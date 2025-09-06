@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { useRouter } from 'next/router', // Changed from useNavigate
 import Link from 'next/link';
@@ -93,3 +94,11 @@ export default function TalentDirectory() {
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  const is_admin = user?.user_type === 'admin';
+  const paginated_talents = filtered_talents;
+  const page_key = `talent - directory-${route_key}-${router.as_path}`);
+}
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -3,6 +3,7 @@
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
 import React from 'react';
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import MainLayout from '../components/MainLayout.dynamic';
@@ -61,3 +62,16 @@ describe('MainLayout', () => {
   });
 });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
+=======
+import { render, screen } from '@testing - library / react';
+import '@testing - library / jest - dom';
+import MainLayout from '../components / MainLayout.dynamic';
+describe ('MainLayout', () => {
+  test ('renders without crashing', () => {
+    render (<MainLayout />);
+    expect (screen.getByTestId ('main - layout')).toBeInTheDocument ();
+  });
+  test ('displays correct content', () => {
+    // Test content display;
+});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

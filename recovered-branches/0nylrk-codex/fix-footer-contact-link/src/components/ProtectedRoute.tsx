@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -22,6 +23,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import React from 'react';
 <<<<<<< HEAD
 import { Navigate  } from 'react-router-dom';
@@ -34,6 +37,7 @@ export interface ProtectedRouteProps {
 
 =======
 import {Navigate} from 'react-router-dom';
+<<<<<<< HEAD
 import {useAuth} from '@/hooks/useAuth';
 import {useTenantAdminStatus} from '@/hooks/useWhitelabelTenant';
 import {useWhitelabel} from '@/context/WhitelabelContext';
@@ -126,3 +130,67 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ProtectedRoute;
 
+=======
+import {use_auth} from '@/hooks / use_auth';
+import {useTenantAdminStatus} from '@/hooks / useWhitelabelTenant';
+import {use_whitelabel} from '@/context / WhitelabelContext';
+export interface ProtectedRouteProps {
+  children: React.ReactNode,
+  admin_only?: boolean;
+  tenantAdminAllowed?: boolean;
+  requiredUserType?: "creator" | "job_seeker" | "employer" | "buyer" | "admin";
+}
+export const ProtectedRoute: React.FC < ProtectedRouteProps> = ({
+  children;
+  admin_only = false;
+  tenantAdminAllowed = false,
+  requiredUserType;
+}) => {
+  const { user, is_loading } = use_auth ();
+  const { tenant } = use_whitelabel ();
+  const { is_admin: isTenantAdmin, is_loading: isCheckingTenantAdmin } = useTenantAdminStatus (tenant?.id),
+  const isCheckingPermissions = is_loading || isCheckingTenantAdmin;
+;
+  // Show loading state if auth or tenant admin status is still being checked;
+  // Check condition
+if ( {) {
+  $2
+}
+    return <div className="flex h - screen w - full items - center justify - center">;
+      <div className="animate - spin rounded - full h - 12 w - 12 border - t-2 border - b-2 border - zion - cyan"></div>;
+    </div>;
+  }
+  // Redirect to login if not authenticated;
+  // Check condition
+if ( {) {
+  $2
+}
+    return <Navigate to="/login" />;
+  }
+  // Check for admin access if required;
+  // Check condition
+if ( {) {
+  $2
+}
+    const hasAdminAccess = user.user_type === 'admin' || user.role === 'admin' || (tenantAdminAllowed && isTenantAdmin);
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      return <Navigate to="/unauthorized" />;
+    }
+  }
+  // Check for specific user type if required;
+  // Check condition
+if ( {) {
+  $2
+}
+    return <Navigate to="/unauthorized" />;
+  }
+  return <>{children}</>;
+}
+;
+export default ProtectedRoute;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

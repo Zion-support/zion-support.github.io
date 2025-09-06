@@ -1,21 +1,25 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 =======
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface TokenConfig {
-  tokenName: string;
-  tokenSymbol: string;
+  token_name: string;
+  token_symbol: string;
   decimals: number;
-  totalSupply: number;
-  issueRate: number;
-  redeemRate: number;
+  total_supply: number;
+  issue_rate: number;
+  redeem_rate: number;
   minIssueAmount: number;
   maxIssueAmount: number;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export interface Wallet {
@@ -37,11 +41,26 @@ const DATA_DIR = path && path.join(process && process.cwd(), 'data');
 const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
+=======
+class TokenStore {
+  private config: TokenConfig = {
+    token_name: 'ZION$',
+    token_symbol: 'ZION',
+    decimals: 18,
+    total_supply: 1000000000,
+    issue_rate: 1.0,
+    redeem_rate: 1.0,
+    minIssueAmount: 1,
+    maxIssueAmount: 10000;
+  }
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface TokenStoreData {
-  wallets: Record<string, Wallet>;
+  wallets: Record < string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
 }
+<<<<<<< HEAD
 
 const DATA_DIR = path.join(process.cwd(), 'data');
 const STORE_FILE = path.join(DATA_DIR, 'token-store.json');
@@ -93,10 +112,21 @@ function readFromDisk(): TokenStoreData | null {
     if (!fs.existsSync(STORE_FILE)) return null;
     const raw = fs.readFileSync(STORE_FILE, 'utf8');
     const parsed = JSON.parse(raw) as TokenStoreData;
+=======
+function readFromDisk (): TokenStoreData | null {
+  try {
+    ensureDataDir ();
+    if () return null) {
+  $2
+}
+    const raw = fs.readFileSync (STORE_FILE, 'utf8');
+    const parsed = JSON.parse (raw) as TokenStoreData;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return parsed;
   } catch {
     return null;
   }
+<<<<<<< HEAD
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   setConfig(newConfig: Partial<TokenConfig>): void {
     this.config = { ...this.config, ...newConfig }
@@ -219,3 +249,11 @@ export class TokenStorageManager {
 // Singleton instance
 export const tokenStorage = new TokenStorageManager();
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  set_config (new_config: Partial < TokenConfig>): void {
+    this.config = { ...this.config, ...new_config }
+  }
+}
+export const token_store = new TokenStore ();
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

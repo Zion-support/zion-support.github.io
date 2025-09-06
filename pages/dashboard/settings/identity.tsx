@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useEffect, useState } from 'react';
 
@@ -22,10 +23,35 @@ export default function IdentitySettingsPage() {
       if (data.ok) setProfile(data.profile);
       else setError(data.error || 'Not found')
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import React, { useEffect, useState } from 'react',
+import Head from 'next / head',
+import type { KycProfile } from '../../../utils / kyc',
+import { ProfileBadges } from '../../../components / ui / ProfileBadges',
+export default /**
+ * IdentitySettingsPage - Function description
+ */
+function IdentitySettingsPage() {
+  const [user_id, setUserId] = useState ('demo - user'),
+  const [profile, set_profile] = useState < KycProfile | null>(null),
+  const [error, set_error] = useState (''),
+  async /**
+ * load - Function description
+ */
+function load() {
+    try {
+      const res = await fetch (`/api / kyc / status?user_id=${encodeURIComponent (user_id)}`),
+      const data = await res.json (),
+      if (set_profile (data.profile), ) {
+  $2
+}
+      else set_error (data.error || 'Not found');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (e) {
-      setError('Failed to fetch')
+      set_error ('Failed to fetch');
     }
   }
+<<<<<<< HEAD
   useEffect(() => {
     load()
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -55,3 +81,28 @@ export default function IdentitySettingsPage() {
 =======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  useEffect (() => {
+    load (),
+    // eslint - disable - next - line react - hooks / exhaustive - deps;
+  }, []),
+  return (
+    <>;
+      <Head>;
+        <title > Identity Settings - Zion</title>;
+        <meta name="description" content="Manage your identity verification status" />;
+      </Head>;
+      <main className="max - w-3xl mx - auto px - 4 py - 8">;
+        <h1 className="text - 2xl font - bold mb - 4">Identity</h1>;
+        <div className="mb - 4">;
+          <ProfileBadges profile={profile || undefined} />;
+        </div>;
+        <div className="mb - 4 text - sm text - gray - 600">;
+          Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.aml_status : 'unknown'}
+        </div>;
+        <a href="/verify" className="inline - block rounded bg - blue - 600 text - white px - 4 py - 2">Go to verification</a>;
+        {error && <div className="mt - 3 text - sm text - red - 600">{error}</div>}
+      </main>;
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

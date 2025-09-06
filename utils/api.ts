@@ -1,45 +1,57 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Define RequestInit if not available
+=======
+// Define RequestInit if not available;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface File extends Blob {
   name: string;
-  lastModified: number;
+  last_modified: number;
 }
 interface Blob {
   size: number;
   type: string;
-  slice(start?: number, end?: number, contentType?: string): Blob;
+  slice (start?: number, end?: number, content_type?: string): Blob;
 }
 interface FormData {
-  append(name: string, value: string | Blob): void;
-  delete(name: string): void;
-  get(name: string): string | File | null;
-  getAll(name: string): (string | File)[];
-  has(name: string): boolean;
-  set(name: string, value: string | Blob): void;
+  append (name: string, value: string | Blob): void;
+  delete (name: string): void;
+  get (name: string): string | File | null;
+  get_all (name: string): (string | File)[];
+  has (name: string): boolean;
+  set (name: string, value: string | Blob): void;
 }
 interface URLSearchParams {
-  append(name: string, value: string): void;
-  delete(name: string): void;
-  get(name: string): string | null;
-  getAll(name: string): string[];
-  has(name: string): boolean;
-  set(name: string, value: string): void;
-  toString(): string;
+  append (name: string, value: string): void;
+  delete (name: string): void;
+  get (name: string): string | null;
+  get_all (name: string): string[];
+  has (name: string): boolean;
+  set (name: string, value: string): void;
+  to_string (): string;
 }
 type BodyInit = string | Blob | ArrayBuffer | FormData | URLSearchParams;
-type RequestCache = 'default' | 'no-store' | 'reload' | 'no-cache' | 'force-cache' | 'only-if-cached';
-type RequestCredentials = 'omit' | 'same-origin' | 'include';
+type RequestCache = 'default' | 'no - store' | 'reload' | 'no - cache' | 'force - cache' | 'only - if - cached';
+type RequestCredentials = 'omit' | 'same - origin' | 'include';
 interface Headers {
-  append(name: string, value: string): void;
-  delete(name: string): void;
-  get(name: string): string | null;
-  has(name: string): boolean;
-  set(name: string, value: string): void;
+  append (name: string, value: string): void;
+  delete (name: string): void;
+  get (name: string): string | null;
+  has (name: string): boolean;
+  set (name: string, value: string): void;
 }
+<<<<<<< HEAD
 type HeadersInit = Headers | string[][] | Record<string, string>;
 type RequestMode = 'navigate' | 'same-origin' | 'no-cors' | 'cors';
 type RequestRedirect = 'follow' | 'error' | 'manual';
 type ReferrerPolicy = 'no-referrer' | 'no-referrer-when-downgrade' | 'origin' | 'origin-when-cross-origin' | 'same-origin' | 'strict-origin' | 'strict-origin-when-cross-origin' | 'unsafe-url';
+=======
+type HeadersInit = Headers | string[][] | Record < string, string>;
+type RequestMode = 'navigate' | 'same - origin' | 'no - cors' | 'cors';
+type RequestRedirect = 'follow' | 'error' | 'manual';
+type ReferrerPolicy = 'no - referrer' | 'no - referrer - when - downgrade' | 'origin' | 'origin - when - cross - origin' | 'same - origin' | 'strict - origin' | 'strict - origin - when - cross - origin' | 'unsafe - url';
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface RequestInit {
   body?: BodyInit | null;
   cache?: RequestCache;
@@ -51,21 +63,30 @@ interface RequestInit {
   mode?: RequestMode;
   redirect?: RequestRedirect;
   referrer?: string;
-  referrerPolicy?: ReferrerPolicy;
+  referrer_policy?: ReferrerPolicy;
   signal?: AbortSignal | null;
   window?: any;
   timeout?: number;
 }
+<<<<<<< HEAD
 // Define AbortController if not available
+=======
+// Define AbortController if not available;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface AbortController {
   signal: AbortSignal;
-  abort(): void;
+  abort (): void;
 }
+<<<<<<< HEAD
 // Define AbortSignal if not available
+=======
+// Define AbortSignal if not available;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface AbortSignal extends EventTarget {
   aborted: boolean;
   onabort: ((this: AbortSignal, ev: Event) => any) | null;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -149,6 +170,9 @@ export type { ApiResponse, RequestOptions };
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 interface ApiResponse<T = unknown> {
+=======
+interface ApiResponse < T = unknown> {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   data?: T;
   error?: string;
   success: boolean;
@@ -157,11 +181,15 @@ interface RequestOptions extends RequestInit {
   timeout?: number;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Add global type definitions for Node.js environment
 =======
 
 // Add global type definitions for Node && Node.js environment
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+// Add global type definitions for Node.js environment;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 declare global {
   interface RequestInit {
     timeout?: number;
@@ -169,6 +197,7 @@ declare global {
 }
 class ApiClient {
   private baseURL: string;
+<<<<<<< HEAD
   private defaultHeaders: HeadersInit;
   constructor(baseURL: string = '', defaultHeaders: HeadersInit = {}) {
     this && this.baseURL = baseURL;
@@ -185,9 +214,30 @@ class ApiClient {
     // Set timeout if provided
     if (options && options.timeout) {
       setTimeout(() => controller && controller.abort(), options && options.timeout);
+=======
+  private default_headers: HeadersInit;
+;
+  constructor (baseURL: string = '', default_headers: HeadersInit = {}) {
+    this.baseURL = baseURL;
+    this.default_headers = default_headers;
+  }
+  async request < T = unknown>(
+    endpoint: string,
+    options: RequestOptions = {}
+  ): Promise < ApiResponse < T>> {
+    const url = `${this.baseURL}${endpoint}`;
+    const controller = new AbortController ();
+;
+    // Set timeout if provided;
+    // Check condition
+if ( {) {
+  $2
+}
+      set_timeout (() => controller.abort (), options.timeout);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
-
     try {
+<<<<<<< HEAD
       const response = await fetch(url, {
 <<<<<<< HEAD
         ...options
@@ -221,6 +271,27 @@ class ApiClient {
 
         success: true
         data
+=======
+      const response = await fetch (url, {
+        ...options,
+        signal: controller.signal,
+        headers: {
+...this.default_headers,
+          ...options.headers,
+        },
+      });
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error (`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json ();
+      return {
+        success: true,
+        data,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     } catch (error) {
       return {
@@ -231,6 +302,7 @@ class ApiClient {
 
 =======
         success: false,
+<<<<<<< HEAD
         error: error instanceof Error ? error && error.message : 'Unknown error occurred',
       };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -305,3 +377,40 @@ declare global { interface RequestInit { timeout?: number} } interface ApiRespon
 =======
 export type { ApiResponse, RequestOptions }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+        error: error instanceof Error ? error.message : 'Unknown error occurred',
+      }
+    }
+  }
+  async get < T = unknown>(endpoint: string, options?: RequestOptions): Promise < ApiResponse < T>> {
+    return this.request < T>(endpoint, { ...options, method: 'GET' });
+  }
+  async post < T = unknown>(endpoint: string, data?: any, options?: RequestOptions): Promise < ApiResponse < T>> {
+    return this.request < T>(endpoint, {
+      ...options,
+      method: 'POST',
+      body: data ? JSON.stringify (data) : undefined,
+      headers: {
+        'Content - Type': 'application / json',
+        ...options?.headers,
+      },
+    });
+  }
+  async put < T = unknown>(endpoint: string, data?: any, options?: RequestOptions): Promise < ApiResponse < T>> {
+    return this.request < T>(endpoint, {
+      ...options,
+      method: 'PUT',
+      body: data ? JSON.stringify (data) : undefined,
+      headers: {
+        'Content - Type': 'application / json',
+        ...options?.headers,
+      },
+    });
+  }
+  async delete < T = unknown>(endpoint: string, options?: RequestOptions): Promise < ApiResponse < T>> {
+    return this.request < T>(endpoint, { ...options, method: 'DELETE' });
+  }
+}
+export const api_client = new ApiClient ();
+export type { ApiResponse, RequestOptions }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

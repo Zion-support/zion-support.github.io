@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 
@@ -14,3 +15,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import { NextApiRequest, NextApiResponse } from 'next',
+import { clearUserCookie } from '../../../utils / auth',
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
+  $2
+}
+  clearUserCookie (res),
+  res.status (200).json ({ success: true });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

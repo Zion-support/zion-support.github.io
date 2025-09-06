@@ -27,6 +27,7 @@ import { motion } from 'framer-motion';
 <<<<<<< HEAD
 <<<<<<< HEAD
 import {
+<<<<<<< HEAD
   Zap
   Clock
   TrendingUp
@@ -50,17 +51,39 @@ import {;
 
 interface PerformanceMetrics {;
   loadTime: number;
+=======
+  Zap,
+  Clock,
+  TrendingUp,
+  Activity,
+  Gauge,
+  Cpu,
+  Database,
+  Network,
+} from 'lucide-react';
+interface PerformanceMetrics {
+  load_time: number;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
+<<<<<<< HEAD
 
   timeToInteractive: number;
+=======
+  timeToInteractive: number;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }, []);
 <<<<<<< HEAD
 //Optimize images for (const img of Array.from (images) ) {
-  if (img.complete && img.naturalWidth > 0) {
+  // Check condition
+if ( {) {
+  $2
+}
   //Add lazy loading img.loading = 'lazy';
+<<<<<<< HEAD
 //Add responsive sizes if not present if (!img.sizes) {
   optimizedCount++
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
@@ -78,10 +101,28 @@ interface PerformanceMetrics {
   firstInputDelay: number
 
   timeToInteractive: number
+=======
+//Add responsive sizes if not present // Check condition
+if ( {) {
+  $2
+}
+  optimized_count++;
+const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({
+  class_name = '',
+}) => {  const [metrics, set_metrics] = useState < PerformanceMetrics>({
+interface PerformanceMetrics {
+  load_time: number,
+  firstContentfulPaint: number,
+  largestContentfulPaint: number,
+  cumulativeLayoutShift: number,
+  firstInputDelay: number,
+  timeToInteractive: number;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 interface PerformanceOptimizerProps {
-  className?: string
+  class_name?: string;
 }
+<<<<<<< HEAD
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '' }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -126,10 +167,16 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     loadTime: 0,
+=======
+const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ class_name = '' }) => {
+  const [metrics, set_metrics] = useState < PerformanceMetrics>({
+    load_time: 0,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     firstContentfulPaint: 0,
     largestContentfulPaint: 0,
     cumulativeLayoutShift: 0,
     firstInputDelay: 0,
+<<<<<<< HEAD
     timeToInteractive: 0
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   });
@@ -232,11 +279,86 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
           // Add responsive sizes if not present
           if (!img.sizes) {
             img.sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+=======
+    timeToInteractive: 0,  });    timeToInteractive: 0;
+  });
+  const [is_optimizing, setIsOptimizing] = useState (false);
+  const [optimization_status, setOptimizationStatus] = useState < string>('idle');
+  const [show_metrics, setShowMetrics] = useState (false);
+;
+  // Measure performance metrics;
+  const measure_performance = useCallback (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      const navigation = performance.getEntriesByType (
+        'navigation')[0] as PerformanceNavigationTiming;
+      const paint_entries = performance.getEntriesByType ('paint');      const paint_entries = performance.getEntriesByType ('paint');
+;
+      const fcp = paint_entries.find (entry => entry.name === 'first - contentful - paint');
+      const lcp = performance.getEntriesByType ('largest - contentful - paint')[0];
+;
+      const fcp = paint_entries.find (
+        entry => entry.name === 'first - contentful - paint');
+      const lcp = performance.getEntriesByType ('largest - contentful - paint')[0];
+;
+      const new_metrics: PerformanceMetrics = {
+        load_time: navigation.loadEventEnd - navigation.loadEventStart,
+        firstContentfulPaint: fcp ? fcp.start_time : 0,
+        largestContentfulPaint: lcp ? lcp.start_time : 0,
+        cumulativeLayoutShift: 0, // Would need to be measured with CLS API;
+        firstInputDelay: 0, // Would need to be measured with FID API;
+        timeToInteractive:;
+          navigation.domContentLoadedEventEnd - navigation.navigation_start,
+      }
+;
+      set_metrics (new_metrics);    }        timeToInteractive: navigation.domContentLoadedEventEnd - navigation.navigation_start;
+      }
+;
+      set_metrics (new_metrics);
+  }, []);
+;
+  // Optimize images;
+  const optimize_images = useCallback (async () => {
+    setIsOptimizing (true);
+    setOptimizationStatus ('Optimizing images...');
+;
+    try {
+      const images = document.querySelectorAll ('img');
+      let optimized_count = 0;
+;
+      for (const img of Array.from (images)) {
+        // Check condition
+if ( {) {
+  $2
+}
+          // Add lazy loading;
+          img.loading = 'lazy';
+;
+          // Add responsive sizes if not present;
+          // Check condition
+if ( {) {
+  $2
+}
+            img.sizes =;
+              '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
-          
-          optimizedCount++
+          optimized_count++;        }
+      }
+      setOptimizationStatus (`Optimized ${optimized_count} images`);
+          // Add responsive sizes if not present;
+          // Check condition
+if ( {) {
+  $2
+}
+            img.sizes = '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw';
+          }
+          optimized_count++;
         }
       }
+<<<<<<< HEAD
 
       setOptimizationStatus(`Optimized ${optimizedCount} images`);
       
@@ -244,14 +366,31 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       setOptimizationStatus('Image optimization complete')
+=======
+      setOptimizationStatus (`Optimized ${optimized_count} images`);
+;
+      // Simulate optimization delay;
+      await new Promise (resolve => set_timeout (resolve, 1000));
+;
+      setOptimizationStatus ('Image optimization complete');
     } catch (error) {
-      setOptimizationStatus('Image optimization failed');
-      console.error('Image optimization error:', error)
+      setOptimizationStatus ('Image optimization failed');
+      console.error ('Image optimization error:', error);
     } finally {
-      setIsOptimizing(false)
+      setIsOptimizing (false);    }      // Simulate optimization delay;
+      await new Promise (resolve => set_timeout (resolve, 1000));
+;
+      setOptimizationStatus ('Image optimization complete');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } catch (error) {
+      setOptimizationStatus ('Image optimization failed');
+      console.error ('Image optimization error:', error);
+    } finally {
+      setIsOptimizing (false);
     }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }, []);
+<<<<<<< HEAD
 
   // Optimize images;
   const optimizeImages = useCallback(async () => {;
@@ -369,6 +508,36 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
 <<<<<<< HEAD
           font-display: swap;        }          font-family: 'Orbitron'
           font-display: swap
+=======
+;
+  // Optimize fonts;
+  const optimize_fonts = useCallback (async () => {
+    setIsOptimizing (true);
+    setOptimizationStatus ('Optimizing fonts...');
+;
+    try {
+      // Add font - display: swap to improve font loading;
+      const style = document.create_element ('style'),
+      style.text_content = `;
+        @font - face {
+          font - family: 'Inter';
+          font - display: swap;
+        }
+        @font - face {
+          font - family: 'JetBrains Mono';        }
+        @font - face {
+          font - family: 'JetBrains Mono',
+          font - display: swap;
+        }
+        @font - face {
+          font - family: 'Orbitron';
+          font - display: swap;
+        }
+        @font - face {
+          font - family: 'Orbitron';
+          font - display: swap;        }          font - family: 'Orbitron',
+          font - display: swap;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
 <<<<<<< HEAD
 =======
@@ -378,6 +547,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
         }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       `;
+<<<<<<< HEAD
       document.head.appendChild(style);
       setOptimizationStatus('Font optimization complete');
       // Simulate optimization delay
@@ -409,10 +579,25 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
       
       // Simulate optimization delay
       await new Promise(resolve => setTimeout(resolve, 800))
+=======
+      document.head.append_child (style);
+;
+      setOptimizationStatus ('Font optimization complete');
+;
+      // Simulate optimization delay;
+      await new Promise (resolve => set_timeout (resolve, 800));
     } catch (error) {
-      setOptimizationStatus('Font optimization failed');
-      console.error('Font optimization error:', error)
+      setOptimizationStatus ('Font optimization failed');
+      console.error ('Font optimization error:', error);
     } finally {
+      setIsOptimizing (false);    }      // Simulate optimization delay;
+      await new Promise (resolve => set_timeout (resolve, 800));
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } catch (error) {
+      setOptimizationStatus ('Font optimization failed');
+      console.error ('Font optimization error:', error);
+    } finally {
+<<<<<<< HEAD
       setIsOptimizing(false)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
@@ -476,12 +661,45 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
 
       preloadLinks && preloadLinks.forEach(linkAttrs => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      setIsOptimizing (false);
+    }
+  }, []);
+;
+  // Optimize CSS and JavaScript;
+  const optimize_code = useCallback (async () => {
+    setIsOptimizing (true);
+    setOptimizationStatus ('Optimizing code...');
+;
+    try {
+      // Add resource hints for critical resources;
+      const preload_links = [;
+        {
+          rel: 'preload',
+          href: '/fonts / inter - var.woff2',
+          as: 'font',
+          type: 'font / woff2',
+          crossorigin: 'anonymous',
+        },
+        {
+          rel: 'preload',
+          href: '/fonts / jetbrains - mono - var.woff2',
+          as: 'font',
+          type: 'font / woff2',
+          crossorigin: 'anonymous',
+        },      ];        { rel: 'preload', href: '/fonts / inter - var.woff2', as: 'font', type: 'font / woff2', crossorigin: 'anonymous' },
+        { rel: 'preload', href: '/fonts / jetbrains - mono - var.woff2', as: 'font', type: 'font / woff2', crossorigin: 'anonymous' }
+      ];
+;
+      preload_links.for_each (link_attrs => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import React, { useEffect } from 'react;
-import Head from 'next/head;
-interface PerformanceOptimizerProps {preloadImages?: string[];
-  preloadFonts?: string[];
+import Head from 'next / head;
+interface PerformanceOptimizerProps {preload_images?: string[];
+  preload_fonts?: string[];
   criticalCSS?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 preloadImages = [], preloadFonts = [;
@@ -517,6 +735,41 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
           if (key === 'crossorigin') {
 <<<<<<< HEAD
             link.setAttribute(key, value as string);
+=======
+const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({
+preload_images = [], preload_fonts = [;
+    'https: //fonts.googleapis.com / css2?family = Inter:wght@300;400;500;600;700;800;900 & display = swap;
+  ], criticalCSS'}) => {
+  useEffect (() => {
+    // Performance monitoring;
+    if ( {'      // Monitor Core Web Vitals'      const observer = new PerformanceObserver ((list) => {) {
+  $2
+}
+        for (const entry of list.get_entries ()) {
+if ( {'            console.log ('LCP: ', entry.start_time)) {
+  $2
+}
+'          }'          if ( {'            console.log ('FID: ', entry.processing_start - entry.start_time)) {
+  $2
+}'          }'          if ( {'            if (!(entry as any).hadRecentInput) {'              console.log ('CLS: ', (entry as any).value)) {
+  $2
+}'            }'          }}
+      });
+      try {
+        observer.observe ({ entry_types: ['largest - contentful - paint', 'first - input', 'layout - shift'] });
+'      } catch (e) {'        // Fallback for browsers that don & apos;t support all entry types;
+        console.log ('Performance monitoring not fully supported');
+'      }';
+      // Resource hints for better performance;
+      const addResourceHint = (href: string, as: string, type?: string) =>: any {
+        const link = document.create_element ('link');
+        Object.entries (link_attrs).for_each (([key, value]) => {
+          // Check condition
+if ( {) {
+  $2
+}
+            link.set_attribute (key, value as string);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           } else {
 =======
       const addResourceHint = (href: string, as: string, type?: string) => {;
@@ -529,6 +782,7 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
             (link as any)[key] = value;
           }
         });
+<<<<<<< HEAD
         document && document.head.appendChild(link);
       });
       setOptimizationStatus('Code optimization complete');
@@ -679,10 +933,100 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
             if (lcp > 2500) { // LCP should be under 2.5s
               console.warn('LCP is too slow:', lcp)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+        document.head.append_child (link);
+      });
+;
+      setOptimizationStatus ('Code optimization complete');
+;
+      // Simulate optimization delay;
+      await new Promise (resolve => set_timeout (resolve, 1200));
+    } catch (error) {
+      setOptimizationStatus ('Code optimization failed');
+      console.error ('Code optimization error:', error);
+    } finally {
+      setIsOptimizing (false);    }      setIsOptimizing (false);
+    }
+  }, []);
+;
+  // Run all optimizations;
+  const runAllOptimizations = useCallback (async () => {
+    setIsOptimizing (true);
+    setOptimizationStatus ('Starting comprehensive optimization...');
+;
+    try {
+      await optimize_images ();
+      await optimize_fonts ();
+      await optimize_code ();
+;
+      setOptimizationStatus ('All optimizations complete!');
+;
+      // Re - measure performance after optimization;
+      set_timeout (() => {
+        measure_performance ();
+      }, 500);
+    } catch (error) {
+      setOptimizationStatus ('Optimization failed');
+      console.error ('Optimization error:', error);
+    } finally {
+      setIsOptimizing (false);    }      setOptimizationStatus ('All optimizations complete!');
+;
+      // Re - measure performance after optimization;
+      set_timeout (() => {
+        measure_performance ();
+      }, 500);
+    } catch (error) {
+      setOptimizationStatus ('Optimization failed');
+      console.error ('Optimization error:', error);
+    } finally {
+      setIsOptimizing (false);
+    }
+  }, [optimize_images, optimize_fonts, optimize_code, measure_performance]);
+;
+  // Initialize performance monitoring;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      // Measure initial performance;
+      window.addEventListener ('load', measure_performance);
+;
+      // Monitor for performance issues;
+      const observer = new PerformanceObserver (list => {
+        for (const entry of list.get_entries ()) {
+          // Check condition
+if ( {) {
+  $2
+}
+            const lcp = entry.start_time;
+            // Check condition
+if ( {) {
+  $2
+}
+              // LCP should be under 2.5s;
+              console.warn ('LCP is too slow:', lcp);            }
+          }
+        }
+      });      // Monitor for performance issues;
+      const observer = new PerformanceObserver ((list) => {
+        for (const entry of list.get_entries ()) {
+          // Check condition
+if ( {) {
+  $2
+}
+            const lcp = entry.start_time;
+            // Check condition
+if ( { // LCP should be under 2.5s) {
+  $2
+}
+              console.warn ('LCP is too slow:', lcp);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             }
           }
         }
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -695,10 +1039,21 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
       
       observer.observe({ entryTypes: ['largest-contentful-paint'] }),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+      observer.observe ({ entry_types: ['largest - contentful - paint'] });
+;
       return () => {
-        window.removeEventListener('load', measurePerformance);
-        observer.disconnect()
+        window.removeEventListener ('load', measure_performance);
+        observer.disconnect ();
+      }    }
+      observer.observe ({ entry_types: ['largest - contentful - paint'] }),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      return () => {
+        window.removeEventListener ('load', measure_performance);
+        observer.disconnect ();
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     }
@@ -1198,6 +1553,250 @@ export default PerformanceOptimizer;
 
 interface PerformanceMetrics {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  }, [measure_performance]);
+;
+  const getPerformanceScore = (): number => {
+    let score = 100;
+;
+    // Check condition
+if (score -= 20) {
+  $2
+}
+    // Check condition
+if (score -= 25) {
+  $2
+}
+    // Check condition
+if (score -= 15) {
+  $2
+}
+    // Check condition
+if (score -= 20) {
+  $2
+}
+    return Math.max (0, score);  } ;
+    return Math.max (0, score);
+  }
+;
+  const getPerformanceGrade = (score: number): string => {
+    // Check condition
+if (return 'A') {
+  $2
+}
+    // Check condition
+if (return 'B') {
+  $2
+}
+    // Check condition
+if (return 'C') {
+  $2
+}
+    // Check condition
+if (return 'D') {
+  $2
+}
+    return 'F';  }    return 'F';
+  }
+;
+  const performance_score = getPerformanceScore ();
+  const performance_grade = getPerformanceGrade (performance_score);
+;
+    >;
+      <div className='flex items - center justify - between mb - 6'>;
+        <h3 className='text - xl font - bold text - white flex items - center gap - 2'>;
+          <Gauge className='w - 5 h - 5 text - cyan - 400' />          Performance Optimizer;
+        </h3>;
+        <button;
+          on_click={() => setShowMetrics (!show_metrics)}
+          className='text - sm text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300'        >  return (
+    <div className={`bg - slate - 800 / 50 backdrop - blur - xl rounded - 2xl border border - white / 10 p - 6 ${class_name}`}>;
+      <div className="flex items - center justify - between mb - 6">;
+        <h3 className="text - xl font - bold text - white flex items - center gap - 2">;
+          <Gauge className="w - 5 h - 5 text - cyan - 400" />;
+        </h3>;
+        <button;
+          on_click={() => setShowMetrics (!show_metrics)}
+          className='text - sm text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300'          className="text - sm text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300";
+        >;
+          {show_metrics ? 'Hide' : 'Show'} Metrics;
+        </button>;
+      </div>;
+      {/* Performance Score */}
+      <div className='mb - 6'>;
+        <div className='flex items - center justify - between mb - 2'>;
+          <span className='text - white / 70'>Performance Score</span>;
+          <span className='text - 2xl font - bold text - cyan - 400'>;
+            {performance_grade}
+          </span>;
+        </div>;
+        <div className='w - full bg - white / 10 rounded - full h - 3'>;
+          <motion.div;
+            className='h - 3 bg - gradient - to - r from - red - 500 via - yellow - 500 to - green - 500 rounded - full';
+            initial={{ width: 0 }}
+            animate={{ width: `${performance_score}%` }}
+            transition={{ duration: 1, ease: 'ease_out' }}
+          />;
+        </div>;
+        <div className='text - right mt - 1'>;
+          <span className='text - sm text - white / 60'>{performance_score}/100</span>        </div>        </div>;
+        <div className="w - full bg - white / 10 rounded - full h - 3">;
+          <motion.div;
+            className="h - 3 bg - gradient - to - r from - red - 500 via - yellow - 500 to - green - 500 rounded - full";
+            initial={{ width: 0 }}
+            animate={{ width: `${performance_score}%` }}
+            transition={{ duration: 1, ease: "ease_out" }}
+          />;
+        </div>;
+        <div className="text - right mt - 1">;
+          <span className="text - sm text - white / 60">{performance_score}/100</span>;
+        </div>;
+      </div>;
+      {/* Metrics Display */}
+      {show_metrics && (
+        <motion.div;
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: 'auto' }}
+          exit={{ opacity: 0, height: 0 }}
+          className='grid grid - cols - 2 md:grid - cols - 3 gap - 4 mb - 6';
+          <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;
+            <Clock className='w - 6 h - 6 text - blue - 400 mx - auto mb - 2' />;
+            <div className='text - lg font - bold text - white'>;
+              {Math.round (metrics.load_time)}ms;
+            </div>;
+            <div className='text - xs text - white / 60'>Load Time</div>;
+          </div>;
+          <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;
+            <Activity className='w - 6 h - 6 text - green - 400 mx - auto mb - 2' />;
+            <div className='text - lg font - bold text - white'>;
+              {Math.round (metrics.firstContentfulPaint)}ms;
+            </div>;
+            <div className='text - xs text - white / 60'>FCP</div>;
+          </div>;
+          <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;
+            <TrendingUp className='w - 6 h - 6 text - purple - 400 mx - auto mb - 2' />;
+            <div className='text - lg font - bold text - white'>;
+              {Math.round (metrics.largestContentfulPaint)}ms;
+            </div>;
+            <div className='text - xs text - white / 60'>LCP</div>;
+          </div>;
+          <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;
+            <Cpu className='w - 6 h - 6 text - yellow - 400 mx - auto mb - 2' />;
+            <div className='text - lg font - bold text - white'>;
+              {Math.round (metrics.timeToInteractive)}ms;
+            </div>;
+            <div className='text - xs text - white / 60'>TTI</div>;
+          </div>;
+          <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;
+            <Database className='w - 6 h - 6 text - orange - 400 mx - auto mb - 2' />;
+            <div className='text - lg font - bold text - white'>;
+              {metrics.cumulativeLayoutShift.to_fixed (3)}
+            </div>;
+            <div className='text - xs text - white / 60'>CLS</div>;
+          </div>;
+          <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;
+            <Network className='w - 6 h - 6 text - red - 400 mx - auto mb - 2' />;
+            <div className='text - lg font - bold text - white'>;
+              {Math.round (metrics.firstInputDelay)}ms;
+            </div>;
+            <div className='text - xs text - white / 60'>FID</div>          </div>;
+          <div className="text - center p - 3 rounded - lg bg - white / 5 border border - white / 10">;
+            <Network className="w - 6 h - 6 text - red - 400 mx - auto mb - 2" />;
+            <div className="text - lg font - bold text - white">{Math.round (metrics.firstInputDelay)}ms</div>;
+            <div className="text - xs text - white / 60">FID</div>;
+        </motion.div>)}
+      {/* Optimization Controls */}
+      <div className='space - y-3'>        <button      <div className="space - y-3">;
+        <button;
+          on_click={runAllOptimizations}
+          disabled={is_optimizing}
+          className={`w - full px - 4 py - 3 rounded - lg font - semibold text - white transition - all duration - 300 ${
+            is_optimizing;
+              ? 'bg - gray - 600 cursor - not - allowed';
+              : 'bg - gradient - to - r from - cyan - 600 to - blue - 600 hover:from - cyan - 700 hover:to - blue - 700 hover:scale - 105';
+          } flex items - center justify - center gap - 2`}
+        >;
+          {is_optimizing ? (
+            <>;
+              <div className='w - 4 h - 4 border - 2 border - white / 30 border - t-white rounded - full animate - spin' />              <span > Optimizing...</span>;
+            </>) : (
+            <>;
+              <Zap className='w - 4 h - 4' />              <span > Run All Optimizations</span>              <div className="w - 4 h - 4 border - 2 border - white / 30 border - t-white rounded - full animate - spin" />;
+              <span > Optimizing...</span>;
+            </>) : (
+            <>;
+              <Zap className='w - 4 h - 4' />              <Zap className="w - 4 h - 4" />;
+              <span > Run All Optimizations</span>;
+            </>)}
+        </button>;
+        {optimization_status !== 'idle' && (
+          <div className='text - center p - 3 rounded - lg bg - white / 5 border border - white / 10'>;
+            <div className='text - sm text - white / 80'>{optimization_status}</div>          </div>          <div className="text - center p - 3 rounded - lg bg - white / 5 border border - white / 10">;
+            <div className="text - sm text - white / 80">{optimization_status}</div>;
+          </div>)}
+      </div>;
+      {/* Performance Tips */}
+      <div className='mt - 6 pt - 4 border - t border - white / 10'>;
+        <h4 className='text - sm font - semibold text - white / 80 mb - 3'>;
+          Performance Tips;
+        </h4>;
+        <ul className='text - xs text - white / 60 space - y-1'>          <li>• Use WebP images for better compression</li>      <div className="mt - 6 pt - 4 border - t border - white / 10">;
+        <h4 className="text - sm font - semibold text - white / 80 mb - 3">Performance Tips</h4>;
+        <ul className="text - xs text - white / 60 space - y-1">;
+          <li>• Use WebP images for better compression</li>;
+          <li>• Implement lazy loading for images</li>;
+          <li>• Minimize CSS and JavaScript bundles</li>;
+          <li>• Use CDN for static assets</li>;
+          <li>• Enable gzip compression</li>;
+        </ul>;
+      </div>;
+    </div>);
+}export default PerformanceOptimizer;}
+      // Preload critical resources;
+      preload_images.for_each (image => {
+addResourceHint (image, 'image');
+'      });';
+      preload_fonts.for_each (font => {
+        addResourceHint (font, 'style');
+'      });'    }}, [preload_images, preload_fonts]);
+  return (
+    <Head>;
+      {/* Critical CSS inlined for above - the - fold content */}
+      {criticalCSS && (
+        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />)}
+{/* Preload critical resources */}
+      {preload_images.map ((image, index) => (
+        <link;
+key={`preload - image-${index}}          rel="preload""          as="image""          href={image}"        />))}
+      {preload_fonts.map ((font, index) => (
+        <link;
+key={`preload - font-${index}`}          rel="preload""          as="style""          href={font}"          on_load={() => {
+            const link = document.query_selector (link[href="${font}"]`);
+"            if ( {"              (link as HTMLLinkElement).rel = 'stylesheet) {
+  $2
+}
+}'          }}`        />))}
+      {/* Performance hints */}
+      <meta http_equiv="x - dns - prefetch - control" content="on" />"      "      {/* Service Worker registration */}
+      <script;
+        dangerouslySetInnerHTML={{
+          __html:             // Check condition
+if ( {'              window.addEventListener ('load', function () {'                navigator.service_worker.register ('/sw.js')'                  .then (function (registration) {'                    console.log ('SW registered: ', registration)) {
+  $2
+}
+'                  })'                  .catch (function (registration_error) {
+                    console.log ('SW registration failed: ', registration_error);'                  });'              });
+}
+          ``        }}/>;
+    </Head>);
+}
+  );
+}
+;
+export default PerformanceOptimizer;
+;
+interface PerformanceMetrics {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   fcp: number;
   lcp: number;
   fid: number;
@@ -1210,10 +1809,14 @@ interface PerformanceMetrics {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface PerformanceOptimizerProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  enableReporting?: boolean;
+  enable_reporting?: boolean;
 }
+<<<<<<< HEAD
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   onMetricsUpdate
   enableReporting = false
@@ -1358,3 +1961,108 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
 }
 export default PerformanceOptimizer;
 
+=======
+const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({
+  onMetricsUpdate,
+  enable_reporting = false;
+}) => {
+  const [metrics, set_metrics] = useState < PerformanceMetrics | null>(null);
+;
+  const measureWebVitals = useCallback (() => {
+    if () return) {
+  $2
+}
+    const navigation = performance.getEntriesByType ('navigation')[0] as PerformanceNavigationTiming;
+    const paint = performance.getEntriesByType ('paint');
+;
+    // Core Web Vitals;
+    const fcp = paint.find (entry => entry.name === 'first - contentful - paint')?.start_time || 0;
+    const lcp = performance.getEntriesByType ('largest - contentful - paint')[0]?.start_time || 0;
+    const ttfb = navigation.response_start - navigation.request_start;
+;
+    // Memory usage (if available);
+    const memory = (performance as any).memory ? {
+      used: (performance as any).memory.usedJSHeapSize,
+      total: (performance as any).memory.totalJSHeapSize,
+      limit: (performance as any).memory.jsHeapSizeLimit;
+    } : undefined;
+;
+    const new_metrics: PerformanceMetrics = {
+      fcp,
+      lcp,
+      fid: 0, // First Input Delay - would need user interaction to measure;
+      cls: 0, // Cumulative Layout Shift - would need observer;
+      ttfb,
+      memory;
+    }
+;
+    set_metrics (new_metrics);
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      onMetricsUpdate (new_metrics);
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      console.log ('Performance Metrics:', new_metrics);
+    }
+  }, [onMetricsUpdate, enable_reporting]);
+;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      measureWebVitals ();
+    } else {
+      window.addEventListener ('load', measureWebVitals);
+    }
+    return () => {
+      window.removeEventListener ('load', measureWebVitals);
+    }
+  }, [measureWebVitals]);
+;
+  // Monitor for performance issues;
+  useEffect (() => {
+    // Check condition
+if (return) {
+  $2
+}
+    const warnings: string[] = [];
+;
+    if (warnings.push ('First Contentful Paint is slow (>1.8s)')) {
+  $2
+}
+    if (warnings.push ('Largest Contentful Paint is slow (>2.5s)')) {
+  $2
+}
+    if (warnings.push ('Time to First Byte is slow (>600ms)')) {
+  $2
+}
+    // Check condition
+if ( {) {
+  $2
+}
+      const memory_usage = (metrics.memory.used / metrics.memory.limit) * 100;
+      if (warnings.push ('High memory usage detected')) {
+  $2
+}
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      console.warn ('Performance Issues Detected:', warnings);
+    }
+  }, [metrics, enable_reporting]);
+;
+  return null;
+}
+;
+export default PerformanceOptimizer;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

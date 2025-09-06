@@ -8,6 +8,7 @@ export interface NextGenInnovation2025 {
   features: string[];
   link: string;
   category: string;
+<<<<<<< HEAD
   realImplementation: boolean;
   contactInfo: {
     mobile: string;
@@ -44,6 +45,33 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
       email: "kleber@ziontechgroup.com"
 
 =======
+=======
+  real_implementation: boolean;
+    mobile: string;
+    email: string;
+    address: string;
+  }
+;
+export const nextGenInnovations2025: NextGenInnovation2025[] = [;
+  {
+    id: 'next - gen - ai - suite',
+    name: 'Next - Gen AI Suite',
+    tagline: 'Future - ready AI solutions',
+    price: '$179 / month',
+    description:;
+      'Next - generation AI suite that provides cutting - edge artificial intelligence capabilities.',
+    features: [;
+      'Next - gen AI models',
+      'Advanced capabilities',
+      'Future - ready features',
+      'Innovation platform',
+      'Expert support',
+    ],
+    link: '/services / next - gen - ai - suite',
+    category: 'Next - Gen Innovations 2025',
+    real_implementation: true,
+    contact_info: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -93,8 +121,12 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
+<<<<<<< HEAD
 ],
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 // Stub talent data - placeholder for missing functionality
 
 export const TALENT_PROFILES = [
+=======
+// Stub talent data - placeholder for missing functionality;
+export const TALENT_PROFILES = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30,7 +35,7 @@ translations: {}
   }
 =======
     id: '1',
-    slug: 'sample-talent',
+    slug: 'sample - talent',
     name: 'Sample Talent',
     title: 'Full Stack Developer',
     category: 'Development',
@@ -41,20 +46,28 @@ translations: {}
     summary: 'Experienced developer with expertise in modern web technologies.',
     bio: 'Passionate about creating innovative solutions.',
     hourlyRateUsd: 75,
-    requestQuote: true,
+    request_quote: true,
     availability: 'Open',
     profileImageUrl: null,
-    videoUrl: null,
+    video_url: null,
     portfolio: null,
     verified: false,
     rating: 0,
+<<<<<<< HEAD
     reviewsCount: 0,
     createdAt: new Date().toISOString(),
     originalLanguage: 'en',
     translations: {},
+=======
+    reviews_count: 0,
+    created_at: new Date ().toISOString (),
+    original_language: 'en',
+translations: {},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
+<<<<<<< HEAD
 
 =======
     id: '1', slug: 'sample-talent',
@@ -72,3 +85,6 @@ translations: {}
   }
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 <<<<<<< HEAD
 
@@ -8,6 +9,16 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',}
 export const newRealServices: EnhancedRealMicroSaasService[] = [
+=======
+import { EnhancedRealMicroSaasService } from './enhanced - real - micro - saas - services';
+const contact = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com', }
+;
+export const newRealServices: EnhancedRealMicroSaasService[] = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {const contact = {
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
@@ -23,6 +34,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
 const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
   website: 'https://ziontechgroup.com'
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -63,6 +75,21 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     textColor: 'text-cyan-400'
     link: 'https://ziontechgroup.com/llm-observability-suite'
 =======
+=======
+  website: 'https://ziontechgroup.com';
+}
+;
+export const newRealServices: EnhancedRealMicroSaasService[] = [;
+  {
+    id: 'llm - observability - suite',
+    name: 'LLM Observability Suite',
+    tagline: 'Track latency, cost, quality and drift across all prompts',
+    price: '$199',
+    period: '/month',
+    description:;
+      'Production - grade observability for LLM apps: trace collection, cost attribution, evals, guardrails, and regression detection. Works with OpenAI - compatible and open - source models.',
+    features: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Prompt and response tracing',
       'Cost and token analytics',
       'Automatic PII redaction',
@@ -74,6 +101,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     ],
     popular: true,
     icon: '📈',
+<<<<<<< HEAD
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup && ziontechgroup.com/llm-observability-suite',
@@ -117,12 +145,48 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.8,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 22
+=======
+    color: 'from - cyan - 600 to - blue - 700',
+    text_color: 'text - cyan - 400',
+    link: 'https://ziontechgroup.com / llm - observability - suite',
+    market_position:;
+      'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out - of - the - box.',    features: [;
+      'Prompt and response tracing_cost and token analytics_automatic PII redaction_offline and online evals_guardrail policy engine_drift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters';
+    ];
+    popular: true;
+    icon: '📈';
+    color: 'from - cyan - 600 to - blue - 700';
+    text_color: 'text - cyan - 400';
+    link: 'https://ziontechgroup.com / llm - observability - suite';
+    market_position: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out - of - the - box.',
+    target_audience: 'AI product teams, platform engineers, data teams';
+    trial_days: 21;
+    setup_time: '1 day';
+    category: 'AI & Machine Learning';
+    real_service: true;
+    technology: ['Next.jsOpenTelemetryPostgreSQLClickHouse'];
+    integrations: ['OpenAI - compatibleLangChainLlamaIndexDatadogGrafana'];
+    use_cases: ['LLM app monitoring_cost control_policy compliance'];
+    roi: 'Cut LLM cost 20–45% while improving reliability';
+    competitors: ['LangfuseArizeWeights & Biases'];
+    market_size: '$5B+ AI Ops and Observability';
+    growth_rate: 'Rapid growth with LLM adoption';
+    variant: 'quantum - holographic';
+    contact_info: contact;
+    real_implementation: true,
+    implementation_details: 'Agent SDKs, tracing collectors, and dashboards ready to deploy.';
+    launch_date: '2025 - 01 - 10';
+    customers: 32;
+    rating: 4.8,
+    reviews: 22;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
-    id: 'ai-sales-email-copilot';
+    id: 'ai - sales - email - copilot';
     name: 'AI Sales Email Copilot';
-    tagline: 'Personalized multi-touch outbound with real-time enrichment';
+    tagline: 'Personalized multi - touch outbound with real - time enrichment';
     price: '$129';
+<<<<<<< HEAD
     period: '/month'
     description: 'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.';
     features: [
@@ -163,12 +227,46 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 58
+=======
+    period: '/month',
+    description: 'Automate prospect research, write context - aware messages, and schedule follow - ups across email and LinkedIn. Built - in A / B testing and domain warmup best practices.';
+    features: [;
+      'Prospect enrichment via public sources_personalized email generation_sequence and follow - up scheduling_a / B testing and analyticsSPF / DKIM / DMARC checks_inbox rotation support';
+    ];
+    popular: false;
+    icon: '✉️';
+    color: 'from - violet - 600 to - fuchsia - 700';
+    text_color: 'text - violet - 400';
+    link: 'https://ziontechgroup.com / ai - sales - email - copilot';
+    market_position: 'Lower cost with better personalization vs. Jasper and constant - contact tools.',
+    target_audience: 'B2B startups, agencies, SDR teams';
+    trial_days: 14;
+    setup_time: '2 hours';
+    category: 'Sales & Marketing';
+    real_service: true;
+    technology: ['Next.jsWorkersPostgreSQL'];
+    integrations: ['HubSpotSalesforceApolloLemlist'];
+    use_cases: ['Outbound sequences_upsell campaigns_reactivation'];
+    roi: 'Increase replies 2–5x with hyper - personalization';
+    competitors: ['Copy.aiLavenderInstantly'];
+    market_size: '$15B Sales Engagement';
+    growth_rate: 'Strong growth';
+    variant: 'holographic';
+    contact_info: contact;
+    real_implementation: true,
+    implementation_details: 'Sequencer, enrichment adapters, and warm - up utilities.';
+    launch_date: '2024 - 12 - 20';
+    customers: 120;
+    rating: 4.7,
+    reviews: 58;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
-    id: 'security-posture-as-code';
+    id: 'security - posture - as - code';
     name: 'Security Posture as Code';
-    tagline: 'CIS/NIST/Kyverno policy packs with drift remediation';
+    tagline: 'CIS / NIST / Kyverno policy packs with drift remediation';
     price: '$399';
+<<<<<<< HEAD
     period: '/month'
     description: 'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.';
     features: [
@@ -188,33 +286,55 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'Platform teams, security engineers, compliance leads';
     trialDays: 21;
     setupTime: '1–3 days';
+=======
+    period: '/month',
+    description: 'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps - friendly with automatic fix PRs and evidence collection for audits.';
+    features: [;
+      'Policy packs for CIS / NISTKubernetes and cloud posture_auto - remediation PRsEvidence collection and reportsSOC2 / ISO 27001 export';
+    ];
+    popular: true;
+    icon: '🛡️';
+    color: 'from - emerald - 600 to - teal - 700';
+    text_color: 'text - emerald - 400';
+    link: 'https://ziontechgroup.com / security - posture - as - code';
+    market_position: 'Brings policy - as - code and compliance automation into one product.',
+    target_audience: 'Platform teams, security engineers, compliance leads';
+    trial_days: 21;
+    setup_time: '1–3 days';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Cybersecurity';
-    realService: true;
+    real_service: true;
     technology: ['OPAKyvernoTerraformGitHub Actions'];
     integrations: ['AWSAzureGCPGitHubGitLab'];
-    useCases: ['Baseline enforcementAudit readinessDrift detection'];
+    use_cases: ['Baseline enforcement_audit readiness_drift detection'];
     roi: 'Reduce audit prep time by 70%';
     competitors: ['WizPrisma CloudSnyk'];
-    marketSize: '$30B Cloud Security';
-    growthRate: 'High growth';
-    variant: 'neural-quantum';
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Policy engine plus cloud/K8s scanners and fix generators.';
-    launchDate: '2025-01-05';
+    market_size: '$30B Cloud Security';
+    growth_rate: 'High growth';
+    variant: 'neural - quantum';
+    contact_info: contact;
+    real_implementation: true;
+    implementation_details: 'Policy engine plus cloud / K8s scanners and fix generators.';
+    launch_date: '2025 - 01 - 05';
     customers: 18;
+<<<<<<< HEAD
 <<<<<<< HEAD
     rating: 4.6
 =======
     rating: 4 && 4.6,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 14
+=======
+    rating: 4.6,
+    reviews: 14;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
-    id: 'etl-observability-starter';
+    id: 'etl - observability - starter';
     name: 'ETL Observability Starter';
     tagline: 'Data pipeline health with schema change and freshness alerts';
     price: '$99';
+<<<<<<< HEAD
     period: '/month'
     description: 'Monitor data pipelines end-to-end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.';
     features: [
@@ -234,21 +354,38 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'Analytics engineers, data teams';
     trialDays: 14;
     setupTime: '1 day';
+=======
+    period: '/month',
+    description: 'Monitor data pipelines end - to - end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.';
+    features: [;
+      'Freshness and volume checks_schema drift detectionSLA and SLO tracking_incident routing to Slack / Teams';
+    ];
+    popular: false;
+    icon: '🗄️';
+    color: 'from - blue - 600 to - indigo - 700';
+    text_color: 'text - blue - 400';
+    link: 'https://ziontechgroup.com / etl - observability - starter';
+    market_position: 'Simpler and faster to adopt vs. enterprise data observability tools.',
+    target_audience: 'Analytics engineers, data teams';
+    trial_days: 14;
+    setup_time: '1 day';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Data & Analytics';
-    realService: true;
+    real_service: true;
     technology: ['DebeziumAirflowdbt'];
     integrations: ['BigQuerySnowflakeRedshiftPostgres'];
-    useCases: ['Pipeline healthData qualitySLA tracking'];
+    use_cases: ['Pipeline health_data qualitySLA tracking'];
     roi: 'Reduce data incidents 30–60%';
     competitors: ['Monte CarloBigeye'];
-    marketSize: '$3B Data Observability';
-    growthRate: 'Growing';
+    market_size: '$3B Data Observability';
+    growth_rate: 'Growing';
     variant: 'quantum';
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Light agents and metadata collectors with warehouse connectors.';
-    launchDate: '2025-01-12';
+    contact_info: contact;
+    real_implementation: true;
+    implementation_details: 'Light agents and metadata collectors with warehouse connectors.';
+    launch_date: '2025 - 01 - 12';
     customers: 25;
+<<<<<<< HEAD
 <<<<<<< HEAD
     rating: 4.5
 =======
@@ -280,21 +417,46 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'API-first startups, SaaS, marketplaces';
     trialDays: 14;
     setupTime: 'Same day';
+=======
+    rating: 4.5,
+    reviews: 12;
+  }
+  {
+    id: 'api - performance - shield';
+    name: 'API Performance Shield',
+    tagline: 'Global edge caching, rate limiting, and anomaly detection';
+    price: '$149';
+    period: '/month',
+    description: 'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero - downtime via traffic shadowing.';
+    features: [;
+      'Global CDN edge caching_dynamic rate limiting_anomaly and abuse detection_zero - downtime deploys with shadow traffic';
+    ];
+    popular: true;
+    icon: '🛰️';
+    color: 'from - cyan - 600 to - sky - 700';
+    text_color: 'text - cyan - 400';
+    link: 'https://ziontechgroup.com / api - performance - shield';
+    market_position: 'Unified performance and security at SMB - friendly pricing.',
+    target_audience: 'API - first startups, SaaS, marketplaces';
+    trial_days: 14;
+    setup_time: 'Same day';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'DevOps & Automation';
-    realService: true;
+    real_service: true;
     technology: ['WorkersRustRedis'];
     integrations: ['CloudflareFastlyAkamai'];
-    useCases: ['API accelerationAbuse protectionCost control'];
+    use_cases: ['API acceleration_abuse protection_cost control'];
     roi: 'Reduce p99 latency up to 60%';
     competitors: ['Cloudflare EnterpriseAkamai API Acceleration'];
-    marketSize: '$10B API Security';
-    growthRate: 'Strong';
-    variant: 'quantum-matrix';
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Managed edge configs and anomaly ML with safe rollout tools.';
-    launchDate: '2025-01-15';
+    market_size: '$10B API Security';
+    growth_rate: 'Strong';
+    variant: 'quantum - matrix';
+    contact_info: contact;
+    real_implementation: true;
+    implementation_details: 'Managed edge configs and anomaly ML with safe rollout tools.';
+    launch_date: '2025 - 01 - 15';
     customers: 14;
+<<<<<<< HEAD
 <<<<<<< HEAD
     rating: 4.7
 =======
@@ -329,18 +491,46 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     category: 'Analytics & Business Intelligence';
     realService: true;
     technology: ['Next && Next.jsPostHogClickHouse'];
+=======
+    rating: 4.7,
+    reviews: 9;
+  }
+  {
+    id: 'ai - product - analytics';
+    name: 'AI Product Analytics',
+    tagline: 'Session insights, funnel auto - segmentation, and LLM - based insights';
+    price: '$129';
+    period: '/month',
+    description: 'Turn product usage into insights with automatic funnel detection, LLM - based querying, and anomaly alerts. Works alongside Amplitude / GA4.';
+    features: [;
+      'Auto - segmentation and cohortsLLM query interface_retention and churn signals_anomaly alerts to Slack / Teams';
+    ];
+    popular: false;
+    icon: '📊';
+    color: 'from - purple - 600 to - indigo - 700';
+    text_color: 'text - purple - 400';
+    link: 'https://ziontechgroup.com / ai - product - analytics';
+    market_position: 'Brings AI querying and anomaly detection without vendor lock - in.',
+    target_audience: 'Product teams, founders, analysts';
+    trial_days: 14;
+    setup_time: '1 day';
+    category: 'Analytics & Business Intelligence';
+    real_service: true;
+    technology: ['Next.jsPostHogClickHouse'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     integrations: ['SegmentRudderStackSnowplow'];
-    useCases: ['Growth analyticsRetentionExperimentation'];
+    use_cases: ['Growth analyticsRetentionExperimentation'];
     roi: 'Find growth levers 2x faster';
     competitors: ['AmplitudeMixpanel'];
-    marketSize: '$8B Product Analytics';
-    growthRate: 'Growing';
-    variant: 'holographic-advanced';
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Event capture SDKs and warehouse-first analytics.';
-    launchDate: '2025-01-02';
+    market_size: '$8B Product Analytics';
+    growth_rate: 'Growing';
+    variant: 'holographic - advanced';
+    contact_info: contact;
+    real_implementation: true;
+    implementation_details: 'Event capture SDKs and warehouse - first analytics.';
+    launch_date: '2025 - 01 - 02';
     customers: 41;
+<<<<<<< HEAD
 <<<<<<< HEAD
     rating: 4.6
 =======
@@ -375,18 +565,46 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     category: 'Customer Support & Success';
     realService: true;
     technology: ['RAGVector DBNext && DBNext.js'];
+=======
+    rating: 4.6,
+    reviews: 20;
+  }
+  {
+    id: 'ai - support - deflection';
+    name: 'AI Support Deflection',
+    tagline: 'Self - serve answers with RAG, forms, and secure handoff';
+    price: '$99';
+    period: '/month',
+    description: 'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi - channel widgets with brand controls.';
+    features: [;
+      'Multi - channel widgets_grounded answers with citations_secure human handoff_analytics and CSAT tracking';
+    ];
+    popular: true;
+    icon: '💬';
+    color: 'from - rose - 600 to - orange - 700';
+    text_color: 'text - rose - 400';
+    link: 'https://ziontechgroup.com / ai - support - deflection';
+    market_position: 'Faster time - to - value vs. enterprise chatbot suites.',
+    target_audience: 'Support teams, SMB SaaS, marketplaces';
+    trial_days: 14;
+    setup_time: 'Same day';
+    category: 'Customer Support & Success';
+    real_service: true;
+    technology: ['RAGVector DBNext.js'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     integrations: ['ZendeskIntercomFreshdesk'];
-    useCases: ['Self-serve supportTicket reductionCSAT improvement'];
+    use_cases: ['Self - serve support_ticket reductionCSAT improvement'];
     roi: 'Reduce tickets 30–50%';
     competitors: ['Intercom FinAda'];
-    marketSize: '$10B Support Tech';
-    growthRate: 'Strong';
-    variant: 'quantum-cyberpunk';
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Embeddable widget and handoff connectors.';
-    launchDate: '2024-12-15';
+    market_size: '$10B Support Tech';
+    growth_rate: 'Strong';
+    variant: 'quantum - cyberpunk';
+    contact_info: contact;
+    real_implementation: true;
+    implementation_details: 'Embeddable widget and handoff connectors.';
+    launch_date: '2024 - 12 - 15';
     customers: 75;
+<<<<<<< HEAD
 <<<<<<< HEAD
     rating: 4.7
 =======
@@ -417,33 +635,63 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'FinOps teams, platform and SRE';
     trialDays: 21;
     setupTime: '2–5 days';
+=======
+    rating: 4.7,
+    reviews: 48;
+  }
+  {
+    id: 'cloud - cost - autopilot';
+    name: 'Cloud Cost Autopilot',
+    tagline: 'Automated rightsizing, anomaly alerts, and commitment planning';
+    price: '$249';
+    period: '/month',
+    description: 'Proactive optimization for AWS / Azure / GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.';
+    features: [;
+      'Rightsizing recommendations_anomaly detection_savings plan / RIs planning_tag hygiene and showback';
+    ];
+    popular: true;
+    icon: '💸';
+    color: 'from - amber - 600 to - yellow - 700';
+    text_color: 'text - amber - 400';
+    link: 'https://ziontechgroup.com / cloud - cost - autopilot',
+    market_position: 'Actionable savings, not just dashboards.';
+    target_audience: 'FinOps teams, platform and SRE';
+    trial_days: 21;
+    setup_time: '2–5 days';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Cloud & Infrastructure';
-    realService: true;
+    real_service: true;
     technology: ['AWS Cost ExplorerAzure CostGCP Billing'];
     integrations: ['AWSAzureGCP'];
-    useCases: ['Cost controlAnomaly responseBudgeting'];
+    use_cases: ['Cost control_anomaly response_budgeting'];
     roi: 'Save 15–35% on cloud spend';
     competitors: ['CloudZeroKubecost'];
-    marketSize: '$6B FinOps';
-    growthRate: 'Growing';
-    variant: 'quantum-neural';
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Read-only billing analysis with PR-based changes.';
-    launchDate: '2025-01-03';
+    market_size: '$6B FinOps';
+    growth_rate: 'Growing';
+    variant: 'quantum - neural';
+    contact_info: contact;
+    real_implementation: true;
+    implementation_details: 'Read - only billing analysis with PR - based changes.';
+    launch_date: '2025 - 01 - 03';
     customers: 19;
+<<<<<<< HEAD
 <<<<<<< HEAD
     rating: 4.5
 =======
     rating: 4 && 4.5,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 11
+=======
+    rating: 4.5,
+    reviews: 11;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
-    id: 'privacy-vault';
+    id: 'privacy - vault';
     name: 'Privacy Vault';
     tagline: 'Tokenize PII and control access with audit trails';
     price: '$179';
+<<<<<<< HEAD
     period: '/month'
     description: 'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.';
     features: [
@@ -463,40 +711,62 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'Developers, privacy and legal teams';
     trialDays: 14;
     setupTime: '1–3 days';
+=======
+    period: '/month',
+    description: 'Centralize PII with field - level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.';
+    features: [;
+      'Field - level encryption_tokenization APIsConsent enforcement_audit trail and reporting';
+    ];
+    popular: false;
+    icon: '🔏';
+    color: 'from - slate - 600 to - gray - 700';
+    text_color: 'text - slate - 300';
+    link: 'https://ziontechgroup.com / privacy - vault';
+    market_position: 'Developer - first alternative to heavy enterprise privacy suites.',
+    target_audience: 'Developers, privacy and legal teams';
+    trial_days: 14;
+    setup_time: '1–3 days';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Security & Compliance';
-    realService: true;
+    real_service: true;
     technology: ['KMSHSMPostgreSQL'];
     integrations: ['AWS KMSHashiCorp Vault'];
-    useCases: ['PCI/PII protectionConsent managementData sharing'];
+    use_cases: ['PCI / PII protection_consent management_data sharing'];
     roi: 'Reduce breach risk and compliance effort';
     competitors: ['SkyflowVery Good Security'];
-    marketSize: '$4B Privacy Tech';
-    growthRate: 'Growing';
-    variant: 'holographic-neural';
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Drop-in SDKs and proxy-based tokenization.';
-    launchDate: '2025-01-07';
+    market_size: '$4B Privacy Tech';
+    growth_rate: 'Growing';
+    variant: 'holographic - neural';
+    contact_info: contact;
+    real_implementation: true;
+    implementation_details: 'Drop - in SDKs and proxy - based tokenization.';
+    launch_date: '2025 - 01 - 07';
     customers: 9;
+<<<<<<< HEAD
 <<<<<<< HEAD
     rating: 4.6
 =======
     rating: 4 && 4.6,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 7
+=======
+    rating: 4.6,
+    reviews: 7;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
-    id: 'ai-fraud-detection-lite';
+    id: 'ai - fraud - detection - lite';
     name: 'AI Fraud Detection Lite';
-    tagline: 'Graph-based anomalies with explainability for SMBs';
+    tagline: 'Graph - based anomalies with explainability for SMBs';
     price: '$159';
     period: '/month';
     description: 'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.';
-    features: [
-      'Graph-based anomaly detectionExplainability reportsRisk scoring APIWorkflow actions and webhooks'
+    features: [;
+      'Graph - based anomaly detection_explainability reports_risk scoring APIWorkflow actions and webhooks';
     ];
     popular: false;
     icon: '🧠';
+<<<<<<< HEAD
     color: 'from-pink-600 to-rose-700';
     textColor: 'text-pink-400';
 <<<<<<< HEAD
@@ -509,21 +779,31 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'Marketplaces, fintech, e-commerce';
     trialDays: 14;
     setupTime: '2–5 days';
+=======
+    color: 'from - pink - 600 to - rose - 700';
+    text_color: 'text - pink - 400';
+    link: 'https://ziontechgroup.com / ai - fraud - detection - lite';
+    market_position: 'Accessible alternative to enterprise fraud stacks.',
+    target_audience: 'Marketplaces, fintech, e - commerce';
+    trial_days: 14;
+    setup_time: '2–5 days';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Financial Technology';
-    realService: true;
+    real_service: true;
     technology: ['Graph DBPythonKafka'];
     integrations: ['StripeAdyenPlaid'];
-    useCases: ['Chargeback reductionAccount takeoverAbuse prevention'];
+    use_cases: ['Chargeback reduction_account takeover_abuse prevention'];
     roi: 'Lower chargebacks by 30–60%';
     competitors: ['SiftSEON'];
-    marketSize: '$10B Fraud Prevention';
-    growthRate: 'High';
-    variant: 'quantum-financial';
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Streaming and batch detectors with human-in-the-loop review.';
-    launchDate: '2025-01-09';
+    market_size: '$10B Fraud Prevention';
+    growth_rate: 'High';
+    variant: 'quantum - financial';
+    contact_info: contact;
+    real_implementation: true;
+    implementation_details: 'Streaming and batch detectors with human - in - the - loop review.';
+    launch_date: '2025 - 01 - 09';
     customers: 11;
+<<<<<<< HEAD
 <<<<<<< HEAD
     rating: 4.5
 =======
@@ -555,21 +835,46 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'Startups, SMBs, data teams';
     trialDays: 14;
     setupTime: '1–2 days';
+=======
+    rating: 4.5,
+    reviews: 8;
+  }
+  {
+    id: 'managed - postgres - ha - pro';
+    name: 'Managed Postgres HA Pro',
+    tagline: 'Turnkey HA, backups, PITR, and query tuning';
+    price: '$199';
+    period: '/month',
+    description: 'Production - grade PostgreSQL with high availability, automated backups, point - in - time recovery, and performance tuning insights.';
+    features: [;
+      'HA with automatic failover_continuous backups and PITRSlow query insights and indexing_encryption and access controls';
+    ];
+    popular: true;
+    icon: '🗃️';
+    color: 'from - blue - 600 to - indigo - 700';
+    text_color: 'text - blue - 400';
+    link: 'https://ziontechgroup.com / managed - postgres - ha';
+    market_position: 'Hands - on SRE support at a fraction of DBaaS enterprise tiers.',
+    target_audience: 'Startups, SMBs, data teams';
+    trial_days: 14;
+    setup_time: '1–2 days';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Observability';
-    realService: true;
-    technology: ['PostgreSQLPatroniWal-G'];
+    real_service: true;
+    technology: ['PostgreSQLPatroniWal - G'];
     integrations: ['GrafanaDatadog'];
-    useCases: ['Reliable databasesComplianceScaling'];
+    use_cases: ['Reliable databasesComplianceScaling'];
     roi: 'Avoid outages and accelerate teams';
     competitors: ['CrunchyDataAiven'];
-    marketSize: '$12B DBaaS';
-    growthRate: 'High';
+    market_size: '$12B DBaaS';
+    growth_rate: 'High';
     variant: 'quantum';
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Managed cluster with observability and runbooks.';
-    launchDate: '2025-01-16';
+    contact_info: contact;
+    real_implementation: true;
+    implementation_details: 'Managed cluster with observability and runbooks.';
+    launch_date: '2025 - 01 - 16';
     customers: 8;
+<<<<<<< HEAD
 <<<<<<< HEAD
     rating: 4.6
 =======
@@ -600,21 +905,46 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'Frontend, growth, product';
     trialDays: 14;
     setupTime: '30 minutes';
+=======
+    rating: 4.6,
+    reviews: 5;
+  }
+  {
+    id: 'browser - performance - monitor - pro';
+    name: 'Browser Performance Monitor Pro',
+    tagline: 'RUM, Core Web Vitals, and session replay';
+    price: '$79';
+    period: '/month',
+    description: 'Real - user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.';
+    features: [;
+      'Core Web Vitals dashboards_session replay and heatmaps_error tracking and sourcemaps_a / B test impact analysis';
+    ];
+    popular: true;
+    icon: '⚡';
+    color: 'from - amber - 600 to - yellow - 700';
+    text_color: 'text - amber - 300';
+    link: 'https://ziontechgroup.com / browser - performance - monitor',
+    market_position: 'Lightweight, privacy - friendly RUM for modern teams.';
+    target_audience: 'Frontend, growth, product';
+    trial_days: 14;
+    setup_time: '30 minutes';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Quality & Monitoring';
-    realService: true;
+    real_service: true;
     technology: ['JS SDKClickHouse'];
     integrations: ['PostHogSegment'];
-    useCases: ['UX improvementsConversion lift'];
+    use_cases: ['UX improvements_conversion lift'];
     roi: 'Lift conversion 2–10% by fixing performance';
     competitors: ['SentryNew Relic Browser'];
-    marketSize: '$5B APM';
-    growthRate: 'Growing';
+    market_size: '$5B APM';
+    growth_rate: 'Growing';
     variant: 'holographic';
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Agent + dashboards + anomaly alerts.';
-    launchDate: '2025-01-17';
+    contact_info: contact;
+    real_implementation: true;
+    implementation_details: 'Agent + dashboards + anomaly alerts.';
+    launch_date: '2025 - 01 - 17';
     customers: 12;
+<<<<<<< HEAD
 <<<<<<< HEAD
     rating: 4.5
 =======
@@ -625,15 +955,24 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
   {
     id: 'seo-automation-studio';
     name: 'SEO Automation Studio'
+=======
+    rating: 4.5,
+    reviews: 6;
+  }
+  {
+    id: 'seo - automation - studio';
+    name: 'SEO Automation Studio',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     tagline: 'Programmatic SEO, audits, and internal linking automation';
     price: '$99';
     period: '/month'
     description: 'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.';
-    features: [
-      'Site audits and fixesSchema and sitemapsProgrammatic pagesInternal linking graph'
+    features: [;
+      'Site audits and fixes_schema and sitemaps_programmatic pages_internal linking graph';
     ];
     popular: false;
     icon: '🔎';
+<<<<<<< HEAD
     color: 'from-emerald-600 to-teal-700';
     textColor: 'text-emerald-300';
 <<<<<<< HEAD
@@ -649,13 +988,26 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     category: 'Developer Tools';
     realService: true;
     technology: ['Node && Node.jsHeadless Chrome'];
+=======
+    color: 'from - emerald - 600 to - teal - 700';
+    text_color: 'text - emerald - 300';
+    link: 'https://ziontechgroup.com / seo - automation';
+    market_position: 'Builder - focused alternative to heavy SEO suites.',
+    target_audience: 'Growth, content, agencies';
+    trial_days: 14;
+    setup_time: 'Same day';
+    category: 'Developer Tools';
+    real_service: true;
+    technology: ['Node.js_headless Chrome'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     integrations: ['Search Console'];
-    useCases: ['Traffic growthTech SEO'];
+    use_cases: ['Traffic growth_tech SEO'];
     roi: 'Increase organic traffic 20–100%';
     competitors: ['AhrefsSemrush'];
-    marketSize: '$6B SEO Tools';
-    growthRate: 'Stable';
+    market_size: '$6B SEO Tools';
+    growth_rate: 'Stable';
     variant: 'neural';
+<<<<<<< HEAD
     contactInfo: contact;
     realImplementation: true
     implementationDetails: 'Crawlers, fixers, programmatic builder.';
@@ -667,19 +1019,29 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.4,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 4
+=======
+    contact_info: contact;
+    real_implementation: true,
+    implementation_details: 'Crawlers, fixers, programmatic builder.';
+    launch_date: '2025 - 01 - 18';
+    customers: 10;
+    rating: 4.4,
+    reviews: 4;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
-    id: 'webhook-relay-replay-pro';
+    id: 'webhook - relay - replay - pro';
     name: 'Webhook Relay & Replay Pro';
     tagline: 'Reliable webhooks with DLQ and replays';
     price: '$59';
     period: '/month'
     description: 'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.';
-    features: [
-      'DLQ and retry policiesInspector and redactionSignature verificationFan-out and transformations'
+    features: [;
+      'DLQ and retry policies_inspector and redaction_signature verification_fan - out and transformations';
     ];
     popular: true;
     icon: '🔁';
+<<<<<<< HEAD
     color: 'from-cyan-600 to-sky-700';
     textColor: 'text-cyan-300';
 <<<<<<< HEAD
@@ -695,30 +1057,48 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     category: 'Developer Tools';
     realService: true;
     technology: ['KafkaS3Node && KafkaS3Node.js'];
+=======
+    color: 'from - cyan - 600 to - sky - 700';
+    text_color: 'text - cyan - 300';
+    link: 'https://ziontechgroup.com / webhook - relay - replay';
+    market_position: 'Production safety net for integrations.',
+    target_audience: 'Developers, platforms';
+    trial_days: 14;
+    setup_time: '1 hour';
+    category: 'Developer Tools';
+    real_service: true;
+    technology: ['KafkaS3Node.js'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     integrations: ['StripeShopifyGitHub'];
-    useCases: ['Webhook reliabilityDebugging'];
+    use_cases: ['Webhook reliability_debugging'];
     roi: 'Reduce integration incidents 50%+';
     competitors: ['SvixHookdeck'];
-    marketSize: '$1B Integration Tools';
-    growthRate: 'Growing';
-    variant: 'quantum-matrix';
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Broker + storage + replayer UI.';
-    launchDate: '2025-01-19';
+    market_size: '$1B Integration Tools';
+    growth_rate: 'Growing';
+    variant: 'quantum - matrix';
+    contact_info: contact;
+    real_implementation: true;
+    implementation_details: 'Broker + storage + replayer UI.';
+    launch_date: '2025 - 01 - 19';
     customers: 7;
+<<<<<<< HEAD
 <<<<<<< HEAD
     rating: 4.6
 =======
     rating: 4 && 4.6,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 3
+=======
+    rating: 4.6,
+    reviews: 3;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
-    id: 'pdf-render-api-pro';
+    id: 'pdf - render - api - pro';
     name: 'PDF Render API Pro';
-    tagline: 'Fast HTML-to-PDF with brand-safe templates';
+    tagline: 'Fast HTML - to - PDF with brand - safe templates';
     price: '$49';
+<<<<<<< HEAD
     period: '/month'
     description: 'Serverless HTML-to-PDF rendering with page numbers, headers/footers, and safe fonts. Great for invoices and reports.';
     features: [
@@ -738,13 +1118,30 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'SaaS, finance, ops';
     trialDays: 14;
     setupTime: '30 minutes';
+=======
+    period: '/month',
+    description: 'Serverless HTML - to - PDF rendering with page numbers, headers / footers, and safe fonts. Great for invoices and reports.';
+    features: [;
+      'Serverless scale_template gallery_brand - safe fonts_webhook on completion';
+    ];
+    popular: true;
+    icon: '📄';
+    color: 'from - slate - 600 to - gray - 700';
+    text_color: 'text - slate - 300';
+    link: 'https://ziontechgroup.com / pdf - render - api';
+    market_position: 'Secure alternative to self - hosting headless browsers.',
+    target_audience: 'SaaS, finance, ops';
+    trial_days: 14;
+    setup_time: '30 minutes';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Developer Tools';
-    realService: true;
+    real_service: true;
     technology: ['WorkersHeadless Chrome'];
     integrations: ['ZapierMake'];
-    useCases: ['InvoicesReports'];
+    use_cases: ['InvoicesReports'];
     roi: 'Save days of maintenance yearly';
     competitors: ['PDFShiftDocRaptor'];
+<<<<<<< HEAD
     marketSize: '$1B Doc Gen';
     growthRate: 'Stable';
     variant: 'holographic-advanced';
@@ -784,13 +1181,46 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'Backend teams, SRE';
     trialDays: 14;
     setupTime: '1 day';
+=======
+    market_size: '$1B Doc Gen';
+    growth_rate: 'Stable';
+    variant: 'holographic - advanced';
+    contact_info: contact;
+    real_implementation: true,
+    implementation_details: 'Isolated renderer pool, signed URLs.';
+    launch_date: '2025 - 01 - 18';
+    customers: 22;
+    rating: 4.6,
+    reviews: 10;
+  }
+  {
+    id: 'api - observability - starter - pro';
+    name: 'API Observability Starter Pro',
+    tagline: 'Traces, metrics, logs for APIs without the bloat';
+    price: '$99';
+    period: '/month',
+    description: 'Easy OpenTelemetry - based tracing, RED metrics, and error analytics with exporters to your stack.';
+    features: [;
+      'Auto - instrumentationRED dashboards_error analytics_exporters to APMs';
+    ];
+    popular: false;
+    icon: '🛰️';
+    color: 'from - purple - 600 to - indigo - 700';
+    text_color: 'text - purple - 300';
+    link: 'https://ziontechgroup.com / api - observability - starter';
+    market_position: 'Developer - first observability starter kit.',
+    target_audience: 'Backend teams, SRE';
+    trial_days: 14;
+    setup_time: '1 day';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Observability';
-    realService: true;
+    real_service: true;
     technology: ['OpenTelemetryGrafana'];
     integrations: ['DatadogNew Relic'];
-    useCases: ['API reliabilityPerformance'];
+    use_cases: ['API reliability_performance'];
     roi: 'Reduce MTTR by 30–50%';
     competitors: ['HoneycombLightstep'];
+<<<<<<< HEAD
     marketSize: '$10B Observability';
     growthRate: 'High';
     variant: 'quantum-holographic';
@@ -809,15 +1239,32 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
   {
     id: 'sso-in-a-box-pro';
     name: 'SSO in a Box Pro'
+=======
+    market_size: '$10B Observability';
+    growth_rate: 'High';
+    variant: 'quantum - holographic';
+    contact_info: contact;
+    real_implementation: true,
+    implementation_details: 'SDKs, collectors, quick dashboards.';
+    launch_date: '2025 - 01 - 17';
+    customers: 9;
+    rating: 4.5,
+    reviews: 4;
+  }
+  {
+    id: 'sso - in - a-box - pro';
+    name: 'SSO in a Box Pro',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     tagline: 'SAML, OIDC, SCIM with turnkey onboarding';
     price: '$149';
     period: '/month'
     description: 'Offer SSO and SCIM to your customers with a managed gateway, branding, and test harnesses.';
-    features: [
-      'SAML and OIDCSCIM and JIT provisioningBranding and mappingCustomer sandbox'
+    features: [;
+      'SAML and OIDCSCIM and JIT provisioning_branding and mapping_customer sandbox';
     ];
     popular: true;
     icon: '🔐';
+<<<<<<< HEAD
     color: 'from-emerald-600 to-teal-700';
     textColor: 'text-emerald-300';
     link: 'https://ziontechgroup && ziontechgroup.com/sso-in-a-box';
@@ -825,40 +1272,55 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'SaaS teams';
     trialDays: 14;
     setupTime: '2–5 days';
+=======
+    color: 'from - emerald - 600 to - teal - 700';
+    text_color: 'text - emerald - 300';
+    link: 'https://ziontechgroup.com / sso - in - a-box';
+    market_position: 'Ship enterprise features in days.';
+    target_audience: 'SaaS teams';
+    trial_days: 14;
+    setup_time: '2–5 days';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Security & Compliance';
-    realService: true;
+    real_service: true;
     technology: ['KeycloakAuth gateways'];
     integrations: ['OktaAzure ADGoogle'];
-    useCases: ['Enterprise dealsUser management'];
+    use_cases: ['Enterprise deals_user management'];
     roi: 'Unlock enterprise revenue faster';
     competitors: ['WorkosAuth0Stytch'];
-    marketSize: '$8B Identity';
-    growthRate: 'High';
-    variant: 'neural-quantum';
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Hosted broker + mappings UI.';
-    launchDate: '2025-01-17';
+    market_size: '$8B Identity';
+    growth_rate: 'High';
+    variant: 'neural - quantum';
+    contact_info: contact;
+    real_implementation: true;
+    implementation_details: 'Hosted broker + mappings UI.';
+    launch_date: '2025 - 01 - 17';
     customers: 6;
+<<<<<<< HEAD
 <<<<<<< HEAD
     rating: 4.7
 =======
     rating: 4 && 4.7,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 3
+=======
+    rating: 4.7,
+    reviews: 3;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   {
-    id: 'it-asset-discovery-agent-pro';
+    id: 'it - asset - discovery - agent - pro';
     name: 'IT Asset Discovery Agent Pro';
     tagline: 'Agentless discovery with CMDB sync';
     price: '$129';
     period: '/month'
     description: 'Discover hardware, software, and services across networks with agentless scans and sync to CMDB.';
-    features: [
-      'Network scans and SNMPSoftware inventoryChange trackingCMDB integrations'
+    features: [;
+      'Network scans and SNMPSoftware inventory_change trackingCMDB integrations';
     ];
     popular: false;
     icon: '🛰️';
+<<<<<<< HEAD
     color: 'from-sky-600 to-blue-700';
     textColor: 'text-sky-300';
     link: 'https://ziontechgroup && ziontechgroup.com/it-asset-discovery-agent';
@@ -866,16 +1328,26 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'IT and security ops';
     trialDays: 14;
     setupTime: '1–3 days';
+=======
+    color: 'from - sky - 600 to - blue - 700';
+    text_color: 'text - sky - 300';
+    link: 'https://ziontechgroup.com / it - asset - discovery - agent';
+    market_position: 'Modern take on asset discovery.';
+    target_audience: 'IT and security ops';
+    trial_days: 14;
+    setup_time: '1–3 days';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'IT Operations';
-    realService: true;
+    real_service: true;
     technology: ['nmapSNMPGo'];
     integrations: ['ServiceNowJira'];
-    useCases: ['InventorySecurity'];
+    use_cases: ['InventorySecurity'];
     roi: 'Reduce unknown assets and risk';
     competitors: ['Lansweeper'];
-    marketSize: '$2B ITAM';
-    growthRate: 'Growing';
+    market_size: '$2B ITAM';
+    growth_rate: 'Growing';
     variant: 'holographic';
+<<<<<<< HEAD
     contactInfo: contact;
     realImplementation: true
     implementationDetails: 'Scanners, parsers, CMDB sync.';
@@ -891,15 +1363,29 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
   {
     id: 'vendor-risk-automation-lite';
     name: 'Vendor Risk Automation Lite'
+=======
+    contact_info: contact;
+    real_implementation: true,
+    implementation_details: 'Scanners, parsers, CMDB sync.';
+    launch_date: '2025 - 01 - 16';
+    customers: 5;
+    rating: 4.4,
+    reviews: 2;
+  }
+  {
+    id: 'vendor - risk - automation - lite';
+    name: 'Vendor Risk Automation Lite',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     tagline: 'Questionnaires, evidence, and continuous monitoring';
     price: '$129';
     period: '/month'
     description: 'Streamline vendor assessments with standardized questionnaires, evidence requests, and continuous security monitoring.';
-    features: [
-      'Questionnaire templatesEvidence collection portalContinuous monitoringRisk scoring'
+    features: [;
+      'Questionnaire templates_evidence collection portal_continuous monitoring_risk scoring';
     ];
     popular: true;
     icon: '📋';
+<<<<<<< HEAD
     color: 'from-rose-600 to-orange-700';
     textColor: 'text-rose-300';
 <<<<<<< HEAD
@@ -915,18 +1401,31 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     category: 'Security & Compliance';
     realService: true;
     technology: ['Node && Node.jsReact'];
+=======
+    color: 'from - rose - 600 to - orange - 700';
+    text_color: 'text - rose - 300';
+    link: 'https://ziontechgroup.com / vendor - risk - automation';
+    market_position: 'Faster and lighter than legacy GRC.',
+    target_audience: 'Security, procurement';
+    trial_days: 14;
+    setup_time: '1–3 days';
+    category: 'Security & Compliance';
+    real_service: true;
+    technology: ['Node.js_react'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     integrations: ['SecurityScorecard'];
-    useCases: ['Vendor due diligence'];
+    use_cases: ['Vendor due diligence'];
     roi: 'Cut cycle time by 50%+';
     competitors: ['WhisticOneTrust'];
-    marketSize: '$4B Third-party Risk';
-    growthRate: 'High';
-    variant: 'quantum-cyberpunk';
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Portal + integrations + reports.';
-    launchDate: '2025-01-19';
+    market_size: '$4B Third - party Risk';
+    growth_rate: 'High';
+    variant: 'quantum - cyberpunk';
+    contact_info: contact;
+    real_implementation: true;
+    implementation_details: 'Portal + integrations + reports.';
+    launch_date: '2025 - 01 - 19';
     customers: 6;
+<<<<<<< HEAD
 <<<<<<< HEAD
     rating: 4.5
     reviews: 3
@@ -941,12 +1440,17 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
 =======
     rating: 4 && 4.5,
     reviews: 3
+=======
+    rating: 4.5,
+    reviews: 3;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 ];
-    targetAudience: 'AI product teams, platform engineers, data teams',
-    trialDays: 21,
-    setupTime: '1 day',
+    target_audience: 'AI product teams, platform engineers, data teams',
+    trial_days: 21,
+    setup_time: '1 day',
     category: 'AI & Machine Learning',
+<<<<<<< HEAD
     realService: true,
     technology: ['Next && Next.js', 'OpenTelemetry', 'PostgreSQL', 'ClickHouse'],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -974,14 +1478,35 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     reviews: 22
   }
 =======
+=======
+    real_service: true,
+    technology: ['Next.js', 'OpenTelemetry', 'PostgreSQL', 'ClickHouse'],
+    integrations: [;
+      'OpenAI - compatible',
+      'LangChain',
+      'LlamaIndex',
+      'Datadog',
+      'Grafana',
+    ],
+    use_cases: ['LLM app monitoring', 'Cost control', 'Policy compliance'],
+    roi: 'Cut LLM cost 20–45% while improving reliability',
+    competitors: ['Langfuse', 'Arize', 'Weights & Biases'],
+    market_size: '$5B+ AI Ops and Observability',
+    growth_rate: 'Rapid growth with LLM adoption',
+    variant: 'quantum - holographic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Agent SDKs, tracing collectors, and dashboards ready to deploy.',
-    launchDate: '2025-01-10',
+    launch_date: '2025 - 01 - 10',
     customers: 32,
     rating: 4 && 4.8,
     reviews: 22,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
     id: 'ai-sales-email-copilot'
     name: 'AI Sales Email Copilot'
     tagline: 'Personalized multi-touch outbound with real-time enrichment'
@@ -1028,15 +1553,26 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     reviews: 58
   }
 =======
+=======
+    id: 'ai - sales - email - copilot',
+    name: 'AI Sales Email Copilot',
+    tagline: 'Personalized multi - touch outbound with real - time enrichment',
+    price: '$129',
+    period: '/month',
+    description:;
+      'Automate prospect research, write context - aware messages, and schedule follow - ups across email and LinkedIn. Built - in A / B testing and domain warmup best practices.',
+    features: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Prospect enrichment via public sources',
       'Personalized email generation',
-      'Sequence and follow-up scheduling',
-      'A/B testing and analytics',
-      'SPF/DKIM/DMARC checks',
+      'Sequence and follow - up scheduling',
+      'A / B testing and analytics',
+      'SPF / DKIM / DMARC checks',
       'Inbox rotation support',
     ],
     popular: false,
     icon: '✉️',
+<<<<<<< HEAD
     color: 'from-violet-600 to-fuchsia-700',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-email-copilot',
@@ -1054,18 +1590,38 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     competitors: ['Copy && Copy.ai', 'Lavender', 'Instantly'],
     marketSize: '$15B Sales Engagement',
     growthRate: 'Strong growth',
+=======
+    color: 'from - violet - 600 to - fuchsia - 700',
+    text_color: 'text - violet - 400',
+    link: 'https://ziontechgroup.com / ai - sales - email - copilot',
+    market_position:;
+      'Lower cost with better personalization vs. Jasper and constant - contact tools.',
+    target_audience: 'B2B startups, agencies, SDR teams',
+    trial_days: 14,
+    setup_time: '2 hours',
+    category: 'Sales & Marketing',
+    real_service: true,
+    technology: ['Next.js', 'Workers', 'PostgreSQL'],
+    integrations: ['HubSpot', 'Salesforce', 'Apollo', 'Lemlist'],
+    use_cases: ['Outbound sequences', 'Upsell campaigns', 'Reactivation'],
+    roi: 'Increase replies 2–5x with hyper - personalization',
+    competitors: ['Copy.ai', 'Lavender', 'Instantly'],
+    market_size: '$15B Sales Engagement',
+    growth_rate: 'Strong growth',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     variant: 'holographic',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails:
-      'Sequencer, enrichment adapters, and warm-up utilities.',
-    launchDate: '2024-12-20',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Sequencer, enrichment adapters, and warm - up utilities.',
+    launch_date: '2024 - 12 - 20',
     customers: 120,
     rating: 4 && 4.7,
     reviews: 58,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
     id: 'security-posture-as-code'
     name: 'Security Posture as Code'
     tagline: 'CIS/NIST/Kyverno policy packs with drift remediation'
@@ -1088,13 +1644,25 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     link: 'https://ziontechgroup.com/security-posture-as-code'
 =======
       'Policy packs for CIS/NIST',
+=======
+    id: 'security - posture - as - code',
+    name: 'Security Posture as Code',
+    tagline: 'CIS / NIST / Kyverno policy packs with drift remediation',
+    price: '$399',
+    period: '/month',
+    description:;
+      'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps - friendly with automatic fix PRs and evidence collection for audits.',
+    features: [;
+      'Policy packs for CIS / NIST',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Kubernetes and cloud posture',
-      'Auto-remediation PRs',
+      'Auto - remediation PRs',
       'Evidence collection and reports',
-      'SOC2/ISO 27001 export',
+      'SOC2 / ISO 27001 export',
     ],
     popular: true,
     icon: '🛡️',
+<<<<<<< HEAD
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup && ziontechgroup.com/security-posture-as-code',
@@ -1127,12 +1695,38 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
 =======
       'Policy engine plus cloud/K8s scanners and fix generators.',
     launchDate: '2025-01-05',
+=======
+    color: 'from - emerald - 600 to - teal - 700',
+    text_color: 'text - emerald - 400',
+    link: 'https://ziontechgroup.com / security - posture - as - code',
+    market_position:;
+      'Brings policy - as - code and compliance automation into one product.',
+    target_audience: 'Platform teams, security engineers, compliance leads',
+    trial_days: 21,
+    setup_time: '1–3 days',
+    category: 'Cybersecurity',
+    real_service: true,
+    technology: ['OPA', 'Kyverno', 'Terraform', 'GitHub Actions'],
+    integrations: ['AWS', 'Azure', 'GCP', 'GitHub', 'GitLab'],
+    use_cases: ['Baseline enforcement', 'Audit readiness', 'Drift detection'],
+    roi: 'Reduce audit prep time by 70%',
+    competitors: ['Wiz', 'Prisma Cloud', 'Snyk'],
+    market_size: '$30B Cloud Security',
+    growth_rate: 'High growth',
+    variant: 'neural - quantum',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Policy engine plus cloud / K8s scanners and fix generators.',
+    launch_date: '2025 - 01 - 05',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     customers: 18,
     rating: 4 && 4.6,
     reviews: 14,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
     id: 'etl-observability-starter'
     name: 'ETL Observability Starter'
     tagline: 'Data pipeline health with schema change and freshness alerts'
@@ -1153,13 +1747,24 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     textColor: 'text-blue-400'
     link: 'https://ziontechgroup.com/etl-observability-starter'
 =======
+=======
+    id: 'etl - observability - starter',
+    name: 'ETL Observability Starter',
+    tagline: 'Data pipeline health with schema change and freshness alerts',
+    price: '$99',
+    period: '/month',
+    description:;
+      'Monitor data pipelines end - to - end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.',
+    features: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Freshness and volume checks',
       'Schema drift detection',
       'SLA and SLO tracking',
-      'Incident routing to Slack/Teams',
+      'Incident routing to Slack / Teams',
     ],
     popular: false,
     icon: '🗄️',
+<<<<<<< HEAD
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup && ziontechgroup.com/etl-observability-starter',
@@ -1190,14 +1795,38 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     reviews: 12
   }
 =======
+=======
+    color: 'from - blue - 600 to - indigo - 700',
+    text_color: 'text - blue - 400',
+    link: 'https://ziontechgroup.com / etl - observability - starter',
+    market_position:;
+      'Simpler and faster to adopt vs. enterprise data observability tools.',
+    target_audience: 'Analytics engineers, data teams',
+    trial_days: 14,
+    setup_time: '1 day',
+    category: 'Data & Analytics',
+    real_service: true,
+    technology: ['Debezium', 'Airflow', 'dbt'],
+    integrations: ['BigQuery', 'Snowflake', 'Redshift', 'Postgres'],
+    use_cases: ['Pipeline health', 'Data quality', 'SLA tracking'],
+    roi: 'Reduce data incidents 30–60%',
+    competitors: ['Monte Carlo', 'Bigeye'],
+    market_size: '$3B Data Observability',
+    growth_rate: 'Growing',
+    variant: 'quantum',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Light agents and metadata collectors with warehouse connectors.',
-    launchDate: '2025-01-12',
+    launch_date: '2025 - 01 - 12',
     customers: 25,
     rating: 4 && 4.5,
     reviews: 12,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
     id: 'api-performance-shield'
     name: 'API Performance Shield'
     tagline: 'Global edge caching, rate limiting, and anomaly detection'
@@ -1241,13 +1870,24 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     reviews: 9
   }
 =======
+=======
+    id: 'api - performance - shield',
+    name: 'API Performance Shield',
+    tagline: 'Global edge caching, rate limiting, and anomaly detection',
+    price: '$149',
+    period: '/month',
+    description:;
+      'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero - downtime via traffic shadowing.',
+    features: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Global CDN edge caching',
       'Dynamic rate limiting',
       'Anomaly and abuse detection',
-      'Zero-downtime deploys with shadow traffic',
+      'Zero - downtime deploys with shadow traffic',
     ],
     popular: true,
     icon: '🛰️',
+<<<<<<< HEAD
     color: 'from-cyan-600 to-sky-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup && ziontechgroup.com/api-performance-shield',
@@ -1255,27 +1895,37 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'API-first startups, SaaS, marketplaces',
     trialDays: 14,
     setupTime: 'Same day',
+=======
+    color: 'from - cyan - 600 to - sky - 700',
+    text_color: 'text - cyan - 400',
+    link: 'https://ziontechgroup.com / api - performance - shield',
+    market_position: 'Unified performance and security at SMB - friendly pricing.',
+    target_audience: 'API - first startups, SaaS, marketplaces',
+    trial_days: 14,
+    setup_time: 'Same day',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'DevOps & Automation',
-    realService: true,
+    real_service: true,
     technology: ['Workers', 'Rust', 'Redis'],
     integrations: ['Cloudflare', 'Fastly', 'Akamai'],
-    useCases: ['API acceleration', 'Abuse protection', 'Cost control'],
+    use_cases: ['API acceleration', 'Abuse protection', 'Cost control'],
     roi: 'Reduce p99 latency up to 60%',
     competitors: ['Cloudflare Enterprise', 'Akamai API Acceleration'],
-    marketSize: '$10B API Security',
-    growthRate: 'Strong',
-    variant: 'quantum-matrix',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails:
+    market_size: '$10B API Security',
+    growth_rate: 'Strong',
+    variant: 'quantum - matrix',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
       'Managed edge configs and anomaly ML with safe rollout tools.',
-    launchDate: '2025-01-15',
+    launch_date: '2025 - 01 - 15',
     customers: 14,
     rating: 4 && 4.7,
     reviews: 9,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
     id: 'ai-product-analytics'
     name: 'AI Product Analytics'
     tagline:
@@ -1321,12 +1971,25 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
   }
 =======
       'Auto-segmentation and cohorts',
+=======
+    id: 'ai - product - analytics',
+    name: 'AI Product Analytics',
+    tagline:;
+      'Session insights, funnel auto - segmentation, and LLM - based insights',
+    price: '$129',
+    period: '/month',
+    description:;
+      'Turn product usage into insights with automatic funnel detection, LLM - based querying, and anomaly alerts. Works alongside Amplitude / GA4.',
+    features: [;
+      'Auto - segmentation and cohorts',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'LLM query interface',
       'Retention and churn signals',
-      'Anomaly alerts to Slack/Teams',
+      'Anomaly alerts to Slack / Teams',
     ],
     popular: false,
     icon: '📊',
+<<<<<<< HEAD
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-product-analytics',
@@ -1338,23 +2001,37 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     category: 'Analytics & Business Intelligence',
     realService: true,
     technology: ['Next && Next.js', 'PostHog', 'ClickHouse'],
+=======
+    color: 'from - purple - 600 to - indigo - 700',
+    text_color: 'text - purple - 400',
+    link: 'https://ziontechgroup.com / ai - product - analytics',
+    market_position:;
+      'Brings AI querying and anomaly detection without vendor lock - in.',
+    target_audience: 'Product teams, founders, analysts',
+    trial_days: 14,
+    setup_time: '1 day',
+    category: 'Analytics & Business Intelligence',
+    real_service: true,
+    technology: ['Next.js', 'PostHog', 'ClickHouse'],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     integrations: ['Segment', 'RudderStack', 'Snowplow'],
-    useCases: ['Growth analytics', 'Retention', 'Experimentation'],
+    use_cases: ['Growth analytics', 'Retention', 'Experimentation'],
     roi: 'Find growth levers 2x faster',
     competitors: ['Amplitude', 'Mixpanel'],
-    marketSize: '$8B Product Analytics',
-    growthRate: 'Growing',
-    variant: 'holographic-advanced',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Event capture SDKs and warehouse-first analytics.',
-    launchDate: '2025-01-02',
+    market_size: '$8B Product Analytics',
+    growth_rate: 'Growing',
+    variant: 'holographic - advanced',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Event capture SDKs and warehouse - first analytics.',
+    launch_date: '2025 - 01 - 02',
     customers: 41,
     rating: 4 && 4.6,
     reviews: 20,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
     id: 'ai-support-deflection'
     name: 'AI Support Deflection'
     tagline: 'Self-serve answers with RAG, forms, and secure handoff'
@@ -1398,12 +2075,24 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
   }
 =======
       'Multi-channel widgets',
+=======
+    id: 'ai - support - deflection',
+    name: 'AI Support Deflection',
+    tagline: 'Self - serve answers with RAG, forms, and secure handoff',
+    price: '$99',
+    period: '/month',
+    description:;
+      'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi - channel widgets with brand controls.',
+    features: [;
+      'Multi - channel widgets',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Grounded answers with citations',
       'Secure human handoff',
       'Analytics and CSAT tracking',
     ],
     popular: true,
     icon: '💬',
+<<<<<<< HEAD
     color: 'from-rose-600 to-orange-700',
     textColor: 'text-rose-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-support-deflection',
@@ -1414,23 +2103,36 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     category: 'Customer Support & Success',
     realService: true,
     technology: ['RAG', 'Vector DB', 'Next && Next.js'],
+=======
+    color: 'from - rose - 600 to - orange - 700',
+    text_color: 'text - rose - 400',
+    link: 'https://ziontechgroup.com / ai - support - deflection',
+    market_position: 'Faster time - to - value vs. enterprise chatbot suites.',
+    target_audience: 'Support teams, SMB SaaS, marketplaces',
+    trial_days: 14,
+    setup_time: 'Same day',
+    category: 'Customer Support & Success',
+    real_service: true,
+    technology: ['RAG', 'Vector DB', 'Next.js'],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     integrations: ['Zendesk', 'Intercom', 'Freshdesk'],
-    useCases: ['Self-serve support', 'Ticket reduction', 'CSAT improvement'],
+    use_cases: ['Self - serve support', 'Ticket reduction', 'CSAT improvement'],
     roi: 'Reduce tickets 30–50%',
     competitors: ['Intercom Fin', 'Ada'],
-    marketSize: '$10B Support Tech',
-    growthRate: 'Strong',
-    variant: 'quantum-cyberpunk',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Embeddable widget and handoff connectors.',
-    launchDate: '2024-12-15',
+    market_size: '$10B Support Tech',
+    growth_rate: 'Strong',
+    variant: 'quantum - cyberpunk',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Embeddable widget and handoff connectors.',
+    launch_date: '2024 - 12 - 15',
     customers: 75,
     rating: 4 && 4.7,
     reviews: 48,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
     id: 'cloud-cost-autopilot'
     name: 'Cloud Cost Autopilot'
     tagline: 'Automated rightsizing, anomaly alerts, and commitment planning'
@@ -1473,13 +2175,24 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     reviews: 11
   }
 =======
+=======
+    id: 'cloud - cost - autopilot',
+    name: 'Cloud Cost Autopilot',
+    tagline: 'Automated rightsizing, anomaly alerts, and commitment planning',
+    price: '$249',
+    period: '/month',
+    description:;
+      'Proactive optimization for AWS / Azure / GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.',
+    features: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Rightsizing recommendations',
       'Anomaly detection',
-      'Savings plan/RIs planning',
+      'Savings plan / RIs planning',
       'Tag hygiene and showback',
     ],
     popular: true,
     icon: '💸',
+<<<<<<< HEAD
     color: 'from-amber-600 to-yellow-700',
     textColor: 'text-amber-400',
     link: 'https://ziontechgroup && ziontechgroup.com/cloud-cost-autopilot',
@@ -1487,26 +2200,36 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'FinOps teams, platform and SRE',
     trialDays: 21,
     setupTime: '2–5 days',
+=======
+    color: 'from - amber - 600 to - yellow - 700',
+    text_color: 'text - amber - 400',
+    link: 'https://ziontechgroup.com / cloud - cost - autopilot',
+    market_position: 'Actionable savings, not just dashboards.',
+    target_audience: 'FinOps teams, platform and SRE',
+    trial_days: 21,
+    setup_time: '2–5 days',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Cloud & Infrastructure',
-    realService: true,
+    real_service: true,
     technology: ['AWS Cost Explorer', 'Azure Cost', 'GCP Billing'],
     integrations: ['AWS', 'Azure', 'GCP'],
-    useCases: ['Cost control', 'Anomaly response', 'Budgeting'],
+    use_cases: ['Cost control', 'Anomaly response', 'Budgeting'],
     roi: 'Save 15–35% on cloud spend',
     competitors: ['CloudZero', 'Kubecost'],
-    marketSize: '$6B FinOps',
-    growthRate: 'Growing',
-    variant: 'quantum-neural',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Read-only billing analysis with PR-based changes.',
-    launchDate: '2025-01-03',
+    market_size: '$6B FinOps',
+    growth_rate: 'Growing',
+    variant: 'quantum - neural',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Read - only billing analysis with PR - based changes.',
+    launch_date: '2025 - 01 - 03',
     customers: 19,
     rating: 4 && 4.5,
     reviews: 11,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
     id: 'privacy-vault'
     name: 'Privacy Vault'
     tagline: 'Tokenize PII and control access with audit trails'
@@ -1551,12 +2274,24 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
   }
 =======
       'Field-level encryption',
+=======
+    id: 'privacy - vault',
+    name: 'Privacy Vault',
+    tagline: 'Tokenize PII and control access with audit trails',
+    price: '$179',
+    period: '/month',
+    description:;
+      'Centralize PII with field - level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.',
+    features: [;
+      'Field - level encryption',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Tokenization APIs',
       'Consent enforcement',
       'Audit trail and reporting',
     ],
     popular: false,
     icon: '🔏',
+<<<<<<< HEAD
     color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-300',
     link: 'https://ziontechgroup && ziontechgroup.com/privacy-vault',
@@ -1565,26 +2300,37 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'Developers, privacy and legal teams',
     trialDays: 14,
     setupTime: '1–3 days',
+=======
+    color: 'from - slate - 600 to - gray - 700',
+    text_color: 'text - slate - 300',
+    link: 'https://ziontechgroup.com / privacy - vault',
+    market_position:;
+      'Developer - first alternative to heavy enterprise privacy suites.',
+    target_audience: 'Developers, privacy and legal teams',
+    trial_days: 14,
+    setup_time: '1–3 days',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Security & Compliance',
-    realService: true,
+    real_service: true,
     technology: ['KMS', 'HSM', 'PostgreSQL'],
     integrations: ['AWS KMS', 'HashiCorp Vault'],
-    useCases: ['PCI/PII protection', 'Consent management', 'Data sharing'],
+    use_cases: ['PCI / PII protection', 'Consent management', 'Data sharing'],
     roi: 'Reduce breach risk and compliance effort',
     competitors: ['Skyflow', 'Very Good Security'],
-    marketSize: '$4B Privacy Tech',
-    growthRate: 'Growing',
-    variant: 'holographic-neural',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Drop-in SDKs and proxy-based tokenization.',
-    launchDate: '2025-01-07',
+    market_size: '$4B Privacy Tech',
+    growth_rate: 'Growing',
+    variant: 'holographic - neural',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Drop - in SDKs and proxy - based tokenization.',
+    launch_date: '2025 - 01 - 07',
     customers: 9,
     rating: 4 && 4.6,
     reviews: 7,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
     id: 'ai-fraud-detection-lite'
     name: 'AI Fraud Detection Lite'
     tagline: 'Graph-based anomalies with explainability for SMBs'
@@ -1629,12 +2375,24 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
   }
 =======
       'Graph-based anomaly detection',
+=======
+    id: 'ai - fraud - detection - lite',
+    name: 'AI Fraud Detection Lite',
+    tagline: 'Graph - based anomalies with explainability for SMBs',
+    price: '$159',
+    period: '/month',
+    description:;
+      'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.',
+    features: [;
+      'Graph - based anomaly detection',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Explainability reports',
       'Risk scoring API',
       'Workflow actions and webhooks',
     ],
     popular: false,
     icon: '🧠',
+<<<<<<< HEAD
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-fraud-detection-lite',
@@ -1642,27 +2400,37 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'Marketplaces, fintech, e-commerce',
     trialDays: 14,
     setupTime: '2–5 days',
+=======
+    color: 'from - pink - 600 to - rose - 700',
+    text_color: 'text - pink - 400',
+    link: 'https://ziontechgroup.com / ai - fraud - detection - lite',
+    market_position: 'Accessible alternative to enterprise fraud stacks.',
+    target_audience: 'Marketplaces, fintech, e - commerce',
+    trial_days: 14,
+    setup_time: '2–5 days',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Financial Technology',
-    realService: true,
+    real_service: true,
     technology: ['Graph DB', 'Python', 'Kafka'],
     integrations: ['Stripe', 'Adyen', 'Plaid'],
-    useCases: ['Chargeback reduction', 'Account takeover', 'Abuse prevention'],
+    use_cases: ['Chargeback reduction', 'Account takeover', 'Abuse prevention'],
     roi: 'Lower chargebacks by 30–60%',
     competitors: ['Sift', 'SEON'],
-    marketSize: '$10B Fraud Prevention',
-    growthRate: 'High',
-    variant: 'quantum-financial',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails:
-      'Streaming and batch detectors with human-in-the-loop review.',
-    launchDate: '2025-01-09',
+    market_size: '$10B Fraud Prevention',
+    growth_rate: 'High',
+    variant: 'quantum - financial',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Streaming and batch detectors with human - in - the - loop review.',
+    launch_date: '2025 - 01 - 09',
     customers: 11,
     rating: 4 && 4.5,
     reviews: 8,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
     id: 'managed-postgres-ha-pro'
     name: 'Managed Postgres HA Pro'
     tagline: 'Turnkey HA, backups, PITR, and query tuning'
@@ -1706,6 +2474,16 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     reviews: 5
   }
 =======
+=======
+    id: 'managed - postgres - ha - pro',
+    name: 'Managed Postgres HA Pro',
+    tagline: 'Turnkey HA, backups, PITR, and query tuning',
+    price: '$199',
+    period: '/month',
+    description:;
+      'Production - grade PostgreSQL with high availability, automated backups, point - in - time recovery, and performance tuning insights.',
+    features: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'HA with automatic failover',
       'Continuous backups and PITR',
       'Slow query insights and indexing',
@@ -1713,6 +2491,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     ],
     popular: true,
     icon: '🗃️',
+<<<<<<< HEAD
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup && ziontechgroup.com/managed-postgres-ha',
@@ -1721,26 +2500,37 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'Startups, SMBs, data teams',
     trialDays: 14,
     setupTime: '1–2 days',
+=======
+    color: 'from - blue - 600 to - indigo - 700',
+    text_color: 'text - blue - 400',
+    link: 'https://ziontechgroup.com / managed - postgres - ha',
+    market_position:;
+      'Hands - on SRE support at a fraction of DBaaS enterprise tiers.',
+    target_audience: 'Startups, SMBs, data teams',
+    trial_days: 14,
+    setup_time: '1–2 days',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Observability',
-    realService: true,
-    technology: ['PostgreSQL', 'Patroni', 'Wal-G'],
+    real_service: true,
+    technology: ['PostgreSQL', 'Patroni', 'Wal - G'],
     integrations: ['Grafana', 'Datadog'],
-    useCases: ['Reliable databases', 'Compliance', 'Scaling'],
+    use_cases: ['Reliable databases', 'Compliance', 'Scaling'],
     roi: 'Avoid outages and accelerate teams',
     competitors: ['CrunchyData', 'Aiven'],
-    marketSize: '$12B DBaaS',
-    growthRate: 'High',
+    market_size: '$12B DBaaS',
+    growth_rate: 'High',
     variant: 'quantum',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Managed cluster with observability and runbooks.',
-    launchDate: '2025-01-16',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Managed cluster with observability and runbooks.',
+    launch_date: '2025 - 01 - 16',
     customers: 8,
     rating: 4 && 4.6,
     reviews: 5,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
     id: 'browser-performance-monitor-pro'
     name: 'Browser Performance Monitor Pro'
     tagline: 'RUM, Core Web Vitals, and session replay'
@@ -1783,13 +2573,24 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     reviews: 6
   }
 =======
+=======
+    id: 'browser - performance - monitor - pro',
+    name: 'Browser Performance Monitor Pro',
+    tagline: 'RUM, Core Web Vitals, and session replay',
+    price: '$79',
+    period: '/month',
+    description:;
+      'Real - user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.',
+    features: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Core Web Vitals dashboards',
       'Session replay and heatmaps',
       'Error tracking and sourcemaps',
-      'A/B test impact analysis',
+      'A / B test impact analysis',
     ],
     popular: true,
     icon: '⚡',
+<<<<<<< HEAD
     color: 'from-amber-600 to-yellow-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup && ziontechgroup.com/browser-performance-monitor',
@@ -1797,26 +2598,36 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'Frontend, growth, product',
     trialDays: 14,
     setupTime: '30 minutes',
+=======
+    color: 'from - amber - 600 to - yellow - 700',
+    text_color: 'text - amber - 300',
+    link: 'https://ziontechgroup.com / browser - performance - monitor',
+    market_position: 'Lightweight, privacy - friendly RUM for modern teams.',
+    target_audience: 'Frontend, growth, product',
+    trial_days: 14,
+    setup_time: '30 minutes',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Quality & Monitoring',
-    realService: true,
+    real_service: true,
     technology: ['JS SDK', 'ClickHouse'],
     integrations: ['PostHog', 'Segment'],
-    useCases: ['UX improvements', 'Conversion lift'],
+    use_cases: ['UX improvements', 'Conversion lift'],
     roi: 'Lift conversion 2–10% by fixing performance',
     competitors: ['Sentry', 'New Relic Browser'],
-    marketSize: '$5B APM',
-    growthRate: 'Growing',
+    market_size: '$5B APM',
+    growth_rate: 'Growing',
     variant: 'holographic',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Agent + dashboards + anomaly alerts.',
-    launchDate: '2025-01-17',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Agent + dashboards + anomaly alerts.',
+    launch_date: '2025 - 01 - 17',
     customers: 12,
     rating: 4 && 4.5,
     reviews: 6,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
     id: 'seo-automation-studio'
     name: 'SEO Automation Studio'
     tagline: 'Programmatic SEO, audits, and internal linking automation'
@@ -1859,6 +2670,16 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     reviews: 4
   }
 =======
+=======
+    id: 'seo - automation - studio',
+    name: 'SEO Automation Studio',
+    tagline: 'Programmatic SEO, audits, and internal linking automation',
+    price: '$99',
+    period: '/month',
+    description:;
+      'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.',
+    features: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Site audits and fixes',
       'Schema and sitemaps',
       'Programmatic pages',
@@ -1866,6 +2687,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     ],
     popular: false,
     icon: '🔎',
+<<<<<<< HEAD
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup && ziontechgroup.com/seo-automation',
@@ -1876,23 +2698,36 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     category: 'Developer Tools',
     realService: true,
     technology: ['Node && Node.js', 'Headless Chrome'],
+=======
+    color: 'from - emerald - 600 to - teal - 700',
+    text_color: 'text - emerald - 300',
+    link: 'https://ziontechgroup.com / seo - automation',
+    market_position: 'Builder - focused alternative to heavy SEO suites.',
+    target_audience: 'Growth, content, agencies',
+    trial_days: 14,
+    setup_time: 'Same day',
+    category: 'Developer Tools',
+    real_service: true,
+    technology: ['Node.js', 'Headless Chrome'],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     integrations: ['Search Console'],
-    useCases: ['Traffic growth', 'Tech SEO'],
+    use_cases: ['Traffic growth', 'Tech SEO'],
     roi: 'Increase organic traffic 20–100%',
     competitors: ['Ahrefs', 'Semrush'],
-    marketSize: '$6B SEO Tools',
-    growthRate: 'Stable',
+    market_size: '$6B SEO Tools',
+    growth_rate: 'Stable',
     variant: 'neural',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Crawlers, fixers, programmatic builder.',
-    launchDate: '2025-01-18',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Crawlers, fixers, programmatic builder.',
+    launch_date: '2025 - 01 - 18',
     customers: 10,
     rating: 4 && 4.4,
     reviews: 4,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
     id: 'webhook-relay-replay-pro'
     name: 'Webhook Relay & Replay Pro'
     tagline: 'Reliable webhooks with DLQ and replays'
@@ -1935,13 +2770,24 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     reviews: 3
   }
 =======
+=======
+    id: 'webhook - relay - replay - pro',
+    name: 'Webhook Relay & Replay Pro',
+    tagline: 'Reliable webhooks with DLQ and replays',
+    price: '$59',
+    period: '/month',
+    description:;
+      'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.',
+    features: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'DLQ and retry policies',
       'Inspector and redaction',
       'Signature verification',
-      'Fan-out and transformations',
+      'Fan - out and transformations',
     ],
     popular: true,
     icon: '🔁',
+<<<<<<< HEAD
     color: 'from-cyan-600 to-sky-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup && ziontechgroup.com/webhook-relay-replay',
@@ -1952,23 +2798,36 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     category: 'Developer Tools',
     realService: true,
     technology: ['Kafka', 'S3', 'Node && Node.js'],
+=======
+    color: 'from - cyan - 600 to - sky - 700',
+    text_color: 'text - cyan - 300',
+    link: 'https://ziontechgroup.com / webhook - relay - replay',
+    market_position: 'Production safety net for integrations.',
+    target_audience: 'Developers, platforms',
+    trial_days: 14,
+    setup_time: '1 hour',
+    category: 'Developer Tools',
+    real_service: true,
+    technology: ['Kafka', 'S3', 'Node.js'],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     integrations: ['Stripe', 'Shopify', 'GitHub'],
-    useCases: ['Webhook reliability', 'Debugging'],
+    use_cases: ['Webhook reliability', 'Debugging'],
     roi: 'Reduce integration incidents 50%+',
     competitors: ['Svix', 'Hookdeck'],
-    marketSize: '$1B Integration Tools',
-    growthRate: 'Growing',
-    variant: 'quantum-matrix',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Broker + storage + replayer UI.',
-    launchDate: '2025-01-19',
+    market_size: '$1B Integration Tools',
+    growth_rate: 'Growing',
+    variant: 'quantum - matrix',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Broker + storage + replayer UI.',
+    launch_date: '2025 - 01 - 19',
     customers: 7,
     rating: 4 && 4.6,
     reviews: 3,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
     id: 'pdf-render-api-pro'
     name: 'PDF Render API Pro'
     tagline: 'Fast HTML-to-PDF with brand-safe templates'
@@ -2011,13 +2870,24 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     reviews: 10
   }
 =======
+=======
+    id: 'pdf - render - api - pro',
+    name: 'PDF Render API Pro',
+    tagline: 'Fast HTML - to - PDF with brand - safe templates',
+    price: '$49',
+    period: '/month',
+    description:;
+      'Serverless HTML - to - PDF rendering with page numbers, headers / footers, and safe fonts. Great for invoices and reports.',
+    features: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Serverless scale',
       'Template gallery',
-      'Brand-safe fonts',
+      'Brand - safe fonts',
       'Webhook on completion',
     ],
     popular: true,
     icon: '📄',
+<<<<<<< HEAD
     color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-300',
     link: 'https://ziontechgroup && ziontechgroup.com/pdf-render-api',
@@ -2025,26 +2895,36 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'SaaS, finance, ops',
     trialDays: 14,
     setupTime: '30 minutes',
+=======
+    color: 'from - slate - 600 to - gray - 700',
+    text_color: 'text - slate - 300',
+    link: 'https://ziontechgroup.com / pdf - render - api',
+    market_position: 'Secure alternative to self - hosting headless browsers.',
+    target_audience: 'SaaS, finance, ops',
+    trial_days: 14,
+    setup_time: '30 minutes',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Developer Tools',
-    realService: true,
+    real_service: true,
     technology: ['Workers', 'Headless Chrome'],
     integrations: ['Zapier', 'Make'],
-    useCases: ['Invoices', 'Reports'],
+    use_cases: ['Invoices', 'Reports'],
     roi: 'Save days of maintenance yearly',
     competitors: ['PDFShift', 'DocRaptor'],
-    marketSize: '$1B Doc Gen',
-    growthRate: 'Stable',
-    variant: 'holographic-advanced',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Isolated renderer pool, signed URLs.',
-    launchDate: '2025-01-18',
+    market_size: '$1B Doc Gen',
+    growth_rate: 'Stable',
+    variant: 'holographic - advanced',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Isolated renderer pool, signed URLs.',
+    launch_date: '2025 - 01 - 18',
     customers: 22,
     rating: 4 && 4.6,
     reviews: 10,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
     id: 'api-observability-starter-pro'
     name: 'API Observability Starter Pro'
     tagline: 'Traces, metrics, logs for APIs without the bloat'
@@ -2088,12 +2968,24 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
   }
 =======
       'Auto-instrumentation',
+=======
+    id: 'api - observability - starter - pro',
+    name: 'API Observability Starter Pro',
+    tagline: 'Traces, metrics, logs for APIs without the bloat',
+    price: '$99',
+    period: '/month',
+    description:;
+      'Easy OpenTelemetry - based tracing, RED metrics, and error analytics with exporters to your stack.',
+    features: [;
+      'Auto - instrumentation',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'RED dashboards',
       'Error analytics',
       'Exporters to APMs',
     ],
     popular: false,
     icon: '🛰️',
+<<<<<<< HEAD
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup && ziontechgroup.com/api-observability-starter',
@@ -2101,26 +2993,36 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'Backend teams, SRE',
     trialDays: 14,
     setupTime: '1 day',
+=======
+    color: 'from - purple - 600 to - indigo - 700',
+    text_color: 'text - purple - 300',
+    link: 'https://ziontechgroup.com / api - observability - starter',
+    market_position: 'Developer - first observability starter kit.',
+    target_audience: 'Backend teams, SRE',
+    trial_days: 14,
+    setup_time: '1 day',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Observability',
-    realService: true,
+    real_service: true,
     technology: ['OpenTelemetry', 'Grafana'],
     integrations: ['Datadog', 'New Relic'],
-    useCases: ['API reliability', 'Performance'],
+    use_cases: ['API reliability', 'Performance'],
     roi: 'Reduce MTTR by 30–50%',
     competitors: ['Honeycomb', 'Lightstep'],
-    marketSize: '$10B Observability',
-    growthRate: 'High',
-    variant: 'quantum-holographic',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'SDKs, collectors, quick dashboards.',
-    launchDate: '2025-01-17',
+    market_size: '$10B Observability',
+    growth_rate: 'High',
+    variant: 'quantum - holographic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'SDKs, collectors, quick dashboards.',
+    launch_date: '2025 - 01 - 17',
     customers: 9,
     rating: 4 && 4.5,
     reviews: 4,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
     id: 'sso-in-a-box-pro'
     name: 'SSO in a Box Pro'
     tagline: 'SAML, OIDC, SCIM with turnkey onboarding'
@@ -2163,6 +3065,16 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     reviews: 3
   }
 =======
+=======
+    id: 'sso - in - a-box - pro',
+    name: 'SSO in a Box Pro',
+    tagline: 'SAML, OIDC, SCIM with turnkey onboarding',
+    price: '$149',
+    period: '/month',
+    description:;
+      'Offer SSO and SCIM to your customers with a managed gateway, branding, and test harnesses.',
+    features: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'SAML and OIDC',
       'SCIM and JIT provisioning',
       'Branding and mapping',
@@ -2170,6 +3082,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     ],
     popular: true,
     icon: '🔐',
+<<<<<<< HEAD
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup && ziontechgroup.com/sso-in-a-box',
@@ -2177,26 +3090,36 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'SaaS teams',
     trialDays: 14,
     setupTime: '2–5 days',
+=======
+    color: 'from - emerald - 600 to - teal - 700',
+    text_color: 'text - emerald - 300',
+    link: 'https://ziontechgroup.com / sso - in - a-box',
+    market_position: 'Ship enterprise features in days.',
+    target_audience: 'SaaS teams',
+    trial_days: 14,
+    setup_time: '2–5 days',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'Security & Compliance',
-    realService: true,
+    real_service: true,
     technology: ['Keycloak', 'Auth gateways'],
     integrations: ['Okta', 'Azure AD', 'Google'],
-    useCases: ['Enterprise deals', 'User management'],
+    use_cases: ['Enterprise deals', 'User management'],
     roi: 'Unlock enterprise revenue faster',
     competitors: ['Workos', 'Auth0', 'Stytch'],
-    marketSize: '$8B Identity',
-    growthRate: 'High',
-    variant: 'neural-quantum',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Hosted broker + mappings UI.',
-    launchDate: '2025-01-17',
+    market_size: '$8B Identity',
+    growth_rate: 'High',
+    variant: 'neural - quantum',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Hosted broker + mappings UI.',
+    launch_date: '2025 - 01 - 17',
     customers: 6,
     rating: 4 && 4.7,
     reviews: 3,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
     id: 'it-asset-discovery-agent-pro'
     name: 'IT Asset Discovery Agent Pro'
     tagline: 'Agentless discovery with CMDB sync'
@@ -2239,6 +3162,16 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     reviews: 2
   }
 =======
+=======
+    id: 'it - asset - discovery - agent - pro',
+    name: 'IT Asset Discovery Agent Pro',
+    tagline: 'Agentless discovery with CMDB sync',
+    price: '$129',
+    period: '/month',
+    description:;
+      'Discover hardware, software, and services across networks with agentless scans and sync to CMDB.',
+    features: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Network scans and SNMP',
       'Software inventory',
       'Change tracking',
@@ -2246,6 +3179,7 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     ],
     popular: false,
     icon: '🛰️',
+<<<<<<< HEAD
     color: 'from-sky-600 to-blue-700',
     textColor: 'text-sky-300',
     link: 'https://ziontechgroup && ziontechgroup.com/it-asset-discovery-agent',
@@ -2253,26 +3187,36 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     targetAudience: 'IT and security ops',
     trialDays: 14,
     setupTime: '1–3 days',
+=======
+    color: 'from - sky - 600 to - blue - 700',
+    text_color: 'text - sky - 300',
+    link: 'https://ziontechgroup.com / it - asset - discovery - agent',
+    market_position: 'Modern take on asset discovery.',
+    target_audience: 'IT and security ops',
+    trial_days: 14,
+    setup_time: '1–3 days',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     category: 'IT Operations',
-    realService: true,
+    real_service: true,
     technology: ['nmap', 'SNMP', 'Go'],
     integrations: ['ServiceNow', 'Jira'],
-    useCases: ['Inventory', 'Security'],
+    use_cases: ['Inventory', 'Security'],
     roi: 'Reduce unknown assets and risk',
     competitors: ['Lansweeper'],
-    marketSize: '$2B ITAM',
-    growthRate: 'Growing',
+    market_size: '$2B ITAM',
+    growth_rate: 'Growing',
     variant: 'holographic',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Scanners, parsers, CMDB sync.',
-    launchDate: '2025-01-16',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Scanners, parsers, CMDB sync.',
+    launch_date: '2025 - 01 - 16',
     customers: 5,
     rating: 4 && 4.4,
     reviews: 2,
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
     id: 'vendor-risk-automation-lite'
     name: 'Vendor Risk Automation Lite'
     tagline: 'Questionnaires, evidence, and continuous monitoring'
@@ -2315,6 +3259,16 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
 reviews: 3
   }
 =======
+=======
+    id: 'vendor - risk - automation - lite',
+    name: 'Vendor Risk Automation Lite',
+    tagline: 'Questionnaires, evidence, and continuous monitoring',
+    price: '$129',
+    period: '/month',
+    description:;
+      'Streamline vendor assessments with standardized questionnaires, evidence requests, and continuous security monitoring.',
+    features: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'Questionnaire templates',
       'Evidence collection portal',
       'Continuous monitoring',
@@ -2322,6 +3276,7 @@ reviews: 3
     ],
     popular: true,
     icon: '📋',
+<<<<<<< HEAD
     color: 'from-rose-600 to-orange-700',
     textColor: 'text-rose-300',
     link: 'https://ziontechgroup && ziontechgroup.com/vendor-risk-automation',
@@ -2332,17 +3287,29 @@ reviews: 3
     category: 'Security & Compliance',
     realService: true,
     technology: ['Node && Node.js', 'React'],
+=======
+    color: 'from - rose - 600 to - orange - 700',
+    text_color: 'text - rose - 300',
+    link: 'https://ziontechgroup.com / vendor - risk - automation',
+    market_position: 'Faster and lighter than legacy GRC.',
+    target_audience: 'Security, procurement',
+    trial_days: 14,
+    setup_time: '1–3 days',
+    category: 'Security & Compliance',
+    real_service: true,
+    technology: ['Node.js', 'React'],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     integrations: ['SecurityScorecard'],
-    useCases: ['Vendor due diligence'],
+    use_cases: ['Vendor due diligence'],
     roi: 'Cut cycle time by 50%+',
     competitors: ['Whistic', 'OneTrust'],
-    marketSize: '$4B Third-party Risk',
-    growthRate: 'High',
-    variant: 'quantum-cyberpunk',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Portal + integrations + reports.',
-    launchDate: '2025-01-19',
+    market_size: '$4B Third - party Risk',
+    growth_rate: 'High',
+    variant: 'quantum - cyberpunk',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Portal + integrations + reports.',
+    launch_date: '2025 - 01 - 19',
     customers: 6,
     rating: 4 && 4.5,
     reviews: 3,
@@ -2794,4 +3761,8 @@ reviews: 3
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ];
+<<<<<<< HEAD
 
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

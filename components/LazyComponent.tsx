@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
 interface LazyComponentProps {component: () => Promise<{ default: React.ComponentType<any> }>;
   fallback?: React.ReactNode;
@@ -13,4 +14,23 @@ const LazyComponent: React.FC<LazyComponentProps> = ({component;
     </Suspense>;
   );
 }
+=======
+import React, { Suspense, lazy } from 'react',
+interface LazyComponentProps {
+  component: () => Promise<{ default: React.ComponentType < any> }>,
+  fallback?: React.ReactNode,
+  [key: string]: any;
+}
+const LazyComponent: React.FC < LazyComponentProps> = ({
+  component,
+  fallback = <div > Loading...</div>,
+  ...props;
+}) => {
+  const LazyLoadedComponent = lazy (component),
+  return (
+    <Suspense fallback={fallback}>;
+      <LazyLoadedComponent {...props} />;
+    </Suspense>);
+},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export default LazyComponent;

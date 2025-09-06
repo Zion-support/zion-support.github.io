@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link  } from 'react-router-dom';
 import { SERVICE_CATEGORIES } from '@/data/servicesData';
@@ -11,6 +12,19 @@ export function ContactPage() {
     message: '',
     budget: '',
     timeline: ''
+=======
+import React from 'react';
+import { render, screen } from '@testing - library / react';
+import { MemoryRouter } from 'react-router-dom';
+import EquipmentPage from './EquipmentPage';
+describe ('EquipmentPage', () => {
+  it ('renders equipment page correctly', () => {
+    render (
+      <MemoryRouter>;
+        <EquipmentPage />;
+      </MemoryRouter>);
+    expect (screen.getByText ('Equipment')).toBeInTheDocument ();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
   const [selectedService, setSelectedService] = useState('');
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

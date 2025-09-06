@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 
 
 export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
+=======
+export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface CreateNotificationParams {
-  userId: string;
+  user_id: string;
   title: string;
   message: string;
   type: NotificationType;
+<<<<<<< HEAD
   relatedId?: string | null;
   sendEmail?: boolean;
   actionUrl?: string | null
@@ -29,13 +35,44 @@ export interface OnboardingNotificationParams {
   userId: string;
   missingMilestone: string
   userRole: 'talent' | 'client'
+=======
+  related_id?: string | null;
+  send_email?: boolean;
+  action_url?: string | null,
+  action_text?: string | null;
+}
+export interface CreateNotificationResult {
+  success: boolean;
+  notification_id?: string,
+  error?: any;
+}
+export interface HireRequestNotificationParams {
+  talent_id: string;
+  admin_id?: string;
+  requester_name: string;
+  requester_email: string;
+  project_type?: string;
+  project_summary?: string,
+  hireRequestId: string;
+}
+export interface OnboardingNotificationParams {
+  user_id: string;
+  missing_milestone: string,
+  user_role: 'talent' | 'client';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface SystemNotificationParams {
-  userId: string;
+  user_id: string;
   title: string;
   message: string;
+<<<<<<< HEAD
   actionUrl?: string | null;
   actionText?: string | null
 
   sendEmail?: boolean
+=======
+  action_url?: string | null;
+  action_text?: string | null,
+  send_email?: boolean;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

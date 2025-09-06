@@ -37,6 +37,7 @@ import React, { ReactNode } from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,6 +54,9 @@ import Footer from './Footer';
 >>>>>>> origin/automation-improvements-final
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface LayoutProps {
   children: React.ReactNode;
 =======
@@ -63,11 +67,12 @@ interface LayoutProps {;
   description?: string;
   keywords?: string;
   canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  noIndex?: boolean;
+  og_title?: string;
+  og_description?: string;
+  og_image?: string;
+  no_index?: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -111,14 +116,28 @@ export default function Layout(): any ({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="min-h-screen bg-white">;
+=======
+export default /**
+ * Layout - Function description
+ */
+function Layout() {
+  return (
+    <div className="min - h-screen bg - white">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       <Header />;
       <main>;
         {children}
       </main>;
       <Footer />;
+<<<<<<< HEAD
     </div>;
   );
 }
+=======
+    </div>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export default Layout;
 import React from 'react;
 import Header from './Header;
@@ -127,6 +146,7 @@ import Footer from './Footer;
 type LayoutProps = {children: React.ReactNode;
 }
   children: React.ReactNode}
+<<<<<<< HEAD
 export: default function Layout() {return: <div>{children}</div>;
 React from";
   "react""import Footer from "react";
@@ -154,3 +174,28 @@ export default function Layout(): any ({ children }: LayoutProps) {;
   )"; type: LayoutProps = { children: React && React.ReactNode, }; export default function Layout(): any ({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React && React.ReactNode, }; export default function Layout(): any ({ children }: LayoutProps) { return <div>{children}</div> } " ;
 }}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+export: default /**
+ * Layout - Function description
+ */
+function Layout() {
+;
+  return: <div>{children}</div>;
+React from";
+  "react""import Footer from './react';
+  "./Footer"import Footer  from "react./Footer,
+export default /**
+ * Layout - Function description
+ */
+function Layout() {
+  return (
+<div className="min - h-screen flex flex - col>      <Header />"      <main className="flex - 1 pt - 16>        {children}"      </main><Footer />;
+    </div>)"; type: LayoutProps = { children: React.ReactNode, } export default /**
+ * Layout - Function description
+ */
+function Layout() { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, } export default /**
+ * Layout - Function description
+ */
+function Layout() { return <div>{children}</div> } " ;
+}}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

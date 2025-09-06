@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createPartner } from "../../../utils/api/partnerAuth";
 
@@ -94,3 +95,52 @@ export default async function handler(
   };
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { create_partner  } from '../../../utils / api / partner_auth';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.set_header ("Allow", "POST");
+    return res.status (405).json ({ error: "Method Not Allowed" });
+    const { name, entity_type, pointOfContact, useCaseType, brand } =;
+      req.body || {}
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.status (400).json ({ error: "Missing required fields" });
+    }
+    try {
+      const { partner, api_key } = await create_partner ({
+        name,
+        entity_type,
+        pointOfContact,
+        useCaseType,
+        brand,
+      });
+      return res.status (201).json ({
+        partner: {
+          id: partner.id,
+          name: partner.name,
+          status: partner.status,
+          entity_type: partner.entity_type,
+          useCaseType: partner.useCaseType,
+          created_at: partner.created_at,
+        },
+        api_key: api_key.key,
+        dashboard_url: `/partners / dashboard?pid=${partner.id}`,
+      });
+    } catch (e) {
+      return res.status (500).json ({ error: "Failed to create partner" });
+    }
+    return res.status (500).json ({ error: "Failed to create partner" });
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Signature utilities
 export const signature = {
   // Add signature functionality here
@@ -80,3 +81,12 @@ export function verifySignature(
   }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+// Signature utilities;
+export const signature = {
+  // Add signature functionality here;
+  verify: (signature: string, message: string, address: string) => false,
+  sign: (message: string, private_key: string) => '',
+  recover: (signature: string, message: string) => '';
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

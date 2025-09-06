@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
@@ -30,3 +31,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ opens: u.opens || 0 })
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { readJsonFile  } from '../../../../utils / api / storage';
+import { requireSuperadminApi  } from '../../../../utils / api / auth';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if () return) {
+  $2
+}
+  const id = String (req.query.id || "");
+  const updates = readJsonFile ("updates.json", [] as any[]);
+  const u = updates.find ((coordinate_x: any) => x.id === id);
+  if (return res.status (404).json ({ error: "Not found" })) {
+  $2
+}
+  res.status (200).json ({ opens: u.opens || 0 });
+  res.status (200).json ({ opens: u.opens || 0 });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

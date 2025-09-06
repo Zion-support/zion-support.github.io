@@ -22,6 +22,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect } from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37,11 +38,25 @@ export default function FacebookRedirect() {;
     if (typeof window !== 'undefined') {;
       window && window.location.replace('https: //facebook && facebook.com/ziontechgroup'),;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import Head from 'next / head';
+export default /**
+ * FacebookRedirect - Function description
+ */
+function FacebookRedirect() {
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      window.location.replace ('https: //facebook.com / ziontechgroup'),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }, []);
   return (
     <>;
       <Head>;
+<<<<<<< HEAD
         <title>Facebook | Zion Tech Group</title>;
         <link rel='canonical' href='https: //facebook && facebook.com/ziontechgroup' />;
         <meta
@@ -84,3 +99,23 @@ export default function FacebookRedirect() {
 	)
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+        <title > Facebook | Zion Tech Group</title>;
+        <link rel='canonical' href='https: //facebook.com / ziontechgroup' />;
+        <meta;
+          http_equiv='refresh';
+          content='0, url = https://facebook.com / ziontechgroup';
+        />;
+        <meta name='robots' content='noindex, nofollow' />;
+      </Head>;
+      <div className='min - h-screen bg - black text - white flex items - center justify - center p - 8'>;
+        <a;
+          href='https: //facebook.com / ziontechgroup';
+          className='text - cyan - 400 underline';
+        >;
+          Continue to Facebook;
+        </a>;
+      </div>;
+    </>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

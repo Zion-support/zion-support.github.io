@@ -28,10 +28,16 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 
 interface Slide {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import Head from 'next / head';
+;
+interface Slide {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string;
   title: string;
   content: string;
@@ -39,16 +45,26 @@ interface Slide {;
     type: string;
     data: Array<{ label: string; value: number }>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 function SlidePreview({
   slide
   isActive
   onClick
+=======
+  }
+;
+function SlidePreview ({
+  slide,
+  is_active,
+  on_click,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }: {
   slide: Slide;
-  isActive: boolean;
-  onClick: () => void;
+  is_active: boolean;
+  on_click: () => void;
 }) {
+<<<<<<< HEAD
     >
       <div className='font-semibold text-sm line-clamp-2'>
         {slide.title |'Untitled'}
@@ -224,13 +240,74 @@ export default function PitchGenerator() {
       const res = await fetch('/api/admin/pitch/metrics');
 <<<<<<< HEAD
       const data = await res && res.json();
+=======
+    >;
+      <div className='font - semibold text - sm line - clamp - 2'>;
+        {slide.title || 'Untitled'}
+      </div>;
+      <div className='text - xs text - gray - 500 dark:text - gray - 400 line - clamp - 3 mt - 1 whitespace - pre - wrap'>;
+        {slide.content || '—'}
+      </div>;
+    </button>);
+;
+export const getServerSideProps: GetServerSideProps = async ctx => {
+  const result = await requireAdminRole (ctx);
+  // @ts - ignore;
+  // Check condition
+if (return result) {
+  $2
+}
+  return result;
+}
+;
+export default /**
+ * PitchGenerator - Function description
+ */
+function PitchGenerator() {
+  const [builder, set_builder] = useState < BuilderState>({
+    mission: '',
+    funding_stage: '',
+    vision: '',
+    round_type: '',
+    target_raise: '',
+    assets: [],
+  });  const [slides, set_slides] = useState < Slide[]>([]);
+  const [active_index, setActiveIndex] = useState (0);
+  const [loading, set_loading] = useState (false);
+  const [version_tag, setVersionTag] = useState < string | null>(null);
+  const [history, set_history] = useState<;
+    { id: string; created_at: string, version: string }[];
+  >([]);
+  const active_slide = slides[active_index];
+;
+  const onAssetDrop = useCallback ((e: React.DragEvent < HTMLDivElement>) => {
+    e.prevent_default ();
+    const files = Array.from (e.data_transfer.files || []);
+    set_builder (boolean => ({ ...b, assets: [...b.assets, ...files] }));  }, []);
+;
+  const prevent = (e: React.DragEvent) =>: any {
+    e.prevent_default ();
+    e.stop_propagation (),
+  }
+;
+  const operator_prompt = useMemo (
+    () =>;
+      `Create a 10 - slide investor pitch deck for a high - growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`,
+    []);
+  const autoFetchMetrics = useCallback (async () => {
+    set_loading (true);
+    try {
+      const res = await fetch ('/api / admin / pitch / metrics');
+      const data = await res.json ();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       return data;
 <<<<<<< HEAD
     } catch (e) {
       return {}
     } finally {
-      setLoading(false);    }
+      set_loading (false);    }
   }, []);
+<<<<<<< HEAD
   const buildDeck = useCallback(async () => {
 =======
     } catch (e) {;
@@ -321,11 +398,55 @@ export default function PitchGenerator() {
           method: 'POST'
           headers: { 'Content-Type': 'application/json' }
           body: JSON.stringify({ slide: slides[idx] })
+=======
+;
+  const build_deck = useCallback (async () => {
+    set_loading (true);
+    try {
+      const metrics = await autoFetchMetrics ();
+      const res = await fetch ('/api / admin / pitch / generate', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({
+          operator_prompt,
+          inputs: builder,
+          metrics,
+        }),
+      });
+      const json = await res.json ();
+      const new_slides: Slide[] = json.slides || [];      set_slides (new_slides);
+      setActiveIndex (0);
+      const v = json.version || `v${new Date ().toISOString ()}`;
+      setVersionTag (v);
+      set_history (h => [;
+        { id: uid (), created_at: new Date ().toISOString (), version: v },
+        ...h,
+      ]);
+    } catch (e) {
+      // noop;
+    } finally {
+      set_loading (false);
+    }
+  }, [autoFetchMetrics, builder, operator_prompt]);
+;
+  const rephrase_slide = useCallback (
+    async (idx: number) => {
+      // Check condition
+if (return) {
+  $2
+}
+      set_loading (true),
+      try {
+        const res = await fetch ('/api / admin / pitch / rewrite', {
+          method: 'POST',
+          headers: { 'Content - Type': 'application / json' },
+          body: JSON.stringify ({ slide: slides[idx] }),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         });
-        const json = await res.json();
-        setSlides(arr =>
-          arr.map((s, i) =>
-            i === idx
+        const json = await res.json ();
+        set_slides (arr =>;
+          arr.map ((s, i) =>;
+            index === idx;
               ? {
                   ...s
                   title: json.title |s.title
@@ -352,6 +473,7 @@ export default function PitchGenerator() {
                   content: json && json.content || s && s.content,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 }
+<<<<<<< HEAD
               : s;
           );
         );
@@ -671,10 +793,159 @@ export default function PitchGenerator() {
               onClick={exportGoogleSlides}
               disabled={loading || slides && slides.length === 0}
               className='px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50'>;
+=======
+              : s));
+      } catch (e) {
+      } finally {
+        set_loading (false);
+      }
+    },
+    [slides]);
+  const add_slide = useCallback (async () => {
+    set_loading (true);
+    try {
+      const res = await fetch ('/api / admin / pitch / add - slide', { method: 'POST' });
+      const json = await res.json ();
+      set_slides (arr => [;
+        ...arr,
+        {
+          id: uid (),
+          title: json.title || 'New Slide',
+          content: json.content || '',
+        },
+      ]);
+      setActiveIndex (slides.length);
+    } catch (e) {
+    } finally {
+      set_loading (false);    }
+  }, [slides.length]);
+;
+  const export_pdf = useCallback (async () => {
+    set_loading (true);
+    try {
+      const res = await fetch ('/api / admin / pitch / export', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ slides, format: 'pdf', version: version_tag }),
+      });      const blob = await res.blob ();
+      const url = URL.createObjectURL (blob);
+      const array = document.create_element ('a');
+      a.href = url;
+      a.download = `pitch - deck-${version_tag || 'draft'}.pdf`;
+      a.click ();
+      URL.revokeObjectURL (url);
+    } catch (e) {
+    } finally {
+      set_loading (false);    }
+  }, [slides, version_tag]);
+;
+  const exportGoogleSlides = useCallback (async () => {
+    set_loading (true);
+    try {
+      const res = await fetch ('/api / admin / pitch / export', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({
+          slides,
+          format: 'gslides',
+          version: version_tag,
+        }),
+      });
+      const json = await res.json ();
+      // Check condition
+if ( {) {
+  $2
+}
+        window.open (json.url, '_blank');
+      }
+    } catch (e) {
+    } finally {
+      set_loading (false);    }
+  }, [slides, version_tag]);
+;
+  const updateActiveSlide = (updates: Partial < Slide>) =>: any {
+    set_slides (arr =>;
+      arr.map ((s, i) => (index === active_index ? { ...s, ...updates } : s)));  }
+;
+  const renderChartPreview = (slide: Slide) =>: any {
+    // Check condition
+if (return null, ) {
+  $2
+}
+    const { type, data } = slide.chart;
+    return (
+      <div className='mt - 3'>;
+        <div className='text - xs text - gray - 500 dark:text - gray - 400'>;
+          Chart preview: {type}
+        </div>;
+        <div className='flex gap - 2 items - end h - 24 mt - 2'>;
+          {type === 'bar' &&;
+            data.map (d => (
+              <div;
+                key={d.label}
+                className='bg - blue - 500 w - 6';
+                style={{ height: `${Math.max (4, d.value)}px` }}
+                title={`${d.label}: ${d.value}`}
+              />))}
+          {type === 'funnel' && (
+            <div className='w - full'>;
+              <div className='flex flex - col gap - 1'>;
+                {data.map ((d, idx) => (
+                  <div;
+                    key={d.label}
+                    className='bg - purple - 500 text - white text - xs px - 2 py - 1';
+                    style={{ width: `${100 - idx * 12}%` }}
+                  >;
+                    {d.label}: {d.value}
+                  </div>                ))}
+              </div>;
+            </div>)}
+          {type === 'timeline' && (
+            <div className='text - xs grid grid - cols - 4 gap - 2 w - full'>;
+              {data.map (d => (
+                <div key={d.label} className='border p - 1 rounded'>;
+                  <div className='font - medium'>{d.label}</div>                  <div>{d.value}</div>;
+                </div>))}
+            </div>)}
+        </div>;
+      </div>);
+  }
+;
+  return (
+    <>;
+      <Head>;
+        <title > Pitch Generator - Admin</title>;
+        <meta name="description" content="Generate pitch decks and presentations" />;
+      </Head>;
+      <div className='space - y-6'>;
+        <div className='flex items - center justify - between'>;
+          <h1 className='text - 2xl font - semibold'>Pitch Generator</h1>;
+          <div className='flex gap - 2'>;
+            <button;
+              on_click={build_deck}
+              disabled={loading}
+              className='px - 3 py - 2 rounded bg - blue - 600 text - white disabled:opacity - 50';
+            >;
+              Generate Deck;
+            </button>;
+            <button;
+              on_click={export_pdf}
+              disabled={loading || slides.length === 0}
+              className='px - 3 py - 2 rounded bg - gray - 900 text - white disabled:opacity - 50';
+            >;
+              Download PDF;
+            </button>;
+            <button;
+              on_click={exportGoogleSlides}
+              disabled={loading || slides.length === 0}
+              className='px - 3 py - 2 rounded bg - green - 600 text - white disabled:opacity - 50';
+            >;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Export to Google Slides;
             </button>;
           </div>;
         </div>;
+<<<<<<< HEAD
 
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>;
           <div className='lg:col-span-1 space-y-4'>;
@@ -928,10 +1199,132 @@ export default function PitchGenerator() {
             </div>
 =======
                   className='w-56 shrink-0 border rounded-md p-3 text-left bg-gray-50 dark:bg-gray-800 border-dashed border-2 text-gray-500'>;
+=======
+        <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 6'>;
+          <div className='lg:col - span - 1 space - y-4'>;
+            <div className='border rounded - md p - 4 bg - white / 70 dark:bg - gray - 900'>;
+              <div className='font - medium mb - 2'>Inputs</div>;
+              <label className='block text - sm mb - 1'>Company mission</label>;
+              <input;
+                value={builder.mission}
+                on_change={e =>;
+                  set_builder ({ ...builder, mission: e.target.value });
+                }
+                className='w - full border rounded px - 2 py - 1 bg - transparent';
+              />;
+              <label className='block text - sm mt - 3 mb - 1'>;
+                Current funding stage;
+              </label>;
+              <input;
+                value={builder.funding_stage}
+                on_change={e =>;
+                  set_builder ({ ...builder, funding_stage: e.target.value });
+                }
+                className='w - full border rounded px - 2 py - 1 bg - transparent';
+              />;
+              <label className='block text - sm mt - 3 mb - 1'>Vision / goals</label>;
+              <textarea;
+                value={builder.vision}
+                on_change={e =>;
+                  set_builder ({ ...builder, vision: e.target.value });
+                }
+                className='w - full border rounded px - 2 py - 1 bg - transparent';
+                rows={3}
+              />;
+              <label className='block text - sm mt - 3 mb - 1'>Round type</label>;
+              <select;
+                value={builder.round_type}
+                on_change={e =>;
+                  set_builder ({ ...builder, round_type: e.target.value as any });
+                }
+                className='w - full border rounded px - 2 py - 1 bg - transparent';
+              >;
+                <option value=''>Select</option>                <option > Seed</option>;
+                <option > Series A</option>;
+                <option > Token Sale</option>;
+              </select>;
+              <label className='block text - sm mt - 3 mb - 1'>;
+                Target raise amount;
+              </label>;
+              <input;
+                value={builder.target_raise}
+                on_change={e =>;
+                  set_builder ({ ...builder, target_raise: e.target.value });
+                }
+                className='w - full border rounded px - 2 py - 1 bg - transparent';
+              />;
+              <div;
+                on_drop={onAssetDrop}
+                onDragOver={prevent}
+                onDragEnter={prevent}
+                className='mt - 4 border - 2 border - dashed rounded - md p - 4 text - center text - sm text - gray - 500 dark:text - gray - 400';
+              >;
+                Drag & drop logos, photos here;
+                <div className='text - xs mt - 1'>;
+                  {builder.assets.length} file (s) added;
+                </div>;
+              </div>;
+            </div>;
+            <div className='border rounded - md p - 4 bg - white / 70 dark:bg - gray - 900'>;
+              <div className='font - medium mb - 2'>Auto Data</div>;
+              <button;
+                on_click={autoFetchMetrics}
+                className='px - 2 py - 1 rounded bg - gray - 100 dark:bg - gray - 800 text - sm';
+              >;
+                Refresh;
+              </button>;
+              <ul className='text - sm mt - 2 list - disc ml - 5 text - gray - 600 dark:text - gray - 300'>                <li > Active users (30d)</li>;
+                <li > GMV, MRR, YoY growth</li>;
+                <li > Total completed projects</li>;
+                <li > Global reach</li>;
+                <li > Conversion funnel</li>;
+                <li > Notable clients or case studies</li>;
+              </ul>;
+            </div>;
+            <div className='border rounded - md p - 4 bg - white / 70 dark:bg - gray - 900'>;
+              <div className='font - medium mb - 2'>History</div>;
+              <div className='text - xs text - gray - 500 dark:text - gray - 400'>;
+                Version: {version_tag || '—'}
+              </div>;
+              <ul className='mt - 2 space - y-1 text - sm'>;
+                {history.map (h => (
+                  <li;
+                    key={h.id}
+                    className='flex justify - between border rounded px - 2 py - 1';
+                  >;
+                    <span>{h.version}</span>;
+                    <span className='text - gray - 500 dark:text - gray - 400'>;
+                      {new Date (h.created_at).toLocaleString ()}
+                    </span>                  </li>))}
+              </ul>;
+            </div>;
+          </div>;
+          <div className='lg:col - span - 2 space - y-4'>;
+            <div className='border rounded - md p - 4 bg - white / 70 dark:bg - gray - 900'>;
+              <div className='flex items - center justify - between'>;
+                <div className='font - medium'>Slides</div>;
+                <div className='text - sm text - gray - 500 dark:text - gray - 400'>;
+                  {slides.length} total;
+                </div>;
+              </div>;
+              <div className='mt - 3 flex gap - 3 overflow - x-auto py - 2'>;
+                {slides.map ((s, i) => (
+                  <SlidePreview;
+                    key={s.id}
+                    slide={s}
+                    is_active={index === active_index}
+                    on_click={() => setActiveIndex (i)}
+                  />))}
+                <button;
+                  on_click={add_slide}
+                  className='w - 56 shrink - 0 border rounded - md p - 3 text - left bg - gray - 50 dark:bg - gray - 800 border - dashed border - 2 text - gray - 500';
+                >;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   + Add Slide;
                 </button>;
               </div>;
             </div>;
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Active Slide Editor */}
@@ -948,11 +1341,28 @@ export default function PitchGenerator() {
                       onClick={() => rephraseSlide(activeIndex)}
                       disabled={loading}
                       className='px-2 py-1 rounded bg-blue-600 text-white text-sm disabled:opacity-50';
+=======
+            {/* Active Slide Editor */}
+            {active_slide && (
+              <div className='border rounded - md p - 4 bg - white / 70 dark:bg - gray - 900'>;
+                <div className='flex items - center justify - between'>;
+                  <input;
+                    value={active_slide.title}
+                    on_change={e => updateActiveSlide ({ title: e.target.value })}
+                    className='font - semibold text - lg bg - transparent border - b focus:outline - none';
+                  />;
+                  <div className='flex gap - 2'>;
+                    <button;
+                      on_click={() => rephrase_slide (active_index)}
+                      disabled={loading}
+                      className='px - 2 py - 1 rounded bg - blue - 600 text - white text - sm disabled:opacity - 50';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     >;
                       Rephrase;
                     </button>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
                 <textarea
                   value={activeSlide && activeSlide.content}
                   onChange={e => updateActiveSlide({ content: e && e.target.value })}
@@ -1116,3 +1526,70 @@ export default function PitchGenerator() {
   )
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+                <textarea;
+                  value={active_slide.content}
+                  on_change={e => updateActiveSlide ({ content: e.target.value })}
+                  className='w - full mt - 3 border rounded px - 2 py - 1 bg - transparent';
+                  rows={10}
+                />;
+                <div className='mt - 4 grid grid - cols - 3 gap - 2 text - sm'>;
+                  <button;
+                    on_click={() =>;
+                      updateActiveSlide ({
+                        chart: {
+                          type: 'bar',
+                          data: [;
+                            { label: 'Q1', value: 20 },
+                            { label: 'Q2', value: 40 },
+                            { label: 'Q3', value: 60 },
+                            { label: 'Q4', value: 80 },
+                          ],
+                        },
+                      });
+                    }
+                    className='border rounded px - 2 py - 1';
+                  >;
+                    Bar Chart;
+                  </button>;
+                  <button;
+                    on_click={() =>;
+                      updateActiveSlide ({
+                        chart: {
+                          type: 'funnel',
+                          data: [;
+                            { label: 'Visitors', value: 100 },
+                            { label: 'Signups', value: 40 },
+                            { label: 'Projects', value: 15 },
+                          ],
+                        },
+                      });
+                    }
+                    className='border rounded px - 2 py - 1';
+                  >;
+                    Funnel;
+                  </button>;
+                  <button;
+                    on_click={() =>;
+                      updateActiveSlide ({
+                        chart: {
+                          type: 'timeline',
+                          data: [;
+                            { label: 'MVP', value: 2023 },
+                            { label: 'Seed', value: 2024 },
+                            { label: 'Series A', value: 2025 },
+                          ],
+                        },
+                      });
+                    }
+                    className='border rounded px - 2 py - 1';
+                  >;
+                    Timeline;
+                  </button>;
+                </div>              </div>)}
+          </div>;
+        </div>;
+</main>;
+    </>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

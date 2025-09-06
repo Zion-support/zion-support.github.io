@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -29,13 +30,31 @@ interface Transaction {
   refunded_at?: string
   cancelled_at?: string
 
+=======
+import { use_currency } from '@/hooks / use_currency';
+import {logErrorToProduction} from '@/utils / production_logger';
+interface Transaction {
+  id: string,
+  user_id: string,
+  provider_id: string,
+  service_id: string,
+  amount: number,
+  currency: string,
+  status: 'pending' | 'in_escrow' | 'released' | 'disputed' | 'refunded' | 'cancelled',
+  in_escrow: boolean,
+  created_at: string,
+  completed_at?: string;
+  refunded_at?: string;
+  cancelled_at?: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   provider?: {
-    display_name?: string
+    display_name?: string;
   }
   service?: {
-    title?: string
+    title?: string;
   }
 }
+<<<<<<< HEAD
 export function TransactionHistory() {
   const { user } = useAuth();
   const { toast } = useToast();
@@ -121,3 +140,38 @@ export function TransactionHistory() {;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+export /**
+ * TransactionHistory - Function description
+ */
+function TransactionHistory() {
+  const { user } = use_auth ();
+  const { toast } = use_toast ();
+  const [filter, set_filter] = useState<'all' | 'pending' | 'completed' | 'escrow'>(
+    () => (safe_storage.get_item ('transaction_filter') as any) || 'all');
+  useEffect ((, ) => {
+    safe_storage.set_item ('transaction_filter', filter);
+  }, [filter]);
+  const { data: transactions, is_loading, error, refetch } = use_query ({
+    query_key: ['transactions', user?.id, filter];
+    query_fn: async () => {
+      // Check condition
+if (return []) {
+  $2
+}
+          provider:profiles ! provider_id (display_name);
+      query = query.order ('created_at', { ascending: false }),
+    },
+              const is_client = user?.id === transaction.user_id;              const is_pending =;
+                transaction.status === 'pending' || transaction.status === 'in_escrow';
+              const isInEscrow = transaction.in_escrow;
+              const can_release = !is_client && is_pending && isInEscrow;
+              const can_cancel = is_client && is_pending;
+              const can_refund = is_client && transaction.status === 'released';
+              const counterparty_name = is_client;
+                ? transaction.provider?.display_name || 'Service Provider';
+                : 'Client';
+}
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -27,3 +28,5 @@ export function SidebarTrigger(): any ({ className, ...props }: SidebarTriggerPr
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,32 +1,53 @@
-// Export all micro SaaS services
+// Export all micro SaaS services;
 export { urlShortenerService } from './urlShortenerService';
 export { passwordGeneratorService } from './passwordGeneratorService';
 export { qrCodeService } from './qrCodeService';
 export { fileConverterService } from './fileConverterService';
 export { textAnalysisService } from './textAnalysisService';
+<<<<<<< HEAD
 // Export service types and interfaces
+=======
+;
+// Export service types and interfaces;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export type {
   ShortUrl;
   UrlAnalytics;
   ClickEvent;
-  CreateShortUrlRequest
+  CreateShortUrlRequest;
 } from './urlShortenerService';
+<<<<<<< HEAD
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export type {
   PasswordOptions;
   PasswordStrength;
-  GeneratedPassword
+  GeneratedPassword;
 } from './passwordGeneratorService';
+<<<<<<< HEAD
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export type {
   QRCodeOptions;
   QRCodeResult;
-  QRCodeTemplate
+  QRCodeTemplate;
 } from './qrCodeService';
+<<<<<<< HEAD
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export type {
   ConversionOptions;
   ConversionResult;
   SupportedFormat;
-  FileInfo
+  FileInfo;
 } from './fileConverterService';
+<<<<<<< HEAD
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export type {
   TextAnalysisResult;
   BasicTextStats;
@@ -35,8 +56,9 @@ export type {
   KeywordAnalysis;
   LanguageDetection;
   EntityExtraction;
-  TextSummary
+  TextSummary;
 } from './textAnalysisService';
+<<<<<<< HEAD
 // Service categories for easy discovery
 
 export const SERVICE_CATEGORIES = {
@@ -60,45 +82,91 @@ export const SERVICE_CATEGORIES = {
 export const SERVICES_METADATA = {
   urlShortener: {
     name: 'URL Shortener'
+=======
+;
+// Service categories for easy discovery;
+export const SERVICE_CATEGORIES = {
+  UTILITIES: {
+    name: 'Utility Tools';
+    description: 'Essential tools for everyday tasks',
+    services: ['urlShortenerpasswordGeneratorqrCodeGenerator'];
+  }
+  MEDIA: {
+    name: 'Media & Files';
+    description: 'File conversion and media processing tools',
+    services: ['file_converter'];
+  }
+  ANALYSIS: {
+    name: 'Analysis & Insights';
+    description: 'Text analysis and content insights',
+    services: ['text_analysis'];
+  }
+} as const;
+;
+// Service metadata for the application;
+export const SERVICES_METADATA = {
+  url_shortener: {
+    name: 'URL Shortener',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     description: 'Create short, trackable URLs with analytics';
     icon: '🔗';
     category: 'UTILITIES';
-    features: [
-      'Custom short codesClick trackingAnalytics dashboardExpiration datesQR code generation'
+    features: [;
+      'Custom short codes_click tracking_analytics dashboard_expiration datesQR code generation';
     ];
+<<<<<<< HEAD
     pricing: 'Free'
     apiEndpoint: '/api/url-shortener'
   }
   passwordGenerator: {
+=======
+    pricing: 'Free',
+    api_endpoint: '/api / url - shortener';
+  }
+  password_generator: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     name: 'Password Generator';
     description: 'Generate secure passwords with strength analysis';
     icon: '🔐';
     category: 'UTILITIES';
-    features: [
-      'Multiple generation modesStrength analysisCustom character setsPassword historySecurity recommendations'
+    features: [;
+      'Multiple generation modes_strength analysis_custom character sets_password history_security recommendations';
     ];
+<<<<<<< HEAD
     pricing: 'Free'
     apiEndpoint: '/api/password-generator'
+=======
+    pricing: 'Free',
+    api_endpoint: '/api / password - generator';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   qrCodeGenerator: {
     name: 'QR Code Generator';
     description: 'Create QR codes for various purposes';
     icon: '📱';
     category: 'UTILITIES';
-    features: [
-      'Multiple QR code typesCustom stylingLogo integrationError correctionTemplate library'
+    features: [;
+      'Multiple QR code types_custom styling_logo integration_error correction_template library';
     ];
+<<<<<<< HEAD
     pricing: 'Free'
     apiEndpoint: '/api/qr-code-generator'
   }
   fileConverter: {
+=======
+    pricing: 'Free',
+    api_endpoint: '/api / qr - code - generator';
+  }
+  file_converter: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     name: 'File Converter';
     description: 'Convert files between different formats';
     icon: '🔄';
     category: 'MEDIA';
-    features: [
-      'Multiple file formatsBatch conversionQuality settingsMetadata preservationCloud processing'
+    features: [;
+      'Multiple file formats_batch conversion_quality settings_metadata preservation_cloud processing';
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
     pricing: 'Free (Basic) / $9.99/month (Pro)'
 =======
@@ -107,13 +175,20 @@ export const SERVICES_METADATA = {
     apiEndpoint: '/api/file-converter'
   }
   textAnalysis: {
+=======
+    pricing: 'Free (Basic) / $9.99 / month (Pro)',
+    api_endpoint: '/api / file - converter';
+  }
+  text_analysis: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     name: 'Text Analysis';
     description: 'Analyze text for insights and optimization';
     icon: '📊';
     category: 'ANALYSIS';
-    features: [
-      'Readability metricsSentiment analysisKeyword extractionEntity recognitionLanguage detection'
+    features: [;
+      'Readability metrics_sentiment analysis_keyword extraction_entity recognition_language detection';
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
     pricing: 'Free (Basic) / $19.99/month (Pro)'
 =======
@@ -156,3 +231,37 @@ export const getServiceStats = () => {
   }
 }
 
+=======
+    pricing: 'Free (Basic) / $19.99 / month (Pro)',
+    api_endpoint: '/api / text - analysis';
+  }
+} as const;
+;
+// Service availability and status;
+export const getServiceStatus = () =>: any {
+  return {
+    url_shortener: { status: 'active', uptime: '99.9%', last_updated: new Date () }
+    password_generator: { status: 'active', uptime: '99.9%', last_updated: new Date () }
+    qrCodeGenerator: { status: 'active', uptime: '99.9%', last_updated: new Date () }
+    file_converter: { status: 'active', uptime: '99.9%', last_updated: new Date () }
+    text_analysis: { status: 'active', uptime: '99.9%', last_updated: new Date () }
+  }
+}
+;
+// Service usage statistics;
+export const getServiceStats = () =>: any {
+  return {
+    total_users: 15420;
+    total_requests: 2847500;
+    averageResponseTime: 125,
+    services: {
+      url_shortener: { users: 8920, requests: 1250000, avg_response: 89 }
+      password_generator: { users: 12450, requests: 890000, avg_response: 45 }
+      qrCodeGenerator: { users: 6780, requests: 456000, avg_response: 156 }
+      file_converter: { users: 5430, requests: 234000, avg_response: 234 }
+      text_analysis: { users: 3890, requests: 11500, avg_response: 178 }
+    }
+  }
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

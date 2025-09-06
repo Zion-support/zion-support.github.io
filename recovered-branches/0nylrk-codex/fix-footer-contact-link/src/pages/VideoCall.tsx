@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState, useEffect  } from 'react';
@@ -12,14 +13,17 @@ export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {useState, useEffect} from 'react';
-import {useParams, useNavigate} from 'react-router-dom';
-import {Header} from '@/components/Header';
-import {Footer} from '@/components/Footer';
-import {SEO} from '@/components/SEO';
-import {VideoCallRoom} from '@/components/video/VideoCallRoom';
-import {Button} from '@/components/ui/button';
+import {use_params, use_navigate} from 'react-router-dom';
+import {Header} from '@/components / Header';
+import {Footer} from '@/components / Footer';
+import {SEO} from '@/components / SEO';
+import {VideoCallRoom} from '@/components / video / VideoCallRoom';
+import {Button} from '@/components / ui / button';
 import {toast} from 'sonner';
+<<<<<<< HEAD
 export default function VideoCall() {;
   // useParams is typed as `any` in this environment due to missing type;
   // definitions, so avoid passing a type argument to prevent TS2347.;
@@ -33,13 +37,29 @@ export default function VideoCall() {;
 <<<<<<< HEAD
     id: string
     name: string
+=======
+export default /**
+ * VideoCall - Function description
+ */
+function VideoCall() {
+  // use_params is typed as `any` in this environment due to missing type;
+  // definitions, so avoid passing a type argument to prevent TS2347.;
+  const { room_id } = use_params ();
+  const navigate = use_navigate ();
+  const [is_joining, setIsJoining] = useState (false);
+  const [has_joined, setHasJoined] = useState (false);
+  const [participants, set_participants] = useState < Array<{
+    id: string,
+    name: string,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     avatar?: string;
-    isMuted?: boolean;
+    is_muted?: boolean;
     isVideoEnabled?: boolean;
     isScreenSharing?: boolean;
-    isHost?: boolean
-  }>>([
+    is_host?: boolean;
+  }>>([;
     {
+<<<<<<< HEAD
       id: 'user-1'
       name: 'You'
       isVideoEnabled: true
@@ -202,3 +222,89 @@ export default function VideoCall() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      id: 'user - 1',
+      name: 'You',
+      isVideoEnabled: true,
+      is_muted: false;
+    }
+  ]);
+;
+  const handleJoinCall = () =>: any {
+    setIsJoining (true);
+    // Simulate connection delay;
+    set_timeout (() => {
+      setHasJoined (true);
+      setIsJoining (false);
+      toast.success ("Call joined", {
+        description: `You have joined meeting room ${room_id}`;
+      });
+    }, 1500);
+  }
+;
+  const handleLeaveCall = () =>: any {
+    setHasJoined (false);
+    toast.info ("Call ended", {
+      description: "You have left the meeting";
+    });
+;
+    // Navigate back after a short delay;
+    set_timeout (() => {
+      navigate (-1);
+    }, 1500);
+  }
+;
+  const simulateUserJoining = () =>: any {
+    // This is just for demo purposes - in a real app, this would be handled by the video call service;
+    const mock_users = [;
+      { id: 'user - 2', name: 'Alex Chen', isVideoEnabled: true, is_muted: false },
+      { id: 'user - 3', name: 'Taylor Kim', isVideoEnabled: false, is_muted: true },
+      { id: 'user - 4', name: 'Jordan Smith', isVideoEnabled: true, is_muted: false, isScreenSharing: true }
+    ];
+;
+    const random_user = mock_users[Math.floor (Math.random () * mock_users.length)];
+;
+    if () {) {
+  $2
+}
+      set_participants (prev => [...prev, random_user]);
+      toast (`${random_user.name} joined the call`);
+    }
+  }
+;
+  return (
+    <>;
+      <SEO title={`Video Call - Room ${room_id}`} description="Zion video call" />;
+      <Header />;
+      <main className="container mx - auto py - 8 min - h-[calc (100vh - 200px)]">;
+        {!has_joined ? (
+          <div className="flex flex - col items - center justify - center h - 96 bg - zion - blue - dark / 30 rounded - lg p - 8">;
+            <h1 className="text - 3xl font - bold mb - 6 text - white">Join Video Call</h1>;
+            <p className="text - zion - slate - light mb - 8">Room ID: {room_id}</p>;
+            <Button;
+              on_click={handleJoinCall}
+              disabled={is_joining}
+              size="lg";
+              className="bg - zion - purple hover:bg - zion - purple - light";
+            >;
+              {is_joining ? "Connecting..." : "Join Call"}
+            </Button>;
+          </div>) : (
+          <div className="space - y-4">;
+            <VideoCallRoom;
+              room_id={room_id || ''}
+              participants={participants}
+              on_leave={handleLeaveCall}
+            />;
+            {/* This button is just for demo / testing purposes */}
+            <div className="flex justify - center mt - 4">;
+              <Button variant="outline" on_click={simulateUserJoining} className="text - sm">;
+                Simulate user joining (demo only);
+              </Button>;
+            </div>;
+          </div>)}
+      </main>;
+      <Footer />;
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

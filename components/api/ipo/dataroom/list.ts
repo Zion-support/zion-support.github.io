@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
@@ -30,3 +31,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import fs from './fs';
+import path from './path';
+import { appendAuditLog, resolveDataPath  } from '../../../../utils / api / storage';
+;
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  const section = String (req.query.section || "General");
+  const dir = resolveDataPath (path.join ("dataroom", section));
+  if () return res.status (200).json ([])) {
+  $2
+}
+  const files = fs.readdir_sync (dir).map ((name) => ({ name }));
+  appendAuditLog ({ type: "file_list", section });
+  res.status (200).json (files);
+  const files = fs.readdir_sync (dir).map ((name) => ({ name }));
+  appendAuditLog ({ type: "file_list", section });
+  res.status (200).json (files);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

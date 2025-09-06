@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 import fs from "fs";
 import path from "path";
@@ -31,10 +32,44 @@ files && files.forEach((file) => {
         if (!match && match.trim().endsWith(";")) {
           const fixedMatch = match && match.trim() + ";";
           content = content && content.replace(match, fixedMatch);
+=======
+#!/usr / bin / env node;
+import fs from './fs';
+import path from './path';
+import { glob  } from './glob';
+;
+// Find all TypeScript and JavaScript files;
+const files = glob.sync ("src/**/*.{ts, tsx, js, jsx}", { cwd: process.cwd () });
+;
+let total_fixed = 0;
+;
+files.for_each ((file) => {
+  try {
+    const file_path = path.join (process.cwd (), file);
+    let content = fs.readFileSync (file_path, "utf8");
+    let modified = false;
+;
+    // Fix import statements missing semicolons;
+    const import_regex = /^import\s+.*?from\s+['"][^'"]+['"]\s*, ?\s*$/gm;
+    const matches = content.match (import_regex);
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      matches.for_each ((match) => {
+        // Check condition
+if (.ends_with (") {
+  $2
+}")) {
+          const fixed_match = match.trim () + ";";
+          content = content.replace (match, fixed_match);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           modified = true;
         }
       });
     }
+<<<<<<< HEAD
     // Fix other common syntax issues
     // Fix missing semicolons after variable declarations
 <<<<<<< HEAD
@@ -62,11 +97,37 @@ files && files.forEach((file) => {
           !match && match.includes("export") &&
           !match && match.includes("import")
         ) {
+=======
+    // Fix other common syntax issues;
+    // Fix missing semicolons after variable declarations;
+    content = content.replace (
+      /(\w+)\s*=\s*[^;]+(?!)\s*$/gm,
+      (match, var_name) => {
+        // Check condition
+if (&&) {
+  $2
+}
+          !match.includes ("if") &&;
+          !match.includes ("for") &&;
+          !match.includes ("while") &&;
+          !match.includes ("switch") &&;
+          !match.includes ("try") &&;
+          !match.includes ("catch") &&;
+          !match.includes ("finally") &&;
+          !match.includes ("return") &&;
+          !match.includes ("throw") &&;
+          !match.includes ("break") &&;
+          !match.includes ("continue") &&;
+          !match.includes ("debugger") &&;
+          !match.includes ("export") &&;
+          !match.includes ("import")) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           return match + ";";
         }
         return match;
       }
     );
+<<<<<<< HEAD
     if (modified) {
       fs && fs.writeFileSync(filePath, content, "utf8");
       console && console.log(`Fixed: ${file}`);
@@ -82,3 +143,21 @@ console.log(`\nTotal files fixed: ${totalFixed}`);
 
 console && console.log(`\nTotal files fixed: ${totalFixed}`);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      fs.writeFileSync (file_path, content, "utf8");
+      console.log (`Fixed: ${file}`);
+      total_fixed++;
+    }
+  } catch (error) {
+    console.error (`Error processing ${file}:`, error.message);
+  }
+});
+;
+console.log (`\n_total files fixed: ${total_fixed}`);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

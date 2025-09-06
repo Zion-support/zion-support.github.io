@@ -3,6 +3,7 @@
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
 import React from 'react';
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import SEOEnhancer from '../components/SEOEnhancer.dynamic';
@@ -11,6 +12,15 @@ describe('SEOEnhancer', () => {
   test('renders without crashing', () => {
     render(<SEOEnhancer />);
     expect(screen.getByTestId('seo-enhancer')).toBeInTheDocument();
+=======
+import { render, screen } from '@testing - library / react';
+import '@testing - library / jest - dom';
+import SEOEnhancer from '../components / SEOEnhancer.dynamic';
+describe ('SEOEnhancer', () => {
+  test ('renders without crashing', () => {
+    render (<SEOEnhancer />);
+    expect (screen.getByTestId ('seo - enhancer')).toBeInTheDocument ();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
 });
 =======

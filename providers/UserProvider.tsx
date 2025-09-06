@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React, {
+<<<<<<< HEAD
   createContext
   useContext
   useEffect
@@ -33,9 +34,29 @@ export type UserContextValue = {
 
 export type UserContextValue = {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  create_context,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,} from 'react';} from 'react';
+;
+export type UserRole = 'client' | 'talent';
+;
+export type User = {
+  id: string;
+  name: string;
+  role: UserRole;
+  avatar_url?: string;
+  onboarding_completed: boolean;
+}
+;
+export type UserContextValue = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   user: User | null;
-  setUser: (user: User | null) => void;
+  set_user: (user: User | null) => void;
   logout: () => void;
+<<<<<<< HEAD
   completeOnboarding: () => void;};}
 const UserContext = createContext<UserContextValue | undefined>(undefined);
 <<<<<<< HEAD
@@ -70,10 +91,17 @@ export type UserContextValue = {
 
 const UserContext = createContext<UserContextValue | undefined>(undefined);
 
+=======
+  complete_onboarding: () => void;}}
+;
+const UserContext = create_context < UserContextValue | undefined>(undefined);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 const DEFAULT_USER: User = {
   id: 'u001',
   name: 'Jordan Lee',
   role: 'client',
+<<<<<<< HEAD
   onboardingCompleted: false
 };
 
@@ -86,11 +114,26 @@ export function UserProvider({
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   useEffect(() => {
+=======
+  onboarding_completed: false,
+}
+;
+export /**
+ * UserProvider - Function description
+ */
+function UserProvider() {  const [user, set_user] = useState < User | null>(null);  const [user, set_user] = useState < User | null>(null);
+;
+  useEffect (() => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
-      const raw = localStorage.getItem('zion.user');
-      if (raw) {
-        setUser(JSON.parse(raw));
+      const raw = local_storage.get_item ('zion.user');
+      // Check condition
+if ( {) {
+  $2
+}
+        set_user (JSON.parse (raw));
       } else {
+<<<<<<< HEAD
 =======
 
 const DEFAULT_USER: User = {;
@@ -199,3 +242,41 @@ export function useUser() {
   return ctx;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+        set_user (DEFAULT_USER);
+      }
+    } catch {
+      set_user (DEFAULT_USER);
+    }
+  }, []);
+;
+  useEffect (() => {
+    try {
+      if (local_storage.set_item ('zion.user', JSON.stringify (user))) {
+  $2
+}
+      else local_storage.remove_item ('zion.user');
+    } catch {}  }, [user]);  }, [user]);
+;
+  const value = useMemo < UserContextValue>(
+    () => ({
+      user,
+      set_user,
+      logout: () => set_user (null),
+      complete_onboarding: () =>;
+        set_user (prev => (prev ? { ...prev, onboarding_completed: true } : prev)),    }),    }),
+    [user]);
+;
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
+;
+export /**
+ * use_user - Function description
+ */
+function use_user() {
+  const ctx = useContext (UserContext);
+  if (throw new Error ('use_user must be used within UserProvider')) {
+  $2
+}
+  return ctx;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

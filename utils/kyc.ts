@@ -3,7 +3,11 @@ export type KycRole = 'client' | 'talent' | 'enterprise';
 export type KycStatus = 'not started' | 'in progress' | 'submitted' | 'approved' | 'rejected' | 'needs more info';
 export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface KycDocumentMeta {
   id: string;
   kind: 'document' | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
@@ -12,29 +16,32 @@ export interface KycDocumentMeta {
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   url: string;
-  uploadedAt: string;
+  uploaded_at: string;
   status: 'pending' | 'approved' | 'rejected';
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface KycProfile {
-  userId: string;
+  user_id: string;
   role: KycRole;
   fullLegalName?: string;
-  businessName?: string;
+  business_name?: string;
   businessRegistrationNumber?: string;
   country?: string;
   dateOfBirth?: string;
   documents: KycDocumentMeta[];
   status: 'in_progress' | 'submitted' | 'approved' | 'rejected';
-  amlStatus: 'unknown' | 'clear' | 'match' | 'review';
+  aml_status: 'unknown' | 'clear' | 'match' | 'review';
   flags?: string[];
-  riskScore?: number;
-  createdAt: string;
+  risk_score?: number;
+  created_at: string;
   lastUpdatedAt: string;
-  auditTrail: Array<{
+  audit_trail: Array<{
     at: string;
     by: string;
     action: string;
@@ -62,20 +69,37 @@ export interface KycProfile {
   notes?: string;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 }
+<<<<<<< HEAD
 export function getRequiredDocuments(role: KycRole): string[] {
   if (role === 'client') {
+=======
+export function getRequiredDocuments (role: KycRole): string[] {
+  // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return ['government_id', 'proof_of_address'];
   } else {
     return ['business_registration', 'proof_of_address', 'beneficial_ownership'];
   }
 }
+<<<<<<< HEAD
 export function getOptionalDocuments(role: KycRole): string[] {
   if (role === 'client') {
+=======
+export function getOptionalDocuments (role: KycRole): string[] {
+  // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return ['bank_statement', 'utility_bill'];
   } else {
     return ['bank_statement', 'utility_bill', 'tax_certificate'];
   }
 }
+<<<<<<< HEAD
 export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {
   const missing: string[] = [];
 <<<<<<< HEAD
@@ -149,3 +173,37 @@ export function isKycProfileExpired(profile: KycProfile): boolean {
   return new Date(profile.expiresAt) < new Date();
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
+  const missing: string[] = [];
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('name');
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('country');
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('dateOfBirth');
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('businessRegistrationNumber');
+  }
+  return {
+    ok: missing.length === 0,
+    missing;
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -8,6 +8,7 @@ export interface NextGenAi2026Service {
   features: string[];
   link: string;
   category: string;
+<<<<<<< HEAD
   realImplementation: boolean;
   contactInfo: {
     mobile: string;
@@ -44,6 +45,33 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
       email: "kleber@ziontechgroup.com"
 
 =======
+=======
+  real_implementation: boolean;
+    mobile: string;
+    email: string;
+    address: string;
+  }
+;
+export const nextGenAI2026Services: NextGenAi2026Service[] = [;
+  {
+    id: '2026 - next - gen - ai',
+    name: '2026 Next - Gen AI Platform',
+    tagline: 'Next - generation AI for 2026',
+    price: '$299 / month',
+    description:;
+      'Advanced next - generation AI platform designed specifically for 2026 with cutting - edge capabilities.',
+    features: [;
+      'Next - gen AI capabilities',
+      'Advanced algorithms',
+      'Future - ready features',
+      'Innovation platform',
+      'Expert support',
+    ],
+    link: '/services / 2026 - next - gen - ai',
+    category: 'Next - Gen AI 2026',
+    real_implementation: true,
+    contact_info: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -93,8 +121,12 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
     contactInfo: {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
+<<<<<<< HEAD
 ],
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

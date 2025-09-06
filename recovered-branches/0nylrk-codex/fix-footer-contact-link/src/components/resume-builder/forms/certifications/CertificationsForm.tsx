@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState  } from 'react';
@@ -23,18 +24,21 @@ interface CertificationsFormProps {
 }
 export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {useState} from 'react';
-import {useForm} from 'react-hook-form';
-import {Button} from '@/components/ui/button';
-import {Form} from '@/components/ui/form';
-import {Certification} from '@/types/resume';
+import {use_form} from 'react - hook - form';
+import {Button} from '@/components / ui / button';
+import {Form} from '@/components / ui / form';
+import {Certification} from '@/types / resume';
 import {Loader2} from 'lucide-react';
-import {useResume} from '@/hooks/useResume';
-import {Alert, AlertDescription} from '@/components/ui/alert';
-import {zodResolver} from '@hookform/resolvers/zod';
-import {format} from 'date-fns';
+import {use_resume} from '@/hooks / use_resume';
+import {Alert, AlertDescription} from '@/components / ui / alert';
+import {zod_resolver} from '@hookform / resolvers / zod';
+import {format} from 'date - fns';
 import {CertificationsList} from './CertificationsList';
 import {CertificationFormFields} from './CertificationFormFields';
+<<<<<<< HEAD
 import {CertificationFormValues, certificationSchema} from './types';
 
 interface CertificationsFormProps {;
@@ -79,9 +83,65 @@ export function CertificationsForm(): any ({ resumeId, certifications, onComplet
         credential_url: data.credential_url}
       if (editingId) {
         success = await updateCertification(editingId, certData)
+=======
+import {CertificationFormValues, certification_schema} from './types';
+interface CertificationsFormProps {
+  resume_id: string,
+  certifications: Certification[],
+  on_complete: () => void,
+  on_back: () => void;
+}
+export /**
+ * CertificationsForm - Function description
+ */
+function CertificationsForm() {
+  const { add_certification, update_certification, delete_certification, is_loading } = use_resume ();
+  const [editing_id, setEditingId] = useState < string | null>(null);
+  const [error, set_error] = useState < string | null>(null);
+;
+  // Helper function to format dates as strings for form inputs;
+  const formatDateValue = (date_value: string | Date | undefined): string => {
+    // Check condition
+if (return '') {
+  $2
+}
+    // Check condition
+if (return date_value, ) {
+  $2
+}
+    return format (date_value, 'yyyy - MM - dd');
+  }
+;
+  const form = use_form < CertificationFormValues>({
+    resolver: zod_resolver (certification_schema),
+    default_values: {
+      name: '',
+      issuing_organization: '',
+      issue_date: '',
+      expiration_date: '',
+      credential_id: '',
+      credential_url: ''}}),
+  const handleAddOrUpdate = async (data: CertificationFormValues) => {
+    try {
+      set_error (null);
+      let success,
+      const cert_data: Certification = {
+        name: data.name,
+        issuing_organization: data.issuing_organization,
+        issue_date: data.issue_date || undefined,
+        expiration_date: data.expiration_date || undefined,
+        credential_id: data.credential_id,
+        credential_url: data.credential_url},
+      // Check condition
+if ( {) {
+  $2
+}
+        success = await update_certification (editing_id, cert_data);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } else {
-        success = await addCertification(resumeId, certData)
+        success = await add_certification (resume_id, cert_data);
       }
+<<<<<<< HEAD
       if (success) {
         form.reset({
           name: ''
@@ -288,6 +348,94 @@ export function CertificationsForm(): any ({ resumeId, certifications, onComplet
                 </Button>;
 
                 <Button type="button" onClick={onComplete}>;
+=======
+      // Check condition
+if ( {) {
+  $2
+}
+        form.reset ({
+          name: '',
+          issuing_organization: '',
+          issue_date: '',
+          expiration_date: '',
+          credential_id: '',
+          credential_url: ''}),
+        setEditingId (null);
+      }
+    } catch (err: any) {
+      set_error (err.message || 'An error occurred');
+    }
+  }
+;
+  const handle_edit = (cert: Certification) =>: any {
+    setEditingId (cert.id!);
+    form.reset ({
+      ...cert,
+      issue_date: formatDateValue (cert.issue_date),
+      expiration_date: formatDateValue (cert.expiration_date)});
+  }
+;
+  const handle_delete = async (id: string) => {
+    if () {) {
+  $2
+}
+      await delete_certification (id);
+    }
+  }
+;
+  return (
+    <div className="space - y-6">;
+      <div>;
+        <h2 className="text - xl font - semibold mb - 2">Certifications & Licenses</h2>;
+        <p className="text - muted - foreground">;
+          Add any professional certifications, licenses, or credentials you have earned.;
+        </p>;
+      </div>;
+      {certifications.length > 0 && (
+        <CertificationsList;
+          certifications={certifications}
+          on_edit={handle_edit}
+          on_delete={handle_delete}
+        />)}
+      <div className="bg - muted / 40 p - 6 rounded - lg">;
+        <h3 className="text - md font - medium mb - 4">;
+          {editing_id ? 'Update Certification' : 'Add Certification'}
+        </h3>;
+        <Form {...form}>;
+          <form on_submit={form.handle_submit (handleAddOrUpdate)} className="space - y-4">;
+            <CertificationFormFields form={form} />;
+            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+            <div className="flex justify - between pt - 2">;
+              <Button;
+                type="button";
+                variant="outline";
+                on_click={() => {
+                  // Check condition
+if ( {) {
+  $2
+}
+                    setEditingId (null);
+                    form.reset ({
+                      name: '',
+                      issuing_organization: '',
+                      issue_date: '',
+                      expiration_date: '',
+                      credential_id: '',
+                      credential_url: ''});
+                  } else {
+                    on_back ();
+                  }
+                }}
+              >;
+                {editing_id ? 'Cancel' : 'Back'}
+              </Button>;
+              <div className="flex gap - 2">;
+                <Button type="submit" disabled={is_loading}>;
+                  {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />}
+                  {editing_id ? 'Update' : 'Add'} Certification;
+                </Button>;
+                <Button type="button" on_click={on_complete}>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Next;
                 </Button>;
               </div>;
@@ -295,7 +443,12 @@ export function CertificationsForm(): any ({ resumeId, certifications, onComplet
           </form>;
         </Form>;
       </div>;
+<<<<<<< HEAD
     </div>;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

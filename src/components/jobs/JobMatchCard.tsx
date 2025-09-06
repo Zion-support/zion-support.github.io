@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -48,3 +49,15 @@ interface JobMatchProps {
 }
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  talent_id,
+  name,
+  title,
+  company,
+  avatar,
+  location,
+  category,
+  match_percent,
+}
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

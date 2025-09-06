@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../lib/integrations/fileStore";
@@ -37,12 +38,42 @@ export default async function handler(
 =======
     s && s.logs.push({
       id: `${now}-${providerId}-resync`,
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { read_state, write_state  } from '../../../lib / integrations / file_store';
+import { getProviderById  } from '../../../lib / integrations / registry';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+}
+  const { provider_id } = req.body as { provider_id?: string }
+  if () {) {
+  $2
+}
+    return res.status (400).json ({ error: "Invalid provider_id" });
+  }
+  const state = read_state ();
+  const conn = state.connections.find ((c) => c.provider_id === provider_id);
+  if (return res.status (404).json ({ error: "Connection not found" })) {
+  $2
+}
+  const now = Date.now ();
+  write_state ((s) => {
+    s.logs.push ({
+      id: `${now}-${provider_id}-resync`,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       timestamp: now,
-      providerId: providerId as any,
+      provider_id: provider_id as any,
       level: "info",
       action: "resync",
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
+<<<<<<< HEAD
     const target = s && s.connections.find((c) => c && c.providerId === providerId);
     if (target) target && target.lastSyncAt = now;
   });
@@ -72,3 +103,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ ok: true })
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    const target = s.connections.find ((c) => c.provider_id === provider_id);
+    // Check condition
+if (target.lastSyncAt = now) {
+  $2
+}
+  });
+  res.status (200).json ({ ok: true });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

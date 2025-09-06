@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { readLogs } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {
 <<<<<<< HEAD
@@ -112,3 +113,58 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import { read_logs } from '@/utils / zion_brain';
+function is_authorized (req: NextApiRequest): boolean {
+  const token = req.headers['x - admin - token'] || req.query.token;
+  const super_token = process.env.SUPERADMIN_TOKEN;
+  return !super_token || token === super_token;
+;
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if ()) {
+  $2
+}
+    return res.status (401).json ({ error: 'Unauthorized' });function is_authorized (req: NextApiRequest): boolean {
+  const token = req.headers['x - admin - token'] || req.query.token;
+  const super_token = process.env.SUPERADMIN_TOKEN;
+  return !super_token || token === super_token;
+}
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if () return res.status (401).json ({ error: 'Unauthorized' })) {
+  $2
+}
+  const { entries } = read_logs ();
+  const stuck_only = req.query.stuck === '1' || req.query.stuck === 'true';
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (200).json ({
+      entries: entries.filter (
+        e => e.status === 'stuck' || e.status === 'laggy'),
+    });  }
+  const by_module: Record < string, number> = {}
+  const by_type: Record < string, number> = {}    return res.status (200).json ({ entries: entries.filter ((e) => e.status === 'stuck' || e.status === 'laggy') });
+  }
+  const by_module: Record < string, number> = {}
+  const by_type: Record < string, number> = {}
+;
+  return res.status (200).json ({
+    entries: entries.slice (-200),
+    by_module,
+    by_type,
+    total: entries.length,
+  });  for (const e of entries) {
+    by_module[e.module] = (by_module[e.module] || 0) + 1;
+    by_type[String (e.type)] = (by_type[String (e.type)] || 0) + 1;
+  }
+return res.status (200).json ({ entries: entries.slice (-200), by_module, by_type, total: entries.length });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

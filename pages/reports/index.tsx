@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 export default function Reports() {
   const [uptime, setUptime] = useState<any[]>([]),
@@ -200,10 +201,98 @@ export default function Reports() {;
         <div className='border rounded p-4'>;
           <div className='font-medium mb-1'>PageSpeed (weekly)</div>;
           <div className='text-sm text-gray-600'>;
+=======
+import {useEffect, useState} from 'react';
+export default /**
+ * Reports - Function description
+ */
+function Reports() {
+  const [uptime, set_uptime] = useState < any[]>([]);
+  const [seo, set_seo] = useState < any>({});
+  const [links, set_links] = useState < any>({});
+  const [deps, set_deps] = useState < any>({});
+  const [changelog, set_changelog] = useState < any>({});
+  const [pagespeed, set_pagespeed] = useState < any>({});
+;
+  useEffect (() => {
+    Promise.all ([;
+      fetch ('/api / reports / uptime');
+        .then (r => r.json ());
+        .then (set_uptime),
+      fetch ('/api / reports / seo');
+        .then (r => r.json ());
+        .then (set_seo),
+      fetch ('/api / reports / links');
+        .then (r => r.json ());
+        .then (set_links),
+      fetch ('/api / reports / deps');
+        .then (r => r.json ());
+        .then (set_deps),
+      fetch ('/api / reports / changelog');
+        .then (r => r.json ());
+        .then (set_changelog),
+      fetch ('/api / reports / pagespeed');
+        .then (r => r.json ());
+        .then (set_pagespeed),
+    ]).catch (() => {});  }, []);
+;
+  const last_uptime = uptime[uptime.length - 1];
+;
+  return (
+    <div className='space - y-6'>;
+      <div>;
+        <h1 className='text - 2xl font - semibold'>Automation Reports</h1>;
+        <div className='text - sm text - gray - 500'>;
+          Autonomously generated and synced;
+        </div>;
+      </div>;
+      <section className='grid lg:grid - cols - 2 gap - 6'>;
+        <div className='border rounded p - 4'>;
+          <div className='font - medium mb - 1'>Uptime</div>;
+          {last_uptime ? (
+            <div className='text - sm'>;
+              Last check: {new Date (last_uptime.timestamp).toLocaleString ()} —{' '}
+              {
+                last_uptime.results?.filter (
+                  (r: any) => r.status >= 200 && r.status < 400).length;
+              }
+              /{last_uptime.results?.length} ok;
+            </div>) : (
+            <div className='text - sm text - gray - 500'>No data</div>)}
+        </div>;
+        <div className='border rounded p - 4'>;
+          <div className='font - medium mb - 1'>SEO (weekly)</div>;
+          <div className='text - sm text - gray - 600'>;
+            Pages: {seo?.results?.length || 0}
+          </div>;
+        </div>;
+        <div className='border rounded p - 4'>;
+          <div className='font - medium mb - 1'>Broken Links (weekly)</div>;
+          <div className='text - sm text - gray - 600'>;
+            Broken: {links?.broken?.length || 0}
+          </div>;
+        </div>;
+        <div className='border rounded p - 4'>;
+          <div className='font - medium mb - 1'>Dependencies (weekly)</div>;
+          <div className='text - sm text - gray - 600'>;
+            Checked: {deps?.entries?.length || 0}
+          </div>;
+        </div>;
+        <div className='border rounded p - 4'>;
+          <div className='font - medium mb - 1'>Changelog (weekly)</div>;
+          <div className='text - sm text - gray - 600'>;
+            Commits: {changelog?.total_commits || 0}
+          </div>;
+        </div>;
+        <div className='border rounded p - 4'>;
+          <div className='font - medium mb - 1'>PageSpeed (weekly)</div>;
+          <div className='text - sm text - gray - 600'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Pages: {pagespeed?.results?.length || 0}
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
     </div>;
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -222,3 +311,7 @@ export default function Reports() {;
   )
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    </div>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

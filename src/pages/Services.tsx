@@ -49,21 +49,21 @@ const Services: React.FC = () => {
     {
       title: "Cloud Infrastructure",
       description: "Scalable, secure, and reliable cloud solutions that grow with your business needs.",
-      features: ["AWS/Azure/GCP", "DevOps", "Microservices", "Auto-scaling"],
+      features: ["AWS / Azure / GCP", "DevOps", "Microservices", "Auto-scaling"],
       icon: "☁️",
       color: "from-green-500 to-blue-600"
     },
     {
       title: "Web Development",
       description: "Modern, responsive web applications built with the latest technologies and best practices.",
-      features: ["React/Next.js", "TypeScript", "Mobile-First", "SEO Optimized"],
+      features: ["React / Next.js", "TypeScript", "Mobile-First", "SEO Optimized"],
       icon: "💻",
       color: "from-purple-500 to-pink-600"
     },
     {
       title: "Mobile Applications",
       description: "Native and cross-platform mobile apps that deliver exceptional user experiences.",
-      features: ["iOS/Android", "React Native", "Flutter", "App Store Optimization"],
+      features: ["iOS / Android", "React Native", "Flutter", "App Store Optimization"],
       icon: "📱",
       color: "from-orange-500 to-red-600"
     },
@@ -218,6 +218,12 @@ const Services: React.FC = () => {;
     </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
+<<<<<<< HEAD
 }
 export default Services;
 >>>>>>> 2fc87795dcf7cb742c24a257dd9040071acce941
+=======
+};
+;
+export default Services;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 import { store } from '[^']*';
@@ -27,3 +28,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { store  } from '../../../../../../utils / data / enterprise_store';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  const { company_id } = req.query;
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (400).json ({ error: "company_id required" });
+  }
+  const invoices = store.list_invoices (company_id);
+  return res.status (200).json (invoices);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
@@ -30,10 +31,38 @@ export default async function handler(
         projectId: string;
         fromRole: "client" | "talent";
         fromId: string;
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { v4 as uuidv4  } from './uuid';
+import {
+  findProjectById,
+  hasExistingReview,
+  upsert_review,
+  counterpart_role,
+} from '../../../utils / data_store';
+import type { Review } from "../../../types / reviews";
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (405).json ({ error: "Method not allowed" });
+  }
+  try {
+    const { project_id, from_role, from_id, rating, text, categories, anonymous } =;
+      req.body as {
+        project_id: string;
+        from_role: "client" | "talent";
+        from_id: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         rating: number;
         text: string;
         categories?: Review["categories"];
         anonymous?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
       }
     if (!projectId |!fromRole |!fromId) {
@@ -101,10 +130,44 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
     if (project && project.status !== "Completed") {
       return res && res.status(400).json({
+=======
+      }
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.status (400).json ({ error: "Missing required fields" });
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.status (400).json ({ error: "Rating must be between 1 and 5" });
+    }
+    if (.trim ().length === 0) {) {
+  $2
+}
+      return res.status (400).json ({ error: "Review text is required" });
+    }
+    const project = await findProjectById (project_id);
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.status (404).json ({ error: "Project not found" });
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.status (400).json ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         error: "Reviews can only be submitted after project completion",
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
+<<<<<<< HEAD
     const toRole = counterpartRole(fromRole);
     const toId = toRole === "talent" ? project && project.talentSlug : project && project.clientId;
     const expectedFromId =
@@ -136,6 +199,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         error: "You have already submitted a review for this project"
 =======
       return res && res.status(409).json({
+=======
+    const to_role = counterpart_role (from_role);
+    const to_id = to_role === "talent" ? project.talent_slug : project.client_id;
+;
+    const expectedFromId =;
+      from_role === "client" ? project.client_id : project.talent_slug;
+    // Check condition
+if ( {) {
+  $2
+}
+      return res;
+        .status (403);
+        .json ({ error: "Invalid reviewer for this project" });
+    }
+    const existing = await hasExistingReview (project_id, from_role, from_id);
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.status (409).json ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         error: "You have already submitted a review for this project",
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
@@ -143,6 +227,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
+<<<<<<< HEAD
     const now = new Date().toISOString();
     const review: Review = {
 <<<<<<< HEAD
@@ -184,9 +269,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       fromId,
       toRole,
       toId,
+=======
+    const now = new Date ().toISOString ();
+    const review: Review = {
+      id: uuidv4 (),
+      project_id,
+      from_role,
+      from_id,
+      to_role,
+      to_id,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       rating,
-      text: String(text).trim(),
+      text: String (text).trim (),
       categories,
+<<<<<<< HEAD
       anonymous: Boolean(anonymous),
       approved: false, // requires admin approval
       reported: false, reports: [],
@@ -201,3 +297,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      anonymous: Boolean (anonymous),
+      approved: false, // requires admin approval;
+      reported: false,
+      reports: [],
+      removed: false,
+      created_at: now,
+    }
+;
+    await upsert_review (review);
+;
+    return res;
+      .status (201);
+      .json ({ message: "Review submitted", review_id: review.id });
+  } catch (error: any) {
+    return res;
+      .status (500);
+      .json ({ error: "Internal server error", details: error?.message });
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

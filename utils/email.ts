@@ -1,21 +1,31 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs-extra';
 import path from 'path';
+=======
+import fs from 'fs - extra';
+import path from 'path';
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface WarningEmailPayload {
   toUserId: string;
-  toAddress?: string | null;
+  to_address?: string | null;
   subject: string;
   body: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface EmailOptions {
   to: string;
   subject: string;
   body: string;
 }
+<<<<<<< HEAD
 export async function sendWarningEmail(
   payload: WarningEmailPayload
 ): Promise<void> {
@@ -396,3 +406,18 @@ export const COMMON_TEMPLATES = {
   SECURITY_NOTIFICATION: 'security_notification'
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+export async function sendWarningEmail (
+  payload: WarningEmailPayload): Promise < void> {
+  const log_dir = path.resolve (process.cwd (), 'data / fraud');
+  const log_path = path.join (log_dir, 'emails.log');
+  await fs.ensure_dir (log_dir);
+;
+  const line = `[${new Date ().toISOString ()}] toUserId=${payload.toUserId} to=${payload.to_address || 'unknown'} subject=${payload.subject} body=${payload.body}\n`;
+  await fs.append_file (log_path, line, 'utf8');
+}
+export async function send_email (options: EmailOptions): Promise < void> {
+  // Mock implementation - in production, this would send actual emails;
+  console.log ('Email would be sent:', options);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

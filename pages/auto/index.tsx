@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
@@ -48,3 +49,15 @@ export default AutoIndex;
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import Head from 'next / head';
+import Link from 'next / link';
+          </li>;
+        </ul>;
+      </main>;
+    </div>),
+}
+;
+export default AutoIndex;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

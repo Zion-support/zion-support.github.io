@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Validation utilities
 export const validation = {
   // Add validation utilities here
@@ -114,3 +115,9 @@ export const validators = { email: (email: string): boolean => { const emailRege
 =======
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+// Validation utilities;
+export const validation = {
+  // Add validation utilities here;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

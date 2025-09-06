@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 import Link from 'next/link',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -46,6 +47,37 @@ const statuses: GrantStatus[] = [;
 export default function GrantsPage() {;
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{;
+=======
+import {useEffect, useState} from 'react';
+import Link from 'next / link';
+import EnhancedLayout from '../../components / layout / EnhancedLayout';
+import type {
+  GrantApplication,
+  GrantCategory,
+  GrantStatus,
+} from '../../types / grants';
+;
+const categories: GrantCategory[] = [;
+  'Ecosystem Tools',
+  'Talent Development',
+  'Regional Expansion',
+  'Research Grants',
+];
+const statuses: GrantStatus[] = [;
+  'Draft',
+  'Submitted',
+  'Under Review',
+  'Approved',
+  'Rejected',
+];
+;
+export default /**
+ * GrantsPage - Function description
+ */
+function GrantsPage() {
+  const [items, set_items] = useState < GrantApplication[]>([]);
+  const [filters, set_filters] = useState<{
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     sector?: string;
     status?: string;
     region?: string;
@@ -62,6 +94,7 @@ import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/g
 
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],
+<<<<<<< HEAD
 export default function GrantsPage() {
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
@@ -105,9 +138,42 @@ export default function GrantsPage() {;
       .then((d) => setItems(d.items || []))
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       .catch(() => setItems([]))
-  }, [filters]);
-
+=======
+export default /**
+ * GrantsPage - Function description
+ */
+function GrantsPage() {
+  const [items, set_items] = useState < GrantApplication[]>([]);
+  const [filters, set_filters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
+;
+  useEffect (() => {
+    const params = new URLSearchParams ();
+    if (params.set ('sector', filters.sector)) {
+  $2
+}
+    if (params.set ('status', filters.status)) {
+  $2
+}
+    if (params.set ('region', filters.region)) {
+  $2
+}
+    if (params.set ('program', filters.program)) {
+  $2
+}
+    fetch (`/api / grants?${params.to_string ()}`);
+      .then (r => r.json ());
+      .then (d => set_items (d.items || []));
+      .catch (() => set_items ([]));  }, [filters]);
+;
   return (
+    <EnhancedLayout>      .then ((r) => r.json ());
+      .then ((d) => set_items (d.items || []));
+      .catch (() => set_items ([]));
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  }, [filters]);
+;
+  return (
+<<<<<<< HEAD
     <EnhancedLayout>
 <<<<<<< HEAD
       <div className='flex items-center justify-between mb-6'>
@@ -144,10 +210,22 @@ export default function GrantsPage() {;
           </Link>;
           <Link href='/incubator'>;
             <a className='px-3 py-2 bg-purple-600 text-white rounded'>;
+=======
+    <EnhancedLayout>;
+      <div className='flex items - center justify - between mb - 6'>;
+        <h1 className='text - 2xl font - semibold'>Zion Grants & Incubator</h1>;
+        <div className='flex gap - 2'>;
+          <Link href='/grants / apply'>;
+            <a className='px - 3 py - 2 bg - blue - 600 text - white rounded'>Apply</a>;
+          </Link>;
+          <Link href='/incubator'>;
+            <a className='px - 3 py - 2 bg - purple - 600 text - white rounded'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Incubator;
             </a>;
           </Link>;
       </div>;
+<<<<<<< HEAD
 
       <div className='grid md:grid-cols-4 gap-4 mb-6'>;
         <select
@@ -227,11 +305,76 @@ export default function GrantsPage() {;
                 </h3>
                 <div className='text-xs text-gray-600 dark:text-gray-400'>
                   {g.sector |'General'} • {g.region |'Global'} •{' '}
+=======
+      <div className='grid md:grid - cols - 4 gap - 4 mb - 6'>;
+        <select;
+          className='border rounded p - 2';
+          value={filters.sector || ''}
+          on_change={e =>;
+            set_filters (function => ({ ...f, sector: e.target.value || undefined }));
+          }
+        >;
+          <option value=''>All Sectors</option>;
+          {categories.map (c => (
+            <option key={c} value={c}>;
+              {c}
+            </option>))}
+        </select>;
+        <select;
+          className='border rounded p - 2';
+          value={filters.status || ''}
+          on_change={e =>;
+            set_filters (function => ({ ...f, status: e.target.value || undefined }));
+          }
+        >;
+          <option value=''>All Stages</option>;
+          {statuses.map (string => (
+            <option key={s} value={s}>;
+              {s}
+            </option>))}
+        </select>;
+        <input;
+          className='border rounded p - 2';
+          placeholder='Region';
+          value={filters.region || ''}
+          on_change={e =>;
+            set_filters (function => ({ ...f, region: e.target.value || undefined }));
+          }
+        />;
+        <select;
+          className='border rounded p - 2';
+          value={filters.program || ''}
+          on_change={e =>;
+            set_filters (function => ({ ...f, program: e.target.value || undefined }));
+          }
+        >;
+          <option value=''>All Programs</option>;
+          <option value='grant'>Grant</option>;
+          <option value='incubator'>Incubator</option>;
+        </select>;
+      </div>;
+      <div className='grid gap - 4'>;
+        {items.map (g => (
+          <div;
+            key={g.id}
+            className='border rounded p - 4 bg - white / 70 dark:bg - black / 40';
+          >;
+            <div className='flex items - center justify - between'>;
+              <div>;
+                <h3 className='text - lg font - medium'>;
+                  <Link href={`/grants/${g.id}`}>;
+                    <a>{g.project_name}</a>;
+                  </Link>;
+                </h3>;
+                <div className='text - xs text - gray - 600 dark:text - gray - 400'>;
+                  {g.sector || 'General'} • {g.region || 'Global'} •{' '}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {g.program === 'incubator' ? 'Incubator' : 'Grant'}
-                </div>
-              </div>
-              <div className='flex gap-2 items-center'>
+                </div>;
+              </div>;
+              <div className='flex gap - 2 items - center'>;
                 {g.program === 'incubator' && (
+<<<<<<< HEAD
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
                     Incubated by Zion
                   </span>
@@ -315,3 +458,29 @@ export default function GrantsPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+                  <span className='px - 2 py - 1 text - xs rounded bg - purple - 100 text - purple - 700'>;
+                    Incubated by Zion;
+                  </span>)}
+                {g.status === 'Approved' && (
+                  <span className='px - 2 py - 1 text - xs rounded bg - emerald - 100 text - emerald - 700'>;
+                    Grant Winner;
+                  </span>)}
+                <span className='px - 2 py - 1 text - xs rounded bg - gray - 100 dark:bg - gray - 800'>;
+                  {g.status}
+                </span>;
+              </div>;
+            </div>;
+            <p className='mt - 2 text - sm text - gray - 700 dark:text - gray - 300 line - clamp - 3'>;
+              {g.proposal_summary}
+            </p>;
+            <div className='mt - 3 text - sm text - gray - 600 dark:text - gray - 400'>;
+              Budget: {g.budget_amount} {g.budget_currency}
+            </div>;
+          </div>))}
+        {items.length === 0 && (
+          <div className='text - sm text - gray - 600'>No grants found.</div>)}
+      </div>;
+    </EnhancedLayout>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

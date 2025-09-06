@@ -8,10 +8,11 @@ export interface QuantumSpaceService {
   features: string[];
   link: string;
   category: string;
-  realImplementation: boolean;
-  contactInfo: {
+  real_implementation: boolean;
+  contact_info: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 
     address: string;
   }
@@ -44,12 +45,37 @@ export const quantumSpaceServices: QuantumSpaceService[] = [
 
       email: "kleber@ziontechgroup.com";
 =======
+=======
+    address: string;
+  }
+;
+export const quantumSpaceServices: QuantumSpaceService[] = [;
+  {
+    id: 'quantum - computing - platform',
+    name: 'Quantum Computing Platform',
+    tagline: 'Next - generation quantum computing solutions',
+    price: '$199 / month',
+    description:;
+      'Advanced quantum computing platform for complex calculations and simulations.',
+    features: [;
+      'Quantum algorithms',
+      'Simulation tools',
+      'API access',
+      'Documentation',
+      'Support services',
+    ],
+    link: '/services / quantum - computing - platform',
+    category: 'Quantum Computing',
+    real_implementation: true,
+    contact_info: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950";
+<<<<<<< HEAD
       email: "kleber@ziontechgroup && ziontechgroup.com";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -89,3 +115,11 @@ export const quantumSpaceServices: QuantumSpaceService[] = [
   }
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }
+];
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

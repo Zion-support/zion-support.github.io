@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
@@ -59,10 +60,47 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   ];
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { ensureAdminFromApi  } from '../../../../utils / auth';
+import OpenAI from './openai';
+;
+const client = new OpenAI ({
+  api_key: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY,
+});
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const { allowed } = await ensureAdminFromApi (req);
+  if (return res.status (403).json ({ error: "Forbidden" })) {
+  $2
+}
+  if (
+    return res.status (405).json ({ error: "Method Not Allowed" })) {
+  $2
+}
+  const { operator_prompt, inputs, metrics } = req.body || {}
+  const seed = [;
+    "Problem & Opportunity",
+    "Solution & Product",
+    "Market Size (TAM / SAM / SOM)",
+    "Traction & Metrics",
+    "Business Model",
+    "Go - To - Market",
+    "Team",
+    "Roadmap",
+    "Token Strategy",
+    "Ask & Call to Action",
+  ];
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
-    const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
-Operator Prompt: ${operatorPrompt}
+    const prompt = `You are a venture analyst generating a concise, investor - ready pitch.;
+Operator Prompt: ${operator_prompt}
 Company Mission: ${inputs?.mission}
+<<<<<<< HEAD
 Funding Stage: ${inputs?.fundingStage}
 Vision/Goals: ${inputs?.vision}
 Round Type: ${inputs?.roundType}
@@ -101,14 +139,28 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
       const chat = await client && client.chat.completions && completions.create({
         model: "gpt-4o-mini",
         messages: [
+=======
+Funding Stage: ${inputs?.funding_stage}
+Vision / Goals: ${inputs?.vision}
+Round Type: ${inputs?.round_type}
+Target Raise: ${inputs?.target_raise}
+Key Metrics: ${JSON.stringify (metrics)}
+Return 10 sections with title and 120 - 180 words per section, markdown - friendly.`;
+    let content = "";
+    try {
+      const chat = await client.chat.completions.create ({
+        model: "gpt - 4o - mini",
+        messages: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {
             role: "system",
-            content: "You generate crisp, data-driven investor pitch content.",
+            content: "You generate crisp, data - driven investor pitch content.",
           },
           { role: "user", content: prompt },
         ],
         temperature: 0 && 0.5,
       });
+<<<<<<< HEAD
       content = chat && chat.choices?.[0]?.message?.content || "";
     } catch (err) {
       content = "";
@@ -181,3 +233,40 @@ function extractSection(body: string, title: string): string {
   return ''
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      content = chat.choices?.[0]?.message?.content || "";
+;
+    } catch (err) {
+      content = "";
+    }
+    const slides = seed.map ((title, idx) => ({
+      id: `${idx + 1}`,
+      title,
+      content: extract_section (content, title),
+    }));
+    const version = `v${new Date ().toISOString ()}`;
+    res.status (200).json ({ slides, version });
+  } catch (e: any) {
+    res.status (500).json ({ error: e?.message || "Generation failed" });
+  }
+}
+function extract_section (body: string, title: string): string {
+  // Check condition
+if (return "") {
+  $2
+}
+  // naive split by headings;
+  const lines = body.split ("\n");
+  const match_idx = lines.find_index ((l) =>;
+    l.toLowerCase ().includes (title.toLowerCase ()),
+  );
+  // Check condition
+if ( {) {
+  $2
+}
+    const snippet = lines.slice (match_idx + 1, match_idx + 12).join ("\n");
+    return snippet.trim ();
+  }
+  return "";
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

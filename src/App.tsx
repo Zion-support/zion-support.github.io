@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
@@ -27,6 +28,21 @@ const LoadingSpinner = () => (
 const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+=======
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Sidebar from './components/layout/Sidebar';
+import ErrorBoundary from './components/ErrorBoundary';
+// Import pages
+import HomePage from './pages/Home';
+import AboutPage from './pages/About';
+import ContactPage from './pages/Contact';
+import ServicesPage from './pages/Services';
+import PricingPage from './pages/Pricing';
+export default function App() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <ErrorBoundary>
       <Router>
@@ -52,6 +68,7 @@ const App = () => {
       </Router>
     </ErrorBoundary>
   );
+<<<<<<< HEAD
 };
 
 export default App;
@@ -113,3 +130,6 @@ export default function App() {,
   ),
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { authenticateRequest } from '@/utils/auth';
 import { generateText } from '@/utils/ai';
 <<<<<<< HEAD
@@ -79,3 +80,52 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import { authenticate_request } from '@/utils / auth';
+import { generate_text } from '@/utils / ai';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const method = (req.method || 'POST').toUpperCase ();
+  if (
+    return res.status (405).json ({ error: 'Method not allowed' })) {
+  $2
+}export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const method = (req.method || 'POST').toUpperCase ();
+  if (return res.status (405).json ({ error: 'Method not allowed' })) {
+  $2
+}
+  const auth = authenticate_request (req, false);
+  if (return res.status (401).json ({ error: auth.error })) {
+  $2
+}
+  const { job_description, resumes } = req.body || {}
+  if ()) {
+  $2
+}
+    return res;
+      .status (400);
+      .json ({ error: 'job_description and resumes[] required' });
+;
+  const prompt =;
+    `Score resumes 0 - 100 for fit vs job description. Return JSON array of {candidate_index, score, summary, red_flags}.\n` +;
+    `Job Description:\n${job_description}\n\n` +;
+    `Resumes:\n${resumes.map ((r: string, index: number) => `#${i}:\n${r}`).join ('\n\n')}`;
+;
+  const text = await generate_text (
+    prompt,
+    'You are an expert technical recruiter. Output strictly valid JSON.');
+  return res.status (200).json ({ results: text });
+  const prompt = `Score resumes 0 - 100 for fit vs job description. Return JSON array of {candidate_index, score, summary, red_flags}.\n` +;
+    `Job Description:\n${job_description}\n\n` +;
+    `Resumes:\n${resumes.map ((r: string, index: number) => `#${i}:\n${r}`).join ('\n\n')}`;
+;
+  const text = await generate_text (prompt, 'You are an expert technical recruiter. Output strictly valid JSON.');
+  return res.status (200).json ({ results: text });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

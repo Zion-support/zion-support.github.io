@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { useEffect, useState  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
@@ -31,10 +32,57 @@ export function useWallet() {
     } catch (err: any) {
       console && console.error('Error fetching wallet:', err);
       setError(err && err.message)
+=======
+import {useEffect, useState} from 'react';
+import {use_auth} from '@/hooks / use_auth';
+import {supabase} from '@/integrations / supabase / client';
+import type { Wallet, TokenTransaction } from '@/types / tokens';
+export /**
+ * use_wallet - Function description
+ */
+function use_wallet() {
+  const { user } = use_auth ();
+  const [wallet, set_wallet] = useState < Wallet | null>(null);
+  const [transactions, set_transactions] = useState < TokenTransaction[]>([]);
+  const [loading, set_loading] = useState (true);
+  const [error, set_error] = useState < string | null>(null);
+;
+  async /**
+ * fetch_wallet - Function description
+ */
+function fetch_wallet() {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_wallet (null);
+      set_loading (false);
+      return;
+    }
+    try {
+      set_loading (true);
+      const { data, error } = await supabase;
+        .from ('wallets');
+        .select ('*');
+        .eq ('user_id', user.id);
+        .single ();
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        throw error;
+      }
+      set_wallet (data);
+    } catch (err: any) {
+      console.error ('Error fetching wallet:', err);
+      set_error (err.message);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
-      setLoading(false)
+      set_loading (false);
     }
   }
+<<<<<<< HEAD
   async function fetchTransactions() {
     if (!user?.id) {
       setTransactions([]);
@@ -89,14 +137,94 @@ export function useWallet() {
     fetchWallet();
     fetchTransactions()
   }, [user?.id]);
+=======
+  async /**
+ * fetch_transactions - Function description
+ */
+function fetch_transactions() {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_transactions ([]);
+      return;
+    }
+    try {
+      const { data, error } = await supabase;
+        .from ('token_transactions');
+        .select ('*');
+        .eq ('user_id', user.id);
+        .order ('created_at', { ascending: false });
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      set_transactions ((data || []) as TokenTransaction[]);
+    } catch (err: any) {
+      console.error ('Error fetching transactions:', err);
+    }
+  }
+  async /**
+ * earn_tokens - Function description
+ */
+function earn_tokens() {
+    // Check condition
+if (return) {
+  $2
+}
+    set_wallet (prev => prev ? { ...prev, balance: prev.balance + amount } : prev);
+    set_transactions (prev => [;
+      {
+        id: crypto.randomUUID ();
+        user_id: user.id;
+        amount;
+        transaction_type: 'earn';
+        reason: reason || null,
+        created_at: new Date ().toISOString ()}
+      ...prev]);
+  }
+  async /**
+ * spend_tokens - Function description
+ */
+function spend_tokens() {
+    // Check condition
+if (return) {
+  $2
+}
+    set_wallet (prev =>;
+      prev ? { ...prev, balance: Math.max (0, prev.balance - amount) } : prev);
+    set_transactions (prev => [;
+      {
+        id: crypto.randomUUID ();
+        user_id: user.id;
+        amount;
+        transaction_type: 'burn';
+        reason: reason || null,
+        created_at: new Date ().toISOString ()}
+      ...prev]);
+  }
+  useEffect (() => {
+    fetch_wallet ();
+    fetch_transactions ();
+  }, [user?.id]);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     wallet;
     transactions;
     loading;
     error;
+<<<<<<< HEAD
     fetchWallet;
     fetchTransactions;
     earnTokens;
 
     spendTokens}
+=======
+    fetch_wallet;
+    fetch_transactions;
+    earn_tokens;
+    spend_tokens}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

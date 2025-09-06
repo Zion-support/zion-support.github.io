@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -20,3 +21,23 @@ export default function CertificatePage() {
 =======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import { use_router } from 'next / router',
+import CertificatePreview from '../../../components / learn / CertificatePreview',
+export default /**
+ * CertificatePage - Function description
+ */
+function CertificatePage() {
+  const router = use_router (),
+  const { course_id } = router.query as { course_id: string },
+  // Check condition
+if (return null, ) {
+  $2
+}
+  return (
+    <div className="space - y-4">;
+      <h1 className="text - 2xl font - semibold">Certificate</h1>;
+      <CertificatePreview course_id={course_id} />;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

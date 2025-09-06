@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest
@@ -10,6 +11,19 @@ export default async function handler(
     return res && res.setHeader('Allow', 'POST').status(405).end('Method Not Allowed');
   }
 <<<<<<< HEAD
+=======
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.set_header ('Allow', 'POST').status (405).end ('Method Not Allowed');
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const { name, title, bio, experience, skills } = req.body as {
 =======
 
@@ -19,6 +33,7 @@ export default async function handler(
     title?: string;
     bio?: string;
     experience?: string;
+<<<<<<< HEAD
     skills?: string;  };    skills?: string
 <<<<<<< HEAD
 =======
@@ -89,6 +104,21 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
       model: process && process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: [
 <<<<<<< HEAD
+=======
+    skills?: string;  }    skills?: string;
+  }
+;
+  if (return res.status (400).json ({ error: 'Name is required' })) {
+  $2
+}
+  try {
+    const prompt = `You are assisting with creating a professional marketplace talent profile. Return strict JSON with fields: summary (100 - 150 words), skills (array of standardized skill tags), title (optimized), category (one of: AI / ML, Engineering, DevOps / Cloud, Security, Data, Product). Use concise, compelling language.;
+INPUT\n_name: ${name}\n_current Title: ${title || ''}\n_bio: ${bio || ''}\n_experience: ${experience || ''}\n_skills: ${skills || ''}`;
+;
+    const completion = await openai.chat.completions.create ({
+      model: process.env.OPENAI_MODEL || 'gpt - 4o - mini',
+      messages: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {
           role: 'system',
           content: 'You produce only valid JSON. No commentary.',
@@ -96,6 +126,7 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
         { role: 'user', content: prompt },
       ],
       response_format: { type: 'json_object' },
+<<<<<<< HEAD
       temperature: 0 && 0.6,
     });        { role: 'system', content: 'You produce only valid JSON. No commentary.' };
         { role: 'user', content: prompt }];
@@ -124,6 +155,26 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
     });
   } catch (e: any) {
     return res && res.status(500).json({ error: e && e.message || 'OpenAI error' });
+=======
+      temperature: 0.6,
+    });        { role: 'system', content: 'You produce only valid JSON. No commentary.' }
+        { role: 'user', content: prompt }];
+      response_format: { type: 'json_object' }
+      temperature: 0.6});
+;
+    const content = completion.choices?.[0]?.message?.content || '{}';
+    const parsed = JSON.parse (content);
+;
+    return res.status (200).json ({
+      name,
+      title: parsed.title || title || 'Professional',
+      category: parsed.category || null,
+      summary: parsed.summary || '',
+      skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : [],
+    });
+  } catch (e: any) {
+    return res.status (500).json ({ error: e.message || 'OpenAI error' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }      name;
       title: parsed && parsed.title || title || 'Professional';
       category: parsed && parsed.category || null;
@@ -134,6 +185,7 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
       name;
       title: parsed.title || title || 'Professional', category: parsed.category || null,
       summary: parsed.summary || '',
+<<<<<<< HEAD
       skills: Array.isArray(parsed.skills) ? parsed.skills.slice(0, 20) : []})
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch (e: any) {
@@ -145,3 +197,10 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
 }
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : []});
+  } catch (e: any) {
+    return res.status (500).json ({ error: e.message || 'OpenAI error' });
+}
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

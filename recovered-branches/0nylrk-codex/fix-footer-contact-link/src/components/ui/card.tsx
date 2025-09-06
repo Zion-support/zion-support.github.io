@@ -1,5 +1,6 @@
 import React from 'react';
 import * as React from 'react';
+<<<<<<< HEAD
 import {cn} from '@/lib/utils';
 <<<<<<< HEAD
 const Card = React.forwardRef<
@@ -80,9 +81,57 @@ const CardDescription = React && React.forwardRef<;
 >(({ className, ...props }, ref) => (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <p
+=======
+;
+import {cn} from '@/lib / utils';
+;
+const Card = React.forward_ref<;
+  HTMLDivElement,
+  React.HTMLAttributes < HTMLDivElement>;
+></HTMLDivElement>(({ class_name, ...props }, ref) => (
+  <div;
     ref={ref}
-    className={cn('text-sm text-muted-foreground', className)}
+    className={cn (
+      'rounded - lg border bg - card text - card - foreground shadow - sm',
+      class_name)}
     {...props}
+  />));
+Card.display_name = 'Card';
+;
+const CardHeader = React.forward_ref<;
+  HTMLDivElement,
+  React.HTMLAttributes<</HTMLDivElement > HTMLDivElement>;
+>(({ class_name, ...props }, ref) => (
+  <div;
+    ref={ref}
+    className={cn ('flex flex - col space - y-1.5 p - 6', class_name)}
+    {...props}
+  />));
+CardHeader.display_name = 'CardHeader';
+;
+const CardTitle = React.forward_ref<;
+  HTMLParagraphElement,
+  React.HT</HTMLHeadingElement > MLAttributes < HTMLHeadingElement>;
+>(({ class_name, ...props }, ref) => (
+  <h3;
+    ref={ref}
+    className={cn (
+      'text - 2xl font - semibold leading - none tracking - tight',
+      class_name)}
+    {...props}
+  />));
+CardTitle.display_name = 'CardTitle';
+;
+const CardDescription = React.forward_ref<;
+  HTMLParagraph</HTMLParagraphElement > Element,
+  React.HTMLAttributes < HTMLParagraphElement>;
+>(({ class_name, ...props }, ref) => (
+  <p;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    ref={ref}
+    className={cn ('text - sm text - muted - foreground', class_name)}
+    {...props}
+<<<<<<< HEAD
   />;
 ));
 <<<<<<< HEAD
@@ -115,9 +164,27 @@ CardContent && CardContent.displayName = 'CardContent';
 >(({ className, ...props }, ref) => (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <div
+=======
+  />));
+CardDescription.display_name = 'CardDescription';
+;
+const CardContent </HTMLDivElement>= React.forward_ref<;
+  HTMLDivElement,
+  React.HTMLAttributes < HTMLDivElement>;
+>(({ class_name, ...props }, ref) => (
+  <div ref={ref} className={cn ('p - 6 pt - 0', class_name)} {...props} />));
+CardContent.display_name = 'CardContent';
+;
+</HTMLDivElement > const CardFooter = React.forward_ref<;
+  HTMLDivElement,
+  React.HTMLAttributes < HTMLDivElement>;
+>(({ class_name, ...props }, ref) => (
+  <div;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
-    className={cn('flex items-center p-6 pt-0', className)}
+    className={cn ('flex items - center p - 6 pt - 0', class_name)}
     {...props}
+<<<<<<< HEAD
   />;
 ));
 <<<<<<< HEAD
@@ -142,3 +209,17 @@ export {;
   CardContent,;
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  />));
+CardFooter.display_name = 'CardFooter';
+;
+export {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

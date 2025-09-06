@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react";
 import { Badge } from "@/components/ui/badge";
@@ -24,6 +25,26 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
   setStatusFilter;
   archiveFilter
   setArchiveFilter
+=======
+import React from './react';
+import { Badge } from '@/components / ui / badge';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
+import type { QuoteStatus } from "@/types / quotes";
+type RequestsHeaderProps = {
+  unread_count: number,
+  status_filter: QuoteStatus | 'all',
+  setStatusFilter: (value: QuoteStatus | 'all') => void,
+  archive_filter: 'active' | 'archived' | 'all',
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
+}
+;
+export const RequestsHeader: React.FC < RequestsHeaderProps> = ({
+  unread_count;
+  status_filter;
+  setStatusFilter;
+  archive_filter,
+  setArchiveFilter;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }) => {
 =======
 type RequestsHeaderProps = {;
@@ -43,6 +64,7 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
 }) => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+<<<<<<< HEAD
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">;
       <div>;
         <div className="flex items-center gap-3">;
@@ -106,6 +128,27 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
           onValueChange={(value) => setStatusFilter(value as QuoteStatus | 'all')}
         >;
           <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">;
+=======
+    <div className="flex flex - col md:flex - row justify - between items - start md:items - center mb - 8">;
+      <div>;
+        <div className="flex items - center gap - 3">;
+          <h1 className="text - 3xl font - bold text - white">Hire Requests</h1>;
+          {unread_count > 0 && (
+            <Badge className="bg - blue - 500">;
+              {unread_count} New;
+            </Badge>)}
+        </div>;
+        <p className="text - zion - slate - light mt - 2">;
+          Manage client requests to hire your services;
+        </p>;
+      </div>;
+      <div className="flex gap - 3 mt - 4 md:mt - 0">;
+        <Select;
+          value={status_filter}
+          onValueChange={(value) => setStatusFilter (value as QuoteStatus | 'all')}
+        >;
+          <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white w-[140px]">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <SelectValue placeholder="All Statuses" />;
           </SelectTrigger>;
           <SelectContent>;
@@ -117,12 +160,20 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
             <SelectItem value="closed">Closed</SelectItem>;
           </SelectContent>;
         </Select>;
+<<<<<<< HEAD
 
         <Select
           value={archiveFilter} 
           onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
         >;
           <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">;
+=======
+        <Select;
+          value={archive_filter}
+          onValueChange={(value) => setArchiveFilter (value as 'active' | 'archived' | 'all')}
+        >;
+          <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white w-[140px]">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <SelectValue placeholder="Active Only" />;
           </SelectTrigger>;
           <SelectContent>;
@@ -132,7 +183,13 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
           </SelectContent>;
         </Select>;
       </div>;
+<<<<<<< HEAD
     </div>;
   );
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    </div>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 import { store } from '[^']*';
@@ -32,12 +33,34 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method === "POST") {
     const { name, slug, logoUrl, brandColor, plan } = req && req.body || {};
     const created = store && store.createCompany({
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { store  } from '../../../utils / data / enterprise_store';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    const companies = store.list_companies ();
+    return res.status (200).json (companies);
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    const { name, slug, logo_url, brand_color, plan } = req.body || {}
+    const created = store.create_company ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       name,
       slug,
-      logoUrl,
-      brandColor,
+      logo_url,
+      brand_color,
       plan,
     });
+<<<<<<< HEAD
     return res && res.status(201).json(created);
   }
 
@@ -67,3 +90,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(405).json({ error: 'method_not_allowed' })
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    return res.status (201).json (created);
+  }
+  res.set_header ("Allow", "GET, POST");
+  return res.status (405).end ("Method Not Allowed");
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

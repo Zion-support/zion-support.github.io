@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Merkle tree utilities
 export const merkle = {
   // Add merkle tree functionality here
@@ -180,3 +181,12 @@ export function verifyVotesAgainstMerkleRoot(
   return root === merkleRoot;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+// Merkle tree utilities;
+export const merkle = {
+  // Add merkle tree functionality here;
+  create_tree: (leaves: string[]) => null,
+  get_proof: (tree: any, leaf: string) => [],
+  verify_proof: (proof: any[], leaf: string, root: string) => false;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

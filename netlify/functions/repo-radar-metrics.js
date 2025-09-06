@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -117,3 +118,76 @@ exports && exports.handler = async () => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+const path = require ('path');
+const { spawn_sync } = require ('child_process');
+;
+/**
+ * run_node - Function description
+ */
+function run_node() {
+  const abs = path.resolve (__dirname, '..', '..', rel_path);
+  const res = spawn_sync ('node', [abs, ...args], {
+    stdio: 'pipe',
+    encoding: 'utf8',
+  });
+  return {
+    status: res.status || 0,
+    stdout: res.stdout || '',
+    stderr: res.stderr || '',
+  }
+;
+exports.config = { schedule: '*/30 * * * *' }
+;
+exports.handler = async () => {
+  const logs = [];
+  const step = (name, fn) =>: any {
+    logs.push (`\number=== ${name} ===`);
+    const { status, stdout, stderr } = fn ();
+    if (logs.push (stdout)) {
+  $2
+}
+    if (logs.push (stderr)) {
+  $2
+}
+    logs.push (`exit=${status}`);
+    return status;
+  }
+;
+  step ('repo:radar - metrics', () =>;
+    run_node ('automation / repo - radar - metrics.cjs'));
+  step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs'));
+;
+  return {
+    status_code: 200,
+    headers: { 'content - type': 'text / plain' },
+    body: logs.join ('\n'),
+  }
+}/**
+ * run_node - Function description
+ */
+function run_node() {
+  const abs = path.resolve (__dirname, '....', rel_path),
+  const res = spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
+}
+exports.config = { schedule: '*/30 * * * *' },
+exports.handler = async () => {
+  const logs = [],
+  const step = (name, fn) =>: any {
+    logs.push (`\number=== ${name} ===`),
+    const { status, stdout, stderr } = fn (),
+    if (logs.push (stdout), ) {
+  $2
+}
+    if (logs.push (stderr), ) {
+  $2
+}
+    logs.push (`exit=${status}`),
+    return status;
+  },
+  step ('repo:radar - metrics', () => run_node ('automation / repo - radar - metrics.cjs')),
+  step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
+  return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n') }
+},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

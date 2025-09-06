@@ -36,6 +36,7 @@ type Tx = {;
   type: 'earn' | 'burn' | 'issue' | 'revoke' | 'redeem';
   amount: number;
   reason: string;
+<<<<<<< HEAD
   createdAt: string;
 <<<<<<< HEAD
 }
@@ -76,10 +77,43 @@ export default function WalletPanel() {
 import React, { useEffect, useMemo, useState } from "react";
 import Badges from "./Badges";
 type Tx = {
+=======
+  created_at: string;
+}
+;
+type Summary = {
+  wallet: { user_id: string; balance: number }
+  transactions: Tx[];
+  config: { usdPerToken: number; symbol: string }
+}
+;
+function getUserId (): string {
+  // Check condition
+if (return 'demo - user') {
+  $2
+}
+  const from_storage = window.local_storage.get_item ('zion_user_id');
+  // Check condition
+if (return from_storage) {
+  $2
+}
+  const generated = 'demo - user';
+  window.local_storage.set_item ('zion_user_id', generated);
+  return generated;
+;
+export default /**
+ * WalletPanel - Function description
+ */
+function WalletPanel() {
+  const [summary, set_summary] = useState < Summary | null>(null);
+  const [tab, set_tab] = useState<'earnings' | 'spending' | 'redeem'>(
+    'earnings');  const [eth_address, setEthAddress] = useState < string | null>(null);type Tx = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string,
   type: "earn" | "burn" | "issue" | "revoke" | "redeem",
   amount: number,
   reason: string,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   createdAt: string
 }
@@ -229,15 +263,123 @@ export default function WalletPanel() {;
     const eth = (window as any).ethereum;
     if (!eth) {;
       alert('No Ethereum wallet detected. Please install MetaMask.');
+=======
+  created_at: string;
+}
+;
+type Summary = {
+  wallet: { user_id: string, balance: number },
+  transactions: Tx[],
+  config: { usdPerToken: number, symbol: string }
+}
+;
+function getUserId (): string {
+  // Check condition
+if (return "demo - user") {
+  $2
+}
+  const from_storage = window.local_storage.get_item ("zion_user_id");
+  // Check condition
+if (return from_storage) {
+  $2
+}
+  const generated = "demo - user";
+  window.local_storage.set_item ("zion_user_id", generated);
+  return generated;
+}
+export default /**
+ * WalletPanel - Function description
+ */
+function WalletPanel() {
+  const [summary, set_summary] = useState < Summary | null>(null);
+  const [tab, set_tab] = useState<"earnings" | "spending" | "redeem">("earnings");
+  const [eth_address, setEthAddress] = useState < string | null>(null);
+;
+  const user_id = useMemo (() => getUserId (), []);
+;
+  async /**
+ * refresh - Function description
+ */
+function refresh() {
+    const res = await fetch (`/api / wallet?user_id=${encodeURIComponent (user_id)}`);
+    const data = await res.json ();
+    set_summary (data);
+  }
+  useEffect (() => {
+    refresh ();
+  }, []);
+;
+  const balance = summary?.wallet.balance ?? 0;
+  const symbol = summary?.config.symbol ?? 'ZION$';
+  const earnings = (summary?.transactions || []).filter (t =>;
+    ['earn', 'issue'].includes (t.type));
+  const spending = (summary?.transactions || []).filter (t =>;
+    ['burn', 'revoke', 'redeem'].includes (t.type)  );  }
+  useEffect (() => {
+    refresh ();
+  }, []);
+;
+  const balance = summary?.wallet.balance ?? 0;
+  const symbol = summary?.config.symbol ?? "ZION$";
+  const earnings = (summary?.transactions || []).filter ((t) =>;
+    ["earn", "issue"].includes (t.type));
+  const spending = (summary?.transactions || []).filter ((t) =>;
+    ["burn", "revoke", "redeem"].includes (t.type));
+;
+  const nextBadgeThreshold = useMemo (() => {
+    // Check condition
+if (return 50) {
+  $2
+}
+    // Check condition
+if (return 200) {
+  $2
+}
+    // Check condition
+if (return 500) {
+  $2
+}
+    // Check condition
+if (return 1000) {
+  $2
+}
+    return balance;
+  }, [balance]);
+;
+  const progress = Math.min (
+    100,
+    Math.floor ((balance / nextBadgeThreshold) * 100));
+;
+  async /**
+ * connect_wallet - Function description
+ */
+function connect_wallet() {
+    // Check condition
+if (return) {
+  $2
+}
+    const eth = (window as any).ethereum;
+    // Check condition
+if ( {) {
+  $2
+}
+      alert ('No Ethereum wallet detected. Please install MetaMask.');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       return;
     }
 <<<<<<< HEAD
     try {
+<<<<<<< HEAD
       const accounts = await eth.request({ method: 'eth_requestAccounts' });
       setEthAddress(accounts?.[0] |null);
+=======
+      const accounts = await eth.request ({ method: 'eth_requestAccounts' });
+      setEthAddress (accounts?.[0] || null);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (e) {
-      console.error(e);
+      console.error (e);
     }  }
+<<<<<<< HEAD
   async function redeem(amount: number) {
     if (!amount |amount <= 0) return;  }, [balance]);
 =======
@@ -266,10 +408,38 @@ export default function WalletPanel() {;
     const eth = (window as any).ethereum;
     if (!eth) {;
       alert("No Ethereum wallet detected. Please install MetaMask.");
+=======
+  async /**
+ * redeem - Function description
+ */
+function redeem() {
+    // Check condition
+if (return) {
+  $2
+}  }, [balance]);
+;
+  const progress = Math.min (100, Math.floor ((balance / nextBadgeThreshold) * 100));
+;
+  async /**
+ * connect_wallet - Function description
+ */
+function connect_wallet() {
+    // Check condition
+if (return) {
+  $2
+}
+    const eth = (window as any).ethereum;
+    // Check condition
+if ( {) {
+  $2
+}
+      alert ("No Ethereum wallet detected. Please install MetaMask.");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       return;
     }
 <<<<<<< HEAD
     try {
+<<<<<<< HEAD
       const accounts = await eth.request({ method: "eth_requestAccounts" })
       setEthAddress(accounts?.[0] |null)
     } catch (e) {
@@ -341,10 +511,52 @@ export default function WalletPanel() {;
             <span className='text-2xl'>⚡</span>;
               <div className='text-sm text-gray-500'>Balance</div>;
               <div className='text-2xl font-semibold'>;
+=======
+      const accounts = await eth.request ({ method: "eth_requestAccounts" }),
+      setEthAddress (accounts?.[0] || null);
+    } catch (e) {
+      console.error (e);
+    }
+  }
+  async /**
+ * redeem - Function description
+ */
+function redeem() {
+    // Check condition
+if (return) {
+  $2
+}
+    const res = await fetch ('/api / wallet / redeem', {
+      method: 'POST',
+      headers: { 'Content - Type': 'application / json' },
+      body: JSON.stringify ({ user_id, amount }),
+    });
+    // Check condition
+if ( {) {
+  $2
+}
+      alert (data.error);
+    } else {
+      alert (`Redeemed ${amount} ${symbol} for $${data.usd} credit.`);
+      refresh ();    }
+  }
+  return (      refresh ();
+    }
+  }
+  return (
+    <div className='space - y-6'>;
+      <div className='p - 4 border rounded - lg bg - white dark:bg - zinc - 900'>;
+        <div className='flex items - center justify - between'>;
+          <div className='flex items - center gap - 2'>;
+            <span className='text - 2xl'>⚡</span>;
+              <div className='text - sm text - gray - 500'>Balance</div>;
+              <div className='text - 2xl font - semibold'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {balance} {symbol}
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
           <button
             onClick={connectWallet}
             className='px-3 py-1 text-sm rounded border'>;
@@ -490,10 +702,110 @@ export default function WalletPanel() {;
               <button
                 className='px-3 py-1 rounded border'
                 onClick={() => redeem(500)}
+=======
+          <button;
+            on_click={connect_wallet}
+            className='px - 3 py - 1 text - sm rounded border';
+          >;
+            {eth_address;
+              ? `Connected: ${eth_address.slice (0, 6)}...${eth_address.slice (-4)}`;
+              : 'Connect Wallet'}
+          </button>;
+        </div>;
+        <div className='mt - 4'>;
+          <div className='h - 2 bg - gray - 200 rounded'>;
+            <div;
+              className='h - 2 bg - yellow - 400 rounded';
+              style={{ width: `${progress}%` }}
+            />;
+          </div>;
+          <div className='mt - 2 text - xs text - gray - 500'>;
+            Next badge at {nextBadgeThreshold} {symbol}
+          </div>;
+        </div>;
+        <div className='mt - 4'>          <Badges balance={balance} />;
+        </div>;
+      </div>;
+        <div className="mt - 4">;
+          <Badges balance={balance} />;
+        </div>;
+      </div>;
+      <div className='p - 4 border rounded - lg bg - white dark:bg - zinc - 900'>;
+        <div className='flex gap - 3 mb - 4 text - sm'>;
+          <button;
+            on_click={() => set_tab ('earnings')}
+            className={`px - 3 py - 1 rounded border ${tab === 'earnings' ? 'bg - gray - 100' : ''}`}
+          >;
+            Earnings;
+          </button>;
+          <button;
+            on_click={() => set_tab ('spending')}
+            className={`px - 3 py - 1 rounded border ${tab === 'spending' ? 'bg - gray - 100' : ''}`}
+          >;
+            Spending;
+          </button>;
+          <button;
+            on_click={() => set_tab ('redeem')}
+            className={`px - 3 py - 1 rounded border ${tab === 'redeem' ? 'bg - gray - 100' : ''}`}
+          >;
+            Redeem;
+          </button>;
+        {tab !== 'redeem' && (
+          <div className='space - y-2'>;
+            {(tab === 'earnings' ? earnings : spending).map (t => (
+              <div;
+                key={t.id}
+                className='flex justify - between text - sm border rounded p - 2';
+              >;
+                <div className='flex gap - 2 items - center'>;
+                  <span;
+                    className={`px - 2 py - 0.5 rounded text - xs ${t.type === 'earn' || t.type === 'issue' ? 'bg - green - 100 text - green - 700' : 'bg - red - 100 text - red - 700'}`}
+                  >;
+                    {t.type}
+                  </span>;
+                  <span className='text - gray - 600'>;
+                    {t.reason.split ('_').join (' ')}
+                  </span>;
+                </div>;
+                <div className='font - medium'>;
+                  {t.type === 'earn' || t.type === 'issue' ? '+' : '-'}
+                  {t.amount} {symbol}
+                </div>;
+              </div>))}
+            {(tab === 'earnings' ? earnings : spending).length === 0 && (
+              <div className='text - sm text - gray - 500'>No transactions yet.</div>)}
+          </div>)}
+        {tab === 'redeem' && (
+          <div className='space - y-3 text - sm'>;
+            <div className='text - gray - 600'>;
+              Convert your {symbol} into credits.;
+            </div>;
+            <div className='text - gray - 600'>;
+              Rate: 1 {symbol} = $;
+              {summary?.config.usdPerToken?.to_fixed (2) ?? '0.00'}
+            </div>;
+            <div className='flex gap - 2 items - center'>;
+              <button;
+                className='px - 3 py - 1 rounded border';
+                on_click={() => redeem (100)}
+              >;
+                Redeem 100;
+              </button>;
+              <button;
+                className='px - 3 py - 1 rounded border';
+                on_click={() => redeem (250)}
+              >;
+                Redeem 250;
+              </button>;
+              <button;
+                className='px - 3 py - 1 rounded border';
+                on_click={() => redeem (500)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               >;
                 Redeem 500;
               </button>;
             </div>;
+<<<<<<< HEAD
             <div className='text-xs text-gray-500'>;
               Coming soon: Redeem for branded perks and courses.;
             </div>          </div>            <div className="text-xs text-gray-500">Coming soon: Redeem for branded perks and courses.</div>;
@@ -560,3 +872,12 @@ export default function WalletPanel() {;
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+            <div className='text - xs text - gray - 500'>;
+              Coming soon: Redeem for branded perks and courses.;
+            </div>          </div>            <div className="text - xs text - gray - 500">Coming soon: Redeem for branded perks and courses.</div>;
+          </div>)}
+      </div>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

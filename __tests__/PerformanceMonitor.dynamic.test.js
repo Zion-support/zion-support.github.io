@@ -3,6 +3,7 @@
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
 import React from 'react';
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import PerformanceMonitor from '../components/PerformanceMonitor.dynamic';
@@ -11,6 +12,15 @@ describe('PerformanceMonitor', () => {
   test('renders without crashing', () => {
     render(<PerformanceMonitor />);
     expect(screen.getByTestId('performance-monitor')).toBeInTheDocument();
+=======
+import { render, screen } from '@testing - library / react';
+import '@testing - library / jest - dom';
+import PerformanceMonitor from '../components / PerformanceMonitor.dynamic';
+describe ('PerformanceMonitor', () => {
+  test ('renders without crashing', () => {
+    render (<PerformanceMonitor />);
+    expect (screen.getByTestId ('performance - monitor')).toBeInTheDocument ();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
 });
 =======

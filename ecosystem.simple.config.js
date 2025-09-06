@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default { apps: [ { name: 'bolt-zion-app',script: 'npm',args: 'run preview',cwd: './',instances: 1,autorestart: true,watch: false,max_memory_restart: '1G',env: { NODE_ENV: 'production',},log_file: 'logs/pm2/preview.log',error_file: 'logs/pm2/preview-error.log',out_file: 'logs/pm2/preview-out.log',},{ name: 'auto-fix',script: 'node',args: 'scripts/pm2/auto-fix.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '512M',env: { NODE_ENV: 'production' },log_file: 'logs/pm2/auto-fix.log',error_file: 'logs/pm2/auto-fix-error.log',out_file: 'logs/pm2/auto-fix-out.log',},{ name: 'healthcheck',script: 'node',args: 'scripts/pm2/healthcheck.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '128M',env: { NODE_ENV: 'production' },log_file: 'logs/pm2/health.log',error_file: 'logs/pm2/health-error.log',out_file: 'logs/pm2/health-out.log',},{ name: 'code-quality-monitor',script: 'node',args: 'scripts/pm2/code-quality-monitor.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '1G',env: { NODE_ENV: 'development',PM2_PROCESS_NAME: 'code-quality-monitor',QUALITY_THRESHOLD: '80',AUTO_FIX_CRITICAL: 'true',},log_file: 'logs/pm2/code-quality-monitor.log',error_file: 'logs/pm2/code-quality-monitor-error.log',out_file: 'logs/pm2/code-quality-monitor-out.log',},{ name: 'performance-monitor',script: 'node',args: 'scripts/pm2/performance-monitor.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '1G',env: { NODE_ENV: 'development',PM2_PROCESS_NAME: 'performance-monitor',PERFORMANCE_THRESHOLD: '3000',BUNDLE_SIZE_LIMIT: '2MB',},log_file: 'logs/pm2/performance-monitor.log',error_file: 'logs/pm2/performance-monitor-error.log',out_file: 'logs/pm2/performance-monitor-out.log',} ],};
 =======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
@@ -32,6 +33,19 @@ export default {
       "autorestart": true
       "watch": false
       "max_memory_restart": '1G'
+=======
+export default { apps: [ { name: 'bolt - zion - app', script: 'npm', args: 'run preview', cwd: './', instances: 1, autorestart: true, watch: false, max_memory_restart: '1G', env: { NODE_ENV: 'production', }, log_file: 'logs / pm2 / preview.log', error_file: 'logs / pm2 / preview - error.log', out_file: 'logs / pm2 / preview - out.log', }, { name: 'auto - fix', script: 'node', args: 'scripts / pm2 / auto - fix.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '512M', env: { NODE_ENV: 'production' }, log_file: 'logs / pm2 / auto - fix.log', error_file: 'logs / pm2 / auto - fix - error.log', out_file: 'logs / pm2 / auto - fix - out.log', }, { name: 'healthcheck', script: 'node', args: 'scripts / pm2 / healthcheck.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '128M', env: { NODE_ENV: 'production' }, log_file: 'logs / pm2 / health.log', error_file: 'logs / pm2 / health - error.log', out_file: 'logs / pm2 / health - out.log', }, { name: 'code - quality - monitor', script: 'node', args: 'scripts / pm2 / code - quality - monitor.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '1G', env: { NODE_ENV: 'development', PM2_PROCESS_NAME: 'code - quality - monitor', QUALITY_THRESHOLD: '80', AUTO_FIX_CRITICAL: 'true', }, log_file: 'logs / pm2 / code - quality - monitor.log', error_file: 'logs / pm2 / code - quality - monitor - error.log', out_file: 'logs / pm2 / code - quality - monitor - out.log', }, { name: 'performance - monitor', script: 'node', args: 'scripts / pm2 / performance - monitor.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '1G', env: { NODE_ENV: 'development', PM2_PROCESS_NAME: 'performance - monitor', PERFORMANCE_THRESHOLD: '3000', BUNDLE_SIZE_LIMIT: '2MB', }, log_file: 'logs / pm2 / performance - monitor.log', error_file: 'logs / pm2 / performance - monitor - error.log', out_file: 'logs / pm2 / performance - monitor - out.log', } ], }
+export default {
+  "apps": [{
+      name: 'bolt - zion - app',
+      "script": 'npm',
+      "args": 'run preview',
+      "cwd": './',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '1G',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       "env": {
 <<<<<<< HEAD
         NODE_ENV: 'production'}
@@ -134,20 +148,31 @@ export default { apps: [ { name: 'bolt-zion-app',script: 'npm',args: 'run previe
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
         NODE_ENV: 'production'},
+<<<<<<< HEAD
       "log_file": 'logs/pm2/preview && preview.log',
       "error_file": 'logs/pm2/preview-error && error.log',
       "out_file": 'logs/pm2/preview-out && out.log'},
+=======
+      "log_file": 'logs / pm2 / preview.log',
+      "error_file": 'logs / pm2 / preview - error.log',
+      "out_file": 'logs / pm2 / preview - out.log'},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
-      "name": 'auto-fix',
+      "name": 'auto - fix',
       "script": 'node',
+<<<<<<< HEAD
       "args": 'scripts/pm2/auto-fix && fix.js',
+=======
+      "args": 'scripts / pm2 / auto - fix.js',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       "instances": 1,
       "autorestart": true,
       "watch": false,
       "max_memory_restart": '512M',
       "env": {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production';
       },
+<<<<<<< HEAD
       "log_file": 'logs/pm2/auto-fix && fix.log',
       "error_file": 'logs/pm2/auto-fix-error && error.log',
       "out_file": 'logs/pm2/auto-fix-out && out.log'},
@@ -155,45 +180,75 @@ export default { apps: [ { name: 'bolt-zion-app',script: 'npm',args: 'run previe
       "name": 'healthcheck',
       "script": 'node',
       "args": 'scripts/pm2/healthcheck && healthcheck.js',
+=======
+      "log_file": 'logs / pm2 / auto - fix.log',
+      "error_file": 'logs / pm2 / auto - fix - error.log',
+      "out_file": 'logs / pm2 / auto - fix - out.log'},
+    {
+      "name": 'healthcheck',
+      "script": 'node',
+      "args": 'scripts / pm2 / healthcheck.js',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       "instances": 1,
       "autorestart": true,
       "watch": false,
       "max_memory_restart": '128M',
       "env": {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production';
       },
+<<<<<<< HEAD
       "log_file": 'logs/pm2/health && health.log',
       "error_file": 'logs/pm2/health-error && error.log',
       "out_file": 'logs/pm2/health-out && out.log'},
+=======
+      "log_file": 'logs / pm2 / health.log',
+      "error_file": 'logs / pm2 / health - error.log',
+      "out_file": 'logs / pm2 / health - out.log'},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
-      "name": 'code-quality-monitor',
+      "name": 'code - quality - monitor',
       "script": 'node',
+<<<<<<< HEAD
       "args": 'scripts/pm2/code-quality-monitor && monitor.js',
+=======
+      "args": 'scripts / pm2 / code - quality - monitor.js',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       "instances": 1,
       "autorestart": true,
       "watch": false,
       "max_memory_restart": '1G',
       "env": {
         NODE_ENV: 'development',
-        "PM2_PROCESS_NAME": 'code-quality-monitor',
+        "PM2_PROCESS_NAME": 'code - quality - monitor',
         "QUALITY_THRESHOLD": '80',
         "AUTO_FIX_CRITICAL": 'true'},
+<<<<<<< HEAD
       "log_file": 'logs/pm2/code-quality-monitor && monitor.log',
       "error_file": 'logs/pm2/code-quality-monitor-error && error.log',
       "out_file": 'logs/pm2/code-quality-monitor-out && out.log'},
+=======
+      "log_file": 'logs / pm2 / code - quality - monitor.log',
+      "error_file": 'logs / pm2 / code - quality - monitor - error.log',
+      "out_file": 'logs / pm2 / code - quality - monitor - out.log'},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
-      "name": 'performance-monitor',
+      "name": 'performance - monitor',
       "script": 'node',
+<<<<<<< HEAD
       "args": 'scripts/pm2/performance-monitor && monitor.js',
+=======
+      "args": 'scripts / pm2 / performance - monitor.js',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       "instances": 1,
       "autorestart": true,
       "watch": false,
       "max_memory_restart": '1G',
       "env": {
         NODE_ENV: 'development',
-        "PM2_PROCESS_NAME": 'performance-monitor',
+        "PM2_PROCESS_NAME": 'performance - monitor',
         "PERFORMANCE_THRESHOLD": '3000',
         "BUNDLE_SIZE_LIMIT": '2MB'},
+<<<<<<< HEAD
       "log_file": 'logs/pm2/performance-monitor && monitor.log',
       "error_file": 'logs/pm2/performance-monitor-error && error.log',
       "out_file": 'logs/pm2/performance-monitor-out && out.log'}
@@ -204,3 +259,15 @@ export default { apps: [ { name: 'bolt-zion-app',script: 'npm',args: 'run previe
 export default { apps: [ { name: 'bolt-zion-app',script: 'npm',args: 'run preview',cwd: './',instances: 1,autorestart: true,watch: false,max_memory_restart: '1G',env: { NODE_ENV: 'production',},log_file: 'logs/pm2/preview && preview.log',error_file: 'logs/pm2/preview-error && error.log',out_file: 'logs/pm2/preview-out && out.log',},{ name: 'auto-fix',script: 'node',args: 'scripts/pm2/auto-fix && fix.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '512M',env: { NODE_ENV: 'production' },log_file: 'logs/pm2/auto-fix && fix.log',error_file: 'logs/pm2/auto-fix-error && error.log',out_file: 'logs/pm2/auto-fix-out && out.log',},{ name: 'healthcheck',script: 'node',args: 'scripts/pm2/healthcheck && healthcheck.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '128M',env: { NODE_ENV: 'production' },log_file: 'logs/pm2/health && health.log',error_file: 'logs/pm2/health-error && error.log',out_file: 'logs/pm2/health-out && out.log',},{ name: 'code-quality-monitor',script: 'node',args: 'scripts/pm2/code-quality-monitor && monitor.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '1G',env: { NODE_ENV: 'development',PM2_PROCESS_NAME: 'code-quality-monitor',QUALITY_THRESHOLD: '80',AUTO_FIX_CRITICAL: 'true',},log_file: 'logs/pm2/code-quality-monitor && monitor.log',error_file: 'logs/pm2/code-quality-monitor-error && error.log',out_file: 'logs/pm2/code-quality-monitor-out && out.log',},{ name: 'performance-monitor',script: 'node',args: 'scripts/pm2/performance-monitor && monitor.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '1G',env: { NODE_ENV: 'development',PM2_PROCESS_NAME: 'performance-monitor',PERFORMANCE_THRESHOLD: '3000',BUNDLE_SIZE_LIMIT: '2MB',},log_file: 'logs/pm2/performance-monitor && monitor.log',error_file: 'logs/pm2/performance-monitor-error && error.log',out_file: 'logs/pm2/performance-monitor-out && out.log',} ],};
 export default { apps: [ { name: 'bolt-zion-app',script: 'npm',args: 'run preview',cwd: './',instances: 1,autorestart: true,watch: false,max_memory_restart: '1G',env: { NODE_ENV: 'production',},log_file: 'logs/pm2/preview && preview.log',error_file: 'logs/pm2/preview-error && error.log',out_file: 'logs/pm2/preview-out && out.log',},{ name: 'auto-fix',script: 'node',args: 'scripts/pm2/auto-fix && fix.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '512M',env: { NODE_ENV: 'production' },log_file: 'logs/pm2/auto-fix && fix.log',error_file: 'logs/pm2/auto-fix-error && error.log',out_file: 'logs/pm2/auto-fix-out && out.log',},{ name: 'healthcheck',script: 'node',args: 'scripts/pm2/healthcheck && healthcheck.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '128M',env: { NODE_ENV: 'production' },log_file: 'logs/pm2/health && health.log',error_file: 'logs/pm2/health-error && error.log',out_file: 'logs/pm2/health-out && out.log',},{ name: 'code-quality-monitor',script: 'node',args: 'scripts/pm2/code-quality-monitor && monitor.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '1G',env: { NODE_ENV: 'development',PM2_PROCESS_NAME: 'code-quality-monitor',QUALITY_THRESHOLD: '80',AUTO_FIX_CRITICAL: 'true',},log_file: 'logs/pm2/code-quality-monitor && monitor.log',error_file: 'logs/pm2/code-quality-monitor-error && error.log',out_file: 'logs/pm2/code-quality-monitor-out && out.log',},{ name: 'performance-monitor',script: 'node',args: 'scripts/pm2/performance-monitor && monitor.js',instances: 1,autorestart: true,watch: false,max_memory_restart: '1G',env: { NODE_ENV: 'development',PM2_PROCESS_NAME: 'performance-monitor',PERFORMANCE_THRESHOLD: '3000',BUNDLE_SIZE_LIMIT: '2MB',},log_file: 'logs/pm2/performance-monitor && monitor.log',error_file: 'logs/pm2/performance-monitor-error && error.log',out_file: 'logs/pm2/performance-monitor-out && out.log',} ],};
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      "log_file": 'logs / pm2 / performance - monitor.log',
+      "error_file": 'logs / pm2 / performance - monitor - error.log',
+      "out_file": 'logs / pm2 / performance - monitor - out.log'}
+  ]}
+export default { apps: [ { name: 'bolt - zion - app', script: 'npm', args: 'run preview', cwd: './', instances: 1, autorestart: true, watch: false, max_memory_restart: '1G', env: { NODE_ENV: 'production', }, log_file: 'logs / pm2 / preview.log', error_file: 'logs / pm2 / preview - error.log', out_file: 'logs / pm2 / preview - out.log', }, { name: 'auto - fix', script: 'node', args: 'scripts / pm2 / auto - fix.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '512M', env: { NODE_ENV: 'production' }, log_file: 'logs / pm2 / auto - fix.log', error_file: 'logs / pm2 / auto - fix - error.log', out_file: 'logs / pm2 / auto - fix - out.log', }, { name: 'healthcheck', script: 'node', args: 'scripts / pm2 / healthcheck.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '128M', env: { NODE_ENV: 'production' }, log_file: 'logs / pm2 / health.log', error_file: 'logs / pm2 / health - error.log', out_file: 'logs / pm2 / health - out.log', }, { name: 'code - quality - monitor', script: 'node', args: 'scripts / pm2 / code - quality - monitor.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '1G', env: { NODE_ENV: 'development', PM2_PROCESS_NAME: 'code - quality - monitor', QUALITY_THRESHOLD: '80', AUTO_FIX_CRITICAL: 'true', }, log_file: 'logs / pm2 / code - quality - monitor.log', error_file: 'logs / pm2 / code - quality - monitor - error.log', out_file: 'logs / pm2 / code - quality - monitor - out.log', }, { name: 'performance - monitor', script: 'node', args: 'scripts / pm2 / performance - monitor.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '1G', env: { NODE_ENV: 'development', PM2_PROCESS_NAME: 'performance - monitor', PERFORMANCE_THRESHOLD: '3000', BUNDLE_SIZE_LIMIT: '2MB', }, log_file: 'logs / pm2 / performance - monitor.log', error_file: 'logs / pm2 / performance - monitor - error.log', out_file: 'logs / pm2 / performance - monitor - out.log', } ], }
+export default { apps: [ { name: 'bolt - zion - app', script: 'npm', args: 'run preview', cwd: './', instances: 1, autorestart: true, watch: false, max_memory_restart: '1G', env: { NODE_ENV: 'production', }, log_file: 'logs / pm2 / preview.log', error_file: 'logs / pm2 / preview - error.log', out_file: 'logs / pm2 / preview - out.log', }, { name: 'auto - fix', script: 'node', args: 'scripts / pm2 / auto - fix.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '512M', env: { NODE_ENV: 'production' }, log_file: 'logs / pm2 / auto - fix.log', error_file: 'logs / pm2 / auto - fix - error.log', out_file: 'logs / pm2 / auto - fix - out.log', }, { name: 'healthcheck', script: 'node', args: 'scripts / pm2 / healthcheck.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '128M', env: { NODE_ENV: 'production' }, log_file: 'logs / pm2 / health.log', error_file: 'logs / pm2 / health - error.log', out_file: 'logs / pm2 / health - out.log', }, { name: 'code - quality - monitor', script: 'node', args: 'scripts / pm2 / code - quality - monitor.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '1G', env: { NODE_ENV: 'development', PM2_PROCESS_NAME: 'code - quality - monitor', QUALITY_THRESHOLD: '80', AUTO_FIX_CRITICAL: 'true', }, log_file: 'logs / pm2 / code - quality - monitor.log', error_file: 'logs / pm2 / code - quality - monitor - error.log', out_file: 'logs / pm2 / code - quality - monitor - out.log', }, { name: 'performance - monitor', script: 'node', args: 'scripts / pm2 / performance - monitor.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '1G', env: { NODE_ENV: 'development', PM2_PROCESS_NAME: 'performance - monitor', PERFORMANCE_THRESHOLD: '3000', BUNDLE_SIZE_LIMIT: '2MB', }, log_file: 'logs / pm2 / performance - monitor.log', error_file: 'logs / pm2 / performance - monitor - error.log', out_file: 'logs / pm2 / performance - monitor - out.log', } ], }
+export default { apps: [ { name: 'bolt - zion - app', script: 'npm', args: 'run preview', cwd: './', instances: 1, autorestart: true, watch: false, max_memory_restart: '1G', env: { NODE_ENV: 'production', }, log_file: 'logs / pm2 / preview.log', error_file: 'logs / pm2 / preview - error.log', out_file: 'logs / pm2 / preview - out.log', }, { name: 'auto - fix', script: 'node', args: 'scripts / pm2 / auto - fix.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '512M', env: { NODE_ENV: 'production' }, log_file: 'logs / pm2 / auto - fix.log', error_file: 'logs / pm2 / auto - fix - error.log', out_file: 'logs / pm2 / auto - fix - out.log', }, { name: 'healthcheck', script: 'node', args: 'scripts / pm2 / healthcheck.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '128M', env: { NODE_ENV: 'production' }, log_file: 'logs / pm2 / health.log', error_file: 'logs / pm2 / health - error.log', out_file: 'logs / pm2 / health - out.log', }, { name: 'code - quality - monitor', script: 'node', args: 'scripts / pm2 / code - quality - monitor.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '1G', env: { NODE_ENV: 'development', PM2_PROCESS_NAME: 'code - quality - monitor', QUALITY_THRESHOLD: '80', AUTO_FIX_CRITICAL: 'true', }, log_file: 'logs / pm2 / code - quality - monitor.log', error_file: 'logs / pm2 / code - quality - monitor - error.log', out_file: 'logs / pm2 / code - quality - monitor - out.log', }, { name: 'performance - monitor', script: 'node', args: 'scripts / pm2 / performance - monitor.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '1G', env: { NODE_ENV: 'development', PM2_PROCESS_NAME: 'performance - monitor', PERFORMANCE_THRESHOLD: '3000', BUNDLE_SIZE_LIMIT: '2MB', }, log_file: 'logs / pm2 / performance - monitor.log', error_file: 'logs / pm2 / performance - monitor - error.log', out_file: 'logs / pm2 / performance - monitor - out.log', } ], }
+export default { apps: [ { name: 'bolt - zion - app', script: 'npm', args: 'run preview', cwd: './', instances: 1, autorestart: true, watch: false, max_memory_restart: '1G', env: { NODE_ENV: 'production', }, log_file: 'logs / pm2 / preview.log', error_file: 'logs / pm2 / preview - error.log', out_file: 'logs / pm2 / preview - out.log', }, { name: 'auto - fix', script: 'node', args: 'scripts / pm2 / auto - fix.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '512M', env: { NODE_ENV: 'production' }, log_file: 'logs / pm2 / auto - fix.log', error_file: 'logs / pm2 / auto - fix - error.log', out_file: 'logs / pm2 / auto - fix - out.log', }, { name: 'healthcheck', script: 'node', args: 'scripts / pm2 / healthcheck.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '128M', env: { NODE_ENV: 'production' }, log_file: 'logs / pm2 / health.log', error_file: 'logs / pm2 / health - error.log', out_file: 'logs / pm2 / health - out.log', }, { name: 'code - quality - monitor', script: 'node', args: 'scripts / pm2 / code - quality - monitor.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '1G', env: { NODE_ENV: 'development', PM2_PROCESS_NAME: 'code - quality - monitor', QUALITY_THRESHOLD: '80', AUTO_FIX_CRITICAL: 'true', }, log_file: 'logs / pm2 / code - quality - monitor.log', error_file: 'logs / pm2 / code - quality - monitor - error.log', out_file: 'logs / pm2 / code - quality - monitor - out.log', }, { name: 'performance - monitor', script: 'node', args: 'scripts / pm2 / performance - monitor.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '1G', env: { NODE_ENV: 'development', PM2_PROCESS_NAME: 'performance - monitor', PERFORMANCE_THRESHOLD: '3000', BUNDLE_SIZE_LIMIT: '2MB', }, log_file: 'logs / pm2 / performance - monitor.log', error_file: 'logs / pm2 / performance - monitor - error.log', out_file: 'logs / pm2 / performance - monitor - out.log', } ], }
+export default { apps: [ { name: 'bolt - zion - app', script: 'npm', args: 'run preview', cwd: './', instances: 1, autorestart: true, watch: false, max_memory_restart: '1G', env: { NODE_ENV: 'production', }, log_file: 'logs / pm2 / preview.log', error_file: 'logs / pm2 / preview - error.log', out_file: 'logs / pm2 / preview - out.log', }, { name: 'auto - fix', script: 'node', args: 'scripts / pm2 / auto - fix.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '512M', env: { NODE_ENV: 'production' }, log_file: 'logs / pm2 / auto - fix.log', error_file: 'logs / pm2 / auto - fix - error.log', out_file: 'logs / pm2 / auto - fix - out.log', }, { name: 'healthcheck', script: 'node', args: 'scripts / pm2 / healthcheck.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '128M', env: { NODE_ENV: 'production' }, log_file: 'logs / pm2 / health.log', error_file: 'logs / pm2 / health - error.log', out_file: 'logs / pm2 / health - out.log', }, { name: 'code - quality - monitor', script: 'node', args: 'scripts / pm2 / code - quality - monitor.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '1G', env: { NODE_ENV: 'development', PM2_PROCESS_NAME: 'code - quality - monitor', QUALITY_THRESHOLD: '80', AUTO_FIX_CRITICAL: 'true', }, log_file: 'logs / pm2 / code - quality - monitor.log', error_file: 'logs / pm2 / code - quality - monitor - error.log', out_file: 'logs / pm2 / code - quality - monitor - out.log', }, { name: 'performance - monitor', script: 'node', args: 'scripts / pm2 / performance - monitor.js', instances: 1, autorestart: true, watch: false, max_memory_restart: '1G', env: { NODE_ENV: 'development', PM2_PROCESS_NAME: 'performance - monitor', PERFORMANCE_THRESHOLD: '3000', BUNDLE_SIZE_LIMIT: '2MB', }, log_file: 'logs / pm2 / performance - monitor.log', error_file: 'logs / pm2 / performance - monitor - error.log', out_file: 'logs / pm2 / performance - monitor - out.log', } ], }
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

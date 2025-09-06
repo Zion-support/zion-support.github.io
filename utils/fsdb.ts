@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Mock file system database utility
 export function readJson<T>(filePath: string, defaultValue: T): T {
   try {
@@ -16,9 +17,24 @@ export function readJson<T>(filePath: string, defaultValue: T): T {
     }
   } catch (error) {
     console && console.error('Error reading file:', error);
-  }
-  return defaultValue;
+=======
+// Mock file system database utility;
+export function read_json < T>(file_path: string, default_value: T): T {
+  try {
+    const fs = require ('fs'),
+    if () {) {
+  $2
 }
+      const content = fs.readFileSync (file_path, 'utf8');
+      return JSON.parse (content);
+    }
+  } catch (error) {
+    console.error ('Error reading file:', error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  }
+  return default_value;
+}
+<<<<<<< HEAD
 export function writeJson<T>(filePath: string, data: T): void {
   try {
     const fs = require('fs');
@@ -259,3 +275,33 @@ export function generateId(): string {
   return `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+export function write_json < T>(file_path: string, data: T): void {
+  try {
+    const fs = require ('fs');
+    const path = require ('path');
+    const dir = path.dirname (file_path),
+    if () {) {
+  $2
+}
+      fs.mkdir_sync (dir, { recursive: true });
+    }
+    fs.writeFileSync (file_path, JSON.stringify (data, null, 2));
+  } catch (error) {
+    console.error ('Error writing file:', error);
+  }
+}
+export async function create_dispute (dispute: DisputeCase): Promise < void> {
+  const all = await readAllDisputes ();
+  all.push (dispute);
+  await writeAllDisputes (all);
+}
+export function getDisputeUploadDir (case_id: string): string {
+  return path.join (UPLOADS_ROOT, case_id);
+}
+export async function ensureDisputeUploadDir (case_id: string): Promise < string> {
+  const dir = getDisputeUploadDir (case_id);
+  await mkdir (dir, { recursive: true });
+  return dir;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

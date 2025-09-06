@@ -8,10 +8,11 @@ export interface QuantumAiService2025 {
   features: string[];
   link: string;
   category: string;
-  realImplementation: boolean;
-  contactInfo: {
+  real_implementation: boolean;
+  contact_info: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 
     address: string;
   }
@@ -44,12 +45,37 @@ export const quantumAIServices2025: QuantumAiService2025[] = [
 
       email: "kleber@ziontechgroup.com";
 =======
+=======
+    address: string;
+  }
+;
+export const quantumAIServices2025: QuantumAiService2025[] = [;
+  {
+    id: 'quantum - ai - hybrid',
+    name: 'Quantum AI Hybrid Platform',
+    tagline: 'Combining quantum computing with artificial intelligence',
+    price: '$299 / month',
+    description:;
+      'Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.',
+    features: [;
+      'Quantum AI algorithms',
+      'Hybrid processing',
+      'Advanced simulations',
+      'Real - time optimization',
+      'Enterprise support',
+    ],
+    link: '/services / quantum - ai - hybrid',
+    category: 'Quantum AI',
+    real_implementation: true,
+    contact_info: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950";
+<<<<<<< HEAD
       email: "kleber@ziontechgroup && ziontechgroup.com";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -89,3 +115,11 @@ export const quantumAIServices2025: QuantumAiService2025[] = [
   }
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }
+];
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

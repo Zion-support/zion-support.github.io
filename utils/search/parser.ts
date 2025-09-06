@@ -1,7 +1,8 @@
-// Search parser utilities
-export const parseSearchQuery = (query: string) => {
-  // Add search query parsing functionality here
+// Search parser utilities;
+export const parseSearchQuery = (query: string) =>: any {
+  // Add search query parsing functionality here;
   return {
+<<<<<<< HEAD
     keywords: []
     skills: []
     location: null
@@ -146,4 +147,26 @@ export async function parseQueryToFilters(
   
   return filters;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    keywords: [],
+    skills: [],
+    location: null,
+    type: null;
+  }
+}
+;
+export const search_all = (parsed: any, access: any) =>: any {
+  // Add search functionality here;
+  return {
+    all: [],
+    talent: [],
+    jobs: [],
+    projects: [];
+  }
+}
+;
+export const suggestDidYouMean = (query: string) =>: any {
+  // Add did you mean functionality here;
+  return null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

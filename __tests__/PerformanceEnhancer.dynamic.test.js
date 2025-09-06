@@ -3,6 +3,7 @@
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
 import React from 'react';
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import PerformanceEnhancer from '../components/PerformanceEnhancer.dynamic';
@@ -11,6 +12,15 @@ describe('PerformanceEnhancer', () => {
   test('renders without crashing', () => {
     render(<PerformanceEnhancer />);
     expect(screen.getByTestId('performance-enhancer')).toBeInTheDocument();
+=======
+import { render, screen } from '@testing - library / react';
+import '@testing - library / jest - dom';
+import PerformanceEnhancer from '../components / PerformanceEnhancer.dynamic';
+describe ('PerformanceEnhancer', () => {
+  test ('renders without crashing', () => {
+    render (<PerformanceEnhancer />);
+    expect (screen.getByTestId ('performance - enhancer')).toBeInTheDocument ();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
 });
 =======

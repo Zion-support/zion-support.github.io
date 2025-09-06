@@ -202,6 +202,7 @@ const Pricing: React.FC = () => {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 =======
 
 class ErrorBoundary extends React.Component {
@@ -267,4 +268,9 @@ const Pricing: React.FC = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
+=======
+  );
+};
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export default Pricing;

@@ -9,16 +9,23 @@ interface TextAnalysisResult {
     sentences: number;
     paragraphs: number;
     syllables: number;
+<<<<<<< HEAD
     readingTime: number;
 
     speakingTime: number;
   }
 
+=======
+    reading_time: number;
+    speaking_time: number;
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   readability: {
     fleschReadingEase: number;
     fleschKincaidGrade: number;
-    gunningFog: number;
+    gunning_fog: number;
     smog: number;
+<<<<<<< HEAD
     colemanLiau: number;
     automatedReadability: number;
 
@@ -31,17 +38,39 @@ interface TextAnalysisResult {
     positiveWords: string[];
 
     negativeWords: string[];
+=======
+    coleman_liau: number;
+    automated_readability: number;
+    average_grade: number;
+  }
+  sentiment: {
+    score: number;
+    label:;
+      | 'very - negative';
+      | 'negative';
+      | 'neutral';
+      | 'positive';
+      | 'very - positive';
+    positive_words: string[];
+    negative_words: string[];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   language: {
-    detectedLanguage: string;
+    detected_language: string;
     confidence: number;
+<<<<<<< HEAD
     isEnglish: boolean;
   }
 
+=======
+    is_english: boolean;
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   keywords: {
-    topWords: Array<{ word: string; count: number; frequency: number }>;
+    top_words: Array<{ word: string; count: number; frequency: number }>;
     bigrams: Array<{ phrase: string; count: number }>;
     trigrams: Array<{ phrase: string; count: number }>;
+<<<<<<< HEAD
   };    topWords: Array<{ word: string, count: number, frequency: number }>;
 =======
   text: string,
@@ -74,10 +103,14 @@ interface TextAnalysisResult {
   keywords: {
     topWords: Array<{ word: string, count: number, frequency: number }>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  }    top_words: Array<{ word: string, count: number, frequency: number }>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     bigrams: Array<{ phrase: string, count: number }>;
-    trigrams: Array<{ phrase: string, count: number }>
+    trigrams: Array<{ phrase: string, count: number }>;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -547,9 +580,267 @@ export default async function handler(
         label: sentimentLabel,
         positiveWords: textWords && textWords.filter(word => positiveWords && positiveWords.includes(word)),
         negativeWords: textWords && textWords.filter(word => negativeWords && negativeWords.includes(word)),
+=======
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (405).json ({ error: 'Method not allowed' });  }    return res.status (405).json ({ error: 'Method not allowed' });
+  }
+  try {
+    const { text } = req.body;
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.status (400).json ({ error: 'Text is required' });
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      return res;
+        .status (400);
+        .json ({ error: 'Text too long (max 10, 000 characters)' });    }      return res.status (400).json ({ error: 'Text is required' });
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.status (400).json ({ error: 'Text too long (max 10, 000 characters)' });
+;
+    // Basic statistics;
+    const characters = text.length;
+    const charactersNoSpaces = text.replace (/\s / g, '').length;
+    const words = text;
+      .trim ();
+      .split (/\s+/);
+      .filter (word => word.length > 0).length;
+    const sentences = text;
+      .split (/[.!?]+/);
+      .filter (sentence => sentence.trim ().length > 0).length;
+    const paragraphs = text;
+      .split (/\n\s*\n/);
+      .filter (para => para.trim ().length > 0).length;    const words = text.trim ().split (/\s+/).filter (word => word.length > 0).length;
+    const sentences = text.split (/[.!?]+/).filter (sentence => sentence.trim ().length > 0).length;
+    const paragraphs = text.split (/\n\s*\n/).filter (para => para.trim ().length > 0).length;
+;
+    // Syllable counting (simplified);
+    const syllable_count = (word: string): number => {
+      word = word.toLowerCase ();
+      // Check condition
+if (return 1, ) {
+  $2
+}
+      word = word.replace (/(?:[^laeiouy]es | ed|[^laeiouy]e)$/, '');
+      word = word.replace (/^y/, '');
+      const matches = word.match (/[aeiouy]{1, 2}/g);
+      return matches ? matches.length : 1;
+    }
+;
+    const syllables = text.split (/\s+/).reduce ((total, word) => {
+      return total + syllable_count (word);    }, 0);      return matches ? matches.length : 1;
+    }
+;
+    const syllables = text.split (/\s+/).reduce ((total, word) => {
+      return total + syllable_count (word);
+    // Reading and speaking time (average: 200 words / min reading, 150 words / min speaking);
+    const reading_time = Math.ceil (words / 200);
+    const speaking_time = Math.ceil (words / 150);
+;
+    // Readability scores;
+    const fleschReadingEase = Math.max (
+      0,
+      Math.min (
+        100,
+        206.835 - 1.015 * (words / sentences) - 84.6 * (syllables / words)));
+    const fleschKincaidGrade = Math.max (
+      0,
+      0.39 * (words / sentences) + 11.8 * (syllables / words) - 15.59);
+    const gunning_fog = Math.max (
+      0,
+      0.4 *;
+        (words / sentences +;
+          100 *;
+            (text.split (/\s+/).filter (word => word.length > 6).length / words)));
+    const smog = Math.max (
+      0,
+      1.043 *;
+        Math.sqrt (
+          text.split (/\s+/).filter (word => word.length > 2).length *;
+            (30 / sentences)) +;
+        3.1291);
+    const coleman_liau = Math.max (
+      0,
+      0.0588 * ((charactersNoSpaces / words) * 100) -;
+        0.296 * ((sentences / words) * 100) -;
+        15.8);
+    const automated_readability = Math.max (
+      0,
+      4.71 * (charactersNoSpaces / words) + 0.5 * (words / sentences) - 21.43);
+    const average_grade = Math.round (
+      (fleschKincaidGrade +;
+        gunning_fog +;
+        smog +;
+        coleman_liau +;
+        automated_readability) /;
+        5);
+;
+    // Sentiment analysis (simplified);
+    const positive_words = [;
+      'good',
+      'great',
+      'excellent',
+      'amazing',
+      'wonderful',
+      'fantastic',
+      'brilliant',
+      'outstanding',
+      'superb',
+      'marvelous',
+    ];
+    const negative_words = [;
+      'bad',
+      'terrible',
+      'awful',
+      'horrible',
+      'dreadful',
+      'atrocious',
+      'abysmal',
+      'appalling',
+      'dismal',
+      'lousy',
+    ];
+;
+    const text_words = text.toLowerCase ().split (/\s+/);
+    const positive_count = text_words.filter (word =>;
+      positive_words.includes (word)).length;
+    const negative_count = text_words.filter (word =>;
+      negative_words.includes (word)).length;
+;
+    const sentiment_score = positive_count - negative_count;
+    let sentiment_label: TextAnalysisResult['sentiment']['label'];
+    // Check condition
+if (sentiment_label = 'very - negative') {
+  $2
+}    else // Check condition
+if (sentiment_label = 'negative') {
+  $2
+}    else // Check condition
+if (sentiment_label = 'neutral') {
+  $2
+}
+    else // Check condition
+if (sentiment_label = 'positive') {
+  $2
+}
+    else sentiment_label = 'very - positive';
+;
+    // Keyword analysis;
+    const word_counts = new Map < string, number>();
+    text;
+      .toLowerCase ();
+      .split (/\s+/);
+      .for_each (word => {
+        const clean_word = word.replace (/[^\w]/g, '');
+        // Check condition
+if ( {) {
+  $2
+}
+          word_counts.set (clean_word, (word_counts.get (clean_word) || 0) + 1);
+        }
+      });    text.toLowerCase ().split (/\s+/).for_each (word => {
+      const clean_word = word.replace (/[^\w]/g, '');
+      // Check condition
+if ( {) {
+  $2
+}
+        word_counts.set (clean_word, (word_counts.get (clean_word) || 0) + 1);
+      }
+    });
+    const top_words = Array.from (word_counts.entries ());
+      .sort ((a, b) => b[1] - a[1]);
+      .slice (0, 10);
+      .map (([word, count]) => ({
+        word,
+        count,
+        frequency: Math.round ((count / words) * 1000) / 10,      }));        word;
+        count;
+        frequency: Math.round ((count / words) * 1000) / 10;
+      }));
+;
+    // Bigrams and trigrams;
+    const words_array = text.toLowerCase ().split (/\s+/);
+    const bigram_counts = new Map < string, number>();
+    const trigram_counts = new Map < string, number>();
+;
+    for (let index = 0; i < words_array.length - 1; i++) {
+      const bigram = `${words_array[i]} ${words_array[i + 1]}`;
+      bigram_counts.set (bigram, (bigram_counts.get (bigram) || 0) + 1);
+    }
+    for (let index = 0; i < words_array.length - 2; i++) {
+      const trigram = `${words_array[i]} ${words_array[i + 1]} ${words_array[i + 2]}`;
+      trigram_counts.set (trigram, (trigram_counts.get (trigram) || 0) + 1);    }      const bigram = `${words_array[i]} ${words_array[i + 1]}`;
+      bigram_counts.set (bigram, (bigram_counts.get (bigram) || 0) + 1);
+    }
+    for (let index = 0, i < words_array.length - 2, i++) {
+      const trigram = `${words_array[i]} ${words_array[i + 1]} ${words_array[i + 2]}`;
+      trigram_counts.set (trigram, (trigram_counts.get (trigram) || 0) + 1);
+    }
+    const bigrams = Array.from (bigram_counts.entries ());
+      .sort ((a, b) => b[1] - a[1]);
+      .slice (0, 5);
+      .map (([phrase, count]) => ({ phrase, count }));
+;
+    const trigrams = Array.from (trigram_counts.entries ());
+      .sort ((a, b) => b[1] - a[1]);
+      .slice (0, 5);
+      .map (([phrase, count]) => ({ phrase, count }));
+;
+    // Language detection (simplified - assume English for demo);
+    const is_english = /^[a - z_a - Z\s., !?;:'"()-]+$/.test (text);    const detected_language = is_english ? 'en' : 'unknown';
+    const confidence = is_english ? 0.95 : 0.5;
+;
+    const result: TextAnalysisResult = {
+      text,    const is_english = /^[a - z_a - Z\s., !?, :'"()-]+$/.test (text);
+    const detected_language = is_english ? 'en' : 'unknown';
+    const confidence = is_english ? 0.95 : 0.5;
+;
+    const result: TextAnalysisResult = {
+      text,
+        characters,
+        charactersNoSpaces,
+        words,
+        sentences,
+        paragraphs,
+        syllables,
+        reading_time,
+        speaking_time,
+      },
+      readability: {
+        fleschReadingEase: Math.round (fleschReadingEase * 100) / 100,
+        fleschKincaidGrade: Math.round (fleschKincaidGrade * 100) / 100,
+        gunning_fog: Math.round (gunning_fog * 100) / 100,
+        smog: Math.round (smog * 100) / 100,
+        coleman_liau: Math.round (coleman_liau * 100) / 100,
+        automated_readability: Math.round (automated_readability * 100) / 100,
+        average_grade,
+      },
+      sentiment: {
+        score: sentiment_score,
+        label: sentiment_label,
+        positive_words: text_words.filter (word => positive_words.includes (word)),
+        negative_words: text_words.filter (word => negative_words.includes (word)),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       language: {
+<<<<<<< HEAD
         detectedLanguage
         confidence
         isEnglish
@@ -613,9 +904,35 @@ export default async function handler(
         detectedLanguage;
         confidence;
         isEnglish}
+=======
+        detected_language,
+        confidence,
+        is_english,
+      },
       keywords: {
-        topWords;
+        top_words,
+        bigrams,
+        trigrams,
+      },
+    }
+;
+    res.status (200).json (result);
+  } catch (error) {
+    console.error ('Text analysis error:', error);
+    res.status (500).json ({ error: 'Internal server error' });
+  }        score: sentiment_score;
+        label: sentiment_label;
+        positive_words: text_words.filter (word => positive_words.includes (word));
+        negative_words: text_words.filter (word => negative_words.includes (word))}
+      language: {
+        detected_language;
+        confidence;
+        is_english}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      keywords: {
+        top_words;
         bigrams;
+<<<<<<< HEAD
 <<<<<<< HEAD
         trigrams}}
     res.status(200).json(result)
@@ -637,3 +954,13 @@ export default async function handler(
 =======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+        trigrams}}
+;
+    res.status (200).json (result);
+  } catch (error) {
+    console.error ('Text analysis error:', error);
+    res.status (500).json ({ error: 'Internal server error' });
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

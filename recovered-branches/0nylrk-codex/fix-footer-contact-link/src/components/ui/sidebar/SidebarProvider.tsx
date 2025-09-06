@@ -1,12 +1,17 @@
+<<<<<<< HEAD
 
 import React, { createContext, useContext, useState } from "react";
 <<<<<<< HEAD
+=======
+import React, { create_context, useContext, useState } from './react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface SidebarContextType {
-  isOpen: boolean;
+  is_open: boolean;
   toggle: () => void;
   open: () => void;
   close: () => void
 }
+<<<<<<< HEAD
 
 const SidebarContext = createContext<SidebarContextType>({
   isOpen: true
@@ -15,10 +20,22 @@ const SidebarContext = createContext<SidebarContextType>({
   close: () => {}
 });
 export const useSidebar = (): SidebarContextType => useContext(SidebarContext);
+=======
+const SidebarContext = create_context < SidebarContextType>({
+  is_open: true,
+  toggle: () => {},
+  open: () => {},
+  close: () => {},
+});
+;
+export const use_sidebar = (): SidebarContextType => useContext (SidebarContext);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface SidebarProviderProps {
   children: React.ReactNode;
-  defaultOpen?: boolean;
+  default_open?: boolean;
 }
+<<<<<<< HEAD
 export function SidebarProvider({
   children
   defaultOpen = true
@@ -75,3 +92,24 @@ export function SidebarProvider(): any ({ ;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+export /**
+ * SidebarProvider - Function description
+ */
+function SidebarProvider() {
+  const [is_open, setIsOpen] = useState (default_open);
+;
+  const toggle = () =>: any setIsOpen (!is_open);
+  const open = () =>: any setIsOpen (true);
+  const close = () =>: any setIsOpen (false);
+;
+  return (
+    <SidebarContext.Provider value={{ is_open, toggle, open, close }}>;
+      <div;
+        className={`grid ${is_open ? "grid - cols-[auto_1fr]" : "grid - cols-[auto_1fr]"} min - h-screen w - full`}
+      >;
+        {children}
+      </div>;
+    </SidebarContext.Provider>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

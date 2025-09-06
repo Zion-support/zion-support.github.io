@@ -6,6 +6,7 @@
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
 import React from 'react';
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Navigation from '../components/Navigation';
@@ -57,3 +58,17 @@ const React from "react"; import { render,screen } from "@testing-library/react"
   });
 });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
+=======
+import { render, screen } from '@testing - library / react';
+import '@testing - library / jest - dom';
+import Navigation from '../components / Navigation';
+describe ('Navigation', () => {
+  test ('renders without crashing', () => {
+    render (<Navigation />);
+    expect (screen.getByRole ('main')).toBeInTheDocument ();
+  });
+;
+  test ('displays correct content', () => {
+    expect (screen.getByText (/Zion Tech Group / i)).toBeInTheDocument ();
+});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

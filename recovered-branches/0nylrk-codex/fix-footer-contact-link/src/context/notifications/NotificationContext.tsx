@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 <<<<<<< HEAD
 import { supabase  } from '@/integrations/supabase/client';
@@ -109,11 +110,77 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
         );
         .subscribe();
 <<<<<<< HEAD
+=======
+import React, { create_context, useContext, useEffect, ReactNode } from 'react';
+import {supabase} from '@/integrations / supabase / client';
+import {use_auth} from '@/hooks / use_auth';
+import {useNotificationOperations} from './useNotificationOperations';
+import {NotificationContextType} from './types';
+// Default context used when React type definitions are missing. Providing a;
+// fully - typed object here avoids TypeScript errors that occur when an untyped;
+// `create_context` call returns `{}` instead of the expected shape.;
+const default_context: NotificationContextType = {
+  notifications: [],
+  filtered_notifications: [],
+  unread_count: 0,
+  loading: false,
+  filter: 'all',
+  markAsRead: async () => {},
+  markAllAsRead: async () => {},
+  dismiss_notification: async () => {},
+  set_filter: () => {},
+  fetch_notifications: async () => {}},
+// Cast the default context value to avoid issues when React types are missing.;
+const NotificationContext = create_context (
+  default_context as NotificationContextType);
+;
+export const use_notifications = (): NotificationContextType => {
+  const context = useContext (NotificationContext) as NotificationContextType;
+  // Check condition
+if ( {) {
+  $2
+}
+    throw new Error ('use_notifications must be used within a NotificationProvider');
+  }
+  return context;
+}
+;
+export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {
+  const { user } = use_auth ();
+  const notification_ops = useNotificationOperations (user?.id);
+;
+  // Load notifications when user changes;
+  useEffect (() => {
+    notification_ops.fetch_notifications ();
+;
+    // Set up real - time subscription for new notifications;
+    // Check condition
+if ( {) {
+  $2
+}
+      const channel = supabase;
+        .channel ('notifications - changes');
+        .on ('postgres_changes',
+          {
+            event: '*',
+            schema: 'public',
+            table: 'notifications',
+            filter: `user_id = eq.${user.id}`;
+          }
+          (payload) => {
+            console.log ('Notification change received:', payload);
+            notification_ops.fetch_notifications ();
+          }
+        );
+        .subscribe ();
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       return () => {
-        supabase.removeChannel(channel)
+        supabase.remove_channel (channel);
       }
     }
   }, [user]);
+<<<<<<< HEAD
 =======
 
       return () => {;
@@ -136,3 +203,12 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
   );
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+;
+  return (
+    <NotificationContext.Provider value={notification_ops}>;
+      {children}
+    </NotificationContext.Provider>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

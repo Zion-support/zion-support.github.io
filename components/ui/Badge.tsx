@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../lib/utils";
@@ -16,9 +17,24 @@ interface HTMLElement {;
   style: { [key: string]: string }
 }
 <<<<<<< HEAD
-interface HTMLDivElement extends HTMLElement {
-  tagName: 'DIV';
+=======
+import React from './react';
+import { cva, type VariantProps  } from './class - variance - authority';
+import { cn  } from '../../lib / utils';
+;
+// Define HTML element types;
+interface HTMLElement {
+  class_name: string;
+  id: string;
+  innerHTML: string;
+  text_content: string | null;
+  style: { [key: string]: string }
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+interface HTMLDivElement extends HTMLElement {
+  tag_name: 'DIV';
+}
+<<<<<<< HEAD
 
 const badgeVariants = cva(
   "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
@@ -81,3 +97,36 @@ function Badge(): any ({ className, variant, ...props }: BadgeProps) {;
   );
 }
 export { Badge, badgeVariants }
+=======
+const badge_variants = cva (
+  "inline - flex items - center rounded - full border px - 2.5 py - 0.5 text - xs font - semibold transition - colors focus:outline - none focus:ring - 2 focus:ring - ring focus:ring - offset - 2",
+  {
+    variants: {
+      variant: {
+        default:;
+          "border - transparent bg - primary text - primary - foreground hover:bg - primary / 80",
+        secondary:;
+          "border - transparent bg - secondary text - secondary - foreground hover:bg - secondary / 80",
+        destructive:;
+          "border - transparent bg - destructive text - destructive - foreground hover:bg - destructive / 80",
+        outline: "text - foreground border - border",
+      },
+    },
+    default_variants: {
+      variant: "default",
+    },
+  }
+);
+;
+export interface BadgeProps;
+  extends React.HTMLAttributes < HTMLDivElement>,
+    VariantProps < typeof badge_variants> {}
+/**
+ * Badge - Function description
+ */
+function Badge() {
+  return (
+    <div className={cn (badge_variants ({ variant }), class_name)} {...props} />);
+}
+export { Badge, badge_variants }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

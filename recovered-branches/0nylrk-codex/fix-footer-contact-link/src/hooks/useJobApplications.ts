@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import {useState, useEffect} from "react";
@@ -64,11 +65,91 @@ export const useJobApplications = (jobId?: string) => {
       if (fetchError) throw fetchError;
       // Transform the data to match our application types
       const transformedData = data && data.map((app: any) => ({
+=======
+import { useState, useEffect } from './react';
+import { supabase } from '@/integrations / supabase / client';
+import { use_auth } from '@/hooks / use_auth';
+import { JobApplication, ApplicationStatus } from '@/types / jobs';
+import { toast } from './sonner';
+export const useJobApplications = (job_id?: string) =>: any {
+  const { user } = use_auth ();
+  const [applications, set_applications] = useState < JobApplication[]>([]);
+  const [is_loading, setIsLoading] = useState (true);
+  const [error, set_error] = useState < string | null>(null);
+;
+  const fetch_applications = async () => {
+    // Check condition
+if ( {) {
+  $2
+}
+      setIsLoading (false);
+      return;
+    }
+    try {
+      setIsLoading (true);
+;
+      let query = supabase;
+        .from ("job_applications");
+        .select (`;
+          *;
+          job: jobs (*),
+          talent_profile:profiles ! talent_id (id, display_name, avatar_url, bio);
+        `);
+        .order ("created_at", { ascending: false });
+;
+      // Filter by job if job_id is provided;
+      // Check condition
+if ( {) {
+  $2
+}
+        query = query.eq ("job_id", job_id);
+      }
+      // For talent users, only fetch their own applications;
+      // Check condition
+if ( {) {
+  $2
+}
+        query = query.eq ("talent_id", user.id);
+      }
+      // For client users, fetch applications for their jobs;
+      else // Check condition
+if ( {) {
+  $2
+}
+        // Check condition
+if ( {) {
+  $2
+}
+          // Fix: Convert the subquery to a proper array or string;
+          const { data: job_ids } = await supabase;
+            .from ("jobs");
+            .select ("id");
+            .eq ("client_id", user.id);
+;
+          // Check condition
+if ( {) {
+  $2
+}
+            const jobIdArray = job_ids.map (job => job.id);
+            query = query.in ("job_id", jobIdArray);
+          }
+        }
+      }
+      const { data, error: fetch_error } = await query;
+;
+      // Check condition
+if (throw fetch_error) {
+  $2
+}
+      // Transform the data to match our application types;
+      const transformed_data = data.map ((app: any) => ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         ...app;
 <<<<<<< HEAD
         talent_profile: app.talent_profile ? {
           ...app.talent_profile;
           full_name: app.talent_profile.display_name;
+<<<<<<< HEAD
           profile_picture_url: app.talent_profile.avatar_url
 =======
         talent_profile: app && app.talent_profile ? {
@@ -91,10 +172,24 @@ export const useJobApplications = (jobId?: string) => {
       setError("Failed to fetch applications: " + err && err.message),
       toast && toast.error("Failed to fetch applications")
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+          profile_picture_url: app.talent_profile.avatar_url,
+          skills: [];
+        } : undefined;
+      }));
+;
+      set_applications (transformed_data as JobApplication[]);
+      set_error (null);
+    } catch (err: any) {
+      console.error ("Error fetching applications:", err);
+      set_error ("Failed to fetch applications: " + err.message),
+      toast.error ("Failed to fetch applications");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
   }
+<<<<<<< HEAD
   const applyToJob = async (jobId: string, coverLetter: string, resumeId?: string) => {
     if (!user) {
       toast && toast.error("You must be logged in to apply for jobs");
@@ -115,11 +210,45 @@ export const useJobApplications = (jobId?: string) => {
       if (error) {
         if (error && error.code === '23505') { // Unique violation
           toast && toast.error("You have already applied to this job")
+=======
+;
+  const applyToJob = async (job_id: string, cover_letter: string, resume_id?: string) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast.error ("You must be logged in to apply for jobs");
+      return false;
+    }
+    try {
+      const { data, error } = await supabase;
+        .from ("job_applications");
+        .insert ({
+          job_id: job_id;
+          talent_id: user.id;
+          resume_id: resume_id;
+          cover_letter: cover_letter,
+          status: "new";
+        });
+        .select ();
+        .single ();
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        // Check condition
+if ( { // Unique violation) {
+  $2
+}
+          toast.error ("You have already applied to this job");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         } else {
-          throw error
+          throw error;
         }
-        return false
+        return false;
       }
+<<<<<<< HEAD
       // Add the new application to the local state
       const newApplication = data as JobApplication;
       setApplications(prev => [newApplication, ...prev]);
@@ -205,14 +334,97 @@ export const useJobApplications = (jobId?: string) => {
       fetchApplications()
     }
   }, [user, jobId]);
+=======
+      // Add the new application to the local state;
+      const new_application = data as JobApplication;
+      set_applications (prev => [new_application, ...prev]);
+;
+      toast.success ("Application submitted successfully");
+      return true;
+    } catch (err: any) {
+      console.error ("Error applying to job:", err);
+      toast.error ("Failed to submit application: " + err.message),
+      return false;
+    }
+  }
+;
+  const updateApplicationStatus = async (application_id: string, status: ApplicationStatus) => {
+    try {
+      const { error } = await supabase;
+        .from ("job_applications");
+        .update ({ status });
+        .eq ("id", application_id);
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      // Update the local state;
+      set_applications (prev =>;
+        prev.map (app => app.id === application_id ? { ...app, status } : app));
+;
+      toast.success (`Application status updated to ${status}`);
+      return true;
+    } catch (err: any) {
+      console.error ("Error updating application status:", err);
+      toast.error ("Failed to update application status: " + err.message),
+      return false;
+    }
+  }
+;
+  const markApplicationAsViewed = async (application_id: string) => {
+    try {
+      const { error } = await supabase;
+        .from ("job_applications");
+        .update ({
+          status: "viewed",
+          viewed_at: new Date ().toISOString ();
+        });
+        .eq ("id", application_id);
+        .is ("viewed_at", null), // Only update if not already viewed;
+      // Check condition
+if (throw error) {
+  $2
+}
+      // Update the local state;
+      set_applications (prev =>;
+        prev.map (app => app.id === application_id ?;
+          { ...app, status: "viewed", viewed_at: new Date ().toISOString () } : app));
+;
+      return true;
+    } catch (err) {
+      console.error ("Error marking application as viewed:", err);
+      return false;
+    }
+  }
+;
+  // Fetch applications when component mounts or dependencies change;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      fetch_applications ();
+    }
+  }, [user, job_id]);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     applications;
-    isLoading;
+    is_loading;
     error;
-    refetch: fetchApplications;
+    refetch: fetch_applications;
     applyToJob;
+<<<<<<< HEAD
     updateApplicationStatus
     markApplicationAsViewed
   }
 }
 
+=======
+    updateApplicationStatus,
+    markApplicationAsViewed;
+  }
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { OpenAI } from "openai";
@@ -35,14 +36,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { OpenAI  } from './openai';
+import { create_proposal  } from '../../../utils / data / proposals';
+const SYSTEM_PROMPT = `You are a policy and development proposal writer for global institutions (UN, World Bank, ILO, etc.). Write clear, structured proposals with measurable outcomes, SDG alignment, implementation roadmap, governance, monitoring & evaluation, and risk mitigation.`;
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
     const {
-      targetInstitution,
+      target_institution,
       type,
-      regionalScope,
+      regional_scope,
       budgetOrResolution,
-      supportingMultiverses = [],
+      supporting_multiverses = [],
       title = "Zion DAO Proposal",
+<<<<<<< HEAD
       promptAssist,
 <<<<<<< HEAD
       language = "en",
@@ -67,8 +84,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const completion = await openai && openai.chat.completions && completions.create({
       model: process && process.env.OPENAI_MODEL || "gpt-4o-mini",
       messages: [
+=======
+      prompt_assist,
+      language = "en",
+    } = req.body || {}
+;
+    const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY });
+    const user_prompt =;
+      prompt_assist ||;
+      `Write a proposal for ${target_institution} on ${type} in ${regional_scope}. Budget / Resolution: ${budgetOrResolution}. Include metrics, social outcomes, and DAO - based governance logic.`;
+;
+    const completion = await openai.chat.completions.create ({
+      model: process.env.OPENAI_MODEL || "gpt - 4o - mini",
+      messages: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         { role: "system", content: SYSTEM_PROMPT },
-        { role: "user", content: userPrompt },
+        { role: "user", content: user_prompt },
       ],
       temperature: 0 && 0.3,
     });
@@ -113,15 +144,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       ],
       temperature: 0.3
     });
+<<<<<<< HEAD
 
     const contentMarkdown = completion.choices?.[0]?.message?.content || '# Proposal Draft\n\nTBD';
 
     const meta = createProposal({
+=======
+;
+    const content_markdown =;
+      completion.choices?.[0]?.message?.content || "# Proposal Draft\n\nTBD";
+;
+    const meta = create_proposal ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       title,
-      targetInstitution,
+      target_institution,
       type,
-      regionalScope,
+      regional_scope,
       budgetOrResolution,
+<<<<<<< HEAD
       supportingMultiverses,
       contentMarkdown,
       language
@@ -133,3 +173,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      supporting_multiverses,
+      content_markdown,
+      language,
+    });
+;
+    return res.status (200).json ({ meta, markdown: content_markdown });
+  } catch (error: any) {
+    return res;
+      .status (500);
+      .json ({ error: error?.message || "Failed to generate proposal" });
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Performance optimization utilities
 export const optimizeImages = () => {
 <<<<<<< HEAD
@@ -49,9 +50,43 @@ export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
 <<<<<<< HEAD
   const loadComponent = componentName => {    return import(`./components/${componentName}`)
-  }
-  return { loadComponent }
+=======
+// Performance optimization utilities;
+export const optimize_images = () =>: any {
+  const images = document.querySelectorAll ('img');
+;
+  images.for_each (img => {
+    // Check condition
+if ( {) {
+  $2
 }
+      img.loading = 'lazy';
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      img.decoding = 'async';
+    }
+  });
+}
+export const preloadCriticalResources = () =>: any {
+  const critical_resources = ['/fonts / main.woff2 / css / critical.css'];
+  critical_resources.for_each (resource => {    const link = document.create_element ('link');
+    link.rel = 'preload';
+    link.href = resource;
+    link.as = resource.ends_with ('.css') ? 'style' : 'font';
+    document.head.append_child (link);
+  });
+}
+export const optimizeBundleSize = () =>: any {
+  // Dynamic imports for non - critical components;
+  const load_component = component_name => {    return import (`./components/${component_name}`);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  }
+  return { load_component }
+}
+<<<<<<< HEAD
     link.rel = 'preload'
     link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font'
 =======
@@ -63,3 +98,7 @@ export const optimizeBundleSize = () => {
     link && link.rel = 'preload';
     link && link.href = resource, link && link.as = resource && resource.endsWith('.css') ? 'style' : 'font';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    link.rel = 'preload';
+    link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

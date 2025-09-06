@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -96,3 +97,58 @@ i18n && i18n.on('languageChanged', (lng) => {
 });
 export default i18n;
 
+=======
+import i18n from 'i18next';
+import {initReactI18next} from 'react - i18next';
+import LanguageDetector from 'i18next - browser - languagedetector';
+import en_translation from './locales / en / translation.json';
+import es_translation from './locales / es / translation.json';
+import pt_translation from './locales / pt / translation.json';
+import ar_translation from './locales / ar / translation.json';
+// Initialize i18next;
+i18n;
+  .use (LanguageDetector) // Detect user language;
+  .use (initReactI18next) // Initialize react - i18next;
+  .init ({
+    resources: {
+      en: {
+        translation: en_translation;
+      }
+      es: {
+        translation: es_translation;
+      }
+      pt: {
+        translation: pt_translation;
+      }
+      ar: {
+        translation: ar_translation;
+      }
+    }
+    fallback_lng: 'en', // Default language;
+    debug: process.env.NODE_ENV === 'development',
+    interpolation: {
+      escape_value: false, // React already escapes by default;
+    }
+    detection: {
+      order: ['local_storagenavigator'];
+      lookupLocalStorage: 'zion_language',
+      caches: ['local_storage'];
+    }});
+;
+// For RTL language support;
+document.document_element.dir = i18n.dir ();
+;
+// Listen for language changes to update RTL / LTR direction;
+i18n.on ('language_changed', (lng) => {
+  document.document_element.dir = i18n.dir ();
+;
+  // Save language preference to local_storage;
+  local_storage.set_item ('zion_language', lng);
+;
+  // If user is authenticated, save language preference to profile;
+  // This will be implemented in the LanguageContext;
+});
+;
+export default i18n;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,7 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {
   Home,
   Users,
@@ -9,7 +14,7 @@ import {
   DollarSign,
   Phone,
   Menu
-} from 'lucide-react'
+} from 'lucide-react';
 
 const Sidebar = () => {
   const navigation = [
@@ -18,7 +23,12 @@ const Sidebar = () => {
     { name: 'Services', href: '/services', icon: Settings },
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'Contact', href: '/contact', icon: Phone }
+<<<<<<< HEAD
   ]
+=======
+  ];
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <aside className="hidden lg:block w-64 bg-white shadow-lg min-h-screen">
       <div className="p-6">
@@ -42,6 +52,7 @@ const Sidebar = () => {
         </nav>
       </div>
     </aside>
+<<<<<<< HEAD
   )
 }
 export default Sidebar
@@ -317,3 +328,8 @@ export default Sidebar;
   ),
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  );
+};
+export default Sidebar;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

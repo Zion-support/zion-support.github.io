@@ -1,5 +1,6 @@
-// SEO Meta Tags Configuration
+// SEO Meta Tags Configuration;
 export const defaultSEO = {
+<<<<<<< HEAD
   title: 'Zion Tech Group - AI-Powered Business Solutions'
   description: 'Transform your business with our comprehensive suite of AI-powered solutions, cloud platforms, cybersecurity, and micro SaaS services.'
   keywords: 'AI, artificial intelligence, cloud computing, cybersecurity, micro SaaS, business automation, Zion Tech Group'
@@ -30,14 +31,30 @@ export const defaultSEO = {
     images: [
       {
         url: 'https://ziontechgroup && ziontechgroup.com/og-image && image.jpg',
+=======
+  title: 'Zion Tech Group - AI - Powered Business Solutions',
+  description: 'Transform your business with our comprehensive suite of AI - powered solutions, cloud platforms, cybersecurity, and micro SaaS services.',
+  keywords: 'AI, artificial intelligence, cloud computing, cybersecurity, micro SaaS, business automation, Zion Tech Group',
+  open_graph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://ziontechgroup.com',
+    site_name: 'Zion Tech Group',
+    title: 'Zion Tech Group - AI - Powered Business Solutions',
+    description: 'Transform your business with our comprehensive suite of AI - powered solutions.',
+    images: [;
+      {
+        url: 'https://ziontechgroup.com / og - image.jpg',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         width: 1200,
         height: 630,
-        alt: 'Zion Tech Group - AI-Powered Business Solutions',
+        alt: 'Zion Tech Group - AI - Powered Business Solutions',
       },
     ],
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   twitter: {
+<<<<<<< HEAD
     handle: '@ziontechgroup'
     site: '@ziontechgroup'
     cardType: 'summary_large_image'
@@ -59,3 +76,24 @@ export const defaultSEO = {
 }
 export default defaultSEO
 
+=======
+    handle: '@ziontechgroup',
+    site: '@ziontechgroup',
+    card_type: 'summary_large_image',
+  },
+  additionalMetaTags: [;
+    {
+      name: 'viewport',
+      content: 'width = device - width, initial - scale = 1',
+    {
+      name: 'theme - color',
+      content: '#1e40af',
+    },
+    {
+      name: 'msapplication - TileColor',
+      content: '#1e40af',
+    },
+  ],
+}
+export default defaultSEO;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { upsertFile } = require('./_lib/github');
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -203,3 +204,128 @@ exports.handler = async function() {
 =======
 },
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+const { upsert_file } = require ('./_lib / github');
+;
+exports.handler = async function () {
+  try {
+    const base_url = process.env.URL || process.env.DEPLOY_URL || '';
+    const endpoints = [;
+      '/',
+      '/learn',
+      '/dao',
+      '/certifications',
+      '/api / learn / courses',
+      '/api / dao / metrics',
+    ];
+;
+    const results = [];
+    ${ep}`;
+      const t0 = Date.now ();
+      try {
+        const resp = await fetch (url);
+        const ms = Date.now () - t0;
+        results.push ({ path: ep, status: resp.status, ms });
+      } catch (e) {
+        const ms = Date.now () - t0;
+        results.push ({
+          path: ep,
+          status: 0,
+          ms,
+          error: String (e.message || e),
+        });
+      }
+    }
+    const log = { timestamp: Date.now (), results }
+;
+    const owner = process.env.GITHUB_OWNER;
+    const repo = process.env.GITHUB_REPO;
+    const token = process.env.GITHUB_TOKEN;
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      const existing_path = 'data / ops / uptime - log.json';
+      // Fetch existing file, append, and trim to last 500 entries;
+      try {
+        const existing_url = `https://raw.githubusercontent.com/${owner}/${repo}/main/${existing_path}`;
+        const resp = await fetch (existing_url);
+        const arr = resp.ok ? await resp.json () : [];
+        arr.push (log);
+        while (arr.length > 500) arr.shift ();
+        const content = JSON.stringify (arr, null, 2);
+        await upsert_file ({
+          owner,
+          repo,
+          path: existing_path,
+          content,
+          message: 'chore (automation): hourly uptime log update',
+          token,
+        });
+      } catch (_) {
+        const content = JSON.stringify ([log], null, 2);
+        await upsert_file ({
+          owner,
+          repo,
+          path: existing_path,
+          content,
+          message: 'chore (automation): init uptime log',
+          token,
+        });
+      }
+    }
+    return {
+      status_code: 200,
+      body: JSON.stringify ({ ok: true, count: results.length }),
+    }
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+}  try {
+    const base_url = process.env.URL || process.env.DEPLOY_URL || '',
+    const endpoints = [;
+      '//learn / dao / certifications / api / learn / courses / api / dao / metrics';
+    ],
+    const results = [],
+    for (const ep of endpoints) {
+      const url = `${base_url}${ep}`,
+      const t0 = Date.now (),
+      try {
+        const resp = await fetch (url),
+        const ms = Date.now () - t0,
+        results.push ({ path: ep, status: resp.status, ms });
+      } catch (e) {
+        const ms = Date.now () - t0,
+        results.push ({ path: ep, status: 0, ms, error: String (e.message || e) });
+      }
+    }
+    const log = { timestamp: Date.now (), results },
+    const owner = process.env.GITHUB_OWNER,
+    const repo = process.env.GITHUB_REPO,
+    const token = process.env.GITHUB_TOKEN,
+    // Check condition
+if ( {) {
+  $2
+}
+      const existing_path = 'data / ops / uptime - log.json',
+      // Fetch existing file, append, and trim to last 500 entries;
+      try {
+        const existing_url = `https://raw.githubusercontent.com/${owner}/${repo}/main/${existing_path}`,
+        const resp = await fetch (existing_url),
+        const arr = resp.ok ? await resp.json () : [],
+        arr.push (log),
+        while (arr.length > 500) arr.shift (),
+        const content = JSON.stringify (arr, null, 2),
+        await upsert_file ({ owner, repo, path: existing_path, content, message: 'chore (automation): hourly uptime log update', token });
+      } catch (_) {
+        const content = JSON.stringify ([log], null, 2),
+        await upsert_file ({ owner, repo, path: existing_path, content, message: 'chore (automation): init uptime log', token });
+      }
+    }
+    return { status_code: 200, body: JSON.stringify ({ ok: true, count: results.length }) }
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

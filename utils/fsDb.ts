@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // File system database utilities
 export const fsDb = {
   // Add file system database functionality here
@@ -73,3 +74,13 @@ export function writeJson<T>(relativePath: string, value: T): void {
   fs.writeFileSync(full, JSON.stringify(value, null, 2), 'utf-8');
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+// File system database utilities;
+export const fs_db = {
+  // Add file system database functionality here;
+  read: (path: string) => null,
+  write: (path: string, data: any) => null,
+  exists: (path: string) => false,
+  delete: (path: string) => null;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

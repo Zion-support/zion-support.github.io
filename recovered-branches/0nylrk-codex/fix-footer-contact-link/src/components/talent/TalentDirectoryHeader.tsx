@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 
 import React from "react";
 <<<<<<< HEAD
+=======
+import React from './react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface TalentDirectoryHeaderProps {
   title: string;
   description: string
@@ -14,6 +18,7 @@ interface TalentDirectoryHeaderProps {;
   title: string,;
   description: string;
 }
+<<<<<<< HEAD
 
 export function TalentDirectoryHeader(): any ({ title, description }: TalentDirectoryHeaderProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -39,3 +44,19 @@ export function TalentDirectoryHeader(): any ({ title, description }: TalentDire
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+export /**
+ * TalentDirectoryHeader - Function description
+ */
+function TalentDirectoryHeader() {
+  return (
+    <div className="bg - zion - blue - dark border - b border - zion - blue - light">;
+      <div className="container mx - auto px - 4 py - 8 md:py - 12">;
+        <h1 className="text - 3xl md:text - 4xl font - bold text - white mb - 2">;
+          {title}
+        </h1>;
+        <p className="text - zion - slate - light max - w-2xl">{description}</p>;
+      </div>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

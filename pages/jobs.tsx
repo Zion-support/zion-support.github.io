@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Seo from '../components/seo/Seo';
 import { JobPostingJsonLd } from 'next-seo';
@@ -28,25 +29,42 @@ const Jobs: NextPage = () => {
     employmentType: 'FULL_TIME',
     validThrough: new Date(Date.now() + 1000 * 60 * 60 * 24 * 30).toISOString().slice(0, 10);
     baseSalary: {
+=======
+import type { NextPage } from 'next',
+import Seo from '../components / seo / Seo',
+import { JobPostingJsonLd } from 'next - seo',
+const Jobs: NextPage = () => {
+  const job = {
+    title: 'Senior Full - Stack Engineer (Next.js + AI)',
+    description: 'Build modern AI - enabled web apps at Zion Tech Solutions.',
+    date_posted: new Date ().toISOString ().slice (0, 10),
+    employment_type: 'FULL_TIME',
+    valid_through: new Date (Date.now () + 1000 * 60 * 60 * 24 * 30).toISOString ().slice (0, 10),
+    base_salary: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       currency: 'USD',
       value: 160000,
-      unitText: 'YEAR'},
-    hiringOrganization: {
+      unit_text: 'YEAR'},
+    hiring_organization: {
       name: 'Zion Tech Solutions',
-      sameAs: 'https://ziontechgroup.netlify.app',
-      logo: 'https://ziontechgroup.netlify.app/logo.png'},
+      same_as: 'https://ziontechgroup.netlify.app',
+      logo: 'https://ziontechgroup.netlify.app / logo.png'},
     jobLocationType: 'TELECOMMUTE'} as const,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
-    <div>
-      <Seo title="Jobs" description="Open roles at Zion Tech Solutions." />
-      <JobPostingJsonLd
-        datePosted={job.datePosted}
+    <div>;
+      <Seo title="Jobs" description="Open roles at Zion Tech Solutions." />;
+      <JobPostingJsonLd;
+        date_posted={job.date_posted}
         description={job.description}
-        employmentType={job.employmentType}
-        hiringOrganization={job.hiringOrganization}
+        employment_type={job.employment_type}
+        hiring_organization={job.hiring_organization}
         jobLocationType={job.jobLocationType}
         title={job.title}
+<<<<<<< HEAD
         validThrough={job.validThrough}
         baseSalary={job.baseSalary}
       />
@@ -63,3 +81,16 @@ export default Jobs;
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+        valid_through={job.valid_through}
+        base_salary={job.base_salary}
+      />;
+      <main>;
+        <h1 > Jobs</h1>;
+        <p>{job.title}</p>;
+        <p>{job.description}</p>;
+      </main>;
+    </div>);
+},
+export default Jobs,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

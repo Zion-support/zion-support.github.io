@@ -1,12 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useMemo, useState  } from 'react';
 import Head from 'next/head';
 
 interface ProviderMeta {;
+=======
+import React, { useState } from 'react';
+import Head from 'next / head';
+;
+interface ProviderMeta {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string;
   name: string;
   category: 'crm' | 'ats';
   description?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface ConnectionMap {
   [providerId: string]: any
@@ -369,10 +377,205 @@ export default function AdminIntegrationsPage() {
                         checked={syncRules && syncRules.pushNotesMode === 'auto'}
                         onChange={() =>;
                           setSyncRules({ ...syncRules, pushNotesMode: 'auto' });
+=======
+;
+interface ConnectionMap {
+  [provider_id: string]: any,
+/**
+ * StatusIcon - Function description
+ */
+function StatusIcon() {
+  const label =;
+    status === 'connected' ? '✅' : status === 'warning' ? '⚠️' : '❌';
+  return (
+    <span className='text - xl' title={status}>;
+      {label}
+    </span>);
+;
+interface ConnectionMap {
+  [key: string]: boolean,
+const AdminIntegrationsPage: React.FC = () => {  const [providers, set_providers] = useState < ProviderMeta[]>([]);
+  const [connections, set_connections] = useState < ConnectionMap>({});
+  const [loading, set_loading] = useState (false);
+  const [selected, set_selected] = useState < string | null>(null);
+  const [sync_rules, setSyncRules] = useState < any>({
+    autoCreateContacts: true,
+    pushNotesMode: 'auto',
+    autoSyncApplicants: true,
+    autoUploadResumes: true,
+  });
+;
+  async /**
+ * refresh - Function description
+ */
+function refresh() {
+    const [p, s] = await Promise.all ([;
+      fetch ('/api / integrations / providers').then (r => r.json ()),
+      fetch ('/api / integrations / status').then (r => r.json ()),
+    ]);
+    set_providers (p.providers || []);
+    set_connections (s.connections || {});
+  }
+  useEffect (() => {
+    refresh ();
+  }, []);
+  async /**
+ * connect - Function description
+ */
+function connect() {
+    set_loading (true),
+    try {
+      // Open mock oauth popup;
+      window.open (
+        `/api / integrations / oauth/${provider_id}/start`,
+        'oauth',
+        'width = 500, height = 700');
+      await new Promise (r => set_timeout (r, 500));
+      await fetch ('/api / integrations / connect', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ provider_id, sync_rules }),
+      });
+      await refresh ();
+    } finally {
+      set_loading (false);
+    }  }
+  async /**
+ * disconnect - Function description
+ */
+function disconnect() {
+    set_loading (true),
+    try {
+      await fetch ('/api / integrations / disconnect', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ provider_id }),
+      });
+      await refresh ();
+    } finally {
+      set_loading (false);
+    }  }
+  async /**
+ * resync - Function description
+ */
+function resync() {
+    set_loading (true),
+    try {
+      await fetch ('/api / integrations / resync', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ provider_id }),
+      });
+      await refresh ();
+    } finally {
+      set_loading (false);
+    }
+  }
+  const grouped = useMemo (
+    () => ({
+      crm: providers.filter (p => p.category === 'crm'),
+      ats: providers.filter (p => p.category === 'ats'),
+    }),
+    [providers]);
+;
+  /**
+ * Card - Function description
+ */
+function Card() {
+    const conn = connections[p.id] || { status: 'disconnected' }
+    const is_connected = conn.status === 'connected';
+    return (
+      <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4 flex flex - col gap - 3 bg - white / 60 dark:bg - black / 40'>;
+        <div className='flex items - center justify - between'>;
+          <div className='flex items - center gap - 3'>;
+            <div className='h - 8 w - 8 rounded bg - gray - 100 dark:bg - gray - 800 flex items - center justify - center text - xs'>;
+              {p.name.slice (0, 2)}
+            </div>;
+            <div>;
+              <div className='font - semibold'>{p.name}</div>;
+              <div className='text - xs text - gray - 500'>{p.description}</div>            </div>;
+          </div>;
+          <StatusIcon status={conn.status} />;
+        </div>;
+        <div className='flex items - center gap - 2'>;
+          {!is_connected && (
+            <button;
+              on_click={() => connect (p.id)}
+              disabled={loading}
+              className='px - 3 py - 1.5 rounded bg - black text - white text - sm';
+            >;
+              Connect;
+            </button>)}
+          {is_connected && (
+            <>;
+              <button;
+                on_click={() => resync (p.id)}
+                disabled={loading}
+                className='px - 3 py - 1.5 rounded bg - blue - 600 text - white text - sm';
+              >;
+                Resync Now;
+              </button>;
+              <button;
+                on_click={() => set_selected (p.id)}
+                className='px - 3 py - 1.5 rounded border text - sm';
+              >;
+                Configure;
+              </button>;
+              <button;
+                on_click={() => disconnect (p.id)}
+                disabled={loading}
+                className='px - 3 py - 1.5 rounded border text - sm';
+              >;
+                Disconnect;
+              </button>            </>)}
+        </div>;
+      </div>);  }
+  /**
+ * RulesModal - Function description
+ */
+function RulesModal() {
+    // Check condition
+if (return null) {
+  $2
+}
+    const provider = providers.find (p => p.id === selected)!;
+    const is_crm = provider.category === 'crm';
+    return (
+      <div className='fixed inset - 0 bg - black / 40 flex items - center justify - center'>;
+        <div className='w - full max - w-md rounded - lg bg - white dark:bg - neutral - 900 p - 4 border border - gray - 200 dark:border - gray - 800'>;
+          <div className='font - semibold mb - 2'>Sync Rules — {provider.name}</div>;
+          <div className='space - y-3 text - sm'>;
+            {is_crm ? (
+              <>;
+                <label className='flex items - center gap - 2'>;
+                  <input;
+                    type='checkbox';
+                    checked={!!sync_rules.autoCreateContacts}
+                    on_change={e =>;
+                      setSyncRules ({
+                        ...sync_rules,
+                        autoCreateContacts: e.target.checked,
+                      });
+                    }
+                  />{' '}
+                  Auto - create contacts;
+                </label>;
+                <div>;
+                  <div className='mb - 1'>Push notes:</div>;
+                  <div className='flex gap - 3'>;
+                    <label className='flex items - center gap - 2'>;
+                      <input;
+                        type='radio';
+                        name='push_notes';
+                        checked={sync_rules.pushNotesMode === 'auto'}
+                        on_change={() =>;
+                          setSyncRules ({ ...sync_rules, pushNotesMode: 'auto' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         }
                       />{' '}
                       Auto;
                     </label>;
+<<<<<<< HEAD
                     <label className='flex items-center gap-2'>;
                       <input
                         type='radio'
@@ -392,11 +595,24 @@ export default function AdminIntegrationsPage() {
                             pushNotesMode: 'manual',;
                           });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+                    <label className='flex items - center gap - 2'>;
+                      <input;
+                        type='radio';
+                        name='push_notes';
+                        checked={sync_rules.pushNotesMode === 'manual'}
+                        on_change={() =>;
+                          setSyncRules ({
+                            ...sync_rules,
+                            pushNotesMode: 'manual',
+                          });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         }
                       />{' '}
                       Manual only;
                     </label>                  </div>;
                 </div>;
+<<<<<<< HEAD
               </>;
             ) : (;
               <>;
@@ -459,12 +675,57 @@ export default function AdminIntegrationsPage() {
               onClick={async () => {;
                 await connect(provider && provider.id);
                 setSelected(null);
+=======
+              </>) : (
+              <>;
+                <label className='flex items - center gap - 2'>;
+                  <input;
+                    type='checkbox';
+                    checked={!!sync_rules.autoSyncApplicants}
+                    on_change={e =>;
+                      setSyncRules ({
+                        ...sync_rules,
+                        autoSyncApplicants: e.target.checked,
+                      });
+                    }
+                  />{' '}
+                  Auto - sync applicants;
+                </label>;
+                <label className='flex items - center gap - 2'>;
+                  <input;
+                    type='checkbox';
+                    checked={!!sync_rules.autoUploadResumes}
+                    on_change={e =>;
+                      setSyncRules ({
+                        ...sync_rules,
+                        autoUploadResumes: e.target.checked,
+                      });
+                    }
+                  />{' '}
+                  Auto - upload resumes;
+                </label>;
+              </>)}
+          </div>;
+          <div className='mt - 4 flex justify - end gap - 2'>;
+            <button;
+              className='px - 3 py - 1.5 rounded border text - sm';
+              on_click={() => set_selected (null)}
+            >;
+              Close;
+            </button>;
+            <button;
+              className='px - 3 py - 1.5 rounded bg - black text - white text - sm';
+              on_click={async () => {
+                await connect (provider.id);
+                set_selected (null);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               }}
             >;
               Save;
             </button>;
           </div>;
         </div>;
+<<<<<<< HEAD
       </div>;
     );  }
   return (
@@ -737,3 +998,115 @@ function ManualOverrideForm() {;
   )
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      </div>);  }
+  return (
+    <>;
+      <Head>;
+        <title > Admin Integrations • Zion</title>;
+      </Head>;
+      <main className='container mx - auto px - 4 py - 8'>;
+        <h1 className='text - 2xl font - semibold mb - 2'>Integrations</h1>;
+        <p className='text - sm text - gray - 600 mb - 6'>;
+          Connect your CRM and ATS to sync contacts, applicants, and activity.;
+        </p>;
+        <section className='mb - 8'>;
+          <h2 className='text - lg font - semibold mb - 3'>CRM</h2>;
+          <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4'>;
+            {grouped.crm.map (p => (
+              <Card key={p.id} p={p} />))}
+          </div>;
+        </section>;
+        <section className='mb - 10'>;
+          <h2 className='text - lg font - semibold mb - 3'>ATS</h2>;
+          <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4'>;
+            {grouped.ats.map (p => (
+              <Card key={p.id} p={p} />))}
+          </div>;
+        </section>;
+        <section className='mb - 10'>;
+          <h2 className='text - lg font - semibold mb - 2'>Zapier</h2>;
+          <div className='text - sm text - gray - 600'>Polling endpoints:</div>;
+          <ul className='list - disc pl - 6 text - sm mt - 2'>;
+            <li>;
+              New Zion Job Posted → GET{' '}
+              <code>/api / integrations / zapier / jobs - posted?since = TIMESTAMP</code>;
+            </li>;
+            <li>;
+              Talent Matched → GET{' '}
+              <code>;
+                /api / integrations / zapier / talent - matched?since = TIMESTAMP;
+              </code>;
+            </li>          </ul>;
+        </section>;
+        <section>;
+          <h2 className='text - lg font - semibold mb - 2'>Manual Overrides</h2>          <ManualOverrideForm />;
+        </section>;
+      </main>;
+      <RulesModal />;
+    </>);
+/**
+ * ManualOverrideForm - Function description
+ */
+function ManualOverrideForm() {
+  const [job_id, setJobId] = useState ('');
+  const [disableCrmSync, setDisableCrmSync] = useState (false);
+  const [disableAtsSync, setDisableAtsSync] = useState (false);
+  const [message, set_message] = useState ('');
+;
+  async /**
+ * save - Function description
+ */
+function save() {
+    set_message ('');
+    const res = await fetch ('/api / integrations / overrides', {
+      method: 'POST',
+      headers: { 'Content - Type': 'application / json' },
+      body: JSON.stringify ({ job_id, disableCrmSync, disableAtsSync }),
+    });
+    if (set_message ('Saved')) {
+  $2
+}
+    else set_message ('Error');
+  }
+  return (
+    <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4 bg - white / 60 dark:bg - black / 40 max - w-xl'>;
+      <div className='grid grid - cols - 1 gap - 3'>;
+        <label className='text - sm'>;
+          Job / Post ID;
+          <input;
+            value={job_id}
+            on_change={e => setJobId (e.target.value)}
+            placeholder='job_123';
+            className='w - full mt - 1 px - 3 py - 2 rounded border bg - transparent';
+          />;
+        </label>;
+        <label className='flex items - center gap - 2 text - sm'>;
+          <input;
+            type='checkbox';
+            checked={disableCrmSync}
+            on_change={e => setDisableCrmSync (e.target.checked)}
+          />{' '}
+          Disable CRM sync;
+        </label>;
+        <label className='flex items - center gap - 2 text - sm'>;
+          <input;
+            type='checkbox';
+            checked={disableAtsSync}
+            on_change={e => setDisableAtsSync (e.target.checked)}
+          />{' '}
+          Disable ATS sync;
+        </label>;
+        <div className='flex items - center gap - 2'>;
+          <button;
+            on_click={save}
+            className='px - 3 py - 1.5 rounded bg - black text - white text - sm';
+          >;
+            Save Override;
+          </button>;
+          <div className='text - sm text - gray - 500'>{message}</div>;
+        </div>;
+      </div>;
+    </div>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

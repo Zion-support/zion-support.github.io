@@ -1,14 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import OptimizedImagedynamic from '../components/OptimizedImage.dynamic';
-describe('OptimizedImagedynamic', () => {
-  test('renders without crashing', () => {
-    render(<OptimizedImagedynamic />);
-    expect(screen.getByTestId('optimizedimage.dynamic')).toBeInTheDocument();
+import { render, screen, fire_event } from '@testing - library / react';
+import '@testing - library / jest - dom';
+import OptimizedImagedynamic from '../components / OptimizedImage.dynamic';
+describe ('OptimizedImagedynamic', () => {
+  test ('renders without crashing', () => {
+    render (<OptimizedImagedynamic />);
+    expect (screen.getByTestId ('optimizedimage.dynamic')).toBeInTheDocument ();
   });
+<<<<<<< HEAD
   test('displays correct content', () => {
     // Test content display
   test('handles user interactions', () => {
@@ -66,3 +67,12 @@ describe('OptimizedImage', () => {
   });
 });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
+=======
+  test ('displays correct content', () => {
+    // Test content display;
+  test ('handles user interactions', () => {
+    // Test user interactions;
+  test ('applies correct styling', () => {
+    // Test styling;
+});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

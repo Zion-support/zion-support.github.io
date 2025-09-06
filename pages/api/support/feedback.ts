@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { readJson, writeJson } from '../../../utils/fsDb';
@@ -25,3 +26,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(200).json({ ok: true })
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+import { read_json, write_json } from '../../../utils / fs_db',
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
+  $2
+}
+  const { article_id, helpful } = req.body as { article_id: string, helpful: boolean },
+  if (return res.status (400).json ({ error: 'article_id and helpful required' }), ) {
+  $2
+}
+  const feedback = read_json < any[]>('support / feedback.json', []),
+  feedback.push ({ article_id, helpful, ts: Date.now () }),
+  write_json ('support / feedback.json', feedback),
+  return res.status (200).json ({ ok: true });
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

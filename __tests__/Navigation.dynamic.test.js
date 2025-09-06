@@ -3,6 +3,7 @@
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
 import React from 'react';
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Navigation from '../components/Navigation.dynamic';
@@ -61,3 +62,16 @@ describe('Navigation', () => {
   });
 });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
+=======
+import { render, screen } from '@testing - library / react';
+import '@testing - library / jest - dom';
+import Navigation from '../components / Navigation.dynamic';
+describe ('Navigation', () => {
+  test ('renders without crashing', () => {
+    render (<Navigation />);
+    expect (screen.getByTestId ('navigation')).toBeInTheDocument ();
+  });
+  test ('displays navigation items', () => {
+    // Test navigation items;
+});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -15,6 +15,7 @@ export type FeedbackRecord = {
   message: string;
   rating: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
   metadata: Record<string, any>;
   createdAt: string;
   ip: string;
@@ -258,3 +259,22 @@ export function generateFeedbackId(): string {
   return `feedback_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  metadata: Record < string, any>;
+  created_at: string;
+  ip: string;
+}
+const feedback_data: FeedbackRecord[] = [];
+;
+export async function saveFeedbackFallback (feedback: FeedbackRecord): Promise < void> {
+  feedback_data.push (feedback);
+  console.log ('Feedback saved:', feedback.id);
+}
+export function write_all (rows: any[]): void {
+  console.log ('Writing feedback rows:', rows.length);
+  // Implementation would write to database or file;
+}
+export function getAllFeedback (): FeedbackRecord[] {
+  return [...feedback_data];
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

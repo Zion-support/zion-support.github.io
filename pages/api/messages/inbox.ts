@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../utils/auth';
@@ -19,3 +20,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ items })
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import { NextApiRequest, NextApiResponse } from 'next',
+import { require_user } from '../../../utils / auth',
+import { list_conversations } from '../../../utils / messaging / storage',
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  const user = require_user (req, res),
+  // Check condition
+if (return, ) {
+  $2
+}
+  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
+  $2
+}
+  const items = list_conversations (user.id),
+  res.status (200).json ({ items });
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

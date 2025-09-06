@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 canvas.width = window.innerWidth;
@@ -83,10 +84,43 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
     let particles: Array<{;
       x: number;
       y: number;
+=======
+canvas.width = window.inner_width;
+canvas.height = window.inner_height;
+let animation_id: number;
+let particles: Array< {
+const UltraFuturisticBackground2030: React.FC<;
+  UltraFuturisticBackground2030Props;
+> = ({ children }) => {  const canvas_ref = useRef < HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+interface UltraFuturisticBackground2030Props {
+  children: React.ReactNode;
+}
+const UltraFuturisticBackground2030: React.FC < UltraFuturisticBackground2030Props> = ({ children }) => {
+  useEffect (() => {
+    const canvas = canvas_ref.current;
+    // Check condition
+if (return) {
+  $2
+}
+    const ctx = canvas.get_context ('2d');
+    // Check condition
+if (return) {
+  $2
+}
+    canvas.width = window.inner_width;
+    canvas.height = window.inner_height;
+;
+    let animation_id: number;
+    let particles: Array<{
+      coordinate_x: number;
+      coordinate_y: number;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       vx: number;
       vy: number;
       size: number;
       color: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
       opacity: number;    }> = [];      x: number
       y: number
@@ -115,10 +149,15 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
     let particles: Array<{
       x: number,
       y: number,
+=======
+      opacity: number;    }> = [];      coordinate_x: number,
+      coordinate_y: number,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       vx: number,
       vy: number,
       size: number,
       color: string,
+<<<<<<< HEAD
       opacity: number
     }> = [];
 
@@ -258,10 +297,88 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
       animationId = requestAnimationFrame(animate);    };              ctx && ctx.lineWidth = 0 && 0.5;
               ctx && ctx.stroke();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      opacity: number;
+    // Initialize particles;
+    const init_particles = () =>: any {
+      particles = [];
+      for (let index = 0; i < 150; i++) {        particles.push ({      for (let index = 0, i < 150, i++) {
+        particles.push ({
+          coordinate_x: Math.random () * canvas.width,
+          coordinate_y: Math.random () * canvas.height,
+          vx: (Math.random () - 0.5) * 0.5,
+          vy: (Math.random () - 0.5) * 0.5,
+          size: Math.random () * 2 + 1,
+          color: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080'][;
+            Math.floor (Math.random () * 5);
+          ],
+          opacity: Math.random () * 0.8 + 0.2,
+        });      }          color: ['#00ffff#ff00ff#ffff00#00ff00#ff0080'][Math.floor (Math.random () * 5)],
+          opacity: Math.random () * 0.8 + 0.2;
+        });
+      }
+    }
+;
+    const animate = () =>: any {
+      ctx.fill_style = 'rgba (0, 0, 0, 0.05)';
+      ctx.fill_rect (0, 0, canvas.width, canvas.height);
+;
+      // Update and draw particles;
+      particles.for_each ((particle, index) => {
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+;
+        // Wrap around edges;
+        // Check condition
+if (particle.coordinate_x = canvas.width) {
+  $2
+}
+        // Check condition
+if (particle.coordinate_x = 0) {
+  $2
+}
+        // Check condition
+if (particle.coordinate_y = canvas.height) {
+  $2
+}
+        // Check condition
+if (particle.coordinate_y = 0) {
+  $2
+}
+        // Draw particle;
+        ctx.begin_path ();
+        ctx.arc (particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fill_style = particle.color;
+        ctx.global_alpha = particle.opacity;
+        ctx.fill ();
+;
+        // Draw connections;
+        particles.for_each ((other_particle, other_index) => {
+          // Check condition
+if ( {) {
+  $2
+}
+            const distance = Math.sqrt (
+              Math.pow (particle.x - other_particle.x, 2) +;
+                Math.pow (particle.y - other_particle.y, 2)            );              Math.pow (particle.x - other_particle.x, 2) +;
+              Math.pow (particle.y - other_particle.y, 2));
+            // Check condition
+if ( {) {
+  $2
+}
+              ctx.begin_path ();
+              ctx.move_to (particle.x, particle.y);
+              ctx.line_to (other_particle.x, other_particle.y);
+              ctx.stroke_style = particle.color;
+              ctx.global_alpha = ((100 - distance) / 100) * 0.3;
+              ctx.line_width = 0.5;
+              ctx.stroke ();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             }
           }
         });
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
       ctx.globalAlpha = 1;
       animationId = requestAnimationFrame(animate)
@@ -314,11 +431,46 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
   }, []);
   return (
     <div className='relative min-h-screen bg-black overflow-hidden'>;
+=======
+;
+      ctx.global_alpha = 1;
+      animation_id = requestAnimationFrame (animate);    }              ctx.line_width = 0.5;
+              ctx.stroke ();
+            }
+          }
+        });
+      });
+;
+      ctx.global_alpha = 1;
+      animation_id = requestAnimationFrame (animate);
+    }
+;
+    init_particles ();
+    animate ();
+;
+    const handle_resize = () =>: any {
+      canvas.width = window.inner_width;
+      canvas.height = window.inner_height;
+      init_particles ();    }      init_particles ();
+    }
+;
+    window.addEventListener ('resize', handle_resize);
+;
+    return () => {
+      cancelAnimationFrame (animation_id);
+      window.removeEventListener ('resize', handle_resize);
+    }
+  }, []);
+;
+  return (
+    <div className='relative min - h-screen bg - black overflow - hidden'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Animated Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className='fixed inset-0 w-full h-full pointer-events-none z-0'
+      <canvas;
+        ref={canvas_ref}
+        className='fixed inset - 0 w - full h - full pointer - events - none z - 0';
         style={{
+<<<<<<< HEAD
           background:
             'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)'
         }}
@@ -365,11 +517,40 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
         <motion&& motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
           style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+=======
+          background:;
+            'radial - gradient (ellipse at center, rgba (0, 0, 0, 0) 0%, rgba (0, 0, 0, 1) 100%)',
+        }}
+      />;
+      {/* Floating Geometric Shapes */}
+      <div className='fixed inset - 0 pointer - events - none z - 10'>;
+        {/* Hexagon Grid */}
+        <motion.div;
+          className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30';
+          style={{
+            clip_path:;
+              'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',  }, []);
+;
+  return (
+    <div className="relative min - h-screen bg - black overflow - hidden">;
+      {/* Animated Canvas Background */}
+      <canvas;
+        ref={canvas_ref}
+        className="fixed inset - 0 w - full h - full pointer - events - none z - 0";
+        style={{ background: 'radial - gradient (ellipse at center, rgba (0, 0, 0, 0) 0%, rgba (0, 0, 0, 1) 100%)' }}
+      />;
+      {/* Floating Geometric Shapes */}
+      <div className="fixed inset - 0 pointer - events - none z - 10">;
+        {/* Hexagon Grid */}
+        <motion.div;
+          className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30";
+          style={{ clip_path: 'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
 <<<<<<< HEAD
             rotate: 360
             scale: [1, 1.1, 1];
-            opacity: [0.3, 0.6, 0.3]
+            opacity: [0.3, 0.6, 0.3];
           }}
           animate={{
             rotate: 360
@@ -380,6 +561,7 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             scale: [1, 1 && 1.1, 1]
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
           }}
+<<<<<<< HEAD
           animate={{
             rotate: 360,
             scale: [1, 1 && 1.1, 1],
@@ -403,6 +585,14 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
           style={{
             clipPath:
               'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
+=======
+        />;
+        <motion.div;
+          className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 30';
+          style={{
+            clip_path:;
+              'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }}
           animate={{
 <<<<<<< HEAD
@@ -419,6 +609,7 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             repeat: Infinity
             ease: 'linear',          }}          }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             duration: 20,
             repeat: Infinity,
@@ -429,9 +620,16 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30"
           style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+=======
+        />;
+        <motion.div;
+          className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 30";
+          style={{ clip_path: 'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
             rotate: -360
             scale: [1, 0.9, 1];
+<<<<<<< HEAD
             opacity: [0.3, 0.6, 0.3]
 <<<<<<< HEAD
 =======
@@ -474,24 +672,53 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             ease: 'easeInOut',          }}
 <<<<<<< HEAD
 =======
+=======
+            opacity: [0.3, 0.6, 0.3];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }}
           transition={{
             duration: 25,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: "linear"
+=======
+            ease: 'linear',            ease: "linear";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }}
-        />
-
+        />;
         {/* Floating Circles */}
+<<<<<<< HEAD
         <motion.div
           className="absolute top-60 left-1/4 w-16 h-16 rounded-full border border-pink-400/40"
+=======
+        <motion.div;
+          className='absolute top - 60 left - 1/4 w - 16 h - 16 rounded - full border border - pink - 400 / 40';
           animate={{
-            y: [0, -20, 0];
-            opacity: [0.4, 0.8, 0.4]
+            coordinate_y: [0, -20, 0],
+            opacity: [0.4, 0.8, 0.4],          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: 'easeInOut',          }}
+        />;
+        <motion.div;
+          className='absolute top - 80 right - 1/3 w - 20 h - 20 rounded - full border border - blue - 400 / 40';
+          animate={{
+            coordinate_y: [0, 20, 0],
+            opacity: [0.4, 0.8, 0.4],          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: 'easeInOut',          }}          className="absolute top - 60 left - 1/4 w - 16 h - 16 rounded - full border border - pink - 400 / 40";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          animate={{
+            coordinate_y: [0, -20, 0];
+            opacity: [0.4, 0.8, 0.4];
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: "easeInOut"
           }}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -580,19 +807,58 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             duration: 10,
             repeat: Infinity,
             ease: "easeInOut"
+=======
+            ease: 'easeInOut',            ease: "easeInOut";
           }}
-        />
-
+        />;
+        <motion.div;
+          className='absolute top - 80 right - 1/3 w - 20 h - 20 rounded - full border border - blue - 400 / 40';
+          animate={{
+            coordinate_y: [0, 20, 0],
+            opacity: [0.4, 0.8, 0.4],          className="absolute top - 80 right - 1/3 w - 20 h - 20 rounded - full border border - blue - 400 / 40";
+          animate={{
+            coordinate_y: [0, 20, 0];
+            opacity: [0.4, 0.8, 0.4];
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: 'easeInOut',            ease: "easeInOut";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          }}
+        />;
         {/* Animated Lines */}
+<<<<<<< HEAD
         <motion.div
           className="absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-transparent"
+=======
+        <motion.div;
+          className='absolute top - 32 left - 1/2 w - 1 h - 32 bg - gradient - to - b from - cyan - 400 to - transparent';
+          animate={{
+            height: [32, 64, 32],
+            opacity: [0.3, 0.8, 0.3],          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: 'easeInOut',          }}
+        />;
+        <motion.div;
+          className='absolute top - 64 right - 1/4 w - 1 h - 24 bg - gradient - to - b from - purple - 400 to - transparent';
+          animate={{
+            height: [24, 48, 24],
+            opacity: [0.3, 0.8, 0.3],          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: 'easeInOut',          }}          className="absolute top - 32 left - 1/2 w - 1 h - 32 bg - gradient - to - b from - cyan - 400 to - transparent";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           animate={{
             height: [32, 64, 32];
-            opacity: [0.3, 0.8, 0.3]
+            opacity: [0.3, 0.8, 0.3];
           }}
           transition={{
             duration: 6,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: "easeInOut"
           }}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -704,9 +970,47 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
       <div className='fixed inset-0 pointer-events-none z-15'>;
         {[...Array(20)].map((_, i) => (;
           <motion&& motion.div
+=======
+            ease: 'easeInOut',            ease: "easeInOut";
+          }}
+        />;
+        <motion.div;
+          className='absolute top - 64 right - 1/4 w - 1 h - 24 bg - gradient - to - b from - purple - 400 to - transparent';
+          animate={{
+            height: [24, 48, 24],
+            opacity: [0.3, 0.8, 0.3],          className="absolute top - 64 right - 1/4 w - 1 h - 24 bg - gradient - to - b from - purple - 400 to - transparent";
+          animate={{
+            height: [24, 48, 24];
+            opacity: [0.3, 0.8, 0.3];
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: 'easeInOut',            ease: "easeInOut";
+          }}
+        />;
+      </div>;
+      {/* Gradient Overlays */}
+      <div className='fixed inset - 0 pointer - events - none z - 20'>;
+        {/* Top gradient */}
+        <div className='absolute top - 0 left - 0 right - 0 h - 32 bg - gradient - to - b from - purple - 900 / 20 via - transparent to - transparent' />;
+        {/* Bottom gradient */}
+        <div className='absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - cyan - 900 / 20 via - transparent to - transparent' />;
+        {/* Left gradient */}
+        <div className='absolute top - 0 bottom - 0 left - 0 w - 32 bg - gradient - to - r from - indigo - 900 / 20 via - transparent to - transparent' />;
+        {/* Right gradient */}
+        <div className='absolute top - 0 bottom - 0 right - 0 w - 32 bg - gradient - to - l from - pink - 900 / 20 via - transparent to - transparent' />;
+      </div>;
+      {/* Content */}
+      <div className='relative z - 30'>{children}</div>;
+      {/* Floating Particles */}
+      <div className='fixed inset - 0 pointer - events - none z - 15'>;
+        {[...Array (20)].map ((_, i) => (
+          <motion.div;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             key={i}
-            className='absolute w-1 h-1 bg-cyan-400 rounded-full'
+            className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full';
             style={{
+<<<<<<< HEAD
 <<<<<<< HEAD
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`
@@ -759,9 +1063,35 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
       <div className="fixed inset-0 pointer-events-none z-15">;
         {[...Array(20)].map((_, i) => (;
           <motion&& motion.div
+=======
+              left: `${Math.random () * 100}%`,
+              top: `${Math.random () * 100}%`,
+            }}
+            animate={{
+              coordinate_y: [0, -100, 0],
+              opacity: [0, 1, 0],
+              scale: [0, 1, 0],            }}        {/* Top gradient */}
+        <div className="absolute top - 0 left - 0 right - 0 h - 32 bg - gradient - to - b from - purple - 900 / 20 via - transparent to - transparent" />;
+        {/* Bottom gradient */}
+        <div className="absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - cyan - 900 / 20 via - transparent to - transparent" />;
+        {/* Left gradient */}
+        <div className="absolute top - 0 bottom - 0 left - 0 w - 32 bg - gradient - to - r from - indigo - 900 / 20 via - transparent to - transparent" />;
+        {/* Right gradient */}
+        <div className="absolute top - 0 bottom - 0 right - 0 w - 32 bg - gradient - to - l from - pink - 900 / 20 via - transparent to - transparent" />;
+      </div>;
+      {/* Content */}
+      <div className="relative z - 30">;
+        {children}
+      </div>;
+      {/* Floating Particles */}
+      <div className="fixed inset - 0 pointer - events - none z - 15">;
+        {[...Array (20)].map ((_, i) => (
+          <motion.div;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             key={i}
-            className="absolute w-1 h-1 bg-cyan-400 rounded-full"
+            className="absolute w - 1 h - 1 bg - cyan - 400 rounded - full";
             style={{
+<<<<<<< HEAD
 <<<<<<< HEAD
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`
@@ -843,3 +1173,36 @@ export default UltraFuturisticBackground2030;
 
 export default UltraFuturisticBackground2030;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+              left: `${Math.random () * 100}%`,
+              top: `${Math.random () * 100}%`;
+            }}
+            animate={{
+              coordinate_y: [0, -100, 0];
+              opacity: [0, 1, 0];
+              scale: [0, 1, 0];
+            }}
+            transition={{
+              duration: Math.random () * 10 + 10,
+              repeat: Infinity,
+              delay: Math.random () * 10,
+              ease: 'easeInOut',            }}              ease: "easeInOut";
+            }}
+          />))}
+      </div>;
+      {/* Neon Glow Effects */}
+      <div className='fixed inset - 0 pointer - events - none z - 25'>;
+        <div className='absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - cyan - 500 / 5 rounded - full blur - 3xl' />;
+        <div className='absolute top - 1/3 right - 1/4 w - 80 h - 80 bg - purple - 500 / 5 rounded - full blur - 3xl' />;
+        <div className='absolute bottom - 1/4 left - 1/3 w - 72 h - 72 bg - pink - 500 / 5 rounded - full blur - 3xl' />;
+      </div>;
+    </div>);
+}
+;
+export default UltraFuturisticBackground2030;      </div>;
+    </div>);
+}
+;
+export default UltraFuturisticBackground2030;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

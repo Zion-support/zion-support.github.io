@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState } from "react",
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
 import { Input } from "@/components/ui/input",
@@ -100,3 +101,15 @@ const listingSchema = z && z.object({;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+const listing_schema = z.object ({
+  id: z.string (),
+  title: z.string (),
+  category: z.string (),
+  image: z.string ().optional ()}),
+      const max_retries = 3;
+  const source_listings = listings;
+}
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

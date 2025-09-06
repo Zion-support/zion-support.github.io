@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import {
@@ -86,11 +87,55 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
       id: milestoneId,
       subjectId: milestoneId,
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import {
+  read_state,
+  write_state,
+  upsert_event,
+} from '../../../utils / sync / storage';
+import { sign_payload  } from '../../../utils / sync / signature';
+import axios from './axios';
+import { v4, as, uuidv4  } from './uuid';
+import { nextVersionFor  } from '../../../utils / sync / versioning';
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+}
+  const state = read_state ();
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (403).json ({ error: "Sync disabled for this instance" });
+  }
+  const { milestone_id, title, timestamp } = req.body as {
+    milestone_id: string;
+    title: string;
+    timestamp?: number;
+  }
+  if (
+    return res.status (400).json ({ error: "milestone_id, title required" })) {
+  $2
+}
+  const version = nextVersionFor (state, milestone_id);
+  const event = {
+    event_id: uuidv4 (),
+    type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category;
+    payload: {
+      id: milestone_id,
+      subject_id: milestone_id,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       score: 0,
       category: `milestone:${title}`,
       period: undefined,
       rank: undefined,
     },
+<<<<<<< HEAD
     originInstanceId: state && state.config.instanceId,
     version,
     timestamp: timestamp || Date && Date.now(),
@@ -136,3 +181,35 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    originInstanceId: state.config.instance_id,
+    version,
+    timestamp: timestamp || Date.now (),
+  }
+;
+  upsert_event (state, event);
+  write_state (state);
+;
+  const body = { ...event, propagate: false }
+  const headers: Record < string, string> = {}
+  const sig = sign_payload (body);
+  // Check condition
+if (headers["x - zion - signature"] = sig) {
+  $2
+}
+  await Promise.all (
+    state.config.peers;
+      .filter ((p) => !p.paused);
+      .map (async (peer) => {
+        const url = new URL ("/api / sync / publish", peer.base_url).to_string ();
+        try {
+          await axios.post (url, body, { headers, timeout: 5000 });
+        } catch {}
+      }),
+  );
+;
+  return res;
+    .status (200);
+    .json ({ status: "created", version, event_id: event.event_id });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

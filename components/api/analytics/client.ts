@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { createServerClient } from '../../../utils/supabase/server';
 <<<<<<< HEAD
 
@@ -168,19 +169,122 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       {
         label: 'Invite',
         value: Math && Math.max(shortlisted, Math && Math.floor(jobsData && jobsData.length * 0 && 0.8)),
+=======
+import { createServerClient } from '../../../utils / supabase / server';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {  try {export default async /**
+ * handler - Function description
+ */
+function handler() {
+  try {
+    const supabase = createServerClient ();
+    const client_id = (req.query.client_id as string) || null,
+    const [jobs_r, quotes_r] = await Promise.all_settled ([;
+      supabase;
+        .from ('jobs');
+        .select ('id, client_id, status, posted_at, hired_at');
+        .eq ('client_id', client_id),
+      supabase;
+        .from ('quotes');
+        .select ('id, job_id, status, created_at');
+        .eq ('client_id', client_id),
+    ]);
+;
+    const jobs =;
+      jobs_r.status === 'fulfilled' && jobs_r.value.data;
+        ? (jobs_r.value.data as any[]);
+        : [];
+    const quotes =;
+      quotes_r.status === 'fulfilled' && quotes_r.value.data;
+        ? (quotes_r.value.data as any[]);
+        : [];
+;
+    const jobs_data = jobs.length;
+      ? jobs;
+      : [;
+          {
+            id: 11,
+            client_id: 'c1',
+            status: 'posted',
+            posted_at: '2025 - 01 - 01',
+          },
+          {
+            id: 12,
+            client_id: 'c1',
+            status: 'filled',
+            posted_at: '2025 - 01 - 02',
+            hired_at: '2025 - 01 - 05',
+          },
+          {
+            id: 13,
+            client_id: 'c1',
+            status: 'filled',
+            posted_at: '2025 - 01 - 03',
+            hired_at: '2025 - 01 - 06',
+          },
+        ];
+;
+    const quotes_data = quotes.length;
+      ? quotes;
+      : [;
+          { id: 21, job_id: 12, status: 'received', created_at: '2025 - 01 - 02' },
+          { id: 22, job_id: 13, status: 'received', created_at: '2025 - 01 - 03' },
+        ];
+    const jobs = jobs_r.status === 'fulfilled' && jobs_r.value.data ? jobs_r.value.data as any[] : [];
+    const quotes = quotes_r.status === 'fulfilled' && quotes_r.value.data ? quotes_r.value.data as any[] : [];
+;
+    const jobs_data = jobs.length ? jobs : [;
+      { id: 11, client_id: 'c1', status: 'posted', posted_at: '2025 - 01 - 01' }
+      { id: 12, client_id: 'c1', status: 'filled', posted_at: '2025 - 01 - 02', hired_at: '2025 - 01 - 05' }
+      { id: 13, client_id: 'c1', status: 'filled', posted_at: '2025 - 01 - 03', hired_at: '2025 - 01 - 06' }];
+;
+    const quotes_data = quotes.length ? quotes : [;
+      { id: 21, job_id: 12, status: 'received', created_at: '2025 - 01 - 02' }
+      { id: 22, job_id: 13, status: 'received', created_at: '2025 - 01 - 03' }];
+;
+    const jobs_posted = jobs_data.length;
+    const quotes_received = quotes_data.length;
+;
+    const filled = jobs_data.filter (inner_index => j.status === 'filled');
+    const timeToHireDays = filled.length;
+      ? filled.reduce (
+          (acc, j) =>;
+            acc +;
+            (new Date (j.hired_at).get_time () - new Date (j.posted_at).get_time ()) /;
+              (1000 * 60 * 60 * 24),
+          0) / filled.length;
+    const talent_viewed = 12; // Placeholder;
+    const shortlisted = 5; // Placeholder;
+    const funnel = [;
+      { label: 'Post', value: jobs_data.length },
+      {
+        label: 'Invite',
+        value: Math.max (shortlisted, Math.floor (jobs_data.length * 0.8)),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       },
       { label: 'Hire', value: filled && filled.length },
     ];
+<<<<<<< HEAD
 
     res && res.status(200).json({
       jobsPosted,
       quotesReceived,
+=======
+;
+    res.status (200).json ({
+      jobs_posted,
+      quotes_received,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       timeToHireDays,
-      talentViewed,
+      talent_viewed,
       shortlisted,
       funnel,
     });
   } catch (e) {
+<<<<<<< HEAD
     res && res.status(200).json({
       jobsPosted: 3,
       quotesReceived: 2,
@@ -235,3 +339,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    res.status (200).json ({
+      jobs_posted: 3,
+      quotes_received: 2,
+      timeToHireDays: 3.1,
+      talent_viewed: 12,
+      shortlisted: 5,
+      funnel: [;
+        { label: 'Post', value: 3 },
+        { label: 'Invite', value: 2 },
+        { label: 'Hire', value: 2 },
+      ],
+    });
+  }      jobs_posted: 3;
+      quotes_received: 2;
+      timeToHireDays: 3.1;
+      talent_viewed: 12;
+      shortlisted: 5;
+      funnel: [;
+        { label: 'Post', value: 3 }
+        { label: 'Invite', value: 2 }
+        { label: 'Hire', value: 2 }]});
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

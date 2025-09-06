@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -37,12 +41,27 @@ export default function About() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">About Zion Tech Group</h1>
           <div className="bg-white rounded-lg shadow-lg p-8">
             <p className="text-lg text-gray-600 mb-6">
+<<<<<<< HEAD
               Zion Tech Group is a leading provider of AI and technology solutions
               that help businesses scale and succeed in the digital age.
             </p>
             <p className="text-lg text-gray-600 mb-6">
               We specialize in enterprise-grade AI, micro SaaS development, and IT services
               that drive real business results for our clients.
+=======
+              Zion Tech Group is a leading provider of AI and technology solutions,
+              empowering businesses with cutting-edge technology to drive innovation and growth.
+            </p>
+            <p className="text-gray-600 mb-6">
+              Our team of experts specializes in artificial intelligence, cloud computing,
+              cybersecurity, and digital transformation services. We help organizations
+              leverage technology to achieve their business objectives.
+            </p>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Our Mission</h2>
+            <p className="text-gray-600">
+              To deliver innovative technology solutions that transform businesses and
+              create lasting value for our clients.
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
               <div>
@@ -72,6 +91,7 @@ export default function About() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 =======
 const About: React.FC = () => {;
   return (
@@ -96,3 +116,8 @@ const About: React.FC = () => {;
 }
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  );
+};
+export default About;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

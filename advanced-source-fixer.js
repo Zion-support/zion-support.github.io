@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -324,10 +325,241 @@ class AdvancedSourceFixer {
       }
       if (fixed && fixed.includes(";")) {
         fixes && fixes.push("Added semicolons");
+=======
+#!/usr / bin / env node;
+import fs from './fs';
+import path from './path';
+import { fileURLToPath  } from './url';
+;
+const __filename = fileURLToPath (import.meta.url);
+const __dirname = path.dirname (__filename);
+;
+class AdvancedSourceFixer {
+  constructor () {
+    this.fixes = [];
+    this.errors = [];
+    this.report_file = path.join (__dirname, "advanced - source - fix - report.json");
+  }
+  log (message, level = "INFO") {
+    const timestamp = new Date ().toISOString ();
+    console.log (`[${timestamp}] [${level}] ${message}`);
+  }
+  async fixAllSourceFiles () {
+    this.log ("🔧 Starting advanced source file fixing...");
+    await this.fix_directory (path.join (__dirname, "src"));
+    await this.fix_directory (path.join (__dirname, "pages"));
+    this.log (`✅ Fixed ${this.fixes.length} files`);
+    // Check condition
+if ( {) {
+  $2
+}
+      this.log (`❌ ${this.errors.length} errors encountered`);
+    }
+    await this.generate_report ();
+  }
+  async fix_directory (dir) {
+    if () return) {
+  $2
+}
+    const items = fs.readdir_sync (dir);
+    for (const item of items) {
+      const full_path = path.join (dir, item);
+      const stat = fs.stat_sync (full_path);
+;
+      // Check condition
+if (&&) {
+  $2
+}
+        !item.starts_with (".") &&;
+        item !== "node_modules") {
+        await this.fix_directory (full_path);
+      } else // Check condition
+if (||) {
+  $2
+}
+        item.ends_with (".tsx") ||;
+        item.ends_with (".js") ||;
+        item.ends_with (".jsx")) {
+        await this.fix_file (full_path);
+      }
+    }
+  }
+  async fix_file (file_path) {
+    try {
+      const content = fs.readFileSync (file_path, "utf8");
+      let fixed_content = content;
+      let was_fixed = false;
+;
+      if () {) {
+  $2
+}
+        fixed_content = this.fixParsingErrors (content, file_path);
+        was_fixed = true;
+      }
+      if () {) {
+  $2
+}
+        fixed_content = this.fixImportExportIssues (fixed_content, file_path);
+        was_fixed = true;
+      }
+      if () {) {
+  $2
+}
+        fixed_content = this.fixSyntaxIssues (fixed_content, file_path);
+        was_fixed = true;
+      }
+      // Check condition
+if ( {) {
+  $2
+}
+        fs.writeFileSync (file_path, fixed_content);
+        this.fixes.push ({
+          file: file_path,
+          timestamp: new Date ().toISOString (),
+          fixes: this.getAppliedFixes (content, fixed_content),
+        });
+        this.log (`Fixed: ${file_path}`);
+      }
+    } catch (error) {
+      this.errors.push ({
+        file: file_path,
+        error: error.message,
+        timestamp: new Date ().toISOString (),
+      });
+      this.log (`Error fixing ${file_path}: ${error.message}`, "ERROR");
+    }
+  }
+  hasParsingErrors (content) {
+    const error_patterns = [;
+      /Error: 'Parsing error:/,
+      /Unterminated string literal/,
+      /Identifier expected/,
+      /Declaration or statement expected/,
+      /Expression expected/,
+      /Property or signature expected/,
+      /Unexpected token/,
+      /'from' expected/,
+      /', ' expected/,
+      /';' expected/,
+      /'\)' expected/,
+      /'\}' expected/,
+    ];
+    return error_patterns.some ((pattern) => pattern.test (content));
+  }
+  hasImportExportIssues (content) {
+    return (
+      content.includes ("from") &&;
+      !content.includes ("import") &&;
+      !content.includes ("export"));
+  }
+  hasSyntaxIssues (content) {
+    const syntax_issues = [;
+      /import.*from.*from/,
+      /export.*from.*from/,
+      /function.*function/,
+      /const.*const.*const/,
+      /let.*let.*let/,
+    ];
+    return syntax_issues.some ((pattern) => pattern.test (content));
+  }
+  fixParsingErrors (content, file_path) {
+    let fixed = content;
+;
+    // Fix unterminated strings;
+    fixed = fixed.replace (/"[^"]*$/gm, '"');
+    fixed = fixed.replace (/'[^']*$/gm, "'");
+;
+    // Fix duplicate keywords;
+    fixed = fixed.replace (/import\s + from\s + from / g, "import React from");
+    fixed = fixed.replace (/export\s + from\s + from / g, "export default");
+    fixed = fixed.replace (/function\s + function / g, "function");
+    fixed = fixed.replace (/const\s + const / g, "const");
+    fixed = fixed.replace (/let\s + let / g, "let");
+;
+    // Add missing semicolons;
+    fixed = fixed.replace (/([^}])\n / g, "$1;\n");
+;
+    // Fix JSX tags;
+    fixed = fixed.replace (/<([^>]*)\s*>/g, "<$1>");
+    fixed = fixed.replace (/<\/([^>]*)\s*>/g, "</$1>");
+;
+    return fixed;
+  }
+  fixImportExportIssues (content, file_path) {
+    let fixed = content;
+;
+    if (|| file_path.ends_with (".jsx")) {) {
+  $2
+}
+      // Check condition
+if (&&) {
+  $2
+}
+        !fixed.includes ("import * as React")) {
+        fixed = "import React from 'react';\n" + fixed;
+      }
+    }
+    fixed = fixed.replace (/import\s+{\s*}\s * from / g, "import React from");
+    fixed = fixed.replace (/import\s + from\s+['"]/g, "import React from 'react'");
+;
+    if (&& !fixed.includes ("export {")) {) {
+  $2
+}
+      fixed += "\n\nexport default {}";
+    }
+    return fixed;
+  }
+  fixSyntaxIssues (content, file_path) {
+    let fixed = content;
+;
+    // Fix duplicate keywords;
+    fixed = fixed.replace (/\bconst\s + const\b / g, "const");
+    fixed = fixed.replace (/\blet\s + let\b / g, "let");
+    fixed = fixed.replace (/\bvar\s + var\b / g, "var");
+    fixed = fixed.replace (/\bfunction\s + function\b / g, "function");
+;
+    // Fix trailing commas;
+    fixed = fixed.replace (/\{\s*, \s*\}/g, "{}");
+    fixed = fixed.replace (/\{\s*, \s*/g, "{");
+    fixed = fixed.replace (/\[\s*, \s*\]/g, "[]");
+    fixed = fixed.replace (/\[\s*, \s*/g, "[");
+    fixed = fixed.replace (/\(\s*, \s*\)/g, "()");
+    fixed = fixed.replace (/\(\s*, \s*/g, "(");
+;
+    return fixed;
+  }
+  getAppliedFixes (original, fixed) {
+    const fixes = [];
+    // Check condition
+if ( {) {
+  $2
+}
+      // Check condition
+if ( {) {
+  $2
+}
+        fixes.push ("Content length changed");
+      }
+      if () {) {
+  $2
+}
+        fixes.push ("Added React import");
+      }
+      if () {) {
+  $2
+}
+        fixes.push ("Added default export");
+      }
+      if () {) {
+  $2
+}
+        fixes.push ("Added semicolons");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     }
     return fixes;
   }
+<<<<<<< HEAD
   async generateReport() {
     const report = {
 <<<<<<< HEAD
@@ -392,3 +624,27 @@ module.exports = AdvancedSourceFixer;
 =======
 export default AdvancedSourceFixer;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+  async generate_report () {
+    const report = {
+      timestamp: new Date ().toISOString (),
+      totalFilesFixed: this.fixes.length,
+      total_errors: this.errors.length,
+      fixes: this.fixes,
+      errors: this.errors,
+    }
+;
+    fs.writeFileSync (this.report_file, JSON.stringify (report, null, 2));
+    this.log (`Report generated: ${this.report_file}`);
+  }
+}
+// Check condition
+if ( {) {
+  $2
+}
+  const fixer = new AdvancedSourceFixer ();
+  fixer.fixAllSourceFiles ().catch (console.error);
+}
+export default AdvancedSourceFixer;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

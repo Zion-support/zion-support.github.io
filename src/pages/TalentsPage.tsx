@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import { useState, useEffect, useCallback, useMemo  } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -48,3 +49,9 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
+=======
+;
+    let filtered_talents = all_talents;
+    }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

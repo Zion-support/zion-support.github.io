@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import { serve } from
@@ -107,3 +108,10 @@ import { serve } from https: import Stripe from';https: import { createClient} f
   return new Response('Not found', { "status": 404 })});
     return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+.eq ('id', order_id)}} return new Response (JSON.stringify ({ "received": true }), { "status": 200 })} return new Response ('Not found', { "status": 404 })}); return new Response (JSON.stringify ({ "received": true }), { "status": 200 })}
+;
+  return new Response ('Not found', { "status": 404 })});
+    return new Response (JSON.stringify ({ "received": true }), { "status": 200 })}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

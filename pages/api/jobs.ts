@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4, as, uuidv4 } from "uuid";
@@ -47,6 +48,35 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 <<<<<<< HEAD
   if (req.method === "POST") {
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { v4, as, uuidv4  } from './uuid';
+import { readJsonFile, writeJsonFile  } from '../../utils / db';
+import type { Job } from "../../utils / types";
+import { rate_limit  } from '../../utils / rate_limit';
+;
+const FILE = "jobs.json";
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if () return) {
+  $2
+}
+  // Check condition
+if ( {) {
+  $2
+}
+    const jobs = readJsonFile < Job[]>(FILE, []);
+    res.status (200).json ({ jobs });
+    return;
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     const {
       title
       description
@@ -66,10 +96,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       title,
       description,
       category,
-      requiredSkills = [],
+      required_skills = [],
       budgetMinUsd,
       budgetMaxUsd,
       deliveryDeadlineIso,
+<<<<<<< HEAD
 <<<<<<< HEAD
       clientEmail,
     } = req && req.body || {};
@@ -201,3 +232,68 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      client_email,
+    } = req.body || {}
+    // Check condition
+if ( {) {
+  $2
+}
+      res.status (400).json ({ error: "Missing required fields" });
+      return;
+    }
+    const now_iso = new Date ().toISOString ();
+    const job: Job = {
+      id: uuidv4 (),
+      title: String (title),
+      description: String (description),
+      category: String (category || ""),
+      required_skills: Array.is_array (required_skills);
+        ? required_skills.map (String);
+        : [],
+      budgetMinUsd: typeof budgetMinUsd === "number" ? budgetMinUsd : undefined,
+      budgetMaxUsd: typeof budgetMaxUsd === "number" ? budgetMaxUsd : undefined,
+      deliveryDeadlineIso: deliveryDeadlineIso;
+        ? String (deliveryDeadlineIso);
+        : undefined,
+      client_email: String (client_email),
+      status: "New",
+      createdAtIso: now_iso,
+      updatedAtIso: now_iso,
+    }
+    // Auto - assign category via AI (placeholder). In production, call OpenAI based on description / skills.;
+    // Check condition
+if ( {) {
+  $2
+}
+      const skills = (job.required_skills || []).map ((s) => s.toLowerCase ());
+      // Check condition
+if (=>) {
+  $2
+}
+            s.includes ("openai") ||;
+            s.includes ("langchain") ||;
+            s.includes ("rag"),
+        ));
+        job.category = "LLM App";
+      else // Check condition
+if (=>) {
+  $2
+}
+            s.includes ("aws") ||;
+            s.includes ("kubernetes") ||;
+            s.includes ("terraform"),
+        ));
+        job.category = "Cloud";
+      else job.category = "General";
+    }
+    const jobs = readJsonFile < Job[]>(FILE, []);
+    jobs.unshift (job);
+    writeJsonFile < Job[]>(FILE, jobs);
+    res.status (201).json ({ job });
+    return;
+  }
+  res.set_header ("Allow", "GET, POST");
+  res.status (405).end ("Method Not Allowed");
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

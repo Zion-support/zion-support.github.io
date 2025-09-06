@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
@@ -11,9 +12,24 @@ export function TalentCardAvailability({
   availabilityType
 }: TalentCardAvailabilityProps) {  // Format availability status
 export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {
+=======
+import React from 'react';
+import { Clock } from 'lucide-react';
 interface TalentCardAvailabilityProps {
-  availabilityType: string
+  availability_type: string;
+export /**
+ * TalentCardAvailability - Function description
+ */
+function TalentCardAvailability() {  // Format availability status;
+export /**
+ * TalentCardAvailability - Function description
+ */
+function TalentCardAvailability() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+interface TalentCardAvailabilityProps {
+  availability_type: string;
 }
+<<<<<<< HEAD
 export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {
   // Format availability status
 <<<<<<< HEAD
@@ -27,10 +43,27 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
         return 'bg-blue-500/20 text-blue-400'
       default:
         return 'bg-gray-500/20 text-gray-400'
+=======
+export /**
+ * TalentCardAvailability - Function description
+ */
+function TalentCardAvailability() {
+  // Format availability status;
+  const getAvailabilityColor = (status: string) =>: any {    switch (status) {
+      case 'full - time':;
+        return 'bg - green - 500 / 20 text - green - 400';
+      case 'part - time':;
+        return 'bg - yellow - 500 / 20 text - yellow - 400';
+      case 'project - based':;
+        return 'bg - blue - 500 / 20 text - blue - 400',
+      default:;
+        return 'bg - gray - 500 / 20 text - gray - 400';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
-  }; return 'bg-gray-500/20 text-gray-400'
+  } return 'bg - gray - 500 / 20 text - gray - 400';
     }
   }
+<<<<<<< HEAD
   const getAvailabilityLabel = (status: string,) => {
 =======
   const getAvailabilityColor = (status: string) => {
@@ -123,3 +156,21 @@ export function TalentCardAvailability(): any ({ availabilityType }: TalentCardA
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  const getAvailabilityLabel = (status: string, ) =>: any {
+    switch (status) {
+      case 'full - time':;
+        return 'Full - time';
+      case 'part - time':;
+        return 'Part - time';
+      case 'project - based':;
+        return 'Project',
+      default:;
+        return status;
+  }
+    >;
+      <Clock className='h - 3 w - 3' />;
+      <span>{getAvailabilityLabel (availability_type)}</span>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

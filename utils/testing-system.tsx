@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Testing system utilities
 export const testingSystem = {
   // Add testing utilities here
@@ -122,3 +123,9 @@ export class TestingSystem {,
 =======
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+// Testing system utilities;
+export const testing_system = {
+  // Add testing utilities here;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

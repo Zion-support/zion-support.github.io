@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Analytics utilities
 export const trackEvent = (event: string, data?: any) => {
   if (typeof window !== 'undefined' && window && window.gtag) {
@@ -12,10 +13,29 @@ export const trackPageView = (url: string) => {
 =======
   if (typeof window !== 'undefined' && window && window.gtag) {
     window && window.gtag('config', 'GA_MEASUREMENT_ID', {
+=======
+// Analytics utilities;
+export const track_event = (event: string, data?: any) =>: any {
+  // Check condition
+if ( {) {
+  $2
+}
+    window.gtag ('event', event, data);
+  }
+}
+;
+export const trackPageView = (url: string) =>: any {
+  // Check condition
+if ( {) {
+  $2
+}
+    window.gtag ('config', 'GA_MEASUREMENT_ID', {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       page_path: url,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 // Track events
@@ -70,36 +90,61 @@ export const trackEvent = (
 ) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', eventName, properties);
+=======
+}
+;
+// Track events;
+export const track_event = (
+  event_name: string,
+  properties?: Record < string, string | number | boolean>) =>: any {
+  // Check condition
+if ( {) {
+  $2
+}
+    window.gtag ('event', event_name, properties);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-};
-
-export const trackPageView = (url: string) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config', GA_TRACKING_ID, {
+}
+;
+export const trackPageView = (url: string) =>: any {
+  // Check condition
+if ( {) {
+  $2
+}
+    window.gtag ('config', GA_TRACKING_ID, {
       page_path: url,
     });
   }
-};
-
-export const measurePerformance = () => {
-  if (typeof window !== 'undefined' && 'performance' in window) {
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+}
+;
+export const measure_performance = () =>: any {
+  // Check condition
+if ( {) {
+  $2
+}
+    const navigation = performance.getEntriesByType ('navigation')[0] as PerformanceNavigationTiming;
     return {
-      loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+      load_time: navigation.loadEventEnd - navigation.loadEventStart,
       domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-      firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,
-      firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0,
-    };
+      first_paint: performance.getEntriesByName ('first - paint')[0]?.start_time || 0,
+      firstContentfulPaint: performance.getEntriesByName ('first - contentful - paint')[0]?.start_time || 0,
+    }
   }
   return null;
+<<<<<<< HEAD
 };
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface WebVitalMetric {
   name: string;
   value: number;
   id: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const trackWebVitals = (metric: WebVitalMetric) => {
 <<<<<<< HEAD
@@ -126,15 +171,30 @@ export const trackWebVitals = (metric: WebVitalMetric) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', metric.name, {
       value: Math.round(metric.value),
+=======
+export const trackWebVitals = (metric: WebVitalMetric) =>: any {
+  // Check condition
+if ( {) {
+  $2
+}
+    window.gtag ('event', metric.name, {
+      value: Math.round (metric.value),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       event_category: 'Web Vitals',
       event_label: metric.id,
       non_interaction: true,
     });
   }
+<<<<<<< HEAD
 };
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 // Track events
+=======
+}
+;
+// Track events;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export const event = ({
   action
   category
@@ -145,6 +205,7 @@ export const event = ({
   category: string;
   label?: string;
   value?: number;
+<<<<<<< HEAD
 }) => {
 <<<<<<< HEAD
   if (typeof window !== 'undefined' && window.gtag) {
@@ -162,11 +223,20 @@ export const measurePerformance = () => {if (typeof window !== 'undefined' && 'p
 =======
   if (typeof window !== 'undefined' && window && window.gtag) {
     window && window.gtag('event', action, {
+=======
+}) =>: any {
+  // Check condition
+if ( {) {
+  $2
+}
+    window.gtag ('event', action, {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       event_category: category,
       event_label: label,
       value: value,
     });
   }
+<<<<<<< HEAD
 };
 
 export const measurePerformance = () => {;
@@ -178,9 +248,24 @@ export const measurePerformance = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return {;
       loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart;
+=======
+}
+;
+export const measure_performance = () =>: any {
+  // Check condition
+if ( {') {
+  $2
+}
+    const navigation = performance.getEntriesByType (
+      'navigation'')[0] as PerformanceNavigationTiming;
+;
+    return {
+      load_time: navigation.loadEventEnd - navigation.loadEventStart;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       domContentLoaded:;
 <<<<<<< HEAD
         navigation.domContentLoadedEventEnd -;
+<<<<<<< HEAD
         navigation.domContentLoadedEventStart;
       firstPaint:;
         performance.getEntriesByName('first-paint')[0]?.startTime |0,';
@@ -225,12 +310,43 @@ export const trackWebVitals = (metric: WebVitalMetric) => {;
 })}
 }
 // Declare global types
+=======
+        navigation.domContentLoadedEventStart,
+      first_paint:;
+        performance.getEntriesByName ('first - paint')[0]?.start_time || 0, ';
+      firstContentfulPaint:;
+        performance.getEntriesByName ('first - contentful - paint')[0]?.start_time ||';
+        0;,
+}}
+  return null}
+;
+// Web Vitals tracking;
+interface WebVitalMetric {
+  name: string;
+  value: number;
+  id: string}
+export const trackWebVitals = (metric: WebVitalMetric) =>: any {
+  // Check condition
+if ( {') {
+  $2
+}
+    window.gtag ('event', metric.name, {';
+      value: Math.round (metric.value);
+      event_category: 'Web Vitals', ';
+      event_label: metric.id;
+      non_interaction: true;,
+})}
+}
+;
+// Declare global types;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 declare global {
   interface Window {
 <<<<<<< HEAD
     gtag: (...args: any[]) => void;
-    dataLayer: any[];
+    data_layer: any[];
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -253,3 +369,6 @@ export const trackEvent = ( eventName: 'string',properties?: Record<string,strin
   }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

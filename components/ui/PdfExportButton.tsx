@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 html2pdf () .set (opt) .from (element) .save ()
 }
@@ -23,6 +24,33 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
     if (!targetRef.current) return;
     const element = targetRef.current;
     const html2pdf = (await import('html2pdf.js')).default;
+=======
+html2pdf () .set (opt) .from (element) .save ();
+}
+;
+export default /**
+ * PdfExportButton - Function description
+ */
+function PdfExportButton() {  const on_click = async () => {import React from 'react';
+export type PdfExportButtonProps = {
+  target_ref: React.RefObject < HTMLDivElement>,
+  file_name?: string;
+  theme?: 'light' | 'dark';
+}
+;
+export default /**
+ * PdfExportButton - Function description
+ */
+function PdfExportButton() {
+    // Check condition
+if (return) {
+  $2
+}
+    const element = target_ref.current;
+;
+    const html2pdf = (await import ('html2pdf.js')).default;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     const opt = {
 <<<<<<< HEAD
       margin: [10, 10, 10, 10]
@@ -85,6 +113,7 @@ export default function PdfExportButton(): any ({ targetRef, fileName = 'resume 
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } as any;
+<<<<<<< HEAD
     html2pdf().set(opt).from(element).save();
 <<<<<<< HEAD
   }
@@ -123,3 +152,20 @@ export default function PdfExportButton(): any ({ targetRef, fileName = 'resume 
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+    html2pdf ().set (opt).from (element).save ();
+  }
+;
+      >;
+      Download as PDF;
+    </button>);
+}  return (
+    <button;
+      on_click={on_click}
+      className="no - print fixed right - 4 top - 20 z - 50 inline - flex items - center gap - 2 rounded - md bg - blue - 600 text - white px - 4 py - 2 shadow hover: bg - blue - 700 focus:outline - none";
+      aria - label="Download as PDF";
+      Download as PDF;
+    </button>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

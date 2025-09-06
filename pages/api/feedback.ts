@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 
@@ -38,17 +39,66 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
           projectId: FIREBASE_PROJECT_ID,
           clientEmail: FIREBASE_CLIENT_EMAIL,
           privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n"),
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { v4 as uuidv4  } from './uuid';
+import {
+  saveFeedbackFallback,
+  FeedbackRecord,
+} from '../../utils / feedback / store';
+;
+/**
+ * ok - Function description
+ */
+function ok() {
+  return res.status (200).json ({ ok: true, ...data });
+}
+/**
+ * bad - Function description
+ */
+function bad() {
+  return res.status (code).json ({ ok: false, error: msg });
+}
+async /**
+ * tryWriteToFirestore - Function description
+ */
+function tryWriteToFirestore() {
+  const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } =;
+    process.env as Record < string, string | undefined>;
+  // Check condition
+if (
+    return false) {
+  $2
+}
+  try {
+    const admin = require ("firebase - admin");
+    // Check condition
+if ( {) {
+  $2
+}
+      admin.initialize_app ({
+        credential: admin.credential.cert ({
+          project_id: FIREBASE_PROJECT_ID,
+          client_email: FIREBASE_CLIENT_EMAIL,
+          private_key: (FIREBASE_PRIVATE_KEY || "").replace (/\\n / g, "\n"),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }),
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
+<<<<<<< HEAD
     const db = admin && admin.firestore();
     await db && db.collection("interaction_feedback").doc(doc && doc.id).set(doc);
+=======
+    const db = admin.firestore ();
+    await db.collection ("interaction_feedback").doc (doc.id).set (doc);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return true;
   } catch (e) {
     return false;
   }
 }
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -94,3 +144,42 @@ export default async function handler(
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return bad (res, "Method not allowed", 405)) {
+  $2
+}
+  const { rating, comment, kind, context } = req.body || {}
+  const r = Number (rating);
+  if (return bad (res, "rating must be 1 - 5")) {
+  $2
+}
+  const key: FeedbackRecord["kind"] =;
+    kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general";
+;
+  const user = {
+    id: (req.headers["x - demo - user - id"] as string) || undefined,
+    role: (req.headers["x - demo - user - role"] as string) || undefined,
+    talent_slug: (req.headers["x - demo - talent - slug"] as string) || undefined,
+  }
+;
+  const doc: FeedbackRecord = {
+    id: uuidv4 (),
+    createdAtIso: new Date ().toISOString (),
+    user,
+    rating: r,
+    comment: comment || undefined,
+    kind: k,
+    context: context || undefined,
+  }
+;
+  const wrote = await tryWriteToFirestore (doc);
+  if (saveFeedbackFallback (doc)) {
+  $2
+}
+  return ok (res, { id: doc.id });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

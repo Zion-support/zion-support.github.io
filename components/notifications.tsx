@@ -22,16 +22,24 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 import dynamic from 'next/dynamic';
 <<<<<<< HEAD
 
 <<<<<<< HEAD
 const NotificationCenter = dynamic(
   () => import('../components/notifications/NotificationCenter')
+=======
+import dynamic from 'next / dynamic';
+;
+const NotificationCenter = dynamic (
+  () => import ('../components / notifications / NotificationCenter'),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     ssr: false
   }
 );
+<<<<<<< HEAD
 
 export default function NotificationsPage() {
   return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {
@@ -60,3 +68,18 @@ export default function NotificationsPage() {;
 =======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+export default /**
+ * NotificationsPage - Function description
+ */
+function NotificationsPage() {
+  return <NotificationCenter />;const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter'), {
+  ssr: false}),
+export default /**
+ * NotificationsPage - Function description
+ */
+function NotificationsPage() {
+  return <NotificationCenter />;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,5 +1,6 @@
 export interface Application {
   id: string;
+<<<<<<< HEAD
   name: string;
   email: string;
   position: string;
@@ -11,3 +12,11 @@ export interface Application {
 
 export type UserRole = 'admin' | 'user' | 'guest';
 
+=======
+  job_id: string;
+  talent_slug: string;
+  status: 'applied' | 'skipped' | 'pending';
+  createdAtIso: string;
+}
+export type UserRole = 'admin' | 'user' | 'guest';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

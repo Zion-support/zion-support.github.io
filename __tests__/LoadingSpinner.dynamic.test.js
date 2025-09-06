@@ -3,6 +3,7 @@
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
 import React from 'react';
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import LoadingSpinner from '../components/LoadingSpinner.dynamic';
@@ -61,3 +62,16 @@ describe('LoadingSpinner', () => {
   });
 });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
+=======
+import { render, screen } from '@testing - library / react';
+import '@testing - library / jest - dom';
+import LoadingSpinner from '../components / LoadingSpinner.dynamic';
+describe ('LoadingSpinner', () => {
+  test ('renders without crashing', () => {
+    render (<LoadingSpinner />);
+    expect (screen.getByTestId ('loading - spinner')).toBeInTheDocument ();
+  });
+  test ('displays loading text', () => {
+    expect (screen.getByText ('Loading...')).toBeInTheDocument ();
+});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

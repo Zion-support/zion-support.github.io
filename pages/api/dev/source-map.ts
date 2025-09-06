@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
 import { getGitStatus, requireRoles } from "../../../utils/devAccess";
@@ -29,3 +30,45 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import type { NextApiRequest, NextApiResponse } from './next';,
+import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';,
+import { getGitStatus, require_roles  } from '../../../utils / dev_access';,
+;
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  const identity = require_roles (req, res, ["admin", "maintainer"]),
+  // Check condition
+if (return, ) {
+  $2
+}
+  // Check condition
+if ( {) {
+  $2
+}
+    const nodes = getSourceMapWithExistence (),
+    const git = getGitStatus (),
+    res.status (200).json ({ nodes, status: { git_connected: git.connected, git_branch: git.branch } }),
+    return;
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    const { path: repoRelativePath } = req.body || {},
+    if () {) {
+  $2
+}
+      res.status (400).json ({ error: "Invalid path" }),
+      return;
+    }
+    const result = deployBasicTemplateForPath (repoRelativePath),
+    res.status (200).json ({ ok: true, result }),
+    return;
+  }
+  res.set_header ("Allow", "GET, POST"),
+  res.status (405).end ("Method Not Allowed");
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

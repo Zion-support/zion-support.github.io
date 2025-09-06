@@ -138,6 +138,12 @@ const Home: React.FC = () => {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 export default Home;
 >>>>>>> 2fc87795dcf7cb742c24a257dd9040071acce941
+=======
+};
+;
+export default Home;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -3,6 +3,7 @@
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
 import React from 'react';
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import MainSidebar from '../components/MainSidebar.dynamic';
@@ -61,3 +62,16 @@ describe('MainSidebar', () => {
   });
 });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
+=======
+import { render, screen } from '@testing - library / react';
+import '@testing - library / jest - dom';
+import MainSidebar from '../components / MainSidebar.dynamic';
+describe ('MainSidebar', () => {
+  test ('renders without crashing', () => {
+    render (<MainSidebar />);
+    expect (screen.getByTestId ('main - sidebar')).toBeInTheDocument ();
+  });
+  test ('displays navigation items', () => {
+    // Test navigation items;
+});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

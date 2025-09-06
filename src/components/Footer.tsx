@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -25,6 +26,23 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react';
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import {
+  Twitter,
+  Linkedin,
+  Facebook,
+  Instagram,
+  Github,
+  ChevronUp
+} from 'lucide-react';
+
+const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -63,18 +81,35 @@ export const Footer: React.FC = () => {
               </a>
             </div>
           </div>
-
           {/* Services */}
           <div>
             <h4 className="text-white font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
+<<<<<<< HEAD
               <li><Link to="/services/ai-services" className="text-gray-400 hover:text-white transition-colors">AI Services</Link></li>
               <li><Link to="/services/micro-saas" className="text-gray-400 hover:text-white transition-colors">Micro SaaS</Link></li>
               <li><Link to="/services/it-services" className="text-gray-400 hover:text-white transition-colors">IT Services</Link></li>
               <li><Link to="/pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</Link></li>
+=======
+              <li><Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors">AI Services</Link></li>
+              <li><Link to="/it-services" className="text-gray-400 hover:text-white transition-colors">IT Services</Link></li>
+              <li><Link to="/micro-saas" className="text-gray-400 hover:text-white transition-colors">Micro SaaS</Link></li>
+              <li><Link to="/cloud-solutions" className="text-gray-400 hover:text-white transition-colors">Cloud Solutions</Link></li>
+              <li><Link to="/cybersecurity" className="text-gray-400 hover:text-white transition-colors">Cybersecurity</Link></li>
             </ul>
           </div>
-
+          {/* Solutions */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Solutions</h3>
+            <ul className="space-y-2">
+              <li><Link to="/solutions/enterprise" className="text-gray-400 hover:text-white transition-colors">Enterprise</Link></li>
+              <li><Link to="/solutions/healthcare" className="text-gray-400 hover:text-white transition-colors">Healthcare</Link></li>
+              <li><Link to="/solutions/finance" className="text-gray-400 hover:text-white transition-colors">Finance</Link></li>
+              <li><Link to="/solutions/government" className="text-gray-400 hover:text-white transition-colors">Government</Link></li>
+              <li><Link to="/solutions/retail" className="text-gray-400 hover:text-white transition-colors">Retail</Link></li>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            </ul>
+          </div>
           {/* Company */}
           <div>
             <h4 className="text-white font-semibold mb-4">Company</h4>
@@ -86,6 +121,7 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
+<<<<<<< HEAD
 
         <div className="mt-12 pt-8 border-t border-slate-700/50">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -100,9 +136,19 @@ export const Footer: React.FC = () => {
                 Terms of Service
               </Link>
             </div>
+=======
+        {/* Bottom Section */}
+        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
+          <div className="text-gray-400 text-sm">
+            © 2024 Zion Tech Group. All rights reserved.
+          </div>
+          <div className="flex space-x-6 mt-4 sm:mt-0">
+            <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</Link>
+            <Link to="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</Link>
+            <Link to="/cookies" className="text-gray-400 hover:text-white transition-colors text-sm">Cookie Policy</Link>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </div>
         </div>
-
         {/* Back to Top Button */}
         <button
           onClick={scrollToTop}
@@ -112,6 +158,7 @@ export const Footer: React.FC = () => {
         </button>
       </div>
     </footer>
+<<<<<<< HEAD
 =======
 const Footer: React.FC = () => {;
   return (
@@ -160,3 +207,8 @@ const Footer: React.FC = () => {;
 };
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  );
+};
+export default Footer;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

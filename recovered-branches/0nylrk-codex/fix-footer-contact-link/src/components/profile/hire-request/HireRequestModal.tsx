@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react";
 <<<<<<< HEAD
@@ -29,12 +30,43 @@ export function HireRequestModal({
   }
   if (!talent) return null;
 
+=======
+import React from './react';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from '@/components / ui / dialog';
+import { HireRequestForm  } from './HireRequestForm';
+import { TalentProfile  } from '@/types / talent';
+import { UserProfile  } from '@/types / auth';
+interface HireRequestModalProps {
+  talent: TalentProfile | null;
+  is_open: boolean;
+  on_close: () => void;
+  user_details?: UserProfile;
+}
+export /**
+ * HireRequestModal - Function description
+ */
+function HireRequestModal() {
+  const handle_close = () =>: any {
+    on_close ();
+  }
+;
+  // Check condition
+if (return null) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
-    <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="bg-zion-blue-dark border-zion-blue-light max-w-4xl w-[95vw] max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle className="text-xl font-bold text-white">
+    <Dialog open={is_open} onOpenChange={handle_close}>;
+      <DialogContent className="bg - zion - blue - dark border - zion - blue - light max - w-4xl w-[95vw] max - h-[90vh] overflow - y-auto">;
+        <DialogHeader>;
+          <DialogTitle className="text - xl font - bold text - white">;
             Hire {talent.full_name}
+<<<<<<< HEAD
           </DialogTitle>
         </DialogHeader>
 =======
@@ -83,3 +115,15 @@ export function HireRequestModal(): any ({ talent, isOpen, onClose, userDetails 
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+          </DialogTitle>;
+        </DialogHeader>;
+        <HireRequestForm;
+          talent={talent}
+          on_close={handle_close}
+          user_details={user_details}
+        />;
+      </DialogContent>;
+    </Dialog>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

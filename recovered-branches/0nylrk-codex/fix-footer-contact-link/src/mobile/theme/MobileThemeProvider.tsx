@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 
 import React from "react";
 <<<<<<< HEAD
 import { useTheme } from "@/hooks/useTheme";
+=======
+import React from './react';
+import { use_theme } from '@/hooks / use_theme';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface MobileThemeProviderProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
+<<<<<<< HEAD
 export function MobileThemeProvider({ children }: MobileThemeProviderProps) {
   const { theme } = useTheme();
 =======
@@ -29,3 +35,16 @@ export function MobileThemeProvider(): any ({ children }: MobileThemeProviderPro
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+export /**
+ * MobileThemeProvider - Function description
+ */
+function MobileThemeProvider() {
+  const { theme } = use_theme ();
+;
+  return (
+    <div className={`mobile - app ${theme === 'dark' ? 'dark' : 'light'}`}>;
+      {children}
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

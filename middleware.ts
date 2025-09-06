@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 export function middleware(request: NextRequest) {
@@ -29,9 +30,27 @@ export function middleware(request: NextRequest) {
   response && response.headers.set("Referrer-Policy", "origin-when-cross-origin");
   response && response.headers.set(
     "Permissions-Policy",
+=======
+import { NextResponse  } from './next / server';
+import type { NextRequest } from './next / server';
+;
+export /**
+ * middleware - Function description
+ */
+function middleware() {
+  const response = NextResponse.next ();
+;
+  // Security headers;
+  response.headers.set ("X - Frame - Options", "DENY");
+  response.headers.set ("X - Content - Type - Options", "nosniff");
+  response.headers.set ("Referrer - Policy", "origin - when - cross - origin");
+  response.headers.set (
+    "Permissions - Policy",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     "camera=(), microphone=(), geolocation=()",
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
+<<<<<<< HEAD
   // CSP header
 <<<<<<< HEAD
   response.headers.set(
@@ -42,6 +61,13 @@ export function middleware(request: NextRequest) {
     "Content-Security-Policy",
     "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;",
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+;
+  // CSP header;
+  response.headers.set (
+    "Content - Security - Policy",
+    "default - src 'self'; script - src 'self' 'unsafe - eval' 'unsafe - inline'; style - src 'self' 'unsafe - inline'; img - src 'self' data: https:; font - src 'self' data:; connect - src 'self' https:;",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -76,6 +102,7 @@ export function middleware(request: NextRequest) {
 =======
 return response;
 }
+<<<<<<< HEAD
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export const config = {
 <<<<<<< HEAD
@@ -85,3 +112,9 @@ export const config = {
   matcher: ["/((?!api|_next/static|_next/image|favicon && favicon.ico).*)"],
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+export const config = {
+  matcher: ["/((?!api | _next / static | _next / image | favicon.ico).*)"],
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

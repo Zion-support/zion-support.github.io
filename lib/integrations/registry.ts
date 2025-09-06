@@ -1,7 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
+=======
+import { IntegrationProviderMeta  } from './types';
+;
+export const PROVIDERS: IntegrationProviderMeta[] = [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: "salesforce"
     name: "Salesforce"
@@ -15,11 +21,19 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     description: "Marketing & Sales CRM"
   }
   {
+<<<<<<< HEAD
     id: "zoho"
     name: "Zoho CRM"
     category: "crm"
     description: "All-in-one CRM"
   }
+=======
+    id: "zoho",
+    name: "Zoho CRM",
+    category: "crm",
+    description: "All - in - one CRM",
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
     id: "pipedrive"
     name: "PipeDrive"
@@ -64,8 +78,17 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'workable', name: 'Workable', category: 'ats', description: 'Recruiting software' },
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
 ];
+<<<<<<< HEAD
 
 export function getProviderById(id: string): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id);
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+export function getProviderById (
+  id: string,
+): IntegrationProviderMeta | undefined {
+  return PROVIDERS.find ((p) => p.id === id);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -30,20 +30,32 @@ import type { GetServerSideProps } from 'next';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import path from 'path';
 import fs from 'fs';
+<<<<<<< HEAD
 import DocsLayout from '../../../components/docs/DocsLayout';
 import CodeBlock from '../../../components/docs/CodeBlock';
 <<<<<<< HEAD
 
+=======
+import DocsLayout from '../../../components / docs / DocsLayout';
+import CodeBlock from '../../../components / docs / CodeBlock';
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string;
   title: string;
   html?: string;
   code?: { language?: string; content: string }[];
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 type DocsContent = {
   title: string;
   sections: Section[];
 }
+<<<<<<< HEAD
 type PageProps = {
   docs: DocsContent;
 }
@@ -163,3 +175,45 @@ export default function ApiDocsPage({ docs }: PageProps) {
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+type PageProps = {
+  docs: DocsContent;
+}
+;
+export const getServerSideProps: GetServerSideProps < PageProps> = async () => {
+  const content_path = path.join (process.cwd (), 'data', 'docs', 'content.json');
+  const raw = fs.readFileSync (content_path, 'utf8');
+  const docs = JSON.parse (raw) as DocsContent;
+  return { props: { docs } }
+}
+;
+export default /**
+ * ApiDocsPage - Function description
+ */
+function ApiDocsPage() {
+      nav={docs.sections.map (string => ({ id: s.id, title: s.title }))}
+    >;
+      {docs.sections.map (section => (
+        <section key={section.id} id={section.id} className='scroll - mt - 24'>;
+          <h2 className='text - 2xl font - semibold'>{section.title}</h2>          {section.html && (
+            <div dangerouslySetInnerHTML={{ __html: section.html }} />)}
+          {section.code && section.code.length > 0 && (  return (
+    <DocsLayout title={docs.title} nav={docs.sections.map ((s) => ({ id: s.id, title: s.title }))}>;
+      {docs.sections.map ((section) => (
+        <section key={section.id} id={section.id} className="scroll - mt - 24">;
+          <h2 className="text - 2xl font - semibold">{section.title}</h2>;
+            <div dangerouslySetInnerHTML={{ __html: section.html }} />)}
+          {section.code && section.code.length > 0 && (
+            <div className='space - y-4 mt - 4'>;
+              {section.code.map ((c, idx) => (
+                <CodeBlock key={idx} language={c.language}>;
+                  {c.content}
+                </CodeBlock>              ))}            <div className="space - y-4 mt - 4">;
+              {section.code.map ((c, idx) => (
+                <CodeBlock key={idx} language={c.language}>{c.content}</CodeBlock>))}
+            </div>)}
+        </section>))}
+    </DocsLayout>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

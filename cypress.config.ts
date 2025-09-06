@@ -1,10 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { defineConfig } from 'cypress;
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import { define_config } from 'cypress;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ;
-export default defineConfig({,
+export default define_config ({,
   e2e: {,
+<<<<<<< HEAD
   baseUrl: 'http://localhost:3000',
 =======
 <<<<<<< HEAD
@@ -44,16 +49,25 @@ import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { bas
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
     viewportWidth: 1280,
     viewportHeight: 720,
+=======
+  base_url: 'http://localhost:3000',
+support_file: cypress / support / e2e.ts',
+import { define_config } from 'cypress'; export default define_config ({ e2e: { base_url: 'http: support_file: 'cypress / support / e2e.ts', spec_pattern: 'cypress / e2e*.cy.{js, jsx, ts, tsx}', viewport_width: 1280, viewport_height: 720, video: false, screenshotOnRunFailure: true, defaultCommandTimeout: 10000, request_timeout: 10000, response_timeout: 10000, setupNodeEvents () { }, }, component: { dev_server: { framework: 'react', bundler: 'vite', }, }, });
+    spec_pattern: 'cypress / e2e/**/*.cy.{js, jsx, ts, tsx}',
+    viewport_width: 1280,
+    viewport_height: 720,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     video: false,
     screenshotOnRunFailure: true,
     defaultCommandTimeout: 10000,
-    requestTimeout: 10000,
-    responseTimeout: 10000,
+    request_timeout: 10000,
+    response_timeout: 10000,
     pageLoadTimeout: 30000,
     retries: {,
-      runMode: 2,
-      openMode: 0
+      run_mode: 2,
+      open_mode: 0;
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -101,3 +115,10 @@ import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { bas
   }
 })
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+    setupNodeEvents (on, config) {,
+      // implement node event listeners here;
+    }
+  }
+}),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

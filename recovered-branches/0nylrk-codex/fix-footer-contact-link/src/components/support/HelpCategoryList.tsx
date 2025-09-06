@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react";
 <<<<<<< HEAD
@@ -115,3 +116,74 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import React from './react';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+import { HelpCategory  } from './types';
+interface HelpCategoryListProps {
+  categories: HelpCategory[];
+  onCategorySelect: (category_id: string) => void;
+  search_query: string;
+}
+export /**
+ * HelpCategoryList - Function description
+ */
+function HelpCategoryList() {
+  // Filter categories based on search query;
+  const filtered_categories = search_query;
+    ? categories.filter (
+        (category) =>;
+          category.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+          category.description;
+            .toLowerCase ();
+            .includes (search_query.toLowerCase ()) ||;
+          category.articles.some (
+            (article) =>;
+              article.title.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+              article.content.toLowerCase ().includes (search_query.toLowerCase ()),
+          ),
+      );
+    : categories;
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="text - center py - 8">;
+        <h3 className="text - lg font - medium mb - 2">No results found</h3>;
+        <p className="text - zion - slate - light">;
+          Try adjusting your search query or browse all categories.;
+        </p>;
+      </div>);
+  }
+  return (
+    <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+      {filtered_categories.map ((category) => (
+        <Card;
+          key={category.id}
+          className="cursor - pointer hover:border - zion - purple / 50 transition - colors";
+          on_click={() => onCategorySelect (category.id)}
+        >;
+          <CardHeader className="pb - 2">;
+            <div className="w - 10 h - 10 rounded - full bg - zion - purple / 10 flex items - center justify - center mb - 3">;
+              {category.icon}
+            </div>;
+            <CardTitle>{category.name}</CardTitle>;
+            <CardDescription>{category.description}</CardDescription>;
+          </CardHeader>;
+          <CardContent>;
+            <p className="text - sm text - zion - slate - light">;
+              {category.articles.length} articles;
+            </p>;
+          </CardContent>;
+        </Card>))}
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

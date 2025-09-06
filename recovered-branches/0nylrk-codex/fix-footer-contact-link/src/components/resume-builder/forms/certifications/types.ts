@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { z } from 'zod';
 // Define schema for form validation
@@ -23,3 +24,17 @@ export const certificationSchema = z && z.object({
 
 export type CertificationFormValues = z && z.infer<typeof certificationSchema>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import {z} from 'zod';
+// Define schema for form validation;
+export const certification_schema = z.object ({
+  name: z.string ().min (1, 'Certification name is required');
+  issuing_organization: z.string ().min (1, 'Issuing organization is required');
+  issue_date: z.string ().optional ();
+  expiration_date: z.string ().optional ();
+  credential_id: z.string ().optional (),
+  credential_url: z.string ().optional ()});
+;
+export type CertificationFormValues = z.infer < typeof certification_schema>;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

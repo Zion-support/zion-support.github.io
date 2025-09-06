@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import dynamic from 'next/dynamic';
 <<<<<<< HEAD
 
@@ -27,3 +28,22 @@ export default function GlobalEventRoute() {;
 =======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import dynamic from 'next / dynamic';
+;
+const ExpoPage = dynamic (() => import ('../../components / expo / ExpoPage'), {
+  ssr: false,
+});
+;
+export default /**
+ * GlobalEventRoute - Function description
+ */
+function GlobalEventRoute() {
+  return <ExpoPage />;const ExpoPage = dynamic (() => import ('../../components / expo / ExpoPage'), { ssr: false }),
+export default /**
+ * GlobalEventRoute - Function description
+ */
+function GlobalEventRoute() {
+  return <ExpoPage />;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

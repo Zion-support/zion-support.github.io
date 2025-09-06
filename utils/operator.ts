@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Operator utilities
 export const operator = {
   // Add operator functionality here
@@ -75,3 +76,12 @@ export async function tagOperatorSession(
   return Promise.resolve();
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+// Operator utilities;
+export const operator = {
+  // Add operator functionality here;
+  log_event: (event: any) => null,
+  get_events: () => [],
+  getEventById: (id: string) => null;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

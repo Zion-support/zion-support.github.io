@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { useToast } from '@/hooks/use-toast'
 import { Button } from '@/components/ui/button'
@@ -83,11 +84,98 @@ export function AIListingGenerator({
         'ai-listing-generator'
         {
           body: { title, category, keyFeatures, targetAudience }
+=======
+import React, { useState } from 'react';
+import { use_toast } from '@/hooks / use - toast';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import { Textarea } from '@/components / ui / textarea';
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+import Skeleton from '@/components / ui / skeleton';
+import { Sparkles, ArrowRight } from 'lucide-react';
+import { supabase } from '@/integrations / supabase / client';
+import { Badge } from '@/components / ui / badge';
+import { logErrorToProduction } from '@/utils / production_logger';
+interface GeneratedContent {
+  description: string;
+tags: string[];
+suggested_price: {
+  min: number;
+max: number;
+}
+key_points: string[];
+}interface AIListingGeneratorProps {
+  onApplyGenerated?: (content: GeneratedContent) => void;
+initial_values?: {
+  title?: string;
+category?: string;
+key_features?: string;
+target_audience?: string;
+export /**
+ * AIListingGenerator - Function description
+ */
+function AIListingGenerator() {
+  const { toast } = use_toast ();
+  const [title, set_title] = useState (initial_values.title || '');
+  const [category, set_category] = useState (initial_values.category || '');
+  const [key_features, setKeyFeatures] = useState (
+    initial_values.key_features || '');
+  const [target_audience, setTargetAudience] = useState (
+    initial_values.target_audience || '');
+  const [is_loading, setIsLoading] = useState (false);
+  const [generated_content, setGeneratedContent] = useState (
+    null as GeneratedContent | null);
+  const handleInputChange = (
+    e: { target: { value: string } },
+    field: string) =>: any {
+    switch (field) {      case 'title':;
+        set_title (e.target.value);
+        break;
+      case 'category':;
+        set_category (e.target.value);
+        break;
+      case 'key_features':;
+        setKeyFeatures (e.target.value);
+        break;
+      case 'target_audience':;
+        setTargetAudience (e.target.value);
+        break;
+    }
+  }
+  const handle_generate = async () => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: 'Missing required fields',
+        description: 'Please provide at least a title and category.',
+        variant: 'destructive',
+      });
+      return;
+    }
+    setIsLoading (true);
+    try {
+      const { data, error } = await supabase.functions.invoke (
+        'ai - listing - generator',
+        {
+          body: { title, category, key_features, target_audience },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
-      )
-      if (error) {
-        throw new Error(error.message)
+      );
+      // Check condition
+if ( {) {
+  $2
+}
+        throw new Error (error.message);
       }
+<<<<<<< HEAD
       if ((data as any)?.error) {
         throw new Error((data as any).error)
       }
@@ -106,10 +194,34 @@ export function AIListingGenerator({
             : 'Failed to generate content. Please try again.'
         variant: 'destructive'
       })
+=======
+      // Check condition
+if (?.error) {) {
+  $2
+}
+        throw new Error ((data as any).error);
+      }
+      setGeneratedContent ((data as any)?.generated || null);
+      toast ({
+        title: 'Content Generated',
+        description: 'AI has created optimized listing content for you.',
+      });
+    } catch (error) {
+      logErrorToProduction ('Error generating content:', { data: error });
+      toast ({
+        title: 'Generation Failed',
+        description:;
+          error instanceof Error;
+            ? error.message;
+            : 'Failed to generate content. Please try again.',
+        variant: 'destructive',
+      });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
   }
+<<<<<<< HEAD
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent)
@@ -186,6 +298,18 @@ export function AIListingGenerator(): any ({;
       case 'targetAudience':;
         setTargetAudience(e && e.target.value);
         break;
+=======
+  const handle_apply = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      onApplyGenerated (generated_content);
+      toast ({
+        title: 'Content Applied',
+        description: 'The generated content has been applied to your listing.',
+      });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   };
 
@@ -252,6 +376,7 @@ export function AIListingGenerator(): any ({;
 
 export function AIListingGenerator({ onApplyGenerated, initialValues;
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className='space-y-6'>
       <Card className='border border-zion-blue-light bg-zion-blue-dark'>
@@ -397,11 +522,116 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
             <div className='space-y-2'>;
               {[...Array(3)].map((_, i) => (;
                 <Skeleton
+=======
+    <div className='space - y-6'>;
+      <Card className='border border - zion - blue - light bg - zion - blue - dark'>;
+        <CardHeader>;
+          <CardTitle className='flex items - center text - white'>;
+            <Sparkles className='h - 5 w - 5 mr - 2 text - zion - cyan' />;
+            AI Listing Optimizer;
+          </CardTitle>;
+          <p className='text - sm text - zion - slate - light'>;
+            Provide basic information and let AI generate optimized,
+            SEO - friendly content for your listing;
+          </p>;
+        </CardHeader>;
+        <CardContent className='space - y-4'>;
+          <div className='space - y-2'>;
+            <label;
+              html_for='title';
+              className='text - sm font - medium text - zion - slate - light';
+            >;
+              Title;
+            </label>;
+            <Input;
+              id='title';
+              value={title}
+              on_change={e => handleInputChange (e, 'title')}
+              placeholder='Enter your product or service title';
+              className='bg - zion - blue border border - zion - blue - light text - white';
+              disabled={is_loading}            />;
+          </div>;
+          <div className='space - y-2'>;
+            <label;
+              html_for='category';
+              className='text - sm font - medium text - zion - slate - light';
+            >;
+              Category;
+            </label>;
+            <Input;
+              id='category';
+              value={category}
+              on_change={e => handleInputChange (e, 'category')}
+              placeholder='e.g. AI Tool, Digital Product, Service';
+              className='bg - zion - blue border border - zion - blue - light text - white';
+              disabled={is_loading}            />;
+          </div>;
+          <div className='space - y-2'>;
+            <label;
+              html_for='key_features';
+              className='text - sm font - medium text - zion - slate - light';
+            >;
+              Key Features (Optional);
+            </label>;
+            <Textarea;
+              id='key_features';
+              value={key_features}
+              on_change={e => handleInputChange (e, 'key_features')}
+              placeholder='Briefly describe the main features or benefits';
+              className='bg - zion - blue border border - zion - blue - light text - white min - h-20';
+              disabled={is_loading}            />;
+          </div>;
+          <div className='space - y-2'>;
+            <label;
+              html_for='target_audience';
+              className='text - sm font - medium text - zion - slate - light';
+            >;
+              Target Audience (Optional);
+            </label>;
+            <Input;
+              id='target_audience';
+              value={target_audience}
+              on_change={e => handleInputChange (e, 'target_audience')}
+              placeholder='e.g. Developers, Marketers, Startups';
+              className='bg - zion - blue border border - zion - blue - light text - white';
+              disabled={is_loading}
+            />;
+          </div>;
+          <Button;
+            on_click={handle_generate}
+            disabled={is_loading || !title || !category}
+            className='w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white mt - 2'          >;
+            {is_loading ? (
+              <>Generating Optimized Content...</>) : (
+              <>;
+                <Sparkles className='h - 4 w - 4 mr - 2' />;
+                Generate Optimized Content;
+              </>)}
+          </Button>;
+        </CardContent>;
+      </Card>;
+      {is_loading && (
+        <Card className='border border - zion - blue - light bg - zion - blue - dark overflow - hidden'>;
+          <CardHeader>;
+            <Skeleton className='h - 8 w - 3/4 bg - zion - blue - light / 20' />;
+          </CardHeader>;
+          <CardContent className='space - y-4'>;
+            <Skeleton className='h - 32 w - full bg - zion - blue - light / 20' />;
+            <div className='flex flex - wrap gap - 2'>;
+              {[...Array (5)].map ((_, i) => (
+                <Skeleton key={i} className='h - 6 w - 16 bg - zion - blue - light / 20' />))}
+            </div>;
+            <Skeleton className='h - 8 w - 1/3 bg - zion - blue - light / 20' />;
+            <div className='space - y-2'>;
+              {[...Array (3)].map ((_, i) => (
+                <Skeleton;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={i}
-                  className='h-6 w-full bg-zion-blue-light/20'
+                  className='h - 6 w - full bg - zion - blue - light / 20';
                 />              ))}
             </div>;
           </CardContent>;
+<<<<<<< HEAD
         </Card>;
       )}
 <<<<<<< HEAD
@@ -484,10 +714,49 @@ export function AIListingGenerator({ onApplyGenerated, initialValues;
                 {generatedContent && generatedContent.keyPoints.map((point, index) => (                  <li key={index}>{point}</li>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 ))}
+=======
+        </Card>)}
+      {generated_content && !is_loading && (
+        <Card className='border border - zion - blue - light bg - zion - blue - dark'>;
+          <CardHeader>;
+            <CardTitle className='text - white'>Generated Content</CardTitle>;
+          </CardHeader>;
+          <CardContent className='space - y-4'>;
+            <div>;
+              <h3 className='text - sm font - medium text - zion - slate - light mb - 2'>;
+                Description;
+              </h3>;
+              <p className='text - white'>{generated_content.description}</p>;
+            </div>;
+            <div>;
+              <h3 className='text - sm font - medium text - zion - slate - light mb - 2'>;
+                Tags;
+              </h3>;
+              <div className='flex flex - wrap gap - 2'>;
+                {generated_content.tags.map ((tag, index) => (                  <Badge key={index}>{tag}</Badge>))}
+              </div>;
+            </div>;
+            <div>;
+              <h3 className='text - sm font - medium text - zion - slate - light mb - 2'>;
+                Suggested Price Range;
+              </h3>;
+              <p className='text - white'>;
+                ${generated_content.suggested_price.min.to_fixed (2)} - $;
+                {generated_content.suggested_price.max.to_fixed (2)}
+              </p>;
+            </div>;
+            <div>;
+              <h3 className='text - sm font - medium text - zion - slate - light mb - 2'>;
+                Key Selling Points;
+              </h3>;
+              <ul className='list - disc pl - 5 text - white space - y-1'>;
+                {generated_content.key_points.map ((point, index) => (                  <li key={index}>{point}</li>))}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </ul>;
             </div>;
           </CardContent>;
           <CardFooter>;
+<<<<<<< HEAD
             <Button
               onClick={handleApply}
               className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white'>;
@@ -512,11 +781,38 @@ case 'keyFeatures': setKeyFeatures (e.target.value)
 break;'
 case 'targetAudience': const handleGenerate = async () => {
   if (!title |!category) {
+=======
+            <Button;
+              on_click={handle_apply}
+              className='w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white'            >;
+              Apply to My Listing;
+              <ArrowRight className='ml - 2 h - 4 w - 4' />;
+            </Button>;
+          </CardFooter>;
+        </Card>)}
+    </div>);
+  target: {
+  value: string;
+}, field: string) => {
+  switch (field) {
+  case 'title': set_title (e.target.value);
+break;';
+case 'category': set_category (e.target.value);
+break;';
+case 'key_features': setKeyFeatures (e.target.value);
+break;';
+case 'target_audience': const handle_generate = async () => {
+  // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   toast ({
-  return
-}setIsLoading (true)
-}catch (error) {'
+  return;
+}setIsLoading (true);
+}catch (error) {';
   logErrorToProduction ('Error generating content:', {
+<<<<<<< HEAD
   data: error
 })
 toast ({
@@ -573,12 +869,23 @@ toast ({;
 };
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  data: error;
+});
+toast ({
+}finally {
+  setIsLoading (false);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-const handleApply = () => {
-  if (generatedContent && onApplyGenerated) {
-  onApplyGenerated (generatedContent)
+const handle_apply = () =>: any {
+  // Check condition
+if ( {) {
+  $2
+}
+  onApplyGenerated (generated_content);
 toast ({
 }
+<<<<<<< HEAD
 <CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> </p> </CardHeader> <CardContent className="space-y-4" > <div className="space-y-2" > <label htmlFor="title" className="text-sm font-medium text-zion-slate-light" >Title</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {"
   isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) "
 }</Button> </CardContent> </Card> <CardHeader> <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" /> </CardHeader>) )
@@ -597,3 +904,19 @@ toast ({
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+<CardHeader> <CardTitle className="flex items - center text - white" > <Sparkles className="h - 5 w - 5 mr - 2 text - zion - cyan" /> AI Listing Optimizer </CardTitle> </p> </CardHeader> <CardContent className="space - y-4" > <div className="space - y-2" > <label html_for="title" className="text - sm font - medium text - zion - slate - light" >Title</label> <Input /> </div> <div className="space - y-2" > <label html_for="category" className="text - sm font - medium text - zion - slate - light" >Category</label> <Input /> </div> <div className="space - y-2" > <label html_for="key_features" className="text - sm font - medium text - zion - slate - light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space - y-2" > <label html_for="target_audience" className="text - sm font - medium text - zion - slate - light" >Target Audience (Optional) </label> <Input > {";
+  is_loading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h - 4 w - 4 mr - 2" /> Generate Optimized Content </>) ";
+}</Button> </CardContent> </Card> <CardHeader> <Skeleton className="h - 8 w - 3/4 bg - zion - blue - light / 20" /> </CardHeader>) );
+}</div> </CardContent> </Card>) ";
+}<CardHeader> <CardTitle className="text - white" >Generated Content</CardTitle> </CardHeader> <CardContent className="space - y-4" > <div> <h3 className="text - sm font - medium text - zion - slate - light mb - 2" >Description</h3> <p className="text - white" > {
+  generated_content.description;
+}</p> </div> <div>) );
+}</div> </div> <div>) ) ";
+}</ul> </div> </CardContent> <CardFooter> <Button > Apply to My Listing <ArrowRight className="ml - 2 h - 4 w - 4" /> </Button> </CardFooter> </Card>);
+}</div>);
+}'"  );
+}
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

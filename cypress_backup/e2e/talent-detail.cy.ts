@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 describe("talent detail page", () => {
   it("loads profile from API", () => {
 <<<<<<< HEAD
@@ -80,9 +81,74 @@ describe("talent detail page", () => {
     cy && cy.visit("/talent/t-123");
     cy && cy.wait("@getTalent");
     cy && cy.get('[data-testid="talent-name"]').should("contain", "Cypress Talent");
+=======
+describe ("talent detail page", () => {
+  it ("loads profile from API", () => {
+    cy.intercept ("GET", "/api / talent / t-123", {
+      status_code: 200,
+      body: {
+        id: "t - 123",
+        full_name: "Cypress Talent",
+        bio: "Testing bio",
+        skills: ["Cypress"],
+      },
+    }).as ("get_talent");
+    cy.visit ("/talent / t-123");
+    cy.wait ("@get_talent");
+    cy.get ('[data - testid="talent - name"]').should ("contain", "Cypress Talent");
+  });
+});
+describe ("talent detail page", () => {
+  it ("loads profile from API", () => {
+    cy.intercept ("GET", "/api / talent / t-123", {
+      status_code: "200",
+      body: {
+        id: "t - 123",
+        full_name: "Cypress Talent",
+        bio: "Testing bio",
+        skills: ["Cypress"],
+      },
+    }).as ("get_talent");
+    cy.visit ("/talent / t-123");
+    cy.wait ("@get_talent");
+    cy.get ('[data - testid="talent - name"]').should ("contain", "Cypress Talent");
+  });
+});
+describe ("talent detail page", () => {
+  it ("loads profile from API", () => {
+    cy.intercept ("GET", "/api / talent / t-123", {
+      status_code: 200,
+      body: {
+        id: "t - 123",
+        full_name: "Cypress Talent",
+        bio: "Testing bio",
+        skills: ["Cypress"],
+      },
+    }).as ("get_talent");
+    cy.visit ("/talent / t-123");
+    cy.wait ("@get_talent");
+    cy.get ('[data - testid="talent - name"]').should ("contain", "Cypress Talent");
+  });
+});
+describe ("talent detail page", () => {
+  it ("loads profile from API", () => {
+    cy.intercept ("GET", "/api / talent / t-123", {
+      status_code: 200,
+      body: {
+        id: "t - 123",
+        full_name: "Cypress Talent",
+        bio: "Testing bio",
+        skills: ["Cypress"],
+      },
+    }).as ("get_talent");
+    cy.visit ("/talent / t-123");
+    cy.wait ("@get_talent");
+    cy.get ('[data - testid="talent - name"]').should ("contain", "Cypress Talent");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
 <<<<<<< HEAD
 });
+<<<<<<< HEAD
 =======
 describe('talent detail page', () => {
   it('loads profile from API', () => {
@@ -118,3 +184,6 @@ describe('talent detail page',() => { it('loads profile from API',() => { cy.int
 =======
 });
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

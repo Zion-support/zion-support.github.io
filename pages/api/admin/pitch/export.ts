@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -48,3 +49,50 @@ function escapeHtml(str: string) {
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+import { ensureAdminFromApi } from '../../../../utils / auth',
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const { allowed } = await ensureAdminFromApi (req),
+  if (return res.status (403).json ({ error: 'Forbidden' }), ) {
+  $2
+}
+  if (return res.status (405).json ({ error: 'Method Not Allowed' }), ) {
+  $2
+}
+  const { slides, format, version } = req.body || {},
+  if () return res.status (400).json ({ error: 'Invalid slides' }), ) {
+  $2
+}
+  // Check condition
+if ( {) {
+  $2
+}
+    // TODO: integrate Google Slides API and return created deck URL;
+    const url = `https://docs.google.com / presentation / d/${encodeURIComponent ('stub-' + (version || 'draft'))}`,
+    return res.status (200).json ({ url });
+  }
+  // Fallback: return a minimal PDF - like blob by sending HTML and letting client download, here we return a simple HTML as octet - stream.;
+  const html = `<!doctype html><html><head><meta charset="utf - 8"><title > Pitch ${version || ''}</title></head><body>` +;
+    slides.map ((string: any, index: number) => `<section style="page - break - after: always, font - family: Arial, sans - serif, padding: 24px, "><h1>${i + 1}. ${escape_html (s.title || '')}</h1><pre style="white - space: pre - wrap, font: inherit, ">${escape_html (s.content || '')}</pre></section>`).join ('') +;
+`</body></html>`,
+  res.set_header ('Content - Typeapplication / octet - stream'),
+  res.set_header ('Content - Disposition', `attachment, filename="pitch - deck-${version || 'draft'}.html"`),
+  res.status (200).send (html);
+}
+/**
+ * escape_html - Function description
+ */
+function escape_html() {
+  return String (str);
+.replace (/&/g, '&amp, ');
+    .replace (/</g, '&lt, ');
+    .replace (/>/g, '&gt, ');
+    .replace (/"/g, '&quot, ');
+    .replace (/'/g, '&#039, ');
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

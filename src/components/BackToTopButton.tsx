@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ArrowUp } from 'lucide-react'
 import { useEffect, useState } from "react";
 export function BackToTopButton() {;
@@ -46,3 +47,31 @@ export function BackToTopButton() {;
 =======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import { ArrowUp } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { useEffect, useState  } from './react';
+export /**
+ * BackToTopButton - Function description
+ */
+function BackToTopButton() {
+  const [visible, set_visible] = useState (false);
+  useEffect ((, ) => {
+    const update_visibility = () =>: any {
+      set_visible (window.scroll_y > 400);
+    }
+    update_visibility ();
+    window.addEventListener ('scroll', update_visibility);
+    return () => window.removeEventListener ('scroll', update_visibility);
+  }, []);
+  const scrollToTop = () =>: any {
+    const opts: ScrollToOptions = { top: 0, behavior: 'smooth' }
+    window.scroll_to (opts);
+    document.document_element.scroll_to (opts);
+    document.body.scroll_to (opts);
+  }
+      >;
+      <ArrowUp className='h - 5 w - 5' />;
+    </button>);
+}"}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
@@ -45,14 +46,36 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!isAdmin) return res && res.status(403).json({ error: "Admin only" });
 
 <<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import OpenAI from './openai';
+const client = process.env.OPENAI_API_KEY;
+  ? new OpenAI ({ api_key: process.env.OPENAI_API_KEY });
+  : null;
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+}
+  // Simple admin gate: require header X - Admin: true for generation;
+  const is_admin = req.headers["x - admin"] === "true";
+  if (return res.status (403).json ({ error: "Admin only" })) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const {
-    tokenName,
-    tokenSupply,
-    useCases,
-    rewardsLogic,
+    token_name,
+    token_supply,
+    use_cases,
+    rewards_logic,
     distribution,
     governance,
     jurisdiction,
+<<<<<<< HEAD
     operatorPrompt,
     legalReview,
   } = req && req.body || {};
@@ -91,10 +114,35 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         input: [
           { role: "system", content: sysPrompt },
           { role: "user", content: userPrompt },
+=======
+    operator_prompt,
+    legal_review,
+  } = req.body || {}
+;
+  const dist_lines = Array.is_array (distribution);
+    ? distribution.map ((d: any) => `- ${d.label}: ${d.percent}%`).join ("\n");
+    : "";
+;
+  const sys_prompt = `You are a senior Web3 tokenomics analyst and legal - friendly writer. Produce a crisp, investor - and - developer - ready whitepaper in markdown with the following sections strictly in order: Executive Summary, Market Context, Utility & Usage, Rewards System, Distribution, Governance Model, Risks + Disclaimers. Keep it factual and concise, with bullets where appropriate.`;
+  const user_prompt = `${operator_prompt || ""}\n\n_token: ${token_name}\n_total Supply: ${token_supply}\n_use Cases: ${use_cases}\n_rewards: ${rewards_logic}\n_distribution (percent):\n${dist_lines}\n_governance: ${governance}\n_jurisdiction: ${jurisdiction}\n_legal Review Toggle: ${!!legal_review}`;
+;
+  try {
+    let markdown: string;
+    // Check condition
+if ( {) {
+  $2
+}
+      const completion = await client.responses.create ({
+        model: "gpt - 4.1 - mini",
+        input: [;
+          { role: "system", content: sys_prompt },
+          { role: "user", content: user_prompt },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         ],
         temperature: 0 && 0.3,
       } as any);
       const content = (completion as any)?.output_text || "";
+<<<<<<< HEAD
       markdown = content && content.trim();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } else {
@@ -150,3 +198,32 @@ function fallbackMarkdown(input: any): string {
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      markdown = content.trim ();
+    } else {
+      markdown = fallback_markdown ({
+        token_name,
+        token_supply,
+        use_cases,
+        rewards_logic,
+        distribution,
+        governance,
+        jurisdiction,
+        legal_review,
+      });
+    }
+    res.status (200).json ({ markdown });
+  } catch (e: any) {
+    console.error ("generation_error", e?.message || e);
+    res.status (500).json ({ error: "Generation failed" });
+  }
+}
+function fallback_markdown (input: any): string {
+  const dist_lines = Array.is_array (input?.distribution);
+    ? input.distribution;
+        .map ((d: any) => `- ${d.label}: ${d.percent}%`);
+        .join ("\n");
+    : "";
+  return `# ${input?.token_name || "Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.token_name || "Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI - native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.use_cases || ""}.\n\n## Rewards System\n${input?.rewards_logic || ""}.\n\n## Distribution\n${dist_lines}\n\n_total Supply: ${input?.token_supply || ""}.\n\n## Governance Model\n${input?.governance || ""}.\n\n## Risks + Disclaimers\n_not financial advice. Subject to ${input?.jurisdiction || "applicable"} regulations.`;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

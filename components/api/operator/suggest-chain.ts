@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { CHAINS } from '../../../utils/chains';
 <<<<<<< HEAD
 
@@ -118,3 +119,81 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import { CHAINS } from '../../../utils / chains';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: 'Method not allowed' })) {
+  $2
+}  const { region, stake_usd } = req.body || {}export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: 'Method not allowed' })) {
+  $2
+}
+  const { region, stake_usd } = req.body || {}
+  const stake = Number (stake_usd || 0);
+;
+  // Simple heuristics;
+  // - Low stake: prefer low fees (Polygon, BNB, Avalanche);
+  // - High stake: prefer high trust L2s (Arbitrum / Optimism) or Ethereum;
+  // - Region hints (very rough):;
+  //   APAC -> BNB / Avalanche, NA / EU -> Arbitrum / Optimism / Ethereum;
+  let candidates = ['polygon', 'bnb', 'avalanche'];
+  // Check condition
+if (candidates = ['arbitrum', 'optimism', 'ethereum']) {
+  $2
+}
+  const region_lc = (region || '').to_string ().toLowerCase ();
+  if (|| region_lc.includes ('asia')) {) {
+  $2
+}
+    candidates =;
+      stake > 5000;
+        ? ['arbitrum', 'optimism', 'avalanche'];
+        : ['bnb', 'avalanche', 'polygon'];
+  } else if (|| region_lc.includes ('europe')) {) {
+  $2
+}
+    candidates =;
+      stake > 5000;
+        ? ['arbitrum', 'ethereum', 'optimism'];
+        : ['polygon', 'arbitrum', 'optimism'];
+  } else // Check condition
+if (||) {
+  $2
+}
+    region_lc.includes ('na') ||;
+    region_lc.includes ('america')) {
+    candidates =;
+      stake > 5000;
+        ? ['arbitrum', 'optimism', 'ethereum'];
+        : ['polygon', 'arbitrum', 'optimism'];
+  }
+  const ranked = candidates.map (key => ({ key: k, chain: (CHAINS as any)[k] }));
+  res;
+    .status (200);
+    .json ({ recommendation: ranked[0], alternatives: ranked.slice (1) });
+  const region_lc = (region || '').to_string ().toLowerCase ();
+  if (|| region_lc.includes ('asia')) {) {
+  $2
+}
+    candidates = stake > 5000 ? ['arbitrumoptimismavalanche'] : ['bnbavalanchepolygon'];
+  } else if (|| region_lc.includes ('europe')) {) {
+  $2
+}
+    candidates = stake > 5000 ? ['arbitrumethereumoptimism'] : ['polygonarbitrumoptimism'];
+  } else if (|| region_lc.includes ('na') || region_lc.includes ('america')) {) {
+  $2
+}
+    candidates = stake > 5000 ? ['arbitrumoptimismethereum'] : ['polygonarbitrumoptimism'];
+  }
+  const ranked = candidates.map ((k) => ({ key: k, chain: (CHAINS as any)[k] }));
+  res.status (200).json ({ recommendation: ranked[0], alternatives: ranked.slice (1) });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

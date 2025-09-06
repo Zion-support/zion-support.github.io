@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -33,6 +34,14 @@ const Header = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
+=======
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
+
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
@@ -41,6 +50,9 @@ const Header = () => {;
     { name: 'Contact', href: '/contact' }
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">
@@ -52,6 +64,7 @@ const Header = () => {;
               Zion Tech Group
             </h1>
           </Link>
+<<<<<<< HEAD
         </div>
 
         {/* Desktop Navigation */}
@@ -90,6 +103,31 @@ const Header = () => {;
       {isMenuOpen && (
         <div className="md:hidden border-t border-slate-700/20 bg-slate-900/95 backdrop-blur-md">
           <div className="px-4 py-4 space-y-2">
+=======
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="lg:hidden mt-4 border-t border-gray-200 pt-4">
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -104,6 +142,7 @@ const Header = () => {;
         </div>
       )}
     </header>
+<<<<<<< HEAD
 =======
 const Header: React.FC = () => {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -548,3 +587,8 @@ const Header = () => {,
 ,
 export default Header,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  );
+};
+export default Header;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

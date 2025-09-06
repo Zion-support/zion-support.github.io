@@ -3,6 +3,7 @@
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
 import React from 'react';
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import PWARegistration from '../components/PWARegistration.dynamic';
@@ -11,6 +12,15 @@ describe('PWARegistration', () => {
   test('renders without crashing', () => {
     render(<PWARegistration />);
     expect(screen.getByTestId('pwa-registration')).toBeInTheDocument();
+=======
+import { render, screen } from '@testing - library / react';
+import '@testing - library / jest - dom';
+import PWARegistration from '../components / PWARegistration.dynamic';
+describe ('PWARegistration', () => {
+  test ('renders without crashing', () => {
+    render (<PWARegistration />);
+    expect (screen.getByTestId ('pwa - registration')).toBeInTheDocument ();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
 });
 =======

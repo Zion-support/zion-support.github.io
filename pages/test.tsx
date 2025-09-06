@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -119,3 +120,37 @@ export default function TestPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import React from 'react';
+import Layout from '../components / Layout';
+;
+export default /**
+ * TestPage - Function description
+ */
+function TestPage() {
+  return (
+    <Layout title="Test Page">;
+      <div className="min - h-screen bg - gray - 100 flex items - center justify - center">;
+        <h1 className="text - 4xl font - bold text - gray - 900">Test Page</h1>;
+      </div>;
+    </Layout>);
+}
+export default /**
+ * TestPage - Function description
+ */
+function TestPage() {
+  return (
+    <>;
+      <Head>;
+        <title > Test Page | Zion Tech Group</title>;
+      </Head>;
+      <div className='min - h-screen bg - black text - white flex items - center justify - center'>;
+        <h1 className='text - 4xl font - bold text - cyan - 400'>Test Page Working</h1>;
+      </div>;
+    </>);
+      <div className="min - h-screen bg - black text - white flex items - center justify - center">;
+        <h1 className="text - 4xl font - bold text - cyan - 400">Test Page Working</h1>;
+      </div>;
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

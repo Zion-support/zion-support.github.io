@@ -6,6 +6,7 @@
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
 import React from 'react';
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import PageTransition from '../components/PageTransition';
@@ -15,6 +16,15 @@ describe('PageTransition', () => {
   test('renders without crashing', () => {
     render(<PageTransition />);
     expect(screen.getByTestId('page-transition')).toBeInTheDocument();
+=======
+import { render, screen } from '@testing - library / react';
+import '@testing - library / jest - dom';
+import PageTransition from '../components / PageTransition';
+describe ('PageTransition', () => {
+  test ('renders without crashing', () => {
+    render (<PageTransition />);
+    expect (screen.getByTestId ('page - transition')).toBeInTheDocument ();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
 });
 =======

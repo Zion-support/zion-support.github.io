@@ -8,10 +8,11 @@ export interface ServiceExpansion2025 {
   features: string[];
   link: string;
   category: string;
-  realImplementation: boolean;
-  contactInfo: {
+  real_implementation: boolean;
+  contact_info: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 
     address: string;
   }
@@ -44,12 +45,37 @@ export const serviceExpansions2025: ServiceExpansion2025[] = [
 
       email: "kleber@ziontechgroup.com";
 =======
+=======
+    address: string;
+  }
+;
+export const serviceExpansions2025: ServiceExpansion2025[] = [;
+  {
+    id: 'ai - workflow - automation',
+    name: 'AI Workflow Automation',
+    tagline: 'Intelligent process automation and optimization',
+    price: '$89 / month',
+    description:;
+      'Advanced AI - powered workflow automation platform that streamlines business processes.',
+    features: [;
+      'Process automation',
+      'AI optimization',
+      'Workflow analytics',
+      'Integration capabilities',
+      'Custom workflows',
+    ],
+    link: '/services / ai - workflow - automation',
+    category: 'Service Expansions 2025',
+    real_implementation: true,
+    contact_info: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950";
+<<<<<<< HEAD
       email: "kleber@ziontechgroup && ziontechgroup.com";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -89,3 +115,11 @@ export const serviceExpansions2025: ServiceExpansion2025[] = [
   }
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }
+];
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

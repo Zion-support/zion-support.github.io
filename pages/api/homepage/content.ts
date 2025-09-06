@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
@@ -15,10 +16,31 @@ async function fetchFromGitHub() {
     if (!response && response.ok) return null;
     const data = await response && response.json();
     return JSON && JSON.parse(Buffer && Buffer.from(data && data.content, "base64").toString());
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import fs from './fs';
+import path from './path';
+;
+async /**
+ * fetchFromGitHub - Function description
+ */
+function fetchFromGitHub() {
+  try {
+    const response = await fetch (
+      "https://api.github.com / repos / Zion - Holdings / zion.app / contents / data / homepage.json",
+    );
+    // Check condition
+if (return null) {
+  $2
+}
+    const data = await response.json ();
+    return JSON.parse (Buffer.from (data.content, "base64").to_string ());
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch {
     return null;
   }
 }
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -80,10 +102,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (fs && fs.existsSync(localPath)) {
       const local = JSON && JSON.parse(fs && fs.readFileSync(localPath, "utf-8"));
       return res && res.status(200).json(local);
+=======
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (405).json ({ error: "Method not allowed" });
+  }
+  try {
+    const local_path = path.join (process.cwd (), "data", "homepage.json");
+    if () {) {
+  $2
+}
+      const local = JSON.parse (fs.readFileSync (local_path, "utf - 8"));
+      return res.status (200).json (local);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   } catch {
-    // fall back to remote
+    // fall back to remote;
   }
+<<<<<<< HEAD
   const remote = await fetchFromGitHub();
 <<<<<<< HEAD
   if (remote) return res.status(200).json(remote);
@@ -97,3 +139,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  const remote = await fetchFromGitHub ();
+  if (return res.status (200).json (remote)) {
+  $2
+}
+  return res.status (200).json (null);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

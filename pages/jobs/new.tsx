@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState  } from 'react';
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton',
@@ -53,3 +54,14 @@ export default function NewJobPage() {
   )
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import {useState} from 'react';
+import EnhancedCard from '../../components / ui / EnhancedCard';
+import EnhancedButton from '../../components / ui / EnhancedButton';
+import EnhancedLoading from '../../components / ui / EnhancedLoading';
+import { use_toast } from '../../components / ui / NotificationSystem';
+          </form>)}
+      </EnhancedCard>;
+    </div>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

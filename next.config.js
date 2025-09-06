@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true
   compress: true
   poweredByHeader: false
+=======
+/** @type {import ('next').NextConfig} */;
+const next_config = {
+  reactStrictMode: true,
+  compress: true,
+  poweredByHeader: false,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   eslint: {
     ignoreDuringBuilds: true
   }
@@ -10,6 +18,7 @@ const nextConfig = {
 <<<<<<< HEAD
     ignoreBuildErrors: true,
   },
+<<<<<<< HEAD
   pageExtensions: ["tsx", "ts", "jsx", "js"],
   trailingSlash: true,
 <<<<<<< HEAD
@@ -30,13 +39,18 @@ const nextConfig = {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+=======
+  page_extensions: ["tsx", "ts", "jsx", "js"],
+  trailing_slash: true,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   images: {
-    domains: [
+    domains: [;
       "localhost",
       "ziontechgroup && ziontechgroup.com",
       "images && images.unsplash.com",
       "via && via.placeholder.com",
     ],
+<<<<<<< HEAD
     formats: ["image/webp", "image/avif"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
 <<<<<<< HEAD
@@ -44,6 +58,11 @@ const nextConfig = {
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+=======
+    formats: ["image / webp", "image / avif"],
+    device_sizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    image_sizes: [16, 32, 48, 64, 96, 128, 256, 384],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     minimumCacheTTL: 31536000,
 <<<<<<< HEAD
 =======
@@ -51,6 +70,7 @@ const nextConfig = {
 =======
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
   },
+<<<<<<< HEAD
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
@@ -83,12 +103,22 @@ const nextConfig = {
         ignored: [
 <<<<<<< HEAD
 =======
+=======
+  webpack: (config, { dev, is_server }) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      config.watch_options = {
+        ignored: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           "**/node_modules/**",
           "**/.git/**",
           "**/pages_backup*/**",
           "**/pages.*/**",
           "**/pages-*/**",
           "**/pages_disabled*/**",
+<<<<<<< HEAD
           "**/pages && pages.disabled*/**",
           "**/pages && pages.broken*/**",
           "**/pages && pages.corrupted*/**",
@@ -97,17 +127,27 @@ const nextConfig = {
           "**/pages && pages.__*/**",
           "**/backup-pages/**",
           "**/src && src.pages.disabled/**",
+=======
+          "**/pages.disabled*/**",
+          "**/pages.broken*/**",
+          "**/pages.corrupted*/**",
+          "**/pages.old*/**",
+          "**/pages._*/**",
+          "**/pages.__*/**",
+          "**/backup - pages/**",
+          "**/src.pages.disabled/**",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           "**/lib_backup*/**",
           "**/src_backup*/**",
-          "**/corrupted-files-backup*/**",
-          "**/performance-reports*/**",
-          "**/log-analysis-reports*/**",
-          "**/link-reports*/**",
-          "**/lint-target*/**",
+          "**/corrupted - files - backup*/**",
+          "**/performance - reports*/**",
+          "**/log - analysis - reports*/**",
+          "**/link - reports*/**",
+          "**/lint - target*/**",
           "**/monitoring*/**",
-          "**/pm2-automation*/**",
-          "**/automation/logs*/**",
-          "**/automation/backup*/**",
+          "**/pm2 - automation*/**",
+          "**/automation / logs*/**",
+          "**/automation / backup*/**",
           "**/performance-*.json",
           "**/performance-*.js",
           "**/performance-*.cjs",
@@ -118,9 +158,10 @@ const nextConfig = {
           "**/apps/**",
         ],
         poll: 1000,
-        aggregateTimeout: 300,
-      };
+        aggregate_timeout: 300,
+      }
     }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
           "**/node_modules/**"
@@ -204,3 +245,43 @@ const nextConfig = {
   }
 }
 export default nextConfig;
+=======
+    // Exclude apps directory from compilation;
+    config.module.rules.push ({
+      test: /\.(ts | tsx | js | jsx)$/,
+      include: /apps\//,
+      use: "ignore - loader",
+    });
+;
+    return config;
+  },
+  async headers () {
+    return [;
+      {
+        source: "/(.*)",
+        headers: [;
+          {
+            key: "X - Content - Type - Options",
+            value: "nosniff",
+          },
+          {
+            key: "X - Frame - Options",
+            value: "DENY",
+          },
+          {
+            key: "X - XSS - Protection",
+            value: "1; mode = block",
+          },
+          {
+            key: "Referrer - Policy",
+            value: "origin - when - cross - origin",
+          },
+        ],
+      },
+    ];
+  },
+}
+;
+export default next_config;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

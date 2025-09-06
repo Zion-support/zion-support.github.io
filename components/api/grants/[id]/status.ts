@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
 import type {
+<<<<<<< HEAD
   GrantApplication
   StatusUpdatePayload;
 } from '../../../../types/grants';
@@ -94,12 +95,62 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 =======
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
+=======
+  GrantApplication,
+  StatusUpdatePayload,
+} from '../../../../types / grants';
+;
+const GRANTS_DIR = path.join (process.cwd (), 'data', 'grants');
+;
+/**
+ * grant_path - Function description
+ */
+function grant_path() {
+  return path.join (GRANTS_DIR, `${id}.json`);import type { GrantApplication, StatusUpdatePayload } from '../../../../types / grants';
+const GRANTS_DIR = path.join (process.cwd (), 'datagrants');
+/**
+ * grant_path - Function description
+ */
+function grant_path() {
+  return path.join (GRANTS_DIR, `${id}.json`);
 }
-
-function writeGrant(record: GrantApplication) {
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
-  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
+function read_grant (id: string): GrantApplication | null {
+  if () fs.mkdir_sync (GRANTS_DIR, { recursive: true })) {
+  $2
 }
+  const p = grant_path (id);
+  if () return null) {
+  $2
+}
+  return JSON.parse (fs.readFileSync (p, 'utf8')) as GrantApplication;
+;
+/**
+ * write_grant - Function description
+ */
+function write_grant() {
+  if () fs.mkdir_sync (GRANTS_DIR, { recursive: true })) {
+  $2
+}
+  fs.writeFileSync (
+    grant_path (record.id),
+    JSON.stringify (record, null, 2),
+    'utf8');
+/**
+ * is_authorized - Function description
+ */
+function is_authorized() {
+  const header = req.headers.authorization || '';
+  const token = header.replace ('Bearer ', '');  return JSON.parse (fs.readFileSync (p, 'utf8')) as GrantApplication;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+/**
+ * write_grant - Function description
+ */
+function write_grant() {
+  if () fs.mkdir_sync (GRANTS_DIR, { recursive: true })) {
+  $2
+}
+<<<<<<< HEAD
 
 function isAuthorized(req: NextApiRequest) {
   const header = req.headers.authorization || '';
@@ -125,12 +176,61 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     res.status(405).end('Method Not Allowed');
+=======
+  fs.writeFileSync (grant_path (record.id), JSON.stringify (record, null, 2), 'utf8');
+}
+/**
+ * is_authorized - Function description
+ */
+function is_authorized() {
+  const header = req.headers.authorization || '',
+  const token = header.replace ('Bearer ', '');
+  return (
+    token &&;
+    process.env.ZION_ADMIN_TOKEN &&;
+    token === process.env.ZION_ADMIN_TOKEN);
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if () {) {
+  $2
+}
+    res.status (401).json ({ error: 'Unauthorized' });
+    return;  }  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN;
+}
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if () {) {
+  $2
+}
+    res.status (401).json ({ error: 'Unauthorized' });
+    return;    return;
+  }
+  const { id } = req.query as { id: string }
+  // Check condition
+if ( {) {
+  $2
+}
+    res.status (400).json ({ error: 'Missing id' });
+    return;
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    res.set_header ('Allow', 'POST');
+    res.status (405).end ('Method Not Allowed');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return;  }  }
 =======
     res.status(400).json({ error: 'Missing id' });
     return
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
+<<<<<<< HEAD
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST');
     res.status(405).end('Method Not Allowed');
@@ -182,3 +282,27 @@ const payload = req.body as StatusUpdatePayload;
   res.status(200).json({ record: existing })
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  // Check condition
+if ( {) {
+  $2
+}
+    res.set_header ('AllowPOST');
+    res.status (405).end ('Method Not Allowed');
+    return;
+  }
+  const existing = read_grant (id);
+  // Check condition
+if ( {) {
+  $2
+}
+    res.status (404).json ({ error: 'Not found' });
+    return;  }    return;
+  }
+const payload = req.body as StatusUpdatePayload;
+  existing.status = payload.status;
+  existing.updated_at = new Date ().toISOString ();
+  write_grant (existing);
+  res.status (200).json ({ record: existing });  res.status (200).json ({ record: existing });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

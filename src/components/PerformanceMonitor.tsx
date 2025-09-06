@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Activity } from 'lucide-react';
 
@@ -42,3 +43,7 @@ export const PerformanceMonitor: React.FC = () => {
 =======
 import React from 'react';
 >>>>>>> 2fc87795dcf7cb742c24a257dd9040071acce941
+=======
+import React from 'react';
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

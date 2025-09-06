@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     const inStandalone = window.matchMedia('(display-mode: standalone)').matches
@@ -14,3 +15,8 @@
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    const in_standalone = window.match_media ('(display - mode: standalone)').matches,
+        description: 'Your browser does not support app installation.'}),
+      return;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

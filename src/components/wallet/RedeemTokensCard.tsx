@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from "react",
 import { useWallet } from "@/hooks/useWallet",
@@ -28,9 +29,35 @@ title: string
 description: string
 cost: number;'
 type: 'credit' | 'feature' | 'course'
+=======
+import React, { useState } from 'react';
+import { use_wallet } from '@/hooks / use_wallet';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+import { Button } from '@/components / ui / button'; import { Gift, ArrowRight, ExternalLink } from 'lucide-react';
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components / ui / dialog';
+type RewardOption = {
+  id: string;
+title: string;
+description: string;
+cost: number;';
+type: 'credit' | 'feature' | 'course';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-const REWARD_OPTIONS: RewardOption[] = [
+const REWARD_OPTIONS: RewardOption[] = [;
   {
+<<<<<<< HEAD
     id: 'premium-week'
     title: 'Premium Week'
     description:
@@ -60,6 +87,43 @@ export function RedeemTokensCard() {
     if (!wallet |wallet.balance < option.cost) return
     await spendTokens(option.cost, `Redeemed: ${option.title}`)
     setOpen(false)
+=======
+    id: 'premium - week',
+    title: 'Premium Week',
+    description:;
+      '7 days of premium features including top placement in search results',
+    cost: 100,
+    type: 'feature',
+  },
+  {
+    id: 'resume - review',
+    title: 'AI Resume Review',
+    description: 'Get your resume analyzed and optimized by our AI',
+    cost: 50,
+    type: 'feature',
+  },
+  {
+    id: 'platform - credit',
+    title: '$5 Platform Credit',
+    description: 'Get $5 credit to use on any paid service',
+    cost: 100,
+    type: 'credit',
+  },
+];
+export /**
+ * RedeemTokensCard - Function description
+ */
+function RedeemTokensCard() {
+  const { wallet, spend_tokens } = use_wallet ();
+  const [open, set_open] = useState (false);
+  const handle_redeem = async (option: RewardOption) => {
+    // Check condition
+if (return) {
+  $2
+}
+    await spend_tokens (option.cost, `Redeemed: ${option.title}`);
+    set_open (false);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
 =======
@@ -129,14 +193,20 @@ export function RedeemTokensCard() {;
   return (
     <Card>;
       <CardHeader>;
+<<<<<<< HEAD
         <CardTitle className='flex items-center gap-2'>;
           <Gift className='h-5 w-5' /> Redeem Rewards;
+=======
+        <CardTitle className='flex items - center gap - 2'>;
+          <Gift className='h - 5 w - 5' /> Redeem Rewards;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         </CardTitle>;
         <CardDescription>;
           Exchange your ZION$ for rewards and perks;
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
+<<<<<<< HEAD
         <Dialog open={open} onOpenChange={setOpen}>;
           <DialogTrigger asChild>;
             <Button className='w-full'>View Available Rewards</Button>;
@@ -215,16 +285,69 @@ export function RedeemTokensCard() {;
   )
 }
 =======
+=======
+        <Dialog open={open} onOpenChange={set_open}>;
+          <DialogTrigger as_child>;
+            <Button className='w - full'>View Available Rewards</Button>;
+          </DialogTrigger>;
+          <DialogContent>;
+            <DialogHeader>;
+              <DialogTitle > Available Rewards</DialogTitle>;
+              <DialogDescription>;
+                Exchange your tokens for these rewards. You currently have{' '}
+                {wallet?.balance || 0} ZION$.;
+              </DialogDescription>;
+            </DialogHeader>;
+            <div className='space - y-4 py - 4'>;
+              {REWARD_OPTIONS.map (option => (
+                <div;
+                  key={option.id}
+                  className='flex justify - between items - center border - b pb - 4';
+                >                  <div>;
+                    <h3 className='font - medium'>{option.title}</h3>;
+                    <p className='text - sm text - muted - foreground'>;
+                      {option.description}
+                    </p>;
+                  </div>;
+                  <div className='flex flex - col items - end gap - 1'>;
+                    <span className='text - sm font - bold'>;
+                      {option.cost} ZION$;
+                    </span>;
+                    <Button;
+                      size='sm';
+                      variant={
+                        wallet && wallet.balance >= option.cost;
+                          ? 'default';
+                          : 'outline';
+                      }
+                      disabled={!wallet || wallet.balance < option.cost}
+                      on_click={() => handle_redeem (option)}                    >;
+                      Redeem <ArrowRight className='ml - 1 h - 3 w - 3' />;
+                    </Button>;
+                  </div>;
+                </div>))}
+            </div>;
+            <div className='flex justify - between'>;
+              <Button;
+                variant='outline';
+                size='sm';
+                on_click={() => set_open (false)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               >;
                 Close;
               </Button>;
               <Button variant='ghost' size='sm'>;
+<<<<<<< HEAD
                 Learn More <ExternalLink className='ml-1 h-3 w-3' />;
+=======
+                Learn More <ExternalLink className='ml - 1 h - 3 w - 3' />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </Button>;
             </div>;
           </DialogContent>;
         </Dialog>;
       </CardContent>;
+<<<<<<< HEAD
     </Card>;
   );
 }
@@ -232,3 +355,7 @@ export function RedeemTokensCard() {;
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    </Card>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

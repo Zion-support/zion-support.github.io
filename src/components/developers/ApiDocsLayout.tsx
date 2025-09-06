@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -40,9 +41,24 @@ import {;
 <<<<<<< HEAD
  docsSearchSuggestions
 } from "@/data/docsSearchData"
+=======
+  const current_path = router.pathname;
+export default ApiDocsLayout;
+import Link from 'next / link';
+import { use_router } from 'next / router';
+import { Search } from 'lucide-react'import Link from 'next / link';
+import { Search } from 'lucide-react';
+import { EnhancedSearchInput  } from '@/components / search / EnhancedSearchInput';
+import { cn  } from '@/lib / utils';
+import {
+getDocsSearchPath;
+docsSearchSuggestions;
+} from '@/data / docsSearchData';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface ApiDocsLayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
+<<<<<<< HEAD
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 
   const router = useRouter()
@@ -215,3 +231,92 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+export /**
+ * ApiDocsLayout - Function description
+ */
+function ApiDocsLayout() {
+  const router = use_router ();
+  const current_path = router.pathname;
+  const [search_value, setSearchValue] = useState ("");
+  const navigation_items = [;
+  { title: "Getting Started", path: "/developers / docs / getting - started" },
+    { title: "API Reference", path: "/developers / docs / reference" },
+    { title: "Webhooks", path: "/developers / docs / webhooks" },
+    { title: "Sample Code", path: "/docs / sample - code" },
+    { title: "Error Codes & Rate Limits", path: "/developers / docs / errors" }],
+  const handleSelectSuggestion = (suggestion: SearchSuggestion) =>: any {
+    const path = getDocsSearchPath (suggestion.text);    // Check condition
+if ( {) {
+  $2
+}
+      router.push (path);
+      setSearchValue ("");
+    }
+  }
+  const handle_submit = (e: React.FormEvent) =>: any {
+    e.prevent_default ();
+    const path = getDocsSearchPath (search_value);    // Check condition
+if ( {) {
+  $2
+}
+      router.push (path);
+      setSearchValue ("");
+    }
+  }
+  return (
+    <div className="flex min - h-screen bg - zinc - 950">;
+    {/* Sidebar */}
+      <div className="hidden md: block w - 64 border - r border - zinc - 800 p - 6 sticky top - 0 h - screen overflow - y-auto">;
+      <Link href="/developers / docs" className="flex items - center mb - 8">;
+      <div className="bg - gradient - to - r from - zion - purple to - zion - cyan rounded - md w - 8 h - 8 mr - 3 flex items - center justify - center">;
+        <span className="text - white font - bold">Z</span>;
+      </div>;
+      <span className="font - bold text - white">API Docs</span>;
+      </Link>;
+      <div className="mb - 6">;
+      <form on_submit={handle_submit} className="relative">;
+        <Search className="absolute left - 2 top - 2.5 h - 4 w - 4 text - zinc - 500" />;
+        <EnhancedSearchInput;
+        value = {search_value, }
+          on_change = {setSearchValue, }
+          onSelectSuggestion = {handleSelectSuggestion, }
+          search_suggestions = {docsSearchSuggestions, }
+          placeholder="Search documentation";
+        />;
+      </form>;
+      </div>;
+      <nav role="navigation" aria - label="Main" className="flex flex - col space - y-1">;
+      {navigation_items.map ((item, ) => (
+        <Link;
+        key={item.path}
+          href={item.path}
+          className={cn (
+          "block px - 3 py - 2 rounded - md text - sm";
+          current_path === item.path;
+          ? "bg - zion - purple / 20 text - zion - cyan";
+          : "text - zinc - 400 hover: text - white hover:bg - zinc - 900")}        >;
+        {item.title}
+        </Link>))}
+      </nav>;
+    </div>;
+    {/* Main content */}
+      <div className="flex - grow max - w-5xl mx - auto px - 4 py - 8 md:px - 8 md:py - 12">;
+      {children}
+      </div>;
+    </div>);
+}
+}
+/* Sidebar */ ";
+}<div className="hidden md:block w - 64 border - r border - zinc - 800 p - 6 sticky top - 0 h - screen overflow - y-auto"> <Link href="/developers / docs"className="flex items - center mb - 8"> <div className="bg - gradient - to - r from - zion - purple to - zion - cyan rounded - md w - 8 h - 8 mr - 3 flex items - center justify - center"> <span className="text - white font - bold">Z</span> </div> <span className="font - bold text - white">API Docs</span> </Link> <div className="mb - 6"> /> </form> </div>);
+}> {
+  item.title;
+}</Link>) );
+}</nav> </div> {
+  /* Main content */ ";
+}<div className="flex - grow max - w-5xl mx - auto px - 4 py - 8 md:px - 8 md:py - 12"> {
+  children;
+}</div> </div>);
+}export default ApiDocsLayout;
+"export default ApiDocsLayout;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -5,6 +5,7 @@ export interface ContactInfo {
   email: string;
   address: string;
   site: string;
+<<<<<<< HEAD
 =======
 export interface ContactInfo {;
 export interface ContactInfo {
@@ -14,31 +15,44 @@ export interface ContactInfo {
 
 export interface Service {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface Service {
 <<<<<<< HEAD
   id: string;
   name: string;
   description: string;
-  category: 'micro-saas' | 'ai-services' | 'it-services';
+  category: 'micro - saas' | 'ai - services' | 'it - services';
   price: {
     min: number;
     max: number;
     currency: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   };
 =======
   }
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+=======
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   features: string[];
   technologies: string[];
-  deliveryTime: string;
+  delivery_time: string;
   support: string;
   image?: string;
   popular?: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  title: string;
+  href: string;
+  icon: string;
+  color: string;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-
 export interface ServiceCategory {
   title: string;
   description: string;
@@ -47,7 +61,6 @@ export interface ServiceCategory {
   href: string;
   color: string;
 }
-
 export interface SEOProps {
   title?: string;
   description?: string;
@@ -94,7 +107,13 @@ export interface SEOProps {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   keywords?: string;
   canonical?: string;
+<<<<<<< HEAD
   ogImage?: string;
+=======
+  og_image?: string;
+  url?: string;
+  type?: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   noindex?: boolean;
 <<<<<<< HEAD
 =======
@@ -152,20 +171,33 @@ export interface AnimationState {,
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-
 export interface LoadingState {
-  isLoading: boolean;
+  is_loading: boolean;
   error?: string;
 <<<<<<< HEAD
   progress?: number;
+<<<<<<< HEAD
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-
 export interface AnimationState {
-  isLoaded: boolean;
-  hasError: boolean;
+  is_loaded: boolean;
+  has_error: boolean;
 }
+<<<<<<< HEAD
 
 // Form Types
+=======
+export interface FormData {
+  name: string;
+  email: string;
+  company?: string;
+  phone?: string;
+  service?: string;
+  message: string;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface ContactForm {
   name: string;
   email: string;
@@ -174,6 +206,7 @@ export interface ContactForm {
   service: string;
   budget?: string;
   message: string;
+<<<<<<< HEAD
   preferredContact: 'email' | 'phone' | 'both';
 =======
 }
@@ -236,6 +269,11 @@ export interface ContactForm {
   preferredContact: 'email' | 'phone' | 'both';
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 }
+=======
+  preferred_contact: 'email' | 'phone' | 'both';
+;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface Testimonial {
   id: string;
   name: string;
@@ -251,8 +289,12 @@ export interface Testimonial {
   rating: number;
   avatar?: string;
   image?: string;
+<<<<<<< HEAD
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   project?: string;
 }
 export interface BlogPost {
@@ -264,6 +306,7 @@ export interface BlogPost {
 <<<<<<< HEAD
 =======
   date: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
   tags: string[];
   image?: string;
@@ -277,6 +320,10 @@ export interface BlogPost {
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   publishedAt: string;
   updatedAt: string;
+=======
+  published_at: string;
+  updated_at: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   tags: string[];
   category: string;
   image: string;
@@ -286,9 +333,14 @@ export interface BlogPost {
 =======
   slug: string;
   featured?: boolean;
+<<<<<<< HEAD
   readTime: number;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+=======
+  read_time: number;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface TeamMember {
   id: string;
@@ -306,26 +358,37 @@ export interface TeamMember {
   image: string;
   skills: string[];
 <<<<<<< HEAD
+<<<<<<< HEAD
   linkedin?: string;
   github?: string;
   twitter?: string;
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   social: {
     linkedin?: string;
     twitter?: string;
     github?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   };
   skills?: string[];
   position?: string;
 =======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   linkedin?: string;
   github?: string;
   twitter?: string;
+<<<<<<< HEAD
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface Project {
 <<<<<<< HEAD
@@ -339,6 +402,7 @@ export interface Project {
 <<<<<<< HEAD
 =======
   name: string;
+<<<<<<< HEAD
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   description: string;
   image: string;
@@ -356,10 +420,21 @@ export interface Project {
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled';
+=======
+;
+  description: string;
+  image: string;
+  technologies: string[];
+  live_url?: string;
+  github_url?: string;
+  featured: boolean;
+  status: 'planning' | 'in - progress' | 'completed' | 'on - hold' | 'cancelled';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   priority: 'low' | 'medium' | 'high' | 'critical';
-  startDate: Date;
-  endDate: Date;
+  start_date: Date;
+  end_date: Date;
   budget: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -551,13 +626,31 @@ export interface Service { id: string; name: string; description: string; catego
   deliverables: {
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+=======
+    allocated: number;
+    spent: number;
+    currency: string;
+  }
+  team: {
+    lead: string;
+    members: string[];
+    external: string[];
+  }
+  client: {
+    name: string;
+    contact: string;
+    industry: string;
+  }
+  deliverables: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     name: string;
     description: string;
-    status: 'pending' | 'in-progress' | 'completed' | 'review';
-    dueDate: Date;
+    status: 'pending' | 'in - progress' | 'completed' | 'review';
+    due_date: Date;
   }[];
 <<<<<<< HEAD
   risks: {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   risks?: {
@@ -565,6 +658,8 @@ export interface Service { id: string; name: string; description: string; catego
   risks: {
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     description: string;
     probability: 'low' | 'medium' | 'high';
     impact: 'low' | 'medium' | 'high';
@@ -572,6 +667,7 @@ export interface Service { id: string; name: string; description: string; catego
   }[];
 <<<<<<< HEAD
   dependencies: {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   dependencies?: {
@@ -579,12 +675,15 @@ export interface Service { id: string; name: string; description: string; catego
   dependencies: {
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     project: string;
     type: 'blocking' | 'influencing';
     description: string;
   }[];
 <<<<<<< HEAD
   metrics: {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   metrics?: {
@@ -592,6 +691,8 @@ export interface Service { id: string; name: string; description: string; catego
   metrics: {
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     name: string;
     value: number;
     unit: string;
@@ -599,6 +700,7 @@ export interface Service { id: string; name: string; description: string; catego
   }[];
 <<<<<<< HEAD
   lessons: {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   lessons?: {
@@ -606,11 +708,14 @@ export interface Service { id: string; name: string; description: string; catego
   lessons: {
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     learned: string;
     category: 'technical' | 'process' | 'communication' | 'management';
     impact: 'positive' | 'negative' | 'neutral';
   }[];
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -638,17 +743,34 @@ export interface Partner {
 }
 
 // Pricing Types
+=======
+export interface FAQ {
+  question: string;
+  answer: string;
+  category?: string;
+}
+export interface PricingPlan {
+  name: string;
+  price: number;
+  period: string;
+  features: string[];
+  popular?: boolean;
+  cta: string;
+  href: string;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface PricingTier {
   id: string;
   name: string;
   price: number;
   currency: string;
-  period: 'month' | 'year' | 'one-time';
+  period: 'month' | 'year' | 'one - time';
   features: string[];
   limitations?: string[];
   popular?: boolean;
   cta: string;
   description: string;
+<<<<<<< HEAD
 =======
 export interface FAQ {
   question: string;
@@ -748,6 +870,10 @@ export interface PricingTier {
   description: string;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 }
+=======
+;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface NavigationItem {
   name: string;
   href: string;
@@ -761,6 +887,7 @@ export interface SocialLink {
   platform: 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram';
   url: string;
   label: string;
+<<<<<<< HEAD
 =======
   name: string;
   href: string;
@@ -775,6 +902,9 @@ export interface SocialLink {
   label: string;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface FooterLink {
   name: string;
@@ -792,6 +922,7 @@ export interface HeroSection {
       text: string;
       href: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
     };
     secondary: {
       text: string;
@@ -806,6 +937,14 @@ export interface HeroSection {
     }
   }
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+=======
+    }
+    secondary: {
+      text: string;
+      href: string;
+    }
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   image?: string;
 }
 export interface Feature {
@@ -819,6 +958,7 @@ export interface Stats {
   value: string;
   description?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 // User Types
@@ -944,12 +1084,28 @@ export interface FAQ {
 }
 
 // Job Types
+=======
+export interface CaseStudy {
+  id: string;
+  title: string;
+  client: string;
+  industry: string;
+  challenge: string;
+  solution: string;
+  results: string[];
+  image: string;
+  technologies: string[];
+  duration: string;
+  team_size: number;
+  featured?: boolean;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface JobOpening {
   id: string;
   title: string;
   department: string;
   location: string;
-  type: 'full-time' | 'part-time' | 'contract';
+  type: 'full - time' | 'part - time' | 'contract';
   experience: string;
   description: string;
   requirements: string[];
@@ -958,10 +1114,13 @@ export interface JobOpening {
     min: number;
     max: number;
     currency: string;
-  };
+  }
 }
+<<<<<<< HEAD
 
 // News Types
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface NewsItem {
   id: string;
   title: string;
@@ -973,8 +1132,11 @@ export interface NewsItem {
   image?: string;
   featured: boolean;
 }
+<<<<<<< HEAD
 
 // Event Types
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface Event {
   id: string;
   title: string;
@@ -983,9 +1145,10 @@ export interface Event {
   time: string;
   location: string;
   type: 'webinar' | 'workshop' | 'conference' | 'meetup';
-  registrationUrl?: string;
+  registration_url?: string;
   image?: string;
 }
+<<<<<<< HEAD
 
 // Company Types
 export interface CompanyInfo {
@@ -1413,6 +1576,8 @@ export interface Environment {
 <<<<<<< HEAD
 
 // Additional interfaces
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface User {
   id: string;
   email: string;
@@ -1426,7 +1591,7 @@ export interface User {
     experience: number;
     location: string;
     timezone: string;
-  };
+  }
   preferences: {
     theme: 'light' | 'dark' | 'auto';
     language: string;
@@ -1434,23 +1599,22 @@ export interface User {
       email: boolean;
       push: boolean;
       sms: boolean;
-    };
-  };
+    }
+  }
   activity: {
-    lastLogin: Date;
-    loginCount: number;
+    last_login: Date;
+    login_count: number;
     projects: string[];
     tasks: string[];
-  };
+  }
   subscription: {
     plan: 'free' | 'basic' | 'premium' | 'enterprise';
     status: 'active' | 'inactive' | 'cancelled' | 'expired';
-    startDate: Date;
-    endDate: Date;
+    start_date: Date;
+    end_date: Date;
     features: string[];
-  };
+  }
 }
-
 export interface Notification {
   id: string;
   type: 'info' | 'success' | 'warning' | 'error';
@@ -1461,45 +1625,68 @@ export interface Notification {
   action?: {
     label: string;
     url: string;
-  };
+  }
   category: 'system' | 'project' | 'team' | 'client' | 'billing';
   priority: 'low' | 'medium' | 'high';
   expires?: Date;
 }
-
 export interface BaseComponentProps {
-  className?: string;
+  class_name?: string;
   children?: React.ReactNode;
   id?: string;
   disabled?: boolean;
   loading?: boolean;
-  onClick?: () => void;
+  on_click?: () => void;
   type?: 'button' | 'submit' | 'reset';
 }
-
 export interface InputProps {
-  className?: string;
+  class_name?: string;
   children?: React.ReactNode;
   id?: string;
   disabled?: boolean;
   loading?: boolean;
-  onClick?: () => void;
+  on_click?: () => void;
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
   placeholder?: string;
   value?: string;
-  onChange?: (value: string) => void;
+  on_change?: (value: string) => void;
   error?: string;
   required?: boolean;
 }
-
 export interface ApiRequest {
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   url: string;
   data?: any;
-  params?: Record<string, any>;
-  headers?: Record<string, string>;
+  params?: Record < string, any>;
+  headers?: Record < string, string>;
 }
+<<<<<<< HEAD
 
+=======
+export interface ApiResponse < T> {
+  success: boolean;
+  data?: T;
+  error?: string;
+  message?: string;
+}
+export interface PaginationParams {
+  page: number;
+  limit: number;
+  sort?: string;
+  order?: 'asc' | 'desc';
+}
+export interface PaginatedResponse < T> {
+  data: T[];
+  pagination: {
+    page: number;
+    limit: number;
+    total: number;
+    pages: number;
+    has_next: boolean;
+    has_prev: boolean;
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface PerformanceMetrics {
   fcp?: number;
   lcp?: number;
@@ -1507,14 +1694,12 @@ export interface PerformanceMetrics {
   cls?: number;
   ttfb?: number;
 }
-
 export interface AccessibilitySettings {
-  highContrast: boolean;
-  fontSize: number;
-  reducedMotion: boolean;
-  screenReader: boolean;
+  high_contrast: boolean;
+  font_size: number;
+  reduced_motion: boolean;
+  screen_reader: boolean;
 }
-
 export interface UserPreferences {
   theme: 'light' | 'dark' | 'system';
   language: string;
@@ -1523,9 +1708,8 @@ export interface UserPreferences {
     email: boolean;
     browser: boolean;
     marketing: boolean;
-  };
+  }
 }
-
 export interface CompanyInfo {
   name: string;
   tagline: string;
@@ -1536,24 +1720,22 @@ export interface CompanyInfo {
     state: string;
     zip: string;
     country: string;
-  };
+  }
   contact: {
     phone: string;
     email: string;
     website: string;
-  };
+  }
   certifications: string[];
 }
-
 export interface ErrorInfo {
   message: string;
   code?: string;
   details?: any;
   timestamp: string;
-  userAgent?: string;
+  user_agent?: string;
   url?: string;
 }
-
 export interface FormField {
   name: string;
   label: string;
@@ -1569,8 +1751,9 @@ export interface FormField {
     max?: number;
     pattern?: string;
     message?: string;
-  };
+  }
 }
+<<<<<<< HEAD
 
 export interface PaginationParams {
   page: number;
@@ -1595,6 +1778,16 @@ export interface PaginatedResponse<T> {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 =======
+=======
+// Environment;
+export interface Environment {
+  NODE_ENV: 'development' | 'production' | 'test';
+  NEXT_PUBLIC_API_URL?: string;
+  NEXT_PUBLIC_APP_URL?: string;
+  NEXT_PUBLIC_GA_ID?: string;
+  NEXT_PUBLIC_SENTRY_DSN?: string;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface Partner {
   name: string;
   logo: string;
@@ -1614,7 +1807,7 @@ export interface Certification {
   issuer: string;
   date: string;
   expiry?: string;
-  credentialId?: string;
+  credential_id?: string;
   image?: string;
 }
 export interface Technology {
@@ -1640,14 +1833,14 @@ export interface NewsletterSubscription {
   interests: string[];
   frequency: 'daily' | 'weekly' | 'monthly';
   subscribed: boolean;
-  subscribedAt: string;
+  subscribed_at: string;
 }
 export interface SearchResult {
   id: string;
   title: string;
   description: string;
   url: string;
-  type: 'page' | 'blog' | 'service' | 'case-study' | 'job';
+  type: 'page' | 'blog' | 'service' | 'case - study' | 'job';
   score: number;
   highlights?: string[];
 }
@@ -1662,14 +1855,18 @@ export interface SortOption {
   direction: 'asc' | 'desc';
 }
 export interface Pagination {
-  currentPage: number;
-  totalPages: number;
-  totalItems: number;
+  current_page: number;
+  total_pages: number;
+  total_items: number;
   itemsPerPage: number;
-  hasNext: boolean;
-  hasPrev: boolean;
+  has_next: boolean;
+  has_prev: boolean;
 }
+<<<<<<< HEAD
 export interface APIResponse<T> {
+=======
+export interface APIResponse < T> {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   data: T;
   success: boolean;
   message?: string;
@@ -1682,11 +1879,20 @@ export interface ErrorResponse {
   errors: string[];
   code?: string;
 }
+<<<<<<< HEAD
 export interface SuccessResponse<T> {
+=======
+export interface SuccessResponse < T> {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   success: true;
   data: T;
   message?: string;
 }
+<<<<<<< HEAD
 export type Response<T> = SuccessResponse<T> | ErrorResponse;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+=======
+export type Response < T> = SuccessResponse < T> | ErrorResponse;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

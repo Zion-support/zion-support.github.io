@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -84,3 +85,48 @@ export function securityHeaders(req, res, next) {
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+// Security middleware;
+import { NextResponse } from 'next / server';
+import { getSecurityHeaders } from '../utils / security - headers';
+;
+export /**
+ * security_middleware - Function description
+ */
+function security_middleware() {
+  const response = NextResponse.next ();
+;
+  // Add security headers;
+  const headers = getSecurityHeaders ();
+  headers.for_each (({ key, value }) => {
+    response.headers.set (key, value);
+  });
+;
+  // Add HSTS header for HTTPS;
+  // Check condition
+if ( {) {
+  $2
+}
+    response.headers.set (
+      'Strict - Transport - Security',
+      'max - age = 31536000; includeSubDomains; preload');
+  }
+  return response;// Security headers middleware;
+export /**
+ * security_headers - Function description
+ */
+function security_headers() {
+  Object.entries ({
+    'X - Content - Type - Options': 'nosniff',
+    'X - Frame - Options': 'DENY',
+    'X - XSS - Protection': '1; mode = block',
+    'Referrer - Policy': 'strict - origin - when - cross - origin',
+    'Permissions - Policy': 'camera=(), microphone=(), geolocation=()',
+    'Strict - Transport - Security': 'max - age = 31536000; includeSubDomains';
+  }).for_each (([key, value]) => {
+    res.set_header (key, value);
+  });
+;
+  next ();
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

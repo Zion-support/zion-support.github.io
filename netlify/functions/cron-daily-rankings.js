@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { upsertFile } = require('./_lib/github');
@@ -62,13 +63,51 @@ exports && exports.handler = async function () {
         owner,
         repo,
         path: 'data/marketplace/rankings-daily && daily.json',
+=======
+const fs = require ('fs');
+const path = require ('path');
+const { upsert_file } = require ('./_lib / github');
+;
+exports.handler = async function () {
+  try {
+    // Demo ranking: based on certifications and progress;
+    const users_path = path.join (process.cwd (), 'data', 'learn', 'users.json');
+    const users = JSON.parse (fs.readFileSync (users_path, 'utf - 8'));
+;
+    const entries = Object.values (users).map (u => ({
+      user_id: u.user_id,
+      name: u.name || u.user_id,
+      points:;
+        (u.certifications?.length || 0) * 100 +;
+        Object.values (u.progress || {}).reduce (
+          (acc, p) => acc + (p.percent || 0),
+          0),
+    }));
+    const top = entries.sort ((a, b) => b.points - a.points).slice (0, 100);
+;
+    const owner = process.env.GITHUB_OWNER;
+    const repo = process.env.GITHUB_REPO;
+    const token = process.env.GITHUB_TOKEN;
+;
+    const content = JSON.stringify ({ updated_at: Date.now (), top }, null, 2);
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      await upsert_file ({
+        owner,
+        repo,
+        path: 'data / marketplace / rankings - daily.json',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         content,
-        message: 'chore(automation): daily rankings update',
+        message: 'chore (automation): daily rankings update',
         token,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
     return {
+<<<<<<< HEAD
 <<<<<<< HEAD
       statusCode: 200
       body: JSON.stringify({ ok: true, topCount: top.length })
@@ -83,12 +122,28 @@ exports.handler = async function() {
       userId: u.userId,
       name: u.name || u.userId,
       points: (u.certifications?.length || 0) * 100 + Object.values(u.progress || {}).reduce((acc, p) => acc + (p.percent || 0), 0)
+=======
+      status_code: 200,
+      body: JSON.stringify ({ ok: true, top_count: top.length }),
+    }
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+}  try {
+    // Demo ranking: based on certifications and progress;
+    const users_path = path.join (process.cwd (), 'datalearnusers.json'),
+    const users = JSON.parse (fs.readFileSync (users_path, 'utf - 8')),
+    const entries = Object.values (users).map ((u) => ({
+      user_id: u.user_id,
+      name: u.name || u.user_id,
+      points: (u.certifications?.length || 0) * 100 + Object.values (u.progress || {}).reduce ((acc, p) => acc + (p.percent || 0), 0);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     })),
-    const top = entries.sort((a, b) => b.points - a.points).slice(0, 100),
-
+    const top = entries.sort ((a, b) => b.points - a.points).slice (0, 100),
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
+<<<<<<< HEAD
 
     const content = JSON.stringify({ updatedAt: Date.now(), top }, null, 2),
 
@@ -96,9 +151,20 @@ exports.handler = async function() {
       await upsertFile({ owner, repo, path: 'data/marketplace/rankings-daily.json', content, message: 'chore(automation): daily rankings update', token })
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
+=======
+    const content = JSON.stringify ({ updated_at: Date.now (), top }, null, 2),
+    // Check condition
+if ( {) {
+  $2
+}
+      await upsert_file ({ owner, repo, path: 'data / marketplace / rankings - daily.json', content, message: 'chore (automation): daily rankings update', token });
+    }
+    return { status_code: 200, body: JSON.stringify ({ ok: true, top_count: top.length }) }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 };  try {
     // Demo ranking: based on certifications and progress
@@ -159,3 +225,6 @@ exports.handler = async function() {
 =======
 },
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

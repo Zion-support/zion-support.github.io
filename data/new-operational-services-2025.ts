@@ -8,10 +8,11 @@ export interface NewOperationalService2025 {
   features: string[];
   link: string;
   category: string;
-  realImplementation: boolean;
-  contactInfo: {
+  real_implementation: boolean;
+  contact_info: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 
     address: string;
   }
@@ -44,12 +45,37 @@ export const newOperationalServices2025: NewOperationalService2025[] = [
 
       email: "kleber@ziontechgroup.com";
 =======
+=======
+    address: string;
+  }
+;
+export const newOperationalServices2025: NewOperationalService2025[] = [;
+  {
+    id: 'smart - operations - center',
+    name: 'Smart Operations Center',
+    tagline: 'AI - powered operations management',
+    price: '$119 / month',
+    description:;
+      'Intelligent operations center that uses AI to optimize business processes and workflows.',
+    features: [;
+      'AI process optimization',
+      'Real - time monitoring',
+      'Predictive analytics',
+      'Automated workflows',
+      'Performance insights',
+    ],
+    link: '/services / smart - operations - center',
+    category: 'New Operational Services 2025',
+    real_implementation: true,
+    contact_info: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950";
+<<<<<<< HEAD
       email: "kleber@ziontechgroup && ziontechgroup.com";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -89,3 +115,11 @@ export const newOperationalServices2025: NewOperationalService2025[] = [
   }
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      email: "kleber@ziontechgroup.com";
+      address: "364 E Main St STE 1008 Middletown DE 19709";
+    }
+  }
+];
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

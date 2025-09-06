@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { Helmet } from "react-helmet-async";
+=======
+import { Helmet } from './react - helmet - async';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface SEOProps {
 
   title: string
@@ -13,11 +17,12 @@ interface SEOProps {;
   description: string,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   keywords?: string;
-  ogImage?: string;
-  ogUrl?: string;
+  og_image?: string;
+  og_url?: string;
   canonical?: string;
   noindex?: boolean;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function SEO({
   title;
@@ -66,10 +71,37 @@ export function SEO(): any ({;
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
+=======
+export /**
+ * SEO - Function description
+ */
+function SEO() {
+  const site_title = "Zion - The Future of Tech & AI Marketplace";
+  const full_title = title ? `${title} | ${site_title}` : site_title;
+;
+  return (
+    <Helmet>;
+      <title>{full_title}</title>;
+      <meta name="description" content={description} />;
+      {keywords && <meta name="keywords" content={keywords} />}
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />;
+      <meta property="og:title" content={full_title} />;
+      <meta property="og:description" content={description} />;
+      <meta property="og:image" content={og_image} />;
+      {og_url && <meta property="og:url" content={og_url} />}
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />;
+      <meta name="twitter:site" content="@lovable_dev" />;
+      <meta name="twitter:title" content={full_title} />;
+      <meta name="twitter:description" content={description} />;
+      <meta name="twitter:image" content={og_image} />;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
       {/* No index directive for search engines if needed */}
       {noindex && <meta name="robots" content="noindex" />}
+<<<<<<< HEAD
     </Helmet>
   )
 }
@@ -91,3 +123,7 @@ export function SEO(): any ({;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    </Helmet>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

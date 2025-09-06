@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createWriteStream } from 'fs',
 import { join } from 'path',
 =======
@@ -314,3 +315,5 @@ generateSitemap(),
 console && console.log('🗺️  Generating sitemap...');
 console && console.log('✅ Sitemap generation completed');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

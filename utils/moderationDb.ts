@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ModerationFlag {
   id: string;
   contentId: string;
@@ -9,10 +10,21 @@ export interface ModerationFlag {
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
+=======
+export interface ModerationFlag {
+  id: string;
+  content_id: string;
+  content_type: 'post' | 'comment' | 'user';
+  reason: string;
+  user_email: string;
+  status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+  created_at: string;
+  admin_notes?: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-
-// Mock data storage - replace with actual database
+// Mock data storage - replace with actual database;
 let flags: ModerationFlag[] = [];
+<<<<<<< HEAD
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
   return flags.find(flag => flag.id === id) |null;
 
@@ -20,10 +32,18 @@ export async function getFlagById(id: string): Promise<ModerationFlag | null> {
 export async function readAllFlags(): Promise<ModerationFlag[]> {
   // Mock implementation - replace with actual database logic
   return [];
+=======
+;
+export async function getFlagById (id: string): Promise < ModerationFlag | null> {
+  return flags.find (flag => flag.id === id) || null;
 }
-
-export async function createFlag(data: Partial<ModerationFlag>): Promise<ModerationFlag> {
+export async function readAllFlags (): Promise < ModerationFlag[]> {
+  return [...flags];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+export async function create_flag (data: Partial < ModerationFlag>): Promise < ModerationFlag> {
   const flag: ModerationFlag = {
+<<<<<<< HEAD
     id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     contentId: data.contentId |''
     contentType: data.contentType |'post'
@@ -121,3 +141,33 @@ export async function getActionsForFlag(flagId: string): Promise<ModerationActio
   return actions.filter(action => action.flagId === flagId);
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    id: `flag_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
+    content_id: data.content_id || '',
+    content_type: data.content_type || 'post',
+    reason: data.reason || '',
+    user_email: data.user_email || '',
+    status: 'pending',
+    created_at: new Date ().toISOString (),
+    ...data;
+  }
+;
+  flags.push (flag);
+  return flag;
+}
+export async function updateFlagStatus (
+  id: string,
+  status: ModerationFlag['status'],
+  admin_notes?: string): Promise < FlaggedContent | undefined> {
+  const flag = await getFlagById (id);
+  // Check condition
+if (return undefined) {
+  $2
+}
+  flag.status = status;
+  flag.admin_notes = admin_notes || flag.admin_notes;
+  flag.updated_at = new Date ().toISOString ();
+  await upsert_flag (flag);
+  return flag;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
