@@ -3,6 +3,7 @@ function resolveUrl(envVar: string | undefined, fallback: string) {
     return fallback;
   }
   return envVar;
+}
 
 const TWITTER_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_TWITTER_URL,
@@ -264,3 +265,4 @@ export function Footer() {
       </div>
     </footer>
   );
+}
