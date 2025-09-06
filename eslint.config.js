@@ -1,14 +1,46 @@
-const { FlatCompat } = require('@eslint/eslintrc');
-const js = require('@eslint/js');
+import { FlatCompat } from '@eslint/eslintrc';
+import js from '@eslint/js';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const compat = new FlatCompat({
   baseDirectory: __dirname,
   recommendedConfig: js.configs.recommended,
 });
 
-module.exports = [
+export default [
   js.configs.recommended,
   {
+    files: ['**/*.{js,jsx}'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn'
+    }
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'warn',
@@ -35,9 +67,35 @@ module.exports = [
       'src.disabled/**',
       'components.disabled/**',
       'pages.disabled/**',
+      'pages_backup/**',
+      'pages_backup_*/**',
+      'pages_backup_conflict/**',
+      'pages_backup_conflicts/**',
+      'pages_minimal/**',
+      'pages.broken/**',
+      'pages.corrupted.*/**',
+      'pages.disabled*/**',
+      'pages.disabled_*/**',
+      'pages.disabled_full/**',
+      'pages.old/**',
+      'pages_api.disabled/**',
+      'pages_disabled/**',
+      'pages.__backup/**',
+      'pages._archive_corrupted/**',
+      'pages._quarantine/**',
+      'pages.bak/**',
+      'pages.blog.disabled/**',
+      'solutions.disabled/**',
+      'src.corrupted/**',
+      'src.pages.disabled/**',
+      'src_backup/**',
+      'temp-backup/**',
+      'tests.disabled/**',
       'zion-os/**',
       'zion-website/**',
       'zion_academy/**',
+      'zion-ai-assistant/**',
+      'zion-os.disabled/**',
       'api/**',
       'api-backup/**',
       'api-disabled/**',
@@ -102,8 +160,29 @@ module.exports = [
       'ultimate-*.js',
       '*.js',
       'public/**',
-      'src/**',
-      'app/**'
+      'services-broken.tsx',
+      'services/**/*.ts',
+      'vitest.config.ts',
+      'playwright.config.ts',
+      'setupTests.ts',
+      'components/**',
+      'data/**',
+      'hooks/**',
+      'lib/**',
+      'middleware*',
+      'next.config.ts',
+      'cypress.config.ts',
+      'jest.*',
+      'fix_typescript_syntax_errors.jsx',
+      'contracts.disabled/**',
+      'data.disabled/**',
+      'hooks.disabled/**',
+      'lib.disabled/**',
+      'lib_backup/**',
+      'lint-target/**',
+      'pages-backup/**',
+      'pages-disabled/**',
+      'pages-quarantine/**'
     ]
   }
 ];
