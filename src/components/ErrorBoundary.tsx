@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-=======
-import React, { Component, ReactNode, ErrorInfo } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+
 
 interface Props {
   children: ReactNode;

@@ -16,11 +16,6 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-<<<<<<< HEAD
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-        },
-=======
           vendor: ["react", "react-dom"],
           ui: ["framer-motion", "lucide-react"],
           router: ["react-router-dom"]
@@ -31,7 +26,6 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       },
     },
   },
@@ -40,10 +34,4 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-<<<<<<< HEAD
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
-  },
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 });

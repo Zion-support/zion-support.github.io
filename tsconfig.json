@@ -12,25 +12,13 @@
       "es2021",
       "es2022"
     ],
-<<<<<<< HEAD
-=======
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "es6"],
->>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-<<<<<<< HEAD
-    "module": "esnext",
-    "moduleResolution": "bundler",
-=======
     "module": "ESNext",
     "moduleResolution": "node",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -42,15 +30,6 @@
     ],
     "baseUrl": ".",
     "paths": {
-<<<<<<< HEAD
-      "@/*": ["./*"],
-      "@/components/*": ["./components/*"],
-      "@/app/*": ["./app/*"],
-      "@/styles/*": ["./styles/*"],
-      "@/utils/*": ["./utils/*"],
-      "@/types/*": ["./types/*"]
-    }
-=======
       "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
       "@/pages/*": ["./src/pages/*"],
@@ -61,23 +40,7 @@
       "@/assets/*": ["./src/assets/*"]
     },
     "allowSyntheticDefaultImports": true
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   },
-<<<<<<< HEAD
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
-=======
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
-<<<<<<< HEAD
->>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }
