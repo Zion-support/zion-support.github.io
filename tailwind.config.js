@@ -1,10 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{js,ts,jsx,tsx}',
-    './app/**/*.{js,ts,jsx,tsx}',
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -35,6 +36,9 @@ module.exports = {
           900: '#111827',
           950: '#030712',
         },
+        'zion-slate-dark': '#1e293b',
+        'zion-slate': '#334155',
+        'zion-slate-light': '#475569',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
