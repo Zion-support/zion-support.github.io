@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import React from 'react';
-;
-=======
 
 export default function PerformanceMonitor() {
   return (
@@ -66,4 +62,3 @@ export default function PerformanceMonitor() {
           <span className="text-sm font-medium text-white">Performance Monitor</span>,;
           <button,;
             onClick={() => setIsVisible(false)},;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

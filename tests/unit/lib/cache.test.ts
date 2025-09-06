@@ -25,19 +25,6 @@ export default function Cache.test({ }: Cache.testProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<<< HEAD:corrupted_backup/PostJob.jsx
-<<<<<<< HEAD:src.pages.disabled/PostJob.jsx
-}
-
-}
-
-
-}
-
-
-}
-
-========
 
 
 

@@ -7,14 +7,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   // TODO: Implement authentication logic here
-<<<<<<< HEAD:pages/api/auth/[...nextauth].ts
-  res.status(200).json({ message: 'Auth endpoint placeholder' });
-}
-=======
-<<<<<<< HEAD
-  res.status(200).json({ message: 'Auth endpoint placeholder' });
-}
-=======
   res.status(200).json({ message: 'Auth endpoint' });
 }
 >>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

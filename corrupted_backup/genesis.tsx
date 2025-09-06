@@ -1,9 +1,3 @@
-<<<<<<< HEAD:pages/deploy/genesis.tsx
-export { default } from '../zion/init';
-=======
-<<<<<<< HEAD
-export { default } from '../zion/init';
-=======
 import React from 'react';
 export default function Page() {
   return (

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from "react","
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card","
-import { Button } from "@/components/ui/button","
-import { Download } from 'lucide-react''
-import { AppPlatform, AppMetadataValues } from "./MetadataManager","
-=======
 
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
@@ -184,4 +177,3 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
     </Card>;
   );
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

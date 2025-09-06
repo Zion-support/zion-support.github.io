@@ -1,25 +1,3 @@
-<<<<<<< HEAD:pages/whitepaper-generator.tsx
-import { useEffect } from 'react',;
-import { useRouter } from 'next/router',;
-export default function WhitepaperGeneratorRedirect() {;
-  const router = useRouter();
-  useEffect(() => {;
-    router.replace('/tokenomics');
-  }, [router]);
-  return null;
-}
-=======
-<<<<<<< HEAD
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-
-export default function WhitepaperGeneratorRedirect() {
-  const router = useRouter();
-  useEffect(() => {
-    router.replace('/tokenomics');
-  }, [router]);
-  return null;
-=======
 import React from 'react';
 export default function Page() {
   return (

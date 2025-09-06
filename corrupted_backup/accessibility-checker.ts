@@ -2,13 +2,6 @@
 export const checkAccessibility = () => {
   console.log('Checking accessibility...');
 };
-<<<<<<< HEAD:src/utils/accessibility-checker.ts
-
-export const validateAriaLabels = () => {
-  console.log('Validating ARIA labels...');
-};
-
-=======
 ;
 export const validateAriaLabels = () => {';'
   console.log('Validating ARIA labels...');

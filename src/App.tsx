@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
-import React from 'react';
-function App() {
-  console.log('App component rendering...');
-  return (
-    <div className="min-h-screen bg-gray-50 p-8">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Zion Tech Group
-        </h1>
-        <p className="text-xl text-gray-600 mb-8">
-          Leading AI & Technology Solutions for a Smarter Future
-        </p>
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-2xl font-semibold mb-4">Site is Working!</h2>
-          <p className="text-gray-700 mb-4">
-            ✅ The React application is now loading correctly!
-          </p>
-          <p className="text-gray-600">
-            The console errors have been resolved and the site is functional.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-<<<<<<< HEAD
-export default App;
-
-=======
 ;
 import React from 'react',;
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom',;
@@ -67,7 +34,6 @@ export default function App() {,;
       </Router>;
     </ErrorBoundary>);
 };
-=======
 import React, { Suspense, lazy } from 'react';
 import Footer from './components/Footer';
 // Enhanced Components
@@ -195,4 +161,3 @@ const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ d
   );
 }
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

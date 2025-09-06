@@ -1,15 +1,4 @@
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/api-disabled/contact.ts
-export {};
 module.exports = {};
-module.exports = {};
-module.exports = {};
-module.exports = {};
-=======
-module.exports = {};
-<<<<<<< HEAD
-module.exports = {};
-module.exports = {};
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:api-disabled/contact.ts
 module.exports = {};

@@ -1,91 +1,4 @@
-<<<<<<< HEAD:data/specialized-emerging-tech-services-2025.ts
-
-
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: ServiceVariant;
-  contact_info: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  }
-
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-
-  customers: number;
-  rating: number;
-  reviews: number;
-  benefits: string[];
-  capabilities: string[];
-        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
-    }
-        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
-    },;
-  ];    description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.';
-
-  market_advantage: string;
-;
-
-const contact = {
-
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup && ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-
-    features: [
-      'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications';
-      'Advanced pattern recognitionCustom neuromorphic algorithms'
-    ];
-    technology: ['Neuromorphic Computing, Spiking Neural Networks, Python, Custom algorithms'];
-    integrations: ['Intel Loihi, IBM TrueNorth, Custom neuromorphic hardware, Robotics platforms'];
-    useCases: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'], roi: 'Average 700% ROI through energy efficiency and cognitive capabilities'
-    competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision'];
-
-    popular: true, icon: '🧠',
-
-  }
-];
-;
-    marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth'
-    variant: 'ai-futuristic', contactInfo: contact
-    realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities'
-    launchDate: '2024-02-15', customers: 45
-    rating: 4.8, reviews: 34
-    benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']
-    marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
-  }
-];
-
-import { ServiceVariant } from '../types/service-variants',;
-=======
 import { ServiceVariant } from '../types/service-variants';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/specialized-emerging-tech-services-2025.ts
 export interface SpecializedEmergingTechService {;
   id: string;
   name: string;
@@ -153,15 +66,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     period: '/month';
     description: 'Advanced AR/VR platform that enables businesses to create immersive experiences, develop metaverse applications, and engage customers in virtual environments.';
     features: [;
-<<<<<<< HEAD:data/specialized-emerging-tech-services-2025.ts
-    ];
-
-    popular: true, icon: '🧠',
-
-      'AR/VR content creation and managementMetaverse development tools and SDKs3D modeling and animation capabilitiesMulti-platform deployment (VR headsets, mobile AR, web)Real-time collaboration in virtual spacesAI-powered content generationAnalytics and user behavior trackingIntegration with major VR/AR hardware',;
-=======
       'AR/VR content creation and managementMetaverse development tools and SDKs3D modeling and animation capabilitiesMulti-platform deployment (VR headsets, mobile AR, web)Real-time collaboration in virtual spacesAI-powered content generationAnalytics and user behavior trackingIntegration with major VR/AR hardware';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:corrupted_backup/specialized-emerging-tech-services-2025.ts
       'Custom avatar and environment creationE-commerce integration for virtual stores';
     ];
     popular: true;

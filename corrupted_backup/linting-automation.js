@@ -1,11 +1,3 @@
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:automation/linting-automation.js
-=======
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
 import fs from 'fs')
@@ -102,18 +94,8 @@ class LintingAutomation {}
   }
   getRecentFiles() {}
     const recentFiles = [];,
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD:automation/linting-automation.js
->>>>>>> main
-=======
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
-=======
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
 #!/usr/bin/env node;
@@ -144,14 +126,6 @@ class LintingAutomation {
     const logMessage = `[${timestamp}] ${message}\n`;
     fs.appendFileSync(this.logFile, logMessage);
   }
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:automation/linting-automation.js
-=======
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
   log(message) {
@@ -160,18 +134,8 @@ class LintingAutomation {
     const logMessage = `[${timestamp}] ${message}\;n;`;
     );
     fs.appendFileSync(this.logFile, logMessage)}
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD:automation/linting-automation.js
->>>>>>> main
-=======
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
-=======
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
 ursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -181,14 +145,6 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       const startTime = Date.now();
       // Run linting;
       const lintOutput = execSync('npm run lint', { 
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:automation/linting-automation.js
-=======
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
         cwd: this.projectRoot,
@@ -199,18 +155,8 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
         encoding: 'utf8'
         timeout: 60000;
       };);
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD:automation/linting-automation.js
->>>>>>> main
-=======
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
-=======
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
 "cwd": this.projectRoot,
@@ -230,32 +176,14 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       this.log(`Linting completed successfully in ${lintTime}ms`);
       await this.saveLintReport()} catch (error) {
       this.log(`Linting "failed": ${error.message}`);
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:automation/linting-automation.js
-=======
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
       // Parse linting output to count errors and warnings;
       const output = error.stdout || error.stderr || ;';';
       const errorCount = (output.match(/error/g) || []).lengt;h;
       const warningCount = (output.match(/warning/g) || []).lengt;h;
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD:automation/linting-automation.js
->>>>>>> main
-=======
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
-=======
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
 // Parse linting output to count errors and warnings
@@ -278,15 +206,6 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
     try {
       // Try to auto-fix linting issues;
       this.log('Attempting to auto-fix linting issues...');
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:automation/linting-automation.js
-      const fixOutput = execSync('npm run "lint": fix', { 
-=======
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
       const fixOutput = execSync('npm run lint:fix', { 
@@ -299,18 +218,10 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
         encoding: 'utf8'
         timeout: 120000;
       };);
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD:automation/linting-automation.js
->>>>>>> main
-=======
       const fixOutput = execSync('npm run "lint": fix', { 
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
       const fixOutput = execSync('npm run "lint": fix', { 
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
       const fixOutput = execSync('npm run "lint": fix', { 
       const fixOutput = execSync('npm run "lint": fix', { 
@@ -323,14 +234,6 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       this.log('Auto-fix applied');
       // Run linting again to check if issues were resolved;
       const recheckOutput = execSync('npm run lint', { 
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:automation/linting-automation.js
-=======
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
         cwd: this.projectRoot,
@@ -341,18 +244,8 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
         encoding: 'utf8'
         timeout: 60000;
       };);
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD:automation/linting-automation.js
->>>>>>> main
-=======
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
-=======
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
 "cwd": this.projectRoot,
@@ -370,30 +263,10 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       "lastLint": this.lastLint;
       projectRoot: this.projectRoot;
       eslintConfig: this.getEslintConfig()
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-   ; ;};
-   };
-========
-<<<<<<< HEAD:automation/linting-automation.js
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
    ; ;};
    };
 >>>>>>> main
-=======
-<<<<<<< HEAD:automation/linting-automation.js
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
 };ursor/migrate-github-actions-to-pm2-and-clean-up-5599
@@ -401,14 +274,6 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   }
   getEslintConfig() {
     try {
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:automation/linting-automation.js
-=======
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
       const configPath = path.join(this.projectRoot, 'eslint.config.js';);
@@ -420,18 +285,8 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
           exists: true,
           path: configPath,
           size: fs.statSync(configPath).size
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD:automation/linting-automation.js
->>>>>>> main
-=======
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
-=======
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
         return {}
@@ -442,15 +297,6 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
     } catch (error) {
       // Ignore errors;
     }
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:automation/linting-automation.js
-    
-=======
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
     return { exists: false ;}}
@@ -461,18 +307,10 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       stack: error.stack,
       projectRoot: this.projectRoot
    ; ;};
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD:automation/linting-automation.js
->>>>>>> main
-=======
     
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
     
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
     
     
@@ -486,68 +324,11 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       stack: error.stack;
       projectRoot: this.projectRoot;
    };
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:automation/linting-automation.js
-    
-    
-=======
 >>>>>>> main
-=======
     
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
     
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-<<<<<<< HEAD
->>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
-    
-    
-    
-    
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
-const configPath = path.join(this.projectRoot, 'eslint.config.js');
-      if (!fs.existsSync(configPath)) {
-        return {
-          "exists": false,
-          "path": configPath
-        };
-      }
-      return {
-        "exists": true,
-        "path": configPath,
-        "size": fs.statSync(configPath).size
-      };ursor/migrate-github-actions-to-pm2-and-clean-up-5599
-    } catch (error) {
-      // Ignore errors;
-    }
-return { "exists": false };
-  }
-  async reportLintingFailure(error) {
-    const failureReport = {
-      "timestamp": new Date().toISOString(),
-      "error": error.message,
-      "stack": error.stack,
-      "projectRoot": this.projectRoot
-    };ursor/migrate-github-actions-to-pm2-and-clean-up-5599
-    const failureFile = path.join(this.projectRoot, 'automation/logs/linting-failure-report.json');
-    fs.writeFileSync(failureFile, JSON.stringify(failureReport, null, 2));
-    this.log('Linting failure reported');
-  }
-  async checkFileChanges() {
-    try {
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:automation/linting-automation.js
-=======
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
       // Check for recently modified files that might need linting;
@@ -558,18 +339,8 @@ return { "exists": false };
         this.log(`Found ${filesToCheck.length} recently modified files, running linting...`);
   }
         await this.runLinting()}
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD:automation/linting-automation.js
->>>>>>> main
-=======
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
-=======
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
 // Check for recently modified files that might need linting
@@ -583,15 +354,6 @@ return { "exists": false };
     }
   }
   getRecentFiles() {
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:automation/linting-automation.js
-    const recentFiles = [];
-=======
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
     const recentFiles = [;];
@@ -617,18 +379,10 @@ return { "exists": false };
               return stats.mtime.getTime() > cutoffTime;} catch {
               return false;}
           }))}
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD:automation/linting-automation.js
->>>>>>> main
-=======
     const recentFiles = [];
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
     const recentFiles = [];
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
     const recentFiles = [];
     const recentFiles = [];
@@ -655,24 +409,10 @@ const cutoffTime = Date.now() - 60000; // 1 minute ago
     } catch (error) {
       // Ignore errors;
     }
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
     return recentFiles;}
     return recentFiles}
-========
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:automation/linting-automation.js
-    return recentFiles}
-    return recentFiles}
-=======
     return recentFiles;}
     return recentFiles}
-=======
-    return recentFiles;}
-    return recentFiles}
-<<<<<<< HEAD
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
   getFilesInDirectory(dir, fileList = []) {}
@@ -681,23 +421,10 @@ const cutoffTime = Date.now() - 60000; // 1 minute ago
       for (const file of, files) {}
         const filePath = path.join(dir, file);,
         const stat = fs.statSync(filePath);,
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-    return recentFiles}
-    return recentFiles}
-========
-<<<<<<< HEAD:automation/linting-automation.js
->>>>>>> main
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
-=======
     return recentFiles}
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
     return recentFiles}
-<<<<<<< HEAD:automation/linting-automation.js
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
     return recentFiles}
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
@@ -709,32 +436,11 @@ return recentFiles;
       for (const file of files) {
         const filePath = path.join(dir, file);
         const stat = fs.statSync(filePath);
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-        if () {
-          this.getFilesInDirectory(filePath, fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
-          fileList.push(filePath)}
-========
-<<<<<<< HEAD:automation/linting-automation.js
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         if () {
           this.getFilesInDirectory(filePath, fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
           fileList.push(filePath)}
 >>>>>>> main
-=======
-<<<<<<< HEAD:automation/linting-automation.js
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
 if (stat.isDirectory()) {
@@ -746,15 +452,6 @@ if (stat.isDirectory()) {
     } catch (error) {
       // Ignore errors;
     }
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:automation/linting-automation.js
-    
-=======
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
     return fileList) {
@@ -771,15 +468,6 @@ if (stat.isDirectory()) {
     this.isRunning = true;
     this.log('Linting Automation started');
     return fileList}}
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-    
-========
-<<<<<<< HEAD:automation/linting-automation.js
->>>>>>> main
-=======
-<<<<<<< HEAD
-    
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
   async start() {}
@@ -796,26 +484,13 @@ if (stat.isDirectory()) {
         await this.checkFileChanges()}
     }, this.lintInterval);
   }
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD:automation/linting-automation.js
-<<<<<<< HEAD
-    return fileList}}
-    
-    return fileList}}
-    
-=======
 >>>>>>> main
-=======
     return fileList}}
     
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
     return fileList}}
     
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
     return fileList}}
     
@@ -841,35 +516,14 @@ automation.start().catch(error => {}),
   _console.error('Failed to start linting "automation": ', error);',
   process.exit(1);
 });,
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-;
-========
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:automation/linting-automation.js
-=======
-<<<<<<< HEAD
-=======;
 >>>>>>> bda99e5abd16efb90ee02549943231847392138b
-=======
 ;
 >>>>>>> main
 >>>>>>> main
-=======
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-<<<<<<< HEAD
-=======;
-=======
 ;
-=======
-=======
-=======;
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
 return fileList;
@@ -899,30 +553,10 @@ if (this.isRunning) {
     });
   }
 }
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-// Start the linting automation;
-const automation = new LintingAutomation;(;);
-========
-<<<<<<< HEAD:automation/linting-automation.js
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 // Start the linting automation;
 const automation = new LintingAutomation;(;);
 >>>>>>> main
-=======
-<<<<<<< HEAD:automation/linting-automation.js
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
-=======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/linting-automation.js
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
 // Start the linting automation
@@ -933,18 +567,10 @@ automation.start().catch(error => {
 });
 #!/usr/bin/env node;  const fs = require('fs') const path = require('path') const { execSync } =  import fs from 'fs') import path from 'path') const { execSync } = require('child_process'); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 class LintingAutomation { constructor() { this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot,'automation/logs/linting-automation.log'); this.lintReportFile = path.join(this.projectRoot,'automation/logs/lint-report.json'); this.lastLint = null; this.lintInterval = 60000; this.isRunning = false; this.setupLogging(); this.log('Linting Automation started')} setupLogging() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)}   log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message}\;n;`; console.log(logMessage.trim();); fs.appendFileSync(this.logFile,logMessage)} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 async runLinting() { try { this.log('Running linting check...'); const startTime = Date.now(); const lintOutput = execSync('npm run lint',{  cwd: this.projectRoot,encoding: 'utf8',timeout: 60000 });  cwd: this.projectRoot; encoding: 'utf8' timeout: 60000};); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 const endTime = Date.now(); const lintTime = endTime - startTime; this.lastLint = { timestamp: new Date().toISOString() success: true; lintTime: lintTime; output: lintOutput; errors: 0; warnings: 0}; this.log(`Linting completed successfully in ${lintTime}ms`); await this.saveLintReport()} catch (error) { this.log(`Linting failed: ${error.message}`);  const output = error.stdout || error.stderr || ''; const errorCount = (output.match(/error/g) || []).length; const warningCount = (output.match(/warning/g) || []).length;  const output = error.stdout || error.stderr || ;';'; const errorCount = (output.match(/error/g) || []).lengt;h; const warningCount = (output.match(/warning/g) || []).lengt;h; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 this.lastLint = { timestamp: new Date().toISOString() success: false; error: error.message; output: output; errors: errorCount; warnings: warningCount}; await this.saveLintReport(); await this.handleLintingFailure(error)} } async handleLintingFailure(error) { this.log('Handling linting failure...'); try { this.log('Attempting to auto-fix linting issues...'); const fixOutput = execSync('npm run lint:fix',{  cwd: this.projectRoot,encoding: 'utf8',timeout: 120000 });  cwd: this.projectRoot; encoding: 'utf8' timeout: 120000};); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 this.log('Auto-fix applied'); const recheckOutput = execSync('npm run lint',{  cwd: this.projectRoot,encoding: 'utf8',timeout: 60000 });  cwd: this.projectRoot; encoding: 'utf8' timeout: 60000};); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 this.log('Linting issues resolved')} catch (fixError) { this.log(`Failed to fix linting issues: ${fixError.message}`); await this.reportLintingFailure(fixError)} } async saveLintReport() { const report = { lastLint: this.lastLint; projectRoot: this.projectRoot; eslintConfig: this.getEslintConfig()  };  }; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 fs.writeFileSync(this.lintReportFile,JSON.stringify(report,null,2))} getEslintConfig() { try {  const configPath = path.join(this.projectRoot,'eslint.config.js'); if (!fs.existsSync(configPath)) { return { exists: false,path: configPath }} return { exists: true,path: configPath,size: fs.statSync(configPath).size };  const configPath = path.join(this.projectRoot,'eslint.config.js';); if () { return {) { ) { return {} exists: true; path: configPath; size: fs.statSync(configPath).size}} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } catch (error) { }  return { exists: false }} async reportLintingFailure(error) { const failureReport = { timestamp: new Date().toISOString(),error: error.message,stack: error.stack,projectRoot: this.projectRoot };  return { exists: false }} async reportLintingFailure(error) { const failureReport = { timestamp: new Date().toISOString() error: error.message; stack: error.stack; projectRoot: this.projectRoot}; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 const failureFile = path.join(this.projectRoot,'automation/logs/linting-failure-report.json'); fs.writeFileSync(failureFile,JSON.stringify(failureReport,null,2)); this.log('Linting failure reported')} async checkFileChanges() { try {  const filesToCheck = this.getRecentFiles(); if (filesToCheck.length > 0) { this.log(`Found ${filesToCheck.length} recently modified files,running linting...`); await this.runLinting()}  const filesToCheck = this.getRecentFiles(;); if ( { this.log(`Found ${filesToCheck.length} recently modified files,running linting...`)) { { this.log(`Found ${filesToCheck.length} recently modified files,running linting...`)} await this.runLinting()} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } catch (error) { this.log(`File change check failed: ${error.message}`)} } getRecentFiles() { const recentFiles = [];  const cutoffTime = Date.now() - 60000; try { const sourceDirs = ['pages','components','lib','hooks','utils']; for (const dir of sourceDirs) { const dirPath = path.join(this.projectRoot,dir); if (fs.existsSync(dirPath)) { const files = this.getFilesInDirectory(dirPath); recentFiles.push(...files.filter(file => { try { const stats = fs.statSync(file); return stats.mtime.getTime() > cutoffTime} catch { return false} }))}  const cutoffTime = Date.now() - 600;0;0; try { const sourceDirs = ['pages','components','lib','hooks','utils']; for (const dir of sourceDirs) { const dirPath = path.join(this.projectRoot,dir;); if () { const files = this.getFilesInDirectory(dirPath) { ) { const files = this.getFilesInDirectory(dirPath}); recentFiles.push(...files.filter(file => { try { const stats = fs.statSync(file;); return stats.mtime.getTime() > cutoffTime} catch { return false} }))} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } } catch (error) { }  return recentFiles}  return recentFiles} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 getFilesInDirectory(dir,fileList = []) { try { const files = fs.readdirSync(dir); for (const file of files) { const filePath = path.join(dir,file); const stat = fs.statSync(filePath);  if (stat.isDirectory()) { this.getFilesInDirectory(filePath,fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) { fileList.push(filePath)}  if () { this.getFilesInDirectory(filePath,fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) { fileList.push(filePath)} } } catch (error) { } return fileList) { ) { this.getFilesInDirectory(filePath,fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) { fileList.push(filePath)} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } } catch (error) { }  return fileList}  return fileList}} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 async start() { this.isRunning = true; this.log('Linting Automation started'); await this.runLinting(); setInterval(async () => {  if (this.isRunning) { await this.checkFileChanges()} },this.lintInterval)}  if ( { await this.checkFileChanges()} },this.lintInterval)) { { await this.checkFileChanges()} },this.lintInterval)} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 process.on('SIGTERM',() => { this.log('Received SIGTERM,shutting down gracefully'); this.isRunning = false; process.exit(0)}); process.on('SIGINT',() => { this.log('Received SIGINT,shutting down gracefully'); this.isRunning = false; process.exit(0)})} }  const automation = new LintingAutomation();  const automation = new LintingAutomation;(;); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 automation.start().catch(error => { console.error('Failed to start linting automation:',error); process.exit(1)});
 #!/usr/bin/env node;  const fs = require('fs') const path = require('path') const { execSync } =  import fs from 'fs') import path from 'path') const { execSync } = require('child_process'); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 class LintingAutomation { constructor() { this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot,'automation/logs/linting-automation.log'); this.lintReportFile = path.join(this.projectRoot,'automation/logs/lint-report.json'); this.lastLint = null; this.lintInterval = 60000; this.isRunning = false; this.setupLogging(); this.log('Linting Automation started')} setupLogging() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)}   log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message}\;n;`; console.log(logMessage.trim();); fs.appendFileSync(this.logFile,logMessage)} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 async runLinting() { try { this.log('Running linting check...'); const startTime = Date.now(); const lintOutput = execSync('npm run lint',{  cwd: this.projectRoot,encoding: 'utf8',timeout: 60000 });  cwd: this.projectRoot; encoding: 'utf8' timeout: 60000};); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 const endTime = Date.now(); const lintTime = endTime - startTime; this.lastLint = { timestamp: new Date().toISOString() success: true; lintTime: lintTime; output: lintOutput; errors: 0; warnings: 0}; this.log(`Linting completed successfully in ${lintTime}ms`); await this.saveLintReport()} catch (error) { this.log(`Linting failed: ${error.message}`);  const output = error.stdout || error.stderr || ''; const errorCount = (output.match(/error/g) || []).length; const warningCount = (output.match(/warning/g) || []).length;  const output = error.stdout || error.stderr || ;';'; const errorCount = (output.match(/error/g) || []).lengt;h; const warningCount = (output.match(/warning/g) || []).lengt;h; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 this.lastLint = { timestamp: new Date().toISOString() success: false; error: error.message; output: output; errors: errorCount; warnings: warningCount}; await this.saveLintReport(); await this.handleLintingFailure(error)} } async handleLintingFailure(error) { this.log('Handling linting failure...'); try { this.log('Attempting to auto-fix linting issues...'); const fixOutput = execSync('npm run lint:fix',{  cwd: this.projectRoot,encoding: 'utf8',timeout: 120000 });  cwd: this.projectRoot; encoding: 'utf8' timeout: 120000};); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 this.log('Auto-fix applied'); const recheckOutput = execSync('npm run lint',{  cwd: this.projectRoot,encoding: 'utf8',timeout: 60000 });  cwd: this.projectRoot; encoding: 'utf8' timeout: 60000};); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 this.log('Linting issues resolved')} catch (fixError) { this.log(`Failed to fix linting issues: ${fixError.message}`); await this.reportLintingFailure(fixError)} } async saveLintReport() { const report = { lastLint: this.lastLint; projectRoot: this.projectRoot; eslintConfig: this.getEslintConfig()  };  }; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 fs.writeFileSync(this.lintReportFile,JSON.stringify(report,null,2))} getEslintConfig() { try {  const configPath = path.join(this.projectRoot,'eslint.config.js'); if (!fs.existsSync(configPath)) { return { exists: false,path: configPath }} return { exists: true,path: configPath,size: fs.statSync(configPath).size };  const configPath = path.join(this.projectRoot,'eslint.config.js';); if () { return {) { ) { return {} exists: true; path: configPath; size: fs.statSync(configPath).size}} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } catch (error) { }  return { exists: false }} async reportLintingFailure(error) { const failureReport = { timestamp: new Date().toISOString(),error: error.message,stack: error.stack,projectRoot: this.projectRoot };  return { exists: false }} async reportLintingFailure(error) { const failureReport = { timestamp: new Date().toISOString() error: error.message; stack: error.stack; projectRoot: this.projectRoot}; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 const failureFile = path.join(this.projectRoot,'automation/logs/linting-failure-report.json'); fs.writeFileSync(failureFile,JSON.stringify(failureReport,null,2)); this.log('Linting failure reported')} async checkFileChanges() { try {  const filesToCheck = this.getRecentFiles(); if (filesToCheck.length > 0) { this.log(`Found ${filesToCheck.length} recently modified files,running linting...`); await this.runLinting()}  const filesToCheck = this.getRecentFiles(;); if ( { this.log(`Found ${filesToCheck.length} recently modified files,running linting...`)) { { this.log(`Found ${filesToCheck.length} recently modified files,running linting...`)} await this.runLinting()} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } catch (error) { this.log(`File change check failed: ${error.message}`)} } getRecentFiles() { const recentFiles = [];  const cutoffTime = Date.now() - 60000; try { const sourceDirs = ['pages','components','lib','hooks','utils']; for (const dir of sourceDirs) { const dirPath = path.join(this.projectRoot,dir); if (fs.existsSync(dirPath)) { const files = this.getFilesInDirectory(dirPath); recentFiles.push(...files.filter(file => { try { const stats = fs.statSync(file); return stats.mtime.getTime() > cutoffTime} catch { return false} }))}  const cutoffTime = Date.now() - 600;0;0; try { const sourceDirs = ['pages','components','lib','hooks','utils']; for (const dir of sourceDirs) { const dirPath = path.join(this.projectRoot,dir;); if () { const files = this.getFilesInDirectory(dirPath) { ) { const files = this.getFilesInDirectory(dirPath}); recentFiles.push(...files.filter(file => { try { const stats = fs.statSync(file;); return stats.mtime.getTime() > cutoffTime} catch { return false} }))} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } } catch (error) { }  return recentFiles}  return recentFiles} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 getFilesInDirectory(dir,fileList = []) { try { const files = fs.readdirSync(dir); for (const file of files) { const filePath = path.join(dir,file); const stat = fs.statSync(filePath);  if (stat.isDirectory()) { this.getFilesInDirectory(filePath,fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) { fileList.push(filePath)}  if () { this.getFilesInDirectory(filePath,fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) { fileList.push(filePath)} } } catch (error) { } return fileList) { ) { this.getFilesInDirectory(filePath,fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) { fileList.push(filePath)} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } } catch (error) { }  return fileList}  return fileList}} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 async start() { this.isRunning = true; this.log('Linting Automation started'); await this.runLinting(); setInterval(async () => {  if (this.isRunning) { await this.checkFileChanges()} },this.lintInterval)}  if ( { await this.checkFileChanges()} },this.lintInterval)) { { await this.checkFileChanges()} },this.lintInterval)} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 process.on('SIGTERM',() => { this.log('Received SIGTERM,shutting down gracefully'); this.isRunning = false; process.exit(0)}); process.on('SIGINT',() => { this.log('Received SIGINT,shutting down gracefully'); this.isRunning = false; process.exit(0)})} }  const automation = new LintingAutomation();  const automation = new LintingAutomation;(;); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 automation.start().catch(error => { console.error('Failed to start linting automation:',error); process.exit(1)});
-<<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/linting-automation.js
-========
-<<<<<<< HEAD:automation/linting-automation.js
->>>>>>> main
-=======
 #!/usr/bin/env node;  const fs = require('fs') const path = require('path') const { execSync } =  import fs from 'fs') import path from 'path') const { execSync } = require('child_process'); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 class LintingAutomation { constructor() { this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot,'automation/logs/linting-automation.log'); this.lintReportFile = path.join(this.projectRoot,'automation/logs/lint-report.json'); this.lastLint = null; this.lintInterval = 60000; this.isRunning = false; this.setupLogging(); this.log('Linting Automation started')} setupLogging() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)}   log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message}\;n;`; console.log(logMessage.trim();); fs.appendFileSync(this.logFile,logMessage)} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 async runLinting() { try { this.log('Running linting check...'); const startTime = Date.now(); const lintOutput = execSync('npm run lint',{  cwd: this.projectRoot,encoding: 'utf8',timeout: 60000 });  cwd: this.projectRoot; encoding: 'utf8' timeout: 60000};); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 const endTime = Date.now(); const lintTime = endTime - startTime; this.lastLint = { timestamp: new Date().toISOString() success: true; lintTime: lintTime; output: lintOutput; errors: 0; warnings: 0}; this.log(`Linting completed successfully in ${lintTime}ms`); await this.saveLintReport()} catch (error) { this.log(`Linting failed: ${error.message}`);  const output = error.stdout || error.stderr || ''; const errorCount = (output.match(/error/g) || []).length; const warningCount = (output.match(/warning/g) || []).length;  const output = error.stdout || error.stderr || ;';'; const errorCount = (output.match(/error/g) || []).lengt;h; const warningCount = (output.match(/warning/g) || []).lengt;h; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 this.lastLint = { timestamp: new Date().toISOString() success: false; error: error.message; output: output; errors: errorCount; warnings: warningCount}; await this.saveLintReport(); await this.handleLintingFailure(error)} } async handleLintingFailure(error) { this.log('Handling linting failure...'); try { this.log('Attempting to auto-fix linting issues...'); const fixOutput = execSync('npm run lint:fix',{  cwd: this.projectRoot,encoding: 'utf8',timeout: 120000 });  cwd: this.projectRoot; encoding: 'utf8' timeout: 120000};); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 this.log('Auto-fix applied'); const recheckOutput = execSync('npm run lint',{  cwd: this.projectRoot,encoding: 'utf8',timeout: 60000 });  cwd: this.projectRoot; encoding: 'utf8' timeout: 60000};); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 this.log('Linting issues resolved')} catch (fixError) { this.log(`Failed to fix linting issues: ${fixError.message}`); await this.reportLintingFailure(fixError)} } async saveLintReport() { const report = { lastLint: this.lastLint; projectRoot: this.projectRoot; eslintConfig: this.getEslintConfig()  };  }; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 fs.writeFileSync(this.lintReportFile,JSON.stringify(report,null,2))} getEslintConfig() { try {  const configPath = path.join(this.projectRoot,'eslint.config.js'); if (!fs.existsSync(configPath)) { return { exists: false,path: configPath }} return { exists: true,path: configPath,size: fs.statSync(configPath).size };  const configPath = path.join(this.projectRoot,'eslint.config.js';); if () { return {) { ) { return {} exists: true; path: configPath; size: fs.statSync(configPath).size}} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } catch (error) { }  return { exists: false }} async reportLintingFailure(error) { const failureReport = { timestamp: new Date().toISOString(),error: error.message,stack: error.stack,projectRoot: this.projectRoot };  return { exists: false }} async reportLintingFailure(error) { const failureReport = { timestamp: new Date().toISOString() error: error.message; stack: error.stack; projectRoot: this.projectRoot}; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 const failureFile = path.join(this.projectRoot,'automation/logs/linting-failure-report.json'); fs.writeFileSync(failureFile,JSON.stringify(failureReport,null,2)); this.log('Linting failure reported')} async checkFileChanges() { try {  const filesToCheck = this.getRecentFiles(); if (filesToCheck.length > 0) { this.log(`Found ${filesToCheck.length} recently modified files,running linting...`); await this.runLinting()}  const filesToCheck = this.getRecentFiles(;); if ( { this.log(`Found ${filesToCheck.length} recently modified files,running linting...`)) { { this.log(`Found ${filesToCheck.length} recently modified files,running linting...`)} await this.runLinting()} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } catch (error) { this.log(`File change check failed: ${error.message}`)} } getRecentFiles() { const recentFiles = [];  const cutoffTime = Date.now() - 60000; try { const sourceDirs = ['pages','components','lib','hooks','utils']; for (const dir of sourceDirs) { const dirPath = path.join(this.projectRoot,dir); if (fs.existsSync(dirPath)) { const files = this.getFilesInDirectory(dirPath); recentFiles.push(...files.filter(file => { try { const stats = fs.statSync(file); return stats.mtime.getTime() > cutoffTime} catch { return false} }))}  const cutoffTime = Date.now() - 600;0;0; try { const sourceDirs = ['pages','components','lib','hooks','utils']; for (const dir of sourceDirs) { const dirPath = path.join(this.projectRoot,dir;); if () { const files = this.getFilesInDirectory(dirPath) { ) { const files = this.getFilesInDirectory(dirPath}); recentFiles.push(...files.filter(file => { try { const stats = fs.statSync(file;); return stats.mtime.getTime() > cutoffTime} catch { return false} }))} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } } catch (error) { }  return recentFiles}  return recentFiles} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 getFilesInDirectory(dir,fileList = []) { try { const files = fs.readdirSync(dir); for (const file of files) { const filePath = path.join(dir,file); const stat = fs.statSync(filePath);  if (stat.isDirectory()) { this.getFilesInDirectory(filePath,fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) { fileList.push(filePath)}  if () { this.getFilesInDirectory(filePath,fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) { fileList.push(filePath)} } } catch (error) { } return fileList) { ) { this.getFilesInDirectory(filePath,fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) { fileList.push(filePath)} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } } catch (error) { }  return fileList}  return fileList}} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 async start() { this.isRunning = true; this.log('Linting Automation started'); await this.runLinting(); setInterval(async () => {  if (this.isRunning) { await this.checkFileChanges()} },this.lintInterval)}  if ( { await this.checkFileChanges()} },this.lintInterval)) { { await this.checkFileChanges()} },this.lintInterval)} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 process.on('SIGTERM',() => { this.log('Received SIGTERM,shutting down gracefully'); this.isRunning = false; process.exit(0)}); process.on('SIGINT',() => { this.log('Received SIGINT,shutting down gracefully'); this.isRunning = false; process.exit(0)})} }  const automation = new LintingAutomation();  const automation = new LintingAutomation;(;); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 automation.start().catch(error => { console.error('Failed to start linting automation:',error); process.exit(1)});
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 #!/usr/bin/env node;  const fs = require('fs') const path = require('path') const { execSync } =  import fs from 'fs') import path from 'path') const { execSync } = require('child_process'); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 class LintingAutomation { constructor() { this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot,'automation/logs/linting-automation.log'); this.lintReportFile = path.join(this.projectRoot,'automation/logs/lint-report.json'); this.lastLint = null; this.lintInterval = 60000; this.isRunning = false; this.setupLogging(); this.log('Linting Automation started')} setupLogging() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)}   log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message}\;n;`; console.log(logMessage.trim();); fs.appendFileSync(this.logFile,logMessage)} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 async runLinting() { try { this.log('Running linting check...'); const startTime = Date.now(); const lintOutput = execSync('npm run lint',{  cwd: this.projectRoot,encoding: 'utf8',timeout: 60000 });  cwd: this.projectRoot; encoding: 'utf8' timeout: 60000};); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 const endTime = Date.now(); const lintTime = endTime - startTime; this.lastLint = { timestamp: new Date().toISOString() success: true; lintTime: lintTime; output: lintOutput; errors: 0; warnings: 0}; this.log(`Linting completed successfully in ${lintTime}ms`); await this.saveLintReport()} catch (error) { this.log(`Linting failed: ${error.message}`);  const output = error.stdout || error.stderr || ''; const errorCount = (output.match(/error/g) || []).length; const warningCount = (output.match(/warning/g) || []).length;  const output = error.stdout || error.stderr || ;';'; const errorCount = (output.match(/error/g) || []).lengt;h; const warningCount = (output.match(/warning/g) || []).lengt;h; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 this.lastLint = { timestamp: new Date().toISOString() success: false; error: error.message; output: output; errors: errorCount; warnings: warningCount}; await this.saveLintReport(); await this.handleLintingFailure(error)} } async handleLintingFailure(error) { this.log('Handling linting failure...'); try { this.log('Attempting to auto-fix linting issues...'); const fixOutput = execSync('npm run lint:fix',{  cwd: this.projectRoot,encoding: 'utf8',timeout: 120000 });  cwd: this.projectRoot; encoding: 'utf8' timeout: 120000};); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 this.log('Auto-fix applied'); const recheckOutput = execSync('npm run lint',{  cwd: this.projectRoot,encoding: 'utf8',timeout: 60000 });  cwd: this.projectRoot; encoding: 'utf8' timeout: 60000};); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 this.log('Linting issues resolved')} catch (fixError) { this.log(`Failed to fix linting issues: ${fixError.message}`); await this.reportLintingFailure(fixError)} } async saveLintReport() { const report = { lastLint: this.lastLint; projectRoot: this.projectRoot; eslintConfig: this.getEslintConfig()  };  }; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 fs.writeFileSync(this.lintReportFile,JSON.stringify(report,null,2))} getEslintConfig() { try {  const configPath = path.join(this.projectRoot,'eslint.config.js'); if (!fs.existsSync(configPath)) { return { exists: false,path: configPath }} return { exists: true,path: configPath,size: fs.statSync(configPath).size };  const configPath = path.join(this.projectRoot,'eslint.config.js';); if () { return {) { ) { return {} exists: true; path: configPath; size: fs.statSync(configPath).size}} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } catch (error) { }  return { exists: false }} async reportLintingFailure(error) { const failureReport = { timestamp: new Date().toISOString(),error: error.message,stack: error.stack,projectRoot: this.projectRoot };  return { exists: false }} async reportLintingFailure(error) { const failureReport = { timestamp: new Date().toISOString() error: error.message; stack: error.stack; projectRoot: this.projectRoot}; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 const failureFile = path.join(this.projectRoot,'automation/logs/linting-failure-report.json'); fs.writeFileSync(failureFile,JSON.stringify(failureReport,null,2)); this.log('Linting failure reported')} async checkFileChanges() { try {  const filesToCheck = this.getRecentFiles(); if (filesToCheck.length > 0) { this.log(`Found ${filesToCheck.length} recently modified files,running linting...`); await this.runLinting()}  const filesToCheck = this.getRecentFiles(;); if ( { this.log(`Found ${filesToCheck.length} recently modified files,running linting...`)) { { this.log(`Found ${filesToCheck.length} recently modified files,running linting...`)} await this.runLinting()} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } catch (error) { this.log(`File change check failed: ${error.message}`)} } getRecentFiles() { const recentFiles = [];  const cutoffTime = Date.now() - 60000; try { const sourceDirs = ['pages','components','lib','hooks','utils']; for (const dir of sourceDirs) { const dirPath = path.join(this.projectRoot,dir); if (fs.existsSync(dirPath)) { const files = this.getFilesInDirectory(dirPath); recentFiles.push(...files.filter(file => { try { const stats = fs.statSync(file); return stats.mtime.getTime() > cutoffTime} catch { return false} }))}  const cutoffTime = Date.now() - 600;0;0; try { const sourceDirs = ['pages','components','lib','hooks','utils']; for (const dir of sourceDirs) { const dirPath = path.join(this.projectRoot,dir;); if () { const files = this.getFilesInDirectory(dirPath) { ) { const files = this.getFilesInDirectory(dirPath}); recentFiles.push(...files.filter(file => { try { const stats = fs.statSync(file;); return stats.mtime.getTime() > cutoffTime} catch { return false} }))} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } } catch (error) { }  return recentFiles}  return recentFiles} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 getFilesInDirectory(dir,fileList = []) { try { const files = fs.readdirSync(dir); for (const file of files) { const filePath = path.join(dir,file); const stat = fs.statSync(filePath);  if (stat.isDirectory()) { this.getFilesInDirectory(filePath,fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) { fileList.push(filePath)}  if () { this.getFilesInDirectory(filePath,fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) { fileList.push(filePath)} } } catch (error) { } return fileList) { ) { this.getFilesInDirectory(filePath,fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) { fileList.push(filePath)} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } } catch (error) { }  return fileList}  return fileList}} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 async start() { this.isRunning = true; this.log('Linting Automation started'); await this.runLinting(); setInterval(async () => {  if (this.isRunning) { await this.checkFileChanges()} },this.lintInterval)}  if ( { await this.checkFileChanges()} },this.lintInterval)) { { await this.checkFileChanges()} },this.lintInterval)} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 process.on('SIGTERM',() => { this.log('Received SIGTERM,shutting down gracefully'); this.isRunning = false; process.exit(0)}); process.on('SIGINT',() => { this.log('Received SIGINT,shutting down gracefully'); this.isRunning = false; process.exit(0)})} }  const automation = new LintingAutomation();  const automation = new LintingAutomation;(;); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 automation.start().catch(error => { console.error('Failed to start linting automation:',error); process.exit(1)});
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
 >>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:corrupted_backup/linting-automation.js
 #!/usr/bin/env node;  const fs = require('fs') const path = require('path') const { execSync } =  import fs from 'fs') import path from 'path') const { execSync } = require('child_process'); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 class LintingAutomation { constructor() { this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot,'automation/logs/linting-automation.log'); this.lintReportFile = path.join(this.projectRoot,'automation/logs/lint-report.json'); this.lastLint = null; this.lintInterval = 60000; this.isRunning = false; this.setupLogging(); this.log('Linting Automation started')} setupLogging() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)}   log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message}\;n;`; console.log(logMessage.trim();); fs.appendFileSync(this.logFile,logMessage)} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 async runLinting() { try { this.log('Running linting check...'); const startTime = Date.now(); const lintOutput = execSync('npm run lint',{  cwd: this.projectRoot,encoding: 'utf8',timeout: 60000 });  cwd: this.projectRoot; encoding: 'utf8' timeout: 60000};); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 const endTime = Date.now(); const lintTime = endTime - startTime; this.lastLint = { timestamp: new Date().toISOString() success: true; lintTime: lintTime; output: lintOutput; errors: 0; warnings: 0}; this.log(`Linting completed successfully in ${lintTime}ms`); await this.saveLintReport()} catch (error) { this.log(`Linting failed: ${error.message}`);  const output = error.stdout || error.stderr || ''; const errorCount = (output.match(/error/g) || []).length; const warningCount = (output.match(/warning/g) || []).length;  const output = error.stdout || error.stderr || ;';'; const errorCount = (output.match(/error/g) || []).lengt;h; const warningCount = (output.match(/warning/g) || []).lengt;h; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 this.lastLint = { timestamp: new Date().toISOString() success: false; error: error.message; output: output; errors: errorCount; warnings: warningCount}; await this.saveLintReport(); await this.handleLintingFailure(error)} } async handleLintingFailure(error) { this.log('Handling linting failure...'); try { this.log('Attempting to auto-fix linting issues...'); const fixOutput = execSync('npm run lint:fix',{  cwd: this.projectRoot,encoding: 'utf8',timeout: 120000 });  cwd: this.projectRoot; encoding: 'utf8' timeout: 120000};); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 this.log('Auto-fix applied'); const recheckOutput = execSync('npm run lint',{  cwd: this.projectRoot,encoding: 'utf8',timeout: 60000 });  cwd: this.projectRoot; encoding: 'utf8' timeout: 60000};); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 this.log('Linting issues resolved')} catch (fixError) { this.log(`Failed to fix linting issues: ${fixError.message}`); await this.reportLintingFailure(fixError)} } async saveLintReport() { const report = { lastLint: this.lastLint; projectRoot: this.projectRoot; eslintConfig: this.getEslintConfig()  };  }; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 fs.writeFileSync(this.lintReportFile,JSON.stringify(report,null,2))} getEslintConfig() { try {  const configPath = path.join(this.projectRoot,'eslint.config.js'); if (!fs.existsSync(configPath)) { return { exists: false,path: configPath }} return { exists: true,path: configPath,size: fs.statSync(configPath).size };  const configPath = path.join(this.projectRoot,'eslint.config.js';); if () { return {) { ) { return {} exists: true; path: configPath; size: fs.statSync(configPath).size}} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } catch (error) { }  return { exists: false }} async reportLintingFailure(error) { const failureReport = { timestamp: new Date().toISOString(),error: error.message,stack: error.stack,projectRoot: this.projectRoot };  return { exists: false }} async reportLintingFailure(error) { const failureReport = { timestamp: new Date().toISOString() error: error.message; stack: error.stack; projectRoot: this.projectRoot}; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 const failureFile = path.join(this.projectRoot,'automation/logs/linting-failure-report.json'); fs.writeFileSync(failureFile,JSON.stringify(failureReport,null,2)); this.log('Linting failure reported')} async checkFileChanges() { try {  const filesToCheck = this.getRecentFiles(); if (filesToCheck.length > 0) { this.log(`Found ${filesToCheck.length} recently modified files,running linting...`); await this.runLinting()}  const filesToCheck = this.getRecentFiles(;); if ( { this.log(`Found ${filesToCheck.length} recently modified files,running linting...`)) { { this.log(`Found ${filesToCheck.length} recently modified files,running linting...`)} await this.runLinting()} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } catch (error) { this.log(`File change check failed: ${error.message}`)} } getRecentFiles() { const recentFiles = [];  const cutoffTime = Date.now() - 60000; try { const sourceDirs = ['pages','components','lib','hooks','utils']; for (const dir of sourceDirs) { const dirPath = path.join(this.projectRoot,dir); if (fs.existsSync(dirPath)) { const files = this.getFilesInDirectory(dirPath); recentFiles.push(...files.filter(file => { try { const stats = fs.statSync(file); return stats.mtime.getTime() > cutoffTime} catch { return false} }))}  const cutoffTime = Date.now() - 600;0;0; try { const sourceDirs = ['pages','components','lib','hooks','utils']; for (const dir of sourceDirs) { const dirPath = path.join(this.projectRoot,dir;); if () { const files = this.getFilesInDirectory(dirPath) { ) { const files = this.getFilesInDirectory(dirPath}); recentFiles.push(...files.filter(file => { try { const stats = fs.statSync(file;); return stats.mtime.getTime() > cutoffTime} catch { return false} }))} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } } catch (error) { }  return recentFiles}  return recentFiles} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 getFilesInDirectory(dir,fileList = []) { try { const files = fs.readdirSync(dir); for (const file of files) { const filePath = path.join(dir,file); const stat = fs.statSync(filePath);  if (stat.isDirectory()) { this.getFilesInDirectory(filePath,fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) { fileList.push(filePath)}  if () { this.getFilesInDirectory(filePath,fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) { fileList.push(filePath)} } } catch (error) { } return fileList) { ) { this.getFilesInDirectory(filePath,fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) { fileList.push(filePath)} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } } catch (error) { }  return fileList}  return fileList}} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 async start() { this.isRunning = true; this.log('Linting Automation started'); await this.runLinting(); setInterval(async () => {  if (this.isRunning) { await this.checkFileChanges()} },this.lintInterval)}  if ( { await this.checkFileChanges()} },this.lintInterval)) { { await this.checkFileChanges()} },this.lintInterval)} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 process.on('SIGTERM',() => { this.log('Received SIGTERM,shutting down gracefully'); this.isRunning = false; process.exit(0)}); process.on('SIGINT',() => { this.log('Received SIGINT,shutting down gracefully'); this.isRunning = false; process.exit(0)})} }  const automation = new LintingAutomation();  const automation = new LintingAutomation;(;); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 automation.start().catch(error => { console.error('Failed to start linting automation:',error); process.exit(1)});
 #!/usr/bin/env node;  const fs = require('fs') const path = require('path') const { execSync } =  import fs from 'fs') import path from 'path') const { execSync } = require('child_process'); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 class LintingAutomation { constructor() { this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot,'automation/logs/linting-automation.log'); this.lintReportFile = path.join(this.projectRoot,'automation/logs/lint-report.json'); this.lastLint = null; this.lintInterval = 60000; this.isRunning = false; this.setupLogging(); this.log('Linting Automation started')} setupLogging() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)}   log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message}\;n;`; console.log(logMessage.trim();); fs.appendFileSync(this.logFile,logMessage)} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 async runLinting() { try { this.log('Running linting check...'); const startTime = Date.now(); const lintOutput = execSync('npm run lint',{  cwd: this.projectRoot,encoding: 'utf8',timeout: 60000 });  cwd: this.projectRoot; encoding: 'utf8' timeout: 60000};); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 const endTime = Date.now(); const lintTime = endTime - startTime; this.lastLint = { timestamp: new Date().toISOString() success: true; lintTime: lintTime; output: lintOutput; errors: 0; warnings: 0}; this.log(`Linting completed successfully in ${lintTime}ms`); await this.saveLintReport()} catch (error) { this.log(`Linting failed: ${error.message}`);  const output = error.stdout || error.stderr || ''; const errorCount = (output.match(/error/g) || []).length; const warningCount = (output.match(/warning/g) || []).length;  const output = error.stdout || error.stderr || ;';'; const errorCount = (output.match(/error/g) || []).lengt;h; const warningCount = (output.match(/warning/g) || []).lengt;h; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 this.lastLint = { timestamp: new Date().toISOString() success: false; error: error.message; output: output; errors: errorCount; warnings: warningCount}; await this.saveLintReport(); await this.handleLintingFailure(error)} } async handleLintingFailure(error) { this.log('Handling linting failure...'); try { this.log('Attempting to auto-fix linting issues...'); const fixOutput = execSync('npm run lint:fix',{  cwd: this.projectRoot,encoding: 'utf8',timeout: 120000 });  cwd: this.projectRoot; encoding: 'utf8' timeout: 120000};); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 this.log('Auto-fix applied'); const recheckOutput = execSync('npm run lint',{  cwd: this.projectRoot,encoding: 'utf8',timeout: 60000 });  cwd: this.projectRoot; encoding: 'utf8' timeout: 60000};); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 this.log('Linting issues resolved')} catch (fixError) { this.log(`Failed to fix linting issues: ${fixError.message}`); await this.reportLintingFailure(fixError)} } async saveLintReport() { const report = { lastLint: this.lastLint; projectRoot: this.projectRoot; eslintConfig: this.getEslintConfig()  };  }; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 fs.writeFileSync(this.lintReportFile,JSON.stringify(report,null,2))} getEslintConfig() { try {  const configPath = path.join(this.projectRoot,'eslint.config.js'); if (!fs.existsSync(configPath)) { return { exists: false,path: configPath }} return { exists: true,path: configPath,size: fs.statSync(configPath).size };  const configPath = path.join(this.projectRoot,'eslint.config.js';); if () { return {) { ) { return {} exists: true; path: configPath; size: fs.statSync(configPath).size}} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } catch (error) { }  return { exists: false }} async reportLintingFailure(error) { const failureReport = { timestamp: new Date().toISOString(),error: error.message,stack: error.stack,projectRoot: this.projectRoot };  return { exists: false }} async reportLintingFailure(error) { const failureReport = { timestamp: new Date().toISOString() error: error.message; stack: error.stack; projectRoot: this.projectRoot}; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 const failureFile = path.join(this.projectRoot,'automation/logs/linting-failure-report.json'); fs.writeFileSync(failureFile,JSON.stringify(failureReport,null,2)); this.log('Linting failure reported')} async checkFileChanges() { try {  const filesToCheck = this.getRecentFiles(); if (filesToCheck.length > 0) { this.log(`Found ${filesToCheck.length} recently modified files,running linting...`); await this.runLinting()}  const filesToCheck = this.getRecentFiles(;); if ( { this.log(`Found ${filesToCheck.length} recently modified files,running linting...`)) { { this.log(`Found ${filesToCheck.length} recently modified files,running linting...`)} await this.runLinting()} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } catch (error) { this.log(`File change check failed: ${error.message}`)} } getRecentFiles() { const recentFiles = [];  const cutoffTime = Date.now() - 60000; try { const sourceDirs = ['pages','components','lib','hooks','utils']; for (const dir of sourceDirs) { const dirPath = path.join(this.projectRoot,dir); if (fs.existsSync(dirPath)) { const files = this.getFilesInDirectory(dirPath); recentFiles.push(...files.filter(file => { try { const stats = fs.statSync(file); return stats.mtime.getTime() > cutoffTime} catch { return false} }))}  const cutoffTime = Date.now() - 600;0;0; try { const sourceDirs = ['pages','components','lib','hooks','utils']; for (const dir of sourceDirs) { const dirPath = path.join(this.projectRoot,dir;); if () { const files = this.getFilesInDirectory(dirPath) { ) { const files = this.getFilesInDirectory(dirPath}); recentFiles.push(...files.filter(file => { try { const stats = fs.statSync(file;); return stats.mtime.getTime() > cutoffTime} catch { return false} }))} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } } catch (error) { }  return recentFiles}  return recentFiles} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 getFilesInDirectory(dir,fileList = []) { try { const files = fs.readdirSync(dir); for (const file of files) { const filePath = path.join(dir,file); const stat = fs.statSync(filePath);  if (stat.isDirectory()) { this.getFilesInDirectory(filePath,fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) { fileList.push(filePath)}  if () { this.getFilesInDirectory(filePath,fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) { fileList.push(filePath)} } } catch (error) { } return fileList) { ) { this.getFilesInDirectory(filePath,fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) { fileList.push(filePath)} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 } } catch (error) { }  return fileList}  return fileList}} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 async start() { this.isRunning = true; this.log('Linting Automation started'); await this.runLinting(); setInterval(async () => {  if (this.isRunning) { await this.checkFileChanges()} },this.lintInterval)}  if ( { await this.checkFileChanges()} },this.lintInterval)) { { await this.checkFileChanges()} },this.lintInterval)} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 process.on('SIGTERM',() => { this.log('Received SIGTERM,shutting down gracefully'); this.isRunning = false; process.exit(0)}); process.on('SIGINT',() => { this.log('Received SIGINT,shutting down gracefully'); this.isRunning = false; process.exit(0)})} }  const automation = new LintingAutomation();  const automation = new LintingAutomation;(;); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 automation.start().catch(error => { console.error('Failed to start linting automation:',error); process.exit(1)});

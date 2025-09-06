@@ -1,9 +1,3 @@
-<<<<<<< HEAD:pages/zion-global-2025.tsx
-export { default } from './summit';
-=======
-<<<<<<< HEAD
-export { default } from './summit';
-=======
 import React from 'react';
 export default function Page() {
   return (

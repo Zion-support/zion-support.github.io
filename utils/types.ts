@@ -1,53 +1,3 @@
-<<<<<<< HEAD
-
-
-export interface Application {
-
-
-
-export interface Application {;
-  id: string;
-  name: string;
-  email: string;
-  position: string;
-  experience: number;
-  skills: string[];
-  createdAt: string;
-  updatedAt?: string;
-}
-
-export interface Application {;
-
-
-  id: string;
-  jobId: string;
-  talentSlug: string;
-  status: "applied" | "skipped" | "pending";
-  createdAtIso: string;
-}
-export type UserRole = 'admin' | 'user' | 'guest';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-export type UserRole = "admin" | "user" | "guest";
-
-
-export type UserRole = "admin" | "user" | "guest";
-
-=======
 export type JobStatus = 'New' | 'In Progress' | 'Filled' | 'Closed';
 export type Job = {;
   id: string;
@@ -94,4 +44,3 @@ export type Conversation = {;
   updatedAtIso: string;
   messages: Message[];
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

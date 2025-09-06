@@ -1,19 +1,3 @@
-<<<<<<< HEAD:pages/book-builder.tsx
-import dynamic from 'next/dynamic',;
-const BookBuilder = dynamic(() => import('../components/book/BookBuilder'), { ssr: false });
-export default function BookBuilderPage() {;
-  return <BookBuilder />;
-}
-=======
-<<<<<<< HEAD
-import dynamic from 'next/dynamic';
-const BookBuilder = dynamic(() => import('../components/book/BookBuilder'), {
-  ssr: false,
-});
-
-export default function BookBuilderPage() {
-  return <BookBuilder />;
-=======
 import React from 'react';
 export default function Page() {
   return (

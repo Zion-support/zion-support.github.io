@@ -1,54 +1,8 @@
-<<<<<<< HEAD:browserstack.config.ts
-import { defineConfig, devices } from '@playwright/test';
-export default defineConfig({;
-  testDir: 'tests/e2e';
-  use: {;
-    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000';
-    trace: 'on-first-retry'};
-  projects: [;
-    {;
-      name: 'Desktop Chrome';
-      use: {;
-        browserName: 'chromium';
-        channel: 'chrome'}
-    };
-    {;
-      name: 'Desktop Firefox';
-      use: {;
-        browserName: 'firefox'}
-    };
-    {;
-      name: 'Desktop Safari';
-      use: {;
-        browserName: 'webkit'}
-    };
-    {;
-      name: 'Mobile Chrome';
-      use: {;
-        browserName: 'chromium';
-        ...devices['Pixel 5']}
-    };
-    {;
-      name: 'Mobile Safari';
-      use: {;
-        browserName: 'webkit';
-        ...devices['iPhone 12']}
-    }
-  ];
-  reporter: [;
-    ['list'];
-    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]];
-});
-=======
 import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
   testDir: "tests/e2e",
   use: {
-<<<<<<< HEAD
-    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
-    trace: 'on-first-retry',
-=======
     baseURL: process.env.PLAYWRIGHT_BASE_URL || "http://localhost:3000",
     trace: "on-first-retry",
 >>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
@@ -57,10 +11,6 @@ export default defineConfig({
     {
       name: "Desktop Chrome",
       use: {
-<<<<<<< HEAD
-        browserName: 'chromium',
-        channel: 'chrome',
-=======
         browserName: "chromium",
         channel: "chrome",
 >>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
@@ -69,9 +19,6 @@ export default defineConfig({
     {
       name: "Desktop Firefox",
       use: {
-<<<<<<< HEAD
-        browserName: 'firefox',
-=======
         browserName: "firefox",
 >>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
       },
@@ -79,9 +26,6 @@ export default defineConfig({
     {
       name: "Desktop Safari",
       use: {
-<<<<<<< HEAD
-        browserName: 'webkit',
-=======
         browserName: "webkit",
 >>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
       },
@@ -89,10 +33,6 @@ export default defineConfig({
     {
       name: "Mobile Chrome",
       use: {
-<<<<<<< HEAD
-        browserName: 'chromium',
-        ...devices['Pixel 5'],
-=======
         browserName: "chromium",
         ...devices["Pixel 5"],
 >>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
@@ -101,10 +41,6 @@ export default defineConfig({
     {
       name: "Mobile Safari",
       use: {
-<<<<<<< HEAD
-        browserName: 'webkit',
-        ...devices['iPhone 12'],
-=======
         browserName: "webkit",
         ...devices["iPhone 12"],
 >>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
@@ -112,10 +48,6 @@ export default defineConfig({
     },
   ],
   reporter: [
-<<<<<<< HEAD
-    ['list'],
-    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }],
-=======
     ["list"],
     ["html", { outputFolder: "playwright-logs/html-report", open: "never" }],
 >>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

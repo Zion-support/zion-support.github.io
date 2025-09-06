@@ -1,29 +1,3 @@
-<<<<<<< HEAD:pages/ai-autonomous-marketing-platform.tsx
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
-export async function getStaticProps() {;
-	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } });
-}
-;
-export default function AIAutonomousMarketingPlatform(props: any) {;
-	return <ServicePage {...props} />;
-}
-;
-=======
-<<<<<<< HEAD
-import ServicePage, {
-  getStaticProps as getSlugStaticProps,
-} from './services/[slug]';
-
-export async function getStaticProps() {
-  return (getSlugStaticProps as any)({
-    params: { slug: 'ai-autonomous-marketing-platform' },
-  });
-}
-
-export default function AIAutonomousMarketingPlatform(props: any) {
-  return <ServicePage {...props} />;
-}
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';

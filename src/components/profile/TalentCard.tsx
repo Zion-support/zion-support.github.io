@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-export interface TalentCardProps {
-  talent: TalentProfile,
-  onViewProfile: (id:,  string) => void,
-  onRequestHire: (talent:,  TalentProfile) => void,
-  isSaved: boolean,
-  onToggleSave: (id: string, isSaved:,  boolean) => void,
-  isAuthenticated: boolean
-}
-=======
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
@@ -210,4 +200,3 @@ export function TalentCard({;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

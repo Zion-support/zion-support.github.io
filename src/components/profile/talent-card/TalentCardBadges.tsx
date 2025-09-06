@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-const TalentCardBadges = () => {
-  return (
-    <div>
-      {/* TalentCardBadges component */}
-    </div>
-  );
-};
-export default TalentCardBadges;
-=======
 
 import React from "react",
 import { Badge } from "@/components/ui/badge",
@@ -47,4 +36,3 @@ export function TalentCardBadges({ featured }: TalentCardBadgesProps) {;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

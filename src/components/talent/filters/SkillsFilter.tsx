@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import { ChevronDown, ChevronUp } from 'lucide-react''
-import { Button } from "@/components/ui/button","
-import { Checkbox } from "@/components/ui/checkbox";
-import { SkillsFilterProps } from "@/types/filters";
-// Common skills in AI and tech
-=======
 
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -120,4 +113,3 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

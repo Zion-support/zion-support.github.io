@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {,
-  onCountryChange: (country: CountryPricing | null,) => void
-  selectedCountry: CountryPricing | null
-}
-  // Set top/popular countries
-  useEffect(() => {
-})
-=======
 
 import { useState, useEffect } from "react",
 import { Globe } from 'lucide-react'
@@ -117,4 +108,3 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

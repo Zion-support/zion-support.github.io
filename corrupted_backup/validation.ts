@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:utils/validation.ts
-
-=======
 export const validators = {,
   email: (email: string): boolean => {,
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,

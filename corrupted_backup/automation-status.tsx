@@ -5,18 +5,6 @@ const AutomationStatus: NextPage = () => {
   return (
     <div>
       <Head>
-<<<<<<< HEAD:pages/admin/automation-status.tsx
-        <title>AutomationStatus - Zion Tech Solutions</title>
-        <meta name="description" content="AutomationStatus page" />
-      </Head>
-      
-=======
-<<<<<<< HEAD
-        <title>AutomationStatus - Zion Tech Solutions</title>
-        <meta name='description' content='AutomationStatus page' />
-      </Head>
-
-=======
         <title>Automation Status - Zion Tech Solutions</title>
         <meta name="description" content="Automation Status page" />
       </Head>

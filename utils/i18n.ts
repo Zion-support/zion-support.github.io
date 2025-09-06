@@ -1,57 +1,3 @@
-<<<<<<< HEAD
-export const supportedLocales = ["en", "pt", "es", "ar"] as const;
-
-language: 'en',
-  resolvedLanguage: 'en';
-};
-
-
-export const supported_locales = ['en', 'pt', 'es', 'ar'] as const;
-;
-export function is_rtl (locale: string): boolean {
-  return ['ar', 'he', 'fa', 'ur'].includes (locale);
-}
-export const i18n = {
-
-
-
-export function isRtl(locale: string): boolean {;
-
-  return ['ar', 'he', 'fa', 'ur'].includes(locale);
-}
-export const i18n = {
-
-
-
-
-
-  language: 'en',
-  resolved_language: 'en';
-}
-export const supportedLocales = ['en', 'pt', 'es', 'ar'] as const;
-
-
-
-export function isRtl(locale: string): boolean {
-  return ["ar", "he", "fa", "ur"].includes(locale);
-}
-export const i18n = {
-  language: "en",
-  resolvedLanguage: "en",
-};
-
-
-}
-}
-
-
-
-}
-
-
-
-
-=======
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -85,4 +31,3 @@ if (!i18n.isInitialized) {;
 }
 ;
 export default i18n;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

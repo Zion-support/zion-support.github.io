@@ -1,10 +1,3 @@
-<<<<<<< HEAD:pages/admin/source-map.tsx
-export { default } from "../dev/tree",
-export { default } from "../dev/tree";
-=======
-<<<<<<< HEAD
-export { default } from '../dev/tree';
-=======
 import React from 'react';
 export default function Page() {
   return (

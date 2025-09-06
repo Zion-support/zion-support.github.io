@@ -5,20 +5,6 @@ export default function CertificatePage() {
   const { courseId } = router.query as { courseId: string },
   if (!courseId) return null,
   return (
-<<<<<<< HEAD:pages/learn/[courseId]/certificate.tsx
-    <div className="space-y-4">
-      <h1 className="text-2xl font-semibold">Certificate</h1>
-      <CertificatePreview courseId={courseId} />
-    </div>
-  )
-}
-=======
-<<<<<<< HEAD
-    <div className='space-y-4'>
-      <h1 className='text-2xl font-semibold'>Certificate</h1>
-      <CertificatePreview courseId={courseId} />
-    </div>
-=======
     <main className="min-h-screen bg-black text-zinc-100 p-8">
       <section className="prose prose-invert max-w-3xl mx-auto">
         <h1>learn [courseId] certificate</h1>

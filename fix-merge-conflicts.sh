@@ -1,72 +1,37 @@
 #!/bin/bash
 
+# Script to fix merge conflicts by keeping HEAD version
+echo "Fixing merge conflicts..."
 
-# Script to automatically resolve merge conflicts by choosing the main branch version
-# This script removes everything from <<<<<<< HEAD to ======= and keeps everything after =======
+# Find all files with merge conflicts
+files_with_conflicts=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
 
+if [ -z "$files_with_conflicts" ]; then
+    echo "No merge conflicts found."
+    exit 0
+fi
 
-echo "Fixing merge conflicts in source files..."
+echo "Found merge conflicts in:"
+echo "$files_with_conflicts"
 
-# Find all files with merge conflicts in src and app directories
-find src app -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" -o -name "*.css" | while read file; do
-  if [ -f "$file" ] && grep -q "<<<<<<< HEAD" "$file"; then
-    echo "Fixing conflicts in: $file"
+# Process each file
+for file in $files_with_conflicts; do
+    echo "Processing $file..."
     
     # Create a backup
     cp "$file" "$file.backup"
     
-    # Remove everything from <<<<<<< HEAD to ======= (inclusive)
-    # Keep everything after ======= until >>>>>>> 
-    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
+    # Use sed to remove merge conflict markers and keep HEAD version
+    # This removes everything from <<<<<<< HEAD to ======= and from >>>>>>> to the end
+    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+    sed -i '/>>>>>>> origin\/cursor\/fix-netlify-build-and-merge-to-main-9f58/d' "$file"
     
-    # Remove the 
-    sed -i '/^>>>>>>> /d' "$file"
+    # Clean up any remaining conflict markers
+    sed -i '/<<<<<<< HEAD/d' "$file"
+    sed -i '/=======/d' "$file"
+    sed -i '/>>>>>>> origin/d' "$file"
     
-    echo "Fixed: $file"
-  fi
+    echo "Fixed $file"
 done
 
 echo "Merge conflicts fixed!"
-
-echo "Merge conflicts fixed!"
-
-echo "Merge conflicts fixed. Backups saved to /workspace/backup-merge-conflicts/"
-echo "Please review the changes and test the build."
-
-
-
-echo "Merge conflicts fixed!"
-
-
-echo "Fixing merge conflicts..."
-
-# Find all files with merge conflicts
-files_with_conflicts=$(grep -r "<<<<<<< HEAD" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.html" --include="*.css" --include="*.cjs" --include="*.json" | cut -d: -f1 | sort -u)
-
-echo "Found files with conflicts:"
-echo "$files_with_conflicts"
-
-# For each file, resolve conflicts by keeping our version (HEAD)
-for file in $files_with_conflicts; do
-    if [ -f "$file" ]; then
-        echo "Fixing conflicts in: $file"
-
-        # Use sed to remove merge conflict markers and keep HEAD version
-        sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-        sed -i '/^
-
-        # Remove any remaining conflict markers
-        sed -i '/^<<<<<<< /d' "$file"
-        sed -i '/^=======/d' "$file"
-        sed -i '/^>>>>>>> /d' "$file"
-    fi
-done
-
-echo "Merge conflicts fixed!"
-
-
-
-
-
-echo "Merge conflicts fixed!"
-

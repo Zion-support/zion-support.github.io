@@ -50,106 +50,21 @@ export interface SuggestedMilestoneItem {
 
 
 export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other";
-<<<<<<< HEAD
-export interface MilestoneSuggestionInput {scopeOfWork: string;
-export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",;
-export interface MilestoneSuggestionInput {;
-  scopeOfWork: string,;
-=======
 export interface MilestoneSuggestionInput {;
   scopeOfWork: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   startDateIso: string, // ISO 8601;
   endDateIso: string,   // ISO 8601;
   projectType: ProjectType;
 }
-<<<<<<< HEAD
-export interface SuggestedMilestoneItem {title: string;
-  description: string;
-
-
-
-
-
-;
-export interface SuggestedMilestoneItem {;
-  title: string,;
-  description: string,;
-
-
-export interface SuggestedMilestoneItem {
-  title: string,
-  description: string,
-
-
-
-
-=======
 ;
 export interface SuggestedMilestoneItem {;
   title: string;
   description: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   suggestedDueDateIso: string;
   estimatedEffortHours: number, // estimated hours;
   tags?: string[], // e.g., ["AI Suggested"];
 }
-<<<<<<< HEAD
-
-
-
-
-export interface MilestoneSuggestionResponse {
-  milestones: SuggestedMilestoneItem[];
-}
-
-
-
-
-
-export interface MilestoneSuggestionResponse {
-  milestones: SuggestedMilestoneItem[];
-}
-
-;
-export interface MilestoneSuggestionResponse {;
-  milestones: SuggestedMilestoneItem[];
-
-}
-;
-export interface SuggestedMilestoneItem {;
-  title:string,;
-  description:string,;
-  suggestedDueDateIso:string,;
-  estimatedEffortHours:number, // estimated hours;
-  tags?:string[], // e.g., ["AI Suggested"];
-}
-;
-export interface MilestoneSuggestionResponse {;
-  milestones:SuggestedMilestoneItem[];
-}
-export interface MilestoneSuggestionResponse {milestones: SuggestedMilestoneItem[];
 ;
 export interface MilestoneSuggestionResponse {;
   milestones: SuggestedMilestoneItem[];
 }
-
-
-
-
-
-
-
-;
-export interface MilestoneSuggestionResponse {;
-  milestones: SuggestedMilestoneItem[];
-}
-
-
-
-=======
-;
-export interface MilestoneSuggestionResponse {;
-  milestones: SuggestedMilestoneItem[];
-}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

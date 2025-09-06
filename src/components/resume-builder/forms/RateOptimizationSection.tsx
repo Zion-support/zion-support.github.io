@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-} import {
-  FormField;
-  FormItem;
-  FormLabel;
-  FormControl;
-  FormDescription;
-interface RateOptimizationSectionProps {
-  control: Control<any>,
-  setValue: UseFormSetValue<any>,
-  skills: string[],
-  yearsExperience: number,
-import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender","
-import { Card, CardContent } from "@/components/ui/card","
-=======
 
 import React, { useState } from "react",
 import { Control, UseFormSetValue } from "react-hook-form",
@@ -28,19 +13,12 @@ import { Input } from "@/components/ui/input",
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
 import { Card, CardContent } from "@/components/ui/card",
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: UseFormSetValue<any>,
   skills: string[],
   yearsExperience: number,
   location?: string,
-<<<<<<< HEAD
-  rateType: "hourly" | "fixed""
-}
-export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
-}})
-=======
   rateType: "hourly" | "fixed"
 }
 
@@ -140,4 +118,3 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
     </div>;
   );
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

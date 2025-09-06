@@ -6,8 +6,6 @@ interface Performance.testProps {
 
 export default function Performance.test({ }: Performance.testProps) {
 
-<<<<<<<< HEAD:tests/performance.test.js
-========
 
 <:tests/performance.test.js
 =
@@ -57,16 +55,6 @@ export default function Performance.test({ }: Performance.testProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<<< HEAD:corrupted_backup/performance.test.js
-
-<:tests/performance.test.js
-
-=
-}
-}
-
-}
-========
 
 
 >
@@ -106,7 +94,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 }
 
-========
 
 >>>>>>>> main:tests/performance.test.js
 

@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import _React from 'react'; const QuantumComputing = () => { return ( <div> <h1>QuantumComputing</h1> <p>Component placeholder</p> </div> )}; export default QuantumComputing;
-=======
 import React from \'react\'; const QuantumComputing = () => { return ( <div> <h1>QuantumComputing</h1> <p>Component placeholder</p> </div> )}; export default QuantumComputing;
 const React from "react"; const QuantumComputing = () => { return ( <div> <h1>QuantumComputing</h1> <p>Component placeholder</p> </div> )}; export default QuantumComputing;''"
 import _React from 'react'; const QuantumComputing = () => { return ( <div> <h1>QuantumComputing</h1> <p>Component placeholder</p> </div> )}; export default QuantumComputing;
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 import React from \'react\'; const QuantumComputing = () => { return ( <div> <h1>QuantumComputing</h1> <p>Component placeholder</p> </div> )}; export default QuantumComputing;
@@ -41,13 +34,6 @@ class ErrorBoundary extends React.Component {
 }
 import _React from 'react'; const QuantumComputing = () => { return ( <div> <h1>QuantumComputing</h1> <p>Component placeholder</p> </div> )}; export default QuantumComputing;
 import _React from 'react'; const QuantumComputing = () => { return ( <div> <h1>QuantumComputing</h1> <p>Component placeholder</p> </div> )}; export default QuantumComputing;
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
-<<<<<<< HEAD
-import _React from 'react'; const QuantumComputing = () => { return ( <div> <h1>QuantumComputing</h1> <p>Component placeholder</p> </div> )}; export default QuantumComputing;
-=======
 import React from \'react\'; const QuantumComputing = () => { return ( <div> <h1>QuantumComputing</h1> <p>Component placeholder</p> </div> )}; export default QuantumComputing;
 const React from "react"; const QuantumComputing = () => { return ( <div> <h1>QuantumComputing</h1> <p>Component placeholder</p> </div> )}; export default QuantumComputing;''"
 import _React from 'react'; const QuantumComputing = () => { return ( <div> <h1>QuantumComputing</h1> <p>Component placeholder</p> </div> )}; export default QuantumComputing;

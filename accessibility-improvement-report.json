@@ -1,30 +1,4 @@
 {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  "timestamp": "2025-09-06T10:57:00.075Z",
-  "totalDuration": 5762,
-  "improvements": [
-    {
-      "type": "accessibility-testing",
-      "status": "configured",
-      "recommendations": [
-        "Run accessibility tests regularly",
-        "Integrate tests into CI/CD pipeline",
-        "Test with actual screen readers"
-      ]
-    },
-    {
-      "type": "accessibility-guidelines",
-      "status": "created",
-      "recommendations": [
-        "Review and implement the accessibility guidelines",
-        "Train team members on accessibility best practices",
-        "Regular accessibility audits and testing"
-      ]
-    }
-  ]
-=======
   "timestamp": "2025-09-06T01:32:26.501Z",
   "checks": [
     {
@@ -1376,4 +1350,3 @@
   }
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

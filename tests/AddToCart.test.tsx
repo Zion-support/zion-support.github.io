@@ -6,8 +6,6 @@ interface AddToCart.testProps {
 
 export default function AddToCart.test({ }: AddToCart.testProps) {
 
-<<<<<<<< HEAD:tests/AddToCart.test.tsx
-========
 
 <:tests/AddToCart.test.tsx
 =
@@ -57,16 +55,6 @@ export default function AddToCart.test({ }: AddToCart.testProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<<< HEAD:corrupted_backup/AddToCart.test.tsx
-
-<:tests/AddToCart.test.tsx
-
-=
-}
-}
-
-}
-========
 
 
 >
@@ -106,7 +94,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 }
 
-========
 
 >>>>>>>> main:tests/AddToCart.test.tsx
 

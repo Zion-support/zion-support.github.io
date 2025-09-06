@@ -1,41 +1,13 @@
-<<<<<<< HEAD
-import React from 'react';
-import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
-import { cn } from '@/lib/utils';
-type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
-interface ProfileBadgeProps {;
-  type: BadgeType;,
-  className?: string;  type: BadgeType,;
-  className?: string;
-}
-=======
 
 import React from "react",
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react'
 import { cn } from "@/lib/utils",
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 interface ProfileBadgeProps {
   type: BadgeType,
   className?: string
 }
-<<<<<<< HEAD
-export function ProfileBadge({ type, className }:,  ProfileBadgeProps) {
-  const badgeConfig = {
-    verified: {,
-      icon: BadgeCheck,
-      icon: Star,
-      text: "Featured","
-      colors: "bg-yellow-500/20 text-yellow-400"},"
-    new: {,
-      icon: Clock,
-      text: "New","
-      colors: "bg-green-500/20 text-green-400"},"
-    "top-rated": {"
-      icon: Award,
-import React from 'react';
-=======
 
 export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const badgeConfig = {
@@ -69,7 +41,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
     </div>
   )
 import React from "react",;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
 import { cn } from "@/lib/utils",;
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',;
@@ -78,19 +49,6 @@ interface ProfileBadgeProps {;
   className?: string;
 }
 ;
-<<<<<<< HEAD
-export function ProfileBadge({ type, className }:,  ProfileBadgeProps) {;
-  const badgeConfig = {;
-    verified: {;,
-      icon: BadgeCheck,;
-      text: "Verified",;
-      colors: "bg-blue-500/20 text-blue-400"},;
-    featured: {;,
-      icon: Star,;
-      text: "Featured",;
-      colors: "bg-yellow-500/20 text-yellow-400"},;
-    new: {;,
-=======
 export function ProfileBadge({ type, className }: ProfileBadgeProps) {;
   const badgeConfig = {;
     verified: {;
@@ -102,7 +60,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {;
       text: "Featured",;
       colors: "bg-yellow-500/20 text-yellow-400"},;
     new: {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       icon: Clock,;
       text: "New",;
       colors: "bg-green-500/20 text-green-400"},;
@@ -119,24 +76,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {;
     )}>;
       <Icon className="w-3 h-3" />;
       <span>{text}</span>;
-<<<<<<< HEAD
-    </div>);
-  type, class_name;
-}: ProfileBadgeProps) {
-  const badge_config = {
-  verified: {,
-  const {
-  icon: Icon,  text, colors;,
-}= badge_config[type];
-}> <Icon className="w - 3 h - 3" /> <span> {"
-  text;
-}</span>;
-}'"  );
-}
-}}}
-=======
     </div>;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

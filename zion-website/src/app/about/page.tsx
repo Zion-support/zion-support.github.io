@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import { 
   UserGroupIcon,
   LightBulbIcon, 
@@ -49,7 +46,6 @@ const team = [
     role: 'Chief Operations Officer',
     bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.',
     image: '/images/team/james-kim.jpg'}]
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 
 export default function AboutPage() {
   return (
@@ -74,28 +70,6 @@ export default function AboutPage() {
               We believe in the power of technology to solve complex problems and create opportunities for our clients to thrive in the digital age.
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="bg-gray-50 p-8 rounded-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Values</h3>
-            <ul className="space-y-3">
-              <li className="flex items-center">
-                <span className="text-blue-600 mr-3">✓</span>
-                Innovation and Excellence
-              </li>
-              <li className="flex items-center">
-                <span className="text-blue-600 mr-3">✓</span>
-                Client Success
-              </li>
-              <li className="flex items-center">
-                <span className="text-blue-600 mr-3">✓</span>
-                Ethical Technology
-              </li>
-              <li className="flex items-center">
-                <span className="text-blue-600 mr-3">✓</span>
-                Continuous Learning
-              </li>
-            </ul>
-=======
         </div>
       </div>
 
@@ -246,7 +220,6 @@ export default function AboutPage() {
             <a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Careers <span aria-hidden="true">→</span>
             </Link>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
           </div>
         </div>
       </div>

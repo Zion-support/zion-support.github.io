@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 class ErrorBoundary extends React.Component {
@@ -28,10 +24,6 @@ class ErrorBoundary extends React.Component {
 }
 import { ClipboardList,Search,Settings,CheckCircle,Users,Headphones,FileText,Star,Clock export const ServiceProcessSteps = () => { const processSteps = [{ \"step\": \'1\',\"title\": \"Discovery & Assessment\",\"description\": \"We begin by understanding your current IT infrastructure,business needs,and objectives.\",\"icon\": \'Search\',\"color\": \"blue\",details[; \"Infrastructure audit and documentation review\",Business requirements gathering\",Current pain points identification\",Compliance and security assessment\",Budget and timeline discussion\" ],; \"duration\": \"1-2 days\",\"team\": \"Project Manager + Senior Engineer\" },{ \"step\": \'2\',\"title\": \"Planning & Design\",\"description\": \"Our team creates a comprehensive solution design tailored to your specific needs.\",\"icon\": \'ClipboardList\',\"color\": \"green\",details[; \"Solution architecture design\",Technology stack selection\",Implementation timeline planning\",Resource allocation\",Risk assessment and mitigation\" ],; \"duration\": \"3-5 days\",\"team\": \"Solution Architect + Technical Lead\" },{ \"step\": \'3\',\"title\": \"Implementation\",\"description\": \"Expert engineers execute the planned solution with precision and attention to detail.\",\"icon\": \'Settings\',\"color\": \"purple\",details[; \"Infrastructure setup and configuration\",Security implementation\",Integration and testing\",Documentation creation\",Quality assurance checks\" ],; \"duration\": \"1-4 weeks\",\"team\": \"Implementation Engineers + Security Specialist\" },{ \"step\": \'4\',\"title\": \"Testing & Validation\",\"description\": \"Rigorous testing ensures everything works perfectly before going live.\",\"icon\": \'CheckCircle\',\"color\": \"orange\",details[; \"Functional testing and validation\",Performance and load testing\",Security penetration testing\",User acceptance testing\",Compliance verification\" ],; \"duration\": \"2-5 days\",\"team\": \"QA Engineers + Security Team\" },{ \"step\": \'5\',\"title\": \"Deployment & Go-Live\",\"description\": \"Carefully managed deployment ensures smooth transition to the new system.\",\"icon\": \'Users\',\"color\": \"red\",details[; \"Production deployment\",Data migration and verification\",User training and onboarding\",Go-live support\",Performance monitoring\" ],; \"duration\": \"1-2 days\",\"team\": \"Deployment Team + Support Engineers\" },{}}}}}}}
 const { ClipboardList,Search,Settings,CheckCircle,Users,Headphones,FileText,Star,Clock export const ServiceProcessSteps = () => { const processSteps = [{ step: "1",title: "Discovery & Assessment",description: "We begin by understanding your current IT infrastructure,business needs,and objectives.",icon: "Search",color: "blue",details[; "Infrastructure audit and documentation review",Business requirements gathering",Current pain points identification",Compliance and security assessment",Budget and timeline discussion" ],; duration: "1-2 days",team: "Project Manager + Senior Engineer" },{ step: "2",title: "Planning & Design",description: "Our team creates a comprehensive solution design tailored to your specific needs.",icon: "ClipboardList",color: "green",details[; "Solution architecture design",Technology stack selection",Implementation timeline planning",Resource allocation",Risk assessment and mitigation" ],; duration: "3-5 days",team: "Solution Architect + Technical Lead" },{ step: "3",title: "Implementation",description: "Expert engineers execute the planned solution with precision and attention to detail.",icon: "Settings",color: "purple",details[; "Infrastructure setup and configuration",Security implementation",Integration and testing",Documentation creation",Quality assurance checks" ],; duration: "1-4 weeks",team: "Implementation Engineers + Security Specialist" },{ step: "4",title: "Testing & Validation",description: "Rigorous testing ensures everything works perfectly before going live.",icon: "CheckCircle",color: "orange",details[; "Functional testing and validation",Performance and load testing",Security penetration testing",User acceptance testing",Compliance verification" ],; duration: "2-5 days",team: "QA Engineers + Security Team" },{ step: "5",title: "Deployment & Go-Live",description: "Carefully managed deployment ensures smooth transition to the new system.",icon: "Users",color: "red",details[; "Production deployment",Data migration and verification",User training and onboarding",Go-live support",Performance monitoring" ],; duration: "1-2 days",team: "Deployment Team + Support Engineers" },{}}}}}}}'"'"
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import React from 'react';
@@ -45,13 +37,5 @@ export default function ServiceProcessSteps({ }: ServiceProcessStepsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD:src.disabled/src/components/services/PageSections/ServiceProcessSteps.jsx
-}
-=======
-<<<<<<< HEAD:backup-merge-conflicts/ServiceProcessSteps.jsx.backup
-
-}
-=======
 }
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:src.disabled/src/components/services/PageSections/ServiceProcessSteps.jsx
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58:backup-problematic-files/src.disabled/src/components/services/PageSections/ServiceProcessSteps.jsx

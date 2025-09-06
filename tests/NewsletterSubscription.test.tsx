@@ -1,10 +1,6 @@
 import React from 'react';
 interface NewsletterSubscription.testProps {
   // Add props here as needed
-<<<<<<<< HEAD:corrupted_backup/NewsletterSubscription.test.tsx
-}
-
-========
 >
 
 
@@ -28,11 +24,6 @@ export default function NewsletterSubscription.test({ }: NewsletterSubscription.
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<<< HEAD:corrupted_backup/NewsletterSubscription.test.tsx
-<<<<<<<< HEAD:tests/NewsletterSubscription.test.tsx
-
-
-========
 
 
 <:tests/NewsletterSubscription.test.tsx
@@ -42,7 +33,6 @@ export default function NewsletterSubscription.test({ }: NewsletterSubscription.
 }
 
 }
-========
 
 
 >

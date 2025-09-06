@@ -1,17 +1,8 @@
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const execAsync = promisify(exec); class CursorChatAutomation { constructor(config = {}) { this.config = { interval: config.interval || 30000,maxSessions: config.maxSessions || 5,logFile: config.logFile || 'cursor-chat-automation.log',enableLogging: config.enableLogging !== false,autoRestart: config.autoRestart !== false,...config,}; this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,}; this.log('Cursor Chat Automation initialized')} log(message,level = 'INFO') { if (!this.config.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`;  try { fs.appendFileSync(this.config.logFile,logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.interval,autoProceed: options.autoProceed !== false,...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),process: null,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.sendProceedCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async sendProceedCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = 'proceed'; this.log(`Sending "${command}" to session ${sessionId}`); session.lastCommand = new Date(); session.commandCount++; this.stats.totalCommands++; await this.executeCursorCommand(sessionId,command); this.stats.successfulCommands++; this.log(`Command sent successfully to session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.log( `Failed to send command to session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async executeCursorCommand(sessionId,command) { return new Promise((resolve,reject) => { const delay = Math.random() * 1000 + 500; setTimeout(() => { if (Math.random() < 0.05) { reject(new Error('Simulated command failure'))} else { resolve({ success: true,sessionId,command })} },delay)})} start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Chat Automation system started'); for (const [sessionId,session] of this.sessions) { if (session.status === 'active' && session.config.autoProceed) { this.startSessionAutomation(sessionId)} } this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Chat Automation system stopped')} startHealthMonitoring() { const healthCheck = () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout(healthCheck,60000)}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} terminateSession(sessionId) { const session = this.sessions.get(sessionId); if (!session) { this.log(`Session ${sessionId} not found for termination`,'WARN'); return false} session.status = 'terminated'; this.stats.sessionsTerminated++; this.log(`Session ${sessionId} terminated`); return true} getSessionInfo(sessionId) { return this.sessions.get(sessionId)} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,}))} } if (require.main === module) { const automation = new CursorChatAutomation({ interval: 30000,maxSessions: 3,enableLogging: true,autoRestart: true,}); automation.createSession('main-chat',{ name: 'Main Development Chat',interval: 25000,}); automation.createSession('code-review',{ name: 'Code Review Assistant',interval: 35000,}); automation.createSession('bug-fixes',{ name: 'Bug Fixes Helper',interval: 40000,}); automation.start(); process.on('SIGINT',() => {  automation.stop(); const stats = automation.getStats();  ); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); .toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} module.exports = CursorChatAutomation;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const execAsync = promisify(exec); class CursorChatAutomation { constructor(config = {}) { this.config = { interval: config.interval || 30000,maxSessions: config.maxSessions || 5,logFile: config.logFile || 'cursor-chat-automation.log',enableLogging: config.enableLogging !== false,autoRestart: config.autoRestart !== false,...config,}; this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,}; this.log('Cursor Chat Automation initialized')} log(message,level = 'INFO') { if (!this.config.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`;  try { fs.appendFileSync(this.config.logFile,logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.interval,autoProceed: options.autoProceed !== false,...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),process: null,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.sendProceedCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async sendProceedCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = 'proceed'; this.log(`Sending "${command}" to session ${sessionId}`); session.lastCommand = new Date(); session.commandCount++; this.stats.totalCommands++; await this.executeCursorCommand(sessionId,command); this.stats.successfulCommands++; this.log(`Command sent successfully to session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.log( `Failed to send command to session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async executeCursorCommand(sessionId,command) { return new Promise((resolve,reject) => { const delay = Math.random() * 1000 + 500; setTimeout(() => { if (Math.random() < 0.05) { reject(new Error('Simulated command failure'))} else { resolve({ success: true,sessionId,command })} },delay)})} start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Chat Automation system started'); for (const [sessionId,session] of this.sessions) { if (session.status === 'active' && session.config.autoProceed) { this.startSessionAutomation(sessionId)} } this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Chat Automation system stopped')} startHealthMonitoring() { const healthCheck = () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout(healthCheck,60000)}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} terminateSession(sessionId) { const session = this.sessions.get(sessionId); if (!session) { this.log(`Session ${sessionId} not found for termination`,'WARN'); return false} session.status = 'terminated'; this.stats.sessionsTerminated++; this.log(`Session ${sessionId} terminated`); return true} getSessionInfo(sessionId) { return this.sessions.get(sessionId)} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,}))} } if (require.main === module) { const automation = new CursorChatAutomation({ interval: 30000,maxSessions: 3,enableLogging: true,autoRestart: true,}); automation.createSession('main-chat',{ name: 'Main Development Chat',interval: 25000,}); automation.createSession('code-review',{ name: 'Code Review Assistant',interval: 35000,}); automation.createSession('bug-fixes',{ name: 'Bug Fixes Helper',interval: 40000,}); automation.start(); process.on('SIGINT',() => {  automation.stop(); const stats = automation.getStats();  ); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); .toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} module.exports = CursorChatAutomation;
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
 #!/usr/bin/env node
@@ -42,12 +33,6 @@ class CursorChatAutomation {
     this.sessions = new Map();
     this.isRunning = false;
     this.stats = {
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
       totalCommands: 0,
       successfulCommands: 0,
@@ -58,14 +43,10 @@ class CursorChatAutomation {
     };
     this.log('Cursor Chat Automation initialized');
   }
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-=======
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
       "totalCommands": 0,
@@ -87,20 +68,11 @@ class CursorChatAutomation {
     try {
       fs.appendFileSync(this.config.logFile, logEntry + '\n');
     } catch (error) {
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-      console.error('Failed to write to log file:', error.message);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       console.error('Failed to write to log file:', error.message);
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
       console.error('Failed to write to log "file": ', error.message);
@@ -131,24 +103,13 @@ class CursorChatAutomation {
       if (sessionConfig.autoProceed) {
         this.startSessionAutomation(sessionId);
       }
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-      return session;
-    } catch (error) {
-      this.log(`Failed to create session ${sessionId}: ${error.message}`, 'ERROR');
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       return session;
     } catch (error) {
       this.log(`Failed to create session ${sessionId}: ${error.message}`, 'ERROR');
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
       return session;
@@ -166,24 +127,13 @@ class CursorChatAutomation {
   startSessionAutomation(sessionId) {
     const session = this.sessions.get(sessionId);
     if (!session || session.status !== 'active') {
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-      this.log(`Cannot start automation for session ${sessionId}: session not found or inactive`, 'WARN');
-      return;
-    }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       this.log(`Cannot start automation for session ${sessionId}: session not found or inactive`, 'WARN');
       return;
     }
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
       this.log(
@@ -201,20 +151,11 @@ class CursorChatAutomation {
         // Schedule next command
         setTimeout(() => runSession(), session.config.interval);
       } catch (error) {
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-        this.log(`Session ${sessionId} automation error: ${error.message}`, 'ERROR');
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         this.log(`Session ${sessionId} automation error: ${error.message}`, 'ERROR');
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
         this.log(
@@ -252,25 +193,15 @@ class CursorChatAutomation {
       await this.executeCursorCommand(sessionId, command);
       this.stats.successfulCommands++;
       this.log(`Command sent successfully to session ${sessionId}`);
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
     } catch (error) {
       this.stats.failedCommands++;
       session.errors++;
       this.log(`Failed to send command to session ${sessionId}: ${error.message}`, 'ERROR');
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-=======
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
     } catch (error) {
@@ -297,25 +228,15 @@ class CursorChatAutomation {
       const delay = Math.random() * 1000 + 500;
       setTimeout(() => {
         // Simulate occasional failures
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
         if (Math.random() < 0.05) { // 5% failure rate
           reject(new Error('Simulated command failure'));
         } else {
           resolve({ success: true, sessionId, command });
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-=======
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
         if (Math.random() < 0.05) {
@@ -368,20 +289,11 @@ class CursorChatAutomation {
             Date.now() - (session.lastCommand?.getTime() || 0);
           const maxDelay = session.config.interval * 3;
           if (timeSinceLastCommand > maxDelay) {
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-            this.log(`Session ${sessionId} appears stuck, restarting automation`, 'WARN');
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             this.log(`Session ${sessionId} appears stuck, restarting automation`, 'WARN');
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
             this.log(
@@ -397,22 +309,12 @@ class CursorChatAutomation {
     };
     healthCheck();
   }
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-    healthCheck();
-  }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     healthCheck();
   }
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
   /**
@@ -425,26 +327,16 @@ class CursorChatAutomation {
     return {
       ...this.stats,
       uptime,
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
       uptimeFormatted: this.formatUptime(uptime),
       activeSessions: Array.from(this.sessions.values()).filter(s => s.status === 'active').length,
       totalSessions: this.sessions.size
     };
   }
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-=======
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
       "uptimeFormatted": this.formatUptime(uptime),
@@ -480,26 +372,16 @@ class CursorChatAutomation {
     this.log(`Session ${sessionId} terminated`);
     return true;
   }
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
     session.status = 'terminated';
     this.stats.sessionsTerminated++;
     this.log(`Session ${sessionId} terminated`);
     return true;
   }
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-=======
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
   /**
@@ -514,12 +396,6 @@ class CursorChatAutomation {
   listSessions() {
     return Array.from(this.sessions.entries()).map(([id, session]) => ({
       id,
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
       name: session.config.name,
       status: session.status,
@@ -528,14 +404,10 @@ class CursorChatAutomation {
       createdAt: session.createdAt,
       lastCommand: session.lastCommand
     }));
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-=======
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
       "name": session.config.name,
@@ -572,12 +444,6 @@ if (require.main === module) {
     const stats = automation.getStats();
     console.log('\nFinal "Statistics": ');
     console.log(JSON.stringify(stats, null, 2));
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
     process.exit(0);
   });
@@ -585,14 +451,10 @@ if (require.main === module) {
   setInterval(() => {
     const stats = automation.getStats();
     console.log(`\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions, ${stats.totalCommands} commands sent`);
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-=======
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
     process.exit(0);
@@ -606,23 +468,11 @@ if (require.main === module) {
   }, 60000); // Status update every minute
 }
 module.exports = CursorChatAutomation;
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const execAsync = promisify(exec); class CursorChatAutomation { constructor(config = {}) { this.config = { interval: config.interval || 30000,maxSessions: config.maxSessions || 5,logFile: config.logFile || 'cursor-chat-automation.log',enableLogging: config.enableLogging !== false,autoRestart: config.autoRestart !== false,...config,}; this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,}; this.log('Cursor Chat Automation initialized')} log(message,level = 'INFO') { if (!this.config.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`; console.log(logEntry); try { fs.appendFileSync(this.config.logFile,logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.interval,autoProceed: options.autoProceed !== false,...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),process: null,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.sendProceedCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async sendProceedCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = 'proceed'; this.log(`Sending "${command}" to session ${sessionId}`); session.lastCommand = new Date(); session.commandCount++; this.stats.totalCommands++; await this.executeCursorCommand(sessionId,command); this.stats.successfulCommands++; this.log(`Command sent successfully to session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.log( `Failed to send command to session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async executeCursorCommand(sessionId,command) { return new Promise((resolve,reject) => { const delay = Math.random() * 1000 + 500; setTimeout(() => { if (Math.random() < 0.05) { reject(new Error('Simulated command failure'))} else { resolve({ success: true,sessionId,command })} },delay)})} start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Chat Automation system started'); for (const [sessionId,session] of this.sessions) { if (session.status === 'active' && session.config.autoProceed) { this.startSessionAutomation(sessionId)} } this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Chat Automation system stopped')} startHealthMonitoring() { const healthCheck = () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout(healthCheck,60000)}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} terminateSession(sessionId) { const session = this.sessions.get(sessionId); if (!session) { this.log(`Session ${sessionId} not found for termination`,'WARN'); return false} session.status = 'terminated'; this.stats.sessionsTerminated++; this.log(`Session ${sessionId} terminated`); return true} getSessionInfo(sessionId) { return this.sessions.get(sessionId)} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,}))} } if (require.main === module) { const automation = new CursorChatAutomation({ interval: 30000,maxSessions: 3,enableLogging: true,autoRestart: true,}); automation.createSession('main-chat',{ name: 'Main Development Chat',interval: 25000,}); automation.createSession('code-review',{ name: 'Code Review Assistant',interval: 35000,}); automation.createSession('bug-fixes',{ name: 'Bug Fixes Helper',interval: 40000,}); automation.start(); process.on('SIGINT',() => { console.log('\nShutting down Cursor Chat Automation...'); automation.stop(); const stats = automation.getStats(); console.log('\nFinal Statistics:'); console.log(JSON.stringify(stats,null,2)); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); console.log( `\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} module.exports = CursorChatAutomation;
-#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const execAsync = promisify(exec); class CursorChatAutomation { constructor(config = {}) { this.config = { interval: config.interval || 30000,maxSessions: config.maxSessions || 5,logFile: config.logFile || 'cursor-chat-automation.log',enableLogging: config.enableLogging !== false,autoRestart: config.autoRestart !== false,...config,}; this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,}; this.log('Cursor Chat Automation initialized')} log(message,level = 'INFO') { if (!this.config.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`; console.log(logEntry); try { fs.appendFileSync(this.config.logFile,logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.interval,autoProceed: options.autoProceed !== false,...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),process: null,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.sendProceedCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async sendProceedCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = 'proceed'; this.log(`Sending "${command}" to session ${sessionId}`); session.lastCommand = new Date(); session.commandCount++; this.stats.totalCommands++; await this.executeCursorCommand(sessionId,command); this.stats.successfulCommands++; this.log(`Command sent successfully to session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.log( `Failed to send command to session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async executeCursorCommand(sessionId,command) { return new Promise((resolve,reject) => { const delay = Math.random() * 1000 + 500; setTimeout(() => { if (Math.random() < 0.05) { reject(new Error('Simulated command failure'))} else { resolve({ success: true,sessionId,command })} },delay)})} start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Chat Automation system started'); for (const [sessionId,session] of this.sessions) { if (session.status === 'active' && session.config.autoProceed) { this.startSessionAutomation(sessionId)} } this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Chat Automation system stopped')} startHealthMonitoring() { const healthCheck = () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout(healthCheck,60000)}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} terminateSession(sessionId) { const session = this.sessions.get(sessionId); if (!session) { this.log(`Session ${sessionId} not found for termination`,'WARN'); return false} session.status = 'terminated'; this.stats.sessionsTerminated++; this.log(`Session ${sessionId} terminated`); return true} getSessionInfo(sessionId) { return this.sessions.get(sessionId)} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,}))} } if (require.main === module) { const automation = new CursorChatAutomation({ interval: 30000,maxSessions: 3,enableLogging: true,autoRestart: true,}); automation.createSession('main-chat',{ name: 'Main Development Chat',interval: 25000,}); automation.createSession('code-review',{ name: 'Code Review Assistant',interval: 35000,}); automation.createSession('bug-fixes',{ name: 'Bug Fixes Helper',interval: 40000,}); automation.start(); process.on('SIGINT',() => { console.log('\nShutting down Cursor Chat Automation...'); automation.stop(); const stats = automation.getStats(); console.log('\nFinal Statistics:'); console.log(JSON.stringify(stats,null,2)); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); console.log( `\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} module.exports = CursorChatAutomation;
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/cursor-chat-automation.js
-=======
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const execAsync = promisify(exec); class CursorChatAutomation { constructor(config = {}) { this.config = { interval: config.interval || 30000,maxSessions: config.maxSessions || 5,logFile: config.logFile || 'cursor-chat-automation.log',enableLogging: config.enableLogging !== false,autoRestart: config.autoRestart !== false,...config,}; this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,}; this.log('Cursor Chat Automation initialized')} log(message,level = 'INFO') { if (!this.config.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`; console.log(logEntry); try { fs.appendFileSync(this.config.logFile,logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.interval,autoProceed: options.autoProceed !== false,...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),process: null,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.sendProceedCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async sendProceedCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = 'proceed'; this.log(`Sending "${command}" to session ${sessionId}`); session.lastCommand = new Date(); session.commandCount++; this.stats.totalCommands++; await this.executeCursorCommand(sessionId,command); this.stats.successfulCommands++; this.log(`Command sent successfully to session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.log( `Failed to send command to session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async executeCursorCommand(sessionId,command) { return new Promise((resolve,reject) => { const delay = Math.random() * 1000 + 500; setTimeout(() => { if (Math.random() < 0.05) { reject(new Error('Simulated command failure'))} else { resolve({ success: true,sessionId,command })} },delay)})} start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Chat Automation system started'); for (const [sessionId,session] of this.sessions) { if (session.status === 'active' && session.config.autoProceed) { this.startSessionAutomation(sessionId)} } this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Chat Automation system stopped')} startHealthMonitoring() { const healthCheck = () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout(healthCheck,60000)}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} terminateSession(sessionId) { const session = this.sessions.get(sessionId); if (!session) { this.log(`Session ${sessionId} not found for termination`,'WARN'); return false} session.status = 'terminated'; this.stats.sessionsTerminated++; this.log(`Session ${sessionId} terminated`); return true} getSessionInfo(sessionId) { return this.sessions.get(sessionId)} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,}))} } if (require.main === module) { const automation = new CursorChatAutomation({ interval: 30000,maxSessions: 3,enableLogging: true,autoRestart: true,}); automation.createSession('main-chat',{ name: 'Main Development Chat',interval: 25000,}); automation.createSession('code-review',{ name: 'Code Review Assistant',interval: 35000,}); automation.createSession('bug-fixes',{ name: 'Bug Fixes Helper',interval: 40000,}); automation.start(); process.on('SIGINT',() => { console.log('\nShutting down Cursor Chat Automation...'); automation.stop(); const stats = automation.getStats(); console.log('\nFinal Statistics:'); console.log(JSON.stringify(stats,null,2)); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); console.log( `\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} module.exports = CursorChatAutomation;
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/cursor-chat-automation.js
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { exec } = require('child_process'); const { promisify } = require('util'); const execAsync = promisify(exec); class CursorChatAutomation { constructor(config = {}) { this.config = { interval: config.interval || 30000,maxSessions: config.maxSessions || 5,logFile: config.logFile || 'cursor-chat-automation.log',enableLogging: config.enableLogging !== false,autoRestart: config.autoRestart !== false,...config,}; this.sessions = new Map(); this.isRunning = false; this.stats = { totalCommands: 0,successfulCommands: 0,failedCommands: 0,sessionsCreated: 0,sessionsTerminated: 0,startTime: null,}; this.log('Cursor Chat Automation initialized')} log(message,level = 'INFO') { if (!this.config.enableLogging) return; const timestamp = new Date().toISOString(); const logEntry = `[${timestamp}] [${level}] ${message}`; console.log(logEntry); try { fs.appendFileSync(this.config.logFile,logEntry + '\n')} catch (error) { console.error('Failed to write to log file:',error.message)} } async createSession(sessionId,options = {}) { try { const sessionConfig = { name: options.name || `Session-${sessionId}`,interval: options.interval || this.config.interval,autoProceed: options.autoProceed !== false,...options,}; const session = { id: sessionId,config: sessionConfig,status: 'active',lastCommand: null,commandCount: 0,errors: 0,createdAt: new Date(),process: null,}; this.sessions.set(sessionId,session); this.stats.sessionsCreated++; this.log(`Session ${sessionId} created: ${sessionConfig.name}`); if (sessionConfig.autoProceed) { this.startSessionAutomation(sessionId)} return session} catch (error) { this.log( `Failed to create session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } startSessionAutomation(sessionId) { const session = this.sessions.get(sessionId); if (!session || session.status !== 'active') { this.log( `Cannot start automation for session ${sessionId}: session not found or inactive`,'WARN' ); return} const runSession = async () => { if (!this.isRunning || session.status !== 'active') { return} try { await this.sendProceedCommand(sessionId); setTimeout(() => runSession(),session.config.interval)} catch (error) { this.log( `Session ${sessionId} automation error: ${error.message}`,'ERROR' ); session.errors++; setTimeout(() => runSession(),session.config.interval)} }; runSession(); this.log(`Automation started for session ${sessionId}`)} async sendProceedCommand(sessionId) { const session = this.sessions.get(sessionId); if (!session) { throw new Error(`Session ${sessionId} not found`)} try { const command = 'proceed'; this.log(`Sending "${command}" to session ${sessionId}`); session.lastCommand = new Date(); session.commandCount++; this.stats.totalCommands++; await this.executeCursorCommand(sessionId,command); this.stats.successfulCommands++; this.log(`Command sent successfully to session ${sessionId}`)} catch (error) { this.stats.failedCommands++; session.errors++; this.log( `Failed to send command to session ${sessionId}: ${error.message}`,'ERROR' ); throw error} } async executeCursorCommand(sessionId,command) { return new Promise((resolve,reject) => { const delay = Math.random() * 1000 + 500; setTimeout(() => { if (Math.random() < 0.05) { reject(new Error('Simulated command failure'))} else { resolve({ success: true,sessionId,command })} },delay)})} start() { if (this.isRunning) { this.log('Automation system already running','WARN'); return} this.isRunning = true; this.stats.startTime = new Date(); this.log('Cursor Chat Automation system started'); for (const [sessionId,session] of this.sessions) { if (session.status === 'active' && session.config.autoProceed) { this.startSessionAutomation(sessionId)} } this.startHealthMonitoring()} stop() { this.isRunning = false; this.log('Cursor Chat Automation system stopped')} startHealthMonitoring() { const healthCheck = () => { if (!this.isRunning) return; this.log(`Health check: ${this.sessions.size} active sessions`); for (const [sessionId,session] of this.sessions) { if (session.status === 'active') { const timeSinceLastCommand = Date.now() - (session.lastCommand?.getTime() || 0); const maxDelay = session.config.interval * 3; if (timeSinceLastCommand > maxDelay) { this.log( `Session ${sessionId} appears stuck,restarting automation`,'WARN' ); this.startSessionAutomation(sessionId)} } } setTimeout(healthCheck,60000)}; healthCheck()} getStats() { const uptime = this.stats.startTime ? Date.now() - this.stats.startTime.getTime() : 0; return { ...this.stats,uptime,uptimeFormatted: this.formatUptime(uptime),activeSessions: Array.from(this.sessions.values()).filter( s => s.status === 'active' ).length,totalSessions: this.sessions.size,}} formatUptime(ms) { const seconds = Math.floor(ms / 1000); const minutes = Math.floor(seconds / 60); const hours = Math.floor(minutes / 60); const days = Math.floor(hours / 24); if (days > 0) return `${days}d ${hours % 24}h ${minutes % 60}m`; if (hours > 0) return `${hours}h ${minutes % 60}m`; if (minutes > 0) return `${minutes}m ${seconds % 60}s`; return `${seconds}s`} terminateSession(sessionId) { const session = this.sessions.get(sessionId); if (!session) { this.log(`Session ${sessionId} not found for termination`,'WARN'); return false} session.status = 'terminated'; this.stats.sessionsTerminated++; this.log(`Session ${sessionId} terminated`); return true} getSessionInfo(sessionId) { return this.sessions.get(sessionId)} listSessions() { return Array.from(this.sessions.entries()).map(([id,session]) => ({ id,name: session.config.name,status: session.status,commandCount: session.commandCount,errors: session.errors,createdAt: session.createdAt,lastCommand: session.lastCommand,}))} } if (require.main === module) { const automation = new CursorChatAutomation({ interval: 30000,maxSessions: 3,enableLogging: true,autoRestart: true,}); automation.createSession('main-chat',{ name: 'Main Development Chat',interval: 25000,}); automation.createSession('code-review',{ name: 'Code Review Assistant',interval: 35000,}); automation.createSession('bug-fixes',{ name: 'Bug Fixes Helper',interval: 40000,}); automation.start(); process.on('SIGINT',() => { console.log('\nShutting down Cursor Chat Automation...'); automation.stop(); const stats = automation.getStats(); console.log('\nFinal Statistics:'); console.log(JSON.stringify(stats,null,2)); process.exit(0)}); setInterval(() => { const stats = automation.getStats(); console.log( `\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions,${stats.totalCommands} commands sent` )},60000)} module.exports = CursorChatAutomation;
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

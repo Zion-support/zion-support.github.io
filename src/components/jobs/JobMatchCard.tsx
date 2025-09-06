@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-}
-  talentId
-  name
-  title
-  company
-  avatar
-  location
-  category
-  matchPercent
-}
-}
-  talent_id,
-  name,
-  title,
-  company,
-  avatar,
-  location,
-  category,
-  match_percent,
-}
-}
-=======
 import React from 'react',
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -181,4 +158,3 @@ export function JobMatchCard({;
   );
 }
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

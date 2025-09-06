@@ -11,9 +11,5 @@ export default function Pricing({ }: PricingProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD:backup-problematic-files/pages_backup_conflicts/pricing.tsx
-}
-}
-=======
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup_conflicts/pricing.tsx
 }

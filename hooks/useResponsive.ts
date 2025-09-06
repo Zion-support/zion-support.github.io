@@ -1,67 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
-import { useState, useEffect } from 'react';
-
-interface ResponsiveState {
-  isMobile: boolean;
-  isTablet: boolean;
-  isDesktop: boolean;
-  width: number;
-  height: number;
-}
-
-export const useResponsive = (): ResponsiveState => {
-  const [state, setState] = useState<ResponsiveState>({
-    isMobile: false,
-    isTablet: false,
-    isDesktop: false,
-    width: 0,
-    height: 0,
-  });
-"isDesktop":width >= 1024})},;
-
-        "isDesktop":width >= 1024})},;
-
-    updateDimensions(),;
-    window && window.addEventListener(;
-  'resize', updateDimensions),;
-    return () => window && window.removeEventListener(;
-  'resize', updateDimensions)}, []),;
-  return state},;
-export default useResponsive,;import { useState, useEffect } from 'react';
-
-  'resize', updateDimensions)}, []);
-  return state}
-export default useResponsive;import { useState, useEffect } from 'react';
-        "is_desktop":width >= 1024})},
-;
-    update_dimensions (),
-    window.addEventListener (
-  'resize', update_dimensions),
-    return () => window.removeEventListener (
-  'resize', update_dimensions)}, []),
-  return state},
-export default use_responsive,import { useState, useEffect } from 'react';
-;
-interface Breakpoints {
-  sm: number;
-  md: number;
-  lg: number;
-  xl: number;
-  '2xl': number;
-}
-    window && window.addEventListener(;
-  'resize', updateDimensions);
-    return () => window && window.removeEventListener(;
-
-
-
-<<<<<<< HEAD
-=======
   useEffect(() => {
     const updateScreenSize = () => {
       const width = window.innerWidth;
@@ -109,8 +45,6 @@ export default useResponsive,
   'resize', updateDimensions)}, []);
   return state};
 export default useResponsive;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
   'react';
 interface ResponsiveState {
   "screenWidth": number;
@@ -194,38 +128,7 @@ import { useState,useEffect } from 'react'; interface ResponsiveState { screenWi
 import { useState,useEffect } from 'react'; interface ResponsiveState { screenWidth: number; screenHeight: number; orientation: "landscape" | "portrait"; isMobile: boolean; isTablet: boolean; isDesktop: boolean} const useResponsive = (): ResponsiveState => { const [state,setState] = useState<ResponsiveState>({ screenWidth: 1920,screenHeight: 1080,orientation: "landscape",isMobile: false,isTablet: false,isDesktop: true,}); useEffect(() => { const updateDimensions = () => { const width = window.innerWidth; const height = window.innerHeight; setState({ screenWidth: width,screenHeight: height,orientation: width > height ? "landscape" : "portrait",isMobile: width < 768,isTablet: width >= 768 && width < 1024,isDesktop: width >= 1024,})}; updateDimensions(); window.addEventListener( 'resize',updateDimensions); return () => window.removeEventListener( 'resize',updateDimensions)},[]); return state}; export default useResponsive;
 import { useState,useEffect } from 'react'; interface ResponsiveState { screenWidth: number; screenHeight: number; orientation: "landscape" | "portrait"; isMobile: boolean; isTablet: boolean; isDesktop: boolean} const useResponsive = (): ResponsiveState => { const [state,setState] = useState<ResponsiveState>({ screenWidth: 1920,screenHeight: 1080,orientation: "landscape",isMobile: false,isTablet: false,isDesktop: true,}); useEffect(() => { const updateDimensions = () => { const width = window.innerWidth; const height = window.innerHeight; setState({ screenWidth: width,screenHeight: height,orientation: width > height ? "landscape" : "portrait",isMobile: width < 768,isTablet: width >= 768 && width < 1024,isDesktop: width >= 1024,})}; updateDimensions(); window.addEventListener( 'resize',updateDimensions); return () => window.removeEventListener( 'resize',updateDimensions)},[]); return state}; export default useResponsive;
 import { useState,useEffect } from 'react'; interface ResponsiveState { screenWidth: number; screenHeight: number; orientation: "landscape" | "portrait"; isMobile: boolean; isTablet: boolean; isDesktop: boolean} const useResponsive = (): ResponsiveState => { const [state,setState] = useState<ResponsiveState>({ screenWidth: 1920,screenHeight: 1080,orientation: "landscape",isMobile: false,isTablet: false,isDesktop: true,}); useEffect(() => { const updateDimensions = () => { const width = window.innerWidth; const height = window.innerHeight; setState({ screenWidth: width,screenHeight: height,orientation: width > height ? "landscape" : "portrait",isMobile: width < 768,isTablet: width >= 768 && width < 1024,isDesktop: width >= 1024,})}; updateDimensions(); window.addEventListener( 'resize',updateDimensions); return () => window.removeEventListener( 'resize',updateDimensions)},[]); return state}; export default useResponsive;
-<<<<<<< HEAD
-
-interface Breakpoints {
-  sm: number;
-  md: number;
-  lg: number;
-  xl: number;
-  '2xl': number;
-}
-;
-
-  return state}
-export default useResponsive
-import { useState,useEffect } from 'react'; interface ResponsiveState { screenWidth: number; screenHeight: number; orientation: "landscape" | "portrait"; isMobile: boolean; isTablet: boolean; isDesktop: boolean} const useResponsive = (): ResponsiveState => { const [state,setState] = useState<ResponsiveState>({ screenWidth: 1920,screenHeight: 1080,orientation: "landscape",isMobile: false,isTablet: false,isDesktop: true,}); useEffect(() => { const updateDimensions = () => { const width = window.innerWidth; const height = window.innerHeight; setState({ screenWidth: width,screenHeight: height,orientation: width > height ? "landscape" : "portrait",isMobile: width < 768,isTablet: width >= 768 && width < 1024,isDesktop: width >= 1024,})}; updateDimensions(); window.addEventListener( 'resize',updateDimensions); return () => window.removeEventListener( 'resize',updateDimensions)},[]); return state}; export default useResponsive;
-
-import { useState,useEffect } from 'react'; interface ResponsiveState { screenWidth: number; screenHeight: number; orientation: "landscape" | "portrait"; isMobile: boolean; isTablet: boolean; isDesktop: boolean} const useResponsive = (): ResponsiveState => { const [state,setState] = useState<ResponsiveState>({ screenWidth: 1920,screenHeight: 1080,orientation: "landscape",isMobile: false,isTablet: false,isDesktop: true,}); useEffect(() => { const updateDimensions = () => { const width = window && window.innerWidth; const height = window && window.innerHeight; setState({ screenWidth: width,screenHeight: height,orientation: width > height ? "landscape" : "portrait",isMobile: width < 768,isTablet: width >= 768 && width < 1024,isDesktop: width >= 1024,})}; updateDimensions(); window && window.addEventListener( 'resize',updateDimensions); return () => window && window.removeEventListener( 'resize',updateDimensions)},[]); return state}; export default useResponsive;
-const default_breakpoints: Breakpoints = {
-const defaultBreakpoints: Breakpoints = {
-  sm: 640,
-  md: 768,
-  lg: 1024,
-  xl: 1280,
-  '2xl': 1536,
-
-
-
-
-
-=======
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

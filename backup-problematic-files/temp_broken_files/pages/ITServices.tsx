@@ -1,8 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/ITServices.tsx
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../components/Layout';
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -14,15 +9,6 @@ import {
   Shield, 
   Cloud, 
   Database, 
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/ITServices.tsx
-  Monitor, 
-  CheckCircle, 
-  Settings,
-  BarChart3,
-  Headphones,
-  HardDrive,
-  Wifi,
-=======
   Network, 
   Lock, 
   Monitor, 
@@ -212,96 +198,6 @@ export default function ITServicesPage() {
             <p className="text-xl text-blue-100 mb-8">
               Contact us today to discuss your IT needs and get expert solutions.
             </p>
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pages/ITServices.tsx
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-            {processSteps.map((step, index) => (
-              <motion.div
-                key={index}
-                className="text-center relative"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                  {step.step}
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  {step.description}
-                </p>
-                {index < processSteps.length - 1 && (
-                  <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gray-300 transform translate-x-4"></div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="text-3xl md:text-4xl font-bold mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-200 font-medium">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-              Ready to Transform Your IT Infrastructure?
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-600">
-              Let&apos;s discuss your IT needs and create a comprehensive solution that supports your business growth. 
-              Get a free consultation and discover how our IT services can benefit your organization.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-              >
-                Get Free IT Consultation
-              </Link>
-              <Link 
-                href="tel:+13024640950" 
-                className="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300 font-semibold"
-              >
-                Call: +1 302 464 0950
-              </Link>
-            </div>
-            <div className="mt-8 text-gray-600">
-              <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:underline">kleber@ziontechgroup.com</a></p>
-              <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
-=======
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
               <div className="flex items-center text-white">
                 <Phone className="h-5 w-5 mr-2" />

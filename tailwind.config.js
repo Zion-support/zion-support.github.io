@@ -1,16 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    './pages/**/*.{js,ts,jsx,tsx}./components/**/*.{js,ts,jsx,tsx}'],
-  theme: {
-    extend: {
-      colors: {
-        'fade-in': 'fadeIn 0.6s ease-out forwardsfade-in-up': 'fadeInUp 0.6s ease-out forwardsfade-in-down': 'fadeInDown 0.6s ease-out forwardsslide-in-left': 'slideInLeft 0.6s ease-out forwardsslide-in-right': 'slideInRight 0.6s ease-out forwardsscale-in': 'scaleIn 0.6s ease-out forwardsfloat': 'float 6s ease-in-out infinitepulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinitebounce-slow': 'bounce 2s infiniteglow': 'glow 2s ease-in-out infinite alternateshimmer': 'shimmer 2.5s linear infinitematrix': 'matrix 20s linear infiniteneon-pulse': 'neonPulse 1.5s ease-in-out infinitecyber-float': 'cyberFloat 8s ease-in-out infinitehologram': 'hologram 3s ease-in-out infiniteenergy-wave': 'energyWave 4s ease-in-out infinitequantum-spin': 'quantumSpin 6s linear infiniteneural-network': 'neuralNetwork 10s linear infiniteplasma-flow': 'plasmaFlow 5s ease-in-out infinitecyber-grid': 'cyberGrid 15s linear infinite',
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -24,10 +14,7 @@ module.exports = {
       colors: {
 background: 'var(--background)',
         foreground: 'var(--foreground)',
-<<<<<<< HEAD
-=======
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -39,29 +26,6 @@ background: 'var(--background)',
           700: '#1d4ed8',
           800: '#1e40af',
           900: '#1e3a8a',
-<<<<<<< HEAD
-          950: '#172554',
-        },
-=======
-<<<<<<< HEAD
-          950: '#172554'},
-        // Extended color palette
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
-        gray: {
-          50: '#f9fafb',
-          100: '#f3f4f6',
-          200: '#e5e7eb',
-          300: '#d1d5db',
-          400: '#9ca3af',
-          500: '#6b7280',
-          600: '#4b5563',
-          700: '#374151',
-          800: '#1f2937',
-          900: '#111827',
-          950: '#030712'
-        }
-<<<<<<< HEAD
-=======
       },;
       animationDelay: {;
         '2000': '2s4000': '4s'},;
@@ -107,9 +71,7 @@ background: 'var(--background)',
     extend: {}},;
   plugins: []}
 ;
-=======
         },
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -173,12 +135,4 @@ float: {
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
 };
-<<<<<<< HEAD
-
-    require('@tailwindcss/aspect-ratio')
-  ]
-};
-
-=======
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

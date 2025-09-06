@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-const AvatarMenu = () => {
-  return (
-    <div>
-      {/* AvatarMenu component */}
-    </div>
-  );
-};
-export default AvatarMenu;
-=======
 import React from 'react',
 import Link from 'next/link',
 import { useAuth } from '@/hooks/useAuth',
@@ -83,4 +72,3 @@ export const AvatarMenu: React.FC = () => {
 },
 
 export default AvatarMenu,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

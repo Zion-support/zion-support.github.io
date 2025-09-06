@@ -39,7 +39,6 @@ class ErrorMonitor {
 
 
 
-========
 
 
 >
@@ -94,7 +93,6 @@ class ErrorMonitor {
 
         timestamp: new Date().toISOString()
 
-========
 
 >
 
@@ -212,71 +210,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   parseTypeScriptErrors(output) {
     const errors = [];
     const lines = output.split('\n');
-<<<<<<<< HEAD:automation/error-monitor.js
-
-
-
-    for (const line of lines) {
-      if (line.includes('error TS')) {
-        const match = line.match(
-          /(.+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/
-        );
-        if (match) {
-          errors.push({
-            type: 'typescript_error',
-            file: match[1].trim(),
-            line: parseInt(match[2]),
-            column: parseInt(match[3]),
-            message: match[4].trim(),
-
-            timestamp: new Date().toISOString()
-
-
-
-
-
-
-
-            timestamp: new Date().toISOString(),
-          });
-        }
-      }
-    }
-
-
-
-
-
-
-
-
-
-
->
-
-            timestamp: new Date().toISOString(),
-          });
-
-    );
-        }
-      }
-    }
-<<<<<<<< HEAD:automation/error-monitor.js
-
-
-
-
-            timestamp: new Date().toISOString(),
-          });
-    );
-        }
-      }
-    }
-
-
-
-
-========
 
 
 >
@@ -309,8 +242,6 @@ timestamp: new Date().toISOString()
   parseESLintErrors(output) {
     const errors = [];
     const lines = output.split('\n');
-<<<<<<<< HEAD:automation/error-monitor.js
-========
 
 
 
@@ -339,17 +270,6 @@ timestamp: new Date().toISOString()
 
 
 
-<<<<<<<< HEAD:automation/error-monitor.js
-
-
-
-
-
-
-    );
-      }
-    }
-========
 
 >
 
@@ -369,7 +289,6 @@ timestamp: new Date().toISOString()
 
 
 
-========
 
 
 >
@@ -404,8 +323,6 @@ timestamp: new Date().toISOString()
     const status = this.monitoringReport.healthStatus;
     const totalErrors = this.monitoringReport.metrics.totalErrors;
     const totalWarnings = this.monitoringReport.metrics.totalWarnings;
-<<<<<<<< HEAD:automation/error-monitor.js
-========
 
 
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
@@ -462,11 +379,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       const ErrorFixerAutomation = require('./error-fixer-automation.js');
       const automation = new ErrorFixerAutomation();
       await automation.run();
-<<<<<<<< HEAD:automation/error-monitor.js
-      console.log('✅ Error fixer completed');
-
-
-========
 
 
 >
@@ -496,7 +408,6 @@ console.log('✅ Error fixer completed');
 
         timestamp: new Date().toISOString()
 
-========
 
 >
 
@@ -545,7 +456,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 
-========
 
 
 >

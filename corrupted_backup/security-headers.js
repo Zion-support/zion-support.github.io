@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD:utils/security-headers.js
-
-=======
 // Security headers configuration,
 export const securityHeaders = [,
   {,

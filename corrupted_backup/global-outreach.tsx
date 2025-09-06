@@ -1,9 +1,3 @@
-<<<<<<< HEAD:pages/governance/global-outreach.tsx
-export { default } from '../protocol/un-bridge';
-=======
-<<<<<<< HEAD
-export { default } from '../protocol/un-bridge';
-=======
 import React from 'react';
 export default function Page() {
   return (

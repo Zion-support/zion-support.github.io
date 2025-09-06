@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import { useIsMobile } from "@/hooks/use-mobile";
-interface SmartAppBannerProps {
-  appName?: string;
-  appIconSrc?: string;
-  appStoreUrl?: string;
-  googlePlayUrl?: string;
-}
-export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
-})
-=======
 
 import React, { useState, useEffect } from "react",
 import { safeStorage } from "@/utils/safeStorage",
@@ -183,4 +172,3 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
     </div>;
   );
 };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

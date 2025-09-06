@@ -1,87 +1,4 @@
-<<<<<<< HEAD
-}
-export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {
-  const prompt = `Create a concise, compelling job post for a ${role}.
-Company: ${opts.company |'Confidential'}
-Location: ${opts.location |'Remote'}
-Key skills: ${(opts.tags |[]).join() |'N/A'}
-Add responsibilities, requirements, and benefits in bullet points.`;
-  const completion = await openai.responses.create({
-    model: 'gpt-4o-mini'
-    input: prompt
-});
-
-import OpenAI from 'openai',;
-type OpenAIClient = OpenAI,;
-export function createOpenAIClient(apiKey: string): OpenAIClient {;
-  return new OpenAI({ apiKey });
-
-}
-;
-export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {;
-  const prompt = `Create a concise, compelling job post for a ${role}.;
-Company: ${opts.company || 'Confidential'}
-Location: ${opts.location || 'Remote'}
-
-  return completion.output_text;
-}
-
-import OpenAI from 'openai',;
-type OpenAIClient = OpenAI,;
-export function createOpenAIClient(apiKey: string): OpenAIClient {;
-  return new OpenAI({ apiKey });
-}
-;
-export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {;
-  const prompt = `Create a concise, compelling job post for a ${role}.;
-Company: ${opts.company || 'Confidential'}
-Location: ${opts.location || 'Remote'}
-Key skills: ${(opts.tags || []).join() || 'N/A'};
-Add responsibilities, requirements, and benefits in bullet points.`;
-  const completion = await openai.responses.create({
-    model: 'gpt-4o-mini',
-    input: prompt
-});
-Key skills: ${(opts.tags || []).join() || 'N/A'}
-Add responsibilities, requirements, and benefits in bullet points.`,;
-  const completion = await openai.responses.create({;
-    model: 'gpt-4o-mini';
-    input: prompt;
-  });
-  return completion.output_text;
-}
-
-type OpenAIClient = OpenAI;
-export function createOpenAIClient(apiKey: string): OpenAIClient {
-  return new OpenAI({ apiKey })
-import OpenAI from 'openai',;
-type OpenAIClient = OpenAI,;
-=======
 import OpenAI from 'openai';
-<<<<<<< HEAD
-type OpenAIClient = OpenAI;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
-export function createOpenAIClient(apiKey: string): OpenAIClient {;
-  return new OpenAI({ apiKey });
-}
-;
-export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {;
-  const prompt = `Create a concise, compelling job post for a ${role}.;
-Company: ${opts.company || 'Confidential'}
-Location: ${opts.location || 'Remote'}
-Key skills: ${(opts.tags || []).join() || 'N/A'}
-Add responsibilities, requirements, and benefits in bullet points.`;
-  const completion = await openai.responses.create({;
-    model: 'gpt-4o-mini';
-    input: prompt;
-  });
-
-  return completion.output_text;
-}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58
 
 Company: ${opts && opts.company || 'Confidential'}
 Location: ${opts && opts.location || 'Remote'}
@@ -110,7 +27,4 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 });
   return completion.output_text;
 }
-<<<<<<< HEAD
-=======
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

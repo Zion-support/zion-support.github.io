@@ -1,25 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from';react' const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState('all') const [searchTerm,setSearchTerm] = useState(')'';';''}
-=======
 import { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') \'';\''\"";
 const { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState ("all") const [searchTerm,setSearchTerm] = useState (") "";"""";"""
 import React from';react' const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState('all') const [searchTerm,setSearchTerm] = useState(')'';';''}
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-
-
-=======
 import { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') \'';\''\"";
 const { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState ("all") const [searchTerm,setSearchTerm] = useState (") "";"""";"""
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/ContentQualityAnalyzer.jsx
-=======
-=======
 >>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') \'';\''\"";
 const { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState ("all") const [searchTerm,setSearchTerm] = useState (") "";"""";"""
@@ -32,21 +18,12 @@ const { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,Trend
 :temp_exclude/src.disabled/components/ContentQualityAnalyzer.jsx
 import { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') \'';\''\"";
 const { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState ("all") const [searchTerm,setSearchTerm] = useState (") "";"""";"""
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from';react' const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState('all') const [searchTerm,setSearchTerm] = useState(')'';';''}
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
-import React from';react' const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState('all') const [searchTerm,setSearchTerm] = useState(')'';';''}
-=======
 import { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') \'';\''\"";
 const { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState ("all") const [searchTerm,setSearchTerm] = useState (") "";"""";"""
 import React from';react' const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState('all') const [searchTerm,setSearchTerm] = useState(')'';';''}
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 import React from';react' const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [contentIssues,setContentIssues] = useState([]) const [report,setReport] = useState(null) const [selectedFilter,setSelectedFilter] = useState('all') const [searchTerm,setSearchTerm] = useState(')'';';''}
 >>>>>>> cursor/automate-test-improve-and-merge-code-ac88

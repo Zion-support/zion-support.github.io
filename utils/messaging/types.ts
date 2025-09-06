@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-export type UserRole = 'admin' | 'user' | 'guest';
-
-
-
-
-
-export type UserRole = 'admin' | 'user' | 'guest';
-
-
-
-
-
-
-
-
-
-export type UserRole = "admin" | "user" | "guest";
-
-=======
 export type UserRole = 'client' | 'talent' | 'admin';
 export interface UserSummary {;
   id: string;
@@ -74,4 +54,3 @@ export interface NewMessageInput {;
   attachmentName?: string, // optional filename;
   context?: ConversationContext;
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-9f58

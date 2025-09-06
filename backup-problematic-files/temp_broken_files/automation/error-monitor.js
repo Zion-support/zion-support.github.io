@@ -36,21 +36,12 @@ class ErrorMonitor {
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-monitor.js
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/error-monitor.js
 
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     // Initial health check
@@ -85,20 +76,11 @@ class ErrorMonitor {
       this.monitoringReport.errorsDetected.push({
         type: 'health_check_failure',
         message: error.message,
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-monitor.js
-        timestamp: new Date().toISOString()
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         timestamp: new Date().toISOString()
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/error-monitor.js
         timestamp: new Date().toISOString(),
@@ -201,20 +183,11 @@ class ErrorMonitor {
             line: parseInt(match[2]),
             column: parseInt(match[3]),
             message: match[4].trim(),
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-monitor.js
-            timestamp: new Date().toISOString()
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             timestamp: new Date().toISOString()
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/error-monitor.js
             timestamp: new Date().toISOString(),
@@ -222,21 +195,12 @@ class ErrorMonitor {
         }
       }
     }
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-monitor.js
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/error-monitor.js
 
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     return errors;
@@ -253,46 +217,27 @@ class ErrorMonitor {
           line: parseInt(match[2]),
           column: parseInt(match[3]),
           message: match[4].trim(),
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-monitor.js
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/error-monitor.js
           timestamp: new Date().toISOString()
         });
       }
     }
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-monitor.js
-=======
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/error-monitor.js
           timestamp: new Date().toISOString(),
         });
       }
     }
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-monitor.js
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/error-monitor.js
 
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     return errors;
@@ -315,24 +260,13 @@ class ErrorMonitor {
     console.log(`📊 Health Status: ${status.toUpperCase()}`);
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-monitor.js
-    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
-    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
-    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/error-monitor.js
     console.log(
@@ -351,23 +285,12 @@ class ErrorMonitor {
       const ErrorFixerAutomation = require('./error-fixer-automation.js');
       const automation = new ErrorFixerAutomation();
       await automation.run();
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-monitor.js
-      console.log('✅ Error fixer completed');
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       console.log('✅ Error fixer completed');
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/error-monitor.js
@@ -377,20 +300,11 @@ class ErrorMonitor {
       this.monitoringReport.errorsDetected.push({
         type: 'error_fixer_failure',
         message: error.message,
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-monitor.js
-        timestamp: new Date().toISOString()
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         timestamp: new Date().toISOString()
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/error-monitor.js
         timestamp: new Date().toISOString(),
@@ -418,21 +332,12 @@ class ErrorMonitor {
     if (!fs.existsSync(reportDir)) {
       fs.mkdirSync(reportDir, { recursive: true });
     }
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/automation/error-monitor.js
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 >>>>>>> main
-=======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/error-monitor.js
 
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     // Add duration to report

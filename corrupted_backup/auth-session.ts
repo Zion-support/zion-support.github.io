@@ -7,14 +7,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     res.status(401).json({ error: 'Unauthorized' });
     return;
   }
-<<<<<<< HEAD:pages/api/auth-session.ts
-  res.status(200).json({ message: 'OK' });
-}
-=======
-<<<<<<< HEAD
-  res.status(200).json({ message: 'OK' });
-}
-=======
   
   res.status(200).json({ session: null });
 }

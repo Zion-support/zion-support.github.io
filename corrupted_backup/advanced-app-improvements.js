@@ -156,18 +156,6 @@ export class ErrorTracker {
 }
 
 export const errorTracker = new ErrorTracker();
-<<<<<<< HEAD:advanced-app-improvements.js
-`
-  };
-
-  Object.entries(monitoringFiles).forEach(([filename, content]) => {
-    const fullPath = path.join('/workspace', filename);
-    fs.mkdirSync(path.dirname(fullPath), { recursive: true });
-    fs.writeFileSync(fullPath, content);
-    console.log(`Created ${filename}`);
-  });
-}
-=======
 
 // Call the monitoring function
 createAdvancedMonitoring();
@@ -266,12 +254,6 @@ export class MemoryCache {
     this.cache.clear();
   }
 
-<<<<<<< HEAD:advanced-app-improvements.js
-  size() {
-    return this.cache.size;
-  }
-}`
-=======
 export const redisCache = new RedisCache();
   `,
     'cache/memory-cache.js': `// Memory-based caching system
@@ -330,10 +312,6 @@ export const memoryCache = new MemoryCache();
     const fullPath = path.join('/workspace', filename);
     fs.mkdirSync(path.dirname(fullPath), { recursive: true });
     fs.writeFileSync(fullPath, content);
-<<<<<<< HEAD:advanced-app-improvements.js
-    console.log(`Created ${filename}`);
-  });
-=======
     console.log(`[OK] Created ${filename}`);
   });
 });
@@ -425,10 +403,6 @@ export class ResponseCache {
     const fullPath = path.join('/workspace', filename);
     fs.mkdirSync(path.dirname(fullPath), { recursive: true });
     fs.writeFileSync(fullPath, content);
-<<<<<<< HEAD:advanced-app-improvements.js
-    console.log(`Created ${filename}`);
-  });
-=======
     console.log(`[OK] Created ${filename}`);
   });
 });
@@ -590,8 +564,6 @@ async function main() {
     createAdvancedMonitoring();
     createAdvancedCaching();
     createAPIOptimization();
-<<<<<<< HEAD:advanced-app-improvements.js
-=======
     createDatabaseOptimization();
     
     // Create PM2 ecosystem configuration
