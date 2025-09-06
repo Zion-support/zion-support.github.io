@@ -1,6 +1,4 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
+
 
 const LanguageSync: NextPage = () => {
   return (
@@ -21,21 +19,18 @@ const LanguageSync: NextPage = () => {
       </main>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-export default LanguageSync;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+},
+export default LanguageSync,
 
 =======
 },
-export default LanguageSync,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-},
-<<<<<<< HEAD
 
-export default LanguageSync,;
-=======
 export default LanguageSync,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
