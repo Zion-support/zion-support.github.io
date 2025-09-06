@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/GlobalServiceSection.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -140,6 +141,8 @@ const services = [;
     icon: <Truck className='h-10 w-10' />,;
   },;
 ];
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function GlobalServiceSection() {;
   return (
     <section className='py-20 bg-zion-blue' id='global-services'>;
@@ -298,6 +301,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>            Get Your Free Commercial Proposal        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {services.map((service, index) => (
             <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -322,6 +330,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Button>
         </div>
 
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -342,11 +351,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </div>
           ))}
         </div>
 
         <div className="flex justify-center mt-12">
+<<<<<<< HEAD
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
             Get Your Free Commercial Proposal
           </Button>
@@ -418,6 +432,11 @@ export function GlobalServiceSection() {;
           </p>;
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
             Get Your Free Commercial Proposal
           </Button>
@@ -631,6 +650,7 @@ export function GlobalServiceSection() {;
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/GlobalServiceSection.tsx
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -684,3 +704,7 @@ icon: <Recycle className="h-10 w-10" /> ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+    </section>);
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

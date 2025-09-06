@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
@@ -154,6 +155,9 @@ export function RolePicker({ onSelect }: RolePickerProps) {
         <Card 
           className={`cursor-pointer transition-all ${
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+className={`cursor-pointer transition-all ${
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             selectedRole === 'client' 
               ? "border-primary bg-primary/5" 
               : "border-border hover:border-primary/40"
@@ -203,7 +207,10 @@ import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Briefcase, Users, Check } from 'lucide-react';
 type UserRole = "talent" | "client" | null,;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface RolePickerProps {;
   onSelect: (role: UserRole) => void;
 }
@@ -214,6 +221,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
     setSelectedRole(role);
     onSelect(role);
   };
+<<<<<<< HEAD
   return (;
     <div className="space-y-4 px-4">;
       <h2 className="text-xl font-medium">What brings you to Zion?</h2>;
@@ -224,6 +232,21 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
             selectedRole === 'talent';
               ? "border-primary bg-primary/5";
               : "border-border hover:border-primary/40";
+=======
+  return (
+    <div className='space-y-4 px-4'>;
+      <h2 className='text-xl font-medium'>What brings you to Zion?</h2>;
+      <p className='text-muted-foreground'>;
+        Choose how you want to use our platform;
+      </p>;
+
+      <div className='space-y-3 mt-6'>;
+        <Card
+          className={`cursor-pointer transition-all ${
+            selectedRole === 'talent'
+              ? 'border-primary bg-primary/5'
+              : 'border-border hover:border-primary/40'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           }`}
           onClick={() => handleSelect('talent')}
         >;
@@ -356,6 +379,7 @@ function RolePicker() {
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     </div>);
 }
@@ -379,3 +403,9 @@ function RolePicker() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+    </div>);
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

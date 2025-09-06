@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,13 +34,18 @@ import { toast } from "@/components/ui/use-toast",
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface HelpArticleViewProps {
 =======
 import { HELP_CATEGORIES } from "./help-content";
 >>>>>>> interface HelpArticleViewProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   articleId: string
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 <<<<<<< HEAD
@@ -82,6 +88,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -90,6 +97,18 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
     year: "numeric"
     month: "long"
     day: "numeric", })
+=======
+
+
+export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
+  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
+
+
+    year: "numeric",;
+    month: "long",;
+    day: "numeric", });
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -144,12 +163,19 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
     year: "numeric",;
     month: "long",;
     day: "numeric", });
+<<<<<<< HEAD
 };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from './react';
 import { Button  } from '@/components / ui / button';
 import { Card  } from '@/components / ui / card';
@@ -354,6 +380,7 @@ function formatDate(date: string): string {;
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 
@@ -373,3 +400,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

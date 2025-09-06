@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -20,6 +21,8 @@ import {logErrorToProduction} from '@/utils/productionLogger',
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 const AUTO_SERVICE_TITLES = [
 =======
 =======
@@ -365,6 +368,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
+<<<<<<< HEAD
     'ai-models-apis': {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       title: "AI Models & APIs"
@@ -435,6 +439,10 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
       icon: <Mic className="w-6 h-6" />
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     'ai-models-apis': {
       title: "AI Models & APIs"
       description: "Access cutting-edge AI models with easy integration"
@@ -446,8 +454,11 @@ ursor/fix-website-loading-errors-and-merge-6662
     },
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     'content-creation': {
       title: "Content Creation"
       description: "Generate high-quality content for your projects"
@@ -459,8 +470,11 @@ ursor/fix-website-loading-errors-and-merge-6662
     },
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     'data-analysis': {
       title: "Data Analysis"
       description: "Extract insights from complex datasets"
@@ -472,8 +486,11 @@ ursor/fix-website-loading-errors-and-merge-6662
     },
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     'computer-vision': {
       title: "Computer Vision"
       description: "Image and video processing solutions"
@@ -485,8 +502,11 @@ ursor/fix-website-loading-errors-and-merge-6662
     },
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     'virtual-assistants': {
       title: "Virtual Assistants"
       description: "Intelligent automation for your workflow"
@@ -498,6 +518,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     },
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -512,6 +533,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
     },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     'voice-speech': {
       title: "Voice & Speech"
       description: "Speech recognition and synthesis tools"
@@ -520,17 +543,24 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
+=======
+
+    },
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     'developer-tools': {
       title: "Developer Tools",
       description: "AI-powered coding assistance and automation",;
       icon: <Code className="w-6 h-6" />;
     };          icon: <Bot className="w-6 h-6" />},
+<<<<<<< HEAD
     },
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -573,12 +603,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+    },
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     'developer-tools': {
       title: "Developer Tools"
       description: "AI-powered coding assistance and automation"
       icon: <Code className="w-6 h-6" />
 
 
+<<<<<<< HEAD
 >>>>>>>     },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     'business-solutions': {
@@ -587,6 +622,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       icon: <Briefcase className="w-6 h-6" />
     }
   },
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 =======
@@ -726,6 +763,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>   return (
 =======
@@ -742,6 +780,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <>
       <NextSeo title={seoTitle} description={seoDescription} />
@@ -800,6 +840,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
               {listings.map((listing,) => (
                 <ProductListingCard
@@ -813,6 +854,9 @@ ursor/fix-website-loading-errors-and-merge-6662
           )}
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
               <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
@@ -885,6 +929,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="text - center mb - 12">;
             <div className="flex justify - center mb - 6">;
               <div className="text - zion - cyan p - 4 bg - zion - blue - dark rounded - full">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
@@ -898,6 +943,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className="flex justify-center mb-6">
               <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {category.icon}
               </div>
             </div>
@@ -934,6 +981,7 @@ function generateInnovationListing(): any (index: number): ProductListing {;
   const params = router && router.query as { slug?: string };
   const slug = slugProp ?? params && params.slug;
 
+<<<<<<< HEAD
 =======
             </p>
           </div>
@@ -956,6 +1004,9 @@ function generateInnovationListing(): any (index: number): ProductListing {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               {listings.map((listing) => (
                 <ProductListingCard
                   key={listing.id}
@@ -977,9 +1028,12 @@ function generateInnovationListing(): any (index: number): ProductListing {;
       title: "Services",;
       description: "On-demand IT support, consulting, development, and more",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       icon: <Briefcase className="w-6 h-6" />;
     },;
     'talents': {;
@@ -1153,18 +1207,28 @@ function generateInnovationListing(): any (index: number): ProductListing {;
             <ListingGridSkeleton />;
           ) : (;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">;
+<<<<<<< HEAD
               {listings.map((listing) => (;
                 <ProductListingCard;
                   key={listing.id}
                   listing={listing}
                   onRequestQuote={handleRequestQuote}
                   detailBasePath="/marketplace/listing";
+=======
+              {listings && listings.map((listing,) => (;
+                <ProductListingCard
+                  key = {listing && listing.id,}
+                  listing = {listing,}
+                  onRequestQuote = {handleRequestQuote,}
+                  detailBasePath="/marketplace/listing"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 />;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -1174,10 +1238,13 @@ function generateInnovationListing(): any (index: number): ProductListing {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               ))}
             </div>
           )}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1196,6 +1263,8 @@ function generateInnovationListing(): any (index: number): ProductListing {;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -1208,7 +1277,11 @@ function generateInnovationListing(): any (index: number): ProductListing {;
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </p>;
           </div>;
           {is_loading ? (
@@ -1227,6 +1300,7 @@ function generateInnovationListing(): any (index: number): ProductListing {;
       </Suspense>;
     </>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> ;
 
@@ -1244,3 +1318,9 @@ function generateInnovationListing(): any (index: number): ProductListing {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+
+
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

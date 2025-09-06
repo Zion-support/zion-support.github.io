@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/utils/monitoring.ts
 
 ========
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/utils/monitoring.ts
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Monitoring utilities;
 export const log_event = (event: string) =>: any {
   console.log ('Event logged:', event);
@@ -15,8 +18,11 @@ export const track_performance = () =>: any {
 ;
 <<<<<<<< HEAD:src/utils/monitoring.ts
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Monitoring utilities
 export const logEvent = (event: string) => {;
   console.log('Event logged:', event);
@@ -26,6 +32,7 @@ export const logEvent = (event: string) => {;
 
   console.log('Tracking performance...');
 
+<<<<<<< HEAD
 =======
 }
 export const trackPerformance = () => {
@@ -72,3 +79,6 @@ export const trackPerformance = () => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

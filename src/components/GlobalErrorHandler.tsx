@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
 
 =======
@@ -46,6 +47,9 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 interface ErrorContextType {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   reportError: (error: Error, context?: any) => void;
+=======
+reportError: (error: Error, context?: any) => void;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   showRetryableError: (error: Error, retryAction?: () => void) => void;
   showNetworkError: (retryAction?: () => void) => void;
   showAuthError: (loginAction?: () => void) => void;
@@ -357,6 +361,10 @@ export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps
     showAuthError,;
     clearAllErrors,;
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 <<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
 
@@ -596,8 +604,11 @@ export function useErrorHandler() {;
 } ;
 <<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
 
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/GlobalErrorHandler.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           handleApiError (error, options?.retry_action);
         }
         return null;
@@ -612,6 +623,7 @@ export function useErrorHandler() {;
     handleApiError;
     handleAsyncOperation}
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/GlobalErrorHandler.tsx
 =======
   }
@@ -713,6 +725,8 @@ export function useErrorHandler() {
     handleAsyncOperation
   };    reportError
     handleApiError
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
     handleAsyncOperation}
 }
@@ -730,6 +744,7 @@ export function useErrorHandler() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> import { toast } from '@/hooks/use-toast';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { Button } from '@/components/ui/button';
@@ -744,6 +759,8 @@ import { Button } from '@/components/ui/button',;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -871,6 +888,7 @@ export function GlobalErrorHandler({ children } GlobalErrorHandlerProps) {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>>   const contextValue: ErrorContextType = {
@@ -882,6 +900,10 @@ export function GlobalErrorHandler({ children } GlobalErrorHandlerProps) {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const contextValue: ErrorContextType = {
     reportError,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -953,6 +975,7 @@ export function useGlobalErrorHandler(): ErrorContextType {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
+<<<<<<< HEAD
   const message = error.message.toLowerCase(),
 
 <<<<<<< HEAD
@@ -1389,3 +1412,6 @@ if (options?.onError) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  const message = error.message.toLowerCase(),
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,10 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
+=======
+return (
+    <div className='mb-6 border-b border-zion-blue-light pb-6'>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <button
         onClick={toggleSection}
 =======
@@ -122,6 +127,7 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -166,6 +172,11 @@ const REGION_OPTIONS = [
               >
 <<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+      
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {expanded && (
         <div className='mt - 4 space - y-2'>;
           {REGION_OPTIONS.map (region => (
@@ -173,6 +184,10 @@ const REGION_OPTIONS = [
                 id={`region-${region.id}`}
 
       </button>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   { id: "North America", label: "North America" },
   { id: "Europe", label: "Europe" },
   { id: "Asia", label: "Asia" },
@@ -180,7 +195,10 @@ const REGION_OPTIONS = [
   { id: "Australia", label: "Australia" },
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
       {expanded && (;
         <div className='mt-4 space-y-2'>;
@@ -209,6 +227,7 @@ const REGION_OPTIONS = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>   { id: "Africa", label: "Africa" }
 ursor/fix-website-loading-errors-and-merge-6662
@@ -221,6 +240,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   { id: "Africa", label: "Africa" }
 >>>>>>> ]
 
@@ -254,6 +278,7 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
               </label>;
             </div>;
 
+<<<<<<< HEAD
 =======
       </button>
       {expanded && (
@@ -261,6 +286,8 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
           {REGION_OPTIONS.map(region => (
             <div key={region.id} className="flex items-center">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Checkbox
                 id={`region-${region.id}`}
                 checked={selectedRegions.includes(region.id)}
@@ -272,6 +299,7 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
 =======
 =======
@@ -280,6 +308,69 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
                 className='ml-2 text-sm text-zion-slate-light cursor-pointer'
               >                {region.label}                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
                htmlFor="input-
+=======
+          ))}
+        </div>;
+      )}
+
+    </div>;
+  );
+
+  toggleSection ;
+}className="flex w-full items-center justify-between text-white font-medium" > <span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;
+}</button> {;
+  REGION OPTIONS && OPTIONS.map (region => (<divkey= {
+  region && region.id "
+}className="flex items-center"> <Checkbox > {;
+  region && region.label ;
+}</label> </div>) ) ;
+}</div>) ;
+}</div>) ;
+}"}
+
+                checked={selected_regions.includes (region.id)}
+                onCheckedChange={() => toggle_region (region.id)}
+            <div key={region.id} className="flex items - center">;
+import { Checkbox  } from '@/components / ui / checkbox';
+import { RegionFilterProps  } from '@/types / filters';
+const REGION_OPTIONS = [;
+  { id: "North America", label: "North America" },
+  { id: "Europe", label: "Europe" },
+  { id: "Asia", label: "Asia" },
+  { id: "South America", label: "South America" },
+  { id: "Australia", label: "Australia" },
+  { id: "Africa", label: "Africa" }
+];
+export /**
+ * RegionFilter - Function description
+ */
+function RegionFilter() {
+  return (
+    <div className="mb - 6 border - b border - zion - blue - light pb - 6">;
+      <button;
+        on_click={toggle_section}
+        className="flex w - full items - center justify - between text - white font - medium";
+      >;
+        <span > Region</span>;
+        {expanded ? (
+          <ChevronUp className="h - 4 w - 4 text - zion - slate - light" />) : (
+          <ChevronDown className="h - 4 w - 4 text - zion - slate - light" />)}
+      </button>;
+      {expanded && (
+        <div className="mt - 4 space - y-2">;
+          {REGION_OPTIONS.map (region => (
+            <div key={region.id} className="flex items - center">;
+              <Checkbox;
+                id={`region-${region.id}`}
+                checked={selected_regions.includes (region.id)}
+                onCheckedChange={() => toggle_region (region.id)}
+                className='border - zion - slate - light data-[state = checked]:bg - zion - purple data-[state = checked]:border - zion - purple'              />;
+              <label;
+                html_for={`region-${region.id}`}
+                className='ml - 2 text - sm text - zion - slate - light cursor - pointer';
+              >                {region.label}                className="ml - 2 text - sm text - zion - slate - light cursor - pointer";
+              html_for="input-;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {region.label}
               ">
               </label>
@@ -293,6 +384,7 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 }className="flex w-full items-center justify-between text-white font-medium" > <span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />)
 }</button> {
   REGION OPTIONS.map (region => (<div key= {
+<<<<<<< HEAD
   region.id "
 }className="flex items-center" > <Checkbox > {
 <<<<<<< HEAD
@@ -312,6 +404,16 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  region.id ";
+}className="flex items - center" > <Checkbox > {
+  region.label;
+}</label> </div>) );
+}</div>);
+}</div>);
+}"}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   region.label 
 }</label> </div>) ) 
 }</div>) ;
@@ -320,6 +422,7 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>>                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -327,6 +430,8 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               >;
@@ -339,6 +444,7 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -357,3 +463,6 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import * as React from "react"
+import * as MenubarPrimitive from "@radix-ui/react-menubar"
+import { Check, ChevronRight, Circle } from 'lucide-react'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
 const MenubarMenu = MenubarPrimitive.Menu
@@ -57,6 +63,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       "flex h-10 items-center space-x-1 rounded-md border bg-background p-1",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -64,6 +71,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
 >>>>>>>     )}
     {...props}
@@ -83,6 +94,7 @@ const MenubarTrigger = React.forwardRef<;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   React.ElementRef<typeof MenubarPrimitive.Trigger>;
   React.ElementRef<typeof MenubarPrimitive.Trigger>,;
+<<<<<<< HEAD
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Trigger>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >(({ className, ...props }, ref) => (;
@@ -95,6 +107,10 @@ className={cn(
 >>>>>>>       className
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Trigger>;
 >(({ className, ...props }, ref) => (;
   <MenubarPrimitive.Trigger;
@@ -107,6 +123,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       "flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -123,6 +140,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     className={cn(
       "flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
 >>>>>>>     )}
     {...props}
@@ -134,11 +153,56 @@ const MenubarSubTrigger = React.forwardRef<;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+import * as React from &quot;react & quot;
+import * as MenubarPrimitive from &quot;@radix - ui / react - menubar & quot;
+import { Check, ChevronRight, Circle } from 'lucide-react';
+import { cn } from &quot;@/lib / utils & quot;
+;
+const MenubarMenu = MenubarPrimitive.Menu;
+const MenubarGroup = MenubarPrimitive.Group;
+const MenubarPortal = MenubarPrimitive.Portal;
+const MenubarSub = MenubarPrimitive.Sub;
+const MenubarRadioGroup = MenubarPrimitive.RadioGroup;
+const Menubar = React.forward_ref<;
+  React.ElementRef < typeof MenubarPrimitive.Root>,
+  React.ComponentPropsWithoutRef < typeof MenubarPrimitive.Root>;
+>(({ class_name, ...props }, ref) => (
+  <MenubarPrimitive.Root;
+    ref={ref}
+    className={cn (
+      &quot;flex h - 10 items - center space - x-1 rounded - md border bg - background p - 1&quot;,
+      class_name)}
+    {...props}
+  />));
+Menubar.display_name = MenubarPrimitive.Root.display_name;
+const MenubarTrigger = React.forward_ref<;
+  React.ElementRef < typeof MenubarPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef < typeof MenubarPrimitive.Trigger>;
+>(({ class_name, ...props }, ref) => (
+  <MenubarPrimitive.Trigger;
+    ref={ref}
+className={cn (
+      &quot;flex cursor - default select - none items - center rounded - sm px - 3 py - 1.5 text - sm font - medium outline - none focus:bg - accent focus:text - accent - foreground data-[state = open]:bg - accent data-[state = open]:text - accent - foreground & quot;,
+      class_name)}
+    {...props}
+  />));
+MenubarTrigger.display_name = MenubarPrimitive.Trigger.display_name;
+const MenubarSubTrigger = React.forward_ref<;
+  React.ElementRef < typeof MenubarPrimitive.SubTrigger>,
+  React.ComponentPropsWithoutRef < typeof MenubarPrimitive.SubTrigger> & {
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   React.ElementRef<typeof MenubarPrimitive.SubTrigger>,;
 
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.SubTrigger> & {;
     inset?: boolean;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
 >(({ className, inset, children, ...props }, ref) => (;
   <MenubarPrimitive.SubTrigger;
@@ -180,6 +244,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       inset && "pl-8",
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -201,6 +266,8 @@ className={cn(
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
 >>>>>>>     )}
     {...props}
@@ -222,6 +289,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     <ChevronRight className="ml-auto h-4 w-4" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -229,6 +297,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   </MenubarPrimitive.SubTrigger>
 >>>>>>> ))
 MenubarSubTrigger.displayName = MenubarPrimitive.SubTrigger.displayName
@@ -255,6 +327,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -262,6 +335,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
 >>>>>>>     )}
     {...props}
@@ -277,6 +354,7 @@ const MenubarContent = React.forwardRef<
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
     { className, align = &quot;start&quot; alignOffset = -4, sideOffset = 8, ...props },
 
     { className, align = "start", alignOffset = -4, sideOffset = 8, ...props },
@@ -302,6 +380,14 @@ const MenubarContent = React.forwardRef<
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+    { className, align = "start", alignOffset = -4, sideOffset = 8, ...props },
+
+    { className, align = &quot;start&quot; alignOffset = -4, sideOffset = 8, ...props },
+    { className, align = "start", alignOffset = -4, sideOffset = 8, ...props },
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     ref
 >>>>>>>   ) => (
     <MenubarPrimitive.Portal>
@@ -329,6 +415,7 @@ className={cn(
           "z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -336,6 +423,10 @@ className={cn(
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           className
 >>>>>>>         )}
         {...props}
@@ -349,11 +440,64 @@ const MenubarItem = React.forwardRef<;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+className={cn (
+      &quot;flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[state = open]:bg - accent data-[state = open]:text - accent - foreground & quot;,
+      inset && &quot;pl - 8&quot;,
+      class_name)}
+    {...props}
+  >;
+    {children}
+<ChevronRight className=&quot;ml - auto h - 4 w - 4&quot; />;
+  </MenubarPrimitive.SubTrigger>));
+MenubarSubTrigger.display_name = MenubarPrimitive.SubTrigger.display_name;
+const MenubarSubContent = React.forward_ref<;
+  React.ElementRef < typeof MenubarPrimitive.SubContent>,
+  React.ComponentPropsWithoutRef < typeof MenubarPrimitive.SubContent>;
+>(({ class_name, ...props }, ref) => (
+  <MenubarPrimitive.SubContent;
+    ref={ref}
+    className={cn (
+      &quot;z - 50 min - w-[8rem] overflow - hidden rounded - md border bg - popover p - 1 text - popover - foreground data-[state = open]:animate - in data-[state = closed]:animate - out data-[state = closed]:fade - out - 0 data-[state = open]:fade - in - 0 data-[state = closed]:zoom - out - 95 data-[state = open]:zoom - in - 95 data-[side = bottom]:slide - in - from - top - 2 data-[side = left]:slide - in - from - right - 2 data-[side = right]:slide - in - from - left - 2 data-[side = top]:slide - in - from - bottom - 2&quot;,
+      class_name)}
+    {...props}
+  />));
+MenubarSubContent.display_name = MenubarPrimitive.SubContent.display_name;
+const MenubarContent = React.forward_ref<;
+  React.ElementRef < typeof MenubarPrimitive.Content>,
+  React.ComponentPropsWithoutRef < typeof MenubarPrimitive.Content>;
+>(
+  (
+    { class_name, align = &quot;start & quot;, align_offset = -4, side_offset = 8, ...props },
+    ref) => (
+    <MenubarPrimitive.Portal>;
+      <MenubarPrimitive.Content;
+        ref={ref}
+        align={align}
+        align_offset={align_offset}
+        side_offset={side_offset}
+className={cn (
+          &quot;z - 50 min - w-[12rem] overflow - hidden rounded - md border bg - popover p - 1 text - popover - foreground shadow - md data-[state = open]:animate - in data-[state = closed]:fade - out - 0 data-[state = open]:fade - in - 0 data-[state = closed]:zoom - out - 95 data-[state = open]:zoom - in - 95 data-[side = bottom]:slide - in - from - top - 2 data-[side = left]:slide - in - from - right - 2 data-[side = right]:slide - in - from - left - 2 data-[side = top]:slide - in - from - bottom - 2&quot;,
+          class_name)}
+        {...props}
+      />;
+    </MenubarPrimitive.Portal>));
+MenubarContent.display_name = MenubarPrimitive.Content.display_name;
+const MenubarItem = React.forward_ref<;
+  React.ElementRef < typeof MenubarPrimitive.Item>,
+  React.ComponentPropsWithoutRef < typeof MenubarPrimitive.Item> & {
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   React.ElementRef<typeof MenubarPrimitive.Item>,;
 
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Item> & {;
     inset?: boolean;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
 >(({ className, inset, ...props }, ref) => (;
   <MenubarPrimitive.Item;
@@ -395,6 +539,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       inset && "pl-8",
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -416,6 +561,8 @@ className={cn(
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
 >>>>>>>     )}
     {...props}
@@ -435,6 +582,7 @@ const MenubarCheckboxItem = React.forwardRef<;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   React.ElementRef<typeof MenubarPrimitive.CheckboxItem>;
   React.ElementRef<typeof MenubarPrimitive.CheckboxItem>,;
+<<<<<<< HEAD
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.CheckboxItem>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >(({ className, children, checked, ...props }, ref) => (;
@@ -447,6 +595,10 @@ className={cn(
 >>>>>>>       className
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.CheckboxItem>;
 >(({ className, children, checked, ...props }, ref) => (;
   <MenubarPrimitive.CheckboxItem;
@@ -459,10 +611,15 @@ ursor/fix-website-loading-errors-and-merge-6662
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       className
 >>>>>>>     )}
+=======
+      className
+    )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       inset && &quot;pl - 8&quot;,
@@ -479,6 +636,7 @@ const MenubarCheckboxItem = React.forward_ref<;
 className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       class_name)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
@@ -489,6 +647,8 @@ className={cn (
       className
     )}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     checked={checked}
     {...props}
   >
@@ -561,6 +721,7 @@ const MenubarLabel = React.forwardRef<;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
   React.ElementRef<typeof MenubarPrimitive.Label>,;
 
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Label> & {;
@@ -585,6 +746,8 @@ className={cn(
       inset && &quot;pl-8&quot;
 >>>>>>>       className
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <MenubarPrimitive.RadioItem;
@@ -595,7 +758,10 @@ ursor/fix-website-loading-errors-and-merge-6662
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
     )}
   </MenubarPrimitive.CheckboxItem>));
@@ -609,6 +775,7 @@ const MenubarRadioItem = React.forward_ref<;
 className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       class_name)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 <<<<<<< HEAD
@@ -625,6 +792,8 @@ className={cn(
       className
     )}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     {...props}
   >
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
@@ -641,6 +810,7 @@ const MenubarLabel = React.forward_ref<;
   React.ElementRef < typeof MenubarPrimitive.Label>,
   React.ComponentPropsWithoutRef < typeof MenubarPrimitive.Label> & {
 
+<<<<<<< HEAD
   React.ElementRef<typeof MenubarPrimitive.Label>,;
 
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Label> & {;
@@ -658,6 +828,12 @@ const MenubarLabel = React.forwardRef<;
   React.ElementRef<typeof MenubarPrimitive.Label>,;
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Label> & {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+  React.ElementRef<typeof MenubarPrimitive.Label>,;
+
+  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Label> & {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     inset?: boolean;
   }
 >(({ className, inset, ...props }, ref) => (;
@@ -672,6 +848,7 @@ const MenubarLabel = React.forwardRef<;
       inset && "pl-8",
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -693,6 +870,8 @@ className={cn(
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
 >>>>>>>     )}
     {...props}
@@ -704,6 +883,7 @@ const MenubarSeparator = React.forwardRef<;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
   React.ElementRef<typeof MenubarPrimitive.Separator>;
 >>>>>>>   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Separator>;
@@ -711,6 +891,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Separator>;
 >>>>>>> >(({ className, ...props }, ref) => (;
+=======
+
+  React.ElementRef<typeof MenubarPrimitive.Separator>,;
+
+
+  React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Separator>;
+>(({ className, ...props }, ref) => (;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 className={cn (
       &quot;px - 2 py - 1.5 text - sm font - semibold & quot;,
       inset && &quot;pl - 8&quot;,
@@ -722,7 +910,6 @@ const MenubarSeparator = React.forward_ref<;
   React.ElementRef < typeof MenubarPrimitive.Separator>,
   React.ComponentPropsWithoutRef < typeof MenubarPrimitive.Separator>;
 >(({ class_name, ...props }, ref) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   <MenubarPrimitive.Separator;
     ref={ref}
 <<<<<<< HEAD
@@ -781,6 +968,7 @@ const MenubarShortcut = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -808,6 +996,9 @@ export {
   MenubarShortcut};
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         className
       )}
 />));
@@ -821,13 +1012,16 @@ const MenubarShortcut = ({
       className={cn (
         &quot;ml - auto text - xs tracking - widest text - muted - foreground & quot;,
         class_name)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {...props}
     />);
 }
 
 MenubarShortcut.displayname = &quot;MenubarShortcut & quot;
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 MenubarShortcut.displayname = "MenubarShortcut"
 
 
@@ -852,6 +1046,7 @@ export {
   MenubarPortal,
   MenubarSubContent,
   MenubarSubTrigger,
+<<<<<<< HEAD
   MenubarGroup,
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -879,3 +1074,6 @@ export {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  MenubarGroup,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

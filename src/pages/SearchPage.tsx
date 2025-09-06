@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -14,6 +15,37 @@ import { useRouter  } from 'next/router';
 import { useRouterReady, useRouteChange  } from '@/hooks/useRouterReady';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { generateSearchSuggestions } from "@/data/marketplaceData",
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+  const pageKey = `search-${routeKey}-${router && router.asPath}`;
+import { useRouter } from 'next/router';
+import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { generateSearchSuggestions } from "@/data/marketplaceData";
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { SearchSuggestion } from "@/types/search";
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
@@ -42,11 +74,15 @@ import {
   TabsList
   TabsTrigger} from "@/components/ui/tabs"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',
@@ -62,12 +98,18 @@ import {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Loader2 } from 'lucide-react'
 
 interface SearchResult {
@@ -215,6 +257,7 @@ export default function SearchPage() {
     if (query.trim()) {
       fetchResults(query.trim())
 <<<<<<< HEAD
+<<<<<<< HEAD
     } else {
       setResults([])
     }
@@ -254,6 +297,20 @@ import {;
   TabsContent,;
   TabsList,;
   TabsTrigger} from "@/components/ui/tabs",;
+=======
+  const page_key = `search-${route_key}-${router.as_path}`;
+import { use_router } from 'next / router';
+import { useRouterReady, useRouteChange } from '@/hooks / useRouterReady';
+import { EnhancedSearchInput  } from '@/components / search / EnhancedSearchInput';
+import { generateSearchSuggestions  } from '@/data / marketplace_data';
+import { SearchSuggestion  } from '@/types / search';
+import {logErrorToProduction} from '@/utils / production_logger';
+import {
+  Tabs;
+  TabsContent;
+  TabsList;
+  TabsTrigger } from '@/components / ui / tabs';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Loader2 } from 'lucide-react';
 interface SearchResult {
   id: string,
@@ -325,9 +382,12 @@ if (return) {
   $2
 }
       fetch_results (query.trim ());
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     } else {
       setResults([])
     }
@@ -349,6 +409,7 @@ if (return) {
       return;
     }
     set_loading (true);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   }, [router.isReady, query]), // Fixed dependency array
@@ -364,6 +425,8 @@ if (return) {
     }
     setLoading(true)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     try {
       const res = await fetch(`/api/search?query=${encodeURIComponent(term)}`)
       const data = await res.json()
@@ -593,6 +656,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -600,6 +664,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  const handleSubmit = (e: React && React.FormEvent) => {;
+    e && e.preventDefault();    if (query && query.trim()) {;
+      router && router.push(`/search?q=${encodeURIComponent(query && query.trim())}`);
+    }
+  };
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div key={pageKey}>
       <main className="container mx-auto px-4 py-8">
@@ -624,6 +699,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             searchSuggestions={suggestions}
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -643,6 +719,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             placeholder="Search talent, jobs, and projects..."
 >>>>>>>           />
         </form>
@@ -650,6 +728,22 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="flex justify-center py-8">
             <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
           </div>
+<<<<<<< HEAD
+=======
+            onSelectSuggestion={(suggestion) => {;
+              const searchTerm = suggestion && suggestion.text.trim();
+              setQuery(searchTerm);              router && router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
+            }}
+            searchSuggestions = {suggestions,}
+            placeholder="Search talent, jobs, and projects...";
+          />;
+        </form>;
+
+        {loading && (;
+          <div className="flex justify-center py-8">;
+            <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
+          </div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         )}
         {!loading && marketplaceResults.length === 0 && blogResults.length > 0 && (
           <div>
@@ -689,6 +783,34 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+        {!loading && marketplaceResults && marketplaceResults.length > 0 && (;
+          <Tabs defaultValue="products" className="space-y-4">;
+            <TabsList className="mb-4">;
+              <TabsTrigger value="products">;
+                Products ({productResults && productResults.length});
+              </TabsTrigger>;
+              <TabsTrigger value="talent">;
+                Talent ({talentResults && talentResults.length});
+              </TabsTrigger>;
+              <TabsTrigger value="docs">;
+                Docs ({docResults && docResults.length});
+              </TabsTrigger>;
+              <TabsTrigger value="blog">;
+                Blog ({blogResults && blogResults.length});
+              </TabsTrigger>;
+            </TabsList>;
+            <TabsContent value="products" className="space-y-4">;
+              {results;
+                .filter((r,) => r && r.type === "product" || r && r.type === "service");
+                .map((r,) => (;
+
+
+                .filter((r) => r.type === "product" || r.type === "service")
+                .map((r) => (
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <div
                     key={`${r.type}-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
@@ -828,6 +950,9 @@ const data = await res.json ()
 if (data && data.results && Array.isArray (data.results) ) {
   setResults (data.results)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Add key prop to force re - render when route changes;
   const page_key = `search-${route_key}-${router.as_path}`;
   return (
@@ -958,7 +1083,29 @@ if () {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 }else {
+<<<<<<< HEAD
   setResults ([]);'
+=======
+  set_results ([]);
+}, [router.is_ready, query]), //Fixed dependency array const fetch_results = async (term: string) => {
+  if () {) {
+  $2
+}
+  set_results ([]);
+return;
+}set_loading (true);
+try {
+  const res = await fetch (`/api / search?query=$ {
+  encodeURIComponent (term);
+}`);
+const data = await res.json ();
+if () {) {
+  $2
+}
+  set_results (data.results);
+}else {
+  set_results ([]);';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 logErrorToProduction ('Search API response structure is not as expected:', {
 <<<<<<< HEAD
 
@@ -1121,6 +1268,7 @@ router.push (`/search?q=$ {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 ;
@@ -1131,6 +1279,8 @@ router.push (`/search?q=$ {
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </main>;
     </div>;
   );
@@ -1162,7 +1312,11 @@ router.push (`/search?q=$ {
               </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
               <Link href="/pricing/" className="bg - blue - 600 text - white px - 6 py - 3 rounded - lg hover:bg - blue - 700 transition - colors">;
                 View Pricing;
@@ -1173,6 +1327,7 @@ router.push (`/search?q=$ {
             </div>;
     </>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> }
 ;
@@ -1195,3 +1350,7 @@ router.push (`/search?q=$ {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

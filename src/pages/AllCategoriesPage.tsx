@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { CategoryCard } from "@/components/CategoryCard";
 import { GradientHeading } from "@/components/GradientHeading";
 import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 
 
@@ -111,6 +114,7 @@ const categories = [;
 ];
 
 export default function AllCategoriesPage() {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     title: 'Services'
@@ -143,6 +147,8 @@ export default function AllCategoriesPage() {;
 
 export default function AllCategoriesPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className='min-h-screen bg-zion-blue'>
       <div className='container mx-auto px-4 py-12'>
@@ -158,7 +164,11 @@ export default function AllCategoriesPage() {
         </div>;
 
 
+<<<<<<< HEAD
 >>>>>>>               <CategoryCard
+=======
+              <CategoryCard
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 key={category && category.id}
                 title={category && category.title}
                 description={category && category.description}
@@ -282,6 +292,7 @@ export default function AllCategoriesPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>                 key={category.title}
                 title={category.title}
@@ -292,6 +303,11 @@ export default function AllCategoriesPage() {;
                 // So we don't pass the category.link to a 'to' prop here directly;
                 // The 'link' in the categories array above is used by CategoryCard's internal Link;
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+                // The CategoryCard itself is a Link to its specific category page;
+                // So we don't pass the category.link to a 'to' prop here directly;
+                // The 'link' in the categories array above is used by CategoryCard's internal Link;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               />;
             ))}
 
@@ -330,6 +346,7 @@ export default function AllCategoriesPage() {;
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -348,3 +365,42 @@ export default function AllCategoriesPage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+        <ErrorBoundary>;
+          <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
+            {categories.map (category => (
+              <CategoryCard;
+                key={category.id}
+                title={category.title}
+                description={category.description}
+                icon={category.icon}
+                href={category.href}
+              />))}
+          </div>;
+        <ErrorBoundary>;
+          <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
+            {categories.map (category => (          <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 6">;
+            {categories.map ((category) => (
+              <CategoryCard;
+                key={category.title}
+                title={category.title}
+                description={category.description}
+                icon={category.icon}
+            {categories.map ((category, ) => (
+              <CategoryCard;
+                key = {category.title, }
+                title = {category.title, }
+                description = {category.description, }
+                icon = {category.icon, }
+                // The CategoryCard itself is a Link to its specific category page;
+                // So we don't pass the category.link to a 'to' prop here directly;
+                // The 'link' in the categories array above is used by CategoryCard's internal Link;
+              />))}
+          </div>;
+        </ErrorBoundary>;
+      </div>;
+    </div>);
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

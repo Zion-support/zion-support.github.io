@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function PerformanceMonitor() {
 =======
@@ -171,3 +172,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
 export default PerformanceMonitor;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import React from 'react';
+
+import React from 'react';
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

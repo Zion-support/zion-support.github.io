@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -27,6 +28,15 @@ import {
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+Calendar,
+  Clock,
+  DollarSign,
+  Tag,;
+  Users;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   Briefcase;
 import {;
   Calendar,;
@@ -41,8 +51,13 @@ import {;
   DollarSign,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   Tag,;
+<<<<<<< HEAD
   Users;
   Briefcase;
+=======
+  Users,;
+  Briefcase,;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 } from 'lucide-react';import { formatDistanceToNow } from 'date-fns';
 import { toast } from 'sonner';
 import { useAuth } from '@/hooks/useAuth';
@@ -91,9 +106,48 @@ interface Job {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+export default function JobDetails() {;
+  const router = useRouter(); // Init router;
+  const { jobId: rawJobId } = router && router.query; // Get jobId from query;
+
+  const jobId = typeof rawJobId === 'string' ? rawJobId : undefined;
+  const { job, isLoading, error } = useJobDetails(jobId) as {;
+  deadline?: string;
+;
+export default /**
+ * JobDetails - Function description
+ */
+function JobDetails() {
+  const router = use_router (); // Init router;
+  const { job_id: rawJobId } = router.query; // Get job_id from query;
+  const job_id = typeof rawJobId === 'string' ? rawJobId : undefined;
+  const { job, is_loading, error } = useJobDetails (job_id) as {
+    job: Job | undefined;
+    is_loading: boolean;
+    error: any;
+  }
+
+
+  deadline?: string;
+
+export default function JobDetails() {;
+  const router = useRouter(); // Init router
+  const { jobId: rawJobId } = router.query; // Get jobId from query
+  const jobId = typeof rawJobId === 'string' ? rawJobId : undefined;
+  const { job, isLoading, error } = useJobDetails(jobId) as {
+    job: Job | undefined;
+    isLoading: boolean;
+    error: any;
+  };
+  const { user, isAuthenticated } = useAuth();
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from useParams, useNavigate;
 import { Header } from '@/components/Header',;
@@ -223,12 +277,16 @@ export default function JobDetails() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (isLoading) {
 =======
 >>>>>>>   if (isLoading) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     return <JobDetailsSkeleton />
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   if (isLoading) {
     return <JobDetailsSkeleton />;
 >>>>>>>   }
@@ -241,6 +299,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   };
   if (isLoading) {;
     return <JobDetailsSkeleton />;
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -250,6 +309,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
   if (error |!job) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return (
       <>
         <Header />
@@ -286,7 +347,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       </>
     )
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
   const handleApply = () => {
     if (!isAuthenticated) {
@@ -294,6 +358,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
   return (
 =======
 =======
@@ -304,6 +369,29 @@ ursor/fix-website-loading-errors-and-merge-6662
       router.push(
         `/login?redirect=${encodeURIComponent(`/jobs/${jobId |''}`)}`
       ); // Added null check for jobId
+=======
+  if (error || !job) {;
+    return (
+      <>;
+        <Header />;
+        <div className='container mx-auto px-4 py-16 text-center'>;
+          <h1 className='text-2xl font-bold mb-4'>Job Not Found</h1>;
+          <p className='mb-8'>;
+            The job you're looking for doesn't exist or has been removed.;
+          </p>;
+          <Button onClick={() => router && router.push('/careers')}>View All Jobs</Button>        </div>;
+      </>;
+    );
+  }
+
+
+  const handleApply = () => {;
+    if (!isAuthenticated) {;
+      toast && toast.error('Please log in to apply for this job');
+      router && router.push(;
+        `/login?redirect=${encodeURIComponent(`/jobs/${jobId || ''}`)}`;
+      ); // Added null check for jobId;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       return;
     }
 <<<<<<< HEAD
@@ -436,6 +524,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2">
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <Card>
               <CardHeader>
                 <div className="flex justify-between items-start">
@@ -490,6 +582,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div>
                   <h3 className='font-semibold text-lg mb-3'>
                     Job Description
+<<<<<<< HEAD
 =======
                 <div>
                   <h3 className="font-semibold text-lg mb-3">Job Description</h3>
@@ -514,6 +607,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+                  </h3>
+                  <div className='whitespace-pre-wrap'>{job.description}</div>
+                </div>
+
+            onClick={() => router && router.push('/careers')}          >;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 
                 <div>
                   <h3 className="font-semibold text-lg mb-3">Required Skills</h3>
@@ -610,11 +711,20 @@ export default function JobDetails() {;
                   </div>;
                 </div>;
                 <div>;
+<<<<<<< HEAD
                   <h3 className="font-semibold text-lg mb-3">Required Skills</h3>;
                   <div className="flex flex-wrap gap-2">;
                     {job.skills?.map((skill: string, i: number) => (;
                       <Badge key={i} variant="secondary">;
                         {skill}
+=======
+                  <h3 className='font-semibold text-lg mb-3'>;
+                    Required Skills;
+                  </h3>;
+                  <div className='flex flex-wrap gap-2'>;
+                    {job && job.skills?.map((skill: string, i: number) => (;
+                      <Badge key={i} variant='secondary'>                        {skill}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       </Badge>;
                     ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -651,16 +761,23 @@ export default function JobDetails() {;
                   </div>
                 </div>
 
+<<<<<<< HEAD
 =======
 >>>>>>>           <div>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     ))}
 
 
           
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <div>
 >>>>>>>             <Card>
               <CardContent className='pt-6 space-y-4'>
@@ -717,6 +834,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </Button>
                 )}
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 
                 <div className="flex items-start">
                   <Clock className="mt-1 h-5 w-5 text-muted-foreground" />
@@ -751,8 +874,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {isOwnJob && (
 =======
                 
@@ -1047,6 +1175,7 @@ if ( {) {
                     </p>;
                   </div>)}
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
@@ -1057,6 +1186,9 @@ if ( {) {
       </main>
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </CardContent>;
             </Card>;
           </div>;
@@ -1066,6 +1198,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
@@ -1074,6 +1207,8 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {/* Job application modal */}
       {job && (
         <ApplyToJobModal
@@ -1144,6 +1279,7 @@ if ( {) {
 }router.push (`/login?redirect=$ {
   encodeURIComponent (`/jobs/$ {';
   job_id || '' ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   return (<> <Header /> <div className="container mx-auto px-4 py-16 text-center" > <h1 className="text-2xl font-bold mb-4" >Job Not Found</h1> <p className="mb-8" >The job you're looking for doesn't exist or has been removed.</p> <Button onClick={';
@@ -1152,6 +1288,8 @@ if ( {) {
 }router.push (`/login?redirect=$ {encodeURIComponent (`/jobs/$ {';
   jobId |'' ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }`) ;
 }`);
 //Added null check for jobId return;
@@ -1214,6 +1352,7 @@ const isOwnJob = user?.id === job.client id;
 }</>) ;
 }'"
 }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 
@@ -1258,3 +1397,15 @@ const isOwnJob = user?.id === job.client id;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+}
+
+            id: job.id,
+            title: job.title,
+            description: job.description,
+            company_name: job.company_name ?? "Company",
+            budget: formatBudget(job.budget),
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

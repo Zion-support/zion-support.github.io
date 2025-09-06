@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/CategoryListingPage.tsx
 
 
@@ -13,6 +14,10 @@ import { safeStorage } from "@/utils/safeStorage";
 interface Listing {
 >>>>>>> import React from 'react';
 ========
+=======
+// Example listing type
+interface Listing {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoryListingPage.tsx
 import { useState, useEffect } from 'react';
@@ -31,10 +36,13 @@ import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
 import { safeStorage } from '@/utils/safeStorage';
 // Example listing type;
 interface Listing {;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/CategoryListingPage.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoryListingPage.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState, useEffect } from 'react';
 import { GradientHeading } from '@/components / GradientHeading';
 import { ListingScoreCard } from '@/components / ListingScoreCard';
@@ -645,8 +653,11 @@ export function CategoryListingPage({ ;
           return 0;
 <<<<<<<< HEAD:src/components/CategoryListingPage.tsx
 
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoryListingPage.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             new Date (a.created_at).get_time () - new Date (b.created_at).get_time ());
         case 'rating - high':;
           return (b.rating || 0) - (a.rating || 0);
@@ -662,6 +673,7 @@ export function CategoryListingPage({ ;
     });
   return (
     <>;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/CategoryListingPage.tsx
 =======
       const matchesSearch =;
@@ -700,6 +712,36 @@ export function CategoryListingPage({ ;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
         <div className="container mx-auto">;
           <div className="text-center mb-12">;
+=======
+
+
+
+
+              {description}
+
+            </p>;
+          </div>;
+
+
+          {/* Filters and Search */}
+
+                  className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />;
+              </div>;
+
+              <Select value={selectedSort} onValueChange={setSelectedSort}>;
+                <SelectTrigger className='bg-zion-blue border border-zion-blue-light text-white'>;
+                  <div className='flex items-center'>;
+                    {selectedSort === 'a-z' ? (;
+                      <ArrowDownAZ className='mr-2 h-4 w-4' />;
+                    ) : selectedSort === 'z-a' ? (;
+                      <ArrowUpZA className='mr-2 h-4 w-4' />;
+                    ) : null}
+                    <span>;
+                      {sortOptions && sortOptions.find(option => option && option.value === selectedSort);
+      <div className='min - h-screen bg - zion - blue py - 12 px - 4'>;
+        <div className='container mx - auto'>;
+          <div className='text - center mb - 12'>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <GradientHeading>{title}</GradientHeading>;
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
 <<<<<<< HEAD
@@ -715,6 +757,7 @@ export function CategoryListingPage({ ;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoryListingPage.tsx
           {/* Filters and Search */}
 
+<<<<<<< HEAD
                   ))}
 =======
 >>>>>>>               {description}
@@ -806,6 +849,9 @@ export function CategoryListingPage({ ;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="relative">
@@ -1032,8 +1078,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                       value={option && option.value}
                       className='text-white'>                      {option && option.label}
                     </SelectItem>;
+<<<<<<< HEAD
                   ))}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoryListingPage.tsx
+=======
+
+
+
+                  ))}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <SelectContent className='bg - zion - blue - dark border border - zion - blue - light'>;
                   {sort_options.map (option => (
                     <SelectItem;
@@ -1173,13 +1227,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
               Showing {processedListings.length} results
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               {searchQuery && ` for "${searchQuery}"`}
 
             </p>;
           </div>;
 
 
+<<<<<<< HEAD
 ========
 <<<<<<< HEAD
             </p>;
@@ -1196,6 +1254,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoryListingPage.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Listings Grid */}
           <div aria-busy={isLoading}>;
             {isLoading ? (;
@@ -1220,9 +1281,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoryListingPage.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 ))}
               </div>;
             ) : (;
@@ -1238,6 +1302,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>>                   variant="outline"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -1250,6 +1315,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                     setSelectedFilter(filterOptions[0]?.value |'all') }}
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   variant="outline"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   onClick={() => {
@@ -1276,6 +1343,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>                 >
                   Clear all filters
@@ -1378,16 +1446,23 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
 <<<<<<< HEAD
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 >
                   Clear all filters
                 </Button>
               </div>
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </div>;
             ) : (;
               <div className="text-center py-20">;
@@ -1460,6 +1535,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/CategoryListingPage.tsx
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ========
@@ -1592,6 +1668,10 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
 }</div> </div> </div> </>) ;
 }'"}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoryListingPage.tsx
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Results Count */}
           <div className='mb - 6'>;
             <p className='text - zion - slate - light'>;
@@ -1728,6 +1808,7 @@ case 'z - a': return (<> <div className="min - h-screen bg - zion - blue py - 12
 }className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
 }</div> </div> </div> </>);
 }'"}
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/CategoryListingPage.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> }
@@ -1783,3 +1864,6 @@ case 'z - a': return (<> <div className="min - h-screen bg - zion - blue py - 12
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

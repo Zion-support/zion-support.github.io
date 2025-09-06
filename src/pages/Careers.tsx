@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -84,6 +85,9 @@ export default function Careers() {
 <<<<<<< HEAD
 >>>>>>>   // Benefits list
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+// Benefits list
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const benefits = [
     {
       title: "Flexible Work",
@@ -91,6 +95,7 @@ export default function Careers() {
 <<<<<<< HEAD
 
       icon: (
+<<<<<<< HEAD
 =======
 >>>>>>>       icon: (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -99,6 +104,8 @@ export default function Careers() {
         </svg>
       )
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
     }
@@ -216,7 +223,6 @@ export default function Careers() {;
       description:;
         'Remote-first culture with flexible hours to support your productivity and work-life balance.',;
       icon: (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <svg
           className='w-10 h-10 text-zion-cyan'
           fill='none'
@@ -246,7 +252,6 @@ export default function Careers() {;
       description:;
         'Comprehensive health insurance and wellness programs to keep you at your best.',;
       icon: (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <svg
           className='w-10 h-10 text-zion-purple'
           fill='none'
@@ -276,7 +281,6 @@ export default function Careers() {;
       description:;
         'Education stipends and dedicated learning time to help you grow professionally.',;
       icon: (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <svg
           className='w-10 h-10 text-zion-cyan'
           fill='none'
@@ -306,7 +310,6 @@ export default function Careers() {;
       description:;
         'Salary packages that recognize your value, plus equity options to share in our success.',;
       icon: (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <svg
           className='w-10 h-10 text-zion-purple'
           fill='none'
@@ -336,7 +339,6 @@ export default function Careers() {;
       description:;
         'Contribute to innovations that make advanced technology accessible worldwide.',;
       icon: (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <svg
           className='w-10 h-10 text-zion-cyan'
           fill='none'
@@ -357,7 +359,11 @@ export default function Careers() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <>;
 >>>>>>>       <SEO
@@ -462,6 +468,7 @@ export default function Careers() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
             <div>
 =======
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24'>
@@ -470,6 +477,13 @@ export default function Careers() {;
               <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>
               <p className="text-zion-slate-light text-lg whitespace-pre-line">
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <div>
               <h2 className='text-3xl font-bold text-white mb-6'>
                 Why Work at Zion?
@@ -492,8 +506,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                 Why Work at Zion?;
               </h2>;
               <p className='text-zion-slate-light text-lg whitespace-pre-line'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>>                 {whyWork}
+=======
+                {whyWork}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </p>;
             </div>;
             <div className='rounded-lg overflow-hidden relative w-full h-full'>;
@@ -535,6 +553,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
+<<<<<<< HEAD
                   className='bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light'
                 >
                   <div className='bg-zion-blue inline-flex p-4 rounded-full mb-4'>                    {benefit.icon}
@@ -551,6 +570,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+                  className='bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light'>;
+                  <div className='bg-zion-blue inline-flex p-4 rounded-full mb-4'>                    {benefit && benefit.icon}
+                  </div>;
+                  <h3 className='text-xl font-bold text-white mb-3'>;
+                    {benefit && benefit.title}
+                  </h3>;
+                  <p className='text-zion-slate-light'>{benefit && benefit.description}</p>;
+                </div>;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           
           <div className="mb-24">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Benefits</h2>
@@ -559,11 +589,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div key={index} className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
                   <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
                     {benefit.icon}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                   <p className="text-zion-slate-light">{benefit.description}</p>
                 </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               ))}
             </div>
           </div>
@@ -627,6 +664,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   {jobList.map((job, index) => (
                     <Card
                       key={index}
+<<<<<<< HEAD
                       className='bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors'
                     >
                       <CardContent className='p-6'>
@@ -654,6 +692,49 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+                      className='bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors'>;
+                      <CardContent className='p-6'>;
+                        <div className='flex flex-col md:flex-row md:items-center md:justify-between'>                          <div>;
+                            <h3 className='text-xl font-bold text-white mb-2'>;
+                              {job && job.title}
+                            </h3>;
+                            <div className='flex flex-wrap gap-2 mb-4'>;
+                              <span className='text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full'>;
+                                {job && job.location}
+                              </span>;
+                              <span className='text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full'>;
+                                {job && job.type}
+                              </span>;
+                              <span className='text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full'>;
+                                {job && job.department}
+                              </span>;
+                            </div>;
+                            <p className='text-zion-slate-light mb-4'>;
+                              {job && job.description}
+                            </p>;
+                          </div>;
+                          <Button
+                            asChild
+                            className='w-full md:w-auto mt-4 md:mt-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'>;
+                            <Link href={`/careers/${job && job.id}`}>;
+import { SEO } from '@/components / SEO';
+import { GradientHeading } from '@/components / GradientHeading';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent } from '@/components / ui / card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import Link from 'next / link';
+import { CAREER_JOBS } from '@/data / careers_jobs';
+export default /**
+ * Careers - Function description
+ */
+function Careers() {
+  const apply_email = 'careers@ziontechgroup.com';
+  const jobs = CAREER_JOBS;
+  const why_work =;
+    'At Zion, we’re building more than a marketplace—we’re cultivating a community where forward - thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. You’ll join a remote - first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. You’ll work alongside passionate peers who care about real - world results, not just buzzwords. Zion’s growth means endless opportunities to expand your skills, explore new roles, and contribute to open - source initiatives. If you’re driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine what’s possible and make advanced AI accessible to all. Join us to transform ideas into reality today.';
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           
           <div className="mb-24">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Open Positions</h2>
@@ -678,6 +759,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                               <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.location}</span>
                               <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.type}</span>
                               <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.department}</span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                             </div>
                             <p className="text-zion-slate-light mb-4">{job.description}</p>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -732,7 +817,10 @@ export default function Careers() {;
   const jobs = CAREER_JOBS,;
   const whyWork =;
     "At Zion, we’re building more than a marketplace—we’re cultivating a community where forward-thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. You’ll join a remote-first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. You’ll work alongside passionate peers who care about real-world results, not just buzzwords. Zion’s growth means endless opportunities to expand your skills, explore new roles, and contribute to open-source initiatives. If you’re driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine what’s possible and make advanced AI accessible to all. Join us to transform ideas into reality today.",;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Benefits list;
   const benefits = [;
     {;
@@ -854,7 +942,13 @@ export default function Careers() {;
                             asChild;
                             className="w-full md:w-auto mt-4 md:mt-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
                           >;
+<<<<<<< HEAD
                             <Link href={`/careers/${job.id}`}>View Details</Link>;
+=======
+                            <Link href={`/careers/${job.id}`}>;
+                              View Details;
+                            </Link>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           </Button>;
                         </div>;
                       </CardContent>;
@@ -863,7 +957,10 @@ export default function Careers() {;
                     </Card>;
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   ))}
                 </TabsContent>;
               ))}
@@ -880,6 +977,7 @@ export default function Careers() {;
               about AI and technology. Send us your resume and let's start a;
               conversation. You can also apply directly by emailing us at;
 
+<<<<<<< HEAD
 =======
                     </Card>;
                   ))}
@@ -900,6 +998,9 @@ export default function Careers() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>
@@ -910,6 +1011,7 @@ export default function Careers() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               <a
@@ -923,6 +1025,8 @@ export default function Careers() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <a
                 href={`mailto:${applyEmail}`}
                 className="text-zion-cyan hover:text-zion-purple transition-colors"
@@ -982,6 +1086,7 @@ export default Careers
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 export default Careers;
 };
@@ -989,6 +1094,15 @@ export default Careers;
 ;
 >>>>>>> >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+
+}
+;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     </Card>))}
                 </TabsContent>))}
             </Tabs>;
@@ -1032,6 +1146,7 @@ const Careers: React.FC = () => {
       </div>;
     </>);
 }
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -1055,3 +1170,7 @@ export default Careers;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+export default Careers;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

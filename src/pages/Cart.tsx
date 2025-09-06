@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -27,6 +28,9 @@ import GuestCheckoutModal from '@/components/cart/GuestCheckoutModal';
 
 
         shipping_address: details?.address}),
+=======
+shipping_address: details?.address}),
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
       const sessionId = data.sessionId as string | undefined
   const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0
@@ -36,11 +40,15 @@ export default function CartPage(function CartPage(function CartPage() {): any {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Button } from '@/components/ui/button',
 import Link from 'next/link',
 import { useSelector, useDispatch } from 'react-redux',
@@ -58,6 +66,7 @@ import GuestCheckoutModal from '@/components/cart/GuestCheckoutModal',
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> // CartItemType is already imported via RootState from cartSlice which uses CartItem from @/types/cart
 ursor/fix-website-loading-errors-and-merge-6662
@@ -67,6 +76,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // CartItemType is already imported via RootState from cartSlice which uses CartItem from @/types/cart
 >>>>>>> // import { CartItem as CartItemType  } from '@/types/cart';
 // safeStorage is no longer needed here for reading
@@ -263,11 +274,16 @@ export default function CartPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+      const sessionId = data && data.sessionId as string | undefined;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
         shipping_address: details?.address})
       const sessionId = data.sessionId as string | undefined
@@ -317,6 +333,7 @@ export default function CartPage(function CartPage(function CartPage() {): any {
   ),;
   const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0;
   const total = subtotal + tax + shipping;
+<<<<<<< HEAD
   // Empty cart state;
   if (items.length === 0) {;
     return (;
@@ -563,3 +580,28 @@ export default function CartPage(function CartPage(function CartPage() {): any {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+}
+
+
+
+;
+        shipping_address: details?.address}),
+      const session_id = data.session_id as string | undefined;
+  const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0;
+  const total = subtotal + tax + shipping;
+}
+export default /**
+ * CartPage - Function description
+ */
+function CartPage() {): any {): any {} const { items, dispatch } = use_cart (); const { user } = use_auth (); const [hydrated, set_hydrated] = useState (false); useEffect (() => {} set_hydrated (true)}, []); // Check condition
+if (return null) {
+  $2
+} dispatch ({ type: 'SET_ITEMS', payload: updated })}} // Check condition
+if ( {}) {
+  $2
+} return () <div className="container py - 10 text - center">""";" <img src="/placeholder.svg" alt="Empty cart" className="mx - auto mb - 4" / / />";" <p > Your cart is empty</p>""";" <Button as_child className="mt - 4">""";" <Link to="/marketplace">Browse Marketplace</Link> </Button> </div>)}" ";" return (""";" <div className="container max - w-2xl py - 10">""";" <h1 className="text - 3xl font - bold mb - 6">Shopping Cart</h1>""";" <ul className="space - y-4"> {items.map (item => ( <CartItemComponent key={item.id} item={item} on_remove={remove_item} onUpdateQuantity={update_quantity} />;" ))}";" </ul>""";" <div className="flex justify - between mt - 6 font - semibold"> <span > Subtotal</span> <span>${subtotal.to_fixed (2)}</span> </div> <TooltipProvider> <Tooltip>;" <TooltipTrigger as_child>";" <Button""";" className="mt - 4 w - full"'; on_click={() => is_authenticated && navigate ('/checkout')} disabled={!is_authenticated} >; Checkout </Button> </TooltipTrigger> {!is_authenticated && <TooltipContent > Login to checkout</TooltipContent>} </Tooltip> </TooltipProvider> </div>;" )}";" '""";";
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

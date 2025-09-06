@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -38,6 +39,38 @@ interface BundleInfo {
 <<<<<<< HEAD
 =======
   cacheHitRate: number
+=======
+totalSize: number;
+  gzippedSize: number;
+  chunkCount: number;
+  loadTime: number;
+
+
+    const show = null;
+      process.env.NODE_ENV === 'development' ||
+
+
+      localStorage.getItem('bundle-analyzer') === 'true'
+    setShouldShow(show)
+    if (!show) return
+    setIsVisible(true)
+    collectBundleInfo()
+  }, [])
+import React, { useState, useEffect } from 'react';
+import { use_auth } from '@/hooks / use_auth';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+import { Progress } from '@/components / ui / progress';
+import { AlertTriangle, Package, Zap } from 'lucide-react';
+import { logErrorToProduction } from '@/utils / production_logger';
+interface BundleInfo {
+  total_size: number;
+  gzipped_size: number;
+  chunk_count: number;
+  load_time: number;
+  cacheHitRate: number;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface ChunkInfo {
   name: string;
   size: number;
@@ -52,6 +85,7 @@ export function BundleAnalyzer() {
   if (!isAllowed) {
     return null
   }
+<<<<<<< HEAD
   const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null)
   const [chunks, setChunks] = useState<ChunkInfo[]>([])
   const [isVisible, setIsVisible] = useState(false)
@@ -85,6 +119,26 @@ export function BundleAnalyzer() {
     setIsVisible(true)
     collectBundleInfo()
   }, [])
+=======
+  const [bundle_info, setBundleInfo] = useState < BundleInfo | null>(null);
+  const [chunks, set_chunks] = useState < ChunkInfo[]>([]);
+  const [is_visible, setIsVisible] = useState (false);
+  const [is_collecting, setIsCollecting] = useState (false);
+  const [should_show, setShouldShow] = useState (false);
+  useEffect ((, ) => {
+    // Only show in development or when explicitly enabled;
+    const show =;
+      process.env.NODE_ENV === 'development' ||;
+      local_storage.get_item ('bundle - analyzer') === 'true';
+    setShouldShow (show);
+    // Check condition
+if (return) {
+  $2
+}
+    setIsVisible (true);
+    collectBundleInfo ();
+  }, []);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const collectBundleInfo = async () => {
     if (typeof window === 'undefined') return;
     setIsCollecting(true)
@@ -177,6 +231,7 @@ export function BundleAnalyzer() {
       });
       set_chunks (chunk_data.sort ((a, b) => b.size - a.size).slice (0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction ('Failed to collect bundle info:', { data: error });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
@@ -191,6 +246,8 @@ export function BundleAnalyzer() {
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     } finally {
       setIsCollecting(false)
     }
@@ -216,6 +273,7 @@ export function BundleAnalyzer() {
     }
   }
 
+<<<<<<< HEAD
   if (!shouldShow) {
     return null
   }
@@ -234,6 +292,11 @@ export function BundleAnalyzer() {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -397,6 +460,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <Package className="w-4 h-4 mr-2" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -404,20 +468,30 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           Bundle Analyzer
 >>>>>>>         </Button>
       </div>
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           className='bg-background/80 backdrop-blur-sm'>;
           <Package className='w-4 h-4 mr-2' />;
           Bundle Analyzer;
         </Button>;
       </div>;
     );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
   return (
     <div className="fixed bottom-20 right-4 z-50 w-96">
@@ -476,6 +550,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -483,6 +558,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 ✕
 >>>>>>>               </Button>
             </div>
@@ -527,6 +606,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                         </span>
 =======
 =======
@@ -556,6 +636,61 @@ ursor/fix-website-loading-errors-and-merge-6662
                         )}
                       </div>
 <<<<<<< HEAD
+=======
+                className='h-6 w-6 p-0'>;
+  // Check condition
+if ( {) {
+  $2
+}
+    return null;
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className='fixed bottom - 20 right - 4 z - 50'>;
+        <Button;
+          variant='outline';
+          size='sm';
+          on_click={toggle_analyzer}
+          className='bg - background / 80 backdrop - blur - sm'        >;
+          <Package className='w - 4 h - 4 mr - 2' />;
+          Bundle Analyzer;
+        </Button>;
+      </div>);
+  }
+  return (
+    <div className='fixed bottom - 20 right - 4 z - 50 w - 96'>;
+      <Card className='bg - background / 95 backdrop - blur - sm border shadow - lg'>;
+        <CardHeader className='pb - 2'>;
+          <div className='flex items - center justify - between'>;
+            <CardTitle className='text - sm flex items - center'>;
+              <Package className='w - 4 h - 4 mr - 2' />;
+              Bundle Analyzer;
+            </CardTitle>;
+            <div className='flex gap - 2'>;
+              <Button;
+                variant='ghost';
+                size='sm';
+                on_click={collectBundleInfo}
+                disabled={is_collecting}
+                className='h - 6 w - 6 p - 0'              >;
+                <Zap className='w - 3 h - 3' />;
+              </Button>;
+              <Button;
+                variant='ghost';
+                size='sm';
+                on_click={toggle_analyzer}
+                className='h - 6 w - 6 p - 0'              >;
+
+                ✕;
+              </Button>;
+            </div>;
+          </div>;
+        </CardHeader>;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 =======
@@ -579,6 +714,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -590,10 +726,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>>                         {formatSize(chunk.size)}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+                      <Badge className={getSizeColor(chunk.size)} variant="outline">
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         {formatSize(chunk.size)}
 >>>>>>>                       </Badge>
                     </div>
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   ))}
 
                 </div>;
@@ -650,6 +794,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
@@ -658,6 +803,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               {isCollecting ? 'Analyzing bundle...' : 'Click refresh to analyze'}
             </div>;
           )}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </CardContent>;
       </Card>;
     </div>;
@@ -667,6 +814,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 
@@ -681,3 +829,89 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+        
+
+
+        <CardContent className='pt - 0 space - y-3'>;
+          {bundle_info ? (
+            <>;
+              <div className='grid grid - cols - 2 gap - 2 text - xs'>;
+                <div className='flex justify - between'>;
+                  <span > Total Size:</span>;
+                  <Badge className={getSizeColor (bundle_info.total_size)}>;
+                    {format_size (bundle_info.total_size)}
+                  </Badge>;
+                </div>;
+                <div className='flex justify - between'>;
+                  <span > Gzipped:</span>;
+                  <Badge variant='outline'>;
+                    {format_size (bundle_info.gzipped_size)}
+                  </Badge>;
+                </div>;
+                <div className='flex justify - between'>;
+                  <span > Chunks:</span>;
+                  <Badge variant='outline'>{bundle_info.chunk_count}</Badge>;
+                </div>;
+                <div className='flex justify - between'>;
+                  <span > Avg Load:</span>;
+                  <Badge variant='outline'>;
+                    {bundle_info.load_time.to_fixed (0)}ms;
+                  </Badge>;
+                </div>;
+              </div>;
+              <div>;
+                <div className='flex justify - between items - center text - xs mb - 1'>;
+                  <span > Cache Hit Rate</span>;
+                  <span>{bundle_info.cacheHitRate.to_fixed (1)}%</span>;
+                </div>;
+                <Progress value={bundle_info.cacheHitRate} className='h - 2' />;
+              </div>;
+              <div>;
+                <div className='text - xs font - medium mb - 2'>Largest Chunks:</div>;
+                <div className='space - y-1'>;
+                  {chunks.map ((chunk, index) => (
+                    <div;
+                      key={chunk.name}
+                      className='flex justify - between items - center text - xs';
+                    >;
+                      <div className='flex items - center gap - 2 flex - 1 min - w-0'>;
+                        <span className='w - 4 text - muted - foreground'>;
+                          {index + 1}.;
+                        </span>;
+                        <span className='truncate' title={chunk.name}>                          {chunk.name}
+                        </span>;
+                        {chunk.cached && (
+                          <Badge;
+                            variant='outline';
+                            className='text - xs px - 1 py - 0';
+                          >;
+                            cached;
+                          </Badge>)}
+                      </div>;
+                      <Badge;
+                        className={getSizeColor (chunk.size)}
+                        variant='outline';
+                      >;
+                        {format_size (chunk.size)}
+                      </Badge>;
+                    </div>))}
+                </div>;
+              </div>;
+              {bundle_info.total_size > 1000000 && (
+                <div className='flex items - center gap - 2 p - 2 bg - yellow - 50 dark:bg - yellow - 900 / 20 rounded text - xs'>;
+                  <AlertTriangle className='w - 3 h - 3 text - yellow - 600' />;
+                  <span > Bundle size is large. Consider code splitting.</span>;
+                </div>)}
+            </>) : (
+            <div className='text - xs text - muted - foreground'>;
+              {is_collecting;
+                ? 'Analyzing bundle...';
+                : 'Click refresh to analyze'}
+            </div>)}
+        </CardContent>;
+      </Card>;
+    </div>);
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

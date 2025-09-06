@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,6 +55,12 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
+=======
+import React from 'react';
+import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
+import { cn } from '@/lib/utils';
+type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface ProfileBadgeProps {;
   type: BadgeType;
   className?: string;  type: BadgeType,
@@ -84,6 +91,7 @@ interface ProfileBadgeProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -98,12 +106,15 @@ type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface ProfileBadgeProps {
   type: BadgeType,
 <<<<<<< HEAD
 
   className?: string
 }
+<<<<<<< HEAD
 
 =======
 >>>>>>>   className?: string
@@ -112,6 +123,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 interface ProfileBadgeProps {
   type: BadgeType,
@@ -184,6 +197,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   text;
 }</span>;
 }'"  );
+<<<<<<< HEAD
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       text: "Top Rated",
@@ -339,3 +353,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

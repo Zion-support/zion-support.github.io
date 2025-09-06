@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,6 +86,8 @@ xport const NavigationButtons = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <Button variant="outline" onClick={onBack}>
 import { Button } from "@/components/ui/button",;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Loader2 } from 'lucide-react';
 import { NavigationButtonsProps } from "./types";
 export const NavigationButtons = ({;
@@ -117,8 +120,25 @@ export const NavigationButtons = ({
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
+<<<<<<< HEAD
     <div className="flex justify-between">
       {onBack && (
+=======
+    <div className="flex justify-between">;
+      {onBack && (;
+        <Button variant='outline' onClick={onBack}>;
+export const NavigationButtons = ({;
+  onBack,;
+  onNext,;
+  isNextDisabled = false,;
+  backLabel = 'Back',;
+  nextLabel = 'Next',;
+  isLoading = false,;
+}: NavigationButtonsProps) => {;
+  return (
+    <div className='flex justify-between'>;
+      {onBack && (;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Button variant='outline' onClick={onBack}>          {backLabel}
         <Button variant="outline" onClick={onBack}>
   return (
@@ -187,6 +207,7 @@ export const NavigationButtons = ({;
           {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           {nextLabel}
         </Button>;
+<<<<<<< HEAD
       )}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </div>;
@@ -210,3 +231,6 @@ export const NavigationButtons = ({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+      )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

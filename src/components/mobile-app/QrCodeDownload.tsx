@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6,6 +7,8 @@ import React from "react",
 import { QrCode } from 'lucide-react'
 import { AppStoreButtons } from "./AppStoreButtons",
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export const QrCodeDownload: React.FC = () => {
 =======
 }
@@ -19,6 +22,7 @@ xport const QrCodeDownload: React.FC = () => {
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
@@ -54,6 +58,9 @@ export const QrCodeDownload: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+              
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
               <AppStoreButtons 
 =======
@@ -97,6 +104,7 @@ export const QrCodeDownload: React.FC = () => {
 =======
               
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -105,6 +113,9 @@ export const QrCodeDownload: React.FC = () => {
 =======
               
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <div className="flex gap-2 items-center text-sm text-gray-400">
 >>>>>>>                 <span className="block h-1 w-1 rounded-full bg-zion-purple"></span>
                 <span>Compatible with iOS 14+ and Android 8.0+</span>
@@ -114,6 +125,13 @@ export const QrCodeDownload: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+            
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <div className="flex-shrink-0">
 =======
 >>>>>>>             <div className="flex-shrink-0">
@@ -283,8 +301,13 @@ export const QrCodeDownload: React.FC = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
+=======
+
+";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   {/* This would be replaced with an actual QR code in production */}
                 </div>
                 <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">
@@ -297,6 +320,7 @@ export const QrCodeDownload: React.FC = () => {;
       </div>
     </section>
 
+<<<<<<< HEAD
   )
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -310,3 +334,6 @@ export const QrCodeDownload: React.FC = () => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

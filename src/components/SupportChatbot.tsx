@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/SupportChatbot.tsx
 
 
@@ -22,6 +23,23 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+    set_messages (prev => [...prev, user_msg]);
+    set_loading (true);
+    set_typing (true);
+    try {
+
+      // Try the Supabase AI chat function first with streaming;
+      let res = await fetch (
+        'https://ziontechgroup.functions.supabase.co / functions / v1 / ai - chat',
+
+        {
+          method: 'POST'
+          headers: {
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState, useRef, useEffect } from 'react'
 import { MessageSquare, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -32,11 +50,15 @@ interface Msg {
   role: 'user' | 'assistant'
   message: string
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -48,6 +70,11 @@ import {logErrorToProduction} from '@/utils/productionLogger',;
 
 interface Msg { id: string, role: 'user' | 'assistant', message: string }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Fallback responses when API is unavailable
 
 const FALLBACK_RESPONSES = [
@@ -182,6 +209,7 @@ function SupportChatbot() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 // Fallback responses when API is unavailable
 
@@ -255,6 +283,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       // If Supabase function fails, try local API fallback
       if (!res.ok) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -408,6 +438,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -455,6 +486,8 @@ ursor/fix-website-loading-errors-and-merge-6662
         {
           method: 'POST'
           headers: {
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface Msg {;
   id: string;
   role: 'user' | 'assistant';
@@ -688,6 +721,7 @@ if ( {) {
                   setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: accumulated } : m));
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>                 }
 ursor/fix-website-loading-errors-and-merge-6662
@@ -840,6 +874,12 @@ export function SupportChatbot() {;
               } catch (_) {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/SupportChatbot.tsx
+=======
+
+
+                }
+              } catch (_) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 // ignore parse errors;
               }
             }
@@ -911,8 +951,11 @@ export function SupportChatbot() {;
           "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.";
         set_messages (prev =>;
           prev.map (m => (m.id === bot_id ? { ...m, message: final } : m)));
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       }
       setMessages(prev => [...prev, errorMsg])
     } finally {
@@ -923,8 +966,11 @@ export function SupportChatbot() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         const final = accumulated.trim() ||
           (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),
         setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m))
@@ -960,6 +1006,7 @@ export function SupportChatbot() {;
         setMessages(prev =>;
           prev && prev.map(m => (m && m.id === botId ? { ...m, message: final } : m));
         );
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -992,6 +1039,8 @@ export function SupportChatbot() {;
       setLoading(false),
       setTyping(false)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   },
 
@@ -1082,6 +1131,10 @@ export function SupportChatbot() {;
           aria-label="Close help bot"
         >
           <X className="h-5 w-5" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </Button>
       </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1095,6 +1148,7 @@ export function SupportChatbot() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>         )}
         {messages.map(m => (
@@ -1103,6 +1157,11 @@ export function SupportChatbot() {;
         {typing && <ChatMessage role='assistant' message='...' />}
 >>>>>>>         <div ref={endRef} />
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+        const final = accumulated.trim() ||;
+          (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),;
+        setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m));
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       }
     } catch (err) {;
       logErrorToProduction('Chatbot error:', { data: err });
@@ -1140,8 +1199,11 @@ ursor/fix-website-loading-errors-and-merge-6662
       setLoading(false);
       setTyping(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/SupportChatbot.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   }
 
@@ -1237,8 +1299,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         )}
         {messages && messages.map(m => (;
           <ChatMessage key={m && m.id} role={m && m.role} message={m && m.message} />;
@@ -1253,8 +1318,11 @@ ursor/fix-website-loading-errors-and-merge-6662
         )}
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div ref={endRef} />
 >>>>>>>       </div>
       <div className='p-2 border-t border-zion-purple/20 bg-zion-blue-dark/30'>
@@ -1321,6 +1389,16 @@ setTyping (false) ;
 }'";
 }
 }
+<<<<<<< HEAD
+=======
+
+
+}
+;
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       set_loading (false);
       set_typing (false);
     }
@@ -1497,6 +1575,7 @@ setMessages (prev => prev.map (m => m.id === botId ? {;
 }buffer = lines[lines.length - 1] || '' ;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
+<<<<<<< HEAD
 }
 }catch (err) {';
   logErrorToProduction ('Chatbot error:', {;
@@ -1600,3 +1679,6 @@ setTyping (false)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

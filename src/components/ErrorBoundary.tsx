@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ErrorBoundary.tsx
 <<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
@@ -17,6 +18,8 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface Props {
   children: ReactNode;
 }
@@ -108,6 +111,7 @@ class ErrorBoundary extends Component<Props, State> {
       );
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ErrorBoundary.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -120,6 +124,10 @@ class ErrorBoundary extends Component<Props, State> {
 export { ErrorBoundary };
 export default ErrorBoundary;
 ========
+=======
+
+export default ErrorBoundary
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return { hasError: true, error };
   };
 ,
@@ -182,6 +190,7 @@ export default ErrorBoundary;
 };
 ,
 export { ErrorBoundary };
+<<<<<<< HEAD
     return this.props.children;
   }
 }
@@ -361,3 +370,10 @@ export { ErrorBoundary };'"
 =======
 export default ErrorBoundary;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+    return this.props.children;
+  }
+}
+export default ErrorBoundary;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

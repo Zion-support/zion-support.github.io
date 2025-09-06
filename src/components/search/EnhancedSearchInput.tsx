@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,6 +30,10 @@ import { logInfo, logWarn } from '@/utils/productionLogger'
           
 import { logInfo, logWarn } from '@/utils/productionLogger'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+import { logInfo, logWarn } from '@/utils/productionLogger'
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useEffect, useRef, useMemo } from "react",
 import { useTranslation } from "react-i18next",
 import { Search, X } from 'lucide-react'
@@ -70,6 +75,7 @@ interface EnhancedSearchInputProps {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
+<<<<<<< HEAD
 >>>>>>> interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -115,6 +121,8 @@ interface EnhancedSearchInputProps {
   placeholder?: string,
   /**
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
    * Optional list of fallback suggestions (e.g. recent searches).
 >>>>>>>    * If provided, these will be shown when the input is empty.
    */
@@ -359,10 +367,29 @@ export function EnhancedSearchInput({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>             }
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+        try {
+          const response = await fetch (`/api / search / suggest?q=${encodeURIComponent (query)}`, {
+            signal: AbortSignal.timeout (5000) // 5 second timeout;
+          });
+          // Check condition
+if ( {) {
+  $2
+}
+            const data = await response.json ();
+            if () {) {
+  $2
+}
+              setApiSuggestions (data.slice (0, 5)), // Limit to 5 API suggestions;
+
+          setApiSuggestions([]),
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             }
 >>>>>>>           } else {
 
@@ -589,9 +616,48 @@ if ( {) {
   const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {
     logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),
     onChange(suggestionObj.text),
+<<<<<<< HEAD
     if (onSelectSuggestion) {
       logInfo('Calling onSelectSuggestion with:', { data: suggestionObj })
       onSelectSuggestion(suggestionObj)
+=======
+
+
+    if (onSelectSuggestion) {
+      logInfo('Calling onSelectSuggestion with:', { data: suggestionObj })
+      onSelectSuggestion(suggestionObj)
+        setHighlightedIndex (-1);
+      });
+      .catch (() => setFilteredSuggestions ([]));
+    return () => controller.abort ();
+  }, [debounced, search_suggestions]);
+  // Handle clicks outside the component to close suggestions;
+  useEffect ((, ) => {
+    /**
+ * handleClickOutside - Function description
+ */
+function handleClickOutside() {
+      if () {) {
+  $2
+}
+        setIsFocused (false),
+        // setHighlightedIndex (-1), // Already handled in on_blur generally;
+      }
+    }
+    document.addEventListener ("mousedown", handleClickOutside);
+    return () => document.removeEventListener ("mousedown", handleClickOutside);
+  }, []);
+  const router = use_router ();
+  const handleSelectSuggestion = (suggestion_obj: SearchSuggestion, ) =>: any {
+    log_info ('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestion_obj }),
+    on_change (suggestion_obj.text);
+    // Check condition
+if ( {) {
+  $2
+}
+      log_info ('Calling onSelectSuggestion with:', { data: suggestion_obj }),
+      onSelectSuggestion (suggestion_obj);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     } else {
       // Provide a sensible default navigation if the parent did not supply a handler
       logWarn('onSelectSuggestion callback not provided')
@@ -1088,6 +1154,9 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
         router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
@@ -1177,6 +1246,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
   return (
 =======
   
@@ -1197,6 +1267,12 @@ if ( {) {
     >
       <div className="relative flex items-center w-full">
 <<<<<<< HEAD
+=======
+      // Provide a sensible default navigation if the parent did not supply a handler
+
+      logWarn('onSelectSuggestion callback not provided'),
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       if (suggestionObj.id) {
         router.push(`/marketplace/listing/${suggestionObj.id}`)
       } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {
@@ -1207,7 +1283,10 @@ if ( {) {
 
         router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`)
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 
       aria-expanded = {isFocused && filteredSuggestions && filteredSuggestions.length> 0,}
@@ -1232,6 +1311,7 @@ if ( {) {
           ref={inputRef}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -1239,6 +1319,10 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           type="text"
           id="enhanced-search-input"
           name="search"
@@ -1299,6 +1383,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             setEnterHandledPostFocus (false);
 
           }}
+<<<<<<< HEAD
           onKeyDown = {handleKeyDown,}
           aria-label = {t('general.search'),}
 >>>>>>>           className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
@@ -1306,6 +1391,16 @@ ursor/fix-website-loading-errors-and-merge-6662
           aria-autocomplete="list"
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+          on_focus={(e) => {
+            setIsFocused (true);            setHighlightedIndex (-1), // Explicitly reset on focus;
+            const current_val = e.target.value;
+            setValueOnFocus (current_val);
+            setEnterHandledPostFocus (false);
+            e.target.setSelectionRange (current_val.length, current_val.length);
+          }}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
               setHighlightedIndex(-1)
             ,}
@@ -1330,14 +1425,21 @@ ursor/fix-website-loading-errors-and-merge-6662
             if (!containerRef.current || !containerRef.current.contains(relatedTarget as Node)) {;
               setIsFocused(false);
               setHighlightedIndex(-1);
+<<<<<<< HEAD
             }
+=======
+            ,}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             setValueOnFocus(null);
           }}
           onKeyDown={handleKeyDown}
           aria-label={t('general.search')}
           className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
           aria-autocomplete="list"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="off"
         />
@@ -1368,12 +1470,16 @@ ursor/fix-website-loading-errors-and-merge-6662
         visible = {isFocused,}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>         highlightedIndex={highlightedIndex} // Pass highlightedIndex
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </div>;
       <AutocompleteSuggestions;
         suggestions={filteredSuggestions}
@@ -1390,6 +1496,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 ;
 
 }
@@ -1401,6 +1508,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 >>>>>>> >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         highlightedIndex={highlightedIndex} // Pass highlightedIndex
         listId="autocomplete-suggestions-list" // Pass ID for aria-controls
 
@@ -1544,7 +1653,11 @@ break
   );
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           on_blur={(e) => {
             const related_target = e.related_target as HTMLElement;            if () {) {
   $2
@@ -1649,6 +1762,7 @@ break;
         list_id="autocomplete - suggestions - list";
       />;
     </div>);
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> >>>>>>> 
@@ -1671,3 +1785,6 @@ break;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

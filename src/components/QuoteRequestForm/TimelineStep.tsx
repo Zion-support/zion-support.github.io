@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/QuoteRequestForm/TimelineStep.tsx
 
 
@@ -14,6 +15,9 @@ import { Calendar } from '@/components/ui/calendar'
 import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
 import { CalendarIcon } from 'lucide-react'
+=======
+<div
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import {
   Popover
@@ -26,7 +30,11 @@ interface TimelineStepProps {
   formData: QuoteFormData
   updateFormData: (data: Partial<QuoteFormData>) => void
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { format } from "date-fns",
 import { Calendar } from "@/components/ui/calendar",
 import { Button } from "@/components/ui/button",
@@ -42,7 +50,13 @@ interface TimelineStepProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
 
@@ -248,7 +262,10 @@ xport function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
     <div className="space-y-6">
       <div>
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData && formData.timeline === 'fixed'
                   ? 'bg-zion-purple/20 border-zion-purple'
@@ -264,6 +281,10 @@ xport function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
 
 
             <div
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               onClick={() => updateFormData({ timeline: "fixed" })}
             >
               <h4 className="font-medium text-white">Fixed Dates</h4>
@@ -272,7 +293,10 @@ xport function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
             
             <div 
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData && formData.timeline === 'flexible'
                   ? 'bg-zion-purple/20 border-zion-purple'
@@ -286,7 +310,10 @@ xport function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <div>
                 <Label className='block mb-2 text-zion-slate-light'>
                   Start Date
@@ -444,6 +471,7 @@ function TimelineStep() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -539,6 +567,8 @@ function TimelineStep() {
 <<<<<<< HEAD
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     />
                   </PopoverContent>
                 </Popover>
@@ -548,7 +578,10 @@ function TimelineStep() {
               
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <div>
                 <Label className='block mb-2 text-zion-slate-light'>
                   End Date
@@ -562,11 +595,15 @@ function TimelineStep() {
                       className='p-3 pointer-events-auto';
 
 
+<<<<<<< HEAD
 ========
                       selected={formData && formData.startDate}
                       onSelect={date => updateFormData({ startDate: date })}                      initialFocus;
                       className='p-3 pointer-events-auto';
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/QuoteRequestForm/TimelineStep.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {form_data.timeline === 'fixed' && (
             <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4 mt - 6'>;
               <div>;
@@ -595,6 +632,7 @@ function TimelineStep() {
                       selected={form_data.start_date}
                       on_select={date => updateFormData ({ start_date: date })}                      initial_focus;
                       className='p - 3 pointer - events - auto';
+<<<<<<< HEAD
 =======
 
 import { format } from "date-fns",;
@@ -669,6 +707,8 @@ export function TimelineStep({ formData, updateFormData } TimelineStepProps) {;
                       initialFocus;
                       className="p-3 pointer-events-auto";
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     />;
                   </PopoverContent>;
                 </Popover>;
@@ -680,7 +720,10 @@ export function TimelineStep({ formData, updateFormData } TimelineStepProps) {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       )}
                     </Button>;
                   </PopoverTrigger>;
@@ -696,7 +739,11 @@ export function TimelineStep({ formData, updateFormData } TimelineStepProps) {;
                       className='p-3 pointer-events-auto';
                       disabled={date =>;
                         date < (formData && formData.startDate || new Date());
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/QuoteRequestForm/TimelineStep.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       mode="single"
 
 
@@ -756,9 +803,12 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
           {formData.timeline === "fixed" && (;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/QuoteRequestForm/TimelineStep.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <div>;
                 <Label className='block mb - 2 text - zion - slate - light'>;
                   End Date;
@@ -795,14 +845,19 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
 <<<<<<<< HEAD:src/components/QuoteRequestForm/TimelineStep.tsx
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/QuoteRequestForm/TimelineStep.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </div>)}
         </div>;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/QuoteRequestForm/TimelineStep.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> ;
@@ -914,3 +969,6 @@ updateFormData: (data: Partial<QuoteFormData>) => void ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

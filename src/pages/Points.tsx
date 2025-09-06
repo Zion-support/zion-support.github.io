@@ -1,11 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 import React, { useState } from 'react';
 
+=======
+} from 'lucide-react';
+import { use_auth } from '@/hooks / use_auth';
+import { use_points } from '@/hooks / use_points';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -62,6 +68,7 @@ import { useAuth } from '@/hooks/useAuth';
 } from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
@@ -70,6 +77,26 @@ ursor/fix-website-loading-errors-and-merge-6662
   Card,
   CardContent,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+import {;
+  Gift,;
+  Star,;
+  Users,;
+  ShoppingBag,;
+  MessageSquare,;
+  TrendingUp,;
+  History,;
+} from 'lucide-react';
+import { useAuth } from '@/hooks/useAuth';
+import { usePoints } from '@/hooks/usePoints';
+import {;
+  Card,;
+  CardContent,;
+
+  Card,
+  CardContent,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   CardDescription,;
   CardHeader;
   CardTitle;
@@ -94,6 +121,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
@@ -101,6 +129,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
+import { useAuth } from '@/hooks/useAuth';
+import { usePoints } from '@/hooks/usePoints';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -128,6 +162,10 @@ export default function PointsPage() {;
   }) {    if (!user?.id) return;  async function handleRedeem(reward: { id: string, cost: number, title: string }) {
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export default function PointsPage() { const { isAuthenticated, user  } = useAuth(),
   const { ledger, balance, loading, fetchLedger  } = usePoints(),
   const [ loginOpen, setLoginOpen ] = useState(false),
@@ -135,11 +173,14 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
 
 
   async function handleRedeem(reward: { id: string, cost: number, title: string }) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
   }) {    if (!user?.id) return;  async function handleRedeem(reward: { id: string, cost: number, title: string }) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     if (!user?.id) return;
     setRedeeming(true);
     try {
@@ -265,9 +306,14 @@ export default function PointsPage() {;
       setRedeeming(false);
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>     }
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
 >>>>>>>   }
 
@@ -283,8 +329,19 @@ export default function PointsPage() {;
     {
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+      icon: <Users className='h-5 w-5' />,
+      title: 'Sign Up & Profile Setup',
+      description: 'Complete your profile and verify your email',
+      points: '50 pts',
+      action: isAuthenticated ? '✓ Completed' : 'Get Started',
+    },
+      icon: <ShoppingBag className='h-5 w-5' />,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       title: 'First Purchase',
       description: 'Make your first purchase on the marketplace',
       points: '100 pts',
@@ -343,7 +400,10 @@ ursor/fix-website-loading-errors-and-merge-6662
     },
     {
       icon: <ShoppingBag className="h-5 w-5" />,
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       title: "First Purchase",
       description: "Make your first purchase on the marketplace",
       points: "100 pts",
@@ -420,6 +480,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       action: isAuthenticated ? "✓ Completed" : "Get Started"
 <<<<<<< HEAD
 
+<<<<<<< HEAD
     },
 =======
 >>>>>>>     },
@@ -452,6 +513,65 @@ ursor/fix-website-loading-errors-and-merge-6662
       description: "Make your first purchase on the marketplace",
       points: "100 pts",
       action: "Browse Marketplace"
+=======
+  const earningOpportunities = [;
+    {;
+      icon: <Users className='h-5 w-5' />,;
+      title: 'Sign Up & Profile Setup',;
+      description: 'Complete your profile and verify your email',;
+      points: '50 pts',;
+      action: isAuthenticated ? '✓ Completed' : 'Get Started',;
+    },;
+      icon: <ShoppingBag className='h-5 w-5' />,;
+      title: 'First Purchase',;
+      description: 'Make your first purchase on the marketplace',;
+      points: '100 pts',;
+      action: 'Browse Marketplace',;
+    },;
+    {;
+      icon: <MessageSquare className='h-5 w-5' />,;
+      title: 'Community Engagement',;
+      description: 'Post in the community or comment on discussions',;
+      points: '25 pts per post',;
+      action: 'Join Community',;
+    },;
+    {;
+      icon: <Users className='h-5 w-5' />,;
+      title: 'Refer Friends',;
+      description: 'Invite friends to join Zion marketplace',;
+      points: '200 pts per referral',;
+      action: 'Share Referral Link',;
+    },  ];
+
+  const upcomingRewards = [;
+    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",;
+      description: "Invite friends to join Zion marketplace",;
+      points: "200 pts per referral",;
+      action: "Share Referral Link";
+    }
+
+  const upcomingRewards = [;
+    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },;
+    {;
+      id: 'premium1',;
+      title: 'Premium Features (1 month)',;
+      cost: 1000,;
+      category: 'Subscription',;
+    },;
+    {;
+      id: 'swag',;
+      title: 'Zion Swag Pack',;
+      cost: 1500,;
+      category: 'Merchandise',;
+    },;
+    {;
+      id: 'coupon25',;
+      title: '$25 Off Coupon',;
+      cost: 2000,;
+      category: 'Discount',;
+    },;
+    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' },;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     },
     {
 <<<<<<< HEAD
@@ -516,7 +636,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   if (!isAuthenticated) {;
     return (
@@ -568,6 +691,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   if (!isAuthenticated) {
     return (
       <>
+<<<<<<< HEAD
 
             <Button onClick={() => setLoginOpen(true)} size="lg">
               Join Now to Start Earning
@@ -587,6 +711,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   if (!isAuthenticated) {
     return (
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <>
         <div className='container py-10 max-w-4xl'>
           <div className='text-center mb-8'>
@@ -629,6 +755,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -636,6 +763,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <Button onClick={() => setLoginOpen(true)} size="lg">
               Join Now to Start Earning
             </Button>
@@ -653,6 +785,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -664,6 +797,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
@@ -677,6 +812,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   How to Earn Points
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -692,6 +828,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
                   How to Earn Points
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </CardTitle>
 >>>>>>>                 <CardDescription>
                   Multiple ways to accumulate rewards
@@ -700,6 +838,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -736,6 +875,66 @@ ursor/fix-website-loading-errors-and-merge-6662
                 {earningOpportunities.map((opportunity, index) => (
                   <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <>;
+        <div className='container py - 10 max - w-4xl'>;
+          <div className='text - center mb - 8'>;
+            <Gift className='h - 16 w - 16 text - primary mx - auto mb - 4' />;
+            <h1 className='text - 4xl font - bold mb - 4'>Zion Rewards Program</h1>;
+            <p className='text - xl text - muted - foreground mb - 6'>;
+              Earn points for every action you take and redeem them for;
+              exclusive rewards!;
+            </p>;
+            <Button on_click={() => setLoginOpen (true)} size='lg'>              Join Now to Start Earning;
+            </Button>;
+          </div>;
+            <Button on_click={(, ) => setLoginOpen (true)} size="lg">;
+            <Button on_click={() => setLoginOpen (true)} size="lg">;
+              Join Now to Start Earning;
+            </Button>;
+          </div>;
+          <div className='grid md:grid - cols - 2 gap - 8 mb - 12'>;
+            <Card>;
+              <CardHeader>;
+                <CardTitle className='flex items - center gap - 2'>;
+                  <TrendingUp className='h - 5 w - 5' />                  How to Earn Points          <div className="grid md:grid - cols - 2 gap - 8 mb - 12">;
+            <Card>;
+              <CardHeader>;
+                <CardTitle className="flex items - center gap - 2">;
+                  <TrendingUp className="h - 5 w - 5" />;
+                </CardTitle>;
+                <CardDescription>;
+                  Multiple ways to accumulate rewards;
+                </CardDescription>;
+              </CardHeader>;
+              <CardContent className='space - y-4'>;
+                {earning_opportunities.map ((opportunity, index) => (
+                  <div;
+
+                    key={index}
+                    className='flex items - start gap - 3 p - 3 rounded - lg border';
+                  >;
+                    <div className='text - primary mt - 1'>{opportunity.icon}</div>;
+                    <div className='flex - 1'>;
+                      <h4 className='font - medium'>{opportunity.title}</h4>;
+                      <p className='text - sm text - muted - foreground'>;
+                        {opportunity.description}
+
+              <CardContent className="space-y-4">
+                {earningOpportunities.map((opportunity, index) => (
+                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+
+              <CardContent className="space-y-4">
+                {earningOpportunities.map((opportunity, index) => (
+                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <div className="text-primary mt-1">{opportunity.icon}</div>
 >>>>>>>                     <div className="flex-1">
                       <h4 className="font-medium">{opportunity.title}</h4>
@@ -745,6 +944,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
                     <Badge variant='secondary'>{opportunity.points}</Badge>                  </div>                    </div>
 >>>>>>>                     <Badge variant="secondary">{opportunity.points}</Badge>
@@ -758,6 +958,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <Badge variant='secondary'>{opportunity.points}</Badge>                  </div>                    </div>
                     <Badge variant="secondary">{opportunity.points}</Badge>
+=======
+
+
+
+                    <Badge variant="secondary">{opportunity.points}</Badge>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 ))}
@@ -769,6 +975,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
                 <CardTitle className='flex items-center gap-2'>
                   <Gift className='h-5 w-5' />                  Upcoming Rewards                <CardTitle className="flex items-center gap-2">
@@ -785,6 +992,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <Gift className='h-5 w-5' />                  Upcoming Rewards                <CardTitle className="flex items-center gap-2">
                 <CardTitle className="flex items-center gap-2">
                   <Gift className="h-5 w-5" />
+=======
+                <CardTitle className="flex items-center gap-2">
+
+                <CardTitle className="flex items-center gap-2">
+
+
+                  <Gift className="h-5 w-5" />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   Upcoming Rewards
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </CardTitle>
@@ -795,6 +1010,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -813,12 +1029,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Badge variant="outline">{reward.cost}</Badge>
 <<<<<<< HEAD
 =======
+=======
+
+
+              <CardContent className="space-y-4">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {upcomingRewards.map((reward, index) => (
                   <div key={index} className="flex items-center justify-between p-3 rounded-lg border">
                     <div>
                       <h4 className="font-medium">{reward.title}</h4>
                       <p className="text-sm text-muted-foreground">{reward.category}</p>
                     </div>
+<<<<<<< HEAD
               <CardContent className="space-y-4">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 {upcomingRewards.map((reward, index) => (
@@ -844,6 +1066,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <Badge variant="outline">{reward.cost}</Badge>
+=======
+
+
+
+                    <Badge variant="outline">{reward.cost}</Badge>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 ))}
@@ -853,6 +1081,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -867,6 +1096,12 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Button onClick={() => setLoginOpen(true)}>Create Account</Button>            </CardContent>          <Card className="text-center">
 <<<<<<< HEAD
 =======
+=======
+
+
+
+          <Card className="text-center">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <CardContent className="pt-6">
               <Star className="h-12 w-12 text-primary mx-auto mb-4" />
               <h3 className="text-2xl font-bold mb-2">Coming Soon</h3>
@@ -876,6 +1111,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Button onClick={() => setLoginOpen(true)}>
                 Create Account
               </Button>
+<<<<<<< HEAD
 
           <Card className="text-center">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -903,11 +1139,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+            </CardContent>
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </Card>
 >>>>>>>         </div>
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
       </>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <>;
         <div className='container py-10 max-w-4xl'>;
           <div className='text-center mb-8'>;
@@ -1077,14 +1322,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                 Our full rewards system is launching soon! Sign up now to start earning points immediately.;
               </p>;
               <Button on_click={() => setLoginOpen (true)}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Create Account;
               </Button>;
           </Card>;
         </div>;
 
 
+<<<<<<< HEAD
 >>>>>>>     );
+=======
+    );
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
   return (
 <<<<<<< HEAD
@@ -1093,6 +1341,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         <p className="text-xl text-muted-foreground">Points Available</p>
         {!loading && balance === 0 && (
 
+<<<<<<< HEAD
 =======
     <div className='container py-10 max-w-4xl'>
       <div className='text-center mb-8'>
@@ -1135,6 +1384,9 @@ ursor/fix-website-loading-errors-and-merge-6662
         <p className="text-xl text-muted-foreground">Points Available</p>
         {!loading && balance === 0 && (
           <p className="text-sm text-muted-foreground mt-2">
+=======
+          <p className="text-sm text-muted-foreground mt-2">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             You haven't earned any points yet. Complete the tasks below to start
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             earning and redeem rewards.
@@ -1144,6 +1396,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -1154,10 +1407,17 @@ ursor/fix-website-loading-errors-and-merge-6662
               <TrendingUp className='h-5 w-5' />              Keep Earning      <div className="grid md:grid-cols-2 gap-8 mb-12">
 <<<<<<< HEAD
 =======
+=======
+
+
+
+      <div className="grid md:grid-cols-2 gap-8 mb-12">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <TrendingUp className="h-5 w-5" />
+<<<<<<< HEAD
 
       <div className="grid md:grid-cols-2 gap-8 mb-12">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1180,6 +1440,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+              Keep Earning
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </CardTitle>
 >>>>>>>             <CardDescription>
               More ways to boost your point balance
@@ -1188,6 +1454,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -1224,6 +1491,79 @@ ursor/fix-website-loading-errors-and-merge-6662
             {earningOpportunities.map((opportunity, index) => (
               <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+        <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
+      </>);
+  }
+  return (
+    <div className='container py - 10 max - w-4xl'>;
+      <div className='text - center mb - 8'>;
+        <Gift className='h - 16 w - 16 text - primary mx - auto mb - 4' />;
+        <h1 className='text - 4xl font - bold mb - 4'>Your Rewards</h1>;
+        <div className='text - 6xl font - bold text - primary mb - 2'>;
+          {loading ? '...' : balance}
+        </div>;
+        <p className='text - xl text - muted - foreground'>Points Available</p>;
+        {!loading && balance === 0 && (
+          <p className='text - sm text - muted - foreground mt - 2'>            You haven't earned any points yet. Complete the tasks below to start        </div>;
+        <p className="text - xl text - muted - foreground">Points Available</p>;
+        {!loading && balance === 0 && (
+          <p className="text - sm text - muted - foreground mt - 2">;
+            You haven't earned any points yet. Complete the tasks below to start;
+            earning and redeem rewards.;
+          </p>)}
+      </div>;
+      <div className='grid md:grid - cols - 2 gap - 8 mb - 12'>;
+        <Card>;
+          <CardHeader>;
+            <CardTitle className='flex items - center gap - 2'>;
+              <TrendingUp className='h - 5 w - 5' />              Keep Earning      <div className="grid md:grid - cols - 2 gap - 8 mb - 12">;
+        <Card>;
+          <CardHeader>;
+            <CardTitle className="flex items - center gap - 2">;
+              <TrendingUp className="h - 5 w - 5" />;
+            </CardTitle>;
+            <CardDescription>;
+              More ways to boost your point balance;
+            </CardDescription>;
+          </CardHeader>;
+          <CardContent className='space - y-4'>;
+            {earning_opportunities.map ((opportunity, index) => (
+              <div;
+
+                key={index}
+                className='flex items - start gap - 3 p - 3 rounded - lg border';
+              >;
+                <div className='text - primary mt - 1'>{opportunity.icon}</div>;
+                <div className='flex - 1'>;
+                  <h4 className='font - medium'>{opportunity.title}</h4>;
+                  <p className='text - sm text - muted - foreground'>;
+                    {opportunity.description}
+
+                  </p>              <div key={index} className="flex items - start gap - 3 p - 3 rounded - lg border">;
+                <div className="text - primary mt - 1">{opportunity.icon}</div>;
+                <div className="flex - 1">;
+                  <h4 className="font - medium">{opportunity.title}</h4>;
+                  <p className="text - sm text - muted - foreground">{opportunity.description}</p>;
+                </div>;
+                <div className='text - right'>;
+                  <Badge variant='secondary' className='mb - 1'>;
+
+                    {opportunity.points}
+                  </Badge>;
+                  <p className='text - xs text - muted - foreground'>;
+                    {opportunity.action}
+
+          <CardContent className="space-y-4">
+            {earningOpportunities.map((opportunity, index) => (
+              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+
+          <CardContent className="space-y-4">
+            {earningOpportunities.map((opportunity, index) => (
+              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <div className="text-primary mt-1">{opportunity.icon}</div>
 >>>>>>>                 <div className="flex-1">
                   <h4 className="font-medium">{opportunity.title}</h4>
@@ -1233,6 +1573,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1260,6 +1601,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <div className="text-right">
 >>>>>>>                   <Badge variant="secondary" className="mb-1">{opportunity.points}</Badge>
                   <p className="text-xs text-muted-foreground">{opportunity.action}</p>
@@ -1274,6 +1620,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
             <CardTitle className='flex items-center gap-2'>
               <Gift className='h-5 w-5' />              Available Rewards            <CardTitle className="flex items-center gap-2">
@@ -1290,6 +1637,14 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Gift className='h-5 w-5' />              Available Rewards            <CardTitle className="flex items-center gap-2">
             <CardTitle className="flex items-center gap-2">
               <Gift className="h-5 w-5" />
+=======
+            <CardTitle className="flex items-center gap-2">
+
+            <CardTitle className="flex items-center gap-2">
+
+
+              <Gift className="h-5 w-5" />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               Available Rewards
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </CardTitle>
@@ -1325,6 +1680,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className="text-right space-y-1">
                   <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
                   {balance >= reward.cost ? (
+<<<<<<< HEAD
 =======
                 className='flex items-center justify-between p-3 rounded-lg border'
               >
@@ -1332,6 +1688,120 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <p className='text-sm text-muted-foreground'>
                     {reward.category}
                   </p>
+=======
+
+
+        </div>;
+        <p className='text-xl text-muted-foreground'>Points Available</p>;
+        {!loading && balance === 0 && (;
+          <p className='text-sm text-muted-foreground mt-2'>            You haven't earned any points yet. Complete the tasks below to start        </div>;
+        <p className="text-xl text-muted-foreground">Points Available</p>;
+        {!loading && balance === 0 && (;
+          <p className="text-sm text-muted-foreground mt-2">;
+            You haven't earned any points yet. Complete the tasks below to start;
+            earning and redeem rewards.;
+          </p>;
+        )}
+      </div>;
+
+      <div className='grid md:grid-cols-2 gap-8 mb-12'>;
+        <Card>;
+          <CardHeader>;
+            <CardTitle className='flex items-center gap-2'>;
+              <TrendingUp className='h-5 w-5' />              Keep Earning      <div className="grid md:grid-cols-2 gap-8 mb-12">;
+        <Card>;
+          <CardHeader>;
+            <CardTitle className="flex items-center gap-2">;
+              <TrendingUp className="h-5 w-5" />;
+            </CardTitle>;
+            <CardDescription>;
+              More ways to boost your point balance;
+            </CardDescription>;
+          </CardHeader>;
+          <CardContent className='space-y-4'>;
+            {earningOpportunities && earningOpportunities.map((opportunity, index) => (;
+              <div
+                key={index}
+                className='flex items-start gap-3 p-3 rounded-lg border'>;
+                <div className='text-primary mt-1'>{opportunity && opportunity.icon}</div>;
+                <div className='flex-1'>;
+                  <h4 className='font-medium'>{opportunity && opportunity.title}</h4>;
+                  <p className='text-sm text-muted-foreground'>;
+                    {opportunity && opportunity.description}
+                  </p>              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">;
+                <div className="text-primary mt-1">{opportunity && opportunity.icon}</div>;
+                <div className="flex-1">;
+                  <h4 className="font-medium">{opportunity && opportunity.title}</h4>;
+                  <p className="text-sm text-muted-foreground">{opportunity && opportunity.description}</p>;
+                </div>;
+                <div className='text-right'>;
+                  <Badge variant='secondary' className='mb-1'>;
+                    {opportunity && opportunity.points}
+                  </Badge>;
+                  <p className='text-xs text-muted-foreground'>;
+                    {opportunity && opportunity.action}
+                  </p>                </div>                </div>;
+                <div className="text-right">;
+                  <Badge variant="secondary" className="mb-1">{opportunity && opportunity.points}</Badge>;
+                  <p className="text-xs text-muted-foreground">{opportunity && opportunity.action}</p>;
+                </div>;
+              </div>;
+            ))}
+          </CardContent>;
+        </Card>;
+
+        <Card>;
+          <CardHeader>;
+            <CardTitle className='flex items-center gap-2'>;
+              <Gift className='h-5 w-5' />              Available Rewards            <CardTitle className="flex items-center gap-2">;
+              <Gift className="h-5 w-5" />;
+              Available Rewards;
+            </CardTitle>;
+            <CardDescription>;
+              Redeem your points for these rewards;
+            </CardDescription>;
+          </CardHeader>;
+          <CardContent className='space-y-4'>;
+            {upcomingRewards && upcomingRewards.map(reward => (;
+              <div
+                key={reward && reward.id}
+                className='flex items-center justify-between p-3 rounded-lg border'>;
+                  <h4 className='font-medium'>{reward && reward.title}</h4>;
+                  <p className='text-sm text-muted-foreground'>;
+                    {reward && reward.category}
+                  </p>;
+                </div>;
+                <div className='text-right space-y-1'>;
+                  <Badge variant='outline' className='mb-1'>;
+                    {reward && reward.cost} pts;
+                  </Badge>;
+                  {balance >= reward && reward.cost ? (;
+                    <Button
+                      size='sm'
+                      onClick={() => handleRedeem(reward)}
+                      disabled={redeeming}
+
+                    >                      {redeeming ? 'Processing...' : 'Redeem'}
+                    </Button>;
+                  ) : (;
+                    <p className='text-xs text-muted-foreground'>;
+                      Need more points;
+                    </p>                  )}
+                    <p className="text-xs text-muted-foreground">Need more points</p>;
+                <div>;
+                  <h4 className="font-medium">{reward && reward.title}</h4>;
+                  <p className="text-sm text-muted-foreground">{reward && reward.category}</p>;
+                </div>;
+                <div className="text-right space-y-1">;
+                  <Badge variant="outline" className="mb-1">{reward && reward.cost} pts</Badge>;
+                  {balance >= reward && reward.cost ? (;
+                    <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>;
+                      {redeeming ? 'Processing...' : 'Redeem'}
+                    </Button>;
+                  ) : (;
+                    <p className="text-xs text-muted-foreground">Need more points</p>;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <CardContent className="space-y-4">
             {upcomingRewards.map((reward) => (
               <div key={reward.id} className="flex items-center justify-between p-3 rounded-lg border">
@@ -1368,12 +1838,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 
                   {balance >= reward.cost ? (
                     <Button size="sm" on_click={() => handle_redeem (reward)} disabled={redeeming}>;
+<<<<<<< HEAD
 >>>>>>>                 </div>
+=======
+
+                </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <div className="text-right space-y-1">
                   <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
                   {balance >= reward.cost ? (
 
                     <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
                     <p className="text-xs text-muted-foreground">Need more points</p>
@@ -1385,6 +1861,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
                   {balance >= reward.cost ? (
                     <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       {redeeming ? 'Processing...' : 'Redeem'}
                     </Button>
                   ) : (
@@ -1418,6 +1896,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
           <CardTitle className='flex items-center gap-2'>
             <History className='h-5 w-5' />            Points History          <CardTitle className="flex items-center gap-2">
@@ -1451,6 +1930,18 @@ ursor/fix-website-loading-errors-and-merge-6662
           <CardTitle className="flex items-center gap-2">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <History className="h-5 w-5" />
+=======
+
+
+            ))}
+
+          <CardTitle className="flex items-center gap-2">
+
+          <CardTitle className="flex items-center gap-2">
+
+
+            <History className="h-5 w-5" />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             Points History
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </CardTitle>
@@ -1512,11 +2003,16 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="space-y-2 mt-2">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {ledger.map(entry => (
                   <div key={entry.id} className="flex items-center justify-between py-2 border-b">
                     <div>
@@ -1587,6 +2083,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                 ))}
 =======
 >>>>>>>                 ))}
@@ -1622,6 +2119,9 @@ ursor/fix-website-loading-errors-and-merge-6662
       </Card>
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 =======
@@ -1639,18 +2139,25 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>>           </p>
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 ))}
               </div>;
             </ScrollArea>;
           )}
 
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
       <Card className="text-center">
         <CardContent className="pt-6">
@@ -1663,6 +2170,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -1674,6 +2182,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </p>
 >>>>>>>           <div className="flex gap-4 justify-center">
             <Button variant="outline" asChild>
@@ -1683,6 +2193,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
             <Button variant='outline' asChild>
               <Link href='/community'>Join Community</Link>            <Button variant="outline" asChild>
@@ -1699,6 +2210,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Link href='/community'>Join Community</Link>            <Button variant="outline" asChild>
             <Button variant="outline" asChild>
               <Link href="/community">Join Community</Link>
+=======
+
+            <Button variant="outline" asChild>
+
+
+              <Link href="/community">Join Community</Link>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </Button>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>
@@ -1709,13 +2227,130 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
   )
 }
+=======
+        </CardContent>;
+      </Card>;
+
+      <Card className='text-center'>;
+        <CardContent className='pt-6'>;
+          <Star className='h-12 w-12 text-primary mx-auto mb-4' />;
+          <h3 className='text-2xl font-bold mb-2'>;
+            Full Rewards System Coming Soon;
+          </h3>;
+          <p className='text-muted-foreground mb-4'>;
+            We're finalizing the redemption system. Keep earning points -;
+            they'll be ready to spend soon!;
+          </p>;
+          <div className='flex gap-4 justify-center'>;
+            <Button variant='outline' asChild>;
+              <Link href='/marketplace'>Browse Marketplace</Link>          </p>;
+          <div className="flex gap-4 justify-center">;
+            <Button variant="outline" asChild>;
+              <Link href="/marketplace">Browse Marketplace</Link>;
+            </Button>;
+            <Button variant='outline' asChild>;
+              <Link href='/community'>Join Community</Link>            <Button variant="outline" asChild>;
+              <Link href="/community">Join Community</Link>;
+            </Button>;
+            <Button variant='outline' asChild>;
+                    </Button>) : (
+                    <p className="text - xs text - muted - foreground">Need more points</p>)}
+                </div>;
+              </div>))}
+          </CardContent>;
+        </Card>;
+      </div>;
+      <Card>;
+        <CardHeader>;
+          <CardTitle className='flex items - center gap - 2'>;
+            <History className='h - 5 w - 5' />            Points History          <CardTitle className="flex items - center gap - 2">;
+            <History className="h - 5 w - 5" />;
+            Points History;
+          </CardTitle>;
+          <CardDescription > Your recent points activity</CardDescription>;
+        </CardHeader>;
+        <CardContent>;
+          {ledger.length === 0 ? (
+            <p className='text - center py - 8 text - muted - foreground'>;
+              No points activity yet.;
+            </p>;
+            <ScrollArea className='h - 64'>;
+              <div className='space - y-2 mt - 2'>;
+                {ledger.map (entry => (
+                  <div;
+                    key={entry.id}
+                    className='flex items - center justify - between py - 2 border - b';
+                  >;
+                    <div>;
+                      <p className='font - medium capitalize'>;
+                        {entry.reason || 'adjustment'}
+                      </p>;
+                      <p className='text - xs text - muted - foreground'>;
+                        {formatDistanceToNow (new Date (entry.created_at), {
+                          add_suffix: true,
+                        })}
+                      </p>;
+                    </div>;
+                    <Badge;
+                      variant='outline';
+                      className={
+                        entry.delta >= 0;
+                          ? 'bg - green - 100 text - green - 800';
+                          : 'bg - red - 100 text - red - 800';
+                      }                      variant="outline";
+                      class_name = {entry.delta >= 0 ? 'bg - green - 100 text - green - 800' : 'bg - red - 100 text - red - 800', }
+                    >;
+                      {entry.delta >= 0 ? '+' : ''}                      {entry.delta} pts                    </Badge>;
+                  </div>))}
+              </div>;
+            </ScrollArea>)}
+        </CardContent>;
+      </Card>;
+      <Card className='text - center'>;
+        <CardContent className='pt - 6'>;
+          <Star className='h - 12 w - 12 text - primary mx - auto mb - 4' />;
+          <h3 className='text - 2xl font - bold mb - 2'>;
+            Full Rewards System Coming Soon;
+          </h3>;
+          <p className='text - muted - foreground mb - 4'>;
+            We're finalizing the redemption system. Keep earning points -;
+            they'll be ready to spend soon!;
+          </p>;
+          <div className='flex gap - 4 justify - center'>;
+            <Button variant='outline' as_child>;
+              <Link href='/marketplace'>Browse Marketplace</Link>          </p>;
+          <div className="flex gap - 4 justify - center">;
+            <Button variant="outline" as_child>;
+              <Link href="/marketplace">Browse Marketplace</Link>;
+            </Button>;
+            <Button variant='outline' as_child>;
+              <Link href='/community'>Join Community</Link>            <Button variant="outline" as_child>;
+              <Link href="/community">Join Community</Link>;
+            </Button>;
+            <Button variant='outline' as_child>;
+
+              <Link href='/community'>Join Community</Link>            </Button>;
+          </div>;
+        </CardContent>;
+      </Card>;
+
+
+  );
+}
+  );
+}
+    </div>);
+}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
 
-=======
   )
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 
   );
@@ -1754,3 +2389,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

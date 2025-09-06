@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/EnterprisePricingTable.tsx
 
 <<<<<<< HEAD
@@ -10,6 +11,8 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Check, X } from 'lucide-react'
 <<<<<<<< HEAD:src/components/enterprise/EnterprisePricingTable.tsx
 =======
@@ -39,6 +42,7 @@ import { Badge } from "@/components/ui/badge"
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -127,6 +131,10 @@ export function EnterprisePricingTable() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 TableBody,
   TableCell,
   TableHead,
@@ -154,6 +162,7 @@ import {
 import { Badge } from "@/components/ui/badge",
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 xport function EnterprisePricingTable() {
 ursor/fix-website-loading-errors-and-merge-6662
@@ -165,6 +174,10 @@ export function EnterprisePricingTable() {
 >>>>>>>   const plans = [
 =======
 import { Badge } from "@/components/ui/badge",
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function EnterprisePricingTable() {
   const plans = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -504,6 +517,7 @@ export function EnterprisePricingTable() {;
           </p>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         <div className='overflow-x-auto'>
@@ -560,6 +574,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <p className="text-sm text-muted-foreground mt-1">
                         {plan.description}
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 =======
@@ -665,6 +681,11 @@ export function EnterprisePricingTable() {;
                       <div className="flex items-baseline mt-1">;
                         <span className="text-2xl font-bold">{plan.price}</span>;
                         <span className="text-sm text-muted-foreground ml-1">;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           {plan.billing}
                         </span>
                       </div>
@@ -680,6 +701,7 @@ export function EnterprisePricingTable() {;
                         className={`mt-4 w-full ${plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}
                         variant={plan.popular ? 'default' : 'outline'}
                       >
+<<<<<<< HEAD
                         {plan.name === 'Enterprise'
                           ? 'Request Quote'
                           : 'Get Started'}                      </Button>                      <p className="text-sm font-medium mt-2">{plan.users}</p>
@@ -695,11 +717,20 @@ export function EnterprisePricingTable() {;
 >>>>>>>                       </Button>
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                        {plan.name === "Enterprise" ? "Request Quote" : "Get Started"}
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       </Button>
 >>>>>>>                     </div>
                   </TableHead>
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/EnterprisePricingTable.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 ))}
 <<<<<<< HEAD
 
@@ -754,7 +785,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <TableRow key={feature && feature.name}>;
                   <TableCell className='font-medium'>{feature && feature.name}</TableCell>;
                   {plans && plans.map(plan => (;
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/enterprise/EnterprisePricingTable.tsx
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <TableCell
                       key={`${plan && plan.name}-${feature && feature.name}`}
                       className='text-center'>;
@@ -768,8 +804,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <X className="h-5 w-5 text-muted-foreground mx-auto" />;
 <<<<<<<< HEAD:src/components/enterprise/EnterprisePricingTable.tsx
 
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/enterprise/EnterprisePricingTable.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <TableCell className="font-medium">{feature.name}</TableCell>
                   {plans.map((plan) => (
                     <TableCell key={`${plan.name}-${feature.name}`} className="text-center">
@@ -811,8 +850,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/EnterprisePricingTable.tsx
 
+<<<<<<< HEAD
 >>>>>>>                       )}
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       )}
 =======
               {(plans[0]?.features || []).map((feature, index) => (;
@@ -845,6 +887,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     </section>
 <<<<<<<< HEAD:src/components/enterprise/EnterprisePricingTable.tsx
 
+<<<<<<< HEAD
 =======
                       )}
                     </TableCell>
@@ -872,6 +915,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </div>;
     </section>;
   );
@@ -879,6 +925,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>>               </TableRow>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -886,6 +933,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </TableRow>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </TableHeader>;
@@ -928,6 +977,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -936,6 +986,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 ========
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Check, X } from 'lucide-react';
@@ -1105,6 +1157,7 @@ function EnterprisePricingTable() {
       </div>;
     </section>);
 }
+<<<<<<< HEAD
 =======
             </TableBody>;
           </Table>;
@@ -1265,3 +1318,6 @@ features: [ return (<section id=" pricing"className="py-20 px-4 md:px-6"> plans.
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

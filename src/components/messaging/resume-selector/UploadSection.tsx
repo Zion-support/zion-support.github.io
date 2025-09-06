@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { Upload, FileText } from 'lucide-react'
@@ -51,6 +52,8 @@ export function UploadSection({
           Browse Files
           <input
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Upload, FileText } from 'lucide-react'
 interface UploadSectionProps {
   customFile: File | null;
@@ -64,11 +67,18 @@ export function UploadSection(): any ({;
   onFileUpload,;
 }: UploadSectionProps) {;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 
 export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className='space-y-3'>;
       <div className='flex flex-col items-center justify-center border-2 border-dashed border-zion-purple/30 rounded-lg p-6 bg-zion-blue-dark/30'>;
@@ -93,7 +103,6 @@ function UploadSection() {
         <p className='text - sm text - zion - slate mb - 2'>;
           {custom_file;
             ? custom_file.name;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             : 'Drag & drop your PDF or click to browse'}
         </p>;
         <Button variant='outline' className='relative'>;
@@ -129,6 +138,7 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -170,6 +180,12 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
       
       {customFile && (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+      
+      {customFile && (
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
 >>>>>>>           <div className="flex items-center justify-between">
             <div className="flex items-center">
@@ -183,6 +199,7 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -203,6 +220,10 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Upload, FileText } from 'lucide-react';
@@ -273,6 +294,7 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 }
 >>>>>>> 
@@ -291,3 +313,42 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+          <input;
+            type='file';
+            className='absolute inset - 0 w - full h - full opacity - 0 cursor - pointer';
+            accept='.pdf'            on_change={onFileUpload}
+          />;
+        </Button>;
+      </div>;
+            type="file";
+            className="absolute inset - 0 w - full h - full opacity - 0 cursor - pointer";
+            accept=".pdf";
+            on_change = {onFileUpload, }
+          />;
+        </Button>;
+      </div>;
+      {custom_file && (
+        <div className='p - 3 bg - zion - blue - dark / 30 rounded - md'>;
+          <div className='flex items - center justify - between'>;
+            <div className='flex items - center'>;
+              <FileText className='h - 4 w - 4 mr - 2 text - zion - cyan' />;
+              <span className='text - white'>{custom_file.name}</span>;
+            </div>;
+            <span className='text - xs text - zion - slate'>;
+              {Math.round (custom_file.size / 1024)} KB;
+            </span>          </div>      {custom_file && (
+        <div className="p - 3 bg - zion - blue - dark / 30 rounded - md">;
+          <div className="flex items - center justify - between">;
+            <div className="flex items - center">;
+              <FileText className="h - 4 w - 4 mr - 2 text - zion - cyan" />;
+              <span className="text - white">{custom_file.name}</span>;
+            </div>;
+            <span className="text - xs text - zion - slate">{Math.round (custom_file.size / 1024)} KB</span>;
+          </div>;
+        </div>)}
+    </div>);
+}
+
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

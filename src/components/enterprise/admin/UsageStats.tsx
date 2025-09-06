@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/admin/UsageStats.tsx
 
 =======
@@ -156,6 +157,9 @@ export function UsageStats() {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+return (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -193,6 +197,11 @@ ursor/fix-website-loading-errors-and-merge-6662
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Card>
           <CardHeader>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -256,6 +265,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardFooter>
         </Card>
         
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Card>
           <CardHeader>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -319,6 +333,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardFooter>
         </Card>
         
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Card>
           <CardHeader>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -380,6 +399,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardFooter>
         </Card>
         
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Card>
           <CardHeader>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -486,6 +510,11 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className="flex items-center gap-4">
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
             <Sparkles className="h-5 w-5 text-primary" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>
           <div>
             <h3 className="font-medium">Need higher limits?</h3>
@@ -1061,6 +1090,7 @@ export function UsageStats() {;
 ;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
     </div>
@@ -1070,10 +1100,14 @@ export function UsageStats() {;
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Button > Contact Us</Button>;
       </div>;
     </div>);
 }"}
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1125,3 +1159,8 @@ CardHeader;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+    </div>
+  )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

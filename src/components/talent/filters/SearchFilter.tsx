@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { Input } from "@/components/ui/input",
@@ -35,6 +36,11 @@ import { Input } from "@/components/ui/input",
 import { SearchIcon } from 'lucide-react'
 import { SearchFilterProps } from "@/types/filters",
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
+=======
+export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className="mb-6">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -87,6 +93,7 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
           Type a name or skill to filter results
 =======
         <p id='talent-search-help' className='sr-only'>          Type a name or skill to filter results        <p id="talent-search-help" className="sr-only">
@@ -102,6 +109,8 @@ import { Input } from "@/components/ui/input",;
 =======
 }
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Input
           id='talent-search'
           type='text'
@@ -110,6 +119,7 @@ import { Input } from "@/components/ui/input",;
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
@@ -125,6 +135,8 @@ import { Input } from "@/components/ui/input",;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           Type a name or skill to filter results
         </p>
       </div>
@@ -134,6 +146,7 @@ import { Input } from "@/components/ui/input",;
           onChange={e => setSearchTerm(e && e.target.value)}
           aria-describedby='talent-search-help';
           className='pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light';
+<<<<<<< HEAD
 };
 ;
 
@@ -144,6 +157,12 @@ import { Input } from "@/components/ui/input",;
 }
 };
 ;
+=======
+
+};
+;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Input } from "@/components/ui/input",;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { SearchIcon } from 'lucide-react';
@@ -176,6 +195,7 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -194,3 +214,46 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+  );
+}
+
+import { Input } from '@/components / ui / input';
+import { SearchIcon } from 'lucide-react';
+import { SearchFilterProps } from '@/types / filters';
+  return (
+    <div className='mb - 6'>;
+      <div className='relative'>;
+        <label html_for='talent - search' className='sr - only'>;
+          Search talents;
+        </label>;
+        <SearchIcon;
+          className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate - light';
+          aria - hidden='true'        <SearchIcon className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate - light" aria - hidden="true" />;
+        <Input;
+          id="talent - search";
+          type="text";
+          placeholder="Search talents...";
+          value = {search_term, }
+          on_change = {(e, ) => setSearchTerm (e.target.value), }
+          aria - describedby="talent - search - help";
+          className="pl - 10 bg - zion - blue border - zion - blue - light text - white placeholder - zion - slate - light";
+        />;
+        <Input;
+          id='talent - search';
+          type='text';
+          placeholder='Search talents...';
+          value={search_term}
+          on_change={e => setSearchTerm (e.target.value)}
+          aria - describedby='talent - search - help';
+          className='pl - 10 bg - zion - blue border - zion - blue - light text - white placeholder - zion - slate - light';
+        />;
+        <p id='talent - search - help' className='sr - only'>          Type a name or skill to filter results        <p id="talent - search - help" className="sr - only">;
+          Type a name or skill to filter results;
+        </p>;
+      </div>;
+    </div>);
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

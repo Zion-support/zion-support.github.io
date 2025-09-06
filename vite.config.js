@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
@@ -21,6 +22,12 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/vite.config.js
+=======
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export default defineConfig({
 =======
 
@@ -125,7 +132,13 @@ export default defineConfig({,
     },
   },
   optimizeDeps: {
+<<<<<<< HEAD
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react'],
   },
 });
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+    include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
+  }
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

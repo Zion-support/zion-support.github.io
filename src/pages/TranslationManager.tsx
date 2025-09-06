@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -524,3 +525,21 @@ export default function TranslationManager() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+let sourceText = '';    ;
+    for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;
+
+
+}
+
+}
+
+}
+
+
+;
+    let source_text = '';
+    for (const lang of supported_languages.map (l => l.code)) {
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

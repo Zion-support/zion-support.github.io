@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:src/layout/AppLayout.tsx
 <<<<<<< HEAD
 
@@ -14,6 +15,13 @@ import { Footer } from '@/components/Footer';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import React from 'react'';
+import { Outlet } from 'react-router-dom'';
+import { Footer } from '@/components/Footer';
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 interface AppLayoutProps {
 	children?: React.ReactNode
@@ -90,11 +98,14 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
 		</div>
 	)
 }
+<<<<<<< HEAD
 =======
 ursor/integrate-build-improve-and-re-verify-8f7d
 		</div>
 	)
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react";
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
@@ -122,6 +133,7 @@ export function AppLayout({ children }: AppLayoutProps) {
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:src/layout/AppLayout.tsx
 <<<<<<< HEAD
@@ -167,3 +179,10 @@ origin/chore/build-fixes-and-slim-app
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+		</div>;
+	);
+}'"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

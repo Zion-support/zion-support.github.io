@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import * as React from "react"
+import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
+import { Check, ChevronRight, Circle } from 'lucide-react'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
 const DropdownMenu = DropdownMenuPrimitive.Root
@@ -40,6 +46,9 @@ const DropdownMenuSubTrigger = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.SubTrigger> & {
     inset?: boolean
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import * as React from &quot;react & quot;
 import * as DropdownMenuPrimitive from &quot;@radix - ui / react - dropdown - menu & quot;
 import { Check, ChevronRight, Circle } from 'lucide-react';
@@ -55,9 +64,12 @@ const DropdownMenuSubTrigger = React.forward_ref<;
   React.ElementRef < typeof DropdownMenuPrimitive.SubTrigger>,
   React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.SubTrigger> & {
     inset?: boolean;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
 >(({ className, inset, children, ...props }, ref) => (;
   <DropdownMenuPrimitive.SubTrigger;
@@ -79,6 +91,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent",
       inset && "pl-8",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -92,6 +105,10 @@ className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent",
       inset && "pl-8",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
 >>>>>>>     )}
     {...props}
@@ -113,6 +130,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     <ChevronRight className="ml-auto h-4 w-4" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -120,6 +138,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   </DropdownMenuPrimitive.SubTrigger>
 >>>>>>> ))
 DropdownMenuSubTrigger.displayName =
@@ -147,6 +169,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       "z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -154,6 +177,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
 >>>>>>>     )}
     {...props}
@@ -178,6 +205,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   React.ElementRef<typeof DropdownMenuPrimitive.Content>,;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -185,6 +213,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Content>;
 >>>>>>> >(({ className, sideOffset = 4, ...props }, ref) => (;
   <DropdownMenuPrimitive.Portal>;
@@ -210,6 +242,7 @@ className={cn(
         "z-50 min-w-[8rem] overflow-hidden rounded-md border border-border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -217,6 +250,10 @@ className={cn(
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         className
 >>>>>>>       )}
       {...props}
@@ -229,11 +266,61 @@ const DropdownMenuItem = React.forwardRef<;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+className={cn (
+      &quot;flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent data-[state = open]:bg - accent & quot;,
+      inset && &quot;pl - 8&quot;,
+      class_name)}
+    {...props}
+  >;
+    {children}
+<ChevronRight className=&quot;ml - auto h - 4 w - 4&quot; />;
+  </DropdownMenuPrimitive.SubTrigger>));
+DropdownMenuSubTrigger.display_name =;
+  DropdownMenuPrimitive.SubTrigger.display_name;
+const DropdownMenuSubContent = React.forward_ref<;
+  React.ElementRef < typeof DropdownMenuPrimitive.SubContent>,
+  React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.SubContent>;
+>(({ class_name, ...props }, ref) => (
+  <DropdownMenuPrimitive.SubContent;
+    ref={ref}
+    className={cn (
+      &quot;z - 50 min - w-[8rem] overflow - hidden rounded - md border border - border bg - popover p - 1 text - popover - foreground shadow - lg data-[state = open]:animate - in data-[state = closed]:animate - out data-[state = closed]:fade - out - 0 data-[state = open]:fade - in - 0 data-[state = closed]:zoom - out - 95 data-[state = open]:zoom - in - 95 data-[side = bottom]:slide - in - from - top - 2 data-[side = left]:slide - in - from - right - 2 data-[side = right]:slide - in - from - left - 2 data-[side = top]:slide - in - from - bottom - 2&quot;,
+      class_name)}
+    {...props}
+  />));
+DropdownMenuSubContent.display_name =;
+  DropdownMenuPrimitive.SubContent.display_name;
+const DropdownMenuContent = React.forward_ref<;
+  React.ElementRef < typeof DropdownMenuPrimitive.Content>,
+  React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.Content>;
+>(({ class_name, side_offset = 4, ...props }, ref) => (
+  <DropdownMenuPrimitive.Portal>;
+    <DropdownMenuPrimitive.Content;
+      ref={ref}
+      side_offset={side_offset}
+className={cn (
+        &quot;z - 50 min - w-[8rem] overflow - hidden rounded - md border border - border bg - popover p - 1 text - popover - foreground shadow - md data-[state = open]:animate - in data-[state = closed]:animate - out data-[state = closed]:fade - out - 0 data-[state = open]:fade - in - 0 data-[state = closed]:zoom - out - 95 data-[state = open]:zoom - in - 95 data-[side = bottom]:slide - in - from - top - 2 data-[side = left]:slide - in - from - right - 2 data-[side = right]:slide - in - from - left - 2 data-[side = top]:slide - in - from - bottom - 2&quot;,
+        class_name)}
+      {...props}
+    />;
+  </DropdownMenuPrimitive.Portal>));
+DropdownMenuContent.display_name = DropdownMenuPrimitive.Content.display_name;
+const DropdownMenuItem = React.forward_ref<;
+  React.ElementRef < typeof DropdownMenuPrimitive.Item>,
+  React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.Item> & {
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   React.ElementRef<typeof DropdownMenuPrimitive.Item>,;
 
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Item> & {;
     inset?: boolean;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
 >(({ className, inset, ...props }, ref) => (;
   <DropdownMenuPrimitive.Item;
@@ -275,6 +362,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       inset && "pl-8",
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -296,6 +384,8 @@ className={cn(
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
 >>>>>>>     )}
     {...props}
@@ -315,6 +405,7 @@ const DropdownMenuCheckboxItem = React.forwardRef<;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>;
   React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>,;
+<<<<<<< HEAD
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.CheckboxItem>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >(({ className, children, checked, ...props }, ref) => (;
@@ -327,6 +418,10 @@ className={cn(
 >>>>>>>       className
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.CheckboxItem>;
 >(({ className, children, checked, ...props }, ref) => (;
   <DropdownMenuPrimitive.CheckboxItem;
@@ -339,10 +434,15 @@ ursor/fix-website-loading-errors-and-merge-6662
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       className
 >>>>>>>     )}
+=======
+      className
+    )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none transition - colors focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       inset && &quot;pl - 8&quot;,
@@ -359,6 +459,7 @@ const DropdownMenuCheckboxItem = React.forward_ref<;
 className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none transition - colors focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       class_name)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
@@ -369,6 +470,8 @@ className={cn (
       className
     )}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     checked={checked}
     {...props}
   >
@@ -442,6 +545,7 @@ const DropdownMenuLabel = React.forwardRef<;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
   React.ElementRef<typeof DropdownMenuPrimitive.Label>,;
 
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {;
@@ -466,6 +570,8 @@ className={cn(
       inset && &quot;pl-8&quot;
 >>>>>>>       className
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <DropdownMenuPrimitive.RadioItem;
@@ -476,7 +582,10 @@ ursor/fix-website-loading-errors-and-merge-6662
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
     )}
   </DropdownMenuPrimitive.CheckboxItem>));
@@ -491,6 +600,7 @@ const DropdownMenuRadioItem = React.forward_ref<;
 className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none transition - colors focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       class_name)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 <<<<<<< HEAD
@@ -507,6 +617,8 @@ className={cn(
       className
     )}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     {...props}
   >
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
@@ -523,6 +635,7 @@ const DropdownMenuLabel = React.forward_ref<;
   React.ElementRef < typeof DropdownMenuPrimitive.Label>,
   React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.Label> & {
 
+<<<<<<< HEAD
   React.ElementRef<typeof DropdownMenuPrimitive.Label>,;
 
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {;
@@ -540,6 +653,12 @@ const DropdownMenuLabel = React.forwardRef<;
   React.ElementRef<typeof DropdownMenuPrimitive.Label>,;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+  React.ElementRef<typeof DropdownMenuPrimitive.Label>,;
+
+  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     inset?: boolean;
   }
 >(({ className, inset, ...props }, ref) => (;
@@ -554,6 +673,7 @@ const DropdownMenuLabel = React.forwardRef<;
       inset && "pl-8",
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -575,6 +695,8 @@ className={cn(
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
 >>>>>>>     )}
     {...props}
@@ -586,6 +708,7 @@ const DropdownMenuSeparator = React.forwardRef<;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
   React.ElementRef<typeof DropdownMenuPrimitive.Separator>;
 >>>>>>>   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>;
@@ -593,6 +716,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>;
 >>>>>>> >(({ className, ...props }, ref) => (;
+=======
+
+  React.ElementRef<typeof DropdownMenuPrimitive.Separator>,;
+
+
+  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>;
+>(({ className, ...props }, ref) => (;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 className={cn (
       &quot;px - 2 py - 1.5 text - sm font - semibold & quot;,
       inset && &quot;pl - 8&quot;,
@@ -604,7 +735,6 @@ const DropdownMenuSeparator = React.forward_ref<;
   React.ElementRef < typeof DropdownMenuPrimitive.Separator>,
   React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.Separator>;
 >(({ class_name, ...props }, ref) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   <DropdownMenuPrimitive.Separator;
     ref={ref}
 <<<<<<< HEAD
@@ -628,11 +758,17 @@ const DropdownMenuShortcut = ({
     <span
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+      className={cn("ml-auto text-xs tracking-widest opacity-60", className)}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {...props}
     />;
   );
 }
 
+<<<<<<< HEAD
 =======
       className={cn(&quot;ml-auto text-xs tracking-widest opacity-60&quot; className)}
 ursor/fix-website-loading-errors-and-merge-6662
@@ -695,6 +831,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+DropdownMenuShortcut.display_name = &quot;DropdownMenuShortcut & quot;
+;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 DropdownMenuShortcut.displayName = "DropdownMenuShortcut"
 
 export {
@@ -710,6 +851,7 @@ export {
   DropdownMenuGroup,
   DropdownMenuPortal,
   DropdownMenuSub,
+<<<<<<< HEAD
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,;
   DropdownMenuRadioGroup};
@@ -725,3 +867,6 @@ export {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  DropdownMenuSubContent,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

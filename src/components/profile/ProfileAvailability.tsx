@@ -1,9 +1,12 @@
+<<<<<<< HEAD
 import { Availability } from '@/types/profile'
 import { Badge } from '@/components/ui/badge'
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Calendar, Clock, Check } from 'lucide-react'
 =======
 import { Availability } from '@/types/profile'
@@ -32,6 +35,9 @@ export function ProfileAvailability({
 }: ProfileAvailabilityProps) {
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Availability } from '@/types / profile';
 import { Badge } from '@/components / ui / badge';
 import { Calendar, Clock, Check } from 'lucide-react';
@@ -43,9 +49,12 @@ export /**
  */
 function ProfileAvailability() {
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') =>: any {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     switch (status) {
       case 'available':
         return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
@@ -164,6 +173,7 @@ function ProfileAvailability() {
                   </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -178,6 +188,11 @@ import { Calendar, Clock, Check } from 'lucide-react';
 interface ProfileAvailabilityProps {;
   availability: Availability;
 <<<<<<< HEAD
+=======
+import { Availability } from "@/types/profile";
+import { Badge } from "@/components/ui/badge";
+import { Calendar, Clock, Check } from 'lucide-react'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Badge } from '@/components/ui/badge';
 import { Calendar } from 'lucide-react';
 
@@ -258,6 +273,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -307,6 +323,11 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
 <<<<<<< HEAD
 >>>>>>>                 </div>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {availability.availableHours && availability.availableHours.length > 0 && (
         <div className="mt-4">
           <h4 className="text-zion-slate-light text-sm mb-2">Weekly Availability</h4>
@@ -317,7 +338,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div key={index} className="flex items-center gap-2 text-zion-slate">
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <div className="w-20 text-zion-slate-light">{slot.day}:</div>
                 <div className="flex items-center gap-1">
                   <Clock className="h-4 w-4 text-zion-cyan" />
@@ -430,6 +454,7 @@ export function ProfileAvailability(): any ({;
                 </div>;
               </div>;
 
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -439,6 +464,16 @@ export function ProfileAvailability(): any ({;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+            ))}
+          </div>;
+        </div>;
+      )}
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </div>
               </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -458,6 +493,7 @@ export function ProfileAvailability(): any ({;
         </div>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
     </div>
   )
@@ -469,6 +505,10 @@ export function ProfileAvailability(): any ({;
 }
       )};
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+      )};
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </div>;
   );
 };
@@ -476,6 +516,7 @@ export function ProfileAvailability(): any ({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 }
@@ -493,6 +534,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8'>;
       <h3 className='text - xl font - bold text - white mb - 4'>Availability</h3>;
       <div className='flex flex - col md:flex - row md:items - center md:gap - 6 mb - 4'>;
@@ -560,6 +603,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ;
 
@@ -581,3 +625,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

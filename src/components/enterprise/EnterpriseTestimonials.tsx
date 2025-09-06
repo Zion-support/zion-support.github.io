@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseTestimonials.tsx
 
 <<<<<<< HEAD
@@ -87,6 +88,8 @@ export function EnterpriseTestimonials() {
     image: "/placeholder.svg"}]
 <<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {
 
 ========
@@ -100,8 +103,11 @@ import {
   CarouselItem;
   CarouselNext;
   CarouselPrevious} from "@/components/ui/carousel";
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseTestimonials.tsx
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 <<<<<<< HEAD
 =======
@@ -188,7 +194,11 @@ export function EnterpriseTestimonials() {
 };
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       />
                     </div>
                     <div>
@@ -230,8 +240,11 @@ const testimonials = [
     company: "FutureTech Systems",
 <<<<<<< HEAD
     image: "/placeholder.svg"}];
+<<<<<<< HEAD
 =======
     image: "/placeholder.svg"}],
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function EnterpriseTestimonials() {
@@ -637,11 +650,15 @@ function EnterpriseTestimonials() {
               </CarouselItem>))}
           </CarouselContent>;
           <div className='flex justify - center gap - 2 mt - 8'>            <CarouselPrevious />          <div className="flex justify - center gap - 2 mt - 8">;
+<<<<<<< HEAD
 =======
           </CarouselContent>;
           <div className="flex justify-center gap-2 mt-8">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/enterprise/EnterpriseTestimonials.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <CarouselPrevious />;
             <CarouselNext />;
           </div>;
@@ -652,6 +669,7 @@ function EnterpriseTestimonials() {
 
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     </section>);
 }
@@ -716,3 +734,10 @@ image: "/placeholder.svg" ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+    </section>);
+}
+
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

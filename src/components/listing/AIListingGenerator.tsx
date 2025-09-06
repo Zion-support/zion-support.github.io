@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -20,6 +21,8 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface GeneratedContent {
 
   description: string
@@ -107,6 +110,7 @@ import {logErrorToProduction} from '@/utils/productionLogger',
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> >>>>>>>       toast({
 ursor/fix-website-loading-errors-and-merge-6662
@@ -117,6 +121,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       toast({
 >>>>>>>         title: "Content Generated"
         description: "AI has created optimized listing content for you."
@@ -128,6 +134,27 @@ ursor/fix-website-loading-errors-and-merge-6662
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
         variant: "destructive"
       })
+<<<<<<< HEAD
+=======
+      // Check condition
+if (.error) {) {
+  $2
+}
+        throw new Error ((data as any).error);
+      }
+      setGeneratedContent ((data as any)?.generated || null);
+      toast ({
+        title: "Content Generated",
+        description: "AI has created optimized listing content for you.";
+      });
+    } catch (error) {
+      logErrorToProduction ('Error generating content:', { data: error }),
+      toast ({
+        title: "Generation Failed",
+        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
+        variant: "destructive";
+      });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     } finally {
       setIsLoading(false)
     }
@@ -205,6 +232,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       onApplyGenerated(generatedContent),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -212,6 +240,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       toast({
         title: "Content Applied"
         description: "The generated content has been applied to your listing."
@@ -283,15 +315,21 @@ if ( {) {
         title: "Content Applied",
         description: "The generated content has been applied to your listing.";
       });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   }
   },
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
 
   },
@@ -299,7 +337,10 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 
 =======
@@ -443,17 +484,106 @@ if (error) {
 toast ({
 }catch (error) {'
   logErrorToProduction ('Error generating content:', {
+<<<<<<< HEAD
   data: error
 })
 toast ({
 }finally {
   setIsLoading (false)
+=======
+
+          />;
+        </CardContent>;
+      </Card>;
+
+      {isLoading && <LoadingContentSkeleton />}
+
+      {generatedContent && !isLoading && (;
+        <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />;
+      )}
+    </div>;
+  );
+
+}: AIListingGeneratorProps) {;
+  const {;
+  toast ;
+}= useToast ();
+const [isLoading, setIsLoading] = useState (false);
+const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null> (null);
+const handleGenerate = async ({;
+  title;
+category;
+keyFeatures;
+targetAudience ;
+}: {;
+  title: string;
+category: string;
+keyFeatures: string;
+targetAudience: string ;
+}) => {;
+  setIsLoading (true);
+try {;
+  const {;
+  data, error ;
+}= await supabase && supabase.functions.invoke ('ai-listing-generator', {;
+  body: {;
+  title, category,  keyFeatures, targetAudience ;
+
+});
+if (error) {;
+  throw new Error (error && error.message) ;
+}if (data && (data as any) .error) {;
+  throw new Error ( (data as any) .error) ;
+}setGeneratedContent ( (data as any) ?.generated || null);
+toast ({;
+
+}catch (error) {';
+  logErrorToProduction ('Error generating content:', {;
+  data: error ;
+});
+toast ({;
+
+}finally {;
+  setIsLoading (false) ;
+
+};
+const handleApply = () => {;
+  if (generatedContent && onApplyGenerated) {;
+  onApplyGenerated (generatedContent);
+toast ({;
+
+
+};
+return (<div className="space-y-6" > <Card className="border border-zion-blue-light bg-zion-blue-dark" > <CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> <p className="text-sm text-zion-slate-light" > Provide basic information and let AI generate optimized, SEO-friendly content for your listing </p> </CardHeader> <CardContent> <AIListingFormonSubmit= {
+  handleGenerate 
+}isLoading= {
+  isLoading 
+}initialValues= {
+  initialValues 
+}/> </CardContent> </Card> {;
+  isLoading && <LoadingContentSkeleton /> ;
+}{;
+  generatedContent && !isLoading && (<GeneratedContentDisplaycontent= {
+  generatedContent 
+}onApply= {
+  handleApply 
+}/>) ;
+}</div>) ;
+}'";
+
+  data: error;
+});
+toast ({
+}finally {
+  setIsLoading (false);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 const handleApply = () => {
   if (generatedContent && onApplyGenerated) {
   onApplyGenerated (generatedContent)
 toast ({
 }
+<<<<<<< HEAD
 return (<div className="space-y-6" > <Card className="border border-zion-blue-light bg-zion-blue-dark" > <CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> <p className="text-sm text-zion-slate-light" > Provide basic information and let AI generate optimized, SEO-friendly content for your listing </p> </CardHeader> <CardContent> <AIListingForm onSubmit= {
   handleGenerate
 }isLoading= {
@@ -517,3 +647,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+}'";
+}
+
+}
+}
+}
+}
+
+    </div>;
+  );
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

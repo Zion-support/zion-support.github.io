@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { useState, useEffect  } from 'react';
@@ -55,6 +56,8 @@ interface CountryTabsProps {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState, useEffect } from 'react',;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input',;
 import { Button } from '@/components/ui/button',;
@@ -70,12 +73,35 @@ import {;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CountryServiceCard } from '@/components/services/CountryServiceCard';
 import { CountryPricing } from '@/data/onsiteServicePricing';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 
   setSearchQuery: (query: string) => void;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
+=======
+export function CountryTabs(): any ({;
+  popularCountries,;
+  filteredCountries,;
+  handleCountrySelect,;
+  onQuote,;
+  searchQuery,;
+  setSearchQuery,;
+}: CountryTabsProps) {;
+  const [currentPage, setCurrentPage] = useState(1);
+  const countriesPerPage = 50;
+
+  useEffect(() => {;
+    setCurrentPage(1);
+  }, [searchQuery]);
+  const totalPages = Math && Math.ceil(filteredCountries && filteredCountries.length / countriesPerPage);
+  const paginatedCountries = filteredCountries && filteredCountries.slice(;
+    (currentPage - 1) * countriesPerPage,;
+    currentPage * countriesPerPage;
+  );
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 export function CountryTabs({
   popularCountries,
@@ -136,6 +162,7 @@ export function CountryTabs({
   searchQuery,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1),
@@ -185,6 +212,13 @@ export function CountryTabs({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   )
+=======
+  const paginatedCountries = filteredCountries.slice(
+    (currentPage - 1) * countriesPerPage,
+    currentPage * countriesPerPage
+  )
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1),
   const countriesPerPage = 50,
@@ -217,12 +251,15 @@ export function CountryTabs({
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
       <TabsContent value='featured' className='mt-0'>
         <div className='mb-6'>
           <h2 className='text-2xl font-bold text-white text-center'>
 >>>>>>>             Featured Service Locations
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <Tabs defaultValue='featured' className='w-full'>;
       <TabsList className='bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6'>;
@@ -249,6 +286,7 @@ export function CountryTabs({
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             Featured Service Locations
@@ -262,6 +300,8 @@ export function CountryTabs({
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             Featured Service Locations
           </h2>
           <p className="text-zion-slate-light text-center mt-2">
@@ -334,6 +374,7 @@ export function CountryTabs({
               country = {country,}
               onSelect = {handleCountrySelect,}
               onQuote = {onQuote,}
+<<<<<<< HEAD
               isPopular = {popularCountries.includes(country.country),}
             />
 <<<<<<< HEAD
@@ -344,6 +385,11 @@ export function CountryTabs({
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+              isPopular = {popularCountries && popularCountries.includes(country && country.country),}
+            />;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCountries
@@ -396,6 +442,7 @@ export function CountryTabs({
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -418,6 +465,8 @@ export function CountryTabs({
 =======
 >>>>>>>                     }}
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           ))}
 
         </div>;
@@ -641,15 +690,25 @@ function CountryTabs() {
 }
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     onClick={(e) => {;
                       e.preventDefault(),;
                       setCurrentPage(Math.max(1, currentPage - 1));
 
 
+<<<<<<< HEAD
 >>>>>>>                     }}
 >>>>>>>                   />;
+=======
+                    }}
+                  />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </PaginationItem>;
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map(;
                   (page) => (;
@@ -679,6 +738,7 @@ function CountryTabs() {
                 )}
                 <PaginationItem>;
                   <PaginationNext;
+<<<<<<< HEAD
                     href={`?page=${currentPage + 1}`}
 
                   />
@@ -725,3 +785,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+                    href={`?page=${currentPage + 1}`}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

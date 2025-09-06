@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/jobs/SuggestedJobs.tsx
 
 =======
@@ -113,6 +114,8 @@ import { Loader2 } from 'lucide-react'import { Badge  } from '@/components / ui 
 import { useJobSuggestions  } from '@/hooks / useJobSuggestions';
 import { JobMatchesCard  } from './JobMatchesCard';
 import { NoJobsCard  } from './NoJobsCard';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface SuggestedJobsProps {
   talent_id?: string;
 }
@@ -142,6 +145,7 @@ function SuggestedJobs() {
   const handle_decline = (match_id: string) =>: any {
     updateJobMatchStatus (match_id, 'declined');
   }
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/jobs/SuggestedJobs.tsx
 >>>>>>>   const { 
     isLoading,
@@ -200,16 +204,40 @@ function SuggestedJobs() {
   if (isLoading) {
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/SuggestedJobs.tsx
+=======
+
+  const { user } = useAuth(),
+  const currentTalentId = talentId || user?.id,
+  const { user } = useAuth()
+  const currentTalentId = talentId || user?.id
+  const { user } = useAuth(),
+  const currentTalentId = talentId || user?.id,
+
+
+  const { 
+    isLoading,
+    updateJobMatchStatus, 
+    categorizedMatches: { 
+
+
+
+
+
+  if (isLoading) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/jobs/SuggestedJobs.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>>     return (
 
 
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return (
       <div className="flex items - center justify - center p - 6">;
         <Loader2 className="w - 6 h - 6 animate - spin text - primary" />;
@@ -222,6 +250,7 @@ import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/bad
 import { useJobSuggestions } from "@/hooks/useJobSuggestions";
 import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -230,6 +259,8 @@ import { NoJobsCard } from "./NoJobsCard";
   if (isLoading) {
     return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <div className="flex items-center justify-center p-6">
         <Loader2 className="w-6 h-6 animate-spin text-primary" />
       </div>
@@ -238,6 +269,7 @@ import { NoJobsCard } from "./NoJobsCard";
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
   }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -255,6 +287,8 @@ import { NoJobsCard } from "./NoJobsCard";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useAuth } from "@/hooks/useAuth",;
 import { Loader2 } from 'lucide-react';
 import { Badge } from "@/components/ui/badge",;
@@ -262,7 +296,10 @@ import { useJobSuggestions } from "@/hooks/useJobSuggestions",;
 import { JobMatchesCard } from "./JobMatchesCard",;
 import { NoJobsCard } from "./NoJobsCard",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface SuggestedJobsProps {;
   talentId?: string;
 }
@@ -357,14 +394,17 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
           <div className="grid gap-4 md:grid-cols-2">
 =======
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="space-y-6">;
       {/* New Matches Section */}
@@ -441,6 +481,7 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
+<<<<<<< HEAD
           
 >>>>>>>           <div className="grid gap-4 md:grid-cols-2">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -448,6 +489,12 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+              />;
+
+
+          
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
               <JobMatchesCard
@@ -467,6 +514,7 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>               />
@@ -479,6 +527,9 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
               />;
+=======
+              />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             ))}
 =======
               {newMatches.length} New;
@@ -505,9 +556,9 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
 
 ;
 
-=======
       
 ;
+<<<<<<< HEAD
 >>>>>>> >>>>>>>       {/* Previously Viewed Section */}
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -525,6 +576,9 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
 ;
       
 ;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {/* Previously Viewed Section */}
       {viewedMatches.length > 0 && (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -546,6 +600,7 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
+<<<<<<< HEAD
           
 >>>>>>>           <div className="grid gap-4 md:grid-cols-2">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -553,6 +608,12 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+              />;
+
+
+          
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
               <JobMatchesCard
@@ -569,6 +630,7 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
                 match={match} 
                 onApply={handleApply} 
                 onDecline={handleDecline} 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -597,6 +659,9 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
               />;
+=======
+              />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             ))}
 =======
           ;
@@ -620,9 +685,9 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
 
 ;
 
-=======
       
 ;
+<<<<<<< HEAD
 >>>>>>> >>>>>>>       {/* Applied Jobs Section */}
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -640,6 +705,9 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
 ;
       
 ;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {/* Applied Jobs Section */}
       {appliedMatches.length > 0 && (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -651,10 +719,19 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
               <JobMatchesCard
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 key = {match.id,}
+=======
+
+              <JobMatchesCard 
+
+
+                key = {match.id,}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {/* Applied Jobs Section */}
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/SuggestedJobs.tsx
@@ -671,6 +748,7 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
             {appliedMatches && appliedMatches.map(match => (;
               <JobMatchesCard
                 key = {match && match.id,}
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -680,6 +758,8 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
               <JobMatchesCard 
                 key = {match.id,}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
@@ -724,6 +804,7 @@ export function SuggestedJobs({ talentId } SuggestedJobsProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>             ))}
           </div>
@@ -805,6 +886,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               />;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/SuggestedJobs.tsx
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             ))}
           </div>;
         </div>;
@@ -819,6 +904,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/jobs/SuggestedJobs.tsx
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ========
 =======
@@ -898,6 +984,9 @@ if (isLoading) {;
 }</div>) ;
 }'"}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/SuggestedJobs.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Check condition
 if ( {) {
   $2
@@ -1017,6 +1106,7 @@ if ( {) {
 }</div> </div>);
 }</div>);
 }'"}
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/jobs/SuggestedJobs.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> }
@@ -1083,3 +1173,7 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/CodeBlock.tsx
 
 =======
@@ -384,6 +385,10 @@ export function CodeBlock({ ;
 
             ))}
           </div>
+=======
+))}
+          </div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         )}
 <<<<<<<< HEAD:src/components/developers/CodeBlock.tsx
 
@@ -426,7 +431,11 @@ export function CodeBlock({ ;
       )}
 export default CodeBlock
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {language}
         </div>;
       )}
@@ -459,8 +468,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/CodeBlock.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     >;
       <pre;
         className={cn ('p - 4 overflow - auto', showLineNumbers && 'pl - 12 relative')}
@@ -485,6 +498,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>)}
     </div>);
 export default CodeBlock;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/CodeBlock.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 xport default CodeBlock;
@@ -517,6 +531,8 @@ xport default CodeBlock;
     </div>
   )
 export default CodeBlock
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 export default CodeBlock;
 ;
@@ -524,11 +540,16 @@ export default CodeBlock;
 }
 }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </div>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
 }
 ;
+<<<<<<< HEAD
 export default CodeBlock;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -599,3 +620,6 @@ showLineNumbers && "pl-12 relative") ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+export default CodeBlock;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -139,6 +140,34 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
           <Star
             key={star}
             className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
+=======
+return (
+      <div className='flex'>;
+        {[1, 2, 3, 4, 5].map(star => (;
+          <Star
+            key={star}
+            className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
+          />;
+
+import {  Dialog,  Dialog,
+
+import { useState } from "react",
+import { formatDistanceToNow } from "date-fns",
+import { Star, Flag, User } from 'lucide-react'
+import { Review } from "@/types/reviews",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import {
+  Dialog,
+
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
@@ -155,6 +184,7 @@ import {
   DialogHeader,
   DialogTitle,
           />
+<<<<<<< HEAD
         ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </div>
@@ -311,6 +341,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
 =======
 >>>>>>>               <AvatarFallback className="bg-muted">
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         ))}
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -327,6 +359,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <AvatarFallback>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
               )}
             </Avatar>
           )}
@@ -366,6 +399,11 @@ ursor/fix-website-loading-errors-and-merge-6662
               {review.is_anonymous ? "Anonymous" : review.reviewer_profile?.display_name || "User"}
 =======
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+                  {review.reviewer_profile?.display_name ? 
+import { useState } from "react",;
+import { formatDistanceToNow } from "date-fns",;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Star, Flag, User } from 'lucide-react';
 import { Review } from '@/types / reviews';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
@@ -449,7 +487,6 @@ if (return null) {
       .join ("");
       .toUpperCase ();
       .substring (0, 2);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   return (
 
@@ -502,6 +539,7 @@ if (return null) {
                     getInitials(review && review.reviewer_profile.display_name) : "??"}
 
                 </AvatarFallback>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
   }
@@ -525,6 +563,8 @@ if (return null) {
                   {review.reviewer_profile?.display_name
                     ? getInitials(review.reviewer_profile.display_name)
                     : '??'}                </AvatarFallback>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               )}
             </Avatar>
           )}
@@ -681,6 +721,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 
 
       
+<<<<<<< HEAD
 =======
               <Badge variant='outline' className='flex gap-1 items-center'>
                 Communication
@@ -693,6 +734,9 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </Badge>
             )}
 
@@ -714,6 +758,9 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               </Badge>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Badge variant='outline' className='flex gap - 1 items - center'>;
                 Communication;
                 <span className='ml - 1 text - yellow - 500'>;
@@ -734,10 +781,13 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                   {review.timeliness_rating}/5;
                 </span>;
               </Badge>)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {review.would_work_again !== undefined && (
               <Badge
                 variant={review.would_work_again ? 'default' : 'secondary'}
@@ -767,7 +817,10 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 
 
       {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
             {review.communication_rating && (
@@ -799,6 +852,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
       </div>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
       {(review.communication_rating |
         review.quality_rating |
@@ -883,6 +937,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
             {review.quality_rating && (
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </Badge>
             )}
             {review.quality_rating && (
@@ -1031,11 +1087,14 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 
               <Badge 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
               <Badge 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 variant={review.would_work_again ? "default" : "secondary"}
                 className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
               >
@@ -1082,8 +1141,90 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               </Badge>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             )}
+<<<<<<< HEAD
           </div>
         </div>
+=======
+
+            {review && review.quality_rating && (;
+              <Badge variant='outline' className='flex gap-1 items-center'>;
+                Quality;
+                <span className='ml-1 text-yellow-500'>;
+                  {review && review.quality_rating}/5;
+                </span>;
+              </Badge>;
+            )}
+
+            {review && review.timeliness_rating && (;
+              <Badge variant='outline' className='flex gap-1 items-center'>;
+                Timeliness;
+                <span className='ml-1 text-yellow-500'>;
+                  {review && review.timeliness_rating}/5;
+                </span>;
+              </Badge>;
+            )}
+
+            {review && review.would_work_again !== undefined && (;
+              <Badge
+                variant={review && review.would_work_again ? 'default' : 'secondary'}
+                className={`${review && review.would_work_again ? 'bg-green-100 text-green-800 hover:bg-green-200' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}>;
+                {review && review.would_work_again;
+                  ? 'Would work again';
+                  : 'Would not work again'}              </Badge>;
+                {review && review.would_work_again ? "Would work again" : "Would not work again"}
+          <div>;
+            <div className="font-medium">;
+              {review && review.is_anonymous ? "Anonymous" : review && review.reviewer_profile?.display_name || "User"}
+            </div>;
+            <div className="text-sm text-muted-foreground">;
+              {formatDistanceToNow(new Date(review && review.created_at), { addSuffix: true })}
+            </div>;
+          </div>;
+        </div>;
+
+        <div className="flex">;
+          {renderStars(review && review.rating)}
+        </div>;
+      </div>;
+
+      <div className="mb-4">;
+        <p className="text-sm whitespace-pre-wrap">{review && review.review_text}</p>;
+      </div>;
+
+      {(review && review.communication_rating || review && review.quality_rating || review && review.timeliness_rating || review && review.would_work_again !== undefined) && (;
+        <div className="border-t pt-3 mt-3">;
+          <div className="flex flex-wrap gap-2">;
+            {review && review.communication_rating && (;
+              <Badge variant="outline" className="flex gap-1 items-center">;
+                Communication;
+                <span className="ml-1 text-yellow-500">{review && review.communication_rating}/5</span>;
+              </Badge>;
+            )}
+
+            {review && review.quality_rating && (;
+              <Badge variant="outline" className="flex gap-1 items-center">;
+                Quality;
+                <span className="ml-1 text-yellow-500">{review && review.quality_rating}/5</span>;
+              </Badge>;
+            )}
+
+            {review && review.timeliness_rating && (;
+              <Badge variant="outline" className="flex gap-1 items-center">;
+                Timeliness;
+                <span className="ml-1 text-yellow-500">{review && review.timeliness_rating}/5</span>;
+              </Badge>;
+            )}
+
+            {review && review.would_work_again !== undefined && (;
+              <Badge
+                variant={review && review.would_work_again ? "default" : "secondary"}
+                className={`${review && review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}>;
+                {review && review.would_work_again ? "Would work again" : "Would not work again"}
+              </Badge>;
+            )}
+          </div>;
+        </div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       )}
 <<<<<<< HEAD
 
@@ -1106,6 +1247,10 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
           <DialogTrigger asChild>
             <Button variant='ghost' size='sm' className='text-muted-foreground'>
               <Flag className='h-3 w-3 mr-1' />              Report
+<<<<<<< HEAD
+=======
+      
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <div className="mt-3 flex justify-end">
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
@@ -1115,6 +1260,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -1132,9 +1278,12 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               <Flag className="h-3 w-3 mr-1" />
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               Report
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>             </Button>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -1150,6 +1299,9 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </Button>
 >>>>>>>           </DialogTrigger>
           <DialogContent>
@@ -1177,17 +1329,65 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 please provide details below.
               </DialogDescription>
             </DialogHeader>
+<<<<<<< HEAD
             <Textarea
               placeholder='Why are you reporting this review?'              value={reportReason}
               onChange={e => setReportReason(e.target.value)}
               className='min-h-[100px]'
               placeholder="Why are you reporting this review?"
               value = {reportReason,}
+=======
+
+      <div className='mt-3 flex justify-end'>;
+        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>;
+          <DialogTrigger asChild>;
+            <Button variant='ghost' size='sm' className='text-muted-foreground'>;
+              <Flag className='h-3 w-3 mr-1' />              Report      ;
+      <div className="mt-3 flex justify-end">;
+        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>;
+          <DialogTrigger asChild>;
+            <Button variant="ghost" size="sm" className="text-muted-foreground">;
+              <Flag className="h-3 w-3 mr-1" />;
+              </Badge>)}
+          </div>;
+        </div>)}
+      <div className='mt - 3 flex justify - end'>;
+        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>;
+          <DialogTrigger as_child>;
+            <Button variant='ghost' size='sm' className='text - muted - foreground'>;
+              <Flag className='h - 3 w - 3 mr - 1' />              Report;
+      <div className="mt - 3 flex justify - end">;
+        <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>;
+          <DialogTrigger as_child>;
+            <Button variant="ghost" size="sm" className="text - muted - foreground">;
+              <Flag className="h - 3 w - 3 mr - 1" />;
+            </Button>;
+          </DialogTrigger>;
+          <DialogContent>;
+            <DialogHeader>;
+
+              onChange = {(e,) => setReportReason(e && e.target.value),}
+              className="min-h-[100px]";
+            />;
+
+            <DialogFooter>;
+
+              <Button
+                variant='outline'
+                onClick={() => setIsReportDialogOpen(false)}
+              >;
+                Cancel;
+              </Button>;
+              <Button
+                onClick={handleReport}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               onChange = {(e,) => setReportReason(e.target.value),}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
               className="min-h-[100px]"
             />
@@ -1203,6 +1403,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               className="min-h-[100px]"
             />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 If you believe this review violates our community guidelines, please provide details below.
               </DialogDescription>
             </DialogHeader>
@@ -1223,6 +1425,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 Cancel
               </Button>
 
+<<<<<<< HEAD
 =======
 >>>>>>>               className="min-h-[100px]"
             />
@@ -1255,6 +1458,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               className="min-h-[100px]"
             />
             
@@ -1290,6 +1496,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -1301,6 +1508,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </Button>
             </DialogFooter>
           </DialogContent>
@@ -1415,6 +1624,7 @@ return (<div className="border rounded - lg p - 4 bg - card"> <div className="fl
 }disabled= {
   !report_reason.trim () || is_reporting;
 }> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>);
+<<<<<<< HEAD
 }"}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1444,3 +1654,6 @@ return (<div className="border rounded - lg p - 4 bg - card"> <div className="fl
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}"}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

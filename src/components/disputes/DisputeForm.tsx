@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/disputes/DisputeForm.tsx
 
 =======
@@ -395,17 +396,25 @@ export function DisputeForm({
         
         if (onDisputeCreated) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+if (onDisputeCreated) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           onDisputeCreated(dispute.id)
         }
       }
     } catch (error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> >>>>>>>     } finally {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -422,6 +431,11 @@ export function DisputeForm({
       toast.error("Failed to submit dispute. Please try again.")
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
+=======
+      logErrorToProduction('Error submitting dispute:', { data: error }),
+      toast.error("Failed to submit dispute. Please try again.")
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     } finally {
       setIsSubmitting(false)
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -440,6 +454,7 @@ export function DisputeForm({
 =======
 =======
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -480,6 +495,9 @@ export function DisputeForm({
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                 <FormLabel>Reason for dispute</FormLabel>
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
@@ -489,6 +507,7 @@ export function DisputeForm({
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> }) => (
               <FormItem>
 
+<<<<<<< HEAD
 >>>>>>>                 <FormLabel>Reason for dispute</FormLabel>
 >>>>>>>                 <Select onValueChange={field.onChange} defaultValue={field.value}>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -499,6 +518,8 @@ export function DisputeForm({
             name="reason_code"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "reason_code"> }) => (
               <FormItem>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <FormLabel>Reason for dispute</FormLabel>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -625,10 +646,13 @@ import { z } from "zod",;
 import { Button } from "@/components/ui/button",;
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/disputes/DisputeForm.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {;
   Form,;
   FormControl,;
@@ -887,6 +911,7 @@ if ( {) {
                   <Textarea;
                     placeholder='Please provide specific details about the issue...';
                     className='min - h-[150px]';
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1102,6 +1127,8 @@ export function DisputeForm({;
                     placeholder="Please provide specific details about the issue...";
                     className="min-h-[150px]";
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     {...field}
                   />;
                 </FormControl>;
@@ -1152,11 +1179,15 @@ export function DisputeForm({;
                             Remove;
                           </Button>;
                         </li>;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/disputes/DisputeForm.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <Textarea
                     placeholder="Please provide specific details about the issue..."
                     className="min-h-[150px]"
 
+<<<<<<< HEAD
 >>>>>>>                     {...field}
 >>>>>>>                   />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1171,6 +1202,8 @@ export function DisputeForm({;
                   <Textarea
                     placeholder="Please provide specific details about the issue..."
                     className="min-h-[150px]"
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     {...field}
                   />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1229,6 +1262,7 @@ export function DisputeForm({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -1382,6 +1416,8 @@ description: values.description
 ursor/fix-website-loading-errors-and-merge-6662
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/disputes/DisputeForm.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       ))}
                     </ul>;
                   </div>;
@@ -1393,13 +1429,19 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="flex justify-end space-x-2">
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {onCancel && (
               <Button type='button' variant='outline' onClick={onCancel}>
                 Cancel
               </Button>
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/disputes/DisputeForm.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </FormItem>)}
           />;
           <FormItem>;
@@ -1433,6 +1475,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         </li>))}
                     </ul>;
                   </div>)}
+<<<<<<< HEAD
 =======
               </FormItem>;
             )}
@@ -1469,6 +1512,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>;
                 )}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </div>;
             </FormControl>;
             <FormMessage />;
@@ -1603,7 +1648,12 @@ description: values.description ;
 }/> <FormField <FormItem> <FormLabel>Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";
 }/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) ;
 
+<<<<<<< HEAD
 >>>>>>> }/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) 
+=======
+
+}/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 }</ul> </div>) ;
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) ;
@@ -1615,6 +1665,12 @@ description: values.description ;
 ========
 <<<<<<< HEAD
 }'"}
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   setIsSubmitting (true);
 const dispute = await create_dispute ({
   project id: project_id;
@@ -1646,6 +1702,7 @@ if ( {) {
 }/> <FormItem> <FormLabel > Attachments (optional) </FormLabel> <FormControl> <div className="space - y-4" > <Input type="file" multiple > Remove </Button> </li>) );
 }</ul> </div>);
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>);
+<<<<<<< HEAD
 }'"}
 =======
 }'"
@@ -1668,3 +1725,6 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}'"}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

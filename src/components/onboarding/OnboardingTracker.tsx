@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -143,10 +144,14 @@ export function OnboardingTracker({
 <<<<<<< HEAD
 
       {/* Progress bar */}
+=======
+{/* Progress bar */}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
         <div 
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
 
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -206,6 +211,9 @@ export function OnboardingTracker({;
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>;
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {/* Steps list */}
       <div className="space-y-3">;
         {steps && steps.map((step,) => (;
@@ -342,6 +350,7 @@ function OnboardingTracker() {
         ))}
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -372,13 +381,20 @@ function OnboardingTracker() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </div>;
     </div>;
   );
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   step.id ";
 }className="flex items - center" > <div className="mr - 3" > {";
   step.completed ? (<CheckCircle className="h - 5 w - 5 text - zion - cyan" /> h - 5 w - 5 text - zion - slate - light"/>);
@@ -389,6 +405,7 @@ function OnboardingTracker() {
 }</div>) );
 }</div> </div>);
 }"}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> }
 ;
@@ -422,3 +439,7 @@ function OnboardingTracker() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

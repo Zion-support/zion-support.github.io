@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/HowItWorksSection.tsx
 
 
@@ -9,6 +10,8 @@
 import React from 'react',
 import { GradientHeading } from "./GradientHeading",
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import { GradientHeading } from "./GradientHeading";
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/HowItWorksSection.tsx
@@ -144,6 +147,9 @@ const stats = [ "
   scale: 0.8
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import { GradientHeading } from './GradientHeading';
 import { Check, Handshake, Search, Send } from 'lucide-react';
@@ -243,6 +249,7 @@ const stats = [ ";
     visible: {
       opacity: 1,      scale: 1
       transition: {
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/HowItWorksSection.tsx
 =======
     visible: {
@@ -342,6 +349,27 @@ export default function Page() {
     success: "100% client retention"}
 ]
 <<<<<<< HEAD
+=======
+
+
+const getSteps = (t: any,) => [
+
+
+import React from 'react',
+import { GradientHeading } from "./GradientHeading",
+import { Check, Handshake, Search, Send } from 'lucide-react'
+import { cn } from "@/lib/utils",
+import { useTranslation } from "react-i18next",
+interface HowItWorksSectionProps {
+  className?: string,
+  style?: React.CSSProperties
+}
+
+
+const getSteps = (t: any) => [
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   {
 
     title: t('how_it_works.post'),
@@ -359,7 +387,10 @@ export default function Page() {
     title: t('how_it_works.done'),
     description: t('how_it_works.done_desc'),
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <section className={cn('py-20 bg-zion-blue', className)} style={style}>
       <div className='container mx-auto px-4'>
@@ -377,7 +408,11 @@ export default function Page() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
             {t('home.how_it_works_subtitle')}
           </p>
@@ -746,6 +781,7 @@ function HowItWorksSection() {
                       <p className='text-zion-slate-light'>;
                         {step && step.description}
                       </p>                    </div>                    </div>;
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/HowItWorksSection.tsx
         <div className="relative">
           {/* Timeline line */}
@@ -817,6 +853,9 @@ function HowItWorksSection() {
 }
 };
 };
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
         <div className="relative">
           {/* Timeline line */}
@@ -838,10 +877,13 @@ function HowItWorksSection() {
                       <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
                       <p className="text-zion-slate-light">{step.description}</p>
                     </div>
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/HowItWorksSection.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>>                   ) : null}
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   ) : null}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/HowItWorksSection.tsx
                 </div>;
@@ -1023,6 +1065,7 @@ export default Component;
 ;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -1034,6 +1077,8 @@ export default Component;
 }
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       </p>                    </div>                    </div>) : null}
                 </div>;
                       <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;
@@ -1058,6 +1103,7 @@ export default Component;
 }
 }
 }
+<<<<<<< HEAD
 =======
   ),;}
  interface HowItWorksSectionProps {;
@@ -1136,3 +1182,6 @@ return (<section className= {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

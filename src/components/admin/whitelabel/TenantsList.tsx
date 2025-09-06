@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -100,11 +101,15 @@ export function TenantsList() {;
         .order('created_at', { ascending: false }),;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+.order('created_at', { ascending: false }),;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 }
 ;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 ;
@@ -314,3 +319,11 @@ export function TenantsList() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+        .order ('created_at', { ascending: false }),
+}
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

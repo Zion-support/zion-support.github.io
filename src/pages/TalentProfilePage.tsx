@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React, { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { TalentProfile } from "@/components/profile/TalentProfile",
 =======
 import React, { useState, useEffect } from "react";
@@ -206,6 +209,7 @@ export default function TalentProfilePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>   } : {
 ursor/fix-website-loading-errors-and-merge-6662
@@ -215,6 +219,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   } : {
 >>>>>>>     id: userDetails?.id |''
     displayName: userDetails?.name |''
@@ -284,6 +290,9 @@ ursor/fix-website-loading-errors-and-merge-6662
         description: "There was a problem loading this talent profile. Please try again."
         variant: "destructive"})
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         id: user.id || '',
         display_name: user.display_name || '',
         email: user.email || '', // Ensure email is always a string;
@@ -332,6 +341,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     return <ProfileLoadingState />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
+<<<<<<< HEAD
   if (error |!profile) {
     return <ProfileErrorState error={error} />
 <<<<<<< HEAD
@@ -354,6 +364,22 @@ ursor/fix-website-loading-errors-and-merge-6662
       router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`)
       return
 <<<<<<< HEAD
+=======
+  // Handle loading error gracefully;
+  useEffect ((, ) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+        title: 'Error loading profile',
+        description:;
+          'There was a problem loading this talent profile. Please try again.',
+        variant: 'destructive',
+      }) }        title: "Error loading profile",
+        description: "There was a problem loading this talent profile. Please try again.",
+        variant: "destructive"});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   }, [error]);
   // Check condition
@@ -436,7 +462,11 @@ import { SEO } from '@/components/SEO';
 
 import React, { useState, useEffect } from "react";
 
+<<<<<<< HEAD
 >>>>>>> import { useRouter } from 'next/router';
+=======
+import { useRouter } from 'next/router';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { TalentProfile } from "@/components/profile/TalentProfile";
 import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState";
 import { ProfileErrorState } from "@/components/profile/ProfileErrorState";
@@ -533,7 +563,6 @@ if ( {) {
         variant: 'default',
       });
       return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     setIsMessageModalOpen (true);
   }
@@ -541,7 +570,11 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 >>>>>>>   return (
+=======
+  return (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <>;
 
 
@@ -658,6 +691,7 @@ if ( {) {
           on_close={() => setIsHireModalOpen (false)}
           user_details={user_profile}
         />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
           isOpen={isHireModalOpen}
@@ -665,6 +699,8 @@ if ( {) {
           userDetails={userProfile}
         />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {/* Message Talent Modal */}
         <MessageTalentModal
           talent={profile}
@@ -724,9 +760,14 @@ return (<> <SEOtitle= {
   profile && profile.profile picture url 
 }/> <div className="min-h-screen bg-zion-blue pb-12" > <TalentProfileprofile= {
   profile 
+<<<<<<< HEAD
 =======
   return
 }setIsMessageModalOpen (true)
+=======
+  return;
+}setIsMessageModalOpen (true);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 return (<> <SEO title= {
   profile.full name
@@ -739,6 +780,7 @@ return (<> <SEO title= {
 }onRequestHire= {
   handleRequestHire
 }onMessageTalent= {
+<<<<<<< HEAD
   handleMessageTalent
 }/> <BackToDirectoryButton /> {
   /* Sticky action buttons that appear when scrolling */ "
@@ -762,12 +804,27 @@ return (<> <SEO title= {
   () => setIsMessageModalOpen (false)
 }/> </div> </>)
 }'"      <div className="min-h-screen bg-zion-blue pb-12">
+=======
+
+
+        title={profile.full_name}
+        description={profile.bio || 'Talent profile'}
+        ogImage={profile.profile_picture_url}
+      />
+      <div className="min-h-screen bg-zion-blue pb-12">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <TalentProfile
         profile = {profile,}
         onRequestHire = {handleRequestHire,}
         onMessageTalent = {handleMessageTalent,}
+<<<<<<< HEAD
       />
       <BackToDirectoryButton />
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         title: "Error loading profile",
         description: "There was a problem loading this talent profile. Please try again.",
         variant: "destructive"})
@@ -953,6 +1010,7 @@ return (<> <SEO title= {
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
   handleMessageTalent 
 }/> <BackToDirectoryButton /> {
@@ -1322,6 +1380,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {/* Sticky action buttons that appear when scrolling */}
 >>>>>>>       <StickyAction>
         <div className="p-2 flex gap-2">
@@ -1334,6 +1394,9 @@ ursor/fix-website-loading-errors-and-merge-6662
             Hire Now
           </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       />;
       <BackToDirectoryButton />;
 
@@ -1347,9 +1410,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Handshake className="mr-2 h-4 w-4" />;
             Hire Now;
           </Button>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Button
             size="sm"
             variant="outline"
@@ -1365,6 +1431,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
       <HireRequestModal
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1373,6 +1440,64 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       {/* Request to Hire Modal */}
       <HireRequestModal
+=======
+            onClick = {handleMessageTalent,}>;
+            <MessageSquare className="mr-2 h-4 w-4" />;
+  handleMessageTalent;
+}/> <BackToDirectoryButton /> {
+  /* Sticky action buttons that appear when scrolling */ ";
+}<StickyAction> <div className="p - 2 flex gap - 2" > <Button > <Handshake className="mr - 2 h - 4 w - 4" /> Hire Now </Button> <Button > <MessageSquare className="mr - 2 h - 4 w - 4" /> Message </Button> </div> </StickyAction> {
+  /* Request to Hire Modal */;
+}<HireRequestModal talent= {
+  profile;
+}is_open= {
+  isHireModalOpen;
+}on_close= {
+  () => setIsHireModalOpen (false);
+}user_details= {
+  user_profile;
+}/> {
+  /* Message Talent Modal */;
+}<MessageTalentModal talent= {
+  profile;
+}is_open= {
+  isMessageModalOpen;
+}on_close= {
+  () => setIsMessageModalOpen (false);
+}/> </div> </>);
+}'"      <div className="min - h-screen bg - zion - blue pb - 12">;
+      <TalentProfile;
+        profile = {profile, }
+        onRequestHire = {handleRequestHire, }
+        onMessageTalent = {handleMessageTalent, }
+      />;
+      <BackToDirectoryButton />;
+      {/* Sticky action buttons that appear when scrolling */}
+      <StickyAction>;
+        <div className="p - 2 flex gap - 2">;
+          <Button;
+            size="sm";
+            className="bg - zion - purple text - white hover:bg - zion - purple - dark";
+            on_click = {handleRequestHire, }
+          >;
+            <Handshake className="mr - 2 h - 4 w - 4" />;
+            Hire Now;
+          </Button>;
+          <Button;
+            size="sm";
+            variant="outline";
+            className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
+            on_click = {handleMessageTalent, }
+          >;
+            <MessageSquare className="mr - 2 h - 4 w - 4" />;
+
+            Message;
+          </Button>;
+        </div>;
+      </StickyAction>;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <HireRequestModal 
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1395,6 +1520,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       <MessageTalentModal
         talent = {profile,}
         isOpen = {isMessageModalOpen,}
+<<<<<<< HEAD
         onClose = {() => setIsMessageModalOpen(false),}      />
     </div>
     </>
@@ -1403,8 +1529,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
+
+        onClose = {() => setIsMessageModalOpen(false),}      />;
+
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+
       
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -1435,6 +1566,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     </>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1453,3 +1585,23 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+      {/* Request to Hire Modal */}
+      <HireRequestModal;
+        talent = {profile, }
+        is_open = {isHireModalOpen, }
+        on_close = {(, ) => setIsHireModalOpen (false), }
+        user_details = {user_profile, }
+      />;
+      {/* Message Talent Modal */}
+      <MessageTalentModal;
+        talent = {profile, }
+        is_open = {isMessageModalOpen, }
+        on_close = {() => setIsMessageModalOpen (false), }      />;
+    </div>;
+    </>);
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

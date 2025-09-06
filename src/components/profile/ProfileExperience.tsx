@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,6 +80,9 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
 =======
 >>>>>>>           <div key={exp.id} className="flex">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+<div key={exp.id} className="flex">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <div className="mr-4">
               <div className="h-10 w-10 rounded-full bg-zion-purple/20 flex items-center justify-center">
                 <Briefcase className="h-5 w-5 text-zion-purple" />
@@ -88,6 +92,13 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+            
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <div>
 =======
 >>>>>>>             <div>
@@ -141,6 +152,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 import { ProfileExperience as ProfileExperienceType } from '@/types/profile';
+<<<<<<< HEAD
 }
 
 >>>>>>>               <p className="text-zion-slate">{exp.description}</p>
@@ -156,11 +168,19 @@ import { ProfileExperience as ProfileExperienceType } from "@/types/profile",;
 }
 
 }
+=======
+
+}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <p className="text-zion-slate">{exp.description}</p>
             </div>
           </div>
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile",;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Briefcase } from 'lucide-react';
 interface ProfileExperienceProps {;
   experience: ProfileExperienceType[];
@@ -192,6 +212,7 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {;
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -210,3 +231,39 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+  );
+}
+
+    <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8'>;
+      <h3 className='text - xl font - bold text - white mb - 4'>Experience</h3>;
+      <div className='space - y-6'>;
+        {experience.map (exp => (
+          <div key={exp.id} className='flex'>;
+            <div className='mr - 4'>;
+              <div className='h - 10 w - 10 rounded - full bg - zion - purple / 20 flex items - center justify - center'>;
+                <Briefcase className='h - 5 w - 5 text - zion - purple' />    <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8">;
+      <h3 className="text - xl font - bold text - white mb - 4">Experience</h3>;
+      <div className="space - y-6">;
+        {experience.map ((exp, ) => (
+          <div key={exp.id} className="flex">;
+            <div className="mr - 4">;
+              <div className="h - 10 w - 10 rounded - full bg - zion - purple / 20 flex items - center justify - center">;
+                <Briefcase className="h - 5 w - 5 text - zion - purple" />;
+              </div>;
+            </div>;
+            <div>;
+              <h4 className='text - white font - medium'>{exp.role}</h4>;
+              <div className='text - zion - cyan mb - 1'>{exp.company}</div>;
+              <div className='text - sm text - zion - slate - light mb - 2'>;
+                {exp.start_date} - {exp.current ? 'Present' : exp.end_date}
+              </div>;
+              <p className='text - zion - slate'>{exp.description}</p>            </div>              <p className="text - zion - slate">{exp.description}</p>;
+            </div>;
+          </div>))}
+      </div>;
+    </div>);
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

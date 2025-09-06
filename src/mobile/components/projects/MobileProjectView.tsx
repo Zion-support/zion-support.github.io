@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -36,6 +37,9 @@ interface Milestone {
 interface ProjectViewProps {
   project: {
     id: string;
+=======
+id: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     title: string;
     client: {
       name: string;
@@ -51,6 +55,7 @@ interface ProjectViewProps {
   milestones: Milestone[]
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
 
+<<<<<<< HEAD
   const router = useRouter()
   const startProjectCall = () => {
     const roomId = `project-${project.id}`
@@ -71,6 +76,29 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+import React from 'react';
+import { Card, CardContent } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { Badge } from '@/components / ui / badge';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
+import {
+  CheckCircle,
+  ChevronRight,
+  FileText,
+  MessageSquare,
+  Video,
+} from 'lucide-react';
+import { Progress } from '@/components / ui / progress';
+import { SeverityIndicator } from '../common / SeverityIndicator';
+import { use_router } from 'next / router';
+import { toast } from 'sonner';
+
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -153,8 +181,11 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
   };
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
@@ -208,12 +239,16 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
             <div className='space-y-1'>
               <div className='flex justify-between items-center text-sm'>
 >>>>>>>                 <span>Progress</span>
                 <span className="font-medium">{project.progress}%</span>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 
 
@@ -222,8 +257,11 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
               <div className="flex justify-between items-center text-sm">
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <span>Progress</span>
                 <span className='font-medium'>{project.progress}%</span>
 >>>>>>>               </div>
@@ -231,6 +269,14 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
             </div>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+            
+            <div className="grid grid-cols-2 gap-3 text-sm">
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <div>
 =======
             <div className='grid grid-cols-2 gap-3 text-sm'>
@@ -333,6 +379,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             
+<<<<<<< HEAD
             <div>
               <p className="text-sm text-muted-foreground mb-1">Description</p>
               <p className="text-sm">{project.description}</p>
@@ -344,6 +391,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               </Button>
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <div>
               <p className='text-sm text-muted-foreground mb-1'>Description</p>
               <p className='text-sm'>{project.description}</p>
@@ -441,6 +492,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Video className="h-4 w-4" /> Call
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -448,12 +500,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </Button>
 >>>>>>>             </div>
           </div>
         </CardContent>
       </Card>
       <section>
+<<<<<<< HEAD
         <h2 className='text-lg font-medium mb-4'>Milestones</h2>
         <div className='space-y-3'>
           {milestones.map(milestone => (            <Card key={milestone.id}>
@@ -468,6 +525,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                       <div className="h-5 w-5 rounded-full border-2 border-muted-foreground"></div>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+        <h2 className="text-lg font-medium mb-4">Milestones</h2>
+        <div className="space-y-3">
+          {milestones.map((milestone) => (
+            <Card key={milestone.id}>
+              <CardContent className="p-4">
+                <div className="flex justify-between items-start mb-2">
+                  <div className="flex items-center gap-2">
+                    {milestone.status === "completed" ? (
+                      <CheckCircle className="h-5 w-5 text-green-500" />
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     ) : (
                       <div className='h-5 w-5 rounded-full border-2 border-muted-foreground'></div>
                 onClick={startProjectCall}>;
@@ -489,8 +559,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <CheckCircle className='h-5 w-5 text-green-500' />;
                     ) : (;
                       <div className='h-5 w-5 rounded-full border-2 border-muted-foreground'></div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>>                     )}
+=======
+                    )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
                     }>;
                     {milestone && milestone.paymentStatus}
@@ -604,7 +678,10 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
   };
   return (;
     <div className="space-y-6 px-4 pb-24">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Card>;
         <CardContent className="p-4">;
           <div className="space-y-4">;
@@ -745,6 +822,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -761,6 +839,8 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </Badge>;
 =======
       </section>
@@ -818,6 +898,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 }
 >>>>>>> 
@@ -838,3 +919,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

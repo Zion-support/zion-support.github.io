@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/components/ContractForm.tsx
 
 
@@ -77,6 +78,8 @@ import { Loader2 } from 'lucide-react'import { Button } from "@/components/ui/bu
 };
 import { Button } from "@/components/ui/button";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Form } from "@/components/ui/form";
 import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
@@ -111,6 +114,10 @@ export type ContractFormValues = z && z.infer<typeof formSchema>;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/components/ContractForm.tsx
   )
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState, useEffect  } from './react';
 import { use_form  } from './react - hook - form';
 import { zod_resolver  } from '@hookform / resolvers / zod';
@@ -144,6 +151,7 @@ export type ContractFormValues = z.infer < typeof form_schema>;
 }
 <<<<<<<< HEAD:src/components/contracts/components/ContractForm.tsx
 
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 
@@ -605,3 +613,6 @@ talent.full name ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

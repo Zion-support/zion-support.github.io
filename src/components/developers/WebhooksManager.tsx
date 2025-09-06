@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/WebhooksManager.tsx
 
 <<<<<<< HEAD
@@ -214,6 +215,9 @@ export function WebhooksManager() { const {
     webhooks,
     loading,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+loading,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     testResult,
     fetchWebhooks,
     createWebhook,
@@ -536,6 +540,7 @@ if (=== '' ||) {
     }
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/WebhooksManager.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -559,6 +564,16 @@ if (=== '' ||) {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+  }, []),
+
+
+  }, [])
+  const handleCreateWebhook = async () => {
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     clearTestResult
   } = useWebhooks(),
   
@@ -643,6 +658,7 @@ if (=== '' ||) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -679,6 +695,9 @@ if (=== '' ||) {
     {
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <Card className='bg-zinc-900 border-zinc-800 text-white'>
       <CardHeader>
@@ -695,7 +714,10 @@ ursor/fix-website-loading-errors-and-merge-6662
       
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <CardContent>
         <div className='flex justify-between items-center mb-6'>
           <p className='text-sm text-zinc-400'>
@@ -707,7 +729,10 @@ ursor/fix-website-loading-errors-and-merge-6662
           
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
             <DialogTrigger asChild>
               <Button variant='default'>
@@ -983,9 +1008,12 @@ export function WebhooksManager() {;
                     placeholder='https://example && example.com/webhook';
                     className='bg-zinc-800 border-zinc-700'                  />;
                   <p className='text-xs text-zinc-500'>;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/WebhooksManager.tsx
 >>>>>>>       value: 'talent_hired',
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       value: 'talent_hired',
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/WebhooksManager.tsx
       label: 'Talent Hired',
@@ -1230,6 +1258,7 @@ export function WebhooksManager() {;
               </DialogHeader>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/WebhooksManager.tsx
 <<<<<<< HEAD
 
@@ -1338,6 +1367,10 @@ export function WebhooksManager() {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               
               <div className="space-y-4 py-4">
                 <div className="space-y-2">
@@ -1382,6 +1415,7 @@ export function WebhooksManager() {;
                 </div>
                 
                 <div className="space-y-2">
+<<<<<<< HEAD
                   <Label>Event Types</Label>
                   <div className="grid gap-2 pt-2">
                     {eventOptions.map((event) => (
@@ -1564,6 +1598,11 @@ export function WebhooksManager() {;
 =======
 >>>>>>>                           onCheckedChange={() => toggleEvent(event.value)}
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <Label>Event Types</Label>
                   <div className="grid gap-2 pt-2">
                     {eventOptions.map((event) => (
@@ -1793,6 +1832,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -1826,8 +1866,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     ))}
 
 ========
@@ -1855,8 +1897,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                     resetWebhookForm();
 <<<<<<<< HEAD:src/components/developers/WebhooksManager.tsx
 
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/WebhooksManager.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <div className='space - y-2'>;
                   <Label > Event Types</Label>;
                   <div className='grid gap - 2 pt - 2'>;
@@ -1902,10 +1947,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>>               
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/WebhooksManager.tsx
+=======
+              
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <DialogFooter>
                 <Button variant="outline" onClick={() => {
                   setShowCreateDialog(false);
@@ -1913,10 +1962,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                 }}>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>                   Cancel
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   Cancel
 >>>>>>>                 </Button>
                 <Button onClick={handleCreateWebhook} disabled={
@@ -2072,7 +2127,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </div>;
                     <DropdownMenu>;
                       <DropdownMenuTrigger asChild>;
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/WebhooksManager.tsx
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         <Button
                           variant='ghost'
                           size='icon'
@@ -2143,6 +2203,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             webhooks.map((webhook) => (
               <div key={webhook.id} className="p-4 border border-zinc-800 rounded-lg">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <div className="flex items-center justify-between">
                   <div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2208,6 +2273,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </div>
                     
                       <DropdownMenu>
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       <DropdownMenuTrigger asChild>
                         <Button variant="ghost" size="icon" aria-label="More options">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2362,10 +2433,29 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <DropdownMenuItem;
                           onClick={() => setShowDeleteConfirm(webhook.id)}
 <<<<<<< HEAD
+<<<<<<< HEAD
                           className="cursor-pointer text-red-500";
                         >;
                           <X size={14} className="mr-2" /> Delete;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+                          className="cursor-pointer text-red-500"
+                        >
+                          <X size={14} className="mr-2" /> Delete
+                        </DropdownMenuItem>
+
+
+
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  </div>
+                </div>
+
+
+                          onClick={() => setShowDeleteConfirm(webhook && webhook.id)}
+                          className='cursor-pointer text-red-500'                        >;
+                          <X size={14} className='mr-2' /> Delete                        </DropdownMenuItem>                          <X size={14} className="mr-2" /> Delete;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         </DropdownMenuItem>;
                       </DropdownMenuContent>;
                     </DropdownMenu>;
@@ -2384,6 +2474,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       key = {event,}
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
+<<<<<<< HEAD
 >>>>>>>                       {event}
                     </Badge>
                   ))}
@@ -2391,6 +2482,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className='mt-3 text-xs text-zinc-500 flex items-center space-x-4'>
                   <span>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 
 ========
                       key = {event,}
@@ -2430,8 +2524,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       {event}
                     </Badge>;
                   ))}
@@ -2447,10 +2544,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>;
                 <div className='mt-3 text-xs text-zinc-500 flex items-center space-x-4'>;
                   <span>;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/WebhooksManager.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>>                     Created:{' '}
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     Created:{' '}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/WebhooksManager.tsx
                     {format(new Date(webhook && webhook.created_at), 'MMM d, yyyy')}
@@ -2591,6 +2691,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       {/* Test Webhook Dialog */}
       <Dialog;
         open={showTestDialog !== null}
+<<<<<<< HEAD
         onOpenChange={open => {          if (!open) {
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>       <CardFooter className="justify-between border-t border-zinc-800 py-4">
@@ -2598,6 +2699,25 @@ ursor/fix-website-loading-errors-and-merge-6662
       {/* Test Webhook Dialog */}
       <Dialog;
         open={showTestDialog !== null}
+=======
+
+      
+
+
+                </div>;
+                <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">;
+                  <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>;
+                  {webhook.last_triggered_at && (;
+                    <span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH:mm')}</span>;
+                  )}
+                </div>;
+              </div>;
+            ));
+          )}
+        </div>
+      </CardContent>
+      
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <CardFooter className="justify-between border-t border-zinc-800 py-4">
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/WebhooksManager.tsx
 =======
@@ -2620,6 +2740,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         <Button variant="outline" size="sm" onClick={fetchWebhooks}>
           <RefreshCw size={14} className="mr-1" /> Refresh
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/WebhooksManager.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2634,6 +2755,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 ========
         </Button>
+=======
+
+        </Button>
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </CardFooter>
                       {format(;
                         new Date(webhook && webhook.last_triggered_at),;
@@ -2689,6 +2815,7 @@ if ( {) {
               setShowTestResult(false)
               clearTestResult() }
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/WebhooksManager.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2711,6 +2838,17 @@ ursor/fix-website-loading-errors-and-merge-6662
       <Dialog
         open={showTestDialog !== null} 
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/WebhooksManager.tsx
+=======
+        onOpenChange = {(open,) => {;
+      <Dialog
+        open={showTestDialog !== null} 
+        </Button>
+      </CardFooter>
+
+      {/* Test Webhook Dialog */}
+      <Dialog;
+        open={showTestDialog !== null} ;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         onOpenChange={(open) => {;
           if (!open) {;
             setShowTestDialog(null);
@@ -2756,8 +2894,11 @@ if ( {) {
         <DialogContent className="bg-zinc-900 border-zinc-800 text-white">
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <DialogHeader>
 >>>>>>>             <DialogTitle>Test Webhook</DialogTitle>
             <DialogDescription className='text-zinc-400'>
@@ -2789,7 +2930,16 @@ if ( {) {
               <div className='space-y-4 py-4'>;
                 <div className='space-y-2'>;
                   <Label htmlFor='test-event-type'>Event Type</Label>;
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/WebhooksManager.tsx
+=======
+
+
+              <div className="space-y-4 py-4">
+                <div className="space-y-2">
+                  <Label htmlFor="test-event-type">Event Type</Label>
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <Select
 >>>>>>>                     value={testEventType}
                     onValueChange={value =>;
@@ -2797,6 +2947,7 @@ if ( {) {
                     }
                     value = {testEventType,}
                     onValueChange = {(value,) => setTestEventType(value as WebhookEventType),}
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/WebhooksManager.tsx
 ========
                   >;
@@ -2810,6 +2961,9 @@ if ( {) {
                         <SelectItem key={option && option.value} value={option && option.value}>;
                           {option && option.label}
                         </SelectItem>;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               clearTestResult()
             }
           }
@@ -2833,7 +2987,18 @@ if ( {) {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/WebhooksManager.tsx
                   >
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+                    <SelectTrigger className="bg-zinc-800 border-zinc-700">
+                      <SelectValue placeholder="Select an event type" />
+                  >
+
+                    <SelectTrigger className="bg-zinc-800 border-zinc-700">
+                      <SelectValue placeholder="Select an event type" />
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     </SelectTrigger>
 =======
                     <SelectTrigger className='bg-zinc-800 border-zinc-700'>
@@ -2909,7 +3074,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </SelectContent>;
                   </Select>;
                   <p className='text - xs text - zinc - 500'>;
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/WebhooksManager.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     The event type will determine the structure of the test;
                     payload.;
                   </p>;
@@ -2930,6 +3099,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   }
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
                   <p className="text-xs text-zinc-500">
@@ -2938,13 +3108,22 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </div>
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/WebhooksManager.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <DialogFooter>
                 <Button variant="outline" onClick={() => setShowTestDialog(null)}>
                   Cancel
                 </Button>
+<<<<<<< HEAD
 >>>>>>>                 <Button onClick={() => showTestDialog && handleTestWebhook(showTestDialog)}>
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <Button onClick={() => showTestDialog && handleTestWebhook(showTestDialog)}>
 >>>>>>>                   Send Test
                 </Button>
@@ -3089,8 +3268,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/developers/WebhooksManager.tsx
 
 
+<<<<<<< HEAD
 >>>>>>>                     <Badge
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <Badge
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/WebhooksManager.tsx
                       className={
@@ -3111,6 +3293,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     >;
 <<<<<<<< HEAD:src/components/developers/WebhooksManager.tsx
 
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/WebhooksManager.tsx
 =======
@@ -3192,6 +3375,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           ) : (
             <>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <div className="space-y-4 py-4">
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
@@ -3202,6 +3387,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
                         {testResult?.responseBody |'No response body'}                      </pre>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -3333,6 +3519,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                     clearTestResult()
 <<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+                  
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <div className="space-y-2 mt-4">
                     <Label>Response Body</Label>
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">
@@ -3383,9 +3574,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                         {testResult?.responseBody || "No response body"}
 <<<<<<<< HEAD:src/components/developers/WebhooksManager.tsx
 
+<<<<<<< HEAD
 ========
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/WebhooksManager.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <DialogFooter>;
                 <Button;
                   variant='outline';
@@ -3446,7 +3640,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                         {test_result?.response_body || "No response body"}
 <<<<<<<< HEAD:src/components/developers/WebhooksManager.tsx
 
+<<<<<<< HEAD
 >>>>>>>                     </ScrollArea>;
+=======
+                    </ScrollArea>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </div>;
                 </div>;
               </div>;
@@ -3631,9 +3829,32 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </Button>;
               </DialogFooter>;
             </>;
+<<<<<<< HEAD
           )}
         </DialogContent>
       </Dialog>
+=======
+
+
+          )}
+        </DialogContent>
+      </Dialog>
+                  onClick={() => {;
+                    setShowTestResult(false);
+                    clearTestResult();
+                  }}
+                >                  Test Another Event                <Button variant="outline" onClick={() => {;
+                  setShowTestResult(false);
+                  clearTestResult();
+                }}>;
+                </Button>;
+              </DialogFooter>;
+            </>;
+          )}
+        </DialogContent>;
+      </Dialog>;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {/* Delete Webhook Confirmation Dialog */}
       <AlertDialog
         open={showDeleteConfirm !== null}
@@ -3659,7 +3880,13 @@ ursor/fix-website-loading-errors-and-merge-6662
             <AlertDialogAction 
               onClick = {() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm),}
               className="bg-red-600 hover: bg-red-700"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      <AlertDialog 
+        open={showDeleteConfirm !== null} 
+        onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       >
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <AlertDialogHeader>
@@ -4054,8 +4281,26 @@ clearTestResult ();
 <<<<<<< HEAD
 {'
   value: 'talent hired',  label: 'Talent Hired', description: 'When talent is hired for a project'
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> }]
+=======
+
+  value: WebhookEventType,  label: string, description: string 
+}[] = [ {
+  value: 'new application',  label: 'New Application', description: 'When a talent applies to a job' 
+}
+{'
+  value: 'quote received',  label: 'Quote Received', description: 'When a quote is received from talent' 
+}
+{'
+  value: 'milestone approved',  label: 'Milestone Approved', description: 'When a project milestone is approved' 
+}
+{'
+  value: 'talent hired',  label: 'Talent Hired', description: 'When talent is hired for a project' 
+
+}]
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event) return (<Card className="bg-zinc-900 border-zinc-800 text-white"> <CardHeader> <CardTitle className="text-xl flex items-center"> <Webhook className="mr-2" size= {
   20 "
 }/> Webhooks </CardTitle> <CardDescription className="text-zinc-400"> Set up webhooks to get notified when events happen in your Zion account. </CardDescription> </CardHeader> <CardContent> <div className="flex justify-between items-center mb-6"> </p> <Dialog open= {
@@ -4287,6 +4532,7 @@ clearTestResult ()
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -4333,6 +4579,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }> Close </Button> Test Another Event </Button> </DialogFooter> </>) 
 }</DialogContent> </Dialog> {
   /* Delete Webhook Confirmation Dialog */ 
@@ -4345,9 +4594,24 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 }
+<<<<<<< HEAD
       <AlertDialog;
         open={showDeleteConfirm !== null} ;
         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
+=======
+
+            <AlertDialogCancel className='bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700'>;
+              Cancel;
+            </AlertDialogCancel>;
+            <AlertDialogAction;
+              on_click={() =>;
+                showDeleteConfirm && handleDeleteWebhook (showDeleteConfirm);
+              }
+              className='bg - red - 600 hover:bg - red - 700'            >;
+            <AlertDialogAction;
+              on_click = {() => showDeleteConfirm && handleDeleteWebhook (showDeleteConfirm), }
+              className="bg - red - 600 hover: bg - red - 700";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       >;
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
           <AlertDialogHeader>;
@@ -4388,6 +4652,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 <<<<<<<< HEAD:src/components/developers/WebhooksManager.tsx
 
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 
@@ -4537,3 +4802,6 @@ clearTestResult ();
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/workspace/QuickActions.tsx
 
 <<<<<<< HEAD
@@ -39,6 +40,11 @@ import {
   CardTitle,
 } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
+=======
+import React from "react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { FileText, Plus, Search, Calendar } from 'lucide-react';
 export /**
  * QuickActions - Function description
@@ -272,6 +278,7 @@ export function QuickActions() {
 <<<<<<<< HEAD:src/components/enterprise/workspace/QuickActions.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
             >
 =======
 =======
@@ -292,6 +299,10 @@ export function QuickActions() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {actions.map(action => (
             <Button 
@@ -309,6 +320,7 @@ export function QuickActions() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
             <Button
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -328,6 +340,8 @@ export function QuickActions() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
@@ -380,6 +394,7 @@ export function QuickActions() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -427,6 +442,9 @@ export function QuickActions() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               key={action.id}
               variant="outline"
               className={`h-auto justify-start p-4 ${action.color}`}
@@ -531,6 +549,7 @@ export function QuickActions() {;
                 <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
               </div>;
             </Button>;
+<<<<<<< HEAD
 
 >>>>>>>               <div className='flex flex-col items-start text-left'>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -540,6 +559,10 @@ export function QuickActions() {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <div className='flex flex-col items-start text-left'>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <div className='flex items-center'>
@@ -554,7 +577,10 @@ export function QuickActions() {;
 
             </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           ))}
         </div>;
 <<<<<<< HEAD
@@ -569,6 +595,7 @@ export function QuickActions() {;
 <<<<<<<< HEAD:src/components/enterprise/workspace/QuickActions.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 }
 >>>>>>> 
@@ -578,6 +605,8 @@ export function QuickActions() {;
 ========
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </span>              </div>;
                 <span className="mt - 1 text - xs text - muted - foreground">{action.description}</span>;
           {actions.map (action => (
@@ -598,6 +627,7 @@ export function QuickActions() {;
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
 =======
         </div>;
       </CardContent>;
@@ -633,3 +663,7 @@ const actions = [ {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

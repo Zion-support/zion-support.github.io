@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -61,6 +62,9 @@ export function PortfolioBuilder() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -196,7 +200,6 @@ export function PortfolioBuilder() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-=======
           Add Project
         </Button>
       </div>
@@ -206,8 +209,14 @@ export function PortfolioBuilder() {;
 >>>>>>>       {/* Edit or Add Form */}
       {(showAddProject |editingProject) && (
         <Card>
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>           <CardContent className='pt-6'>
+=======
+
+
+          <CardContent className='pt-6'>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <h2 className='text-xl font-semibold mb-6'>
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>
@@ -237,6 +246,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 setEditingProject(null)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               }}
             />
           </CardContent>
@@ -255,6 +265,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           className='gap-2';
           disabled={showAddProject || !!editingProject}        >;
           <FilePlus className='h-4 w-4' />;
@@ -350,6 +362,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
       {projects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
+<<<<<<< HEAD
 =======
       {projects.length > 0 ? (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
@@ -363,6 +376,10 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Button 
           onClick={() => setShowAddProject(true)} 
           className="gap-2"
@@ -388,7 +405,11 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
             <ProjectForm;
               project={editingProject || undefined}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
+=======
+              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               onCancel={() => {
                 setShowAddProject(false);
 
@@ -420,6 +441,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
               key={project.id}
 =======
 >>>>>>>               key={project.id}
@@ -457,10 +479,15 @@ ursor/fix-website-loading-errors-and-merge-6662
               key={project.id}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>>               project={project}
+=======
+              key={project.id}
+              project={project}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
             <CardContent>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>>               <div className="flex flex-col items-center gap-4">
 =======
@@ -499,6 +526,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Button
                   onClick={() => setShowAddProject(true)}
                   className='mt-2'                >            <CardContent>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <div className="flex flex-col items-center gap-4">
                 <div className="bg-muted/50 p-6 rounded-full">
                   <FilePlus className="h-12 w-12 text-muted-foreground" />
@@ -507,6 +536,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className="text-muted-foreground max-w-md mx-auto">
                   Add your best work to showcase your skills and experience to potential employers.
                 </p>
+<<<<<<< HEAD
                 <Button
                   onClick={() => setShowAddProject(true)}
                 <Button 
@@ -516,6 +546,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+
+                <Button 
+                  onClick={() => setShowAddProject(true)} 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   className="mt-2"
 >>>>>>>                 >
                   Add Your First Project
@@ -529,6 +567,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -537,10 +576,77 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>
   )
 }
+=======
+                  className='mt-2'                >            <CardContent>;
+              <div className="flex flex-col items-center gap-4">;
+                <div className="bg-muted/50 p-6 rounded-full">;
+                  <FilePlus className="h-12 w-12 text-muted-foreground" />;
+                </div>;
+                <h3 className="text-xl font-medium">No portfolio projects yet</h3>;
+                <p className="text-muted-foreground max-w-md mx-auto">;
+                  Add your best work to showcase your skills and experience to potential employers.;
+                </p>;
+                <Button
+                  onClick={() => setShowAddProject(true)} ;
+                  className="mt-2";
+              on_edit={() => setEditingProject (project)}
+              on_delete={handleDeleteProject}
+          {projects.map ((project, ) => (
+            <ProjectCard;
+              key = {project.id, }
+              project = {project, }
+              on_edit = {(, ) => setEditingProject (project), }
+              on_delete = {handleDeleteProject, }
+            />))}
+        </div>) : (
+        !showAddProject && (
+          <Card className='text - center py - 12'>;
+            <CardContent>;
+              <div className='flex flex - col items - center gap - 4'>;
+                <div className='bg - muted / 50 p - 6 rounded - full'>;
+                  <FilePlus className='h - 12 w - 12 text - muted - foreground' />;
+                </div>;
+                <h3 className='text - xl font - medium'>;
+                  No portfolio projects yet;
+                </h3>;
+                <p className='text - muted - foreground max - w-md mx - auto'>;
+                  Add your best work to showcase your skills and experience to;
+                  potential employers.;
+                </p>;
+                <Button;
+                  on_click={() => setShowAddProject (true)}
+                  className='mt - 2'                >            <CardContent>;
+              <div className="flex flex - col items - center gap - 4">;
+                <div className="bg - muted / 50 p - 6 rounded - full">;
+                  <FilePlus className="h - 12 w - 12 text - muted - foreground" />;
+                </div>;
+                <h3 className="text - xl font - medium">No portfolio projects yet</h3>;
+                <p className="text - muted - foreground max - w-md mx - auto">;
+                  Add your best work to showcase your skills and experience to potential employers.;
+                </p>;
+                <Button;
+                  on_click={() => setShowAddProject (true)}
+                  className="mt - 2";
+
+                >;
+                  Add Your First Project;
+                </Button>;
+              </div>;
+            </CardContent>;
+
+  );
+}
+
+          </Card>))}
+    </div>);
+}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
 }
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
@@ -568,3 +674,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+    </div>;
+  );
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

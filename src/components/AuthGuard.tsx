@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/AuthGuard.tsx
 
 
@@ -58,6 +59,9 @@ interface AuthGuardProps {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       const redirectTo = options?.redirectTo |'/login'
+=======
+const redirectTo = options?.redirectTo |'/login'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       const returnUrl = options?.returnUrl |router.asPath
           if (!requireAuth({ showToast: false })) return false
     const userRoles = user?.role ? [user.role] : []
@@ -80,7 +84,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 const redirectTo = options?.redirectTo || '/login';
       const returnUrl = options?.returnUrl || router && router.asPath;
           if (!requireAuth({ showToast: false })) return false,;
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AuthGuard.tsx
+=======
+
+  useEffect(() => {
+    // Don't redirect while auth is still loading
+    if (isLoading) return,
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     const userRoles = user?.role ? [user && user.role] : [];
     requireAuth;
     requireRole;
@@ -89,11 +101,17 @@ const redirectTo = options?.redirectTo || '/login';
     user;
     isLoading}
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/AuthGuard.tsx
 
 
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AuthGuard.tsx
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       const redirect_to = options?.redirect_to || '/login';
       const return_url = options?.return_url || router.as_path;
           if () return false, ) {
@@ -107,6 +125,7 @@ const redirectTo = options?.redirectTo || '/login';
     user;
     is_loading}
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/AuthGuard.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> ;
@@ -604,3 +623,6 @@ return false;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -356,6 +357,8 @@ const mockReplies: ForumReply[] = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript
   // can't determine the generic type for the helper from React Router.
@@ -363,8 +366,21 @@ export default function ForumPostPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 ],
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 ]
 xport default function ForumPostPage() {
@@ -411,6 +427,7 @@ xport default function ForumPostPage() {
 =======
   const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin'
       return;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -418,6 +435,9 @@ xport default function ForumPostPage() {
   const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin'
       return;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const router = useRouter(),
   const postId = router.query.postId as string,
   const { user } = useAuth(),
@@ -979,12 +999,15 @@ export default function ForumPostPage() {;
   const formattedDate = format(new Date(post && post.createdAt), "MMMM d, yyyy 'at' h: mm a"),;
 }
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
   )
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     id: "reply1",
     post_id: "1",
     content: "Great post! I've had similar experiences with data preparation being the key to successful fine - tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.",
@@ -1070,6 +1093,7 @@ if (return) {
   );
 }
 
+<<<<<<< HEAD
 ;
 
 
@@ -1281,3 +1305,6 @@ if (return) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

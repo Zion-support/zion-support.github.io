@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { useRouter  } from 'next/router';
@@ -10,6 +11,8 @@ import { useRouter  } from 'next/router';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect, useRef } from 'react';
 import { useRouter  } from 'next/router';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react'; import { Input } from '@/components/ui/input'; import { Search, X } from 'lucide-react'
 import { Input } from '@/components/ui/input'
@@ -26,6 +29,9 @@ import { SearchSuggestion  } from '@/types/search';
 import { slugify  } from '@/lib/slugify';
 import { useDebounce  } from '@/hooks/useDebounce';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react'
 import { Input } from '@/components/ui/input';
@@ -34,9 +40,12 @@ import { fireEvent } from '@/lib/analytics';
 import { SearchSuggestion } from '@/types/search';
 import { slugify } from '@/lib/slugify';
 import { useDebounce } from '@/hooks/useDebounce';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 /**
  * SearchBar component props
@@ -54,6 +63,7 @@ interface SearchBarProps {
 
   value: string,
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>   /**
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -64,10 +74,16 @@ ursor/fix-website-loading-errors-and-merge-6662
    */
 
   value: string;  value: string
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
    * The current value of the search input;
    */;
   value: string;  value: string,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   /**
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
    * Function to call when the search input changes
@@ -181,6 +197,10 @@ export function SearchBar({
       setSuggestions([])
       setHighlightedIndex(-1)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 /**
  * SearchBar component that allows users to search for content.
  */
@@ -201,9 +221,12 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
       setSuggestions([]);
       setHighlightedIndex(-1);
       return
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
     const controller = new AbortController()
     fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, { signal: controller.signal })
@@ -241,6 +264,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
     inputRef.current?.blur()
       aria-expanded={focused && suggestions.length > 0}
       aria-haspopup='listbox'
+<<<<<<< HEAD
       aria-controls={listId}
       data-testid='search-bar'    >
       <div className='relative'>
@@ -305,6 +329,11 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React, { useState, useEffect, useRef } from 'react',;
 import { useRouter } from 'next/router',;
+=======
+import { useRouter } from 'next/router';
+import { Search, X } from 'lucide-react';import { Input } from '@/components/ui/input';import { Search, X } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
@@ -460,6 +489,7 @@ export function SearchBar(): any ({;
           type='text'
           id='main-search-input'
           name='search'
+<<<<<<< HEAD
 =======
 ;
 /**;
@@ -539,6 +569,24 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
             setFocused(true),;
             // Ensure the input receives focus properly;
             e.target.setSelectionRange(e.target.value.length, e.target.value.length);
+=======
+          value={value}
+
+
+            if (true) {}
+
+
+            ) {
+              setFocused(false)
+              setHighlightedIndex(-1)
+          onChange={e => onChange(e && e.target.value)}
+          onFocus={e => {;
+            setFocused(true);            // Ensure the input receives focus properly;
+            e && e.target.setSelectionRange(;
+              e && e.target.value && value.length,;
+              e && e.target.value && value.length;
+            );
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           }}
           onBlur={(e) => {;
             // Only blur if not clicking on suggestions;
@@ -546,12 +594,23 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
             if (!relatedTarget || !containerRef.current?.contains(relatedTarget)) {;
               setFocused(false),;
               setHighlightedIndex(-1);
+<<<<<<< HEAD
             }
           }}
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+            }          }}
+          className='pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate';
+          aria-autocomplete='list';
+          aria-activedescendant={;
+            highlightedIndex !== -1;
+              ? `suggestion-item-${highlightedIndex}`;
+              : undefined;
+          }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 >>>>>>>           aria-autocomplete="list"
@@ -563,6 +622,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           onKeyDown={(e) => {
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -570,11 +630,51 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="search"
           onKeyDown={(e) => {
+<<<<<<< HEAD
             if (!focused |suggestions.length === 0) {
+=======
+
+
+          autoComplete='search';
+          onKeyDown={e => {            if (!focused || suggestions && suggestions.length === 0) {;
+          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder: text-zion-slate";
+          aria-autocomplete="list";
+          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
+          autoComplete="search";
+          onKeyDown={(e) => {;
+            if (!focused || suggestions && suggestions.length === 0) {;
+              if (e && e.key === 'Escape') {;
+                e && e.preventDefault();
+                setFocused(false);
+                setHighlightedIndex(-1);
+                inputRef && inputRef.current?.blur();
+              }
+              // If Enter is pressed and there's a value, navigate with query parameter;
+              if (e && e.key === 'Enter' && value && value.trim()) {                e && e.preventDefault(); // Prevent form submission if SearchBar is in a form;
+
+                fireEvent('search', { search_term: value });
+                router && router.push(`/search?q=${encodeURIComponent(value)}`);
+                setFocused(false);
+                inputRef && inputRef.current?.blur();
+              }
+              return;            }              // If Enter is pressed and there's a value, navigate with query parameter;
+              if (e && e.key === 'Enter' && value && value.trim()) {;
+                e && e.preventDefault(), // Prevent form submission if SearchBar is in a form;
+                fireEvent('search', { search_term: value }),;
+                router && router.push(`/search?q=${encodeURIComponent(value)}`);
+                setFocused(false);
+                inputRef && inputRef.current?.blur();
+
+              }
+              return;
+            if (!focused || suggestions.length === 0) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               if (e.key === 'Escape') {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -683,7 +783,11 @@ ursor/fix-website-loading-errors-and-merge-6662
               // If Enter is pressed and there's a value, navigate with query parameter
               if (e.key = == 'Enter' && value.trim()) {
                 e.preventDefault(); // Prevent form submission if SearchBar is in a form
+<<<<<<< HEAD
 >>>>>>>                 fireEvent('search', { search_term: value });
+=======
+                fireEvent('search', { search_term: value });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 router.push(`/search?q=${encodeURIComponent(value)}`);
                 setFocused(false);
 
@@ -691,7 +795,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 
               }
               return
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             }
 
 
@@ -739,11 +842,16 @@ ursor/fix-website-loading-errors-and-merge-6662
               default: break;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>             }
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             }
 >>>>>>>           }}
         />;
@@ -757,6 +865,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </button>
         )}
 
+<<<<<<< HEAD
 =======
 =======
               // If Enter is pressed and there's a value, navigate with query parameter;
@@ -865,17 +974,24 @@ ursor/fix-website-loading-errors-and-merge-6662
 }/> </div>)
 }'"  )
 }
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
 }
 }
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </div>;
       <AutocompleteSuggestions;
         suggestions={suggestions}
@@ -908,6 +1024,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 }/> </div>) ;
 }'"  );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 
@@ -931,3 +1048,328 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+}
+
+import { use_router } from 'next / router';
+import { Search, X } from 'lucide-react'; import { Input } from '@/components / ui / input'; import { Search, X } from 'lucide-react';
+import { Input } from '@/components / ui / input';
+import { Search, X } from 'lucide-react';
+import { AutocompleteSuggestions } from '@/components / search / AutocompleteSuggestions';
+import { fire_event } from '@/lib / analytics';
+import { SearchSuggestion } from '@/types / search';
+import { slugify } from '@/lib / slugify';
+import { use_debounce } from '@/hooks / use_debounce';
+import { useOnClickOutside } from '@/hooks / useOnClickOutside';
+/**;
+* SearchBar component props;
+*/;
+interface SearchBarProps {
+  /**;
+  * The current value of the search input;
+  */;
+  value: string;  value: string,
+  /**;
+  * Function to call when the search input changes;
+  * @param {string} val - The new value of the search input;
+  */;
+  on_change: (val: string) => void;  /**;
+  * Function to call when a suggestion is selected;
+  * @param {SearchSuggestion} suggestion - The selected suggestion;
+  */  on_change: (val: string, ) => void,
+  on_change: (val: string) => void,
+  /**;
+  * Function to call when a suggestion is selected;
+  * @param {SearchSuggestion} suggestion - The selected suggestion;
+  */;
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
+  /**;
+  * The placeholder text for the search input;
+  */;
+  placeholder?: string;
+/**;
+* SearchBar component that allows users to search for content.;
+*/  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
+  /**;
+  * The placeholder text for the search input;
+  */;
+  placeholder?: string;
+}
+/**;
+* SearchBar component that allows users to search for content.;
+*/;
+export /**
+ * SearchBar - Function description
+ */
+function SearchBar() {  const router = use_router (); export /**
+ * SearchBar - Function description
+ */
+function SearchBar() {
+  const router = use_router ();
+  const [suggestions, set_suggestions] = useState < SearchSuggestion[]>([]);
+  const [focused, set_focused] = useState (false);
+  const [highlighted_index, setHighlightedIndex] = useState (-1);
+  const list_id = 'searchbar - autocomplete - list';  const debounced = use_debounce (value, 150);
+  const input_ref = useRef < HTMLInputElement>(null);
+  const container_ref = useRef < HTMLDivElement>(null);
+  useEffect ((, ) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_suggestions ([]);
+      setHighlightedIndex (-1);
+      return;
+    }
+    const controller = new AbortController ();
+    fetch (`/api / search / suggest?q=${encodeURIComponent (debounced)}`, {
+      signal: controller.signal,
+    });
+      .then (res => {
+        if (throw new Error ('Failed to fetch suggestions')) {
+  $2
+}
+        return res.json ();
+      });
+      .then (data => {
+        if () {) {
+  $2
+}
+          set_suggestions (data.slice (0, 5)) } else {  const debounced = use_debounce (value, 150);
+  const input_ref = useRef < HTMLInputElement>(null);
+  const container_ref = useRef < HTMLDivElement>(null);
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_suggestions ([]);
+      setHighlightedIndex (-1);
+    }
+    const controller = new AbortController ();
+    fetch (`/api / search / suggest?q=${encodeURIComponent (debounced)}`, { signal: controller.signal });
+      .then (res => {
+        if (throw new Error ('Failed to fetch suggestions')) {
+  $2
+}
+        return res.json ();
+      });
+      .then (data => {
+        if () {) {
+  $2
+}
+          set_suggestions (data.slice (0, 5));
+        } else {
+          set_suggestions ([]);
+        }
+        setHighlightedIndex (-1);
+      });
+      .catch (() => set_suggestions ([]));
+    return () => controller.abort () }, [debounced]);
+  useOnClickOutside (container_ref, () => {
+    set_focused (false);
+    setHighlightedIndex (-1) }); return () => controller.abort ();
+  }, [debounced]);
+  useOnClickOutside (container_ref, () => {
+    set_focused (false);
+    setHighlightedIndex (-1);    setHighlightedIndex (-1);
+    setHighlightedIndex (-1);
+  });
+  const handle_select = (suggestion: SearchSuggestion) =>: any {
+    on_change (suggestion.text);
+    if (onSelectSuggestion (suggestion)) {
+  $2
+}
+    const search_query = encodeURIComponent (suggestion.text);
+    router.push (`/search?q=${search_query}`);
+    fire_event ('search', { search_term: suggestion.text });
+    set_focused (false);
+    setHighlightedIndex (-1);
+    input_ref.current?.blur ();
+      aria - expanded={focused && suggestions.length > 0}
+      aria - haspopup='listbox';
+      aria - controls={list_id}
+      data - testid='search - bar'    >;
+      <div className='relative'>;
+        <Search className='absolute left - 3 top - 1/2 -translate - y-1 / 2 h - 4 w - 4 text - zion - slate' />;
+        <Input;
+          ref={input_ref}
+          type='text';
+          id='main - search - input';
+          name='search';
+          value={value}
+          on_change={e => on_change (e.target.value)}
+          on_focus={e => {
+            set_focused (true);            // Ensure the input receives focus properly;
+            e.target.setSelectionRange (
+              e.target.value.length,
+              e.target.value.length);
+          }}
+          on_blur={e => {
+            // Only blur if not clicking on suggestions;
+            const related_target = e.related_target as HTMLElement;
+            // Check condition
+if (
+            ) {) {
+  $2
+}
+              set_focused (false);
+              setHighlightedIndex (-1);
+            }          }}
+          className='pl - 10 bg - zion - blue border border - zion - blue - light text - white placeholder:text - zion - slate';
+          aria - autocomplete='list';
+          aria - activedescendant={
+            highlighted_index !== -1;
+              ? `suggestion - item-${highlighted_index}`;
+              : undefined;
+          }
+          auto_complete='search';
+          onKeyDown={e => {            // Check condition
+if ( {) {
+  $2
+}
+          className="pl - 10 bg - zion - blue border border - zion - blue - light text - white placeholder: text - zion - slate";
+          aria - autocomplete="list";
+          aria - activedescendant={highlighted_index !== -1 ? `suggestion - item-${highlighted_index}` : undefined}
+          auto_complete="search";
+          onKeyDown={(e) => {
+            // Check condition
+if ( {) {
+  $2
+}
+              // Check condition
+if ( {) {
+  $2
+}
+                e.prevent_default ();
+                set_focused (false);
+                setHighlightedIndex (-1);
+                input_ref.current?.blur ();
+              }
+              // If Enter is pressed and there's a value, navigate with query parameter;
+              if () {                e.prevent_default ()) {
+  $2
+} // Prevent form submission if SearchBar is in a form;
+                fire_event ('search', { search_term: value });
+                router.push (`/search?q=${encodeURIComponent (value)}`);
+                set_focused (false);
+                input_ref.current?.blur ();
+              }
+              return }              // If Enter is pressed and there's a value, navigate with query parameter;
+              if () {) {
+  $2
+}
+                e.prevent_default (), // Prevent form submission if SearchBar is in a form;
+                fire_event ('search', { search_term: value }),
+                router.push (`/search?q=${encodeURIComponent (value)}`);
+                set_focused (false);
+                input_ref.current?.blur ();
+              }
+              return;
+            }
+            switch (e.key) {
+              case 'ArrowDown':;
+                e.prevent_default ();
+                setHighlightedIndex (prev => (prev + 1) % suggestions.length);
+                break;
+              case 'ArrowUp':;
+                e.prevent_default ();
+                setHighlightedIndex (
+                  prev => (prev - 1 + suggestions.length) % suggestions.length);                break;              case 'Enter':;
+                // Check condition
+if ( {) {
+  $2
+}
+                  e.prevent_default ();
+                  handle_select (suggestions[highlighted_index]);
+                } else if () {) {
+  $2
+}
+                  // This case should ideally be handled by the form's on_submit,                  // but if SearchBar is used standalone, this provides a fallback.;
+                setHighlightedIndex ((prev) => (prev + 1) % suggestions.length);
+                break;
+              case 'ArrowUp':;
+                e.prevent_default ();
+                setHighlightedIndex ((prev) => (prev - 1 + suggestions.length) % suggestions.length);
+                setHighlightedIndex ((prev) => (prev + 1) % suggestions.length);
+                break;
+              case 'ArrowUp':;
+                e.prevent_default ();
+                setHighlightedIndex ((prev) => (prev - 1 + suggestions.length) % suggestions.length);
+                break;
+              case 'Enter':;
+                // Check condition
+if ( {) {
+  $2
+}
+                  e.prevent_default ();
+                  handle_select (suggestions[highlighted_index]);
+                } else if () {) {
+  $2
+}
+                  // This case should ideally be handled by the form's on_submit,                  handle_select (suggestions[highlighted_index]);
+                } else if () {) {
+  $2
+}
+                  // This case should ideally be handled by the form's on_submit;
+                  // but if SearchBar is used standalone, this provides a fallback.;
+                  e.prevent_default ();
+                  fire_event ('search', { search_term: value });
+                  router.push (`/search?q=${encodeURIComponent (value)}`);
+                  set_focused (false);
+                  input_ref.current?.blur ();
+                break;
+              case 'Escape':;
+                e.prevent_default ();
+                set_focused (false);
+                setHighlightedIndex (-1);
+                input_ref.current?.blur ();
+                break;
+              default:;
+                break }              default: break;
+            }
+          }}
+        />;
+        {value && (
+          <button;
+            className='absolute right - 3 top - 1/2 -translate - y-1 / 2 text - zion - slate hover:text - white';
+            on_click={() => on_change ('')}
+            aria - label='Clear search'          >;
+            <X className='h - 4 w - 4' />          </button>;
+            <X className="h - 4 w - 4" />;
+            on_click={() => on_change ('')}
+            aria - label="Clear search";
+          >;
+            <X className="h - 4 w - 4" />;
+          </button>)}
+      </div>;
+      <AutocompleteSuggestions;
+        suggestions = {suggestions, }
+        search_term = {value, }
+        onSelectSuggestion = {handle_select, }
+        visible = {focused, }
+        highlighted_index = {highlighted_index, }
+        list_id = {list_id, }
+      />;
+    </div>);
+}/> on_click={';
+  () => on_change ('') ";
+}aria - label="Clear search" > <X className="h - 4 w - 4" /> </button>);
+}</div> <AutocompleteSuggestions suggestions= {
+  suggestions;
+}search_term= {
+  value;
+}onSelectSuggestion= {
+  handle_select;
+}visible= {
+  focused;
+}highlighted_index= {
+  highlighted_index;
+}list_id= {
+  list_id;
+}/> </div>);
+}'"  );
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

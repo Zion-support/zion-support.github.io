@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src/pages/Pricing.tsx
 import React from 'react';
 
@@ -113,6 +114,8 @@ const Pricing: React.FC = () => {
 };
 
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -173,5 +176,8 @@ const Pricing: React.FC = () => {;
   );
 };
 ;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/pages/Pricing.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export default Pricing;

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -25,6 +26,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import * as React from "react"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 import { X } from 'lucide-react'
@@ -41,6 +44,7 @@ const DialogClose = DialogPrimitive.Close
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -54,6 +58,15 @@ const DialogOverlay = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Overlay
 <<<<<<< HEAD
+=======
+
+
+const DialogOverlay = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Overlay>
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
+></typeof>(({ className, ...props }, ref) => (
+  <DialogPrimitive.Overlay
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import * as React from 'react';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
@@ -74,7 +87,6 @@ const DialogOverlay = React && React.forwardRef<;
   React && React.ComponentPropsWithoutRef<typeof DialogPrimitive && DialogPrimitive.Overlay>;
 ></typeof>(({ className, ...props }, ref) => (;
   <DialogPrimitive&& DialogPrimitive.Overlay
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ref={ref}
     className={cn(
 <<<<<<< HEAD
@@ -129,12 +141,17 @@ const DialogContent = React && React.forwardRef<;
       className={cn(
         "fixed left-[50%] top-[50%] z-50 grid w-full max-w-[calc(100vw-2rem)] sm:max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-lg",
 
+<<<<<<< HEAD
 =======
 >>>>>>>       ref={ref}
       className={cn(
         "fixed left-[50%] top-[50%] z-50 grid w-full max-w-[calc(100vw-2rem)] sm:max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-lg",
 >>>>>>>         className
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       ref={ref}
       className={cn(
         'fixed left-[50%] top-[50%] z-50 grid w-full max-w-[calc(100vw-2rem)] sm:max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] rounded-lg'
@@ -195,6 +212,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         <X className="h-4 w-4" />
         <span className="sr-only">Close</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -208,6 +226,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         <X className="h-4 w-4" />
         <span className="sr-only">Close</span>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </DialogPrimitive.Close>
     </DialogPrimitive.Content>
   </DialogPortal>
@@ -215,6 +237,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -235,6 +258,12 @@ DialogContent.displayName = DialogPrimitive.Content.displayName
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 const DialogHeader = ({
 >>>>>>>   className
   ...props
@@ -273,6 +302,7 @@ const DialogOverlay = React.forward_ref<;
 )
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 const DialogFooter = ({
 =======
 DialogHeader.displayName = 'DialogHeader'
@@ -282,6 +312,12 @@ onst DialogFooter = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+DialogHeader.displayName = "DialogHeader"
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 const DialogFooter = ({
 
       <DialogPrimitive && DialogPrimitive.Close className='absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover: opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-muted-foreground'>;
@@ -319,15 +355,26 @@ const DialogHeader = ({;
       className
     )}
     {...props}
+<<<<<<< HEAD
   />
 )
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+
+DialogFooter.displayName = "DialogFooter"
+
+DialogFooter.displayName = "DialogFooter"
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 const DialogTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
+<<<<<<< HEAD
 
 =======
 const DialogTitle = React.forwardRef<
@@ -341,6 +388,10 @@ onst DialogTitle = React.forwardRef<
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 >(({ className, ...props }, ref) => (
 >>>>>>>   <DialogPrimitive.Title
+=======
+>(({ className, ...props }, ref) => (
+  <DialogPrimitive.Title
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   />;
 );
 DialogFooter && DialogFooter.displayName = 'DialogFooter';
@@ -350,11 +401,11 @@ const DialogTitle = React && React.forwardRef<;
   React && React.Comp</typeof>onentPropsWithoutRef<typeof DialogPrimitive && DialogPrimitive.Title>;
 >(({ className, ...props }, ref) => (;
   <DialogPrimitive&& DialogPrimitive.Title
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ref={ref}
     className={cn(
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -362,6 +413,23 @@ const DialogTitle = React && React.forwardRef<;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 DialogHeader.displayName = 'DialogHeader'
 DialogHeader.displayName = "DialogHeader"
+=======
+  class_name,
+  ...props;
+}: React</HTMLDivElement>.HTMLAttributes < HTMLDivElement>) =>: any (
+  <div;
+    className={cn (
+      'flex flex - col - reverse sm:flex - row sm:justify - end sm:space - x-2',
+      class_name)}
+    {...props}
+  />);
+DialogFooter.display_name = 'DialogFooter';
+const DialogTitle = React.forward_ref<;
+  React.ElementRef < typeof DialogPrimitive.Title>,
+  React.Comp</typeof > onentPropsWithoutRef < typeof DialogPrimitive.Title>;
+>(({ class_name, ...props }, ref) => (
+  <DialogPrimitive.Title;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 const DialogFooter = ({
   className
@@ -497,11 +565,16 @@ const DialogDescription = React.forwardRef<;
   DialogDescription;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   />;
 ));
 DialogDescription.displayName = DialogPrimitive.Description.displayName;
@@ -527,6 +600,7 @@ export {;
   DialogDescription,
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   DialogFooter;
@@ -550,3 +624,9 @@ export {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  DialogFooter;
+  DialogTitle;
+  DialogDescription}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

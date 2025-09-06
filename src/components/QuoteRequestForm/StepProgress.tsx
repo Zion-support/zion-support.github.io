@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -28,6 +29,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 <<<<<<< HEAD
 
   return (
+=======
+return (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <div className='relative'>;
       <div className='absolute top-4 left-0 right-0 h-0 && 0.5 bg-zion-blue-light'>;
         <div
@@ -68,7 +72,11 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     { id: 'budget', label: 'Budget' },
     { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { QuoteRequestSteps } from "../QuoteRequestForm",
 import { CheckIcon } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -145,6 +153,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>             width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100}%`
@@ -161,6 +170,8 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100}%`
           }}
         />
@@ -298,6 +309,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -309,6 +321,14 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+                ),}>;
+                {step && step.label}
+
+;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <span 
                 className={cn(
                   "text-xs mt-2 font-medium",
@@ -376,9 +396,12 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
               >;
                 {step.label}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </span>;
             </div>;
           );
@@ -406,6 +429,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 
@@ -426,3 +450,103 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+  const getStepStatus = (step_id: QuoteRequestSteps) =>: any {
+    const step_order = steps.find_index (string => s.id === step_id);
+    const currentStepOrder = steps.find_index (string => s.id === current_step);
+    // Check condition
+if (return 'complete') {
+  $2
+}
+    // Check condition
+if (return 'current') {
+  $2
+}
+    return 'upcoming';
+  const getStepStatus = (step_id: QuoteRequestSteps, ) =>: any {
+    const step_order = steps.find_index (string => s.id === step_id),
+    const currentStepOrder = steps.find_index (string => s.id === current_step),
+    // Check condition
+if (return "complete", ) {
+  $2
+}
+    // Check condition
+if (return "current", ) {
+  $2
+}
+    return "upcoming";
+  },
+  return (
+    <div className='relative'>;
+      <div className='absolute top - 4 left - 0 right - 0 h - 0.5 bg - zion - blue - light'>;
+        <div;
+          className='absolute h - full bg - zion - purple transition - all duration - 500';
+          style={{
+            width: `${(steps.find_index (string => s.id === current_step) / (steps.length - 1)) * 100}%`,
+          }}
+        />;
+      </div>;
+      <div className='flex justify - between relative'>;
+        {steps.map (step => {
+          const status = getStepStatus (step.id);
+          return (
+            <div key={step.id} className='flex flex - col items - center relative'>;
+              <div;
+                className={cn (
+                  'w - 8 h - 8 rounded - full flex items - center justify - center z - 10 transition - colors',
+                  status === 'complete';
+                    ? 'bg - zion - purple text - white';
+                    : status === 'current';
+                      ? 'bg - zion - cyan border - 2 border - zion - purple';
+                      : 'bg - zion - blue - light text - zion - slate - light')}              >;
+                {status === 'complete' ? (
+                  <CheckIcon className='h - 4 w - 4' />) : (
+                  <span className='text - xs'>;
+                    {steps.find_index (string => s.id === step.id) + 1}
+                  </span>)}
+              </div>;
+              <span;
+                className={cn (
+                  'text - xs mt - 2 font - medium',
+                  status === 'complete';
+                    ? 'text - zion - cyan';
+                    : status === 'current';
+                      ? 'text - white';
+                      : 'text - zion - slate - light'                )}                  "text - xs mt - 2 font - medium";
+                  status === "complete" ? "text - zion - cyan" :;
+                  status === "current" ? "text - white" :;
+                  "text - zion - slate - light")}
+              <span;
+                class_name = {cn (
+                  "text - xs mt - 2 font - medium",
+                  status === "complete" ? "text - zion - cyan" :;
+                  status === "current" ? "text - white" :;
+                  "text - zion - slate - light"), }
+              >;
+                {step.label}
+              </span>;
+            </div>);
+        })}
+      </div>;
+    </div>);
+  (steps.find_index (string => s.id === current_step) / (steps.length - 1) ) * 100;
+}%`;
+}/> </div>;
+}className=" flex flex - col items - center relative"> <div) : (<span className=" text - xs" > {
+  steps.find_index (string => s.id === step.id) + 1;
+}</span>);
+}</div> <span);
+}> {
+  step.label;
+}</span> </div>);
+});
+}</div> </div>);
+}"          );
+        })}
+      </div>;
+    </div>);
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

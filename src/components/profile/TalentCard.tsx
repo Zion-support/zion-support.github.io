@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import { Button } from '@/components/ui/button'
@@ -49,6 +50,8 @@ import React, { useState } from 'react', // Import React and useState
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export interface TalentCardProps {
   talent: TalentProfile
   onViewProfile: (id: string) => void
@@ -205,10 +208,13 @@ export function TalentCard({;
 <<<<<<< HEAD
       onViewProfile(talent && talent.id);    }      onViewProfile(talent && talent.id);
       onToggleSave(talent.id, !isSaved)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
       onViewProfile(talent.id);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   },;
   const handleRequestHire = (e: React.MouseEvent) => {;
@@ -240,7 +246,6 @@ export function TalentCard({;
 <<<<<<< HEAD
                   src={talent && talent.profile_picture_url}
                   alt={talent && talent.full_name || 'Talent Avatar'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   fill={true}                  style={{ objectFit: 'cover' }}
                   className='rounded-full' // Make sure image itself is rounded if fill is used in a rounded container                  onError={() => setAvatarError(true)}
 =======
@@ -273,6 +278,7 @@ export function TalentCard({;
 
                   alt={talent.full_name || 'Talent Avatar'}
 
+<<<<<<< HEAD
                   fill={true}
 =======
 >>>>>>>                   alt={talent.full_name || 'Talent Avatar'}
@@ -330,6 +336,25 @@ export function TalentCard({;
 >>>>>>>               >
 
 xport interface TalentCardProps {
+=======
+
+import Link from 'next/link';
+import { TalentProfile } from '@/types/talent';
+
+import Image from 'next/image'; // Import next/image
+import React, { useState } from 'react'; // Import React and useState
+import { Button } from "@/components/ui/button",
+import { Card } from "@/components/ui/card",
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
+import Link from "next/link",
+import { TalentProfile } from "@/types/talent",
+import Image from 'next/image', // Import next/image
+import React, { useState } from 'react', // Import React and useState
+
+
+
+export interface TalentCardProps {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   talent: TalentProfile
   onViewProfile: (id: string) => void
   onRequestHire: (talent: TalentProfile) => void
@@ -345,7 +370,10 @@ xport interface TalentCardProps {
   isAuthenticated: boolean
 
                   alt={talent.full_name || 'Talent Avatar'}
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   fill={true}
                   style={{ objectFit: 'cover' }}
 
@@ -420,6 +448,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
                 <div className="flex items-center text-zion-slate-light">
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   <MapPin className="h-4 w-4 mr-1" />
 >>>>>>>                   <span>{talent.location}</span>
@@ -479,6 +508,14 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
           <div className='flex items-center gap-2'>
             {isAuthenticated && (
+=======
+
+
+
+                  <MapPin className="h-4 w-4 mr-1" />
+                  <span>{talent.location}</span>
+                </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 />;
                 <span className='sr-only'>{isSaved ? 'Saved' : 'Save'}</span>;
               </Button>;
@@ -494,7 +531,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>;
 
 
+<<<<<<< HEAD
 >>>>>>>               )}
+=======
+              )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               {talent && talent.availability_type && (;
                 <div className='flex items-center text-zion-slate-light'>;
                   <Clock className='h-4 w-4 mr-1' />                  <span>{talent && talent.availability_type}</span>                <div className="flex items-center text-zion-slate-light">;
@@ -517,6 +558,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </span>;
 
 
+<<<<<<< HEAD
 >>>>>>>               {talent.availability_type && (;
                 <div className="flex items-center text-zion-slate-light">;
                   <Clock className="h-4 w-4 mr-1" />;
@@ -594,6 +636,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         )}
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
 >>>>>>>               <Button
@@ -742,6 +786,16 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>;
           </div>;
         )}
+<<<<<<< HEAD
+=======
+
+
+              <Button
+                size='sm'
+                variant='secondary'
+                onClick={handleRequestHire}
+                className='bg-zion-purple hover:bg-zion-purple-light text-white'>                className="bg-zion-purple hover:bg-zion-purple-light text-white";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
         <div className="mt-5 flex items-center justify-between">;
           <div>;
@@ -752,6 +806,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
+<<<<<<< HEAD
             )}
           </div>
           
@@ -793,6 +848,42 @@ ursor/fix-website-loading-errors-and-merge-6662
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light";
             >;
               View <ArrowRight className="ml-1 h-4 w-4" />;
+=======
+
+        
+        <div className="mt-5 flex items-center justify-between">
+          <div>
+                <span className='text - zion - slate - light font - normal'>/hr</span>;
+              </div>) : (
+              <div className='text - zion - slate - light'>Rate not specified</div>)}
+          </div>;
+          <div className='flex items - center gap - 2'>;
+            {is_authenticated && (
+              <Button;
+                size='sm';
+                variant='secondary';
+                on_click={handleRequestHire}
+                className='bg - zion - purple hover:bg - zion - purple - light text - white'              >                className="bg - zion - purple hover:bg - zion - purple - light text - white";
+          <div>;
+
+            {talent.hourly_rate ? (
+              <div className="text - white font - bold">;
+                ${talent.hourly_rate}
+
+          </div>;
+
+          <div className="flex items-center gap-2">;
+            {isAuthenticated && (;
+
+              <Button
+              <Button
+
+                size="sm"
+                variant="secondary"
+                onClick={handleRequestHire}
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </Button>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
@@ -806,6 +897,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -819,3 +911,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

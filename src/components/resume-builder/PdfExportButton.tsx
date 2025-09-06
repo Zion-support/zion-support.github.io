@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -436,3 +437,16 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+import React from 'react';
+
+const PdfExportButton = () => {
+  return (
+    <div>
+      {/* PdfExportButton component */}
+    </div>
+  );
+};
+
+export default PdfExportButton;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

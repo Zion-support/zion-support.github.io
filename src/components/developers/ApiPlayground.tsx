@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/ApiPlayground.tsx
 
 =======
@@ -159,6 +160,9 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 <<<<<<< HEAD
 
     const options: RequestInit = {
+=======
+const options: RequestInit = {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       method
       headers: {
 
@@ -235,6 +239,7 @@ if (url += `?${query}` }
       // Add timeout to prevent hanging
       signal: AbortSignal.timeout(15000)},
 
+<<<<<<< HEAD
     if (method !== "GET" && method !== "DELETE") {
       signal: AbortSignal.timeout(15000),
     }
@@ -257,6 +262,8 @@ if (url += `?${query}` }
     setResponse(null)
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       try {
         options.body = JSON.stringify (JSON.parse (body));
       } catch {
@@ -384,7 +391,20 @@ export function ApiPlayground(): any ({;
   const [body, setBody] = useState('{}');
   const [response, setResponse] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiPlayground.tsx
+=======
+
+        options.body = body
+
+;
+export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {;
+  const [apiKey, setApiKey] = useState("demo_key_123"),;
+  const [paramValues, setParamValues] = useState<Record<string string>>({}),;
+  const [body, setBody] = useState("{}"),;
+  const [response, setResponse] = useState<string | null>(null),;
+  const [loading, setLoading] = useState(false),;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const handleParamChange = (name: string, value: string) => {;
     setParamValues(prev => ({ ...prev, [name]: value }));
   };
@@ -488,8 +508,11 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className='space-y-4'>;
       <Input
@@ -505,12 +528,17 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       />
+<<<<<<< HEAD
 >>>>>>>       {params.map(p => (
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+      {params.map(p => (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Input
           key={p.name}
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
           value={paramValues[p.name] |''}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -522,6 +550,13 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       {params && params.map(p => (;
         <Input
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiPlayground.tsx
+=======
+
+          value={paramValues[p.name] || ''}
+
+
+          onChange={e => handleParamChange(p.name, e.target.value)}        />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           key={p && p.name}
           value={paramValues[p && p.name] || ''}
           onChange={e => handleParamChange(p && p.name, e && e.target.value)}        />;
@@ -608,6 +643,7 @@ if () {) {
 <<<<<<<< HEAD:src/components/developers/ApiPlayground.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
           value={paramValues[p.name] || ""}
 =======
 =======
@@ -727,6 +763,44 @@ if (contentType?.includes ('application/json') ) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+    </div>;
+  );
+
+export default ApiPlayground;
+  const val = paramValues[p && p.name];
+if (val) searchParams && searchParams.append (p && p.name, val) ;
+});
+const query = searchParams && searchParams.toString ();
+if (query) url += `?$ {;
+  query ;
+}` ;
+}const options: RequestInit = {;
+  method, headers: {;
+  Authorization: `Bearer $ {;
+  apiKey ;
+}`;
+"Content-Type" : "application/json" ;
+};
+//Add timeout to prevent hanging signal: AbortSignal && AbortSignal.timeout (15000) ;
+};
+}setLoading (true);
+setResponse (null);
+let responseText: string;
+if (contentType?.includes ('application/json') ) {;
+  try {;
+  /> {;
+  params && params.map ( (p) => (<Inputkey= {
+  p && p.name 
+}</div>) ;
+}export default ApiPlayground;
+
+  p.name;
+}</div>);
+}export default ApiPlayground;
+'";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   p.name 
 }</div>) ;
 }export default ApiPlayground;
@@ -735,6 +809,7 @@ if (contentType?.includes ('application/json') ) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>>           value={paramValues[p.name] || ""}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -742,6 +817,8 @@ if (contentType?.includes ('application/json') ) {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           value={paramValues[p.name] || ""}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           onChange={(e) => handleParamChange(p.name, e.target.value)}
@@ -762,6 +839,7 @@ if (contentType?.includes ('application/json') ) {
   )
 }
 ;
+<<<<<<< HEAD
 export default ApiPlayground;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -973,3 +1051,6 @@ if (contentType?.includes ('application/json') ) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+export default ApiPlayground;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

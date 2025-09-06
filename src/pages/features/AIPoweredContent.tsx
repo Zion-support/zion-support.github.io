@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -100,6 +101,10 @@ export default function AIPoweredContent() {
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <>
+=======
+return (
+    <>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <SEO
         title='AI Content Generation'
         description='Generate SEO-optimized blog posts, service descriptions and FAQs with ZionGPT.'
@@ -257,6 +262,7 @@ export default function AIPoweredContent() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -271,6 +277,12 @@ export default function AIPoweredContent() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+;
+}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useEffect } from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -318,7 +330,10 @@ export default function AIPoweredContent() {;
               src="https: //placehold.co/800x400";
               alt="Screenshot of ZionGPT content tool";
               className="object-cover";
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             />;
           </div>;
           <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>;
@@ -396,7 +411,11 @@ function AIPoweredContent() {
           <h2 className='text - 2xl font - bold mb - 4'>Benefits &amp; Use Cases</h2>;
           <ul className='list - disc list - inside space - y-2 mb - 8 text - zion - slate - light'>;
 
+<<<<<<< HEAD
 >>>>>>>             <li>;
+=======
+            <li>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               Save time drafting marketing content for your products or;
               services.;
             </li>;
@@ -443,6 +462,7 @@ function AIPoweredContent() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -456,3 +476,6 @@ function AIPoweredContent() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

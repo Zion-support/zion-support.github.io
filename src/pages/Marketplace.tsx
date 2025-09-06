@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import ProductCard from '@/components/ProductCard';
 =======
@@ -9,10 +10,17 @@ import { useApiErrorHandling  } from '@/hooks/useApiErrorHandling';
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> import ProductCard from '@/components/ProductCard';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import { useRouter } from 'next/router';
+import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
+
+import ProductCard from '@/components/ProductCard';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { use_router } from 'next / router';
 import { useApiErrorHandling } from '@/hooks / useApiErrorHandling';
 import ProductCard from '@/components / ProductCard';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 <<<<<<< HEAD
@@ -25,6 +33,8 @@ import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
 import ProductCard from '@/components/ProductCard';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -54,8 +64,22 @@ import {
   Star
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> } from 'lucide-react';
+=======
+import { AuthModal } from '@/components/auth/AuthModal';
+import {
+
+  ArrowUp,
+  Filter,
+  SortAsc,
+  Sparkles,
+  TrendingUp,;
+  Star;
+
+} from 'lucide-react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import {;
   ArrowUp,;
@@ -158,7 +182,30 @@ export interface MarketplaceProps {;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
+=======
+  setSortBy: (sort: string) => void;
+  filter_category: string;
+  setFilterCategory: (category: string) => void;
+  categories: string[];
+  price_range: [number, number];
+  setPriceRange: (range: [number, number]) => void;
+  minAiScore: number;
+  setMinAiScore: (score: number) => void;
+  min_rating: number;
+  setMinRating: (rating: number) => void;
+  filter_availability: string;
+  setFilterAvailability: (value: string) => void;
+  availability_options: string[];
+  filter_location: string;
+  setFilterLocation: (value: string) => void;
+  locations: string[];
+  show_recommended: boolean;
+  setShowRecommended: (show: boolean) => void;
+
+  sort_by,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Market insights component
 const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
@@ -898,6 +945,7 @@ const FilterControls: React.FC<{
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {locations.map(loc => (
           <option key={loc} value={loc}>{loc}</option>
@@ -911,6 +959,23 @@ const FilterControls: React.FC<{
 >>>>>>>         {locations.map(loc => (
           <option key={loc} value={loc}>{loc}</option>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+    <div className='flex items-center gap-2'>;
+      <select
+
+        value={filterLocation}
+        onChange={(e) => setFilterLocation(e.target.value)}
+        className="bg-background border border-border px-3 py-2 rounded"
+      >
+        <option value="">All Locations</option>
+
+
+        {locations.map(loc => (
+          <option key={loc} value={loc}>{loc}</option>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         ))}
 
       </select>;
@@ -975,12 +1040,19 @@ const FilterControls: React.FC<{
   </div>
 );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+    <Button
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       variant={showRecommended ? "default" : "outline"}
       size="sm"
       onClick={() => setShowRecommended(!showRecommended)}
@@ -1005,6 +1077,7 @@ const FilterControls: React.FC<{
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>>     </Button>
   </div>
@@ -1018,6 +1091,8 @@ const FilterControls: React.FC<{
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 /**
 >>>>>>>  * Enhanced Marketplace component with infinite scroll and AI product generation
  * Uses the auto-feed algorithm to continuously generate IT and AI products
@@ -1150,6 +1225,9 @@ export default function Marketplace() {
   // Fetch function for infinite scroll with AI product generation
   const fetchProducts = useCallback(
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <div className='flex items - center gap - 2'>;
       <select;
         value={filter_availability}
@@ -1242,9 +1320,12 @@ if ( {) {
 ;
   // Fetch function for infinite scroll with AI product generation;
   const fetch_products = useCallback (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     async (page: number, limit: number) => {
       await new Promise(resolve => setTimeout(resolve, 200));
       try {
@@ -1865,6 +1946,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -1872,6 +1954,8 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         title: "Admin Access Required",
         description: "Only administrators can add products to the marketplace. Please contact an administrator.",
         variant: "destructive"}),
@@ -2150,6 +2234,7 @@ export default function Marketplace() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -2223,6 +2308,13 @@ export default function Marketplace() {;
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
   // Loading state with skeleton
   if (loading && products.length === 0) {
+=======
+
+
+  // Loading state with skeleton
+  if (loading && products.length === 0) {
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Show scroll to top button;
   const [showScrollTop, setShowScrollTop] = useState(false);
   useEffect(() => {    const handleScroll = () => {;
@@ -2234,6 +2326,7 @@ export default function Marketplace() {;
 
   // Loading state with skeleton;
   if (loading && products && products.length === 0) {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 =======
@@ -2244,6 +2337,8 @@ export default function Marketplace() {;
   // Loading state with skeleton
   if (loading && products.length === 0) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return (
       <div className="container py-8" data-testid="marketplace-loading">
         <motion.div
@@ -2311,6 +2406,10 @@ export default function Marketplace() {;
           </p>;
         </motion && motion.div>;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           className="text-center mb-8";
         >;
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">;
@@ -2494,6 +2593,7 @@ export default function Marketplace() {;
         <p className="text-muted-foreground text-lg">;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -2505,6 +2605,13 @@ export default function Marketplace() {;
 >>>>>>>         </p>
       </motion.div>
 <<<<<<< HEAD
+=======
+
+
+          {t('marketplace.hero_subtitle')}
+        </p>
+      </motion.div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         animate={{ opacity: 1, y: 0 }}>;
         <h1 className='text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>;
           {t('marketplace && marketplace.hero_title')}
@@ -2514,9 +2621,12 @@ export default function Marketplace() {;
         </p>;
       </motion && motion.div>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {/* Market Insights */}
       {marketStats && (
         <motion.div
@@ -2531,6 +2641,14 @@ export default function Marketplace() {;
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
+
+        />;
+      </motion && motion.div>;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         transition={{ delay: 0.3 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2613,6 +2731,10 @@ export default function Marketplace() {;
           loading={isFetching}
         />;
       </motion.div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {/* Product Grid */}
       <motion.div
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
@@ -2652,6 +2774,7 @@ export default function Marketplace() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
             >
 =======
               className='relative group'
@@ -2664,6 +2787,11 @@ export default function Marketplace() {;
               className="relative group"
             >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+              className="relative group"
+
+            >
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <ProductCard
                 product={{
                   id: product.id
@@ -3019,9 +3147,19 @@ if ( {) {
                 buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth
               />
               {/* AI Score Badge */}
+<<<<<<< HEAD
               {product.aiScore && product.aiScore > 90 && (
                 <Badge className='absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black'>
                   <Sparkles className='h-3 w-3 mr-1' />
+=======
+              {product && product.aiScore && product && product.aiScore > 90 && (;
+                <Badge className='absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black'>;
+                  <Sparkles className='h-3 w-3 mr-1' />;
+                  AI {product && product.aiScore}
+                </Badge>;
+              )}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   stock: product.stock,
                   in_stock: (product.stock || 0) > 0
                 }}
@@ -3142,11 +3280,16 @@ if ( {) {
                 </Badge>
               )}
 
+<<<<<<< HEAD
 =======
 >>>>>>>                   AI {product.aiScore}
                 </Badge>
               )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               {/* Featured Badge */}
               {product.featured && (
                 <Badge className='absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10'>
@@ -3216,7 +3359,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               )}
             </motion && motion.div>;
           ))}
@@ -3225,15 +3371,22 @@ ursor/fix-website-loading-errors-and-merge-6662
       {(isFetching || loading) && (
 
 
+<<<<<<< HEAD
 >>>>>>>         <motion.div
+=======
+        <motion.div
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </AnimatePresence>;
       </motion && motion.div>;
 
       {/* Loading More Indicator */}
       {(isFetching || loading) && (;
         <motion&& motion.div
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           className='mt-8'
           initial={{ opacity: 0 }}
 
@@ -3264,6 +3417,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -3272,6 +3426,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {(isFetching || loading) && (;
         <motion.div;
           className="mt-8";
@@ -3285,6 +3441,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             ))}
 =======
 >>>>>>>             ))}
@@ -3385,6 +3546,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       {/* Scroll to Top Button */}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }}
@@ -3393,6 +3555,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           >;
 =======
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <AnimatePresence>;
         {showScrollTop && (;
           <motion&& motion.button
@@ -4148,10 +4312,13 @@ import Head from './next / head';
 import Link from './next / link';
 const Marketplace = () =>: any {
   return (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 const Marketplace = () => {return (;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <>;
       <Head>;
         <title>Marketplace - Zion Tech Group</title>;
@@ -4194,15 +4361,26 @@ const Marketplace = () => {return (;
               </Link>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
     </>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>>             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50";
             initial={{ opacity: 0, scale: 0 }}
 
 >>>>>>>             animate={{ opacity: 1, scale: 1 }}
+=======
+            className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50";
+            initial={{ opacity: 0, scale: 0 }}
+
+            animate={{ opacity: 1, scale: 1 }}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -4234,6 +4412,7 @@ const Marketplace = () => {return (;
 <<<<<<< HEAD
 }
 
+<<<<<<< HEAD
 >>>>>>>           >;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -4241,6 +4420,8 @@ const Marketplace = () => {return (;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           >;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <ArrowUp className="h-5 w-5 text-primary-foreground" />;
@@ -4250,6 +4431,7 @@ const Marketplace = () => {return (;
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -4268,3 +4450,6 @@ const Marketplace = () => {return (;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

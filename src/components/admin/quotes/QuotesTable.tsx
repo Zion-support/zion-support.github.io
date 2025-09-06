@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/admin/quotes/QuotesTable.tsx
 
 <<<<<<< HEAD
@@ -148,6 +149,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({
 
@@ -177,6 +180,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
   deleteQuote
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -189,6 +193,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 =======
   deleteQuote
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   quotes,
   isArchived = false,
   isLoading,
@@ -199,6 +205,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 <<<<<<< HEAD
 
   deleteQuote,
+<<<<<<< HEAD
 
   onViewDetails
 =======
@@ -207,6 +214,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }) => {
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   onViewDetails
 },) => {
 >>>>>>>   return (
@@ -278,9 +287,13 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                 </TableCell>
                 <TableCell className="text-white">
 <<<<<<< HEAD
+<<<<<<< HEAD
 ========
 <<<<<<< HEAD
 quotes;
+=======
+  quotes;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   is_archived = false;
 import React from './react';
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'import {
@@ -354,9 +367,12 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                   {quote.talent_name || 'Unknown Talent'}
                 </TableCell>;
                 <TableCell className="text - white">;
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/admin/quotes/QuotesTable.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   {quote.requester_name}
                 </TableCell>
                 <TableCell className="text-white">
@@ -437,6 +453,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     {isArchived ? (
                       <>
                         <Button
@@ -474,8 +495,11 @@ import { ;
 } from "@/components/ui/dropdown-menu";import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import {formatDate} from "@/utils/dateUtils";
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           size="icon"
                           className="text-red-500"
                           onClick={() => {
@@ -563,6 +587,7 @@ import {formatDate} from "@/utils/dateUtils";
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                     )}
 =======
 >>>>>>>                     )}
@@ -581,6 +606,28 @@ import {formatDate} from "@/utils/dateUtils";
 '"
 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+import React from "react",;
+import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react';
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow;
+} from "@/components/ui/table",;
+import { Button } from "@/components/ui/button",;
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger;
+} from "@/components/ui/dropdown-menu",;
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",;
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
+import { formatDate } from "@/utils/dateUtils",;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface QuotesTableProps {;
   quotes: QuoteRequest[],;
   isArchived?: boolean;
@@ -1010,9 +1057,12 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                       </DropdownMenu>;
 <<<<<<<< HEAD:src/components/admin/quotes/QuotesTable.tsx
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/admin/quotes/QuotesTable.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     )}
 =======
                       </DropdownMenu>;                    )}
@@ -1030,9 +1080,12 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 '";
 
 
+<<<<<<< HEAD
 >>>>>>>         </TableBody>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </TableBody>;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/admin/quotes/QuotesTable.tsx
       </Table>;
@@ -1051,6 +1104,11 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
 '"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </div>;
                 </TableCell>;
                 <TableCell className="text - white">;
@@ -1151,6 +1209,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
       </Table>;
     </div>);
 }
+<<<<<<< HEAD
 '";
 =======
   ),;
@@ -1253,3 +1312,6 @@ onViewDetails ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+'";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

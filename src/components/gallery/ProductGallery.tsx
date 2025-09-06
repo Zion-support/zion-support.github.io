@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/gallery/ProductGallery.tsx
 
 =======
@@ -23,6 +24,9 @@ const ModelViewer = React.lazy(async () => {
     default: (props: any) => React.createElement('model-viewer', props)
   }
 <<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 });
 interface ProductGalleryProps {
 
@@ -248,6 +252,9 @@ export function ProductGallery({
                   alt='3d model'
                   camera-controls
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   images: string[];
   video_url?: string;
   model_url?: string;
@@ -375,6 +382,7 @@ function ProductGallery() {
 <<<<<<<< HEAD:src/components/gallery/ProductGallery.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
             />          </div>
@@ -396,16 +404,25 @@ function ProductGallery() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+    </Dialog>;
+  );
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </Dialog>;
   );
 };
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, Suspense } from 'react',;
 import {;
   Dialog,;
@@ -435,6 +452,10 @@ interface ProductGalleryProps {;
 }
 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </TabsContent>)}
       </Tabs>;
       {images.length > 0 && (
@@ -476,6 +497,7 @@ interface ProductGalleryProps {;
 }
 <<<<<<<< HEAD:src/components/gallery/ProductGallery.tsx
 
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 
@@ -718,3 +740,6 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

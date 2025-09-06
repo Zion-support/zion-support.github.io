@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/disputes/DisputeDetail.tsx
 
 <<<<<<< HEAD
@@ -169,6 +170,9 @@ import {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   ResolutionType,;
 } from '@/types/disputes';
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import React, { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
@@ -935,6 +939,13 @@ export function DisputeDetail() {;
 <<<<<<<< HEAD:src/components/disputes/DisputeDetail.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  if (isLoading) {;
+
+      summary: resolution.summary,
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   if (isLoading) {
 =======
 >>>>>>>   if (isLoading) {
@@ -996,6 +1007,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         <Button onClick={() => router.push("/dashboard/disputes")} className="mt-4">
           Back to Disputes
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -1005,6 +1017,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         <Button onClick={() => router.push("/dashboard/disputes")} className="mt-4">
           Back to Disputes
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </Button>
       </div>
     )
@@ -1088,12 +1104,37 @@ if ( {) {
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+      case 'closed':;
+        return 'outline';
+      default:;
+        return 'default';
+
+            {formatDistanceToNow(new Date(dispute?.created_at || ''), {;
+              addSuffix: true,;
+            })}
+          </p>;
+        </div>;
+
+        <div className='flex gap-2'>;
+
+          <Button
+            variant='outline'
+            onClick={() => router && router.push('/dashboard/disputes')}
+          >;
+            Back to List;
+          </Button>;
+          {isAdmin && dispute?.status === 'open' && (;
+            <Button onClick={() => handleStatusChange('under_review')}>              Start Review;
+            </Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
@@ -1189,6 +1230,7 @@ if ( {) {
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -1210,6 +1252,10 @@ if ( {) {
       </div>
             </Button>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+            </Button>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           )}
 
 
@@ -1218,6 +1264,7 @@ if ( {) {
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
           <Check className="h-4 w-4" />
           <AlertTitle>This dispute has been resolved</AlertTitle>
+<<<<<<< HEAD
 >>>>>>>           <AlertTitle>This dispute has been resolved</AlertTitle>
 =======
 =======
@@ -1238,6 +1285,9 @@ if ( {) {
       {dispute.status === 'resolved' && dispute.resolution_summary && (
         <Alert className='bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900'>
           <Check className='h-4 w-4' />
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <AlertTitle>This dispute has been resolved</AlertTitle>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <AlertDescription>{dispute.resolution_summary}</AlertDescription>
@@ -1247,11 +1297,14 @@ if ( {) {
         <div className='lg:col-span-2'>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
       {dispute.status === "resolved" && dispute.resolution_summary && (
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
@@ -1369,10 +1422,14 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
             <TabsContent value='overview' className='space-y-6'>
 >>>>>>>               <Card>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <TabsList className='mb-6'>
               <TabsTrigger value='overview'>Overview</TabsTrigger>
@@ -1386,8 +1443,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             <TabsContent value="overview" className="space-y-6">
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Card>
 >>>>>>>                 <CardHeader>
                   <CardTitle>Dispute Details</CardTitle>
@@ -1460,8 +1520,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+                  
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <div>
                     <h3 className='font-medium'>Description</h3>
                     <p className='whitespace-pre-wrap'>{dispute.description}</p>
@@ -1545,6 +1613,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/disputes/DisputeDetail.tsx
 
 
+<<<<<<< HEAD
 >>>>>>>                   
 >>>>>>>                   <div>
 =======
@@ -1553,6 +1622,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   
                   <div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1584,6 +1656,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                           <span>Under review</span>
                         </li>
                       )}
@@ -1602,6 +1675,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/disputes/DisputeDetail.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   {dispute.milestone_id && (
                     <div>;
                       <h3 className='font - medium'>Related Milestone</h3>;
@@ -1735,6 +1810,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <li className='flex gap-2 items-center'>
                           <Badge
                             variant='outline'
+<<<<<<< HEAD
                             className='h-6 w-6 rounded-full p-0 flex items-center justify-center'
                           >
                             2
@@ -1751,6 +1827,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+                            className='h-6 w-6 rounded-full p-0 flex items-center justify-center'>;
+                            {dispute && dispute.status !== 'open' ? '3' : '2'}
+                          </Badge>;
+                          <span>;
+                            Resolved on{' '}
+
+                            {format(;
+                              new Date(dispute && dispute.resolved_at),;
+                              "MMM d, yyyy 'at' h:mm a";
+
+                            )}
+                          </span>;
+                        </li>;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   
                   <div>
                     <h3 className="font-medium">Timeline</h3>
@@ -1814,7 +1906,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                           </span>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                         </li>
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       )}
 <<<<<<<< HEAD:src/components/disputes/DisputeDetail.tsx
 =======
@@ -2086,7 +2181,29 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <CardContent>;
                     <p className='whitespace - pre - wrap'>;
                       {dispute.resolution_summary}
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/disputes/DisputeDetail.tsx
+=======
+
+
+              
+              {dispute.status === "resolved" && (
+
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Resolution</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+
+                    <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>
+                    
+
+                    {dispute.resolution_type && (
+                      <div className='mt-4'>
+                        <Badge>
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     </ul>;
                   </div>;
                 </CardContent>;
@@ -2116,11 +2233,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                           {dispute && dispute.resolution_type.replace('_', ' ')}
                         </Badge>;
                       </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           Resolution: {dispute.resolution_type.replace('_ ')}
                         </Badge>;
                       </div>;
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     )}
 =======
                     <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>;
@@ -2142,8 +2266,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             <TabsContent value="messages" className="space-y-6">
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Card>
 >>>>>>>                 <CardHeader>
                   <CardTitle>Messages</CardTitle>
@@ -2301,6 +2428,28 @@ ursor/fix-website-loading-errors-and-merge-6662
                                         'User avatar'
                                       }
                                     />;
+<<<<<<< HEAD
+=======
+
+                        .map((msg) => {
+                          const isCurrentUser = user?.id === msg.user_id,
+                          return (
+                            <div
+                              key={msg.id}
+                              className={`flex ${isCurrentUser ? 'justify-end' : 'justify-start'}`}
+                            >;
+                              <div;
+                                className={`max-w-[80%] ${;
+                                  isCurrentUser;
+                                    ? 'bg-primary text-primary-foreground';
+                                    : 'bg-muted';
+                                } p-4 rounded-lg`}
+                              >;
+                                <div className="flex items-center gap-2 mb-2">;
+                                  <Avatar className="h-6 w-6">;
+                                    <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || "User avatar"} />;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                                     <AvatarFallback>;
                                       {msg && msg.user_profile?.display_name?.[0] ||;
                                         '?'}
@@ -2391,7 +2540,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                           ),;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         });
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/disputes/DisputeDetail.tsx
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     )}
                   </div>;
                 </CardContent>;
@@ -2438,6 +2593,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                       </Button>
@@ -2450,6 +2606,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       </Button>
                     </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2461,11 +2619,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
             <TabsContent value='attachments'>
 >>>>>>>               <Card>
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+            
+            <TabsContent value="attachments">
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Card>
 >>>>>>>                 <CardHeader>
                   <CardTitle>Attachments</CardTitle>
@@ -2503,12 +2669,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
             {isAdmin && (
 =======
 >>>>>>>             {isAdmin && (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               <TabsContent value="admin" className="space-y-6">
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+            
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {isAdmin && (
               <TabsContent value='admin' className='space-y-6'>
 >>>>>>>                 <Card>
@@ -2968,6 +3141,47 @@ ursor/fix-website-loading-errors-and-merge-6662
                       Handle this dispute as an administrator;
                     </CardDescription>;
                   </CardHeader>;
+<<<<<<< HEAD
+=======
+
+
+                      <h3 className="font-medium mb-2">Change Status</h3>
+                      <div className="flex gap-2">
+                        <Button 
+                          variant="outline" 
+                          onClick={() => handleStatusChange("open")}
+                          disabled={dispute.status === "open"}
+                        >
+                          Mark as Open
+                        </Button>
+                        <Button 
+                          variant="outline" 
+                          onClick={() => handleStatusChange("under_review")}
+                          disabled={dispute.status === "under_review"}
+                        >
+                          Mark as Under Review
+                        </Button>
+                        <Button 
+                          variant="outline" 
+                          onClick={() => handleStatusChange("closed")}
+                          disabled={dispute.status === "closed"}
+
+
+                        >
+                          Mark as Open
+                        </Button>
+                        <Button
+                          variant='outline'
+                          onClick={() => handleStatusChange('under_review')}
+                          disabled={dispute && dispute.status === 'under_review'}
+                        >;
+                          Mark as Under Review;
+                        </Button>;
+                        <Button
+                          variant='outline'
+                          onClick={() => handleStatusChange('closed')}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <CardContent className='space - y-6'>;
                     <div>;
                       <h3 className='font - medium mb - 2'>Change Status</h3>;
@@ -3035,7 +3249,61 @@ ursor/fix-website-loading-errors-and-merge-6662
                           <Textarea;
                             placeholder='Enter resolution summary...';
                             value={resolution.summary}
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/disputes/DisputeDetail.tsx
+=======
+
+
+                    
+                    {dispute.status !== "resolved" && (
+
+
+                      <div>
+                        <h3 className="font-medium mb-2">Resolve Dispute</h3>
+                        <div className="space-y-4">
+                          <Textarea
+
+                            placeholder="Enter resolution summary..."
+                            value={resolution.summary}
+                            onChange={(e) => setResolution({ ...resolution, summary: e.target.value })}
+                            className="min-h-[100px]"
+                          />
+                          
+                          <div className="grid grid-cols-2 gap-4">
+
+                            <div>
+                              <label className='text-sm font-medium mb-1 block'>
+                                Resolution Type
+                              </label>
+                              <select
+
+
+
+                                className="w-full p-2 border rounded"
+                                value={resolution.resolution_type || ""}
+                                onChange={(e) => setResolution({ ...resolution, resolution_type: e.target.value as ResolutionType })}
+                              >
+                                <option value="client_favor">In Client's Favor</option>
+                                <option value="talent_favor">In Talent's Favor</option>
+                                <option value="compromise">Compromise</option>
+                                <option value="dismissed">Dismissed</option>
+                              </select>
+                            </div>
+                          </div>
+                          
+                          <Button onClick={handleResolveDispute}>Resolve Dispute</Button>
+
+                        </div>
+                      </div>
+                    )}
+                    
+                    <div>
+                      <h3 className='font-medium mb-2'>Admin Notes</h3>
+                      <div className='space-y-4 max-h-[300px] overflow-y-auto p-2'>
+                        {messages
+                          .filter(msg => msg.is_admin_note)
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           disabled={dispute && dispute.status === 'closed'}                        >;
                           Close Dispute;
                         </Button>;
@@ -3130,8 +3398,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                               </div>
                               <p className='whitespace-pre-wrap text-sm'>
                                 {msg.message}
@@ -3252,6 +3523,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                           placeholder='Add an admin note (only visible to administrators)...'
                           value={adminNote}
                           onChange={e => setAdminNote(e && e.target.value)}                        />;
+<<<<<<< HEAD
+=======
+
+                      
+                      <Separator className="my-4" />
+                      
+                      <div className="space-y-4">
+                        <Textarea
+                          placeholder="Add an admin note (only visible to administrators)..."
+                          value={adminNote}
+                          onChange={(e) => setAdminNote(e.target.value)}
+                        />
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         <Button
                           variant='outline'
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/disputes/DisputeDetail.tsx
@@ -3326,9 +3611,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 
                               }) }
 
+<<<<<<< HEAD
 ========
                               }) }
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/disputes/DisputeDetail.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           onClick={() => {;
                             if (adminNote && adminNote.trim()) {;
                               addDisputeMessage(;
@@ -3341,6 +3629,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                                 );
                                 setAdminNote('');
                               });                            }
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/disputes/DisputeDetail.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
@@ -3374,6 +3663,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                                 setAdminNote('')
                               }) }
 
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                               addDisputeMessage(disputeId!, adminNote, true).then(() => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                                 getDisputeMessages(disputeId!).then(setMessages),
@@ -3384,6 +3677,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           }}
 =======
 >>>>>>>                           }}
@@ -3523,6 +3820,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className="space-y-6">
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -3540,6 +3838,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Card>
             <CardHeader>
               <CardTitle>Parties Involved</CardTitle>
@@ -3726,10 +4026,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>           <Card>
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+          
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Card>
 >>>>>>>             <CardHeader>
               <CardTitle>Case Information</CardTitle>
@@ -3799,11 +4106,14 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
 ========
                   <AvatarImage
                     src={dispute && dispute.talent_profile?.avatar_url}
                     alt={
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/disputes/DisputeDetail.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       dispute && dispute.talent_profile?.display_name || 'Talent avatar'
                     }
                   />;
@@ -4126,6 +4436,7 @@ container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center j
 }, [dispute_id, getDisputeById, getDisputeMessages, router]);
 }
 const handleResolveDispute = async () => {
+<<<<<<< HEAD
   // Check condition
 if (return) {
   $2
@@ -4393,3 +4704,9 @@ container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center j
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+;
+
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,12 +1,39 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+interface NotificationProps {
+  type: 'message' | 'order' | 'default';
+}
+
+
+export function NotificationBadge({ type }: NotificationProps) {
+  switch (type) {
+    case 'message':
+      return <Badge className="bg-blue-500">Message</Badge>;
+    case 'order':
+      return <Badge className="bg-orange-500">Order</Badge>;
+    default:
+      return <Badge variant="outline">Notification</Badge>;
+  }
+}
+
+export default function NotificationsPage() {
+  return (
+    <div className="container py-10">
+      <h1 className="text-3xl font-bold mb-6">Notifications</h1>
+      <p className="text-muted-foreground">Your notifications will appear here.</p>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useEffect } from 'react';
 import { Bell, Check, X, AlertCircle, Info, CheckCircle } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
@@ -20,6 +47,7 @@ import { toast } from '@/hooks/use-toast';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -31,6 +59,13 @@ import { toast } from '@/hooks/use-toast';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface Notification {
   id: string;
   type: 'message' | 'order' | 'system' | 'promotion';
@@ -49,6 +84,7 @@ interface Notification {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
@@ -56,6 +92,8 @@ interface Notification {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from 'react',;
 import { useNotifications } from '@/context/notifications/NotificationContext',;
 import {;
@@ -99,7 +137,11 @@ const getNotificationIcon = (;
 },
 
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
 const getNotificationIcon = (type: string) =>: any {
   switch (type) {
@@ -377,6 +419,7 @@ export default function NotificationsPage() {
     </>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -387,3 +430,6 @@ export default function NotificationsPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

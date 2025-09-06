@@ -56,6 +56,7 @@ export function AppHeader() {
     </header>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/src/layout/AppHeader.jsx
 =======
 >>>>>>> origin/chore/resolve-conflicts-1756215853
@@ -75,6 +76,11 @@ export function AppHeader() {
 }
 origin/chore/resolve-conflicts-1756215853
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function AppHeader() {;
     return (<header className="bg-white shadow-sm border-b border-gray-200">";
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";
@@ -92,6 +98,7 @@ export function AppHeader() {;
 '"
 =======
 
+<<<<<<< HEAD
 '"
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -112,3 +119,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+'"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

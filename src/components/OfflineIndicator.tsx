@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/OfflineIndicator.tsx
 
 import { WifiOff, Wifi } from 'lucide-react'
@@ -85,6 +86,11 @@ export const OfflineIndicator = () => {
     }
 
   }, [showOfflineAlert]),
+=======
+import { useState, useEffect } from 'react';
+
+import { WifiOff, Wifi } from 'lucide-react'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
 
@@ -110,6 +116,7 @@ export const OfflineIndicator = () => {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
     }
 
@@ -122,6 +129,10 @@ import { useState, useEffect } from 'react';
 import { WifiOff, Wifi } from 'lucide-react'
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/OfflineIndicator.tsx
 import { useState, useEffect } from 'react';
+=======
+import { useState, useEffect } from 'react';
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         setTimeout(() => setShowOfflineAlert(false), 3000)
 import { useState, useEffect } from 'react',;
 
@@ -182,8 +193,12 @@ export const OfflineIndicator = () => {;
         setTimeout(() => setShowOfflineAlert(false), 3000);
 <<<<<<<< HEAD:src/components/OfflineIndicator.tsx
 
+<<<<<<< HEAD
 >>>>>>>       }
 ========
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       }
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/OfflineIndicator.tsx
     };
@@ -280,6 +295,10 @@ if (return null) {
         </div>
       </Alert>
     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   )
 } }
 <<<<<<<< HEAD:src/components/OfflineIndicator.tsx
@@ -292,6 +311,7 @@ if (return null) {
       </Alert>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/OfflineIndicator.tsx
 };
 <<<<<<< HEAD
@@ -307,6 +327,11 @@ if (return null) {
 ========
 };};
 };
+=======
+
+
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <div className='fixed top - 4 right - 4 z - 50 max - w-sm pointer - events - none'>;
       <Alert variant={is_online ? 'default' : 'destructive'}>;
         <div className='flex items - center gap - 2'>;
@@ -322,6 +347,7 @@ if (return null) {
       </Alert>;
     </div>);
 } }
+<<<<<<< HEAD
 =======
 import { useState, useEffect } from 'react',;
 import { WifiOff, Wifi } from 'lucide-react';
@@ -411,3 +437,6 @@ return () : (<WifiOff className="h-4 w-4" />) ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

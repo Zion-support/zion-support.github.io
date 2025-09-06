@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { useToast } from '@/hooks/use-toast'
 import { Button } from '@/components/ui/button'
@@ -25,6 +26,39 @@ import { Button } from "@/components/ui/button",
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+return (
+
+        disabled={isLoading || !title || !category}
+        className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2'>        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2";
+          id="title";
+
+        <Input
+          id="category"
+          value={category}
+          onChange={(e) => setCategory(e && e.target.value)}
+          placeholder="e && e.g. AI Tool, Digital Product, Service";
+          className="bg-zion-blue border border-zion-blue-light text-white";
+          disabled={isLoading}
+        />;
+      </div>;
+      <div className="space-y-2">;
+        <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Key Features (Optional)">Key Features (Optional)</label>;
+        <Textarea
+
+
+
+          id="keyFeatures"
+          value={keyFeatures}
+          onChange={(e) => setKeyFeatures(e && e.target.value)}
+          placeholder="Briefly describe the main features or benefits";
+          className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
+          disabled={isLoading}
+
+import React, { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input",
@@ -366,6 +400,13 @@ export function AIListingForm({
 
   return (
     <div className="space-y-4">
+<<<<<<< HEAD
+=======
+        />
+
+
+      </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <div className="space-y-2">
         <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>
         <Input
@@ -381,6 +422,7 @@ export function AIListingForm({
 <<<<<<< HEAD
 
       </div>
+<<<<<<< HEAD
 =======
 >>>>>>>       </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -435,6 +477,8 @@ export function AIListingForm({
         <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>
         <Input
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <div className="space-y-2">
         <label htmlFor="title" className="text-sm font-medium text-zion-slate-light" htmlFor="input-Title">Title</label>
         <Input
@@ -449,7 +493,11 @@ ursor/fix-website-loading-errors-and-merge-6662
         </label>;
         <Input;
           id='title';
+<<<<<<< HEAD
 >>>>>>>           value={title}
+=======
+          value={title}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           on_change={e => set_title (e.target.value)}
           placeholder='Enter your product or service title';
           className='bg - zion - blue border border - zion - blue - light text - white';
@@ -506,7 +554,6 @@ ursor/fix-website-loading-errors-and-merge-6662
         disabled={is_loading || !title || !category}
         className='w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white mt - 2'      >        className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white mt - 2";
           id="title";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           value={title}
           on_change={(e) => set_title (e.target.value)}
           placeholder="Enter your product or service title";
@@ -521,6 +568,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           value={category}
 
 
+<<<<<<< HEAD
 >>>>>>>           id="targetAudience"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           value={targetAudience}
@@ -674,6 +722,8 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
       <Button 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           id="targetAudience"
           value={targetAudience}
           onChange={(e) => setTargetAudience(e.target.value)}
@@ -776,9 +826,17 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         />;
       </div>;
       <Button;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
         disabled={isLoading || !title || !category}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       >
@@ -817,6 +875,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <Sparkles className="h-4 w-4 mr-2" />
             Generate Optimized Content
@@ -826,6 +885,22 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+        />;
+      </div>;
+      <Button
+        onClick={handleSubmit}
+        disabled={isLoading || !title || !category}
+        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2">;
+        {isLoading ? (;
+          <>Generating Optimized Content...</>;
+        ) : (;
+          <>;
+            <Sparkles className='h-4 w-4 mr-2' />            Generate Optimized Content            <Sparkles className="h-4 w-4 mr-2" />;
+            Generate Optimized Content;
+          </>;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) 
 }</Button> </div>) 
 }'";
@@ -833,10 +908,17 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 }
 }
 }
+<<<<<<< HEAD
             <Sparkles className="h-4 w-4 mr-2" />
             Generate Optimized Content
           </>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+            <Sparkles className="h-4 w-4 mr-2" />
+            Generate Optimized Content
+          </>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         )}
       </Button>;
     </div>;
@@ -845,7 +927,10 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           on_change={(e) => set_category (e.target.value)}
           placeholder="e.g. AI Tool, Digital Product, Service";
           className="bg - zion - blue border border - zion - blue - light text - white";
@@ -899,6 +984,7 @@ if ( {) {
 }</Button> </div>);
 }'";
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 ;
@@ -921,3 +1007,7 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

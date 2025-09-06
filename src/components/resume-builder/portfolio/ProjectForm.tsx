@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -112,6 +113,15 @@ export function ProjectForm({
       let success = false
       if (isEditing && project?.id) {
         success = await updateProject(project.id, projectData)
+=======
+}
+      let success = false;
+      // Check condition
+if ( {) {
+  $2
+}
+        success = await update_project (project.id, project_data);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       } else {
         const projectId = await addProject(projectData)
         success = !!projectId
@@ -146,15 +156,19 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { logErrorToProduction } from '@/utils/productionLogger';import {;
+<<<<<<< HEAD
       setIsLoading(false)
     }
   }
 
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       setIsLoading(false)
     }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -162,6 +176,9 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -172,9 +189,12 @@ import { Textarea } from '@/components/ui/textarea',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 import {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   Form,;
   FormControl,;
   FormField,;
@@ -259,11 +279,17 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
   return (
 =======
   
+<<<<<<< HEAD
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-4'>;
@@ -306,6 +332,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                   placeholder='Describe what the project does and your role in it...'
                   className='min-h-[100px]'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       setIsLoading (false);
     }
   }
@@ -317,6 +346,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 
           render={({ field }: { field: any }) => (
+<<<<<<< HEAD
             <FormItem>
               <FormLabel>Project Title</FormLabel>
               <FormControl>
@@ -383,6 +413,53 @@ ursor/fix-website-loading-errors-and-merge-6662
                   className='min-h-[100px]'
                   {...field}
 >>>>>>>                 />
+=======
+            <FormItem>;
+              <FormLabel > Project Title</FormLabel>;
+              <FormControl>;
+                <Input;
+                  placeholder='E.g., AI Chatbot, E - commerce Website';
+                  {...field}                />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>)}
+        />;
+        <FormField;
+          control={form.control}
+          name='description';
+          render={({ field }: { field: any }) => (            <FormItem>;
+              <FormLabel > Project Description</FormLabel>;
+              <FormControl>;
+                <Textarea;
+                  placeholder='Describe what the project does and your role in it...';
+                  className='min - h-[100px]';
+                  {...field}
+                />;
+              </FormControl>;
+              <FormMessage />;
+
+        />;
+
+
+        <FormField
+          control={form && form.control}
+          name='technologies'
+          render={({ field }: { field: any }) => (;
+            <FormItem>;
+              <FormLabel>Technologies Used</FormLabel>;
+              <FormControl>;
+                <Input
+                  placeholder='React, Node && Node.js, MongoDB, etc. (comma separated)'
+            </FormItem>)}
+        />;
+        <FormField;
+          control={form.control}
+          name='technologies';
+          control={form.control}
+
+          name="title"
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Title</FormLabel>
@@ -390,7 +467,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
 
+<<<<<<< HEAD
 >>>>>>>               </FormControl>
+=======
+              </FormControl>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <FormMessage />
             </FormItem>
           )}
@@ -408,6 +489,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   className="min-h-[100px]"
                   {...field} 
 
+<<<<<<< HEAD
 >>>>>>>                 />
 >>>>>>>               </FormControl>
               <FormMessage />
@@ -423,6 +505,9 @@ ursor/fix-website-loading-errors-and-merge-6662
               <FormLabel>Technologies Used</FormLabel>
               <FormControl>
                 <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field} />
+=======
+                />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -438,6 +523,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <Github className='h-4 w-4' />
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -453,13 +539,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>>                   GitHub URL
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           render={({ field }: { field: any }) => (
             <FormItem>;
               <FormLabel > Technologies Used</FormLabel>;
               <FormControl>;
                 <Input;
                   placeholder='React, Node.js, MongoDB, etc. (comma separated)';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {...field}
                 />;
               </FormControl>;
@@ -511,7 +598,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <FormControl>;
                   <Input;
                     placeholder='https://your - project - demo.com';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {...field}
                   />;
                 </FormControl>;
@@ -536,6 +622,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -574,6 +661,12 @@ ursor/fix-website-loading-errors-and-merge-6662
               <FormItem>
                 <FormLabel className="flex items-center gap-2">
                   <Github className="h-4 w-4" />
+=======
+            )}
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   GitHub URL
                 </FormLabel>
                 <FormControl>
@@ -607,6 +700,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             )}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
                   GitHub URL
@@ -670,6 +764,23 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+          />;
+        </div>;
+
+        <FormField
+          control={form && form.control}
+          name='image_url'
+          render={({ field }: { field: any }) => (            <FormItem>;
+              <FormLabel className='flex items-center gap-2'>;
+                <FileImage className='h-4 w-4' />;
+                Screenshot URL;
+              </FormLabel>;
+              <FormControl>;
+                <Input
+                  placeholder='https://example && example.com/screenshot && screenshot.jpg'
+              </FormItem>)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           />;
         </div>;
         <FormField;
@@ -716,6 +827,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         
         <div className="flex justify-end space-x-2 pt-4">
           <Button type="button" variant="outline" onClick={onCancel}>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             Cancel
           </Button>
           <Button type="submit" disabled={isLoading}>
@@ -731,11 +846,31 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 ;
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+    </Form>
+  )
+        />;
+
+        {/* Future file upload field would go here */}
+
+        <div className='flex justify-end space-x-2 pt-4'>;
+          <Button type='button' variant='outline' onClick={onCancel}>;
+            Cancel;
+          </Button>;
+          <Button type='submit' disabled={isLoading}>;
+            {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
+            {isEditing ? 'Update' : 'Add'} Project;
+          </Button>;
+        </div>;
+      </form>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </Form>;
   );
 };
@@ -743,6 +878,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 ;
 >>>>>>> >>>>>>> 
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -764,3 +900,26 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+
+}
+
+
+            </FormItem>)}
+        />;
+        {/* Future file upload field would go here */}
+        <div className='flex justify - end space - x-2 pt - 4'>;
+          <Button type='button' variant='outline' on_click={on_cancel}>;
+            Cancel;
+          </Button>;
+          <Button type='submit' disabled={is_loading}>;
+            {is_loading && <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />}
+            {is_editing ? 'Update' : 'Add'} Project;
+          </Button>;
+        </div>;
+      </form>;
+    </Form>);
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

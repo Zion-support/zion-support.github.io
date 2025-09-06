@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -35,6 +36,11 @@ export function Button({ children, variant = 'default', size = 'md', asChild = f
 =======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+import React from 'react';';
+export function Button({ children, variant = 'default', size = 'md', asChild = false, className="", onClick,  type = 'button', disabled = false }) {';
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
     const variantClasses = {
         default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
@@ -64,6 +70,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 
 }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -82,6 +89,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
   const variantClasses = {
     default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
@@ -115,6 +124,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 }
 
 
+<<<<<<< HEAD
 =======
 
 =======
@@ -149,3 +159,8 @@ origin/chore/resolve-conflicts-1756215853
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

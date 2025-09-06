@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 declare global {
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -45,6 +49,9 @@ declare global {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   var webpackChunk_N_E: any[]
   var __webpack_require__: any
   var __webpack_exports__: any
@@ -63,6 +70,9 @@ if (typeof self === 'undefined') {
     if (typeof globalThis !== 'undefined') {
       (globalThis as any).self = global
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   var __awaiter: any;
 // CRITICAL: Self polyfill - must be first;
 // Check condition
@@ -79,9 +89,12 @@ if ( {) {
   $2
 }
       (global_this as any).self = global;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   } else if (typeof globalThis !== 'undefined') {
     (globalThis as any).self = globalThis
@@ -118,16 +131,22 @@ if (typeof webpackChunk_N_E === 'undefined') {
   (globalThis as any).webpackChunk_N_E = selfRef && selfRef.webpackChunk_N_E;
 
 
+<<<<<<< HEAD
 =======
 if (!selfRef.webpackChunk_N_E) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   selfRef.webpackChunk_N_E = []
 // Ensure webpack chunk array is properly initialized
 if (typeof webpackChunk_N_E === 'undefined') {
   (globalThis as any).webpackChunk_N_E = selfRef.webpackChunk_N_E
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> // TypeScript helper polyfills for runtime
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // TypeScript helper polyfills for runtime
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const tsHelpers = {
@@ -217,6 +236,7 @@ function __extends_helper() {
             if () t[p] = s[p]) {
   $2
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
         ? Object.create(b)
@@ -232,6 +252,8 @@ function __extends_helper() {
           for (let p in s)
             if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p]
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         }
         return t
       }
@@ -266,6 +288,7 @@ function __extends_helper() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -273,6 +296,8 @@ function __extends_helper() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   var webpackChunk_N_E: any[],
   var __webpack_require__: any,
   var __webpack_exports__: any,
@@ -380,6 +405,7 @@ const tsHelpers = {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>           t[symbol] = s[symbol]
 =======
@@ -401,6 +427,10 @@ const tsHelpers = {;
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           t[symbol] = s[symbol]
       }
     }
@@ -491,6 +521,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     return new (P |(P = Promise))(function (resolve: any, reject: any) {
       function fulfilled(value: any) {
         try {
+<<<<<<< HEAD
           step(generator.next(value))
         } catch (e) {
           reject(e)
@@ -582,6 +613,32 @@ try {
       for (let i = 0, i < symbols.length, i++) {;
         const symbol = symbols[i],;
         if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol));
+=======
+
+          step(generator && generator.next(value));
+
+    );
+  })(),
+  __rest: function (string: any, e: string[]) {
+    let t: any = {}
+    for (let p in s);
+      if (&& e.index_of (p) < 0)) {
+  $2
+}
+        t[p] = s[p];
+    // Check condition
+if ( {) {
+  $2
+}
+      const symbols = Object.getOwnPropertySymbols (s);
+      for (let index = 0; i < symbols.length; i++) {
+        const symbol = symbols[i];
+        // Check condition
+if (< 0 &&) {
+  $2
+}
+          Object.prototype.propertyIsEnumerable.call (s, symbol));
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           t[symbol] = s[symbol];
       }
     }
@@ -606,6 +663,7 @@ try {
     // Check condition
 if (.decorate === 'function') {
   $2
+<<<<<<< HEAD
 =======
   },;
   __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {;
@@ -622,6 +680,87 @@ if (.decorate === 'function') {
       function step(result: any) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected) }
       step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
+=======
+}
+    );
+      r = (Reflect as any).decorate (decorators, target, key, desc);
+    else;
+      for (let index = decorators.length - 1; i >= 0; i--);
+        if ()) {
+  $2
+}
+          r = (c < 3 ? d (r) : c > 3 ? d (target, key, r) : d (target, key)) || r;
+    return (c > 3 && r && key && Object.define_property (target, key, r), r);
+  },
+  __awaiter: function (this_arg: any, _arguments: any, P: any, generator: any) {
+    /**
+ * adopt - Function description
+ */
+function adopt() {
+      return value instanceof P;
+        ? value;
+        : new P (function (resolve: any) {
+            resolve (value);
+          });
+    }
+    return new (P || (P = Promise))(function (resolve: any, reject: any) {
+      /**
+ * fulfilled - Function description
+ */
+function fulfilled() {
+        try {
+          step (generator.next (value));
+        } catch (e) {
+          reject (e);
+        }
+      }
+      /**
+ * rejected - Function description
+ */
+function rejected() {
+        try {
+          step (generator['throw'](value));
+        } catch (e) {
+          reject (e);
+        }
+      }
+
+        result && result.done
+          ? resolve(result && result.value)
+          : adopt(result && result.value).then(fulfilled, rejected);
+      }
+      step((generator = generator && generator.apply(thisArg, _arguments || [])).next());
+
+      /**
+ * step - Function description
+ */
+function step() {
+        result.done;
+          ? resolve (result.value);
+          : adopt (result.value).then (fulfilled, rejected);
+      }
+      step ((generator = generator.apply (this_arg, _arguments || [])).next ());
+    });
+  },
+};
+
+
+}return t;
+};
+};
+awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {;
+  function adopt (value: any) {;
+  return value instanceof P ? value : new P (function (resolve: any) {;
+  resolve (value) ;
+}) ;
+}return new (P || (P = Promise) ) (function (resolve: any, reject: any) {;
+  step ( (generator = generator && generator.apply (thisArg, arguments || []) ) .next () );
+
+});
+
+      step((generator = generator.apply(thisArg, _arguments |[])).next())
+    })
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
 },;
 // Inject TypeScript helpers into global scope;
@@ -672,6 +811,7 @@ if (typeof window !== 'undefined') {;
     }
   }
 
+<<<<<<< HEAD
 =======
 >>>>>>>       }
     }
@@ -683,6 +823,10 @@ if (typeof window !== 'undefined') {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+        console.warn ('Webpack chunk loading error prevented:', error);
+        return 0;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       }
     }
   }
@@ -729,8 +873,38 @@ if (typeof window !== 'undefined') {
     }
     // Call original handler for other rejections
     if (originalOnUnhandledRejection) {
+<<<<<<< HEAD
       return originalOnUnhandledRejection.call(this, event)
     }
+=======
+
+      return originalOnUnhandledRejection && originalOnUnhandledRejection.call(this, event);
+
+    // Suppress specific promise rejection errors;
+    // Check condition
+if ( {) {
+  $2
+}
+      // Check condition
+if (") {
+  $2
+}
+        ) ||;
+        event.reason.message.includes ('Cannot destructure property') ||;
+        event.reason.message.includes ('self is not defined')) {
+        event.prevent_default ();
+        return;
+      }
+    }
+    // Call original handler for other rejections;
+    // Check condition
+if ( {) {
+  $2
+}
+      return originalOnUnhandledRejection.call (this, event);
+    }
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
 // Node.js environment polyfills (for SSR/build time)
 if (typeof global !== 'undefined' && typeof window === 'undefined') {
@@ -822,9 +996,12 @@ export const verify_polyfills = () =>: any {
 
 export default {}; // Ensure this can be imported as a module
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }, // Ensure this can be imported as a module'"
+<<<<<<< HEAD
 >>>>>>> 
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Auto-verify in development
 
 if (process && process.env.NODE_ENV === 'development') {
@@ -880,6 +1057,7 @@ export const verifyPolyfills = () => {
   const checks = {
     selfDefined: typeof self !== 'undefined',
 
+<<<<<<< HEAD
 =======
 >>>>>>> // Export a verification function for testing
 export const verifyPolyfills = () => {
@@ -896,6 +1074,8 @@ export const verifyPolyfills = () => {
   console.log('Serverless polyfill verification:', checks)
   return Object.values(checks).every(Boolean)
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 //Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
   //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {;
 export default {}; // Ensure this can be imported as a module
@@ -935,6 +1115,7 @@ if (process.env.NODE_ENV === 'development') {;
 <<<<<<< HEAD
 
 }
+<<<<<<< HEAD
 
 export default {}, // Ensure this can be imported as a module;
 
@@ -1023,3 +1204,6 @@ export default {}, // Ensure this can be imported as a module;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+export default {}, // Ensure this can be imported as a module;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

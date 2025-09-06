@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Search } from 'lucide-react'
 =======
 =======
@@ -43,6 +46,28 @@ export default function HelpCenter() {
   const handleCategorySelect = (categoryId: string) => {
     setSelectedCategory(categoryId)
     setSelectedArticle(null)
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { Input } from '@/components / ui / input';
+import { Button } from '@/components / ui / button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { HelpCategoryList } from './HelpCategoryList';
+import { HelpArticleList } from './HelpArticleList';
+import { HelpArticleView } from './HelpArticleView';
+import { HELP_CATEGORIES } from './help - content';
+import { Search } from 'lucide-react';
+export default /**
+ * HelpCenter - Function description
+ */
+function HelpCenter() {
+  const [selected_category, setSelectedCategory] = useState < string | null>(null);
+  const [selected_article, setSelectedArticle] = useState < string | null>(null);
+  const [search_query, setSearchQuery] = useState ('');
+  const handleCategorySelect = (category_id: string) =>: any {
+    setSelectedCategory (category_id);
+    setSelectedArticle (null);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
   const handleArticleSelect = (articleId: string) => {
     setSelectedArticle(articleId)
@@ -59,6 +84,7 @@ export default function HelpCenter() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
@@ -71,6 +97,8 @@ export default function HelpCenter() {
   }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 <<<<<<< HEAD
@@ -84,6 +112,7 @@ export default function HelpCenter() {
     setSelectedArticle(null)
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -150,6 +179,8 @@ export default function HelpCenter() {
                   searchQuery={searchQuery}                />
               )}
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 
 
@@ -184,11 +215,15 @@ import { HelpCategoryList } from './HelpCategoryList';
 import { HelpArticleList } from './HelpArticleList';
 import { HelpArticleView } from './HelpArticleView';
 import { HELP_CATEGORIES } from './help-content';
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           
           <div className="relative mb-8">
             <Input
@@ -220,9 +255,12 @@ import { HelpArticleList } from "./HelpArticleList",;
 import { HelpArticleView } from "./HelpArticleView",;
 import { HELP_CATEGORIES } from "./help-content",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Search } from 'lucide-react';
 export default function HelpCenter() {;
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null),;
@@ -316,6 +354,7 @@ export default function HelpCenter() {;
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -325,6 +364,8 @@ export default function HelpCenter() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   onCategorySelect={handleCategorySelect}
                   searchQuery={searchQuery}                />
               )}
@@ -332,7 +373,11 @@ export default function HelpCenter() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
               {selectedCategory && !selectedArticle && (
+<<<<<<< HEAD
 =======
+=======
+                <>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
 
@@ -342,6 +387,7 @@ export default function HelpCenter() {;
                 <>
               {selectedCategory && !selectedArticle && (;
                 <>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 <<<<<<< HEAD
@@ -355,6 +401,8 @@ export default function HelpCenter() {;
               {selectedCategory && !selectedArticle && (
                 <>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <Button
                     variant='ghost'
                     onClick={handleBackToCategories}
@@ -449,6 +497,7 @@ export default function HelpCenter() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -478,6 +527,8 @@ export default function HelpCenter() {;
                   </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -493,6 +544,7 @@ export default function HelpCenter() {;
                 <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
                 
                 <div className="space-y-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -528,6 +580,8 @@ export default function HelpCenter() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">How does the AI matching work?</h3>
                     <p className="text-zion-slate-light">
@@ -541,6 +595,7 @@ export default function HelpCenter() {;
                   
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
@@ -555,6 +610,8 @@ export default function HelpCenter() {;
 =======
                   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">How do I hire someone on Zion?</h3>
                     <p className="text-zion-slate-light">
@@ -600,11 +657,18 @@ export default function HelpCenter() {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                   
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">How do I contact support?</h3>
                     <p className="text-zion-slate-light">
                       You can reach our support team through the chat widget at the bottom right of any page, by emailing support@ziontechgroup.com, or by scheduling a call with our team through the Contact tab.
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     </p>
                   </div>
                 </div>
@@ -614,6 +678,7 @@ export default function HelpCenter() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                         </svg>
 =======
 =======
@@ -652,6 +717,119 @@ export default function HelpCenter() {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+            </TabsContent>;
+
+            <TabsContent value='faq'>;
+              <div className='bg-zion-blue-light/20 rounded-lg p-6'>;
+                <h2 className='text-xl font-semibold mb-4'>;
+                  Frequently Asked Questions;
+                </h2>;
+
+                <div className='space-y-6'>;
+                  <div>;
+                    <h3 className='font-medium text-zion-cyan mb-2'>;
+                      How does the AI matching work?;
+                    </h3>;
+                    <p className='text-zion-slate-light'>;
+                      Our AI matching algorithm analyzes your requirements and;
+                      preferences to match you with the most compatible talent;
+                      or services. The process takes into account skills,;
+            <TabsContent value='articles'>;
+              {!selected_category && !selected_article && (
+                <HelpCategoryList;
+                  categories={HELP_CATEGORIES}
+                  onCategorySelect={handleCategorySelect}
+                  search_query={search_query}                />)}
+              {selected_category && !selected_article && (
+                <>;
+                  <Button;
+                    variant='ghost';
+                    on_click={handleBackToCategories}
+                    className='mb - 4';
+                  >;
+                    ← All Categories;
+                  </Button>;
+                  <HelpArticleList;
+                    category_id={selected_category}
+                    onArticleSelect={handleArticleSelect}
+                    search_query={search_query}                  />;
+                </>)}
+              {selected_article && (
+                <>;
+                  <Button;
+                    variant='ghost';
+                    on_click={handleBackToArticles}
+                    className='mb - 4'                  >;
+                    ← Back to Articles;
+                  </Button>;
+                  <HelpArticleView article_id={selected_article} />;
+                </>)}
+            </TabsContent>;
+            <TabsContent value='faq'>;
+              <div className='bg - zion - blue - light / 20 rounded - lg p - 6'>;
+                <h2 className='text - xl font - semibold mb - 4'>;
+                  Frequently Asked Questions;
+                </h2>;
+                <div className='space - y-6'>;
+                  <div>;
+                    <h3 className='font - medium text - zion - cyan mb - 2'>;
+                      How does the AI matching work?;
+                    </h3>;
+                    <p className='text - zion - slate - light'>;
+                      Our AI matching algorithm analyzes your requirements and;
+                      preferences to match you with the most compatible talent;
+                      or services. The process takes into account skills,
+
+                      experience, availability, and past performance to ensure;
+                      optimal results.;
+                    </p>;
+                  </div>;
+
+                  <div>;
+                    <h3 className='font - medium text - zion - cyan mb - 2'>;
+                      How do I hire someone on Zion?;
+                    </h3>;
+                    <p className='text - zion - slate - light'>;
+
+                      To hire talent on Zion, post a job or project, review;
+                      matches or applications, interview candidates through our;
+                      platform, and extend an offer. Our secure payment system;
+                      protects both parties throughout the engagement.;
+                    </p>;
+                  </div>;
+
+                  <div>;
+                    <h3 className='font - medium text - zion - cyan mb - 2'>;
+                      What are the payment terms?;
+                    </h3>;
+                    <p className='text - zion - slate - light'>;
+                      Zion offers flexible payment options including;
+                      milestone - based payments, hourly rates, or fixed project;
+
+                      fees. Funds are held in escrow until deliverables are;
+                      approved, ensuring security for both clients and talent.;
+                    </p>;
+                  </div>;
+
+                  <div>;
+                    <h3 className='font - medium text - zion - cyan mb - 2'>;
+                      How do I contact support?;
+                    </h3>;
+                    <p className='text - zion - slate - light'>;
+                      You can reach our support team through the chat widget at;
+                      the bottom right of any page, by emailing;
+                      support@ziontechgroup.com, or by scheduling a call with;
+
+                      our team through the Contact tab.;
+                    </p>;
+                  </div>;
+                </div>;
+              </div>;
+            </TabsContent>;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             
             <TabsContent value="contact">
               <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
@@ -670,7 +848,10 @@ export default function HelpCenter() {;
                         </svg>
                       </div>
                       <a href="mailto:support@ziontechgroup.com" className="text-zion-cyan hover:underline">
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         support@ziontechgroup.com
                       </Link>
                     </div>
@@ -689,6 +870,7 @@ export default function HelpCenter() {;
                           xmlns='http://www.w3.org/2000/svg'
                           className='h-5 w-5 text-zion-purple'
                           viewBox='0 0 20 20'
+<<<<<<< HEAD
                           fill='currentColor'
                         >
                           <path d='M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z' />
@@ -697,6 +879,17 @@ export default function HelpCenter() {;
 >>>>>>>                         </svg>
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+                    
+                    <div className="flex items-center">
+                      <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         </svg>
 >>>>>>>                       </div>
                       <span className='text-zion-slate-light'>
@@ -768,6 +961,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </p>
                   
                   <form className="space-y-4">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <div>
                       <Input
                         placeholder="Your email"
@@ -802,6 +1000,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -809,6 +1008,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       Submit Feedback
 >>>>>>>                     </Button>
                   </form>
@@ -1016,6 +1219,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Tabs>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </>;
   );
 }
@@ -1023,11 +1227,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+
+
+    </>);
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 >>>>>>> 
       </div>
     </>
+<<<<<<< HEAD
   )
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -1041,3 +1253,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

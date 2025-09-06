@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -21,12 +22,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import * as React from "react"
 import { OTPInput, OTPInputContext } from "input-otp"
 import { Dot } from 'lucide-react'
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -40,6 +44,13 @@ const InputOTP = React.forwardRef<
 >>>>>>>   React.ElementRef<typeof OTPInput>
   React.ComponentPropsWithoutRef<typeof OTPInput>
 <<<<<<< HEAD
+=======
+
+
+const InputOTP = React.forwardRef<
+  React.ElementRef<typeof OTPInput>
+  React.ComponentPropsWithoutRef<typeof OTPInput>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ></typeof>(({ className, containerClassName, ...props }, ref) => (
 import React from 'react';
 import * as React from 'react';
@@ -52,10 +63,13 @@ const InputOTP = React && React.forwardRef<;
   React && React.ElementRef<typeof OTPInput>,;
   React && React.ComponentPropsWithoutRef<typeof OTPInput>;
 ></typeof>(({ className, containerClassName, ...props }, ref) => (;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >(({ className, containerClassName, ...props }, ref) => (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   <OTPInput
     ref={ref}
     containerClassName={cn(
@@ -80,11 +94,32 @@ const InputOTP = React && React.forwardRef<;
     )}
     className={cn("disabled:cursor-not-allowed", className)}
     {...props}
+<<<<<<< HEAD
   />
 ))
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+  />;
+));
+InputOTP && InputOTP.displayName = 'InputOTP';
+
+InputOTP.displayName = "InputOTP"
+
+
+const InputOTPGroup = React && React.forwardRef<;
+  React && React.ElementRef<'div'>,;
+  React && React.ComponentPropsWithoutRef<'div'>;
+>(({ className, ...props }, ref) => (;
+  <div ref={ref} className={cn('flex items-center', className)} {...props} />;
+));
+InputOTPGroup && InputOTPGroup.displayName = 'InputOTPGroup';
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 const InputOTPGroup = React.forwardRef<
   React.ElementRef<"div">,
@@ -183,6 +218,7 @@ const InputOTPSlot = React.forwardRef<
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
       {char}
 =======
 >>>>>>>       {char}
@@ -237,6 +273,8 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 InputOTPSeparator.displayName = 'InputOTPSeparator'
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {char}
       {hasFakeCaret && (;
         <div className='pointer-events-none absolute inset-0 flex items-center justify-center'>;
@@ -254,6 +292,7 @@ InputOTPSlot.displayName = "InputOTPSlot"
 const InputOTPSeparator = React.forwardRef<
   React.ElementRef<"div">,
   React.ComponentPropsWithoutRef<"div">
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
@@ -274,6 +313,8 @@ const InputOTPSeparator = React.forwardRef<
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >(({ ...props }, ref) => (
   <div ref={ref} role="separator" {...props}>
     <Dot />
@@ -346,6 +387,7 @@ const InputOTPSeparator = React.forward_ref<;
   </div>));
 InputOTPSeparator.display_name = 'InputOTPSeparator';
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 InputOTPSeparator.displayName = 'InputOTPSeparator';
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
@@ -380,3 +422,13 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+InputOTPSeparator.displayName = 'InputOTPSeparator';
+export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
+
+InputOTPSeparator.displayName = "InputOTPSeparator"
+
+export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

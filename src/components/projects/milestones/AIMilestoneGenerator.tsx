@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32,6 +33,9 @@ import { format, parseISO } from 'date-fns'
 import { Badge } from '@/components/ui/badge'
 
 interface AIMilestoneGeneratorProps {
+=======
+interface AIMilestoneGeneratorProps {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   scope: string;
   startDate: string;
   endDate: string | null;
@@ -73,6 +77,9 @@ export function AIMilestoneGenerator({
       endDate
       projectType
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -118,6 +125,7 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
+<<<<<<< HEAD
     await generateMilestones(input)
     // Initially select all milestones
     const initialSelection: Record<number, boolean> = {}
@@ -125,6 +133,21 @@ if ( {) {
       initialSelection[index] = true
     })
     setSelectedMilestones(initialSelection)
+=======
+    const input: MilestoneInput = {
+      scope,
+      start_date,
+      end_date,
+      project_type,
+    }
+    await generate_milestones (input);
+    // Initially select all milestones;
+    const initial_selection: Record < number, boolean> = {}
+    generated_milestones.for_each ((_, index: number) => {
+      initial_selection[index] = true;
+    });
+    setSelectedMilestones (initial_selection);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
   const handleAddToProject = () => {
     const selectedMilestonesList = generatedMilestones.filter(
@@ -159,6 +182,7 @@ if ( {) {
     } catch (error) {
 <<<<<<< HEAD
 
+<<<<<<< HEAD
       return dateString
     }
   }
@@ -167,15 +191,22 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       return dateString
     }
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -258,6 +289,7 @@ export function AIMilestoneGenerator({;
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 =======
 >>>>>>>   return (
@@ -270,6 +302,22 @@ export function AIMilestoneGenerator({;
         </h3>
         <Button
 <<<<<<< HEAD
+=======
+
+
+
+  return (
+    <div className='space-y-4'>;
+      <div className='flex items-center justify-between'>;
+        <h3 className='text-lg font-medium flex items-center'>;
+          <Sparkles className='w-5 h-5 mr-2 text-primary' />;
+          AI Milestone Generator;
+        </h3>;
+        <Button
+
+
+          disabled={isGenerating || !scope || !startDate || !projectType}        >
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
           variant="outline"
           onClick={handleGenerateMilestones}
@@ -303,6 +351,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
           disabled={isGenerating || !scope || !startDate || !projectType}        >
 
 >>>>>>>           variant="outline"
@@ -327,6 +376,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {isGenerating ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -393,6 +444,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                           <span className='font-medium'>{milestone.title}</span>
                           <Badge
                             variant='secondary'
+<<<<<<< HEAD
                             className='ml-2 flex items-center'
                           >
                             <Sparkles className='w-3 h-3 mr-1' />
@@ -404,6 +456,78 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+                            className='ml-2 flex items-center'>;
+                            <Sparkles className='w-3 h-3 mr-1' />;
+      return date_string;
+    }
+  }
+  return (
+    <div className='space - y-4'>;
+      <div className='flex items - center justify - between'>;
+        <h3 className='text - lg font - medium flex items - center'>;
+          <Sparkles className='w - 5 h - 5 mr - 2 text - primary' />;
+          AI Milestone Generator;
+        </h3>;
+        <Button;
+          variant='outline';
+          on_click={handleGenerateMilestones}
+          disabled={is_generating || !scope || !start_date || !project_type}        >;
+          {is_generating ? (
+            <>;
+              <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />;
+              Generating...;
+            </>) : (
+            <>;
+              <Sparkles className='mr - 2 h - 4 w - 4' />;
+              Generate Milestones;
+            </>)}
+        </Button>;
+      </div>;
+      {generated_milestones.length > 0 && (
+        <Card>;
+          <CardContent className='pt - 6'>;
+            <div className='flex justify - between items - center mb - 4'>;
+              <p className='text - sm text - muted - foreground'>;
+                {generated_milestones.length} milestones generated based on your;
+                project scope;
+              </p>;
+              <Button;
+                on_click={handleAddToProject}
+                disabled={!Object.values (selected_milestones).some (Boolean)}              >;
+                Add Selected to Project;
+              </Button>;
+            </div>;
+            <Accordion type='multiple' className='w - full'>;
+              {generated_milestones.map ((milestone, index) => (
+                <AccordionItem;
+                  value={`item-${index}`}
+                  key={index}
+                  className='border p - 2 rounded - md mb - 2';
+                >;
+                  <div className='flex items - center justify - between'>;
+                    <div className='flex items - center flex - 1'>                      <input;
+                        type='checkbox';
+                        id={`milestone-${index}`}
+                        checked={selected_milestones[index] || false}
+                        on_change={() => toggleMilestoneSelection (index)}
+                        className='mr - 2 w - 4 h - 4 rounded text - primary'                      />;
+                      <AccordionTrigger className='hover:no - underline flex - 1 text - left'>;
+                        <div className='flex items - center'>;
+                          <span className='font - medium'>{milestone.title}</span>;
+                          <Badge;
+                            variant='secondary';
+                            className='ml - 2 flex items - center';
+                          >;
+                            <Sparkles className='w - 3 h - 3 mr - 1' />;
+                            AI Suggested;
+                          </Badge>;
+                        </div>;
+                      </AccordionTrigger>;
+                    </div>;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Button 
                 onClick={handleAddToProject}
                 disabled={!Object.values(selectedMilestones).some(Boolean)}
@@ -439,6 +563,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       variant="ghost"
                       size="sm"
                       onClick={(e) => {
@@ -462,6 +590,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
+<<<<<<< HEAD
                       variant="ghost"
                       size="sm"
                       onClick={(e) => {
@@ -476,6 +605,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                       <Plus className="h-4 w-4" />
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     >
                       <Plus className='h-4 w-4' />
 >>>>>>>                     </Button>
@@ -524,9 +656,12 @@ ursor/fix-website-loading-errors-and-merge-6662
               ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               ))}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -551,6 +686,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -559,6 +695,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </Accordion>;
           </CardContent>;
         </Card>;
@@ -598,6 +736,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </CardContent>;
         </Card>)}
     </div>);
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -624,3 +763,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

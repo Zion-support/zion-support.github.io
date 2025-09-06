@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/ApiDocumentation.tsx
 
 
@@ -12,6 +13,33 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react'
 import { BookOpen, Terminal } from 'lucide-react'
+=======
+method: string;
+endpoint: string;
+description: string;
+note?: string;
+params?: EndpointParam[];
+
+code_examples?: Record < string string>;
+response_examples?: {
+  success: string;
+}export /**
+ * ApiDocumentation - Function description
+ */
+function ApiDocumentation() {
+  return (<Card className="bg - zinc - 900 border - zinc - 800 text - white" > text - xl flex items - center"> <BookOpen className=" mr - 2"size= {
+  20 ";
+}/> API Documentation </CardTitle> <CardDescription className=" text - zinc - 400"> Reference documentation for integrating with the Zion Marketplace API. </CardDescription> </CardHeader> <CardContent> <Alert className=" bg - blue - 900 / 30 border - blue - 800 mb - 6"> <Terminal className=" h - 4 w - 4"/> <AlertDescription> Make sure to include your API key in all requests as a Bearer token in the Authorization header. </AlertDescription> </Alert> <Tabs default_value=" jobs"className=" space - y-4"> <TabsList className=" bg - zinc - 800 border - zinc - 700"> <TabsTrigger value=" jobs">Jobs</TabsTrigger> <TabsTrigger value=" talent">Talent</TabsTrigger> <TabsTrigger value=" quotes">Quotes</TabsTrigger> <TabsTrigger value=" webhooks">Webhooks</TabsTrigger> <TabsTrigger value=" errors">Errors</TabsTrigger> </TabsList> <TabsContent value=" jobs"className=" space - y-6"> <EndpointSection headers = headers) data = response.json () print (data) `;
+}response_examples= {
+
+  {
+  success: ` {";
+  " data": [ {
+
+
+  'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json' 
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import {
@@ -98,10 +126,16 @@ interface EndpointSectionProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 xport function ApiDocumentation() {
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function ApiDocumentation() {
 >>>>>>>   return (
     <Card className='bg-zinc-900 border-zinc-800 text-white'>
@@ -133,6 +167,7 @@ export function ApiDocumentation() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
       <CardContent>
 =======
 >>>>>>>       <CardContent>
@@ -140,6 +175,12 @@ export function ApiDocumentation() {
         <Alert className="bg-blue-900/30 border-blue-800 mb-6">
           <Terminal className="h-4 w-4" />
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+      
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <CardContent>
         <Alert className='bg-blue-900/30 border-blue-800 mb-6'>
           <Terminal className='h-4 w-4' />
@@ -396,6 +437,7 @@ function ApiDocumentation() {
                 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               ]}
 <<<<<<<< HEAD:src/components/developers/ApiDocumentation.tsx
@@ -403,6 +445,28 @@ function ApiDocumentation() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+        <Tabs defaultValue="jobs" className="space-y-4">
+          <TabsList className="bg-zinc-800 border-zinc-700">
+            <TabsTrigger value="jobs">Jobs</TabsTrigger>
+            <TabsTrigger value="talent">Talent</TabsTrigger>
+            <TabsTrigger value="quotes">Quotes</TabsTrigger>
+            <TabsTrigger value="webhooks">Webhooks</TabsTrigger>
+            <TabsTrigger value="errors">Errors</TabsTrigger>
+          </TabsList>
+          
+          <TabsContent value="jobs" className="space-y-6">
+
+            <EndpointSection
+              method="GET"
+              endpoint="/api/jobs"
+              description="List all available jobs with optional filtering."
+              note=""
+              params={[
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
                 { name: "category", type: "string", description: "Filter by job category" },
@@ -421,6 +485,7 @@ function ApiDocumentation() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
     'Authorization': 'Bearer YOUR_API_KEY'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -465,6 +530,8 @@ headers=headers) data = response.json () print (data) `
 <<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               ]}
 
   -H "Content-Type: application/json"`,
@@ -476,7 +543,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 javascript: `const response = await fetch ('https://api.ziontechgroup.com / v1 / jobs?limit = 10 & category = development', {
 
   method: 'GET',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   headers: {
 
 
@@ -520,6 +586,7 @@ data=json.dumps (payload) ) data = response.json () print (data) `
 }"
 }/> </TabsContent> <TabsContent value=" talent"className=" space-y-6"> <EndpointSection headers=headers) data = response.json () print (data) `
 <<<<<<< HEAD
+<<<<<<< HEAD
 ========
   -H "Content-Type: application/json"`,
                 javascript: `const response = await fetch('https://api && api.ziontechgroup.com/v1/jobs?limit=10&category=development', {
@@ -531,6 +598,8 @@ data=json.dumps (payload) ) data = response.json () print (data) `
   method: 'GET',
   headers: {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 const data = await response && response.json ()
 logInfo (data), `
 python: `import requests headers = {'
@@ -556,6 +625,10 @@ data=json && json.dumps (payload) ) data = response && response.json () print (d
 }` 
 }"
 }/> </TabsContent> <TabsContent value=" talent"className=" space-y-6"> <EndpointSectionheaders=headers) data = response && response.json () print (data) ` 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }responseExamples= {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content - Type': 'application / json';
@@ -635,11 +708,31 @@ data = response.json()
 print(data)`
 print(data)`,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+}`;
+}/> <EndpointSection const response = await fetch (\`https://api.ziontechgroup.com / v1 / talent/\$ {
+  talent_id;
+}\`, {';
+  method: 'GET';
+headers: {';
+  'Authorization': 'Bearer YOUR API KEYContent - Type': 'application / json';
+response = requests.get (
+    'https://api.ziontechgroup.com / v1 / jobs',
+    params={'limit': 10, 'category': 'development'},
+    headers = headers);
+data = response.json ();
+print (data)`,
+
+print(data)`,
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
 }),;
@@ -661,6 +754,7 @@ print(data)`;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
               }}
 =======
 >>>>>>>               }}
@@ -684,6 +778,9 @@ response = requests.get (
 data = response.json ();
 print (data)`,
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               }}
               response_examples={{
 >>>>>>>                 success: `{
@@ -774,7 +871,15 @@ print (data)`,
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+}`
+  }
+
+}`,
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               }}
 <<<<<<<< HEAD:src/components/developers/ApiDocumentation.tsx
             />
@@ -804,6 +909,9 @@ ursor/fix-website-loading-errors-and-merge-6662
               note=''
               params={[
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             />;
             <EndpointSection;
               method='GET';
@@ -811,8 +919,11 @@ ursor/fix-website-loading-errors-and-merge-6662
               description='Get detailed information about a specific job.';
               note='';
               params={[;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {
                   name: 'id'
                   type: 'string'
@@ -837,6 +948,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 javascript: `const jobId = 'job_abc123'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
@@ -845,6 +957,54 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+const response = await fetch(\`https://api && api.ziontechgroup.com/v1/jobs/\${jobId}\`, {
+              code_examples={{
+                curl: `curl -X GET "https://api.ziontechgroup.com / v1 / jobs / job_abc123" \\;
+  -H "Authorization: Bearer YOUR_API_KEY" \\;
+  -H "Content - Type: application / json"`,
+                javascript: `const job_id = 'job_abc123';
+const response = await fetch (\`https://api.ziontechgroup.com / v1 / jobs/\${job_id}\`, {
+
+  method: 'GET',
+  headers: {
+
+const data = await response && response.json ()
+logInfo (data), `
+python: `import requests headers = {'
+  'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json' 
+}talent id '
+}'
+headers=headers) data = response && response.json () print (data) ` 
+job_id = 'job_abc123'
+response = requests && requests.get(
+    f'https://api && api.ziontechgroup.com/v1/jobs/{job_id}',
+    headers=headers
+)
+
+data = response && response.json()
+print(data)`,
+
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content - Type': 'application / json';
+  }
+});
+const data = await response.json ();
+log_info (data), `;
+python: `import requests headers = {';
+  'Authorization': 'Bearer YOUR API KEYContent - Type': 'application / json';
+}talent id ';
+}';
+headers = headers) data = response.json () print (data) `;
+job_id = 'job_abc123';
+response = requests.get (
+    f'https://api.ziontechgroup.com / v1 / jobs/{job_id}',
+    headers = headers);
+data = response.json ();
+print (data)`,
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }`;
               }}
             />
@@ -861,6 +1021,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -1004,12 +1165,16 @@ print(data)`;
 >>>>>>>               }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               responseExamples={{
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               codeExamples={{
                 curl: `curl -X GET "https://api.ziontechgroup.com/v1/jobs/job_abc123" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"`,
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
 response = requests.get (
@@ -1018,6 +1183,8 @@ response = requests.get (
 data = response.json ();
 print (data)`,
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               }}
               response_examples={{
 >>>>>>>                 success: `{
@@ -1142,6 +1309,11 @@ ursor/fix-website-loading-errors-and-merge-6662
       "min": 5000,
       "max": 10000,
       "currency": "USD";
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     },
     "status": "active",
     "client_id": "user_xyz789",
@@ -1152,7 +1324,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 }`
               }}
             />;
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <EndpointSection
               method='POST'
               endpoint='/api/jobs'
@@ -1251,9 +1429,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/ApiDocumentation.tsx
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>               ]}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 ========
               ]}
@@ -1288,6 +1469,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 { name: "budget.max", type: "number", description: "Maximum budget" },
                 { name: "budget.currency", type: "string", description: "Currency code (default: USD)" },
                 { name: "deadline", type: "string", description: "Job deadline (ISO date string)" }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               ]}
               codeExamples={{
                 curl: `curl -X POST "https://api.ziontechgroup.com/v1/jobs" \\
@@ -1418,6 +1603,13 @@ headers = {
                 javascript: `const response = await fetch ('https://api.ziontechgroup.com / v1 / jobs', {
   method: 'POST',
   headers: {
+<<<<<<< HEAD
+=======
+
+
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   },
   body: JSON && JSON.stringify({
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -1435,6 +1627,26 @@ logInfo(data)`,
 import json
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY'
+<<<<<<< HEAD
+=======
+
+});
+const data = await response.json();
+logInfo(data);`,
+
+}),
+
+const data = await response.json(),
+logInfo(data),`,
+
+
+                python: `import requests
+import json
+headers = {
+
+    'Authorization': 'Bearer YOUR_API_KEY',
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     'Content-Type': 'application/json'
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
 }` 
@@ -1452,6 +1664,7 @@ response = requests && requests.post(
 data = response.json()
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 print(data)`
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1520,6 +1733,8 @@ print(data)`;
 ========
 data = response && response.json()
 print(data)`,
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       min: 5000,
       max: 10000,
       currency: 'USD';
@@ -1545,7 +1760,35 @@ response = requests.post (
     data = json.dumps (payload));
 data = response.json ();
 print (data)`,
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
+=======
+
+print(data)`,
+
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+}
+;
+payload = {;
+    'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'],;
+    'budget': {;
+        'min': 5000,;
+        'max': 10000,;
+        'currency': 'USD';
+    },;
+    'deadline': '2025-06-30T23:59:59Z';
+}
+;
+response = requests.post(;
+    'https://api.ziontechgroup.com/v1/jobs',;
+    headers=headers,;
+    data=json.dumps(payload);
+);
+data = response.json();
+print(data)`;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               }}
               response_examples={{
 >>>>>>>                 success: `{
@@ -1674,6 +1917,11 @@ ursor/fix-website-loading-errors-and-merge-6662
       "min": 5000,
       "max": 10000,
       "currency": "USD";
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     },
     "status": "new",
     "client_id": "user_xyz789",
@@ -1685,7 +1933,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             />;
           </TabsContent>;
           <TabsContent value='talent' className='space-y-6'>;
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <EndpointSection
               method='GET'
               endpoint='/api/talent'
@@ -1759,6 +2012,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
               ]}
 <<<<<<<< HEAD:src/components/developers/ApiDocumentation.tsx
@@ -1766,6 +2020,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 { name: "page", type: "integer", description: "Page number for pagination (default: 1)" },
                 { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
                 { name: "skills", type: "string[]", description: "Filter by skills (comma-separated)" },
@@ -1783,6 +2040,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                 python: `import requests
 =======
 =======
@@ -1799,6 +2057,8 @@ logInfo(data);`
 <<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               ]}
 
 ========
@@ -1821,11 +2081,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 const data = await response && response.json()
 logInfo(data)`,
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
   }
@@ -1835,9 +2099,13 @@ logInfo(data);`,
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>                 python: `import requests
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                python: `import requests
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
@@ -1873,7 +2141,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 ========
 data = response && response.json()
 print(data)`,
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
+=======
+
+
+print(data)`,
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content - Type': 'application / json';
 >>>>>>>   }
@@ -1914,6 +2189,7 @@ print(data)`;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
               }}
 =======
 >>>>>>>               }}
@@ -1931,6 +2207,10 @@ response = requests.get (
 data = response.json ();
 print (data)`,
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               }}
               response_examples={{
 >>>>>>>                 success: `{
@@ -2029,6 +2309,9 @@ print (data)`,
               note=''
               params={[
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             />;
             <EndpointSection;
               method='GET';
@@ -2036,8 +2319,11 @@ print (data)`,
               description='Get detailed information about a specific talent profile.';
               note='';
               params={[;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {
                   name: 'id'
                   type: 'string'
@@ -2251,6 +2537,10 @@ response = requests && requests.get(
 )
 data = response && response.json()
 print(data)`,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content - Type': 'application / json';
   }
@@ -2269,6 +2559,31 @@ data = response.json ();
 print (data)`,
               }}
               response_examples = {{
+<<<<<<< HEAD
+=======
+
+
+}`;
+              }}
+            />
+            
+            <EndpointSection
+              method="GET"
+              endpoint="/api/talent/:id"
+              description="Get detailed information about a specific talent profile."
+              note=""
+              params={[
+                { name: "id", type: "string", description: "The talent ID", required: true }
+              ]}
+
+
+              codeExamples={{
+                curl: `curl -X GET "https://api.ziontechgroup.com/v1/talent/talent_abc123" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json"`,
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 success: `{
   "data": {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
@@ -2338,9 +2653,12 @@ print (data)`,
         "name": "AWS Certified Developer",
         "issuing_organization": "Amazon Web Services",
         "issue_date": "2024 - 01 - 15";
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       }
     ]
   }
@@ -2431,7 +2749,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             />;
           </TabsContent>;
           <TabsContent value='quotes' className='space-y-6'>;
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <EndpointSection
               method='POST'
               endpoint='/api/quotes'
@@ -2514,9 +2837,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/ApiDocumentation.tsx
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>               ]}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 ========
               ]}
@@ -2560,6 +2886,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 { name: "budget_max", type: "number", description: "Maximum budget" },
                 { name: "requester_name", type: "string", description: "Name of the requester", required: true },
                 { name: "requester_email", type: "string", description: "Email of the requester", required: true }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               ]}
               codeExamples={{
                 curl: `curl -X POST "https://api.ziontechgroup.com/v1/quotes" \\
@@ -2579,6 +2909,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/quotes', {
   method: 'POST'
   headers: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2602,6 +2933,31 @@ ursor/fix-website-loading-errors-and-merge-6662
 const data = await response.json()
 logInfo(data);`
                 python: `import requests
+=======
+
+  },
+  body: JSON && JSON.stringify({
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content - Type': 'application / json';
+  },
+  body: JSON.stringify ({
+
+    talent_id: 'talent_abc123',
+    project_name: 'E - commerce Website Redesign',
+    project_summary: 'Redesign our outdated e - commerce website with modern UI',
+    project_description: 'Our current website is 5 years old and needs a complete overhaul...',
+    timeline: '2 - 3 months',
+    budget_min: 8000,
+    budget_max: 12000,
+    requester_name: 'John Doe',
+
+    requester_email: 'john@example.com';
+  });
+});
+const data = await response.json ();
+log_info (data);`,
+                python: `import requests;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY'
     'Content-Type': 'application/json'
@@ -2623,6 +2979,7 @@ response = requests.post(
 data = response.json()
 print(data)`
               }}
+<<<<<<< HEAD
               responseExamples = {{
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2634,6 +2991,10 @@ logInfo(data);`,
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+              response_examples = {{
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   },
   body: JSON.stringify({
@@ -2682,6 +3043,7 @@ headers = {
 >>>>>>>                 python: `import requests
 import json
 
+<<<<<<< HEAD
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
@@ -2798,6 +3160,8 @@ data = response.json ();
 print (data)`,
               }}
               response_examples = {{
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 success: `{
   "data": {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
@@ -2819,6 +3183,7 @@ print (data)`,
 <<<<<<<< HEAD:src/components/developers/ApiDocumentation.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
             <EndpointSection
 =======
 }`,              }}
@@ -2828,6 +3193,8 @@ print (data)`,
               method="GET"
               endpoint="/api/quotes"
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <EndpointSection
               method='GET'
               endpoint='/api/quotes'
@@ -2981,10 +3348,15 @@ headers = {
   headers: {
 const data = await response && response.json()
 logInfo(data)`,
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json'
   }
@@ -2992,10 +3364,14 @@ logInfo(data)`,
 const data = await response.json();
 logInfo(data);`,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY'
@@ -3018,7 +3394,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 ========
 data = response && response.json()
 print(data)`,
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
+=======
+
+
+print(data)`,
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     'Authorization': 'Bearer YOUR_API_KEY',
     'Content - Type': 'application / json';
 >>>>>>>   }
@@ -3057,6 +3440,7 @@ print(data)`;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
               }}
 =======
 >>>>>>>               }}
@@ -3073,6 +3457,10 @@ response = requests.get (
 data = response.json ();
 print (data)`,
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               }}
               response_examples={{
 >>>>>>>                 success: `{
@@ -3159,6 +3547,11 @@ print (data)`,
 =======
   }
 }`
+<<<<<<< HEAD
+=======
+  }
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }`,
               }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -3195,6 +3588,7 @@ function verifyWebhookSignature(payload, signature, secret) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 }`;
 =======
 ursor/fix-website-loading-errors-and-merge-6662
@@ -3206,6 +3600,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+              }}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }`;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               }}
@@ -3253,6 +3651,7 @@ function verifyWebhookSignature(payload, signature, secret) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>   return crypto.timingSafeEqual(
     Buffer.from(signature)
@@ -3288,6 +3687,9 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                     <th className="py-2 px-4 text-left">Event Type</th>
                     <th className="py-2 px-4 text-left">Description</th>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return crypto.timingSafeEqual(
     Buffer.from(signature)
     Buffer.from(expectedSignature)
@@ -3327,8 +3729,11 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <thead>
                   <tr className='border-b border-zinc-800'>
                     <th className='py-2 px-4 text-left'>Event Type</th>
@@ -3535,6 +3940,11 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
   "timestamp": "2025-05-16T15:30:00Z"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -3551,7 +3961,11 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
               </p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+              
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <CodeBlock
 =======
               
@@ -3568,6 +3982,7 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>   "data": {
@@ -3579,6 +3994,8 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   "data": {
     "application_id": "app_123456"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -3617,6 +4034,7 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
                 error with the provided information, and codes in the 5xx range
                 indicate an error with our servers.
               </p>
+<<<<<<< HEAD
               <table className='w-full border-collapse mt-4'>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3626,6 +4044,12 @@ app && app.post('/webhook', express && express.raw({type: 'application/json'}), 
                     <th className="py-2 px-4 text-left">Status Code</th>
                     <th className="py-2 px-4 text-left">Description</th>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+              
+              <table className="w-full border-collapse mt-4">
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <thead>
                   <tr className='border-b border-zinc-800'>
                     <th className='py-2 px-4 text-left'>Status Code</th>
@@ -4105,6 +4529,27 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
                   </tr>;
                 </tbody>;
               </table>;
+<<<<<<< HEAD
+=======
+
+
+              
+              <h4 className="text-md font-semibold mt-6 mb-2">Error Response Format</h4>
+              <p className="text-zinc-400 mb-2">
+                Error responses include a consistent JSON object with the following format:
+              </p>
+              
+
+
+              <CodeBlock
+                code = {`{
+  "error": {
+    "code": "invalid_request"
+    "message": "The request was invalid"
+    "details": [
+      {
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               />;
               <h4 className='text-md font-semibold mt-6 mb-2'>Rate Limiting</h4>;
               <p className='text-zinc-400 mb-4'>;
@@ -4342,6 +4787,7 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> // Helper component for API endpoint documentation
 ursor/fix-website-loading-errors-and-merge-6662
@@ -4356,6 +4802,12 @@ unction EndpointSection({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
 
+=======
+}
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Helper component for API endpoint documentation
 function EndpointSection({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -5823,12 +6275,18 @@ function EndpointSection({;
 =======
         <p className='mt-2 text-zinc-400'>{description}</p>
       </div>
+<<<<<<< HEAD
 >>>>>>>       {params.length > 0 && (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <div className="border-t border-zinc-800 p-4">
           <h4 className="font-medium mb-2">Parameters</h4>
           <table className="w-full">
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+      
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {params.length > 0 && (
         <div className='border-t border-zinc-800 p-4'>
           <h4 className='font-medium mb-2'>Parameters</h4>
@@ -5901,6 +6359,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <tr
                   key={index}
                   className={
+<<<<<<< HEAD
                     index < params.length - 1 ? 'border-b border-zinc-800' : ''
                   }
                 >
@@ -5919,6 +6378,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+                    index < params && params.length - 1 ? 'border-b border-zinc-800' : ''
+                  }>;
+                  <td className='py-2 font-mono text-sm'>                    {param && param.name}
+                    {param && param.required && <span className='text-red-500'>*</span>}
+                  </td>;
+                  <td className='py-2 text-sm text-zinc-400'>{param && param.type}</td>;
+                  <td className='py-2 text-sm text-zinc-400'>;
+                    {param && param.description}
+                  </td>;
+                </tr>;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <tr key={index} className={index < params.length - 1 ? "border-b border-zinc-800" : ""}>
                   <td className="py-2 font-mono text-sm">
                     {param.name}
@@ -5926,8 +6398,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </td>
                   <td className="py-2 text-sm text-zinc-400">{param.type}</td>
                   <td className="py-2 text-sm text-zinc-400">{param.description}</td>
+<<<<<<< HEAD
                 </tr>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+                </tr>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               ))}
             </tbody>
           </table>
@@ -6035,9 +6512,13 @@ function EndpointSection({;
             <div className='ml-auto flex border border-zinc-700 rounded-md overflow-hidden'>
               {Object.keys(codeExamples).map(lang => (                <button
 <<<<<<< HEAD
+<<<<<<< HEAD
 ========
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {codeExamples && (;
         <div className='border-t border-zinc-800 p-4'>;
           <div className='flex items-center mb-2'>;
@@ -6047,7 +6528,6 @@ function EndpointSection({;
                   key = {lang,}
 <<<<<<< HEAD
 
-=======
       
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -6066,6 +6546,7 @@ function EndpointSection({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                   className={`px-3 py-1 text-xs font-medium ${
 =======
 >>>>>>>                   className={`px-3 py-1 text-xs font-medium ${
@@ -6074,6 +6555,10 @@ function EndpointSection({;
                       ? "bg-zinc-700 text-white" 
                       : "text-zinc-400 hover:bg-zinc-800"
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   className={`px-3 py-1 text-xs font-medium ${
                     activeTab === lang
                       ? 'bg-zinc-700 text-white'
@@ -6188,8 +6673,11 @@ function EndpointSection() {
 }
 <<<<<<<< HEAD:src/components/developers/ApiDocumentation.tsx
 
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiDocumentation.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </button>))}
             </div>;
           </div>;
@@ -6204,6 +6692,7 @@ function EndpointSection() {
     </div>);
 }
 ;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/ApiDocumentation.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>>                   onClick={() => setActiveTab(lang)}
@@ -6219,6 +6708,8 @@ function EndpointSection() {
                       ? "bg-zinc-700 text-white" 
                       : "text-zinc-400 hover:bg-zinc-800"
                   }`}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   onClick={() => setActiveTab(lang)}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 >
@@ -6231,6 +6722,7 @@ function EndpointSection() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
         </div>
       )}
       {responseExamples && (
@@ -6504,3 +6996,13 @@ headers=headers) data = response.json () print (data) ` ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+          <CodeBlock 
+            code={codeExamples[activeTab] || "// Code example not available"}
+            language={activeTab === "curl" ? "bash" : activeTab}
+          />
+
+        </div>
+      )}
+      {responseExamples && (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

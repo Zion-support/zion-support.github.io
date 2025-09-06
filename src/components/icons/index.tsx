@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/icons/index.tsx
 
 
@@ -11,6 +12,8 @@
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { SVGProps } from 'react'
 import { logWarn } from '@/utils/productionLogger'
 import {
@@ -616,11 +619,15 @@ export type IconProps = SVGProps<SVGSVGElement> & {
   className?: string
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { SVGProps } from 'react',
 import { logWarn } from '@/utils/productionLogger',
 import { Home as LucideHome, Bot as LucideBot, Sparkles as LucideSparkles, User as LucideUser, ArrowRight as LucideArrowRight, BarChart3 as LucideBarChart3, Briefcase as LucideBriefcase, Monitor as LucideMonitor, Server as LucideServer, Bell as LucideBell, Calendar as LucideCalendar, Check as LucideCheck, ChevronDown as LucideChevronDown, ChevronUp as LucideChevronUp, ChevronLeft as LucideChevronLeft, ChevronRight as LucideChevronRight, Plus as LucidePlus, Minus as LucideMinus, X as LucideX, Edit as LucideEdit, Trash as LucideTrash, Settings as LucideSettings, Search as LucideSearch, Filter as LucideFilter, UploadCloud as LucideUploadCloud, DownloadCloud as LucideDownloadCloud, Copy as LucideCopy, ExternalLink as LucideExternalLink, Link as LucideLink, MessageSquare as LucideMessageSquare, Users as LucideUsers, FileText as LucideFileText, Image as LucideImage, AlertTriangle as LucideAlertTriangle, Info as LucideInfo, Mail as LucideMail, Lock as LucideLock, LogOut as LucideLogOut, LogIn as LucideLogIn, ShoppingCart as LucideShoppingCart, CreditCard as LucideCreditCard, DollarSign as LucideDollarSign, Percent as LucidePercent, Award as LucideAward, Activity as LucideActivity, Airplay as LucideAirplay, AlignCenter as LucideAlignCenter, AlignJustify as LucideAlignJustify, AlignLeft as LucideAlignLeft, AlignRight as LucideAlignRight, Anchor as LucideAnchor, Aperture as LucideAperture, Archive as LucideArchive, ArrowDownCircle as LucideArrowDownCircle, ArrowDownLeft as LucideArrowDownLeft, ArrowDownRight as LucideArrowDownRight, ArrowLeftCircle as LucideArrowLeftCircle, ArrowRightCircle as LucideArrowRightCircle, ArrowUpCircle as LucideArrowUpCircle, ArrowUpLeft as LucideArrowUpLeft, ArrowUpRight as LucideArrowUpRight, AtSign as LucideAtSign, BarChart as LucideBarChart, BarChart2 as LucideBarChart2, BatteryCharging as LucideBatteryCharging, Battery as LucideBattery, BellOff as LucideBellOff, Bluetooth as LucideBluetooth, Bold as LucideBold, BookOpen as LucideBookOpen, Book as LucideBook, Bookmark as LucideBookmark, Box as LucideBox, CameraOff as LucideCameraOff, Camera as LucideCamera, Cast as LucideCast, CheckCircle as LucideCheckCircle, CheckSquare as LucideCheckSquare, ChevronDownSquare as LucideChevronDownSquare, ChevronLeftSquare as LucideChevronLeftSquare, ChevronRightSquare as LucideChevronRightSquare, ChevronUpSquare as LucideChevronUpSquare, ChevronsDown as LucideChevronsDown, ChevronsLeft as LucideChevronsLeft, ChevronsRight as LucideChevronsRight, ChevronsUp as LucideChevronsUp, Chrome as LucideChrome, Circle as LucideCircle, Clipboard as LucideClipboard, Clock as LucideClock, CloudDrizzle as LucideCloudDrizzle, CloudLightning as LucideCloudLightning, CloudOff as LucideCloudOff, CloudRain as LucideCloudRain, CloudSnow as LucideCloudSnow, Cloud as LucideCloud, Code as LucideCode, Codepen as LucideCodepen, Codesandbox as LucideCodesandbox, Coffee as LucideCoffee, Columns as LucideColumns, Command as LucideCommand, Compass as LucideCompass, Copyleft as LucideCopyleft, Copyright as LucideCopyright, CornerDownLeft as LucideCornerDownLeft, CornerDownRight as LucideCornerDownRight, CornerLeftDown as LucideCornerLeftDown, CornerLeftUp as LucideCornerLeftUp, CornerRightDown as LucideCornerRightDown, CornerRightUp as LucideCornerRightUp, CornerUpLeft as LucideCornerUpLeft, CornerUpRight as LucideCornerUpRight, Cpu as LucideCpu, Crop as LucideCrop, Crosshair as LucideCrosshair, Database as LucideDatabase, Delete as LucideDelete, Disc as LucideDisc, DivideCircle as LucideDivideCircle, DivideSquare as LucideDivideSquare, Divide as LucideDivide, Download as LucideDownload, Dribbble as LucideDribbble, Droplet as LucideDroplet, Edit2 as LucideEdit2, Edit3 as LucideEdit3, EyeOff as LucideEyeOff, Eye as LucideEye, Facebook as LucideFacebook, FastForward as LucideFastForward, Feather as LucideFeather, Figma as LucideFigma, FileMinus as LucideFileMinus, FilePlus as LucideFilePlus, File as LucideFile, Film as LucideFilm, Flag as LucideFlag, FolderMinus as LucideFolderMinus, FolderPlus as LucideFolderPlus, Folder as LucideFolder, Framer as LucideFramer, Frown as LucideFrown, Gift as LucideGift, GitBranch as LucideGitBranch, GitCommit as LucideGitCommit, GitMerge as LucideGitMerge, GitPullRequest as LucideGitPullRequest, Github as LucideGithub, Gitlab as LucideGitlab, Globe as LucideGlobe, Grid as LucideGrid, HardDrive as LucideHardDrive, Hash as LucideHash, Headphones as LucideHeadphones, Heart as LucideHeart, HelpCircle as LucideHelpCircle, Hexagon as LucideHexagon, Inbox as LucideInbox, Instagram as LucideInstagram, Italic as LucideItalic, Key as LucideKey, Layers as LucideLayers, Layout as LucideLayout, LifeBuoy as LucideLifeBuoy, Link2 as LucideLink2, Linkedin as LucideLinkedin, List as LucideList, Loader as LucideLoader, Loader2 as LucideLoader2, MapPin as LucideMapPin, Map as LucideMap, Maximize2 as LucideMaximize2, Maximize as LucideMaximize, Meh as LucideMeh, Menu as LucideMenu, MessageCircle as LucideMessageCircle, MicOff as LucideMicOff, Mic as LucideMic, Minimize2 as LucideMinimize2, Minimize as LucideMinimize, Moon as LucideMoon, MoreHorizontal as LucideMoreHorizontal, MoreVertical as LucideMoreVertical, MousePointer as LucideMousePointer, Move as LucideMove, Music as LucideMusic, Megaphone as LucideMegaphone, Navigation2 as LucideNavigation2, Navigation as LucideNavigation, Network as LucideNetwork, Octagon as LucideOctagon, Package as LucidePackage, Paperclip as LucidePaperclip, PauseCircle as LucidePauseCircle, Pause as LucidePause, PenTool as LucidePenTool, PhoneCall as LucidePhoneCall, PhoneForwarded as LucidePhoneForwarded, PhoneIncoming as LucidePhoneIncoming, PhoneMissed as LucidePhoneMissed, PhoneOff as LucidePhoneOff, PhoneOutgoing as LucidePhoneOutgoing, Phone as LucidePhone, PieChart as LucidePieChart, PlayCircle as LucidePlayCircle, Play as LucidePlay, Pocket as LucidePocket, Power as LucidePower, PowerOff as LucidePowerOff, Printer as LucidePrinter, Radio as LucideRadio, RefreshCcw as LucideRefreshCcw, RefreshCw as LucideRefreshCw, Repeat as LucideRepeat, Rewind as LucideRewind, RotateCcw as LucideRotateCcw, RotateCw as LucideRotateCw, Recycle as LucideRecycle, Rss as LucideRss, Save as LucideSave, Scissors as LucideScissors, ScreenShare as LucideScreenShare, ScreenShareOff as LucideScreenShareOff, Send as LucideSend, Share2 as LucideShare2, Share as LucideShare, ShieldOff as LucideShieldOff, Shield as LucideShield, ShoppingBag as LucideShoppingBag, Shuffle as LucideShuffle, Sidebar as LucideSidebar, SkipBack as LucideSkipBack, SkipForward as LucideSkipForward, Slack as LucideSlack, Slash as LucideSlash, Sliders as LucideSliders, Smartphone as LucideSmartphone, Smile as LucideSmile, Speaker as LucideSpeaker, Square as LucideSquare, Star as LucideStar, StopCircle as LucideStopCircle, Sun as LucideSun, Sunrise as LucideSunrise, Sunset as LucideSunset, Table as LucideTable, Tablet as LucideTablet, Tag as LucideTag, Target as LucideTarget, Terminal as LucideTerminal, ThumbsDown as LucideThumbsDown, ThumbsUp as LucideThumbsUp, ToggleLeft as LucideToggleLeft, ToggleRight as LucideToggleRight, Trash2 as LucideTrash2, Trello as LucideTrello, TrendingDown as LucideTrendingDown, TrendingUp as LucideTrendingUp, Triangle as LucideTriangle, Truck as LucideTruck, Tv as LucideTv, Twitch as LucideTwitch, Twitter as LucideTwitter, Type as LucideType, Umbrella as LucideUmbrella, Underline as LucideUnderline, Unlock as LucideUnlock, Upload as LucideUpload, UserCheck as LucideUserCheck, UserMinus as LucideUserMinus, UserPlus as LucideUserPlus, UserX as LucideUserX, VideoOff as LucideVideoOff, Video as LucideVideo, Voicemail as LucideVoicemail, Wallet as LucideWallet, Volume1 as LucideVolume1, Volume2 as LucideVolume2, VolumeX as LucideVolumeX, Volume as LucideVolume, Watch as LucideWatch, WifiOff as LucideWifiOff, Wifi as LucideWifi, Wind as LucideWind, XCircle as LucideXCircle, XOctagon as LucideXOctagon, XSquare as LucideXSquare, Youtube as LucideYoutube, ZapOff as LucideZapOff, Zap as LucideZap, ZoomIn as LucideZoomIn, ZoomOut as LucideZoomOut } from 'lucide-react'
@@ -934,11 +941,14 @@ export const ZoomOut = LucideZoomOut,
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+<<<<<<< HEAD
 >>>>>>> import React, { SVGProps } from 'react'
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import React, { SVGProps } from 'react'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1879,10 +1889,14 @@ const iconMap = {
 <<<<<<< HEAD
   'zoom-out': LucideZoomOut},
 
+<<<<<<< HEAD
   'zoom-out': LucideZoomOut,
 }
 xport const Icon: React.FC<IconProps> = ({
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Create a map of icon names to component references
 const iconMap = {
   home: LucideHome
@@ -2212,6 +2226,7 @@ export const Icon: React.FC<IconProps> = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -2239,6 +2254,10 @@ export const Icons = iconMap, // Export the map if you need to refer to availabl
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const LucideIconComponent = iconMap[name],
 
 
@@ -3185,6 +3204,7 @@ export const Icon: React.FC<IconProps> = ({;
 };
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 ========
   }
@@ -3210,6 +3230,10 @@ export const Icons = iconMap, // Export the map if you need to refer to availabl
 ========
 export default Icon, // Default export the Icon component;
 export const Icons = iconMap, // Export the map if you need to refer to available icons;
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { SVGProps } from 'react';
 import { log_warn } from '@/utils / production_logger';
 import {
@@ -4133,6 +4157,7 @@ export default Icon, // Default export the Icon component;
 export const Icons = icon_map, // Export the map if you need to refer to available icons;
 export default Icon, // Default export the Icon component;
 export const Icons = icon_map, // Export the map if you need to refer to available icons;
+<<<<<<< HEAD
 =======
 import React, { SVGProps } from 'react',;
 import { logWarn } from '@/utils/productionLogger',;
@@ -5114,3 +5139,7 @@ export const Icons = iconMap, // Export the map if you need to refer to availabl
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+export default Icon, // Default export the Icon component;
+export const Icons = iconMap, // Export the map if you need to refer to available icons;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

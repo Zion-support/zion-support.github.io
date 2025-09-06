@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
@@ -17,6 +18,15 @@ interface ResultsHeaderProps {
 <<<<<<< HEAD
 xport function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import { Loader2 } from 'lucide-react';
+interface ResultsHeaderProps {;
+  isLoading: boolean;
+  resultCount: number;
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className="flex items-center mb-6 text-zion-slate-light">
       {isLoading ? (
@@ -48,10 +58,18 @@ xport function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
 }
 
 }
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+          <span>Loading talents...</span>
+        </div>
+      ) : (
+        <span>
+          {resultCount === 0 ? (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { Loader2 } from 'lucide-react';
 interface ResultsHeaderProps {;
@@ -102,6 +120,7 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   return (
     <div className="flex items-center mb-6 text-zion-slate-light">
@@ -137,6 +156,8 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             "No talents found. Try adjusting your filters."
           ) : (
             `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`
@@ -197,6 +218,7 @@ function ResultsHeader() {
     </div>));
 }
 
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 
@@ -233,3 +255,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

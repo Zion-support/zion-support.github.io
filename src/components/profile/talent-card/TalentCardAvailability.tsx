@@ -1,6 +1,30 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+interface TalentCardAvailabilityProps {
+  availability_type: string;
+}
+
+export /**
+ * TalentCardAvailability - Function description
+ */
+function TalentCardAvailability() {
+  // Format availability status;
+  const getAvailabilityColor = (status: string) =>: any {    switch (status) {
+      case 'full - time':;
+        return 'bg - green - 500 / 20 text - green - 400';
+      case 'part - time':;
+        return 'bg - yellow - 500 / 20 text - yellow - 400';
+      case 'project - based':;
+        return 'bg - blue - 500 / 20 text - blue - 400',
+      default:;
+        return 'bg - gray - 500 / 20 text - gray - 400';
+
+    }
+  } return 'bg - gray - 500 / 20 text - gray - 400';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
 import { Clock } from 'lucide-react'
@@ -70,9 +94,13 @@ interface TalentCardAvailabilityProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>>   }; return 'bg-gray-500/20 text-gray-400'
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  }; return 'bg-gray-500/20 text-gray-400'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   }
 
@@ -117,6 +145,7 @@ interface TalentCardAvailabilityProps {
       <Clock className='h-3 w-3' />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
@@ -125,6 +154,10 @@ interface TalentCardAvailabilityProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import React from 'react';
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react",;
 
 =======
@@ -149,9 +182,12 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       case 'part-time':;
 <<<<<<< HEAD
         return 'bg-yellow-500/20 text-yellow-400';
+<<<<<<< HEAD
 >>>>>>>       case 'project-based':;
 =======
         return 'bg-yellow-500/20 text-yellow-400',;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       case 'project-based':;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         return 'bg-blue-500/20 text-blue-400',;
@@ -161,7 +197,12 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
 <<<<<<< HEAD
   };        return 'bg-gray-500/20 text-gray-400';
 
+<<<<<<< HEAD
 >>>>>>>     }
+=======
+
+    }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   };
 
   const getAvailabilityLabel = (status: string,) => {;
@@ -185,6 +226,10 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const getAvailabilityLabel = (status: string, ) =>: any {
     switch (status) {
       case 'full - time':;
@@ -201,6 +246,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       <span>{getAvailabilityLabel (availability_type)}</span>;
     </div>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
@@ -228,10 +274,18 @@ ursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
       <Clock className="h-3 w-3" />
+=======
+  return (
+    <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
+      <Clock className="h-3 w-3" />
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
   )
 }
+<<<<<<< HEAD
 ;
 }
 }
@@ -242,3 +296,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

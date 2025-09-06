@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -18,6 +19,8 @@ import React from 'react'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { CheckCircle } from 'lucide-react'
 
 import {
@@ -41,6 +44,7 @@ export function VerifiedBadge({
     sm: 'h-3.5 w-3.5'
     md: 'h-4 w-4'
     lg: 'h-5 w-5'
+<<<<<<< HEAD
   }
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 interface VerifiedBadgeProps {
@@ -58,6 +62,16 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
   }
 
 <<<<<<< HEAD
+=======
+import React from 'react';
+import { CheckCircle } from 'lucide-react';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components / ui / tooltip';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface VerifiedBadgeProps {
   verified: boolean;
   size?: 'sm' | 'md' | 'lg';
@@ -75,7 +89,6 @@ if (return null) {
     sm: 'h - 3.5 w - 3.5',
     md: 'h - 4 w - 4',
     lg: 'h - 5 w - 5',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
 interface VerifiedBadgeProps {
@@ -103,7 +116,6 @@ if (return null) {
     sm: 'h - 3.5 w - 3.5',
     md: 'h - 4 w - 4',
     lg: 'h - 5 w - 5';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
 
@@ -111,6 +123,7 @@ if (return null) {
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
@@ -133,6 +146,8 @@ interface VerifiedBadgeProps {;
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent' }: VerifiedBadgeProps) {
   if (!verified) return null,
   
@@ -151,6 +166,7 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
 
 =======
   
+<<<<<<< HEAD
 >>>>>>>   return (
     <TooltipProvider>
       <Tooltip>
@@ -158,10 +174,15 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
           <span className='inline-flex text-blue-500'>            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />          <span className="inline-flex text-blue-500">
 >>>>>>>             <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
@@ -174,6 +195,8 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
         <TooltipTrigger asChild>
           <span className='inline-flex text-blue-500'>            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />          <span className="inline-flex text-blue-500">
           <span className="inline-flex text-blue-500">
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
           </span>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -211,6 +234,7 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
     </TooltipProvider>
   )
 }
+<<<<<<< HEAD
 }
 ;
 <<<<<<< HEAD
@@ -222,3 +246,38 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified talent' }: VerifiedBadgeProps) {;
+  if (!verified) return null;
+
+  const sizeClasses = {;
+    sm: 'h-3 && 3.5 w-3 && 3.5',;
+    md: 'h-4 w-4',;
+    lg: 'h-5 w-5';
+  };
+
+  return (
+    <TooltipProvider>;
+      <Tooltip>;
+        <TooltipTrigger asChild>;
+          <span className='inline-flex text-blue-500'>            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />          <span className="inline-flex text-blue-500">;
+            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />;
+    <TooltipProvider>;
+      <Tooltip>;
+        <TooltipTrigger as_child>;
+          <span className='inline - flex text - blue - 500'>            <CheckCircle className={`${size_classes[size]} fill - blue - 100`} />          <span className="inline - flex text - blue - 500">;
+            <CheckCircle className={`${size_classes[size]} fill - blue - 100`} />;
+          </span>;
+        </TooltipTrigger>;
+        <TooltipContent>;
+          <p>{label}</p>;
+        </TooltipContent>;
+      </Tooltip>;
+
+  );
+}
+
+    </TooltipProvider>);
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -36,6 +37,15 @@ interface ReviewFormValues {
   timeliness_rating?: number
   would_work_again?: boolean
   is_anonymous?: boolean
+=======
+rating?: number;
+  review_text?: string;
+  communication_rating?: number;
+  quality_rating?: number;
+  timeliness_rating?: number;
+  would_work_again?: boolean;
+  is_anonymous?: boolean;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 
 interface ReviewFormProps {
@@ -125,6 +135,7 @@ interface ReviewFormProps {
 
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 
@@ -457,3 +468,13 @@ export function ReviewForm({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+interface ReviewFormProps {
+  project_id: string,
+  reviewee_id: string,
+  reviewee_name: string,
+  on_submit: (data: any) => Promise < boolean>,
+  }
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

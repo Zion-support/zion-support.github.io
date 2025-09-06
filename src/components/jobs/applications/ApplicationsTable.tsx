@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -150,6 +151,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 >>>>>>> import { format } from 'date-fns'
+=======
+import { format } from 'date-fns'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { JobApplication } from '@/types/jobs'
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
 import { ClickableBadge } from '@/components/ui/clickable-badge'
@@ -168,7 +172,11 @@ import React, { useState } from 'react'; // Import React and useState
 import { toast } from '@/hooks/use-toast'
 import Image from 'next/image'; // Import next/image
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> import { format } from 'date-fns';
+=======
+import { format } from 'date-fns';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { JobApplication } from '@/types/jobs';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed;
 import { ClickableBadge } from '@/components/ui/clickable-badge';
@@ -186,9 +194,12 @@ import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmat
 import React, { useState } from 'react'; // Import React and useState;
 import { toast } from '@/hooks/use-toast';
 import Image from 'next/image'; // Import next/image;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 interface ApplicationsTableProps {
   applications: JobApplication[];
@@ -306,6 +317,7 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
         />
       ) : (
         <User className="h-4 w-4" />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       )}
     </AvatarPrimitive>
@@ -336,6 +348,137 @@ export function ApplicationsTable({
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
+=======
+      )}
+
+  application: JobApplication;
+}) =>: any {
+  const [avatar_error, setAvatarError] = useState (false);
+  const talent_name = application.talent_profile?.full_name || 'Candidate';
+interface ApplicationsTableProps {
+  applications: JobApplication[],
+  processing_id: string | null,
+  onViewApplication: (application_id: string, ) => Promise < void>,
+  onStatusChange: (application_id: string, new_status: string, ) => Promise < void>,
+  onViewScore: (application: JobApplication, ) => void;
+}
+// Sub - component for avatar to handle its own error state;
+const ApplicationAvatar = ({ application }: { application: JobApplication }, ) =>: any {
+  const [avatar_error, setAvatarError] = useState (false),
+  const talent_name = application.talent_profile?.full_name || "Candidate",
+  return (
+    <AvatarPrimitive className='h - 8 w - 8'>;
+      {' '}
+      {/* Using Renamed AvatarPrimitive */}
+      {application.talent_profile?.profile_picture_url && !avatar_error ? (
+        <Image;
+          src = {application.talent_profile.profile_picture_url, }
+          alt = {talent_name, }
+          width={32} // for h - 8 w - 8;
+          height={32} // for h - 8 w - 8;
+          className='rounded - full object - cover';
+          on_error={() => setAvatarError (true)}
+          priority={false}        />) : (
+        <User className='h - 4 w - 4' />)}
+    </AvatarPrimitive>);
+}
+export /**
+ * ApplicationsTable - Function description
+ */
+function ApplicationsTable() {
+  const [hireModalOpen, setHireModalOpen] = useState (false);
+  const [selected_application, setSelectedApplication] =;
+    useState < JobApplication | null>(null);
+  const handleHireClick = (application: JobApplication) =>: any {
+    setSelectedApplication (application);
+    setHireModalOpen (true);
+  }
+  const handleHireConfirmed = () =>: any {
+    toast ({
+      title: 'Hiring process initiated',
+      description: 'Offer has been sent to the talent.',
+    });
+
+  }
+    </AvatarPrimitive>;
+  );
+};
+
+export function ApplicationsTable(): any ({;
+  applications,;
+  processingId,;
+  onViewApplication,;
+  onStatusChange,;
+  onViewScore,;
+}: ApplicationsTableProps) {;
+  const [hireModalOpen, setHireModalOpen] = useState(false);
+  const [selectedApplication, setSelectedApplication] =;
+    useState<JobApplication | null>(null);
+
+  const handleHireClick = (application: JobApplication) => {;
+    setSelectedApplication(application);
+    setHireModalOpen(true);
+  };
+  const handleHireConfirmed = () => {;
+    toast({;
+      title: 'Hiring process initiated',;
+      description: 'Offer has been sent to the talent.',;
+    });
+  };
+
+  return (
+    <>;
+
+                    <div>;
+                      <div className='font-medium'>;
+                        {application && application.talent_profile?.full_name || 'Candidate'}
+                      </div>;
+                      <div className='text-xs text-muted-foreground mt-0 && 0.5'>;
+                        {application && application.talent_profile?.professional_title ||;
+
+      <div className='rounded - md border'>;
+        <Table>;
+          <TableHeader>;
+            <TableRow>;
+              <TableHead > Candidate</TableHead>;
+              <TableHead className='hidden md:table - cell'>Applied</TableHead>;
+              <TableHead className='hidden md:table - cell'>Status</TableHead>;
+              <TableHead className='hidden lg:table - cell'>;
+                Match Score;
+              </TableHead>;
+              <TableHead className='text - right'>Actions</TableHead>;
+            </TableRow>;
+          </TableHeader>;
+          <TableBody>;
+            {applications.map (application => (              <TableRow key={application.id}>;
+                <TableCell>;
+                  <div className='flex items - center gap - 3'>;
+                    <ApplicationAvatar application={application} />{' '}
+                    {/* Use sub - component */}
+                    <div>;
+                      <div className='font - medium'>;
+                        {application.talent_profile?.full_name || 'Candidate'}
+                      </div>;
+                      <div className='text - xs text - muted - foreground mt - 0.5'>;
+                        {application.talent_profile?.professional_title ||;
+                          'Applicant'}
+                      </div>;
+                    </div>;
+                  </div>;
+                </TableCell>;
+
+          </TableBody>;
+        </Table>;
+      </div>;
+
+
+      <HireConfirmationModal
+        isOpen = {hireModalOpen,}
+        onClose = {() => setHireModalOpen(false),}
+        application = {selectedApplication |undefined,}
+        onConfirm = {handleHireConfirmed,}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
@@ -347,6 +490,20 @@ export function ApplicationsTable({
   applications,
   processingId,
   onViewApplication,
+<<<<<<< HEAD
+=======
+},
+
+export function ApplicationsTable({ 
+  applications, 
+  processingId, 
+  onViewApplication, 
+
+  onStatusChange,
+  onViewScore
+}: ApplicationsTableProps) {
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 },
 
 export function ApplicationsTable({ 
@@ -356,6 +513,7 @@ export function ApplicationsTable({
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
+<<<<<<< HEAD
   const [hireModalOpen, setHireModalOpen] = useState(false)
   const [selectedApplication, setSelectedApplication] =
     useState<JobApplication | null>(null)
@@ -375,6 +533,8 @@ export function ApplicationsTable({
 <<<<<<< HEAD
 =======
   }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -426,6 +586,12 @@ export function ApplicationsTable({
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+            {applications.map((application) => (
+              <TableRow key={application.id}>
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <TableCell>
                   <div className="flex items-center gap-3">
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
@@ -525,6 +691,10 @@ export function ApplicationsTable({
                       className="cursor-pointer"
                       onClick={() => onViewScore(application)}
                     >
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       {application.match_score}%
                     </ClickableBadge>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -593,6 +763,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 }</AvatarPrimitive>)
 }h-4 w-4"/>) ;
 }</AvatarPrimitive>) ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 };"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
@@ -622,6 +796,7 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
   handleHireConfirmed
 }/> </>)
 }'"}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -689,6 +864,10 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }) => 
         <User className="h-4 w-4" />;
       )}
     </AvatarPrimitive>;
+=======
+      />;
+    </>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   );
 <<<<<<< HEAD
 
@@ -826,7 +1005,11 @@ return (<> <div className=" rounded - md border"> hidden md:table - cell" >Appli
 }onStatusChange= {
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   onStatusChange;
 }/> </div> </TableCell> </TableRow>) );
 }</TableBody> </Table> </div> <HireConfirmationModal is_open= {
@@ -839,13 +1022,17 @@ return (<> <div className=" rounded - md border"> hidden md:table - cell" >Appli
   handleHireConfirmed;
 }/> </>);
 }'"}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>>     </>;
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -864,3 +1051,6 @@ return (<> <div className=" rounded - md border"> hidden md:table - cell" >Appli
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,10 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+const imgRef = useRef<HTMLDivElement>(null);
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -58,6 +65,7 @@
           observer.disconnect()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -84,6 +92,12 @@ interface OptimizedImageProps {;
   onError?: () => void,;
   fallbackSrc?: string,;
   lazy?: boolean;
+=======
+const observer = new IntersectionObserver ( ([entry]) => {
+  // Check condition
+if ( {) {
+  $2
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 ;
 export function OptimizedImage({;
@@ -277,6 +291,7 @@ if (||) {
     // Generate a simple gray blur placeholder
     return `data: image/svg+xml,base64,${Buffer.from(
       `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
+<<<<<<< HEAD
 
 =======
     
@@ -286,6 +301,8 @@ if (||) {
 >>>>>>>         <defs>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <defs>
 >>>>>>>           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" style="stop-color:#f3f4f6;stop-opacity:1" />
@@ -309,6 +326,7 @@ if (||) {
     ).toString('base64')}`
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
   }
     >
@@ -317,6 +335,20 @@ if (||) {
 >>>>>>>           src={getOptimizedSrc(src)}
     >
       {isInView && !hasError && (
+=======
+  },
+
+
+  return (
+    <div
+      ref={imgRef}
+      className={cn('relative overflow-hidden', className)}
+      style={{ width, height }}
+    ).toString('base64')}`
+  }
+    >
+      {isInView && !hasError && (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Intersection Observer for lazy loading;
   useEffect(() => {;
     if (!lazy || priority || isInView) return;
@@ -402,8 +434,11 @@ if (||) {
         <Image;
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           src={getOptimizedSrc(src)}
   // Generate blur placeholder;
   const generateBlurDataURL = () =>: any {
@@ -427,11 +462,14 @@ if (return blurDataURL) {
       {isInView && !has_error && (
         <Image;
           src={getOptimizedSrc (src)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>>           alt={alt}
 =======
         <Image;
           src={getOptimizedSrc(src)}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           alt={alt}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           width={width}
@@ -449,8 +487,14 @@ if (return blurDataURL) {
             isLoading ? 'opacity-0' : 'opacity-100'
           ),}
 
+<<<<<<< HEAD
 =======
           className={cn(            'transition-opacity duration-300'
+=======
+
+          className={cn(            'transition-opacity duration-300',
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             isLoading ? 'opacity-0' : 'opacity-100'
           ),}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -460,6 +504,12 @@ if (return blurDataURL) {
           )}
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {...props}
         />
       )}
@@ -519,8 +569,11 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       )}
 >>>>>>>       {/* Error fallback */}
       {hasError && (;
@@ -565,6 +618,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   fillRule='evenodd'
                   d='M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z'
                   clipRule='evenodd'
+<<<<<<< HEAD
                 />
               </svg>
               <span className='text-xs'>Image not available</span>
@@ -580,6 +634,109 @@ ursor/fix-website-loading-errors-and-merge-6662
       {/* Lazy loading placeholder */}
       {!isInView && lazy && !priority && (
 
+=======
+                />;
+              </svg>;
+              <span className='text-xs'>Image not available</span>;
+            </div>;
+
+              className="max-w-full max-h-full object-contain"
+              onLoad={handleLoad}
+            />
+          ) : (
+            <div className="text-gray-400 text-center">
+              <svg
+                className="w-8 h-8 mx-auto mb-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <span className="text-xs">Image not available</span>
+
+            </div>
+          )}
+        </div>;
+      )}
+      {/* Lazy loading placeholder */}
+
+    </div>;
+
+  );
+}
+
+
+  )
+
+// Higher-order component for easy migration from regular img tags
+export function withImageOptimization<P extends { src: string; alt: string }>(
+  Component: React.ComponentType<P>
+) {
+  return function OptimizedComponent(props: P) {
+
+// Higher-order component for easy migration from regular img tags;
+export function withImageOptimization<Pextends { src: string alt: string }>(;
+  Component: React && React.ComponentType<P>;
+) {;
+  return function OptimizedComponent(): any (props: P) {;
+
+    const { src, alt, ...otherProps } = props;
+
+    return <OptimizedImage src={src} alt={alt} {...(otherProps as any)} />;
+  };
+}
+
+// Utility to preload critical images;
+export function preloadImage(): any (src: string): Promise<void> {;
+  return new Promise((resolve, reject) => {;
+    const img = new window && window.Image();
+    img && img.onload = () => resolve();
+    img && img.onerror = reject;
+    img && img.src = src;
+  });
+}
+
+
+    const { src, alt, ...otherProps } = props
+    return <OptimizedImage src={src} alt={alt} {...(otherProps as any)} />
+  }
+// Utility to preload critical images
+export function preloadImage(src: string): Promise<void> {
+  return new Promise((resolve, reject) => {
+    const img = new window.Image()
+    img.onload = () => resolve()
+    img.onerror = reject
+    img.src = src
+  })
+
+// Utility to get image dimensions
+export function getImageDimensions(
+  src: string
+): Promise<{ width: number; height: number }> {
+  return new Promise((resolve, reject) => {
+    const img = new window.Image()
+    img.onload = () =>
+
+      resolve({ width: img.naturalWidth, height: img.naturalHeight })
+    img.onerror = reject
+    img.src = src
+  });    img.src = src
+  })
+}
+    img.onerror = reject
+    img.src = src
+  })
+}
+
+
+      {!isInView && lazy && !priority && (
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800" />
       )}
     </div>;
@@ -612,7 +769,10 @@ export function preloadImage(src: string): Promise<void> {;
   });
 }
 ;
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Utility to get image dimensions;
 export function getImageDimensions(): any (;
   src: string;
@@ -632,7 +792,11 @@ export function getImageDimensions(): any (;
 } ;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           on_load={handle_load}
           on_error={handle_error}
           className={cn (            'transition - opacity duration - 300',
@@ -679,6 +843,7 @@ export function withImageOptimization < P extends { src: string; alt: string }>(
 function OptimizedComponent() {
     const { src, alt, ...other_props } = props;
     return <OptimizedImage src={src} alt={alt} {...(other_props as any)} />;
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -806,3 +971,30 @@ export function getImageDimensions(src: string): Promise<{ width: number, height
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  }
+// Utility to preload critical images;
+export function preload_image (src: string): Promise < void> {
+  return new Promise ((resolve, reject) => {
+    const img = new window.Image ();
+    img.onload = () => resolve ();
+    img.onerror = reject;
+    img.src = src;
+  });
+// Utility to get image dimensions;
+export function getImageDimensions (
+  src: string): Promise<{ width: number; height: number }> {
+  return new Promise ((resolve, reject) => {
+    const img = new window.Image ();
+    img.onload = () =>;
+      resolve ({ width: img.natural_width, height: img.natural_height });
+    img.onerror = reject;
+    img.src = src;
+  });    img.src = src;
+  });
+}
+    img.onerror = reject;
+    img.src = src;
+  });
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

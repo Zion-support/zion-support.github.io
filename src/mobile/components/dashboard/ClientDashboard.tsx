@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37,6 +38,8 @@ import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
 import Link from "next/link",
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function ClientDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -45,7 +48,15 @@ export function ClientDashboard() {
           <Plus className="mr-2 h-5 w-5" /> Post a New Job
         </Button>
       </section>
+<<<<<<< HEAD
       
+=======
+
+
+
+      
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Active Projects</h2>
@@ -56,6 +67,10 @@ export function ClientDashboard() {
           </Link>
         </div>
         
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Card>
           <CardContent className="p-4">
             <div className="space-y-4">
@@ -71,6 +86,10 @@ export function ClientDashboard() {
               
               <div className="space-y-1">
                 <div className="flex justify-between text-sm">
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <span>Progress</span>
                   <span className="font-medium">60%</span>
                 </div>
@@ -236,18 +255,28 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center">
                     <UserCheck className="h-4 w-4" />
 
+<<<<<<< HEAD
 >>>>>>>                   </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                  </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <div className="w-7 h-7 rounded-full bg-secondary/20 border-2 border-background flex items-center justify-center">
                     <UserCheck className="h-4 w-4" />
                   </div>
                 </div>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>                 <Button size="sm" variant="outline">View Details</Button>
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <Button size="sm" variant="outline">View Details</Button>
 >>>>>>>               </div>
             </div>
@@ -258,6 +287,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>       <section>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -274,6 +304,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
       
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+      
+
+      
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <section>
 >>>>>>>         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Suggested Talents</h2>
@@ -300,6 +337,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className="space-y-3">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -307,6 +345,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Card>
 >>>>>>>             <CardContent className="p-4">
               <div className="flex justify-between">
@@ -346,6 +388,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
           
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -354,6 +397,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
           
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Card>
 >>>>>>>             <CardContent className="p-4">
               <div className="flex justify-between">
@@ -398,6 +445,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
               <div className="mt-3 flex gap-1 flex-wrap">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -406,6 +454,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
               <div className="mt-3 flex gap-1 flex-wrap">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <Badge variant="outline" className="text-xs">React</Badge>
 >>>>>>>                 <Badge variant="outline" className="text-xs">Node.js</Badge>
                 <Badge variant="outline" className="text-xs">AWS</Badge>
@@ -422,6 +474,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+      
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Recent Updates</h2>
@@ -478,6 +537,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
@@ -492,6 +552,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Card>
           <CardContent className="p-4 space-y-4">
             <div className="flex gap-3 items-start">
@@ -529,8 +591,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </div>
 >>>>>>>               <div>
                 <p className='text-sm'>
@@ -599,6 +664,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>             <Button variant="outline" className="w-full">View All Notifications</Button>
           </CardContent>
         </Card>
@@ -626,6 +692,11 @@ import { Badge } from "@/components/ui/badge",;
 =======
             
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+            
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <Button variant="outline" className="w-full">View All Notifications</Button>
           </CardContent>
         </Card>
@@ -700,6 +771,9 @@ export function ClientDashboard() {;
                   <div className="w-7 h-7 rounded-full bg-secondary/20 border-2 border-background flex items-center justify-center">;
                     <UserCheck className="h-4 w-4" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -1058,6 +1132,7 @@ function ClientDashboard() {
         </Card>;
       </section>;
     </div>);
+<<<<<<< HEAD
 }
 ;
 <<<<<<< HEAD
@@ -1113,3 +1188,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

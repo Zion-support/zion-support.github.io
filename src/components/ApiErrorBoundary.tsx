@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -66,6 +67,24 @@ export class ApiErrorBoundary extends Component<
     return {
       hasError: true
       error
+=======
+}
+      return (
+
+      // Reset error state after a brief delay;
+      this.retryTimeoutId = set_timeout ((, ) => {
+        this.set_state ({
+          has_error: false,
+          error: null,
+          error_info: null,
+          is_retrying: false,
+        });
+      }, 500);
+    } catch (retry_error) {
+      logErrorToProduction ('Retry failed:', { data: retry_error });
+      Sentry.capture_exception (retry_error);
+      this.set_state ({ is_retrying: false });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   }
   componentDidCatch(error: Error, errorInfo: any) {
@@ -137,6 +156,7 @@ export class ApiErrorBoundary extends Component<
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 import { QueryClient  } from '@tanstack/react-query';
 import * as Sentry from '@sentry/nextjs';
@@ -323,6 +343,17 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
 
       return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                <AlertTitle>;
+                  {isNetworkError;
+                    ? 'Connection Problem';
+                    : 'Something went wrong'}
+                </AlertTitle>;
+              </div>;
+
+              </AlertDescription>;
+            </Alert>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className="flex min-h-screen items-center justify-center p-4">
           <div className="w-full max-w-md space-y-4">
             <Alert variant="destructive">
@@ -377,6 +408,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -391,9 +423,10 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps ApiErrorBo
 <<<<<<< HEAD
 >>>>>>>                 {this.state.isRetrying ? (
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
             <div className='flex flex-col gap-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
 
 =======
@@ -435,10 +468,23 @@ ursor/fix-website-loading-errors-and-merge-6662
                     Try Again
                   </>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 )}
+=======
+                )}
+
+
+                variant="outline"
+                onClick={() => window.location.reload()}
+                className="w-full"
+              >
+
+
+                Reload Page
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </Button>
               <Button
 <<<<<<< HEAD
@@ -496,7 +542,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <WifiOff className='h - 4 w - 4' />;
                 <span > Offline</span>;
               </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {process.env.NODE_ENV === 'development' && this.state.error && (
 
     return this.props.children;
@@ -543,6 +588,7 @@ export const useApiErrorHandler = () =>: any {
                 </pre>;
               </details>;
             )}
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -564,6 +610,8 @@ export const useApiErrorHandler = () =>: any {
             )}
             {process.env.NODE_ENV === 'development' && this.state.error && (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <details className="mt-4 rounded border p-2 text-xs">
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
@@ -592,6 +640,12 @@ export const useApiErrorHandler = () =>: any {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+}, ;
+  return { handleApiError };
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>;
 =======
 =======
@@ -672,6 +726,7 @@ export const useApiErrorHandler = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 };
 
@@ -694,3 +749,15 @@ export const useApiErrorHandler = () => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+
+},
+  return { handleApiError }
+},
+
+
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

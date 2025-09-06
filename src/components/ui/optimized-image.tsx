@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React, { useState, useRef, useEffect } from 'react',
@@ -22,6 +23,8 @@ import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { ImageIcon, AlertTriangle } from 'lucide-react'
 import { cn  } from '@/lib/utils';
 import { imageOptimization  } from '@/utils/performance';
@@ -88,6 +91,7 @@ export const OptimizedImage: React.FC < OptimizedImageProps> = ({
   style,
   object_position = 'center',
   ...props;
+<<<<<<< HEAD
 =======
   className?: string;
   placeholder?: 'blur' | 'shimmer' | 'color' | 'none' | 'empty';
@@ -109,6 +113,34 @@ export const OptimizedImage: React.FC < OptimizedImageProps> = ({
   style?: React.CSSProperties;
   objectPosition?: string
 }
+=======
+}) => {
+  const [is_loading, setIsLoading] = useState (true);
+  const [has_error, setHasError] = useState (false);
+  const [isInView, setIsInView] = useState (!lazy || priority);
+  const [current_src, setCurrentSrc] = useState (src);
+  const [retries, set_retries] = useState (0);
+  const [load_progress, setLoadProgress] = useState (0);
+  const img_ref = useRef < HTMLImageElement>(null);
+  const observer_ref = useRef < IntersectionObserver>();
+  const [metrics, set_metrics] = useState < ImageMetrics | null>(null);
+  const loadStartTime = useRef < number>(0);
+  // Intersection Observer for lazy loading;
+  useEffect (() => {
+    // Check condition
+if (return) {
+  $2
+}
+    observer_ref.current = new IntersectionObserver (
+
+      entries => {
+        const [entry] = entries;        // Check condition
+if ( {) {
+  $2
+}
+          setIsInView (true);
+          observer_ref.current?.disconnect ();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 interface ImageMetrics {
   loadTime: number;
@@ -175,7 +207,10 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         const [entry] = entries;        if (entry && entry.isIntersecting) {
           setIsInView(true)
           observerRef.current?.disconnect()
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         }
       }
       {
@@ -269,6 +304,9 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
                 loadTime: `${loadTime.toFixed(2)}ms`
               })
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }, [lazy, priority, isInView]);
   // Start load time tracking;
   useEffect (() => {
@@ -321,9 +359,12 @@ if ( {) {
                 size: `${(file_size / 1024).to_fixed (2)}KB`,
                 load_time: `${load_time.to_fixed (2)}ms`,
               });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             }
           }
         })
@@ -443,6 +484,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     }
@@ -456,6 +498,13 @@ if ( {) {
 =======
     }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+  loading?: 'lazy' | 'eager';
+  style?: React && React.CSSProperties;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useRef, useEffect } from 'react',;
 import Image from 'next/image',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -751,7 +800,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         />;
       );
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
     return (
 
@@ -808,18 +860,31 @@ if ( {) {
   }
       >;
       <AnimatePresence>;
+<<<<<<< HEAD
   },
 
   },
 
 
 >>>>>>>   // Container styles
+=======
+
+  },
+
+  },
+
+
+  // Container styles
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const containerStyle: React.CSSProperties = {
     aspectRatio: aspectRatio || (width && height ? `${width}/${height}` : undefined),
     width: width ? `${width}px` : undefined,
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {/* Placeholder */}
 
       <div className={placeholderClassName}>;
@@ -849,6 +914,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 >>>>>>>             className="absolute inset-0"
           >
             {generatePlaceholder()}
@@ -921,6 +987,8 @@ if ( {) {
           >
             {generatePlaceholder()}
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             className="absolute inset-0"
           >
             {generatePlaceholder()}
@@ -931,6 +999,10 @@ if ( {) {
                 <motion.div
                   className='h-full bg-blue-500'
                   className="h-full bg-blue-500"
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   initial={{ width: 0 }}
                   animate={{ width: `${loadProgress}%` }}
                   transition={{ duration: 0.3 }}
@@ -976,6 +1048,7 @@ if ( {) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <span className='text-xs mt-1'>Retried {retries} times</span>
               <span className="text-xs mt-1">Retried {retries} times</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1049,6 +1122,9 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             )}
           </motion && motion.div>;
         )}
@@ -1069,8 +1145,11 @@ if ( {) {
               isLoading ? 'opacity-0' : 'opacity-100';
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             )}
 >>>>>>>             initial={{ opacity: 0 }}
             animate={{ opacity: isLoading ? 0 : 1 }}
@@ -1081,6 +1160,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -1153,6 +1233,8 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
 =======
   opacity: 0 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </AnimatePresence>;
     </div>;
   );
@@ -1296,6 +1378,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
             onClick={() => onImageClick?.(index)}
           >
             <div className="relative">
+<<<<<<< HEAD
               <OptimizedImage
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 src={image.src}
@@ -1317,6 +1400,9 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
   const initials =
     fallback |
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <OptimizedImage
                 src={image && image.src}
                 alt={image && image.alt}
@@ -1340,8 +1426,11 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </div>
               />;
 
@@ -1349,6 +1438,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
                 <div className='absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg'>;
                   <p className='text-sm'>{image && image.caption}</p>;
                 </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 <<<<<<< HEAD
@@ -1360,6 +1450,8 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               )}
             </div>
           </motion.div>
@@ -1420,6 +1512,7 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
     >
       {src ? (
 <<<<<<< HEAD
+<<<<<<< HEAD
         <OptimizedImage
           src={src}
           alt={alt}
@@ -1437,6 +1530,8 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </div>;
     </div>;
   );
@@ -1474,9 +1569,12 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
 
     >;
       {src ? (;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <OptimizedImage
           src={src}
           alt={alt}
@@ -1578,9 +1676,12 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {initials}
         </div>;
       )}
@@ -1596,7 +1697,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 };
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {(is_loading || !isInView) && !has_error && (
           <motion.div;
             initial={{ opacity: 1 }}
@@ -1778,6 +1883,7 @@ export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({
     </div>);
 }
 },
+<<<<<<< HEAD
 },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 
@@ -1795,3 +1901,6 @@ export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({
   );
 };
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

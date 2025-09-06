@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   className?: string
@@ -50,6 +51,14 @@ export function Step({
   label
   description
 >>>>>>>   className}: StepProps) {
+=======
+status;
+  label;
+  description;
+  className}: StepProps) {;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   className?: string
 }
 export function Step({
@@ -57,6 +66,7 @@ export function Step({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   className}: StepProps) {
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>   return (
 =======
@@ -84,6 +94,8 @@ export function Step({
   label,
   description,
   className}: StepProps) {
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <li
@@ -120,6 +132,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           "opacity-60": status === "incomplete"},
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -127,6 +140,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         className
       )}
     >
@@ -154,12 +171,23 @@ ursor/fix-website-loading-errors-and-merge-6662
               status === "incomplete"
             "bg-zion-blue border-zion-cyan text-white":
               status === "current"
+<<<<<<< HEAD
+=======
+            "bg-zion-purple border-zion-purple text-white":
+              status === "complete",}
+        )}>;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium",
           {
             "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
               status === "incomplete",
             "bg-zion-blue border-zion-cyan text-white":
               status === "current",
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             "bg-zion-purple border-zion-purple text-white":
               status === "complete"}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -218,6 +246,7 @@ export function Step({;
               status === "complete"}
         )}
       >;
+<<<<<<< HEAD
         {status === "complete" ? (;
           <CheckIcon className="h-5 w-5" />;
         ) : (;
@@ -256,6 +285,8 @@ export function Step({;
 interface StepsProps {
 =======
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {status === "complete" ? (;
           <CheckIcon className="h-5 w-5" />;
         ) : (;
@@ -263,7 +294,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {/* Step number would go here */}
           </span>;
         )}
@@ -274,7 +308,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
             "text-white": status === "current" || status === "complete"})}
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         >
       </div>;
 
@@ -283,6 +320,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           className={cn("text-sm font-medium", {
             "text-zion-slate-light": status === "incomplete"
             "text-white": status === "current" || status === "complete"})}>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 =======
@@ -294,6 +332,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             "text-white": status === "current" || status === "complete"})}
         >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {label}
         </h3>
         {description && (
@@ -331,6 +371,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -338,6 +379,8 @@ export function Steps({ currentStep, className, children }: StepsProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
 interface StepsProps {;
   currentStep: number,;
@@ -347,6 +390,7 @@ interface StepsProps {;
 
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -389,6 +433,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  
+
+
+
+  return (
+    <div className={cn("w-full", className)}>
+      <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
+        {React.Children.map(childrenArray, (child, index) => {
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           if (!React.isValidElement(child)) return null,
           
           let status: "incomplete" | "current" | "complete" = "incomplete",
@@ -399,6 +456,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
           
+<<<<<<< HEAD
 >>>>>>>           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}
@@ -417,6 +475,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}
@@ -430,6 +493,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -445,6 +509,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
       
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <div className="hidden md:flex md:mt-4">
 >>>>>>>         <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
           <div
@@ -454,6 +520,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 }/> </div> </div> </div>)
 }"}
@@ -478,6 +545,24 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+interface StepsProps {;
+  currentStep: number,;
+  className?: string;
+  children: React && React.ReactNode;
+}
+
+export function Steps(): any ({ currentStep, className, children }: StepsProps) {;
+  const childrenArray = React && React.Children.toArray(children);
+
+  return (
+
+}/> </div> </div> </div>) 
+}"};
+;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children),;
@@ -511,7 +596,11 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           // Check condition
 if (status = "complete") {
   $2
@@ -610,6 +699,7 @@ if (status = "current") {
     </div>);
 }/> </div> </div> </div>);
 }"}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> }
 ;
@@ -632,3 +722,7 @@ if (status = "current") {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

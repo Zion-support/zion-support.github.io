@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
 
 
@@ -236,6 +237,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 
   useState
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+useState
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   useEffect
   useRef
   ReactNode
@@ -310,6 +314,9 @@ export function ChatAssistant({
         setDisplayGuestMessages(initialMessages)
         setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const is_guest = !auth?.is_authenticated;
 ========
 const is_guest = !auth?.is_authenticated;
@@ -509,7 +516,11 @@ if ( {) {
   }, [isOpen, onClose])
   if (!isOpen) return null
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   const isGuest = !auth?.isAuthenticated;
+=======
+  const isGuest = !auth?.isAuthenticated;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 ========
   const isGuest = !auth?.isAuthenticated;
@@ -680,7 +691,10 @@ export function ChatAssistant(): any ({;
     return () => document && document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, onClose]),;
   if (!isOpen) return null,;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   return (
@@ -944,23 +958,34 @@ export function ChatAssistant({;
 <<<<<<<< HEAD:src/components/ChatAssistant/ChatAssistant.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
             onClick = {onClose,}
 >>>>>>>             aria-label="Close chat"
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+            onClick={onClose}
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             aria-label="Close chat"
 >>>>>>>           >
             <X className="h-5 w-5" />
           </Button>
         </div>
+<<<<<<< HEAD
 ========
             onClick = {onClose,}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ChatAssistant/ChatAssistant.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             aria-label="Close chat">;
             <X className="h-5 w-5" />;
           </Button>;
         </div>;
+<<<<<<< HEAD
 =======
                 {recipient.name}
               </h2>;
@@ -981,6 +1006,9 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>;
 ;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {/* Context Header (Optional) */}
         {contextHeader && (;
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;
@@ -1111,6 +1139,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                       className="text-xs"
                       onClick={() => handleSendMessage(q)}
                     >;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       {q}
                     </Button>
                   ))}
@@ -1478,6 +1511,7 @@ if (return null, ) {
             </div>;
           </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>)}
     </div>);
 =======
@@ -1551,3 +1585,37 @@ return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+                onClick={handleModalCancel}
+
+
+                className="text-white border-zion-purple hover:bg-zion-purple/10"
+              >
+                Cancel
+              </Button>
+              <Button
+
+                onClick={handleModalSendConfirm}
+
+                className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+              >
+                Send
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>;
+  );
+
+
+
+        </div>)}
+    </div>);
+}
+}
+
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

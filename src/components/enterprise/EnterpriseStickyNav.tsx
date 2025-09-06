@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseStickyNav.tsx
 
 import { Menu } from 'lucide-react'
@@ -10,10 +11,13 @@ import { useState } from "react";
 import { Menu } from 'lucide-react'
 
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState } from 'react';
 import { Menu } from 'lucide-react';
 import Link from 'next/link';
   const [ open, setOpen ] = useState(false),;
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/enterprise/EnterpriseStickyNav.tsx
 import Link from 'next/link'
   const [ open, setOpen ] = useState(false)
@@ -84,6 +88,8 @@ export function EnterpriseStickyNav() {
                 Contact Us
               </Link>            </li>
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -152,7 +158,19 @@ export function EnterpriseStickyNav() {
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>;
 export function EnterpriseStickyNav() {;
   const [open, setOpen] = useState(false);
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/enterprise/EnterpriseStickyNav.tsx
+=======
+
+
+import { useState } from "react",
+import { Menu } from 'lucide-react'
+import Link from "next/link",
+export function EnterpriseStickyNav() {
+  const [open, setOpen] = useState(false),
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <nav className="sticky top-16 z-40 bg-card border-b border-border">;
       <div className="container mx-auto px-4 md:px-6">;
@@ -343,9 +361,12 @@ export function EnterpriseStickyNav() {;
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseStickyNav.tsx
 
+<<<<<<< HEAD
 ========
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/enterprise/EnterpriseStickyNav.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Link;
                 href='#contact';
                 className='text - sm font - medium hover:text - primary';
@@ -384,10 +405,13 @@ function EnterpriseStickyNav() {
               <Link href="#contact" className="text - sm font - medium hover:text - primary">Contact Us</Link>;
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseStickyNav.tsx
 
+<<<<<<< HEAD
 >>>>>>>             </li>;
 ========
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </li>;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/enterprise/EnterpriseStickyNav.tsx
           </ul>;
@@ -395,6 +419,7 @@ function EnterpriseStickyNav() {
       </div>;
 
 
+<<<<<<< HEAD
 =======
             </li>;
           </ul>;
@@ -439,3 +464,9 @@ return (<nav className="sticky top-16 z-40 bg-card border-b border-border" > <di
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  );
+}
+    </nav>);
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

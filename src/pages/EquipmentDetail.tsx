@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -129,6 +130,12 @@ function convertProductListingToEquipmentDetails(
 // Build sample data from the shared equipment listings
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
   equipmentListings.reduce(
+=======
+}
+// Build sample data from the shared equipment listings;
+export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;
+  equipment_listings.reduce (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     (acc, item) => {
 <<<<<<< HEAD
 
@@ -350,6 +357,7 @@ export default function EquipmentDetail() {;
                 equipmentData = convertProductListingToEquipmentDetails(;
                   storedData as ProductListing;
                 );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
                 // It's a ProductListing, convert it
@@ -357,6 +365,8 @@ export default function EquipmentDetail() {;
                   storedData as ProductListing
                 )
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               }
               setEquipment(equipmentData)
               setLoading(false)
@@ -402,6 +412,7 @@ export default function EquipmentDetail() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
     loadEquipment()
   }, [id])
@@ -416,6 +427,8 @@ export default function EquipmentDetail() {;
     loadEquipment()
   }, [id])
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { NextSeo } from '@/components/NextSeo',
@@ -626,11 +639,14 @@ export default function EquipmentDetail() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         title: "Authentication Required",
         description: "Please log in to add items to cart",
         variant: "destructive"}),
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const handleAddToCart = async () => {
     if (!equipment |!isAuthenticated) {
       toast({
@@ -639,7 +655,10 @@ export default function EquipmentDetail() {;
         description: 'Please log in to add items to cart',
         variant: 'destructive',
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       })
 >>>>>>>       return
     }
@@ -675,6 +694,7 @@ export default function EquipmentDetail() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>     try {
       dispatch({
@@ -717,6 +737,8 @@ export default function EquipmentDetail() {;
       })
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     try {
       dispatch({
         type: 'ADD_ITEM'
@@ -767,12 +789,18 @@ if ( {) {
         variant: 'destructive',
       });
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           quantity}}),
+=======
+    } finally {
+      setIsAdding (false);
+    }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
       toast({
         title: "Added to Cart",
@@ -846,7 +874,10 @@ if ( {) {
       </>
     )
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
   const in_cart = items.some (item => item.id === equipment?.id);
   // Loading state;
@@ -1096,10 +1127,43 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               : undefined
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+
+                  onClick={() => router && router.push('/equipment')}
+                  className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'                >;
+                  Browse Equipment;
+                </Button>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </div>;
+      </>;
+    );
+
+  }
+  return (
+    <>;
+      <NextSeo
+        title={`${equipment && equipment.name} - Zion Marketplace`}
+        description = {equipment && equipment.description,}
+        openGraph={{
+
+          title: `${equipment && equipment.name} - Zion Marketplace`,
+          description: equipment && equipment.description,
+          images:
+            equipment && equipment.images.length> 0 && equipment && equipment.images[0];
+              ? [{ url: equipment && equipment.images[0] }];
+              : undefined,;
+
+
+              : undefined,
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
     loadEquipment();
   }, [id]),;
@@ -1228,6 +1292,10 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         }}
 =======
 <<<<<<< HEAD
@@ -1398,11 +1466,15 @@ if ( {) {
             >
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               Equipment
 >>>>>>>             </button>
             <span className='mx-2 text-zion-slate-light'>/</span>
             <span className='text-zion-slate-light'>{equipment.name}</span>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1438,6 +1510,24 @@ if ( {) {
             <motion.div 
               className="space-y-4"
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+          </motion.nav>
+
+              onClick={() => router && router.push('/equipment')}
+              className='text-zion-cyan hover:text-white transition-colors'            >;
+              Equipment;
+            </button>;
+            <span className='mx-2 text-zion-slate-light'>/</span>;
+            <span className='text-zion-slate-light'>{equipment && equipment.name}</span>;
+          </motion && motion.nav>;
+
+          <div className='grid lg:grid-cols-2 gap-12'>;
+
+
+
+          <div className="grid lg:grid-cols-2 gap-12">
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {/* Images */}
             <motion&& motion.div
               className='space-y-4'
@@ -1490,6 +1580,7 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                       key = {index,}
                       onClick = {(,) => setSelectedImageIndex(index),}
+<<<<<<< HEAD
                       className={`aspect-square rounded-md overflow-hidden border-2 transition-all ${
                         selectedImageIndex === index
                           ? 'border-zion-cyan'
@@ -1508,6 +1599,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   src={equipment.images[selectedImageIndex] || equipment.images[0] || 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'}
                   alt={equipment.name}
                   className="object-cover"
@@ -1520,7 +1614,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <button
                       key={index}
                       onClick={() => setSelectedImageIndex(index)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       className={`aspect-square rounded-md overflow-hidden border-2 transition-all ${;
                         selectedImageIndex === index;
                           ? 'border-zion-cyan';
@@ -1541,8 +1638,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
                       />
+<<<<<<< HEAD
 >>>>>>>                     </button>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+                    </button>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   ))}
                 </div>;
               )}
@@ -1553,18 +1654,27 @@ ursor/fix-website-loading-errors-and-merge-6662
             {/* Product Details */}
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
             <motion.div
               className='space-y-6'
 >>>>>>>               initial={{ opacity: 0, x: 20 }}
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+            <motion.div 
+              className="space-y-6"
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               initial={{ opacity: 0, x: 20 }}
 >>>>>>>               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0 && 0.4 }}>;
               {/* Header */}
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -1614,6 +1724,32 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="space-y-2">
                 <div className="flex items-center gap-2 mb-2">
                   <Badge variant="secondary" className="bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20">
+=======
+                    className='border-zion-slate-light text-zion-slate-light'>;
+                    {equipment && equipment.brand}
+                  </Badge>;
+                </div>;
+
+                <h1 className='text-3xl font-bold text-white'>;
+                  {equipment && equipment.name}
+                </h1>;
+
+                {equipment && equipment.rating && (;
+                  <div className='flex items-center gap-2'>;
+                    <div className='flex items-center'>;
+
+                      {[...Array(5)].map((_, i) => (                        <Star
+                          key = {i,}
+                          className={`h-4 w-4 ${
+                            i < Math && Math.floor(equipment && equipment.rating!)
+                              ? 'text-yellow-400 fill-current'
+                              : 'text-zion-slate-light'
+
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 mb-2">
+                  <Badge variant="secondary" className="bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20">
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     {equipment.category}
                   </Badge>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1685,6 +1821,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                             i < Math.floor(equipment.rating!);
                               ? 'text-yellow-400 fill-current';
                               : 'text-zion-slate-light';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           }`}
                         />
                       ))}
@@ -1798,6 +1938,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <span className={equipment.inStock ? 'text-green-400' : 'text-yellow-400'}>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -1805,11 +1946,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     {equipment.expectedShipping}
                   </span>
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Error state;
   // Check condition
 if ( {) {
@@ -1989,7 +2137,6 @@ if ( {) {
                   </span>;
                 </div>;
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {/* Description */}
 
 
@@ -1998,7 +2145,10 @@ if ( {) {
                 <p className="text-zion-slate-light leading-relaxed">{equipment.description}</p>
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </div>
                       equipment && equipment.inStock ? 'text-green-400' : 'text-yellow-400'
                     }>;
@@ -2017,7 +2167,6 @@ if ( {) {
                 </p>;
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Specifications */}
 
                         className='flex justify-between py-2 border-b border-zion-blue-light'>;
@@ -2077,6 +2226,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
@@ -2087,6 +2237,8 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     ))}
                   </div>
                 </div>
@@ -2159,6 +2311,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -2170,6 +2323,8 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       +
                     </Button>
                   </div>
@@ -2178,8 +2333,11 @@ if ( {) {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                   size='lg'
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       className='h-8 w-8 p-0'                    >;
                 </p>;
               </div>;
@@ -2260,6 +2418,7 @@ if ( {) {
               <div className='space-y-4 border-t border-zion-blue-light pt-4'>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
                 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -2273,6 +2432,24 @@ if ( {) {
                 >
                   <ShoppingCart className="h-4 w-4 mr-2" />
                   {isAdding ? 'Adding...' : inCart ? 'In Cart' : 'Add to Cart'}
+=======
+                <div className='flex gap-3 text-zion-slate-light'>;
+                  <Truck className='h-5 w-5 text-zion-cyan flex-shrink-0' />;
+                  <div>;
+                    <p className='text-white text-sm font-medium'>;
+                      Free Shipping;
+                    </p>;
+                    <p className='text-xs'>;
+                <Button;
+                  on_click={handleAddToCart}
+                  disabled={is_adding || !equipment.in_stock}
+                  size='lg';
+                  variant='outline';
+                  className='w - full border - zion - purple text - zion - cyan hover:bg - zion - purple / 10';
+                  data - testid='add - to - cart - button'                >;
+                  <ShoppingCart className='h - 4 w - 4 mr - 2' />;
+                  {is_adding ? 'Adding...' : in_cart ? 'In Cart' : 'Add to Cart'}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </Button>;
               </div>;
               {/* Additional Info */}
@@ -2385,7 +2562,21 @@ ursor/fix-website-loading-errors-and-merge-6662
                 )}
 ;
 
+<<<<<<< HEAD
 ;
+=======
+
+                {/* Warranty */}
+                {equipment && equipment.warranty && (;
+                  <div className='flex gap-3 text-zion-slate-light'>;
+                    <Shield className='h-5 w-5 text-zion-cyan flex-shrink-0' />;
+                    <div>;
+                      <p className='text-white text-sm font-medium'>Warranty</p>;
+                      <p className='text-xs'>{equipment && equipment.warranty}</p>;
+                    </div>;
+                  </div>;
+                )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {/* Return Policy */}
                 {equipment.returnPolicy && (
                   <div className="flex gap-3 text-zion-slate-light">
@@ -2474,7 +2665,11 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>>               </div>;
+=======
+              </div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </motion && motion.div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           </div>;
@@ -2484,7 +2679,11 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
   );
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {/* Warranty */}
                 {equipment.warranty && (
                   <div className='flex gap - 3 text - zion - slate - light'>;
@@ -2521,6 +2720,7 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -2538,3 +2738,7 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

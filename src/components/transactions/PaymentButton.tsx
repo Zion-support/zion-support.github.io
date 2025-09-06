@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
@@ -67,6 +68,9 @@ interface PaymentButtonProps {
   onPaymentInitiated?: () => void,
   redirectUrl?: string
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+redirectUrl?: string
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 export function PaymentButton({
 
@@ -115,6 +119,7 @@ if ( {) {
       if (onPaymentInitiated) {
         onPaymentInitiated()
       }
+<<<<<<< HEAD
       // Call the create-checkout edge function
       const { data, error } = await supabase.functions.invoke("create-checkout", {
         body: {
@@ -137,6 +142,11 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   amount,
   serviceId,
   providerId,
@@ -250,9 +260,12 @@ export function PaymentButton({;
 
 =======
       
+<<<<<<< HEAD
 >>>>>>>       // Type assertion needed for mock Supabase client compatibility
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       // Type assertion needed for mock Supabase client compatibility
 >>>>>>>       if ((data as any)?.url) {
         // Open Stripe checkout in a new tab
@@ -289,6 +302,11 @@ if (?.url) {) {
       }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+      
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     } catch (error) {
       logErrorToProduction('Payment error:', { data: error })
 =======
@@ -432,11 +450,15 @@ export function PaymentButton({;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       // Reset button state after a short delay
       setTimeout(() => {
         setIsProcessing(false)
       }, 1500)
 
+<<<<<<< HEAD
 ;
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -447,6 +469,10 @@ export function PaymentButton({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       // Call the create-checkout edge function;
       const { data, error } = await supabase.functions.invoke("create-checkout", {;
         body: {;
@@ -483,7 +509,6 @@ export function PaymentButton({;
   };
 <<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
 =======
@@ -500,6 +525,7 @@ export function PaymentButton({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>     >
 ursor/fix-website-loading-errors-and-merge-6662
@@ -512,6 +538,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     >
 >>>>>>>       {isProcessing ? (
         <>
@@ -529,7 +559,41 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     </Button>;
   );
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+}catch (error) {';
+  logErrorToProduction ('Payment error:', {;
+  data: error ;
+});
+toast ({;
+
+}finally {;
+  //Reset button state after a short delay setTimeout ( () => {;
+  setIsProcessing (false) ;
+}, 1500) ;
+
+};
+
+}> {";
+  isProcessing ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Processing... </>) : (buttonText) ;
+}</Button>) ;
+}'"  );
+
+}
+
+}> {"
+  isProcessing ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Processing... </>) : (buttonText)
+}</Button>)
+}'"  )
+}
+
+
+
+;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <Button;
       on_click={handlePaymentClick}
       disabled={is_processing}
@@ -554,6 +618,7 @@ toast ({
 }, 1500);
 >>>>>>> }
 
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 
@@ -596,3 +661,6 @@ toast ({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

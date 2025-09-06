@@ -1,11 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 
+<<<<<<< HEAD
 =======
 import { useRouter  } from 'next/router';
 import { useState, useEffect, useCallback, useMemo  } from 'react';
@@ -35,6 +40,8 @@ import { motion, AnimatePresence } from 'framer-motion',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
 >>>>>>> import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
 import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment  } from '@/utils/equipmentAutoFeedAlgorithm';
@@ -492,6 +499,7 @@ function EquipmentPageContent() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -520,6 +528,10 @@ export default function EquipmentPage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Error state
   if (error && equipment.length === 0) {
     return (
@@ -724,6 +736,7 @@ export default function EquipmentPage() {;
     </EquipmentErrorBoundary>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -734,3 +747,21 @@ export default function EquipmentPage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+;
+}
+// Main export with error boundary;
+export default /**
+ * EquipmentPage - Function description
+ */
+function EquipmentPage() {
+  return (
+    <EquipmentErrorBoundary>;
+      <EquipmentPageContent />;
+    </EquipmentErrorBoundary>);
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

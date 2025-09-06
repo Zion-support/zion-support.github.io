@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
@@ -30,6 +31,8 @@ import { Button } from "./ui/button",
 import { fireEvent } from '@/lib/analytics',
 import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react'
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import Link from 'next/link'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { GradientHeading } from './GradientHeading'
@@ -63,6 +66,7 @@ export function FeaturesGuideSection() {
 <<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -94,6 +98,8 @@ export function FeaturesGuideSection() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         'Navigate to the AI Matcher page from the homepage or marketplace',
         'Fill in your project requirements and specifications',
         'Review the AI-recommended matches tailored to your needs',
@@ -625,6 +631,7 @@ export function FeaturesGuideSection() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>     }
 ursor/fix-website-loading-errors-and-merge-6662
@@ -635,6 +642,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
     {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -890,9 +899,12 @@ ursor/fix-website-loading-errors-and-merge-6662
       link: "/help"
       buttonText: "View Resources"
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
 >>>>>>> import Link from 'next/link';
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import Link from 'next/link';
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/FeaturesGuideSection.tsx
 import { GradientHeading } from './GradientHeading';
@@ -1507,15 +1519,39 @@ ursor/fix-website-loading-errors-and-merge-6662
         "Join community forums to connect with other users";
         "Contact our support team for personalized assistance";
       ];
+<<<<<<< HEAD
+=======
+
+
+                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";
+              >;
+
+
+                {feature.title}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
             {features.slice(4).map(feature => (
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/FeaturesGuideSection.tsx
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
+<<<<<<< HEAD
 >>>>>>>                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
+            {features.slice(4).map(feature => (
+              <TabsTrigger 
+                key={feature.id} 
+                value={feature.id}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
 <<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
 >>>>>>>               >
@@ -1762,6 +1798,7 @@ export function FeaturesGuideSection() {;
 <<<<<<< HEAD
                   <Button 
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/FeaturesGuideSection.tsx
 <<<<<<< HEAD
 
@@ -1805,6 +1842,10 @@ export function FeaturesGuideSection() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     asChild
                   >
                     <Link href={feature.link}>
@@ -1814,7 +1855,11 @@ export function FeaturesGuideSection() {;
                   </Button>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/FeaturesGuideSection.tsx
+=======
+                
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">
                   <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>
                   <ol className="list-decimal list-inside space-y-3 pl-4">
@@ -1996,6 +2041,11 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className='mt-12 text-center'>
         
         <div className="mt-12 text-center">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Button
             variant="outline"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2025,7 +2075,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
               <ArrowRight className="ml-2 h-4 w-4" />
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/FeaturesGuideSection.tsx
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </Link>
 >>>>>>>           </Button>
         </div>
@@ -2073,6 +2129,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
   );
 };
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   );
 }
                   </p>;
@@ -2132,6 +2193,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     </section>);
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/FeaturesGuideSection.tsx
 }
+<<<<<<< HEAD
 >>>>>>> >>>>>>> 
   )
 }
@@ -2193,3 +2255,10 @@ const features = [ {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  );
+}
+
+  )
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5,6 +6,33 @@
 =======
 =======
 <<<<<<< HEAD
+=======
+import { useState, useMemo } from 'react';
+import {;
+  onsiteServicePricing,;
+  CountryPricing,;
+} from '@/data/onsiteServicePricing';
+import { Input } from '@/components/ui/input';
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow,;
+} from '@/components/ui/table';
+import { Globe, Search, ArrowUpDown } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+export function ITServicePricingTable() {;
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortConfig, setSortConfig] = useState<{;
+    key: keyof CountryPricing;
+    direction: 'ascending' | 'descending';
+  }>({;
+    key: 'country',;
+    direction: 'ascending',;
+  });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -119,6 +147,7 @@ export function ITServicePricingTable() {
       if (a[sortConfig.key] < b[sortConfig.key]) {
         return sortConfig.direction === 'ascending' ? -1 : 1
       }
+<<<<<<< HEAD
       if (a[sortConfig.key] > b[sortConfig.key]) {
         return sortConfig.direction === 'ascending' ? 1 : -1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -138,6 +167,26 @@ export function ITServicePricingTable() {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+      return 0;
+    });
+
+    return filteredData;
+  }, [onsiteServicePricing, searchQuery, sortConfig]);
+
+  const handleSort = (key: keyof CountryPricing,) => {;
+    setSortConfig({;
+      key,;
+      direction:;
+        sortConfig && sortConfig.key === key && sortConfig && sortConfig.direction === 'ascending';
+          ? 'descending';
+          : 'ascending',;
+    });
+  };
+
+  return (
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -192,6 +241,7 @@ export function ITServicePricingTable() {
             className='pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white'          />
         </div>
       </div>
+<<<<<<< HEAD
       <div className='rounded-md border border-zion-blue-light overflow-hidden'>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -214,6 +264,11 @@ export function ITServicePricingTable() {
                   className='hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light'                >
 >>>>>>>                   <span>Price Per Incident</span>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+      <div className="rounded-md border border-zion-blue-light overflow-hidden">
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Table>
           <TableHeader className='bg-zion-blue'>
             <TableRow>
@@ -300,7 +355,11 @@ export function ITServicePricingTable() {
                   className='hover:bg - zion - blue - dark p - 0 flex items - center justify - end space - x-1 w - full text - zion - cyan hover:text - zion - cyan - light'                >;
                   <span > Price Per Incident</span>;
                   <ArrowUpDown className='h - 4 w - 4' />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <TableHead className="text-zion-cyan font-medium">
                 <Button 
                   variant="ghost" 
@@ -308,8 +367,12 @@ export function ITServicePricingTable() {
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
                 >
 
+<<<<<<< HEAD
 >>>>>>>                   <span>Country</span>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                  <span>Country</span>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
               </TableHead>
@@ -325,6 +388,7 @@ export function ITServicePricingTable() {
                   className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light"
                 >
 
+<<<<<<< HEAD
 >>>>>>>                   <span>Price Per Incident</span>
 >>>>>>>                   <ArrowUpDown className="h-4 w-4" />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -336,6 +400,8 @@ export function ITServicePricingTable() {
                   onClick={() => handleSort("pricePerIncident")}
                   className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light"
                 >
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <span>Price Per Incident</span>
                   <ArrowUpDown className="h-4 w-4" />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -391,6 +457,10 @@ export function ITServicePricingTable() {
                     <span className="text-white">{item.country}</span>
                   </TableCell>
                   <TableCell className="text-right font-medium text-white">${item.pricePerIncident.toFixed(2)}</TableCell>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </TableRow>
               ))
             ) : (
@@ -423,11 +493,15 @@ export function ITServicePricingTable() {
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState, useMemo } from "react",;
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { Input } from "@/components/ui/input",;
@@ -507,9 +581,12 @@ export function ITServicePricingTable() {;
                   <span>Price Per Incident</span>;
                   <ArrowUpDown className="h-4 w-4" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </Button>;
               </TableHead>;
             </TableRow>;
@@ -548,8 +625,12 @@ export function ITServicePricingTable() {;
             )}
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </TableBody>;
         </Table>;
       </div>;
@@ -561,6 +642,7 @@ export function ITServicePricingTable() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 ;
@@ -577,3 +659,34 @@ export function ITServicePricingTable() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+          <TableBody className='bg - zion - blue - dark'>;
+            {sorted_data.length > 0 ? (
+              sorted_data.map (item => (
+                <TableRow;
+                  key={item.country}
+                  className='border - b border - zion - blue - light hover:bg - zion - blue / 50';
+                >;
+                  <TableCell className='flex items - center space - x-2'>;
+                    <Globe className='h - 4 w - 4 text - zion - purple' />;
+                    <span className='text - white'>{item.country}</span>;
+                  </TableCell>;
+                  <TableCell className='text - right font - medium text - white'>;
+                    ${item.pricePerIncident.to_fixed (2)}                  </TableCell>;
+                </TableRow>))) : (
+              <TableRow>;
+                <TableCell;
+                  col_span={2}
+                  className='text - center py - 10 text - zion - slate - light';
+                >;
+                  No countries match your search;
+                </TableCell>;
+              </TableRow>)}
+          </TableBody>;
+        </Table>;
+      </div>;
+    </div>);
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -23,6 +24,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import * as React from "react"
 import { ElementRef, ComponentPropsWithoutRef } from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
@@ -32,6 +35,7 @@ import { cn } from "@/lib/utils"
 
 const Accordion = AccordionPrimitive.Root
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -47,6 +51,15 @@ const AccordionItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
 <<<<<<< HEAD
+=======
+
+
+const AccordionItem = React.forwardRef<
+  ElementRef<typeof AccordionPrimitive.Item>
+  ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
+></typeof>(({ className, ...props }, ref) => (
+  <AccordionPrimitive.Item
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import * as React from 'react';
 import {ElementRef, ComponentPropsWithoutRef} from 'react';
 import * as AccordionPrimitive from '@radix - ui / react - accordion';
@@ -58,22 +71,38 @@ const AccordionItem = React.forward_ref<;
   ComponentPropsWithoutRef < typeof AccordionPrimitive.Item>;
 ></typeof>(({ class_name, ...props }, ref) => (
   <AccordionPrimitive.Item;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     ref={ref}
     className={cn("border-b", className)}
     {...props}
+<<<<<<< HEAD
   />
 ))
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+
+AccordionItem.displayName = "AccordionItem"
+
+AccordionItem.displayName = "AccordionItem"
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 const AccordionTrigger = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Trigger>,
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >(({ className, children, ...props }, ref) => (
 =======
 const AccordionTrigger = React.forwardRef<
@@ -252,12 +281,19 @@ AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
 const AccordionContent = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Content>,
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
   />));
@@ -284,6 +320,7 @@ const AccordionContent = React.forward_ref<;
   ComponentPropsWithoutR</typeof > ef < typeof AccordionPrimitive.Content>;
 >(({ class_name, children, ...props }, ref) => (
   <AccordionPrimitive.Content;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 <<<<<<< HEAD
@@ -301,6 +338,8 @@ const AccordionContent = React.forwardRef<
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     ref={ref}
     className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
@@ -328,16 +367,24 @@ AccordionContent && AccordionContent.displayName = AccordionPrimitive && Accordi
 
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
 
+<<<<<<< HEAD
 AccordionContent.displayName = AccordionPrimitive.Content.displayName;
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+AccordionContent.displayName = AccordionPrimitive.Content.displayName;
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   >;
     <div className={cn ('pb - 4 pt - 0', class_name)}>{children}</div>;
   </AccordionPrimitive.Content>));
 AccordionContent.display_name = AccordionPrimitive.Content.display_name;
 xport { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 
@@ -369,3 +416,6 @@ export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

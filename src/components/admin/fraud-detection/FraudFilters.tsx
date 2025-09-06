@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/admin/fraud-detection/FraudFilters.tsx
 
 
@@ -80,6 +81,9 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   resetFilters: () => void
+=======
+resetFilters: () => void
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
@@ -98,8 +102,11 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   contentTypeFilter
   setContentTypeFilter
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> import React from 'react';
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/admin/fraud-detection/FraudFilters.tsx
 };
@@ -127,6 +134,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 
     <div className="flex flex-col md: flex-row gap-4 mb-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -138,6 +146,8 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   searchQuery,
   setSearchQuery,
   statusFilter,
@@ -158,6 +168,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 >>>>>>>       <div className="relative flex-1">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
         <Input
           placeholder="Search by user or content..."
@@ -201,6 +212,17 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
       <Select value={statusFilter |""} onValueChange={value => setStatusFilter(value |null)}>
       
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
+=======
+        <Input
+          placeholder="Search by user or content..."
+          value = {searchQuery,}
+
+
+
+      
+
+      <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Status" />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -213,6 +235,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="actioned">Actioned</SelectItem>
         </SelectContent>
       </Select>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -235,6 +258,14 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
       <Select value={severityFilter |""} onValueChange={value => setSeverityFilter(value |null)}>
       
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
+=======
+
+
+
+      
+
+      <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Severity" />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -246,6 +277,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="dangerous">Dangerous</SelectItem>
         </SelectContent>
       </Select>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -268,6 +300,14 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
       <Select value={contentTypeFilter |""} onValueChange={value => setContentTypeFilter(value |null)}>
       
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
+=======
+
+
+
+      
+
+      <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Content Type" />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -296,12 +336,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Button variant="outline" onClick={resetFilters} className="md: w-auto">
         <Filter className="h-4 w-4 mr-2" /> Reset Filters
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       </Button>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -326,6 +372,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+          onChange = {(e,) => setSearchQuery(e && e.target.value),}
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 },
 import React from "react",;
 import { Input } from "@/components/ui/input",;
@@ -494,11 +546,15 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 <<<<<<<< HEAD:src/components/admin/fraud-detection/FraudFilters.tsx
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ========
 '"},;
 };
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/admin/fraud-detection/FraudFilters.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   search_query: string,
   setSearchQuery: (value: string, ) => void,
   status_filter: string | null,
@@ -571,6 +627,7 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
     </div>);
 }
 '"},
+<<<<<<< HEAD
 }
 <<<<<<<< HEAD:src/components/admin/fraud-detection/FraudFilters.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -622,3 +679,6 @@ resetFilters ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

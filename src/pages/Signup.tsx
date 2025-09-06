@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -13,6 +14,8 @@ import { useRouter } from 'next/router', // Changed from react-router-dom
 import { useFormik  } from 'formik';
 import * as Yup from 'yup',
 import axios from 'axios',
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import Link from 'next/link';
 import { Input  } from '@/components/ui/input';
 import { Button  } from '@/components/ui/button';
@@ -22,11 +25,15 @@ import { PasswordStrengthMeter  } from '@/components/PasswordStrengthMeter';
 import { AuthButtons  } from '@/components/AuthButtons';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from react-router-domimport { useFormik } from 'formik'
 import * as Yup from 'yup'
@@ -45,6 +52,7 @@ import { AuthButtons } from '@/components/AuthButtons'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
 
+<<<<<<< HEAD
 import { toast } from '@/hooks/use-toast'
 import { AuthLayout } from '@/layout'
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
@@ -73,6 +81,8 @@ const SignupSchema = Yup.object({
 })
 export default function Signup() {
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
 
 
@@ -107,6 +117,9 @@ export default function Signup() {;
   const isPartnerSignup = router.query.type === 'partner'
   const signupSource = (router.query.source as string) |'direct'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState, useEffect } from 'react';
 import { use_router } from 'next / router'; // Changed from react-router-domimport { use_formik } from 'formik';
 import * as Yup from 'yup';
@@ -154,9 +167,12 @@ function Signup() {
   // Check if this is a partner signup;
   const isPartnerSignup = router.query.type === 'partner';
   const signup_source = (router.query.source as string) || 'direct';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const performHealthCheck = async () => {
     setHealthCheckLoading(true)
     setHealthCheckError(null)
@@ -198,6 +214,9 @@ function Signup() {
           'Authentication service is temporarily unavailable'
         )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       logErrorToProduction ('Auth service health check failed', { data: err });
       setAuthServiceAvailable (false);
       // Set a more specific error message based on the error type;
@@ -213,9 +232,12 @@ if ( {) {
 }
         setHealthCheckError (
           'Authentication service is temporarily unavailable');
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       } else {
         setHealthCheckError('Unable to verify authentication service status')
       }
@@ -470,6 +492,9 @@ if ( {) {
           if (errorMsg.toLowerCase().includes('password')) {
             setErrors({ password: errorMsg })
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             : 'No config',
         });
         const status = err.response?.status;
@@ -503,9 +528,12 @@ if ( {) {
   $2
 }
             set_errors ({ password: error_msg });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           } else {
             setErrors({ confirm: errorMsg })
           }
@@ -829,7 +857,6 @@ export default function Signup() {;
         </div>;
       </AuthLayout>;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
     <AuthLayout>;
@@ -1262,6 +1289,7 @@ export default function Signup() {;
                 disabled={loading || emailVerificationRequired}
               />;
               <label html_for='terms' className='text - sm'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
                 checked={formik.values.terms}
@@ -1270,20 +1298,37 @@ export default function Signup() {;
               />
               <label htmlFor='terms' className='text-sm'>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 I agree to the{' '}
                 <Link href='/terms' className='underline'>
                   Terms of Service
                 </Link>{' '}
                 and{' '}
+<<<<<<< HEAD
                 <Link href='/privacy' className='underline'>
                   Privacy Policy
                 </Link>
               </label>
             </div>
+=======
+                <Link href='/privacy' className='underline'>;
+                  Privacy Policy;
+                </Link>;
+              </label>;
+            </div>;
+
+
+            {!emailVerificationRequired ? (;
+
+              <Button
+                type='submit'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {formik.touched.terms && formik.errors.terms && (
               <div className='text-red-500 text-sm'>{formik.errors.terms}</div>
             )}
             {!emailVerificationRequired ? (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>               <Button
@@ -1292,6 +1337,75 @@ export default function Signup() {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+              <Button;
+                type='submit';
+                disabled={loading}
+                data - testid='signup - submit';
+                className={
+
+                  healthCheckError ? 'bg - yellow - 600 hover:bg - yellow - 700' : '';
+                }
+              >;
+                {loading ? (
+                  <>;
+                    <LoadingSpinner size='sm' className='mr - 2' />;
+                    Creating Account...;
+                  </>) : healthCheckError ? (
+                  'Try Creating Account') : (
+                  'Create Account')}
+              </Button>) : (
+              <div className='space - y-2'>;
+                <Button;
+                  type='button';
+                  variant='outline';
+                  className='w - full';
+                  on_click={() => router.push ('/login')}
+                >;
+                  Go to Login;
+                </Button>;
+                <Button;
+                  type='button';
+                  variant='outline';
+                  className='w - full';
+                  on_click={() =>;
+                    router.push (
+                      `/verify - status?email=${encodeURIComponent (formik.values.email)}`);
+
+                  }
+                >;
+                  Check Verification Status;
+                </Button>;
+
+                  onClick={() => {;
+                    setEmailVerificationRequired(false);
+                    setSuccessMessage('');
+
+                <Button;
+                  type='button';
+                  variant='ghost';
+                  className='w - full text - sm';
+                  on_click={() => {
+                    setEmailVerificationRequired (false);
+                    setSuccessMessage ('');
+                  }}
+                >;
+                  Try Different Email;
+                </Button>;
+
+              </div>)}
+            {/* Additional help text when service issues are detected */}
+            {healthCheckError && (
+              <div className='text - center text - xs text - muted - foreground mt - 4 p - 3 bg - muted rounded'>;
+
+                <p>⚠️ We detected some authentication service issues.</p>;
+                <p>;
+                  If signup fails, please try again in a few minutes or contact;
+                  support.;
+                </p>;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <form onSubmit={handleFormSubmit} className="space-y-4" noValidate>
           {/* Show Health Check Warning */}
           {healthCheckError && (
@@ -1470,6 +1584,10 @@ export default function Signup() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Button
                 type="button"
                 variant="ghost"
@@ -1493,10 +1611,14 @@ export default function Signup() {;
           )}
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>           </form>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </form>
 >>>>>>>           {!emailVerificationRequired && (
             <div className='mt-6'>
@@ -1758,16 +1880,90 @@ export default function Signup() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
           form.setError("root", { message: sessionError.message |"Failed to set session. Please try logging in." })
           toast.error(sessionError.message |"Failed to set session. Please try logging in.")
           return
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage, ,
+} from '@/components / ui / form';
+// Form validation schema;
+const signup_schema = z;
+  .object ({
+    display_name: z.string ().min (2, "Name must be at least 2 characters"),
+    email: z.string ().email ("Please enter a valid email"),
+    password: z.string ();
+      .min (8, "Password must be at least 8 characters");
+      .regex (/[A - Z]/, "Password must contain at least one uppercase letter");
+      .regex (/[a - z]/, "Password must contain at least one lowercase letter");
+      .regex (/[0 - 9]/, "Password must contain at least one number"),
+    confirm_password: z.string (),
+    terms_accepted: z.boolean ().refine (val => val === true, {
+      message: "You must accept the terms and conditions", ,
+}), ,
+});
+  .refine (data => data.password === data.confirm_password, {
+    message: "Passwords do not match",
+    path: ["confirm_password"], ,
+});
+type SignupFormValues = z.infer < typeof signup_schema>;
+export default /**
+ * Signup - Function description
+ */
+function Signup() {
+  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, is_loading, is_authenticated, user } = use_auth ();
+  const navigate = use_navigate ();
+  const [show_password, setShowPassword] = useState (false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState (false);
+  // Track confirm password locally to prevent it from clearing on blur;
+  const [confirmPasswordValue, setConfirmPasswordValue] = useState ("");
+  const password_value = form.watch ("password");
+  const [is_submitting, setIsSubmitting] = useState (false);
+  // Initialize react - hook - form;
+  const form = use_form ({
+    resolver: zod_resolver (signup_schema),
+    default_values: {
+      display_name: ",
+      email: ",
+      password: ",
+      confirm_password: ",
+      terms_accepted: false, ,
+}, ,
+}) as UseFormReturn < SignupFormValues>;
+  // Form submission handler;
+  const on_submit = async (data: SignupFormValues) => {
+    // Check condition
+if (return) {
+  $2
+} // Prevent multiple submissions;
+    setIsSubmitting (true);
+    try {
+      const { res, data: res_data } = await register (
+        data.display_name,
+        data.email,
+        data.password);
+      // Handle duplicate email error from API;
+      // Check condition
+if ( {) {
+  $2
+
+          form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })
+          toast.error(sessionError.message || "Failed to set session. Please try logging in.")
+          return;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
         form.set_error ('email', { message: res_data.message });
         toast.error ('Email already registered – please login.');
         return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
       // Check for successful response;
       // Check condition
@@ -1991,6 +2187,7 @@ export default function Signup() {;
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
         </div>;
 =======
 }}
@@ -2079,11 +2276,96 @@ const Signup = () => {
 }
 }};
 };
+=======
+      // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification);
+      if (data && data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {;
+        try {;
+          await mailchimpService && mailchimpService.addSubscriber({;
+            email: data && data.email,;
+            mergeFields: { FNAME: data && data.displayName }
+          });
+          await mailchimpService && mailchimpService.sendWelcomeEmail(data && data.email, 'NEW10');
+} catch (err) {;
+          console && console.error('Mailchimp subscription failed', err);
+          // Non-critical error, don't block user flow;
+}
+      }
+      // Toast and navigation are handled above if session is present;
+      // If emailVerificationRequired, no toast/navigation here, message is shown;
+} catch (err: any) {;
+      const message = err && err.message ?? "Registration failed";
+      form && form.setError("root", { message });
+      toast && toast.error(message);
+} finally {;
+      setIsSubmitting(false);    }
+  };
+  const onInvalid = (errors: any) => {;
+    const firstError = Object && Object.keys(errors)[0] as keyof SignupFormValues;
+    if (firstError) {;
+      form && form.setFocus(firstError);
+
+  const on_invalid = (errors: any) =>: any {
+    const first_error = Object.keys (errors)[0] as keyof SignupFormValues;
+    // Check condition
+if ( {) {
+  $2
+}
+      form.set_focus (first_error);
+}
+  }
+  // Redirect if user is already logged in and has completed profile;
+  // Check condition
+if ( {) {
+  $2
+}
+
+
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+const Signup = () => {;
+  return (
+    <>;
+      <Head>;
+        <title>Signup - Zion Tech Group</title>;
+        <meta name="description" content="Professional Signup services"  />;
+      </Head>;
+      <div className="min-h-screen bg-gray-50">;
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">;
+          <div className="text-center">;
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">;
+              Signup;
+            </h1>;
+            <p className="text-xl text-gray-600 mb-12">;
+              Professional Signup services and solutions;
+            </p>;
+            <div className="grid md:grid-cols-2 gap-8 mb-12">;
+              <div className="bg-white p-6 rounded-lg shadow-md">;
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>;
+                <ul className="text-gray-600 space-y-2">;
+                  <li>• Professional Solutions</li>;
+                  <li>• Expert Implementation</li>;
+                  <li>• 24/7 Support</li>;
+                  <li>• Custom Development</li>;
+                </ul>;
+              </div>;
+              <div className="bg-white p-6 rounded-lg shadow-md">;
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;
+                <ul className="text-gray-600 space-y-2">;
+    return <Navigate to="/" />;
+}
+
+
+}};
+};
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </div>;
       </div>;
     </AuthLayout>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2094,3 +2376,6 @@ const Signup = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

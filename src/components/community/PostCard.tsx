@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/community/PostCard.tsx
 
 
@@ -37,6 +38,8 @@ import { logInfo } from '@/utils/productionLogger'
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -83,6 +86,7 @@ export default PostCard
 =======
 =======
 
+<<<<<<< HEAD
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
 export default PostCard;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -108,6 +112,8 @@ export default PostCard;
 <<<<<<< HEAD
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface PostCardProps {
   post: ForumPost
   compact?: boolean
@@ -118,6 +124,7 @@ interface PostCardProps {
 
 
 
+<<<<<<< HEAD
       "transition-shadow hover: shadow-md",
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ========
@@ -168,6 +175,10 @@ PostCard && PostCard.displayName = 'PostCard';
 export default PostCard;
       "transition-shadow hover: shadow-md",
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/PostCard.tsx
+=======
+
+      "transition-shadow hover: shadow-md",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import { formatDistanceToNow } from './date - fns';
 import Link from './next / link';
@@ -192,6 +203,7 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) =>: any {
 export const PostCard = React.memo (PostCardComponent);
 PostCard.display_name = 'PostCard';
 export default PostCard;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/community/PostCard.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 onst PostCardComponent = ({ post, compact = false }: PostCardProps) => {
@@ -370,3 +382,10 @@ export default PostCard;
 =======
 export default PostCard;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
+export default PostCard;
+
+
+export default PostCard;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 =======
@@ -22,6 +23,14 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+unreadCount, ;
+    markAsRead, ;
+
+  const handleFilterChange = (newFilter: FilterType,) => {;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useEffect } from 'react',
 // Use the shared icon wrapper
 import { Bell } from 'lucide-react'
@@ -44,6 +53,7 @@ export const NotificationCenter: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>     unreadCount, 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -55,6 +65,9 @@ export const NotificationCenter: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     unreadCount, 
     markAsRead, 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -217,6 +230,7 @@ export const NotificationCenter: React.FC = () => {;
     }
   },;
   const handleFilterChange = (newFilter: FilterType) => {;
+<<<<<<< HEAD
     setFilter(newFilter as any);
   };
   return (;
@@ -293,15 +307,19 @@ export const NotificationCenter: React.FC = () => {;
       </PopoverTrigger>
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     setFilter(newFilter as any);
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           )}
 
         </Button>;
@@ -366,6 +384,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
         <NotificationHeader 
@@ -381,3 +400,39 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+    <Popover open={open} onOpenChange={(v, ) => set_open (v ?? false)}>;
+      <PopoverTrigger as_child>;
+        <Button variant="ghost" size="icon" className="relative" aria - label="Open notifications">;
+          <Bell className="h - 5 w - 5 text - zion - slate - light" />;
+          {unread_count > 0 && (
+            <span className="absolute -top - 0.5 -right - 0.5 flex h - 5 w - 5 items - center justify - center rounded - full bg - zion - cyan text-[10px] text - white font - medium">;
+              {unread_count > 9 ? '9+' : unread_count}
+            </span>)}
+        </Button>;
+      </PopoverTrigger>;
+      <PopoverContent className="w-[350px] p - 0 bg - zion - blue border - zion - blue - light max - h-[500px] flex flex - col">;
+        <NotificationHeader;
+          unread_count = {unread_count, }
+          onMarkAllAsRead = {handleMarkAllAsRead, }
+        />;
+        <NotificationFilter;
+          filter = {filter as FilterType, }
+          onFilterChange = {handleFilterChange, }
+        />;
+        <NotificationList;
+          loading = {loading, }
+          error = {error, }
+          notifications = {filtered_notifications, }
+          onMarkAsRead = {markAsRead, }
+          on_dismiss = {dismiss_notification, }
+          on_retry = {fetch_notifications, }
+        />;
+        <NotificationFooter on_close={() => set_open (false)} />;
+      </PopoverContent>;
+    </Popover>);
+},
+;
+
+        <NotificationHeader
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

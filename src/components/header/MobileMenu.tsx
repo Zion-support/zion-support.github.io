@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -177,6 +178,9 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               onClose(), // Close mobile menu on any click
             }}
           >
@@ -201,6 +205,7 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 }
 >>>>>>> 
@@ -225,3 +230,13 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),  );
+}
+  );
+}
+
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

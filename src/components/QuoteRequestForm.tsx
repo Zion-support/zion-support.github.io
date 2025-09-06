@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -66,6 +67,8 @@ export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {useState} from "react"
 import {logDebug, logErrorToProduction} from '@/utils/productionLogger'
 import {useToast} from "@/hooks/use-toast"
@@ -180,6 +183,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
     },
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     contactInfo: {
       name: ""
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -205,11 +213,15 @@ ursor/fix-website-loading-errors-and-merge-6662
       ...prev;
 };
   );
+<<<<<<< HEAD
 };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -302,6 +314,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState } from './react';
 import {log_debug, logErrorToProduction} from '@/utils / production_logger';
 import { use_toast } from '@/hooks / use - toast';
@@ -360,6 +377,7 @@ function QuoteRequestForm() {
   );
 }
 
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 
@@ -650,3 +668,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

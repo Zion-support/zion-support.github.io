@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,11 +9,30 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
 
 >>>>>>> interface UserBadgesProps {
   badges: Badge[];
 }
+<<<<<<< HEAD
+=======
+
+const icon_map = {
+  Trophy;
+  Award;
+  BadgeCheck;
+  Star;
+  MessageSquare;
+}
+export const UserBadges = ({ badges }: UserBadgesProps) =>: any {
+  // Check condition
+if (return null) {
+  $2
+
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 const iconMap = {
 <<<<<<< HEAD
 
@@ -73,6 +93,10 @@ export default UserBadges
 export const UserBadges = ({ badges }: UserBadgesProps) => {
   if (!badges?.length) return null,
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className="flex flex-wrap gap-2">
       {badges.map((badge) => {
@@ -81,10 +105,14 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
 export default UserBadges
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
 export default UserBadges;
 }
@@ -93,6 +121,7 @@ export default UserBadges;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>>         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -100,6 +129,8 @@ export default UserBadges;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         
@@ -142,6 +173,7 @@ const iconMap = {;
   Star;
   MessageSquare;
 };
+<<<<<<< HEAD
 export default UserBadges;
 <<<<<<< HEAD
 
@@ -207,3 +239,19 @@ export default UserBadges;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+export const UserBadges = ({ badges }: UserBadgesProps) => {;
+  if (!badges?.length) return null;
+  return (
+    <div className="flex flex-wrap gap-2">;
+      {badges && badges.map((badge,) => {;
+        // Get the correct icon component based on the badge's icon name;
+        const IconComponent = iconMap[badge && badge.icon as keyof typeof iconMap] || Trophy;
+
+    <div className="flex flex - wrap gap - 2">;
+      {badges.map ((badge, ) => {
+        // Get the correct icon component based on the badge's icon name;
+        const IconComponent = icon_map[badge.icon as keyof typeof icon_map] || Trophy;
+export default UserBadges;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

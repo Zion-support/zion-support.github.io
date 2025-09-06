@@ -31,7 +31,6 @@ export const defaultSEO = {
       },
     ],
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   twitter: {
 
     handle: '@ziontechgroup',
@@ -54,6 +53,7 @@ export const defaultSEO = {
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 export default defaultSEO
 
@@ -110,3 +110,9 @@ export default defaultSEO;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+export default defaultSEO;
+;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

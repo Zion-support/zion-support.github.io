@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState } from 'react';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -59,6 +62,7 @@ interface ProjectCardProps {
 
 }
 
+<<<<<<< HEAD
 =======
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const handleDelete = null;
@@ -78,6 +82,130 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+interface ProjectCardProps {;
+  project: PortfolioProject;
+  onEdit: (project: PortfolioProject) => void;
+  onDelete: (projectId: string) => void;import Image from 'next/image';
+import { PortfolioProject } from '@/types/resume';
+interface ProjectCardProps {;
+  project: PortfolioProject,;
+  onEdit: (project: PortfolioProject,) => void,;
+  onDelete: (projectId: string,) => void;
+}
+
+export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardProps) {;
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+
+  const handleDelete = () => {;
+    if (project && project.id) {;
+      onDelete(project && project.id);
+    }
+    setDeleteDialogOpen(false);
+  };
+
+
+  return (
+    <Card className='h-full flex flex-col'>;
+      <div className='relative h-48 overflow-hidden rounded-t-lg bg-muted'>        {project && project.image_url ? (;
+          <Image
+            src={project && project.image_url}
+            alt={project && project.title}
+            className='object-cover'
+            loading='lazy'    <Card className="h-full flex flex-col">;
+      <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
+        {project && project.image_url ? (;
+          <Image
+            src={project && project.image_url}
+            alt={project && project.title}
+            className='object-cover'
+            loading='lazy'
+        ) : (
+          <div className='w-full h-full flex items-center justify-center bg-muted'>;
+            <FileText className='h-12 w-12 text-muted-foreground/50' />;
+          </div>;
+        )}
+
+import { useState } from 'react';
+import { Card, CardContent, CardFooter } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { Badge } from '@/components / ui / badge';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from '@/components / ui / alert - dialog';
+import { Edit, Trash2, Github, Link, FileText } from 'lucide-react';
+import Image from 'next / image';
+import { PortfolioProject } from '@/types / resume';
+interface ProjectCardProps {
+  project: PortfolioProject;
+  on_edit: (project: PortfolioProject) => void;
+  on_delete: (project_id: string) => void; import Image from 'next / image';
+interface ProjectCardProps {
+  project: PortfolioProject,
+  on_edit: (project: PortfolioProject, ) => void,
+  on_delete: (project_id: string, ) => void;
+}
+export /**
+ * ProjectCard - Function description
+ */
+function ProjectCard() {
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState (false);
+  const handle_delete = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      on_delete (project.id);
+    }
+    setDeleteDialogOpen (false);
+  }
+  return (
+    <Card className='h - full flex flex - col'>;
+      <div className='relative h - 48 overflow - hidden rounded - t-lg bg - muted'>        {project.image_url ? (
+          <Image;
+            src={project.image_url}
+            alt={project.title}
+            className='object - cover';
+            loading='lazy'    <Card className="h - full flex flex - col">;
+      <div className="relative h - 48 overflow - hidden rounded - t-lg bg - muted">;
+        {project.image_url ? (
+          <Image;
+            src={project.image_url}
+            alt={project.title}
+            className='object - cover';
+            loading='lazy') : (
+          <div className='w - full h - full flex items - center justify - center bg - muted'>;
+            <FileText className='h - 12 w - 12 text - muted - foreground / 50' />;
+          </div>)}
+      </div>;
+      <CardContent className='flex - grow pt - 6'>;
+        <div className='space - y-2'>;
+          <h3 className='font - semibold text - lg'>{project.title}</h3>;
+
+          {project.description && (
+            <p className='text - sm text - muted - foreground line - clamp - 3'>;
+              {project.description}
+
+          {project.technologies && project.technologies.length > 0 && (
+            <div className='flex flex-wrap gap-1 mt-2'>
+              {project.technologies.map((tech, index) => (
+                <Badge key={index} variant='secondary' className='text-xs'>                  {tech}                <Badge key={index} variant="secondary" className="text-xs">
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
+import { Edit, Trash2, Github, Link, FileText } from 'lucide-react'
+import Image from 'next/image';
+import { PortfolioProject } from '@/types/resume';
+interface ProjectCardProps {
+  project: PortfolioProject,
+  onEdit: (project: PortfolioProject) => void,
+  onDelete: (projectId: string) => void
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 
 }
@@ -90,6 +218,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
       onDelete(project.id)
     }
     setDeleteDialogOpen(false)
+<<<<<<< HEAD
   }
 ;
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
@@ -110,6 +239,12 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  };
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 =======
   
@@ -168,6 +303,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <p className="text-sm text-muted-foreground line-clamp-3">{project.description}</p>
           )}
 
+<<<<<<< HEAD
 =======
       <CardContent className='flex-grow pt-6'>
         <div className='space-y-2'>
@@ -203,12 +339,15 @@ ursor/fix-website-loading-errors-and-merge-6662
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant='secondary' className='text-xs'>                  {tech}                <Badge key={index} variant="secondary" className="text-xs">
           />
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-muted">
             <FileText className="h-12 w-12 text-muted-foreground/50" />
           </div>
         )}
       </div>
+<<<<<<< HEAD
       <CardContent className="flex-grow pt-6">
         <div className="space-y-2">
           <h3 className="font-semibold text-lg">{project.title}</h3>
@@ -219,6 +358,19 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className="flex flex-wrap gap-1 mt-2">
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant="secondary" className="text-xs">
+=======
+
+      </div>;
+
+      <CardContent className='flex-grow pt-6'>;
+        <div className='space-y-2'>;
+          <h3 className='font-semibold text-lg'>{project && project.title}</h3>;
+
+          {project && project.description && (;
+            <p className='text-sm text-muted-foreground line-clamp-3'>;
+              {project && project.description}
+            </p>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   {tech}
                 </Badge>
               ))}
@@ -228,6 +380,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           )}
+<<<<<<< HEAD
         </div>
       </CardContent>
       <CardFooter className='flex justify-between border-t bg-muted/40 p-4'>
@@ -251,6 +404,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className="flex flex-wrap gap-1 mt-2">
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant="secondary" className="text-xs">
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
           {project && project.technologies && project && project.technologies.length > 0 && (;
             <div className='flex flex-wrap gap-1 mt-2'>;
@@ -278,6 +433,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Badge key={index} variant="secondary" className="text-xs">;
 
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>>                   {tech}
 =======
 =======
@@ -289,6 +445,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className="flex flex-wrap gap-1 mt-2">
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant="secondary" className="text-xs">
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   {tech}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </Badge>;
@@ -306,10 +464,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               title='GitHub'
               href = {project && project.github_url,}
 
+<<<<<<< HEAD
 =======
         </div>
       </CardContent>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       
       <CardFooter className="flex justify-between border-t bg-muted/40 p-4">
         <div className="flex gap-2">
@@ -320,6 +481,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
               target="_blank"
 =======
 >>>>>>>               target="_blank"
@@ -336,6 +498,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Github className='h-4 w-4' />
               </Button>
             </a>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -414,6 +578,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -444,6 +609,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         
         <div className="flex gap-2">
           <Button variant="ghost" size="icon" onClick={() => onEdit(project)} aria-label="Edit project">
@@ -460,6 +628,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -471,6 +640,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
 >>>>>>>         <AlertDialogContent>
           <AlertDialogHeader>
@@ -489,6 +660,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </AlertDialogFooter>
         </AlertDialogContent>
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -522,6 +694,89 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 }
 >>>>>>> 
+=======
+            </p>)}
+          {project.technologies && project.technologies.length > 0 && (
+            <div className='flex flex - wrap gap - 1 mt - 2'>;
+              {project.technologies.map ((tech, index) => (
+                <Badge key={index} variant='secondary' className='text - xs'>                  {tech}                <Badge key={index} variant="secondary" className="text - xs">;
+          />) : (
+          <div className="w - full h - full flex items - center justify - center bg - muted">;
+            <FileText className="h - 12 w - 12 text - muted - foreground / 50" />;
+          </div>)}
+      </div>;
+      <CardContent className="flex - grow pt - 6">;
+        <div className="space - y-2">;
+          <h3 className="font - semibold text - lg">{project.title}</h3>;
+          {project.description && (
+            <p className="text - sm text - muted - foreground line - clamp - 3">{project.description}</p>)}
+          {project.technologies && project.technologies.length > 0 && (
+            <div className="flex flex - wrap gap - 1 mt - 2">;
+              {project.technologies.map ((tech, index) => (
+                <Badge key={index} variant="secondary" className="text - xs">;
+                  {tech}
+                </Badge>))}
+            </div>)}
+        </div>;
+      </CardContent>;
+      <CardFooter className='flex justify - between border - t bg - muted / 40 p - 4'>;
+        <div className='flex gap - 2'>;
+          {project.github_url && (
+            <a;
+              href={project.github_url}
+              target='_blank';
+              rel='noopener noreferrer';
+              aria - label='GitHub';
+              title='GitHub';
+              href = {project.github_url, }
+              target="_blank";
+              rel="noopener noreferrer";
+              aria - label="GitHub";
+              title="GitHub";
+            >;
+              <Button variant='ghost' size='icon' aria - label='GitHub link'>;
+                <Github className='h - 4 w - 4' />;
+              </Button>;
+            </a>)}
+          {project.demo_url && (
+            <a;
+              href={project.demo_url}
+              target='_blank';
+              rel='noopener noreferrer';
+              aria - label='Live demo';
+              title='Live demo'            >;
+              <Button variant='ghost' size='icon' aria - label='Live demo link'>;
+                <Link className='h - 4 w - 4' />              </Button>;
+            </a>)}
+        </div>              <Button variant="ghost" size="icon" aria - label="Live demo link">;
+                <Link className="h - 4 w - 4" />;
+              </Button>;
+            </a>)}
+        </div>;
+        <div className='flex gap - 2'>;
+          <Button;
+            variant='ghost';
+            size='icon';
+            on_click={() => on_edit (project)}
+            aria - label='Edit project';
+          >;
+            <Edit className='h - 4 w - 4' />;
+          <Button;
+            variant='ghost';
+            size='icon';
+            on_click={() => setDeleteDialogOpen (true)}
+            aria - label='Delete project';
+          >;
+            <Trash2 className='h - 4 w - 4' />;
+          </Button>;
+        </div>;
+      </CardFooter>;
+      <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>;
+        <AlertDialogContent>;
+          <AlertDialogHeader>;
+            <AlertDialogTitle > Delete Project</AlertDialogTitle>;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <AlertDialogDescription>;
               Are you sure you want to delete this project? This action cannot;
               be undone.            </AlertDialogDescription>;
@@ -566,6 +821,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
@@ -585,6 +841,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               Delete
             </AlertDialogAction>
           </AlertDialogFooter>
@@ -612,7 +870,11 @@ ursor/fix-website-loading-errors-and-merge-6662
               className='bg - destructive text - destructive - foreground';
             >            <AlertDialogAction on_click={handle_delete} className="bg - destructive text - destructive - foreground">;
 
+<<<<<<< HEAD
 >>>>>>>               Delete;
+=======
+              Delete;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
@@ -621,6 +883,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     </Card>);
 }
@@ -653,3 +916,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+    </Card>);
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

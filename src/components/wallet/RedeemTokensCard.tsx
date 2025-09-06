@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React, { useState } from "react",
@@ -258,6 +259,66 @@ export function RedeemTokensCard() {
     type: 'credit'
   }
 ],
+=======
+return (
+    <Card>;
+      <CardHeader>;
+
+        <CardTitle className='flex items - center gap - 2'>;
+          <Gift className='h - 5 w - 5' /> Redeem Rewards;
+
+        </CardTitle>;
+        <CardDescription>;
+          Exchange your ZION$ for rewards and perks;
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+
+                {wallet?.balance || 0} ZION$.;
+              </DialogDescription>;
+            </DialogHeader>;
+            <div className='space-y-4 py-4'>;
+              {REWARD_OPTIONS && REWARD_OPTIONS.map(option => (;
+
+                <div
+                  key={option && option.id}
+                  className='flex justify-between items-center border-b pb-4'>                  <div>;
+                    <h3 className='font-medium'>{option && option.title}</h3>;
+                    <p className='text-sm text-muted-foreground'>;
+                      {option && option.description}
+                    </p>;
+                  </div>;
+                  <div className='flex flex-col items-end gap-1'>;
+                    <span className='text-sm font-bold'>;
+                      {option && option.cost} ZION$;
+                    </span>;
+                    <Button
+                      size='sm'
+                      variant={
+                        wallet && wallet.balance>= option && option.cost;
+                          ? 'default';
+                          : 'outline';
+                      }
+
+                      disabled={!wallet || wallet.balance < option && option.cost}
+                      onClick={() => handleRedeem(option)}                    >;
+                      Redeem <ArrowRight className='ml-1 h-3 w-3' />;
+                    </Button>;
+                  </div>;
+                </div>;
+
+              ))}
+            </div>;
+            <div className='flex justify-between'>;
+              <Button
+                variant='outline'
+                size='sm'
+                onClick={() => setOpen(false)}
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 export function RedeemTokensCard() {
   const { wallet, spendTokens } = useWallet(),
@@ -398,9 +459,12 @@ export function RedeemTokensCard() {
               <Button variant="ghost" size="sm">
                 Learn More <ExternalLink className="ml-1 h-3 w-3" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </Button>
             </div>
           </DialogContent>
@@ -411,6 +475,7 @@ export function RedeemTokensCard() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
   );
 };
@@ -492,6 +557,11 @@ export function RedeemTokensCard() {;
         <Dialog open={open} onOpenChange={setOpen}>;
           <DialogTrigger asChild>;
             <Button className="w-full">View Available Rewards</Button>;
+=======
+        <Dialog open={open} onOpenChange={set_open}>;
+          <DialogTrigger as_child>;
+            <Button className='w - full'>View Available Rewards</Button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
@@ -546,6 +616,7 @@ export function RedeemTokensCard() {;
           </DialogContent>;
         </Dialog>;
       </CardContent>;
+<<<<<<< HEAD
     </Card>;
   );
 }
@@ -569,3 +640,12 @@ export function RedeemTokensCard() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+    </Card>);
+}
+
+  )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

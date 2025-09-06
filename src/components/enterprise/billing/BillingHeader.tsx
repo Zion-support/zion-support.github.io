@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -107,6 +108,8 @@ import React from "react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function BillingHeader() {
   return (
     <div className="space-y-2">
@@ -121,6 +124,13 @@ export function BillingHeader() {
             <Mail className="h-4 w-4" />
             Contact Billing Support
           </Button>
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Button variant="outline" size="sm" className="gap-1" asChild>
             <Link href="/dashboard/client/analytics">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -144,6 +154,7 @@ export function BillingHeader() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -166,6 +177,34 @@ export function BillingHeader() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+export function BillingHeader() {;
+  return (
+    <div className='space-y-2'>;
+      <div className='flex items-center justify-between'>;
+        <h1 className='text-3xl font-bold tracking-tight'>;
+          Billing & Invoices;
+        </h1>;
+        <div className='flex gap-2'>;
+          <Button variant='outline' size='sm' className='gap-1'>;
+            <Download className='h-4 w-4' />;
+            Export;
+          </Button>;
+          <Button variant='outline' size='sm' className='gap-1'>;
+            <Mail className='h-4 w-4' />;
+            Contact Billing Support;
+          </Button>;
+          <Button variant='outline' size='sm' className='gap-1' asChild>;
+            <Link href='/dashboard/client/analytics'>;
+              <BarChart3 className='h-4 w-4' />              Analytics;
+          <Button variant="outline" size="sm" className="gap-1" asChild>;
+            <Link href="/dashboard/client/analytics">;
+              <BarChart3 className="h-4 w-4" />;
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   )
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -188,17 +227,83 @@ export function BillingHeader() {;
           <Button variant="outline" size="sm" className="gap-1" asChild>;
             <Link href="/dashboard/client/analytics">;
               <BarChart3 className="h-4 w-4" />;
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Button } from '@/components / ui / button';
+import { Download, Mail, BarChart3 } from 'lucide-react';
+import Link from 'next / link';
+export /**
+ * BillingHeader - Function description
+ */
+function BillingHeader() {
+  return (
+    <div className='space - y-2'>;
+      <div className='flex items - center justify - between'>;
+        <h1 className='text - 3xl font - bold tracking - tight'>;
+          Billing & Invoices;
+        </h1>;
+        <div className='flex gap - 2'>;
+          <Button variant='outline' size='sm' className='gap - 1'>;
+            <Download className='h - 4 w - 4' />;
+            Export;
+          </Button>;
+          <Button variant='outline' size='sm' className='gap - 1'>;
+            <Mail className='h - 4 w - 4' />;
+            Contact Billing Support;
+          </Button>;
+          <Button variant='outline' size='sm' className='gap - 1' as_child>;
+            <Link href='/dashboard / client / analytics'>;
+              <BarChart3 className='h - 4 w - 4' />              Analytics;
+          <Button variant="outline" size="sm" className="gap - 1" as_child>;
+            <Link href="/dashboard / client / analytics">;
+              <BarChart3 className="h - 4 w - 4" />;
+import React from './react';
+import { Button  } from '@/components / ui / button';
+import Link from './next / link';
+export /**
+ * BillingHeader - Function description
+ */
+function BillingHeader() {
+  return (
+    <div className="space - y-2">;
+      <div className="flex items - center justify - between">;
+        <h1 className="text - 3xl font - bold tracking - tight">Billing & Invoices</h1>;
+        <div className="flex gap - 2">;
+          <Button variant="outline" size="sm" className="gap - 1">;
+            <Download className="h - 4 w - 4" />;
+            Export;
+          </Button>;
+          <Button variant="outline" size="sm" className="gap - 1">;
+            <Mail className="h - 4 w - 4" />;
+            Contact Billing Support;
+          </Button>;
+          <Button variant="outline" size="sm" className="gap - 1" as_child>;
+            <Link href="/dashboard / client / analytics">;
+              <BarChart3 className="h - 4 w - 4" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               Analytics;
             </Link>;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
       <p className="text-muted-foreground">;
+=======
+
+
+      <p className='text - muted - foreground'>;
+        Manage your subscription, view invoice history, and update payment;
+        methods.;
+      </p>;
+    </div>) <p className="text - muted - foreground">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         Manage your subscription, view invoice history, and update payment methods.;
       </p>;
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -209,3 +314,6 @@ export function BillingHeader() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

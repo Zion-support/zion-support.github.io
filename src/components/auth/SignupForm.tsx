@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -475,6 +476,9 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 passwordStrength.strength >= 4 ? 'text-green-600' :
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+passwordStrength.strength >= 4 ? 'text-green-600' :
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
                 passwordStrength.strength >= 2 ? 'text-yellow-600' : 'text-red-600'
               )}>
@@ -559,9 +563,9 @@ type SignupFormData = z && z.infer<typeof signupSchema>;
 
       setError('root', { message: errorMessage }),;
               <span className={cn('font-medium', passwordStrength && passwordStrength.strength >= 4 ? 'text-green-600' :}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
+<<<<<<< HEAD
 >>>>>>> 
 =======
 =======
@@ -581,6 +585,22 @@ type SignupFormData = z.infer<typeof signupSchema>
     const state = fieldStates[fieldName]
     const isTouched = touchedFields[fieldName as keyof SignupFormData]
       return <AlertCircle className="h-4 w-4 text-red-500" />
+=======
+
+
+  path: ["confirm_password"]}),
+type SignupFormData = z.infer < typeof signup_schema>;
+        setFieldStates (prev => ({
+          ...prev;
+        timeouts[field_name] = set_timeout (async () => {
+          const result = await trigger (typedFieldName);
+          const error = errors[typedFieldName];
+          setFieldStates (prev => ({
+            ...prev;
+    const state = field_states[field_name];
+    const is_touched = touched_fields[field_name as keyof SignupFormData];
+      return <AlertCircle className="h - 4 w - 4 text - red - 500" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
     return null
   }
@@ -669,6 +689,7 @@ type SignupFormData = z.infer<typeof signupSchema>
     </form>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -685,3 +706,6 @@ type SignupFormData = z.infer<typeof signupSchema>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

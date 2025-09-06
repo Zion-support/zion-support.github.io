@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/page/ContractTypeCards.tsx
 
 <<<<<<< HEAD
@@ -91,6 +92,9 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           <CardTitle className='flex items-center gap-2'>
             <FileText className='h-5 w-5' />            Standard Contracts
           <CardTitle className="flex items-center gap-2">
+=======
+<CardTitle className="flex items-center gap-2">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <FileText className="h-5 w-5" />
 <<<<<<< HEAD
 ========
@@ -181,6 +185,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         <CardFooter>
           <Button variant="outline" onClick={onStandardClick}>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/page/ContractTypeCards.tsx
 ========
             Create Standard Contract
@@ -215,6 +220,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Button variant="outline" onClick={onStandardClick}>
             Create Standard Contract
           </Button>
@@ -222,6 +231,12 @@ ursor/fix-website-loading-errors-and-merge-6662
       </Card>
       
       <Card>
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -309,17 +324,25 @@ import {;
   CardHeader,;
   CardTitle,;
 } from '@/components/ui/card';
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/page/ContractTypeCards.tsx
 =======
 <<<<<<< HEAD
     </div>
   )
 }
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { FileText, ShieldCheck } from 'lucide-react';
 interface ContractTypeCardsProps {;
   onStandardClick: () => void;
@@ -369,10 +392,13 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           <CardTitle className="flex items-center gap-2">;
             <FileText className="h-5 w-5" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/page/ContractTypeCards.tsx
 ========
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/page/ContractTypeCards.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Button } from '@/components / ui / button';
 import {
   Card,
@@ -412,10 +438,13 @@ function ContractTypeCards() {
         <CardHeader>;
           <CardTitle className="flex items - center gap - 2">;
             <FileText className="h - 5 w - 5" />;
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             Standard Contracts;
           </CardTitle>;
           <CardDescription>;
@@ -585,6 +614,7 @@ function ContractTypeCards() {
 }
 <<<<<<<< HEAD:src/components/contracts/page/ContractTypeCards.tsx
 
+<<<<<<< HEAD
 =======
 >>>>>>>     </div>;
   );
@@ -636,3 +666,9 @@ onSmartClick: () => void ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+    </div>);
+}
+
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

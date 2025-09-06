@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -76,6 +77,10 @@ export default function IntegrationsFeature() {
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     <>
+=======
+return (
+    <>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <SEO
         title='API & Integrations'
         description='Extend Zion by embedding widgets or using our REST API for custom workflows.'
@@ -228,6 +233,7 @@ export default function IntegrationsFeature() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -241,6 +247,11 @@ export default function IntegrationsFeature() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useEffect } from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -286,7 +297,10 @@ export default function IntegrationsFeature() {;
               src="https://placehold.co/800x400";
               alt="Screenshot showing integrations";
               className="object-cover";
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             />;
           </div>;
           <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>;
@@ -353,7 +367,11 @@ function IntegrationsFeature() {
             <li > Trigger Slack notifications for new orders or messages.</li>;
             <li > Embed talent search or job listings directly on your site.</li>;
 
+<<<<<<< HEAD
 >>>>>>>             <li>;
+=======
+            <li>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               Build custom analytics by pulling data from our REST endpoints.;
             </li>;
           </ul>;
@@ -407,6 +425,7 @@ function IntegrationsFeature() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -420,3 +439,6 @@ function IntegrationsFeature() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // TypeScript file
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,3 +36,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+// TypeScript file;
+export const placeholder = 'placeholder';
+;
+
+
+export const placeholder = 'placeholder';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

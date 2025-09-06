@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/AIMatchingResults.tsx
 
 
@@ -41,6 +42,8 @@ import { cn } from "@/lib/utils",
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface AIMatchingResultsProps {
 =======
 >>>>>>> interface AIMatchingResultsProps {
@@ -789,7 +792,32 @@ ursor/fix-website-loading-errors-and-merge-6662
                                   </div>;
                                 </div>;
                               )}
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AIMatchingResults.tsx
+=======
+
+
+
+
+
+
+
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+
+                            
+                            <div className="mt-2 flex flex-wrap gap-1">
+                              <Badge variant="outline">
+                                {match.category}
+                              </Badge>
+                              {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (
+                                <Badge key={i} variant="outline">
+                                  {skill}
+                                </Badge>;
+                              ))}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                             </div>;
 <<<<<<< HEAD
                             <div className='mt-2 flex flex-wrap gap-1'>;
@@ -821,6 +849,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                                     <Badge key={i} variant='outline'>;
                                       {skill}
                                     </Badge>))}                            </div>;
+<<<<<<< HEAD
 =======
                             ;
                             <div className="mt-2 flex flex-wrap gap-1">;
@@ -849,6 +878,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           </div>;
                         </div>;
                       </div>;
@@ -858,8 +889,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             )}
           </TabsContent>;
         ))}
@@ -873,6 +907,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 
 
+<<<<<<< HEAD
 >>>>>>> }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
@@ -900,6 +935,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </Tabs>;
     </div>;
   );
@@ -909,6 +947,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/AIMatchingResults.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 
@@ -916,6 +955,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </Card>);
               })) : (
               <div className='text - center py - 8 text - zion - slate - light'>;
@@ -924,6 +966,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </TabsContent>))}
       </Tabs>;
     </div>);
+<<<<<<< HEAD
 }
 =======
                   </Card>;
@@ -981,3 +1024,6 @@ if (isLoading) {";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

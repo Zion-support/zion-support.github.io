@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -16,11 +17,27 @@ import { ChevronRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 const Breadcrumb = React.forwardRef<
   HTMLElement
+=======
+}
+>(({ className, separator, ...props }, ref,) => (;
+  <nav
+import * as React from 'react';
+import { Slot } from '@radix - ui / react - slot';
+import { ChevronRight } from 'lucide-react';
+import { cn } from '@/lib / utils';
+const Breadcrumb = React.forward_ref<;
+  HTMLElement,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   React.ComponentPropsWithoutRef<'nav'> & {
     separator?: React.ReactNode
   }
+<<<<<<< HEAD
 >(({ className, separator, ...props }, ref,) => (
   <nav
+=======
+>(({ class_name, separator, ...props }, ref, ) => (
+  <nav;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     ref={ref}
     aria-label='breadcrumb'
     className={cn(
@@ -35,7 +52,13 @@ Breadcrumb.displayName = 'Breadcrumb'
     className = {cn(
       "inline-flex items-center gap-1 text-sm text-zion-slate-light"
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight } from 'lucide-react'
@@ -57,6 +80,7 @@ const Breadcrumb = React.forwardRef<
 <<<<<<< HEAD
 
       "inline-flex items-center gap-1 text-sm text-zion-slate-light",
+<<<<<<< HEAD
 
       className
 =======
@@ -136,6 +160,8 @@ const BreadcrumbEllipsis = ({
   className
   ...props
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
     ),}
     {...props}
@@ -152,6 +178,10 @@ Breadcrumb.display_name = 'Breadcrumb';
     {...props}
   />));
 Breadcrumb.display_name = 'Breadcrumb';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 Breadcrumb.displayName = "Breadcrumb"
  
 const BreadcrumbList = React.forwardRef<
@@ -175,9 +205,12 @@ const BreadcrumbItem = React.forward_ref<;
 BreadcrumbItem.display_name = 'BreadcrumbItem';
 const BreadcrumbLink = React.forward_ref<;
   HTMLAnchorElement,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   React.ComponentPropsWithoutRef<'a'> & {
     asChild?: boolean
   }
@@ -242,6 +275,7 @@ BreadcrumbLink.displayName = "BreadcrumbLink"
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 const BreadcrumbSeparator = ({
 
@@ -305,12 +339,22 @@ BreadcrumbSeparator.displayName = 'BreadcrumbSeparator'
 =======
 BreadcrumbSeparator.displayName = 'BreadcrumbSeparator'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+const BreadcrumbSeparator = ({
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }: React.ComponentProps<"li">) => (
   <li
     role="presentation"
     aria-hidden="true"
     className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
     {...props}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   >
     {children || <ChevronRight className="h-4 w-4" />}
   </li>
@@ -347,6 +391,10 @@ Breadcrumb && Breadcrumb.displayName = 'Breadcrumb';
   HTMLOListElement,;
   React && React.ComponentPropsWithoutRef<'ol'>;
 >(({ className, ...props }, ref) => (;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight } from 'lucide-react'
@@ -434,6 +482,7 @@ const BreadcrumbEllipsis = ({;
   </span>;
     role="presentation";
     aria-hidden="true";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
  
@@ -450,6 +499,8 @@ const BreadcrumbEllipsis = ({
     role="presentation"
     aria-hidden="true"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     className={cn("flex h-9 w-9 items-center justify-center", className)}
   <li
     role="presentation"
@@ -524,7 +575,16 @@ export {
   BreadcrumbEllipsis}
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+    {...props}>;
+    &#8230,;
+  </span>;
+);
+BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = 'BreadcrumbElipssis';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 export {;
   Breadcrumb,;
@@ -537,6 +597,7 @@ export {;
 BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = "BreadcrumbElipssis";
 
 export {;
+<<<<<<< HEAD
   BreadcrumbSeparator;
   BreadcrumbEllipsis};
 =======
@@ -548,6 +609,11 @@ export {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+  BreadcrumbSeparator;
+  BreadcrumbEllipsis};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
  
 const BreadcrumbEllipsis = ({
@@ -600,6 +666,7 @@ export {
 
 
   BreadcrumbEllipsis}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   BreadcrumbEllipsis}
 =======
@@ -621,3 +688,7 @@ export {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  BreadcrumbEllipsis}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

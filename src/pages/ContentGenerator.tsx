@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
@@ -543,3 +544,17 @@ export default function ContentGenerator() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+import React from 'react';
+
+const ContentGenerator = () => {
+  return (
+    <div>
+      <h1>ContentGenerator</h1>
+      <p>This page is under construction.</p>
+    </div>
+  );
+};
+
+export default ContentGenerator;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

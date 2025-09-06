@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/FaqSection.tsx
 
 <<<<<<< HEAD
@@ -42,6 +43,8 @@ import {
   AccordionContent,
   AccordionItem,
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { FileText } from 'lucide-react'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 const faqs = [
@@ -88,9 +91,12 @@ const faqs = [
 ]
 export function FaqSection() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> import { GradientHeading } from './GradientHeading';
 ========
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { GradientHeading } from './GradientHeading';
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/FaqSection.tsx
   Accordion,;
@@ -335,6 +341,7 @@ const faqs = [
 
 import { GradientHeading } from "./GradientHeading";
 
+<<<<<<< HEAD
 onst faqs = [
   {
     question: "How do I publish my AI product or service?",
@@ -481,6 +488,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <AccordionTrigger className="text-white hover:text-zion-cyan">
 ========
 import { GradientHeading } from "./GradientHeading";
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className='max - w-3xl mx - auto bg - zion - blue - light rounded - lg border border - zion - purple / 20 p - 6'>;
           <div className='flex items - center mb - 6'>;
             <FileText className='h - 6 w - 6 text - zion - cyan mr - 2' />;
@@ -561,8 +570,40 @@ const faqs = [;
     answer:;
       "Reach us via the chat widget, email support@ziontechgroup && ziontechgroup.com or call +1 302 464 0950 anytime."}];
 export function FaqSection() {;
+<<<<<<< HEAD
   return (
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/FaqSection.tsx
+=======
+
+
+const faqs = [
+  {
+    question: "How do I publish my AI product or service?",
+    answer:
+
+
+export function FaqSection() {
+  return (
+
+
+
+
+
+        <div className="max-w-3xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-6">
+          <div className="flex items-center mb-6">
+            <FileText className="h-6 w-6 text-zion-cyan mr-2" />
+            <h3 className="text-xl font-bold text-white">Common Questions</h3>
+          </div>
+
+
+          
+
+
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">
+                <AccordionTrigger className="text-white hover:text-zion-cyan">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     question: "How do I publish my AI product or service?",
     answer:;
       "Create an account, choose 'Post Your Product / Service for Free, ' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check."}
@@ -818,12 +859,17 @@ export function FaqSection() {;
 ========
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </AccordionContent>;
               </AccordionItem>))}
           </Accordion>;
         </div>;
       </div>;
     </section>);
+<<<<<<< HEAD
 }
 =======
   ),;}
@@ -881,3 +927,6 @@ answer: export function FaqSection () {";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

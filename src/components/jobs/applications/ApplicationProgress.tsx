@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -12,6 +13,8 @@ import { Progress } from "@/components/ui/progress";
 <<<<<<< HEAD
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface ApplicationProgressProps {
 =======
 import { ApplicationStatus } from "@/types/jobs"
@@ -43,6 +46,22 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   // Define the progress value based on status
 
   const getProgressValue = () => {
+<<<<<<< HEAD
+=======
+import { ApplicationStatus  } from '@/types / jobs';
+import { Progress  } from '@/components / ui / progress';
+import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn  } from '@/lib / utils';
+interface ApplicationProgressProps {
+  status: ApplicationStatus,
+  class_name?: string;
+}
+export /**
+ * ApplicationProgress - Function description
+ */
+function ApplicationProgress() {
+  // Define the progress value based on status;
+  const getProgressValue = () =>: any {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     switch (status) {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -93,6 +112,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -100,6 +120,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <div className="flex justify-between text-xs text-muted-foreground">
 >>>>>>>         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -179,12 +203,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   if (currentRank < statusRank_) {
 >>>>>>>     // This step is complete
     return <CheckCircle2 className="h-4 w-4 text-green-500" />
@@ -362,14 +393,18 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 >>>>>>> 
     // This step is upcoming
+<<<<<<< HEAD
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -383,3 +418,6 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+    return <Circle className="h-4 w-4 text-muted-foreground/50" />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

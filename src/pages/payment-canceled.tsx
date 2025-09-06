@@ -1,6 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { useRouter } from 'next/router'; // Changed from useNavigate
 
@@ -40,7 +46,12 @@ import { useRouter } from 'next/router', // Changed from useNavigate
 import { XCircle } from 'lucide-react'
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { XCircle } from 'lucide-react'
 import { useRouter } from 'next/router', // Changed from useNavigate
 export default function PaymentCanceled() {
@@ -49,6 +60,7 @@ export default function PaymentCanceled() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
   
@@ -57,6 +69,11 @@ export default function PaymentCanceled() {
 =======
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+  
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 =======
 ursor/fix-website-loading-errors-and-merge-6662
@@ -96,6 +113,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           Your payment process was canceled. No charges have been made to your account.
         </p>
         
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className="flex flex-col space-y-3">
           <Button
             onClick={() => router.push('/payments')} // Changed to router.push
@@ -162,12 +184,35 @@ export default function PaymentCanceled() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+            Return to Dashboard
+          </Button>
+        </div>
+      </div>
+    </div>
+  );            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
+        
+        <h1 className="text-2xl font-bold text-white mb-2">Payment Canceled</h1>
+        
+        <p className="text-zion-slate-light mb-6">
+          Your payment process was canceled. No charges have been made to your account.
+        </p>
+        
+        <div className="flex flex-col space-y-3">
+          <Button
+            onClick={() => router.push('/payments')} // Changed to router.push
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+          >
+            Try Again
+          </Button>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <Button 
@@ -175,7 +220,43 @@ export default function PaymentCanceled() {;
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import React from 'react';
+import { Button } from '@/components/ui/button';
+
+import { useRouter } from 'next/router'; // Changed from useNavigate;
+
+import { XCircle } from 'lucide-react';
+import React from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           >
             Return to Dashboard
           </Button>
@@ -199,6 +280,7 @@ export default function PaymentCanceled() {;
       </div>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   )
@@ -215,6 +297,10 @@ import React from 'react',;
   )
 import React from 'react',;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  )
+import React from 'react',;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/router', // Changed from useNavigate;
 import { XCircle } from 'lucide-react';
@@ -336,7 +422,6 @@ function PaymentCanceled() {
             variant='outline';
             on_click={() => router.push ('/dashboard')} // Changed to router.push;
             className='border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white'          >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Return to Dashboard;
           </Button>;
         </div>;
@@ -362,6 +447,7 @@ function PaymentCanceled() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -380,3 +466,10 @@ function PaymentCanceled() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+      </div>);
+      </div>);
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

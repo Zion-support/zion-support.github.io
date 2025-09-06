@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -74,6 +77,7 @@ import {;
 import { useAuth } from '@/hooks/useAuth';
 import Link from 'next/link';
 export default function ZionHireAI() {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -108,6 +112,8 @@ export default function ZionHireAI() {
 
 export default function ZionHireAI() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
   const { isAuthenticated } = useAuth();
 
@@ -126,6 +132,7 @@ export default function ZionHireAI() {
         title='Zion Hire AI - White-labeled AI Recruiting Assistant'
         description='Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience.'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
       <SEO
@@ -135,6 +142,69 @@ export default function ZionHireAI() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+      />;
+      <Header />;
+      <main className='flex-1'>;
+
+                  background_image: `linear - gradient (to bottom right, ${primary_color}, rgba (25, 33, 52, 1))`,
+                }
+              : {}
+          }
+        >;
+          <div className='container mx - auto px - 4 md:px - 6'>;
+            <div className='grid gap - 6 md:grid - cols - 2 items - center'>;
+              <div className='space - y-4'>;
+                <h1 className='text - 3xl md:text - 5xl font - bold tracking - tighter text - white'>;
+                  {is_whitelabel;
+                    ? `${brand_name} Recruiting Assistant`;
+                    : 'Zion Hire AI'}
+                </h1>;
+                <p className='text - lg text - zion - slate - light max - w-[600px]'>;
+                  Empower your team with AI - driven talent acquisition.;
+                  Streamline your hiring process, improve candidate matches, and;
+                  enhance the applicant experience.;
+                </p>;
+                <div className='flex flex - col sm:flex - row gap - 3 pt - 4'>;
+                  <Button;
+                    size='lg';
+                    className='bg - zion - purple hover:bg - zion - purple - light text - white';
+                    as_child;
+                  >;
+                    <Link;
+                      href={is_authenticated ? '/enterprise / admin' : '/login'}
+                    >;
+                      Get Started <ArrowRight className='ml - 2 h - 4 w - 4' />;
+                    </Link>;
+                  </Button>;
+                  <Button;
+                    variant='outline';
+                    size='lg';
+                    className='bg - transparent border - white text - white hover:bg - white / 10';
+                    as_child;
+                  >;
+                    <Link href='/enterprise / demo'>Request Demo</Link>;
+
+                  </Button>;
+                </div>;
+              </div>;
+              <div className='relative hidden md:block'>;
+
+import React from "react";
+import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
+import { useWhitelabel } from "@/context/WhitelabelContext";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from 'lucide-react'
+import { useAuth } from "@/hooks/useAuth";
+import Link from "next/link";
+
+export default function ZionHireAI() { const { isWhitelabel, brandName, primaryColor  } = useWhitelabel(),
+  const { isAuthenticated  } = useAuth(),
+
+  
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -150,6 +220,7 @@ export default function ZionHireAI() {
   
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   return (
 ursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -160,6 +231,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 >>>>>>>     <>
       <SEO 
@@ -279,6 +355,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
                 />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -287,6 +364,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
                 />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </div>
 >>>>>>>             </div>
           </div>
@@ -305,6 +386,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 make data-driven decisions.
             </div>
 
+<<<<<<< HEAD
             <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
               <Card className='bg-card border border-border'>
 <<<<<<< HEAD
@@ -351,6 +433,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
@@ -363,6 +449,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <Card className="bg-card border border-border">
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <CardHeader>
                   <Briefcase className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Job Description Generator</CardTitle>
@@ -387,6 +479,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <li className="flex items-center">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -394,6 +487,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Template</span>
 >>>>>>>                       <span>Industry-specific templates</span>
                     </li>
@@ -403,6 +500,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
               <Card className='bg-card border border-border'>
 <<<<<<< HEAD
                 <CardHeader>
@@ -441,6 +539,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <Card className="bg-card border border-border">
+=======
+              
+              <Card className="bg-card border border-border">
+
+              
+              <Card className="bg-card border border-border">
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <CardHeader>
                   <PenTool className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Resume Screener</CardTitle>
@@ -568,7 +675,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     <li className="flex items-center">
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                      <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
+                      <span>Performance tracking</span>
+
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+
+
+
+                    <li className="flex items-center">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
                       <span>Customizable scoring criteria</span>
                     </li>
@@ -644,8 +766,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <Users className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Candidate Matchmaker</CardTitle>
                   <CardDescription>
@@ -673,11 +798,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <li className="flex items-center">
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
                     <li className="flex items-center">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
 >>>>>>>                       <span>Performance tracking</span>
                     </li>
@@ -687,6 +815,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
               <Card className='bg-card border border-border'>                <CardHeader>
 =======
               <Card className='bg-card border border-border'>                <CardHeader>
@@ -706,6 +835,17 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Card className="bg-card border border-border">
                 <CardHeader>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+              
+              <Card className="bg-card border border-border">
+                <CardHeader>
+
+
+              
+              <Card className="bg-card border border-border">
+                <CardHeader>
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <Globe className="h-10 w-10 text-zion-purple mb-2" />
 >>>>>>>                   <CardTitle>Embeddable Widget</CardTitle>
                   <CardDescription>
@@ -737,6 +877,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
                     <li className="flex items-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -745,6 +886,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
                     <li className="flex items-center">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Code</span>
 >>>>>>>                       <span>Simple JavaScript snippet</span>
                     </li>
@@ -754,6 +899,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
               <Card className='bg-card border border-border'>
 <<<<<<< HEAD
                 <CardHeader>
@@ -803,6 +949,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
               <Card className="bg-card border border-border">
+=======
+              
+              <Card className="bg-card border border-border">
+
+              
+              <Card className="bg-card border border-border">
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <CardHeader>
                   <BarChart3 className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Advanced Analytics</CardTitle>
@@ -825,6 +980,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                         Data
                       </span>                      <span>Cost per hire analysis</span>                    <li className="flex items-center">
                     <li className="flex items-center">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
                       <span>Cost per hire analysis</span>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -877,6 +1037,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
               
               <Card className="bg-card border border-border">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <CardHeader>
 
                   <Shield className="h-10 w-10 text-zion-purple mb-2" />
@@ -951,6 +1116,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
                       <span>Co-branded or white-labeled</span>
                     </li>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <li className="flex items-center">
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Access</span>
 =======
@@ -1029,6 +1199,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1055,6 +1226,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Link href="/enterprise/demo">
 >>>>>>>                 Schedule a Demo
               </Link>
@@ -1693,6 +1868,7 @@ export default function ZionHireAI() {;
 
   );
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1712,3 +1888,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+    </>);
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

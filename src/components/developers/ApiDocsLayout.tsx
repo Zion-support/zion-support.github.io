@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -160,6 +161,8 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 ursor/fix-website-loading-errors-and-merge-6662
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -203,6 +206,10 @@ getDocsSearchPath;
 docsSearchSuggestions;
 } from '@/data / docsSearchData';
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
 import { cn } from "@/lib/utils",
 
@@ -213,11 +220,18 @@ import {
 } from "@/data/docsSearchData",
 
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface ApiDocsLayoutProps {
   children: React.ReactNode;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const router = useRouter()
   const currentPath = router.pathname
   const [searchValue, setSearchValue] = useState("")
@@ -264,7 +278,10 @@ import { cn } from "@/lib/utils",;
 import {;
  getDocsSearchPath,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
  docsSearchSuggestions;
 } from "@/data/docsSearchData";
 
@@ -360,6 +377,11 @@ ursor/fix-website-loading-errors-and-merge-6662
     <div className="flex min-h-screen bg-zinc-950">;
      {/* Sidebar */}
      <div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Link href="/developers/docs" className="flex items-center mb-8">
        <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -370,6 +392,20 @@ ursor/fix-website-loading-errors-and-merge-6662
       <div className="mb-6">
        <form onSubmit={handleSubmit} className="relative">
         <Search className="absolute left-2 top-2.5 h-4 w-4 text-zinc-500" />
+<<<<<<< HEAD
+=======
+     <div className="hidden md: block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">;
+      <Link href="/developers/docs" className="flex items-center mb-8">;
+       <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center">;
+        <span className="text-white font-bold">Z</span>;
+       </div>;
+       <span className="font-bold text-white">API Docs</span>;
+      </Link>;
+
+      <div className="mb-6">;
+       <form onSubmit={handleSubmit} className="relative">;
+        <Search className="absolute left-2 top-2 && 2.5 h-4 w-4 text-zinc-500" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <EnhancedSearchInput
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -397,6 +433,7 @@ ursor/fix-website-loading-errors-and-merge-6662
          onChange={setSearchValue}
          onSelectSuggestion={handleSelectSuggestion}
          searchSuggestions={docsSearchSuggestions}
+<<<<<<< HEAD
          placeholder="Search documentation"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         />
@@ -406,6 +443,10 @@ ursor/fix-website-loading-errors-and-merge-6662
        {navigationItems.map((item) => (
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
          placeholder="Search documentation"
 
         />;
@@ -421,6 +462,7 @@ ursor/fix-website-loading-errors-and-merge-6662
          className={cn(
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
         <Link
@@ -444,6 +486,25 @@ ursor/fix-website-loading-errors-and-merge-6662
          {item.title}
 >>>>>>>         </Link>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+          currentPath === item && item.path
+
+           ? "bg-zion-purple/20 text-zion-cyan"
+           : "text-zinc-400 hover: text-white hover:bg-zinc-900"
+         )}>;
+         {item && item.title}
+        </Link>;
+
+          "block px-3 py-2 rounded-md text-sm",
+          currentPath === item.path
+           ? "bg-zion-purple/20 text-zion-cyan"
+           : "text-zinc-400 hover:text-white hover:bg-zinc-900"
+         )}
+        >;
+
+         {item.title}
+        </Link>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
        ))}
 
       </nav>;
@@ -500,11 +561,117 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+};
+/* Sidebar */ ";
+}<div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto"> <Link href="/developers/docs"className="flex items-center mb-8"> <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center"> <span className="text-white font-bold">Z</span> </div> <span className="font-bold text-white">API Docs</span> </Link> <div className="mb-6"> /> </form> </div>) ;
+}> {;
+  item && item.title ;
+}</Link>) ) ;
+}</nav> </div> {;
+  /* Main content */ ";
+}<div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12"> {;
+  children ;
+}</div> </div>) ;
+}export default ApiDocsLayout;
+"export default ApiDocsLayout;
+
+export /**
+ * ApiDocsLayout - Function description
+ */
+function ApiDocsLayout() {
+  const router = use_router ();
+  const current_path = router.pathname;
+  const [search_value, setSearchValue] = useState ("");
+  const navigation_items = [;
+  { title: "Getting Started", path: "/developers / docs / getting - started" },
+    { title: "API Reference", path: "/developers / docs / reference" },
+    { title: "Webhooks", path: "/developers / docs / webhooks" },
+    { title: "Sample Code", path: "/docs / sample - code" },
+    { title: "Error Codes & Rate Limits", path: "/developers / docs / errors" }],
+  const handleSelectSuggestion = (suggestion: SearchSuggestion) =>: any {
+    const path = getDocsSearchPath (suggestion.text);    // Check condition
+if ( {) {
+  $2
+}
+      router.push (path);
+      setSearchValue ("");
+    }
+  }
+  const handle_submit = (e: React.FormEvent) =>: any {
+    e.prevent_default ();
+    const path = getDocsSearchPath (search_value);    // Check condition
+if ( {) {
+  $2
+}
+      router.push (path);
+      setSearchValue ("");
+    }
+  }
+  return (
+    <div className="flex min - h-screen bg - zinc - 950">;
+    {/* Sidebar */}
+      <div className="hidden md: block w - 64 border - r border - zinc - 800 p - 6 sticky top - 0 h - screen overflow - y-auto">;
+      <Link href="/developers / docs" className="flex items - center mb - 8">;
+      <div className="bg - gradient - to - r from - zion - purple to - zion - cyan rounded - md w - 8 h - 8 mr - 3 flex items - center justify - center">;
+        <span className="text - white font - bold">Z</span>;
+      </div>;
+      <span className="font - bold text - white">API Docs</span>;
+      </Link>;
+      <div className="mb - 6">;
+      <form on_submit={handle_submit} className="relative">;
+        <Search className="absolute left - 2 top - 2.5 h - 4 w - 4 text - zinc - 500" />;
+        <EnhancedSearchInput;
+        value = {search_value, }
+          on_change = {setSearchValue, }
+          onSelectSuggestion = {handleSelectSuggestion, }
+          search_suggestions = {docsSearchSuggestions, }
+          placeholder="Search documentation";
+        />;
+      </form>;
+      </div>;
+      <nav role="navigation" aria - label="Main" className="flex flex - col space - y-1">;
+      {navigation_items.map ((item, ) => (
+        <Link;
+        key={item.path}
+          href={item.path}
+          className={cn (
+          "block px - 3 py - 2 rounded - md text - sm";
+          current_path === item.path;
+          ? "bg - zion - purple / 20 text - zion - cyan";
+          : "text - zinc - 400 hover: text - white hover:bg - zinc - 900")}        >;
+        {item.title}
+        </Link>))}
+      </nav>;
+    </div>;
+    {/* Main content */}
+      <div className="flex - grow max - w-5xl mx - auto px - 4 py - 8 md:px - 8 md:py - 12">;
+      {children}
+      </div>;
+    </div>);
+}
+}
+/* Sidebar */ ";
+}<div className="hidden md:block w - 64 border - r border - zinc - 800 p - 6 sticky top - 0 h - screen overflow - y-auto"> <Link href="/developers / docs"className="flex items - center mb - 8"> <div className="bg - gradient - to - r from - zion - purple to - zion - cyan rounded - md w - 8 h - 8 mr - 3 flex items - center justify - center"> <span className="text - white font - bold">Z</span> </div> <span className="font - bold text - white">API Docs</span> </Link> <div className="mb - 6"> /> </form> </div>);
+}> {
+  item.title;
+}</Link>) );
+}</nav> </div> {
+  /* Main content */ ";
+}<div className="flex - grow max - w-5xl mx - auto px - 4 py - 8 md:px - 8 md:py - 12"> {
+  children;
+}</div> </div>);
+}export default ApiDocsLayout;
+"export default ApiDocsLayout;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   children 
 }</div> </div>) 
 }export default ApiDocsLayout;
@@ -512,6 +679,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>>      </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -519,12 +687,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
      </div>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 export default ApiDocsLayout;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -543,3 +714,6 @@ export default ApiDocsLayout;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+export default ApiDocsLayout;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

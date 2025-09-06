@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/jobs/JobMatchesCard.tsx
 
 
@@ -46,6 +47,9 @@ interface JobMatchCardProps {
 >>>>>>> interface JobMatchCardProps {
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/JobMatchesCard.tsx
+=======
+interface JobMatchCardProps {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState } from 'react';
 import {;
   Card,;
@@ -61,6 +65,7 @@ import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react';
 import { format } from 'date-fns';
 import { JobMatch } from '@/types/jobs';
 interface JobMatchCardProps {;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/jobs/JobMatchesCard.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>>   match: JobMatch;
@@ -81,6 +86,8 @@ interface JobMatchCardProps {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 interface JobMatchCardProps {
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   match: JobMatch;
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
@@ -126,9 +133,28 @@ export function JobMatchesCard(): any ({;
   const job = match && match.job;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/JobMatchesCard.tsx
   return (
+<<<<<<< HEAD
 >>>>>>>     <Card className="overflow-hidden border-l-4 border-l-blue-500">
 =======
   
+=======
+    <Card className='overflow-hidden border-l-4 border-l-blue-500'>;
+      <CardHeader className='p-4 pb-2'>;
+        <div className='flex justify-between items-start'>;
+
+
+
+}
+
+
+export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
+  const job = match.job,
+  
+  if (!job) return null,
+  
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <Card className="overflow-hidden border-l-4 border-l-blue-500">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -284,8 +310,12 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
                   +{match.matched_skills.length - 5}
+<<<<<<< HEAD
 >>>>>>>                 </Badge>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+                </Badge>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               )}
             </div>;
           </div>;
@@ -340,9 +370,12 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -380,6 +413,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
             Applied
 =======
 =======
@@ -393,6 +427,9 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
 <<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>
           <div className='flex items-center text-sm'>
             <Calendar className='h-4 w-4 mr-1 text-muted-foreground' />
@@ -597,6 +634,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>;
           </div>;
         )}
+<<<<<<< HEAD
         ;
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">;
           <div className="flex items-center text-sm">;
@@ -631,6 +669,24 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Button ;
               variant="outline" ;
               className="flex-1";
+=======
+
+
+          <div className="flex gap-2 w-full">
+            <Button 
+              className="flex-1" 
+
+
+              onClick={() => onApply(match.id, job.id)}
+            >
+              Apply Now
+            </Button>
+
+
+            <Button 
+              variant="outline" 
+              className="flex-1"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               onClick={() => onDecline(match.id)}
             >;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -638,7 +694,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             </Button>;
           </div>;
         )}
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/JobMatchesCard.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </CardFooter>;
     </Card>;
 <<<<<<< HEAD
@@ -647,10 +706,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/jobs/JobMatchesCard.tsx
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/JobMatchesCard.tsx
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState } from 'react';
 import {
   Card,
@@ -755,6 +819,7 @@ if (return null) {
       </CardFooter>;
     </Card>);
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/jobs/JobMatchesCard.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> ;
@@ -803,3 +868,6 @@ return (<Card className="overflow-hidden border-l-4 border-l-blue-500" > <CardHe
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

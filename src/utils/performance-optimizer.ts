@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 // Performance optimization utilities
 export const optimizeImages = () => {
   const images = document.querySelectorAll('img');
   images.forEach(img => {
     if (!img.loading) {
       img.loading = 'lazy'
+=======
+const images = document && document.querySelectorAll('img');
+  images && images.forEach(img => {
+    if (!img && img.loading) {
+      img && img.loading = 'lazy';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
     if (!img.decoding) {
       img.decoding = 'async'
@@ -39,10 +46,42 @@ export const preloadCriticalResources = null;
   });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 
     link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+}
+export const optimizeBundleSize = () =>: any {
+  // Dynamic imports for non - critical components;
+  const load_component = component_name => {    return import (`./components/${component_name}`);
+
+  }
+  return { load_component }
+}
+
+  const loadComponent = componentName => {    return import(`./components/${componentName}`);
+
+export const lazyLoadComponents = () => {
+  console.log('Lazy loading components...');
+
+};
+
+
+    link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font';
+;
+  });
+};
+
+export const lazyLoadComponents = () => {
+  console.log('Lazy loading components...');
+};
+
+export const optimizeBundleSize = () => {
+  // Dynamic imports for non-critical components
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const loadComponent = componentName => {
     return import(`./components/${componentName}`);
 
@@ -95,6 +134,7 @@ export const optimizeBundleSize = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -108,3 +148,7 @@ export const optimizeBundleSize = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+    link.rel = 'preload';
+    link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

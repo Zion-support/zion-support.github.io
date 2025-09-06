@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Bot, Users, TrendingUp } from 'lucide-react'
 
@@ -61,6 +62,24 @@ xport default function AITalentMatchingPage() {
       icon: Bot
       title: "AI-Powered Matching"
       description: "Advanced algorithms match the right talent with the right opportunities"
+=======
+export default function AITalentMatchingPage() {;
+  const benefits = [;
+    {;
+      icon: Bot,;
+      title: "AI-Powered Matching",;
+      description: "Advanced algorithms match the right talent with the right opportunities";
+    },;
+    {;
+      icon: Users,;
+      title: "Verified Professionals",;
+      description: "All candidates are pre-screened and verified for quality";
+    },;
+    {;
+      icon: TrendingUp,;
+      title: "Success Tracking",;
+      description: "Monitor performance and success rates of placements";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
     {
       icon: Users
@@ -87,6 +106,7 @@ xport default function AITalentMatchingPage() {
     { label: "Time to Hire", value: "50% faster" }
   ]
 
+<<<<<<< HEAD
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"
@@ -100,6 +120,9 @@ xport default function AITalentMatchingPage() {
     />
   )
 }
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
 import { Bot, Users, TrendingUp } from 'lucide-react'
@@ -135,8 +158,12 @@ export default function AITalentMatchingPage() {
       role: "Startup Founder",
       text: "The quality of candidates has improved dramatically since using Zion's platform.",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> 
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const features = [;
     "Machine learning-based candidate matching",;
     "Comprehensive skill assessment tools",;
@@ -149,7 +176,6 @@ export default function AITalentMatchingPage() {
   const stats = [;
     { label: "Successful Placements", value: "95%" },;
     { label: "Client Satisfaction", value: "98%" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     { label: "Time to Hire", value: "50% faster" }
   ]
 
@@ -190,11 +216,14 @@ function AITalentMatchingPage() {
     { label: "Client Satisfaction", value: "98%" },
     { label: "Time to Hire", value: "50% faster" }
   ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
       avatar: "/placeholder.svg"}],
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"
@@ -262,6 +291,7 @@ export default function AITalentMatchingPage() {;
   );
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
       ctaText="Start Matching Talent"
       ctaLink="/contact"
@@ -291,3 +321,12 @@ export default function AITalentMatchingPage() {;
 }
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+      cta_text="Start Matching Talent";
+      cta_link="/contact";
+    />);
+}
+
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

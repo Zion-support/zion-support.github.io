@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
 
 <<<<<<< HEAD
@@ -10,6 +11,15 @@ import { useRouter  } from 'next/router';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
 <<<<<<< HEAD
+=======
+import { useForm, ControllerRenderProps } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod";
+import { LogIn, User, Eye, EyeOff } from 'lucide-react'
+import { fireEvent  } from '@/lib/analytics';
+import { useAuth } from "@/context/auth/AuthProvider",
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState } from 'react';
 import { use_router } from 'next / router';
 import { use_form, ControllerRenderProps } from 'react - hook - form';
@@ -316,6 +326,7 @@ if ( {) {
           if (.includes ('email not confirmed')) {
   $2
 }
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
           ) {
             errorMessage =
@@ -325,6 +336,79 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+          ) {
+            error_message =;
+              'Your email is not confirmed. Please check your inbox for a confirmation link.';
+
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  const form = useForm<LoginFormValues>({
+    resolver: zodResolver(loginSchema) as any,
+    defaultValues: {
+      email: '',
+      password: '',
+      rememberMe: false,
+    },
+  })
+  const onSubmit = async (data: LoginFormValues) => {
+    if (isSubmitting) return;
+    try {
+      setIsSubmitting(true),
+      // Pass email and password to the login function
+      const result = await login(data.email, data.password, data.rememberMe);
+      if (result?.error) {;
+        let errorMessage = 'Login failed. Please try again.'; // Default generic error
+        if (result?.error && result?.error?.message) {
+          if (
+            result.error.message.toLowerCase().includes('email not confirmed')
+          ) {
+            errorMessage =
+              'Your email is not confirmed. Please check your inbox for a confirmation link.'
+
+  FormMessage} from "@/components/ui/form",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import Link from "next/link",
+import { Checkbox } from "@/components/ui/checkbox",
+// Form validation schema
+const loginSchema = z.object({
+  email: z.string().email("Please enter a valid email").min(1, "Email is required"),
+  password: z.string().min(6, "Password must be at least 6 characters"),
+  rememberMe: z.boolean()}),
+
+
+type LoginFormValues = z.infer<typeof loginSchema>,
+
+export function LoginForm() {
+  const { isLoading, login } = useAuth(),
+  const [showPassword, setShowPassword] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isResending, setIsResending] = useState(false),
+  const [verificationMessage, setVerificationMessage] = useState(''),
+  const router = useRouter(),
+  
+  const form = useForm<LoginFormValues>({
+    resolver: zodResolver(loginSchema) as any
+    defaultValues: {
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       email: "",
       password: "",
       rememberMe: false}}),
@@ -362,6 +446,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
           } else {
             errorMessage = result.error.message
           }
@@ -373,6 +458,8 @@ if ( {) {
         }
         form.setError('root', { message: errorMessage })
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           } else {
             error_message = result.error.message;
           }
@@ -438,6 +525,7 @@ if ( {) {
     }
     router.push (`/verify - status?email=${encodeURIComponent (email)}`);
   }
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
 >>>>>>>   return (
 ursor/fix-website-loading-errors-and-merge-6662
@@ -498,6 +586,9 @@ ursor/fix-website-loading-errors-and-merge-6662
     }
     router.push(`/verify-status?email=${encodeURIComponent(email)}`)
   }
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         form.setError("root", { message: errorMessage })
       } else {
         fireEvent('login', { method: 'email' })
@@ -511,7 +602,10 @@ import { fireEvent } from '@/lib/analytics',;
 import { useAuth } from "@/context/auth/AuthProvider",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {;
   Form,;
   FormControl,;
@@ -805,6 +899,7 @@ if ( {) {
           render={({ field }: { field: ControllerRenderProps<LoginFormValues "email"> }) => (
             <FormItem>
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>
+<<<<<<< HEAD
               <FormControl>
                 <div className="relative">
                   <Input
@@ -825,6 +920,11 @@ if ( {) {
                 <div className='relative'>
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
+=======
+
+              <FormControl>
+                <div className='relative'>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             field: ControllerRenderProps<LoginFormValues, 'email'>;
           }) => (            <FormItem>;
               <FormLabel className='text-zion-slate-light'>;
@@ -888,11 +988,15 @@ if ( {) {
                     size='sm'
                     className='absolute right-1 top-1/2 transform -translate-y-1/2 text-zion-slate h-8 hover:text-zion-cyan'
                     onClick={() => setShowPassword(!showPassword)}                  >;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     placeholder="you@example.com"
                     aria-label="Email address"
                     aria-invalid={!!form.formState.errors.email}
@@ -901,6 +1005,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>>                   />
 >>>>>>>                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -912,6 +1017,8 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   />
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -996,6 +1103,7 @@ if ( {) {
                     {...field}
                   />
                   <User className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
+<<<<<<< HEAD
                 </div>
               </FormControl>
               <FormMessage className='text-red-400' />
@@ -1019,6 +1127,9 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>               <FormControl>
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </div>
               </FormControl>
               <FormMessage className='text-red-400' />
@@ -1091,7 +1202,10 @@ if ( {) {
                     onClick={() => setShowPassword(!showPassword)}
                   >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     {showPassword ? (;
                       <EyeOff className='h-4 w-4' />;
                     ) : (;
@@ -1123,6 +1237,7 @@ if ( {) {
                       <Eye className='h - 4 w - 4' />)}
                     <span className='sr - only'>;
                       {show_password ? 'Hide password' : 'Show password'}
+<<<<<<< HEAD
 =======
 
 import { useState } from "react",;
@@ -1308,6 +1423,8 @@ export function LoginForm() {;
                     <span className="sr-only">;
                       {showPassword ? "Hide password" : "Show password"}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     </span>;
                   </Button>;
                 </div>;
@@ -1327,19 +1444,26 @@ export function LoginForm() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
               <FormControl>
+<<<<<<< HEAD
 ========
           name='remember_me';
           render={({
             field
           }: {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             field: ControllerRenderProps<LoginFormValues, 'rememberMe'>;
           }) => (;
             <FormItem className='flex flex-row items-start space-x-3 space-y-0'>;
               <FormControl>;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>>                 <Checkbox
+=======
+                <Checkbox
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
                   checked={field.value}
                   onCheckedChange={field.onChange}
@@ -1355,6 +1479,7 @@ export function LoginForm() {;
                 <FormLabel className="text-zion-slate-light">Remember me</FormLabel>
               </div>
             </FormItem>
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
                 <Checkbox
@@ -1372,6 +1497,8 @@ export function LoginForm() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <FormMessage className="text-red-400" />;
             </FormItem>;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           )}
         />;
         <FormField;
@@ -1639,9 +1766,12 @@ export function LoginForm() {;
         <p className="text-sm text-center mt-4">
           <Link href="/signup" className="font-medium text-zion-cyan hover: text-zion-cyan-light">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             Create account
           </Link>
         </p>
@@ -1746,10 +1876,13 @@ return;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             className='font-medium text-zion-cyan hover:text-zion-cyan-light'>;
 =======
         <Button;
@@ -1811,6 +1944,7 @@ return;
 <<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ========
 =======
@@ -1948,6 +2082,8 @@ return (<Form {;
 <<<<<<< HEAD
 }'"}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/LoginForm.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Button;
           type='submit';
           className='w - full inline - flex items - center justify - center px - 4 py - 2 border border - transparent rounded - md shadow - sm text - base font - medium text - white bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - zion - purple - light visible';
@@ -2057,6 +2193,7 @@ return;
   is_resending ? 'Sending...': 'Resend / Verify e - mail';
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>);
 }'"}
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/auth/login/LoginForm.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> }
@@ -2086,3 +2223,7 @@ return;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

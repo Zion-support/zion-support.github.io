@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -63,8 +64,10 @@ interface NotificationListProps {;
 
 <<<<<<< HEAD
   onRetry
-},) => {
 =======
+onRetry
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+},) => {
 } import React from 'react';
 import { ScrollArea } from '@/components / ui / scroll - area';
 import Skeleton from '@/components / ui / skeleton';
@@ -89,7 +92,6 @@ export const NotificationList: React.FC < NotificationListProps> = ({
   on_dismiss,
   on_retry;
 }, ) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
       {error ? (
@@ -240,7 +242,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
   );
 };
 
-=======
         <div className="p - 8 text - center text - amber - 500">;
           <p>{error}</p>;
           <Button;
@@ -276,14 +277,12 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
     </ScrollArea>);
 }
 ";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   );
 };
 ";
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             key={notification.id}
@@ -323,6 +322,8 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
   );
 };
 ";
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             key={notification.id}
             notification={notification}
             onMarkAsRead={onMarkAsRead}
@@ -332,6 +333,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
       )}
     </ScrollArea>;
   );
+<<<<<<< HEAD
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -342,3 +344,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

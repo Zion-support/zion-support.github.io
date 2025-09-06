@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/disputes/DisputeStatusBadge.tsx
 
 <<<<<<< HEAD
@@ -54,6 +55,10 @@ import {;
 interface DisputeStatusBadgeProps {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/disputes/DisputeStatusBadge.tsx
   status: 'open' | 'under_review' | 'resolved' | 'closed';
+=======
+status: 'open' | 'under_review' | 'resolved' | 'closed';
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) {;
   let variant: 'default' | 'destructive' | 'secondary' | 'outline' =;
     'destructive';
@@ -150,7 +155,10 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
 >>>>>>>     default:
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       break
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
 <<<<<<< HEAD
 
@@ -309,6 +317,7 @@ export function DisputeStatusBadge({ status } DisputeStatusBadgeProps) {;
         <p>{message}</p>;
       </TooltipContent>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/disputes/DisputeStatusBadge.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -319,11 +328,20 @@ export function DisputeStatusBadge({ status } DisputeStatusBadgeProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+
+
+
+    </Tooltip>);
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 >>>>>>> 
       </TooltipContent>
     </Tooltip>
+<<<<<<< HEAD
   )
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -364,3 +382,6 @@ message ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

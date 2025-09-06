@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -25,6 +26,8 @@ import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export const HELP_CATEGORIES: HelpCategory[] = [
   {
     id: 'getting-started'
@@ -460,6 +463,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
 
 ];
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -611,6 +615,22 @@ id: 'dispute-prevention'
 ];
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+import React from 'react';
+import { HelpCategory } from './types';
+import {;
+  HelpCircle,;
+  CreditCard,;
+  Users,;
+  Calendar,;
+  Briefcase,;
+} from 'lucide-react';
+
+export const HELP_CATEGORIES: HelpCategory[] = [;
+
+    ];
+  },;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   {;
     id: 'getting-started',;
     name: 'Getting Started',;
@@ -672,6 +692,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       {;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
         id: "invoice-management",;
         title: "Managing invoices and receipts",;
@@ -703,6 +724,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       },;
       {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         id: "dispute-prevention",;
         title: "Tips for preventing disputes",;
         content: "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\nBy following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.",;
@@ -897,6 +920,7 @@ id: 'dispute - prevention',
       },
     ],
   },
+<<<<<<< HEAD
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> >>>>>>> 
@@ -912,3 +936,6 @@ id: 'dispute - prevention',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+];
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

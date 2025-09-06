@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -209,6 +210,8 @@ import React from "react",;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function ClickableBadge({
 
 
@@ -217,6 +220,7 @@ export function ClickableBadge({
         </button>
 
 
+<<<<<<< HEAD
 >>>>>>> import React from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -225,6 +229,8 @@ export function ClickableBadge({
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react",;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { X } from 'lucide-react';
@@ -241,9 +247,12 @@ export function ClickableBadge({;
   variant = "default",;
   onRemove,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   ...props;
 }: ClickableBadgeProps) {;
   return (;
@@ -309,6 +318,7 @@ export function ClickableBadge({;
           <X className="h-3 w-3" />;
         </button>;
       )}
+<<<<<<< HEAD
     </div>;
   );
 }
@@ -322,3 +332,69 @@ export function ClickableBadge({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+import React from 'react';
+import { X } from 'lucide-react';
+import { cn } from '@/lib / utils';
+import { badge_variants } from '@/components / ui / badge - variants';
+export interface ClickableBadgeProps;
+  extends React.HTMLAttributes < HTMLDivElement> {
+  on_remove?: () => void;
+  variant?: 'default' | 'secondary' | 'destructive' | 'outline';
+export /**
+ * ClickableBadge - Function description
+ */
+function ClickableBadge() {
+      >;
+      <span>{children}</span>;
+      {on_remove && (
+        <button;
+          type='button';
+          on_click={e => {
+import React from './react';
+import { cn  } from '@/lib / utils';
+import { badge_variants  } from '@/components / ui / badge - variants';
+export interface ClickableBadgeProps extends React.HTMLAttributes < HTMLDivElement> {
+  on_remove?: () => void;
+  variant?: "default" | "secondary" | "destructive" | "outline";
+}
+export /**
+ * ClickableBadge - Function description
+ */
+function ClickableBadge() {
+  return (
+    <div;
+      className={cn (
+        badge_variants ({ variant });
+        "group flex items - center gap - 1";
+        on_remove && "pl - 2.5 pr - 1.5 py - 1";
+        class_name)}
+      {...props}
+      <span>{children}</span>;
+      {on_remove && (
+        <button;
+          type='button';
+          on_click={e => {
+            e.stop_propagation ();
+            on_remove () }}
+          className='ml - 1 rounded - full p - 0.5 hover:bg - background / 20';
+          aria - label='Remove';
+        >;
+          <X className='h - 3 w - 3' />;
+        </button>)}
+    </div>));
+}
+            e.stop_propagation ();
+            on_remove ();
+          }}
+          className="ml - 1 rounded - full p - 0.5 hover:bg - background / 20";
+          aria - label="Remove";
+        >;
+          <X className="h - 3 w - 3" />;
+        </button>)}
+    </div>);
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

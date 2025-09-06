@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,6 +47,8 @@ interface JobsListProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState, useEffect } from "react",
 =======
 >>>>>>> import { useState, useEffect } from "react",
@@ -113,6 +116,11 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
     const fetchJobs = async () => {
       if (!user) return,
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       try {
         let query = supabase
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -556,6 +564,7 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 <<<<<<<< HEAD:src/components/jobs/JobsList.tsx
 
     }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   }
@@ -564,6 +573,14 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 =======
   }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+  },
+
+  },
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   return (
     <div className="grid gap-6 md:grid-cols-2">
@@ -591,7 +608,10 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
 =======
 >>>>>>>           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
@@ -695,10 +715,13 @@ ursor/fix-website-loading-errors-and-merge-6662
         return "bg-gray-100 text-gray-800",;
       default:;
         return "bg-gray-100 text-gray-800";
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/jobs/JobsList.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/JobsList.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const getStatusColor = (status: JobStatus, ) =>: any {
     switch (status) {
       case "new": return "bg - blue - 100 text - blue - 800";
@@ -777,8 +800,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   {skill}
                 </Badge>;
 >>>>>>>               ))}
@@ -913,8 +939,11 @@ return (<div className="grid gap-6 md:grid-cols-2" > {;
 }'"}
 <<<<<<<< HEAD:src/components/jobs/JobsList.tsx
 
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/JobsList.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <div className="grid gap - 6 md:grid - cols - 2">;
       {jobs.map ((job, ) => (
         <Card;
@@ -998,6 +1027,7 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {
 }</div> <div className="mt - 1 text - sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h - 4 w - 4" /> </Button> </div> </CardFooter> </Card>) );
 }</div>);
 }'"}
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/jobs/JobsList.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>>             </div>
@@ -1011,6 +1041,8 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {
                   +{job.skills.length - 3} more
                 </Badge>
               )}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div className="mt-3 text-sm">
@@ -1036,6 +1068,7 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {
                 <X className="h-4 w-4" />
               </Button>
             </div>
+<<<<<<< HEAD
           </CardFooter>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1194,3 +1227,6 @@ return (<div className="grid gap-6 md:grid-cols-2" > {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+          </CardFooter>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

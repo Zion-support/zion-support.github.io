@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -74,6 +75,8 @@ import { format } from "date-fns",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface QuoteDetailsProps {
   quote: QuoteRequest | null
   isOpen: boolean
@@ -193,6 +196,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   },
 
   return (
@@ -202,6 +206,9 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   },
+=======
+  }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -220,11 +227,14 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
         <Separator className="my-4" />
         <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
 >>>>>>>           <Card>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 
 
@@ -245,6 +255,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -256,6 +267,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Card>
 >>>>>>>             <CardContent className="pt-6">
               <h3 className="text-lg font-medium mb-3">Requester Information</h3>
@@ -283,6 +296,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
           
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -291,6 +305,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
           
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Card>
 >>>>>>>             <CardContent className="pt-6">
               <h3 className="text-lg font-medium mb-3">Project Timeline</h3>
@@ -323,6 +341,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
         
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -331,6 +350,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Card className="mt-6">
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-3">Project Details</h3>
@@ -344,6 +367,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -359,6 +383,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
             
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {quote.project_description && (
 >>>>>>>               <>
                 <h4 className="font-medium mt-4">Additional Details</h4>
@@ -403,6 +429,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
         
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -411,6 +438,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className="mt-6 flex justify-end">
 >>>>>>>           <Button onClick={onClose}>Close</Button>
         </div>
@@ -423,6 +454,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 },
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> >>>>>>> 
 >>>>>>> 
@@ -431,6 +463,27 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+import React from './react';
+import {
+  Dialog;
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription;
+} from '@/components / ui / dialog';
+import { Button  } from '@/components / ui / button';
+import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react'import { Card, CardContent  } from '@/components / ui / card';
+import { Separator  } from '@/components / ui / separator';
+import { QuoteStatusBadge  } from './QuoteStatusBadge';
+import type { QuoteRequest } from "@/types / quotes";
+import { format } from './date - fns';
+interface QuoteDetailsProps {
+  quote: QuoteRequest | null,
+  is_open: boolean,
+  on_close: () => void;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
   (open) => !open && onClose ()
 }> <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto" > <DialogHeader> <DialogTitle className="text-2xl flex items-center justify-between" > <span> {
@@ -451,6 +504,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 }` : 'Not specified')
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>)
 }
+<<<<<<< HEAD
 '"
 
 },
@@ -461,3 +515,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+'";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

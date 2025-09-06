@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ChatAssistant/ChatInput.tsx
 
 =======
@@ -263,6 +264,8 @@ import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 're
 import { Button } from "@/components/ui/button",;
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, {;
   useState,;
   useRef,;
@@ -271,7 +274,22 @@ import React, {;
   KeyboardEvent,;
 } from 'react';
 import { Button } from '@/components/ui/button';
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ChatAssistant/ChatInput.tsx
+=======
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
+import { Button } from "@/components/ui/button",
+
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
+import { Button } from "@/components/ui/button",
+import { Send } from 'lucide-react'
+interface ChatInputProps {
+
+  onSend: (message: string) => void,
+  disabled?: boolean
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
+import { Button } from "@/components/ui/button",;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Send } from 'lucide-react';
 interface ChatInputProps {;
   onSend: (message: string) => void;
@@ -300,8 +318,11 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
     inputRef && inputRef.current?.focus();
 <<<<<<<< HEAD:src/components/ChatAssistant/ChatInput.tsx
 
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ChatAssistant/ChatInput.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react';
 import { Button } from "@/components/ui/button";
 import { Send } from 'lucide-react'
@@ -317,7 +338,11 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
     inputRef.current?.focus()
 <<<<<<<< HEAD:src/components/ChatAssistant/ChatInput.tsx
 
+<<<<<<< HEAD
 >>>>>>>   }, []);
+=======
+  }, []);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {;
     e && e.preventDefault();    if (message && message.trim() && !disabled) {;
@@ -330,11 +355,13 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
       }
     }
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 
 ========
@@ -379,8 +406,12 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
 <<<<<<<< HEAD:src/components/ChatAssistant/ChatInput.tsx
 
         disabled={!message.trim() |disabled}
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ChatAssistant/ChatInput.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
       <textarea
@@ -438,6 +469,10 @@ export function ChatInput({ onSend, disabled = false } ChatInputProps) {;
         disabled={disabled}
 <<<<<<< HEAD
       />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light"
         placeholder="Type your message..."
         value={message}
@@ -449,12 +484,15 @@ export function ChatInput({ onSend, disabled = false } ChatInputProps) {;
         disabled={disabled}
       />
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Button 
         type="submit" 
         className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
@@ -493,6 +531,7 @@ export function ChatInput({ onSend, disabled = false } ChatInputProps) {;
 =======
         disabled={!message.trim() || disabled}
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>       >
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -503,6 +542,8 @@ export function ChatInput({ onSend, disabled = false } ChatInputProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         disabled={!message.trim() |disabled}
         disabled={!message.trim() || disabled}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <Send className="h-5 w-5" />
@@ -510,6 +551,7 @@ export function ChatInput({ onSend, disabled = false } ChatInputProps) {;
     </form>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ChatAssistant/ChatInput.tsx
@@ -527,6 +569,10 @@ export function ChatInput({ onSend, disabled = false } ChatInputProps) {;
     </form>;
   );
 }
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Button;
         type='submit';
         className='bg - zion - purple hover:bg - zion - purple - light text - white rounded - full p - 2 h - 10 w - 10 flex items - center justify - center';
@@ -540,6 +586,7 @@ export function ChatInput({ onSend, disabled = false } ChatInputProps) {;
         <Send className="h - 5 w - 5" />;
       </Button>;
     </form>);
+<<<<<<< HEAD
 }
 =======
       />;
@@ -581,3 +628,6 @@ const inputRef = useRef<HTMLTextAreaElement> (null);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import * as React from "react"
+import * as SelectPrimitive from "@radix-ui/react-select"
+import { Check, ChevronDown, ChevronUp } from 'lucide-react'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
 const Select = SelectPrimitive.Root
@@ -55,6 +61,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       "flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -62,6 +69,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
 >>>>>>>     )}
     {...props}
@@ -86,6 +97,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       <ChevronDown className="h-4 w-4 opacity-50" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -93,6 +105,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </SelectPrimitive.Icon>
 >>>>>>>   </SelectPrimitive.Trigger>
 ))
@@ -120,6 +136,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       "flex cursor-default items-center justify-center py-1",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -127,6 +144,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
 >>>>>>>     )}
     {...props}
@@ -158,6 +179,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       "flex cursor-default items-center justify-center py-1",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -165,6 +187,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
 >>>>>>>     )}
     {...props}
@@ -220,6 +246,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -227,6 +254,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         className
 >>>>>>>       )}
       position={position}
@@ -239,6 +270,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
           &quot;p-1&quot;
           position === &quot;popper&quot; &&
@@ -246,6 +278,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>         )}
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+          "p-1",
+          position === "popper" &&
+            "h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]"
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         )}
 import * as React from &quot;react & quot;
 import * as SelectPrimitive from &quot;@radix - ui / react - select & quot;
@@ -322,6 +362,7 @@ const SelectContent = React.forward_ref<;
           &quot;p - 1&quot;,
           position === &quot;popper & quot; &&;
             &quot;h-[var (--radix - select - trigger - height)] w - full min - w-[var (--radix - select - trigger - width)]&quot)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>>       >;
 =======
@@ -334,6 +375,8 @@ const SelectContent = React.forward_ref<;
           position === "popper" &&
             "h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]"
         )}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       >;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {children}
@@ -348,6 +391,7 @@ const SelectLabel = React.forwardRef<;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
   React.ElementRef<typeof SelectPrimitive.Label>;
 >>>>>>>   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>;
@@ -355,13 +399,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>;
 >>>>>>> >(({ className, ...props }, ref) => (;
+=======
+
+  React.ElementRef<typeof SelectPrimitive.Label>,;
+
+
+  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>;
+>(({ className, ...props }, ref) => (;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   </SelectPrimitive.Portal>));
 SelectContent.display_name = SelectPrimitive.Content.display_name;
 const SelectLabel = React.forward_ref<;
   React.ElementRef < typeof SelectPrimitive.Label>,
   React.ComponentPropsWithoutRef < typeof SelectPrimitive.Label>;
 >(({ class_name, ...props }, ref) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   <SelectPrimitive.Label;
     ref={ref}
 <<<<<<< HEAD
@@ -402,6 +453,7 @@ const SelectItem = React.forwardRef<;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   React.ElementRef<typeof SelectPrimitive.Item>;
   React.ElementRef<typeof SelectPrimitive.Item>,;
+<<<<<<< HEAD
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >(({ className, children, ...props }, ref) => (;
@@ -414,6 +466,10 @@ className={cn(
 >>>>>>>       className
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>;
 >(({ className, children, ...props }, ref) => (;
   <SelectPrimitive.Item;
@@ -426,6 +482,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -442,6 +499,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     className={cn(
       "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
 >>>>>>>     )}
     {...props}
@@ -471,19 +530,47 @@ const SelectItem = React.forward_ref<;
   <SelectPrimitive.Item;
     ref={ref}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     className={cn(&quot;-mx-1 my-1 h-px bg-muted&quot; className)}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+className={cn (
+      &quot;relative flex w - full cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
+      class_name)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     ref={ref}
     className={cn(&quot;-mx-1 my-1 h-px bg-muted&quot; className)}
     className={cn("-mx-1 my-1 h-px bg-muted", className)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+    {...props}
+  >;
+    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
+      <SelectPrimitive.ItemIndicator>;
+        <Check className=&quot;h - 4 w - 4&quot; />;
+      </SelectPrimitive.ItemIndicator>;
+    </span>;
+    <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>;
+  </SelectPrimitive.Item>));
+SelectItem.display_name = SelectPrimitive.Item.display_name;
+const SelectSeparator = React.forward_ref<;
+  React.ElementRef < typeof SelectPrimitive.Separator>,
+  React.ComponentPropsWithoutRef < typeof SelectPrimitive.Separator>;
+>(({ class_name, ...props }, ref) => (
+  <SelectPrimitive.Separator;
+    ref={ref}
+    className={cn (&quot;-mx - 1 my - 1 h - px bg - muted & quot;, class_name)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     {...props}
   />;
 ));
@@ -507,6 +594,7 @@ export {Select;
   SelectSeparator;
   SelectScrollUpButton;
   SelectScrollDownButton}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -561,3 +649,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+export {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

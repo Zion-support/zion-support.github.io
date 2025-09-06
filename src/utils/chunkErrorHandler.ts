@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -7,6 +8,9 @@
   private readonly MAX_RETRIES = 3
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   private readonly RETRY_DELAY = 1000; // 1 second
+=======
+private readonly RETRY_DELAY = 1000; // 1 second
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   private readonly CACHE_CLEAR_THRESHOLD = 2
   constructor() {
 
@@ -57,7 +61,11 @@ class ChunkErrorHandler {
 
       this.handlePromiseRejection(event)
     }) }
+<<<<<<< HEAD
 >>>>>>>   private handleScriptError(event: ErrorEvent): void {
+=======
+  private handleScriptError(event: ErrorEvent): void {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
     const { error, filename } = event;
 
@@ -247,6 +255,9 @@ if (return false) {
       `Attempting ChunkLoadError recovery #${attemptNumber}`
       undefined
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return chunkErrorPatterns.some (
       pattern =>;
         error_message.includes (pattern) ||;
@@ -287,7 +298,6 @@ if ( {) {
     logErrorToProduction (
       `Attempting ChunkLoadError recovery #${attempt_number}`,
       undefined,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
 
         context: 'chunkErrorRecovery',
@@ -433,6 +443,7 @@ if ( {) {
           border: none
           padding: 0.75rem 1.5rem
           border-radius: 0.5rem
+<<<<<<< HEAD
           font-size: 1rem
           cursor: pointer
 <<<<<<< HEAD
@@ -590,6 +601,14 @@ class ChunkErrorHandler {;
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>       });
+=======
+    const errorDiv = document && document.createElement('div');
+    errorDiv && errorDiv.style.cssText = `
+    window.location.href = window.location.href + '?_t=' + Date.now()
+
+
+      });
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       logErrorToProduction ('Caches cleared successfully', undefined, {
         context: 'chunkErrorRecovery',
         action: 'cache - clear',
@@ -626,6 +645,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   private showFatalErrorMessage(): void {
     // Create a user-friendly error message
 
+<<<<<<< HEAD
 =======
 >>>>>>>   }
 
@@ -667,12 +687,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>>     errorDiv.innerHTML = `
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
   private showFatalErrorMessage (): void {
     // Create a user - friendly error message;
     const error_div = document.create_element ('div');
     error_div.style.css_text = `;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       position: fixed;
       top: 0;
       left: 0;
@@ -842,6 +863,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>     }
     return this.errorStats.get(sessionKey)!
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     }
     return this.errorStats.get(sessionKey)!
@@ -850,6 +872,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
   // Public method to manually trigger recovery
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -961,13 +985,30 @@ export const chunkErrorHandler = new ChunkErrorHandler()
         userAgent: navigator.userAgent,;
         url: window.location.href;
       });
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
     return this.errorStats.get(sessionKey)!
   }
 
+<<<<<<< HEAD
   // Public method to manually trigger recovery
   public triggerRecovery(): void {
     this.clearCaches().then(() => {
+=======
+
+
+  // Public method to manually trigger recovery
+  public triggerRecovery(): void {
+
+    this && this.clearCaches().then(() => {
+      this && this.reloadPage();
+    });  }
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       this.reloadPage()
     }) }
   // Public method to check if we're in a chunk error state
@@ -993,6 +1034,101 @@ export default chunkErrorHandler
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+      background: rgba (0, 0, 0, 0.8);
+      color: white;
+      display: flex;
+      align - items: center;
+      justify - content: center;
+      z - index: 999999;
+      font - family: system - ui, -apple - system, sans - serif;
+    `;
+    error_div.innerHTML = `;
+      <div style="text - align: center; padding: 2rem; max - width: 500px;">;
+        <h2 style="margin - bottom: 1rem;">Connection Issue</h2>;
+        <p style="margin - bottom: 1.5rem; line - height: 1.5;">;
+          We're having trouble loading some parts of the application.;
+          This might be due to a poor network connection or a temporary server issue.;
+        </p>;
+        <button onclick="window.location.reload ()" style=";
+          background: #0070f3;
+          color: white;
+          border: none;
+          padding: 0.75rem 1.5rem;
+          border - radius: 0.5rem;
+          font - size: 1rem;
+          cursor: pointer;
+          margin - right: 1rem;        ">;
+          Try Again;
+        </button>;
+        <button onclick="window.location.href='/'" style=";
+          background: #666;
+          color: white;
+          border: none;
+          padding: 0.75rem 1.5rem;
+          border - radius: 0.5rem;
+          font - size: 1rem;
+          cursor: pointer;
+        ">;
+          Go Home;
+        </button>;
+      </div>;
+    `;
+    document.body.append_child (error_div);
+  }
+  private delay (ms: number): Promise < void> {
+    return new Promise (resolve => set_timeout (resolve, ms));
+  }
+  private getSessionKey (): string {
+    return `${navigator.user_agent}_${window.location.origin}`;
+  }
+  private getOrCreateErrorStats (session_key: string): ChunkErrorStats {
+    if () {) {
+  $2
+}
+      this.error_stats.set (session_key, {
+        error_count: 0,
+        lastErrorTime: 0,
+        user_agent: navigator.user_agent,
+        url: window.location.href,
+      });
+    }
+    return this.error_stats.get (session_key)!;
+  }
+  // Public method to manually trigger recovery;
+  public trigger_recovery (): void {
+    this.clear_caches ().then (() => {
+      this.reload_page ();
+    }) }
+  // Public method to check if we're in a chunk error state;
+  public isInErrorState (): boolean {
+    const session_key = this.getSessionKey ();
+    const stats = this.error_stats.get (session_key);
+    return stats ? stats.error_count > 0 : false;
+  }
+  // Public method to reset error state;
+  public resetErrorState (): void {
+    const session_key = this.getSessionKey ();
+    this.error_stats.delete (session_key);
+  }
+// Create and export singleton instance;
+export const chunkErrorHandler = new ChunkErrorHandler ();
+// Export for manual usage;
+export default chunkErrorHandler;
+export default chunkErrorHandler;
+        ">;
+          Try Again;
+        </button>;
+        <button onclick="window.location.href='/'" style=";
+export default chunkErrorHandler;
+        <button onclick="window.location.href='/'" style=";
+export default chunkErrorHandler;
+}
+}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
 =======
         <button onclick="window.location.href='/'" style="
@@ -1047,6 +1183,7 @@ export default chunkErrorHandler;
 // Create and export singleton instance;
 export const chunkErrorHandler = new ChunkErrorHandler();
 // Export for manual usage;
+<<<<<<< HEAD
 export default chunkErrorHandler;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1065,3 +1202,6 @@ export default chunkErrorHandler;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+export default chunkErrorHandler;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -56,6 +57,54 @@ import { GradientHeading } from "@/components/GradientHeading",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import Link from 'next/link';
+export default function Internationalization() {;
+  const schema = {;
+    '@context': 'https://schema && schema.org',;
+    '@type': 'WebPage',;
+    name: 'Internationalization',;
+    description:;
+      'Use Zion in multiple languages and attract clients worldwide with localized listings.',;
+    url: 'https://app && app.ziontechgroup.com/features/internationalization',  };    "@context": "https://schema && schema.org";
+    "@type": "WebPage";
+    "name": "Internationalization";
+    "description": "Use Zion in multiple languages and attract clients worldwide with localized listings.",;
+    "url": "https://app && app.ziontechgroup.com/features/internationalization";
+
+import React from "react";
+import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function Internationalization() {
@@ -77,6 +126,7 @@ export default function Internationalization() {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+<<<<<<< HEAD
   return (
     <>
       <SEO
@@ -88,8 +138,9 @@ export default function Internationalization() {
         keywords='i18n, multi-language marketplace, localized listings'
         canonical='https://app.ziontechgroup.com/features/internationalization'
 >>>>>>>       />
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <>;
@@ -123,6 +174,7 @@ export default function Internationalization() {
             </div>;
           </div>;
 
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -150,10 +202,13 @@ export default function Internationalization() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         title="Internationalization"
         description="Reach a global audience with multi-language support across the Zion platform."
         keywords="i18n, multi-language marketplace, localized listings"
         canonical="https://app.ziontechgroup.com/features/internationalization"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -163,6 +218,13 @@ export default function Internationalization() {
       />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> >>>>>>>       {/* Use a normal script tag so JSON-LD is correctly parsed */}
+=======
+
+
+
+      />
+      {/* Use a normal script tag so JSON-LD is correctly parsed */}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <script
         type="application/ld+json"
 
@@ -323,6 +385,7 @@ export default function Internationalization() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -336,6 +399,8 @@ export default function Internationalization() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -364,9 +429,12 @@ export default function Internationalization() {;
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Header />;
       <main className="bg-background text-white py-12">;
         <div className="container mx-auto px-4 md: px-6">;
@@ -422,6 +490,7 @@ export default function Internationalization() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -435,3 +504,6 @@ export default function Internationalization() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

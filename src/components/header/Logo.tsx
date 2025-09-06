@@ -1,11 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/header/Logo.tsx
 
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+return (
+      <Link href="/" className="flex items - center">;
+        <img src={logoToUse} alt={`${brand_name} Logo`} className="h - 8" width={32} height={32} />;
+      </Link>);
+  }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import React from 'react',
 import Link from 'next/link';
@@ -134,11 +142,14 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 ;
 
 =======
   if (logoToUse) {
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 
 
@@ -239,6 +250,7 @@ if ( {) {
     </Link>;
   );
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/header/Logo.tsx
 ;
 >>>>>>> >>>>>>> 
@@ -246,6 +258,9 @@ if ( {) {
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         />;
       </Link>);
   }
@@ -260,6 +275,7 @@ if ( {) {
       />;
     </Link>);
 }
+<<<<<<< HEAD
 =======
 
 import React from 'react',;
@@ -313,3 +329,7 @@ export function Logo({ customLogo } LogoProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -7,13 +8,25 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState } from 'react',
 import Image, { type ImageProps } from 'next/image';
+=======
+import React, { useState } from 'react'
+import Image, { type ImageProps } from 'next/image'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { cn } from '@/lib/utils';
 interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
   src: string;
   alt?: string;
   /** Source to use if the main src fails */
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  fallbackSrc?: string;
+  /** CSS class for the retry button */
+
+  retryClassName?: string;  retryClassName?: string
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from 'react',;
 import Image, { type ImageProps } from 'next/image',;
 import { cn } from '@/lib/utils',;
@@ -26,6 +39,7 @@ interface ImageWithRetryProps extends Omit<ImageProps 'src' | 'alt'> {;
   retryClassName?: string;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
@@ -44,6 +58,12 @@ import { cn } from '@/lib/utils';
 interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {;
   src: string;  alt?: string
   /** Source to use if the main src fails */
+=======
+
+
+}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   fallbackSrc?: string
   /** CSS class for the retry button */
   retryClassName?: string;interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
@@ -123,6 +143,7 @@ export function ImageWithRetry({
     setCurrentSrc(fallbackSrc) }
   const handleRetry = () => {;
     setFailed(false);
+<<<<<<< HEAD
     setCurrentSrc(src) };    setCurrentSrc(fallbackSrc)
   }
   const handleRetry = () => {
@@ -130,6 +151,20 @@ export function ImageWithRetry({
     setCurrentSrc(src);    setCurrentSrc(src)
   }
   const fill = !('width' in props) && !('height' in props)
+=======
+    setCurrentSrc(src);  };    setCurrentSrc(fallbackSrc);
+
+  };
+
+  const handleRetry = () => {;
+    setFailed(false);
+
+
+  };
+
+  const fill = !('width' in props) && !('height' in props);
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className='relative inline-block'>      <Image    <div className="relative inline-block">
       <Image
@@ -169,16 +204,47 @@ export function ImageWithRetry({
 export default ImageWithRetry
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export default ImageWithRetry
+=======
+  const fill = !('width' in props) && !('height' in props);
+  return (
+    <div className='relative inline - block'>      <Image    <div className="relative inline - block">;
+      <Image;
+        {...props}
+        src = {current_src, }
+        alt = {alt, }
+        on_error = {handle_error, }
+        class_name = {cn (class_name), }
+        fill = {fill, }
+      />;
+      {failed && (
+        <button;
+          type='button';
+          on_click={handle_retry}
+          className={cn (
+            'absolute bottom - 1 right - 1 text - xs underline',
+            retryClassName)}        >          on_click = {handle_retry, }
+          class_name = {cn ('absolute bottom - 1 right - 1 text - xs underline', retryClassName), }
+          type="button";
+          on_click={handle_retry}
+          className={cn ('absolute bottom - 1 right - 1 text - xs underline', retryClassName)}
+        >;
+          Retry;
+        </button>)}
+    </div>);
+export default ImageWithRetry;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   src,
   alt = '',
   fallbackSrc = '/images/image-placeholder.svg',
   className,
+<<<<<<< HEAD
   retryClassName,
 export default ImageWithRetry;
 ;
@@ -254,3 +320,6 @@ export default ImageWithRetry;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  retryClassName,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

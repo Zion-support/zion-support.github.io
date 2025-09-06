@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -56,6 +57,10 @@ import { Award } from 'lucide-react'
 interface LeaderboardEntry {
   rank: number,
   name: string,
+=======
+rank: number,
+  name: string,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   referrals: number
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -106,6 +111,7 @@ export function ReferralLeaderboard() {
     { rank: 4, name: "Casey Brown", referrals: 12 }
     { rank: 5, name: "Jordan Lee", referrals: 10 }]
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <Card>
       <CardHeader>
@@ -145,6 +151,8 @@ export function ReferralLeaderboard() {
               key={entry.rank}
               className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors'              className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
 >>>>>>>             >
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {;
   Card,;
   CardContent,;
@@ -181,7 +189,6 @@ export function ReferralLeaderboard() {;
     { rank: 3, name: "Taylor Wong", referrals: 15 },;
     { rank: 4, name: "Casey Brown", referrals: 12 },;
     { rank: 5, name: "Jordan Lee", referrals: 10 }],;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Card>;
       <CardHeader>;
@@ -267,6 +274,7 @@ export function ReferralLeaderboard() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -278,6 +286,8 @@ export function ReferralLeaderboard() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             >
 >>>>>>>               <div className="flex items-center gap-3">
                 <div 
@@ -330,11 +340,15 @@ export function ReferralLeaderboard() {;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Award } from 'lucide-react';
 interface LeaderboardEntry {;
@@ -428,6 +442,7 @@ export function ReferralLeaderboard() {;
     </Card>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -446,3 +461,15 @@ export function ReferralLeaderboard() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+  );
+}
+
+            </div>))}
+        </div>;
+      </CardContent>;
+    </Card>);
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

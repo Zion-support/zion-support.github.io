@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
 
 =======
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -30,11 +33,14 @@ import Link from 'next/link';
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/AuthConfigurationError.tsx
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from 'react'
@@ -216,9 +222,13 @@ if ( {) {
       window.location.reload ();
     }
   };
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/AuthConfigurationError.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
@@ -228,6 +238,7 @@ if ( {) {
 <<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>         <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">
 ursor/fix-website-loading-errors-and-merge-6662
@@ -244,6 +255,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">
           <div className="text-center mb-6">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -272,6 +286,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           {/* Technical Details */}
 <<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
 
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -296,12 +311,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
           <Alert variant="destructive" className="mb-6">
             <AlertTriangle className="h-4 w-4" />
             <AlertDescription>
               <strong>Critical Issue #1:</strong> Auth0 environment variables are not configured. 
+<<<<<<< HEAD
               New users cannot sign up until this is resolved.
             </AlertDescription>
           </Alert>
@@ -320,6 +339,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>>             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               New users cannot sign up until this is resolved.
             </AlertDescription>
           </Alert>
@@ -329,6 +350,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
@@ -341,6 +363,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           <div className="bg-gray-50 rounded-lg p-4 mb-6">
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>
             <ul className="text-sm text-gray-700 space-y-1">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -423,7 +447,29 @@ ursor/fix-website-loading-errors-and-merge-6662
               resolved.            </AlertDescription>;
           </Alert>;
           {/* Technical Details */}        {/* Main Error Card */}
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/AuthConfigurationError.tsx
+=======
+          {/* Action Buttons */}
+
+          <div className="flex flex-col sm:flex-row gap-3 mb-6">
+            {showSetupButton && (
+              <Button 
+                onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
+
+
+                className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
+              >
+                <Settings className="w-4 h-4 mr-2" />
+                Setup Guide
+              </Button>
+
+  };
+  return (;
+    <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">;
+      <div className="max-w-2xl w-full">;
+        {/* Main Error Card */}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">;
           <div className="text-center mb-6">;
             <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center">;
@@ -502,6 +548,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <ul className='text - sm text - gray - 700 space - y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg - gray - 50 rounded - lg p - 4 mb - 6">;
             <h3 className="font - semibold text - gray - 900 mb - 2">Missing Configuration:</h3>;
             <ul className="text - sm text - gray - 700 space - y-1">;
+<<<<<<< HEAD
 =======
 import React from 'react',;
 import Link from 'next/link',;
@@ -577,6 +624,8 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true } AuthC
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <li>• AUTH0_SECRET</li>;
               <li>• AUTH0_BASE_URL</li>;
               <li>• AUTH0_ISSUER_BASE_URL</li>;
@@ -682,7 +731,11 @@ ursor/fix-website-loading-errors-and-merge-6662
               className="flex-1"
             >
               <RefreshCw className="w-4 h-4 mr-2" />
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/AuthConfigurationError.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               Check Again
             </Button>
           </div>
@@ -691,10 +744,15 @@ ursor/fix-website-loading-errors-and-merge-6662
               Check Again;
             </Button>;
           </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Quick Setup Steps */}
 <<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
 
 
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/AuthConfigurationError.tsx
 =======
@@ -702,6 +760,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <div className="border-t pt-6">
             <h3 className="font-semibold text-gray-900 mb-3">Quick Setup Steps:</h3>
             <ol className="space-y-3 text-sm">
@@ -732,9 +793,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                     href="https://manage.auth0.com/" 
                     target="_blank" 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:underline inline-flex items-center gap-1"
                   >
@@ -788,6 +852,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">2</span>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -835,6 +904,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -854,6 +924,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <br />
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/AuthConfigurationError.tsx
+=======
+
+                <div>
+                  <strong>Configure Environment:</strong>
+                  <br />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     className='text-blue-600 hover:underline inline-flex items-center gap-1'>;
                     Visit Auth0 Dashboard <ExternalLink className='w-3 h-3' />;
                   </a>;
@@ -907,10 +983,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">2</span>;
                 <div>;
                   <strong>Create Application:</strong>;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
 ========
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/AuthConfigurationError.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Action Buttons */}
           <div className='flex flex - col sm:flex - row gap - 3 mb - 6'>;
             {showSetupButton && (
@@ -976,8 +1055,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <span className="flex - shrink - 0 w - 6 h - 6 bg - blue - 100 text - blue - 600 rounded - full flex items - center justify - center text - xs font - semibold">2</span>;
                 <div>;
                   <strong > Create Application:</strong>;
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <br />;
                   Create a "Regular Web Application" named "Zion AI Marketplace";
                 </div>;
@@ -1027,6 +1109,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </li>
               <li className="flex items-start gap-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">4</span>
                 <div>
@@ -1038,16 +1121,27 @@ ursor/fix-website-loading-errors-and-merge-6662
                   Run <code className="bg-gray-100 px-1 rounded">npm run dev</code> to apply changes
 >>>>>>>                 </div>
 =======
+=======
+
+              
+              <li className="flex items-start gap-3">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">4</span>
                 <div>
                   <strong>Restart Application:</strong>
                   <br />
+<<<<<<< HEAD
               
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">4</span>
                 <div>
                   <strong>Restart Application:</strong>
                   <br />
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   Run <code className="bg-gray-100 px-1 rounded">npm run dev</code> to apply changes
                 </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1056,6 +1150,9 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   to apply changes                </div>                <div>;
                   <strong>Configure Environment:</strong>;
                   <br />;
@@ -1080,10 +1177,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <strong>Restart Application:</strong>;
                   <br />;
                   Run <code className="bg-gray-100 px-1 rounded">npm run dev</code> to apply changes;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
 ========
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/AuthConfigurationError.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <li className='flex items - start gap - 3'>;
                 <span className='flex - shrink - 0 w - 6 h - 6 bg - blue - 100 text - blue - 600 rounded - full flex items - center justify - center text - xs font - semibold'>;
                   3;
@@ -1121,8 +1221,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <strong > Restart Application:</strong>;
                   <br />;
                   Run <code className="bg - gray - 100 px - 1 rounded">npm run dev</code> to apply changes;
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </div>;
               </li>;
             </ol>;
@@ -1191,6 +1294,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Link 
               href="/help" 
 
+<<<<<<< HEAD
 ========
             <Link 
               href="/help" 
@@ -1211,6 +1315,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Link
               href="/help"
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             
             <Link 
               href="/help" 
@@ -1225,6 +1333,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -1247,6 +1356,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'>;
+              <span>Browse Marketplace</span>            >;
+              <span>Browse Marketplace</span>;
+              <ExternalLink className="w-4 h-4" />;
+            </Link>;
+            
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Link 
@@ -1261,6 +1379,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <ExternalLink className="w-4 h-4" />
             </Link>
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1319,6 +1438,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>           </div>
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>
 <<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
 >>>>>>>         </div>
@@ -1330,6 +1453,19 @@ ursor/fix-website-loading-errors-and-merge-6662
         {showSetupButton && (
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+
+          <div className="mt-6 text-center">
+            <div className="bg-green-50 rounded-lg border border-green-200 p-4">
+              <div className="flex items-center justify-center gap-2 text-green-700 mb-2">
+                <CheckCircle className="w-5 h-5" />
+                <span className="font-semibold">Automated Setup Available</span>
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </div>
               <p className="text-sm text-green-600 mb-3">
                 Run the setup script to configure Auth0 interactively:
@@ -1396,6 +1532,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1409,6 +1546,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               <p className="text-sm text-green-600 mb-3">
                 Run the setup script to configure Auth0 interactively:
               </p>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <code className="bg-green-100 text-green-800 px-3 py-1 rounded text-sm">
                 npm run setup:auth0
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1417,6 +1556,10 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <Link
               href="/talent" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800">;
@@ -1455,6 +1598,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             </Link>;
           </div>;
         </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {/* Setup Script Info */}
         {showSetupButton && (;
           <div className='mt-6 text-center'>;
@@ -1530,6 +1677,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
         {/* Footer */}
@@ -1557,11 +1705,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className="mt-6 text-center text-sm text-gray-500">
           <p>
             For detailed instructions, see{' '}
             <button
             >
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/AuthConfigurationError.tsx
               AUTH0_SETUP_GUIDE_ISSUE_1.md
 >>>>>>>             </button>
@@ -1572,10 +1725,17 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className="mt-6 text-center text-sm text-gray-500">
           <p>
             For detailed instructions, see{' '}
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <button 
               onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
               className="text-blue-600 hover: underline"
             >
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               AUTH0_SETUP_GUIDE_ISSUE_1.md
             </button>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1583,6 +1743,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
   )
@@ -1592,6 +1753,17 @@ export default AuthConfigurationError }
 export default AuthConfigurationError
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+
+              onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
+
+export default AuthConfigurationError };
+;
+export default AuthConfigurationError;
+}
+}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className="mt-6 text-center text-sm text-gray-500">;
           <p>;
             For detailed instructions, see{' '}
@@ -1621,6 +1793,7 @@ export default AuthConfigurationError;}
 
 export default AuthConfigurationError;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ========
   );
@@ -1628,6 +1801,8 @@ export default AuthConfigurationError;
 export default AuthConfigurationError;}
 export default AuthConfigurationError;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/AuthConfigurationError.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {/* Alternative Actions Card */}
         <div className='bg - blue - 50 rounded - xl border border - blue - 200 p - 6'>;
           <h3 className='font - semibold text - blue - 900 mb - 3'>;
@@ -1760,6 +1935,7 @@ export default AuthConfigurationError;
     </div>);
 export default AuthConfigurationError }
 export default AuthConfigurationError,
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/auth/AuthConfigurationError.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> }
@@ -1807,3 +1983,8 @@ export default AuthConfigurationError;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+export default AuthConfigurationError;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

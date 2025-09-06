@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/admin/TeamManagement.tsx
 
 <<<<<<< HEAD
@@ -259,6 +260,9 @@ export function TeamManagement() {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleAddMember = () => {
+=======
+const handleAddMember = () => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     // In a real app, this would make an API call to add the member
     if (!newMemberEmail) {
       toast({
@@ -351,9 +355,12 @@ export function TeamManagement() {
     })
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   Table,
 ========
 <<<<<<< HEAD
@@ -461,10 +468,15 @@ if ( {) {
       description: `A new invitation has been sent to ${member_email}`,
     });
   }
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/admin/TeamManagement.tsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
   }
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         title: "Email required",
         description: "Please enter an email address for the new team member.",
         variant: "destructive"}),
@@ -512,6 +524,11 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className="space-y-6">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -569,6 +586,10 @@ if ( {) {
                   value={newMemberEmail}
                   onChange={(e) => setNewMemberEmail(e.target.value)}
                 />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </div>
               <div className="grid grid-cols-4 items-center gap-4">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -611,6 +632,10 @@ if ( {) {
       <div className='rounded-md border'>
 
       <div className="rounded-md border">
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Table>
           <TableHeader>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -639,6 +664,10 @@ if ( {) {
             {teamMembers.map(member => (              <TableRow key={member.id}>
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <TableCell>
                   <div className="flex items-center gap-2">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -667,6 +696,10 @@ if ( {) {
                           .map((n) => n[0])
                           .join("")}
                       </span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     </div>
                     <div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -696,6 +729,10 @@ if ( {) {
                     variant={member.status === 'active' ? 'default' : 'outline'}                  >
                     variant={member.status === "active" ? "default" : "outline"}
                   >
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     {member.status}
                   </Badge>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -709,6 +746,15 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => handleResendInvite(member.email)}
+                      >
+                        <Mail className="h-4 w-4 mr-1" />
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         Resend
                       </Button>
                     ) : (
@@ -809,6 +855,7 @@ if ( {) {
 import React, { useState } from "react",;
 import {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
 import React, { useState } from 'react';import {;
@@ -820,6 +867,8 @@ import {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/enterprise/admin/TeamManagement.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   Table,;
   TableBody,;
   TableCell,;
@@ -1013,6 +1062,10 @@ export function TeamManagement() {;
       description: `A new invitation has been sent to ${memberEmail}`,;
     });
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 <<<<<<<< HEAD:src/components/enterprise/admin/TeamManagement.tsx
 
@@ -1324,13 +1377,20 @@ export function TeamManagement() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     )}
                   </div>;
                 </TableCell>;
               </TableRow>;
             ))}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 ========
 <<<<<<< HEAD
@@ -1343,6 +1403,7 @@ export function TeamManagement() {;
 <<<<<<<< HEAD:src/components/enterprise/admin/TeamManagement.tsx
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ========
   //In a real app, this would make an API call to remove the member toast ({;
@@ -1369,6 +1430,9 @@ export function TeamManagement() {;
 }</TableBody> </Table> </div> </div>) ;
 }'"}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/enterprise/admin/TeamManagement.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <TableCell>{member.role}</TableCell>;
                 <TableCell>;
                   <Badge;
@@ -1424,6 +1488,7 @@ export function TeamManagement() {;
 }</div> </TableCell> </TableRow>) );
 }</TableBody> </Table> </div> </div>);
 }'"}
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/admin/TeamManagement.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> }
@@ -1581,3 +1646,7 @@ setIsAddingMember (false);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

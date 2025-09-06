@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/AIMatchmaker.tsx
 
 =======
@@ -76,6 +77,9 @@ toast ({
 }finally {
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AIMatchmaker.tsx
+=======
+import { Sparkles, Search } from 'lucide-react'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import { useState } from 'react';
 import { toast } from '@/hooks/use-toast';
@@ -113,6 +117,7 @@ interface AIMatchmakerProps {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -146,6 +151,13 @@ export function AIMatchmaker({
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
   const [query, setQuery] = useState(""),
   const [isMatchmaking, setIsMatchmaking] = useState(false),
@@ -273,6 +285,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       // Set empty matches to show no results found UI
       setMatches([])
+<<<<<<< HEAD
     } finally {
       setIsMatchmaking(false)
 <<<<<<< HEAD
@@ -329,6 +342,8 @@ import { Sparkles, Search } from 'lucide-react';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',;
 <<<<<<< HEAD
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState } from 'react';
 import { toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';
@@ -406,9 +421,23 @@ function AIMatchmaker() {
       // Set empty matches to show no results found UI;
       set_matches ([]);
     } finally {
+<<<<<<< HEAD
       setIsMatchmaking (false);
     }
   }
+=======
+
+      setIsMatchmaking(false)
+
+          <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />;
+          AI Matchmaker;
+        </CardTitle>;
+        <p className='text-sm text-zion-slate-light'>;
+          Describe what you&apos;re looking for and our AI will find the best
+          matches
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface AIMatchmakerProps {;
   serviceType?: string;
 onMatchSelect?: (match: any) => void;
@@ -634,7 +663,10 @@ if ( {) {
         <div className="space-y-4">
           <div className="space-y-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <Textarea
               placeholder="Describe what you need... (e && e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
 ========
@@ -809,6 +841,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
           ;
           {hasSearched && (;
+<<<<<<< HEAD
             <AIMatchingResults ;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/AIMatchmaker.tsx
@@ -824,6 +857,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
@@ -833,6 +869,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/AIMatchmaker.tsx
 
+<<<<<<< HEAD
+=======
+
+
+}
+}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               projectDescription={query}
 =======
 
@@ -862,6 +906,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/AIMatchmaker.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 
@@ -869,6 +914,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className='space - y-4'>;
           <div className='space - y-2'>;
             <Textarea;
@@ -901,6 +949,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </div>;
       </CardContent>;
     </Card>);
+<<<<<<< HEAD
 }
 =======
   ),;}
@@ -995,3 +1044,6 @@ if (onMatchSelect) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -76,6 +77,10 @@ interface ProfileSetupProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   userType: string
 >>>>>>> }
+=======
+userType: string
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(profileSchema)
@@ -84,6 +89,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -160,6 +166,12 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   return (
     <div className="space-y-6">
@@ -184,6 +196,10 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -238,7 +254,10 @@ import { User, Mail, AtSign, GraduationCap } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {;
   Form,;
   FormControl,;
@@ -283,10 +302,13 @@ function ProfileSetup() {
   const getTypeLabel = () =>: any {
     switch (user_type) {
       case "service_provider": return "Service Provider";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
       case "serviceProvider": return "Service Provider",;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       case "talent":;
         return "Talent",;
       case "client":;
@@ -362,6 +384,7 @@ function ProfileSetup() {
             name="headline"
             render={({ field }: { field: any }) => (
 
+<<<<<<< HEAD
 >>>>>>>               <FormItem>
 >>>>>>>                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -374,11 +397,16 @@ function ProfileSetup() {
             control={form.control}
             name="headline"
             render={({ field }: { field: any }) => (
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>
                 <FormControl>
                   <div className="relative">
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <Input
                       placeholder={`e.g., ${
                         userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :
@@ -472,6 +500,7 @@ function ProfileSetup() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           />;
           <FormField;
+<<<<<<< HEAD
             control={form.control}
             name="bio"
             render={({ field }: { field: any }) => (
@@ -479,6 +508,15 @@ function ProfileSetup() {
                 <FormLabel className="text-zion-slate-light">Bio</FormLabel>
                 <FormControl>
                   <Textarea
+=======
+            control = {form.control, }
+            name="bio";
+            render={({ field }: { field: any }, ) => (
+              <FormItem>;
+                <FormLabel className="text - zion - slate - light">Bio</FormLabel>;
+                <FormControl>;
+                  <Textarea;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     placeholder={`Tell us about your ${
                       userType === "serviceProvider" ? "services and expertise" :
                       userType === "talent" ? "skills and experience" :
@@ -539,11 +577,15 @@ function ProfileSetup() {
 <<<<<<< HEAD
 =======
           
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
           
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Button
 =======
 ursor/fix-website-loading-errors-and-merge-6662
@@ -621,6 +663,7 @@ getTypeLabel () "
 }/> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ;
 }/> <Button > Complete Profile </Button> </form> </Form> </div>) ;
 }"}
+<<<<<<< HEAD
 =======
 }/> <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) "
 }/> <FormField <FormItem> <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel> <FormControl> <div className="relative" > <Input className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {
@@ -642,6 +685,11 @@ getTypeLabel () "
                 <FormMessage className="text-red-400" />;
               </FormItem>;
             )}
+=======
+
+                <FormMessage className="text - red - 400" />;
+              </FormItem>)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           />;
           <Button;
             type="submit";
@@ -661,6 +709,7 @@ case "talent": return "Talent";";
 case "client": return "Client";
 default:;
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 
 
@@ -681,3 +730,17 @@ default:;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+getTypeLabel () ";
+}Profile</h3> <p className="text - zion - slate - light mt - 2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text - zion - slate - light">Full Name</FormLabel> <FormControl> <div className="relative" > <Input placeholder="Your full name" className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple" {
+  ...field ";
+}/> <User className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";
+}/> <FormField <FormItem> <FormLabel className="text - zion - slate - light">Professional Headline</FormLabel> <FormControl> <div className="relative" > <Input className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple" {
+  ...field ";
+}/> <GraduationCap className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";
+}/> <FormField <FormItem> <FormLabel className="text - zion - slate - light" >Bio</FormLabel> <FormControl> <Textarea className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple min - h-[120px]" {
+  ...field ";
+}/> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>);
+}/> <Button > Complete Profile </Button> </form> </Form> </div>);
+}"}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

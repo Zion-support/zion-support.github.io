@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -17,6 +18,10 @@ import { BadgeDollarSign } from 'lucide-react'
 export function TokenDisplay() {
   const { wallet, loading } = useWallet();
   const { wallet, loading } = useWallet()
+=======
+const { wallet, loading } = useWallet();
+  return (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import React from "react",
@@ -106,6 +111,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className="mt-2">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -113,6 +119,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Button variant="outline" size="sm">
 >>>>>>>                 View Wallet
               </Button>
@@ -122,6 +132,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -143,6 +154,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react",;
 import { BadgeDollarSign } from 'lucide-react';
 import { useWallet } from "@/hooks/useWallet",;
@@ -153,9 +168,12 @@ export function TokenDisplay() {;
   const { wallet, loading } = useWallet();
   return (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <Card>;
       <CardHeader className="flex flex-row items-center justify-between pb-2">;
         <div>;
@@ -221,9 +239,12 @@ function TokenDisplay() {
             <div className='mt - 2'>;
               <Button variant='outline' size='sm'>                View Wallet            <div className="mt - 2">;
 
+<<<<<<< HEAD
 >>>>>>>               <Button variant="outline" size="sm">;
 =======
             <div className="mt-2">;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Button variant="outline" size="sm">;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 View Wallet;
@@ -234,6 +255,7 @@ function TokenDisplay() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -245,6 +267,8 @@ function TokenDisplay() {
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 >>>>>>>         )}
@@ -262,6 +286,7 @@ function TokenDisplay() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -272,3 +297,6 @@ function TokenDisplay() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

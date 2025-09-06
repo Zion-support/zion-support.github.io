@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -167,6 +168,14 @@ export default function SavedTalentsPage() {
           .from("saved_talents")
           .select(
             `
+=======
+}
+
+        const { data, error } = await supabase;
+          .from ('saved_talents');
+          .select (
+            `;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             talent_profile (
               id
               user_id
@@ -228,6 +237,7 @@ export default function SavedTalentsPage() {
   const handleViewProfile = (talentId: string) => {
     router.push(`/talent/${talentId}`)
   }
+<<<<<<< HEAD
   const handleRequestHire = (talent: TalentProfile) => {
     logInfo('Request to hire:', { data: talent });    toast({
       title: 'Hire Request Sent'
@@ -261,6 +271,13 @@ export default function SavedTalentsPage() {
         })
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+  const handleRequestHire = (talent: TalentProfile) =>: any {
+    log_info ('Request to hire:', { data: talent });    toast ({
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           .eq("user_id", user.id),
 
         if (error) {
@@ -375,6 +392,7 @@ export default function SavedTalentsPage() {;
 <<<<<<< HEAD
 
   const handleViewProfile = (talentId: string) => {;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>>   const handleViewProfile = (talentId: string) => {;
@@ -400,6 +418,73 @@ import { logErrorToProduction } from '@/utils/productionLogger',;
 import { EmptyState } from "@/components/ui/empty-state",;
 import { Heart } from 'lucide-react';
 import { logInfo, logWarn } from '@/utils/productionLogger',;
+=======
+    router.push(`/talent/${talentId}`);
+  };
+  const handleRequestHire = (talent: TalentProfile) => {;
+    logInfo('Request to hire:', { data: talent });    toast({
+      title: 'Hire Request Sent',
+      description: `A hire request has been sent to ${talent.full_name}.`,
+    });
+  }
+  const handleToggleSave = async (
+    talent_id: string,
+    isCurrentlySaved: boolean) => {    try {
+      // Check condition
+if ( {) {
+  $2
+}
+        log_warn ('User not authenticated.');
+        return;
+      }
+
+
+;
+      if (isCurrentlySaved) {;
+
+        // Remove from saved talents;
+        const { error } = await supabase;
+          .from ('saved_talents');
+          .delete ();
+          .eq ('user_id', user.id);
+          .eq ('talent_id', talent_id);
+        // Check condition
+if ( {) {
+  $2
+}
+          throw error;
+        }
+
+  
+        setSavedTalents(prevTalents =>
+          prevTalents.filter(talent => talent.id !== talentId)
+        ),
+        toast({
+          title: "Talent Removed",
+          description: "Talent removed from saved list."})
+
+
+      } else {
+        // Add to saved talents
+        const { error } = await supabase
+          .from('saved_talents')
+
+          .insert([{ user_id: user.id, talent_id: talentId }]),
+  
+          .insert([{ user_id: user.id, talent_id: talentId }]),
+  
+
+        if (error) {
+          throw error
+        }
+  
+        // Fetch the updated talent profile and add it to the list
+        const { data: talentData, error: talentError } = await supabase
+          .from('talent_profiles')
+          .select('*')
+          .eq('id', talentId)
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export default function SavedTalentsPage() {;
   const { user } = useAuth(),;
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),;
@@ -484,6 +569,7 @@ export default function SavedTalentsPage() {;
         logWarn("User not authenticated."),
         return
       } catch (error) {;
+<<<<<<< HEAD
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching saved talents' }),;
         toast({;
           title: "Error",;
@@ -541,6 +627,13 @@ export default function SavedTalentsPage() {;
 
 <<<<<<< HEAD
 =======
+=======
+        logErrorToProduction(;
+          error instanceof Error ? error && error.message : String(error),;
+          error instanceof Error ? error : undefined,;
+          { message: 'Error fetching saved talents' }
+        );
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -683,12 +776,16 @@ export default function SavedTalentsPage() {;
 =======
 =======
           return;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
           return;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           .single(),
   
         if (talentError) {
@@ -863,6 +960,10 @@ ursor/fix-website-loading-errors-and-merge-6662
           Here are the talents you've saved for future reference.
         </p>
         
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {isLoading ? (
           <div className="text-center py-8">Loading saved talents...</div>
         ) : savedTalents.length === 0 ? (
@@ -873,6 +974,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               icon={<Heart className="h-8 w-8" />}
               title="No Saved Talents"
               description="You haven't saved any talents yet."
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               action={{ text: 'Browse Talent', href: '/talent' }}
               className="border-none bg-transparent text-center"
             />
@@ -935,7 +1040,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         description: 'Failed to update saved talents. Please try again later.',;
         variant: 'destructive',;
       });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         // Fetch the updated talent profile and add it to the list;
         const { data: talent_data, error: talent_error } = await supabase;
           .from ('talent_profiles');
@@ -986,12 +1094,15 @@ if ( {) {
         description: 'Failed to update saved talents. Please try again later.',
         variant: 'destructive',
       });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
         title: "Error",;
         description: "Failed to update saved talents. Please try again later.";
         variant: "destructive"});
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   };
   return (;
@@ -1052,6 +1163,7 @@ if ( {) {
                 onRequestHire={handleRequestHire}
                 isAuthenticated={!!user}
               />;
+<<<<<<< HEAD
             ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>
@@ -1062,6 +1174,11 @@ if ( {) {
 }, [user, router])
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             ))}
           </div>;
         )}
@@ -1223,6 +1340,7 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }onViewProfile= {
   handleViewProfile;
 }onRequestHire= {
+<<<<<<< HEAD
   handleRequestHire
 }isAuthenticated= {
   !!user
@@ -1231,10 +1349,24 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }</div> </>)
 }'"}
 >>>>>>> 
+=======
+
+
+
+  handleRequestHire;
+}is_authenticated= {
+  !!user;
+}/>) );
+}</div>);
+}</div> </>);
+}'"}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </div>;
     </>;
   );
 }
+<<<<<<< HEAD
 ;
 
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -1282,3 +1414,6 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

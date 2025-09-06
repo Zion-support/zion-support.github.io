@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,6 +80,15 @@ export const DownloadSection: React.FC = () => {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+appStoreUrl = {appStoreUrl,}
+                googlePlayUrl = {googlePlayUrl,}
+                onAppStoreClick = {(,) => logInfo("App Store button clicked"),}
+                onGooglePlayClick = {() => logInfo("Google Play button clicked"),}
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               
               <AppStoreButtons 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -243,12 +253,21 @@ export const DownloadSection: React.FC = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
             
             <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
 
 >>>>>>>               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
+=======
+";
+
+            
+            <div className="flex-shrink-0 bg-white dark:bg-zion-blue-dark p-4 rounded-lg">
+
+              <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <QrCodeIcon className="w-full h-full p-2" />
                 {/* This would be replaced with an actual QR code in production */}
               </div>
@@ -259,6 +278,7 @@ export const DownloadSection: React.FC = () => {;
       </div>
     </section>
 
+<<<<<<< HEAD
   )
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -272,3 +292,6 @@ export const DownloadSection: React.FC = () => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

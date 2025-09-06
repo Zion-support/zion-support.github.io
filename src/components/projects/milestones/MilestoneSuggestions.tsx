@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5,6 +6,22 @@
 =======
 =======
 <<<<<<< HEAD
+=======
+interface MilestoneSuggestionsProps {
+  project_name: string;
+  scope_summary: string;
+  start_date: Date; import React, { useState } from 'react';
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks / useMilestoneGenerator';
+import { Loader2, Sparkles, Check } from 'lucide-react';
+import { Badge } from '@/components / ui / badge';
+interface MilestoneSuggestionsProps {
+
+
+  endDate?: Date;
+  projectType: string;
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;  projectType: string,
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[],) => void
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -72,7 +89,11 @@ interface MilestoneSuggestionsProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 export function MilestoneSuggestions({
+<<<<<<< HEAD
 >>>>>>> import React, { useState } from 'react';
+=======
+import React, { useState } from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Button } from '@/components/ui/button';
 import {;
   GeneratedMilestone,;
@@ -83,7 +104,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loader2, Sparkles, Check } from 'lucide-react';import { Badge } from '@/components/ui/badge';
 import { format, parseISO } from 'date-fns';
 
+<<<<<<< HEAD
 >>>>>>> 
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface MilestoneSuggestionsProps {;
   projectName: string;
   scopeSummary: string;
@@ -128,6 +154,7 @@ export function MilestoneSuggestions(): any ({;
 }
 
 export function MilestoneSuggestions(): any ({;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 =======
@@ -140,6 +167,8 @@ export function MilestoneSuggestions(): any ({;
 
 export function MilestoneSuggestions({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   projectName;
   scopeSummary;
   startDate;
@@ -159,11 +188,11 @@ export function MilestoneSuggestions({
 
       return format (parseISO (date_string), 'MMM dd, yyyy');
       return date_string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React, { useState } from 'react',;
@@ -227,6 +256,8 @@ export function MilestoneSuggestions({
   projectType: string,
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
 
@@ -464,6 +495,7 @@ export function MilestoneSuggestions({;
     }
   },
 
+<<<<<<< HEAD
   return (
     <div className="space-y-4">
       {!showSuggestions && (
@@ -486,6 +518,8 @@ export function MilestoneSuggestions({;
           onClick={handleGenerateMilestones}
           disabled={isGenerating |!scopeSummary |!startDate}
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className="space-y-4">
       {!showSuggestions && (
@@ -520,6 +554,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -527,6 +562,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
 >>>>>>>               Generating milestones...
             </>
@@ -558,8 +598,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className='space-y-3'>          <CardHeader className="pb-3">
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               Suggest Project Milestones with AI
             </>
           disabled={isGenerating || !scopeSummary || !startDate}
@@ -589,11 +633,16 @@ ursor/fix-website-loading-errors-and-merge-6662
             </>;
 
 
+<<<<<<< HEAD
 >>>>>>>           )}
+=======
+          )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </Button>;
       )}
 >>>>>>> 
           <CardHeader className="pb-3">
+<<<<<<< HEAD
 >>>>>>>             <CardTitle className="text-lg flex items-center">
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -627,6 +676,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <CardTitle className="text-lg flex items-center">
 >>>>>>>               <Sparkles className="h-5 w-5 mr-2 text-primary" />
               AI-Suggested Milestones
@@ -663,6 +717,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <Badge variant="secondary" className="ml-2 text-xs">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -670,6 +725,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         AI Suggested
 >>>>>>>                       </Badge>
                     </div>
@@ -707,6 +766,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                   <p className="text-sm text-muted-foreground">{milestone.description}</p>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -720,6 +780,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <p className="text-sm text-muted-foreground">{milestone.description}</p>
 >>>>>>>                   <div className="flex justify-between items-center mt-2 text-sm">
                     <span>Estimated: {milestone.estimatedHours} hours</span>
@@ -732,9 +796,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
 
+<<<<<<< HEAD
 =======
               <div className='flex items-center justify-center mt-4 text-sm text-muted-foreground'>
                 <Check className='h-4 w-4 mr-1 text-green-500' />                These milestones will be added to your contract              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
 >>>>>>>                 <Check className="h-4 w-4 mr-1 text-green-500" />
@@ -748,6 +815,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className='flex items-center justify-center mt-4 text-sm text-muted-foreground'>
                 <Check className='h-4 w-4 mr-1 text-green-500' />                These milestones will be added to your contract              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
 
+<<<<<<< HEAD
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
 <<<<<<< HEAD
@@ -756,6 +824,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <Check className="h-4 w-4 mr-1 text-green-500" />
 >>>>>>>                 These milestones will be added to your contract
               </div>
@@ -769,8 +841,112 @@ ursor/fix-website-loading-errors-and-merge-6662
 
     </div>;
   );
+<<<<<<< HEAD
 }
 ;
+=======
+
+    <div className='space - y-4'>;
+      {!show_suggestions && (
+        <Button;
+          variant='outline';
+          on_click={handleGenerateMilestones}
+          disabled={is_generating || !scope_summary || !start_date}
+          className='w - full'        >;
+          {is_generating ? (
+            <>;
+              <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />              Generating milestones...;
+            </>) : (
+            <>;
+              <Sparkles className='mr - 2 h - 4 w - 4' />              Suggest Project Milestones with AI;
+              <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
+          variant="outline";
+          on_click={handleGenerateMilestones}
+          disabled={is_generating || !scope_summary || !start_date}
+          className="w - full";
+        >;
+          {is_generating ? (
+            <>;
+              <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
+              Generating milestones...;
+            </>) : (
+            <>;
+              <Sparkles className='mr - 2 h - 4 w - 4' />              <Sparkles className="mr - 2 h - 4 w - 4" />;
+              Suggest Project Milestones with AI;
+            </>)}
+        </Button>)}
+      {show_suggestions && generated_milestones.length > 0 && (
+        <Card>;
+          <CardHeader className='pb - 3'>;
+            <CardTitle className='text - lg flex items - center'>;
+              <Sparkles className='h - 5 w - 5 mr - 2 text - primary' />              AI - Suggested Milestones;
+            </CardTitle>;
+          </CardHeader>;
+          <CardContent>;
+            <div className='space - y-3'>          <CardHeader className="pb - 3">;
+            <CardTitle className="text - lg flex items - center">;
+              <Sparkles className="h - 5 w - 5 mr - 2 text - primary" />;
+              AI - Suggested Milestones;
+            </CardTitle>;
+          </CardHeader>;
+          <CardContent>;
+            <div className='space - y-3'>;
+              {generated_milestones.map ((milestone, index) => (
+                <div key={index} className='p - 3 border rounded - lg bg - muted / 10'>;
+                  <div className='flex items - center justify - between mb - 1'>;
+                    <div className='font - medium flex items - center'>                      {milestone.title}
+                      <Badge variant='secondary' className='ml - 2 text - xs'>;
+                        AI Suggested;
+                      </Badge>;
+                    </div>;
+                    <div className='text - sm text - muted - foreground'>;
+                      Due: {format_date (milestone.due_date)}
+                    </div>;
+                  </div>;
+                  <p className='text - sm text - muted - foreground'>;
+                    {milestone.description}
+                  </p>;
+                  <div className='flex justify - between items - center mt - 2 text - sm'>                    <span > Estimated: {milestone.estimated_hours} hours</span>;
+                  <p className="text - sm text - muted - foreground">{milestone.description}</p>;
+                  <div className="flex justify - between items - center mt - 2 text - sm">;
+              {generated_milestones.map ((milestone, index) => (
+                <div key={index} className="p - 3 border rounded - lg bg - muted / 10">;
+                  <div className="flex items - center justify - between mb - 1">;
+                    <div className="font - medium flex items - center">;
+                      {milestone.title}
+                      <Badge variant="secondary" className="ml - 2 text - xs">;
+                        AI Suggested;
+                      </Badge>;
+                    </div>;
+                    <div className="text - sm text - muted - foreground">;
+                      Due: {format_date (milestone.due_date)}
+                    </div>;
+                  </div>;
+                  <p className="text - sm text - muted - foreground">{milestone.description}</p>;
+                  <div className="flex justify - between items - center mt - 2 text - sm">;
+                    <span > Estimated: {milestone.estimated_hours} hours</span>;
+                  </div>;
+                </div>))}
+              <div className='flex items - center justify - center mt - 4 text - sm text - muted - foreground'>;
+                <Check className='h - 4 w - 4 mr - 1 text - green - 500' />                These milestones will be added to your contract              <div className="flex items - center justify - center mt - 4 text - sm text - muted - foreground">;
+                <Check className="h - 4 w - 4 mr - 1 text - green - 500" />;
+                These milestones will be added to your contract;
+              </div>;
+            </div>;
+          </CardContent>;
+        </Card>)}
+    </div>);
+}
+<Button variant="outline" on_click={
+  handleGenerateMilestones;
+}> {";
+  is_generating ? (<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Generating milestones... </>) : (<> <Sparkles className="mr - 2 h - 4 w - 4" /> Suggest Project Milestones with AI </>);
+}</Button>);
+}AI - Suggested Milestones </CardTitle> </CardHeader> <CardContent> </div> </div>) ) ";
+}<div className="flex items - center justify - center mt - 4 text - sm text - muted - foreground" > <Check className="h - 4 w - 4 mr - 1 text - green - 500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>);
+}</div>);
+}"}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 }<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>)
@@ -803,6 +979,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>>     </div>;
   );
 }
@@ -829,3 +1006,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+    </div>;
+  );
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

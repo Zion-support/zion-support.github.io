@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -275,6 +276,9 @@ export function SocialShareSection() {
 
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+return (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <section className="py-12 bg-zion-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
@@ -335,11 +339,15 @@ export function SocialShareSection() {
 }'";
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <div className="flex flex-wrap gap-3">
             {shareLinks.map((link, index) => (
               <Button
@@ -431,9 +439,12 @@ export function SocialShareSection() {;
               </Button>
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>;
         </div>;
       </div>;
@@ -451,12 +462,12 @@ export function SocialShareSection() {;
 };
 }</div> </div> </div> </section>) ;
 }'";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 }</div> </div> </div> </section>)
 }'"
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 
@@ -480,3 +491,71 @@ export function SocialShareSection() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+      name: 'Twitter',
+      icon: <Twitter className='h - 5 w - 5' aria - hidden='true' />,
+      color: 'bg-[#1DA1F2] hover:bg-[#1DA1F2]/80',
+      on_click: shareToTwitter,
+    },
+    {
+      name: 'Facebook',
+      icon: <Facebook className='h - 5 w - 5' aria - hidden='true' />,
+      color: 'bg-[#4267B2] hover:bg-[#4267B2]/80',
+      on_click: shareToFacebook,
+    },
+    {
+      name: 'LinkedIn',
+      icon: <Linkedin className='h - 5 w - 5' aria - hidden='true' />,
+      color: 'bg-[#0077B5] hover:bg-[#0077B5]/80',
+      on_click: shareToLinkedIn,
+    },
+    {
+      name: 'Copy Link',
+      icon: <Link className='h - 5 w - 5' aria - hidden='true' />,
+      color: 'bg - zion - blue - dark hover:bg - zion - blue - dark / 80',
+      on_click: copyLinkToClipboard,
+    },
+  ];
+  return (
+    <section className='py - 12 bg - zion - blue'>;
+      <div className='container mx - auto px - 4 sm:px - 6 lg:px - 8'>;
+        <div className='max - w-4xl mx - auto flex flex - col md:flex - row items - center justify - between gap - 6 bg - zion - blue - light border border - zion - purple / 20 rounded - lg p - 6'>;
+          <div>;
+            <h3 className='text - xl font - bold text - white mb - 2'>;
+              Share Zion with Your Network;
+            </h3>;
+            <p className='text - zion - slate - light'>;
+              Help others discover the future of AI & tech marketplace;
+            </p>;
+          </div>;
+          <div className='flex flex - wrap gap - 3'>;
+            {share_links.map ((link, index) => (              <Button;
+                key = {index, }
+                className={`${link.color} text - white`}
+                size='sm';
+                on_click={link.on_click}
+                aria - label={link.name}
+                title={link.name}              >;
+                {link.icon}
+                <span className='sr - only'>{link.name}</span>;
+                <span aria - hidden='true'>{link.name}</span>;
+              </Button>))}
+          </div>;
+        </div>;
+      </div>;
+    </section>);
+  navigator.clipboard.write_text (window.location.href) .then ( () => {
+  toast ({
+}) .catch ( () => {
+  toast ({
+  title: t ('errors.failed to copy');
+});
+}
+}</div> </div> </div> </section>);
+}'";
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

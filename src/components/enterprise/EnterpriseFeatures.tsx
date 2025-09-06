@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseFeatures.tsx
 
 
@@ -24,6 +25,11 @@ import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
 
 import React from 'react'
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
+=======
+import React from 'react'
+import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 const features = [
   {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -64,9 +70,12 @@ const features = [
   }
 ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 ========
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/enterprise/EnterpriseFeatures.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 const features = [;
   {;
     title: 'Private Hiring Portal',;
@@ -105,6 +114,10 @@ const features = [;
     icon: Globe,;
   },;
 ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function EnterpriseFeatures() {;
   return (
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseFeatures.tsx
@@ -189,6 +202,7 @@ function EnterpriseFeatures() {
             <div
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseFeatures.tsx
 
+<<<<<<< HEAD
 =======
 
 export function EnterpriseFeatures() {
@@ -207,6 +221,8 @@ export function EnterpriseFeatures() {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {features.map(feature => (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <div
               key={feature.title}
               className='bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md'            >
@@ -219,6 +235,7 @@ export function EnterpriseFeatures() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -257,6 +274,8 @@ export function EnterpriseFeatures() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </div>
@@ -324,8 +343,11 @@ export function EnterpriseFeatures() {
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseFeatures.tsx
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react",;
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react';
 const features = [;
@@ -452,6 +474,7 @@ export function EnterpriseFeatures() {;
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseFeatures.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 };
 }
@@ -463,6 +486,8 @@ export function EnterpriseFeatures() {;
 }
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
           {features.map (feature => (
             <div;
@@ -491,6 +516,7 @@ export function EnterpriseFeatures() {;
       </div>;
     </section>);
 }
+<<<<<<< HEAD
 =======
   ),;}
  import { ;
@@ -555,3 +581,8 @@ icon: Settings ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

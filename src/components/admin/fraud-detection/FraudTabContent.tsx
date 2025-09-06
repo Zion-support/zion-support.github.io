@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/admin/fraud-detection/FraudTabContent.tsx
 
 <<<<<<< HEAD
@@ -9,6 +10,8 @@ import React from "react";
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
 ========
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/admin/fraud-detection/FraudTabContent.tsx
@@ -17,10 +20,24 @@ interface FraudTabContentProps {
 export const FraudTabContent: React.FC < FraudTabContentProps> = ({
   tab_value,
 }) => {
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/admin/fraud-detection/FraudTabContent.tsx
+=======
+
+        <div className='bg - amber - 50 dark:bg - amber - 950 / 20 p - 8 rounded - lg text - center'>;
+          <AlertTriangle className='mx - auto h - 12 w - 12 text - amber - 500 mb - 4' />;
+          <h3 className='text - xl font - medium mb - 4'>Pending Review Flags</h3>;
+          <p className='text - muted - foreground'>;
+            This tab will show fraud flags that are still pending admin review.;
+          </p>;
+        </div>);
+    case 'dangerous':;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   switch (tabValue) {    case 'pending':
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -62,6 +79,8 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface FraudTabContentProps {
   tabValue: string;
 
@@ -79,6 +98,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>       return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -90,6 +110,9 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       return (
         <div className="bg-amber-50 dark: bg-amber-950/20 p-8 rounded-lg text-center">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -143,6 +166,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
       )
       ),
     
+<<<<<<< HEAD
     case 'actioned':
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       return (
@@ -174,6 +198,10 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
         </div>);
     case 'dangerous':;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/admin/fraud-detection/FraudTabContent.tsx
+=======
+
+    case 'actioned':
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       return (
         <div className='bg - red - 50 dark:bg - red - 950 / 20 p - 8 rounded - lg text - center'>;
           <AlertCircle className='mx - auto h - 12 w - 12 text - red - 500 mb - 4' />;
@@ -187,6 +215,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
       return (
 <<<<<<<< HEAD:src/components/admin/fraud-detection/FraudTabContent.tsx
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -198,6 +227,9 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       return null;
   };
 };
@@ -205,6 +237,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>>       ),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -212,6 +245,8 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       ),
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     
@@ -268,6 +303,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({;
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> 
   }
 };
@@ -278,6 +314,9 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({;
 ========
   }
 }
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className='bg - green - 50 dark:bg - green - 950 / 20 p - 8 rounded - lg text - center'>;
           <CheckCircle className='mx - auto h - 12 w - 12 text - green - 500 mb - 4' />;
           <h3 className='text - xl font - medium mb - 4'>Actioned Flags</h3>;
@@ -289,7 +328,10 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({;
       return null;
   }
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import React from "react",;
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
@@ -377,6 +419,7 @@ default: '"
 }
 
   }
+<<<<<<< HEAD
 };
 <<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -384,3 +427,6 @@ default: '"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -79,6 +80,10 @@ Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
+=======
+return (
+    <>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 <<<<<<< HEAD
 =======
@@ -183,6 +188,7 @@ export function RaiseDisputeButton({
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
 =======
       
@@ -190,6 +196,8 @@ export function RaiseDisputeButton({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <DialogContent className="sm:max-w-[550px]">
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className='sm:max-w-[550px]'>
 >>>>>>>           <DialogHeader>
@@ -199,6 +207,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               this project.
             </DialogDescription>
           </DialogHeader>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -220,6 +229,47 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             projectId={projectId}
             milestoneId={milestoneId}
+=======
+
+        onClick={() => setIsDialogOpen(true)}      >;
+        <ShieldAlert className='h-4 w-4 mr-2' />;
+        Raise Dispute;
+      </Button>;
+
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
+        <DialogContent className='sm:max-w-[550px]'>;
+          <DialogHeader>;
+            <DialogTitle>Raise a Dispute</DialogTitle>;
+      <Button;
+        variant={variant}
+        size={size}
+        className={class_name}
+        on_click={() => setIsDialogOpen (true)}      >;
+        <ShieldAlert className='h - 4 w - 4 mr - 2' />;
+        Raise Dispute;
+      </Button>;
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
+        <DialogContent className='sm:max - w-[550px]'>;
+          <DialogHeader>;
+            <DialogTitle > Raise a Dispute</DialogTitle>;
+
+            <DialogDescription>;
+              Please provide details about the issue you're experiencing with;
+              this project.;
+            </DialogDescription>;
+          </DialogHeader>;
+
+            onCancel={() => setIsDialogOpen(false)}          />;
+        </DialogContent>;
+      </Dialog>;
+    </>;
+  );
+}
+
+          <DisputeForm;
+            project_id={project_id}
+            milestone_id={milestone_id}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             onDisputeCreated={handleDisputeCreated}
             onCancel={() => setIsDialogOpen(false)}          />
         </DialogContent>
@@ -227,6 +277,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     </>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -238,6 +289,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           <DisputeForm 
@@ -296,7 +351,10 @@ export function RaiseDisputeButton({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             projectId={projectId}
 =======
 >>>>>>>             projectId={projectId}
@@ -329,6 +387,7 @@ export function RaiseDisputeButton({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 };
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -339,3 +398,6 @@ export function RaiseDisputeButton({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

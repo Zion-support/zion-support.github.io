@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
 
 <<<<<<< HEAD
@@ -481,6 +482,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
   // Ensure all translations are available;
   const ensureAllTranslations = async () => {
@@ -747,6 +751,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
 <<<<<<< HEAD
 <<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
@@ -760,11 +765,15 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
 <<<<<<< HEAD
 <<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
 >>>>>>> 
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </Button>;
       </div>;
     </form>;
   );
 }
+<<<<<<< HEAD
 ;
 
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -796,3 +805,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/components/ProjectDetailsFields.tsx
 
 <<<<<<< HEAD
@@ -156,6 +157,8 @@ import {;
 } from '@/components/ui/popover';
 import { Calendar } from '@/components/ui/calendar';
 import { ContractFormValues } from './ContractForm';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { format } from "date-fns";
 import { CalendarIcon } from 'lucide-react';
 import { UseFormReturn, ControllerRenderProps } from "react-hook-form";
@@ -175,7 +178,31 @@ import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
   form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>;
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/components/ProjectDetailsFields.tsx
+=======
+
+interface ProjectDetailsFieldsProps {
+  form: UseFormReturn<ContractFormValues>;
+
+import { format } from "date-fns",
+import { CalendarIcon } from 'lucide-react'
+import { UseFormReturn, ControllerRenderProps } from "react-hook-form",
+import { 
+
+  FormField,
+  FormItem, 
+  FormLabel, 
+  FormControl, 
+  FormDescription, 
+  FormMessage 
+} from "@/components/ui/form",
+
+import { ContractFormValues } from "./ContractForm";
+interface ProjectDetailsFieldsProps {;
+
+  form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {;
   return (
@@ -209,6 +236,7 @@ function ProjectDetailsFields() {
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> }) => (
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -220,6 +248,8 @@ import { Button } from "@/components/ui/button"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { Calendar } from "@/components/ui/calendar"
 import { ContractFormValues } from "./ContractForm"
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 interface ProjectDetailsFieldsProps {
 import { ContractFormValues } from "./ContractForm";
@@ -313,6 +343,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>           <FormItem>
             <FormLabel>Project Name</FormLabel>
@@ -328,6 +359,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <FormItem>
             <FormLabel>Project Name</FormLabel>
             <FormControl>
@@ -384,6 +419,16 @@ ursor/fix-website-loading-errors-and-merge-6662
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> },) => (;
         name="projectName";
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> }) => (;
+<<<<<<< HEAD
+=======
+
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        name="projectName";
+        render={({ field }: { field: ControllerRenderProps<ContractFormValues "projectName"> }) => (;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <FormItem>;
             <FormLabel>Project Name</FormLabel>;
             <FormControl>;
@@ -580,11 +625,25 @@ ursor/fix-website-loading-errors-and-merge-6662
                         format(field && field.value, "PPP");
                       ) : (;
                         <span>Pick a date</span>;
+<<<<<<< HEAD
+=======
+
+      
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <FormField
         control={form.control}
         name="scopeSummary"
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, "scopeSummary"> }) => (
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/components/ProjectDetailsFields.tsx
+=======
+      <FormField;
+        control={form.control}
+        name="scopeSummary"
+        render={({ field }: { field: ControllerRenderProps<ContractFormValues "scopeSummary"> }) => (
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <FormItem>
             <FormLabel>Scope Summary</FormLabel>
             <FormControl>
@@ -592,6 +651,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/contracts/components/ProjectDetailsFields.tsx
 
 
+<<<<<<< HEAD
 ========
                 placeholder="Describe the project scope, deliverables, and expectations..."
                 className="min-h-[120px]"
@@ -718,6 +778,8 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                     onSelect={field && field.onChange}
                     disabled={(date) => date < new Date()}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/components/ProjectDetailsFields.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           field: ControllerRenderProps < ContractFormValues, 'scope_summary'>;
         }) => (          <FormItem>;
             <FormLabel > Scope Summary</FormLabel>;
@@ -857,6 +919,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                     initialFocus
                   />
 =======
@@ -872,6 +935,8 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                     onSelect = {field.onChange,}
                     disabled = {(date,) => date < new Date(),}
                     >
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       {field.value ? (
                         format(field.value, "PPP")
                       ) : (
@@ -884,6 +949,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                 <PopoverContent className="w-auto p-0" align="start">
                   <Calendar
                     mode="single"
+<<<<<<< HEAD
                     selected={field.value}
                     onSelect={field.onChange}
                     disabled={(date) => date < new Date()}
@@ -891,6 +957,10 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 <<<<<<< HEAD
 >>>>>>>                     initialFocus
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+      />;
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <FormField;
           control = {form.control, }
           name="start_date";
@@ -966,6 +1036,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           control = {form && form.control,}
           name="endDate"
           render={({ field }: { field: ControllerRenderProps<ContractFormValues, "endDate"> },) => (;
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -987,6 +1058,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       {field.value ? (;
                         format(field.value, "PPP");
                       ) : (;
@@ -1002,6 +1075,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>>                     initialFocus
 >>>>>>>                   />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1013,6 +1087,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     initialFocus
                   />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1119,6 +1195,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                       variant={"outline"}
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       {field.value ? (
                         format(field.value, "PPP")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1147,7 +1227,10 @@ ursor/fix-website-loading-errors-and-merge-6662
           name="endDate";
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "endDate"> }) => (;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <FormItem className="flex flex-col">;
               <Popover>;
                 <PopoverTrigger asChild>;
@@ -1249,8 +1332,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/contracts/components/ProjectDetailsFields.tsx
 
 
+<<<<<<< HEAD
 >>>>>>>                       )}
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       )}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/components/ProjectDetailsFields.tsx
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
@@ -1341,6 +1427,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 ========
@@ -1410,6 +1497,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                     initialFocus;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/components/ProjectDetailsFields.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   />;
                 </PopoverContent>;
               </Popover>;
@@ -1420,6 +1509,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/contracts/components/ProjectDetailsFields.tsx
 
 
+<<<<<<< HEAD
 ;
 
 
@@ -1474,3 +1564,6 @@ FormMessage interface ProjectDetailsFieldsProps {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

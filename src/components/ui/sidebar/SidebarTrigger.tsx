@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,6 +15,16 @@ import { useSidebar } from "./sidebar-context";
 import { cn } from "@/lib/utils";
 interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
   className?: string
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+
+    </Button>;
+  );
+};
+};
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) { const { open, toggleSidebar  } = useSidebar()
       >
@@ -46,7 +57,10 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
       size="icon"
 import React from "react",;
 import { Button } from "@/components/ui/button",;
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Menu, X } from 'lucide-react';
 import { useSidebar } from './sidebar-context';
 import { cn } from '@/lib/utils';
@@ -68,6 +82,7 @@ export function SidebarTrigger(): any ({ className, ...props }: SidebarTriggerPr
 };
 };
 
+<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Menu, X } from 'lucide-react'
@@ -75,11 +90,14 @@ import { useSidebar } from "./sidebar-context",
 import { cn } from "@/lib/utils",
 interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
   className?: string
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 ;
@@ -131,3 +149,7 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

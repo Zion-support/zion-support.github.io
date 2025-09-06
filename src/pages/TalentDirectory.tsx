@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -362,6 +363,9 @@ export default function TalentDirectory() {;
 =======
 >>>>>>>                           }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+}}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         />
                       </PaginationItem>
                     </PaginationContent>
@@ -371,8 +375,25 @@ export default function TalentDirectory() {;
             </ErrorBoundary>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 
 =======
+=======
+
+
+  const pageKey = `talent-directory-${routeKey}-${router && router.asPath}`;
+  );
+}
+  );
+}
+
+  const is_admin = user?.user_type === 'admin';
+  const paginated_talents = filtered_talents;
+  const page_key = `talent - directory-${route_key}-${router.as_path}`);
+}
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {/* Mobile filter sidebar */}
@@ -437,6 +458,7 @@ export default function TalentDirectory() {;
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -460,3 +482,6 @@ export default function TalentDirectory() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

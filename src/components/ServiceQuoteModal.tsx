@@ -1,7 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+...formData;            startDate: startDate?.toISOString(),
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             endDate: endDate?.toISOString()}
 =======
 ...formData;            startDate: startDate?.toISOString()
@@ -27,6 +32,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 import { useState } from 'react',
 =======
 ;
@@ -38,6 +44,21 @@ import { useState } from 'react',
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
+=======
+
+
+...form_data;            start_date: start_date?.toISOString (),
+            end_date: end_date?.toISOString ()}
+        }
+      });
+}
+}
+
+
+
+;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState } from 'react',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
@@ -516,6 +537,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     </Dialog>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -534,3 +556,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

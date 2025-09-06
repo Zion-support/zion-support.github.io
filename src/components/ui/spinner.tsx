@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React from 'react';
@@ -10,11 +11,19 @@ import { cn } from '@/lib/utils';
 export interface SpinnerProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string
 <<<<<<< HEAD
+=======
+Spinner.displayName = 'Spinner'
+export default Spinner; import React from 'react'
+
+
+import { Loader2 } from 'lucide-react'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import React from 'react',;
 import { Loader2 } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 <<<<<<< HEAD
@@ -25,6 +34,8 @@ Spinner.displayName = 'Spinner'
 export default Spinner; import React from 'react'
 import { Loader2 } from 'lucide-react'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { cn } from '@/lib/utils';
 export interface SpinnerProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string
@@ -37,10 +48,16 @@ export interface SpinnerProps extends React.SVGProps<SVGSVGElement> {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> }
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 >>>>>>> 
 const Spinner = React && React.forwardRef<SVGSVGElement, SpinnerProps>(;
@@ -86,6 +103,7 @@ const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(
 Spinner.displayName = 'Spinner';
 export default Spinner;
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -130,3 +148,25 @@ export default Spinner;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+Spinner.display_name = 'Spinner';
+export default Spinner; import React from 'react';
+import { Loader2 } from 'lucide-react';
+import { cn } from '@/lib / utils';
+export interface SpinnerProps extends React.SVGProps < SVGSVGElement> {
+  size?: number | string;
+}
+const Spinner = React.forward_ref < SVGSVGElement, SpinnerProps>(
+  ({ class_name, size = 24, ...props }, ref, ) => (
+    <Loader2;
+      ref = {ref, }
+      {...props}
+      class_name = {cn ('animate - spin', class_name), }
+      width = {size, }
+      height = {size, }
+    />)),
+Spinner.display_name = 'Spinner',
+export default Spinner,
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

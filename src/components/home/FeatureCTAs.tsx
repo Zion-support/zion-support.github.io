@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/home/FeatureCTAs.tsx
 
 <<<<<<< HEAD
@@ -319,6 +320,8 @@ import {;
   Clock,;
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface FeatureCTAsProps {;
   className?: string;
   style?: React && React.CSSProperties;
@@ -481,6 +484,11 @@ export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {;
       ),;
       badge: 'premium',;
     },;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t  } = useTranslation(),
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/FeatureCTAs.tsx
   const features = [
@@ -581,7 +589,11 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
       link: '/zion-hire-ai',
       badge: 'premium'
     }
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/FeatureCTAs.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   ];
       >;
       <div className='container mx-auto px-4'>;
@@ -598,8 +610,11 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
 <<<<<<<< HEAD:src/components/home/FeatureCTAs.tsx
 
 
+<<<<<<< HEAD
 >>>>>>>             <Card
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <Card
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/FeatureCTAs.tsx
               key={index}
@@ -812,10 +827,13 @@ export function FeatureCTAs({ className, style } FeatureCTAsProps) {;
                   </CardDescription>;
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
                   </CardDescription>;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/FeatureCTAs.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 )}
 <<<<<<< HEAD
               </CardHeader>
@@ -856,14 +874,16 @@ export function FeatureCTAs({ className, style } FeatureCTAsProps) {;
 <<<<<<<< HEAD:src/components/home/FeatureCTAs.tsx
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <span>{t('general.explore')} {t(`features.${feature.key}`)}</span>
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
               </CardFooter>
             </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           ))}
 
 
@@ -872,6 +892,7 @@ export function FeatureCTAs({ className, style } FeatureCTAsProps) {;
 }
 
 
+<<<<<<< HEAD
 ========
                     className="cursor-pointer";
                     {...(feature.key === 'ai_talent_matching' && { "data-testid":"explore-ai-talent-matching-cta" })}
@@ -884,6 +905,8 @@ export function FeatureCTAs({ className, style } FeatureCTAsProps) {;
             </Card>;
           ))}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/FeatureCTAs.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </div>;
       </div>;
     </section>;
@@ -895,10 +918,13 @@ export function FeatureCTAs({ className, style } FeatureCTAsProps) {;
   )
 }
 
+<<<<<<< HEAD
 ========
   )
 }
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/FeatureCTAs.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import {
   Card,
@@ -1776,6 +1802,7 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {;
       </div>;
     </section>));
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/home/FeatureCTAs.tsx
 ;
 <<<<<<< HEAD
@@ -1929,3 +1956,6 @@ className ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

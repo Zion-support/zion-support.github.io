@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -33,6 +34,9 @@ import { toast } from 'sonner'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+import { Check, Copy, ExternalLink } from 'lucide-react'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function ZapierIntegration() {
   const [copied, setCopied] = useState(false);
   const [apiKey] = useState('zap_live_KztCaFieDu4VBnp8eMJZ9x73R');
@@ -98,6 +102,7 @@ export function ZapierIntegration() {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
+<<<<<<< HEAD
     <div className="space-y-6">
       <div className="grid md:grid-cols-3 gap-6">
         <Card className="md:col-span-2">
@@ -141,6 +146,52 @@ export function ZapierIntegration() {
 <<<<<<< HEAD
 >>>>>>>                     {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+    <div className='space-y-6'>;
+      <div className='grid md:grid-cols-3 gap-6'>;
+        <Card className='md:col-span-2'>;
+          <CardHeader>;
+            <div className='flex items-center justify-between'>;
+              <h3 className='text-lg font-semibold'>Zapier Connection</h3>;
+              <Badge variant='outline' className='bg-blue-100 text-blue-800'>;
+import React, { useState } from 'react';
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from '@/components / ui / card';
+import { Input } from '@/components / ui / input';
+import { toast } from 'sonner';
+import { Check, Copy, ExternalLink } from 'lucide-react';
+export /**
+ * ZapierIntegration - Function description
+ */
+function ZapierIntegration() {
+  const [copied, set_copied] = useState (false);
+  const [api_key] = useState ('zap_live_KztCaFieDu4VBnp8eMJZ9x73R');
+  const [api_key] = useState ("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
+import { Zap } from 'lucide-react';
+export /**
+ * ZapierIntegration - Function description
+ */
+function ZapierIntegration() {
+  const [copied, set_copied] = useState (false);
+  const [api_key] = useState ("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
+  const handleCopyApiKey = () =>: any {
+    navigator.clipboard.write_text (api_key);
+    set_copied (true);
+    set_timeout (() => set_copied (false), 2000);
+    toast.success ('API key copied to clipboard');
+    navigator.clipboard.write_text (api_key),
+    set_copied (true),
+    set_timeout ((, ) => set_copied (false), 2000),
+    toast.success ("API key copied to clipboard");
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   },
   return (
     <div className='space - y-6'>;
@@ -150,7 +201,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className='flex items - center justify - between'>;
               <h3 className='text - lg font - semibold'>Zapier Connection</h3>;
               <Badge variant='outline' className='bg - blue - 100 text - blue - 800'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Active;
               </Badge>;
             </div>;
@@ -161,6 +211,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
                     {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>>                   </Button>
 =======
@@ -179,6 +230,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   />
                   <Button size="sm" variant="outline" onClick={handleCopyApiKey}>
                     {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </Button>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 </div>
@@ -189,6 +242,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -216,6 +270,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <CardFooter className="flex flex-col items-start">
             <Button variant="outline" className="gap-2">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -228,6 +286,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                 <Check className="h-4 w-4 text-green-500" />
                 <span>Create calendar events for interviews</span>
 =======
@@ -266,6 +325,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         
         <Card>
           <CardHeader>
@@ -286,6 +349,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <span>Sync completed projects to accounting</span>
               </li>
               <li className="flex items-center gap-2">
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <Check className="h-4 w-4 text-green-500" />
                 <span>Create calendar events for interviews</span>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -311,6 +380,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Button variant='outline' className='w-full gap-1'>
               <ExternalLink className='h-4 w-4' />              <span>Explore Zion Zaps</span>            <Button variant="outline" className="w-full gap-1">
             <Button variant="outline" className="w-full gap-1">
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <ExternalLink className="h-4 w-4" />
               <span>Explore Zion Zaps</span>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -322,10 +397,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>       <Card>
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+      
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Card>
         <CardHeader>
           <h3 className='text-lg font-semibold'>Zapier Webhook Triggers</h3>
@@ -356,6 +438,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -381,6 +464,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           
           <div className="grid md: grid-cols-3 gap-4">
             <div className="border rounded-md p-4">
@@ -401,6 +488,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <p className="text-xs text-muted-foreground mb-3">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -408,6 +496,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 Triggers when a talent applies to your job.
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
@@ -447,6 +540,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
             
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <div className="border rounded-md p-4">
@@ -456,6 +550,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">Contract Signed</h4>
@@ -487,6 +584,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -500,6 +598,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+            <p className='text - sm text - muted - foreground mb - 4'>;
+              Connect Zion with 3, 000+ apps via Zapier. Use your API key below;
+              to set up integrations.;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -549,6 +654,7 @@ export function ZapierIntegration() {;
                       <Check className='h - 4 w - 4' />) : (
                       <Copy className='h - 4 w - 4' />)}                  </Button>                  <Button size="sm" variant="outline" on_click={handleCopyApiKey}>;
                     {copied ? <Check className="h - 4 w - 4" /> : <Copy className="h - 4 w - 4" />}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
             </p>;
@@ -564,6 +670,8 @@ export function ZapierIntegration() {;
                   <Button size="sm" variant="outline" onClick={handleCopyApiKey}>;
                     {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </Button>;
                 </div>;
               </div>;
@@ -614,7 +722,11 @@ export function ZapierIntegration() {;
                 <Check className="h - 4 w - 4 text - green - 500" />;
                 <span > Create calendar events for interviews</span>;
 
+<<<<<<< HEAD
 >>>>>>>               </li>;
+=======
+              </li>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </ul>;
           </CardContent>;
           <CardFooter>;
@@ -720,6 +832,7 @@ export function ZapierIntegration() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -733,3 +846,6 @@ export function ZapierIntegration() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

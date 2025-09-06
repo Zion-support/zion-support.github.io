@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
 
 =======
@@ -62,6 +63,8 @@ import { Button } from '@/components/ui/button';
 
 ========
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useEffect } from 'react';
 import {;
   FormField,;
@@ -84,9 +87,12 @@ import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
 interface ValidationRule {;
+<<<<<<< HEAD
 =======
 interface ValidationRule {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   required?: boolean;
   minLength?: number;
   maxLength?: number;
@@ -195,7 +201,10 @@ export function ValidatedFormField({
     }, debounceMs)
     setDebounceTimer(timer)
 <<<<<<< HEAD
+<<<<<<< HEAD
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useEffect } from 'react';
 import {
   FormField,
@@ -277,7 +286,10 @@ if ( {) {
       setValidationState (error ? 'invalid' : 'valid');
     }, debounce_ms);
     setDebounceTimer (timer);
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return () => {
       if (timer) clearTimeout(timer)
     }
@@ -403,6 +415,7 @@ if (return null) {
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
   const renderField = () => {
     const baseClasses = cn(getFieldClasses(), className)
@@ -417,6 +430,14 @@ if (return null) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  const render_field = () =>: any {
+    const base_classes = cn (getFieldClasses (), class_name);
+    switch (type) {
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useEffect } from 'react';
 
 import { Checkbox } from '@/components/ui/checkbox';
@@ -757,6 +778,7 @@ export function ValidatedFormField({;
 >>>>>>>     switch (type) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       case 'textarea':
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
   };
@@ -776,11 +798,14 @@ export function ValidatedFormField({;
     switch (type) {;
       case 'textarea':;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         return (
           <div className='relative'>;
             <Textarea
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
               disabled = {disabled,}
               className = {baseClasses,}
@@ -789,6 +814,14 @@ export function ValidatedFormField({;
 >>>>>>>               {...form.register(name)}
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+              disabled={disabled}
+              className={baseClasses}
+              rows={4}
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               {...form.register(name)}
 >>>>>>>             />
             <div className='absolute top-2 right-2'>{getValidationIcon()}</div>
@@ -805,6 +838,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <div className='absolute top-2 right-2'>{getValidationIcon()}</div>;
           </div>;
         );
+<<<<<<< HEAD
       case 'select':;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
 =======
@@ -861,6 +895,13 @@ ursor/fix-website-loading-errors-and-merge-6662
         ),
 
       case 'select':
+=======
+
+        ),
+
+
+      case 'select':;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         return (
           <div className="relative">
             <Select onValueChange={(value) => form.setValue(name, value)} disabled={disabled}>
@@ -872,7 +913,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <SelectItem key={option.value} value={option.value}>
                     {option.label}
                   </SelectItem>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 ))}
               </SelectContent>
             </Select>
@@ -884,6 +928,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
         )
 >>>>>>>       case 'checkbox':
@@ -1018,6 +1063,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </SelectItem>;
                 ))}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
+=======
+
+        ),
+
+
+
+      case 'checkbox':
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </SelectContent>;
             </Select>;
 <<<<<<< HEAD
@@ -1025,10 +1078,13 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>;
         );
       case 'checkbox':;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>>         return (
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         return (
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
           <div className='flex items-center space-x-2'>;
@@ -1087,6 +1143,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -1116,6 +1173,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               className = {cn(baseClasses, 'pr-20'),}
 >>>>>>>               {...form.register(name)}
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               {label}
             </label>;
             {getValidationIcon()}
@@ -1126,10 +1185,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
       case 'password':
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
+=======
+      case 'password':
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>;
         );
       case 'password':;
@@ -1198,11 +1261,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onClick={() => setShowPassword(!showPassword)}
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {showPassword ? (
                   <EyeOff className="h-4 w-4" />
                 ) : (
                   <Eye className="h-4 w-4" />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 )}
               </Button>
             </div>
@@ -1298,6 +1368,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         )
         ),
 
+<<<<<<< HEAD
       default:
         return (
           <div className="relative">
@@ -1341,22 +1412,30 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>
 ursor/fix-website-loading-errors-and-merge-6662
       default:
+=======
+
+
+      default:
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </Button>;
             </div>;
           </div>;
         );
 
       default:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return (
           <div className='relative'>;
             <Input
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               type={type}
               disabled={disabled}
               className={baseClasses}
@@ -1420,8 +1499,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
                   <p className="text-sm text-muted-foreground">{description}</p>
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 )}
               </div>;
 >>>>>>>             )}
@@ -1547,6 +1629,7 @@ if ( {) {
           <FormLabel className='text - sm font - medium'>;
             {label}
             {validation.required && (
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
 =======
 <<<<<<< HEAD
@@ -1589,6 +1672,11 @@ if ( {) {
 >>>>>>>                   {fieldError.message}
                 </FormMessage>
 ========
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       />;
     );
   }
@@ -1625,7 +1713,10 @@ if ( {) {
     }
   }}
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               )}
             </div>;
           )}
@@ -1711,9 +1802,12 @@ export const common_validations = {
   }};
 
 
+<<<<<<< HEAD
 >>>>>>>     />;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     />;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/forms/ValidatedFormField.tsx
   );
@@ -1758,6 +1852,7 @@ export const commonValidations = {;
 <<<<<<<< HEAD:src/components/forms/ValidatedFormField.tsx
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }},
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -2158,3 +2253,9 @@ export const commonValidations = {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+  }},
+    }
+  }};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

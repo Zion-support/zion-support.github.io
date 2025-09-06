@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5,6 +6,31 @@
 =======
 =======
 <<<<<<< HEAD
+=======
+const handleApplySuggestion = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      onSuggestionApplied (suggestion.min_rate, suggestion.max_rate);
+      // Track this suggestion application;
+      // Check condition
+if ( {) {
+  $2
+}
+        trackPricingSuggestion ({
+          user_id: user.id,
+          suggestion_type: 'client',
+          suggested_min: suggestion.min_rate,
+          suggested_max: suggestion.max_rate,
+          accepted: true,
+        });
+      }
+    }
+  }
+  return (
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -339,6 +365,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -357,12 +384,23 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           </Button>
 >>>>>>>         ) : (
+=======
+            type="button"
+            variant="outline"
+            onClick={generateSuggestion}
+            disabled={!jobTitle || !category}
+            className="w-full"
+          >
+            <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation
+
+          </Button>
+        ) : (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             disabled={!jobTitle || !category}
             className='w-full'>;
             <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation;
           </Button>;
         ) : (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <PricingSuggestionBox
     <div className='space - y-4'>;
       <div>;
@@ -376,6 +414,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
             <Sparkles className='h - 4 w - 4 mr - 2' /> Get Budget Recommendation;
           </Button>) : (
           <PricingSuggestionBox;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
@@ -392,6 +431,8 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
         ) : (
           <PricingSuggestionBox
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
@@ -413,6 +454,7 @@ if (experienceLevel) params.experienceLevel = experienceLevel
 //Track this suggestion application if (user && user.id) {
   trackPricingSuggestion ({
 }
+<<<<<<< HEAD
 return (<div className="space-y-4" > <div> {"
   !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={
   generateSuggestion "
@@ -429,6 +471,12 @@ return (<div className="space-y-4" > <div> {"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 <<<<<<< HEAD
+=======
+
+
+},
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             rateType="hourly"
           />
         )}
@@ -451,6 +499,7 @@ return (<div className="space-y-4" > <div> {"
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 
@@ -465,3 +514,16 @@ return (<div className="space-y-4" > <div> {"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+return (<div className="space - y-4" > <div> {";
+  !suggestion && !is_loading ? (<Button type="button" variant="outline" on_click={
+  generate_suggestion ";
+}> <Sparkles className="h - 4 w - 4 mr - 2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />);
+}</div> </div>);
+}
+'"  );
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

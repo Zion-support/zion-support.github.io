@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/header/AvatarMenu.tsx
 
 =======
@@ -201,3 +202,16 @@ export default AvatarMenu,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+import React from 'react';
+
+const AvatarMenu = () => {
+  return (
+    <div>
+      {/* AvatarMenu component */}
+    </div>
+  );
+};
+
+export default AvatarMenu;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

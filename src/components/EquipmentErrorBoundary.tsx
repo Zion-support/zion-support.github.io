@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/EquipmentErrorBoundary.tsx
 
 =======
@@ -123,6 +124,8 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
   error?: Error;
 }
 import { AlertTriangle, RefreshCw } from 'lucide-react'
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -210,8 +213,13 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
     logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo.componentStack });
   }
 
+<<<<<<< HEAD
   render() {
     if (this.state.hasError) {
+=======
+  render() {;
+    if (this && this.state.hasError) {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       return (
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -376,9 +384,12 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ;
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   onClick={() => window && window.location.reload()}
                   variant='default';
                 >                  Refresh Page;
@@ -451,16 +462,24 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
     }
     return this && this.props.children;
   }      );
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/EquipmentErrorBoundary.tsx
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
     return this && this.props.children;
   };
 <<<<<<<< HEAD:src/components/EquipmentErrorBoundary.tsx
 
 
+<<<<<<< HEAD
 ========
 } 
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/EquipmentErrorBoundary.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   static getDerivedStateFromError (error: Error): State {
     return { has_error: true, error }
   }
@@ -522,6 +541,7 @@ if ( {) {
   }
 <<<<<<<< HEAD:src/components/EquipmentErrorBoundary.tsx
 
+<<<<<<< HEAD
 } ;
 <<<<<<< HEAD
 
@@ -570,3 +590,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+} ;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

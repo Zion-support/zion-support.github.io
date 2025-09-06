@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ListingScoreCard.tsx
 
 =======
@@ -35,6 +36,8 @@ import React, { useState, useMemo } from 'react'; // Import useState;
 import { Badge } from '@/components/ui/badge';
 import { Star } from 'lucide-react';
 interface ListingScoreCardProps {;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { cn } from '@/lib / utils';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
@@ -54,6 +57,7 @@ interface ListingScoreCardProps {
   tags?: string[];
   author?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ListingScoreCard.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -62,6 +66,10 @@ interface ListingScoreCardProps {
   rating?: number;
   reviewCount?: number;
   className?: string
+=======
+
+export function ListingScoreCard(): any ({;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 export function ListingScoreCard({
 <<<<<<< HEAD
@@ -199,6 +207,7 @@ export function ListingScoreCard({
         <div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
           <Image
 
+<<<<<<< HEAD
 =======
 >>>>>>>       {image && !mainImageError && (
         <div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
@@ -253,6 +262,9 @@ export function ListingScoreCard({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             src={image} 
             alt={title} 
             className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -293,7 +305,10 @@ export function ListingScoreCard({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           ) : (
 =======
 >>>>>>>           ) : (
@@ -315,6 +330,7 @@ export function ListingScoreCard({
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -345,6 +361,8 @@ export function ListingScoreCard({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>
         
@@ -381,12 +399,15 @@ interface ListingScoreCardProps {;
 ;
 export function ListingScoreCard({;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
 export function ListingScoreCard(): any ({;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ListingScoreCard.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   title,;
   description,;
   image,;
@@ -437,10 +458,13 @@ export function ListingScoreCard({ ;
     >;
       {image && !mainImageError && (;
         <div className='h-48 w-full overflow-hidden relative'>;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ListingScoreCard.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ListingScoreCard.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   author_image?: string;
   ai_score?: number;
   rating?: number;
@@ -633,6 +657,7 @@ function ListingScoreCard() {
                   )}                />;
 <<<<<<<< HEAD:src/components/ListingScoreCard.tsx
 
+<<<<<<< HEAD
 =======
           ) : (;
             aiScore > 0 && (;
@@ -652,6 +677,8 @@ function ListingScoreCard() {
                 <StarIcon;
                   key={star}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   className={cn(;
                     "h-4 w-4";
                     star <= Math.round(rating);
@@ -663,6 +690,7 @@ function ListingScoreCard() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
               ))}
 =======
 >>>>>>>               ))}
@@ -740,6 +768,9 @@ function ListingScoreCard() {
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ListingScoreCard.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               ))}
             </div>;
             <span className='text-sm text-zion-slate-light ml-1'>;
@@ -804,6 +835,7 @@ function ListingScoreCard() {
 <<<<<<< HEAD
 
         {author && (
+<<<<<<< HEAD
 =======
         
 >>>>>>>         {author && (
@@ -821,6 +853,11 @@ function ListingScoreCard() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+          <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>
+            {authorImage && !authorImageError ? (
+              <div className='relative h-8 w-8 rounded-full mr-2 overflow-hidden'>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
                 {author.charAt(0)}
               </div>
@@ -954,6 +991,10 @@ function ListingScoreCard() {
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   className='object - cover rounded - full';
                   on_error={() => setAuthorImageError (true)}
                   priority={false}                />;
@@ -966,6 +1007,7 @@ function ListingScoreCard() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 =======
         ;
         {tags && tags.length > 0 && (;
@@ -999,6 +1041,24 @@ function ListingScoreCard() {
             )}
             <span className="text-sm text-zion-slate-light">{author}</span>;
           </div>;
+=======
+
+                  className="object-cover rounded-full"
+                  onError={() => setAuthorImageError(true)}
+                  priority={false}
+                />
+              </div>
+            ) : (
+              <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">
+
+                {author.charAt(0)}
+              </div>
+            )}
+
+
+            <span className="text-sm text-zion-slate-light">{author}</span>
+          </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         )}
       </div>;
     </div>;
@@ -1081,6 +1141,7 @@ className) ;
 };
 }
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1091,3 +1152,6 @@ className) ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

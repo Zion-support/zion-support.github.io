@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -44,6 +45,8 @@ import { Input } from "@/components/ui/input",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface MobileFilterBarProps {
   searchTerm: string;
   setSearchTerm: (value: string) => void;
@@ -82,7 +85,6 @@ export function MobileFilterBar(): any ({;
   setSearchTerm,;
   setIsMobileFilterOpen,;
 }: MobileFilterBarProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 export function MobileFilterBar({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -172,7 +174,22 @@ export function MobileFilterBar({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           Search talents
         </label>
+<<<<<<< HEAD
         <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" />
+=======
+        <Search className='absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate' />
+        variant='outline';
+        className='w-full flex items-center justify-center gap-2 border-zion-blue-light text-zion-slate-light'      >;
+        <Sliders className='h-4 w-4' />;
+        Filter Talents;
+      </Button>;
+
+      <div className='relative mt-4'>;
+        <label htmlFor='mobile-talent-search' className='sr-only'>;
+          Search talents;
+        </label>;
+        <Search className='absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate' />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Input
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -205,6 +222,10 @@ export function MobileFilterBar({
   );
 };
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           id="mobile-talent-search"
           placeholder="Search talents..."
           value={searchTerm}
@@ -235,6 +256,7 @@ export function MobileFilterBar({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
@@ -249,6 +271,15 @@ export function MobileFilterBar({
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+          onChange={e => setSearchTerm(e && e.target.value)}
+          aria-describedby='mobile-talent-search-help';
+          className='pl-8 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate'        />;
+        <p id='mobile-talent-search-help' className='sr-only'>;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Search, Sliders } from 'lucide-react';
@@ -303,6 +334,7 @@ export function MobileFilterBar({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 ;
@@ -319,3 +351,45 @@ export function MobileFilterBar({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+import React from 'react';
+import { Button } from '@/components / ui / button';
+import { Search, Sliders } from 'lucide-react';
+import { Input } from '@/components / ui / input';
+interface MobileFilterBarProps {
+  search_term: string;
+  setSearchTerm: (value: string) => void;
+  setIsMobileFilterOpen: (is_open: boolean) => void;
+export /**
+ * MobileFilterBar - Function description
+ */
+function MobileFilterBar() {
+  return (
+    <div className='lg:hidden mb - 4 sticky top - 0 z - 20 bg - zion - blue pt - 2 pb - 4'>;
+      <Button;
+        on_click={() => setIsMobileFilterOpen (true)}
+        variant='outline';
+        className='w - full flex items - center justify - center gap - 2 border - zion - blue - light text - zion - slate - light'      >;
+        <Sliders className='h - 4 w - 4' />;
+        Filter Talents;
+      </Button>;
+      <div className='relative mt - 4'>;
+        <label html_for='mobile - talent - search' className='sr - only'>;
+          Search talents;
+        </label>;
+        <Search className='absolute left - 2 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate' />;
+        <Input;
+          id='mobile - talent - search';
+          placeholder='Search talents...';
+          value={search_term}
+          on_change={e => setSearchTerm (e.target.value)}
+          aria - describedby='mobile - talent - search - help';
+          className='pl - 8 bg - zion - blue border - zion - blue - light text - white placeholder:text - zion - slate'        />;
+        <p id='mobile - talent - search - help' className='sr - only'>;
+          Search by name or skill;
+        </p>;
+      </div>;
+    </div>);
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

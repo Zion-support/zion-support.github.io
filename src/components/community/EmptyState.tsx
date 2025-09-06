@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/community/EmptyState.tsx
 
 =======
@@ -13,6 +14,8 @@ import Link from 'next/link';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from 'react',
 import Link from 'next/link';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react'
 import Link from 'next/link'
 <<<<<<< HEAD
@@ -33,8 +36,12 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 
 interface EmptyStateProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/EmptyState.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -66,10 +73,13 @@ import {;
 import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 interface EmptyStateProps {;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/community/EmptyState.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/EmptyState.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import Link from 'next / link';
 import { MessageSquare } from 'lucide-react';
@@ -82,8 +92,11 @@ import {
 } from '@/components / ui / tooltip';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
 interface EmptyStateProps {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   title: string;
   subtitle: string;
   cta: string;
@@ -162,6 +175,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({;
               <Button disabled>{cta}</Button>;
 <<<<<<<< HEAD:src/components/community/EmptyState.tsx
 
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/EmptyState.tsx
 =======
@@ -182,6 +196,8 @@ interface EmptyStateProps {;
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {
   return (
     <div className="text-center py-16">
@@ -222,6 +238,12 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
 <<<<<<<< HEAD:src/components/community/EmptyState.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </Tooltip>;
 =======
 export default EmptyState
@@ -240,16 +262,22 @@ export default EmptyState;
 <<<<<<<< HEAD:src/components/community/EmptyState.tsx
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/EmptyState.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 };
 export default EmptyState;
 <<<<<<<< HEAD:src/components/community/EmptyState.tsx
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/EmptyState.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   has_session: boolean;
 const EmptyState: React.FC < EmptyStateProps> = ({
   title,
@@ -280,6 +308,7 @@ const EmptyState: React.FC < EmptyStateProps> = ({
     </div>);
 }
 export default EmptyState;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/community/EmptyState.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> },;
@@ -372,3 +401,7 @@ export default EmptyState;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+},;
+export default EmptyState;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

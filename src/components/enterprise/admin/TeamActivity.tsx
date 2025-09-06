@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/admin/TeamActivity.tsx
 
 
@@ -369,6 +370,9 @@ if ( {) {
 =======
 >>>>>>>       jobs: { variant: "default" },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+jobs: { variant: "default" },
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       candidates: { variant: "outline" },
       team: { variant: "secondary" },
       billing: { variant: "destructive" }},
@@ -475,6 +479,7 @@ export function TeamActivity() {;
     const style = categoryStyles[category] || { variant: "default" as const },;
     return <Badge variant={style && style.variant}>{category}</Badge>;
   };
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/admin/TeamActivity.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -488,6 +493,9 @@ export function TeamActivity() {;
       team: { variant: "secondary" },
       billing: { variant: "destructive" }},
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
     const style = categoryStyles[category] || { variant: "default" as const },
     return <Badge variant={style.variant}>{category}</Badge>
@@ -556,11 +564,15 @@ export function TeamActivity() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                   {formatDate(activity.timestamp)}
                 </TableCell>
 =======
 >>>>>>>                   {formatDate(activity.timestamp)}
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 
 ========
@@ -570,11 +582,15 @@ export function TeamActivity() {;
       <div className="flex items - center justify - between">;
         <h3 className="text - xl font - medium">Recent Team Activity</h3>;
         <div className="flex items - center gap - 2">;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react",;
 import {;
   Table,;
@@ -710,9 +726,23 @@ export function TeamActivity() {;
           Previous;
         </Button>;
         <div className="text - sm text - muted - foreground">;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/admin/TeamActivity.tsx
 ========
 =======
+=======
+          Page 1 of 10;
+        </div>;
+        <Button variant="outline" size="sm">;
+          Next;
+        </Button>;
+      </div>;
+    </div>);
+}
+const getCategoryBadge = (category: string) =>: any {
+}";
+  activities.map ( (activity) => (<TableRow key= {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import React from "react",;
 import {;
@@ -916,6 +946,7 @@ const getCategoryBadge = (category: string) =>: any {
                 <TableCell className="text-muted-foreground">;
 <<<<<<<< HEAD:src/components/enterprise/admin/TeamActivity.tsx
 
+<<<<<<< HEAD
 ========
                   {formatDate(activity && activity.timestamp)}
                 </TableCell>;
@@ -946,10 +977,13 @@ const getCategoryBadge = (category: string) => {;
 }</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>) ;
 }"}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/enterprise/admin/TeamActivity.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   activity.id;
 }> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </div> <div className="flex items - center justify - between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text - sm text - muted - foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>);
 }"}
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/admin/TeamActivity.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> >>>>>>>                   {formatDate(activity.timestamp)}
@@ -963,6 +997,9 @@ const getCategoryBadge = (category: string) => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   {formatDate(activity.timestamp)}
                 </TableCell>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -985,6 +1022,10 @@ const getCategoryBadge = (category: string) => {;
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -996,6 +1037,7 @@ const getCategoryBadge = (category: string) => {;
         <Button variant="outline" size="sm">
           Next
         </Button>
+<<<<<<< HEAD
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1149,3 +1191,6 @@ const getCategoryBadge = (category: string) => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+      </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

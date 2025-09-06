@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -19,6 +20,29 @@ export function LoadingState() {
   )
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export function LoadingState() {;
+  return (
+    <div className='flex justify-center items-center p-8'>;
+      <Loader2 className='h-8 w-8 animate-spin text-primary' />;
+    </div>;
+  );
+
+
+}
+
+
+import { Loader2 } from 'lucide-react';
+export /**
+ * LoadingState - Function description
+ */
+function LoadingState() {
+  return (
+    <div className='flex justify - center items - center p - 8'>;
+      <Loader2 className='h - 8 w - 8 animate - spin text - primary' />;
+    </div>);
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
     <div className='flex justify-center items-center p-8'>
       <Loader2 className='h-8 w-8 animate-spin text-primary' />
@@ -42,6 +66,7 @@ export function LoadingState() {
 ;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -49,6 +74,8 @@ export function LoadingState() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 };
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { Loader2 } from 'lucide-react'
 
@@ -59,6 +86,7 @@ export function LoadingState() {
     </div>
   ),
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -69,3 +97,6 @@ export function LoadingState() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

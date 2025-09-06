@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -101,6 +102,8 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Categories for filtering
 
 const CATEGORIES = [
@@ -138,6 +141,7 @@ const CATEGORIES = [
 export interface BlogProps {
   posts?: BlogPost[]
 export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
+<<<<<<< HEAD
   logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts })
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('All Categories')
@@ -169,6 +173,17 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
           `/api/blog?query=${encodeURIComponent(query)}`
         )
 >>>>>>>         setPosts(data)
+=======
+  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts }),
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [selectedCategory, setSelectedCategory] = useState("All Categories"),
+  const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]),
+  const query = useDebounce(searchQuery, 300),
+  const [isLoading, setIsLoading] = useState(false),
+  const router = useRouter(),
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Reset state when navigating away to avoid cross-page leakage
   useEffect(() => {
     return () => {
@@ -194,9 +209,14 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
           `/api/blog?query=${encodeURIComponent(query)}`
         ),
 
+<<<<<<< HEAD
 >>>>>>>         setPosts(data)
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>       } catch (err) {
+=======
+        setPosts(data)
+      } catch (err) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         logErrorToProduction ('Failed to fetch blog posts', { data: err });
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       } finally {
@@ -325,6 +345,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   logInfo('BlogPage filteredPosts:', { data: filteredPosts })
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -334,6 +355,10 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     },
 
     fetchPosts()
@@ -577,11 +602,28 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                 </SelectContent>
               </Select>
             </div>
+<<<<<<< HEAD
             {isLoading && (
               <div className="text-center py-4 text-white">
                 Loading articles...
               </div>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+            )
+import { useState, useEffect } from "react",;
+import Link from "next/link",;
+import { useRouter } from "next/router",;
+import { useDebounce } from "@/hooks/useDebounce",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { SEO } from "@/components/SEO",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
+import { BlogPost } from "@/types/blog",;
+import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost",;
+import { BLOG_POSTS } from "@/data/blog-posts",;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Search } from 'lucide-react';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
@@ -672,7 +714,6 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
 
   logInfo('BlogPage filteredPosts:', { data: filteredPosts });
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <SEO
@@ -989,7 +1030,10 @@ if (return null) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   ))}
                 </SelectContent>;
               </Select>;
@@ -1289,6 +1333,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
                           const target = e.currentTarget as HTMLImageElement,
                           target.src = "/images/blog-placeholder.svg"
                         }}
+<<<<<<< HEAD
                       />
                       <span className="text-sm text-white">{post.author.name}</span>
                     </div>
@@ -1297,6 +1342,9 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
                         <span className='text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full'>
 <<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       />
                     </div>
 
@@ -1424,15 +1472,37 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {;
                             const target = e && e.currentTarget as HTMLImageElement;
                             target && target.src = '/images/blog-placeholder && placeholder.svg';
 
+<<<<<<< HEAD
 =======
                           onError={e => {
                             const target = e.currentTarget as HTMLImageElement
                             target.src = '/images/blog-placeholder.svg'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                          }}
+                        />;
+                        <span className='text-sm text-white'>;
+                          {post && post.author.name}
+                        </span>;
+                      </div>;
+                    </CardContent>;
+                    <CardFooter className='p-6 pt-0'>;
+                      <span className='text-zion-cyan group-hover:text-zion-purple'>;
+                      </p>;
+                      <div className='flex items - center'>;
+                        <img;
+                          src={post.author.avatar_url}
+                          alt={post.author.name}
+                          className='w - 8 h - 8 rounded - full mr - 2';
+                          on_error={e => {
+                            const target = e.current_target as HTMLImageElement;
+                            target.src = '/images / blog - placeholder.svg';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           }}
                         />
                         <span className='text-sm text-white'>
                           {post.author.name}
+<<<<<<< HEAD
                         </span>
                       </div>
                     </CardContent>
@@ -1456,6 +1526,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+                        </span>;
+                      </div>;
+                    </CardContent>;
+                    <CardFooter className='p - 6 pt - 0'>;
+                      <span className='text - zion - cyan group - hover:text - zion - purple'>;
+                        Read More →;
+                      </span>;
+                    </CardFooter>;
+                  </Link>;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </CardContent>
                   <CardFooter className="p-6 pt-0">
                     <span className="text-zion-cyan group-hover:text-zion-purple">Read More →</span>
@@ -1515,6 +1598,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </CardFooter>;
                   </Link>;
                 </Card>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               ))}
             </div>
           ) : null}
@@ -1754,6 +1842,9 @@ export default function Blog() {
   const categories = []
   const featuredPosts = blogPosts.filter(post => post.featured)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </span>;
 export default /**
  * Blog - Function description
@@ -1848,9 +1939,12 @@ function Blog() {
   ];
   const categories = [];
   const featured_posts = blog_posts.filter (post => post.featured);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
   const regularPosts = blogPosts.filter()
 }
@@ -2563,6 +2657,7 @@ key = "{post && post.id}
                         </div>";
                         <spanclassName="&quottext-sm" text-gray-400&quot>{category && category.count}&quot;</span>;
                       </Link>;
+<<<<<<< HEAD
 =======
               <section>;"
                 <h2 className="text-3xl font-bold text-white mb-8">Latest Articles</h2>;"
@@ -2574,6 +2669,102 @@ key = "{post && post.id}
                 <div className="&quot;space-y-8&quot;">
                   {regularPosts.map((post, index) => (&quot}
                     <motion.article,"
+=======
+                    ))}
+
+                  </div>;
+                {/* comment */}";
+                <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30">;";
+                  <h3 className="text-xl font-bold text-white mb-4">Stay Updated</h3>;";
+                  <p className="text-gray-300 mb-4">;
+                    Get the latest technology insights delivered to your inbox.;
+                  </p>;";
+                  <div className="space-y-3">;
+                    <input"
+                      type="email""
+                      placeholder="Enter your email""
+                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500">;
+                   />;";
+                    <button className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">;
+    <>";
+      <SEO title="&quot;Blog" - Zion Tech Group | Technology Insights & Industry News & quot;";
+        description="&quot;Stay" updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group & apos;s expert team.&quot;";
+        keywords="&quot;technology" blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news & quot>;
+    />&quot;";
+        title = "Blog - Zion Tech Group | Technology Insights & Industry News;
+        description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group & apos;s expert team.;
+        keywords = "technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news;
+        description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group"s expert team. ";
+        keywords="technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news" />;
+      ";
+      <div className="&quot;min - h-screen" bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 & quot;>;
+        {/* comment */}&quot;";
+        <section className="&quot;py - 20" bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 & quot;>&quot;
+          <div className="&quot;container" mx - auto px - 4&quot;>&quot;";
+            <motion.div, ";
+initial = "{{" opacity: 0, coordinate_y: 20 }}";
+              animate="{{" opacity: 1, coordinate_y: 0 }}";
+              transition="{{" duration: 0.8   }}";
+              className="text - center max - w-4xl mx - auto">";
+              <h1 className="text - 5xl md: text - 6xl font - bold text - white mb - 6">,
+                Technology Insights, ";
+transition="{{" duration: 0.8 }}";
+              className="&quot;text - center" max - w-4xl mx - auto & quot;
+            >&quot;";
+              <h1 className="&quot;text - 5xl" md: text - 6xl font - bold text - white mb - 6&quot, >;
+                Technology Insights & quot,
+              </h1>",
+              <p class_name = "&quot, text - xl" text - gray - 300 mb - 8&quot, >;
+                Stay ahead of the curve with expert insights on AI, quantum computing,
+                cybersecurity, and the latest technology trends shaping our future.&quot;";
+              <p class_name = "text - xl text - gray - 300 mb - 8">;
+                Stay ahead of the curve with expert insights on AI, quantum computing, cybersecurity, and the latest technology trends shaping our future.;
+              </p>";
+              <div className="&quot;flex" flex - wrap justify - center gap - 4&quot;>;
+                {categories.slice (0, 4).map ((category, index) => (&quot}";
+                  <span key = "{category.name}
+                    className="&quot;px - 4" py - 2 bg - blue - 600 / 20 border border - blue - 400 / 30 rounded - full text - blue - 300 text - sm & quot>;
+                  >;
+                    {category.name}&quot;
+                  </span>))}
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+";
+        <div className="container mx - auto px - 4 py - 16">;";
+          <div class_name = "grid grid - cols - 1 lg: grid - cols - 4 gap - 12">,
+            {/* comment */}";
+            <div className="lg: col - span - 3">,
+              {/* comment */}
+              {featured_posts.length > 0 && (";
+                <section className="mb - 16">;";
+                  <h2 className="text - 3xl font - bold text - white mb - 8 flex items - center">;";
+                    <TrendingUp className="w - 8 h - 8 mr - 3 text - blue - 400"  />;
+                    Featured Articles;
+                  </h2>;";
+                  <div class_name = "grid grid - cols - 1 md: grid - cols - 2 gap - 8">,
+                    {featured_posts.map ((post, index) => (
+                      <motion.article;";
+        <div className="&quot;container" mx - auto px - 4 py - 16 & quot;>&quot;
+          <div className="&quot;grid" grid - cols - 1 lg: grid - cols - 4 gap - 12 & quot, >;
+            {/* comment */}&quot;";
+            <div className="&quot;lg:" col - span - 3&quot, >";
+        <div class_name = "container mx - auto px - 4 py - 16">";
+          <div className="grid grid - cols - 1 lg: grid - cols - 4 gap - 12">,
+            {/* comment */}";
+            <div className="lg: col - span - 3">,
+              {/* comment */}
+              {featured_posts.length > 0 && (&quot}";
+                <section className="&quot;mb - 16 & quot;">&quot;
+                  <h2 className="&quot;text - 3xl" font - bold text - white mb - 8 flex items - center & quot;>&quot;
+                    <TrendingUp className="&quot;w - 8" h - 8 mr - 3 text - blue - 400 & quot;       />;
+                    Featured Articles & quot;
+                  </h2>";
+                  <div className="&quot;grid" grid - cols - 1 md: grid - cols - 2 gap - 8&quot, >;
+                    {featured_posts.map ((post, index) => (&quot}
+                      <motion.article, ";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 key = "{post.id}
                       initial="{{" opacity: 0, y: 20 }}"
                       animate="{{" opacity: 1, y: 0 }}"
@@ -2701,6 +2892,7 @@ key = "{post.id}
                     {categories.map((category, index) => (
                       <Link;"
                         key = "{category.name}
+<<<<<<< HEAD
                         to="{"/blog/category/${category.name.toLowerCase().replace(/\s+/g," "-")}"}"
                         className=""flex" items-center justify-between p-3 rounded-lg hover:bg-slate-700/50 transition-colors group"}>
                       >;"
@@ -2765,11 +2957,76 @@ key = "{post.id}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+                        to="{"/blog / category/${category.name.toLowerCase ().replace (/\s+/g, " "-")}"}";
+                        className=""flex" items - center justify - between p - 3 rounded - lg hover:bg - slate - 700 / 50 transition - colors group"}>;
+                      >;";
+                        <div className="flex items - center">;";
+                          <category.icon class_name = "w - 5 h - 5 text - blue - 400 mr - 3 group - hover: text - blue - 300" />, ";
+                          <span className="text - gray - 300 group - hover:text - white">{category.name}</span>;
+                        </div>;";
+                        <span className="{"text - sm" text - gray - 400">{category.count}</span>;
+                      </Link>;";
+                        to = "{"/blog / category/${category.name.toLowerCase ().replace (/\s+/g, " "-')}"}";
+                        className=""flex" items - center justify - between p - 3 rounded - lg hover: bg - slate - 700 / 50 transition - colors group"}
+                      >";
+                        <div className="flex items - center">";
+                          <category.icon className="w - 5 h - 5 text - blue - 400 mr - 3 group - hover: text - blue - 300" />",
+                          <span className="text - gray - 300 group - hover:text - white">{category.name}</span>;
+                        </div>";
+                        <span className="&quot;text - sm" text - gray - 400 & quot;>{category.count}&quot </span>;
+                      </Link>))}
+                  </div>;
+                {/* comment */}";
+                <div className="bg - gradient - to - br from - blue - 600 / 20 to - purple - 600 / 20 rounded - xl p - 6 border border - blue - 400 / 30">;";
+                  <h3 className="text - xl font - bold text - white mb - 4">Stay Updated</h3>;";
+                  <p className="text - gray - 300 mb - 4">;
+                    Get the latest technology insights delivered to your inbox.;
+                  </p>;";
+                  <div className="space - y-3">;
+                    <input;";
+                      type="email";";
+                      placeholder="Enter your email";";
+                      className="w - full px - 4 py - 3 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - lg text - white placeholder - gray - 400 focus: outline - none focus:ring - 2 focus:ring - blue - 500">;
+                  />;";
+                    <button className="w - full px - 4 py - 3 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white font - semibold rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 200">;
+
+                      Subscribe;
+                    </button>;
+                  </div>;
+    </>";
+
+
+
+                <div className="&quot;bg - gradient - to - br" from - blue - 600 / 20 to - purple - 600 / 20 rounded - xl p - 6 border border - blue - 400 / 30 & quot;>&quot;
+                  <h3 className="&quot;text - xl" font - bold text - white mb - 4&quot;>Stay Updated & quot </h3>";
+                  <p className="&quot, text - gray - 300" mb - 4&quot, >;
+                    Get the latest technology insights delivered to your inbox.&quot,
+                  </p>",
+                  <div className="&quot;space - y-3 & quot;">&quot,
+                    <input type="&quot;email & quot;
+                      placeholder="&quot;Enter" your email & quot;";
+                      className="&quot;w - full" px - 4 py - 3 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - lg text - white placeholder - gray - 400 focus: outline - none focus:ring - 2 focus:ring - blue - 500 & quot, >;
+                  />&quot, ";
+                    <button class_name = "&quot, w - full" px - 4 py - 3 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white font - semibold rounded - lg hover:from - blue - 700 hove, r: to - purple - 700 transition - all duration - 200 & quot, >;
+                      Subscribe & quot, ";
+                      type="email;
+                      placeholder="Enter your email;
+                      className="w - full px - 4 py - 3 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - lg text - white placeholder - gray - 400 focus: outline - none focus:ring - 2 focus:ring - blue - 500" />";
+                    <button className="w - full px - 4 py - 3 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white font - semibold rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 200">;
+                      Subscribe,
+                    </button>;
+                  </div>;
+</>),
+  )})))))))));
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
                 variant="outline"
 =======
 ;
 
+<<<<<<< HEAD
 >>>>>>>                 variant="outline"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -2777,6 +3034,8 @@ key = "{post.id}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 ;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 variant="outline"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 onClick={() => {
@@ -2803,6 +3062,7 @@ key = "{post.id}
     </>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2821,3 +3081,6 @@ key = "{post.id}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

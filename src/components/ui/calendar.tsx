@@ -1,16 +1,24 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import * as React from "react",
 =======
 }/>)
 }"
+=======
+class_name, class_names,  showOutsideDays = true, ...props;
+}: CalendarProps) {
+}/>);
+}";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 }/>) ;
 }";
 
+<<<<<<< HEAD
 >>>>>>> import * as React from "react",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -43,12 +51,15 @@ export { Calendar }
 
 }/>) ;
 }";
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import * as React from "react",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { DayPicker } from "react-day-picker",
 import { cn } from "@/lib/utils",
 import { buttonVariants } from "@/components/ui/button",
+<<<<<<< HEAD
 export type CalendarProps = React.ComponentProps<typeof DayPicker>,
 
 <<<<<<< HEAD
@@ -67,3 +78,6 @@ export type CalendarProps = React.ComponentProps<typeof DayPicker>,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+export type CalendarProps = React.ComponentProps<typeof DayPicker>,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

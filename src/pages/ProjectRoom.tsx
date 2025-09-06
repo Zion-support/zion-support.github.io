@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:src/pages/ProjectRoom.tsx
 <<<<<<< HEAD
 =======
@@ -9,16 +10,21 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from 'react',;
 import { useRouter } from 'next/router', // Changed from useParams;
 import { Header } from '@/components/Header',;
@@ -125,6 +131,10 @@ export default function ProjectRoom() {;
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 }
 
@@ -132,6 +142,7 @@ export default function ProjectRoom() {;
 
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ;
 }
@@ -158,3 +169,12 @@ export default function ProjectRoom() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/pages/ProjectRoom.tsx
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+;
+}
+}
+  )
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

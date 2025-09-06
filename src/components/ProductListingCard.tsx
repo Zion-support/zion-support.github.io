@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React, { useState } from 'react';
@@ -41,6 +42,36 @@ import { useRouter } from 'next/router'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { ProductListing } from '@/types/listings'
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useMemo } from 'react';
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
+import { useRouter } from 'next/router';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { ProductListing } from '@/types/listings';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { DollarSign } from 'lucide-react';
 import { RatingStars } from '@/components/RatingStars';
 <<<<<<< HEAD
@@ -79,6 +110,7 @@ interface ProductListingCardProps {
   listing: ProductListing;
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void;
+<<<<<<< HEAD
   detailBasePath?: string
 
 const ProductListingCardComponent = ({
@@ -104,6 +136,11 @@ const ProductListingCardComponent = ({
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  detailBasePath?: string;
+import Image from 'next/image'; // Import next/image
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from 'react',
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
 import { useRouter } from 'next/router',
@@ -142,6 +179,12 @@ interface ProductListingCardProps {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 const ProductListingCardComponent = ({
   listing,
   view = 'grid',
@@ -573,6 +616,7 @@ const ProductListingCardComponent = ({;
 
         }      }}
     >;
+<<<<<<< HEAD
 =======
   detailBasePath = '/marketplace/listing';
 }: ProductListingCardProps) => {;
@@ -664,6 +708,11 @@ const ProductListingCardComponent = ({;
   },
   
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48',
+=======
+      {/* Image */}
+      <div
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   return (
     <div
@@ -687,6 +736,7 @@ const ProductListingCardComponent = ({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
         onClick={handleViewListing} // Keep existing onClick for navigation
         role="button"
         tabIndex={-1} // Remove from tab order as parent is focusable
@@ -707,6 +757,8 @@ const ProductListingCardComponent = ({;
             handleViewListing()
           }  return ()
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         onClick={handleViewListing} // Keep existing onClick for navigation
         role='button'
         tabIndex={-1} // Remove from tab order as parent is focusable
@@ -812,7 +864,6 @@ if ( {) {
   $2
 }
             e.prevent_default ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             handleViewListing () }
         }}
       >;
@@ -830,6 +881,7 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           {' '}
           {/* Ensure this container has dimensions */}
+<<<<<<< HEAD
           <Image
             src = {imageSrc,}
             alt = {listing.title,}
@@ -838,6 +890,10 @@ if ( {) {
             onError = {handleImageError,}
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         onKeyDown={(e) => {
 
           if (e.key === 'Enter' || e.key === ' ') {
@@ -923,6 +979,7 @@ if ( {) {
               variant={stockVariant as any}
               className="absolute top-2 left-2"
             >
+<<<<<<< HEAD
               {stockStatus}
             </Badge>
           )}
@@ -949,17 +1006,24 @@ if ( {) {
 <<<<<<< HEAD
 >>>>>>>               {listing.category}
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               {stockStatus}
             </Badge>;
           )}
 
           <FavoriteButton itemId={listing && listing.id} />;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
            <FavoriteButton itemId={listing.id} />;
 
         </div>;
       </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Content */}
       <div
         className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>;
@@ -996,6 +1060,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                 {listing.uspHeadline}
               </p>
             )}
@@ -1051,9 +1116,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>                   {tag}
                 </span>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Title & Description */}
 
           <Image;
@@ -1132,7 +1198,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             {listing.uspHeadline && (
               <p className="text-primary font-semibold text-sm mb-1">
 
+<<<<<<< HEAD
 >>>>>>>                 {listing.uspHeadline}
+=======
+                {listing.uspHeadline}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </p>
             )}
 
@@ -1159,14 +1229,75 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   {tag}
                 </span>;
 >>>>>>>               ))}
             </div>;
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+        </div>;
+
+        {/* Footer with price and button */}
+
+          </div>;
+
+          <div className='flex gap-2'>;
+            <Button
+              size='sm'
+              className='bg-primary hover:bg-primary/80 text-primary-foreground'
+              onClick={e => {;
+                e && e.stopPropagation(); // Prevent card click event;
+                addToCart();              }}
+
+              disabled = {loading,}
+            >;
+              {loading ? (;
+                <>;
+                  <svg
+                    className='animate-spin -ml-1 mr-3 h-5 w-5 text-white'
+                    xmlns='http://www && www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'>;
+                    <circle
+                      className='opacity-25'
+                      cx='12'
+                      cy='12'
+                      r='10'
+                      stroke='currentColor'
+                      strokeWidth='4'></circle>;
+                    <path
+                      className='opacity-75'
+                      fill='currentColor'
+                      d='M4 12a8 8 0 018-8V0C5 && 8V0C5.373 0 0 5 && 5.373 0 12h4zm2 5 && 5.291A7.962 7 && 7.962 0 014 12H0c0 3 && 3.042 1 && 1.135 5 && 5.824 3 7 && 7.938l3-2 && 2.647z'></path>;
+                  </svg>;
+                  Loading...;
+                </>;
+              ) : (;
+                'Add to Cart';
+              )}
+
+            </Button>;
+
+
+            <Button
+              size='sm'
+              variant='default'
+              className='bg-green-600 hover:bg-green-700 text-white'
+
+        <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
+          <div className="text-sm font-medium">
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
             {listing.price !== null ? (
 =======
@@ -1256,6 +1387,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 addToCart()
               }}
               disabled={loading}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             >
               {loading ? (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1315,6 +1450,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 dispatch(
                   addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
                 ),
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 router.push('/checkout')
               }}
               disabled={loading}
@@ -1420,6 +1559,7 @@ export const ProductListingCard = React.memo(ProductListingCardComponent)
 ProductListingCard.displayName = 'ProductListingCard'
                 Request Quote
               </Button>) }
+<<<<<<< HEAD
           </div>
         </div>;
       </div>;
@@ -1438,6 +1578,13 @@ ProductListingCard.displayName = 'ProductListingCard'
 
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
+=======
+
+
+export const ProductListingCard = React.memo(ProductListingCardComponent);
+ProductListingCard.displayName = 'ProductListingCard';
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             {onRequestQuote && (
@@ -1525,6 +1672,7 @@ export default ProductListingCard;
 '"`;
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export const ProductListingCard = React.memo (ProductListingCardComponent);
 ProductListingCard.display_name = 'ProductListingCard';
@@ -1552,3 +1700,11 @@ ProductListingCard.displayName = 'ProductListingCard';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+export const ProductListingCard = React.memo (ProductListingCardComponent);
+ProductListingCard.display_name = 'ProductListingCard';
+},;
+export const ProductListingCard = React.memo(ProductListingCardComponent);
+ProductListingCard.displayName = 'ProductListingCard';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

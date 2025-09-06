@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React from "react",
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { X } from 'lucide-react'
 =======
 import React from 'react'
@@ -107,6 +110,7 @@ export function ActiveFilters({
     priceRange[0] !== 50 ||
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
         </ClickableBadge>
       ))}
@@ -118,10 +122,16 @@ export function ActiveFilters({
     priceRange[1] !== 200,
   
   if (!hasActiveFilters) return null,
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   const hasActiveFilters = null;
     selectedSkills.length > 0 ||
     selectedAvailability.length > 0 ||
+<<<<<<< HEAD
     selectedRegions.length > 0 ||
     experienceRange[0] !== 0 ||
     experienceRange[1] !== 15 ||
@@ -169,11 +179,23 @@ export function ActiveFilters({
         <ClickableBadge
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
           onClick={() => setPriceRange([50, 200])}        >
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
     selectedRegions.length > 0 ||
     experienceRange[0] !== 0 ||
     experienceRange[1] !== 15 ||
     priceRange[0] !== 50 ||
+<<<<<<< HEAD
+=======
+
+
+    selectedRegions.length > 0 ||
+    experienceRange[0] !== 0 ||
+    experienceRange[1] !== 15 ||
+    priceRange[0] !== 50 ||
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     priceRange[1] !== 200,
   
   if (!hasActiveFilters) return null,
@@ -232,11 +254,21 @@ export function ActiveFilters({;
     priceRange[0] !== 50 ||;
     priceRange[1] !== 200;
   if (!hasActiveFilters) return null;
+<<<<<<< HEAD
   return (;
     <div className="mb-6 flex flex-wrap gap-2 items-center">;
       <span className="text-zion-slate-light text-sm">Active filters:</span>;
       {selectedSkills.map(skill => (;
         <ClickableBadge;
+=======
+
+  return (
+    <div className='mb-6 flex flex-wrap gap-2 items-center'>;
+      <span className='text-zion-slate-light text-sm'>Active filters:</span>;
+
+      {selectedSkills && selectedSkills.map(skill => (;
+        <ClickableBadge
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           key={skill}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
           onClick={() => toggleSkill(skill)}
@@ -272,6 +304,7 @@ export function ActiveFilters({;
       {selectedRegions && selectedRegions.map(region => (;
 
         <ClickableBadge
+<<<<<<< HEAD
 =======
 ;
       {selectedRegions.map(region => (;
@@ -282,11 +315,40 @@ export function ActiveFilters({;
           onClick={() => toggleRegion(region)}
         >;
           {region}
+=======
+          key={region}
+          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
+          onClick={() => toggleRegion(region)}        >;
+          {region}
+
+
+      {(priceRange[0] !== 50 || priceRange[1] !== 200) && (;
+
+        <ClickableBadge
+          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
+          onClick={() => setPriceRange([50, 200])}        >;
+          ${priceRange[0]}-${priceRange[1]}/hr;
+          <X className='h-3 w-3' />;
+        </ClickableBadge>;
+      )}
+
+
+      {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (;
+
+        <ClickableBadge
+          className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
+          onClick={() => setExperienceRange([0, 15])}        >;
+          {experienceRange[0]}-{experienceRange[1]} years;
+          <X className='h-3 w-3' />;
+        </ClickableBadge>;
+      )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <X className="h-3 w-3" />
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -392,6 +454,9 @@ export function ActiveFilters({;
           <X className="h-3 w-3" />
         </ClickableBadge>
       )}
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </ClickableBadge>
       ))}
       
@@ -426,10 +491,14 @@ export function ActiveFilters({;
       )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Button
 =======
 
@@ -458,6 +527,10 @@ export function ActiveFilters({;
   );
 };
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <Button 
@@ -486,6 +559,7 @@ export function ActiveFilters({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 }
@@ -500,6 +574,12 @@ export function ActiveFilters({;
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+        className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'>;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
@@ -544,6 +624,7 @@ export function ActiveFilters({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 ;
@@ -560,3 +641,107 @@ export function ActiveFilters({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+import React from 'react';
+import { ClickableBadge } from '@/components / ui / clickable - badge';
+import { Button } from '@/components / ui / button';
+import { X } from 'lucide-react';
+interface ActiveFiltersProps {
+  selected_skills: string[];
+  toggle_skill: (skill: string) => void;
+  selected_availability: string[];
+  toggle_availability: (status: string) => void;
+  selected_regions: string[];
+  toggle_region: (region: string) => void;
+  price_range: [number, number];
+  setPriceRange: (range: [number, number]) => void;
+  experience_range: [number, number];
+  setExperienceRange: (range: [number, number]) => void;
+  clear_filters: () => void;interface ActiveFiltersProps {
+  selected_skills: string[],
+  toggle_skill: (skill: string, ) => void,
+  selected_availability: string[],
+  toggle_availability: (status: string, ) => void,
+  selected_regions: string[],
+  toggle_region: (region: string, ) => void,
+  price_range: [number, number],
+  setPriceRange: (range: [number, number], ) => void,
+  experience_range: [number, number],
+  setExperienceRange: (range: [number, number], ) => void,
+  clear_filters: () => void;
+}
+export /**
+ * ActiveFilters - Function description
+ */
+function ActiveFilters() {
+  // Check if any filters are active;
+  const hasActiveFilters =;
+    selected_skills.length > 0 ||;
+    selected_availability.length > 0 ||;
+    selected_regions.length > 0 ||;
+    experience_range[0] !== 0 ||;
+    experience_range[1] !== 15 ||;
+    price_range[0] !== 50 ||;
+    price_range[1] !== 200;
+  // Check condition
+if (return null) {
+  $2
+}
+  return (
+    <div className='mb - 6 flex flex - wrap gap - 2 items - center'>;
+      <span className='text - zion - slate - light text - sm'>Active filters:</span>;
+      {selected_skills.map (skill => (
+        <ClickableBadge;
+          key={skill}
+          className='bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2';
+          on_click={() => toggle_skill (skill)}        >;
+          {skill}
+          <X className='h - 3 w - 3' />;
+        </ClickableBadge>))}
+      {selected_availability.map (status => (
+        <ClickableBadge;
+          key={status}
+          className='bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2';
+          on_click={() => toggle_availability (status)}        >;
+          {status === 'full - time';
+            ? 'Full - time';
+            : status === 'part - time';
+              ? 'Part - time';
+              : 'Project - based'}
+          <X className='h - 3 w - 3' />;
+        </ClickableBadge>))}
+      {selected_regions.map (region => (
+        <ClickableBadge;
+          key={region}
+          className='bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2';
+          on_click={() => toggle_region (region)}        >;
+          {region}
+          <X className='h - 3 w - 3' />;
+        </ClickableBadge>))}
+      {(price_range[0] !== 50 || price_range[1] !== 200) && (
+        <ClickableBadge;
+          className='bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2';
+          on_click={() => setPriceRange ([50, 200])}        >;
+          ${price_range[0]}-${price_range[1]}/hr;
+          <X className='h - 3 w - 3' />;
+        </ClickableBadge>)}
+      {(experience_range[0] !== 0 || experience_range[1] !== 15) && (
+        <ClickableBadge;
+          className='bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none flex items - center gap - 1 pl - 2';
+          on_click={() => setExperienceRange ([0, 15])}        >;
+          {experience_range[0]}-{experience_range[1]} years;
+          <X className='h - 3 w - 3' />;
+        </ClickableBadge>)}
+      <Button;
+        variant='ghost';
+        size='sm';
+        on_click={clear_filters}
+        className='h - 7 text - xs text - zion - purple hover:text - zion - purple - light hover:bg - transparent'      >;
+        Clear All;
+      </Button>;
+    </div>);
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

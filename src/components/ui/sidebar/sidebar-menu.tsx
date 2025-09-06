@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,10 +9,36 @@ import React, { forwardRef } from "react",;
 import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types";
 export { SidebarMenuItem, SidebarMenuGroup }
+=======
+return (<a;
+          href={href}
+    return (<button;
+        ref={ref}
+
+SidebarMenuItem.display_name = "SidebarMenuItem";
+
+export { SidebarMenuItem, SidebarMenuGroup }
+export { SidebarMenuItem, SidebarMenuGroup }
+}
+export { SidebarMenuItem, SidebarMenuGroup }
+
+SidebarMenuItem && SidebarMenuItem.displayName = "SidebarMenuItem";
+
+export { SidebarMenuItem, SidebarMenuGroup };
+export { SidebarMenuItem, SidebarMenuGroup };
+};
+
+export { SidebarMenuItem, SidebarMenuGroup };
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { cn } from "@/lib/utils",
 import { SafeRef } from "@/types/ref-types",
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { forwardRef } from "react",
 import { ChevronDown } from 'lucide-react'
 import { cn } from "@/lib/utils",
@@ -224,6 +251,7 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
     </div>;
   );
 },;
+<<<<<<< HEAD
 export { SidebarMenuItem, SidebarMenuGroup };
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -242,3 +270,6 @@ export { SidebarMenuItem, SidebarMenuGroup };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+export { SidebarMenuItem, SidebarMenuGroup };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

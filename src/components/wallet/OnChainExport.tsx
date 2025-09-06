@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,6 +15,18 @@ import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
+=======
+}
+
+
+  )
+}
+
+import React, { useState } from './react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
+import { Button  } from '@/components / ui / button';
+import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {
   Tooltip;
   TooltipContent;
@@ -307,6 +320,7 @@ if ( {) {
   );
 }
 
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 
@@ -438,3 +452,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

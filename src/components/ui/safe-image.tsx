@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -34,6 +35,13 @@ interface SafeImageProps {;
 <<<<<<< HEAD
 
 
+=======
+interface SafeImageProps {
+  src: string;
+  alt: string;  width?: number;interface SafeImageProps {
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   }
 
@@ -52,6 +60,7 @@ interface SafeImageProps {;
 <<<<<<< HEAD
 
   );        aria-label={alt}
+<<<<<<< HEAD
 
 =======
     />
@@ -61,6 +70,11 @@ interface SafeImageProps {;
 import Image from 'next/image',;
 import { useState } from 'react',;
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+'use client',;
+import Image from 'next/image',;
+import { useState } from 'react',;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { ImageIcon } from 'lucide-react';
 
 interface SafeImageProps {;
@@ -80,7 +94,11 @@ interface SafeImageProps {
   src: string,
   alt: string,
 
+<<<<<<< HEAD
 >>>>>>>   width?: number;
+=======
+  width?: number;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   height?: number;
   className?: string;
   fallbackSrc?: string;
@@ -238,6 +256,7 @@ export function SafeImage({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>       >
 ursor/fix-website-loading-errors-and-merge-6662
@@ -250,6 +269,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       >
 >>>>>>>         <ImageIcon className="w-6 h-6" />
       </div>
@@ -267,7 +288,11 @@ ursor/fix-website-loading-errors-and-merge-6662
         <ImageIcon className='w-6 h-6' />      </div>;
     );
   }
+<<<<<<< HEAD
 >>>>>>> 
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
     />;
   );        aria-label={alt}
@@ -282,6 +307,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   );  return (
 
 
+<<<<<<< HEAD
 >>>>>>>     <Image
 =======
 <<<<<<< HEAD
@@ -291,6 +317,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
     />
   ); return (
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <Image
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       src = {currentSrc,}
@@ -310,6 +338,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 }
 
+<<<<<<< HEAD
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -325,11 +354,16 @@ ursor/fix-website-loading-errors-and-merge-6662
       priority={priority}
       // Add unoptimized as fallback for problematic images;
       unoptimized={hasError}
+=======
+
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     />;
   );
 } ;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 } ;
@@ -370,3 +404,73 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  src: string,
+  alt: string,
+interface SafeImageProps {
+  src: string,
+  alt: string,
+  width?: number;
+  height?: number;
+  class_name?: string;
+  fallback_src?: string;
+  priority?: boolean;
+  sizes?: string;
+  quality?: number;
+export /**
+ * SafeImage - Function description
+ */
+function SafeImage() {
+  const [has_error, setHasError] = useState (false);
+  const [current_src, setCurrentSrc] = useState (src);
+  const handle_error = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      setCurrentSrc (fallback_src);
+      setHasError (true);
+      // Try serving the image directly through our custom API route;
+      const fallback_url = `/api / image${src}`;
+      setCurrentSrc (fallback_url);
+      setHasError (true);
+    } else // Check condition
+if ( {) {
+  $2
+}
+      setHasError (true);
+    }
+  }
+  // If we have an error and no fallback, show a placeholder;
+  if () {) {
+  $2
+}
+        return (
+      <div;
+        className={`flex items - center justify - center bg - gray - 100 text - gray - 400 ${class_name}`}
+        style={{ width, height }}
+        role="img";
+        aria - label = {alt, }
+      >;
+        <ImageIcon className='w - 6 h - 6' />      </div>);
+  }
+    />);        aria - label={alt}
+      >;
+        <ImageIcon className="w - 6 h - 6" />;
+      </div>);
+  }
+    />); return (
+    <Image;
+      src = {current_src, }
+      alt = {alt, }
+      width = {width, }
+      height = {height, }
+      class_name = {class_name, }
+      on_error = {handle_error, }
+      priority = {priority, }
+      // Add unoptimized as fallback for problematic images;
+      unoptimized = {has_error, }
+    />);
+}
+} ;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

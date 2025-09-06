@@ -1,6 +1,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Link } from 'react-router-dom';
 import SEO from "../components/SEO";
@@ -154,9 +155,21 @@ const About: React.FC = () => {
 export default About;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+
+const About = () => {
+  return (
+    <div>
+      <h1>About</h1>
+      <p>This page is under construction.</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default About;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export default About;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

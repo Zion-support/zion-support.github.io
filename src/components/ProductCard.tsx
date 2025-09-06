@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ProductCard.tsx
 =======
 =======
@@ -118,6 +119,9 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
 ========
 const stockStatus =;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductCard.tsx
+=======
+const stockStatus =;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     product && product.stock === undefined;
       : 'In stock';
   const stockVariant =;
@@ -128,12 +132,20 @@ const stockStatus =;
   const isMobile = useMediaQuery('(max-width: 768px)'),;
   const isTablet = useMediaQuery('(max-width: 1200px)'),;
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
+<<<<<<< HEAD
+=======
+
+  );
+}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   );
 }
 <<<<<<<< HEAD:src/components/ProductCard.tsx
 ;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 ;
@@ -145,6 +157,8 @@ const stockStatus =;
 ========
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const stock_status =;
     product.stock === undefined;
       : 'In stock';
@@ -159,6 +173,7 @@ const stockStatus =;
 }
   );
 }
+<<<<<<< HEAD
 =======
 import Link from 'next/link',;
 import { Heart } from 'lucide-react';
@@ -634,3 +649,6 @@ onBuy () > {'";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

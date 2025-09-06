@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -70,6 +71,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 >>>>>>>   const showTagline = router.pathname === '/'
+=======
+const showTagline = router.pathname === '/'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [loginOpen, setLoginOpen] = useState(false)
   const isMobile = useIsMobile()
@@ -88,6 +92,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     setLoginOpen(true)
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <>
       <header
@@ -99,6 +104,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground"
           { "bg-red-500": mobileMenuOpen ,}
 >>>>>>>         )}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
   const showTagline = router && router.pathname === '/';
 
@@ -122,9 +129,12 @@ import React from 'react';
     setLoginOpen(true);
   },;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <>
       <header
@@ -161,7 +171,10 @@ import React from 'react';
               {t('home.header_tagline')}
             </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           )}
 
           <div className="ml-6 flex-1 hidden md:block">;
@@ -216,7 +229,10 @@ import React from 'react';
               ) : (
                 <Menu className="block h-6 w-6" aria-hidden="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               )}
 
             </button>;
@@ -241,12 +257,18 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
 
                   e.preventDefault(),
                   // For the main login link, we might not have a specific returnTo beyond current page,
+<<<<<<< HEAD
 
 =======
                   e.preventDefault()
@@ -277,12 +299,17 @@ import React from 'react';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   // or we could default to dashboard.
 >>>>>>>                   // For consistency with how sub-menus now set it:
                   router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })
 
                   openLoginModal(router.asPath)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 onClick={(e,) => {;
                   e && e.preventDefault(),;
                   // For the main login link, we might not have a specific returnTo beyond current page,;
@@ -290,9 +317,12 @@ import React from 'react';
                   // For consistency with how sub-menus now set it:;
                   router && router.push({ pathname: '/auth/login', query: { returnTo: router && router.asPath } }, undefined, { shallow: true }),;
                   openLoginModal(router && router.asPath);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 }}
               >
                 {t('auth.login')}
@@ -321,9 +351,12 @@ import React from 'react';
               </Link>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           )}
           {/* User avatar menu */}
           {isLoggedIn && (
@@ -659,6 +692,17 @@ import React from 'react';
               </AnimatePresence>
             </div>
           </nav>
+<<<<<<< HEAD
+=======
+                            </span>;
+                          </Link>))}
+                      </div>;
+                    </div>;
+                  </motion.div>)}
+              </AnimatePresence>;
+            </div>;
+          </nav>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Right side - Search, User, Mobile menu */}
           <div className="flex items-center space-x-4">
             {/* Search */}
@@ -673,6 +717,20 @@ import React from 'react';
                   onBlur={() => setSearchFocused(false)}
                   className={`w-64 px-4 py-2 pl-10 bg-zion-slate/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan transition-all duration-200 ${
                     searchFocused ? 'w-80' : ''
+<<<<<<< HEAD
+=======
+            <div className="relative hidden md:block">;
+              <form on_submit={handle_search} className="relative">;
+                <input;
+                  type="text";
+                  placeholder="Search...";
+                  value={search_query}
+                  on_change={(e) => setSearchQuery (e.target.value)}
+                  on_focus={() => setSearchFocused (true)}
+                  on_blur={() => setSearchFocused (false)}
+                  className={`w - 64 px - 4 py - 2 pl - 10 bg - zion - slate / 20 border border - zion - cyan / 20 rounded - lg text - white placeholder - zion - slate - light focus:outline - none focus:ring - 2 focus:ring - zion - cyan / 50 focus:border - zion - cyan transition - all duration - 200 ${
+                    search_focused ? 'w - 80' : '';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }`}
                 />
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
@@ -739,6 +797,18 @@ import React from 'react';
               </div>
             ))}
           </nav>
+<<<<<<< HEAD
+=======
+                          className="flex items - center w - full p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors text - white hover:text - zion - cyan">;
+                          <LogOut className="w - 4 h - 4 mr - 3" />;
+                          Logout;
+                        </button>;
+                      </div>;
+                    </motion.div>)}
+                </AnimatePresence>;
+              </div>))}
+          </nav>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Right side actions */}
           <div className="flex items-center space-x-4">
             {/* Search */}
@@ -760,6 +830,7 @@ import React from 'react';
       <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">
         <div className="container flex h-16 items-center px-4 sm:px-6">
           {/* Logo */}
+<<<<<<< HEAD
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0">
               <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -767,6 +838,40 @@ import React from 'react';
               </h1>
             </Link>
           </div>
+=======
+
+            <form onSubmit={handleSearch} className="hidden md:flex relative">  const navigation = [;
+    { name: 'Home', href: '/', current: true },;
+    { name: 'About', href: '/about', current: false },;
+    { name: 'Contact', href: '/contact', current: false },;
+  ];
+  const services = [;
+    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' },;
+    { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },;
+    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },;
+    { name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },;
+    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' },;
+    { name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' },;
+  ];
+  return (
+    <>;
+      <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">;
+        <div className="container flex h-16 items-center px-4 sm:px-6">;
+          {/* Logo */}
+          <div className="flex items-center">;
+            <Link to="/" className="flex-shrink-0">;
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
+          <div className="flex items - center">;
+            <Link to="/" className="flex - shrink - 0">;
+              <h1 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent">;
+
+                Zion Tech Group;
+              </h1>;
+            </Link>;
+          </div>;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Desktop Navigation */}
           <nav className="hidden md:flex ml-8 space-x-8">
             {navigation.map((item) => (
@@ -814,6 +919,7 @@ import React from 'react';
                     <div className="mt-4 pt-4 border-t border-slate-700/50">
                       <Link
                         to="/services"
+<<<<<<< HEAD
                         className="block text-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors">
                         View All Services →
                       </Link>
@@ -827,6 +933,26 @@ import React from 'react';
           <div className="hidden md:flex ml-6 flex-1 max-w-md">
             <form onSubmit={handleSearch} className="relative w-full">
               />
+=======
+                        className="block text-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors">;
+                            </div>;
+                          </div>;
+                        </Link>))}
+                    </div>;
+                    <div className="mt - 4 pt - 4 border - t border - slate - 700 / 50">;
+                      <Link;
+                        to="/services";
+                        className="block text - center text - cyan - 400 hover:text - cyan - 300 text - sm font - medium transition - colors">;
+
+                        View All Services →;
+                      </Link>;
+                    </div>;
+                  </div>;
+
+          <div className="hidden md:flex ml-6 flex-1 max-w-md">;
+            <form onSubmit={handleSearch} className="relative w-full">;
+              />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <button
                 type="submit"
                 className="absolute right-2 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-cyan-400 transition-colors">
@@ -844,6 +970,33 @@ import React from 'react';
                 </Link>
               </div>
             )}
+<<<<<<< HEAD
+=======
+
+                </div>)}
+            </div>;
+          </nav>;
+          {/* Search Bar - Hidden on mobile */}
+          <div className="hidden md:flex ml - 6 flex - 1 max - w-md">;
+            <form on_submit={handle_search} className="relative w - full">;
+              />;
+              <button;
+                type="submit";
+                className="absolute right - 2 top - 1/2 transform -translate - y-1 / 2 text - slate - 400 hover:text - cyan - 400 transition - colors">;
+                <Search className="h - 4 h - 4" />;
+              <div className="hidden md:flex items - center space - x-3">;
+                <Link;
+                  to="/login";
+                  className="px - 4 py - 2 text - zion - cyan border border - zion - cyan rounded - lg hover:bg - zion - cyan hover:text - white transition - colors">;
+                  Login;
+                </Link>;
+                <Link;
+                  to="/signup";
+                  className="px - 4 py - 2 bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition - colors">;
+                  Get Started;
+                </Link>;
+              </div>)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Right side actions */}
           <div className="ml-6 flex items-center space-x-4">
             {/* Notifications */}
@@ -1050,10 +1203,141 @@ import React from 'react';
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+                  to={item.href}
+                  className="text - slate - 300 hover:text - cyan - 400 block px - 3 py - 2 text - base font - medium transition - colors duration - 200";
+                  on_click={() => setMobileMenuOpen (false)}
+                >;
+                  {item.name}
+                </Link>))}
+              {/* Mobile Services */}
+              <div className="px - 3 py - 2">;
+                <div className="text - slate - 400 text - sm font - medium mb - 2">Services</div>;
+                <div className="space - y-1">;
+                  {services.map ((service) => (
+                    <Link;
+                      key={service.name}
+                      to={service.href}
+                      className="block text - slate - 300 hover:text - cyan - 400 px - 3 py - 2 text - sm transition - colors duration - 200";
+                      on_click={() => setMobileMenuOpen (false)}
+                    >;
+                      {service.name}
+                    </Link>))}
+                </div>;
+              </div>;
+              </div>;
+              {/* Mobile Services */}
+              <div className="space - y-2">;
+                <div className="px - 3 py - 2 text - sm font - semibold text - zion - cyan uppercase tracking - wider">;
+                  Services;
+                </div>;
+                {services.map ((service) => (
+                  <Link;
+                    key={service.name}
+                    to={service.href}
+                    on_click={closeMobileMenu}
+                    className="block px - 6 py - 2 text - zion - slate - light hover:text - zion - cyan transition - colors">;
+                    {service.name}
+                  </Link>))}
+              </div>;
+              {/* Mobile Solutions */}
+              <div className="space - y-2">;
+                <div className="px - 3 py - 2 text - sm font - semibold text - zion - cyan uppercase tracking - wider">;
+                  Solutions;
+                </div>;
+                {solutions.map ((solution) => (
+                  <Link;
+                    key={solution.name}
+                    to={solution.href}
+                    on_click={closeMobileMenu}
+                    className="block px - 6 py - 2 text - zion - slate - light hover:text - zion - cyan transition - colors">;
+                    {solution.name}
+                  </Link>))}
+              </div>;
+              {/* Mobile Resources */}
+              <div className="space - y-2">;
+                <div className="px - 3 py - 2 text - sm font - semibold text - zion - cyan uppercase tracking - wider">;
+                  Resources;
+                </div>;
+                {resources.map ((resource) => (
+                  <Link;
+                    key={resource.name}
+                    to={resource.href}
+                    on_click={closeMobileMenu}
+                    className="block px - 6 py - 2 text - zion - slate - light hover:text - zion - cyan transition - colors">;
+                    {resource.name}
+                  </Link>))}
+              </div>;
+              {/* Mobile Company */}
+              <div className="space - y-2">;
+                <div className="px - 3 py - 2 text - sm font - semibold text - zion - cyan uppercase tracking - wider">;
+                  Company;
+                </div>;
+                {company.map ((item) => (
+                  <Link;
+                    key={item.name}
+                    to={item.href}
+                    on_click={closeMobileMenu}
+                    className="block px - 6 py - 2 text - zion - slate - light hover:text - zion - cyan transition - colors">;
+                    {item.name}
+                  </Link>))}
+              </div>;
+              {/* Mobile Auth */}
+              {!user ? (
+                <div className="pt - 4 border - t border - zion - slate / 20">;
+                  <div className="space - y-3">;
+                    <Link;
+                      to="/login";
+                      on_click={closeMobileMenu}
+                      className="block w - full px - 4 py - 2 text - center text - zion - cyan border border - zion - cyan rounded - lg hover:bg - zion - cyan hover:text - white transition - colors">;
+                      Login;
+                    </Link>;
+                    <Link;
+                      to="/signup";
+                      on_click={closeMobileMenu}
+                      className="block w - full px - 4 py - 2 text - center bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition - colors">;
+                      Get Started;
+                    </Link>;
+                  </div>;
+                </div>) : (
+                <div className="pt - 4 border - t border - zion - slate / 20">;
+                  <div className="space - y-3">;
+                    <Link;
+                      to="/dashboard";
+                      on_click={closeMobileMenu}
+                      className="block w - full px - 4 py - 2 text - center bg - zion - cyan text - white rounded - lg hover:bg - zion - cyan / 80 transition - colors">;
+                      Dashboard;
+                    </Link>;
+                    <button;
+                      on_click={() => {
+                        logout ();
+                        closeMobileMenu ();
+}}
+                      className="block w - full px - 4 py - 2 text - center text - zion - cyan border border - zion - cyan rounded - lg hover:bg - zion - cyan hover:text - white transition - colors">;
+                      Logout;
+                    </button>;
+                  </div>;
+                </div>)}
+            </div>;
+          </motion.div>)}
+      </AnimatePresence>;
+    </header>  );
+}
+
+
+
+
+      )}
+      {/* Mobile Bottom Navigation */}
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
   );
@@ -1061,6 +1345,7 @@ import React from 'react';
 }
 ;
 
+<<<<<<< HEAD
 ;
 
 
@@ -1081,3 +1366,6 @@ import React from 'react';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

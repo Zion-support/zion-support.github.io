@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -35,6 +36,12 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
     if (!bulkSkills |bulkSkills.trim().length === 0) {
       setError('Please enter some skills to categorize')
       return;
+=======
+}
+      }
+    } catch (err: any) {;
+      setError(err && err.message || 'Failed to categorize skills');
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
     setError(null)
     try {
@@ -173,6 +180,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
           />
         </div>
 
+<<<<<<< HEAD
 =======
         <Button
           onClick = {handleCategorizeSkills,}
@@ -189,6 +197,8 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
 =======
 >>>>>>>           className="gap-2"
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 
     <div className="bg-muted/40 p-6 rounded-lg">;
@@ -278,6 +288,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>
   );
 };
+<<<<<<< HEAD
 '";
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -322,3 +333,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+'"
+
+'";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

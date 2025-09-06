@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -53,6 +54,41 @@ import { exportResumeToPDF } from "@/utils/pdfExport",
   // Fetch resume data when component mounts
   useEffect(() => {
     const loadResumes = async () => {
+=======
+// Fetch resume data when component mounts
+  useEffect((,) => {
+    const loadResumes = async () => {
+
+import React, { useState, useEffect } from 'react';
+import { Button  } from '@/components / ui / button';
+import { RadioGroup, RadioGroupItem  } from '@/components / ui / radio - group';
+import { Label  } from '@/components / ui / label';
+import { Plus, Loader2 } from 'lucide-react'import { use_resume  } from '@/hooks / use_resume';
+import { exportResumeToPDF  } from '@/utils / pdf_export';
+import { toast  } from '@/components / ui / use - toast';
+import { ResumePreviewCard } from './ResumePreviewCard';
+import { UploadSection } from './UploadSection';
+import { SelectResumeSection } from './SelectResumeSection';
+import { ResumeOption, ResumeSelectorProps } from './types';
+import {logErrorToProduction} from '@/utils / production_logger';
+export /**
+ * ResumeSelector - Function description
+ */
+function ResumeSelector() {
+  const [selected_option, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent');
+  const [selected_resume, setSelectedResume] = useState < ResumeOption | null>(null);
+  const [resume_options, setResumeOptions] = useState < ResumeOption[]>([]);
+  const [custom_file, setCustomFile] = useState < File | null>(null);
+  const [is_loading, setIsLoading] = useState (false);
+  const { resume, fetch_resume } = use_resume ();
+  // Fetch resume data when component mounts;
+  useEffect ((, ) => {
+    const load_resumes = async () => {
+      setIsLoading (true);
+
+
+      setIsLoading(true),
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
       try {
 =======
@@ -177,6 +213,7 @@ export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> import React, { useState, useEffect } from 'react',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -184,6 +221,8 @@ export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useEffect } from 'react',;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Button } from "@/components/ui/button",;
@@ -242,7 +281,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 
 }
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
@@ -477,6 +515,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 ;
@@ -493,3 +532,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

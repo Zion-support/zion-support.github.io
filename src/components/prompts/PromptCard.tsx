@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -8,6 +9,13 @@ import { useState  } from 'react';
 import { Copy, Send } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 >>>>>>> import type { Prompt } from '@/types/prompts';
+=======
+import { useState } from 'react';
+
+import { Copy, Send } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import type { Prompt } from '@/types/prompts';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 interface PromptCardProps {;
   prompt: Prompt;
@@ -59,6 +67,7 @@ export function PromptCard({ prompt }: PromptCardProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -87,6 +96,14 @@ export function PromptCard({ prompt }: PromptCardProps) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState } from 'react',;
+=======
+
+}
+  );
+}
+
+import { useState } from 'react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Copy, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import type { Prompt } from '@/types/prompts',;
@@ -94,6 +111,7 @@ interface PromptCardProps {;
   prompt: Prompt;
 }
 
+<<<<<<< HEAD
 export function PromptCard({ prompt }: PromptCardProps) {
   const [copied, setCopied] = useState(false),
 
@@ -187,3 +205,6 @@ export function PromptCard({ prompt }: PromptCardProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

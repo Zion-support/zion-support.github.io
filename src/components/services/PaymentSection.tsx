@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
 =======
 =======
@@ -48,6 +51,7 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
       description:
         "You'll be redirected to our secure payment portal momentarily."
     })
+<<<<<<< HEAD
   }
 
       title: "Processing your request",
@@ -74,6 +78,8 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
 }"}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       <p className="text-2xl font-bold text-zion-cyan mb-6">
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { MapPin } from 'lucide-react';
 import { PaymentButton } from '@/components / transactions / PaymentButton';
 import { CountryPricing } from '@/data / onsiteServicePricing';
@@ -91,7 +97,6 @@ function PaymentSection() {
       description:;
         "You'll be redirected to our secure payment portal momentarily.",
     });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
 
@@ -111,7 +116,6 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
         "You'll be redirected to our secure payment portal momentarily.",;
     });
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
 
@@ -125,8 +129,12 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
 
 }"}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <div className='text - center'>;
       <p className='text - zion - slate - light mb - 2'>Selected Country</p>;
       <h4 className='text - xl font - bold text - white mb - 2 flex items - center justify - center'>;
@@ -221,6 +229,7 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
     </div>
   )
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -239,3 +248,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

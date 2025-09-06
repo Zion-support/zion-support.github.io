@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/blockchain/SmartContractDeployment.tsx
 
 
@@ -104,6 +105,9 @@ export function SmartContractDeployment({
   onDeploy,
   isDeploying
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+isDeploying
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
     network: 'none'
@@ -394,6 +398,11 @@ export function SmartContractDeployment({;
     toast.success("Solidity contract downloaded")
   },
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <Card className="w-full">
       <CardHeader>
@@ -456,10 +465,13 @@ export function SmartContractDeployment({;
         <CardTitle className="flex items-center gap-2">;
           <ShieldCheck className="h-5 w-5 text-primary" />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/blockchain/SmartContractDeployment.tsx
 ========
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/blockchain/SmartContractDeployment.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const handleDownloadSolidity = () =>: any {
     // Create a blob from the Solidity code;
     const blob = new Blob ([solidity_code], { type: 'text / plain' }),
@@ -480,10 +492,13 @@ export function SmartContractDeployment({;
       <CardHeader>;
         <CardTitle className="flex items - center gap - 2">;
           <ShieldCheck className="h - 5 w - 5 text - primary" />;
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           Smart Contract Deployment;
         </CardTitle>;
         <CardDescription>;
@@ -529,6 +544,7 @@ export function SmartContractDeployment({;
             <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>
           </div>
 
+<<<<<<< HEAD
 =======
 >>>>>>>               })}
             />
@@ -544,12 +560,26 @@ export function SmartContractDeployment({;
                     ...deploymentOptions;                    network: value as BlockchainNetwork
 >>>>>>>                   })}
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+      
+
+
+      <CardContent className="space-y-6">
+        <div className="space-y-4">
+          <div className="flex items-center space-x-2">
+            <Switch
+
+              id="deploy-blockchain"
+              aria-label="Deploy to blockchain"
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               })}
 
 
           
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -568,6 +598,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {deploymentOptions.deployToChain && (
             <>
               <div className="space-y-2">
@@ -598,12 +630,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                     network: value as BlockchainNetwork;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions,;
                     network: value as BlockchainNetwork;
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   })}
@@ -619,6 +656,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions,;
                     network: value as BlockchainNetwork;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   })}
                   className="flex flex-col space-y-1"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -636,6 +675,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+              
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
               <div className="space-y-2">
 =======
@@ -708,6 +754,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
               
 >>>>>>>               <div className="flex items-center space-x-2">
@@ -721,6 +768,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
               
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <div className="flex items-center space-x-2">
                 <Switch
                   id="use-escrow"
@@ -729,6 +778,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   onCheckedChange={(checked) => setDeploymentOptions({
                     ...deploymentOptions;                    useEscrow: checked
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -750,6 +800,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
+=======
+            />;
+            <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>;
+          </div>;
+
+          {deploymentOptions && deploymentOptions.deployToChain && (;
+            <>;
+              <div className="space-y-2">;
+                <Label>Select blockchain network</Label>;
+                <RadioGroup
+                  defaultValue={deploymentOptions && deploymentOptions.network}
+                  onValueChange={(value) => setDeploymentOptions({;
+                    ...deploymentOptions;                    network: value as BlockchainNetwork;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   onCheckedChange={(checked) => setDeploymentOptions({;
                     ...deploymentOptions;
                     useEscrow: checked;
@@ -765,6 +831,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
           <div className="rounded-md bg-muted p-4">
 =======
 ursor/fix-website-loading-errors-and-merge-6662
@@ -785,6 +852,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                     network:value as BlockchainNetwork;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/blockchain/SmartContractDeployment.tsx
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   })}
                   className="flex flex-col space-y-1";
                 >;
@@ -817,6 +888,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   checked={deploymentOptions && deploymentOptions.useEscrow}
                   onCheckedChange={(checked) => setDeploymentOptions({;
                     ...deploymentOptions;                    useEscrow: checked;
+<<<<<<< HEAD
 =======
               ;
               <div className="space-y-2">;
@@ -841,6 +913,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                     ...deploymentOptions,;
                     useEscrow:checked;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   })}
                 />;
                 <Label htmlFor="use-escrow">Use escrow for payments</Label>;
@@ -884,6 +958,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <CardFooter className="flex justify-between">
         <Button variant="outline" onClick={handleDownloadSolidity}>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -905,6 +984,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Button onClick={handleDeployContract} disabled={isDeploying}>
           {isDeploying ? (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -990,11 +1074,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             'Deploy Contract';
           )}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </Button>;
       </CardFooter>;
     </Card>;
 <<<<<<< HEAD
   );
+<<<<<<< HEAD
 };
 <CardHeader> <CardTitle className="flex items-center gap-2" > <ShieldCheck className="h-5 w-5 text-primary" /> Smart Contract Deployment </CardTitle> <CardDescription> Deploy your agreement as a smart contract for enhanced security and automation </CardDescription> </CardHeader> <CardContent className="space-y-6" > <div className="space-y-4" > <div className="flex items-center space-x-2" > <Switch /> <Label htmlFor="deploy-blockchain" >Deploy to blockchain</Label> </div> > <div className="flex items-center space-x-2" > <RadioGroupItem value="ethereum" id="ethereum" /> <Label htmlFor="ethereum" >Ethereum (higher fees, more secure) </Label> </div> <div className="flex items-center space-x-2" > <RadioGroupItem value="polygon" id="polygon" /> <Label htmlFor="polygon" >Polygon (lower fees, faster) </Label> </div> </RadioGroup> </div> <div className="space-y-2" > <Label htmlFor="wallet-address" >Wallet address for transactions</Label> <Input /> </div> <div className="flex items-center space-x-2" > <Switch /> <Label htmlFor="use-escrow" >Use escrow for payments</Label> </div> </>) ;
 }</div> </div> </div> </CardContent> Download .sol File </Button> <ButtononClick={
@@ -1005,6 +1095,11 @@ ursor/fix-website-loading-errors-and-merge-6662
   isDeploying ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Deploying... </>) : ('Deploy Contract') ;
 }</Button> </CardFooter> </Card>) ;
 }'"}
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <CardContent className="space - y-6">;
         <div className="space - y-4">;
           <div className="flex items - center space - x-2">;
@@ -1095,6 +1190,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   is_deploying ? (<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Deploying... </>) : ('Deploy Contract');
 }</Button> </CardFooter> </Card>);
 }'"}
+<<<<<<< HEAD
 =======
   ),; interface SmartContractDeploymentProps {;
   solidityCode: string;
@@ -1152,3 +1248,7 @@ const handleDeployContract = async () => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

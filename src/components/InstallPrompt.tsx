@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/InstallPrompt.tsx
 
 =======
@@ -37,6 +38,8 @@ interface BeforeInstallPromptEvent extends Event {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 =======
 >>>>>>> }
@@ -130,9 +133,13 @@ export const InstallPrompt: React.FC = () => {
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('eventpwa_install_accepted')
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/InstallPrompt.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -370,6 +377,7 @@ if (return null, ) {
             .pwa - install - button - container { /* Target a container for better transform control */;
               transform: scale (0.9), /* Slightly less aggressive scaling */;
               transform - origin: bottom right;
+<<<<<<< HEAD
 =======
 import React, { useEffect, useState } from 'react',;
 import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.;
@@ -478,6 +486,8 @@ export const InstallPrompt:React.FC = () => {;
               transform:scale(0.9), /* Slightly less aggressive scaling */;
               transform-origin:bottom right;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             }
           }
         `}
@@ -569,6 +579,10 @@ export default InstallPrompt;
   );
 },;
 export default InstallPrompt,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <div className="fixed bottom - 4 right - 4 z-[1000] pwa - install - button - container"> {/* Added a container for styling */}
         <div className="bg - zion - blue - dark text - white p - 3 rounded - lg shadow - lg flex items - center space - x-3">;
           <p className="text - sm">Install our app for a better experience!</p>;
@@ -582,6 +596,7 @@ export default InstallPrompt,;
 },
 export default InstallPrompt,
 ;
+<<<<<<< HEAD
 =======
   ),;
 },;
@@ -624,3 +639,8 @@ export default InstallPrompt,
 =======
 main
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+    </>
+  )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import { useOnboardingStatus } from '@/hooks/useOnboardingStatus'
@@ -64,6 +65,26 @@ export function TalentOnboardingSteps() {
 >>>>>>>   const steps: OnboardingStep[] = [
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>     {
+=======
+return <OnboardingTracker steps={steps} />
+
+import React from 'react';
+import { use_auth } from '@/hooks / use_auth';
+import { useOnboardingStatus } from '@/hooks / useOnboardingStatus';
+import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react';
+import { OnboardingTracker, OnboardingStep } from './OnboardingTracker';
+export /**
+ * TalentOnboardingSteps - Function description
+ */
+function TalentOnboardingSteps() {
+  const { user } = use_auth ();
+  const onboarding_status = useOnboardingStatus ();
+  const steps: OnboardingStep[] = [;
+
+
+  const steps: OnboardingStep[] = [
+    {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       id: 'profile',
       label: 'Complete your profile',
       completed: onboarding_status.profile_completed,
@@ -142,6 +163,7 @@ export function TalentOnboardingSteps() {
 
       id: "match",
       label: "Receive your first job match",
+<<<<<<< HEAD
       completed: onboardingStatus.matchReceived,
 =======
       id: "match",
@@ -224,3 +246,6 @@ export function TalentOnboardingSteps() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+      completed: onboardingStatus.matchReceived,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

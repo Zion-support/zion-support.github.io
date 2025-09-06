@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
             </div>
@@ -29,6 +30,17 @@ export function ServiceIncludes() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+</div>
+            <div>
+              <h3 className='text-white font-medium'>Transportation to Site</h3>
+              <p className='text-zion-slate-light'>
+                All travel costs to your location are included in the base
+                price.
+              </p>
+            </div>
+          </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { Check } from 'lucide-react'
 
@@ -42,6 +54,11 @@ export function ServiceIncludes() {
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             <div>
@@ -70,6 +87,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
           <div className='flex items-start'>
             <div className='mt-1 mr-4'>
@@ -77,6 +95,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>             </div>
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+          
+          <div className="flex items-start">
+            <div className="mt-1 mr-4">
+              <Check className="h-5 w-5 text-zion-cyan" />
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </div>
 >>>>>>>             <div>
               <h3 className='text-white font-medium'>Technical Assessment</h3>
@@ -93,6 +120,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </div>
             <div>
               <h3 className="text-white font-medium">First Hour of Service</h3>
@@ -144,6 +176,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
           <div className='flex items-start'>
             <div className='mt-1 mr-4'>
@@ -151,6 +184,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>             </div>
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+          
+          <div className="flex items-start">
+            <div className="mt-1 mr-4">
+              <Check className="h-5 w-5 text-zion-cyan" />
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </div>
 >>>>>>>             <div>
               <h3 className='text-white font-medium'>Network Connectivity</h3>
@@ -266,6 +308,7 @@ export function ServiceIncludes() {
             <div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>               <h3 className="text-white font-medium">Service Documentation</h3>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -273,12 +316,16 @@ export function ServiceIncludes() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
             </div>
             <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -288,6 +335,9 @@ export function ServiceIncludes() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <h3 className="text-white font-medium">Service Documentation</h3>
 >>>>>>>               <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>
             </div>
@@ -384,6 +434,9 @@ export function ServiceIncludes() {;
               <h3 className="text-white font-medium">Service Documentation</h3>;
               <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Check } from 'lucide-react';
 export /**
  * ServiceIncludes - Function description
@@ -530,9 +583,12 @@ function ServiceIncludes() {
             <div>;
               <h3 className="text - white font - medium">Service Documentation</h3>;
               <p className="text - zion - slate - light">Detailed report of work performed and recommendations.</p>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </div>;
           </div>;
         </div>;
@@ -549,6 +605,7 @@ function ServiceIncludes() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -562,3 +619,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

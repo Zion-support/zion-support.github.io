@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Copy, Download, Link, Plus } from 'lucide-react'
 
@@ -25,6 +26,39 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
 import { Copy, Download, Link, Plus } from 'lucide-react'
+=======
+import { useRef, useState } from 'react';
+import { Button } from '@/components/ui/button';
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle,;
+} from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Copy, Download, Link, Plus } from 'lucide-react';
+import { toast } from '@/hooks/use-toast';
+import { useReferrals } from '@/hooks/useReferrals';
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogDescription,;
+  DialogFooter,;
+  DialogHeader,;
+  DialogTitle,;
+  DialogTrigger,;
+} from '@/components/ui/dialog';
+import { Label } from '@/components/ui/label';
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue,;
+} from '@/components/ui/select';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -106,6 +140,7 @@ export function PartnerReferralLinks() {
       setCustomParam('')
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     }
+<<<<<<< HEAD
   }
   const handleDownloadLinks = () => {
     const allLinks = [{ name: 'Default', link: baseLink }, ...generatedLinks]
@@ -132,6 +167,44 @@ export function PartnerReferralLinks() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  };
+
+  const handleDownloadLinks = () => {;
+    const allLinks = [{ name: 'Default', link: baseLink }, ...generatedLinks];
+
+    const csvContent = [;
+      'Name,Link',;
+      ...allLinks && allLinks.map(l => `${l && l.name},${l && l.link}`),;
+    ].join('\n');
+
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL && URL.createObjectURL(blob);
+    const link = document && document.createElement('a');
+    link && link.setAttribute('href', url);
+    link && link.setAttribute('download', 'zion_referral_links && zion_referral_links.csv');
+    link && link.style.visibility = 'hidden';
+    document && document.body.appendChild(link);
+    link && link.click();
+    document && document.body.removeChild(link);
+  };
+
+  return (
+
+              className='flex items-center gap-2'>;
+              <Download className='h-4 w-4' />;
+    <div className='space - y-6'>;
+      <Card className='bg - zion - blue - dark border - zion - blue - light'>;
+
+import { useRef, useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+
+import { Copy, Download, Link, Plus } from 'lucide-react'
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useRef, useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -270,6 +343,7 @@ export function PartnerReferralLinks() {
             <span>Your Referral Link</span>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -346,6 +420,8 @@ export function PartnerReferralLinks() {
     link.click(),
     document.body.removeChild(link)
   },
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   return (
     <div className="space-y-6">
@@ -465,17 +541,28 @@ export function PartnerReferralLinks() {;
   return (;
     <div className="space-y-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <CardHeader>;
           <CardTitle className="flex items-center justify-between">;
             <span>Your Referral Link</span>;
             <Button;
+<<<<<<< HEAD
               variant="outline";
               size="sm";
               onClick={handleDownloadLinks}
               className="flex items-center gap-2";
             >;
               <Download className="h-4 w-4" />;
+=======
+              variant='outline';
+              size='sm';
+              on_click={handleDownloadLinks}
+              className='flex items - center gap - 2'            >;
+              <Download className='h - 4 w - 4' />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               Export Links;
             </Button>;
           </CardTitle>;
@@ -614,6 +701,10 @@ export function PartnerReferralLinks() {;
                 >
                   <SelectTrigger id="campaign">
                     <SelectValue placeholder="Select campaign type" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </SelectTrigger>
                   <SelectContent>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -685,10 +776,17 @@ export function PartnerReferralLinks() {;
                 type="button" 
                 onClick={handleGenerateLink}
                 className="bg-zion-purple hover:bg-zion-purple-dark"
+<<<<<<< HEAD
               >
                 Cancel
               </Button>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+              >
+                Cancel
+              </Button>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Button
                 type='button'
                 onClick={handleGenerateLink}
@@ -703,6 +801,7 @@ export function PartnerReferralLinks() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
                     <span>{item.name |'Campaign Link'}</span>                  </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -725,6 +824,8 @@ export function PartnerReferralLinks() {;
                     <Link className='h-4 w-4 text-zion-purple' />
                     <span>{item.name |'Campaign Link'}</span>                  </div>
                     <span>{item.name || 'Campaign Link'}</span>                  </div>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
       <div className="grid gap-4">
         {generatedLinks.length > 0 ? (
@@ -741,10 +842,15 @@ export function PartnerReferralLinks() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>                 </CardTitle>
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </CardTitle>
 >>>>>>>               </CardHeader>
               <CardContent className='pb-4'>
@@ -772,6 +878,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </CardHeader>;
               <CardContent className='pb-4'>;
                 <div className='flex space-x-2'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -785,6 +892,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CardContent className="pb-4">
                 <div className="flex space-x-2">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <Input
                     value={item.link}
                     readOnly
@@ -849,6 +958,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Button
                 variant='outline'
                 onClick={() => setIsDialogOpen(true)}
+<<<<<<< HEAD
                 className='flex items-center gap-2'              >
                 <Plus className='h-4 w-4' />
                 Create First Link
@@ -893,6 +1003,11 @@ document.body.removeChild (link)
 <<<<<<< HEAD
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+                className="flex items-center gap-2";
+              >;
+                <Plus className="h-4 w-4" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 Create First Link;
               </Button>;
             </CardContent>;
@@ -1001,6 +1116,7 @@ document.body.remove_child (link);
 }read_only className="font - mono text - xs"/> <Button > <Copy className="h - 4 w - 4"/> <span className="sr - only">Copy</span> </Button> </div> </CardContent> </Card>) ) ) : (<Card className="bg - zion - blue / 20 border - dashed border - zion - blue - light"> <CardContent className="flex flex - col items - center justify - center p - 6"> <p className="text - zion - slate - light text - center mb - 4"> Create custom campaign links to track different marketing efforts </p> <Button className="flex items - center gap - 2"> <Plus className="h - 4 w - 4" /> Create First Link </Button> </CardContent> </Card>);
 }</div> </div>);
 }'"}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>>       </div>;
     </div>;
@@ -1019,3 +1135,9 @@ document.body.remove_child (link);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+      </div>;
+    </div>;
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

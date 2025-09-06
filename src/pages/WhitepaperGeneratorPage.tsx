@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React, { useState, useEffect, useCallback } from 'react';
@@ -202,6 +203,8 @@ const COLORS = [
   '#AAAA00'
 ]
 // Helper for slugifying filenames
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 const slugify = (text: string): string => {
   return text
     .toString()
@@ -1150,6 +1153,7 @@ import { Input } from '@/components/ui/input';
     setCurrentSharedWhitepaperIsPublic(null)
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
     try {
       const whitepaperPayload = {
@@ -1345,6 +1349,8 @@ import { Input } from '@/components/ui/input';
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useEffect, useCallback } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',
@@ -1867,6 +1873,7 @@ const WhitepaperGeneratorPage: React.FC = () => {;
         setCurrentSharedWhitepaperIsPublic((linkResponse as any).is_public)
       }
 
+<<<<<<< HEAD
       // Ensure it's public before submitting, or handle as per requirements
       if (currentSharedWhitepaperIsPublic === false) {
         toast.info('Making whitepaper public before submitting to counsel...')
@@ -2146,6 +2153,8 @@ const WhitepaperGeneratorPage: React.FC = () => {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className="flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100">
       {/* Left Column: Inputs and Editors */}
@@ -2351,7 +2360,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               id='token_name';
               value={token_name}
               on_change={e => setTokenName (e.target.value)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               required;
             />;
           </div>;
@@ -2489,6 +2497,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Button
                   variant='ghost'
                   size='icon'
+<<<<<<< HEAD
                   onClick={() => removeDistributionItem(item.id)}
                   aria-label='Remove'
                 >
@@ -2560,6 +2569,140 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+                  onClick={() => removeDistributionItem(item && item.id)}
+                  aria-label='Remove';
+                >;
+                  <Trash2 className='h-4 w-4' />;
+                </Button>              </div>;
+            ))}
+            <Button
+              type='button'
+              onClick={addDistributionItem}
+              variant='outline'
+              className='w-full'>;
+              Add Distribution Item;
+            </Button>;
+            <div>;
+              <label
+                htmlFor='distributionBreakdownDetails'
+                className='block text-sm font-medium'>;
+                Additional Distribution Details (Text):;
+              </label>;
+              <textarea
+                id='distributionBreakdownDetails'
+                value={distributionBreakdown}
+                onChange={e => setDistributionBreakdown(e && e.target.value)}
+                className='mt-1 block w-full border-gray-300 rounded-md shadow-sm';
+                rows={2}
+
+              />            </div>;
+          </div>;
+
+          <div>;
+
+            <label
+              htmlFor='governanceLogic'
+              className='block text-sm font-medium'>;
+              Governance Logic:;
+            </label>;
+            <textarea
+              id='governanceLogic'
+              value={governanceLogic}
+              onChange={e => setGovernanceLogic(e && e.target.value)}
+              required;
+              className='mt-1 block w-full border-gray-300 rounded-md shadow-sm';
+            <label html_for='rewards_logic' className='block text - sm font - medium'>;
+              Rewards Logic:;
+            </label>;
+            <textarea;
+              id='rewards_logic';
+              value={rewards_logic}
+              on_change={e => setRewardsLogic (e.target.value)}
+              required;
+              className='mt - 1 block w - full border - gray - 300 rounded - md shadow - sm';
+              rows={3}
+            />;
+          </div>;
+          {/* Token Distribution Inputs */}
+          <div className='space - y-3 p - 3 border rounded - md'>;
+            <h2 className='text - lg font - semibold'>Token Distribution</h2>;
+            {distribution_data.map (item => (
+              <div key={item.id} className='flex items - center space - x-2'>;
+                <Input;
+                  type='text';
+                  placeholder='Category';
+                  value={item.name}
+                  on_change={e =>;
+                    handleDistributionChange (item.id, 'name', e.target.value);
+                  }
+                  className='flex - grow';
+                />;
+                <Input;
+                  type='number';
+                  placeholder='%';
+                  value={item.percentage}
+                  on_change={e =>;
+                    handleDistributionChange (
+                      item.id,
+                      'percentage',
+                      e.target.value);
+                  }
+                  className='w - 24';
+                  min='0';
+                  max='100';
+                />;
+                <Button;
+                  variant='ghost';
+                  size='icon';
+                  on_click={() => removeDistributionItem (item.id)}
+                  aria - label='Remove';
+                >;
+                  <Trash2 className='h - 4 w - 4' />;
+                </Button>              </div>))}
+            <Button;
+              type='button';
+              on_click={addDistributionItem}
+              variant='outline';
+              className='w - full';
+            >;
+              Add Distribution Item;
+            </Button>;
+            <div>;
+              <label;
+                html_for='distributionBreakdownDetails';
+                className='block text - sm font - medium';
+              >;
+                Additional Distribution Details (Text):;
+              </label>;
+              <textarea;
+                id='distributionBreakdownDetails';
+                value={distribution_breakdown}
+                on_change={e => setDistributionBreakdown (e.target.value)}
+                className='mt - 1 block w - full border - gray - 300 rounded - md shadow - sm';
+                rows={2}
+              />            </div>;
+          </div>;
+          <div>;
+            <label;
+              html_for='governance_logic';
+              className='block text - sm font - medium';
+            >;
+              Governance Logic:;
+            </label>;
+            <textarea;
+              id='governance_logic';
+              value={governance_logic}
+              on_change={e => setGovernanceLogic (e.target.value)}
+              required;
+              className='mt - 1 block w - full border - gray - 300 rounded - md shadow - sm';
+              rows={3}
+            />;
+          </div>;
+          <div>;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
             ))}
             <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>
@@ -2651,9 +2794,15 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div>
             <label htmlFor="legalDisclaimers" className="block text-sm font-medium">Legal Disclaimers:</label>
             <textarea id="legalDisclaimers" value={legalDisclaimers} onChange={(e) => setLegalDisclaimers(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
+<<<<<<< HEAD
           </div>
           <div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+          </div>
+          <div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <label
               htmlFor='legalDisclaimers'
               className='block text-sm font-medium'
@@ -2674,6 +2823,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2681,6 +2831,62 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             type='button'
             onClick={handleGenerateWhitepaper}
+=======
+          </Button>;
+
+          {isLoading && (;
+            <p className='text-center text-sm text-blue-600'>;
+              Draft generation in progress...;
+            </p>;
+
+          )}
+          {error &&;
+            !isLoading &&;
+            !isDownloading &&;
+            !isSharing &&;
+            !isSubmittingToCounsel && (;
+              <p className='text-center text-sm text-red-600 p-2 bg-red-50 rounded-md'>;
+                {error}
+              </p>;
+            )}
+
+
+          {shareableLink && !isSharing && currentSharedWhitepaperId && (;
+            <div className='mt-4 p-3 border rounded-md bg-green-50'>;
+              <div className='flex justify-between items-center'>;
+                <label className='block text-sm font-medium text-green-700'>;
+                  Shareable Link:;
+                </label>;
+
+                <Button
+                  onClick={handleTogglePublicStatus}
+                  variant='outline'
+                  size='sm' // smaller button
+                  disabled={isSharing} // Disable while another share operation is in progress
+                  className={
+                    currentSharedWhitepaperIsPublic
+                      ? 'bg-red-100 hover:bg-red-200'
+                      : 'bg-green-100 hover:bg-green-200'
+                  }>;
+            <label;
+              html_for='legal_disclaimers';
+              className='block text - sm font - medium';
+            >;
+              Legal Disclaimers:;
+            </label>;
+            <textarea;
+              id='legal_disclaimers';
+              value={legal_disclaimers}
+              on_change={e => setLegalDisclaimers (e.target.value)}
+              required;
+              className='mt - 1 block w - full border - gray - 300 rounded - md shadow - sm';
+              rows={3}
+            />          </div>;
+          {/* END OF INPUT FIELDS */}
+          <Button;
+            type='button';
+            on_click={handleGenerateWhitepaper}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             disabled={
               isLoading |isDownloading |isSharing |isSubmittingToCounsel
             }
@@ -2700,6 +2906,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             !isSubmittingToCounsel && (
               <p className='text-center text-sm text-red-600 p-2 bg-red-50 rounded-md'>
                 {error}
+<<<<<<< HEAD
               </p>
             )}
 <<<<<<< HEAD
@@ -2713,6 +2920,43 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+              </p>)}
+          {shareable_link && !is_sharing && currentSharedWhitepaperId && (
+            <div className='mt - 4 p - 3 border rounded - md bg - green - 50'>;
+              <div className='flex justify - between items - center'>;
+                <label className='block text - sm font - medium text - green - 700'>;
+                  Shareable Link:;
+                </label>;
+                <Button;
+                  on_click={handleTogglePublicStatus}
+                  variant='outline';
+                  size='sm' // smaller button;
+                  disabled={is_sharing} // Disable while another share operation is in progress;
+                  className={
+                    currentSharedWhitepaperIsPublic;
+                      ? 'bg - red - 100 hover:bg - red - 200';
+                      : 'bg - green - 100 hover:bg - green - 200';
+                  }                >;
+                  {currentSharedWhitepaperIsPublic;
+                    ? 'Make Private';
+                    : 'Make Public'}
+                </Button>;
+              </div>;
+
+                  onClick={() => {;
+                    navigator && navigator.clipboard.writeText(shareableLink);
+                    toast && toast.success('Link copied to clipboard!');
+
+              <div className='flex items - center space - x-2 mt - 1'>;
+                <Input;
+                  type='text';
+                  value={shareable_link}
+                  read_only;
+                  className='flex - grow bg - white text - xs';
+                />;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             type="button"
             onClick={handleGenerateWhitepaper}
             disabled={isLoading || isDownloading || isSharing || isSubmittingToCounsel}
@@ -2727,6 +2971,10 @@ ursor/fix-website-loading-errors-and-merge-6662
             <p className="text-center text-sm text-red-600 p-2 bg-red-50 rounded-md">{error}</p>
           }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {shareableLink && !isSharing && currentSharedWhitepaperId && (
             <div className="mt-4 p-3 border rounded-md bg-green-50">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2946,6 +3194,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="flex justify-between items-center">;
                 <label className="block text-sm font-medium text-green-700">Shareable Link:</label>;
                 <Button;
+<<<<<<< HEAD
                     onClick={handleTogglePublicStatus}
                     variant="outline";
                     size="sm" // smaller button;
@@ -2966,6 +3215,28 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className="text-xs mt-1 text-gray-600">;
                     Currently: {currentSharedWhitepaperIsPublic ? "Public" : "Private (Only admins can view)"}
                 </p>;
+=======
+                  variant='outline';
+                  size='sm';
+                  on_click={() => {
+                    navigator.clipboard.write_text (shareable_link);
+                    toast.success ('Link copied to clipboard!');
+                  }}
+                >;
+                  Copy;
+                </Button>              </div>;
+
+              {currentSharedWhitepaperIsPublic !== null && (
+                <p className='text - xs mt - 1 text - gray - 600'>;
+
+                  Currently:{' '}
+                  {currentSharedWhitepaperIsPublic;
+                    ? 'Public';
+                    : 'Private (Only admins can view)'}
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               )}
             </div>
           )}
@@ -3001,12 +3272,69 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               type='button'
               onClick={handleSubmitToCounsel}
+=======
+
+
+
+        </form>
+        </form>;
+
+        {/* Section Editors */}
+        {sections && sections.length > 0 && (;
+          <div className='mt-8 pt-6 border-t'>;
+            <h2 className='text-xl font-bold mb-4 text-center'>;
+              Edit Generated Sections;
+            </h2>;
+            {sections && sections.map(section => (;
+              <WhitepaperSectionEditor
+                key={section && section.id}
+                title={section && section.title}
+                content={section && section.content}
+                onContentChange={newContent =>;
+                  handleSectionContentChange(section && section.id, newContent);
+                }              />;
+            ))}
+          </div>;
+        )}
+        {rawDraft && (;
+          <div className='mt-6 p-3 border rounded-md'>;
+            <Button
+              onClick={() => setShowRawDraft(!showRawDraft)}
+              variant='outline';
+              size='sm';
+              className='w-full';
+            >;
+              {showRawDraft ? 'Hide' : 'Show'} Raw Generated Text            </Button>;
+            {showRawDraft && (;
+              <pre className='mt-2 p-2 bg-gray-50 text-xs whitespace-pre-wrap break-all max-h-60 overflow-y-auto rounded'>;
+                {rawDraft}
+              </pre>;
+            )}
+          </div>;
+        )}
+
+      </div>;
+
+
+                </p>)}
+            </div>)}
+          {is_sharing && (
+            <p className='text - center text - sm text - blue - 600'>;
+              Generating shareable link...;
+            </p>)}
+          {/* Submit to Counsel Button */}
+          {sections.length > 0 && (
+            <Button;
+              type='button';
+              on_click={handleSubmitToCounsel}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               disabled={
                 isSubmittingToCounsel |isLoading |isSharing |isDownloading
               }
@@ -3064,6 +3392,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         {/* Section Editors */}
         {sections.length > 0 && (
 
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -3079,6 +3408,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               Edit Generated Sections
             </h2>
             {sections.map(section => (
+=======
+          tokenSupply={tokenSupply}        />;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <div className="mt-8 pt-6 border-t">
             <h2 className="text-xl font-bold mb-4 text-center">Edit Generated Sections</h2>
             {sections.map((section) => (
@@ -3107,6 +3440,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 }              />
                 onContentChange={(newContent) => handleSectionContentChange(section.id, newContent)}
               />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -3166,6 +3500,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>
       {/* Right Column: Preview Panel - Pass ref here */}
 '"
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
             ))}
           </div>
@@ -3183,7 +3519,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             )}
             </div>;
 
+<<<<<<< HEAD
 >>>>>>>         )}
+=======
+        )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </div>
       {/* Right Column: Preview Panel - Pass ref here */}
 
@@ -3247,6 +3587,7 @@ export default WhitepaperGeneratorPage
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>>       <div id="preview-panel-content" ref={previewPanelRef} className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-1">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -3254,6 +3595,8 @@ export default WhitepaperGeneratorPage
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <div id="preview-panel-content" ref={previewPanelRef} className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-1">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         <WhitepaperPreviewPanel
@@ -3263,9 +3606,12 @@ export default WhitepaperGeneratorPage
             tokenSupply={tokenSupply}
         />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </div>;
     </div>;
   );
@@ -3275,6 +3621,7 @@ export default WhitepaperGeneratorPage;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 
@@ -3289,3 +3636,18 @@ export default WhitepaperGeneratorPage;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+        className='md:w - 1/2 lg:w - 3/5 xl:w - 2/3 p - 1';
+      >;
+        <WhitepaperPreviewPanel;
+          sections={sections}
+          distributionChartData={distributionChartData}
+          token_name={token_name}
+          token_supply={token_supply}        />;
+      </div>;
+    </div>);
+}
+export default WhitepaperGeneratorPage;
+'";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/jobs/ApplicationScoreCard.tsx
 
 <<<<<<< HEAD
@@ -120,6 +121,9 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       case "Strongly Recommended": return "bg-green-100 text-green-800"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   // Get suggestion color
+=======
+// Get suggestion color
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const getSuggestionColor = (suggestion: string | undefined,) => {
     switch (suggestion) {
 
@@ -128,6 +132,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
 =======
       case "Strongly Recommended": return "bg-green-100 text-green-800",
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>       case "Recommended for Review":
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -143,6 +148,8 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
     switch (suggestion) {
       case "Strongly Recommended": return "bg-green-100 text-green-800"
       case "Strongly Recommended": return "bg-green-100 text-green-800",
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       case "Recommended for Review":
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         return "bg-blue-100 text-blue-800"
@@ -195,6 +202,11 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         return "bg-orange-100 text-orange-800",;
       default:;
         return "bg-gray-100 text-gray-800";
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -466,6 +478,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
         }
       },;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/jobs/ApplicationScoreCard.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -476,10 +489,33 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+          setIsScoring(false),
+          toast.error("Failed to check scoring status"),
+          return;
+
+        }
+        if (data.scored_at) {
+
+          setIsScoring(false),
+          toast.success("Resume scoring completed"),
+          if (onScoreUpdated) onScoreUpdated(data as JobApplication),
+
+        }
+
+        
+        if (attempts < maxAttempts) {
+          setTimeout(checkScore, 3000)
+        } else {
+          setIsScoring(false),
+          toast.info("Scoring is taking longer than expected. Check back later.")
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
     }
   },
 
+<<<<<<< HEAD
 =======
 >>>>>>>     }
   },
@@ -487,6 +523,8 @@ export function ApplicationScoreCard({ application, onScoreUpdated } Application
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   // Render the score result or button to score
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/ApplicationScoreCard.tsx
@@ -496,6 +534,10 @@ ursor/fix-website-loading-errors-and-merge-6662
       toast && toast.error(`Failed to score resume: ${error && error.message}`);
     }
   },;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Render the score result or button to score;
 <<<<<<<< HEAD:src/components/jobs/ApplicationScoreCard.tsx
 >>>>>>>   return (
@@ -677,8 +719,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                         {application && application.match_breakdown.skills_match && skills_match.missing && (;
                           <p>Missing skills: {application && application.match_breakdown.skills_match && skills_match.missing.join(", ")}</p>;
                         )}
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/jobs/ApplicationScoreCard.tsx
 <<<<<<< HEAD
+=======
+
+
+                      </div>;
+                      </div>;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
                     )}
 
@@ -782,8 +832,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </div>
                     )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/ApplicationScoreCard.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState  } from './react';
 import { Badge  } from '@/components / ui / badge';
 import { Button  } from '@/components / ui / button';
@@ -952,10 +1005,18 @@ if ( {) {
                         {application.match_breakdown.certifications_match.matching && (
                           <p > Matching certs: {application.match_breakdown.certifications_match.matching.join (", ")}</p>)}
                         {application.match_breakdown.certifications_match.missing && (
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/jobs/ApplicationScoreCard.tsx
                           <p>Missing certs: {application.match_breakdown.certifications_match.missing.join(", ")}</p>
                         )}
 <<<<<<< HEAD
+=======
+
+
+                      </div>;
+                      </div>;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
                     )}
 
@@ -963,16 +1024,22 @@ if ( {) {
                     )}
 >>>>>>>                     )}
                     
+<<<<<<< HEAD
 >>>>>>>                     {application.match_breakdown.education_match && (
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     {application.match_breakdown.education_match && (
 >>>>>>>                       <div>
                         <p className="font-medium">Education Match: {application.match_breakdown.education_match.score}/100</p>
                         <p>{application.match_breakdown.education_match.analysis}</p>
                       </div>
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/ApplicationScoreCard.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       </div>;
                     )}
                     {application && application.match_breakdown.experience_match && (;
@@ -1096,6 +1163,7 @@ if ( {) {
             <Button
               onClick = {handleScore,}
               disabled = {isScoring,}
+<<<<<<< HEAD
             <Button 
               onClick = {handleScore,}
               disabled = {isScoring,}
@@ -1113,11 +1181,30 @@ if ( {) {
             <Button 
               onClick={handleScore} 
               disabled={isScoring}
+=======
+              className="w-full">;
+              {isScoring ? (;
+                <>;
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
+                  Scoring Resume...;
+                </>;
+              ) : (;
+                "Score Resume";
+
+            <Button 
+              onClick={handleScore} 
+              disabled={isScoring}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <Button 
               onClick = {handleScore,}
               disabled = {isScoring,}
               onClick={handleScore} 
               disabled={isScoring}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               className="w-full"
             >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1128,6 +1215,7 @@ if ( {) {
                 </>
               ) : (
                 "Score Resume"
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
@@ -1162,6 +1250,8 @@ if ( {) {
               ) : (;
                 "Score Resume";
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/ApplicationScoreCard.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               )}
 =======
               ) :(;
@@ -1175,6 +1265,7 @@ if ( {) {
 
 ;
 
+<<<<<<< HEAD
 =======
 };
 ;
@@ -1190,6 +1281,8 @@ if ( {) {
 <<<<<<< HEAD
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           <p > Missing certs: {application.match_breakdown.certifications_match.missing.join (", ")}</p>)}
                       </div>)}
                     {application.match_breakdown.education_match && (
@@ -1221,6 +1314,7 @@ if ( {) {
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
 =======
   ),; interface ApplicationScoreCardProps {;
   application: JobApplication;
@@ -1302,3 +1396,7 @@ return ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

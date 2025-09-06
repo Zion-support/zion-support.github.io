@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/utils/accessibility-checker.ts
 
 ========
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/utils/accessibility-checker.ts
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Accessibility checker utilities;
 export const check_accessibility = () =>: any {
   console.log ('Checking accessibility...');
@@ -15,8 +18,11 @@ export const validateAriaLabels = () =>: any {
 ;
 <<<<<<<< HEAD:src/utils/accessibility-checker.ts
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Accessibility checker utilities
 export const checkAccessibility = () => {;
   console.log('Checking accessibility...');
@@ -58,6 +64,7 @@ export const validateAriaLabels = () => {
 
 export const validateAriaLabels = () => {;
   console.log('Validating ARIA labels...');
+<<<<<<< HEAD
 };
 
 <<<<<<< HEAD
@@ -65,3 +72,6 @@ export const validateAriaLabels = () => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

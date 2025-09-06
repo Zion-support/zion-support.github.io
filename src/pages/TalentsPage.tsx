@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { useRouter } from 'next/router',
@@ -38,6 +39,17 @@ import { motion, AnimatePresence } from 'framer-motion',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+let filteredTalents = allTalents
+    }
+}
+;
+
+import { useRouter } from 'next/router',
+import { useState, useEffect, useCallback, useMemo } from 'react',
+import { motion, AnimatePresence } from 'framer-motion',
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react'
 >>>>>>> import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
 import { generateAITalents, getTalentMarketStats, getRecommendedTalents  } from '@/utils/talentAutoFeedAlgorithm';
@@ -510,12 +522,19 @@ export default function TalentsPage() {;
     }
 }
 
+<<<<<<< HEAD
 >>>>>>> 
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
     let filteredTalents = allTalents
+=======
+
+
+;
+    let filtered_talents = all_talents;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
 }
 
@@ -671,6 +690,7 @@ export default function TalentsPage() {;
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -687,3 +707,6 @@ export default function TalentsPage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

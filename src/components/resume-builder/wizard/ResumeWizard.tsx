@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -180,6 +181,9 @@ export function ResumeWizard() {;
 <<<<<<< HEAD
 
   if (isLoading) {
+=======
+if (isLoading) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return (
       <div className="flex justify-center items-center h-64">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -199,6 +203,11 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   if (error) {
+<<<<<<< HEAD
+=======
+
+  if (error) {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return (
       <Alert variant="destructive" className="mb-6">
         <AlertCircle className="h-4 w-4" />
@@ -241,14 +250,21 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
   if (showNewResumeForm) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
   }
 
   if (showNewResumeForm) {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return (
       <CreateResumeForm
         onCreateResume = {handleCreateNewResume,}
@@ -261,6 +277,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ;
@@ -278,6 +295,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     );
   }
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   return (
 =======
@@ -291,6 +310,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
 <<<<<<< HEAD
 
+<<<<<<< HEAD
             variant="outline"
 =======
           <Button
@@ -301,6 +321,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     )
   }
   
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
@@ -318,6 +340,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -325,6 +348,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
@@ -371,6 +398,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -379,6 +407,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
       
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Card>
 >>>>>>>         <CardContent className="pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -389,6 +421,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
           <Tabs value={activeTab} onValueChange={setActiveTab}>
 =======
 >>>>>>>           <Tabs value={activeTab} onValueChange={setActiveTab}>
@@ -468,6 +501,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 onPrevStep={prevStep}
 ursor/fix-website-loading-errors-and-merge-6662
           <Tabs value={activeTab} onValueChange={setActiveTab}>
+=======
+
+          
+
+
+          <Tabs value={activeTab} onValueChange={setActiveTab}>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             variant="outline";
             size="sm";
             className="gap-2";
@@ -523,7 +563,6 @@ if ( {) {
             className="gap - 2";
           >;
             <FilePlus className="h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Create New;
           </Button>;
         </div>;
@@ -619,12 +658,66 @@ if ( {) {
       </Card>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+
+};
+
+};
+<AlertTitle>Error</AlertTitle> <AlertDescription> {;
+  error ;
+}</AlertDescription> </Alert>) ;
+
+}if (showNewResumeForm) {;
+
+  () => setShowNewResumeForm (false) ;
+}isLoading= {;
+  isLoading ;
+}/>) ;
+}> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabsvalue= {
+  activeTab 
+}onValueChange= {
+  setActiveTab 
+}> <ResumeStepssteps= {
+  RESUME STEPS 
+}activeTab= {
+  activeTab 
+}onChange= {
+  setActiveTab 
+}/> {;
+  resume && (<ResumeStepContentactiveTab= {
+  activeTab 
+      <Card>;
+        <CardContent className="pt - 6">;
+          <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4 mb - 6">;
+            <h2 className="text - xl font - semibold">{resume?.basic_info?.title || 'My Resume'}</h2>;
+            <ResumeProgress resume={resume} progress={progress} />;
+          </div>;
+          <Tabs value={active_tab} onValueChange={setActiveTab}>;
+            <ResumeSteps;
+              steps = {RESUME_STEPS, }
+              active_tab = {active_tab, }
+              on_change = {setActiveTab, }
+            />;
+            {resume && (
+              <ResumeStepContent;
+                active_tab = {active_tab, }
+                resume = {resume as Resume, }
+                onNextStep = {next_step, }
+                onPrevStep = {prev_step, }
+              />)}
+          </Tabs>;
+        </CardContent>;
+      </Card>;
+    </div>);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 
@@ -639,3 +732,10 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+  prev_step;
+}/>);
+}</Tabs> </CardContent> </Card> </div>);
+}'"}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
 
 =======
@@ -486,6 +487,11 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       // Create the product listing
       const productData = {
+=======
+try {
+      // Create the product listing;
+      const product_data = {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         title: values.title,
         description: values.description,
 <<<<<<< HEAD
@@ -789,11 +795,22 @@ import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/router';
 import Image from 'next/image'; // Import next/image;
 import { logErrorToProduction } from '@/utils/productionLogger';
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+      const { data: productRecord, error: productError } = await supabase
+        .from('product_listings')
+        .insert([productData])
+        .select('id')
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         .single(),
         
       if (productError) {
@@ -808,7 +825,10 @@ import { useToast } from "@/hooks/use-toast",;
 import { useRouter } from "next/router",;
 import Image from 'next/image', // Import next/image;
 import {logErrorToProduction} from '@/utils/productionLogger',;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {;
   Form,;
   FormControl,;
@@ -1283,6 +1303,7 @@ export function ProductSubmissionForm() {;
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1294,6 +1315,8 @@ export function ProductSubmissionForm() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         title: "Publication Failed",
         description: error instanceof Error ? error.message : "An unknown error occurred",
         variant: "destructive"})
@@ -1302,6 +1325,7 @@ export function ProductSubmissionForm() {;
     }
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1337,6 +1361,10 @@ export function ProductSubmissionForm() {;
 >>>>>>>         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className='w-full'>;
       <TabsList className='grid grid-cols-2 mb-6'>;
@@ -1354,12 +1382,17 @@ export function ProductSubmissionForm() {;
       <TabsContent value="manual">
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
+=======
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'>;
           <Sparkles className='h-4 w-4 mr-2' />;
           AI-Powered Creation;
@@ -1368,9 +1401,13 @@ export function ProductSubmissionForm() {;
       <TabsContent value='manual'>;
         <Form {...form}>;
           <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-6'>;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>>             <FormField
+=======
+            <FormField
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 ========
             <FormField
@@ -1473,6 +1510,7 @@ export function ProductSubmissionForm() {;
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "title"> }) => {
                 const { onChange, onBlur, value, ref } = field,
                 return (
+<<<<<<< HEAD
                   <FormItem>
                     <FormLabel>Product Title</FormLabel>
                     <FormControl>
@@ -1520,21 +1558,31 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <FormItem>
                     <FormLabel>Product Title</FormLabel>
                     <FormControl>
+=======
+
+
+                  <FormItem>
+                    <FormLabel>Product Title</FormLabel>
+                    <FormControl>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 field: ControllerRenderProps<ProductFormValues, 'title'>;
               }) => {;
                 const { onChange, onBlur, value, ref } = field;                return (
                   <FormItem>;
                     <FormLabel>Product Title</FormLabel>;
                     <FormControl>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       <Input
 
                         ref={ref}                      />;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         placeholder="Enter product title"
 ;
       // Show success message;
@@ -1886,11 +1934,14 @@ export function ProductSubmissionForm() {;
                 field: ControllerRenderProps < ProductFormValues, 'title'>;
               }) => {
                 const { on_change, on_blur, value, ref } = field; return (
+<<<<<<< HEAD
 =======
                 );
               }}
             />;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <FormField;
               control={form.control}
               name="description"
@@ -2016,6 +2067,7 @@ export function ProductSubmissionForm() {;
               />
               <FormField
                 control={form.control}
+<<<<<<< HEAD
                 name='category'
                 render={({
                   field
@@ -2026,6 +2078,10 @@ export function ProductSubmissionForm() {;
 <<<<<<< HEAD
 >>>>>>>                     <FormLabel>Category</FormLabel>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+                name="price";
+                render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <FormItem>;
                     <FormLabel > Product Title</FormLabel>;
                     <FormControl>;
@@ -2071,6 +2127,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Textarea;
                       placeholder='Describe your product in detail...';
                       className='min - h-32';
+<<<<<<< HEAD
 =======
                 ),;
               }}
@@ -2087,6 +2144,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       placeholder="Describe your product in detail...";
                       className="min-h-32";
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       {...field}
                     />;
                   </FormControl>;
@@ -2261,6 +2320,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2281,6 +2341,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>>                   <FormLabel>Tags</FormLabel>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+                name="category";
+                render={({ field }: { field: ControllerRenderProps<ProductFormValues "category"> }) => (;
+                  <FormItem>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <FormLabel>Category</FormLabel>;
                     <FormControl>;
                       <select
@@ -2349,8 +2414,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <FormItem>
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <FormLabel>Tags</FormLabel>
 >>>>>>>                   <FormControl>
                     <Input
@@ -2573,6 +2641,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                       onChange={handleImageChange}
                       className="cursor-pointer"
                     />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </FormControl>
                   <FormDescription>
                     Upload a high-quality image of your product (recommended size: 1200x800px)
@@ -2589,6 +2662,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
                           alt='Product image preview'                          width={600} // Example width, adjust as needed
 >>>>>>>                           height={400} // Example height, adjust as needed
@@ -2599,6 +2673,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <AspectRatio ratio={3 / 2}>
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
+=======
+
+                  {imagePreview && (
+                    <div className='mt-2 w-full max-w-md border rounded overflow-hidden'>
+                      <AspectRatio ratio={3 / 2}>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       className='cursor-pointer'                    />;
                   </FormControl>;
                   <FormDescription>;
@@ -2617,8 +2697,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                           width={600} // Example width, adjust as needed
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           height={400} // Example height, adjust as needed
                           className='w-full h-full object-cover'
 >>>>>>>                           priority={false} // Preview images are not LCP
@@ -2922,10 +3005,50 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+            />;
+            <FormField;
+              control={form.control}
+              name="video"
+              render={() => (
+
+
+                <FormItem>
+                  <FormLabel>Product Video (MP4)</FormLabel>
+                  <FormControl>
+                    <Input type="file" accept="video/mp4" onChange={handleVideoChange} className="cursor-pointer" />
+                  </FormControl>
+                  <FormDescription>
+                    Optional video demonstrating your product
+                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+
+            />;
+            <FormField;
+              control={form.control}
+              name="model"
+              render={() => (
+
+                <FormItem>
+                  <FormLabel>3D Model (glb)</FormLabel>
+                  <FormControl>
+                    <Input type="file" accept="model/gltf-binary,.glb" onChange={handleModelChange} className="cursor-pointer" />
+                  </FormControl>
+                  <FormDescription>
+                    Upload a 3D model for interactive viewing
+                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <div className="flex justify-end">
@@ -2939,6 +3062,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>               </Button>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -2952,6 +3076,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </Button>
             </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -3318,6 +3447,12 @@ const {
   data: publicUrlData ';
 }= supabase.storage.from ('products') .getPublicUrl (model_path);
 const {
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   error: update_error ';
 }= await supabase .from ('product listings');
 }//Send listing to moderation service try {';
@@ -3330,7 +3465,26 @@ const {
   toast ({
 }finally {
   setIsSubmitting (false);
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ProductSubmissionForm.tsx
+=======
+
+
+      
+      <TabsContent value="ai">
+        <AIListingGenerator 
+          onApplyGenerated={handleApplyGenerated}
+          initialValues={{
+            title: form.getValues("title"),
+            category: form.getValues("category")
+          }}
+        />;
+      </TabsContent>;
+    </Tabs>;
+  );
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 }className="w - full"> <TabsList className="grid grid - cols - 2 mb - 6" > <TabsTrigger value="manual" className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple" > ai"className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple"> <Sparkles className="h - 4 w - 4 mr - 2"/> AI - Powered Creation </TabsTrigger> </TabsList>;
 }";
@@ -3355,6 +3509,7 @@ const {
 }/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
 }/> <div className="flex justify - end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>);
 }'"  );
+<<<<<<< HEAD
 }
 <<<<<<<< HEAD:src/components/ProductSubmissionForm.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -3447,3 +3602,6 @@ return (<Tabs value= {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useEffect, useState } from 'react',;
@@ -5,6 +6,11 @@ import React, { useEffect, useState } from 'react',;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+const in_standalone = window.match_media ('(display - mode: standalone)').matches,
+        description: 'Your browser does not support app installation.'}),
+      return;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
     const inStandalone = window.matchMedia('(display-mode: standalone)').matches
         description: 'Your browser does not support app installation.'})
@@ -16,6 +22,7 @@ import React, { useEffect, useState } from 'react',;
         description: 'Your browser does not support app installation.'}),
       return;
 
+<<<<<<< HEAD
 >>>>>>> import React, { useEffect, useState } from 'react',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -25,6 +32,8 @@ import React, { useEffect, useState } from 'react',;
     const inStandalone = window.matchMedia('(display-mode: standalone)').matches,
         description: 'Your browser does not support app installation.'}),
       return;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useEffect, useState } from 'react',;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Button } from '@/components/ui/button',;
@@ -91,6 +100,7 @@ export const PwaInstallButton: React.FC = () => {;
   )
 },
 
+<<<<<<< HEAD
 export default PwaInstallButton,
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -109,3 +119,6 @@ export default PwaInstallButton,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+export default PwaInstallButton,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

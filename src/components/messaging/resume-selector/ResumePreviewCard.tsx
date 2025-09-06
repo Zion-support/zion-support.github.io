@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -86,6 +87,9 @@ interface ResumePreviewCardProps {
 export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePreviewCardProps) {
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+return (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">
       <CardContent className="p-4">
         <div className="flex justify-between items-start mb-2">
@@ -203,10 +207,24 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+        {resume.skills && resume.skills.length > 0 && (
+          <div className="flex flex-wrap gap-1 mt-2">
+            {resume.skills.slice(0, 5).map((skill, index) => (
+            className='h-8 w-8 p-0'>;
+            <Download className='h-4 w-4 text-zion-cyan' />;
+            <span className='sr-only'>Download Resume</span>;
+          </Button>;
+        </div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
         {resume.skills && resume.skills.length > 0 && (
           <div className='flex flex-wrap gap-1 mt-2'>
@@ -219,6 +237,11 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+        
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {resume.skills && resume.skills.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-2">
 
@@ -281,6 +304,7 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
 
               <Badge 
 
+<<<<<<< HEAD
                 variant="outline"
 =======
               >
@@ -326,6 +350,9 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
 >>>>>>>     </Card>;
 ursor/fix-website-loading-errors-and-merge-6662
               >
+=======
+              >
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 variant='outline';
                 className='bg - zion - blue - dark / 50 text - zion - cyan border - zion - purple / 20 text - xs'              >          <div className="flex flex - wrap gap - 1 mt - 2">;
             {resume.skills.slice (0, 5).map ((skill, index) => (
@@ -333,7 +360,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                 key = {index, }
                 variant="outline";
                 className="bg - zion - blue - dark / 50 text - zion - cyan border - zion - purple / 20 text - xs";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {skill.name}
               </Badge>))}
             {resume.skills.length > 5 && (
@@ -341,6 +367,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
       </CardContent>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     </Card>;
@@ -361,12 +388,15 @@ ursor/fix-website-loading-errors-and-merge-6662
     </Card>
   )
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </CardContent>;
     </Card>;
   );
 };
 }
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -377,3 +407,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+              <Badge;
+                variant='outline';
+                className='bg - zion - blue - dark / 50 text - zion - slate border - zion - purple / 20 text - xs'              >              <Badge;
+                variant="outline";
+                className="bg - zion - blue - dark / 50 text - zion - slate border - zion - purple / 20 text - xs";
+              >;
+                +{resume.skills.length - 5} more;
+              </Badge>)}
+          </div>)}
+      </CardContent>;
+    </Card>);
+}
+
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

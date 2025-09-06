@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 import { Badge } from '@/components/ui/badge'
@@ -52,6 +53,14 @@ import { Star } from 'lucide-react'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+avatarUrl?: string;
+  coverImageUrl?: string;
+  location?: string;
+  rating?: number;
+  reviewCount?: number;
+  aiScore?: number;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 export function ProfileHero({
 
@@ -165,6 +174,68 @@ export function ProfileHero({
   profileType
 }: ProfileHeroProps) {
   return (
+<<<<<<< HEAD
+=======
+    <div className="w-full overflow-hidden">;
+      <div className="relative">;
+        <AspectRatio ratio={3/1} className="bg-zion-blue-light">;
+          {coverImageUrl ? (;
+            <img
+              src = {coverImageUrl,}
+              alt={`${name} cover`}
+              className='w-full h-full object-cover'
+              loading='lazy'
+            />;
+          ) : (;
+            <div className='w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark' />;
+          )}
+
+        </AspectRatio>;
+
+        <div className='container px-4 md:px-6'>;
+          <div className='flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10'>;
+            <Avatar className='h-24 w-24 md:h-32 md:w-32 border-4 border-zion-blue-dark ring-2 ring-zion-purple/30'>;
+              {avatarUrl ? (;
+                <AvatarImage src={avatarUrl} alt={name} />;
+              ) : (;
+                <AvatarFallback className='bg-zion-purple/20 text-zion-cyan text-xl'>                  {name && name.substring(0, 2).toUpperCase()}
+                </AvatarFallback>;
+
+              )}
+            </Avatar>            />;
+          ) : (;
+            <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />;
+
+  profileType: 'service' | 'talent'
+}
+
+export function ProfileHero({
+  name;
+  title;
+  avatarUrl;
+  coverImageUrl;
+  location;
+  rating;
+  reviewCount;
+  aiScore;
+
+
+export function ProfileHero({
+
+  name,
+  title,
+  avatarUrl,
+  coverImageUrl,
+  location,
+  rating,
+  reviewCount,
+  aiScore,
+
+
+  profileType
+}: ProfileHeroProps) {
+  return (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <div className="w-full overflow-hidden">
       <div className="relative">
         <AspectRatio ratio={3/1} className="bg-zion-blue-light">
@@ -227,6 +298,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -234,6 +306,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className="container px-4 md:px-6">
 >>>>>>>           <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">
             <Avatar className="h-24 w-24 md:h-32 md:w-32 border-4 border-zion-blue-dark ring-2 ring-zion-purple/30">
@@ -274,6 +350,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   className={cn(
                     "ml-2 border-zion-purple/50 text-zion-cyan"
 
+<<<<<<< HEAD
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
@@ -288,6 +365,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>                 {location && (
                   <span className="text-sm text-zion-slate-light">{location}</span>
                 )}
+=======
+            <div className='mt-4 md:mt-0 md:ml-6 md:mb-1'>;
+              <div className='flex flex-wrap items-center gap-2 mb-1'>;
+                <h1 className='text-2xl md:text-3xl font-bold text-white'>;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   {name}
                 </h1>;
                 <Badge
@@ -404,6 +488,10 @@ export function ProfileHero({;
                 )}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {rating && (
 =======
 
@@ -420,6 +508,7 @@ export function ProfileHero({;
                       <span className='text-zion-slate-light text-sm'>
                         ({reviewCount})
                       </span>
+<<<<<<< HEAD
                     )}
                   </div>
                 )}
@@ -469,6 +558,19 @@ export function ProfileHero({;
                     <span className="text-white font-medium">{rating.toFixed(1)}</span>
                     {reviewCount && (
                       <span className="text-zion-slate-light text-sm">({reviewCount})</span>
+=======
+
+                {rating && (;
+                  <div className='flex items-center gap-1'>;
+                    <Star className='w-4 h-4 fill-zion-cyan text-zion-cyan' />;
+                    <span className='text-white font-medium'>;
+                      {rating && rating.toFixed(1)}
+                    </span>;
+                    {reviewCount && (;
+                      <span className='text-zion-slate-light text-sm'>;
+                        ({reviewCount});
+                      </span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     )}
                   </div>;
 <<<<<<< HEAD
@@ -482,11 +584,23 @@ export function ProfileHero({;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 )}
+<<<<<<< HEAD
                 
                 {aiScore && (
                   <div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">
                     AI Match: {aiScore}%
                   </div>
+=======
+
+                {rating && (;
+                  <div className="flex items-center gap-1">;
+                    <Star className="w-4 h-4 fill-zion-cyan text-zion-cyan" />;
+                    <span className="text-white font-medium">{rating && rating.toFixed(1)}</span>;
+                    {reviewCount && (;
+                      <span className="text-zion-slate-light text-sm">({reviewCount})</span>;
+                    )}
+                  </div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 )}
               </div>;
             </div>;
@@ -501,6 +615,7 @@ export function ProfileHero({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -514,3 +629,6 @@ export function ProfileHero({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
 
 ========
@@ -15,6 +16,8 @@
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from 'react'
 import {
   Card
@@ -43,6 +46,10 @@ interface PerformanceMetrics {
   healthStatus: 'healthy' | 'warning' | 'error'
 interface Improvement {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -85,8 +92,11 @@ interface PerformanceMetrics {;
   loadTime: number;
   healthStatus: 'healthy' | 'warning' | 'error';
 interface Improvement {;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   id: string;
   title: string;
   description: string;
@@ -471,6 +481,7 @@ const PerformanceDashboard: React.FC = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
 =======
 >>>>>>>   return (
@@ -495,14 +506,23 @@ const PerformanceDashboard: React.FC = () => {;
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 
 
         
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>         <Card>
+=======
+        <Card>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
               Page Count
@@ -515,6 +535,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </Card>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
         <Card>
 =======
 >>>>>>>         <Card>
@@ -522,6 +543,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Page Count</CardTitle>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+        
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
@@ -574,6 +601,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
         <Card>
 =======
 >>>>>>>         <Card>
@@ -594,6 +622,9 @@ ursor/fix-website-loading-errors-and-merge-6662
               <span className="text-sm font-semibold text-green-600">Healthy</span>
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
@@ -690,12 +721,15 @@ const PerformanceDashboard: React.FC = () => {;
         return <TrendingUp className='h-4 w-4 text-blue-500' />;
       default:;
         return <AlertCircle className='h-4 w-4 text-gray-500' />;
+<<<<<<< HEAD
 =======
             </div>
           </CardContent>
         </Card>
       </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {/* Completed Improvements */}
       <Card>
         <CardHeader>
@@ -756,9 +790,21 @@ const PerformanceDashboard: React.FC = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>                   <p className='text-sm text-gray-600 mt-1'>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+                  <p className="text-sm text-gray-600 mt-1">
+  },;
+  const getCategoryIcon = (category: string) => {;
+    switch (category) {;
+      case 'performance': return <Zap className="h-4 w-4" />,;
+      case 'security': return <Shield className="h-4 w-4" />,;
+      case 'ux': return <Search className="h-4 w-4" />,;
+      case 'build': return <TrendingUp className="h-4 w-4" />,;
+      default: return <CheckCircle className="h-4 w-4" />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   };
   const getImpactColor = (impact: string,) => {;
@@ -1023,7 +1069,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </p>
                 </div>
               </div>
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             ))}
 
           </div>;
@@ -1084,12 +1133,16 @@ ursor/fix-website-loading-errors-and-merge-6662
         </Button>
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
           <TrendingUp className="h-4 w-4 mr-2" />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           Bundle Analysis
         </Button>
       </div>
     </div>
   )
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1106,17 +1159,27 @@ export default PerformanceDashboard
 export default PerformanceDashboard
 export default PerformanceDashboard
 export default PerformanceDashboard
+=======
+
+          variant='outline';
+        >;
+          <TrendingUp className='h-4 w-4 mr-2' />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 export default PerformanceDashboard;
 export default PerformanceDashboard, ;
 export default PerformanceDashboard;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 },
 
 export default PerformanceDashboard, 
@@ -1163,6 +1226,7 @@ export default PerformanceDashboard;
 <<<<<<<< HEAD:src/components/PerformanceDashboard.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 
@@ -1172,6 +1236,9 @@ export default PerformanceDashboard;
 ========
 export default PerformanceDashboard, ;
 export default PerformanceDashboard, ;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <div className='space - y-4'>;
             {completed_improvements.map (improvement => (
               <div;
@@ -1223,6 +1290,7 @@ export default PerformanceDashboard, ;
 }
 export default PerformanceDashboard;
 export default PerformanceDashboard,
+<<<<<<< HEAD
 export default PerformanceDashboard,
 =======
 import React, { useState } from 'react',;
@@ -1488,3 +1556,6 @@ export default PerformanceDashboard;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+export default PerformanceDashboard,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/admin/reviews/ReviewsModerationTable.tsx
 
 
@@ -167,6 +168,9 @@ import {
 import {
   Dialog,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+Dialog,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -629,6 +633,10 @@ export function ReviewsModerationTable(): any ({;
       </div>;
     );
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 =======
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",;
@@ -771,6 +779,7 @@ export function ReviewsModerationTable({;
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/admin/reviews/ReviewsModerationTable.tsx
 
+<<<<<<< HEAD
 =======
   }
   const handleApprove = (reviewId: string) => {
@@ -992,6 +1001,16 @@ export function ReviewsModerationTable({;
           <TableRow>;
 <<<<<<< HEAD
 ========
+=======
+
+
+                    ) : (
+                      <AvatarFallback>
+                        {review.reviewer_profile?.display_name ? (
+                          getInitials(review.reviewer_profile.display_name)
+                        ) : (
+                          <User className='h-4 w-4' />
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         src={review && review.reviewer_profile.avatar_url}
                         alt={review && review.reviewer_profile.display_name || ''}                      />;
                     ) : (;
@@ -1038,6 +1057,16 @@ export function ReviewsModerationTable({;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       </AvatarFallback>;
                     )}
+<<<<<<< HEAD
+=======
+
+
+                      <span className="text-sm font-medium">
+                        {review.reviewer_profile?.display_name || "User"}
+
+
+                      </span>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </Avatar>;
                   <div>;
 <<<<<<< HEAD
@@ -1311,6 +1340,7 @@ export function ReviewsModerationTable({;
                           }
                         >                          Mark as approved;
                         </DropdownMenuItem>)}
+<<<<<<< HEAD
 =======
                       <Button;
                         variant="ghost";
@@ -1334,6 +1364,8 @@ export function ReviewsModerationTable({;
                           Mark as approved;
                         </DropdownMenuItem>;                      )}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
@@ -1470,6 +1502,10 @@ export function ReviewsModerationTable({;
                         <DropdownMenuItem onClick={() => updateReviewStatus({ reviewId: review.id, status: "approved" })}>
                           Mark as approved
                         </DropdownMenuItem>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       )}
                     </DropdownMenuContent>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1478,9 +1514,12 @@ export function ReviewsModerationTable({;
               </TableCell>
             </TableRow>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           ))}
         </TableBody>
       </Table>
@@ -1521,6 +1560,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className="flex items-center gap-2">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -1528,6 +1568,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <Avatar>
                     {selectedReview.reviewer_profile?.avatar_url ? (
                       <AvatarImage
@@ -1560,6 +1604,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                           )
                         ) : (
                           <User className='h-4 w-4' />
+<<<<<<< HEAD
                         )}
                       </AvatarFallback>
 <<<<<<< HEAD
@@ -1571,6 +1616,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                         alt={selectedReview.reviewer_profile.display_name || ""}
                       />;
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </TableBody>;
       </Table>;
       {selectedReview && (;
@@ -1663,6 +1710,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -1686,6 +1734,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                         : selectedReview.reviewer_profile?.display_name |
                           'User'}
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     )}
 
 
@@ -1736,6 +1788,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="space-y-2">
                 <h4 className="text-sm font-medium">Additional Ratings</h4>
                 <div className="flex flex-wrap gap-2">
+<<<<<<< HEAD
                   {selectedReview.communication_rating && (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                     <Badge variant="outline">
@@ -1774,13 +1827,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>>                     </Badge>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   {selectedReview.communication_rating && (
                     <Badge variant='outline'>
                       Communication: {selectedReview.communication_rating}/5
                     </Badge>
+<<<<<<< HEAD
 ========
                     )}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/admin/reviews/ReviewsModerationTable.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </Avatar>;
                   <div>;
 <<<<<<< HEAD
@@ -1830,8 +1890,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
                     </Badge>
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>                   )}
+=======
+                  )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 ========
                       variant={
@@ -1920,6 +1984,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/admin/reviews/ReviewsModerationTable.tsx
                   <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               )}
 =======
@@ -1946,6 +2011,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             <DialogFooter>
               {selectedReview.status === "pending" && (
                 <>
+=======
+                    variant='destructive'
+                    onClick={() => handleReject(selectedReview && selectedReview.id)}
+                    disabled={isPending}                  >;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2185,7 +2255,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               )}
 =======
               {selectedReview.status === "approved" && (;
@@ -2220,9 +2293,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 };"
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
+<<<<<<< HEAD
 ========
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/admin/reviews/ReviewsModerationTable.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </TableRow>))}
         </TableBody>;
       </Table>;
@@ -2432,6 +2508,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     </>;
   );
@@ -2440,6 +2517,8 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </>;
   );
 }
@@ -2448,6 +2527,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }
 
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -2649,6 +2729,9 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }</>) ;
 <<<<<<< HEAD
 }"}
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   review.status.char_at (0) .toUpperCase () + review.status.slice (1) ";
 }</Badge> </TableCell> <TableCell>) : (" None") ";
 }</TableCell> <Button size=" sm"variant=" outline"className=" h - 8 w - 8 p - 0"on_click={
@@ -2695,6 +2778,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }</DialogFooter> </DialogContent> </Dialog>);
 }</>);
 }"}
+<<<<<<< HEAD
 =======
 }"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2711,3 +2795,6 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
   );
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -84,15 +85,24 @@ interface MobileHeaderProps {
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   title: string;  showBack?: boolean;  title: string
+=======
+title: string;  showBack?: boolean;  title: string
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   showBack?: boolean
   showNotifications?: boolean
   showSettings?: boolean
   className?: string
   onNotificationsClick?: () => void
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface MobileHeaderProps {
   title: string,
 >>>>>>>   showBack?: boolean;
+=======
+interface MobileHeaderProps {
+  title: string,
+  showBack?: boolean;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   showNotifications?: boolean;
   showSettings?: boolean;
   className?: string;
@@ -149,6 +159,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -156,6 +167,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
 >>>>>>>     )}>
       <div className="flex items-center justify-between h-14 px-4">
@@ -197,6 +212,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <span className="sr-only">Back</span>
             </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
           )}
           <h1 className="text-lg font-medium leading-none truncate">
             {title}
@@ -223,6 +239,15 @@ ursor/fix-website-loading-errors-and-merge-6662
               variant="ghost"
 >>>>>>>               variant="ghost" 
 >>>>>>>               size="icon"
+=======
+interface MobileHeaderProps {;
+  title: string;  showBack?: boolean;  title: string,;
+  showBack?: boolean;
+  showNotifications?: boolean;
+  showSettings?: boolean;
+  className?: string;
+  onNotificationsClick?: () => void;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   onSettingsClick?: () => void;
 
 export function MobileHeader(): any ({;
@@ -254,9 +279,12 @@ export function MobileHeader(): any ({;
               <ChevronLeft className="h-5 w-5" />;
               <span className="sr-only">Back</span>;
             </Button>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           )}
           <h1 className="text-lg font-medium leading-none truncate">
             {title}
@@ -291,21 +319,33 @@ export function MobileHeader(): any ({;
             <Button variant='ghost' size='icon' onClick={onSettingsClick}>;
               <Settings className='h-5 w-5' />;
               <span className='sr-only'>Settings</span>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <Button 
               <span className='sr-only'>Settings</span>            </Button>            <Button 
             <Button 
 
 
               variant="ghost" 
+<<<<<<< HEAD
 >>>>>>>               size="icon"
 >>>>>>>               onClick={onSettingsClick}
+=======
+              size="icon"
+              onClick={onSettingsClick}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             >
               <Settings className="h-5 w-5" />
               <span className="sr-only">Settings</span>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </Button>
 import React from "react",;
 import { useRouter } from 'next/router',;
@@ -324,7 +364,10 @@ interface MobileHeaderProps {;
 ;
 export function MobileHeader({;
   title,;
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   showBack = false,;
   showNotifications = false,;
   showSettings = false,;
@@ -339,6 +382,7 @@ export function MobileHeader({;
       <div className='flex items-center justify-between h-14 px-4'>;
         <div className='flex items-center'>;
           {showBack && (;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
           {showSettings && (
@@ -361,6 +405,8 @@ export function MobileHeader({;
         <div className='flex items-center'>
           {showBack && (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <Button
               variant='ghost'
               size='icon'
@@ -371,6 +417,7 @@ export function MobileHeader({;
               <ChevronLeft className='h-5 w-5' />;
               <span className='sr-only'>Back</span>;
             </Button>;
+<<<<<<< HEAD
 =======
               onClick={() => router.back()}
             >
@@ -399,6 +446,8 @@ export function MobileHeader({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <Button 
               <span className='sr-only'>Settings</span>            </Button>            <Button 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <Button 
               variant="ghost" 
               size="icon"
@@ -409,7 +458,6 @@ export function MobileHeader({;
 <<<<<<< HEAD
 <<<<<<< HEAD
             </Button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           )}
           <h1 className='text-lg font-medium leading-none truncate'>{title}</h1>;
         </div>;
@@ -440,6 +488,7 @@ export function MobileHeader({;
 ;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -542,3 +591,6 @@ export function MobileHeader({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

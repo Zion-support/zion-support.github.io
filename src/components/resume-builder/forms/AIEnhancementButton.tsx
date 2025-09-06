@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -26,6 +27,8 @@ interface AIEnhancementButtonProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function AIEnhancementButton({
 =======
 import { Button } from '@/components/ui/button'
@@ -167,6 +170,9 @@ export function AIEnhancementButton({
     if (enhancedContent) {
       onEnhanced(enhancedContent)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface AIEnhancementButtonProps {;
   currentContent: string;
   enhancementType:;
@@ -224,6 +230,7 @@ export function AIEnhancementButton(): any ({;
         <Loader2 className="h-3 w-3 animate-spin" />
       ) : (
 
+<<<<<<< HEAD
 =======
       onClick = {handleEnhance,}
       disabled = {isEnhancing,}
@@ -288,6 +295,32 @@ export function AIEnhancementButton(): any ({;
       <span className="text-xs">{buttonText}</span>
     </Button>
   )
+=======
+import { Button } from '@/components / ui / button';
+import { Sparkles, Loader2 } from 'lucide-react';
+import { useResumeEnhancer } from '@/hooks / useResumeEnhancer';
+interface AIEnhancementButtonProps {
+  current_content: string;
+  enhancement_type:;
+    | 'summary';
+    | 'work - description';
+    | 'skill - categorization';
+    | 'general';
+  context?: string;
+  on_enhanced: (enhanced_content: string) => void;
+  button_text?: string;
+  class_name?: string;
+export /**
+ * AIEnhancementButton - Function description
+ */
+function AIEnhancementButton() {
+  const { enhance_content, is_enhancing } = useResumeEnhancer ();
+  const [error, set_error] = useState < string | null>(null);
+  const handle_enhance = async () => {
+    // Check condition
+if (.length < 10) {) {
+  $2
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -298,17 +331,30 @@ export function AIEnhancementButton(): any ({;
 =======
 ;
 }
+<<<<<<< HEAD
 >>>>>>> 
+=======
+      on_enhanced (enhanced_content);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   }
 
 
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   },
   
 
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+  },
+  
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 
 
@@ -323,7 +369,10 @@ export function AIEnhancementButton(): any ({;
 
 
         <Sparkles className="h-3 w-3" />
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       )}
 
       <span className="text-xs">{buttonText}</span>;
@@ -352,11 +401,16 @@ export function AIEnhancementButton(): any ({;
       <span className="text - xs">{button_text}</span>;
     </Button>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   )
 }
 ;
 
+<<<<<<< HEAD
 ;
 
 
@@ -379,3 +433,6 @@ export function AIEnhancementButton(): any ({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

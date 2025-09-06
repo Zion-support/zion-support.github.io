@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -93,6 +94,9 @@ interface ContractBuilderProps {
 }
 export function ContractBuilder({
   isOpen;
+=======
+isOpen;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   onClose;
   talent;
   clientName;
@@ -148,6 +152,7 @@ export function ContractBuilder({
     );
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   }
+<<<<<<< HEAD
 >>>>>>>   }
 
 <<<<<<< HEAD
@@ -183,12 +188,19 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
 =======
 >>>>>>>             <div className="flex gap-2">
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+  }
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 
 
             
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <div className="flex gap-2">
@@ -201,6 +213,8 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <div className="flex gap-2">
               <Button
                 variant="outline"
@@ -217,6 +231,7 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
 <<<<<<< HEAD
 
               <Button
+<<<<<<< HEAD
 =======
 >>>>>>>               <Button
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -224,6 +239,19 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+                variant="outline" 
+                size="sm"
+                onClick = {(,) => setTemplateManagerOpen(true),}
+                className="flex gap-1";
+              >;
+                <Save className="h-4 w-4" />;
+                Templates;
+              </Button>;
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               
               <Button
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -239,10 +267,13 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
               talent = {talent,}
 =======
             <ContractForm
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Button
                 variant="secondary"
                 size="sm"
@@ -257,6 +288,7 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
           <TabsContent value="form" className="pt-4">;
 
             <ContractForm
+<<<<<<< HEAD
             <ContractForm 
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -268,6 +300,11 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
           <TabsContent value="form" className="pt-4">
             <ContractForm
             <ContractForm 
+=======
+
+            <ContractForm 
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               talent = {talent,}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               clientName = {clientName,}
@@ -282,6 +319,19 @@ import { SmartContractBuilder } from "./SmartContractBuilder",
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+            />;
+          </TabsContent>;
+
+          <TabsContent value="preview" className="pt-4">;
+            {generatedContract && (;
+
+              <ContractPreview
+
+              <ContractPreview 
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 contractContent = {generatedContract,}
 =======
               <ContractPreview
@@ -401,6 +451,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   form_values;
 }/> </DialogContent> </Dialog>);
 }"}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> }
 ;
@@ -423,3 +474,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

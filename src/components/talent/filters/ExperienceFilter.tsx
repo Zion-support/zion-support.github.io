@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -12,6 +13,9 @@ import { ChevronDown, ChevronUp } from 'lucide-react'
 <<<<<<< HEAD
 
   return (
+=======
+return (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
     <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
       <button;
@@ -41,6 +45,7 @@ function ExperienceFilter() {
     setExperienceRange ([values[0] || 0, values[1] || 15]);
 
   }
+<<<<<<< HEAD
 >>>>>>>   return (
 =======
 import { Slider } from '@/components/ui/slider'
@@ -55,6 +60,21 @@ export function ExperienceFilter({
   const handleChange = (values: number[]) => {
     setExperienceRange([values[0] |0, values[1] |15])
   }
+=======
+      </button>;
+
+      {expanded && (;
+        <div className='mt-6'>;
+          <div className='flex justify-between text-sm text-zion-slate-light mb-2'>            <span>{experienceRange[0]} years</span>;
+            <span>{experienceRange[1]} years</span>;
+          </div>;
+          <Slider
+            aria-label='Experience range'            value={[experienceRange[0], experienceRange[1]]}
+        <div className="mt-6">;
+          <div className="flex justify-between text-sm text-zion-slate-light mb-2">;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Slider } from "@/components/ui/slider",
@@ -64,6 +84,10 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
     setExperienceRange([values[0] || 0, values[1] || 15])
   },
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -126,6 +150,7 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
         className="flex w-full items-center justify-between text-white font-medium"
       >
 
+<<<<<<< HEAD
 >>>>>>>         <span>Years of Experience</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -166,6 +191,8 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
         onClick={toggleSection}
         className="flex w-full items-center justify-between text-white font-medium"
       >
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <span>Years of Experience</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -176,6 +203,10 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
       {expanded && (
       
       {expanded && (
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
             <span>{experienceRange[0]} years</span>
@@ -184,7 +215,10 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
           <Slider
             aria-label='Experience range'            aria-label="Experience range"
             aria-label="Experience range"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Slider } from "@/components/ui/slider",;
 import { ExperienceFilterProps } from "@/types/filters",;
@@ -192,7 +226,12 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
   const handleChange = (values: number[]) => {;
     setExperienceRange([values[0] || 0, values[1] || 15]);
   };
+<<<<<<< HEAD
   return (;
+=======
+
+  return (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
       <button;
         onClick={toggleSection}
@@ -210,6 +249,7 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
           <Slider;
             aria-label="Experience range";
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -231,6 +271,8 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             value={[experienceRange[0], experienceRange[1]]}
 >>>>>>>             min={0}
             max={15}
@@ -240,6 +282,7 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             className="mt-6"
@@ -250,6 +293,9 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 =======
 >>>>>>>             className="mt-6"
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </div>;
   );
 }
@@ -298,6 +344,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 };
 }
+<<<<<<< HEAD
 }
 ;
 <<<<<<< HEAD
@@ -309,3 +356,26 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+        <div className="mt - 6">;
+          <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
+            <span>{experience_range[0]} years</span>;
+            <span>{experience_range[1]} years</span>;
+          </div>;
+          <Slider;
+            aria - label='Experience range'            aria - label="Experience range";
+            value={[experience_range[0], experience_range[1]]}
+            min={0}
+            max={15}
+            step={1}
+            onValueChange={handle_change}
+            className='mt - 6'          />            className="mt - 6";
+            className="mt - 6";
+          />;
+        </div>)}
+    </div>);
+}
+
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,10 +1,30 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import {
 =======
+=======
+import {;
+  Select;
+  SelectContent;
+  SelectItem;
+  SelectTrigger;
+  SelectValue} from "@/components/ui/select";
+import { Label } from "@/components/ui/label";
+import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { ChevronRight, Zap, Star } from 'lucide-react';
+
+type ResumeStep = "basics" | "experience" | "education" | "skills";
+
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 >>>>>>> import {
@@ -101,6 +121,7 @@ export function MobileResumeBuilder() {
     }
   },;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 =======
@@ -112,6 +133,8 @@ export function MobileResumeBuilder() {
     }
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className="space-y-6 px-4 pb-24">
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">
@@ -157,6 +180,7 @@ export function MobileResumeBuilder() {
           variant={currentStep === "experience" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("experience")}
+<<<<<<< HEAD
         >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           Experience
@@ -187,6 +211,9 @@ export function MobileResumeBuilder() {
 <<<<<<< HEAD
 >>>>>>>         >
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         >
           Experience
         </Button>
@@ -214,8 +241,12 @@ export function MobileResumeBuilder() {
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("education")}
 
+<<<<<<< HEAD
 >>>>>>>         >
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+        >
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           Education
         </Button>
         <Button
@@ -226,8 +257,11 @@ export function MobileResumeBuilder() {
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("skills")}
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         >
 >>>>>>>           Skills
         </Button>
@@ -254,6 +288,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
       </Button>
+<<<<<<< HEAD
       
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -264,6 +299,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Button variant="default" className="w-full" size="lg">
 >>>>>>>         Save & Preview
       </Button>
@@ -485,7 +524,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 function ExperienceStep() {
 >>>>>>>   const [experiences, setExperiences] = useState([{ id: '1' }])
   const addExperience = () => {
@@ -494,6 +538,7 @@ function ExperienceStep() {
   }
   const removeExperience = (id: string,) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -519,6 +564,55 @@ function ExperienceStep() {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+=======
+
+
+  };
+};
+  );
+};
+
+
+  Select;
+  SelectContent;
+  SelectItem;
+  SelectTrigger;
+  SelectValue } from '@/components / ui / select';
+import { Label  } from '@/components / ui / label';
+import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
+import { ChevronRight, Zap, Star } from 'lucide-react';
+type ResumeStep = "basics" | "experience" | "education" | "skills";
+import React, { useState } from './react';
+import { Button  } from '@/components / ui / button';
+import { Card, CardContent  } from '@/components / ui / card';
+import { Input  } from '@/components / ui / input';
+import { Textarea  } from '@/components / ui / textarea';
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue} from "@/components / ui / select",
+type ResumeStep = "basics" | "experience" | "education" | "skills",
+export /**
+ * MobileResumeBuilder - Function description
+ */
+function MobileResumeBuilder() {
+  const [current_step, setCurrentStep] = useState < ResumeStep>("basics"),
+  const renderStepContent = () =>: any {
+    switch (current_step) {
+      case "basics": return <BasicsStep />,
+      case "experience":;
+        return <ExperienceStep />,
+      case "education":;
+        return <EducationStep />,
+      case "skills":;
+        return <SkillsStep />,
+      default:;
+        return <BasicsStep />;
+    }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   },
   return (
     <div className="space - y-6 px - 4 pb - 24">;
@@ -610,7 +704,6 @@ function ExperienceStep() {
   },
   const remove_experience = (id: string, ) =>: any {
     set_experiences (experiences.filter (exp => exp.id !== id));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   const remove_education = (id: string, ) =>: any {
     set_educations (educations.filter (edu => edu.id !== id));
@@ -618,6 +711,10 @@ function ExperienceStep() {
   const remove_skill = (id: string, ) =>: any {
     set_skills (skills.filter (skill => skill.id !== id));
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 function ExperienceStep() {;
   const [experiences, setExperiences] = useState([{ id: '1' }]),;
 
@@ -641,7 +738,6 @@ function ExperienceStep() {;
     setSkills(skills && skills.filter(skill => skill && skill.id !== id));
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
@@ -649,6 +745,7 @@ function ExperienceStep() {;
   );
 }
 
+<<<<<<< HEAD
 function SkillsStep() {
   const [skills, setSkills] = useState([
     { id: '1', name: "", proficiency: "beginner" }
@@ -1091,3 +1188,7 @@ function SkillsStep() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/TestimonialCarousel.tsx
 
 
@@ -74,6 +75,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 const testimonials = CASE_STUDIES,
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {  Carousel,  Carousel
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   CarouselContent
@@ -198,6 +201,7 @@ function TestimonialCarousel() {
             }}
 <<<<<<<< HEAD:src/components/TestimonialCarousel.tsx
 
+<<<<<<< HEAD
           >
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
@@ -323,6 +327,9 @@ export function TestimonialCarousel() {
 >>>>>>>                         </Avatar>
 ========
                           <Image
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             className='w - full';
           >;
             <CarouselContent>;
@@ -338,6 +345,7 @@ export function TestimonialCarousel() {
                       <div className="flex - shrink - 0 flex flex - col items - center">;
                         <Avatar className="h - 20 w - 20 border - 2 border - zion - cyan mb - 3">;
                             src={testimonial.avatar}
+<<<<<<< HEAD
 =======
 
 =======
@@ -409,6 +417,9 @@ export function TestimonialCarousel() {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                             alt={testimonial.author}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/TestimonialCarousel.tsx
+=======
+                            alt={testimonial.author}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             className='w-full'>;
             <CarouselContent>;
               {testimonials && testimonials.map((testimonial, index) => (;
@@ -464,6 +475,7 @@ export function TestimonialCarousel() {;
                             loading="lazy"
                           />
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                         </Avatar>
@@ -496,12 +508,15 @@ export function TestimonialCarousel() {;
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-4">
                           />
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         </Avatar>
                         <div className="text-center md:text-left">
                           <p className="font-bold text-zion-cyan">{testimonial.author}</p>
                           <p className="text-zion-slate-light text-sm">{testimonial.role}</p>
                         </div>
                       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                       <div className="flex-1">
@@ -513,6 +528,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>>                           <Image
 ========
+=======
+
+
+
+
+                      <div className="flex-1">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         <div className="flex items-center gap-3 mb-4">
                           <Image
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/TestimonialCarousel.tsx
@@ -606,6 +628,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </CardContent>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                     <CardFooter className="p-6 pt-0">
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -620,6 +643,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <CardFooter className="p-6 pt-0">
                       <Button variant="link" className="text-zion-cyan p-0" asChild>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -653,6 +682,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/TestimonialCarousel.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -662,6 +692,9 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CarouselPrevious className='relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />
               <CarouselNext className='relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />            </div>            <div className="flex justify-center mt-8 gap-2">
             <div className="flex justify-center mt-8 gap-2">
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
             </div>
@@ -693,6 +726,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CarouselNext className='relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />            </div>            <div className="flex justify-center mt-8 gap-2">;
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                             loading='lazy';
                         </Avatar>;
                         <div className='text - center md:text - left'>;
@@ -769,6 +806,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CarouselNext className="relative static right - 0 translate - y-0 bg - zion - blue - dark border - zion - purple / 30 text - zion - cyan hover:bg - zion - blue - light hover:text - zion - cyan hover:border - zion - purple" />;
 <<<<<<<< HEAD:src/components/TestimonialCarousel.tsx
 
+<<<<<<< HEAD
 >>>>>>>             </div>;
 ========
 =======
@@ -824,6 +862,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </div>;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/TestimonialCarousel.tsx
           </Carousel>;
@@ -831,6 +871,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>;
 
 
+<<<<<<< HEAD
 =======
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
@@ -877,3 +918,9 @@ Discover how Zion is transforming the tech and AI marketplace ecosystem </p> </d
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  );
+}
+    </section>);
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

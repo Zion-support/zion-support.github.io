@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -77,6 +78,8 @@ const listingsSchema = z.array(listingSchema),
 interface ServiceTypeStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 
 <<<<<<< HEAD
@@ -293,12 +296,28 @@ const listingSchema = z.object({
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+const listing_schema = z.object ({
+  id: z.string (),
+  title: z.string (),
+  category: z.string (),
+  image: z.string ().optional ()}),
+      const max_retries = 3;
+  const source_listings = listings;
+}
+  );
+}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     },;
     fetchServices();
   }, [formData.serviceType, debouncedQuery, isMounted]),;
@@ -418,6 +437,7 @@ const listingSchema = z.object({
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -434,3 +454,6 @@ const listingSchema = z.object({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

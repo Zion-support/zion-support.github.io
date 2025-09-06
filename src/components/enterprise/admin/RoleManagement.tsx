@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/admin/RoleManagement.tsx
 
 <<<<<<< HEAD
@@ -9,6 +10,8 @@ import React from "react";
 import {
 >>>>>>> import {
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
@@ -151,7 +154,10 @@ export /**
 function RoleManagement() {
   // Mock team members data;
   const team_members = [;
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/enterprise/admin/RoleManagement.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     {
 =======
 =======
@@ -301,6 +307,7 @@ export function RoleManagement() {
 <<<<<<<< HEAD:src/components/enterprise/admin/RoleManagement.tsx
 
   }
+<<<<<<< HEAD
         manageBilling: false,
       },
     },
@@ -325,6 +332,8 @@ export function RoleManagement() {
 ========
   }
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/enterprise/admin/RoleManagement.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 =======
 
@@ -437,6 +446,10 @@ export function RoleManagement() {;
     Manager: 'Can view candidates and create jobs',;
     Viewer: 'Read-only access to candidates',;
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 <<<<<<<< HEAD:src/components/enterprise/admin/RoleManagement.tsx
 
@@ -644,6 +657,10 @@ export function RoleManagement() {;
                 <Badge variant={role === "Admin" ? "default" : "outline"}>{role}</Badge>
               </div>
               <p className="text-sm text-muted-foreground">{description}</p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </div>
           ))}
         </div>
@@ -651,6 +668,11 @@ export function RoleManagement() {;
       <div className='rounded-md border'>
 
       <div className="rounded-md border">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Table>
           <TableHeader>
             <TableRow>
@@ -779,6 +801,7 @@ export function RoleManagement() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                 <TableCell>
 =======
             {teamMembers.map(member => (              <TableRow key={member.id}>
@@ -787,6 +810,13 @@ export function RoleManagement() {;
                   <div className="font-medium">{member.name}</div>
                   <div className="text-sm text-muted-foreground">
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+            {teamMembers.map((member) => (
+              <TableRow key={member.id}>
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <TableCell>
                   <div className='font-medium'>{member.name}</div>
                   <div className='text-sm text-muted-foreground'>
@@ -814,6 +844,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <TableCell className="text-center">
                   <Switch
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -906,6 +937,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <select 
                     className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                     defaultValue={member.role}
@@ -1390,6 +1424,7 @@ export function RoleManagement() {;
                     aria-label="View candidates";
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     checked={member.permissions.viewCandidates}
@@ -1408,6 +1443,8 @@ export function RoleManagement() {;
                 <TableCell className="text-center">;
                   <Switch;
                     aria-label="View candidates";
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={checked =>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1432,8 +1469,11 @@ export function RoleManagement() {;
                 </TableCell>
                 <TableCell className='text-center'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/enterprise/admin/RoleManagement.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     checked={member && member.permissions.viewCandidates}
                     onCheckedChange={checked =>;
                       handlePermissionChange(;
@@ -1478,6 +1518,7 @@ export function RoleManagement() {;
                     checked={member.permissions.viewBilling}
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
                   <Switch
@@ -1498,6 +1539,8 @@ export function RoleManagement() {;
                 <TableCell className='text-center'>
                   <Switch
                     aria-label='View billing'
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     checked={member.permissions.viewBilling}
                     onCheckedChange={checked =>
                       handlePermissionChange(member.id, 'viewBilling', checked)
@@ -1585,11 +1628,15 @@ export function RoleManagement() {;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewBilling", checked);
                     }
@@ -1623,6 +1670,7 @@ export function RoleManagement() {;
 ;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 ;
@@ -1632,6 +1680,10 @@ export function RoleManagement() {;
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <TableCell className='text - center'>;
                   <Switch;
                     aria - label='View candidates';
@@ -1684,6 +1736,7 @@ export function RoleManagement() {;
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 =======
   ),;}
  import { ;
@@ -1726,3 +1779,6 @@ TooltipProvider;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

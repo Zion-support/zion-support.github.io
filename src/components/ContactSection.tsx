@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -250,6 +251,9 @@ export function ContactSection() {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     fetch("/api/contact", {
+=======
+fetch("/api/contact", {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       method: "POST"
       headers: { "Content-Type": "application/json" }
       body: JSON.stringify(formData)})
@@ -326,9 +330,12 @@ export function ContactSection() {
           title: "Message Sent",
           description: "We've received your message and will get back to you soon."}),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -349,6 +356,7 @@ export function ContactSection() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -359,6 +367,8 @@ export function ContactSection() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           title: "Submission Error",
           description: err.message,
           variant: "destructive"})
@@ -374,6 +384,7 @@ export function ContactSection() {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -393,6 +404,8 @@ export function ContactSection() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <section className="py-20 bg-zion-blue" id="contact">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -505,11 +518,14 @@ import { toast } from "@/components/ui/use-toast",;
 import z from "zod",;
 import { Mail } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ContactSection.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function ContactSection() {;
   const [formData, setFormData] = useState({;
     name: "",;
@@ -1106,6 +1122,7 @@ export function ContactSection() {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ContactSection.tsx
                   >;
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -1139,11 +1156,14 @@ export function ContactSection() {;
                   >
                     disabled={isSubmitting}
                   >;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
                     <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>
                   )}
+<<<<<<< HEAD
                 </div>
               </form>
             </div>
@@ -1178,6 +1198,9 @@ description: err.message
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </div>;
               </form>;
             </div>;
@@ -1188,14 +1211,16 @@ description: err.message
 <<<<<<<< HEAD:src/components/ContactSection.tsx
 
 
-=======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 ========
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ContactSection.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </section>);
 }set_errors (field_errors);
 toast ({
@@ -1218,6 +1243,7 @@ description: err.message;
 }</Button>);
 }</div> </form> </div> </div> </div> </div> </section>);
 }'"}
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ContactSection.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1306,3 +1332,7 @@ description: err.message;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

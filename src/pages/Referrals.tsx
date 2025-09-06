@@ -1,7 +1,20 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import { useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { useReferrals } from '@/hooks/useReferrals';
+import { ReferralStats } from '@/components/referrals/ReferralStats';
+import { ReferralLink } from '@/components/referrals/ReferralLink';
+import { ReferralTable } from '@/components/referrals/ReferralTable';
+import { RewardsCard } from '@/components/referrals/RewardsCard';
+import { ReferralGuide } from '@/components/referrals/ReferralGuide';
+import { ReferralLeaderboard } from '@/components/referrals/ReferralLeaderboard';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { Share, Users } from 'lucide-react'
 import { useRouter } from 'next/router', // Changed from useNavigate
@@ -127,6 +140,7 @@ export default function ReferralsPage() {
 
 
   return (
+<<<<<<< HEAD
     <div className='container max-w-7xl py-10'>
       <div className='mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4'>
         <div>
@@ -141,6 +155,42 @@ export default function ReferralsPage() {
           <Share className='h-4 w-4' />          Share Referral Link    <div className="container max-w-7xl py-10">
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    <div className="container max-w-7xl py-10">
+
+
+
+import { useEffect } from 'react'
+import { useAuth } from '@/hooks/useAuth'
+import { useReferrals } from '@/hooks/useReferrals'
+import { ReferralStats } from '@/components/referrals/ReferralStats'
+import { ReferralLink } from '@/components/referrals/ReferralLink'
+import { ReferralTable } from '@/components/referrals/ReferralTable'
+import { RewardsCard } from '@/components/referrals/RewardsCard'
+import { ReferralGuide } from '@/components/referrals/ReferralGuide'
+import { ReferralLeaderboard } from '@/components/referrals/ReferralLeaderboard'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Button } from '@/components/ui/button'
+import { toast } from '@/hooks/use-toast'
+
+import { Share, Users } from 'lucide-react'
+import { useRouter } from 'next/router', // Changed from useNavigate
+import {
+
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useRouter } from 'next/router'; // Changed from useNavigate
+export default function ReferralsPage() {;
+  const router = useRouter(); // Changed from navigate
+  const { isAuthenticated } = useAuth()
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useEffect } from 'react',
 import { useAuth } from '@/hooks/useAuth',
 import { useReferrals } from '@/hooks/useReferrals',
@@ -198,9 +248,12 @@ import { toast } from '@/hooks/use-toast',
 import { Share, Users } from 'lucide-react'
 import { useRouter } from 'next/router', // Changed from useNavigate
 
+<<<<<<< HEAD
 export default function ReferralsPage() {
   const router = useRouter(), // Changed from navigate
   const { isAuthenticated } = useAuth(),
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const {
     isLoading,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -214,6 +267,7 @@ export default function ReferralsPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -249,6 +303,10 @@ export default function ReferralsPage() {
   return (
     <div className='container max-w-7xl py-10'>
       <div className='mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4'>
+=======
+
+      <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div>
           <h1 className='text-3xl font-bold tracking-tight'>
             Referral Program
@@ -349,6 +407,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <TabsTrigger
                 value='referrals'
+<<<<<<< HEAD
                 className='flex items-center gap-2'
               >
                 <Users className='h-4 w-4' />
@@ -361,6 +420,25 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+                className='flex items-center gap-2'>;
+                <Users className='h-4 w-4' />;
+                Your Referrals;
+              </TabsTrigger>;
+              <TabsTrigger value='rewards' className='flex items-center gap-2'>;
+                <Share className='h-4 w-4' />;
+                Rewards;
+              </TabsTrigger>;
+            </TabsList>;
+            <TabsContent
+              value='referrals'
+              className='p-0 border rounded-md mt-6'>;
+              <ReferralTable referrals={referrals} isLoading={isLoading} />;
+            </TabsContent>;
+            <TabsContent value='rewards' className='p-0 mt-6'>              <RewardsCard rewards={rewards} isLoading={isLoading} />;
+            <TabsContent value="rewards" className="p-0 mt-6">;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       
       <div className="grid gap-6 mt-6 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-6">
@@ -386,6 +464,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 Your Referrals
@@ -409,6 +488,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 Your Referrals
               </TabsTrigger>
               <TabsTrigger value="rewards" className="flex items-center gap-2">
@@ -421,10 +502,17 @@ ursor/fix-website-loading-errors-and-merge-6662
             </TabsContent>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
             <TabsContent value='rewards' className='p-0 mt-6'>              <RewardsCard rewards={rewards} isLoading={isLoading} />
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <TabsContent value="rewards" className="p-0 mt-6">
             onShare={shareOnSocialMedia}
           />
@@ -478,6 +566,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         <div className="space-y-6">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -485,16 +574,26 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <ReferralGuide />
 >>>>>>>           <ReferralLeaderboard />
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -520,6 +619,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useReferrals } from '@/hooks/useReferrals',;
@@ -748,10 +849,13 @@ if ( {) {
           </Tabs>;
         </div>;
         <div className='space - y-6'>          <ReferralGuide />        <div className="space - y-6">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
         <div className="space-y-6">;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <ReferralGuide />;
           <ReferralLeaderboard />;
         </div>;
@@ -763,6 +867,7 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -781,3 +886,21 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+    </div>);
+}, [is_authenticated, router]), //Changed navigate to router in dependencies return (<div className="container max - w-7xl py - 10" > <div className="mb - 8 flex flex - col md:flex - row justify - between md:items - center gap - 4" > <div> <h1 className="text - 3xl font - bold tracking - tight" >Referral Program</h1> <p className="text - muted - foreground mt - 1" > Invite others to Zion AI Marketplace and earn rewards </p> </div> Share Referral Link </Button> </div> <ReferralStats stats= {
+  stats;
+}is_loading= {
+  is_loading ";
+}/> <div className="grid gap - 6 mt - 6 lg:grid - cols - 3" > <div className="lg:col - span - 2 space - y-6" > <ReferralLink referral_link= {
+  referral_link;
+}on_copy= {
+  copyReferralLink;
+}on_share= {
+  shareOnSocialMedia ";
+}/> <Tabs default_value="referrals" className="w - full" > <TabsList className="w - full grid grid - cols - 2" > <TabsTrigger value="referrals" className="flex items - center gap - 2" > <Users className="h - 4 w - 4" /> Your Referrals </TabsTrigger> <TabsTrigger value="rewards" className="flex items - center gap - 2" > <Share className="h - 4 w - 4" /> Rewards </TabsTrigger> </TabsList> </TabsContent> </Tabs> </div> <div className="space - y-6" > <ReferralGuide /> <ReferralLeaderboard /> </div> </div> </div>);
+}'";
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

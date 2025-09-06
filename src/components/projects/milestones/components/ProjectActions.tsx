@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import {Button} from '@/components/ui/button'
 import Link from 'next/link'
@@ -88,6 +89,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   onAddMilestone
 >>>>>>> }: ProjectActionsProps) {
+=======
+onAddMilestone
+}: ProjectActionsProps) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   onAddMilestone: () => void;
 
@@ -117,6 +122,7 @@ export function ProjectActions(): any ({;
       {isTalent && !isUnderDispute && (;
         <Button onClick={onAddMilestone}>Add Milestone</Button>;
 
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -130,6 +136,8 @@ export function ProjectActions({
   onAddMilestone
 }: ProjectActionsProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className="flex gap-2">
       {isUnderDispute && disputeId ? (
@@ -164,6 +172,7 @@ export function ProjectActions({
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
             <ShieldAlert className='h-4 w-4 mr-2' />            View Active Dispute
           </Link>
@@ -183,12 +192,16 @@ export function ProjectActions({
           variant="outline"
         />
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </div>;
   );
 };
 
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> >>>>>>>       )}
 =======
@@ -198,6 +211,8 @@ ursor/fix-website-loading-errors-and-merge-6662
         <RaiseDisputeButton projectId={projectId} variant='outline' />
       {isTalent && !isUnderDispute && (
         <Button onClick={onAddMilestone}>Add Milestone</Button>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       )}
     </div>
   )
@@ -232,6 +247,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -250,3 +266,47 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+import React from 'react';
+import {Button} from '@/components / ui / button';
+import Link from 'next / link';
+import { ShieldAlert } from 'lucide-react';
+import { RaiseDisputeButton } from '@/components / disputes / RaiseDisputeButton';
+import { Button } from '@/components / ui / button';
+interface ProjectActionsProps {
+  project_id: string;
+  isUnderDispute: boolean;
+  dispute_id?: string;
+  is_talent: boolean;
+  onAddMilestone: () => void;
+export /**
+ * ProjectActions - Function description
+ */
+function ProjectActions() {
+  return (
+    <div className='flex gap - 2'>;
+      {isUnderDispute && dispute_id ? (
+        <Button variant='outline' as_child>;
+          <Link href={`/dashboard / disputes/${dispute_id}`}>;
+            <ShieldAlert className='h - 4 w - 4 mr - 2' />            View Active Dispute;
+          </Link>;
+        </Button>) : (
+        <RaiseDisputeButton project_id={project_id} variant='outline' />            <ShieldAlert className="h - 4 w - 4 mr - 2" />;
+            View Active Dispute;
+          </Link>;
+        </Button>) : (
+        <RaiseDisputeButton project_id={project_id} variant='outline' />;
+      {is_talent && !isUnderDispute && (
+        <Button on_click={onAddMilestone}>Add Milestone</Button>)}
+    </div>);
+}
+      )}
+      {is_talent && !isUnderDispute && (
+        <Button on_click={onAddMilestone}>;
+          Add Milestone;
+        </Button>)}
+    </div>);
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

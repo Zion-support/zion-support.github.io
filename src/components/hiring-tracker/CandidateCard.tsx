@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/hiring-tracker/CandidateCard.tsx
 
 =======
@@ -124,6 +125,9 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const handleSaveNotes = () => {
+=======
+const handleSaveNotes = () => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
@@ -166,6 +170,7 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
   const candidateName = application.talent_profile?.full_name |'Candidate'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -173,6 +178,11 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const candidateName = application.talent_profile?.full_name |'Candidate'
+=======
+
+import { useState } from 'react';
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const candidateName = application.talent_profile?.full_name || 'Candidate'
   return (
     <>
@@ -182,11 +192,15 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
             className='mb-2 p-0 shadow-sm border'
             ref={provided.innerRef}            {...provided.draggableProps}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       title: "Notes saved",
       description: "Your notes have been saved"
     }),
@@ -203,6 +217,9 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 >>>>>>> 
@@ -250,6 +267,7 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
           <Card 
             className="mb-2 p-0 shadow-sm border"
 import { useState } from "react",;
+<<<<<<< HEAD
 // Local stub is used in place of the @hello-pangea/dnd package which isn't;
 // available in this environment.;
 import { Draggable } from "@/lib/dnd-stub",;
@@ -352,6 +370,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 ========
 import { useState } from 'react';
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/hiring-tracker/CandidateCard.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Local stub is used in place of the @hello-pangea/dnd package which isn't;
 // available in this environment.;
 import { Draggable } from '@/lib/dnd-stub';
@@ -435,6 +455,10 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
     });
   };
   const candidateName = application && application.talent_profile?.full_name || 'Candidate';
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <>;
 
@@ -490,8 +514,11 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <DropdownMenu>
 >>>>>>>                   <DropdownMenuTrigger asChild>
                     <Button variant='ghost' className='h-8 w-8 p-0'>
@@ -499,6 +526,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align='end'>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -568,6 +596,11 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
               </div>
 <<<<<<< HEAD
 ========
+=======
+                    <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
+                  </AvatarPrimitive>;
+                  <div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <h4 className='font-medium text-sm'>{candidateName}</h4>;
                     <p className='text-xs text-muted-foreground'>;
                       {application && application.talent_profile?.professional_title ||;
@@ -608,6 +641,12 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                         </a>;
                       </DropdownMenuItem>;
                     )}
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </DropdownMenuContent>;
                 </DropdownMenu>;
               </div>;
@@ -626,9 +665,13 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   </div>;
                 )}
               </div>;
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/hiring-tracker/CandidateCard.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               {/* Match Score */}
               {application.match_score !== null &&
                 application.match_score !== undefined && (
@@ -739,11 +782,15 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
   handleHireConfirmed
 }/> </>)
 }'"}
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <Link href={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className='h-3 w-3 mr-1' /> Message
                   </Link>
@@ -759,10 +806,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                 >
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
                   {application.resume?.file_url ? (
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/hiring-tracker/CandidateCard.tsx
+=======
+                  {application.resume?.file_url ? (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <div className='flex justify-between mt-2 gap-1'>;
                 <Button variant='outline' size='sm' className='flex-1' asChild>;
                   <Link href={`/messages?talentId=${application && application.talent_id}`}>;
@@ -910,6 +961,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>>                 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -917,6 +969,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <Button 
@@ -927,7 +981,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 >;
                   <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </Button>;
               </div>;
             </CardContent>;
@@ -1585,8 +1642,11 @@ import Image from 'next/image';
 }'"}
 <<<<<<<< HEAD:src/components/hiring-tracker/CandidateCard.tsx
 
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/hiring-tracker/CandidateCard.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   add_suffix: true;
 });
 }</div> {";
@@ -1618,11 +1678,15 @@ import Image from 'next/image';
   handleHireConfirmed;
 }/> </>);
 }'"}
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/hiring-tracker/CandidateCard.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>>       </Draggable>;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+      </Draggable>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
         isOpen={showHireModal}
@@ -1633,6 +1697,7 @@ import Image from 'next/image';
     </>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1656,3 +1721,6 @@ import Image from 'next/image';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

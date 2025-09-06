@@ -1,4 +1,6 @@
+import React from 'react';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -154,3 +156,14 @@ export function TalentCardBadges({ featured }: TalentCardBadgesProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+const TalentCardBadges = () => {
+  return (
+    <div>
+      {/* TalentCardBadges component */}
+    </div>
+  );
+};
+
+export default TalentCardBadges;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

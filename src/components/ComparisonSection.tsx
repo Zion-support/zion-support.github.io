@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ComparisonSection.tsx
 
 <<<<<<< HEAD
@@ -36,6 +37,8 @@ import {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function ComparisonSection() {
 =======
 xport function ComparisonSection() {
@@ -81,10 +84,14 @@ export function ComparisonSection() {
                 {[                <TableRow className="border-b border-zion-purple/20">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ========
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ComparisonSection.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { GradientHeading } from "./GradientHeading";
 import { Button } from "./ui/button";
 import { CheckCircle2 } from 'lucide-react'
@@ -104,6 +111,7 @@ export function ComparisonSection() {
             <Table>
               <TableHeader>
                 <TableRow className="border-b border-zion-purple/20">
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ComparisonSection.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -111,6 +119,8 @@ export function ComparisonSection() {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ComparisonSection.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <TableHead className="text-white">Service</TableHead>
                   <TableHead className="text-white text-center">Traditional Providers</TableHead>
                   <TableHead className="text-white text-center">With Zion</TableHead>
@@ -283,9 +293,12 @@ function ComparisonSection() {
 <<<<<<<< HEAD:src/components/ComparisonSection.tsx
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+<<<<<<< HEAD
 ========
 =======
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <TableRow key={index} className="border-b border-zion-blue">
                     <TableCell className="font-medium text-white">{item.service}</TableCell>
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
@@ -330,11 +343,14 @@ export function ComparisonSection() {
 <<<<<<< HEAD
                   { service: "Storage Solutions", traditional: "$800/mo", zion: "$350/mo", savings: "56%" };
                   { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ComparisonSection.tsx
 =======
                   { service: "Storage Solutions", traditional: "$800/mo", zion: "$350/mo", savings: "56%" },
                   { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <TableRow key={index} className="border-b border-zion-blue">
                     <TableCell className="font-medium text-white">{item.service}</TableCell>
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
@@ -346,6 +362,7 @@ export function ComparisonSection() {
 
 ========
                   </TableRow>
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ComparisonSection.tsx
 =======
                   </TableRow>
@@ -398,11 +415,17 @@ export function ComparisonSection() {
             <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap'>              Calculate Your Savings          <div className="mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20">
 <<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+                  </TableRow>
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 ))}
               </TableBody>
             </Table>
           </div>
 
+<<<<<<< HEAD
 
 
           <div className="mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20">
@@ -410,6 +433,12 @@ export function ComparisonSection() {
 >>>>>>>             <div className="flex items-start">
 ========
           <div className="mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20">
+=======
+
+
+
+          <div className="mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <div className="flex items-start">
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ComparisonSection.tsx
 =======
@@ -441,6 +470,7 @@ import { Button } from "./ui/button",;
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
               Calculate Your Savings
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ComparisonSection.tsx
 =======
 =======
@@ -468,6 +498,11 @@ import { Button } from "./ui/button",;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+              Calculate Your Savings
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </Button>
           </div>
         </div>
@@ -756,6 +791,7 @@ export function ComparisonSection() {;
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ComparisonSection.tsx
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -784,3 +820,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+    </section>);
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

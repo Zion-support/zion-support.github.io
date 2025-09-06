@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/ApiKeysManager.tsx
 
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react'
@@ -149,6 +150,10 @@ import CodeBlock from "./CodeBlock";
 export function ApiKeysManager() { const { 
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiKeysManager.tsx
     keys,
+=======
+keys,
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     loading, 
     newApiKey;
     fetchApiKeys, 
@@ -804,12 +809,51 @@ export function ApiKeysManager() {;
                   <Input
                     id='key-name'
                     value={keyName}
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/ApiKeysManager.tsx
 =======
   -H "Content-Type: application/json"` }
   // Reset form when dialog closes
   const handleDialogClose = () => {
     setKeyName('');  -H "Content-Type: application/json"`
+=======
+                    onChange={e => setKeyName(e && e.target.value)}
+                    placeholder='e && e.g. Production API Key';
+                    className='bg-zinc-800 border-zinc-700'                  />;
+                </div>;
+
+                <div className='space-y-2'>;
+                  <Label>Scopes</Label>;
+                  <div className='grid gap-2 pt-2'>;
+                    {scopeOptions && scopeOptions.map(scope => (;
+                      <div
+                        key={scope && scope.value}
+                        className='flex items-center space-x-2'>;
+                        <Checkbox
+
+                          id={scope && scope.value}                          checked={selectedScopes && selectedScopes.includes(scope && scope.value)}                  <div className="grid gap-2 pt-2">;
+                    {scopeOptions && scopeOptions.map((scope,) => (;
+                      <div key={scope && scope.value} className="flex items-center space-x-2">;
+                        <Checkbox
+                          id={scope && scope.value} 
+                          onCheckedChange={() => toggleScope(scope && scope.value)}
+                        />;
+
+                        <Label
+                          htmlFor={scope && scope.value}
+                          className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'>;
+                          {scope && scope.label}
+                          <span className='block text-xs text-zinc-400 mt-1'>;
+                            {scope && scope.description}
+                          </span>                        </Label>                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70";
+                        >;
+                          {scope && scope.label}
+                          <span className="block text-xs text-zinc-400 mt-1">{scope && scope.description}</span>;
+                      </div>;
+                        <Checkbox 
+                          id={scope.value} 
+                          checked={selectedScopes.includes(scope.value)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
   // Reset form when dialog closes
   const handleDialogClose = () => {
@@ -859,6 +903,7 @@ export function ApiKeysManager() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -866,6 +911,22 @@ export function ApiKeysManager() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+    clearNewApiKey
+  } = useApiKeys(),
+  
+  const [showCreateDialog, setShowCreateDialog] = useState(false),
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
+  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),
+  
+  // Create key form state
+  const [keyName, setKeyName] = useState(""),
+  const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
+
+  // Load keys on mount
+  useState(() => {
+    fetchApiKeys()
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }),
   
   const handleCreateKey = async () => {
@@ -891,7 +952,11 @@ export function ApiKeysManager() {;
   const handleRevokeKey = async (keyId: string) => {
 
     await revokeApiKey(keyId),
+<<<<<<< HEAD
 >>>>>>>     setShowDeleteConfirm(null)
+=======
+    setShowDeleteConfirm(null)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
   // Scope options
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1044,6 +1109,7 @@ export function ApiKeysManager() {;
                           id={scope.value} 
 =======
 
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiKeysManager.tsx
 =======
 <<<<<<< HEAD
@@ -1401,6 +1467,8 @@ export function ApiKeysManager() {;
                   Create Key
 >>>>>>>                 </Button>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           onCheckedChange={() => toggleScope(scope.value)}
                         />
                         <Label
@@ -1416,13 +1484,16 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     ))}
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
@@ -1456,6 +1527,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiKeysManager.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </Button>
 >>>>>>>               </DialogFooter>
             </DialogContent>
@@ -1587,7 +1660,14 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Dialog>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* New API Key Alert */}
+=======
+
+        
+        {/* New API Key Alert */}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {newApiKey && (
 =======
         ;
@@ -1602,6 +1682,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               </span>;
 <<<<<<< HEAD
               <Button
+<<<<<<< HEAD
         
 
 >>>>>>>         {/* New API Key Alert */}
@@ -1622,6 +1703,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Dialog>
         </div>
         
+=======
+
+        
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {/* New API Key Alert */}
         {newApiKey && (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1652,6 +1738,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
@@ -1675,6 +1762,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
@@ -1861,6 +1952,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
             <p className="text-sm text-zinc-300 mb-2">
 
+<<<<<<< HEAD
 >>>>>>>               This key will only be displayed once. Please save it securely.
 >>>>>>>             </p>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1972,6 +2064,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </div>
                   </div>
                           <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               This key will only be displayed once. Please save it securely.
             </p>
             <CodeBlock code={newApiKey} className="mb-3" />
@@ -1981,8 +2075,21 @@ ursor/fix-website-loading-errors-and-merge-6662
             <CodeBlock code={getExampleCode(newApiKey)} language="bash" />
           </div>
         )}
+<<<<<<< HEAD
         {/* API Keys List */}
         <div className="space-y-4">
+=======
+
+
+
+        {/* API Keys List */}
+        <div className='space-y-4'>
+;
+        {/* API Keys List */}
+        <div className="space-y-4">
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {loading ? (
             <div className="text-center py-8 text-zinc-500">Loading API keys...</div>
           ) : keys.length === 0 ? (
@@ -2000,17 +2107,22 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <h3 className="font-medium">{key.name}</h3>
                       <div className="flex items-center space-x-2 mt-1">
                         <span className="text-sm text-zinc-400 font-mono">{key.key_prefix}••••••••••••</span>
+<<<<<<< HEAD
                         {key.is_active ? (
                           <Badge className="bg-green-700 text-white">Active</Badge>
                         ) : (
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>                           <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         {key.is_active ? (
                           <Badge className="bg-green-700 text-white">Active</Badge>
                         ) : (
 
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                           <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>
@@ -2024,6 +2136,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>
                         )}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2178,6 +2292,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         <RefreshCw size={14} className='mr-2' /> Regenerate;
                       </DropdownMenuItem>;
                       <DropdownMenuItem
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -2207,6 +2322,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                       >
                         <X size={14} className="mr-2" /> Revoke
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiKeysManager.tsx
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
@@ -2220,10 +2339,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 
                 <div className="mt-3 flex flex-wrap gap-2">
                   {key.scopes.map((scope,) => (
+<<<<<<< HEAD
 >>>>>>>                         onClick={() => setShowDeleteConfirm(key && key.id)}
 ========
                 <div className="mt-3 flex flex-wrap gap-2">
                   {key.scopes.map((scope,) => (
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         onClick={() => setShowDeleteConfirm(key && key.id)}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiKeysManager.tsx
                         className='cursor-pointer text-red-500';
@@ -2303,6 +2425,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/developers/ApiKeysManager.tsx
 
 
+<<<<<<< HEAD
 >>>>>>>                     <Badge
                       key = {scope,}
                       variant="secondary"
@@ -2338,6 +2461,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className="mt-3 flex flex-wrap gap-2">
                   {key.scopes.map((scope,) => (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <Badge
                       key = {scope,}
                       variant="secondary"
@@ -2345,10 +2470,26 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
                     >
+<<<<<<< HEAD
                       {scope}
                     </Badge>;
                   ))}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiKeysManager.tsx
+=======
+
+
+                      {scope}
+                    </Badge>;
+                  ))}
+
+                    >
+
+                      {scope}
+                    </Badge>;
+                  ))}
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </div>;
                 <div className='mt-3 text-xs text-zinc-500 flex items-center space-x-4'>;
                   <span>;
@@ -2471,11 +2612,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </span>                  )}                    <span>Expires: {format(new Date(key && key.expires_at), 'MMM d, yyyy')}</span>;
 <<<<<<<< HEAD:src/components/developers/ApiKeysManager.tsx
 
+<<<<<<< HEAD
 >>>>>>>                   )}
         <Button variant='outline' size='sm' onClick={fetchApiKeys}>          Refresh
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
                     <span>Expires: {format(new Date(key.expires_at), 'MMM d, yyyy')}</span>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   )}
 =======
                 ;
@@ -2551,11 +2695,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
         </Button>
       </CardFooter>
+<<<<<<< HEAD
 >>>>>>>         </div>;
 ========
           Refresh
         </Button>
       </CardFooter>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </div>;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiKeysManager.tsx
       </CardContent>;
@@ -2578,6 +2725,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
         </Button>;
       </CardFooter>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {/* Regenerate Key Confirmation Dialog */}
 <<<<<<<< HEAD:src/components/developers/ApiKeysManager.tsx
 
@@ -2766,6 +2917,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </AlertDialogContent>
       </AlertDialog>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/ApiKeysManager.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -2795,6 +2947,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               className="bg-red-600 hover: bg-red-700"
 <<<<<<< HEAD
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               className='bg-blue-600 hover:bg-blue-700'            >;
             <AlertDialogAction
               onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm),}
@@ -2913,6 +3067,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -2958,6 +3113,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             <AlertDialogDescription className="text-zinc-400">;
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <AlertDialogCancel className='bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700'>;
               Cancel;
             </AlertDialogCancel>;
@@ -2976,8 +3133,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             <AlertDialogTitle > Regenerate API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text - zinc - 400">;
 
+<<<<<<< HEAD
 >>>>>>>               This action will invalidate the existing key and generate a new one.;
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               This action will invalidate the existing key and generate a new one.;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               Any applications using this key will need to be updated.;
@@ -3024,8 +3184,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             <AlertDialogDescription className="text-zinc-400">;
 <<<<<<<< HEAD:src/components/developers/ApiKeysManager.tsx
 
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/developers/ApiKeysManager.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <AlertDialogCancel className='bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700'>;
               Cancel;
             </AlertDialogCancel>;
@@ -3044,6 +3207,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <AlertDialogDescription className="text - zinc - 400">;
 <<<<<<<< HEAD:src/components/developers/ApiKeysManager.tsx
 
+<<<<<<< HEAD
 >>>>>>>               This action will revoke the API key and it can no longer be used to access the API.;
 ========
               This action will revoke the API key and it can no longer be used to access the API.;
@@ -3077,6 +3241,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           <AlertDialogHeader>;
             <AlertDialogTitle>Revoke API Key?</AlertDialogTitle>;
             <AlertDialogDescription className="text-zinc-400">;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               This action will revoke the API key and it can no longer be used to access the API.;
               This action cannot be undone.;
             </AlertDialogDescription>;
@@ -3114,6 +3280,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -3286,3 +3453,6 @@ setShowCreateDialog (false) ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/home/InteractiveFeatures.tsx
 
 =======
@@ -117,6 +118,8 @@ import {
   CardDescription,
 } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
 import Link from 'next / link';
 import { cn } from '@/lib / utils';interface InteractiveFeaturesProps {
@@ -261,7 +264,11 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
   const handle_toggle = (index: number) =>: any {
     setOpenIndex (prev => (prev === index ? null : index));
   }
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/InteractiveFeatures.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -350,6 +357,7 @@ export function InteractiveFeatures(): any ({;
             <Card;
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
@@ -506,6 +514,8 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               key={index}
               onMouseEnter={() => setOpenIndex(index)}
               onMouseLeave={() => setOpenIndex(null)}
@@ -572,9 +582,12 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                   "transition-all duration-300",
 =======
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   openIndex === index
                     ? 'max-h-48 opacity-100 p-6 pt-0'
                     : 'max-h-0 opacity-0 p-0'
@@ -589,12 +602,16 @@ ursor/fix-website-loading-errors-and-merge-6662
                       href={feature && feature.link}
                       className='flex items-center gap-1'>;
                       Learn more <ArrowRight className='h-4 w-4' />;
+<<<<<<< HEAD
 >>>>>>>                   "transition-all duration-300",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   "transition-all duration-300",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                   openIndex === index ? "max-h-48 opacity-100 p-6 pt-0" : "max-h-0 opacity-0 p-0"
@@ -631,6 +648,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 ========
               className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg";
             >;
@@ -681,6 +699,13 @@ ursor/fix-website-loading-errors-and-merge-6662
               </div>;
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/InteractiveFeatures.tsx
+=======
+export default InteractiveFeatures;
+;
+}
+}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </div>;
 =======
 export default InteractiveFeatures
@@ -691,16 +716,23 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>;
     </section>;
   );
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/home/InteractiveFeatures.tsx
 
 
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/InteractiveFeatures.tsx
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </Card>))}
         </div>;
       </div>;
     </section>);
 export default InteractiveFeatures;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/home/InteractiveFeatures.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> }
@@ -772,3 +804,8 @@ export default InteractiveFeatures;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+export default InteractiveFeatures;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/disputes/DisputesList.tsx
 
 =======
@@ -52,6 +53,8 @@ type DisputesListProps = {
   disputes: Dispute[];
 is_loading: boolean;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/disputes/DisputesList.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 export /**
  * DisputesList - Function description
@@ -240,8 +243,12 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
         return 'default';
 <<<<<<<< HEAD:src/components/disputes/DisputesList.tsx
 
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/disputes/DisputesList.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from "react";
 import { Dispute, DisputeStatus } from "@/types/disputes";
 import { Button } from "@/components/ui/button";
@@ -271,9 +278,12 @@ import Link from "next/link",
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 type DisputesListProps = {
   disputes: Dispute[]
   isLoading: boolean
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
         <div className="border rounded-md">
 =======
@@ -435,6 +445,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                 <TableHead className='text-right'>Actions</TableHead>              </TableRow>                <TableHead className="text-right">Actions</TableHead>
                 <TableHead className="text-right">Actions</TableHead>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </TableRow>
             </TableHeader>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -451,6 +466,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -492,6 +508,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </TableRow>
 import React, { useState } from "react",;
 import { Dispute, DisputeStatus } from "@/types/disputes",;
@@ -633,6 +653,7 @@ export function DisputesList({ disputes, isLoading } DisputesListProps) {;
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/disputes/DisputesList.tsx
               ))}
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -641,6 +662,8 @@ export function DisputesList({ disputes, isLoading } DisputesListProps) {;
 =======
               ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </TableBody>;
           </Table>;
         </div>;
@@ -651,6 +674,7 @@ export function DisputesList({ disputes, isLoading } DisputesListProps) {;
     );
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
     );
 <<<<<<< HEAD
@@ -664,6 +688,22 @@ export function DisputesList({ disputes, isLoading } DisputesListProps) {;
   }
 
   if (disputes.length === 0) {
+=======
+
+
+  }
+
+  if (disputes && disputes.length === 0) {;
+    return (
+      <div className='text-center py-12 border rounded-md bg-muted/20'>;
+        <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
+        <h3 className='text-xl font-medium'>No disputes found</h3>;
+        <p className='text-muted-foreground mt-2'>          No active disputes match the selected filter    );
+    )
+  }
+
+  if (disputes && disputes.length === 0) {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return (
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -738,6 +778,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/disputes/DisputesList.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -753,6 +794,13 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+
+        </p>
+      </div>
+    )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 >>>>>>>         </p>
@@ -1014,6 +1062,7 @@ if ( {) {
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/disputes/DisputesList.tsx
     <div className="space-y-4">
+<<<<<<< HEAD
 >>>>>>>       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <Button
@@ -1050,6 +1099,8 @@ if ( {) {
           onClick={() => setStatusFilter("open")}
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/disputes/DisputesList.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/disputes/DisputesList.tsx
@@ -1079,6 +1130,13 @@ ursor/fix-website-loading-errors-and-merge-6662
         <Button
           variant={statusFilter === "open" ? "default" : "outline"}
           onClick={() => setStatusFilter("open")}
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           size="sm"
           size="sm"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1092,6 +1150,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           size="sm"
 =======
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1114,6 +1178,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           size="sm"
 =======
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1137,6 +1207,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/disputes/DisputesList.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           size="sm"
 =======
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1174,6 +1250,12 @@ ursor/fix-website-loading-errors-and-merge-6662
       <div className='border rounded-md overflow-hidden'>        <Table>      <div className="border rounded-md overflow-hidden">
 
       <div className="border rounded-md overflow-hidden">
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Table>
           <TableHeader>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1217,6 +1299,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             </TableRow>
           </TableHeader>
           <TableBody>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {filteredDisputes.map((dispute) => (
               <TableRow key={dispute.id}>
                 <TableCell className="font-mono text-xs">
@@ -1275,6 +1362,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   {dispute.id.split('-')[0]}
                 </TableCell>
                 <TableCell>
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/disputes/DisputesList.tsx
 =======
 =======
@@ -1289,6 +1377,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+                    addSuffix: true,
+                  })}                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   {dispute.project?.title || "Unknown Project"}
                 </TableCell>
                 <TableCell>
@@ -1303,6 +1398,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/disputes/DisputesList.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/disputes/DisputesList.tsx
 =======
@@ -1354,6 +1450,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>>                 <TableCell className="text-right">
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     </span>
                   </div>
                 </TableCell>
@@ -1387,6 +1488,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               <TableRow key={dispute && dispute.id}>;
                 <TableCell className='font-mono text-xs'>;
                   {dispute && dispute.id.split('-')[0]}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true })}
 
                 </TableCell>;
@@ -1456,6 +1561,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   {formatDistanceToNow (new Date (dispute.created_at), {
                     add_suffix: true,
                   })}                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
+<<<<<<< HEAD
 =======
           size="sm";
         >;
@@ -1513,15 +1619,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <span>;
                       Talent:{dispute.talent_profile?.display_name || "Unknown Talent"}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     </span>;
                   </div>;
                 </TableCell>;
                 <TableCell>;
 <<<<<<<< HEAD:src/components/disputes/DisputesList.tsx
 
+<<<<<<< HEAD
 ========
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/disputes/DisputesList.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true })}
                 </TableCell>
                 <TableCell>
@@ -1560,6 +1671,9 @@ ursor/fix-website-loading-errors-and-merge-6662
               </TableRow>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             ))}
 
 =======
@@ -1665,11 +1779,16 @@ if ( {") {
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </TableBody>;
         </Table>;
       </div>;
@@ -1679,9 +1798,12 @@ if ( {") {
 <<<<<<<< HEAD:src/components/disputes/DisputesList.tsx
 
 
+<<<<<<< HEAD
 ========
 }
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/disputes/DisputesList.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   i ";
 }> <TableCell><Skeleton className="h - 4 w - 24" /></TableCell> <TableCell><Skeleton className="h - 4 w - 40" /></TableCell> <TableCell><Skeleton className="h - 4 w - 32" /></TableCell> <TableCell><Skeleton className="h - 4 w - 24" /></TableCell> <TableCell><Skeleton className="h - 6 w - 20" /></TableCell> <TableCell className="text - right" ><Skeleton className="h - 9 w - 20 ml - auto" /></TableCell> </TableRow>) );
 }</TableBody> </Table> </div> </div>) ";
@@ -1695,6 +1817,7 @@ if ( {") {
 }</TableCell> <TableCell> </Button> </TableCell> </TableRow>) );
 }</TableBody> </Table> </div> </div>);
 }"}
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/disputes/DisputesList.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> }
@@ -1764,3 +1887,7 @@ if (isLoading) {";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

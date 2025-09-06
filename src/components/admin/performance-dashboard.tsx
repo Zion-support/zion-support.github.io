@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/admin/performance-dashboard.tsx
 
 =======
@@ -39,6 +40,8 @@ interface PerformanceMetrics {
 <<<<<<< HEAD
 ========
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -797,6 +800,7 @@ export function PerformanceDashboard() {;
           />
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
 ;
+<<<<<<< HEAD
     return vitals;
   },;
   const collectChunkData = async (): Promise<BundleChunk[]> => {;
@@ -895,6 +899,8 @@ export function PerformanceDashboard() {;
 ursor/fix-website-loading-errors-and-merge-6662
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/admin/performance-dashboard.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return vitals;
   };
   const collectChunkData = async (): Promise<BundleChunk[]> => {;
@@ -946,6 +952,10 @@ ursor/fix-website-loading-errors-and-merge-6662
     const interval = setInterval(collectMetrics, 30000); // Update every 30 seconds;
     return () => clearInterval(interval);
   }, []);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className='space-y-6'>;
       {/* Header */}
@@ -975,7 +985,10 @@ ursor/fix-website-loading-errors-and-merge-6662
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />;
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {isLoading ? 'Collecting...' : 'Refresh'}
 
         </Button>;
@@ -1003,6 +1016,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         <CardHeader>;
           <CardTitle className='flex items - center gap - 2'>;
             <Zap className='w - 5 h - 5' />;
+<<<<<<< HEAD
 =======
 import React, { useState, useEffect } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -1203,6 +1217,8 @@ export function PerformanceDashboard() {;
           <CardTitle className="flex items-center gap-2">;
             <Zap className="w-5 h-5" />;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             Performance Score;
           </CardTitle>;
         </CardHeader>;
@@ -1215,6 +1231,7 @@ export function PerformanceDashboard() {;
                 <p className="text-sm text-muted-foreground">
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                   Last updated: {lastUpdated.toLocaleString()}
@@ -1222,6 +1239,10 @@ export function PerformanceDashboard() {;
 ========
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/admin/performance-dashboard.tsx
+=======
+                  Last updated: {lastUpdated.toLocaleString()}
+                </p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     </Badge>;
                   </div>;
                   <Progress value={metrics && metrics.performanceScore} className='h-2' />;
@@ -1652,8 +1673,33 @@ export function PerformanceDashboard() {;
                             cached
                           </Badge>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
+=======
+                        )}
+                      </div>;
+                    </div>;
+                  </div>;
+                  <div className='text-right'>;
+                    <p className='font-medium'>{formatSize(chunk && chunk.size)}</p>;
+                    <p className='text-xs text-muted-foreground'>;
+                      {chunk && chunk.loadTime.toFixed(0)}ms;
+                    </p>;
+                  </div>;
+                </div>;
+              ))}
+
+
+              
+
+
+              {chunks.length > 10 && (
+                <p className='text-sm text-muted-foreground text-center pt-2'>
+                  ... and {chunks.length - 10} more chunks
+                </p>
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               {chunks && chunks.length > 10 && (;
                 <p className='text-sm text-muted-foreground text-center pt-2'>;
                   ... and {chunks && chunks.length - 10} more chunks;
@@ -1754,6 +1800,7 @@ export function PerformanceDashboard() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
               <div>
 =======
             <div className='flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded'>
@@ -1762,6 +1809,14 @@ export function PerformanceDashboard() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                 <p className="font-medium text-green-900 dark:text-green-100">
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+            
+            <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
+              <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <div>
                 <p className='font-medium text-green-900 dark:text-green-100'>
 >>>>>>>                   Performance monitoring active
@@ -1791,6 +1846,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
 =======
 >>>>>>>             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
@@ -1798,6 +1854,12 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded">
                 <AlertTriangle className="w-5 h-5 text-yellow-600 mt-0.5" />
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+            
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
               <div className='flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded'>
                 <AlertTriangle className='w-5 h-5 text-yellow-600 mt-0.5' />
@@ -1945,6 +2007,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>;
               </div>;
             )}
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/admin/performance-dashboard.tsx
 =======
 =======
@@ -1964,6 +2027,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>;
         </CardContent>;
       </Card>;
@@ -1975,6 +2043,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/admin/performance-dashboard.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 
@@ -1983,6 +2052,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
 } ;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {chunks.length > 0 ? (
             <div className='space - y-2'>;
               {chunks.slice (0, 10).map ((chunk, index) => (
@@ -2074,6 +2146,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         </CardContent>;
       </Card>;
     </div>);
+<<<<<<< HEAD
 =======
   ),;} 
  const collectMetrics = async () => {;
@@ -2149,3 +2222,8 @@ return (<div className="space-y-6" > {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

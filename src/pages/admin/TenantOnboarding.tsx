@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -83,6 +84,9 @@ export default function TenantOnboarding() {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [formData, setFormData] = useState({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+const [formData, setFormData] = useState({
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
     brand_name: ""
     subdomain: ""
@@ -117,11 +121,15 @@ export default function TenantOnboarding() {
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }),
   
   // Check if user has admin role
@@ -210,6 +218,7 @@ export default function TenantOnboarding() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>>   return (
 ursor/fix-website-loading-errors-and-merge-6662
@@ -219,6 +228,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 >>>>>>>     <>
       <SEO 
@@ -434,6 +446,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 }
 >>>>>>> 
@@ -442,6 +455,48 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 }
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+import React, { useState } from "react";
+import {Header} from "@/components/Header";
+import {SEO} from "@/components/SEO";
+import {useAuth} from "@/hooks/useAuth";
+import {useRouter} from "next/router";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
+import {Label} from "@/components/ui/label";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {toast} from "sonner";
+import {supabase} from "@/integrations/supabase/client";
+import {Switch} from "@/components/ui/switch";
+import {logErrorToProduction} from '@/utils/productionLogger';
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -457,7 +512,10 @@ import { toast } from "sonner",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Switch } from "@/components/ui/switch",;
 import { logErrorToProduction } from '@/utils/productionLogger',;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export default function TenantOnboarding() {;
   const { user } = useAuth(),;
   const [activeTab, setActiveTab] = useState("company"),;
@@ -748,7 +806,10 @@ export default function TenantOnboarding() {;
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { SEO } from '@/components / SEO';
@@ -787,6 +848,7 @@ function TenantOnboarding() {
       }
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> ;
 
@@ -804,3 +866,6 @@ function TenantOnboarding() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

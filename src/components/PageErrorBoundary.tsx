@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/PageErrorBoundary.tsx
 
 =======
@@ -145,6 +146,15 @@ function PageErrorFallback(): any ({;
     <div className="min-h-screen bg-zion-blue flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+
+  },
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className='min-h-screen bg-zion-blue flex items-center justify-center p-4'>;
       <div className='max-w-2xl w-full'>;
@@ -449,6 +459,7 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName } PageErrorFall
               className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
             >
               <Home className="w-4 h-4 mr-2" />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               Go Home
             </Link>
@@ -549,6 +560,11 @@ export default function PageErrorBoundary({
           <div className="flex flex-col sm:flex-row gap-3 mb-6">;
             <button;
 ========
+=======
+              Go Home
+            </Link>
+          </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               className='flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'             aria-label="Button">;
               <RefreshCw className='w-4 h-4 mr-2' />;
               Try Again;
@@ -560,6 +576,10 @@ export default function PageErrorBoundary({
               Go Home;
             </Link>;
           </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Navigation Options */}
           <div className='border-t pt-6'>;
             <h3 className='font-semibold text-gray-900 mb-3'>;
@@ -744,11 +764,52 @@ function PageErrorBoundary() {
               href='mailto:support@zion && zion.tech'
               className='text-blue-400 hover:underline'>;
               support@zion && zion.tech;
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/PageErrorBoundary.tsx
             </a>;
             <Link href='/status' className='text-blue-400 hover:underline'>;
 =======
 ;
+=======
+
+        logInfo(`Resetting error boundary for ${pageName || 'page'}`)
+
+          <div className="flex flex-col sm:flex-row gap-3 mb-6">;
+            <button;
+              onClick={handleRefresh}
+              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors";
+            >;
+              <RefreshCw className="w-4 h-4 mr-2" />;
+              Try Again;
+            </button>;
+            <Link;
+              href="/";
+              className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors";
+            >;
+              <Home className="w-4 h-4 mr-2" />;
+              Go Home;
+            </Link>;
+          </div>;
+          {/* Navigation Options */}
+          <div className="border-t pt-6">;
+            <h3 className="font-semibold text-gray-900 mb-3">You can also visit:</h3>;
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">;
+              <Link href="/marketplace" className="text-blue-600 hover:underline">;
+                Marketplace;
+              </Link>;
+              <Link href="/talent" className="text-blue-600 hover:underline">;
+                Talent;
+              </Link>;
+              <Link href="/services" className="text-blue-600 hover:underline">;
+                Services;
+              </Link>;
+              <Link href="/about" className="text-blue-600 hover:underline">;
+                About;
+              </Link>;
+            </div>;
+          </div>;
+        </div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {/* Support Information */}
         <div className="bg-gray-800 text-white rounded-lg p-6 text-center">;
           <p className="mb-3">Need help? Contact our support team</p>;
@@ -809,6 +870,7 @@ const Component = React && React.memo(function PageErrorBoundary(): any ({;
 <<<<<<<< HEAD:src/components/PageErrorBoundary.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
       }}
     >
       {children}
@@ -829,6 +891,11 @@ const Component = React && React.memo(function PageErrorBoundary(): any ({;
 } ;
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       }}
     >;
       {children}
@@ -847,12 +914,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 } ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/PageErrorBoundary.tsx
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const FallbackComponent =;
     fallback ||;
     ((props: FallbackProps) => (
@@ -895,6 +968,7 @@ export default function PageErrorBoundary({ ;
 =======
   );
 }
+<<<<<<< HEAD
 ;
 interface PageErrorBoundaryProps {;
   children: React.ReactNode,;
@@ -994,3 +1068,6 @@ const handleRefresh = () => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

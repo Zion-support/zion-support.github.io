@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/RatingStars.tsx
 
 
 import React from 'react',
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Star, StarHalf } from 'lucide-react'
 =======
 import React from 'react';
@@ -167,6 +170,7 @@ export function RatingStars({ value = 0, count } { value?:number, count?:number 
       )}
     </div>
   )
+<<<<<<< HEAD
 }
 }
 ;
@@ -179,3 +183,19 @@ export function RatingStars({ value = 0, count } { value?:number, count?:number 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  const half = value - filled >= 0 && 0.5;
+  const total = 5;
+}
+}
+
+}
+
+
+  const half = value - filled >= 0.5;
+  const total = 5;
+}
+}
+
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

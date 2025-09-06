@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -38,6 +39,8 @@ import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Button } from "@/components/ui/button",
 >>>>>>> import { Input } from "@/components/ui/input",
 import { ScrollArea } from "@/components/ui/scroll-area",
@@ -295,11 +298,15 @@ export function ChatBotPanel() {
         description: "We're having trouble connecting to our support service."}),
             
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useRef, useEffect } from "react",;
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',;
 import { Button } from "@/components/ui/button",;
@@ -419,6 +426,7 @@ export function ChatBotPanel() {;
 }
       timestamp: new Date ()},
         timestamp: new Date ()},
+<<<<<<< HEAD
 =======
       setMessages((prev) => [...prev, botMessage]),;
       // Check if the request was successful;
@@ -458,6 +466,20 @@ export function ChatBotPanel() {;
     }
   },
 
+=======
+        description: "We're having trouble connecting to our support service."}),
+      id: `bot - escalation-${Date.now ()}`,
+      content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
+      sender: "bot",
+      timestamp: new Date ()},
+  const handleQuickReply = (text: string, ) =>: any {
+    handleSendMessage (text);
+  }
+  );
+}
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const sendToAIAssistant = async (message: string) => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
@@ -498,6 +520,11 @@ export function ChatBotPanel() {;
 
   const suggestEscalation = () => {
     const escalationMessage: Message = {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       id: `bot-escalation-${Date.now()}`,
       content: 
         "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
@@ -528,6 +555,7 @@ export function ChatBotPanel() {;
   },
 
   const handleQuickReply = (text: string) => {
+<<<<<<< HEAD
     handleSendMessage(text)
   }
   );
@@ -1174,3 +1202,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+    handleSendMessage(text)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -102,6 +103,9 @@ export const MobileAppHero: React.FC = () => {
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover:bg-white/10">
 ursor/fix-website-loading-errors-and-merge-6662
             <Link href="/open-app">
+=======
+<Link href="/open-app">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover: bg-white/10">
 >>>>>>>                 Open App
 =======
@@ -150,7 +154,10 @@ import React from "react",;
 }
 "
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <div className="flex-1 flex justify-center">
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
@@ -202,10 +209,15 @@ import React from "react";
 import Link from "next/link";
 import { ArrowRight, Phone } from 'lucide-react'import { Button } from "@/components/ui/button";
 import { AppStoreButtons } from "./AppStoreButtons";
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   );
 };
 ";
 
+<<<<<<< HEAD
 >>>>>>> import React from "react",;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -225,6 +237,8 @@ import { AppStoreButtons } from "./AppStoreButtons";
   );
 };
 ";
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react",;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import Link from "next/link",;
@@ -232,9 +246,12 @@ import { ArrowRight, Phone } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { AppStoreButtons } from "./AppStoreButtons",;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export const MobileAppHero: React.FC = () => {;
   // These would come from environment variables or a config;
   const appStoreUrl = "#", // Replace with actual App Store URL when available;
@@ -279,6 +296,7 @@ export const MobileAppHero: React.FC = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 
@@ -293,3 +311,7 @@ export const MobileAppHero: React.FC = () => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

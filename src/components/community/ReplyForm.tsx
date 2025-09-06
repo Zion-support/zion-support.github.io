@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/community/ReplyForm.tsx
 
 
@@ -35,10 +36,17 @@ import { Card, CardContent } from '@/components/ui/card'
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+interface ReplyFormProps {;
+  onSubmit: (content: string) => Promise<void>;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState } from 'react'
 import { useForm, ControllerRenderProps } from 'react-hook-form'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
+<<<<<<< HEAD
 import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   Form,
@@ -60,6 +68,8 @@ import { Card, CardContent } from '@/components/ui/card'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { useState } from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
@@ -77,6 +87,13 @@ import { Card, CardContent } from "@/components/ui/card",
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
@@ -129,6 +146,7 @@ interface ReplyFormProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>     setIsSubmitting(true);    try {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -136,12 +154,15 @@ interface ReplyFormProps {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     setIsSubmitting(true);    try {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       await onSubmit(values.content)
       form.reset()
     } finally {
       setIsSubmitting(false)
+<<<<<<< HEAD
     }
   }
 <<<<<<< HEAD
@@ -198,6 +219,8 @@ import { Card, CardContent } from '@/components/ui/card';
 interface ReplyFormProps {;
   onSubmit: (content: string) => Promise<void>;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/ReplyForm.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   parentId?: string;
 interface ReplyFormValues {;
   content: string;
@@ -274,6 +297,7 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
 
                 field: ControllerRenderProps<ReplyFormValues, 'content'>;
               }) => (                <FormItem>;
+<<<<<<< HEAD
 =======
   parentId?: string;
 }
@@ -297,6 +321,8 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
     } finally {;
       setIsSubmitting(false);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   },
 
@@ -369,6 +395,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
               name="content";
               render={({ field }: { field: ControllerRenderProps<ReplyFormValues "content"> }) => (;
                 <FormItem>;
+<<<<<<< HEAD
                   <FormControl>;
                     <Textarea;
                       className="min-h-[100px] resize-y";
@@ -412,6 +439,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 field: ControllerRenderProps<ReplyFormValues, 'content'>;
               }) => (                <FormItem>;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/ReplyForm.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <FormControl>;
                     <Textarea className='min-h-[100px] resize-y' {...field} />;
                   </FormControl>;
@@ -421,9 +450,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/ReplyForm.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               )}
             />;
             <div className='mt-4 flex justify-end'>;
@@ -443,9 +475,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 };
 <<<<<<<< HEAD:src/components/community/ReplyForm.tsx
 
+<<<<<<< HEAD
 ========
 export default ReplyForm;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/ReplyForm.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 field: ControllerRenderProps < ReplyFormValues, 'content'>;
               }) => (                <FormItem>;
                   <FormControl>;
@@ -464,6 +499,7 @@ export default ReplyForm;
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
 export default ReplyForm;
 <<<<<<<< HEAD:src/components/community/ReplyForm.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -580,3 +616,6 @@ export default ReplyForm,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+export default ReplyForm;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

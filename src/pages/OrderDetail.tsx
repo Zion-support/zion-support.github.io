@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import Link from 'next/link';
 
 import { useAuth } from '@/hooks/useAuth';
@@ -171,6 +174,9 @@ export default function OrderDetail() {;
       total: 299.99
       items: [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
 export default /**
  * OrderDetail - Function description
@@ -190,9 +196,12 @@ function OrderDetail() {
       status: 'shipped',
       total: 299.99,
       items: [;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {
           id: '1'
           name: 'Premium Web Development Service'
@@ -307,9 +316,12 @@ export default function OrderDetailPage() {;
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return (
       <div className="container mx-auto px-4 py-8">
         <div className="animate-pulse">
@@ -445,6 +457,9 @@ import Link from 'next/link',;
           </Card>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Check condition
 if ( {) {
   $2
@@ -544,9 +559,12 @@ if ( {) {
             </CardContent>;
           </Card>;
         </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {/* Order Status & Tracking */}
         <div className="space-y-6">
           <Card>
@@ -626,6 +644,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> import Link from 'next/link',;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 import { useRouter } from 'next/router',;
@@ -724,6 +743,36 @@ export default function OrderDetailPage() {;
       </div>
     </div>
   );
+=======
+                  <div className="flex items - center space - x-3">;
+                    <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
+                    <span className="text - sm">Delivered</span>;
+                  </div>)}
+              </div>;
+            </CardContent>;
+          </Card>;
+          {order.tracking_number && (
+            <Card>;
+              <CardHeader>;
+                <CardTitle > Tracking Information</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+                <div className="space - y-2">;
+                  <p className="text - sm text - gray - 600">Tracking Number:</p>;
+                  <p className="font - mono text - lg">{order.tracking_number}</p>;
+                  <Button className="w - full mt - 4">;
+                    Track Package;
+                  </Button>;
+                </div>;
+              </CardContent>;
+            </Card>)}
+        </div>;
+      </div>;
+    </div>);
+;
+}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
 import Link from 'next/link',;
@@ -794,10 +843,16 @@ export default function OrderDetailPage() {;
     return (
       <div className="container max-w-3xl py-10">
         <Skeleton className="h-6 w-full" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </div>
     )
   }
 
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1200,3 +1255,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  return (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

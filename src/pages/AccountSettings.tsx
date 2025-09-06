@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -114,10 +115,13 @@ export default function AccountSettings() {
       toast.success(
         `Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`
       )
+=======
+toast.success (
+        `Wallet connected: ${address.slice (0, 6)}...${address.slice (-4)}`);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     } catch (error: any) {
 <<<<<<< HEAD
       toast.error (error.message || 'Failed to connect wallet');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
 <<<<<<< HEAD
@@ -247,6 +251,7 @@ export default function AccountSettings() {;
         <div className="grid gap-6 md:grid-cols-2">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -259,6 +264,60 @@ export default function AccountSettings() {;
               <CardTitle>Profile Settings</CardTitle>
               <CardDescription>Manage your personal information and privacy</CardDescription>
             </CardHeader>
+=======
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Profile Settings</CardTitle>
+              <CardDescription>
+                Manage your personal information and privacy
+              </CardDescription>
+            </CardHeader>
+
+    <>;
+      <SEO title='Account Settings' description='Manage your account' />;
+      <Header />;
+      <main className='container mx-auto py-8 px-4'>;
+        <h1 className='text-3xl font-bold mb-6 text-white'>Account Settings</h1>;
+
+        <div className='grid gap-6 md:grid-cols-2'>;
+          <Card>;
+            <CardHeader>;
+              <CardTitle>Profile Settings</CardTitle>;
+    <>;
+      <SEO title='Account Settings' description='Manage your account' />;
+      <Header />;
+      <main className='container mx - auto py - 8 px - 4'>;
+        <h1 className='text - 3xl font - bold mb - 6 text - white'>Account Settings</h1>;
+        <div className='grid gap - 6 md:grid - cols - 2'>;
+          <Card>;
+            <CardHeader>;
+              <CardTitle > Profile Settings</CardTitle>;
+
+              <CardDescription>;
+                Manage your personal information and privacy;
+              </CardDescription>;
+            </CardHeader>;
+
+                />;
+              </div>;
+
+              <div className='space-y-2'>;
+                <Label htmlFor='didHandle'>Web3 Identity Handle</Label>;
+                <div className='flex gap-2'>;
+
+                  <Input
+                    id='didHandle'
+                    value={didHandle}
+                    onChange={e => setDidHandle(e && e.target.value)}
+                    placeholder='ENS / Lens / Ceramic / Farcaster';
+                  />;
+                  <Button
+                    variant='outline'
+                    onClick={handleConnectWallet}
+                    type='button'
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <CardContent className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="email">Email Address</Label>
@@ -326,6 +385,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <Wallet className="h-4 w-4" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -333,6 +393,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     Connect
 >>>>>>>                   </Button>
                 </div>
@@ -397,6 +461,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className="space-y-0.5">
                   <Label htmlFor="backup" className="flex items-center gap-1">
                     <Database className="h-4 w-4" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     Decentralized Backup
                   </Label>
                   <p className="text-xs text-gray-500">
@@ -439,6 +508,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Button
                 onClick={handleSave}
                 disabled={isSubmitting}
+<<<<<<< HEAD
                 className='w-full'              >
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -448,6 +518,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+                className='w-full'>;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   id="backup"
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}
@@ -475,9 +549,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>           <Card>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
                 {!isSubmitting && <Save className='ml-2 h-4 w-4' />}
 
@@ -485,6 +562,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -499,6 +577,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
           
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Card>
 >>>>>>>             <CardHeader>
               <CardTitle>Web3 Features</CardTitle>
@@ -508,6 +588,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="space-y-2">
                 <h3 className="font-medium">Connected Wallet</h3>
                 {didHandle ? (
+<<<<<<< HEAD
                   <div className="flex items-center gap-2 bg-gray-100 p-3 rounded-md">
                     <svg 
                       xmlns="http://www.w3.org/2000/svg" 
@@ -559,6 +640,98 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+                  <div className='flex items-center gap-2 bg-gray-100 p-3 rounded-md'>
+              </Button>;
+            </CardContent>;
+          </Card>;
+
+          <Card>;
+            <CardHeader>;
+              <CardTitle>Web3 Features</CardTitle>;
+            <CardContent className='space - y-6'>;
+              <div className='space - y-2'>;
+                <Label html_for='email'>Email Address</Label>;
+                <Input;
+                  id='email';
+                  value={user?.email || ''}                  disabled;
+                  className='bg - gray - 100';
+                />;
+              </div>;
+              <div className='space - y-2'>;
+                <Label html_for='did_handle'>Web3 Identity Handle</Label>;
+                <div className='flex gap - 2'>;
+                  <Input;
+                    id='did_handle';
+                    value={did_handle}
+                    on_change={e => setDidHandle (e.target.value)}
+                    placeholder='ENS / Lens / Ceramic / Farcaster';
+                  />;
+                  <Button;
+                    variant='outline';
+                    on_click={handleConnectWallet}
+                    type='button';
+                    className='flex items - center gap - 1'                  >;
+                    <Wallet className='h - 4 w - 4' />;
+                    Connect;
+                  </Button>;
+                </div>;
+                <p className='text - xs text - gray - 500 mt - 1'>;
+                  Link your decentralized identity to display on your profile;
+                </p>;
+              </div>;
+              <div className='flex items - center justify - between'>;
+                <div className='space - y-0.5'>;
+                  <Label html_for='displayWeb3'>Display Web3 Identity</Label>;
+                  <p className='text - xs text - gray - 500'>;
+                    Show your Web3 handle instead of email;
+                  </p>;
+                </div>;
+                <Switch;
+                  id='displayWeb3';
+                  checked={displayWeb3}
+                  onCheckedChange={setDisplayWeb3}                />;
+              </div>;
+              <Separator />;
+              <div className='flex items - center justify - between'>;
+                <div className='space - y-0.5'>;
+                  <Label html_for='backup' className='flex items - center gap - 1'>;
+                    <Database className='h - 4 w - 4' />;
+                    Decentralized Backup;
+                  </Label>;
+                  <p className='text - xs text - gray - 500'>;
+                    Backup your profile data to IPFS / Arweave;
+                  </p>;
+                </div>;
+                <Switch;
+                  id='backup';
+                  checked={enable_backup}
+                  onCheckedChange={setEnableBackup}                />;
+              </div>;
+              {enable_backup && (
+                <div className='rounded - md bg - amber - 50 p - 3 text - sm text - amber - 800'>;
+                  Data will be backed up to decentralized storage. This feature;
+                  is in beta.;
+                </div>)}
+              <Button;
+                on_click={handle_save}
+                disabled={is_submitting}
+                className='w - full'              >;
+                {is_submitting ? 'Saving...' : 'Save Settings'}
+                {!is_submitting && <Save className='ml - 2 h - 4 w - 4' />}
+              </Button>;
+            </CardContent>;
+          </Card>;
+          <Card>;
+            <CardHeader>;
+              <CardTitle > Web3 Features</CardTitle>;
+              <CardDescription>;
+                Manage your Web3 connections and features;
+              </CardDescription>;
+            </CardHeader>;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               
               <div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -594,6 +767,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
     </>
   )
@@ -643,6 +817,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                     ? 'Restore your profile data from decentralized storage' 
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <div>
                 <h3 className='font-medium mb-2'>Backup Status</h3>
                 <div className='grid grid-cols-2 gap-2'>
@@ -657,7 +834,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <div className='bg-gray-100 p-3 rounded-md'>;
                     <p className='text-sm font-medium'>Profile Data</p>;
                     <p className='text-xs text-gray-500'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       {enableBackup ? 'Backed up' : 'Not backed up'}
                     </p>;
                   </div>;
@@ -750,6 +926,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>;
               </div>;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </>;
   );
 };
@@ -766,17 +946,22 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <p className='text - xs text - gray - 500 mt - 1'>;
                   {enable_backup;
                     ? 'Restore your profile data from decentralized storage';
+<<<<<<< HEAD
 >>>>>>>                     : 'Enable backup first to use this feature'}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
                     : 'Enable backup first to use this feature'}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                    : 'Enable backup first to use this feature'}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </p>;
               </div>;
             </CardContent>;
           </Card>;
         </div>;
       </main>;
+<<<<<<< HEAD
     </>;
   );
 }
@@ -801,3 +986,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+    </>);
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

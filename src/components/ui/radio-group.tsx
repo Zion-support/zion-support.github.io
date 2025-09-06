@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import * as React from "react"
+import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
+import { Circle } from 'lucide-react'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
 const RadioGroup = React.forwardRef<
@@ -36,6 +42,7 @@ const RadioGroup = React.forward_ref<;
       className={cn (&quot;grid gap - 2&quot;, class_name)}
   return (
     <RadioGroupPrimitive.Root
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -78,6 +85,18 @@ const RadioGroupItem = React.forwardRef<;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+
+      className={cn("grid gap-2", className)}
+
+      {...props}
+      ref={ref}
+    />);
+});
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   React.ElementRef<typeof RadioGroupPrimitive.Item>,;
 
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>;
@@ -117,6 +136,7 @@ className={cn(
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
       className={cn(
         "aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
@@ -140,6 +160,9 @@ className={cn(
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         className
 >>>>>>>       )}
       {...props}
@@ -155,6 +178,7 @@ RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 export { RadioGroup, RadioGroupItem };
 
 export { RadioGroup, RadioGroupItem }
@@ -187,3 +211,35 @@ export { RadioGroup, RadioGroupItem }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+RadioGroup.display_name = RadioGroupPrimitive.Root.display_name;
+const RadioGroupItem = React.forward_ref<;
+  React.ElementRef < typeof RadioGroupPrimitive.Item>,
+  React.ComponentPropsWithoutRef < typeof RadioGroupPrimitive.Item>;
+>(({ class_name, ...props }, ref) => {
+  return (
+    <RadioGroupPrimitive.Item;
+      ref={ref}
+className={cn (
+        &quot;aspect - square h - 4 w - 4 rounded - full border border - primary text - primary ring - offset - background focus:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50 & quot;,
+        class_name)}
+      {...props}
+    >;
+      <RadioGroupPrimitive.Indicator className=&quot;flex items - center justify - center & quot;>;
+        <Circle className=&quot;h - 2.5 w - 2.5 fill - current text - current & quot; />;
+      </RadioGroupPrimitive.Indicator>;
+    </RadioGroupPrimitive.Item>);
+});
+RadioGroupItem.display_name = RadioGroupPrimitive.Item.display_name;
+
+export { RadioGroup, RadioGroupItem }
+
+
+export { RadioGroup, RadioGroupItem }
+;
+
+export { RadioGroup, RadioGroupItem };
+
+export { RadioGroup, RadioGroupItem }
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

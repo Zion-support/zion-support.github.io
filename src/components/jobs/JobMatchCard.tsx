@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/jobs/JobMatchCard.tsx
@@ -82,6 +83,8 @@ talentId, ;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 
 
@@ -96,6 +99,7 @@ talentId, ;
 
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
@@ -158,6 +162,10 @@ export function JobMatchCard({ ;
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   talent_id,
   name,
   title,
@@ -166,6 +174,7 @@ export function JobMatchCard({ ;
   location,
   category,
   match_percent,
+<<<<<<< HEAD
 =======
   skills,;
   onApply, ;
@@ -473,3 +482,7 @@ postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

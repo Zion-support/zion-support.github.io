@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src/pages/Services.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -80,6 +81,13 @@ const Services: React.FC = () => {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:src/pages/Services.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/pages/Services.tsx
+=======
+import React from 'react';
+import ServiceCard from '../components/ServiceCard';
+import Card from '../components/Card';
+
+const Services: React.FC = () => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
       <div className="container mx-auto px-4 py-16">
@@ -88,10 +96,11 @@ const Services: React.FC = () => {
             Our Services
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
-            Comprehensive technology solutions designed to transform your business 
+            Comprehensive technology solutions designed to transform your business
             and drive innovation across all sectors.
           </p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:src/pages/Services.tsx
@@ -182,6 +191,45 @@ const Services: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+        {/* Main Services */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <ServiceCard
+            title="AI & Machine Learning"
+            description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision."
+            icon="🤖"
+          />
+          <ServiceCard
+            title="Cybersecurity"
+            description="Protect your digital assets with advanced security solutions, threat detection, and compliance management."
+            icon="🔒"
+          />
+          <ServiceCard
+            title="Cloud Infrastructure"
+            description="Scale your operations with robust cloud solutions, migration services, and infrastructure optimization."
+            icon="☁️"
+          />
+          <ServiceCard
+            title="Digital Transformation"
+            description="Modernize your business processes with comprehensive digital transformation strategies and implementation."
+            icon="🚀"
+          />
+          <ServiceCard
+            title="Data Analytics"
+            description="Unlock insights from your data with advanced analytics, business intelligence, and reporting solutions."
+            icon="📊"
+          />
+          <ServiceCard
+            title="IoT Solutions"
+            description="Connect and manage your devices with Internet of Things solutions for smart operations and monitoring."
+            icon="🌐"
+          />
+        </div>
+
+        {/* Service Categories */}
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold text-center mb-12">Service Categories</h2>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card
               title="Consulting Services"
@@ -211,7 +259,11 @@ const Services: React.FC = () => {
         </div>
 
         {/* Industry Solutions */}
+<<<<<<< HEAD
         <div className="text-center mb-16">
+=======
+        <div className="text-center">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <h2 className="text-4xl font-bold mb-12">Industry Solutions</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
             <div className="text-center">
@@ -250,6 +302,7 @@ const Services: React.FC = () => {
               </div>
               <h3 className="text-lg font-semibold">Government</h3>
             </div>
+<<<<<<< HEAD
           </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/pages/Services.tsx
         </div>
@@ -315,10 +368,13 @@ const Services: React.FC = () => {
               </Link>
             </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:src/pages/Services.tsx
   );
 };
@@ -353,4 +409,9 @@ const Services: React.FC = () => {;
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:src/pages/Services.tsx
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/pages/Services.tsx
+=======
+  );
+};
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export default Services;

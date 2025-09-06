@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseTrustBadges.tsx
 
 <<<<<<< HEAD
@@ -31,6 +32,8 @@ import React from "react";
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 import React from 'react'
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function EnterpriseTrustBadges() {
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -64,6 +67,7 @@ export function EnterpriseTrustBadges() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
           <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
             <CheckCircle className="h-5 w-5 text-primary" />
@@ -82,10 +86,18 @@ export function EnterpriseTrustBadges() {
           <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
             <CheckCircle className="h-5 w-5 text-primary" />
             <span className="font-medium">HIPAA Compliant</span>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import React from "react",
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function EnterpriseTrustBadges() {
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -224,6 +236,7 @@ export function EnterpriseTrustBadges() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseTrustBadges.tsx
 ;
 <<<<<<< HEAD
@@ -234,6 +247,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   );
 }
 import React from 'react';
@@ -303,6 +318,7 @@ function EnterpriseTrustBadges() {
         </div>;
       </div>;
     </section>);
+<<<<<<< HEAD
 }
 =======
 } import {;
@@ -325,3 +341,6 @@ function EnterpriseTrustBadges() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -141,6 +142,9 @@ xport function WebhookManager() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   const { 
     webhooks,
+=======
+webhooks,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     loading,
     error,
 
@@ -253,7 +257,6 @@ export function WebhookManager() {;
   ) => {;
     await testWebhook(webhookId, eventType);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
     <div className='space - y-8'>;
@@ -577,7 +580,10 @@ export function WebhookManager() {
                 value={newWebhook.name}
                 onChange={e =>
                   setNewWebhook({ ...newWebhook, name: e.target.value })
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 }
               />
             </div>
@@ -622,6 +628,7 @@ export function WebhookManager() {
             <div className='flex space-x-2'>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <Select
+<<<<<<< HEAD
                 value={newWebhook.selectedEvent}
                 onValueChange={value =>
                   setNewWebhook({
@@ -633,6 +640,11 @@ export function WebhookManager() {
                   <SelectValue placeholder='Select event' />
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -828,6 +840,7 @@ export function WebhookManager() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>                 </SelectTrigger>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -841,6 +854,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </SelectTrigger>
                 <SelectContent>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1039,6 +1054,37 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <CardTitle className="text-lg">{webhook && webhook.name}</CardTitle>;
                       <CardDescription className="truncate max-w-md">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+                        {webhook && webhook.url}
+                      </CardDescription>;
+                    </div>;
+                    <div className='flex items-center'>;
+                      <div className='mr-2 flex items-center'>;
+
+                        <div
+                          className={`h-2 w-2 rounded-full mr-2 ${webhook && webhook.is_active ? 'bg-green-500' : 'bg-gray-400'}`}></div>;
+                        <span className='text-sm'>;
+                          {webhook && webhook.is_active ? 'Active' : 'Inactive'}
+                        </span>;
+                      </div>;
+                      <div className='flex-shrink-0'>;
+                        <Button
+                          variant='outline'
+                          size='sm'
+
+
+          
+          <div className="space-y-2">
+            <Label htmlFor="webhook-secret">Secret (optional)</Label>
+
+            <Input 
+              id="webhook-secret" 
+              placeholder="A secret key to verify the webhook source"
+              value={newWebhook.secret}
+              onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
                         {webhook.url}
 =======
@@ -1098,6 +1144,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                           size="sm"
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
                         >;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           {webhook.is_active ? 'Disable' : 'Enable'}
                         </Button>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1109,6 +1160,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <CardContent className='py-2'>
                   <div className='flex flex-col space-y-2'>
                     <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                         : 'Never triggered'}
@@ -1142,6 +1194,99 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+                          onClick={() =>;
+                            toggleWebhook(webhook && webhook.id, !webhook && webhook.is_active);
+                          }                        >;
+                          {webhook && webhook.is_active ? 'Disable' : 'Enable'}
+                      </CardDescription>;
+                    </div>;
+                    <div className='flex items - center'>;
+                      <div className='mr - 2 flex items - center'>;
+                        <div;
+                          className={`h - 2 w - 2 rounded - full mr - 2 ${webhook.is_active ? 'bg - green - 500' : 'bg - gray - 400'}`}
+                        ></div>;
+                        <span className='text - sm'>;
+                          {webhook.is_active ? 'Active' : 'Inactive'}
+                        </span>;
+                      </div>;
+                      <div className='flex - shrink - 0'>;
+                        <Button;
+                          variant='outline';
+                          size='sm';
+                          on_click={() =>;
+                            toggle_webhook (webhook.id, !webhook.is_active);
+                          }                        >;
+                          {webhook.is_active ? 'Disable' : 'Enable'}
+
+                        </Button>;
+                      </div>;
+                    </div>;
+                  </div>;
+                </CardHeader>;
+
+                <CardContent className='py - 2'>;
+                  <div className='flex flex - col space - y-2'>;
+                    <div>;
+                      <Label className='text - sm'>Events</Label>;
+                      <div className='flex flex - wrap gap - 2 mt - 1'>;
+                        {webhook.event_types.map ((event: WebhookEventType) => (
+                          <ClickableBadge key={event} variant='secondary'>;
+                            {event_options.find (e => e.value === event)?.label ||;
+                              event}                          </ClickableBadge>))}
+                      </div>;
+                    </div>;
+                    <div className='text - xs text - muted - foreground'>;
+                      {webhook.last_triggered_at;
+                        ? `Last triggered: ${new Date (webhook.last_triggered_at).toLocaleString ()}`;
+
+                        : 'Never triggered'}
+                    </div>;
+                  </div>;
+                </CardContent>;
+
+                    onClick={() => deleteWebhook(webhook && webhook.id)}
+                  >;
+                    <Trash className='h-4 w-4 mr-2' /> Delete;
+                  </Button>;
+
+
+                  <Select
+                    onValueChange={value =>;
+                      handleTestWebhook(webhook && webhook.id, value as WebhookEventType);
+                <CardFooter className='flex justify - between pt - 2'>;
+                  <Button;
+                    variant='outline';
+                    size='sm';
+                    on_click={() => delete_webhook (webhook.id)}
+                  >;
+                    <Trash className='h - 4 w - 4 mr - 2' /> Delete;
+                  </Button>;
+                  <Select;
+                    onValueChange={value =>;
+                      handleTestWebhook (webhook.id, value as WebhookEventType);
+                    }                  >;
+                    <SelectTrigger className='w-[180px]'>;
+                      <SelectValue placeholder='Test webhook' />;
+                    </SelectTrigger>;
+                    <SelectContent>;
+                      <SelectItem value='test_event'>Test (generic)</SelectItem>;
+
+                          {eventOptions && eventOptions.find(e => e && e.value === event)?.label ||;
+                            event}
+                        </SelectItem>;
+                  >;
+                    <Trash className="h-4 w-4 mr-2" /> Delete;
+                  </Button>;
+                  <Select
+                    onValueChange={(value) => handleTestWebhook(webhook && webhook.id, value as WebhookEventType)}
+                      {webhook.event_types.map ((event: WebhookEventType) => (                        <SelectItem key={event} value={event}>;
+                          Test{' '}
+                          {event_options.find (e => e.value === event)?.label ||;
+                            event}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       <Label className="text-sm">Events</Label>
                       <div className="flex flex-wrap gap-2 mt-1">
                         {webhook.event_types.map((event: WebhookEventType) => (
@@ -1165,6 +1310,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
                         <SelectItem key={event} value={event}>
                           Test {eventOptions.find(e => e.value === event)?.label |event}
@@ -1215,6 +1361,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     variant="outline"
                     size="sm"
                     onClick={() => deleteWebhook(webhook.id)}
@@ -1243,6 +1391,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         </SelectItem>;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                       ))}
 =======
 >>>>>>>                       ))}
@@ -1268,6 +1417,23 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+                        <SelectItem key={event} value={event}>
+                          Test {eventOptions.find(e => e.value === event)?.label || event}
+                        </SelectItem>;
+                  >;
+                    <Trash className="h - 4 w - 4 mr - 2" /> Delete;
+                  </Button>;
+                  <Select;
+                    onValueChange={(value) => handleTestWebhook (webhook.id, value as WebhookEventType)}
+                  >;
+                    <SelectTrigger className="w-[180px]">;
+                      <SelectValue placeholder="Test webhook" />;
+                    </SelectTrigger>;
+                    <SelectContent>;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1290,6 +1456,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className='flex justify-between'>
                   <span className='font-medium'>Status:</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {testResult && (;
           <Card className='mt-4 border-blue-200'>;
             <CardHeader>;
@@ -1299,7 +1469,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className='space-y-2'>;
                 <div className='flex justify-between'>;
                   <span className='font-medium'>Status:</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <span
                     className={
                       testResult && testResult.status>= 200 && testResult && testResult.status < 300;
@@ -1323,6 +1492,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
                     {testResult.responseBody |'<empty>'}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1335,6 +1505,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
                     {testResult.responseBody |'<empty>'}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
         {testResult && (;
           <Card className="mt-4 border-blue-200">;
@@ -1357,6 +1529,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 
                     {testResult.responseBody || '<empty>'}
+<<<<<<< HEAD
 
 =======
 >>>>>>>                     {testResult.responseBody || '<empty>'}
@@ -1372,6 +1545,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
                     {testResult.responseBody || '<empty>'}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </pre>
                 </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1461,6 +1636,7 @@ newWebhook.secret |undefined);"
 }</div> </div>)
 }'"}
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1478,6 +1654,13 @@ newWebhook.secret |undefined);"
 
 =======
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       <SelectItem value="test_event">Test (generic)</SelectItem>;
                       {webhook.event_types.map (event => (
                         <SelectItem key={event} value={event}>;
@@ -1522,6 +1705,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 event_types: [...new_webhook.event_types, new_webhook.selected_event];
 }
 
+<<<<<<< HEAD
 ;
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1536,3 +1720,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

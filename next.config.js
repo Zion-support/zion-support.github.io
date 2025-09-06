@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 <<<<<<< HEAD
@@ -48,13 +49,18 @@ const nextConfig = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 /** @type {import ('next').NextConfig} */;
 const next_config = {
+=======
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
   eslint: {
     ignoreDuringBuilds: true
-  }
+  },
   typescript: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -236,16 +242,19 @@ origin/automation-improvements-final
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     ignoreBuildErrors: true
-  }
-  pageExtensions: ["tsx", "ts", "jsx", "js"]
-  trailingSlash: true
+  },
+  pageExtensions: ["tsx", "ts", "jsx", "js"],
+  trailingSlash: true,
   images: {
     domains: [
-      "localhost"
-      "ziontechgroup.com"
-      "images.unsplash.com"
+      "localhost",
+      "ziontechgroup.com",
+      "images.unsplash.com",
       "via.placeholder.com"
+<<<<<<< HEAD
     ]
     formats: ["image/webp", "image/avif"]
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840]
@@ -277,10 +286,23 @@ origin/main
     minimumCacheTTL: 31536000
   },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+    ],
+    formats: ["image/webp", "image/avif"],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000
+  },
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
+  },
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   webpack: (config, { dev, isServer }) => {
     if (dev) {
-      config && config.watchOptions = {
+      config.watchOptions = {
         ignored: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -306,6 +328,8 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           "**/node_modules/**",
           "**/.git/**",
           "**/pages_backup*/**",
@@ -313,32 +337,40 @@ if ( {) {
           "**/pages-*/**",
           "**/pages_disabled*/**",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           "**/pages.disabled*/**",
           "**/pages.broken*/**",
           "**/pages.corrupted*/**",
           "**/pages.old*/**",
           "**/pages._*/**",
           "**/pages.__*/**",
+<<<<<<< HEAD
 "**/backup - pages/**",
           "**/src.pages.disabled/**",
 <<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          "**/backup-pages/**",
+          "**/src.pages.disabled/**",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           "**/lib_backup*/**",
           "**/src_backup*/**",
-          "**/corrupted - files - backup*/**",
-          "**/performance - reports*/**",
-          "**/log - analysis - reports*/**",
-          "**/link - reports*/**",
-          "**/lint - target*/**",
+          "**/corrupted-files-backup*/**",
+          "**/performance-reports*/**",
+          "**/log-analysis-reports*/**",
+          "**/link-reports*/**",
+          "**/lint-target*/**",
           "**/monitoring*/**",
-          "**/pm2 - automation*/**",
-          "**/automation / logs*/**",
-          "**/automation / backup*/**",
+          "**/pm2-automation*/**",
+          "**/automation/logs*/**",
+          "**/automation/backup*/**",
           "**/performance-*.json",
           "**/performance-*.js",
           "**/performance-*.cjs",
@@ -346,10 +378,15 @@ if ( {) {
           "**/performance-*.html",
           "**/performance-*.md",
           "**/performance-*.txt",
-          "**/apps/**",
+          "**/apps/**"
         ],
+<<<<<<< HEAD
 poll: 1000,
         aggregate_timeout: 300,
+=======
+        poll: 1000,
+        aggregateTimeout: 300
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       }
         aggregateTimeout: 300,
       };
@@ -357,6 +394,7 @@ poll: 1000,
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -451,6 +489,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
   webpack: (config, { dev, isServer }) => {
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',
@@ -458,6 +498,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
           vendor: {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
+<<<<<<< HEAD
             chunks: 'all',
           },
         },
@@ -474,9 +515,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 origin/main
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+            chunks: 'all'
+          }
+        }
+      }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
-    // Exclude apps directory from compilation
 
+<<<<<<< HEAD
 =======
 
     }
@@ -492,32 +539,44 @@ origin/main
     });
     return config;
   }
+=======
+    // Exclude apps directory from compilation
+    config.module.rules.push({
+      test: /\.(ts|tsx|js|jsx)$/,
+      include: /apps\//,
+      use: "ignore-loader"
+    })
+
+    return config
+  },
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   async headers() {
     return [
       {
-        source: "/(.*)"
+        source: "/(.*)",
         headers: [
           {
-            key: "X-Content-Type-Options"
+            key: "X-Content-Type-Options",
             value: "nosniff"
-          }
+          },
           {
-            key: "X-Frame-Options"
+            key: "X-Frame-Options",
             value: "DENY"
-          }
+          },
           {
-            key: "X-XSS-Protection"
+            key: "X-XSS-Protection",
             value: "1; mode=block"
-          }
+          },
           {
-            key: "Referrer-Policy"
+            key: "Referrer-Policy",
             value: "origin-when-cross-origin"
           }
         ]
       }
-    ];
+    ]
   }
 }
+<<<<<<< HEAD
 export default nextConfig;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -629,3 +688,7 @@ export default next_config;
 }
 export default nextConfig
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+export default nextConfig
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

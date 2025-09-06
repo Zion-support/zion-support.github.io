@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/errors/GlobalErrorBoundary.tsx
 
 =======
@@ -56,6 +57,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {
   AlertTriangle,
   RefreshCw,
@@ -90,9 +93,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / ca
 import { Badge } from '@/components / ui / badge';
 import * as Sentry from '@sentry / nextjs';
 import { logErrorToProduction } from '@/utils / production_logger';
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/errors/GlobalErrorBoundary.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface ErrorBoundaryState {
   hasError: boolean
   error: Error | null
@@ -562,11 +568,14 @@ if ( {) {
                sessionStorage.getItem('userId') || 
                null
 
+<<<<<<< HEAD
 ========
         return localStorage.getItem('userId') || 
                sessionStorage.getItem('userId') || 
                null
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/errors/GlobalErrorBoundary.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     // Report to Sentry;
     Sentry.with_scope (scope => {
       scope.set_tag (
@@ -1206,6 +1215,9 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     }, retryDelay)
     this.retryTimeouts.push(timeout)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     if () {) {
   $2
 }
@@ -1274,8 +1286,11 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 <<<<<<<< HEAD:src/components/errors/GlobalErrorBoundary.tsx
 
 
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/errors/GlobalErrorBoundary.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   private report_error = async () => {
     // Check condition
 if (return) {
@@ -1374,6 +1389,7 @@ if (return) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       if (response.ok) {
         // Show success message
+<<<<<<< HEAD
       }
     } catch (err) {
       logErrorToProduction('Failed to report error:', { data: err })
@@ -1727,6 +1743,8 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
 ========
       if (response.ok) {
         // Show success message
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   private report_error = async () => {
     // Check condition
 if (return) {
@@ -1979,6 +1997,16 @@ if ( {) {
     }
   }
 
+<<<<<<< HEAD
+=======
+    this.setState({
+      errorInfo,
+      errorId,
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   private goHome = () => {
     if (typeof window !== 'undefined') {
       window.location.href = '/'
@@ -2031,6 +2059,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
       }
 
       const severity = this.getErrorSeverity(this.state.error)
@@ -2067,6 +2096,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
       return (
         return this.props.fallback;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
         return this.props.fallback;
 
@@ -2301,15 +2332,27 @@ ursor/fix-website-loading-errors-and-merge-6662
           >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/errors/GlobalErrorBoundary.tsx
 <<<<<<< HEAD
+=======
+            transition={{ duration: 0.3 }}
+          >
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 ========
             <Card className="w-full max-w-2xl border-red-200 bg-white dark:bg-gray-900">
               <CardHeader className="text-center">
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20">
                   <AlertTriangle className="h-8 w-8 text-red-600 dark:text-red-400" />
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/errors/GlobalErrorBoundary.tsx
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </div>
                 <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100">
                   Oops! Something went wrong
@@ -2398,6 +2441,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/errors/GlobalErrorBoundary.tsx
 
+<<<<<<< HEAD
 =======
               <CardContent className='space-y-6'>
                 <div className='text-center'>
@@ -2417,6 +2461,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       {this.props.maxRetries || 3}                    </p>                    {suggestion}
                   </p>
                   {this.state.retryCount > 0 && (
@@ -2430,11 +2477,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </p>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
                     </p>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <div className="flex items-center justify-center gap-2 mt-2">
                   <Badge 
                     variant={severity === 'critical' ? 'destructive' : severity === 'high' ? 'destructive' : 'secondary'}
@@ -2553,8 +2603,11 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </Button>;
 <<<<<<<< HEAD:src/components/errors/GlobalErrorBoundary.tsx
 
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/errors/GlobalErrorBoundary.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
                     </p>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -2605,15 +2658,25 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/errors/GlobalErrorBoundary.tsx
 
+<<<<<<< HEAD
 >>>>>>>                   )}
+=======
+                  )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
                     </p>;
 >>>>>>>                   )}
                 </div>
                 {/* Action Buttons */}
+<<<<<<< HEAD
                 <div className='flex flex-col sm:flex-row gap-3 justify-center'>
 >>>>>>>                   {canRetry && (
+=======
+
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   {canRetry && (
 >>>>>>>                     <Button onClick={this.retry} className="flex items-center gap-2">
                       <RefreshCw className="h-4 w-4" />
@@ -2694,6 +2757,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
+<<<<<<< HEAD
                   <Button 
                     onClick={() => this.setState({ showDetails: !this.state.showDetails })}
                     variant="ghost" 
@@ -2780,6 +2844,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>>                           <h4 className="font-semibold text-sm mb-2">Error Message:</h4>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <Bug className="h-4 w-4" />
                     {this.state.showDetails ? 'Hide' : 'Show'} Details
                   </Button>
@@ -2883,6 +2949,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     {this && this.state.showDetails ? 'Hide' : 'Show'} Details;
                   </Button>;
                 </div>;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/errors/GlobalErrorBoundary.tsx
 
 
@@ -2891,6 +2958,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/errors/GlobalErrorBoundary.tsx
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {/* Error Details */}
                 <AnimatePresence>;
                   {this && this.state.showDetails && (;
@@ -2914,8 +2988,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <div className="space-y-4">
                         <div>
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           <h4 className="font-semibold text-sm mb-2">Error Message:</h4>
 >>>>>>>                           <code className="block p-3 bg-red-50 dark:bg-red-900/10 rounded text-sm text-red-800 dark:text-red-200 overflow-auto">
                             {this.state.error.message}
@@ -2924,11 +3002,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/errors/GlobalErrorBoundary.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                         {process.env.NODE_ENV === 'development' &&
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/errors/GlobalErrorBoundary.tsx
+=======
+
+
+
+                        {process.env.NODE_ENV === 'development' &&
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   private go_home = () => {
     // Check condition
 if ( {) {
@@ -3273,9 +3358,20 @@ if ( {) {
                           {this.props.showReportButton !== false && (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>                             <Button onClick={this.reportError} variant="outline" size="sm">
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+
+                            Copy Details
+                          </Button>
+                          {this.props.showReportButton !== false && (
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                             <Button onClick={this.reportError} variant="outline" size="sm">
 >>>>>>>                               <Send className="h-4 w-4 mr-2" />
                               Report Issue
@@ -3295,8 +3391,11 @@ if ( {) {
 <<<<<<<< HEAD:src/components/errors/GlobalErrorBoundary.tsx
 
 
+<<<<<<< HEAD
 >>>>>>>                           )}
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           )}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/errors/GlobalErrorBoundary.tsx
                         </div>;
@@ -3336,6 +3435,7 @@ if ( {) {
 // Hook for programmatic error boundary
 export const useErrorBoundary = () => {
 
+<<<<<<< HEAD
 =======
 >>>>>>>   }
 // Hook for programmatic error boundary
@@ -3686,6 +3786,8 @@ export default GlobalErrorBoundary;
   return WrappedComponent;
 }
 export default GlobalErrorBoundary 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Higher - order component for adding error boundaries;
 export const withErrorBoundary = <P extends object>(
   Component: React.ComponentType < P>,
@@ -3703,6 +3805,7 @@ export default GlobalErrorBoundary;
   return WrappedComponent;
 }
 export default GlobalErrorBoundary;
+<<<<<<< HEAD
 =======
 }static getDerivedStateFromError (error: Error) : Partial<ErrorBoundaryState> {;
   return {;
@@ -3876,3 +3979,15 @@ timestamp: new Date () .toISOString () ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+      );
+
+    }
+
+    return this.props.children;
+
+  }
+// Hook for programmatic error boundary
+export const useErrorBoundary = () => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

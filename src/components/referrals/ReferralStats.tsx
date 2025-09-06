@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Award, Share, Star, TrendingUp } from 'lucide-react'
+=======
+interface ReferralStatsProps {
+  stats: ReferralStatsType
+  isLoading: boolean
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",
@@ -42,6 +50,7 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -142,6 +151,8 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
 =======
 >>>>>>>     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface ReferralStatsProps {
 
   stats: ReferralStatsType
@@ -167,7 +178,6 @@ import { Star } from 'lucide-react';
 interface ReferralStatsProps {
   stats: ReferralStatsType,
   is_loading: boolean;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export /**
  * ReferralStats - Function description
@@ -339,6 +349,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
               <div className="h-6 w-20 bg-muted animate-pulse rounded" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -347,6 +358,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
               <div className="h-6 w-20 bg-muted animate-pulse rounded" />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             ) : (
               <>
                 <div className="text-2xl font-bold">{card.value}</div>
@@ -392,6 +407,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <CardTitle className="text - sm font - medium">{card.title}</CardTitle>;
     <div className="grid gap - 4 md:grid - cols - 2 lg:grid - cols - 4">;
       {stat_cards.map ((card, i) => (
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -424,6 +440,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+}
+}
+}
+}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -485,6 +509,7 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {;
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 
@@ -504,3 +529,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

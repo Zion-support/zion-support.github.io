@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import Image from "next/image";
@@ -17,6 +18,8 @@ import Image from 'next/image'
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Twitter, Linkedin } from 'lucide-react'
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface Speaker {
   name: string
   title: string
@@ -37,6 +40,10 @@ interface Speaker {
   title: string,
   avatar: string,
   twitter?: string
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import Image from "next/image",
 import { Twitter, Linkedin } from 'lucide-react'
 
@@ -67,12 +74,15 @@ interface Speaker {
 
   linkedin?: string
 }
+<<<<<<< HEAD
 =======
 >>>>>>>   linkedin?: string
 }
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 >>>>>>>   name: string
   title: string
@@ -84,6 +94,7 @@ interface Speaker {
 const speakers: Speaker[] = [
   {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     linkedin: '#'}],
 
@@ -109,6 +120,87 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+import Image from 'next/image';
+import { Twitter, Linkedin } from 'lucide-react';
+interface Speaker {;
+  name: string;
+  title: string;
+  avatar: string;
+  twitter?: string;
+  linkedin?: string;
+  linkedin?: string;
+}
+
+interface Speaker {;
+  name: string,;
+  title: string,;
+  avatar: string,;
+  twitter?: string;
+  linkedin?: string;
+}
+
+const speakers: Speaker[] = [;
+  {;
+    name: 'Alex Zion',;
+    title: 'Founder & CEO',;
+    avatar: 'https://placehold && placehold.co/100x100',;
+    twitter: '#',;
+    linkedin: '#',;
+  },;
+];
+
+export function SpeakersSection() {;
+  return (
+    <section className='py-12 bg-zion-blue-dark text-white' id='speakers'>;
+      <div className='container mx-auto px-4'>;
+        <h2 className='text-3xl font-bold mb-8 text-center'>Speakers</h2>;
+        <div className='grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center'>;
+          {speakers && speakers.map(sp => (;
+            <div key={sp && sp.name} className='text-center space-y-2'>              <Image    <section className="py-12 bg-zion-blue-dark text-white" id="speakers">;
+      <div className="container mx-auto px-4">;
+        <h2 className="text-3xl font-bold mb-8 text-center">Speakers</h2>;
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">;
+          {speakers && speakers.map((sp,) => (;
+            <div key={sp && sp.name} className="text-center space-y-2">;
+                src={sp && sp.avatar}
+                alt={sp && sp.name}
+                width={96}
+                height={96}
+                className='rounded-full mx-auto';
+                loading='lazy';
+              <p className='font-semibold'>{sp && sp.name}</p>;
+              <p className='text-sm opacity-80'>{sp && sp.title}</p>;
+              <div className='flex justify-center gap-3 text-zion-cyan'>;
+                {sp && sp.twitter && (;
+                  <a
+                    href={sp && sp.twitter}
+                    aria-label='Twitter'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='flex items-center'
+                    href = {sp && sp.twitter,}
+                    aria-label="Twitter"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center">;
+                    <Twitter className='h-4 w-4' aria-hidden='true' />;
+                    <span className='sr-only'>Twitter</span>                  </a>                    <Twitter className="h-4 w-4" aria-hidden="true" />;
+                    <span className="sr-only">Twitter</span>;
+                  </a>;
+
+import Image from "next/image";
+import { Twitter, Linkedin } from 'lucide-react'
+
+interface Speaker {
+  name: string,
+  title: string,
+  avatar: string,
+  twitter?: string;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     name: 'Alex Zion',
     title: 'Founder & CEO',
     avatar: 'https://placehold.co/100x100',
@@ -120,12 +212,20 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function SpeakersSection() {
 >>>>>>>   return (
     <section className="py-12 bg-zion-blue-dark text-white" id="speakers">
@@ -138,10 +238,14 @@ export function SpeakersSection() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Image
 import Image from "next/image",;
 import { Twitter, Linkedin } from 'lucide-react';
@@ -169,6 +273,7 @@ export function SpeakersSection() {;
           {speakers.map((sp) => (;
             <div key={sp.name} className="text-center space-y-2">;
               <Image;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -212,6 +317,9 @@ export function SpeakersSection() {;
 <<<<<<< HEAD
 >>>>>>>                     aria-label="Twitter"
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 src={sp.avatar}
                 alt={sp.name}
                 width={96}
@@ -231,14 +339,20 @@ export function SpeakersSection() {;
               <p className="text-sm opacity-80">{sp.title}</p>
               <div className="flex justify-center gap-3 text-zion-cyan">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 className='rounded - full mx - auto';
                 loading='lazy';
               <p className='font - semibold'>{sp.name}</p>;
               <p className='text - sm opacity - 80'>{sp.title}</p>;
               <div className='flex justify - center gap - 3 text - zion - cyan'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {sp.twitter && (
                   <a
                     href={sp.twitter}
@@ -247,6 +361,7 @@ export function SpeakersSection() {;
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -258,6 +373,8 @@ export function SpeakersSection() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     aria-label="Twitter"
 >>>>>>>                     target="_blank"
                     rel="noopener noreferrer"
@@ -267,6 +384,7 @@ export function SpeakersSection() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -296,6 +414,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+                    href={sp.linkedin}
+                    aria-label="LinkedIn"
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <Twitter className="h-4 w-4" aria-hidden="true" />
                     <span className="sr-only">Twitter</span>
                   </Link>
@@ -306,6 +429,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     aria-label="LinkedIn"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -313,6 +437,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     target="_blank"
 >>>>>>>                     rel="noopener noreferrer"
                     className="flex items-center"
@@ -323,11 +451,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+                  </Link>
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 )}
               </div>
             </div>
           ))}
 
+<<<<<<< HEAD
 =======
 >>>>>>>                 )}
               </div>
@@ -359,6 +495,8 @@ ursor/fix-website-loading-errors-and-merge-6662
           ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
 =======
@@ -422,6 +560,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </div>;
     </section>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ;
 
@@ -439,3 +578,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

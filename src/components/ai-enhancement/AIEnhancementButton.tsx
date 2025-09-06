@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ai-enhancement/AIEnhancementButton.tsx
 
 =======
@@ -124,6 +125,9 @@ ursor/fix-website-loading-errors-and-merge-6662
   const [generatedContent, setGeneratedContent] = useState<string | null>(null),
   
   const handleEnhance = async () => {
+=======
+const handleEnhance = async () => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     if ((!options.content |options.content.trim().length < contentLength) &&
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         (!options.context |options.context.trim().length < contentLength)) {
@@ -135,6 +139,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
       toast({
 =======
 =======
@@ -162,6 +167,10 @@ ursor/fix-website-loading-errors-and-merge-6662
         title: "Content applied"
         description: "AI-enhanced content has been applied."})
     }
+=======
+  import { useState } from 'react';
+import { Button } from '@/components / ui / button';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 =======
@@ -451,6 +460,7 @@ export function AIEnhancementButton(): any ({;
       setGeneratedContent(enhancedContent);
       setShowActions(true);
     }
+<<<<<<< HEAD
   };
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ai-enhancement/AIEnhancementButton.tsx
 =======
@@ -498,6 +508,38 @@ export function AIEnhancementButton(): any ({;
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ai-enhancement/AIEnhancementButton.tsx
+=======
+
+  },
+  
+  const handleAccept = () => {
+    if (generatedContent) {
+      onEnhanced(generatedContent),
+      setShowActions(false),
+      setGeneratedContent(null),
+
+
+      toast({
+        title: "Content applied"
+        description: "AI-enhanced content has been applied."})
+    }
+
+
+  },
+  
+  const handleRegenerate = async () => {
+    await handleEnhance()
+  },
+  
+  const handleCancel = () => {
+    setShowActions(false),
+    setGeneratedContent(null)
+  },
+  
+
+
+  if (showActions) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return (
 >>>>>>>       <div className="flex gap-2 items-center">;
         <Button
@@ -713,8 +755,11 @@ export function AIEnhancementButton({;
 }"}
 <<<<<<<< HEAD:src/components/ai-enhancement/AIEnhancementButton.tsx
 
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ai-enhancement/AIEnhancementButton.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Check condition
 if ( {) {
   $2
@@ -758,6 +803,7 @@ if ( {) {
   }
   return (
     <Button;
+<<<<<<< HEAD
 =======
     );
   }
@@ -777,6 +823,29 @@ if ( {) {
 =======
 >>>>>>>     >
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+      type="button";
+      variant = {variant, }
+      size = {size, }
+      className={`gap - 1 ${class_name}`}
+      on_click = {handle_enhance, }
+      disabled = {is_enhancing, }
+    >;
+      {is_enhancing ? (
+        <Loader2 className="h - 4 w - 4 animate - spin" />) : (
+        <Sparkles className="h - 4 w - 4" />)}
+      <span className="text - xs">{button_text}</span>;
+    </Button>);
+}";
+<Button type="button" variant="ghost" size="sm" on_click={
+  handle_accept ";
+}className="text - green - 500 hover:text - green - 700 hover:bg - green - 100 / 20" > <Check className="h - 4 w - 4 mr - 1" /> Apply </Button> <Button) : (<RefreshCw className="h - 4 w - 4 mr - 1" />) ";
+}Regenerate </Button> <Button h - 4 w - 4 mr - 1"/> Cancel </Button> </div>) ";
+}return (<Button) : (<Sparkles className=" h - 4 w - 4" />);
+}</Button>);
+}"}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
     >
 >>>>>>>       {isEnhancing ? (
@@ -794,6 +863,7 @@ if ( {) {
       ) : (
         <Sparkles className="h-4 w-4" />
       )}
+<<<<<<< HEAD
       <span className="text-xs">{buttonText}</span>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -886,3 +956,6 @@ return ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+      <span className="text-xs">{buttonText}</span>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

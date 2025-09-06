@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -56,6 +57,54 @@ import { GradientHeading } from "@/components/GradientHeading",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import Link from 'next/link';
+export default function InstantMessaging() {;
+  const schema = {;
+    '@context': 'https://schema && schema.org',;
+    '@type': 'WebPage',;
+    name: 'Instant Messaging',;
+    description:;
+      'Chat in real time with clients and freelancers using Socket && Socket.IO based messaging.',;
+    url: 'https://app && app.ziontechgroup.com/features/instant-messaging',  };    "@context": "https://schema && schema.org";
+    "@type": "WebPage";
+    "name": "Instant Messaging";
+    "description": "Chat in real time with clients and freelancers using Socket && Socket.IO based messaging.",;
+    "url": "https://app && app.ziontechgroup.com/features/instant-messaging";
+
+import React from "react";
+import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function InstantMessaging() {
@@ -77,6 +126,7 @@ export default function InstantMessaging() {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+<<<<<<< HEAD
   return (
     <>
       <SEO
@@ -88,8 +138,9 @@ export default function InstantMessaging() {
         keywords='real-time messaging, Socket.IO chat, project communication'
         canonical='https://app.ziontechgroup.com/features/instant-messaging'
 >>>>>>>       />
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <>;
@@ -125,6 +176,7 @@ export default function InstantMessaging() {
             </div>;
           </div>;
 
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -152,10 +204,13 @@ export default function InstantMessaging() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         title="Instant Messaging"
         description="Negotiate deals and collaborate instantly with real-time chat."
         keywords="real-time messaging, Socket.IO chat, project communication"
         canonical="https://app.ziontechgroup.com/features/instant-messaging"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -165,6 +220,13 @@ export default function InstantMessaging() {
       />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> >>>>>>>       {/* Use a normal script tag so JSON-LD is correctly parsed */}
+=======
+
+
+
+      />
+      {/* Use a normal script tag so JSON-LD is correctly parsed */}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <script
         type="application/ld+json"
 
@@ -325,6 +387,7 @@ export default function InstantMessaging() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -338,6 +401,8 @@ export default function InstantMessaging() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -366,9 +431,12 @@ export default function InstantMessaging() {;
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Header />;
       <main className="bg-background text-white py-12">;
         <div className="container mx-auto px-4 md: px-6">;
@@ -424,6 +492,7 @@ export default function InstantMessaging() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -437,3 +506,6 @@ export default function InstantMessaging() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

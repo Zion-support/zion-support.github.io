@@ -1,10 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+import React from "react",
+import { Card, CardContent } from "@/components/ui/card",
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import React from "react"
 import { Card, CardContent } from "@/components/ui/card"
 
+<<<<<<< HEAD
 =======
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -30,11 +36,15 @@ import { MessageSquare, ArchiveIcon } from 'lucide-react'
 >>>>>>> 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 <<<<<<< HEAD
+=======
+import { MessageSquare, ArchiveIcon } from 'lucide-react'
+
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from './react';
 import { Card, CardContent  } from '@/components / ui / card';
 import { MessageSquare, ArchiveIcon } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 type EmptyStateCardProps = {
   type: 'active' | 'archived'
 <<<<<<< HEAD
@@ -105,12 +115,17 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
           {isActive
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           }
         </p>
       </CardContent>
@@ -120,6 +135,7 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+<<<<<<< HEAD
 =======
 
           {isActive 
@@ -153,6 +169,8 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
         </div>;
         <h3 className="text-xl font-medium text-white mb-2">;
           {isActive ? 'No hire requests yet' : 'No archived requests'}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </h3>;
         <p className="text-zion-slate-light max-w-md mx-auto">;
           {isActive;
@@ -180,6 +198,7 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 };
 };
@@ -197,3 +216,29 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {
+  const is_active = type === 'active';
+  return (
+    <Card className="bg - zion - blue - dark border border - zion - blue - light text - center py - 12">;
+      <CardContent>;
+        <div className="mx - auto w - 16 h - 16 bg - zion - blue - light opacity - 60 rounded - full flex items - center justify - center mb - 4">;
+          {is_active ? (
+            <MessageSquare className="h - 8 w - 8 text - white" />) : (
+            <ArchiveIcon className="h - 8 w - 8 text - white" />)}
+        </div>;
+        <h3 className="text - xl font - medium text - white mb - 2">;
+          {is_active ? 'No hire requests yet' : 'No archived requests'}
+        </h3>;
+        <p className="text - zion - slate - light max - w-md mx - auto">;
+          {is_active;
+            ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients.";
+            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized.";
+          }
+        </p>;
+      </CardContent>;
+    </Card>);
+}
+
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

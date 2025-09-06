@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/community/ReputationDisplay.tsx
 
 
@@ -8,6 +9,16 @@
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+reputation: number;
+  size?: 'sm' | 'md' | 'lg'
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Trophy } from 'lucide-react'
 import { Progress } from "@/components/ui/progress";
 interface ReputationDisplayProps {
@@ -84,17 +95,27 @@ export const ReputationDisplay = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
       progress: 'h-1',  // Styling based on size
 =======
       container: 'text-xs'
       icon: 'w-3 h-3'
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   size = 'md' 
 }: ReputationDisplayProps) => {
   // Calculate next milestone
   const currentLevel = Math.floor(reputation / 100);
   const nextMilestone = (currentLevel + 1) * 100;
   const progress = ((reputation % 100) / 100) * 100;
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Styling based on size
   const sizeClasses = {
     sm: {
@@ -125,6 +146,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -132,6 +154,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       container: "text-xs",
       icon: "w-3 h-3",
       progress: "h-1"
@@ -149,6 +173,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>     }
 ursor/fix-website-loading-errors-and-merge-6662
@@ -162,6 +187,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
     md: {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -174,6 +203,9 @@ ursor/fix-website-loading-errors-and-merge-6662
       icon: "w-5 h-5"
       progress: "h-3"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Trophy } from 'lucide-react';
 import { Progress } from '@/components / ui / progress';
 interface ReputationDisplayProps {
@@ -237,6 +269,7 @@ export const ReputationDisplay = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 }
 export default ReputationDisplay
 '
@@ -247,6 +280,18 @@ export default ReputationDisplay
 '
     }
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+},
+
+export default ReputationDisplay,
+import { Trophy } from 'lucide-react';
+import { Progress } from "@/components/ui/progress",;
+interface ReputationDisplayProps {;
+  reputation: number,;
+  size?: 'sm' | 'md' | 'lg';
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 
 ========
@@ -350,7 +395,6 @@ export const ReputationDisplay = ({ ;
     }
   };
   return (
-=======
 
 import { Trophy } from 'lucide-react';
 import { Progress } from "@/components/ui/progress",;
@@ -472,6 +516,7 @@ export default ReputationDisplay;
       progress: 'h-3',;
     },;
   };
+<<<<<<< HEAD
 export default ReputationDisplay;
 ';
 =======
@@ -514,3 +559,14 @@ export default ReputationDisplay;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+'
+
+export default ReputationDisplay;
+';
+
+};
+export default ReputationDisplay;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

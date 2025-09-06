@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/CategoriesSection.tsx
 
 <<<<<<< HEAD
@@ -102,6 +103,8 @@ interface CategoryType {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 =======
   description?: string,
@@ -221,6 +224,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   {
     id: "talents"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -485,6 +493,11 @@ export function CategoriesSection({
   const { t } = useTranslation(),
   const defaultCategories = getDefaultCategories(t),
   
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Use fetchedCategories if provided, otherwise fallback to defaultCategories
   const displayCategories = fetchedCategories && fetchedCategories.length > 0
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -497,6 +510,7 @@ export function CategoriesSection({
         // Assign a default color or implement logic to assign colors
         color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -523,6 +537,16 @@ export function CategoriesSection({
         ...cat,
         title: cat.name,
         icon: getIcon(cat.iconName)})),
+=======
+
+
+        ...cat,
+        ...cat,
+
+
+        title: cat.name,
+        icon: getIcon(cat.iconName)})),
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   // If fetchedCategories is an empty array, and we want to show nothing:
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -821,7 +845,12 @@ export function CategoriesSection(): any ({;
           </p>;
           <p className="text-zion-slate-light text-md">;
             {t('home && home.no_categories_support')}
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoriesSection.tsx
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </p>;
         </div>;
       </section>;
@@ -856,6 +885,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     );
   }
 
+<<<<<<< HEAD
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>
@@ -892,6 +922,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 ursor/fix-website-loading-errors-and-merge-6662
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoriesSection.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
   return (
 =======
@@ -962,6 +994,7 @@ export function CategoriesSection({;
               href={category.link || '#'}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -979,6 +1012,8 @@ export function CategoriesSection({;
             <Link
               key={category.id}
               href={category.link || '#'}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1018,6 +1053,7 @@ export function CategoriesSection({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
         </div>
 >>>>>>>         {/* Special services section with translations */}
@@ -1043,6 +1079,9 @@ export function CategoriesSection({;
 <<<<<<< HEAD
 >>>>>>>         <div className="mt-12 flex justify-center">
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {/* Special services section with translations */}
         <div className="mt-8">
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
@@ -1070,6 +1109,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         <div className="mt-12 flex justify-center">
@@ -1082,6 +1122,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className="mt-12 flex justify-center">
           <Link
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1174,6 +1216,9 @@ icon: getIcon (cat.iconName)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -1280,6 +1325,7 @@ icon: getIcon (cat.iconName)
 <<<<<<<< HEAD:src/components/CategoriesSection.tsx
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ========
   switch (iconName) {;
@@ -1331,6 +1377,9 @@ icon: getIcon (cat && cat.iconName) ;
 }</Link> </div> </div> </section>) ;
 }'"}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/CategoriesSection.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export /**
  * CategoriesSection - Function description
  */
@@ -1470,6 +1519,7 @@ if ( {) {
   t ('home.view all categories');
 }</Link> </div> </div> </section>);
 }'"}
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/CategoriesSection.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> }
@@ -1553,3 +1603,7 @@ icon: getIcon (cat.iconName) ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

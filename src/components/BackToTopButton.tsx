@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ArrowUp } from 'lucide-react'
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31,6 +32,19 @@ export function BackToTopButton() {
   useEffect((,) => {
     const updateVisibility = () => {
       setVisible(window.scrollY > 400)
+=======
+import { ArrowUp } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { useEffect, useState  } from './react';
+export /**
+ * BackToTopButton - Function description
+ */
+function BackToTopButton() {
+  const [visible, set_visible] = useState (false);
+  useEffect ((, ) => {
+    const update_visibility = () =>: any {
+      set_visible (window.scroll_y > 400);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
     updateVisibility()
     window.addEventListener('scroll', updateVisibility)
@@ -42,6 +56,7 @@ export function BackToTopButton() {
     document.documentElement.scrollTo(opts)
     document.body.scrollTo(opts)
   }
+<<<<<<< HEAD
       >
       <ArrowUp className='h-5 w-5' />
     </button>;
@@ -88,6 +103,12 @@ export function BackToTopButton() {
 <<<<<<< HEAD
 >>>>>>> import { ArrowUp } from 'lucide-react';
 =======
+=======
+      >;
+      <ArrowUp className='h - 5 w - 5' />;
+    </button>);
+}"}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { ArrowUp } from 'lucide-react';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { useEffect, useState } from "react",;
@@ -113,12 +134,15 @@ export function BackToTopButton() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       onClick={scrollToTop}
       className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -156,6 +180,7 @@ export function BackToTopButton() {;
     </button>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -166,3 +191,6 @@ export function BackToTopButton() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

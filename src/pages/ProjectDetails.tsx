@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -28,6 +29,54 @@ import { ProtectedRoute } from "@/components/ProtectedRoute"
 import { Project, ProjectStatus } from "@/types/projects"
 import { Button } from "@/components/ui/button"
 import {logErrorToProduction} from '@/utils/productionLogger'
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+
+import Link from 'next/link';
+
+import React, { useState, useEffect } from 'react';
+import Link from 'next / link';
+import { use_router } from 'next / router';
+import { format } from 'date - fns';
+import { use_auth } from '@/hooks / use_auth';
+import { use_projects } from '@/hooks / use_projects';
+import { SEO } from '@/components / SEO';
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+import { Project, ProjectStatus } from '@/types / projects';
+import { Button } from '@/components / ui / button';
+import { logErrorToProduction } from '@/utils / production_logger'; import Link from 'next / link';
+import { format  } from './date - fns';
+import { use_auth  } from '@/hooks / use_auth';
+import { use_projects  } from '@/hooks / use_projects';
+import { SEO  } from '@/components / SEO';
+import { ProtectedRoute  } from '@/components / ProtectedRoute';
+import { Project, ProjectStatus  } from '@/types / projects';
+import { Button  } from '@/components / ui / button';
+import {logErrorToProduction} from '@/utils / production_logger';
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {
   Card,
   CardContent,
@@ -35,6 +84,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
+<<<<<<< HEAD
 } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 <<<<<<< HEAD
@@ -48,6 +98,81 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React, { useState, useEffect } from "react",
 import Link from 'next/link';
+=======
+
+} from '@/components / ui / card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+
+
+
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+
+import { logErrorToProduction } from '@/utils/productionLogger';import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { format } from "date-fns";
+import { useAuth } from "@/hooks/useAuth";
+import { useProjects } from "@/hooks/useProjects";
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { Project, ProjectStatus } from "@/types/projects";
+import { Button } from "@/components/ui/button";
+import {logErrorToProduction} from '@/utils/productionLogger';
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle,;
+} from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {;
+  AlertDialog,;
+  AlertDialogAction,;
+  AlertDialogCancel,;
+  AlertDialogContent,;
+  AlertDialogDescription,;
+  AlertDialogFooter,;
+  AlertDialogHeader,;
+  AlertDialogTitle,;
+  AlertDialogTrigger,;
+
+} from '@/components/ui/alert-dialog';
+import { Avatar } from '@/components/ui/avatar';
+import { Badge } from '@/components/ui/badge';
+import { Textarea } from '@/components/ui/textarea';
+import { toast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
+import { ProjectReviewSection } from '@/components/projects/reviews/ProjectReviewSection';
+
+} from '@/components / ui / alert - dialog';
+import { Avatar } from '@/components / ui / avatar';
+import { Badge } from '@/components / ui / badge';
+import { Textarea } from '@/components / ui / textarea';
+import { toast } from '@/hooks / use - toast';
+import { supabase } from '@/integrations / supabase / client';
+import { ProjectReviewSection } from '@/components / projects / reviews / ProjectReviewSection';
+
+  AlertCircle,
+  Calendar,
+  CheckCircle2,
+  Clock,
+  FileText,
+  Layers,
+  MessageSquare,
+  Video,
+  User,
+  XCircle,
+} from 'lucide-react';
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useRouter  } from 'next/router';
 import { format } from "date-fns",
 import { useAuth } from "@/hooks/useAuth",
@@ -239,12 +364,23 @@ function ProjectDetailsContent() {
   useEffect(() => {
     async function loadProject() {
       if (!projectId) return
+<<<<<<< HEAD
       if (!projectId) return;
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+  // Load project data
+  useEffect(() => {
+    async function loadProject() {
+
+      if (!projectId) return;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       setIsLoading(true)
       const projectData = await getProjectById(projectId)
       if (projectData) {
@@ -252,6 +388,7 @@ function ProjectDetailsContent() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
   
 >>>>>>>   // Load project data
@@ -269,6 +406,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       if (!projectId) return,
       
       setIsLoading(true),
@@ -297,6 +436,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
           title: "Project not found",
 =======
         
@@ -318,16 +458,24 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         // Now fetch notes
         fetchProjectNotes(projectId)
       } else {
         toast({
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           title: 'Project not found',
           description: 'The requested project could not be found.',
           variant: 'destructive',
@@ -344,6 +492,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>>           title: "Project not found",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -351,6 +500,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           title: "Project not found",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           description: "The requested project could not be found.",
@@ -424,6 +575,7 @@ function ProjectDetailsContent() {;
         fetchProjectNotes(projectId);
       } else {;
         toast({;
+<<<<<<< HEAD
           title: "Project not found",;
           description: "The requested project could not be found.",;
           variant: "destructive"}),;
@@ -432,6 +584,13 @@ function ProjectDetailsContent() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+          title: 'Project not found',;
+          description: 'The requested project could not be found.',;
+          variant: 'destructive',;
+        });
+        router && router.push('/dashboard');
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       }
       setIsLoading(false)
     }
@@ -483,12 +642,16 @@ function ProjectDetailsContent() {;
     setIsSubmittingNote(true)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>       const { data, error } = await supabase
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     
     loadProject()
   }, [projectId]),
@@ -563,11 +726,14 @@ function ProjectDetailsContent() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
     
 >>>>>>>     try {
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     try {
 >>>>>>>       const { data, error } = await supabase
         .from('project_notes')
@@ -689,6 +855,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   }
   const handleStatusChange = async (newStatus: ProjectStatus) => {
     if (!project) return;
+<<<<<<< HEAD
     const success = await updateProjectStatus(project.id, newStatus)
     if (success) {
       setProject({
@@ -741,6 +908,51 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         })
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+    const success = await updateProjectStatus(project && project.id, newStatus);
+    if (success) {;
+      setProject({;
+        ...project,;
+        status: newStatus,;
+      });
+
+      // If offer was accepted, show a special toast;
+      if (newStatus === 'offer_accepted') {;
+        toast({;
+          title: 'Offer Accepted! 🎉',;
+          description: 'The project is now in progress. Congratulations!',;
+        });
+
+  const handleStatusChange = async (new_status: ProjectStatus) => {
+    // Check condition
+if (return) {
+  $2
+}
+    const success = await updateProjectStatus (project.id, new_status);
+    // Check condition
+if ( {) {
+  $2
+}
+      set_project ({
+        ...project,
+        status: new_status,
+      });
+      // If offer was accepted, show a special toast;
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ({
+          title: 'Offer Accepted! 🎉',
+          description: 'The project is now in progress. Congratulations!',
+        });
+
+          title: 'Offer Accepted! 🎉',
+          description: 'The project is now in progress. Congratulations!',
+
+        })
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       }
     }
 
@@ -780,6 +992,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -787,6 +1000,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           title: "Offer Accepted! 🎉",
           description: "The project is now in progress. Congratulations!"})
       }
@@ -888,6 +1103,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               Return to Dashboard
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -895,6 +1111,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </Button>
 >>>>>>>           </CardContent>
         </Card>
@@ -1035,6 +1255,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </span>
               </div>
             </div>
+<<<<<<< HEAD
 >>>>>>>             {/* Action Buttons Based on Role and Status */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -1053,6 +1274,118 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </span>
               </div>
             </div>
+=======
+
+        title={`Project: ${project && project.job?.title || 'Project Details'} | Zion AI Marketplace`}
+        description='View and manage your project details and collaboration.'
+      />;
+      <main className='container mx-auto px-4 py-8'>;
+        <div className='mb-6'>;
+          <div className='flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2'>;
+            <div>;
+              <h1 className='text-3xl font-bold'>;
+                {project && project.job?.title || 'Project'}
+              </h1>;
+              <div className='flex items-center gap-2 mt-1'>;
+                {getStatusBadge(project && project.status)}
+                <span className='text-muted-foreground'>;
+                  Started on {format(new Date(project && project.start_date), 'PPP')}
+                </span>;
+              </div>;
+            </div>;
+
+
+            {/* Action Buttons Based on Role and Status */}
+            <div className='space-x-2'>;
+              {isTalent && isOfferPending && (;
+                <>;
+                  <AlertDialog>;
+                    <AlertDialogTrigger asChild>;
+                      <Button variant='default'>;
+                        <CheckCircle2 className='mr-2 h-4 w-4' /> Accept Offer;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className='container mx - auto py - 8'>;
+        <Card>;
+          <CardContent className='flex flex - col items - center justify - center py - 10'>;
+            <AlertCircle className='h - 10 w - 10 text - muted - foreground mb - 4' />;
+            <h2 className='text - xl font - bold mb - 2'>Project Not Found</h2>;
+            <p className='text - muted - foreground mb - 4'>;
+              The project you're looking for doesn't exist or you don't have;
+              access to it.;
+            </p>;
+            <Button on_click={() => router.push ('/dashboard')}>              Return to Dashboard;
+            </Button>;
+          </CardContent>;
+        </Card>;
+      </div>);
+  }
+  // Check if user is either the client or the talent;
+  const is_client = user?.id === project.client_id;
+  const is_talent = user?.id === project.talent_id;
+  // Check condition
+if ( {) {
+  $2
+}
+    router.push ('/unauthorized');
+    return null;
+  }
+  const isOfferPending = project.status === 'offer_sent';
+  const isOfferAccepted = [;
+    'offer_accepted',
+    'in_progress',
+    'completed',
+  ].includes (project.status);
+  const isActiveProject = ['offer_accepted', 'in_progress'].includes (
+    project.status);
+  return (
+    <>;
+      <SEO;
+        title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`}
+        description='View and manage your project details and collaboration.';
+      />;
+      <main className='container mx - auto px - 4 py - 8'>;
+        <div className='mb - 6'>;
+          <div className='flex flex - col md:flex - row justify - between md:items - center gap - 4 mb - 2'>;
+            <div>;
+              <h1 className='text - 3xl font - bold'>;
+                {project.job?.title || 'Project'}
+              </h1>;
+              <div className='flex items - center gap - 2 mt - 1'>;
+                {getStatusBadge (project.status)}
+                <span className='text - muted - foreground'>;
+                  Started on {format (new Date (project.start_date), 'PPP')}
+                </span>;
+              </div>;
+            </div>;
+            {/* Action Buttons Based on Role and Status */}
+            <div className='space - x-2'>;
+              {is_talent && isOfferPending && (
+                <>;
+                  <AlertDialog>;
+                    <AlertDialogTrigger as_child>;
+                      <Button variant='default'>;
+                        <CheckCircle2 className='mr - 2 h - 4 w - 4' /> Accept Offer;
+                      </Button>;
+                    </AlertDialogTrigger>;
+                    <AlertDialogContent>;
+                      <AlertDialogHeader>;
+                        <AlertDialogTitle>;
+                          Accept Project Offer?;
+                        </AlertDialogTitle>;
+                        <AlertDialogDescription>;
+                          By accepting this offer, you agree to the project;
+                          terms and timeline. This will initiate the contract;
+                          and start the project.;
+                        </AlertDialogDescription>;
+                      </AlertDialogHeader>;
+                      <AlertDialogFooter>;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             
             {/* Action Buttons Based on Role and Status */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1089,6 +1422,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                           Accept Offer
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -1122,6 +1456,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <MessageSquare className="mr-2 h-4 w-4" /> Request Changes
 >>>>>>>                   </Button>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         </AlertDialogAction>
                       </AlertDialogFooter>
                     </AlertDialogContent>
@@ -1219,6 +1556,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         Mark as Completed
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -1226,6 +1564,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       </AlertDialogAction>
 >>>>>>>                     </AlertDialogFooter>
                   </AlertDialogContent>
@@ -1269,6 +1611,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 ['offer_sent', 'offer_accepted', 'in_progress'].includes(
                   project.status
                 ) && (
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               {(isClient || isTalent) && project && project.status === 'in_progress' && (;
                 <AlertDialog>;
                   <AlertDialogTrigger asChild>;
@@ -1319,6 +1665,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 ['offer_sent', 'offer_accepted', 'in_progress'].includes(;
                   project && project.status;
                 ) && (;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 <<<<<<< HEAD
@@ -1331,6 +1678,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                   project.status
                 ) && (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <Button
                     variant='outline'
                     onClick={() =>
@@ -1435,6 +1784,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               value={activeTab}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               onValueChange={setActiveTab}
+<<<<<<< HEAD
             >
               <TabsList className='mb-6'>
                 <TabsTrigger value='details'>Project Details</TabsTrigger>
@@ -1453,6 +1803,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+            >;
+              <TabsList className='mb - 6'>;
+                <TabsTrigger value='details'>Project Details</TabsTrigger>;
+                <TabsTrigger value='timeline'>Timeline</TabsTrigger>;
+                <TabsTrigger value='documents'>Documents</TabsTrigger>;
+                <TabsTrigger value='notes'>Shared Notes</TabsTrigger>;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -1489,6 +1848,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>                 <Card>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1501,6 +1861,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <Card>
 >>>>>>>                   <CardHeader>
                     <CardTitle>Project Scope</CardTitle>
@@ -1520,6 +1884,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+                      
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       <div>
 =======
 >>>>>>>                       <div>
@@ -1564,7 +1935,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                       
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       <div>
                         <h3 className='font-semibold mb-2'>Job Details</h3>
                         <div className='bg-muted/30 p-4 rounded-md'>
@@ -1606,6 +1980,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <TabsContent value="timeline">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -1613,6 +1988,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <Card>
 >>>>>>>                   <CardHeader>
                     <CardTitle>Project Timeline</CardTitle>
@@ -1633,6 +2012,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                         <div>
 =======
                       <div className='flex items-start gap-3 p-3 bg-muted/30 rounded-md'>
@@ -1642,6 +2022,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                           <h3 className="font-semibold">Project Status</h3>
                           <div className="mt-1">
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+                      
+                      <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">
+                        <Clock className="h-5 w-5 text-primary mt-0.5" />
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                         <div>
                           <h3 className='font-semibold'>Project Status</h3>
                           <div className='mt-1'>
@@ -1683,6 +2071,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <TabsContent value="documents">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -1690,6 +2079,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <Card>
 >>>>>>>                   <CardHeader>
                     <CardTitle>Project Documents</CardTitle>
@@ -1709,6 +2102,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                             </p>
                           </div>
                         </div>
+<<<<<<< HEAD
                         <Button variant="outline" size="sm" asChild>
                           <a href={project.agreement_url} target="_blank" rel="noopener noreferrer">
                             View
@@ -1751,6 +2145,193 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+                        <Button variant='outline' size='sm' asChild>
+              </TabsList>;
+
+              <TabsContent value='details'>;
+                <Card>;
+                  <CardHeader>;
+                    <CardTitle>Project Scope</CardTitle>;
+                    <CardDescription>;
+                      Project details and expectations;
+                    </CardDescription>;
+                  </CardHeader>;
+                  <CardContent>;
+                    <div className='space-y-4'>;
+                      <div>;
+                        <h3 className='font-semibold mb-2'>;
+                          Project Description;
+                        </h3>;
+                        <div className='bg-muted/30 p-4 rounded-md'>;
+                          <p className='whitespace-pre-wrap'>;
+                            {project && project.scope_summary}
+                          </p>;
+                        </div>;
+                      </div>;
+
+                      <div>;
+                        <h3 className='font-semibold mb-2'>Payment Terms</h3>;
+                        <Badge variant='outline' className='capitalize'>;
+                          {project && project.payment_terms} Payment;
+                        </Badge>;
+                      </div>;
+
+                      <div>;
+                        <h3 className='font-semibold mb-2'>Job Details</h3>;
+                        <div className='bg-muted/30 p-4 rounded-md'>;
+                          <p className='whitespace-pre-wrap'>;
+                            {project && project.job?.description}
+                          </p>;
+                        </div>;
+                      </div>;
+                    </div>;
+                  </CardContent>;
+                </Card>;
+              </TabsContent>;
+
+              <TabsContent value='timeline'>;
+                <Card>;
+                  <CardHeader>;
+                    <CardTitle>Project Timeline</CardTitle>;
+                    <CardDescription>Key dates and milestones</CardDescription>;
+                  </CardHeader>;
+                  <CardContent>;
+                    <div className='space-y-4'>;
+                      <div className='flex items-start gap-3 p-3 bg-muted/30 rounded-md'>;
+                        <Calendar className='h-5 w-5 text-primary mt-0 && 0.5' />;
+                        <div>;
+                          <h3 className='font-semibold'>Start Date</h3>;
+                          <p>{format(new Date(project && project.start_date), 'PPP')}</p>;
+                        </div>;
+                      </div>;
+
+                      <div className='flex items-start gap-3 p-3 bg-muted/30 rounded-md'>;
+                        <Clock className='h-5 w-5 text-primary mt-0 && 0.5' />;
+                        <div>;
+                          <h3 className='font-semibold'>Project Status</h3>;
+                          <div className='mt-1'>;
+                            {getStatusBadge(project && project.status)}
+                          </div>;
+                        </div>;
+                      </div>;
+                    </div>;
+                  </CardContent>;
+                </Card>;
+              </TabsContent>;
+
+              <TabsContent value='documents'>;
+                <Card>;
+                  <CardHeader>;
+                    <CardTitle>Project Documents</CardTitle>;
+                    <CardDescription>;
+                      Agreements and relevant files;
+                    </CardDescription>;
+                  </CardHeader>;
+                  <CardContent>;
+                    {project && project.agreement_url ? (;
+                      <div className='flex items-center justify-between bg-muted/30 p-4 rounded-md'>;
+                        <div className='flex items-center gap-3'>;
+                          <FileText className='h-5 w-5 text-primary' />;
+                          <div>;
+                            <h3 className='font-semibold'>Project Agreement</h3>;
+                            <p className='text-sm text-muted-foreground'>;
+                {project.status === 'completed' && (
+                  <TabsTrigger value='reviews'>Reviews</TabsTrigger>)}
+              </TabsList>;
+              <TabsContent value='details'>;
+                <Card>;
+                  <CardHeader>;
+                    <CardTitle > Project Scope</CardTitle>;
+                    <CardDescription>;
+                      Project details and expectations;
+                    </CardDescription>;
+                  </CardHeader>;
+                  <CardContent>;
+                    <div className='space - y-4'>;
+                      <div>;
+                        <h3 className='font - semibold mb - 2'>;
+                          Project Description;
+                        </h3>;
+                        <div className='bg - muted / 30 p - 4 rounded - md'>;
+                          <p className='whitespace - pre - wrap'>;
+                            {project.scope_summary}
+                          </p>;
+                        </div>;
+                      </div>;
+                      <div>;
+                        <h3 className='font - semibold mb - 2'>Payment Terms</h3>;
+                        <Badge variant='outline' className='capitalize'>;
+                          {project.payment_terms} Payment;
+                        </Badge>;
+                      </div>;
+                      <div>;
+                        <h3 className='font - semibold mb - 2'>Job Details</h3>;
+                        <div className='bg - muted / 30 p - 4 rounded - md'>;
+                          <p className='whitespace - pre - wrap'>;
+                            {project.job?.description}
+                          </p>;
+                        </div>;
+                      </div>;
+                    </div>;
+                  </CardContent>;
+                </Card>;
+              </TabsContent>;
+              <TabsContent value='timeline'>;
+                <Card>;
+                  <CardHeader>;
+                    <CardTitle > Project Timeline</CardTitle>;
+                    <CardDescription > Key dates and milestones</CardDescription>;
+                  </CardHeader>;
+                  <CardContent>;
+                    <div className='space - y-4'>;
+                      <div className='flex items - start gap - 3 p - 3 bg - muted / 30 rounded - md'>;
+                        <Calendar className='h - 5 w - 5 text - primary mt - 0.5' />;
+                        <div>;
+                          <h3 className='font - semibold'>Start Date</h3>;
+                          <p>{format (new Date (project.start_date), 'PPP')}</p>;
+                        </div>;
+                      </div>;
+                      <div className='flex items - start gap - 3 p - 3 bg - muted / 30 rounded - md'>;
+                        <Clock className='h - 5 w - 5 text - primary mt - 0.5' />;
+                        <div>;
+                          <h3 className='font - semibold'>Project Status</h3>;
+                          <div className='mt - 1'>;
+                            {getStatusBadge (project.status)}
+                          </div>;
+                        </div>;
+                      </div>;
+                    </div>;
+                  </CardContent>;
+                </Card>;
+              </TabsContent>;
+              <TabsContent value='documents'>;
+                <Card>;
+                  <CardHeader>;
+                    <CardTitle > Project Documents</CardTitle>;
+                    <CardDescription>;
+                      Agreements and relevant files;
+                    </CardDescription>;
+                  </CardHeader>;
+                  <CardContent>;
+                    {project.agreement_url ? (
+                      <div className='flex items - center justify - between bg - muted / 30 p - 4 rounded - md'>;
+                        <div className='flex items - center gap - 3'>;
+                          <FileText className='h - 5 w - 5 text - primary' />;
+                          <div>;
+                            <h3 className='font - semibold'>Project Agreement</h3>;
+                            <p className='text - sm text - muted - foreground'>;
+                              Uploaded when project was created;
+                            </p>;
+                          </div>;
+                        </div>;
+
+
+              
+              <TabsContent value="notes">
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <Card>
 >>>>>>>                   <CardHeader>
                     <CardTitle>Project Notes</CardTitle>
@@ -1766,6 +2347,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -1776,10 +2358,36 @@ ursor/fix-website-loading-errors-and-merge-6662
                             >
                               <div className='flex items-center gap-2 mb-2'>
                                 <Avatar className='h-6 w-6'>
+=======
+                  </CardContent>;
+                </Card>;
+              </TabsContent>;
+
+              <TabsContent value='notes'>;
+                <Card>;
+                  <CardHeader>;
+                    <CardTitle>Project Notes</CardTitle>;
+                    <CardDescription>Shared notes and updates</CardDescription>;
+                  </CardHeader>;
+                  <CardContent>;
+                    <div className='space-y-4'>;
+                      <div className='space-y-4 max-h-[400px] overflow-y-auto mb-4'>;
+                        {notes && notes.length > 0 ? (;
+                          notes && notes.map(note => (;
+
+                            <div
+                              key={note && note.id}
+                              className='bg-muted/30 p-3 rounded-md'>;
+                              <div className='flex items-center gap-2 mb-2'>;
+                                <Avatar className='h-6 w-6'>;
+                                  {note && note.created_by_profile?.avatar_url ? (;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           notes.map((note) => (
                             <div key={note.id} className="bg-muted/30 p-3 rounded-md">
                               <div className="flex items-center gap-2 mb-2">
                                 <Avatar className="h-6 w-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1835,6 +2443,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                                     'User'}
                                   {note.created_by_profile?.avatar_url ? (
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+                                  {note.created_by_profile?.avatar_url ? (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                                     <img
 
 
@@ -1842,7 +2454,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                                     />
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                                   ) : (
                                     <User className='h-4 w-4' />
                                   )}
@@ -1858,9 +2473,43 @@ ursor/fix-website-loading-errors-and-merge-6662
                                 <span className='font-medium text-sm'>;
                                   {note && note.created_by_profile?.display_name ||;
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                                     'User'}
+=======
+                                    'User'}
+                                </span>;
+                                <span className='text-xs text-muted-foreground'>;
+                                  {format(new Date(note && note.created_at), 'PPp')}
+                                </span>;
+                              </div>;
+                              <p className='text-sm whitespace-pre-wrap'>;
+                                {note && note.content}
+                              </p>;
+                            </div>;
+                          ));
+                        ) : (;
+                          <div className='text-center py-8'>;
+                            <MessageSquare className='h-8 w-8 text-muted-foreground mx-auto mb-2' />;
+                            <p className='text-muted-foreground'>;
+                              No notes yet. Add the first note to this project.;
+                            </p>;
+                          </div>;
+                        )}
+
+                      </div>;
+
+                      {isOfferAccepted && (;
+                        <div>;
+                          <Textarea
+                            placeholder='Add a note or update to the project...'
+                            value={newNote}
+                            onChange={e => setNewNote(e && e.target.value)}
+                            className='min-h-[100px] mb-2'                          />;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                                 <span className="font-medium text-sm">
                                   {note.created_by_profile?.display_name || "User"}
                                 </span>
@@ -1914,10 +2563,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </div>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
                           <Button
                             onClick = {handleSubmitNote,}
                             disabled = {!newNote.trim() |isSubmittingNote,}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -1950,6 +2602,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                             onClick={handleSubmitNote}
                             disabled={!newNote.trim() || isSubmittingNote}
 
+<<<<<<< HEAD
                           >
 =======
 >>>>>>>                           <Button
@@ -1999,6 +2652,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>>             <Card>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                           <Button
 
                             onClick = {handleSubmitNote,}
@@ -2013,8 +2668,11 @@ ursor/fix-website-loading-errors-and-merge-6662
               <TabsContent value="reviews">
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <ProjectReviewSection project={project} />
               </TabsContent>
             </Tabs>
@@ -2027,6 +2685,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="order-1 lg:order-2 lg:col-span-1">
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -2043,14 +2702,117 @@ ursor/fix-website-loading-errors-and-merge-6662
           
           <div className="order-1 lg:order-2 lg:col-span-1">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <Card>
 >>>>>>>               <CardHeader>
                 <CardTitle>Project Participants</CardTitle>
               </CardHeader>
               <CardContent>
+<<<<<<< HEAD
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
+=======
+                <div className='space-y-6'>
+                  <div className='flex items-start gap-4'>
+                    <Avatar className='h-10 w-10'>
+                        <Button variant='outline' size='sm' as_child>;
+                          <a;
+                            href={project.agreement_url}
+                            target='_blank';
+                            rel='noopener noreferrer';
+                          >;
+                            View;
+                          </a>;
+                        </Button>;
+                      </div>) : (
+                      <div className='text - center py - 8'>;
+                        <FileText className='h - 10 w - 10 text - muted - foreground mx - auto mb - 2' />;
+                        <h3 className='font - semibold'>No Documents Yet</h3>;
+                        <p className='text - sm text - muted - foreground'>;
+                          No documents have been uploaded to this project.;
+                        </p>;
+                      </div>)}
+                  </CardContent>;
+                </Card>;
+              </TabsContent>;
+              <TabsContent value='notes'>;
+                <Card>;
+                  <CardHeader>;
+                    <CardTitle > Project Notes</CardTitle>;
+                    <CardDescription > Shared notes and updates</CardDescription>;
+                  </CardHeader>;
+                  <CardContent>;
+                    <div className='space - y-4'>;
+                      <div className='space - y-4 max - h-[400px] overflow - y-auto mb - 4'>;
+                        {notes.length > 0 ? (
+                          notes.map (note => (
+                            <div;
+                              key={note.id}
+                              className='bg - muted / 30 p - 3 rounded - md';
+                            >;
+                              <div className='flex items - center gap - 2 mb - 2'>;
+                                <Avatar className='h - 6 w - 6'>;
+                                  {note.created_by_profile?.avatar_url ? (
+                                    <img;
+                                      src={note.created_by_profile.avatar_url}
+                                      alt={note.created_by_profile.display_name}
+                                      loading='lazy'                                    />) : (
+                                    <User className='h - 4 w - 4' />)}
+                                </Avatar>;
+                                <span className='font - medium text - sm'>;
+                                  {note.created_by_profile?.display_name ||;
+                                    'User'}
+                                </span>;
+                                <span className='text - xs text - muted - foreground'>;
+                                  {format (new Date (note.created_at), 'PPp')}
+                                </span>;
+                              </div>;
+                              <p className='text - sm whitespace - pre - wrap'>;
+                                {note.content}
+                              </p>;
+                            </div>))) : (
+                          <div className='text - center py - 8'>;
+                            <MessageSquare className='h - 8 w - 8 text - muted - foreground mx - auto mb - 2' />;
+                            <p className='text - muted - foreground'>;
+                              No notes yet. Add the first note to this project.;
+                            </p>;
+                          </div>)}
+                      </div>;
+                      {isOfferAccepted && (
+                        <div>;
+                          <Textarea;
+                            placeholder='Add a note or update to the project...';
+                            value={new_note}
+                            on_change={e => setNewNote (e.target.value)}
+                            className='min - h-[100px] mb - 2'                          />;
+                          <Button;
+                            on_click = {handleSubmitNote, }
+                            disabled = {!new_note.trim () || isSubmittingNote, }
+                          >;
+                            {isSubmittingNote ? 'Posting...' : 'Post Note'}
+                          </Button>;
+                        </div>)}
+                    </div>;
+                  </CardContent>;
+                </Card>;
+              </TabsContent>;
+              <TabsContent value='reviews'>;
+                <ProjectReviewSection project={project} />;
+              </TabsContent>;
+            </Tabs>;
+          </div>;
+          <div className='order - 1 lg:order - 2 lg:col - span - 1'>;
+            <Card>;
+              <CardHeader>;
+                <CardTitle > Project Participants</CardTitle>;
+              </CardHeader>;
+              <CardContent>;
+                <div className='space - y-6'>;
+                  <div className='flex items - start gap - 4'>;
+                    <Avatar className='h - 10 w - 10'>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       {project.talent_profile?.profile_picture_url ? (
                         <img
                           src={project.talent_profile.profile_picture_url}
@@ -2059,6 +2821,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+                          loading="lazy"
+                        />
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       ) : (
 =======
                           loading='lazy'                        />
@@ -2265,6 +3035,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </div>
               </CardContent>
             </Card>
@@ -2290,6 +3061,41 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+                          loading='lazy'                        />) : (
+                        <User className='h - 6 w - 6' />)}
+                    </Avatar>;
+                    <div>;
+                      <h3 className='font - semibold'>;
+                        {project.talent_profile?.full_name || 'Talent'}
+                      </h3>;
+                      <p className='text - sm text - muted - foreground'>;
+                        {project.talent_profile?.professional_title ||;
+                          'Professional'}
+                      </p>;
+                      {is_client && (
+                        <Button;
+                          variant='outline';
+                          size='sm';
+                          className='mt - 2';
+                          on_click={() =>;
+                            router.push (
+                              `/messages?talent_id=${project.talent_id}`);
+                          }                        >;
+                          <MessageSquare className='mr - 1 h - 3 w - 3' /> Message;
+                        </Button>)}
+                    </div>;
+                  </div>;
+                  <div className='flex items - start gap - 4'>;
+                    <Avatar className='h - 10 w - 10'>;
+
+
+                  
+                  <div className="flex items-start gap-4">
+                    <Avatar className="h-10 w-10">
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       {project.talent_profile?.profile_picture_url ? (
                         <img
                           src={project.talent_profile.profile_picture_url}
@@ -2302,6 +3108,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         />
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
@@ -2319,6 +3126,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       ) : (
                         <User className="h-6 w-6" />
                       )}
@@ -2367,7 +3176,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                         Project Owner;
                       </p>;
                       {isTalent && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         <Button
 
 
@@ -3380,6 +4188,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Card className="mt-6">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -3387,6 +4196,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <CardHeader>
 >>>>>>>                 <CardTitle>Project Status</CardTitle>
               </CardHeader>
@@ -3442,6 +4255,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {format(new Date(project.start_date), "PPP")}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -3449,6 +4263,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     </span>
                   </div>
                 </div>
@@ -3574,6 +4392,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.
                   </p>
+<<<<<<< HEAD
                   <Button
                     variant='outline'
                     onClick={() =>
@@ -3602,6 +4421,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <Button 
                     variant="outline"
                     onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
@@ -3612,6 +4435,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>                   </Button>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -3623,6 +4447,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </Button>
                 </CardFooter>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -3631,6 +4458,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               {project.status === "offer_sent" && isClient && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-muted-foreground">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3733,6 +4561,8 @@ default: return <Badge variant="outline"> {
 }> Mark as Completed </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog>)
 }<Link href= {
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     Waiting for the talent to accept your offer.
                   </p>
                 </CardFooter>
@@ -4007,6 +4837,7 @@ const ProjectDetails = () => {;
     </>;
 
   );
+<<<<<<< HEAD
 =======
   if (error) throw error
 //Refresh notes
@@ -4099,6 +4930,8 @@ default: return <Badge variant="outline"> {
       <ProjectDetailsContent />
     </ProtectedRoute>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react"
 import Head from "next/head"
 import Link from "next/link"
@@ -4152,6 +4985,7 @@ const ProjectDetails = () => {
             </div>
     </>
   )
+<<<<<<< HEAD
 >>>>>>> }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             </Card>;
@@ -4223,3 +5057,123 @@ export default function ProjectDetails() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+
+
+
+  status;
+}</Badge>;
+}'";
+<p > Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex - col items - center justify - center py - 10" > <AlertCircle className="h - 10 w - 10 text - muted - foreground mb - 4" /> <h2 className="text - xl font - bold mb - 2" >Project Not Found</h2> <p className="text - muted - foreground mb - 4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button on_click={";
+  () => router.push ("/dashboard");
+}> Return to Dashboard </Button> </CardContent> </Card> </div>) ";
+}//Check if user is either the client or the talent container mx - auto px - 4 py - 8"> <div className=" mb - 6"> <div className=" flex flex - col md:flex - row justify - between md:items - center gap - 4 mb - 2"> <div> </span> </div> </div> <AlertDialog> <AlertDialogTrigger as_child> <Button variant=" default"> <CheckCircle2 className=" mr - 2 h - 4 w - 4"/> Accept Offer </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle > Accept Project Offer?</AlertDialogTitle> <AlertDialogDescription> By accepting this offer, you agree to the project terms and timeline. This will initiate the contract and start the project. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel > Cancel</AlertDialogCancel> <AlertDialogAction on_click={";
+  () => handleStatusChange (" offer accepted");
+}> Accept Offer </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Button> </>) ";
+}<AlertDialogTrigger as_child> <Button variant=" default"> <CheckCircle2 className=" mr - 2 h - 4 w - 4"/> Mark as Completed </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle > Mark Project as Completed?</AlertDialogTitle> <AlertDialogDescription> This will finalize the project and mark it as complete. Make sure all deliverables have been provided and approved. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel > Cancel</AlertDialogCancel> <AlertDialogAction on_click={";
+  () => handleStatusChange (" completed");
+}> Mark as Completed </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog>);
+}<Link href= {
+  `/project/[id]/milestones` ";
+}> <Layers className=" mr - 2 h - 4 w - 4"/> Milestones </Link> </Button>);
+}<Link href= {
+  `/project/[id]/room` ";
+}> <Video className=" mr - 2 h - 4 w - 4"/> Project Room </Link> </Button>) ";
+}> <MessageSquare className=" mr - 2 h - 4 w - 4"/> Message </Button>);
+}</div> </div> </div>) ";
+}</TabsList> <TabsContent value=" details"> <Card> <CardHeader> <CardTitle > Project Scope</CardTitle> <CardDescription> Project details and expectations </CardDescription> </CardHeader> <CardContent> <div className=" space - y-4"> <div> </div> </div> <div> </Badge> </div> <div> </div> </div> </div> </CardContent> </Card> </TabsContent> <TabsContent value=" timeline"> <Card> <CardHeader> <CardTitle > Project Timeline</CardTitle> <CardDescription> Key dates and milestones </CardDescription> </CardHeader> <CardContent> <div className=" space - y-4"> <div className=" flex items - start gap - 3 p - 3 bg - muted / 30 rounded - md"> <Calendar className=" h - 5 w - 5 text - primary mt - 0.5"/> <div> </div> </div> <div className=" flex items - start gap - 3 p - 3 bg - muted / 30 rounded - md"> <Clock className=" h - 5 w - 5 text - primary mt - 0.5"/> <div> </div> </div> </div> </div> </CardContent> </Card> </TabsContent> <TabsContent value=" documents"> <Card> <CardHeader> <CardTitle > Project Documents</CardTitle> <CardDescription> Agreements and relevant files </CardDescription> </CardHeader> <CardContent> <div> <h3 className=" font - semibold">Project Agreement</h3> <p className=" text - sm text - muted - foreground"> Uploaded when project was created </p> </div> </div> <Button variant=" outline"size=" sm"as_child> <a href= {
+  project.agreement url ";
+}target=" blank"rel=" noopener noreferrer"> View </Link> </Button> </div>) : (<div className=" text - center py - 8"> <FileText className=" h - 10 w - 10 text - muted - foreground mx - auto mb - 2"/> <h3 className=" font - semibold">No Documents Yet</h3> <p className=" text - sm text - muted - foreground"> No documents have been uploaded to this project. </p> </div>) ";
+}</CardContent> </Card> </TabsContent> <TabsContent value=" notes"> <Card> <CardHeader> <CardTitle > Project Notes</CardTitle> <CardDescription> Shared notes and updates </CardDescription> </CardHeader> <CardContent> />) : (<User className=" h - 4 w - 4"/>) ";
+}</Avatar> </div>) ) ) : (<div className=" text - center py - 8"> <MessageSquare className=" h - 8 w - 8 text - muted - foreground mx - auto mb - 2"/> <p className=" text - muted - foreground"> No notes yet. Add the first note to this project. </p> </div>);
+}</div> {";
+  isOfferAccepted && (<div> <Textarea placeholder=" Add a note or update to the project..."value= {
+  new_note;
+}/> <Button on_click={
+  handleSubmitNote;
+}disabled= {
+  !new_note.trim () || isSubmittingNote;
+}> </Button> </div>) ";
+}</div> </CardContent> </Card> </TabsContent> </TabsContent> </Tabs> </div> <div className=" order - 1 lg:order - 2 lg:col - span - 1"> <Card> <CardHeader> <CardTitle > Project Participants</CardTitle> </CardHeader> <CardContent> />) : (<User className=" h - 6 w - 6"/>);
+}</Avatar> <div> on_click={
+  () => router.push (`/messages?talent_id=$ {
+  project.talent id;
+}`) ";
+}> <MessageSquare className=" mr - 1 h - 3 w - 3"/> Message </Button>) ";
+}</div> </div> />) : (<User className=" h - 6 w - 6"/>);
+}</Avatar> <div> on_click={
+  () => router.push (`/messages?client_id=$ {
+  project.client id;
+}`) ";
+}> <MessageSquare className=" mr - 1 h - 3 w - 3"/> Message </Button>) ";
+}</div> </div> </div> </CardContent> </Card> <CardHeader> <CardTitle > Project Status</CardTitle> </CardHeader> <CardContent> </span> </div> </div> </CardContent> </p> <Button variant=" outline"on_click={
+  () => router.push (`/messages?talent_id=$ {
+  project.talent id;
+}`) ";
+}className=" w - full"> <MessageSquare className=" mr - 2 h - 4 w - 4" /> Discuss Changes </Button> </CardFooter>);
+}Waiting for the talent to accept your offer. </p> </CardFooter>);
+}</p> </CardFooter>);
+}</p> </CardFooter>);
+}</Card> </div> </div> </main> </>);
+}export default /**
+ * ProjectDetails - Function description
+ */
+function ProjectDetails() {
+  return (<ProtectedRoute> <ProjectDetailsContent /> </ProtectedRoute> '"export default /**
+ * ProjectDetails - Function description
+ */
+function ProjectDetails() {
+  return (
+    <ProtectedRoute>;
+      <ProjectDetailsContent />;
+    </ProtectedRoute>;
+import React from './react';
+import Head from './next / head';
+import Link from './next / link';
+const ProjectDetails = () =>: any {
+  return (
+    <>;
+      <Head>;
+        <title > Project Details - Zion Tech Group</title>;
+        <meta name="description" content="Professional Project Details services"  />;
+      </Head>;
+      <div className="min - h-screen bg - gray - 50">;
+        <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 12">;
+          <div className="text - center">;
+            <h1 className="text - 4xl font - bold text - gray - 900 mb - 8">;
+              Project Details;
+            </h1>;
+            <p className="text - xl text - gray - 600 mb - 12">;
+              Professional Project Details services and solutions;
+            </p>;
+            <div className="grid md:grid - cols - 2 gap - 8 mb - 12">;
+              <div className="bg - white p - 6 rounded - lg shadow - md">;
+                <h2 className="text - 2xl font - semibold mb - 4">Our Services</h2>;
+                <ul className="text - gray - 600 space - y-2">;
+                  <li>• Professional Solutions</li>;
+                  <li>• Expert Implementation</li>;
+                  <li>• 24 / 7 Support</li>;
+                  <li>• Custom Development</li>;
+                </ul>;
+              </div>;
+              <div className="bg - white p - 6 rounded - lg shadow - md">;
+                <h2 className="text - 2xl font - semibold mb - 4">Why Choose Us</h2>;
+                <ul className="text - gray - 600 space - y-2">;
+                  <li>• Industry Expertise</li>;
+                  <li>• Proven Results</li>;
+                  <li>• Scalable Solutions</li>;
+                  <li>• Competitive Pricing</li>;
+                </ul>;
+              </div>;
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+              <Link href="/pricing/" className="bg - blue - 600 text - white px - 6 py - 3 rounded - lg hover:bg - blue - 700 transition - colors">;
+                View Pricing;
+              </Link>;
+              <Link href="/contact/" className="bg - gray - 600 text - white px - 6 py - 3 rounded - lg hover:bg - gray - 700 transition - colors">;
+                Contact Us;
+              </Link>;
+            </div>;
+    </>);
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

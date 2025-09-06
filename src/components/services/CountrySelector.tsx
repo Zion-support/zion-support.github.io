@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -88,6 +89,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {
 >>>>>>>   onCountryChange: (country: CountryPricing | null,) => void
+=======
+const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {
+  onCountryChange: (country: CountryPricing | null,) => void
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   selectedCountry: CountryPricing | null
 }
@@ -110,6 +115,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -117,6 +123,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     const popular = ["United States", "United Kingdom", "Canada", "Germany", "Australia", "Japan", "Singapore"],
     const top = onsiteServicePricing.filter(item => 
       popular.includes(item.country)
@@ -148,9 +156,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>>   return (
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     setTopCountries(top)
   }, [])
   // Handle country selection
@@ -174,7 +186,10 @@ import {;
   CountryPricing,;
   onsiteServicePricing,;
 } from '@/data/onsiteServicePricing';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 interface CountrySelectorProps {;
   onCountryChange: (country: CountryPricing | null) => void;
@@ -212,8 +227,11 @@ export function CountrySelector(): any ({;
       onsiteServicePricing && onsiteServicePricing.find(item => item && item.country === countryName) || null;
     onCountryChange(country);
   };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 
       </h3>;
@@ -269,6 +287,7 @@ export function CountrySelector(): any ({;
     </div>;
 
   return (
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>     <div className="mb-6">
 =======
@@ -278,6 +297,8 @@ export function CountrySelector(): any ({;
   },
 
   return (
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <div className="mb-6">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
@@ -440,6 +461,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               .map((item) => (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -447,6 +469,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <SelectItem key={item.country} value={item.country} className="text-white">
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
@@ -543,6 +570,7 @@ function CountrySelector() {
     </div>
   )
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -550,12 +578,19 @@ function CountrySelector() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>;
         </SelectContent>;
       </Select>;
     </div>;
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
@@ -585,3 +620,6 @@ function CountrySelector() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

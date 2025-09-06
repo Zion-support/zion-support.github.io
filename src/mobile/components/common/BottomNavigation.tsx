@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Home, ShoppingBag, Users, User } from 'lucide-react'
 
@@ -104,6 +105,8 @@ export function BottomNavigation() {
 import React from "react",;
 import { useRouter } from "next/router",;
 import Link from "next/link",;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Home, ShoppingBag, Users, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -225,6 +228,7 @@ export function BottomNavigation() {;
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -235,3 +239,29 @@ export function BottomNavigation() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+              {React.cloneElement(item.icon as React.ReactElement, { 
+                className: cn("h-5 w-5", isActive ? "stroke-primary" : "stroke-muted-foreground") 
+          <Link;
+            key={item.path}
+            href={item.path}
+            className={cn (
+              "flex flex - col items - center justify - center flex - 1 py - 1 px - 2";
+              is_active ? "text - primary" : "text - muted - foreground")}
+          >;
+            <div className="h - 5 w - 5">;
+              {React.clone_element (item.icon as React.ReactElement, {
+                class_name: cn ("h - 5 w - 5", is_active ? "stroke - primary" : "stroke - muted - foreground");
+              })}
+            </div>;
+            <span className="text - xs mt - 1">{item.label}</span>;
+          </Link>);
+      })}
+
+    </div>);
+}
+
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

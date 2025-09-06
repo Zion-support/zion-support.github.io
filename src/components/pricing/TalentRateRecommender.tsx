@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -69,6 +70,8 @@ import { useAuth } from "@/hooks/useAuth",
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Sparkles } from 'lucide-react'
 interface TalentRateRecommenderProps {
 
@@ -107,6 +110,7 @@ interface TalentRateRecommenderProps {
   rateType: "hourly" | "fixed"
 }
 
+<<<<<<< HEAD
   rateType: "hourly" | "fixed"
 }
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
@@ -233,6 +237,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       // Track this suggestion application
 >>>>>>>       if (user && user.id) {
         trackPricingSuggestion({
@@ -244,7 +250,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           accepted: true
         })
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> interface TalentRateRecommenderProps {;
+=======
+interface TalentRateRecommenderProps {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   skills: string[],;
   yearsExperience: number,;
   location?: string;
@@ -315,7 +325,10 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
           actualValue: suggestedRate,;
           accepted: true;
         });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const handleApplySuggestion = () =>: any {
     // Check condition
 if ( {) {
@@ -337,7 +350,6 @@ if ( {) {
           actual_value: suggested_rate,
           accepted: true;
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     }
 <<<<<<< HEAD
@@ -365,6 +377,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -382,6 +395,9 @@ if ( {) {
             onClick = {generateSuggestion,}
             disabled = {skills.length === 0 |yearsExperience <= 0,}
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 
 
@@ -396,13 +412,16 @@ ursor/fix-website-loading-errors-and-merge-6662
           </Button>
         ) : (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             disabled = {skills && skills.length === 0 || yearsExperience <= 0,}
             className="w-full">;
             <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI;
           </Button>;
         ) : (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <PricingSuggestionBox
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -441,6 +460,17 @@ return (<div className="space-y-4" > <div> {"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 <<<<<<< HEAD
+=======
+
+
+  rateType 
+}/>) 
+}</div> </div>) ;
+};
+'"};
+};
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
@@ -474,6 +504,7 @@ return (<div className="space-y-4" > <div> {"
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 
@@ -488,3 +519,43 @@ return (<div className="space-y-4" > <div> {"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+    <div className="space - y-4">;
+      <div>;
+        {!suggestion && !is_loading ? (
+          <Button;
+            type="button";
+            variant="outline";
+            on_click = {generate_suggestion, }
+            disabled = {skills.length === 0 || years_experience <= 0, }
+            className="w - full";
+          >;
+            <Sparkles className="h - 4 w - 4 mr - 2" /> Optimize Rate with AI;
+          </Button>) : (
+          <PricingSuggestionBox;
+            suggestion = {suggestion, }
+            is_loading = {is_loading, }
+            onApplySuggestion = {handleApplySuggestion, }
+            rate_type = {rate_type, }
+          />)}
+      </div>;
+    </div>);
+}
+return (<div className="space - y-4" > <div> {";
+  !suggestion && !is_loading ? (<Button type="button" variant="outline" on_click={
+  generate_suggestion ";
+}> <Sparkles className="h - 4 w - 4 mr - 2" /> Optimize Rate with AI </Button>) : (<PricingSuggestionBox suggestion= {
+  suggestion;
+}is_loading= {
+  is_loading;
+}onApplySuggestion= {
+  handleApplySuggestion;
+}rate_type= {
+  rate_type;
+}/>);
+}</div> </div>);
+}
+'"},
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

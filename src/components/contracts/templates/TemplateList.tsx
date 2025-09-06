@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/templates/TemplateList.tsx
 
 
@@ -36,6 +37,8 @@ interface TemplateListProps {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { ContractTemplate } from "@/types/contracts",
 import { Button } from "@/components/ui/button",
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
@@ -60,6 +63,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useAuth } from "@/hooks/useAuth";
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // useRouter replaces the old useLocation hook from react-router
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -326,7 +334,15 @@ export function TemplateList(): any ({;
 ========
     await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId);
   };
+<<<<<<< HEAD
   if (isLoading) {;
+=======
+
+  if (isLoading) {;
+
+
+  if (isLoading) {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return (
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/templates/TemplateList.tsx
       <div className="flex justify-center items-center py-8">;
@@ -472,6 +488,7 @@ export function TemplateList({;
                   {template && template.is_default && (;
                     <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0 && 0.5 rounded-full">Default</span>;
                   )}
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/templates/TemplateList.tsx
 =======
   const handleDeleteClick = (templateId: string) => {;
@@ -536,16 +553,27 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="flex items-center gap-2">
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/templates/TemplateList.tsx
+=======
+
+
+              
+
+
+              <div className="flex items-center gap-2">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </div>;
                 <p className="text-xs text-muted-foreground">;
                   Last updated: {new Date(template && template.updated_at).toLocaleDateString()}
                 </p>;
               </div>;
               <div className="flex items-center gap-2">;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/templates/TemplateList.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>>                 <Button
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <Button
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/templates/TemplateList.tsx
                   variant="ghost"
@@ -616,6 +644,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <Button
                   variant="ghost"
                   size="icon"
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/templates/TemplateList.tsx
 =======
 =======
@@ -671,11 +700,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+
+
+
+            
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <Separator className="my-3" />
 
             <Button 
               onClick={() => onSelect(template)} 
               variant="outline" 
+<<<<<<< HEAD
 
 =======
             <Button
@@ -705,6 +741,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             <Button 
               onClick={() => onSelect(template)} 
               variant="outline" 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               className="w-full"
             >
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -840,6 +878,7 @@ return;
         </Card>;
       ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       ;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -853,6 +892,14 @@ return;
   handleDeleteConfirm ;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
 }'"};
+=======
+
+
+  handleDeleteConfirm ;
+}> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
+}'"};
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>;
@@ -894,6 +941,7 @@ return;
 <<<<<<<< HEAD:src/components/contracts/templates/TemplateList.tsx
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ========
 };
@@ -990,6 +1038,9 @@ return ;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
 }'"}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/templates/TemplateList.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Check condition
 if ( {) {
   $2
@@ -1130,6 +1181,7 @@ return;
   handleDeleteConfirm;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>);
 }'"}
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/templates/TemplateList.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> }
@@ -1166,3 +1218,7 @@ return;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

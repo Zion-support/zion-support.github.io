@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -12,6 +13,8 @@
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface EmptyFraudStateProps {
   hasFilters: boolean
   onResetFilters: () => void
@@ -43,6 +46,9 @@ import {ShieldAlert} from 'lucide-react'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -94,6 +100,7 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -106,14 +113,24 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { ShieldAlert } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 interface EmptyFraudStateProps {;
   hasFilters: boolean,;
   onResetFilters: () => void;
+=======
+interface EmptyFraudStateProps {;
+  hasFilters: boolean,;
+  onResetFilters: () => void;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from 'lucide-react'
@@ -125,8 +142,12 @@ interface EmptyFraudStateProps {
 interface EmptyFraudStateProps {;
   hasFilters: boolean,;
   onResetFilters: () => void;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> }
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   hasFilters
   onResetFilters
@@ -169,6 +190,53 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
 <<<<<<< HEAD
 
       )}
+<<<<<<< HEAD
+=======
+
+interface EmptyFraudStateProps {
+  has_filters: boolean,
+  onResetFilters: () => void;
+}
+export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
+  has_filters,
+  onResetFilters;
+}, ) => {
+  return (
+    <div className="text - center py - 12">;
+      <ShieldAlert className="mx - auto h - 12 w - 12 text - muted - foreground mb - 4" />;
+      <h3 className="text - lg font - medium">No fraud flags found</h3>;
+      <p className="text - muted - foreground mb - 6">;
+        {has_filters;
+          ? "Try adjusting your filters";
+          : "You don't have any fraud flags yet"}
+      </p>;
+      {has_filters && (
+        <Button variant="outline" on_click={onResetFilters}>Clear Filters</Button>)}
+    </div>);
+}
+'";
+import React from './react';
+import { Button } from '@/components / ui / button';
+import {ShieldAlert} from 'lucide-react';
+interface EmptyFraudStateProps {
+  has_filters: boolean,
+  onResetFilters: () => void;
+}
+export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
+  has_filters,
+  onResetFilters;
+
+}) => {
+    </div>;
+  );
+};
+'";
+
+
+
+  return (
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </div>;
   );
 
@@ -177,6 +245,7 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
     </div>;
   );
 };
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -194,3 +263,18 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+    <div className="text - center py - 12">;
+      <ShieldAlert className="mx - auto h - 12 w - 12 text - muted - foreground mb - 4" />;
+      <h3 className="text - lg font - medium">No fraud flags found</h3>;
+      <p className="text - muted - foreground mb - 6">;
+        {has_filters;
+          ? "Try adjusting your filters";
+          : "You don't have any fraud flags yet"}
+      </p>;
+      {has_filters && (
+        <Button variant="outline" on_click={onResetFilters}>Clear Filters</Button>)}
+    </div>);
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

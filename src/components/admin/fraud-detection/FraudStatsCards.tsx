@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/admin/fraud-detection/FraudStatsCards.tsx
 
 =======
@@ -71,6 +72,9 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+return (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">
       <Card>
@@ -94,6 +98,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -119,6 +128,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -144,6 +158,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -169,6 +188,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Card>
         <CardHeader className="pb-2">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -191,6 +215,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Card>
         <CardHeader className="pb-2">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -391,6 +420,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
 <<<<<<<< HEAD:src/components/admin/fraud-detection/FraudStatsCards.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
   )
@@ -400,6 +430,8 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
 "
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) => {
   return (
     <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 4 mb - 8">;
@@ -451,6 +483,7 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) =
     </div>);
 }
 ";
+<<<<<<< HEAD
 =======
   ),;
 },; interface FraudStatsCardsProps {;
@@ -477,3 +510,7 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) =
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+  )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

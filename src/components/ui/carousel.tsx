@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import * as React from "react"
+import useEmblaCarousel from "embla-carousel-react"
+import { ArrowLeft, ArrowRight } from 'lucide-react'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
@@ -56,6 +62,7 @@ type CarouselContextProps = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
   }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -71,6 +78,8 @@ type CarouselContextProps = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   orientation: "horizontal" | "vertical"
 } & Omit<CarouselProps "orientation">
 
@@ -146,6 +155,7 @@ function useCarousel(): CarouselContextProps {;
 
   }
 ;
+<<<<<<< HEAD
 
 =======
 >>>>>>>   }
@@ -153,6 +163,8 @@ function useCarousel(): CarouselContextProps {;
 >>>>>>>   return context as CarouselContextProps;
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return context as CarouselContextProps;
 >>>>>>> }
 const Carousel = React.forwardRef<
@@ -165,6 +177,11 @@ const Carousel = React.forwardRef<
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       orientation = "horizontal",
 
       opts,
@@ -202,6 +219,7 @@ const Carousel = React.forwardRef<
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>       ...props
@@ -212,6 +230,8 @@ const Carousel = React.forwardRef<
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       ...props
 >>>>>>>     }
     ref
@@ -268,6 +288,17 @@ const Carousel = React.forwardRef<
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+import * as React from &quot;react & quot;
+import useEmblaCarousel from &quot;embla - carousel - react & quot;
+import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { cn } from &quot;@/lib / utils & quot;
+import { Button } from &quot;@/components / ui / button & quot;
+
+      };
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       },;
 
       [scrollPrev, scrollNext];
@@ -310,7 +341,10 @@ onSelect(api)
         return;
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
 type CarouselApi = ReturnType < typeof useEmblaCarousel>[1];
 type CarouselOptions = {
@@ -394,6 +428,7 @@ onSelect(api)
       return () => {
         api?.off("select", onSelect)
 
+<<<<<<< HEAD
       }
 =======
 >>>>>>>       return () => {
@@ -402,6 +437,8 @@ onSelect(api)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
     }, [api, onSelect])
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       }
       set_api (api);
     }, [api, set_api]);
@@ -415,7 +452,6 @@ if ( {) {
 on_select (api);
       api.on (&quot;re_init & quot;, on_select);
       api.on (&quot;select & quot;, on_select);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       return () => {
         api?.off (&quot;select & quot;, on_select);
       }
@@ -424,11 +460,25 @@ on_select (api);
 
 >>>>>>>     return (
       <CarouselContext.Provider;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+        value={{
+
+          carousel_ref,
+          api: api,
+          opts,
+          orientation:;
+            orientation || (opts && opts.axis === &quot;y & quot; ? &quot;vertical & quot; : &quot;horizontal & quot),
+          scroll_prev,
+          scroll_next,
+          canScrollPrev,
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
       onSelect(api)
       api.on("reInit", onSelect)
@@ -473,6 +523,10 @@ ursor/fix-website-loading-errors-and-merge-6662
           scrollPrev,
           scrollNext,
           canScrollPrev,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           canScrollNext}}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       >;
@@ -485,11 +539,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 
           role=&quot;region&quot;
           aria-roledescription=&quot;carousel&quot;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           className={cn("relative", className)}
           role="region"
           aria-roledescription="carousel"
 
+<<<<<<< HEAD
 =======
 className={cn(&quot;relative&quot;, className)}
           role=&quot;region&quot;
@@ -520,6 +578,10 @@ className={cn(&quot;relative&quot; className)}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {...props}
 >>>>>>>         >;
           {children}
@@ -553,6 +615,17 @@ const CarouselContent = React.forwardRef<
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
   const { carouselRef, orientation } = useCarousel()
+<<<<<<< HEAD
+=======
+);
+Carousel.display_name = &quot;Carousel & quot;
+;
+const CarouselContent = React.forward_ref<;
+  HTMLDivElement,
+  React.HTMLAttributes < HTMLDivElement>;
+>(({ class_name, ...props }, ref) => {
+  const { carousel_ref, orientation } = use_carousel ();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div ref={carouselRef} className="overflow-hidden">
       <div
@@ -586,6 +659,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             : "-mt-4 flex-col snap-y snap-mandatory",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -593,6 +667,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           className
 >>>>>>>         )}
         {...props}
@@ -624,6 +702,9 @@ const CarouselItem = React.forwardRef<
 >(({ className, ...props }, ref) => {
   const { orientation } = useCarousel()
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         className={cn (
           &quot;flex & quot;,
           orientation === &quot;horizontal & quot;
@@ -641,9 +722,12 @@ const CarouselItem = React.forward_ref<;
   React.HTMLAttributes < HTMLDivElement>;
 >(({ class_name, ...props }, ref) => {
   const { orientation } = use_carousel ();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div
       ref={ref}
@@ -673,6 +757,7 @@ ursor/fix-website-loading-errors-and-merge-6662
         orientation === "horizontal" ? "pl-4" : "pt-4",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -680,6 +765,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         className
 >>>>>>>       )}
       {...props}
@@ -694,6 +783,7 @@ const CarouselPrevious = React.forwardRef<
   HTMLButtonElement
   React.ComponentProps<typeof Button>
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -708,6 +798,11 @@ const CarouselPrevious = React.forwardRef<
 >(({ className, variant = &quot;outline&quot; size = &quot;icon&quot; ...props }, ref) => {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>(({ className, variant = "outline", size = "icon", ...props }, ref) => {
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
       role=&quot;group & quot;
       aria - roledescription=&quot;slide & quot;
@@ -725,6 +820,7 @@ const CarouselPrevious = React.forward_ref<;
   React.ComponentProps < typeof Button>;
 >(({ class_name, variant = &quot;outline & quot;, size = &quot;icon & quot;, ...props }, ref) => {
   const { orientation, scroll_prev, canScrollPrev } = use_carousel ();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 <<<<<<< HEAD
@@ -735,6 +831,8 @@ const CarouselPrevious = React.forward_ref<;
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel()
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <Button
       ref={ref}
@@ -768,6 +866,7 @@ const CarouselPrevious = React.forward_ref<;
       {...props}
 <<<<<<< HEAD
 
+<<<<<<< HEAD
     >
       <ArrowLeft className="h-4 w-4" />
       <span className="sr-only">Previous slide</span>
@@ -781,6 +880,9 @@ CarouselPrevious.displayName = &quot;CarouselPrevious&quot;
       <span className="sr-only">Previous slide</span>
 >>>>>>>     </Button>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         className
       )}
       className={cn (
@@ -789,6 +891,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           ? &quot;left - 1 sm:left - 2 md:-left - 12 top - 1/2 -translate - y-1 / 2&quot;
           : &quot;top - 1 sm:top - 2 md:-top - 12 left - 1/2 -translate - x-1 / 2 rotate - 90 & quot;,
         class_name)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
@@ -806,6 +909,11 @@ ursor/fix-website-loading-errors-and-merge-6662
       {...props}
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+      disabled={!canScrollPrev}
+      on_click={scroll_prev}
+      {...props}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
 
@@ -835,10 +943,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 CarouselPrevious.displayName = "CarouselPrevious"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 const CarouselNext = React.forwardRef<
   HTMLButtonElement
   React.ComponentProps<typeof Button>
 
+<<<<<<< HEAD
   const { orientation, scrollNext, canScrollNext } = useCarousel()
 =======
 onst CarouselNext = React.forwardRef<
@@ -847,6 +959,11 @@ onst CarouselNext = React.forwardRef<
 >(({ className, variant = &quot;outline&quot; size = &quot;icon&quot; ...props }, ref) => {
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>   const { orientation, scrollNext, canScrollNext } = useCarousel()
+=======
+>(({ className, variant = "outline", size = "icon", ...props }, ref) => {
+
+  const { orientation, scrollNext, canScrollNext } = useCarousel()
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 >;
       <ArrowLeft className=&quot;h - 4 w - 4&quot; />;
       <span className=&quot;sr - only & quot;>Previous slide</span>;
@@ -859,6 +976,7 @@ const CarouselNext = React.forward_ref<;
   React.ComponentProps < typeof Button>;
 >(({ class_name, variant = &quot;outline & quot;, size = &quot;icon & quot;, ...props }, ref) => {
   const { orientation, scroll_next, canScrollNext } = use_carousel ();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -878,6 +996,8 @@ const CarouselNext = React.forwardRef<
 >(({ className, variant = "outline", size = "icon", ...props }, ref) => {
   const { orientation, scrollNext, canScrollNext } = useCarousel()
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <Button
       ref={ref}
@@ -923,6 +1043,7 @@ const CarouselNext = React.forwardRef<
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
     >
       <ArrowRight className="h-4 w-4" />
       <span className="sr-only">Next slide</span>
@@ -956,6 +1077,9 @@ export {
       <span className="sr-only">Next slide</span>
 >>>>>>>     </Button>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         className
       )}
       className={cn (
@@ -964,7 +1088,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           ? &quot;right - 1 sm:right - 2 md:-right - 12 top - 1/2 -translate - y-1 / 2&quot;
           : &quot;bottom - 1 sm:bottom - 2 md:-bottom - 12 left - 1/2 -translate - x-1 / 2 rotate - 90 & quot;,
         class_name)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       disabled={!canScrollNext}
       on_click={scroll_next}
       {...props}
@@ -977,6 +1100,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 CarouselNext.display_name = &quot;CarouselNext & quot;
 ;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     >
       <ArrowRight className="h-4 w-4" />
       <span className="sr-only">Next slide</span>
@@ -1004,7 +1131,10 @@ CarouselNext.displayName = "CarouselNext"
 })
 CarouselNext.displayName = "CarouselNext"
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export {
   type CarouselApi,
   Carousel,
@@ -1028,6 +1158,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   CarouselNext};
   CarouselPrevious,
   CarouselNext}
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1038,3 +1169,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

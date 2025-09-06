@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/developers/ApiLogs.tsx
 
 <<<<<<< HEAD
@@ -358,6 +359,8 @@ const hasNextPage = currentPage < totalPages - 1;
 }
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState, useEffect  } from './react';
 import { format  } from './date - fns';
 import { List, RefreshCw } from 'lucide-react'import { useApiKeys  } from '@/hooks / useApiKeys';
@@ -377,6 +380,7 @@ function ApiLogs() {
   const hasPrevPage = current_page > 0);
 }
   );
+<<<<<<< HEAD
 }
 =======
 
@@ -629,3 +633,6 @@ bg-zinc-900 border-zinc-800 text-white"> <CardHeader> </CardTitle> <CardDescript
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

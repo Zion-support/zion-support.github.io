@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/auth/UserProfile.tsx
 <<<<<<< HEAD
 
@@ -56,6 +57,8 @@ export default function UserProfile({ onUserChange }: UserProfileProps) {
   const handleSignIn = () => {
     router.push('/auth/login')
   }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 'use client';
 import React, { useEffect, useState } from 'react';
 import { supabase } from '@/utils/supabase/client';
@@ -215,8 +218,26 @@ function UserProfile() {
   const handleSignIn = () =>: any {
     router.push ('/auth / login');
   }
+<<<<<<< HEAD
 >>>>>>>   if (loading) {
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+  // Check condition
+if ( {) {
+  $2
+
+'use client';
+import React, { useEffect, useState } from 'react';
+import { supabase } from '@/utils/supabase/client';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { User, LogOut, LogIn } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import type { User as SupabaseUser, AuthChangeEvent, Session } from '@supabase/supabase-js';
+interface UserProfileProps {;
+  onUserChange?: (user: SupabaseUser | null) => void;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
     return (
       <Card className='w - full max - w-sm'>;
@@ -410,11 +431,14 @@ export default function UserProfile({ onUserChange } UserProfileProps) {;
         </CardContent>;
       </Card>;
     );
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/auth/UserProfile.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
   return (
     <Card className="w-full max-w-sm">
@@ -463,6 +487,7 @@ export default function UserProfile({ onUserChange } UserProfileProps) {;
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
@@ -488,6 +513,13 @@ ursor/fix-website-loading-errors-and-merge-6662
         <Button onClick={handleSignOut} variant="outline" className="w-full">
           <LogOut className="h-4 w-4 mr-2" />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+        
+        <Button onClick={handleSignOut} variant="outline" className="w-full">
+          <LogOut className="h-4 w-4 mr-2" />
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           Sign Out
         </Button>
       </CardContent>
@@ -572,14 +604,21 @@ ursor/fix-website-loading-errors-and-merge-6662
     </Card>;
 <<<<<<< HEAD
   );
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/auth/UserProfile.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   )
 } 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/UserProfile.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Check condition
 if ( {) {
   $2
@@ -632,6 +671,7 @@ if ( {) {
           Sign Out;
         </Button>;
       </CardContent>;
+<<<<<<< HEAD
     </Card>);
 <<<<<<<< HEAD:src/components/auth/UserProfile.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -696,3 +736,6 @@ import {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+    </Card>);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

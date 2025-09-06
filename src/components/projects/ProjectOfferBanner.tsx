@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -35,12 +36,18 @@ export function ProjectOfferBanner() {
   }
   const handleViewOffer = (projectId: string,) => {
     router.push(`/project/${projectId}`)
+=======
+}
+  const handleViewOffer = (project_id: string, ) =>: any {
+    router.push (`/project/${project_id}`);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
 <<<<<<< HEAD
 
     return null
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
   }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -56,6 +63,8 @@ export function ProjectOfferBanner() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
 import { Bell, Calendar, X } from 'lucide-react'
@@ -122,12 +131,15 @@ export function ProjectOfferBanner() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
   }
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 >>>>>>>     <div className="mb-6 space-y-3">
       {pendingOffers
@@ -180,6 +192,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
               
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -188,12 +201,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
               
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <div className="flex items-center gap-2">
 >>>>>>>                 <Button size="sm" className="whitespace-nowrap">
                   View Offer
                 </Button>
                 <Button
                   size="sm"
+<<<<<<< HEAD
 <<<<<<< HEAD
                   variant="ghost"
                   onClick={(e) => handleDismiss(offer.id, e)}
@@ -232,6 +250,8 @@ if (isLoading |pendingOffers.length === 0 |pendingOffers.every (p => dismissed.h
 }</div>)
 }'"}
 >>>>>>> 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 
 import { useEffect, useState } from "react";
@@ -298,9 +318,12 @@ export function ProjectOfferBanner() {;
                 </Button>;
                 <Button
                   size="sm" 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   variant="ghost"
                   onClick={(e) => handleDismiss(offer.id, e)}
                 >
@@ -404,6 +427,7 @@ if () ) {) {
 }> <CardContent className="p - 4 flex items - center justify - between" > <div className="flex items - center gap - 2" > <div className="bg - primary / 10 rounded - full p - 2" > <Bell className="h - 4 w - 4 text - primary" /> </div> <div> </p> </div> </div> <div className="flex items - center gap - 2" > <Button size="sm" className="whitespace - nowrap" > View Offer </Button> <Button > <X className="h - 4 w - 4" /> </Button> </div> </CardContent> </Card>) );
 }</div>);
 }'"}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>>     </div>;
   );
@@ -453,3 +477,10 @@ if (isLoading |pendingOffers.length === 0 |pendingOffers.every (p => dismissed.h
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+    </div>;
+  );
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
@@ -44,19 +45,29 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-8">
 =======
   ];
+=======
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Button from './Button';
+
+const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">
-      <div className="container flex h-16 items-center px-4 sm:px-6">
-        {/* Logo */}
-        <div className="flex items-center">
-          <Link to="/" className="flex-shrink-0">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Zion Tech Group
-            </h1>
+    <header className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 sticky top-0 z-50">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">Z</span>
+            </div>
+            <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
+<<<<<<< HEAD
           <div className="hidden lg:flex items-center space-x-8 ml-8">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             {navigation.map((item) => (
@@ -73,9 +84,31 @@ export default function Header() {
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+              Home
+            </Link>
+            <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+              Services
+            </Link>
+            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+              About
+            </Link>
+            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+              Contact
+            </Link>
+            <Button variant="primary" size="small">
+              Get Started
+            </Button>
+          </nav>
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Mobile Menu Button */}
           <button
+            className="md:hidden text-gray-300 hover:text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+<<<<<<< HEAD
             className="lg:hidden ml-auto p-2 text-slate-300 hover:text-cyan-400 transition-colors duration-200"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -126,11 +159,18 @@ const Header: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="lg:hidden absolute top-16 left-0 right-0 bg-slate-900/95 backdrop-blur-md border-b border-slate-700/20">
             <div className="px-4 py-2 space-y-1">
@@ -175,10 +215,33 @@ const Header: React.FC = () => {
           </div>
         )}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+          <div className="md:hidden py-4 border-t border-slate-700">
+            <nav className="flex flex-col space-y-4">
+              <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+                Home
+              </Link>
+              <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                Services
+              </Link>
+              <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                About
+              </Link>
+              <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+                Contact
+              </Link>
+              <Button variant="primary" size="small" className="w-full">
+                Get Started
+              </Button>
+            </nav>
+          </div>
+        )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </div>
     </header>
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -212,3 +275,7 @@ export default function Header() {
 
 export default Header;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+export default Header;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

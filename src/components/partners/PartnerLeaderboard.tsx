@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import { Star } from 'lucide-react'
@@ -59,6 +60,9 @@ import { Crown, Medal, Trophy } from 'lucide-react'
   earnings: number,
   badges: string[]
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+badges: string[]
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 export function PartnerLeaderboard() {
   // Placeholder data - would come from API in real implementation
@@ -88,6 +92,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -95,6 +100,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     {
 >>>>>>>       id: "2"
       rank: 2
@@ -119,6 +128,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -126,6 +136,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     {
 >>>>>>>       id: "3"
       rank: 3
@@ -150,6 +164,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -157,6 +172,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     {
 >>>>>>>       id: "4"
       rank: 4
@@ -473,6 +492,7 @@ export function PartnerLeaderboard() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   )
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -481,6 +501,67 @@ export function PartnerLeaderboard() {;
 =======
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+import { Badge } from '@/components / ui / badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
+import { Star } from 'lucide-react';
+interface LeaderboardEntry {
+  id: string,
+  rank: number,
+  name: string,
+  avatar?: string;
+  referrals: number,
+  earnings: number,
+  badges: string[];
+}
+export /**
+ * PartnerLeaderboard - Function description
+ */
+function PartnerLeaderboard() {
+  // Placeholder data - would come from API in real implementation;
+  const leaderboard: LeaderboardEntry[] = [;
+    {
+      id: "1",
+      rank: 1,
+      name: "AI Tech Guru",
+      avatar: "", // URL would be here;
+      referrals: 178,
+      earnings: 4500,
+      badges: ["gold", "trending"];
+    }
+    {
+      id: "2",
+      rank: 2,
+      name: "Machine Learning Hub",
+      avatar: "",
+      referrals: 145,
+      earnings: 3625,
+      badges: ["silver"];
+    }
+    {
+      id: "3",
+      rank: 3,
+      name: "Neural Networks Pro",
+      avatar: "",
+      referrals: 124,
+      earnings: 3100,
+      badges: ["bronze"];
+    }
+    {
+      id: "4",
+      rank: 4,
+      name: "AI Career Insights",
+      avatar: "",
+      referrals: 98,
+      earnings: 2450,
+      badges: [];
+    }
+
+    },
+    },
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     {
       id: "5",
       rank: 5,
@@ -490,6 +571,7 @@ export function PartnerLeaderboard() {;
       earnings: 2175,
 
 
+<<<<<<< HEAD
 >>>>>>>       badges: ["newcomer"]
 
 
@@ -504,3 +586,6 @@ export function PartnerLeaderboard() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+      badges: ["newcomer"]
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/community/ForumCategories.tsx
@@ -118,6 +119,9 @@ import { ForumCategoryInfo } from "@/types/community",
   },
   {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+{
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     id: "feedback"
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
@@ -139,6 +143,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   }
   },
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   {
     id: "announcements"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -146,11 +155,22 @@ ursor/fix-website-loading-errors-and-merge-6662
     description: "Official announcements from the Zion team."
     adminOnly: true
     icon: "Megaphone"
+<<<<<<< HEAD
+=======
+const categories: ForumCategoryInfo[] = [;
+  {
+    id: "getting - hired",
+    name: "Getting Hired",
+    description: "Tips, strategies, and questions about getting hired on the platform.";
+    admin_only: false,
+    icon: "Briefcase";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -184,6 +204,9 @@ export const ForumCategories = () => {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ],
 
 const iconMap = {
@@ -207,6 +230,10 @@ export const ForumCategories = () => {
       {visibleCategories.map((category) => {
         const Icon = iconMap[category.icon as keyof typeof iconMap],
         return (
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Link key={category.id} href={`/community/category/${category.id}`}>
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -246,16 +273,21 @@ export default ForumCategories
 export default ForumCategories;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import Link from "next/link",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 import { useAuth } from "@/hooks/useAuth",;
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react';
 import { ForumCategoryInfo } from "@/types/community",;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
@@ -331,6 +363,8 @@ export const ForumCategories = () =>: any {
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/community/ForumCategories.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 const categories: ForumCategoryInfo[] = [;
   {;
     id: "getting-hired",;
@@ -430,6 +464,7 @@ export default ForumCategories;
 <<<<<<<< HEAD:src/components/community/ForumCategories.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 
@@ -581,3 +616,10 @@ export default ForumCategories;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+export default ForumCategories;
+";
+  const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
+export default ForumCategories;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

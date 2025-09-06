@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -41,6 +42,9 @@ export interface Benefit {
 }
 export interface Testimonial {
   name: string;
+=======
+name: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   role?: string;
   text: string;
   avatar?: string
@@ -69,6 +73,7 @@ xport interface Benefit {
   benefits: Benefit[];
   testimonials: Testimonial[];
   ctaText: string;
+<<<<<<< HEAD
   ctaLink: string
 }
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
@@ -91,15 +96,43 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 import Image from "next/image",
+=======
+import React from "react";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import Image from "next/image";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export interface Benefit {
   title: string,
   description: string,
   icon?: React.ReactNode
+<<<<<<< HEAD
   title: string
+=======
+import React from 'react';
+export interface Benefit {
+  title: string;
+  description: string;
+  icon?: React.ReactNode;
+}
+export interface Testimonial {
+
+  name: string;
+  role?: string;
+  text: string;
+  avatar?: string;
+
+}
+interface ServiceLandingTemplateProps {
+
+  title: string;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   subtitle: string;
   description: string;
   benefits: Benefit[];
   features?: string[];
+<<<<<<< HEAD
   stats?: Array<{ label: string; value: string }>
   ctaText: string
   ctaLink: string
@@ -139,6 +172,20 @@ interface ServiceLandingTemplateProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  stats?: Array<{ label: string; value: string }>;
+  cta_text: string;
+  cta_link: string;
+}
+export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({
+
+
+export interface Benefit {
+  title: string;
+  description: string;
+  icon?: React.ReactNode
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 }
 =======
@@ -179,6 +226,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
   return (
 
           </p>
+<<<<<<< HEAD
   testimonials,
   ctaText,
 <<<<<<< HEAD
@@ -191,6 +239,8 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   testimonials,
   ctaText,
   ctaLink}) => {
@@ -225,7 +275,12 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
       </section>
 }
 
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {description}
 
     <div className="min - h-screen bg - white">;
@@ -243,6 +298,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           </p>;
         </div>;
       </section>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
           </p>
@@ -272,6 +328,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {benefits.length > 0 && (
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -445,6 +503,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       </section>;
     </div>;
   );
+<<<<<<< HEAD
 =======
           </a>
         </div>
@@ -452,6 +511,9 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>
   )
 }
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 };
 ;
@@ -543,6 +605,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 },
@@ -559,3 +622,31 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+                  </div>;
+                  <div className="text - gray - 600">{stat.label}</div>;
+                </div>))}
+            </div>;
+          </div>;
+        </section>)}
+      <section className="py - 16 px - 4 bg - blue - 600">;
+        <div className="max - w-4xl mx - auto text - center">;
+          <h2 className="text - 3xl font - bold text - white mb - 4">;
+            Ready to Get Started?;
+          </h2>;
+          <p className="text - xl text - blue - 100 mb - 8">;
+            Contact us today to learn more about our services.;
+          </p>;
+          <a;
+            href={cta_link}
+            className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - gray - 100 transition - colors inline - block";
+          >;
+            {cta_text}
+          </a>;
+        </div>;
+      </section>;
+    </div>);
+}
+
+},
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

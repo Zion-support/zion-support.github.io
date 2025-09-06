@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -43,6 +44,18 @@ export function ClientOnboardingSteps() {
 
   const onboardingStatus = useOnboardingStatus()
   const steps: OnboardingStep[] = [
+=======
+import React from 'react';
+import { useOnboardingStatus } from '@/hooks / useOnboardingStatus';
+import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react';
+import { OnboardingTracker, OnboardingStep } from './OnboardingTracker';
+export /**
+ * ClientOnboardingSteps - Function description
+ */
+function ClientOnboardingSteps() {
+  const onboarding_status = useOnboardingStatus ();
+  const steps: OnboardingStep[] = [;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     {
 <<<<<<< HEAD
       id: 'post - job',
@@ -67,6 +80,7 @@ export function ClientOnboardingSteps() {
     },
   ];
   return <OnboardingTracker steps={steps} title='Get Started With Hiring' />;      link: "/client - dashboard",
+<<<<<<< HEAD
 =======
       id: 'post-job'
       label: 'Post your first job'
@@ -91,6 +105,11 @@ export function ClientOnboardingSteps() {
   ]
   return <OnboardingTracker steps={steps} title='Get Started With Hiring' />;      link: "/client-dashboard"
       action: "Check Dashboard"}]
+=======
+      action: "Check Dashboard"}],
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
 }
@@ -115,6 +134,7 @@ export function ClientOnboardingSteps() {
     {
       id: "response",
       label: "Receive your first application",
+<<<<<<< HEAD
       completed: onboardingStatus.responseReceived,
       link: '/client-dashboard',;
       action: 'Check Dashboard',;
@@ -239,3 +259,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+      completed: onboardingStatus.responseReceived,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -44,14 +45,22 @@ import {
   DialogContent,
   DialogHeader,;
   DialogTitle;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 } from '@/components/ui/dialog';
 import { useCurrency } from '@/hooks/useCurrency';
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
   const router = useRouter();
+<<<<<<< HEAD
   const id = router.query.id as string;  const [selectedImageIndex, setSelectedImageIndex] = useState(0);  const [isLoading, setIsLoading] = useState(false);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+  const id = router && router.query.id as string;  const [selectedImageIndex, setSelectedImageIndex] = useState(0);  const [isLoading, setIsLoading] = useState(false);
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const { user } = useAuth();
@@ -137,6 +146,7 @@ export default function ListingDetail() {
 <<<<<<< HEAD
 <<<<<<< HEAD
   if (!listing) {
+<<<<<<< HEAD
 =======
 >>>>>>> 
   // Find the listing from our shared data source - now also checking equipment listings
@@ -144,8 +154,16 @@ export default function ListingDetail() {
 
 >>>>>>>   if (!listing) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+  // Find the listing from our shared data source - now also checking equipment listings;
+  const listing = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.find(item => item && item.id === id);
+
+  if (!listing) {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return (
       <div className="min-h-screen bg-zion-blue py-12 px-4">
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>         <div className="container mx-auto">
 =======
@@ -183,6 +201,10 @@ ursor/fix-website-loading-errors-and-merge-6662
       setIsChatOpen(true);
     } else {
       setIsContactDialogOpen(true);    }      <div className="min-h-screen bg-zion-blue py-12 px-4">
+=======
+
+      <div className="min-h-screen bg-zion-blue py-12 px-4">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className="container mx-auto">
           <div className="text-center py-20">
             <h1 className="text-3xl font-bold text-white mb-4">Listing Not Found</h1>
@@ -193,6 +215,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       )
   const handleContact = () => {
     if (user) {
@@ -203,6 +226,44 @@ ursor/fix-website-loading-errors-and-merge-6662
       setIsContactDialogOpen(true)
 <<<<<<< HEAD
 =======
+=======
+
+  }
+
+  const handleContact = () => {
+    if (user) {
+      setIsChatOpen(true)
+      </div>);  }
+  const handle_contact = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      setIsChatOpen (true);
+    } else {
+      setIsContactDialogOpen (true);    }      <div className="min - h-screen bg - zion - blue py - 12 px - 4">;
+        <div className="container mx - auto">;
+          <div className="text - center py - 20">;
+            <h1 className="text - 3xl font - bold text - white mb - 4">Listing Not Found</h1>;
+              <p className="text - zion - slate - light mb - 8">The listing you're looking for doesn't exist or has been removed.</p>;
+              <Button as_child className="bg - gradient - to - r from - zion - purple to - zion - purple - dark">;
+                <Link href="/marketplace">Back to Marketplace</Link>;
+              </Button>;
+            </div>;
+          </div>;
+        </div>);
+  const handle_contact = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      setIsChatOpen (true);
+    } else {
+      setIsContactDialogOpen (true);      setIsChatOpen (true);
+
+    } else {
+      setIsContactDialogOpen (true);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   }
   return (
@@ -329,12 +390,18 @@ export default function ListingDetail() {;
                     {listing.images.map((image, index) => (
 =======
                 {listing.images && listing.images.length > 1 && (
+<<<<<<< HEAD
                   <div className='flex p-4 gap-2 overflow-x-auto'>
 >>>>>>>                     {listing.images.map((image, index) => (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                       <div
                         key={index}
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+                  <div className="flex p-4 gap-2 overflow-x-auto">
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     {listing.images.map((image, index) => (
                       <div 
                         key = {index}
@@ -398,7 +465,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                           "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
+<<<<<<< HEAD
 >>>>>>>                         )}
+=======
+                        )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       >
                         <ImageWithRetry
 
@@ -425,7 +496,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                         />
                       </div>
+<<<<<<< HEAD
 >>>>>>>                     ))}
+=======
+                    ))}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </div>
                 )}
               </div>
@@ -433,6 +508,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               {/* Description Section */}
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                 {/* Features */}
 =======
               <div className='mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light'>
@@ -503,6 +579,17 @@ ursor/fix-website-loading-errors-and-merge-6662
                       <div>
 >>>>>>>                         <h4 className="font-medium text-white">Enterprise Security</h4>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+              <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
+                <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
+                <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
+                
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {/* Features */}
                 <div className='mt-8'>;
                   <h3 className='text-xl font-bold text-white mb-4'>;
@@ -591,7 +678,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                         </h4>;
                         <p className='text - sm text - zion - slate - light'>;
                           Built - in data protection and encryption;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         </p>                      </div>;
                     </div>;
                   </div>;
@@ -680,8 +766,52 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                     <Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan">
 =======
+=======
+
+                <div className="mt-8">;
+                  <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>;
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+                    <div className="flex items-start gap-3">;
+                      <div className="p-2 rounded-full bg-zion-purple/20">;
+                        <Brain className="h-5 w-5 text-zion-purple" />;
+                      </div>;
+                      <div>;
+                        <h4 className="font-medium text-white">Advanced AI</h4>;
+                        <p className="text-sm text-zion-slate-light">State-of-the-art machine learning techniques</p>;
+                      </div>;
+                    </div>;
+                    <div className="flex items-start gap-3">;
+                      <div className="p-2 rounded-full bg-zion-cyan/20">;
+                        <Shield className="h-5 w-5 text-zion-cyan" />;
+                      </div>;
+                      <div>;
+                        <h4 className="font-medium text-white">Enterprise Security</h4>;
+                        <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>;
+
+                <div className="mt - 8">;
+                  <h3 className="text - xl font - bold text - white mb - 4">Key Features</h3>;
+                  <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+                    <div className="flex items - start gap - 3">;
+                      <div className="p - 2 rounded - full bg - zion - purple / 20">;
+                        <Brain className="h - 5 w - 5 text - zion - purple" />;
+                      </div>;
+                      <div>;
+                        <h4 className="font - medium text - white">Advanced AI</h4>;
+                        <p className="text - sm text - zion - slate - light">State - of - the - art machine learning techniques</p>;
+                      </div>;
+                    </div>;
+                    <div className="flex items - start gap - 3">;
+                      <div className="p - 2 rounded - full bg - zion - cyan / 20">;
+                        <Shield className="h - 5 w - 5 text - zion - cyan" />;
+                      </div>;
+                      <div>;
+                        <h4 className="font - medium text - white">Enterprise Security</h4>;
+                        <p className="text - sm text - zion - slate - light">Built - in data protection and encryption</p>;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       </div>;
                     </div>;
                   </div>;
@@ -709,7 +839,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                       >                        {tag}                      <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
                 {/* Tags */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+                <div className="mt-8">;
+                  <h3 className="text-xl font-bold text-white mb-4">Tags</h3>;
+                  <div className="flex flex-wrap gap-2">;
+                    {listing && listing.tags.map((tag, i) => (;
+                      <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">;
+
+
+
+                
+                {/* Tags */}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>
                   <div className="flex flex-wrap gap-2">
@@ -718,6 +861,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                         {tag}
                       </Badge>
                     ))}
+<<<<<<< HEAD
                   </div>
                 </div>
               </div>
@@ -745,6 +889,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </Badge>
                   {listing.featured && (
                 
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {/* Tags */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 <div className="mt-8">
@@ -753,6 +900,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     {listing.tags.map((tag, i) => (
                       <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
                         {tag}
+<<<<<<< HEAD
                       </Badge>
                     ))}
 <<<<<<< HEAD
@@ -777,6 +925,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </div>            {/* Right Column - Details */}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                      </Badge>))}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </div>;
                 </div>;
               </div>;
@@ -801,6 +953,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <div className="mb-2">
                   <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {/* Right Column - Details */}
             <div className='lg:col - span - 1'>;
               <div className='bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light sticky top - 6'>;
@@ -847,6 +1002,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -870,6 +1026,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 
                 <h1 className="text-2xl font-bold text-white mb-4">{listing.title}</h1>
                 
@@ -881,6 +1039,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -892,6 +1051,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
@@ -937,6 +1098,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                             "h-5 w-5",
                             i < Math && Math.floor(listing && listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
 
+<<<<<<< HEAD
 =======
                             "h-5 w-5"
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
@@ -958,6 +1120,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+                          ),}
+                        />;
+                      ))}
+                    </div>;
+                    <span className='text-sm text-zion-slate-light'>;
+                      {listing && listing.rating.toFixed(1)} ({listing && listing.reviewCount}{' '}
+                      reviews);
+                    </span>;
+                  </div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                             "h-5 w-5",
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           )}
@@ -970,6 +1143,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>                     </span>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -977,6 +1151,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </span>
 >>>>>>>                   </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+
+
+                    </span>
+                  </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 )}
                 {/* Price */}
 <<<<<<< HEAD
@@ -1036,6 +1217,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <div className="text-2xl font-bold text-white">;
                       Custom Pricing;
                     </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <div className="mb-6">
                   {listing.price !== null ? (
                     <div className="text-3xl font-bold text-white">
@@ -1076,6 +1261,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </Button>
                   )}
 
+<<<<<<< HEAD
                   <Button
                     variant='outline'
                     onClick={handleContact}
@@ -1103,16 +1289,23 @@ ursor/fix-website-loading-errors-and-merge-6662
                       Custom Pricing
                     </div>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+                    <div className="text-2xl font-bold text-white">
+                      Custom Pricing
+                    </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   )}
 
                 </div>;
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {/* Action Buttons */}
                 <div className='space-y-3 mb-8'>                ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Action Buttons */}
                 <div className="space-y-3 mb-8">;
                   {listing && listing.price !== null ? (;
@@ -1186,6 +1379,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                             const target = e.target as HTMLImageElement,
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>                             target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
 ursor/fix-website-loading-errors-and-merge-6662
@@ -1232,6 +1426,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                       {formatPrice(listing.price)}
                     </div>
                   ) : (
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <div className="mb-6">
                   {listing.price !== null ? (
                     <div className="text-3xl font-bold text-white">
@@ -1243,8 +1439,58 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </div>
                   )}
                 </div>
+<<<<<<< HEAD
                 {/* Action Buttons */}
                 <div className='space-y-3 mb-8'>
+=======
+                
+                    <Badge className="ml - 2 bg - zion - cyan / 20 text - zion - cyan">;
+                      Featured;
+                    </Badge>)}
+                </div>;
+                <h1 className='text - 2xl font - bold text - white mb - 4'>;
+                  {listing.title}
+                </h1>;
+                  <div className='flex items - center gap - 2 mb - 6'>;
+                    <div className='flex items - center'>;
+                      {[...Array (5)].map ((_, i) => (
+                        <Star;
+                          key={i}
+                          className={cn (
+                            'h - 5 w - 5',
+                            i < Math.floor (listing.rating!);
+                              ? 'text - zion - cyan fill - zion - cyan';
+                              : 'text - zion - slate - light'                          )}
+                        />))}
+                    </div>;
+                    <span className='text - sm text - zion - slate - light'>;
+                      {listing.rating.to_fixed (1)} ({listing.review_count}{' '}
+                      reviews)                            "h - 5 w - 5";
+                            i < Math.floor (listing.rating!) ? "text - zion - cyan fill - zion - cyan" : "text - zion - slate - light")}
+                  <div className="flex items - center gap - 2 mb - 6">;
+                    <div className="flex items - center">;
+                      {[...Array (5)].map ((_, i, ) => (
+                        <Star;
+                          key = {i, }
+                          class_name = {cn (
+                            "h - 5 w - 5",
+                            i < Math.floor (listing.rating!) ? "text - zion - cyan fill - zion - cyan" : "text - zion - slate - light"), }
+                        />))}
+                    </div>;
+                    <span className='text - sm text - zion - slate - light'>;
+                      {listing.rating.to_fixed (1)} ({listing.review_count}{' '}
+                      reviews);
+                    </span>;
+                  </div>)}
+                {/* Price */}
+                <div className='mb - 6'>;
+                  {listing.price !== null ? (
+                    <div className='text - 3xl font - bold text - white'>;
+                      {format_price (listing.price)}
+                    </div>) : (
+                    <div className='text - 2xl font - bold text - white'>                      Custom Pricing;
+                    </div>)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </div>;
                 {/* Action Buttons */}
                 <div className="space-y-3 mb-8">
@@ -1351,6 +1597,12 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </Button>
                 </div>
                 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {/* Publisher Info */}
                 <div className="border-t border-zion-blue-light pt-6">
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
@@ -1370,9 +1622,20 @@ ursor/fix-website-loading-errors-and-merge-6662
                       </div>
                     ) : (                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
 
+<<<<<<< HEAD
                           className="object-cover"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement,
+=======
+
+
+                          className="object-cover"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement,
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                             target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                           }}
                         />
@@ -1383,6 +1646,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                           {listing.author.name.charAt(0)}
                         </span>
                       </div>
+<<<<<<< HEAD
                     )}
                     <div>
                       <p className='font-medium text-white'>
@@ -1410,11 +1674,14 @@ ursor/fix-website-loading-errors-and-merge-6662
                     )}
                     <div>
 >>>>>>>                       <p className="font-medium text-white">{listing.author.name}</p>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     )}
 
                     <div>
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -1434,6 +1701,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       <p className="font-medium text-white">{listing.author.name}</p>
 >>>>>>>                       <p className="text-xs text-zion-slate-light">Member since 2022</p>
                     </div>
@@ -1451,6 +1720,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
                 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -1459,6 +1729,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
                 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {/* Additional Info */}
 
 >>>>>>>                 <div className="border-t border-zion-blue-light mt-6 pt-6">
@@ -1481,6 +1755,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1509,6 +1784,40 @@ ursor/fix-website-loading-errors-and-merge-6662
                     </Button>;
                   )}
 ;
+=======
+
+                {/* Additional Info */}
+                <div className="border-t border-zion-blue-light mt-6 pt-6">;
+                  <div className="flex justify-between mb-2">;
+                    <span className="text-zion-slate-light">Listed on</span>;
+                    <span className="text-white">{new Date(listing && listing.createdAt).toLocaleDateString()}</span>;
+                  </div>;
+                  <div className="flex justify-between mb-2">;
+                    <span className="text-zion-slate-light">ID</span>;
+                    <span className="text-white">{listing && listing.id}</span>;
+                      service_id={listing.id}
+                      provider_id={listing.author.id}
+                      button_text='Buy Now';
+                      className='w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6';
+                      amount = {listing.price, }
+                      service_id = {listing.id, }
+                      provider_id = {listing.author.id, }
+                      button_text="Buy Now";
+                      className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6";
+                      onPaymentInitiated={(, ) => {
+                        toast ({
+                          title: 'Payment Processing',
+                          description: 'Redirecting to secure checkout...',
+                        });
+                      }}
+                    />) : (
+                    <Button;
+                      on_click={handle_contact}
+                      disabled={is_loading}
+                      className='w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6'                    >;
+                      {is_loading ? 'Processing...' : 'Request Quote'}
+                    </Button>)}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <Button;
                     variant="outline";
                     onClick={handleContact}
@@ -1552,9 +1861,30 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <span className="text-zion-slate-light">Listed on</span>;
                     <span className="text-white">{new Date(listing.createdAt).toLocaleDateString()}</span>;
                   </div>;
+<<<<<<< HEAD
                   <div className="flex justify-between mb-2">;
                     <span className="text-zion-slate-light">ID</span>;
                     <span className="text-white">{listing.id}</span>;
+=======
+                  <div className='flex justify - between mb - 2'>;
+                    <span className='text - zion - slate - light'>ID</span>;
+                    <span className='text - white'>{listing.id}</span>                  </div>                      </div>)}
+                    <div>;
+                      <p className="font - medium text - white">{listing.author.name}</p>;
+                      <p className="text - xs text - zion - slate - light">Member since 2022</p>;
+                    </div>;
+                  </div>;
+                </div>;
+                {/* Additional Info */}
+                <div className="border - t border - zion - blue - light mt - 6 pt - 6">;
+                  <div className="flex justify - between mb - 2">;
+                    <span className="text - zion - slate - light">Listed on</span>;
+                    <span className="text - white">{new Date (listing.created_at).toLocaleDateString ()}</span>;
+                  </div>;
+                  <div className="flex justify - between mb - 2">;
+                    <span className="text - zion - slate - light">ID</span>;
+                    <span className="text - white">{listing.id}</span>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </div>;
                 </div>;
               </div>;
@@ -1562,6 +1892,39 @@ ursor/fix-website-loading-errors-and-merge-6662
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+
+      />;
+
+
+      {/* Contact Dialog */}
+      <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>;
+        <DialogContent className='bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md'>;
+          <DialogHeader>;
+            <DialogTitle className='text-xl font-bold text-white'>;
+              Contact Publisher;
+            </DialogTitle>;
+          </DialogHeader>;
+          <ProfileContact
+
+        roomId={listing.id}
+        recipientId={listing.author.id}
+        isOpen={isChatOpen}
+        onClose={() => setIsChatOpen(false)}
+      />
+
+      {/* Contact Dialog */}
+      <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
+        <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
+          </DialogHeader>
+          <ProfileContact 
+
+            email={listing.author.email} // TypeScript now knows this might be undefined
+            profileName={listing.author.name}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <ChatWidget;
         roomId={listing.id}
         recipientId={listing.author.id}
@@ -1571,6 +1934,10 @@ ursor/fix-website-loading-errors-and-merge-6662
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
         <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1582,6 +1949,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1609,6 +1977,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             profileType="service"
 >>>>>>>           />
         </DialogContent>
@@ -1618,6 +1989,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1662,3 +2034,25 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+            email={listing && listing.author.email} // TypeScript now knows this might be undefined
+            profileName={listing && listing.author.name}
+            profileType='service'          />            profileType="service";
+          <DialogHeader>;
+            <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>;
+          </DialogHeader>;
+          <ProfileContact
+            email={listing && listing.author.email} // TypeScript now knows this might be undefined
+            profileName={listing && listing.author.name}
+            profileType="service"
+          />;
+        </DialogContent>;
+      </Dialog>;
+    </>;
+  );
+
+
+  )
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

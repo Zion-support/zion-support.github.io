@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/header/MobileBottomNav.tsx
 
 =======
@@ -85,6 +86,8 @@ import {
 } from 'lucide-react';
 import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react';
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/header/MobileBottomNav.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface MobileBottomNavProps {
   unread_count?: number;
 export /**
@@ -142,11 +145,14 @@ import {;
 } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
 import { logWarn } from '@/utils/productionLogger';
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/header/MobileBottomNav.tsx
 =======
 interface MobileBottomNavProps {
   unreadCount?: number
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
@@ -165,6 +171,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -304,6 +311,9 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith('/wishlist'),      badge: favoritesCount,
       authRequired: true,
 >>>>>>>     },
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
   }
   const navItems = [
@@ -528,6 +538,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
             <div className='relative'>
               <item.icon className='h-5 w-5 mb-1' aria-hidden='true' />
               {item.badge && item.badge > 0 && (
+<<<<<<< HEAD
                 <span className='absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center'>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -535,6 +546,17 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 ursor/fix-website-loading-errors-and-merge-6662
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/header/MobileBottomNav.tsx
+=======
+                <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">
+import React from "react",;
+import { useRouter } from "next/router",;
+import Link from "next/link",;
+import { cn } from "@/lib/utils",;
+import { useAuth } from "@/hooks/useAuth",;
+import { useWishlist } from "@/hooks/useWishlist",;
+import { useCart } from '@/context/CartContext',;
+import { logWarn } from '@/utils/productionLogger',;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react';
 interface MobileBottomNavProps {;
   unreadCount?: number;
@@ -630,6 +652,7 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
                 <span className='absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center'>;
                   {item && item.badge > 9 ? '9+' : item && item.badge}
                 </span>;
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -730,6 +753,8 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
     !item.authRequired || (item.authRequired && isAuthenticated);
   );
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (;
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">;
       <div className="flex justify-around items-center h-16">;
@@ -752,10 +777,15 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>>                   {item.badge > 9 ? '9+' : item.badge}
 >>>>>>>                 </span>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                  {item.badge > 9 ? '9+' : item.badge}
+                </span>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               )}
             </div>;
             <span className='hidden sm:block text-xs font-medium'>;
@@ -877,10 +907,13 @@ export function MobileBottomNav({ unreadCount = 0 } MobileBottomNavProps) {;
 <<<<<<<< HEAD:src/components/header/MobileBottomNav.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/header/MobileBottomNav.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </div>;
     </nav>;
 <<<<<<< HEAD
@@ -890,6 +923,7 @@ export function MobileBottomNav({ unreadCount = 0 } MobileBottomNavProps) {;
 ;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 ;
@@ -899,6 +933,9 @@ export function MobileBottomNav({ unreadCount = 0 } MobileBottomNavProps) {;
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       name: 'Browse',
       href: '/talent',
       icon: Search,
@@ -971,6 +1008,7 @@ export function MobileBottomNav({ unreadCount = 0 } MobileBottomNavProps) {;
       </div>;
     </nav>);
 }
+<<<<<<< HEAD
 =======
   ),;}
  import {;
@@ -1086,3 +1124,6 @@ return ({';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
 
 =======
@@ -50,6 +51,9 @@ export function SmartContractBuilder(): any ({;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   isOpen;
+=======
+isOpen;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   onClose;
   talent;
   clientName;
@@ -453,8 +457,11 @@ export function SmartContractBuilder(): any ({;
         disputeResolution: prev?.disputeResolution || '',,;
 <<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
 
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }, []); []);
     if ( { // Only prefill if form_values is not already set (e.g., by a template)) {
   $2
@@ -1679,6 +1686,7 @@ setActiveTab ("preview");
           </TabsContent>;
         </Tabs>;
         <TemplateManager
+<<<<<<< HEAD
 =======
         ;
         <TemplateManager;
@@ -1692,6 +1700,16 @@ setActiveTab ("preview");
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+          <TabsContent value="preview" className="pt-4">
+            {generatedContract && (
+              <div>
+                <ContractPreview 
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
@@ -1700,6 +1718,7 @@ setActiveTab ("preview");
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         />;
 =======
@@ -1722,6 +1741,14 @@ setActiveTab ("preview");
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/SmartContractBuilder.tsx
+=======
+
+;
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <TabsContent value="form" className="pt - 4">;
             <ContractForm;
               talent = {talent, }
@@ -1765,6 +1792,7 @@ setActiveTab ("preview");
 }
 <<<<<<<< HEAD:src/components/contracts/SmartContractBuilder.tsx
 
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 
@@ -1928,3 +1956,6 @@ setActiveTab ("preview");
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

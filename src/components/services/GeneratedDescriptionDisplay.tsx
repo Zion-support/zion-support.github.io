@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5,6 +6,20 @@
 =======
 =======
 <<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { useToast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
+import {;
+  Card,;
+  CardContent,;
+  CardHeader,;
+  CardTitle,;
+  CardFooter,;
+} from '@/components/ui/card';
+import { Textarea } from '@/components/ui/textarea';
+import { Check, Pencil } from 'lucide-react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -97,6 +112,7 @@ export function GeneratedDescriptionDisplay({
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+<<<<<<< HEAD
 export function GeneratedDescriptionDisplay({ 
   description, 
   onSave 
@@ -114,6 +130,16 @@ export function GeneratedDescriptionDisplay({
     })
   },
 <<<<<<< HEAD
+=======
+  const handleSave = () => {;
+    onSave(editedDescription);
+    setIsEditing(false);
+    toast({;
+      title: 'Description Saved',;
+      description: 'Your edited description has been saved.',;
+    });
+  };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   return (
 =======
@@ -181,6 +207,10 @@ export function GeneratedDescriptionDisplay({
             onClick={() => setIsEditing(!isEditing)}
             className="border-zion-blue-light text-zion-slate-light hover:text-white"
           >
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {isEditing ? (
               <>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -284,7 +314,10 @@ export function GeneratedDescriptionDisplay({;
             onClick={() => setIsEditing(!isEditing)}
             className="border-zion-blue-light text-zion-slate-light hover:text-white";
           >;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {isEditing ? (;
               <>;
                 <Check className="h-4 w-4 mr-1" />;
@@ -297,6 +330,9 @@ export function GeneratedDescriptionDisplay({;
               </>;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <Card className='border border - zion - blue - light bg - zion - blue - dark'>;
       <CardHeader>;
         <CardTitle className='text - white flex items - center justify - between'>;
@@ -315,9 +351,12 @@ export function GeneratedDescriptionDisplay({;
                 <Pencil className='h - 4 w - 4 mr - 1' />;
                 Edit;
               </>)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </Button>;
         </CardTitle>;
       </CardHeader>;
@@ -338,6 +377,7 @@ export function GeneratedDescriptionDisplay({;
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
@@ -346,6 +386,8 @@ export function GeneratedDescriptionDisplay({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {editedDescription}
           </div>
         )}
@@ -431,6 +473,7 @@ export function GeneratedDescriptionDisplay({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>     </Card>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -439,6 +482,8 @@ export function GeneratedDescriptionDisplay({;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </Card>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   );
@@ -448,6 +493,7 @@ export function GeneratedDescriptionDisplay({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 ;
@@ -464,3 +510,38 @@ export function GeneratedDescriptionDisplay({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+        {is_editing ? (
+          <Textarea;
+            value={edited_description}
+            on_change={e => setEditedDescription (e.target.value)}
+            className='bg - zion - blue border border - zion - blue - light text - white min - h-[300px] resize - none'          />) : (
+          <div className='bg - zion - blue p - 4 rounded - md text - white min - h-[300px] whitespace - pre - wrap'>;
+            {edited_description}
+          </div>)}
+      </CardContent>;
+      {is_editing && (
+        <CardFooter>;
+          <Button;
+            on_click={handle_save}
+            className='w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white'          >;
+            Save Changes;
+          </Button>;
+        </CardFooter>)}
+    </Card>);
+  is_editing ? (<> <Check className="h - 4 w - 4 mr - 1" /> Done </>) : (<> <Pencil className="h - 4 w - 4 mr - 1" /> Edit </>);
+}</Button> </CardTitle> </CardHeader> <CardContent> {
+  is_editing ? (<Textarea value= {
+  edited_description;
+}</div>);
+}</CardContent> {
+  is_editing && (<CardFooter> <Button on_click={
+  handle_save ";
+}className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white" > Save Changes </Button> </CardFooter>);
+}</Card>);
+}'";
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

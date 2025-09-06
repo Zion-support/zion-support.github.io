@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // SEO optimizer utilities;
 export const generateMetaTags = () =>: any {
   console.log ('Generating meta tags...');
@@ -10,6 +13,7 @@ export const optimize_headings = () =>: any {
 }
 ;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -34,6 +38,12 @@ export const optimizeHeadings = () => {
   console.log('Optimizing headings...');
 }
 origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+=======
+// SEO optimizer utilities
+export const generateMetaTags = () => {;
+  console.log('Generating meta tags...');
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 };
 };
 
@@ -72,6 +82,7 @@ export const generateStructuredData = pageData => {;
       contactTyp: e: 'customer service';
     }
   }
+<<<<<<< HEAD
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,3 +101,6 @@ export const generateStructuredData = pageData => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+};
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

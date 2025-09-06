@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { ArrowRight } from 'lucide-react'
 =======
 
               <Badge
+=======
+<Badge
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 key={index}
                 className='bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30'>                {tag}              <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>;
@@ -118,6 +122,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -127,6 +132,11 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 =======
 >>>>>>>   return (
@@ -144,7 +154,29 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
+=======
+
+        
+        <div>
+
+
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
+          <div className="flex flex-wrap gap-2">
+            {content.tags.map((tag, index) => (
+              <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
+                {tag}
+
+
+
+              </Badge>;
+            ))}
+
+        
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div>
           <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
             Tags
@@ -264,6 +296,9 @@ ursor/fix-website-loading-errors-and-merge-6662
             {content.keyPoints.map((point, index) => (
               <li key={index}>{point}</li>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>;
         </div>;
 
@@ -296,7 +331,11 @@ ursor/fix-website-loading-errors-and-merge-6662
               <li key={index}>{point}</li>;
 
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>>             ))}
+=======
+            ))}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
@@ -378,6 +417,7 @@ function GeneratedContentDisplay() {
             {content.key_points.map ((point, index) => (
             {content.key_points.map ((point, index, ) => (
               <li key={index}>{point}</li>))}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
             ))}
@@ -413,6 +453,8 @@ function GeneratedContentDisplay() {
               <li key={index}>{point}</li>
             ))}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </ul>;
         </div>;
       </CardContent>;
@@ -420,10 +462,13 @@ function GeneratedContentDisplay() {
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
         <Button;
           onClick={onApply}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white"
         >
           Apply to My Listing
@@ -432,11 +477,32 @@ function GeneratedContentDisplay() {
       </CardFooter>
     </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>   );
+=======
+  );
+}
+
+        <Button;
+          on_click={on_apply}
+          className='w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white';
+        >;
+          Apply to My Listing;
+          <ArrowRight className='ml - 2 h - 4 w - 4' />        </Button>;
+      </CardFooter>;
+    </Card>);
+}          className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover: from - zion - cyan - light hover:to - zion - cyan text - white";
+        >;
+          Apply to My Listing;
+          <ArrowRight className="ml - 2 h - 4 w - 4" />;
+      </CardFooter>;
+    </Card>);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 ;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -463,3 +529,6 @@ function GeneratedContentDisplay() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

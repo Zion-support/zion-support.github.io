@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,6 +50,13 @@ import {
 export default function LandingPage() {;
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
+=======
+BarChart3,;
+  Smartphone,;
+} from 'lucide-react';
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
@@ -57,11 +65,14 @@ export default function LandingPage() {
   const { isRTL } = useLanguage();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Header } from "@/components/Header",
 import { TrustedBySection } from "@/components/TrustedBySection",
 import { TestimonialCarousel } from "@/components/TestimonialCarousel",
@@ -101,6 +112,7 @@ export default function LandingPage() {
   
 >>>>>>>   // Tools and features showcase
 
+<<<<<<< HEAD
   const toolsFeatures = [
     {
 =======
@@ -220,6 +232,8 @@ export default function LandingPage() {
       
 >>>>>>>       {/* Quick Access Tools Section */}
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Tools and features showcase
 
   const toolsFeatures = [
@@ -312,7 +326,6 @@ function LandingPage() {
       icon: <Smartphone className='h - 6 w - 6 text - zion - purple' />,
       link: '/mobile - launch',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
 ;
   return (
@@ -400,6 +413,10 @@ export default function LandingPage() { const { t  } = useTranslation(),
     {
       title: t("home.tool_ai_matcher"), description: t("home.tool_ai_matcher_desc"),
       icon: <Sparkles className = "h-6 w-6 text-zion-cyan" />,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       title: t("home.tool_ai_matcher"),
       description: t("home.tool_ai_matcher_desc"),
       icon: <Sparkles className="h-6 w-6 text-zion-cyan" />,
@@ -479,7 +496,13 @@ ursor/fix-website-loading-errors-and-merge-6662
                 className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
               >
                 <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   {feature.icon}
 >>>>>>>                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
@@ -515,6 +538,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       <TestimonialCarousel />
       <TrustedBySection />
       <BlogSection />
+<<<<<<< HEAD
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />
       {/* Add social share section to encourage users to spread the word */}
@@ -590,6 +614,36 @@ export default function LandingPage() {;
   ];
   return (;
     <div className="min-h-screen bg-zion-blue text-white">;
+=======
+
+
+          </div>;
+        </div>;
+      </section>;
+
+      <CategoriesSection />;
+      <BenefitsSection />;
+      <CategoriesSection />;
+      <BenefitsSection />;
+
+      {/* Add the comprehensive features guide section */}
+      <FeaturesGuideSection />;
+
+      {/* Add the comprehensive features guide section */}
+      <FeaturesGuideSection />;
+      <CategoriesSection />;
+      <BenefitsSection />;
+
+      {/* Add the comprehensive features guide section */}
+      <FeaturesGuideSection />;
+
+
+
+;
+
+
+    <div className='min - h-screen bg - zion - blue text - white'>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <SEO;
         title={t ('home.seo_title')}
         description={t ('home.seo_description')}
@@ -652,8 +706,12 @@ export default function LandingPage() {;
       <BenefitsSection />;
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>>       <HowItWorksSection />;
+=======
+      <HowItWorksSection />;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <FeaturedListingsSection />;
       <TestimonialCarousel />;
       <TrustedBySection />;
@@ -667,6 +725,7 @@ export default function LandingPage() {;
       <FloatingCTA />;
     </div>);
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -781,3 +840,6 @@ export default LandingPage;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/MarketplaceErrorBoundary.tsx
 
 =======
@@ -35,6 +36,8 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
 import React from 'react';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
@@ -208,8 +211,11 @@ function MarketplaceErrorFallback(): any ({;
 <<<<<<<< HEAD:src/components/MarketplaceErrorBoundary.tsx
 
 
+<<<<<<< HEAD
 >>>>>>>     }
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/MarketplaceErrorBoundary.tsx
   }
@@ -309,6 +315,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
             className="text-primary hover:underline"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/MarketplaceErrorBoundary.tsx
 >>>>>>>         <div className="text-center text-sm text-muted-foreground">
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -320,6 +327,15 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
         
+=======
+
+          >
+
+
+        
+        
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -351,12 +367,15 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
     <ErrorBoundary
 ursor/fix-website-loading-errors-and-merge-6662
 ========
           >
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/MarketplaceErrorBoundary.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             contact support
           </a>
         </div>
@@ -566,10 +585,28 @@ function MarketplaceErrorBoundary() {
   }
       >;
       {children}
+<<<<<<< HEAD
     </ErrorBoundary>
   )
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+    </ErrorBoundary>);
+}   return (
+
+
+    <div className='flex items-center justify-center min-h-[400px] p-6'>;
+      <div className='max-w-md w-full space-y-4'>;
+        <Alert variant='destructive'>;
+          <AlertCircle className='h-4 w-4' />;
+          <AlertDescription className='mt-2'>;
+            {error?.message ||;
+              'An unexpected error occurred while loading marketplace content.'}
+  )
+
+    <ErrorBoundary 
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   },;
   return (;
     <div className="flex items-center justify-center min-h-[400px] p-6">;
@@ -579,6 +616,7 @@ function MarketplaceErrorBoundary() {
           <AlertTitle>Something went wrong in the marketplace</AlertTitle>;
           <AlertDescription className="mt-2">;
             {error?.message || 'An unexpected error occurred while loading marketplace content.'}
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
   }
@@ -594,6 +632,8 @@ function MarketplaceErrorBoundary() {
             {error?.message ||;
               'An unexpected error occurred while loading marketplace content.'}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/MarketplaceErrorBoundary.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </AlertDescription>;
         </Alert>;
         <div className='flex flex-col space-y-2'>;
@@ -681,7 +721,11 @@ export function MarketplaceErrorBoundary(): any ({;
 } ;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
+=======
+  );
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 ========
       FallbackComponent={MarketplaceErrorFallback}
@@ -729,6 +773,7 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
       on_error={handle_error}
     >;
       {children}
+<<<<<<< HEAD
     </ErrorBoundary>);
 }
 =======
@@ -824,3 +869,10 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+} 
+
+    </ErrorBoundary>);
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

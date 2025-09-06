@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,6 +36,9 @@ import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     {
+=======
+{
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       icon: <Star className="h-8 w-8 text-zion-purple" />
       title: "AI-Match Instantly"
       description: "Get matched with the perfect talent or jobs using our advanced AI algorithm."
@@ -85,6 +89,7 @@ import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
     {
 =======
 }
@@ -153,6 +158,8 @@ import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
               className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover: border-zion-purple/50 transition-all duration-300"            >
 >>>>>>>               <div className="mb-4">
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     {
       icon: <CheckCircle className="h-8 w-8 text-zion-cyan" />
       title: "Track Milestones"
@@ -162,7 +169,10 @@ ursor/fix-website-loading-errors-and-merge-6662
     },
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     {
       icon: <Mail className="h-8 w-8 text-zion-purple" />
       title: "Instant Messaging"
@@ -172,6 +182,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     },
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
@@ -188,6 +199,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     {
       icon: <Smartphone className="h-8 w-8 text-zion-cyan" />
       title: "Biometric Security"
@@ -224,7 +237,10 @@ export const MobileFeatureShowcase: React.FC = () => {;
       icon: <Smartphone className="h-8 w-8 text-zion-cyan" />,;
       title: "Biometric Security",;
       description: "Login quickly and securely with Face ID or Touch ID on supported devices.";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       icon: <Users className="h - 8 w - 8 text - zion - cyan" />,
       title: "Hire from Anywhere",
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface.";
@@ -248,7 +264,6 @@ export const MobileFeatureShowcase: React.FC = () => {;
       icon: <Smartphone className="h - 8 w - 8 text - zion - cyan" />,
       title: "Biometric Security",
       description: "Login quickly and securely with Face ID or Touch ID on supported devices.";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   ];
     }
@@ -256,7 +271,10 @@ export const MobileFeatureShowcase: React.FC = () => {;
   ],
 
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 
 
@@ -270,10 +288,14 @@ export const MobileFeatureShowcase: React.FC = () => {;
               key={index} 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <div className="mb-4">
     <section id="features" className="py - 16 bg - zion - blue">;
       <div className="container mx - auto px - 4">;
@@ -291,6 +313,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
               key={index}
               className="bg - zion - blue - dark border border - zion - blue - light p - 6 rounded - lg hover: border - zion - purple / 50 transition - all duration - 300"            >;
               <div className="mb - 4">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>>                 {feature.icon}
 
@@ -328,10 +351,15 @@ export const MobileFeatureShowcase: React.FC = () => {;
               <div className="mb-4">
                 {feature.icon}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+                {feature.icon}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
               <p className="text-zion-slate-light">{feature.description}</p>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -355,6 +383,13 @@ export const MobileFeatureShowcase: React.FC = () => {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
 <<<<<<< HEAD
+=======
+
+'"},
+;
+};
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react",;
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react';
 export const MobileFeatureShowcase: React.FC = () => {;
@@ -459,6 +494,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 
@@ -473,3 +509,8 @@ export const MobileFeatureShowcase: React.FC = () => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+'"},
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

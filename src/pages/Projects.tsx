@@ -1,10 +1,58 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+import {
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { useProjects } from '@/hooks/useProjects';
+import { SEO } from '@/components/SEO';
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle,;
+
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import Link from 'next/link';
+import { Clock, Briefcase } from 'lucide-react';
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import Link from 'next/link'
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react",
 import { useProjects } from "@/hooks/useProjects",
 import { SEO } from "@/components/SEO",
@@ -14,6 +62,7 @@ import { Badge } from "@/components/ui/badge",
 import Link from "next/link",
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 import { Clock, Briefcase } from 'lucide-react'
 
 =======
@@ -33,6 +82,10 @@ import {
 <<<<<<< HEAD
 import { Clock, Briefcase } from 'lucide-react'
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+import { Clock, Briefcase } from 'lucide-react'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
 >>>>>>>   Card
@@ -82,7 +135,6 @@ function ProjectsContent() {
 function ProjectsContent() { const { projects, isLoading  } = useProjects(),;
 function ProjectsContent() {;
   const { projects, isLoading } = useProjects(),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <>;
@@ -119,6 +171,7 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>         {isLoading ? (
 ursor/fix-website-loading-errors-and-merge-6662
@@ -135,6 +188,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
         </div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {isLoading ? (
 >>>>>>>           <p>Loading projects...</p>
         ) : projects.length === 0 ? (
@@ -144,6 +199,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
           <div className='grid gap-6'>
@@ -154,6 +210,17 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className='grid gap-6'>
             {projects.map(project => (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+          <div className="grid gap-6">
+            {projects.map((project) => (
+
+          <div className="grid gap-6">
+            {projects.map((project) => (
+          <div className="grid gap-6">
+            {projects.map((project) => (
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Card key={project.id}>
                 <CardHeader>
                   <CardTitle className='flex items-center gap-2'>
@@ -201,6 +268,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                     <span className="flex items-center gap-1 text-xs text-muted-foreground">
                       <Clock className="h-3 w-3" />
                       Started {new Date(project.start_date).toLocaleDateString()}
+<<<<<<< HEAD
+=======
+                    </span>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -211,6 +282,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 =======
                     {project.job?.description |"Project details"}
+<<<<<<< HEAD
 >>>>>>>                     {project.job?.description || "Project details"}
 >>>>>>>                   </p>
 =======
@@ -251,6 +323,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+                  <p className="text-sm text-muted-foreground line-clamp-2">
+
+                  <p className="text-sm text-muted-foreground line-clamp-2">
+                  <p className="text-sm text-muted-foreground line-clamp-2">
+
+
+                    {project.job?.description || "Project details"}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </p>
                 </CardContent>
                 <CardFooter>
@@ -272,6 +353,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <p className='text-muted-foreground mt-1'>;
             All of your current and past projects;
           </p>        </div>      <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects." />;
+<<<<<<< HEAD
 =======
                   </Button>
                 </CardFooter>
@@ -283,6 +365,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                 </CardFooter>
               </Card>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     <Link href={`/project/${project.id}`}>View Details</Link>
                   </Button>
                 </CardFooter>
@@ -301,9 +386,12 @@ function ProjectsContent() {;
     <>;
       <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects." />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <main className="container mx-auto px-4 py-8">;
         <div className="mb-8">;
           <h1 className="text-3xl font-bold">My Projects</h1>;
@@ -355,8 +443,12 @@ function ProjectsContent() {;
               </Card>;
 
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             ))}
           </div>;
         )}
@@ -367,9 +459,12 @@ function ProjectsContent() {;
   );
 }
 
+<<<<<<< HEAD
 ;
 =======
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
       </main>;
@@ -381,8 +476,13 @@ export default function Projects() {;
   return <ProjectsContent />;}
 
 
+<<<<<<< HEAD
 >>>>>>> 
 xport default function Projects() {;
+=======
+
+export default function Projects() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return <ProjectsContent />;
 
   )
@@ -398,7 +498,10 @@ export default function Projects() {
 export default function Projects() {
   return <ProjectsContent />;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
@@ -476,11 +579,15 @@ export default function Projects() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 };
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 }
 >>>>>>> 
@@ -513,3 +620,6 @@ export default function Projects() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

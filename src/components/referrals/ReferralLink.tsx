@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -38,6 +39,8 @@ import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 =======
 >>>>>>> import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
@@ -59,11 +62,71 @@ export function ReferralLink({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   }
   },
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
+=======
+
+import { useState } from 'react';
+import { Button } from '@/components / ui / button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+import { Input } from '@/components / ui / input';
+import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react';
+interface ReferralLinkProps {
+  referral_link: string;
+  on_copy: () => void;
+  on_share: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
+export /**
+ * ReferralLink - Function description
+ */
+function ReferralLink() {
+  const [copied, set_copied] = useState (false);
+  const handle_copy = () =>: any {
+    on_copy ();
+    set_copied (true);
+    set_timeout (() => set_copied (false), 2000);
+
+  }
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle,;
+} from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react';
+interface ReferralLinkProps {;
+  referralLink: string;
+  onCopy: () => void;
+  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
+
+export function ReferralLink(): any ({;
+  referralLink,;
+  onCopy,;
+  onShare,;
+}: ReferralLinkProps) {;
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {;
+    onCopy();
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 =======
 =======
@@ -127,6 +190,10 @@ export function ReferralLink({
 >>>>>>>             <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             <p className="text-sm text-green-600 dark:text-green-500">
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -145,7 +212,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
   const [ copied, setCopied ] = useState(false),
 
   
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const handleCopy = () => {
     onCopy()
     setCopied(true)
@@ -174,9 +240,12 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
     on_copy ();
     set_copied (true);
     set_timeout (() => set_copied (false), 2000);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
+<<<<<<< HEAD
 >>>>>>>           {copied && (;
+=======
+          {copied && (;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!;
             <p className="text-sm text-green-600 dark:text-green-500">;
 
@@ -216,6 +285,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 
           {copied && (
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -375,11 +445,18 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
   };
   return (;
     <Card className="mt-6">;
+=======
+    <Card className="mt - 6">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <CardHeader>;
         <CardTitle className="flex items - center gap - 2">;
           <Link className="h - 5 w - 5" />;
 
+<<<<<<< HEAD
 >>>>>>>           Your Referral Link;
+=======
+          Your Referral Link;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </CardTitle>;
         <CardDescription>;
           Share this link with others to earn rewards when they join and complete onboarding;
@@ -417,17 +494,26 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
         </div>
       </CardContent>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {copied && (
           
           {copied && (
 
+<<<<<<< HEAD
 >>>>>>>             <p className="text-sm text-green-600 dark:text-green-500">
+=======
+            <p className="text-sm text-green-600 dark:text-green-500">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               Copied to clipboard!
             </p>
           )}
         </div>
       </CardContent>
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
               variant="outline"
@@ -438,6 +524,8 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <CardFooter className="border-t bg-muted/50 p-4">
         <div className="flex flex-col sm:flex-row w-full justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">Share on social media:</p>
@@ -486,6 +574,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
@@ -500,6 +589,8 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             >
               <Facebook className="h-4 w-4" />
               Facebook
@@ -536,6 +627,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
@@ -546,6 +638,8 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               LinkedIn
             </Button>
           </div>
@@ -651,6 +745,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               on_click={() => on_share ('linkedin')}            >;
               <Share className='h - 4 w - 4' />              LinkedIn              <Share className="h - 4 w - 4" />;
 
+<<<<<<< HEAD
 >>>>>>>               LinkedIn;
 =======
               variant="outline";
@@ -659,6 +754,8 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               onClick={() => onShare('linkedin')}
             >;
               <Share className="h-4 w-4" />;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               LinkedIn;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             </Button>;
@@ -668,6 +765,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
     </Card>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -691,3 +789,13 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  );
+}
+    </Card>);
+}
+
+      </CardFooter>
+    </Card>
+  )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

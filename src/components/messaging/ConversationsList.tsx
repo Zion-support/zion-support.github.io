@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -142,6 +143,9 @@ export function ConversationsList({;
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
   return (
+=======
+return (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
           isActive={activeConversation?.id === conversation && conversation.id}
           onClick={() => {;
@@ -196,8 +200,28 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
+=======
+    <div className='w - full md:w - 80 border - r border - zion - purple / 20 overflow - y-auto'>;
+      <div className='p - 3 border - b border - zion - purple / 20'>;
+        <h3 className='font - medium text - white'>Conversations</h3>;
+      </div>;
+      {conversations.length === 0 ? (
+        <div className='p - 8 text - center text - zion - slate'>;
+          <User className='h - 10 w - 10 mx - auto mb - 2 text - zion - purple / 40' />;
+          <p > No conversations yet</p>;
+          <p className='text - sm mt - 1'>;
+            Start a conversation from a job or talent profile.;
+          </p>;
+        </div>) : (
+        <List;
+          height={list_height}
+          item_count={conversations.length}
+          item_size={item_size}
+          width='100%'        >;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {Row}
         </List>
       )}
@@ -205,6 +229,10 @@ ursor/fix-website-loading-errors-and-merge-6662
     </div>
   )
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {Row}
         </List>
       )};
@@ -212,6 +240,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 };
 }
+<<<<<<< HEAD
           width="100%"
         >
           {Row}
@@ -240,6 +269,8 @@ ursor/fix-website-loading-errors-and-merge-6662
   );
 };
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           width="100%"
         >
           {Row}
@@ -249,6 +280,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -263,3 +295,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

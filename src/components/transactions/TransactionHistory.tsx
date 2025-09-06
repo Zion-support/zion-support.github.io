@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { useCurrency } from '@/hooks/useCurrency'
@@ -63,6 +64,25 @@ interface Transaction {
   service?: {
     title?: string
   }
+=======
+export /**
+ * TransactionHistory - Function description
+ */
+function TransactionHistory() {
+  const { user } = use_auth ();
+  const { toast } = use_toast ();
+  const [filter, set_filter] = useState<'all' | 'pending' | 'completed' | 'escrow'>(
+    () => (safe_storage.get_item ('transaction_filter') as any) || 'all');
+  useEffect ((, ) => {
+    safe_storage.set_item ('transaction_filter', filter);
+  }, [filter]);
+  const { data: transactions, is_loading, error, refetch } = use_query ({
+    query_key: ['transactions', user?.id, filter];
+    query_fn: async () => {
+      // Check condition
+if (return []) {
+  $2
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 export function TransactionHistory() {
   const { user } = useAuth();
@@ -724,6 +744,7 @@ export function TransactionHistory() {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 }
 ;
 <<<<<<< HEAD
@@ -744,3 +765,6 @@ export function TransactionHistory() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

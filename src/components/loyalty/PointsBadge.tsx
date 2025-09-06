@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React, { useState } from 'react';
@@ -47,6 +48,17 @@ export function PointsBadge() {
     if (!isAuthenticated) {
       e.preventDefault()
       setLoginOpen(true)
+=======
+{ purchase: 0, post: 0, referral: 0 }
+  );
+  const handle_click = (e: React.MouseEvent < HTMLAnchorElement>, ) =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      e.prevent_default ();
+      setLoginOpen (true);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   }
   const handleRefresh = async (e: React.MouseEvent<HTMLButtonElement>) => {;
@@ -165,10 +177,16 @@ export function PointsBadge() {;
   },
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 >>>>>>>     <TooltipProvider>
       <div className="flex items-center gap-1">
@@ -198,6 +216,10 @@ export function PointsBadge() {;
               className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95"
             >
               <Gift className="h-4 w-4" aria-hidden="true" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <span>{`${points} pts`}</span>
             </Link>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -210,6 +232,7 @@ export function PointsBadge() {;
                   <p className="text-xs text-muted-foreground">
                     You haven't earned any points yet.
                   </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -262,13 +285,62 @@ ursor/fix-website-loading-errors-and-merge-6662
         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
+=======
+                )}
+                <ul className='text-xs mt-1 space-y-0 && 0.5'>;
+                  <li>Purchases: {breakdown && breakdown.purchase}</li>;
+                  <li>Posts: {breakdown && breakdown.post}</li>;
+                  <li>Referrals: {breakdown && breakdown.referral}</li>;
+                </ul>;
+                <p className='text-xs mt-2 text-muted-foreground border-t pt-1'>;
+                  Click to view full rewards program;
+                </p>;
+              </>;
+            ) : (;
+              <>;
+                <p className='text-sm font-medium'>Zion Rewards Program</p>;
+                <p className='text-xs mt-1 text-muted-foreground'>;
+            {is_authenticated ? (
+              <>;
+                <p className='text - sm font - medium'>Point Breakdown</p>;
+                {points === 0 && (
+                  <p className='text - xs text - muted - foreground'>;
+                    You haven't earned any points yet.;
+                  </p>)}
+                <ul className='text - xs mt - 1 space - y-0.5'>;
+                  <li > Purchases: {breakdown.purchase}</li>;
+                  <li > Posts: {breakdown.post}</li>;
+                  <li > Referrals: {breakdown.referral}</li>;
+                </ul>;
+                <p className='text - xs mt - 2 text - muted - foreground border - t pt - 1'>;
+                  Click to view full rewards program;
+                </p>;
+              </>) : (
+              <>;
+                <p className='text - sm font - medium'>Zion Rewards Program</p>;
+                <p className='text - xs mt - 1 text - muted - foreground'>;
+                  • Sign up: 50 pts;
+                  <br />;
+                  • First purchase: 100 pts;
+                  <br />;
+                  • Community posts: 25 pts each;
+                  <br />• Refer friends: 200 pts each;
+                </p>;
+
+
+        
+
+
+        {isAuthenticated && (
+          <Tooltip>
+            <TooltipTrigger asChild>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </TooltipContent>;
         </Tooltip>;
 
         {isAuthenticated && (;
           <Tooltip>;
             <TooltipTrigger asChild>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
 
                 <p className='text - xs mt - 2 text - muted - foreground border - t pt - 1'>;
@@ -298,6 +370,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>>                 variant="ghost"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -318,6 +391,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing |loading ? 'animate-spin' : ''}`}
                   aria-hidden='true'
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 variant="ghost"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 size="sm"
@@ -333,7 +408,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 />
 =======
 >>>>>>>                 <RefreshCw
@@ -363,6 +441,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </div>;
 =======
 ursor/fix-website-loading-errors-and-merge-6662
@@ -389,6 +472,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     </TooltipProvider>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -410,3 +494,19 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+}
+
+
+              <p className='text - sm'>Refresh points balance</p>;
+            </TooltipContent>;
+          </Tooltip>)}
+      </div>;
+      {!is_authenticated && (
+        <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />)}
+    </TooltipProvider>);
+}
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -29,6 +30,15 @@ import { Card, CardContent } from "@/components/ui/card"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+} import {
+  FormField;
+  FormItem;
+  FormLabel;
+  FormControl;
+  FormDescription;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import React, { useState } from "react";
 import { Control, UseFormSetValue } from "react-hook-form";
@@ -124,6 +134,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
   location
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -136,6 +147,8 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 =======
   location
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   control,
   setValue,
   skills,
@@ -145,6 +158,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 <<<<<<< HEAD
 
   location,
+<<<<<<< HEAD
 
   rateType
 }) => {
@@ -162,6 +176,8 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
   }
 >>>>>>>   return (
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   rateType
 },) => {
   const handleSuggestionApplied = (rate: number,) => {
@@ -206,6 +222,7 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   }
+<<<<<<< HEAD
   },
 
 
@@ -258,6 +275,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   },
 
+=======
+
+  },
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className="space-y-4">
       <FormField
@@ -279,7 +302,10 @@ import {;
   FormLabel,;
   FormControl,;
   FormDescription,;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   FormMessage;
 } from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
@@ -307,7 +333,6 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
   };
 <<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
     <div className="space - y-4">;
@@ -335,7 +360,10 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {...field}
               />;
             </FormControl>;
@@ -351,6 +379,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 
           <TalentRateRecommender
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -385,6 +414,8 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 }
 "}
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 <<<<<<< HEAD
 =======
@@ -398,6 +429,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>>             skills={skills}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -405,6 +437,8 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             skills={skills}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             yearsExperience={yearsExperience}
@@ -425,6 +459,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 
@@ -439,3 +474,23 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+          </FormItem>)}
+      />;
+      <Card>;
+        <CardContent className="pt - 4">;
+          <TalentRateRecommender;
+            skills = {skills, }
+            years_experience = {years_experience, }
+            location = {location, }
+            onSuggestionApplied = {handleSuggestionApplied, }
+            rate_type = {rate_type, }
+          />;
+        </CardContent>;
+      </Card>;
+    </div>);
+}
+"},
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -201,6 +202,9 @@ export function TalentCardSaveButton({;
       return;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     }
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     setLocalIsSaved(!localIsSaved)
     if (onToggleSave) {
       onToggleSave(profileId, !localIsSaved)
@@ -230,6 +234,9 @@ export function TalentCardSaveButton({;
   }
     >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   isAuthenticated: boolean;
 export function TalentCardSaveButton(): any ({;
   profileId,;
@@ -273,9 +280,12 @@ export function TalentCardSaveButton(): any ({;
 
 
     >;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Heart
         className={cn(
           'h-4 w-4 transition-colors'
@@ -296,6 +306,7 @@ export function TalentCardSaveButton(): any ({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -315,12 +326,19 @@ export function TalentCardSaveButton(): any ({;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }variant: "default" 
 }) 
 };
 }/> </button>) ;
 }";
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     toast({
@@ -335,7 +353,10 @@ export function TalentCardSaveButton(): any ({;
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -425,6 +446,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 ;
@@ -441,3 +463,7 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

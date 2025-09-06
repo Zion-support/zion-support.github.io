@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 } from '@/components/ui/card';
 =======
@@ -28,10 +29,17 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   Card,
+=======
+Card,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   CardContent,
   CardDescription,
   CardHeader,;
   CardTitle;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 } from '@/components/ui/card';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -49,11 +57,16 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -71,11 +84,16 @@ import { useAuth } from "@/hooks/useAuth",
 import { useRouter } from 'next/router',
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 export default function Partners() {;
 =======
@@ -202,8 +220,74 @@ export default function Partners() {
     async function checkHealth() {;
       try {;
         const res = await fetch('/api/auth/health');
+<<<<<<< HEAD
         setAuthServiceAvailable(res.ok);
         logErrorToProduction('Partner login auth health check failed', {
+=======
+        setAuthServiceAvailable(res && res.ok);
+        logErrorToProduction('Partner login auth health check failed', {;
+          data: err,;
+
+} from '@/components / ui / card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import Link from 'next / link';
+import { PartnerRegistrationForm } from '@/components / partners / PartnerRegistrationForm';
+import { PartnerReferralLinks } from '@/components / partners / PartnerReferralLinks';
+import { PartnerDashboard } from '@/components / partners / PartnerDashboard';
+import { PartnerLeaderboard } from '@/components / partners / PartnerLeaderboard';
+import { PartnerResources } from '@/components / partners / PartnerResources';
+import { use_auth } from '@/hooks / use_auth';
+import { use_router } from 'next / router';
+import { log_info, logErrorToProduction } from '@/utils / production_logger';
+;
+export default /**
+ * Partners - Function description
+ */
+function Partners() {
+  log_info ('PartnersPage rendering');
+  const [active_tab, setActiveTab] = useState ('overview');
+  const { t } = use_translation ();
+  const { user, is_authenticated } = use_auth ();
+  const router = use_router ();
+  const [authServiceAvailable, setAuthServiceAvailable] = useState (true);
+  useEffect (() => {
+import { Button  } from '@/components / ui / button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
+import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';
+import { useState, useEffect  } from './react';
+import { use_translation } from 'react - i18next';
+import Link from 'next / link';
+import { PartnerRegistrationForm  } from '@/components / partners / PartnerRegistrationForm';
+import { PartnerReferralLinks  } from '@/components / partners / PartnerReferralLinks';
+import { PartnerDashboard  } from '@/components / partners / PartnerDashboard';
+import { PartnerLeaderboard  } from '@/components / partners / PartnerLeaderboard';
+import { PartnerResources  } from '@/components / partners / PartnerResources';
+import { use_auth  } from '@/hooks / use_auth';
+import { use_router } from 'next / router';
+import { log_info, logErrorToProduction } from '@/utils / production_logger';
+export default /**
+ * Partners - Function description
+ */
+function Partners() {
+  log_info ('PartnersPage rendering'),
+  const [active_tab, setActiveTab] = useState ("overview"),
+  const { t } = use_translation (),
+  const { user, is_authenticated } = use_auth (),
+  const router = use_router (),
+  const [authServiceAvailable, setAuthServiceAvailable] = useState (true),
+  useEffect ((, ) => {
+    async /**
+ * check_health - Function description
+ */
+function check_health() {
+      try {
+        const res = await fetch ('/api / auth / health');
+        setAuthServiceAvailable (res.ok);
+        logErrorToProduction ('Partner login auth health check failed', {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           data: err,
         });
         setAuthServiceAvailable(false);
@@ -259,6 +343,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -284,6 +369,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+                  </p>                </div>        </div>
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <div className="container max-w-6xl py-10">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold tracking-tight text-white mb-2">{t('partner.title')}</h1>
@@ -319,6 +409,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -332,6 +423,9 @@ ursor/fix-website-loading-errors-and-merge-6662
                   </p>                </div>        </div>
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <Card className="bg-zion-blue-dark border-zion-blue-light">
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <CardHeader>
               <CardTitle className="text-white">{t('partner.influencers.title')}</CardTitle>
               <CardDescription>{t('partner.influencers.desc')}</CardDescription>
@@ -363,6 +457,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>                   <p className="text-sm text-zion-slate-light">{t('partner.influencers.points.resources_desc')}</p>
 
 
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -372,6 +467,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <p className="font-medium text-white">{t('partner.influencers.points.resources')}</p>
                   <p className="text-sm text-zion-slate-light">{t('partner.influencers.points.resources_desc')}</p>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -382,6 +481,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
           <Card className='bg-zion-blue-dark border-zion-blue-light'>
 <<<<<<< HEAD
@@ -411,6 +511,10 @@ ursor/fix-website-loading-errors-and-merge-6662
                 <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />
                 <div>
 <<<<<<< HEAD
+=======
+
+          <Card className="bg-zion-blue-dark border-zion-blue-light">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
                   <p className='font-medium text-white'>
@@ -426,6 +530,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
           <Card className="bg-zion-blue-dark border-zion-blue-light">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <CardHeader>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               <CardTitle className="text-white">{t('partner.organizations.title')}</CardTitle>
@@ -488,9 +597,18 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div className="flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" />
                 <div>
+<<<<<<< HEAD
                   <p className="font-medium text-white">{t('partner.organizations.points.tracking')}</p>
                   <p className="text-sm text-zion-slate-light">{t('partner.organizations.points.tracking_desc')}</p>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+
+
+
+                  <p className="font-medium text-white">{t('partner.organizations.points.tracking')}</p>
+                  <p className="text-sm text-zion-slate-light">{t('partner.organizations.points.tracking_desc')}</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </div>
               </div>
             </CardContent>
@@ -499,6 +617,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -522,6 +641,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
         <div className="text-center mb-12">
           <h2 className="text-2xl font-bold text-white mb-4">{t('partner.how_it_works')}</h2>
@@ -530,6 +653,12 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CardHeader className="text-center pb-2">
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
                   <Users className="h-6 w-6 text-zion-cyan" />
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </div>
                 <CardTitle className="text-lg text-white">{t('partner.steps.join_title')}</CardTitle>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -567,6 +696,12 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CardHeader className="text-center pb-2">
                 <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4">
                   <FileText className="h-6 w-6 text-zion-cyan" />
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 </div>
                 <CardTitle className="text-lg text-white">{t('partner.steps.share_title')}</CardTitle>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -617,6 +752,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <CardContent className="text-center text-sm text-zion-slate-light">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -624,6 +760,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <p>{t('partner.steps.earn_desc')}</p>
 >>>>>>>               </CardContent>
             </Card>
@@ -647,6 +786,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <Button
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
     );
   }
@@ -655,6 +795,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className='container max-w-7xl py-10'>
+=======
+
+
+        <div className="flex justify-center gap-4">
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <Button
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             size="lg"
@@ -666,7 +812,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           <Button
 
 
+<<<<<<< HEAD
 >>>>>>>             size="lg"
+=======
+            size="lg"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             variant="outline"
             className="text-zion-cyan border-zion-cyan"
 import { Button } from "@/components/ui/button",;
@@ -703,7 +853,10 @@ export default function Partners() {;
     }
     checkHealth();
   }, []),;
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
     logInfo('PartnersPage rendering Unauthenticated View');
@@ -870,7 +1023,6 @@ if ( {) {
                 <div>;
                   <p className="font - medium text - white">{t ('partner.influencers.points.resources')}</p>;
                   <p className="text - sm text - zion - slate - light">{t ('partner.influencers.points.resources_desc')}</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </div>;
               </div>;
             </CardContent>;
@@ -995,15 +1147,25 @@ if ( {) {
         </div>;
 
 
+<<<<<<< HEAD
 >>>>>>>           )}
+=======
+          )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </div>;
       </div>;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>     );
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     );
 >>>>>>>   }
 
@@ -1335,6 +1497,7 @@ export default function Partners() {;
           </TabsTrigger>
         </TabsList>        </TabsList>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         <TabsContent value="overview" className="space-y-4">
           <PartnerDashboard />
@@ -1349,6 +1512,10 @@ export default function Partners() {;
           <PartnerReferralLinks />
         </TabsContent>
         <TabsContent value='earnings' className='space-y-4'>          <Card>
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
         <TabsList className="grid grid-cols-2 md:grid-cols-5 mb-4">
@@ -1359,7 +1526,10 @@ export default function Partners() {;
           <TabsTrigger value="resources">{t('partner.tabs.resources')}</TabsTrigger>
         </TabsList>
         
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <TabsContent value="overview" className="space-y-4">
           <PartnerDashboard />
         </TabsContent>
@@ -1375,9 +1545,15 @@ export default function Partners() {;
           <PartnerReferralLinks />
         </TabsContent>
         <TabsContent value='earnings' className='space-y-4'>          <Card>
+<<<<<<< HEAD
 >>>>>>>         <TabsContent value="earnings" className="space-y-4">
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+        
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <TabsContent value="earnings" className="space-y-4">
 
 
@@ -1408,8 +1584,11 @@ ursor/fix-website-loading-errors-and-merge-6662
         <TabsContent value='resources' className='space-y-4'>          <PartnerResources />
         <TabsContent value="resources" className="space-y-4">
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               {/* This will be implemented later */}
               <p className="text-zion-slate-light">{t('partner.earnings_placeholder')}</p>
             </CardContent>
@@ -1448,6 +1627,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           <PartnerLeaderboard />
         </TabsContent>
         
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <TabsContent value="resources" className="space-y-4">
           <PartnerResources />
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1458,9 +1643,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
   async function checkHealth () {try {}checkHealth () ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  async function checkHealth () {try {}checkHealth () ;
+
+  async function checkHealth () {;
+  try {}checkHealth () ;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }, []);
 //If not authenticated, display partner program info and signup CTA </div> <div className="grid md:grid-cols-2 gap-8 mb-12" > <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> </CardContent> </Card> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <FileText className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <PieChart className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> </div> </div> <div className="flex justify-center gap-4" > <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white" asChild > > {t ('partner.login') ;
             onClick={() => window && window.print()}
@@ -1642,7 +1836,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               {/* This will be implemented later */}
               <p className='text - zion - slate - light'>;
                 {t ('partner.earnings_placeholder')}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </p>;
             </CardContent>;
           </Card>;
@@ -1651,9 +1844,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         </TabsContent>;
 
 
+<<<<<<< HEAD
 >>>>>>> }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <TabsContent value="leaderboard" className="space - y-4">;
           <PartnerLeaderboard />;
         </TabsContent>;
@@ -1703,6 +1901,7 @@ function check_health() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
   )
 }
 ;
@@ -1734,3 +1933,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+;
+
+  )
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -84,6 +85,9 @@ import { ApplicationProgress } from "./ApplicationProgress",
 import { toast } from "sonner",
 interface ApplicationCardProps {
   application: JobApplication
+=======
+application: JobApplication
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 
 <<<<<<< HEAD
@@ -230,8 +234,14 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>             <div className="text-sm text-muted-foreground mt-1">
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
 
@@ -239,6 +249,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
     // This would typically download the resume file
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -249,6 +260,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <div className="text-sm text-muted-foreground mt-1">
 >>>>>>>               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
             </div>
@@ -268,6 +281,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
               </div>
             )}
 
+<<<<<<< HEAD
                   <Button
                     variant='ghost'
                     size='sm'
@@ -284,6 +298,14 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 >>>>>>>         {expanded && (
           <div className="mt-4 space-y-3">
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+      
+      <CardContent className="pb-3">
+        <ApplicationProgress status={application.status} className="my-4" />
+        
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {expanded && (
           <div className='mt - 4 space - y-3'>;
 >>>>>>>             {application.cover_letter && (
@@ -412,6 +434,7 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                 </p>;
               </div>;
             )}
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -447,6 +470,18 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+            {application && application.resume && (;
+              <div className='border rounded-md p-3 bg-muted/20'>;
+                <div className='flex justify-between items-center'>;
+                  <div className='flex items-center'>;
+                    <FileText className='h-4 w-4 mr-2 text-blue-500' />;
+                    <span className='text-sm font-medium'>;
+                      {application && application.resume.title || 'Resume'}
+                    </span>;
+                  </div>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <Button
                     variant='ghost'
                     size='sm'
@@ -482,10 +517,13 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                     <Download className='h - 3 w - 3 mr - 1' /> Download                  </Button>;
                 </div>;
               </div>)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {expanded && (
           <div className="mt-4 space-y-3">
             {application.cover_letter && (
@@ -544,15 +582,22 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {application.match_score && (
               <div>
                 <h4 className='text-sm font-medium mb-1'>Match Score</h4>
@@ -587,6 +632,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <div>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>                 <h4 className="text-sm font-medium mb-1">Match Score</h4>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -607,6 +653,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             {application.match_score && (
               <div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <h4 className="text-sm font-medium mb-1">Match Score</h4>
 >>>>>>>                 <div className="flex items-center">
                   <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium">
@@ -619,6 +670,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
           </Button>
 =======
 =======
@@ -639,6 +691,9 @@ ursor/fix-website-loading-errors-and-merge-6662
             onClick={() => setExpanded(!expanded)}
           >
             {expanded ? 'Show Less' : 'Show More'}
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
 import { JobApplication } from "@/types/jobs",;
@@ -711,6 +766,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
                 <p className="text-sm text-muted-foreground">{application.cover_letter}</p>;
               </div>;
             )}
+<<<<<<< HEAD
 ;
             {application.resume && (;
               <div className="border rounded-md p-3 bg-muted/20">;
@@ -718,6 +774,18 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
                   <div className="flex items-center">;
                     <FileText className="h-4 w-4 mr-2 text-blue-500" />;
                     <span className="text-sm font-medium">{application.resume.title || "Resume"}</span>;
+=======
+
+
+            )}
+
+            {application && application.match_score && (;
+              <div>;
+                <h4 className='text-sm font-medium mb-1'>Match Score</h4>;
+                <div className='flex items-center'>;
+                  <div className='h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium'>;
+                    {application && application.match_score}%;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </div>;
                   <Button variant="ghost" size="sm" onClick={handleDownloadResume}>;
                     <Download className="h-3 w-3 mr-1" /> Download;
@@ -749,9 +817,19 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             onClick={() => setExpanded(!expanded)}
           >
             {expanded ? 'Show Less' : 'Show More'}
+<<<<<<< HEAD
 >>>>>>>           </Button>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
+=======
+          </Button>;
+          <div className='flex gap-2'>;
+            {renderActionButtons()}
+
+          </div>
+        )}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </CardContent>
       
       <CardFooter className="flex flex-col gap-3 pt-0">
@@ -765,9 +843,12 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             <Button 
               variant="outline" 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               size="sm"
               asChild
             >
@@ -776,6 +857,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -819,10 +901,27 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+
+
+                <ExternalLink className="h-4 w-4 mr-1" /> View Job
+              </Link>
+            </Button>
+          </div>
+        </div>
+
+        
+
+        
+            <MessageSquare className='h-4 w-4 mr-1' /> Message Client        
+        
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
         <Button 
           variant="secondary" 
 
+<<<<<<< HEAD
 =======
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client
         <Button
@@ -853,6 +952,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+        <Button 
+          variant="secondary" 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           size="sm"
 >>>>>>>           className="w-full"
           asChild
@@ -873,6 +976,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
           </Link>
+<<<<<<< HEAD
         </Button>
       </CardFooter>
     </Card>
@@ -901,6 +1005,10 @@ default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3
 }% </div> <span className="ml-2 text-xs text-muted-foreground" >Relevance to job requirements</span> </div> </div>) 
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </Button>
       </CardFooter>
     </Card>
@@ -930,6 +1038,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               asChild>;
               <Link href={`/jobs/${application && application.job_id}`}>;
                 <ExternalLink className="h-4 w-4 mr-1" /> View Job;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 ;
 
@@ -974,7 +1086,6 @@ ursor/fix-website-loading-errors-and-merge-6662
             >;
               <Link href={`/jobs/${application.job_id}`}>;
                 <ExternalLink className="h - 4 w - 4 mr - 1" /> View Job;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </Link>;
             </Button>;
           </div>;
@@ -987,8 +1098,12 @@ ursor/fix-website-loading-errors-and-merge-6662
       </CardFooter>
     </Card>
   );
+<<<<<<< HEAD
 >>>>>>> }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Button variant='secondary' size='sm' className='w - full' as_child>;
           <Link href={`/messages?job_id=${application.job_id}`}>;
             <MessageSquare className='h - 4 w - 4 mr - 1' /> Message Client;
@@ -1018,6 +1133,7 @@ default: return (<Card className="overflow - hidden" > <CardHeader className="pb
 }</CardContent> <Button variant="outline" size="sm" as_child > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w - full" as_child > </Link> </Button> </CardFooter> </Card>);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 }";
+<<<<<<< HEAD
 }
 }
 <<<<<<< HEAD
@@ -1050,3 +1166,6 @@ default: return (<Card className="overflow - hidden" > <CardHeader className="pb
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

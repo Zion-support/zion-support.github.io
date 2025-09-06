@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
       constructor() {}
@@ -20,6 +21,8 @@ const noop = () => {}
 const noopReturn = () => null
 const noopPromise = () => Promise.resolve()
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Mock Sentry instance with all common methods
 const mockSentry = {
   // Core Sentry methods
@@ -106,12 +109,16 @@ const mockSentry = {
     BrowserTracing: class BrowserTracing {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>       constructor() {}
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Mock implementation for Sentry to prevent Node.js module import issues during build;
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules;
 const noop = () => {},;
@@ -166,6 +173,7 @@ const mockSentry = {;
     BrowserTracing: class BrowserTracing {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -173,6 +181,9 @@ const mockSentry = {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       constructor() {}
 >>>>>>>     }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -300,12 +311,15 @@ const mock_sentry = {
   create_transport: noop_return,
   SDK_VERSION: '7.0.0 - mock',
   // Constants;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   createTransport: noopReturn
   SDK_VERSION: '7.0.0-mock'
   // Constants
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   Severity: {
     Fatal: 'fatal'
     Error: 'error'
@@ -407,6 +421,7 @@ export { mockSentry as Sentry }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     }},;
   // Transport;
   makeBrowserOfflineTransport: noopReturn,;
@@ -423,6 +438,21 @@ export { mockSentry as Sentry }
     Debug: 'debug'}},;
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> // Mock scope;
+=======
+
+
+  // Browser-specific methods
+
+  onLoad: noop, wrap: (fn: (...args: any[]) => any) => fn,
+  
+
+
+// Additional exports for compatibility;
+export { mockSentry as Sentry };
+// All exports are already defined above;
+
+// Mock scope;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 const mock_scope = {
   set_user: noop,
   set_tag: noop,
@@ -504,6 +534,7 @@ export const Severity = mock_sentry.Severity;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 // Additional exports for compatibility;
+<<<<<<< HEAD
 export { mockSentry as Sentry };
 // All exports are already defined above;
 <<<<<<< HEAD
@@ -622,3 +653,7 @@ export { mockSentry as Sentry };
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+export { mock_sentry as Sentry }
+// All exports are already defined above;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

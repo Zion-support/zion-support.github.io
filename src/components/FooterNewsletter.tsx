@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/FooterNewsletter.tsx
 
 =======
@@ -428,6 +429,9 @@ export function FooterNewsletter(): React.ReactElement {;
 
 
       {/* Honeypot field */}
+=======
+{/* Honeypot field */}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <input
 <<<<<<<< HEAD:src/components/FooterNewsletter.tsx
 
@@ -453,7 +457,6 @@ export function FooterNewsletter(): React.ReactElement {;
         disabled={isSubmitting}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/FooterNewsletter.tsx
         className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'>;
-=======
 
         type="text"
 
@@ -463,6 +466,7 @@ export function FooterNewsletter(): React.ReactElement {;
         tabIndex={-1}
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -503,6 +507,8 @@ export function FooterNewsletter(): React.ReactElement {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         autoComplete="off"
         style={{ display: 'none' }}
       />
@@ -513,7 +519,10 @@ export function FooterNewsletter(): React.ReactElement {;
         className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple";
       >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {isSubmitting ? (;
           <>;
             <Loader2 className='h-4 w-4 mr-2 animate-spin' />;
@@ -652,6 +661,7 @@ export function FooterNewsletter():React.ReactElement {;
 =======
 } ;
 
+<<<<<<< HEAD
 =======
 ========
 <<<<<<< HEAD
@@ -659,6 +669,8 @@ export function FooterNewsletter():React.ReactElement {;
 } ;
 } ;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/FooterNewsletter.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useRef } from 'react';
 import { Input } from '@/components / ui / input';
 import { Button } from '@/components / ui / button';
@@ -832,6 +844,7 @@ toast.error ('Unable to subscribe right now. Please try again later.', {;
 }finally {;
   setIsSubmitting (false) ;
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/FooterNewsletter.tsx
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -863,3 +876,6 @@ return (<form id="footer-newsletter-form" aria-label="Newsletter sign-up" onSubm
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

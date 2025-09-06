@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Menu, X } from 'lucide-react'
 =======
@@ -11,6 +12,8 @@ import { Menu, X } from 'lucide-react'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useState  } from 'react';
 import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { Logo  } from '@/components/header/Logo';
@@ -29,9 +32,33 @@ import { MobileMenu  } from '@/components/header/MobileMenu';
 import { MobileBottomNav  } from '@/components/header/MobileBottomNav';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> import { Menu, X } from 'lucide-react'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+import { useState } from 'react'
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { Logo } from '@/components/header/Logo'
+import { PointsBadge } from '@/components/loyalty/PointsBadge'
+import { UserMenu } from '@/components/header/UserMenu'
+import { LanguageSelector } from '@/components/header/LanguageSelector'
+import { ModeToggle } from '@/components/ModeToggle'
+import { useAuth } from '@/hooks/useAuth'
+import { useIsMobile } from '@/hooks/use-mobile'
+import { useMessaging } from '@/context/MessagingContext'
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput'
+import { generateSearchSuggestions } from '@/data/marketplaceData'
+import { slugify } from '@/lib/slugify'
+import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation'
+import { MobileMenu } from '@/components/header/MobileMenu'
+import { MobileBottomNav } from '@/components/header/MobileBottomNav'
+
+import { Menu, X } from 'lucide-react'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useTranslation  } from 'react-i18next';
 import { CartDrawer  } from '@/components/cart/CartDrawer';
 import { LoginModal } from '@/components/auth/LoginModal';
@@ -153,6 +180,9 @@ export function PrimaryNav() {
         ) }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const handle_submit = (e: React.FormEvent) =>: any {
     e.prevent_default ();
     const trimmed = query.trim ();    // Check condition
@@ -168,6 +198,7 @@ if ( {) {
             query: trimmed,
             component: 'PrimaryNav',
           })) }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -204,6 +235,9 @@ import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next',;
 import { CartDrawer } from '@/components/cart/CartDrawer',;
 import { LoginModal } from '@/components/auth/LoginModal',;
+=======
+  }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function PrimaryNav() {;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
   const [loginOpen, setLoginOpen] = useState(false),;
@@ -244,6 +278,7 @@ export function PrimaryNav() {;
           <Logo />;
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -251,6 +286,18 @@ export function PrimaryNav() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+          {/* Navigation - hidden on mobile and tablets, shown on desktop */}
+          <div className='hidden lg:block order-1 flex-shrink-0'>;
+            <ResponsiveNavigation
+              openLoginModal={returnToPath => setLoginOpen(true)}
+
+            />          </div>;
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <>
       <header
@@ -315,6 +362,10 @@ export function PrimaryNav() {;
             <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
           </div>
           
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Actions container with responsive layout */}
           <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
@@ -353,6 +404,7 @@ if ( {) {
                     // Blog posts navigate to blog detail page;
                     router.push (`/blog/${sugg.slug}`);
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -429,6 +481,18 @@ if ( {) {
                 <>
                   <Link
 <<<<<<< HEAD
+=======
+                  } else {
+                    // Default: search results page with query parameter;
+                    router.push (`/search?q=${encodeURIComponent (sugg.text)}`);
+                  }
+
+                onSelectSuggestion={sugg => {;
+                  logDebug('PrimaryNav search suggestion selected:', {;
+                    suggestion: sugg,;
+                  });                  // Handle different suggestion types with proper navigation;
+                  if (sugg && sugg.id) {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 <<<<<<< HEAD
@@ -453,10 +517,104 @@ if ( {) {
                   }
                   setQuery(''),;
                   // Track analytics event;
+<<<<<<< HEAD
                   if (typeof window !== 'undefined' && window.gtag) {;
                     window.gtag('eventsearch_suggestion_click', {;
                       search_term: sugg.text,;
                       suggestion_type: sugg.type,;
+=======
+                  if (typeof window !== 'undefined' && window && window.gtag) {;
+                    window && window.gtag('event', 'search_suggestion_click', {;
+                      search_term: sugg && sugg.text,;
+                      suggestion_type: sugg && sugg.type,;
+                      suggestion_id: sugg && sugg.id || sugg && sugg.slug,;
+                    });
+                  }
+                  // // // // // console && console.log('PrimaryNav search suggestion selected:',;
+  sugg);
+                  // Handle different suggestion types with proper navigation;
+                  if(sugg && sugg.id) {;
+
+                    // Product listings with IDs go to product detail page`;
+                    router && router.push(`/marketplace/listing/${sugg && sugg.id;
+'`;
+}`)} else if(sugg && sugg.type = == 'doc' && sugg && sugg.slug && sugg && sugg.slug.startsWith('/')) {;
+
+                    // Documentation suggestions navigate directly to their path';
+                    router && router.push(sugg && sugg.slug)} else if(sugg && sugg.type === 'blog' && sugg && sugg.slug) {;
+
+                    // Blog posts navigate to blog detail page`;
+                    router && router.push(`/blog/${sugg && sugg.slug}`)} else {;
+
+                    // Default: search results page with slug;`;
+                    router && router.push(`/search/${sugg && sugg.slug || slugify(sugg && sugg.text)}`)};
+                  setQuery('');
+                  // Track analytics event';
+                  if(typeof window !== 'null' && window && window.gtag) {;
+
+                    window && window.gtag('event',search_suggestion_click', {;
+
+                      search_term: sugg && sugg.text,;
+                      suggestion_type: sugg && sugg.type,;
+                      suggestion_id: sugg && sugg.id || sugg && sugg.slug;
+})}
+                }}
+                searchSuggestions = {suggestions,}
+              />;
+            </form>;
+
+            {/* Compact actions group */}
+            <div className='flex items-center gap-1'>;
+              <PointsBadge />;
+              <CartDrawer />;
+            </div>;
+
+            {/* Compact controls group */}
+            <div className='flex items-center gap-1 border-l border-primary/20 pl-1 ml-1'>;
+                  set_query ('');
+                  // Track analytics event;
+                  // Check condition
+if ( {) {
+  $2
+}
+                    window.gtag ('event', 'search_suggestion_click', {
+                      search_term: sugg.text,
+                      suggestion_type: sugg.type,
+                      suggestion_id: sugg.id || sugg.slug,
+                    });
+                  }
+                  // // // // // console.log ('PrimaryNav search suggestion selected:',
+  sugg);
+                  // Handle different suggestion types with proper navigation;
+                  // Check condition
+if ( {) {
+  $2
+}
+                    // Product listings with IDs go to product detail page`;
+                    router.push (`/marketplace / listing/${sugg.id;
+'`;
+}`)} else if () {) {
+  $2
+}
+                    // Documentation suggestions navigate directly to their path';
+                    router.push (sugg.slug)} else // Check condition
+if ( {) {
+  $2
+}
+                    // Blog posts navigate to blog detail page`;
+                    router.push (`/blog/${sugg.slug}`)} else {
+                    // Default: search results page with slug;`;
+                    router.push (`/search/${sugg.slug || slugify (sugg.text)}`)}
+                  set_query ('');
+                  // Track analytics event';
+                  // Check condition
+if ( {) {
+  $2
+}
+                    window.gtag ('event', search_suggestion_click', {
+                      search_term: sugg.text,
+                      suggestion_type: sugg.type,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                       suggestion_id: sugg.id || sugg.slug;
                     });
                   }
@@ -508,17 +666,23 @@ ursor/fix-website-loading-errors-and-merge-6662
                       e.preventDefault(),
                       setLoginOpen(true)
             <div className="flex items-center gap-1">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <PointsBadge />;
               <CartDrawer />;
             </div>;
             {/* Compact controls group */}
 <<<<<<< HEAD
             <div className='flex items - center gap - 1 border - l border - primary / 20 pl - 1 ml - 1'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <ModeToggle />;
               <LanguageSelector />;
             </div>;
@@ -543,16 +707,22 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
                     {t('auth.login')}
 >>>>>>>                   </Link>
+=======
+                    {t('auth.login')}
+                  </Link>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     onClick={e => {;
                       e && e.preventDefault();
                       setLoginOpen(true);                    }}
                   >;
                     {t('auth && auth.login')}
                   </Link>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 <<<<<<< HEAD
@@ -565,6 +735,8 @@ ursor/fix-website-loading-errors-and-merge-6662
                     {t('auth.login')}
                   </Link>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   <Link
                     href="/signup"
                     className="text-sm hover:text-primary whitespace-nowrap"
@@ -576,6 +748,19 @@ ursor/fix-website-loading-errors-and-merge-6662
               {isLoggedIn && <UserMenu />}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+            </div>;
+          </div>;
+
+          {/* Tablet view (md to lg) - simplified controls */}
+
+          <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
             <ModeToggle />
             <LanguageSelector />
@@ -658,6 +843,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               >;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -665,6 +851,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {t('auth.login')}
               </Link>
             )}
@@ -723,7 +912,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               </Link>)}
             {isLoggedIn && <UserMenu />}
           </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {isLoggedIn && <UserMenu  />}
             </div>;
           </div>;
@@ -771,7 +959,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               <X className="h-6 w-6" />
             ) : (
               <Menu className="h-6 w-6" />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             )}
           </button>
         </div>
@@ -844,6 +1035,10 @@ setLoginOpen (true)
 }{
   isMobile && <MobileBottomNav unreadCount= {
   unreadCount
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   unreadCount 
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -866,6 +1061,7 @@ setLoginOpen (true)
               exit = {
   { opacity: 0
   height: 0
+<<<<<<< HEAD
 }}
               transition={{ duration: 0.3 }}"
               className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10">"
@@ -950,6 +1146,17 @@ setLoginOpen (true)
               openLoginModal={(returnToPath) => setLoginOpen(true)}
             />;
           </div>;
+=======
+          <button;
+            className='lg:hidden p - 2 rounded focus:outline - none flex - shrink - 0';
+            on_click={() => setMobileMenuOpen (!mobileMenuOpen)}
+            aria - expanded={mobileMenuOpen}
+            aria - label={t ('general.toggle_mobile_menu')}          >;
+            {mobileMenuOpen ? (
+              <X className='h - 6 w - 6' />) : (
+              <Menu className='h - 6 w - 6' />)}
+          </button>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </div>;
 <<<<<<< HEAD
       </header>;
@@ -970,12 +1177,85 @@ setLoginOpen (true)
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>);
 }
+<<<<<<< HEAD
+=======
+return (<> <header className="sticky top - 0 z - 70 w - full border - b border - primary / 20 bg - card / 90 backdrop - blur - md" role="navigation" aria - label="Primary" data - testid="header" > <div className="container flex items - center justify - between gap - 2 min - h-16 px - 4 sm:px - 6 max-[320px]:flex - wrap" > <Logo />;
+}set_query ('');
+//Track analytics event;
+}search_suggestions= {
+  suggestions;
+}/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <Link on_click={
+  (e) => {
+  > {';
+  t ('auth.login') ";
+}</Link> <Link href="/signup" className="text - sm hover:text - primary whitespace - nowrap" > {';
+  t ('auth.signup');
+}</Link> </>);
+}{
+  isLoggedIn && <UserMenu />;
+}</div> </div> <ModeToggle /> <LanguageSelector /> {";
+  !isLoggedIn && (<Link href="/auth / login" className="text - sm hover:text - primary" data - testid="login - link" on_click={
+  (e) => {
+  e.prevent_default ();
+setLoginOpen (true);
+}';
+}t ('auth.login');
+}</Link>);
+}{
+  isLoggedIn && <UserMenu />;
+}</div> {
+  /* Mobile menu button */ ";
+}<button) : (<Menu className="h - 6 w - 6" />) ";
+}</button> </div> </header> <div className="absolute inset - 0 bg - black / 50 backdrop - blur - sm" on_click={
+  () => setMobileMenuOpen (false) ";
+}aria - hidden="true" /> <div className="relative bg - card border - t border - primary / 20 max - h-[calc (100vh - 4rem) ] overflow - y-auto" > <MobileMenu unread_count= {
+  unread_count;
+}on_close= {
+  () => setMobileMenuOpen (false);
+}openLoginModal= {
+  (returnToPath) => setLoginOpen (true);
+}/> </div> </div>);
+}{
+  is_mobile && <MobileBottomNav unread_count= {
+  unread_count;
+}/>;
+}<LoginModal is_open= {
+  login_open;
+}onOpenChange= {
+  setLoginOpen;
+}/> </>);
+}'"  { opacity: 0,
+  height: 0;
+}}
+              animate = {
+  { opacity: 1,
+  height: 'auto';
+}}
+              exit = {
+  { opacity: 0,
+  height: 0;
+}}
+              transition={{ duration: 0.3 }}";
+              className="lg:hidden bg - slate - 900 / 95 backdrop - blur - md border - t border - white / 10">";
+              <div className="px - 4 py - 6 space - y-4">;
+                {services.map ((category, index) => (
+                  <div key={index}>";
+                    <h3 className="text - sm font - semibold text - cyan - 400 mb - 2">;
+                      {category.category}
+
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     </h3>";
                     <div className="space - y-2 ml - 4">;
                       {category.items.map ((service: unknown, service_index: unknown;
@@ -1023,6 +1303,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 '"`;
 }
 
+<<<<<<< HEAD
 ;
 
 
@@ -1047,3 +1328,6 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

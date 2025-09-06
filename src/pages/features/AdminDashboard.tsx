@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -56,6 +57,54 @@ import { GradientHeading } from "@/components/GradientHeading",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { Header } from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { GradientHeading } from '@/components/GradientHeading';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import Link from 'next/link';
+export default function AdminDashboard() {;
+  const schema = {;
+    '@context': 'https://schema && schema.org',;
+    '@type': 'WebPage',;
+    name: 'Admin Dashboard',;
+    description:;
+      'Monitor marketplace activity, manage listings and view analytics in one place.',;
+    url: 'https://app && app.ziontechgroup.com/features/admin-dashboard',  };    "@context": "https://schema && schema.org";
+    "@type": "WebPage";
+    "name": "Admin Dashboard",;
+    "description": "Monitor marketplace activity, manage listings and view analytics in one place.";
+    "url": "https://app && app.ziontechgroup.com/features/admin-dashboard";
+
+import React from "react";
+import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function AdminDashboard() {
@@ -77,6 +126,7 @@ export default function AdminDashboard() {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
+<<<<<<< HEAD
   return (
     <>
       <SEO
@@ -87,8 +137,9 @@ export default function AdminDashboard() {
         keywords='admin dashboard, analytics, manage listings'
         canonical='https://app.ziontechgroup.com/features/admin-dashboard'
 >>>>>>>       />
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <>;
@@ -96,6 +147,7 @@ export default function AdminDashboard() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
       />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> >>>>>>>       {/* Use a normal script tag so JSON-LD is correctly parsed */}
 =======
@@ -157,6 +209,8 @@ export default function AdminDashboard() {
             <li>Approve or remove listings with a few clicks.</li>
             <li>Assign roles and permissions to your team.</li>
           </ul>      />
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
@@ -256,6 +310,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="space-y-4 mb-12">
             <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -266,6 +321,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="space-y-4 mb-12">
             <div>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <p className="font-semibold">Who can access the dashboard?</p>
 >>>>>>>               <p className="text-zion-slate-light">Only authorized admins and moderators with the proper roles.</p>
             </div>
@@ -425,7 +485,11 @@ export default function AdminDashboard() {;
               <p className='font - semibold'>Who can access the dashboard?</p>;
               <p className='text - zion - slate - light'>;
 
+<<<<<<< HEAD
 >>>>>>>                 Only authorized admins and moderators with the proper roles.;
+=======
+                Only authorized admins and moderators with the proper roles.;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </p>;
             </div>;
             <div>;
@@ -457,6 +521,7 @@ export default function AdminDashboard() {;
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
     </>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -480,3 +545,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  );
+}
+    </>);
+}
+
+  )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

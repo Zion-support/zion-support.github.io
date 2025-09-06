@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
 =======
 import React from "react";
@@ -84,11 +87,16 @@ export default function ITSupportPage() {
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import React from "react",
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
+=======
+import React from "react";
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
 
 <<<<<<< HEAD
@@ -125,10 +133,13 @@ export default function ITSupportPage() {
       text: "Professional and responsive. Their technicians feel like an extension of our own team.",
 <<<<<<< HEAD
 
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
 =======
 >>>>>>>     <ServiceLandingTemplate
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -163,6 +174,10 @@ import { Phone, ShieldCheck, Clock } from 'lucide-react';
 
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
@@ -173,8 +188,11 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       benefits={benefits}
       testimonials={testimonials}
       ctaText="Get IT Support"
@@ -183,7 +201,10 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
   )
 import React from "react",;
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",;
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Phone, ShieldCheck, Clock } from 'lucide-react';
 export default function ITSupportPage() {;
   const benefits = [;
@@ -222,7 +243,6 @@ export default function ITSupportPage() {;
     },;
   ];
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
 
 
@@ -311,6 +331,7 @@ export default function ITSupportPage() {;
     />;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -329,3 +350,29 @@ export default function ITSupportPage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+      name: 'Carlos Diaz',
+      role: 'IT Lead',
+      text: 'Professional and responsive. Their technicians feel like an extension of our own team.',
+      avatar: '/placeholder.svg',
+    },
+  ];
+    return (
+    <ServiceLandingTemplate;
+      title="IT Support Services";
+      subtitle="Reliable assistance to keep your business technology operating smoothly.";
+      hero_image="https://placehold.co / 600x300 / 192134 / 9b87f5?text = IT + Support";
+      description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes.";
+      benefits = {benefits, }
+      testimonials = {testimonials, }
+      cta_text="Get IT Support";
+      cta_link="/request - quote";
+    />);      benefits={benefits}
+      testimonials={testimonials}
+      cta_text="Get IT Support";
+      cta_link="/request - quote";
+    />);
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

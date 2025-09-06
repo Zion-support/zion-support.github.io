@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import {
   Card
@@ -164,6 +165,13 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+// Get region flag based on country name (for demo purposes)
+
+  const getRegionEmoji = (countryName: string | undefined): string => {
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     if (!countryName) return "🌐",
     
     const emojiMap: Record<string string> = {
@@ -219,10 +227,14 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>           </div>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>
 >>>>>>>           {isPopular && (
             <Badge className='bg-zion-purple text-white border-none'>
@@ -282,6 +294,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="flex items-start">
             <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />
             <span>Typical response time: {getResponseTime(country.country)}</span>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>
           <div className="flex items-start">
             <MapPin className="h-4 w-4 mr-2 text-zion-purple mt-1" />
@@ -439,9 +456,15 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           </div>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
       <CardFooter className="flex flex-col space-y-2">;
         <Button;
           onClick={() => onSelect(country)}
+=======
+      <CardFooter className='flex flex-col space-y-2'>;
+        <Button
+          onClick = {() => onSelect(country),}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           className={`w-full ${;
             isPopular;
 <<<<<<< HEAD
@@ -496,11 +519,14 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
             is_popular;
               ? 'bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple';
               : 'bg - zion - blue hover:bg - zion - blue - light border border - zion - blue - light';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
               ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
               : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           }`}
         >;
           Select Service;
@@ -547,8 +573,12 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
       </CardFooter>;
     </Card>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>>       <CardFooter className="flex flex-col space-y-2">
+=======
+      <CardFooter className="flex flex-col space-y-2">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Button
           onClick={() => onSelect(country)}
           className={`w-full ${
@@ -562,12 +592,20 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
         <Button
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
           variant='outline'
           className='w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10'
           onClick={() => onQuote?.(country)}        >
 >>>>>>>           Get Quote
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+          variant="outline"
+          className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+          onClick={() => onQuote?.(country)}
+        >
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           Get Quote
 >>>>>>>         </Button>
         <Button
@@ -579,6 +617,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
         </Button>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
       </CardFooter>;
     </Card>;
@@ -725,3 +764,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+      </CardFooter>
+    </Card>
+  )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

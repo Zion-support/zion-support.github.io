@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Header } from '@/components/Header';
@@ -8,6 +9,9 @@ import { ShieldAlert } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 export default function Unauthorized() {
   const { t } = useTranslation();
+=======
+const { t } = useTranslation();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 =======
 =======
@@ -116,6 +120,7 @@ export default function Unauthorized() {
               {t('errors.return_home')}
             </Link>
             <Link
+<<<<<<< HEAD
               href='/auth/login'
               className='w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'              href="/auth/login"
               className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center"
@@ -137,10 +142,17 @@ export default function Unauthorized() {
 =======
   )
 }
+=======
+
+              className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center">;
+              {t('errors && errors.login_different_account')}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </div>;
     </>;
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
@@ -153,6 +165,13 @@ export default function Unauthorized() {
 import Link from "next/link",;
 import { Button } from "@/components/ui/button",;
 import { Header } from "@/components/Header",;
+=======
+
+
+import Link from 'next / link';
+import { Button } from '@/components / ui / button';
+import { Header } from '@/components / Header';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { ShieldAlert } from 'lucide-react';
 import { useTranslation } from "react-i18next",;
 export default function Unauthorized() {;
@@ -191,15 +210,19 @@ export default function Unauthorized() {;
               className="w - full border border - zion - blue - light text - zion - slate - light hover:bg - zion - blue hover:text - white px - 4 py - 2 rounded inline - flex items - center justify - center";
             >;
               {t ('errors.login_different_account')}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>>             </Link>;
 =======
               {t('errors.login_different_account')}
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </Link>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </>;
   );
 }
@@ -219,3 +242,8 @@ export default function Unauthorized() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

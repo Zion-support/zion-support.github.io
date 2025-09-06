@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/FloatingCTA.tsx
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Button } from "@/components/ui/button",
 
 ========
@@ -45,8 +48,11 @@ import { X } from 'lucide-react'
   useEffect(() => {
   // TODO: Add dependencies if needed
 <<<<<<< HEAD
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/FloatingCTA.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Button } from '@/components / ui / button';
 import Link from 'next / link';
 import { useState, useEffect } from 'react';
@@ -91,6 +97,7 @@ import { useState, useEffect } from "react"
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -113,6 +120,8 @@ export function FloatingCTA() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function FloatingCTA() {
 
 import { Button } from "@/components/ui/button",
@@ -178,6 +187,7 @@ xport function FloatingCTA() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -216,6 +226,10 @@ xport function FloatingCTA() {
 ========
 }
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/FloatingCTA.tsx
+=======
+      if (scrollPosition > threshold && !isClosed) {
+        setIsVisible(true)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }, []); []);
     // Show CTA after 5 seconds;
       setIsVisible (true) }, 5000);
@@ -266,6 +280,10 @@ if ( {) {
 
 import { X } from 'lucide-react';
 export function FloatingCTA() {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     },
 
 
@@ -321,10 +339,13 @@ export function FloatingCTA() {;
     return () => {;
       window && window.removeEventListener("scroll", handleScroll);
     }
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/FloatingCTA.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/FloatingCTA.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }, [isClosed]);
   const handleClose = () => {;
     setIsClosed(true);
@@ -415,6 +436,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             className="text-zion-slate hover: text-white p-1"
             aria-label="Close"
           >
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <X className="w-5 h-5" />
           </button>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -427,6 +454,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/FloatingCTA.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -464,6 +492,14 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+            aria-label='Close'           aria-label="Button">;
+            <X className='w-5 h-5' />          </button>;
+            <X className="w-5 h-5" />;
+
+;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Button } from "@/components/ui/button",;
 import Link from "next/link",;
 import { useState, useEffect } from "react",;
@@ -600,9 +636,12 @@ return (<div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md
 
 }
 
+<<<<<<< HEAD
 ========
 }
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/FloatingCTA.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </AnimatePresence>;
     </>)}
             on_click={ () => setIsExpanded (false) }
@@ -611,6 +650,7 @@ return (<div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md
     </>)}
 '";
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/FloatingCTA.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
@@ -718,3 +758,7 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -123,6 +124,9 @@ export function FraudDetectionSettings() {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   return (
+=======
+return (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <Card className="mb-8">
       <CardHeader className="space-y-1">
         <div className="flex items-center gap-2">
@@ -229,9 +233,14 @@ export function FraudDetectionSettings() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
+
 }
+<<<<<<< HEAD
 }
 >>>>>>> 
 =======
@@ -243,6 +252,9 @@ export function FraudDetectionSettings() {
 }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Switch } from '@/components/ui/switch',;
@@ -385,6 +397,7 @@ export function FraudDetectionSettings() {;
     </Card>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -401,3 +414,6 @@ export function FraudDetectionSettings() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

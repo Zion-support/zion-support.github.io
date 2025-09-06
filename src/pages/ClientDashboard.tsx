@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -61,6 +62,9 @@ import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingIntervie
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 import { useIsMobile } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
+=======
+function ClientDashboardContent() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null),
@@ -273,10 +277,69 @@ function ClientDashboardContent() {;
             <Button asChild className={isMobile ? 'w-full justify-center' : ''}>;
               <Link href="/post-job">;
                 <PlusCircle className="h-4 w-4 mr-2" /> Post New Job;
+<<<<<<< HEAD
+=======
+    onboarding_status.response_received;
+/**
+ * ClientDashboardContent - Function description
+ */
+function ClientDashboardContent() {
+  const [active_tab, setActiveTab] = useState < JobStatus | "all">("all");
+  const { jobs, is_loading } = use_jobs ();
+  const [selectedJobId, setSelectedJobId] = useState < string | null>(null);
+  const [selectedJobTitle, setSelectedJobTitle] = useState < string>("");
+  const is_mobile = useIsMobile ();
+  const onboarding_status = useOnboardingStatus ();
+  const show_advanced =;
+    onboarding_status.job_posted &&;
+    onboarding_status.invite_sent &&;
+    onboarding_status.response_received;
+  // Set the first job as selected when jobs are loaded (if any);
+  useEffect ((, ) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      const first_job = jobs[0];
+      // Check condition
+if ( {) {
+  $2
+}
+        setSelectedJobId (first_job.id);
+        setSelectedJobTitle (first_job.title);
+      }
+    }
+  }, [jobs, selectedJobId]);
+  const handleJobSelect = (job_id: string, job_title: string) =>: any {
+    setSelectedJobId (job_id);    setSelectedJobTitle (job_title);
+  }
+  return (
+    <>;
+      <SEO;
+        title="Client Dashboard | Zion AI Marketplace";
+        description="Manage your jobs and talent requests in the Zion AI Marketplace.";
+      />;
+      <main className="container mx - auto px - 4 py - 8">;
+        <div className={`flex flex - col ${!is_mobile ? 'md:flex - row md:justify - between md:items - center' : ''} mb - 8 gap - 4`}>;
+          <div>;
+            <h1 className={`text-${is_mobile ? '2xl' : '3xl'} font - bold`}>My Jobs</h1>;
+            <p className="text - muted - foreground mt - 1">Manage your job postings and talent applications</p>;
+          </div>;
+          <div className={`flex gap - 2 ${is_mobile ? 'flex - col' : ''}`}>;
+            <Button variant="outline" as_child className={is_mobile ? 'w - full justify - center' : ''}>;
+              <Link href="/hiring - tracker">;
+                <Kanban className="h - 4 w - 4 mr - 2" /> Hiring Pipeline;
+              </Link>;
+            </Button>;
+            <Button as_child className={is_mobile ? 'w - full justify - center' : ''}>;
+              <Link href="/post - job">;
+                <PlusCircle className="h - 4 w - 4 mr - 2" /> Post New Job;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </Link>;
             </Button>;
           </div>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -286,6 +349,11 @@ function ClientDashboardContent() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         {/* New Onboarding Steps */}
         <div className="mb-8">
           <ClientOnboardingSteps />
@@ -300,6 +368,7 @@ function ClientDashboardContent() {;
               
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -324,6 +393,8 @@ function ClientDashboardContent() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <TabsContent value="all" className="mt-0">
 >>>>>>>                 <JobsList onSelectJob={handleJobSelect} />
               </TabsContent>
@@ -430,6 +501,10 @@ function ClientDashboardContent() {;
 
           <div>;
             <div className="sticky top-4 space-y-6">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"};
 ;
 
@@ -521,7 +596,11 @@ export default function ClientDashboard() {;
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export default /**
  * ClientDashboard - Function description
  */
@@ -567,6 +646,7 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
  */
 function ClientDashboard() {
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> }
 ;
@@ -589,3 +669,7 @@ function ClientDashboard() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

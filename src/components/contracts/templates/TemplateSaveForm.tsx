@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
 
 =======
@@ -120,6 +121,8 @@ import { useForm, type ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/templates/TemplateSaveForm.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Loader2 } from 'lucide-react';
 import { ContractFormValues } from '@/components/contracts/components/ContractForm';
 import { ContractTemplate } from '@/types/contracts';
@@ -385,6 +388,10 @@ export function TemplateSaveForm({;
           name="title"
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
             <FormItem>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <FormLabel>Template Name</FormLabel>
               <FormControl>
                 <Input {...field} placeholder="Enter template name" />
@@ -396,6 +403,7 @@ export function TemplateSaveForm({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -404,6 +412,23 @@ export function TemplateSaveForm({;
           )}
         />
         <FormField
+=======
+            field: ControllerRenderProps<FormValues, 'title'>;
+          }) => (            <FormItem>;
+              <FormLabel>Template Name</FormLabel>;
+            field: ControllerRenderProps < FormValues, 'title'>;
+          }) => (            <FormItem>;
+              <FormLabel > Template Name</FormLabel>;
+
+              <FormControl>;
+                <Input {...field} placeholder='Enter template name' />;
+              </FormControl>;
+              <FormMessage />;
+
+            </FormItem>)}
+        />;
+        <FormField;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           control={form.control}
 <<<<<<< HEAD
           name='is_default';
@@ -477,7 +502,6 @@ ursor/fix-website-loading-errors-and-merge-6662
                   aria-label='Default template'
                   checked={field && field.value}
                   onCheckedChange={field && field.onChange}                />;
-=======
 
 import { useState } from "react",;
 import { useForm, type ControllerRenderProps } from "react-hook-form",;
@@ -601,10 +625,13 @@ export function TemplateSaveForm({;
                   onCheckedChange={field.onChange}
                 />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/templates/TemplateSaveForm.tsx
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </FormControl>;
               <FormMessage />;
             </FormItem>;
@@ -622,14 +649,20 @@ export function TemplateSaveForm({;
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             Cancel
 >>>>>>>           </Button>
           <Button type='submit' disabled={saving}>
+<<<<<<< HEAD
 ========
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/templates/TemplateSaveForm.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             field: ControllerRenderProps < FormValues, 'is_default'>;
           }) => (
             <FormItem className='flex items - center justify - between'>;
@@ -679,6 +712,7 @@ try {
               </>;
             ) : (;
               `${editTemplate ? 'Update' : 'Save'} Template`;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
 =======
 <<<<<<< HEAD
@@ -693,6 +727,8 @@ try {
           <Button type="submit" disabled={saving}>
             {saving ? (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Saving...
@@ -762,6 +798,10 @@ try {
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
 }"};
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               `${editTemplate ? "Update" : "Save"} Template`
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
             )}
@@ -775,6 +815,7 @@ try {
 <<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ========
 setSaving (true);
@@ -805,6 +846,9 @@ try {;
 <<<<<<< HEAD
 }"}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/contracts/templates/TemplateSaveForm.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   // Check condition
 if ( {) {
   $2
@@ -819,6 +863,7 @@ if ( {) {
 }Template`);
 }</Button> </div> </form> </Form>);
 }"}
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/contracts/templates/TemplateSaveForm.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> }
@@ -848,3 +893,7 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

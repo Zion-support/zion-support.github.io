@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/gamification/UserLeaderboard.tsx
 
 =======
@@ -83,6 +84,9 @@ import { Trophy } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Trophy } from 'lucide-react'
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/gamification/UserLeaderboard.tsx
+=======
+import { Trophy } from 'lucide-react'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   Card,
   CardContent,
   CardDescription,
@@ -116,9 +120,12 @@ interface UserLeaderboardProps {
 
 
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {
+<<<<<<< HEAD
 >>>>>>> import {;
 ========
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import {;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/gamification/UserLeaderboard.tsx
   Card,;
@@ -168,6 +175,7 @@ interface UserLeaderboardProps {;
   entries: LeaderboardEntry[];
 }
 
+<<<<<<< HEAD
   name: string
 
   points: number
@@ -177,6 +185,9 @@ interface UserLeaderboardProps {
 }
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <Card>
       <CardHeader>
@@ -184,6 +195,7 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -191,6 +203,11 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         <CardTitle className='flex items-center gap-2'>
           <Trophy className='h-5 w-5' /> Leaderboard        </CardTitle>
+=======
+
+          <Trophy className="h-5 w-5" /> Leaderboard
+        </CardTitle>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <CardDescription>Top users by points</CardDescription>
       </CardHeader>
       <CardContent>
@@ -250,6 +267,12 @@ ursor/fix-website-loading-errors-and-merge-6662
           {entries.map((e, idx) => (
             <div
               key={e.name}
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50"
             >
               <span className="font-medium">
@@ -262,6 +285,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <span className='text-sm'>{e.points} pts</span>            </div>              <span className="text-sm">{e.points} pts</span>
             </div>
+<<<<<<< HEAD
           ))}
         </div>
       </CardContent>
@@ -272,6 +296,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           ))}
 
 ========
@@ -321,10 +347,13 @@ export function UserLeaderboard({ entries } UserLeaderboardProps) {;
 }
 <<<<<<<< HEAD:src/components/gamification/UserLeaderboard.tsx
 
+<<<<<<< HEAD
 ========
   );
 }
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/gamification/UserLeaderboard.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export /**
  * UserLeaderboard - Function description
  */
@@ -360,6 +389,7 @@ function UserLeaderboard() {
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/gamification/UserLeaderboard.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 ;
@@ -410,3 +440,6 @@ points: number ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

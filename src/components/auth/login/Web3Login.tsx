@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/auth/login/Web3Login.tsx
 
 <<<<<<< HEAD
@@ -33,6 +34,15 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 import { useWallet as useAppWallet } from "../../../context/WalletContext.tsx", // Renamed to avoid conflict if useWallet hook is defined locally
+=======
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { useAuth } from "@/hooks/useAuth";
+import { useWallet as useAppWallet } from "../../../context/WalletContext ;
+import { Wallet } from 'lucide-react'import { toast } from "sonner";
+import {logErrorToProduction} from '@/utils/productionLogger';
+export function Web3Login() {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -131,6 +141,7 @@ export function Web3Login() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       }
 
@@ -138,12 +149,15 @@ export function Web3Login() {
 =======
 >>>>>>>       }
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       }
 
       
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
       
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>     } catch (error: any) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -156,11 +170,14 @@ export function Web3Login() {
       
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
       
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     } catch (error: any) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
       toast("Login failed", {
         description: error.message |"Failed to connect wallet. Please try again."})
       logErrorToProduction('Web3 login error:', { data: error })
+<<<<<<< HEAD
     } finally {
       setIsLoading(false)
     }
@@ -201,6 +218,8 @@ import { useWallet as useAppWallet } from "../../../context/WalletContext ;
 import { Wallet } from 'lucide-react'import { toast } from "sonner";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function Web3Login() {;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useState  } from './react';
 import { Button  } from '@/components / ui / button';
 import { use_auth  } from '@/hooks / use_auth';
@@ -242,7 +261,15 @@ if ( {) {
       logErrorToProduction ('Web3 login error:', { data: error });
     } finally {
       setIsLoading (false);
+<<<<<<< HEAD
 =======
+=======
+    }
+
+  const { loginWithWeb3 } = useAuth();
+  const { isWalletSystemAvailable } = useAppWallet();
+  const [isLoading, setIsLoading] = useState(false);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 =======
@@ -252,6 +279,10 @@ if ( {) {
 };
   );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   },
 
   const buttonDisabled = isLoading || !isWalletSystemAvailable,
@@ -443,12 +474,18 @@ export function Web3Login() {;
   const buttonTitle = !isWalletSystemAvailable;
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured.";
     : "";
+<<<<<<< HEAD
   )
 }
 <<<<<<<< HEAD:src/components/auth/login/Web3Login.tsx
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/auth/login/Web3Login.tsx
+=======
+
+  )
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const button_disabled = is_loading || !isWalletSystemAvailable;
   const button_title = !isWalletSystemAvailable;
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured.";
@@ -460,6 +497,7 @@ export function Web3Login() {;
 ;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 ;
@@ -531,3 +569,7 @@ const buttonTitle = !isWalletSystemAvailable ? "Web3 login is currently unavaila
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

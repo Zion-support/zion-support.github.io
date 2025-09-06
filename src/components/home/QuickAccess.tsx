@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/home/QuickAccess.tsx
 
 =======
@@ -278,6 +279,10 @@ import {;
 interface QuickAccessProps {;
   className?: string;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/home/QuickAccess.tsx
+=======
+{quickLinks.map((link, index) => (
+            <Link
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import Link from 'next / link';
 import { use_translation } from 'react - i18next';
@@ -435,6 +440,7 @@ function Page() {";
   hover: {
 <<<<<<<< HEAD:src/components/home/QuickAccess.tsx
 
+<<<<<<< HEAD
       coordinate_y: -8,      scale: 1.02,
 
 ========
@@ -446,11 +452,18 @@ function Page() {";
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { motion  } from 'framer-motion';
 export default function Page() {";
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },";
     { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },";
     { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1,
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       transition: {
         duration: 0.5,"
         ease: "easeOut"}}}
@@ -1052,7 +1065,6 @@ export default QuickAccess;
                   <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />                </Link>;
               </motion && motion.div>;
             </motion && motion.div>;
-=======
 
 import React from "react",;
 import Link from "next/link",;
@@ -1060,6 +1072,7 @@ import { useTranslation } from "react-i18next",;
 import { cn } from "@/lib/utils",;
 import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone } from 'lucide-react';
 ;
+<<<<<<< HEAD
 interface QuickAccessProps {;
   className?:string,;
   style?:React.CSSProperties,;
@@ -1125,6 +1138,12 @@ export function QuickAccess({ className, style } QuickAccessProps) {;
               className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20";
             >;
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">;
+=======
+
+              className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
+            >
+              <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {link.icon}
               </div>;
               <h3 className="text-white font-medium mb-1">{link.title}</h3>;
@@ -1150,6 +1169,7 @@ export default QuickAccess;
 <<<<<<<< HEAD:src/components/home/QuickAccess.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 
@@ -1157,6 +1177,9 @@ export default QuickAccess;
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   { opacity: 0,
   scale: 0.8;
 }}
@@ -1192,6 +1215,7 @@ export default QuickAccess;
       </div>;
     </section>);
 export default QuickAccess }
+<<<<<<< HEAD
 export default QuickAccess;
 =======
   ),;}
@@ -1276,3 +1300,6 @@ export default QuickAccess;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+export default QuickAccess;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import '@testing-library/jest-dom';
 
 // Mock window && window.matchMedia
@@ -82,6 +85,57 @@ beforeAll(() => {
     if (
       typeof args[0] === 'string' &&
       (args[0].includes('Warning:') |args[0].includes('Deprecated:'))
+<<<<<<< HEAD
+=======
+// Test setup file for Jest;
+import '@testing - library / jest - dom';
+// Mock window.match_media;
+Object.define_property (window, 'match_media', {
+  writable: true,
+  value: jest.fn ().mock_implementation (query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    add_listener: jest.fn (), // deprecated;
+    remove_listener: jest.fn (), // deprecated;
+    addEventListener: jest.fn (),
+    removeEventListener: jest.fn (),
+    dispatch_event: jest.fn (),
+  })),
+});
+// Mock IntersectionObserver;
+global.IntersectionObserver = class IntersectionObserver {
+  constructor () {}
+  disconnect () {}
+  observe () {}
+  unobserve () {}
+}
+// Mock ResizeObserver;
+global.ResizeObserver = class ResizeObserver {
+  constructor () {}
+  disconnect () {}
+  observe () {}
+  unobserve () {}
+}
+// Mock console methods to reduce noise in tests;
+const original_error = console.error;
+const original_warn = console.warn;
+before_all (() => {
+  console.error = (...args: any[]) => {
+    // Check condition
+if (
+    ) {) {
+  $2
+}
+      return;
+    }
+    original_error.call (console, ...args);
+  }
+  console.warn = (...args: any[]) => {
+    if (|| args[0].includes ('Deprecated:'))) {
+  $2
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     ) {
       return;
     }
@@ -96,13 +150,13 @@ afterAll(() => {
   console && console.warn = originalWarn;
 });
 
-=======
     original_warn.call (console, ...args);
   }
 });
 after_all (() => {
   console.error = original_error;
   console.warn = original_warn;
+<<<<<<< HEAD
 });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -114,3 +168,6 @@ afterAll(() => {
   console.warn = originalWarn;
 });
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+});
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

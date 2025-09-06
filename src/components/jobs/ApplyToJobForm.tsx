@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/jobs/ApplyToJobForm.tsx
 
 
 import { useState } from "react",
 import { useRouter } from 'next/router',
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { useJobApplications } from "@/hooks/useJobApplications",
 =======
 import { useState } from "react";
@@ -65,6 +68,11 @@ import { Job } from "@/types/jobs";
 import { toast } from "sonner";
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 interface ApplyToJobFormProps {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -148,6 +156,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       )
       if (success) {
         toast.success("Your application has been submitted!")
+<<<<<<< HEAD
 
 =======
         selectedResumeId |undefined
@@ -171,6 +180,8 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const { user } = useAuth(),
   const { applyToJob } = useJobApplications(),
   const { resumes, isLoading: isResumesLoading } = useResume(),
@@ -213,6 +224,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>         if (onSuccess) {
 ursor/fix-website-loading-errors-and-merge-6662
@@ -226,6 +238,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         if (onSuccess) {
           onSuccess()
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -235,6 +251,9 @@ ursor/fix-website-loading-errors-and-merge-6662
       setError(err.message |"Failed to submit application")
       toast.error("Failed to submit application")
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     import { use_router } from 'next / router';
 ========
 import { use_router } from 'next / router';
@@ -378,8 +397,39 @@ if ( {) {
     } finally {
       setIsSubmitting (false);
     }
+<<<<<<< HEAD
   }
   return (
+=======
+
+
+  },
+  
+
+  },
+  
+
+  return (
+
+
+      
+
+
+      {error && (
+        <Alert variant="destructive">
+          <AlertCircle className="h-4 w-4" />
+          <AlertDescription>{error}</AlertDescription>
+        </Alert>
+      )}
+
+
+      
+
+
+      <div className="space-y-4">
+        <div>
+          <Label htmlFor="coverLetter">Cover Letter</Label>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/ApplyToJobForm.tsx
     import { useRouter } from 'next/router';
@@ -580,6 +630,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <div>
           <Label htmlFor="resume">Select Resume (Optional)</Label>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -591,8 +646,11 @@ ursor/fix-website-loading-errors-and-merge-6662
           ) : resumes && resumes.length > 0 ? (
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <Select
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}
@@ -792,6 +850,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
               onValueChange = {setSelectedResumeId, }
             >;
               <SelectTrigger className="mt - 1">;
+<<<<<<< HEAD
 =======
           ) :resumes && resumes.length > 0 ? (;
 =======
@@ -806,6 +865,8 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 <SelectValue placeholder="Select a resume" />;
               </SelectTrigger>;
               <SelectContent>;
@@ -816,6 +877,10 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
                         {resume && resume.basic_info.title || "Untitled Resume"}
                       </SelectItem>;
                     );
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   }
                   return null;
                 })}
@@ -917,7 +982,24 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
 <<<<<<<< HEAD:src/components/jobs/ApplyToJobForm.tsx
 <<<<<<< HEAD
 
+<<<<<<< HEAD
       <div className="flex justify-end gap-2">
+=======
+
+            onChange={(e) => setResumeFile(e.target.files?.[0] || null)}
+          />
+        </div>
+      </div>
+
+
+      <div className="flex justify-end gap-2">
+            onChange = {(e,) => setResumeFile(e && e.target.files?.[0] || null),}
+          />;
+        </div>;
+      </div>;
+
+      <div className="flex justify-end gap-2">;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Button
           type="button"
           variant="outline"
@@ -981,6 +1063,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application")
 }</Button> </div> </form>)
@@ -1001,11 +1084,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 
           onClick={() => {;
             if (onSuccess) onSuccess();
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
           disabled={isSubmitting}
           onClick={() => {;
             if (onSuccess) onSuccess();
 
+<<<<<<< HEAD
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
           disabled = {isSubmitting,}
@@ -1034,6 +1120,8 @@ ursor/fix-website-loading-errors-and-merge-6662
             if (onSuccess) onSuccess(),;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/ApplyToJobForm.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           }}
         >;
           Cancel;
@@ -1060,8 +1148,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 }"};
 
 
+<<<<<<< HEAD
 >>>>>>>         </Button>;
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </Button>;
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/ApplyToJobForm.tsx
       </div>;
@@ -1071,6 +1162,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/jobs/ApplyToJobForm.tsx
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ========
 }setError (null);
@@ -1132,6 +1224,9 @@ handleSubmit ;
 <<<<<<< HEAD
 }"}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/ApplyToJobForm.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {resumes.map ((resume, ) => {
                   // Check condition
 if ( {) {
@@ -1222,6 +1317,7 @@ handle_submit;
 }</div> <div> <Label html_for="cv_upload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify - end gap - 2" > <Button <> <Loader2 className="h - 4 w - 4 mr - 2 animate - spin" /> Submitting... </>) : ("Submit Application");
 }</Button> </div> </form>);
 }"}
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/jobs/ApplyToJobForm.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> }
@@ -1284,3 +1380,7 @@ handleSubmit
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

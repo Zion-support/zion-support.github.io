@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -120,6 +121,9 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
       >
+=======
+>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         <Eye className="h-4 w-4" />
       </Button>
       <Button
@@ -192,11 +196,16 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         variant="ghost"
         size="icon"
         title="Send Warning"
@@ -231,7 +240,11 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
           variant="ghost"
           size="sm"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>>           onClick={() => onAction(flagId, 'ignore')}
+=======
+          onClick={() => onAction(flagId, 'ignore')}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         >
           Ignore
         </Button>
@@ -245,6 +258,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
 };
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 
@@ -254,6 +268,10 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
 =======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
+=======
+import React from 'react';
+import { Button } from '@/components / ui / button';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react';
 interface ActionButtonsProps {;
   flagId: string,;
@@ -314,6 +332,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
       )}
     </div>;
   );
+<<<<<<< HEAD
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -324,3 +343,6 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

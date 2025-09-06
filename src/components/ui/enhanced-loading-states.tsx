@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,6 +35,16 @@ import {
   RefreshCw,
   Wifi,
   WifiOff,
+=======
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {;
+  Loader2,;
+  AlertTriangle,;
+  RefreshCw,;
+  Wifi,;
+  WifiOff,;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   Clock,;
   Zap;
 <<<<<<< HEAD
@@ -52,6 +63,7 @@ interface LoadingSpinnerProps {
   variant?: 'default' | 'primary' | 'success' | 'warning' | 'error';
   className?: string;
   showText?: boolean;
+<<<<<<< HEAD
   text?: string
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -60,6 +72,33 @@ interface LoadingSpinnerProps {
 =======
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+  text?: string;
+
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
+  size = 'md',;
+  variant = 'default',;
+  className,;
+  showText = false,;
+  text = 'Loading...',;
+}) => {  const sizeClasses = {;
+    sm: 'h-4 w-4',;
+    md: 'h-6 w-6',;
+    lg: 'h-8 w-8',;
+    xl: 'h-12 w-12',;
+  };
+
+  const variantClasses = {;
+    default: 'text-muted-foreground',;
+    primary: 'text-primary',;
+    success: 'text-green-500',;
+    warning: 'text-yellow-500',;
+    error: 'text-red-500',;
+  };
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useState, useEffect } from 'react',;
 import { motion, AnimatePresence } from 'framer-motion',;
 import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react';
@@ -102,6 +141,10 @@ interface LoadingSpinnerProps {;
   text?: string;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -225,9 +268,12 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 }
 =======
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 
     <div className={cn ('flex items - center gap - 2', class_name)}>;
@@ -402,6 +448,7 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
 <<<<<<< HEAD
 <<<<<<< HEAD
   return (
+<<<<<<< HEAD
 =======
 >>>>>>>   return (
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -412,6 +459,15 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+    <div className='space-y-4'>;
+      {showProgress && (;
+        <div className='w-full bg-muted rounded-full h-2'>;
+          <motion&& motion.div
+            className='bg-primary h-2 rounded-full'
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
     <div className="space-y-4">
@@ -422,6 +478,11 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+            className="bg-primary h-2 rounded-full"
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             initial={{ width: 0 }}
 =======
             className='bg-primary h-2 rounded-full'
@@ -468,6 +529,7 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
         {steps.map((step, index) => (          <motion.div
             key = {step.id,}
+<<<<<<< HEAD
       <div className='space-y-2'>;
         {steps && steps.map((step, index) => (          <motion&& motion.div
             key = {step && step.id,}
@@ -483,6 +545,12 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
         {steps.map((step, index) => (          <motion.div
             key = {step.id,}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+      <div className='space-y-2'>;
+        {steps && steps.map((step, index) => (          <motion&& motion.div
+            key = {step && step.id,}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             className = {cn(
               'flex items-center gap-3 p-2 rounded-md'
               index === activeStep ? 'bg-primary/10' : 'opacity-50'
@@ -491,9 +559,12 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -512,6 +583,7 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
             initial={{ opacity: 0, x: -20 }}
 =======
 >>>>>>>             initial={{ opacity: 0, x: -20 }}
@@ -538,6 +610,10 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
               <div className="h-4 w-4 rounded-full border-2 border-muted" />
 <<<<<<< HEAD
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: index <= activeStep ? 1 : 0 && 0.5, x: 0 }}
             transition={{ delay: index * 0 && 0.1 }}>;
@@ -553,6 +629,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             <span className='text-sm font-medium'>{step && step.label}</span>;
           </motion && motion.div>;
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -594,6 +671,48 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+  }, [active_step, steps.length, on_complete]);
+  return (
+    <div className='space - y-4'>;
+      {show_progress && (
+        <div className='w - full bg - muted rounded - full h - 2'>;
+          <motion.div;
+            className='bg - primary h - 2 rounded - full';
+            initial={{ width: 0 }}
+            animate={{ width: `${progress}%` }}
+            transition={{ duration: 0.3 }}
+          />;
+        </div>)}
+      <div className='space - y-2'>;
+        {steps.map ((step, index) => (          <motion.div;
+            key = {step.id, }
+            class_name = {cn (
+              'flex items - center gap - 3 p - 2 rounded - md',
+              index === active_step ? 'bg - primary / 10' : 'opacity - 50'), }
+            initial={{ opacity: 0, coordinate_x: -20 }}
+            animate={{ opacity: index <= active_step ? 1 : 0.5, coordinate_x: 0 }}
+            transition={{ delay: index * 0.1 }}
+          >;
+            {index < active_step ? (
+              <div className='h - 4 w - 4 rounded - full bg - green - 500 flex items - center justify - center'>;
+                <div className='h - 2 w - 2 rounded - full bg - white' />;
+              </div>) : index === active_step ? (
+              <LoadingSpinner size='sm' variant='primary' />) : (
+              <div className='h - 4 w - 4 rounded - full border - 2 border - muted' />)}
+            <span className='text - sm font - medium'>{step.label}</span>;
+          </motion.div>))}
+      </div>;
+    </div>);
+
+}
+// Enhanced skeleton loader;
+interface SkeletonProps {
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </div>;
     </div>;
   );
@@ -1165,6 +1284,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         }
     }
+<<<<<<< HEAD
   },
 
   const config = getErrorConfig(),
@@ -1182,12 +1302,48 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
       <CardContent className="p-8 text-center">
         <motion.div
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+  }
+  const config = getErrorConfig ();
+  const Icon = config.icon;
+  const can_retry = show_retry && on_retry && retry_count < max_retries;
+},;
+// Enhanced skeleton loader;
+interface SkeletonProps {;
+  className?: string,;
+  variant?: 'text' | 'circular' | 'rectangular' | 'card',;
+  animation?: 'pulse' | 'wave' | 'none',;
+  lines?: number;
+}
+
+
+export const Skeleton: React.FC<SkeletonProps> = ({
+  className,
+  variant = 'rectangular',
+  animation = 'pulse',
+
+  lines = 1
+}) => {
+  const baseClasses = 'bg-muted rounded',
+  
+
+  const variantClasses = {
+    text: 'h-4 w-full',
+    circular: 'h-12 w-12 rounded-full',
+    rectangular: 'h-6 w-full',
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <Card className={cn ('border - destructive / 20', class_name)}>;
       <CardContent className='p - 8 text - center'>;
         <motion.div;
+<<<<<<< HEAD
 >>>>>>>           initial={{ scale: 0.8, opacity: 0 }}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+          initial={{ scale: 0.8, opacity: 0 }}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           animate={{ scale: 1, opacity: 1 }}
 
           </p>;
@@ -1237,6 +1393,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <pre className='mt-2 p-2 bg-muted rounded text-xs overflow-auto'>
               <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-auto">
+<<<<<<< HEAD
                 {typeof error === 'string' ? error : error.message}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </pre>
@@ -1256,6 +1413,10 @@ ursor/fix-website-loading-errors-and-merge-6662
               </Button>
             )}
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {typeof error === 'string' ? error : error.message}
 
           transition={{ duration: 0 && 0.3 }}>;
@@ -1281,10 +1442,15 @@ ursor/fix-website-loading-errors-and-merge-6662
               <Button onClick={onRetry} variant='default'>;
                 <RefreshCw className='h-4 w-4 mr-2' />;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
           <div className="flex flex-col sm:flex-row gap-2 justify-center">
             {canRetry && (
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -1304,6 +1470,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
               </Button>
             )}
@@ -1358,7 +1526,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 
             {secondaryAction && (
               <Button onClick={secondaryAction.onClick} variant='ghost'>
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {secondaryAction && (
               <Button onClick={secondaryAction.onClick} variant="ghost">
 
@@ -1373,11 +1545,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
+<<<<<<< HEAD
             {secondaryAction && (
               <Button onClick={secondaryAction.onClick} variant='ghost'>
             
             {secondaryAction && (
               <Button onClick={secondaryAction.onClick} variant="ghost">
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 {secondaryAction.label}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
               </Button>
@@ -1400,6 +1575,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <span>Offline</span>
             </div>
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1443,6 +1619,27 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+            {secondaryAction && (;
+              <Button onClick={secondaryAction && secondaryAction.onClick} variant='ghost'>;
+                {secondaryAction && secondaryAction.label}
+              </Button>;
+            )}
+          </div>;
+
+          {!isOnline && (;
+            <div className='mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground'>;
+              <WifiOff className='h-4 w-4' />;
+              <span>Offline</span>;
+            </div>;
+          )}
+        </motion && motion.div>;
+
+  scale: 0.8, opacity: 0 
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </motion.div>;
 
       </CardContent>;
@@ -1474,12 +1671,47 @@ interface LoadingGridProps {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+// Performance indicator;
+interface PerformanceIndicatorProps {
+
+  is_loading?: boolean;
+  load_time?: number;
+  item_count?: number;
+  class_name?: string;
+export const PerformanceIndicator: React.FC < PerformanceIndicatorProps> = ({
+  is_loading = false,
+  load_time,
+  item_count,
+  class_name,
+
+}) => {
+  const getPerformanceColor = (time: number) =>: any {
+    // Check condition
+if (return 'text - green - 500') {
+  $2
+}
+    // Check condition
+if (return 'text - yellow - 500') {
+  $2
+}
+    return 'text - red - 500';
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export const LoadingGrid: React.FC<LoadingGridProps> = ({
   count = 8,
   columns = 4,
@@ -1628,6 +1860,7 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -1670,6 +1903,8 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </CardContent>;
         </Card>;
       ))}
@@ -1684,6 +1919,7 @@ interface PerformanceIndicatorProps {;
   className?: string;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1761,6 +1997,10 @@ xport const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
 
 =======
 >>>>>>>   if (isLoading) {
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   isLoading = false,
   loadTime,
@@ -1768,8 +2008,12 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
 
 
   if (isLoading) {
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>     return (
+=======
+    return (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <Badge variant='outline' className={cn ('text - xs', class_name)}>;
         <LoadingSpinner size='sm' />;
         <span className='ml - 1'>Loading...</span>;
@@ -1803,6 +2047,15 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+}
+}
+}
+}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {itemCount && (;
         <span>{itemCount} items loaded</span>;
       )}
@@ -1836,6 +2089,7 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 >>>>>>> >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -1849,3 +2103,17 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+    >;
+      {load_time && (
+        <Badge variant='outline' className={getPerformanceColor (load_time)}>;
+          <Zap className='h - 3 w - 3 mr - 1' />;
+          {load_time}ms;
+        </Badge>)}
+      {item_count && <span>{item_count} items loaded</span>}
+    </div>);
+}
+}
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

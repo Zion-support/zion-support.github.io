@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { BadgeCheck } from 'lucide-react'
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5,6 +6,8 @@ import { BadgeCheck } from 'lucide-react'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export interface Achievement {
 =======
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -30,6 +33,7 @@ export interface Achievement {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -53,6 +57,9 @@ export interface Achievement {
 =======
 =======
 =======
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -98,6 +105,15 @@ export interface Achievement {;
   title: string;
   description: string;
   achieved: boolean;
+<<<<<<< HEAD
+=======
+interface AchievementBadgesProps {
+  achievements: Achievement[];
+  achievements: Achievement[];
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 }
 ;
 interface AchievementBadgesProps {;
@@ -112,7 +128,11 @@ interface AchievementBadgesProps {
 }
 export function AchievementBadges({ achievements }: AchievementBadgesProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> import { BadgeCheck } from 'lucide-react';
+=======
+import { BadgeCheck } from 'lucide-react';
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 export interface Achievement {;
   id: string;
@@ -146,9 +166,12 @@ interface AchievementBadgesProps {;
 }
 
 export function AchievementBadges(): any ({ achievements }: AchievementBadgesProps) {;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <Card>
       <CardHeader>
@@ -164,6 +187,7 @@ export function AchievementBadges(): any ({ achievements }: AchievementBadgesPro
           </div>
         ))}
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -227,10 +251,15 @@ export function AchievementBadges(): any ({ achievements }: AchievementBadgesPro
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       </CardContent>;
     </Card>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -241,3 +270,45 @@ export function AchievementBadges(): any ({ achievements }: AchievementBadgesPro
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+  );
+}
+
+  achieved: boolean;
+}
+interface AchievementBadgesProps {
+  achievements: Achievement[];
+}
+export /**
+ * AchievementBadges - Function description
+ */
+function AchievementBadges() {
+  return (
+    <Card>;
+      <CardHeader>;
+        <CardTitle > Achievements</CardTitle>;
+      </CardHeader>;
+      <CardContent className='space - y-3'>;
+        {achievements.map (array => (
+          <div key={a.id} className='flex items - start gap - 3'>;
+              className={`h - 5 w - 5 mt - 1 ${a.achieved ? 'text - green - 600' : 'text - muted - foreground'}`}
+            />;
+            <div>;
+              <p className='font - medium'>{a.title}</p>;
+              <p className='text - sm text - muted - foreground'>{a.description}</p>            </div>;
+              <p className="font - medium">{a.title}</p>;
+              <p className="text - sm text - muted - foreground">{a.description}</p>;
+            <BadgeCheck;
+              className={`h - 5 w - 5 mt - 1 ${a.achieved ? "text - green - 600" : "text - muted - foreground"}`}
+            />;
+            <div>;
+              <p className="font - medium">{a.title}</p>;
+              <p className="text - sm text - muted - foreground">{a.description}</p>;
+            </div>;
+          </div>))}
+      </CardContent>;
+    </Card>);
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

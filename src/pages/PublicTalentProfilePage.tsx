@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -124,6 +125,10 @@ export default function ProfilePage() {
         if (error) {
           throw error
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+if (error) {
+          throw error
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         }
         setProfileData(data)
       } catch (error) {
@@ -133,6 +138,7 @@ export default function ProfilePage() {
 
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
 
+<<<<<<< HEAD
         toast({
 =======
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' })
@@ -162,8 +168,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' })
         setIsError(true)
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
         setIsError(true),
+<<<<<<< HEAD
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
         setIsError(true)
         setIsError(true),
@@ -173,11 +182,18 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         toast({
           title: "Error"
           description: "Failed to load profile. Please try again later."
           variant: "destructive"})
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         setProfileData (data);
       } catch (error) {
         logErrorToProduction (error instanceof Error ? error.message : String (error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
@@ -186,7 +202,6 @@ ursor/fix-website-loading-errors-and-merge-6662
           title: "Error",
           description: "Failed to load profile. Please try again later.",
           variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } finally {
 
 import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react';
@@ -275,8 +290,12 @@ export default function ProfilePage() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 
   if (isLoading) {
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>     return (
+=======
+    return (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       <div className="min-h-screen flex items-center justify-center">;
         <span className="loading loading-ring loading-lg"></span>;
       </div>;
@@ -341,6 +360,7 @@ export default function ProfilePage() {;
         title={`${profileData.full_name} | Talent Profile`}
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
         description = {profileData.bio |"View the profile of this talented individual.",}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -354,6 +374,8 @@ export default function ProfilePage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ;
   return (;
     <>;
@@ -418,6 +440,7 @@ export default function ProfilePage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
               {/* Skills */}
 =======
                   </div>
@@ -432,6 +455,9 @@ export default function ProfilePage() {;
                     {profileData.skills.map((skill: string, index: number) => (
                       <Badge key={skill + index} variant="secondary">{skill}</Badge>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
@@ -440,6 +466,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       />;
       <div className="container mx-auto px-4 py-8">;
         <div className="grid grid-cols-12 gap-6">;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -450,6 +477,8 @@ ursor/fix-website-loading-errors-and-merge-6662
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           {/* Main Content Area */}
           <div className="col-span-12 lg:col-span-8">
             {/* Profile Header */}
@@ -515,7 +544,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               {/* Skills */}
               {profileData && profileData.skills && profileData && profileData.skills.length > 0 && (;
                 <div className="mt-4">;
@@ -526,6 +558,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>>                     ))}
                   </div>;
                 </div>;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -559,6 +592,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
               <p className="text-zion-slate-light">{profileData.bio |"No bio provided."}</p>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+              )}
+
+
+              <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </div>
             </div>;
 
@@ -568,7 +609,6 @@ ursor/fix-website-loading-errors-and-merge-6662
               <p className="text-zion-slate-light">{profileData && profileData.bio || "No bio provided."}</p>;
             </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Portfolio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>;
@@ -607,6 +647,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                 )}
               </div>
             </div>
+<<<<<<< HEAD
             {/* Experience Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
@@ -618,6 +659,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               <p className="text-zion-slate-light">{profileData.experience |"No experience provided."}</p>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
             </div>
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               </div>;
             </div>;
 
@@ -627,6 +670,7 @@ ursor/fix-website-loading-errors-and-merge-6662
               <p className="text-zion-slate-light">{profileData && profileData.experience || "No experience provided."}</p>;
             </div>;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 =======
@@ -635,6 +679,8 @@ ursor/fix-website-loading-errors-and-merge-6662
               <p className="text-zion-slate-light">{profileData.experience || "No experience provided."}</p>
             </div>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>
@@ -687,6 +733,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     href={profileData.twitter_link}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -694,6 +741,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     target="_blank"
 >>>>>>>                     rel="noopener noreferrer"
                     className="text-zion-cyan hover:text-white transition-colors"
@@ -731,6 +782,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                 )}
 =======
                   </a>
@@ -740,6 +792,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+                  </Link>
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 )}
 
               </div>;
@@ -851,11 +908,16 @@ if (isLoading) {"
 }</div> </div> </div> </>) ;
 }'"};
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>;
         </div>;
       </div>;
@@ -864,7 +926,11 @@ if (isLoading) {"
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     // Check condition
 if ( {) {
   $2
@@ -1079,6 +1145,7 @@ if ( {") {
   /* Placeholder for other sidebar elements */;
 }</div> </div> </div> </>);
 }'"}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> }
 ;
@@ -1101,3 +1168,7 @@ if ( {") {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

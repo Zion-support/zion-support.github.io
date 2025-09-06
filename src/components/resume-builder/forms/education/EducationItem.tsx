@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { format } from 'date-fns';
 import { Edit, Trash2 } from 'lucide-react'; import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card';
@@ -22,6 +23,8 @@ import { format } from 'date-fns',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Edit, Trash2 } from 'lucide-react'
 =======
 import { format } from 'date-fns';
@@ -62,6 +65,7 @@ import { EducationItemProps } from './types';
         </div>
         {education.description && (
 
+<<<<<<< HEAD
 =======
 =======
   return (
@@ -135,6 +139,31 @@ import { EducationItemProps } from './types';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+              onClick={() => onDelete(education && education.id!)}
+              aria-label='Delete education'            >;
+              <Trash2 className='h-4 w-4' />            </Button>;
+          </div>;
+        </div>;
+        {education && education.description && (;
+          <p className='text-sm mt-3 line-clamp-2'>{education && education.description}</p>        )}
+      </CardContent>;
+    </Card>;
+  );
+}              <Trash2 className="h-4 w-4" />;
+            </Button>;
+          </div>;
+        </div>;
+        {education && education.description && (;
+          <p className='text-sm mt-3 line-clamp-2'>{education && education.description}</p>          <p className="text-sm mt-3 line-clamp-2">{education && education.description}</p>;
+
+    </Card>;
+  );
+};
+
+          <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         )}
       </CardContent>;
     </Card>;
@@ -142,6 +171,7 @@ import { EducationItemProps } from './types';
 
 }
 
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -211,6 +241,14 @@ import { EducationItemProps } from './types';
 <<<<<<< HEAD
 >>>>>>> }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+          <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
+        )}
+      </CardContent>
+    </Card>
+  );
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { format } from 'date - fns';
 import { Edit, Trash2 } from 'lucide-react'; import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -283,6 +321,7 @@ function EducationItem() {
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 ;
@@ -305,3 +344,7 @@ function EducationItem() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

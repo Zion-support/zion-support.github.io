@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import * as React from "react"
+import * as ContextMenuPrimitive from "@radix-ui/react-context-menu"
+import { Check, ChevronRight, Circle } from 'lucide-react'
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 
 const ContextMenu = ContextMenuPrimitive.Root
@@ -40,6 +46,9 @@ const ContextMenuSubTrigger = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubTrigger> & {
     inset?: boolean
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import * as React from &quot;react & quot;
 import * as ContextMenuPrimitive from &quot;@radix - ui / react - context - menu & quot;
 import { Check, ChevronRight, Circle } from 'lucide-react';
@@ -55,9 +64,12 @@ const ContextMenuSubTrigger = React.forward_ref<;
   React.ElementRef < typeof ContextMenuPrimitive.SubTrigger>,
   React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.SubTrigger> & {
     inset?: boolean;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
 >(({ className, inset, children, ...props }, ref) => (;
   <ContextMenuPrimitive.SubTrigger;
@@ -79,6 +91,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
       inset && "pl-8",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -92,6 +105,10 @@ className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
       inset && "pl-8",
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
 >>>>>>>     )}
     {...props}
@@ -113,6 +130,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     <ChevronRight className="ml-auto h-4 w-4" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -120,6 +138,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   </ContextMenuPrimitive.SubTrigger>
 >>>>>>> ))
 ContextMenuSubTrigger.displayName = ContextMenuPrimitive.SubTrigger.displayName
@@ -146,6 +168,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -153,6 +176,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
 >>>>>>>     )}
     {...props}
@@ -176,6 +203,7 @@ ursor/fix-website-loading-errors-and-merge-6662
   React.ElementRef<typeof ContextMenuPrimitive.Content>,;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -183,6 +211,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Content>;
 >>>>>>> >(({ className, ...props }, ref) => (;
   <ContextMenuPrimitive.Portal>;
@@ -207,6 +239,7 @@ className={cn(
         "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -214,6 +247,10 @@ className={cn(
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         className
 >>>>>>>       )}
       {...props}
@@ -226,11 +263,58 @@ const ContextMenuItem = React.forwardRef<;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+className={cn (
+      &quot;flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[state = open]:bg - accent data-[state = open]:text - accent - foreground & quot;,
+      inset && &quot;pl - 8&quot;,
+      class_name)}
+    {...props}
+  >;
+    {children}
+<ChevronRight className=&quot;ml - auto h - 4 w - 4&quot; />;
+  </ContextMenuPrimitive.SubTrigger>));
+ContextMenuSubTrigger.display_name = ContextMenuPrimitive.SubTrigger.display_name;
+const ContextMenuSubContent = React.forward_ref<;
+  React.ElementRef < typeof ContextMenuPrimitive.SubContent>,
+  React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.SubContent>;
+>(({ class_name, ...props }, ref) => (
+  <ContextMenuPrimitive.SubContent;
+    ref={ref}
+    className={cn (
+      &quot;z - 50 min - w-[8rem] overflow - hidden rounded - md border bg - popover p - 1 text - popover - foreground shadow - md data-[state = open]:animate - in data-[state = closed]:animate - out data-[state = closed]:fade - out - 0 data-[state = open]:fade - in - 0 data-[state = closed]:zoom - out - 95 data-[state = open]:zoom - in - 95 data-[side = bottom]:slide - in - from - top - 2 data-[side = left]:slide - in - from - right - 2 data-[side = right]:slide - in - from - left - 2 data-[side = top]:slide - in - from - bottom - 2&quot;,
+      class_name)}
+    {...props}
+  />));
+ContextMenuSubContent.display_name = ContextMenuPrimitive.SubContent.display_name;
+const ContextMenuContent = React.forward_ref<;
+  React.ElementRef < typeof ContextMenuPrimitive.Content>,
+  React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.Content>;
+>(({ class_name, ...props }, ref) => (
+  <ContextMenuPrimitive.Portal>;
+    <ContextMenuPrimitive.Content;
+      ref={ref}
+className={cn (
+        &quot;z - 50 min - w-[8rem] overflow - hidden rounded - md border bg - popover p - 1 text - popover - foreground shadow - md animate - in fade - in - 80 data-[state = open]:animate - in data-[state = closed]:animate - out data-[state = closed]:fade - out - 0 data-[state = open]:fade - in - 0 data-[state = closed]:zoom - out - 95 data-[state = open]:zoom - in - 95 data-[side = bottom]:slide - in - from - top - 2 data-[side = left]:slide - in - from - right - 2 data-[side = right]:slide - in - from - left - 2 data-[side = top]:slide - in - from - bottom - 2&quot;,
+        class_name)}
+      {...props}
+    />;
+  </ContextMenuPrimitive.Portal>));
+ContextMenuContent.display_name = ContextMenuPrimitive.Content.display_name;
+const ContextMenuItem = React.forward_ref<;
+  React.ElementRef < typeof ContextMenuPrimitive.Item>,
+  React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.Item> & {
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   React.ElementRef<typeof ContextMenuPrimitive.Item>,;
 
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Item> & {;
     inset?: boolean;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
 >(({ className, inset, ...props }, ref) => (;
   <ContextMenuPrimitive.Item;
@@ -272,6 +356,7 @@ ursor/fix-website-loading-errors-and-merge-6662
       inset && "pl-8",
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -293,6 +378,8 @@ className={cn(
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
 >>>>>>>     )}
     {...props}
@@ -312,6 +399,7 @@ const ContextMenuCheckboxItem = React.forwardRef<;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
   React.ElementRef<typeof ContextMenuPrimitive.CheckboxItem>;
   React.ElementRef<typeof ContextMenuPrimitive.CheckboxItem>,;
+<<<<<<< HEAD
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.CheckboxItem>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >(({ className, children, checked, ...props }, ref) => (;
@@ -324,6 +412,10 @@ className={cn(
 >>>>>>>       className
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.CheckboxItem>;
 >(({ className, children, checked, ...props }, ref) => (;
   <ContextMenuPrimitive.CheckboxItem;
@@ -336,10 +428,15 @@ ursor/fix-website-loading-errors-and-merge-6662
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
       className
 >>>>>>>     )}
+=======
+      className
+    )}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm px - 2 py - 1.5 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       inset && &quot;pl - 8&quot;,
@@ -356,6 +453,7 @@ const ContextMenuCheckboxItem = React.forward_ref<;
 className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       class_name)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
@@ -366,6 +464,8 @@ className={cn (
       className
     )}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     checked={checked}
     {...props}
   >
@@ -439,6 +539,7 @@ const ContextMenuLabel = React.forwardRef<;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
   React.ElementRef<typeof ContextMenuPrimitive.Label>,;
 
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {;
@@ -463,6 +564,8 @@ className={cn(
       inset && &quot;pl-8&quot;
 >>>>>>>       className
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.RadioItem>;
 >(({ className, children, ...props }, ref) => (;
   <ContextMenuPrimitive.RadioItem;
@@ -473,7 +576,10 @@ ursor/fix-website-loading-errors-and-merge-6662
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
     )}
   </ContextMenuPrimitive.CheckboxItem>));
@@ -488,6 +594,7 @@ const ContextMenuRadioItem = React.forward_ref<;
 className={cn (
       &quot;relative flex cursor - default select - none items - center rounded - sm py - 1.5 pl - 8 pr - 2 text - sm outline - none focus:bg - accent focus:text - accent - foreground data-[disabled]:pointer - events - none data-[disabled]:opacity - 50 & quot;,
       class_name)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 <<<<<<< HEAD
@@ -504,6 +611,8 @@ className={cn(
       className
     )}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     {...props}
   >
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
@@ -520,6 +629,7 @@ const ContextMenuLabel = React.forward_ref<;
   React.ElementRef < typeof ContextMenuPrimitive.Label>,
   React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.Label> & {
 
+<<<<<<< HEAD
   React.ElementRef<typeof ContextMenuPrimitive.Label>,;
 
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {;
@@ -537,6 +647,12 @@ const ContextMenuLabel = React.forwardRef<;
   React.ElementRef<typeof ContextMenuPrimitive.Label>,;
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+
+  React.ElementRef<typeof ContextMenuPrimitive.Label>,;
+
+  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     inset?: boolean;
   }
 >(({ className, inset, ...props }, ref) => (;
@@ -551,6 +667,7 @@ const ContextMenuLabel = React.forwardRef<;
       inset && "pl-8",
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -572,6 +689,8 @@ className={cn(
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       className
 >>>>>>>     )}
     {...props}
@@ -583,6 +702,7 @@ const ContextMenuSeparator = React.forwardRef<;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
   React.ElementRef<typeof ContextMenuPrimitive.Separator>;
 >>>>>>>   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator>;
@@ -590,6 +710,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator>;
 >>>>>>> >(({ className, ...props }, ref) => (;
+=======
+
+  React.ElementRef<typeof ContextMenuPrimitive.Separator>,;
+
+
+  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Separator>;
+>(({ className, ...props }, ref) => (;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 className={cn (
       &quot;px - 2 py - 1.5 text - sm font - semibold text - foreground & quot;,
       inset && &quot;pl - 8&quot;,
@@ -601,7 +729,6 @@ const ContextMenuSeparator = React.forward_ref<;
   React.ElementRef < typeof ContextMenuPrimitive.Separator>,
   React.ComponentPropsWithoutRef < typeof ContextMenuPrimitive.Separator>;
 >(({ class_name, ...props }, ref) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   <ContextMenuPrimitive.Separator;
     ref={ref}
 <<<<<<< HEAD
@@ -660,6 +787,7 @@ const ContextMenuShortcut = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
@@ -686,6 +814,9 @@ export {
   ContextMenuRadioGroup};
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         className
       )}
 />));
@@ -699,13 +830,16 @@ const ContextMenuShortcut = ({
       className={cn (
         &quot;ml - auto text - xs tracking - widest text - muted - foreground & quot;,
         class_name)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {...props}
     />);
 }
 
 ContextMenuShortcut.display_name = &quot;ContextMenuShortcut & quot;
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ContextMenuShortcut.displayName = "ContextMenuShortcut"
 
 
@@ -729,6 +863,7 @@ export {
   ContextMenuGroup,
   ContextMenuPortal,
   ContextMenuSub,
+<<<<<<< HEAD
   ContextMenuSubContent,
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -756,3 +891,6 @@ export {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  ContextMenuSubContent,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

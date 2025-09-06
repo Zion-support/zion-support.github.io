@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/workspace/WorkspaceHeader.tsx
 
 <<<<<<< HEAD
@@ -16,6 +17,13 @@ interface WorkspaceHeaderProps {
   company: Company
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 interface WorkspaceHeaderProps {
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { type Company } from './CompanyDashboard';
+import { Bell, Users, Settings } from 'lucide-react';
+interface WorkspaceHeaderProps {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   company: Company;
 
 
@@ -51,6 +59,7 @@ interface WorkspaceHeaderProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
+<<<<<<< HEAD
 ========
 <<<<<<< HEAD
 import React from 'react';
@@ -70,6 +79,8 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -118,17 +129,24 @@ ursor/fix-website-loading-errors-and-merge-6662
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
 <<<<<<< HEAD
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/enterprise/workspace/WorkspaceHeader.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { type Company } from "./CompanyDashboard";
 import { Bell, Users, Settings } from 'lucide-react'
 <<<<<<<< HEAD:src/components/enterprise/workspace/WorkspaceHeader.tsx
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/enterprise/workspace/WorkspaceHeader.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { type Company } from './CompanyDashboard';
@@ -235,6 +253,7 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -242,6 +261,8 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               src={company.logoUrl || "/placeholder.svg"}
               alt={company.name}
               className="max-h-10 max-w-10"
@@ -253,6 +274,7 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
 ursor/fix-website-loading-errors-and-merge-6662
@@ -265,6 +287,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               src={company.logoUrl || "/placeholder.svg"}
               alt={company.name}
               className="max-h-10 max-w-10"
@@ -272,6 +296,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             />
           </div>
           <div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -283,6 +312,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -328,6 +358,8 @@ ursor/fix-website-loading-errors-and-merge-6662
 }          </Button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
@@ -474,6 +506,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
@@ -499,6 +532,8 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
               loading="lazy";
 <<<<<<< HEAD
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               src={company && company.logoUrl || "/placeholder && placeholder.svg"}
               alt={company && company.name}
               className="max-h-10 max-w-10"
@@ -616,6 +651,7 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
 ;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -624,6 +660,8 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
 ========
   );
 }
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export /**
  * WorkspaceHeader - Function description
  */
@@ -704,6 +742,7 @@ function WorkspaceHeader() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 =======
   );}
  import {;
@@ -742,3 +781,6 @@ function WorkspaceHeader() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/jobs/MyApplications.tsx
 
 <<<<<<< HEAD
@@ -56,6 +57,11 @@ import { formatDistanceToNow } from "date-fns",
 import Link from "next/link";
 import { ApplicationStatus } from "@/types/jobs";
 export function MyApplications() {
+=======
+default:
+        return <Badge variant="outline">{status}</Badge>
+    }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   const { applications, isLoading, error } = useJobApplications()
   const getStatusBadge = (status: ApplicationStatus,) => {
@@ -90,6 +96,7 @@ function MyApplications() {
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/MyApplications.tsx
 import {ApplicationStatus} from "@/types/jobs";
+<<<<<<< HEAD
 =======
     switch (status) {
       case "new": return <Badge variant="secondary">New</Badge>
@@ -119,6 +126,8 @@ export function MyApplications() {
 
   if (isLoading) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     return (
       <div className="flex justify-center items-center p-8">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -225,7 +234,10 @@ import { Loader2, MessageSquare, ExternalLink } from 'lucide-react';
 import { formatDistanceToNow } from "date-fns",;
 import Link from "next/link",;
 import { ApplicationStatus } from "@/types/jobs",;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function MyApplications() {;
   const { applications, isLoading, error } = useJobApplications();
   const getStatusBadge = (status: ApplicationStatus,) => {;
@@ -281,7 +293,50 @@ export function MyApplications() {;
 <<<<<<<< HEAD:src/components/jobs/MyApplications.tsx
 
 ;
+<<<<<<< HEAD
 ========
+=======
+  return (;
+    <div className="grid gap-4 md:grid-cols-2">;
+      {applications.map((application) => (;
+        <Card key={application.id}>;
+          <CardHeader className="pb-2">;
+            <div className="flex justify-between items-start">;
+              <CardTitle className="text-lg">;
+                {application.job?.title || "Unknown Job"}
+              </CardTitle>;
+              {getStatusBadge(application.status)}
+            </div>;
+            <p className="text-sm text-muted-foreground">;
+              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
+            </p>;
+          </CardHeader>;
+          <CardContent>;
+            <div className="space-y-3">;
+              {application.cover_letter && (;
+                <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
+
+
+                  {application.cover_letter}
+                </p>
+              )}
+
+              
+              <div className="flex justify-between items-center">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+
+                  className="text-xs"
+                  asChild
+                >
+                  <Link href={`/jobs/${application.job_id}`}>
+                    <ExternalLink className="h-3 w-3 mr-1" /> View Job
+                  </Link>
+                </Button>
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <div className="grid gap-4 md:grid-cols-2">;
       {applications && applications.map((application,) => (;
@@ -504,8 +559,17 @@ export function MyApplications() {;
                   </Link>;
                 </Button>;
                 <Button
+<<<<<<< HEAD
                   variant="default" 
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/jobs/MyApplications.tsx
+=======
+
+                
+
+                <Button 
+
+                  variant="default" 
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   size="sm"
 =======
 >>>>>>>                   size="sm"
@@ -572,6 +636,7 @@ export function MyApplications() {;
   );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 ;
@@ -580,6 +645,8 @@ export function MyApplications() {;
 >>>>>>> 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   },
   // Check condition
 if ( {) {
@@ -663,6 +730,7 @@ if ( {) {
         </Card>))}
     </div>);
 }
+<<<<<<< HEAD
 =======
   ),; export function MyApplications () {;
   const {;
@@ -718,14 +786,22 @@ default: return <Badge variant="outline"> {;
     </div>
   )
 }
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     </div>;
   );
 };
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -733,3 +809,6 @@ default: return <Badge variant="outline"> {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 
@@ -37,6 +38,8 @@ import React from 'react',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -70,8 +73,26 @@ export const getTypeIcon = (type: NotificationType,) => {
     default:
       return <span className="text-gray-500">📣</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+  }
+}
+interface NotificationItemProps {
+  notification: Notification
+  onMarkAsRead: (id: string,) => Promise<void>
+  onDismiss: (id: string,) => Promise<void>
+}
+export const NotificationItem: React.FC<NotificationItemProps> = ({
+  notification
+  onMarkAsRead
+  onDismiss},) => {
+  const router = useRouter(), // Changed from useNavigate to useRouter
+  const handleClick = () => {
+    if (!notification.read) {
+      onMarkAsRead(notification.id)
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -414,11 +435,14 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   },;
   return (;
     <div;
@@ -430,6 +454,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 <<<<<<< HEAD
@@ -440,6 +465,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     >
       <div className="flex items-start gap-2">
         <div className="text-xl">{getTypeIcon(notification.type)}</div>
@@ -497,6 +524,38 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 : 'Just now'}
             </p>
             {notification.action_url && notification.action_text && (
+<<<<<<< HEAD
+=======
+  },;
+
+  return (<div
+      className = {cn(
+        'p-3 border-b border-zion-blue-light relative group',
+        !notification && notification.read ? 'bg-zion-blue-dark/30' : ''),}>;
+      <div className="flex items-start gap-2">;
+        <div className="text-xl">{getTypeIcon(notification && notification.type)}</div>;
+        <div className="flex-1">;
+          <div className="flex justify-between items-center mb-1">;
+            <h4 className="font-medium text-white">;
+              {notification && notification.title || 'Notification'}
+            </h4>;
+            {!notification && notification.read && (;
+              <Badge className="bg-zion-cyan text-xs">New</Badge>;
+            )}
+          </div>;
+          <p className="text-sm text-zion-slate-light">;
+            {notification && notification.message || 'You have a new notification'}
+          </p>;
+          <div className="flex justify-between items-center mt-1">;
+            <p className="text-xs text-zion-slate">;
+              {notification && notification.created_at;
+                ? formatDistanceToNow(new Date(notification && notification.created_at), {;
+                    addSuffix: true});
+                : 'Just now'}
+            </p>;
+
+            {notification && notification.action_url && notification && notification.action_text && (;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Button
                 variant="link"
                 size="sm"
@@ -512,7 +571,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 {notification.action_text}
                 <ChevronRight className="h-3 w-3 ml-1" />
               </Button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
 
           </div>;
@@ -549,6 +607,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -560,6 +619,9 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+                onClick={(e) => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 onClick={(e) => {
                 onClick={(e) => {
 <<<<<<< HEAD
@@ -567,6 +629,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 
 
                   e.stopPropagation(),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -578,6 +641,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 =======
                   e.stopPropagation(),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   onMarkAsRead(notification.id)
                 }}
                 aria-label="Mark as read"
@@ -593,6 +658,27 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
+<<<<<<< HEAD
+=======
+                onClick={(e,) => {;
+                  e && e.stopPropagation(),;
+                  onMarkAsRead(notification && notification.id);
+                }}
+                aria-label="Mark as read";
+              >;
+                <Check className="h-3 && 3.5 w-3 && 3.5 text-green-400" />;
+              </Button>;
+            </TooltipTrigger>;
+            <TooltipContent>;
+              <p>Mark as read</p>;
+            </TooltipContent>;
+          </Tooltip>;
+        </TooltipProvider>;
+
+        <TooltipProvider>;
+          <Tooltip>;
+            <TooltipTrigger asChild>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Button
                 variant="ghost"
                 size="icon"
@@ -601,6 +687,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -612,6 +699,9 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+                onClick={(e) => {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 onClick={(e) => {
                 onClick={(e) => {
 <<<<<<< HEAD
@@ -619,6 +709,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 
 
                   e.stopPropagation(),
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -630,6 +721,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 =======
                   e.stopPropagation(),
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   onDismiss(notification.id)
                 }}
                 aria-label="Dismiss notification"
@@ -704,7 +797,10 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
             <TooltipContent>;
               <p>Dismiss</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   Tooltip;
   TooltipContent;
   TooltipProvider;
@@ -871,20 +967,15 @@ if ( {) {
 <<<<<<< HEAD
 
 
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </div>);
 },
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
       </div>
     </div>
+<<<<<<< HEAD
   )
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -903,3 +994,6 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

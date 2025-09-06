@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -25,6 +26,12 @@ import {
   TooltipProvider
   TooltipTrigger
 } from '@/components/ui/tooltip'
+=======
+return (
+    <>;
+      <TooltipProvider>;
+        <Tooltip>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 interface FavoriteButtonProps {
   itemId: string;
@@ -214,6 +221,7 @@ className: {`w-4 h-4 transition-all duration-300 ${
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -248,6 +256,10 @@ className: {`w-4 h-4 transition-all duration-300 ${
       <TooltipProvider>;
         <Tooltip>;
           <TooltipTrigger asChild>;
+=======
+
+          <TooltipTrigger as_child>;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <button;
 <<<<<<< HEAD
               class_name = {cn (
@@ -274,14 +286,20 @@ className: {`w-4 h-4 transition-all duration-300 ${
 ;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
   return (
     <>
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
+<<<<<<< HEAD
             <button
 
 
@@ -321,3 +339,6 @@ className: {`w-4 h-4 transition-all duration-300 ${
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+            <button
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

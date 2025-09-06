@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ListingCard.tsx
 
 =======
@@ -182,6 +183,9 @@ import Image from 'next/image';interface ListingCardProps {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
   id?: string,;
+=======
+id?: string,;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   title: string,;
   description: string,;
   images?: string[],;
@@ -264,8 +268,11 @@ export function ListingCard({;
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;
 <<<<<<<< HEAD:src/components/ListingCard.tsx
 
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ListingCard.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
   return (
     <Link
@@ -330,6 +337,11 @@ ursor/fix-website-loading-errors-and-merge-6662
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
           />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         </div>
       )}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -362,7 +374,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
         {tags && tags.length > 0 && (
+<<<<<<< HEAD
           <div className='flex flex-wrap gap-2 mb-4'>
+=======
+
+
+
+          <div className="flex flex-wrap gap-2 mb-4">
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             {tags.map((tag, i) => (
               <Badge
                 key={i}
@@ -377,6 +396,7 @@ ursor/fix-website-loading-errors-and-merge-6662
           <div className="flex flex-wrap gap-2 mb-4">
 >>>>>>>             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ListingCard.tsx
 <<<<<<< HEAD
 ========
@@ -394,6 +414,14 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> >>>>>>>         {author && (
 ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+                {tag}
+
+
+              </Badge>;
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             ))}
           </div>;
         )}
@@ -429,6 +457,7 @@ ursor/fix-website-loading-errors-and-merge-6662
             )}
             <span className="text-sm text-zion-slate-light">{author && author.name}</span>;
           </div>;
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ListingCard.tsx
 
         
@@ -459,6 +488,14 @@ ursor/fix-website-loading-errors-and-merge-6662
         )}
         
 
+=======
+
+
+        
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
@@ -495,6 +532,12 @@ ursor/fix-website-loading-errors-and-merge-6662
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>
         )}
@@ -517,6 +560,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 ;
@@ -529,6 +573,12 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;"}) })"
   );
 }
+=======
+;"}) })"
+  );
+}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import { cn } from '@/lib / utils';
 import { Badge } from '@/components / ui / badge';
@@ -620,6 +670,7 @@ function ListingCard() {
       </div>;
     </Link>);
 }"}) })";
+<<<<<<< HEAD
 =======
 import React from "react",;
 import { cn } from "@/lib/utils",;
@@ -750,3 +801,6 @@ profileType = 'service' ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

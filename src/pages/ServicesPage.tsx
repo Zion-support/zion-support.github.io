@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -8,6 +9,8 @@ import React from 'react';
 }
 import React from 'react'
 =======
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -158,9 +161,13 @@ export default ServicesPage;
   );
 };
 
+<<<<<<< HEAD
 export default ServicesPage;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 export default ServicesPage;
 export default ServicesPage;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+export default ServicesPage;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

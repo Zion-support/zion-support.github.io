@@ -1,14 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ModeToggle.tsx
 import { Moon, Sun } from 'lucide-react'
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { toast } from "@/hooks/use-toast"
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages"
 
+<<<<<<< HEAD
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
@@ -94,6 +98,14 @@ export function ModeToggle() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 // Use the ThemeProvider hook directly to ensure no conflicts
 import { useTheme } from "@/components/ThemeProvider"
 import { logIssue } from "@/utils/logIssue"
@@ -126,8 +138,11 @@ import { useEffect, useState } from "react"
         ? 'dark'
         : 'light'
 <<<<<<< HEAD
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ModeToggle.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Moon, Sun } from 'lucide-react';
 <<<<<<< HEAD
 import { Button } from '@/components / ui / button';
@@ -191,7 +206,6 @@ if ( {) {
 <<<<<<<< HEAD:src/components/ModeToggle.tsx
 
 
-=======
     }
     return theme
   })()
@@ -250,6 +264,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -257,6 +272,8 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
     
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 export function ModeToggle() {
@@ -337,6 +354,7 @@ export function ModeToggle() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>       >
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -349,6 +367,9 @@ export function ModeToggle() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       >
         <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {/* Changed to bg-muted for theme consistency */}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -365,6 +386,7 @@ export function ModeToggle() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
             onClick={handleToggle}
             aria-pressed={isDarkMode}
             aria-label={`Toggle theme. Current theme: ${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' : 'dark'} mode.`}
@@ -406,6 +428,10 @@ export function ModeToggle() {
 ursor/fix-website-loading-errors-and-merge-6662
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ModeToggle.tsx
+=======
+            variant="ghost"
+            size="icon"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {;
@@ -515,8 +541,11 @@ export function ModeToggle() {;
         description: 'Unable to change theme. Please try again.',;
         variant: 'destructive',;
       });
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ModeToggle.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     }
   }
 
@@ -680,7 +709,10 @@ export function ModeToggle() {;
             size="icon";
 
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             onClick={handleToggle}
             aria-pressed={isDarkMode}
             aria-label={`Toggle theme. Current theme: ${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' : 'dark'} mode.`}
@@ -769,6 +801,7 @@ export function ModeToggle() {;
 <<<<<<<< HEAD:src/components/ModeToggle.tsx
             )}
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -789,6 +822,9 @@ export function ModeToggle() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             className="focus-visible:ring-ring relative group text-foreground" // Added text-foreground
             data-testid="theme-toggle"
             data-theme={resolvedTheme}
@@ -845,6 +881,7 @@ export function ModeToggle() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>>             </span>
 >>>>>>>           </Button>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -856,6 +893,8 @@ export function ModeToggle() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             </span>
           </Button>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -918,7 +957,10 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
               <p className="text-xs opacity-60 mt-1">Following system preference</p>
             )}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>;
         </TooltipContent>;
       </Tooltip>;
@@ -929,6 +971,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<<< HEAD:src/components/ModeToggle.tsx
 
 
+<<<<<<< HEAD
 ========
 };
 if (!isClient) {";
@@ -946,14 +989,20 @@ if (!isClient) {";
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>) ;
 }'"}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ModeToggle.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       const newTheme = isDarkMode ? "light" : "dark";
       logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`),
 <<<<<<<< HEAD:src/components/ModeToggle.tsx
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/ModeToggle.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       // Determine the new theme we are switching TO;
       const new_theme = isDarkMode ? 'light' : 'dark';
       log_info (`Theme toggle: ${resolved_theme} → ${new_theme}`);
@@ -1067,6 +1116,7 @@ if ( {") {
 }/> </span> </Button> </TooltipTrigger> <TooltipContent>);
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>);
 }'"}
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/ModeToggle.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> }
@@ -1140,3 +1190,7 @@ if (!isClient) {";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

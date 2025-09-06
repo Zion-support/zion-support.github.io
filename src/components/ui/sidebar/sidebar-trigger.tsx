@@ -1,7 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import * as React from "react"
+import { PanelLeft } from 'lucide-react'
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 export const SidebarTrigger = React.forwardRef<
 =======
@@ -60,9 +66,21 @@ export const SidebarTrigger = React.forward_ref<;
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+    <Button;
+      ref={ref}
+      data - sidebar=&quot;trigger & quot;
+      variant=&quot;ghost & quot;
+      size=&quot;icon & quot;
+      className={cn (&quot;h - 7 w - 7&quot;, props.class_name)}
+      on_click={(event) => {
+        props.on_click?.(event);
+        toggle_sidebar ();
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -94,7 +112,10 @@ export const SidebarTrigger = React.forward_ref<;
       onClick={(event) => {
         props.onClick?.(event)
         toggleSidebar()
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       }}
       {...props}
     >
@@ -107,6 +128,7 @@ export const SidebarTrigger = React.forward_ref<;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 SidebarTrigger.displayName = &quot;SidebarTrigger&quot;
 ursor/fix-website-loading-errors-and-merge-6662
@@ -122,3 +144,7 @@ SidebarTrigger.displayName = "SidebarTrigger"
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+SidebarTrigger.displayName = "SidebarTrigger"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

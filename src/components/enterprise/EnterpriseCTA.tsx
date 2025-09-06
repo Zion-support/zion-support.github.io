@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseCTA.tsx
 
 <<<<<<< HEAD
@@ -32,6 +33,8 @@ import { Calendar, ArrowRight } from 'lucide-react'
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { Calendar, ArrowRight } from 'lucide-react'
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function EnterpriseCTA() {
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -97,6 +100,7 @@ export function EnterpriseCTA() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
                   <li className="flex gap-3">
                     <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
@@ -119,11 +123,18 @@ export function EnterpriseCTA() {
                   <li className="flex gap-3">
                     <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <span className="text-primary text-sm font-medium">4</span>
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Calendar, ArrowRight } from 'lucide-react'
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export function EnterpriseCTA() {
   return (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -349,10 +360,13 @@ export function EnterpriseCTA() {;
                     </div>;
                     <p>Free consultation on implementation</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseCTA.tsx
 ========
 <<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/enterprise/EnterpriseCTA.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Calendar, ArrowRight } from 'lucide-react';
@@ -476,10 +490,13 @@ function EnterpriseCTA() {
                       <span className="text - primary text - sm font - medium">4</span>;
                     </div>;
                     <p > Free consultation on implementation</p>;
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </li>;
                 </ul>;
               </div>;
@@ -500,6 +517,7 @@ function EnterpriseCTA() {
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/enterprise/EnterpriseCTA.tsx
 
+<<<<<<< HEAD
 =======
 >>>>>>> 
 ursor/fix-website-loading-errors-and-merge-6662
@@ -529,3 +547,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+    </section>);
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

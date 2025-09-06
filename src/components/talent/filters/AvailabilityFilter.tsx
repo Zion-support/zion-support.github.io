@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   return (
@@ -38,6 +39,9 @@ export function AvailabilityFilter({
 >>>>>>>         <span>Availability</span>
 ursor/fix-website-loading-errors-and-merge-6662
   return (
+=======
+return (
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <div className='mb-6 border-b border-zion-blue-light pb-6'>;
       <button
         onClick={toggleSection}
@@ -53,11 +57,15 @@ ursor/fix-website-loading-errors-and-merge-6662
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
         ) : (
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         )}
       </button>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
       {expanded && (
 =======
 >>>>>>>       {expanded && (
@@ -66,6 +74,34 @@ ursor/fix-website-loading-errors-and-merge-6662
           {AVAILABILITY_OPTIONS.map(option => (
             <div key={option.id} className="flex items-center">
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Checkbox } from '@/components / ui / checkbox';
+import { AvailabilityFilterProps } from '@/types / filters';
+const AVAILABILITY_OPTIONS = [;
+  { id: 'full_time', label: 'Full - time' },
+  { id: 'part_time', label: 'Part - time' },
+  { id: 'project', label: 'Project - based' },
+];
+export /**
+ * AvailabilityFilter - Function description
+ */
+function AvailabilityFilter() {
+  return (
+    <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
+      <button;
+        on_click={toggle_section}
+        className='flex w - full items - center justify - between text - white font - medium'      >;
+        <span > Availability</span>;
+        {expanded ? (
+          <ChevronUp className='h - 4 w - 4 text - zion - slate - light' />) : (
+          <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
+      </button>;
+
+
+      
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       {expanded && (
         <div className='mt - 4 space - y-2'>;
           {AVAILABILITY_OPTIONS.map (option => (
@@ -73,11 +109,18 @@ ursor/fix-website-loading-errors-and-merge-6662
                 id={`availability-${option.id}`}
 
       </button>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   { id: "full_time", label: "Full-time" },
   { id: "part_time", label: "Part-time" },
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
       {expanded && (;
         <div className='mt-4 space-y-2'>;
@@ -94,11 +137,16 @@ import { AvailabilityFilterProps } from "@/types/filters";
 const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+  { id: "project", label: "Project-based" }
+]
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Checkbox } from "@/components/ui/checkbox",
@@ -140,6 +188,7 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
               </label>;
             </div>;
 
+<<<<<<< HEAD
 >>>>>>>               <Checkbox
 =======
 <<<<<<< HEAD
@@ -160,6 +209,8 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
         <div className="mt-4 space-y-2">
           {AVAILABILITY_OPTIONS.map(option => (
             <div key={option.id} className="flex items-center">
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               <Checkbox
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                 id={`availability-${option.id}`}
@@ -317,8 +368,12 @@ function AvailabilityFilter() {
 }</div>);
 }</div>);
 }"}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>>               >
+=======
+              >
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Checkbox } from "@/components/ui/checkbox",;
 import { AvailabilityFilterProps } from "@/types/filters",;
@@ -327,9 +382,13 @@ const AVAILABILITY_OPTIONS = [;
   { id: "part_time", label: "Part-time" },;
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>>   { id: "project", label: "Project-based" }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   { id: "project", label: "Project-based" }
 >>>>>>> ]
 
@@ -360,6 +419,7 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
                 htmlFor={`availability-${option.id}`}
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
   option.label
 }</label> </div>) )
@@ -367,6 +427,8 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 }</div>)
 }"}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;
                 {option.label}
@@ -378,6 +440,7 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 
@@ -426,3 +489,6 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

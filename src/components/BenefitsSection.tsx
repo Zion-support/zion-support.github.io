@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/BenefitsSection.tsx
 
 
@@ -44,6 +45,11 @@ const getBenefits = (t: any) => [
 ========
 const getBenefits = (t: any,) => [
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/BenefitsSection.tsx
+=======
+const getBenefits = (t: any) => [
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   {
 
     icon: <TrendingDown className="w-8 h-8" />}],
@@ -171,8 +177,11 @@ interface BenefitsSectionProps {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <GradientHeading>{t('home.benefits_title')}</GradientHeading>
           <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
             {t('home.benefits_subtitle')}
@@ -196,9 +205,13 @@ import { FeatureCard } from "./FeatureCard",;
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit, index) => (
+<<<<<<< HEAD
 >>>>>>> 
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/BenefitsSection.tsx
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -329,6 +342,7 @@ function BenefitsSection() {
               icon={benefit.icon}
 <<<<<<<< HEAD:src/components/BenefitsSection.tsx
 
+<<<<<<< HEAD
               className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
 =======
 >>>>>>>               key={index}
@@ -340,6 +354,8 @@ function BenefitsSection() {
       "Bulk discount options","
       "Transparent cost structure" ]
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
               key={index}
 
               title={benefit.title}
@@ -366,13 +382,21 @@ export default /**
 function Page() {
   {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
       "Direct provider connections",";
       "Competitive pricing",";
       "Bulk discount options",";
       "Transparent cost structure" ];
 
+<<<<<<< HEAD
 >>>>>>>               className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             />
           ))}
 
@@ -384,11 +408,14 @@ function Page() {
 
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ========
   );
 }
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/BenefitsSection.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 ";
     title: "24 / 7 Support", ";
     description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.", ";
@@ -413,6 +440,7 @@ function Page() {
       "Competitive pricing", ";
       "Bulk discount options", ";
       "Transparent cost structure" ];
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/BenefitsSection.tsx
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> }
@@ -670,3 +698,7 @@ return (<section className= {";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

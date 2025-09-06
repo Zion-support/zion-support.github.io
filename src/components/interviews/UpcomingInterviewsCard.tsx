@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/interviews/UpcomingInterviewsCard.tsx
 
 
@@ -33,6 +34,9 @@ export function UpcomingInterviewsCard() {
 <<<<<<< HEAD
 >>>>>>>         // Filter for confirmed interviews in the future
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+// Filter for confirmed interviews in the future
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
         const upcoming = interviews
           .filter(
             interview =>
@@ -107,6 +111,7 @@ export function UpcomingInterviewsCard() {
         logErrorToProduction('Error loading upcoming interviews:', {
           data: error
         })
+<<<<<<< HEAD
       } finally {
         setIsLoading(false)
       }
@@ -116,6 +121,8 @@ export function UpcomingInterviewsCard() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -178,9 +185,12 @@ export function UpcomingInterviewsCard() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
   }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -188,6 +198,7 @@ import { useInterviews } from "@/hooks/useInterviews",;
 import { Interview } from "@/types/interview",;
 import { format, isPast, parseISO } from "date-fns",;
 import Link from "next/link",;
+<<<<<<< HEAD
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
 ========
 import React, { useEffect, useState } from 'react';
@@ -198,6 +209,8 @@ import { Interview } from '@/types / interview';
 import { format, is_past, parseISO } from 'date - fns';
 import Link from 'next / link';
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/interviews/UpcomingInterviewsCard.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { Calendar, Clock, Video } from 'lucide-react';
 import { Avatar } from '@/components / ui / avatar';
 import { logErrorToProduction } from '@/utils / production_logger';
@@ -295,6 +308,7 @@ if ( {) {
         <CardHeader>;
           <CardTitle className='text - lg flex items - center'>;
             <Video className='h - 5 w - 5 mr - 2 text - zion - purple' />;
+<<<<<<< HEAD
 =======
 
 =======
@@ -397,6 +411,8 @@ export function UpcomingInterviewsCard() {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             Upcoming Interviews;
           </CardTitle>;
         </CardHeader>;
@@ -410,6 +426,11 @@ export function UpcomingInterviewsCard() {;
 <<<<<<< HEAD
 <<<<<<<< HEAD:src/components/interviews/UpcomingInterviewsCard.tsx
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   }
 
 =======
@@ -441,8 +462,11 @@ ursor/fix-website-loading-errors-and-merge-6662
         </CardContent>
       </Card>
     )
+<<<<<<< HEAD
 ========
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/interviews/UpcomingInterviewsCard.tsx
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           </div>;
         </CardContent>;
       </Card>;
@@ -508,6 +532,7 @@ ursor/fix-website-loading-errors-and-merge-6662
     );
   }
   return (
+<<<<<<< HEAD
 <<<<<<<< HEAD:src/components/interviews/UpcomingInterviewsCard.tsx
 =======
     );
@@ -609,6 +634,11 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
             const interviewDate = parseISO(interview.scheduled_date),
             const formattedDate = format(interviewDate, 'EEE, MMM d'),
             const formattedTime = format(interviewDate, 'h: mm a'),
@@ -700,6 +730,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>>                     </p>
@@ -712,12 +743,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                     </p>
                     {isStartingSoon && (
                       <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
                         Soon
                       </span>
+<<<<<<< HEAD
                     )}
                   </div>
 <<<<<<< HEAD
@@ -760,6 +794,8 @@ ursor/fix-website-loading-errors-and-merge-6662
     </Card>
   )
 ========
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
     <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
       <CardHeader>;
         <CardTitle className='text-lg flex items-center'>;
@@ -867,6 +903,7 @@ ursor/fix-website-loading-errors-and-merge-6662
                     )}
                   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <div className='flex items-center text-sm text-muted-foreground'>;
                     <Clock className='h-3 w-3 mr-1' />;
 =======
@@ -875,6 +912,26 @@ ursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     {formattedDate} at {formattedTime}
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/src/components/interviews/UpcomingInterviewsCard.tsx
+=======
+                </div>;
+              </div>;
+            );
+          })}
+        </div>
+        
+        <div className="mt-4 pt-3 border-t border-zion-blue-light/40">
+          <Button asChild size="sm" variant="outline" className="w-full">
+            <Link href="/interviews">
+              View All Interviews
+            </Link>
+
+
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+  )
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
                   </div>;
                 </div>;
               </div>;
@@ -1000,6 +1057,7 @@ if ( {) {
           </Button>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
     </Card>);
 }
 }
@@ -1074,3 +1132,15 @@ return (Soon </span>) ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+}
+
+
+
+    </Card>);
+}
+}
+
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

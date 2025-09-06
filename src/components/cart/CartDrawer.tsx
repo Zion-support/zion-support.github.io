@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -84,6 +85,10 @@ export function CartDrawer() {;
 =======
 >>>>>>> 
 >>>>>>>   return (
+=======
+}
+  }
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 import { ShoppingCart } from 'lucide-react';import { useAuth } from '@/hooks/useAuth';import { ShoppingCart } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { LoginModal } from '@/components/auth/LoginModal';
@@ -104,6 +109,10 @@ export function CartDrawer() {
   const [loginOpen, setLoginOpen] = React && React.useState(false);
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   const handleClick = (e: React.MouseEvent) => {
     if (!isAuthenticated) {
       e.preventDefault();
@@ -112,6 +121,7 @@ export function CartDrawer() {
   };
 
 
+<<<<<<< HEAD
 
 
 >>>>>>> ursor/fix-website-loading-errors-and-merge-6662
@@ -123,6 +133,11 @@ export function CartDrawer() {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
 
+=======
+
+
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   return (
     <>
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -133,6 +148,7 @@ export function CartDrawer() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
 =======
@@ -156,6 +172,11 @@ export function CartDrawer() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
           <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
             {count}
 
@@ -170,6 +191,7 @@ export function CartDrawer() {
     </>;
   );
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -188,3 +210,27 @@ export function CartDrawer() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+
+  );
+}
+
+      <Link;
+        href='/cart';
+        aria - label='Cart';
+        className='relative p - 1';
+        on_click={handle_click}
+      >;
+        <ShoppingCart className='h - 5 w - 5 text - foreground hover:text - primary' />;
+        {count > 0 && (
+          <span className='absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center'>            {count}
+          <span className="absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center">;
+          <span className="absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center">;
+            {count}
+          </span>)}
+      </Link>;
+      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
+    </>);
+}
+;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2

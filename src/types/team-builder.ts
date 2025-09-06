@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ProjectBrief {
   projectName: string;
   goals: string;
@@ -12,12 +13,14 @@ export interface ProjectBrief {
 =======
 
   project_name: string, goals: string,
+=======
+project_name: string, goals: string,
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
   timeline: string, budget: string,
   tech_stack?: string[];
   talent_filters?: { verified_only?: boolean; regions?: string[] }
 
 }
-=======
 
 =======
 <<<<<<< HEAD
@@ -41,12 +44,15 @@ export interface ProjectBrief {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
 export interface ProjectBrief {;
   projectNam: e: string,;
   goal: s: string,;
@@ -58,6 +64,7 @@ export interface ProjectBrief {;
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -74,3 +81,6 @@ export interface ProjectBrief {;
 =======
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8eb6
+=======
+}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-eff2
