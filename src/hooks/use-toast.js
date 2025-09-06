@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 
 // Simple toast function for direct import
 export const toast = ({ title, description, variant = 'default' }) => {
