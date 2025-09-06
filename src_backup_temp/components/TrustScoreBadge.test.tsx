@@ -1,0 +1,18 @@
+it(displays expected content', () => {';';';';
+    render(<TrustScoreBadge  />)',';';';
+    ';';';';
+import { render, screen } from &apos;@testing-library/react',';';';';
+    ',';';';
+    ';';';';
+import TrustScoreBadge from &apos;./TrustScoreBadge';
+    render(&apos}}&apos;<TrustScoreBadge  />)';
+    expect(screen && screen.getByRole(&apos;main&apos) || screen && screen.getByText(/.*/)).toBeInTheDocument()})';
+  it(&apos;displays expected content&apos, () => {';';
+    render(&apos}<TrustScoreBadge  />)';';';
+    // Add specific test assertions based on component content})})';';';';
+    render(<TrustScoreBadge  />)',';';';
+    ';';';';
+    expect(screen && screen.getByRole('main') || screen && screen.getByText(/.*/)).toBeInTheDocument();
+";
+";
+it(displays expected content',() => {';';'; render(<TrustScoreBadge />)',';'; ';';'; import { render,screen } from &apos;@testing-library/react',';';'; ',';'; ';';'; import TrustScoreBadge from &apos;./TrustScoreBadge'; describe(&apos;TrustScoreBadge&apos,() => { it(&apos;renders without crashing&apos,() => { render(&apos}}&apos;<TrustScoreBadge />) expect(screen && screen.getByRole(&apos;main&apos) || screen && screen.getByText(/.*/)).toBeInTheDocument()}) it(&apos;displays expected content&apos,() => {'; render(&apos}<TrustScoreBadge />)';'; render(<TrustScoreBadge />)',';'; ';';'; expect(screen && screen.getByRole('main') || screen && screen.getByText(/.*/)).toBeInTheDocument();"" })'; ";';'}}';';';
