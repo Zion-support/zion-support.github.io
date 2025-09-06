@@ -1,10 +1,3 @@
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
 import SEO from '../components/SEO';
 import Link from 'next/link';
 export default function LegalPage() {
@@ -21,7 +14,7 @@ export default function LegalPage() {
 			</div>
 		</>
 	)
-}
+=======
 import React from 'react',
 import SEO from '../components / SEO',
 import Link from 'next / link',
@@ -42,3 +35,5 @@ return (
   </div>;
   </>);
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

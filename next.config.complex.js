@@ -1,37 +1,27 @@
-/** @type {import ('next').NextConfig} */;
-const next_config = {
-  reactStrictMode: true,
-  compress: true,
-  poweredByHeader: false,
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  page_extensions: ['tsxtsjsxjs'],
 /** @type {import('next').NextConfig} */;
-
-const nextConfig = {;
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   compress: true,;
   poweredByHeader: false,;
   eslint: { ignoreDuringBuilds: true },;
   typescript: { ignoreBuildErrors: true },;
   pageExtensions: ['tsxtsjsxjs'],;
-
   // Image optimization;
-  images: {
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
-    formats: ['image / webpimage / avif'];
-  },
+  images: {;
+    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],;
+    formats: ['image/webpimage/avif'];
+  },;
   // Output configuration;
-  output: 'standalone',
+  output: 'standalone',;
   // Trailing slash;
-  trailing_slash: false,
+  trailingSlash: false,;
   // Base path;
-  base_path: '',
+  basePath: '',;
   // Asset prefix;
-  asset_prefix: '',
+  assetPrefix: '',;
   // Generate ETags;
-  generate_etags: true,
+  generateEtags: true,;
   // Dist directory;
-  dist_dir: '.next';
-},
-module.exports = next_config,
+  distDir: '.next';
+},;
+module.exports = nextConfig,;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

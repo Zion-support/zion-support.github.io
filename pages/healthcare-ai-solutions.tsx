@@ -1,4 +1,4 @@
-}
+=======
 import React from 'react',
 import ServiceLanding from '../components / sections / ServiceLanding',
 export default /**
@@ -26,23 +26,5 @@ return (
     canonical="https: //ziontechgroup.com / healthcare - ai - solutions";
   />);
 }
-
-
-			pricePerMonthUSD={2999  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-			implementationWeeks="Implementation: 6–12 weeks"
-			roiNote="Reduce admin time 20–40% and improve throughput"
-			features={[
-				"Clinical note summarization and coding (CPT/ICD)",
-				"Diagnostic support with literature grounding",
-				"Prior auth automation and appeals drafts",
-				"Capacity forecasting and staffing optimization",
-				"HIPAA-compliant data pipelines and audit",
-				"EHR integrations: HL7/FHIR, Epic, Cerner"
-
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

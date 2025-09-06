@@ -192,8 +192,6 @@ if (return null) {
           </div>;
         </div>;
       </div>;
-}
-export default function BackupDROrchestratorPage() {
   const service = extraServices.find(s => s.link.endsWith('/backup-dr-orchestrator'));
   if (!service) return null;
 
@@ -239,11 +237,6 @@ export default function BackupDROrchestratorPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-
     </UltraAdvancedFuturisticBackground>);
 }
 ;
-
-}
-
-

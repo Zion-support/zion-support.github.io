@@ -34,136 +34,140 @@ const Services: React.FC = () => {
     },
     {
       title: 'Automation',
-      description: 'Process automation and workflow optimization to increase efficiency and reduce costs.',
-      features: ['Workflow Automation', 'RPA Solutions', 'API Integration', 'Process Optimization'],
+      description: 'Streamline your workflows with intelligent automation solutions that boost productivity.',
+      features: ['Process Automation', 'Workflow Optimization', 'RPA Implementation', 'Smart Scheduling'],
       icon: '⚡',
       color: 'from-yellow-500 to-orange-500'
     },
     {
       title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your business from evolving threats.',
-      features: ['Security Audits', 'Threat Detection', 'Compliance', 'Incident Response'],
+      description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
+      features: ['Security Audits', 'Threat Detection', 'Compliance Management', 'Incident Response'],
       icon: '🔒',
       color: 'from-red-500 to-pink-500'
     },
     {
       title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics and visualization.',
-      features: ['Data Visualization', 'Business Intelligence', 'Real-time Analytics', 'Data Mining'],
+      description: 'Transform raw data into actionable insights with advanced analytics and visualization.',
+      features: ['Business Intelligence', 'Data Visualization', 'Predictive Modeling', 'Real-time Analytics'],
       icon: '📊',
       color: 'from-purple-500 to-indigo-500'
     },
     {
-      title: 'Consulting',
-      description: 'Expert technology consulting to help you make informed decisions and strategic planning.',
-      features: ['Technology Strategy', 'Digital Transformation', 'Architecture Design', 'Best Practices'],
-      icon: '💼',
-      color: 'from-gray-500 to-slate-500'
+      title: 'Mobile Development',
+      description: 'Create powerful mobile applications that engage users and drive business growth.',
+      features: ['iOS Development', 'Android Development', 'Cross-platform Apps', 'Mobile Strategy'],
+      icon: '📱',
+      color: 'from-teal-500 to-cyan-500'
     }
   ];
 
   return (
-    <div className="min-h-screen py-20 px-4">
-      <div className="container mx-auto">
-        <motion.div 
-          className="text-center mb-16"
-          initial="initial"
-          animate="animate"
-          variants={staggerContainer}
-        >
-          <motion.h1 
-            className="text-5xl md:text-6xl font-bold text-white mb-6"
-            variants={fadeInUp}
+    <div className="min-h-screen pt-20">
+      {/* Hero Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-16"
           >
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
-              Our Services
-            </span>
-          </motion.h1>
-          <motion.p 
-            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
-            variants={fadeInUp}
-          >
-            Comprehensive technology solutions designed to accelerate your business growth and drive innovation
-          </motion.p>
-        </motion.div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Services</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Comprehensive technology solutions designed to accelerate your business growth and digital transformation
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          initial="initial"
-          whileInView="animate"
-          variants={staggerContainer}
-          viewport={{ once: true }}
-        >
-          {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              className="group bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105"
-              variants={fadeInUp}
-              whileHover={{ y: -10 }}
-            >
-              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                {service.icon}
-              </div>
-              
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
-                {service.title}
-              </h3>
-              
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                {service.description}
-              </p>
-              
-              <ul className="space-y-2 mb-8">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-gray-400">
-                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              
-              <Link
-                to="/contact"
-                className={`inline-block px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
+      {/* Services Grid */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300 group"
               >
-                Learn More
-              </Link>
-            </motion.div>
-          ))}
-        </motion.div>
+                <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  {service.icon}
+                </div>
+                
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
+                  {service.title}
+                </h3>
+                
+                <p className="text-gray-300 mb-6 group-hover:text-gray-200 transition-colors">
+                  {service.description}
+                </p>
+                
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="text-gray-400 flex items-center">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold transition-colors duration-300"
+                >
+                  Learn More
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <motion.div 
-          className="mt-20 text-center"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-3xl p-12 border border-gray-700/50">
-            <h2 className="text-4xl font-bold text-white mb-6">
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-2xl p-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our services can transform your business and drive real results
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our services can transform your business
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
-                Get Free Consultation
+                Get a Quote
               </Link>
               <Link
-                to="/pricing"
-                className="px-8 py-4 border-2 border-gray-600 text-white rounded-xl hover:bg-gray-800 hover:border-gray-500 transition-all duration-300 transform hover:scale-105"
+                to="/about"
+                className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
               >
-                View Pricing
+                Learn More
               </Link>
             </div>
-          </div>
-        </motion.div>
-      </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 };

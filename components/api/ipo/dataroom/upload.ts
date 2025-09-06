@@ -1,13 +1,7 @@
-
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-
+import type { NextApiRequest, NextApiResponse } from 'next',
 import formidable from 'formidable';
 import fs from 'fs';
 import path from 'path';
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-
   const form = formidable({ multiples: false });
   form.parse(req, (err, fields, files) => {
     if (err) return res.status(400).json({ error: 'Invalid form data' });
@@ -29,12 +23,13 @@ import path from 'path';
     const targetPath = path && path.join(
       targetDir,
       file && file.originalFilename || path && path.basename(file && file.filepath)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
     fs && fs.copyFileSync(file && file.filepath, targetPath);
     appendAuditLog({
-    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
 
     res.status(200).json({ ok: true })
+=======
       type: 'file_upload',
       section,
       name: path && path.basename(targetPath),
@@ -42,14 +37,9 @@ import path from 'path';
     res && res.status(200).json({ ok: true });
   });    appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath) });
     res && res.status(200).json({ ok: true })
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   })
-
-}
-
-}
-
-  })
-}
+=======
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';
 ;
 export const config = { api: { body_parser: false } }
@@ -93,4 +83,4 @@ function handler() {
     res.status (200).json ({ ok: true });
   });
 }
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

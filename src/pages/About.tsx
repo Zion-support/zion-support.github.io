@@ -16,163 +16,169 @@ const About: React.FC = () => {
     }
   };
 
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '5+', label: 'Years Experience' },
-    { number: '99%', label: 'Client Satisfaction' }
-  ];
-
   const values = [
     {
       title: 'Innovation',
-      description: 'We stay at the forefront of technology, constantly exploring new solutions and approaches.',
-      icon: '💡'
+      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.',
+      icon: '🚀'
     },
     {
-      title: 'Quality',
-      description: 'We deliver exceptional results with attention to detail and commitment to excellence.',
+      title: 'Excellence',
+      description: 'We maintain the highest standards in everything we do, from code quality to customer service.',
       icon: '⭐'
     },
     {
-      title: 'Collaboration',
-      description: 'We work closely with our clients as partners, ensuring alignment and shared success.',
+      title: 'Integrity',
+      description: 'We build trust through transparency, honesty, and ethical business practices.',
       icon: '🤝'
     },
     {
-      title: 'Integrity',
-      description: 'We maintain the highest ethical standards and transparent communication in all our work.',
-      icon: '🛡️'
+      title: 'Collaboration',
+      description: 'We work closely with our clients as partners in their digital transformation journey.',
+      icon: '👥'
     }
   ];
 
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '99%', label: 'Client Satisfaction' },
+    { number: '24/7', label: 'Support Available' },
+    { number: '5+', label: 'Years Experience' }
+  ];
+
   return (
-    <div className="min-h-screen py-20 px-4">
-      <div className="container mx-auto">
-        {/* Hero Section */}
-        <motion.div 
-          className="text-center mb-20"
-          initial="initial"
-          animate="animate"
-          variants={staggerContainer}
-        >
-          <motion.h1 
-            className="text-5xl md:text-6xl font-bold text-white mb-6"
-            variants={fadeInUp}
+    <div className="min-h-screen pt-20">
+      {/* Hero Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-16"
           >
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
-              About Us
-            </span>
-          </motion.h1>
-          <motion.p 
-            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
-            variants={fadeInUp}
-          >
-            We are a team of passionate technologists dedicated to transforming businesses through innovative solutions
-          </motion.p>
-        </motion.div>
-
-        {/* Mission Statement */}
-        <motion.div 
-          className="mb-20"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-3xl p-12 border border-gray-700/50">
-            <h2 className="text-4xl font-bold text-white mb-6 text-center">Our Mission</h2>
-            <p className="text-xl text-gray-300 text-center max-w-4xl mx-auto leading-relaxed">
-              To empower businesses with cutting-edge technology solutions that drive growth, 
-              efficiency, and innovation. We believe in the transformative power of technology 
-              and are committed to delivering solutions that make a real difference.
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              About <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Zion Tech Group</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              We are a leading technology company dedicated to transforming businesses through innovative AI and cloud solutions
             </p>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
+      </section>
 
-        {/* Stats Section */}
-        <motion.div 
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
-          initial="initial"
-          whileInView="animate"
-          variants={staggerContainer}
-          viewport={{ once: true }}
-        >
-          {stats.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              className="text-center"
-              variants={fadeInUp}
-            >
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  {stat.number}
-                </span>
-              </div>
-              <div className="text-gray-400 text-lg">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Values Section */}
-        <motion.div 
-          className="mb-20"
-          initial="initial"
-          whileInView="animate"
-          variants={staggerContainer}
-          viewport={{ once: true }}
-        >
-          <motion.h2 
-            className="text-4xl font-bold text-white text-center mb-16"
-            variants={fadeInUp}
+      {/* Mission Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
           >
-            Our Values
-          </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">Our Mission</h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              To empower businesses with cutting-edge technology solutions that drive growth, 
+              efficiency, and innovation. We believe in the transformative power of AI and cloud 
+              technologies to solve complex business challenges and create sustainable competitive advantages.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-blue-900/20 to-purple-900/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+          >
+            {stats.map((stat, index) => (
               <motion.div
-                key={value.title}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-gray-600 transition-all duration-300 text-center"
+                key={index}
                 variants={fadeInUp}
-                whileHover={{ y: -10 }}
+                className="text-center"
               >
-                <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-4">{value.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{value.description}</p>
+                <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-gray-300 text-lg">
+                  {stat.label}
+                </div>
               </motion.div>
             ))}
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
+      </section>
 
-        {/* Company Story */}
-        <motion.div 
-          className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-3xl p-12 border border-gray-700/50"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-4xl font-bold text-white mb-8 text-center">Our Story</h2>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              Founded in 2019, we started as a small team of developers with a big vision: 
-              to make advanced technology accessible to businesses of all sizes. What began 
-              as a passion project has grown into a full-service technology company serving 
-              clients across various industries.
+      {/* Values Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">Our Values</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              The principles that guide everything we do
             </p>
-            <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              Our journey has been marked by continuous learning, innovation, and a deep 
-              commitment to our clients' success. We've helped startups scale their operations, 
-              enterprises modernize their systems, and everything in between.
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              Today, we're proud to be at the forefront of technological innovation, 
-              helping businesses navigate the digital landscape and achieve their goals 
-              through smart, sustainable solutions.
-            </p>
-          </div>
-        </motion.div>
-      </div>
+          </motion.div>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
+            {values.map((value, index) => (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300"
+              >
+                <div className="text-4xl mb-4">{value.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-4">{value.title}</h3>
+                <p className="text-gray-300">{value.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Story Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">Our Story</h2>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-xl text-gray-300 leading-relaxed mb-6">
+                Founded in 2019, Zion Tech Group began as a small team of passionate technologists 
+                who believed in the power of AI to transform businesses. What started as a vision 
+                has grown into a leading technology company serving clients across various industries.
+              </p>
+              <p className="text-xl text-gray-300 leading-relaxed">
+                Today, we continue to push the boundaries of what's possible, helping businesses 
+                harness the full potential of modern technology to achieve their goals and drive 
+                meaningful change in their industries.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 };

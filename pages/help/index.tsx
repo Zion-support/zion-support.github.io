@@ -1,4 +1,3 @@
-export async function getStaticProps() {
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return { props: { articles } }
 export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
@@ -9,6 +8,7 @@ export async function getStaticProps() {;
 
 export default function HelpIndex(): any ({ articles }: { articles: HelpArticle[] }) {;
   const categories = Array && Array.from(new Set(articles && articles.map(a => a && a.category)));
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='space-y-8'>;
       <h1 className='text-2xl font-semibold'>Help Center</h1>;
@@ -26,8 +26,7 @@ export default function HelpIndex(): any ({ articles }: { articles: HelpArticle[
                       Last updated {new Date(a && a.updatedAt).toLocaleDateString()}
                     </div>                  </a>;
                 </Link>;
-    </div>;
-  );
+=======
   const categories = Array.from(new Set(articles.map((a) => a.category)));
   return (
     <div className="space-y-8">
@@ -45,13 +44,12 @@ export default function HelpIndex(): any ({ articles }: { articles: HelpArticle[
                     <div className="text-xs opacity-70 mt-1">Last updated {new Date(a.updatedAt).toLocaleDateString()}</div>
                   </a>
                 </Link>
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
           </div>
         </div>
       ))}
-    </div>
-  )
-}
+=======
 import Link from 'next / link';
 import {read_json} from '../../utils / fs_db';
 import type { HelpArticle } from '../../utils / support';
@@ -88,29 +86,5 @@ function HelpIndex() {
         </div>))}
     </div>);
 ;
-
-
-}
-}
-
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </div>;
-      ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

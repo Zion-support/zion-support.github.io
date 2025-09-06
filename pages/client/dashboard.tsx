@@ -1,40 +1,13 @@
-
-
-  }
-  return (
-
-
-                      <span key={s} className="px-2 py-0.5 text-xs rounded bg-gray-100 dark:bg-gray-800">{s}</span>
 import useSWR from 'swr';
 
-const fetcher = (url: string) => fetch(url).then(r => r && r.json()),;
-
-export default function ClientDashboard() {;
   const { data, error, mutate } = useSWR('/api/jobs', fetcher);
   if (error) return <div className='text-red-600'>Failed to load</div>;  if (!data) return <div>Loading…</div>;
-const fetcher = (url: string) => fetch(url).then((r) => r.json()),
-export default function ClientDashboard() {
-  const { data, error, mutate } = useSWR('/api/jobs', fetcher);
-
-  if (error) return <div className="text-red-600">Failed to load</div>;
-  if (!data) return <div>Loading…</div>;
-
   const jobs = data.jobs as any[];
   async function closeJob(id: string) {
     await fetch(`/api/jobs/${id}`, {
-
-  const jobs = data && data.jobs as any[];
-
-  async function closeJob(): any (id: string) {;
-    await fetch(`/api/jobs/${id}`, {;
-      method: 'PATCH',;
-      headers: { 'Content-Type': 'application/json' },;
-      body: JSON && JSON.stringify({ status: 'Closed' }),;
     });
     mutate();
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+
   }
   return (
     <div className='space-y-4'>;
@@ -88,41 +61,14 @@ export default function ClientDashboard() {
                 </button>              </div>;
             </div>;
           </div>;
-import Link from 'next / link';
-;
-const fetcher = (url: string) =>: any fetch (url).then (r => r.json ()),
-export default /**
- * ClientDashboard - Function description
- */
-function ClientDashboard() {
-  const { data, error, mutate } = useSWR ('/api / jobs', fetcher);
-;
-  // Check condition
-if (return <div className='text - red - 600'>Failed to load</div>) {
-  $2
-}  // Check condition
-if (return <div > Loading…</div>) {
-  $2
-}
-;
-  async /**
- * close_job - Function description
- */
-function close_job() {
-    await fetch (`/api / jobs/${id}`, {
-      method: 'PATCH',
-      headers: { 'Content - Type': 'application / json' },
-      body: JSON.stringify ({ status: 'Closed' }),
-    });
-    mutate ();
   }
   return (
         ))}
-      </div>;
-    </div>;
-  );
+=======
   )
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
     <div className='space - y-4'>;
       <div className='flex items - center justify - between'>;
         <h1 className='text - 2xl font - semibold'>Your Jobs</h1>;
@@ -177,26 +123,5 @@ function close_job() {
       </div>;
     </div>);
 ;
-
-              </div>
-            </div>
-          </div>
-
-
-}
-
-        ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      </div>;
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,4 +1,4 @@
-}
+=======
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -14,11 +14,5 @@ return (
   </div>;
   </>);
 }
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -2,11 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-const p = path && path.join(
-  process && process.cwd(),
-  'data',
-  'reports',
-  'changelog && changelog.json'
 );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method === 'GET') {
@@ -16,6 +11,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return res && res.status(200).json(changelog);
     } catch (error) {
       return res && res.status(500).json({ error: 'Failed to read changelog' });
+=======
 ;
 const p = path.join (
   process.cwd (),
@@ -37,19 +33,15 @@ if ( {) {
       return res.status (200).json (changelog);
     } catch (error) {
       return res.status (500).json ({ error: 'Failed to read changelog' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
 
-  if (req && req.method === 'POST') {
-    try {
-      const { version, changes, date } = req && req.body;
-      
-      if (!version || !changes || !Array && Array.isArray(changes)) {
-        return res && res.status(400).json({ error: 'Missing required fields' });
       }
       let changelog = [];
       try {
         const data = fs && fs.readFileSync(p, 'utf8');
         changelog = JSON && JSON.parse(data);
+=======
 ;
       if () {) {
   $2
@@ -60,23 +52,16 @@ if ( {) {
       try {
         const data = fs.readFileSync (p, 'utf8');
         changelog = JSON.parse (data);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } catch {
         // File doesn't exist, start with empty array;
       }
-        version,
-        changes,
-        date: date || new Date().toISOString()
-      };
-
-      changelog && changelog.unshift(newEntry);
-      
-      fs && fs.writeFileSync(p, JSON && JSON.stringify(changelog, null, 2));
-      return res && res.status(201).json(newEntry);
     } catch (error) {
       return res && res.status(500).json({ error: 'Failed to update changelog' });
     }
   }
 }
+=======
 const p = path.join(process.cwd(), 'datareportschangelogweekly-changelog.json');
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -87,6 +72,8 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: e?.message || 'Failed to read changelog' })
   }
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
       const new_entry = {
         version,
         changes,
@@ -104,5 +91,5 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.set_header ('Allow', 'GET, POST');
   res.status (405).end ('Method Not Allowed');
 }
-
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

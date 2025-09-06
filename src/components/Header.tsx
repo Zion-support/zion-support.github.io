@@ -2,7 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  onMenuClick: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
@@ -50,14 +54,14 @@ const Header: React.FC = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`relative text-gray-300 hover:text-white transition-colors duration-300 ${
-                  location.pathname === item.path ? 'text-white' : ''
+                className={`relative text-white hover:text-blue-400 transition-colors duration-300 ${
+                  location.pathname === item.path ? 'text-blue-400' : ''
                 }`}
               >
                 {item.label}
                 {location.pathname === item.path && (
                   <motion.div
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-400"
                     layoutId="activeTab"
                     initial={false}
                     transition={{ duration: 0.3 }}
@@ -67,64 +71,53 @@ const Header: React.FC = () => {
             ))}
           </nav>
 
-          <motion.button
-            className="md:hidden text-white p-2 rounded-lg hover:bg-gray-800 transition-colors"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            whileTap={{ scale: 0.95 }}
+          <button
+            onClick={() => {
+              setIsMenuOpen(!isMenuOpen);
+              onMenuClick();
+            }}
+            className="md:hidden text-white hover:text-blue-400 transition-colors duration-300"
           >
-            <motion.svg 
-              className="w-6 h-6" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-              animate={{ rotate: isMenuOpen ? 90 : 0 }}
+            <motion.div
+              animate={{ rotate: isMenuOpen ? 180 : 0 }}
               transition={{ duration: 0.3 }}
             >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} 
-              />
-            </motion.svg>
-          </motion.button>
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </motion.div>
+          </button>
         </div>
-
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.nav 
-              className="md:hidden py-4 border-t border-gray-800"
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="flex flex-col space-y-4">
-                {navItems.map((item, index) => (
-                  <motion.div
-                    key={item.path}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                  >
-                    <Link 
-                      to={item.path}
-                      className={`block py-2 px-4 rounded-lg transition-colors duration-300 ${
-                        location.pathname === item.path 
-                          ? 'text-white bg-blue-600/20 border border-blue-500/30' 
-                          : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
-                      }`}
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.nav>
-          )}
-        </AnimatePresence>
       </div>
+
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden bg-black/95 backdrop-blur-lg border-t border-gray-700/50"
+          >
+            <div className="container mx-auto px-4 py-4">
+              <nav className="flex flex-col space-y-4">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`text-white hover:text-blue-400 transition-colors duration-300 py-2 ${
+                      location.pathname === item.path ? 'text-blue-400' : ''
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </nav>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 };

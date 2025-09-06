@@ -1,25 +1,10 @@
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useEffect, useState } from 'react';
 export default function AdminLearn() {
-
-  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),
-  const [message, setMessage] = useState('');
-
-
   async function saveCourse() {
     setMessage('')
     const resp = await fetch('/api/admin/learn/course', {
-
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-
-import { useEffect, useState } from 'react';
-export default function AdminLearn() {
-  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),
-  const [message, setMessage] = useState('');
-
-  async function saveCourse() {
-    setMessage('')
-    const resp = await fetch('/api/admin/learn/course', {
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       body: JSON.stringify(form)
     })
     const data = await resp.json()
@@ -27,35 +12,6 @@ export default function AdminLearn() {
     else setMessage('Error: ' + (data.error |'unknown'))
 
   }
-      body: JSON.stringify(form)
-
-    }),
-    const data = await resp.json(),
-    if (data.ok) setMessage('Saved'),
-    else setMessage('Error: ' + (data.error || 'unknown'))
-
-import { useEffect, useState } from 'react';
-export default function AdminLearn(req, res) {
-  try {
-  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),;
-  const [message, setMessage] = useState('');
-  async function saveCourse() {;
-    setMessage('');
-    const resp = await fetch('/api/admin/learn/course', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
-      body: JSON.stringify(form);
-    }),;
-    const data = await resp.json();
-    if (data.ok) setMessage('Saved');
-    else setMessage('Error: ' + (data.error || 'unknown'));
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-
-  }
-}
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-semibold">Learning Admin</h1>
@@ -81,7 +37,7 @@ export default function AdminLearn(req, res) {
       {message && <div className="text-sm">{message}</div>}
     </div>
   )
-}
+=======
 import { useEffect, useState } from 'react',
 ;
 export default /**
@@ -131,22 +87,5 @@ function save_course() {
       {message && <div className="text - sm">{message}</div>}
     </div>);
 }
-
-    </div>
-  );
-};
-
-      {message && <div className="text-sm">{message}</div>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    </div>
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-}
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

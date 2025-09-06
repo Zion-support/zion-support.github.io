@@ -1,12 +1,4 @@
 import type { NextPage } from 'next';
-const CloudComputingStrategies: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>CloudComputingStrategies - Zion Tech Solutions</title>
-        <meta name="description" content="CloudComputingStrategies page" />
-      </Head>
-      
       <main>
         <h1>CloudComputingStrategies</h1>
         <p>This page is under construction.</p>
@@ -14,6 +6,8 @@ const CloudComputingStrategies: NextPage = () => {
     </div>
   )
 }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <main>;
         <h1>CloudComputingStrategies</h1>;
         <p>This page is under construction.</p>;
@@ -22,7 +16,9 @@ const CloudComputingStrategies: NextPage = () => {
   ),;
 };
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default CloudComputingStrategies;
+=======
 import Head from 'next / head';
       <main>;
         <h1 > CloudComputingStrategies</h1>;
@@ -33,5 +29,4 @@ import Head from 'next / head';
 ;
 export default CloudComputingStrategies;
 ;
-
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

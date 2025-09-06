@@ -21,12 +21,6 @@
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Emerging Technology</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Accelerate innovation responsibly across blockchain, IoT/edge, 5G, and spatial computing.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-
-
-              <a href="/contact" className="px-8 py-4">Start a Pilot</Link>
-              <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
-
-
             </div>
           </header>
           <section>
@@ -37,9 +31,6 @@
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
                   <span className="text-gray-200">{f}</span>
                 </div>
-              ))}
-            </div>
-          </section>
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Highlighted Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -47,15 +38,6 @@
                 <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
                   <div className="text-gray-200 font-semibold mb-2">{s.name}</div>
                   <p className="text-gray-300 text-sm">Learn more</p>
-                </a>
-              ))}
-            </div>
-          </section>
-        </div>
-      </div>
-    </Layout>
-  )
-}
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -114,12 +96,3 @@ function EmergingTechPage() {
           </section>;
         </div>;
       </div>;
-
-    </Layout>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-}

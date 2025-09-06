@@ -3,15 +3,12 @@ const EquipmentDetail: NextPage = () => {
   const router = useRouter()
   const { slug } = router.query as { slug?: string }
   const items = equipment as any[];
-  const item = items.find((e) => e.slug === slug);
-
   if (!item) {
     return (
       <EnhancedLayout>
         <Head>
           <title>Equipment Not Found - Zion Tech Solutions</title>
         </Head>
-        <div className="space-y-4">
           <h1 className="text-xl font-semibold">Equipment not found</h1>
           <Link href="/products"><a className="text-blue-600 hover: underline">Back to Equipment</a></Link>
         </div>
@@ -44,6 +41,7 @@ const EquipmentDetail: NextPage = () => {;
       </EnhancedLayout>;
     );
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <EnhancedLayout>;
       <Head>;
@@ -105,18 +103,6 @@ const EquipmentDetail: NextPage = () => {;
       </div>;
     </EnhancedLayout>;
   );
-
-  }
-
-  return (
-    <EnhancedLayout>
-      <Head>
-        <title>{item.name} - Zion Tech Solutions</title>
-      </Head>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="md:col-span-2 space-y-4">
-          <img src={`https://picsum.photos/seed/${encodeURIComponent(item.slug)}/1200/600`} alt={item.name} className="w-full rounded-lg border border-gray-200 dark:border-gray-800" />
-          <div>
             <h1 className="text-2xl font-semibold">{item.name}</h1>
             <p className="opacity-80">Category: {item.category}</p>
           </div>
@@ -137,10 +123,15 @@ const EquipmentDetail: NextPage = () => {;
     </EnhancedLayout>
   )
 }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default EquipmentDetail;
 
+=======
 import Head from 'next / head';
 import {use_router} from 'next / router';
 import Link from 'next / link';
@@ -236,3 +227,4 @@ if ( {) {
 ;
 export default EquipmentDetail;
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

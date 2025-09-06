@@ -20,11 +20,11 @@ function App() {
   return (
     <ErrorBoundary>
       <Router>
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-          <Header />
+        <div className="min-h-screen flex flex-col">
+          <PerformanceMonitor />
+          <Header onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
           <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-          
-          <main className="pt-20">
+          <main className="flex-1">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={<Home />} />
@@ -35,9 +35,7 @@ function App() {
               </Routes>
             </Suspense>
           </main>
-          
           <Footer />
-          <PerformanceMonitor />
         </div>
       </Router>
     </ErrorBoundary>

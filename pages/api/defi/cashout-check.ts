@@ -9,6 +9,7 @@ function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8')
     return JSON.parse(raw)
+=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import type { KycProfile } from '../../../utils / kyc',
 import fs from 'fs',
@@ -19,24 +20,12 @@ function load (): Record < string, KycProfile> {
   try {
     const raw = fs.readFileSync (FILE, 'utf8'),
     return JSON.parse (raw);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch {
     return {}
   }
 }
-
-
-function load(): Record<string, KycProfile> {
-  try {
-    const raw = fs.readFileSync(FILE, 'utf8');
-    return JSON.parse(raw);
-  } catch {;
-    return {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
+=======
 export default /**
  * handler - Function description
  */
@@ -65,3 +54,5 @@ function handler() {
 }
   return res.status (200).json ({ allowed: true, reason: 'KYC approved and AML clear' });
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

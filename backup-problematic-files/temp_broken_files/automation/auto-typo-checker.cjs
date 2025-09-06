@@ -1,12 +1,12 @@
 #!/usr/bin/env node;
- ;
+ 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-;
+
 function run(cmd) { return execSync(cmd, { stdio:'pipe' }).toString().trim() }
-;
-try {;
+
+try {
   try { run('npx cspell --version') } catch { console.log('[typo] installing cspell'); run('npm i -D cspell') }
   const outDir = path.join(process.cwd(), 'public', 'reports');
   fs.mkdirSync(outDir, { recursive:true });
@@ -19,6 +19,6 @@ try {;
   run('git commit -m "chore(automation):update typo report" || true');
   try { run('git push') } catch {}
   console.log('[typo] report updated');
-} catch (e) {;
+} catch (e) {
   console.log('[typo] non-fatal', e.message);
 }

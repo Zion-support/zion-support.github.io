@@ -1,8 +1,12 @@
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from './App';
 import React from 'react';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
 import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
@@ -15,6 +19,7 @@ describe('App', () => {
     render(<App />);
   });
 });
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   it('displays correct content', () => {
     render(<App />);
     // Add specific content assertions here
@@ -23,11 +28,11 @@ describe('App', () => {
     render(<App />);
     // Add interaction tests here
   });
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
 });
-
-const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe('App', () => { it('renders without crashing', () => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<App />)}); it("handles user interactions"
-
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
 });
-});
-const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe('App', () => { it('renders without crashing', () => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<App />)}); it("handles user interactions"
-});
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

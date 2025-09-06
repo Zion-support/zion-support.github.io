@@ -4,16 +4,9 @@ import { v4 as uuidv4 } from 'uuid';
 import { readJsonFile, writeJsonFile } from '../../utils/db';
 import type { Application } from '../../utils/types';
 import { rateLimit } from '../../utils/rateLimit';
-const FILE = 'applications.json';
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return
   if (req.method === 'GET') {
-    const { jobId, talentSlug } = req.query;
-    let apps = readJsonFile<Application[]>(FILE, []);
-    if (jobId) apps = apps.filter((a) => a.jobId === String(jobId));
-    if (talentSlug) apps = apps.filter((a) => a.talentSlug === String(talentSlug));
-    res.status(200).json({ applications: apps });
     return
   }
   if (req.method === 'POST') {
@@ -31,6 +24,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       existing.status = action === 'apply' ? 'applied' : 'skipped';
       writeJsonFile<Application[]>(FILE, apps);
       res.status(200).json({ application: existing });
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       return
     }
     const app: Application = {
@@ -47,8 +41,7 @@ createdAtIso: now}
   res.setHeader('AllowGET, POST')
   res.status(405).end('Method Not Allowed')
 }
-
-
+=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { v4 as uuidv4 } from 'uuid',
 import { readJsonFile, writeJsonFile } from '../../utils / db',
@@ -115,3 +108,5 @@ createdAtIso: now},
   res.status (405).end ('Method Not Allowed');
 }
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

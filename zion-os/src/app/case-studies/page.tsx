@@ -1,6 +1,3 @@
-export default function CaseStudiesPage() {;
-  return (;
-    <div className="min-h-screen py-20">;
 export default /**
  * CaseStudiesPage - Function description
  */

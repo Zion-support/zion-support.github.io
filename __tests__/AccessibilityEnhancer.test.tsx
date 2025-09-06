@@ -1,4 +1,5 @@
-});
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer'
@@ -15,3 +16,4 @@ describe('AccessibilityEnhancer'
     const element = screen.getByRole('button'
     fireEvent.keyDown(element, { "key"
     fireEvent.keyDown(element, { "key"
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

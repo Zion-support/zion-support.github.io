@@ -1,19 +1,3 @@
-import { useEffect, useMemo, useState } from 'react';
-function getRefCode(): string {
-
-  if (typeof window === 'undefined') return ''
-  return localStorage.getItem('ref_code') |''
-}
-export default function AffiliateDashboard() {
-  const [code, setCode] = useState<string>('')
-  const [metrics, setMetrics] = useState<any>(null)
-  const [amount, setAmount] = useState<string>('')
-  const [msg, setMsg] = useState<string>('')
-  useEffect(() => {
-    const c = getRefCode()
-    setCode(c)
-  }, []);
-
   useEffect(() => {
     if (!code) return
     (async () => {
@@ -29,11 +13,6 @@ export default function AffiliateDashboard() {
     setMsg('')
     try {
       const res = await fetch('/api/partners/request-payout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ code, amount: amount ? Number(amount) : undefined })}),
-      const json = await res.json();
-      if (!res.ok) throw new Error(json.error || 'Failed');
       setMsg('Payout requested')
     } catch (e: any) {
       setMsg(e?.message |'Error')
@@ -41,58 +20,6 @@ export default function AffiliateDashboard() {
   }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
 
-
-
-  }
-}
-;
-export default function AffiliateDashboard(req, res) {
-  try {
-  const [code, setCode] = useState<string>('');
-  const [metrics, setMetrics] = useState<any>(null);
-  const [amount, setAmount] = useState<string>('');
-  const [msg, setMsg] = useState<string>('');
-  useEffect(() => {;
-    const c = getRefCode();
-    setCode(c);
-  }, []),;
-  useEffect(() => {;
-    if (!code) return,;
-    (async () => {;
-      try {
-        const res = await fetch(`/api/partners/metrics?code=${encodeURIComponent(code)}`);
-        const json = await res.json();
-        setMetrics(json);
-      } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    })();
-  }, [code]),;
-  async function requestPayout() {;
-    setMsg('');
-    try {
-      const res = await fetch('/api/partners/request-payout', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify({ code, amount: amount ? Number(amount) : undefined })}),;
-      const json = await res.json();
-      if (!res.ok) throw new Error(json.error || 'Failed');
-      setMsg('Payout requested');
-    } catch (error) {
-      setMsg(e?.message || 'Error');
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]),
   if (!code) {
     return (
       <div className="space-y-4">
@@ -101,11 +28,6 @@ export default function AffiliateDashboard(req, res) {
       </div>
     )
   }
-
-
-}
-
-
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>
@@ -119,27 +41,15 @@ export default function AffiliateDashboard(req, res) {
         <div className="flex items-center justify-between">
           <div>
             <div className="text-sm text-gray-600 dark:text-gray-300">Estimated Payout</div>
-
-
-            <div className="text-2xl font-bold">{metrics?.payout_amount ?? 0} {metrics?.currency || 'USD'}</div>
-
-
+            <div className="text-2xl font-bold">{metrics?.payout_amount ?? 0} {metrics?.currency |'USD'}</div>
           </div>
           <div className="flex gap-2">
             <input className="border rounded px-3 py-2" placeholder="Amount (optional)" value={amount} onChange={e=>setAmount(e.target.value)} />
             <button className="px-3 py-2 rounded bg-indigo-600 text-white" onClick={requestPayout}>Request Payout</button>
-
-
-            <a href={exportUrl} className="px-3 py-2 rounded border">Export CSV</Link>
+            <a href={exportUrl} className="px-3 py-2 rounded border">Export CSV</a>
           </div>
         </div>
-        {msg && <p className="mt-2 text-sm">{msg}</p>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
+        {msg && <p className="mt-2 text-sm">{msg}</p>}
       </div>
     </div>
   )
@@ -151,7 +61,6 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-2xl font-semibold">{value}</div>
     </div>
   )
-}
 import { useEffect, useMemo, useState } from 'react',
 ;
 function getRefCode (): string {
@@ -251,5 +160,3 @@ function Stat() {
       <div className="text - 2xl font - semibold">{value}</div>;
     </div>);
 }
-
-

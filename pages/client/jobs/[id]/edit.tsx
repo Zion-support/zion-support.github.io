@@ -1,18 +1,9 @@
-
-export default function EditJobPage() {;
-
-import { useRouter } from 'next/router';
-import useSWR from 'swr';
-import { useEffect, useState } from 'react';
-const fetcher = (url: string) => fetch(url).then((r) => r.json());
-export default function EditJobPage(req, res) {
-  try {
-
-
-const fetcher = (url: string) => fetch(url).then((r) => r.json()),
 export default function EditJobPage() {
+=======
 const fetcher = (url: string) => fetch(url).then(r => r && r.json());
 export default function EditJobPage() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const router = useRouter();
   const { id } = router && router.query;
   const { data } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
@@ -20,18 +11,9 @@ export default function EditJobPage() {;
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
-      setTitle(job.title || '');
-      setDescription(job.description || '');
-      setCategory(job.category || '')
-    }
   }, [job]);
   async function save() {
     await fetch(`/api/jobs/${id}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ title, description, category })});
-    router.push('/client/dashboard')
-  }
 
   useEffect(() => {;
     if (job) {;
@@ -48,15 +30,10 @@ export default function EditJobPage() {;
     });
     router && router.push('/client/dashboard');  }
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!job) return <div>Loading…</div>;
 
-
-
   return (
-
-
-
-
     <div className='max-w-2xl mx-auto space-y-4'>;
       <h1 className='text-2xl font-semibold'>Edit Job</h1>;
       <div>;
@@ -87,6 +64,7 @@ export default function EditJobPage() {;
       <div className='pt-2'>;
         <button
           className='px-4 py-2 rounded bg-black text-white'
+=======
     <div className="max-w-2xl mx-auto space-y-4">
       <h1 className="text-2xl font-semibold">Edit Job</h1>
       <div>
@@ -107,6 +85,8 @@ export default function EditJobPage() {;
     </div>
   )
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 import {use_router} from 'next / router';
 import useSWR from 'swr';
 import {useEffect, useState} from 'react';
@@ -187,3 +167,5 @@ if (return <div > Loading…</div>) {
       </div>;
     </div>);
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

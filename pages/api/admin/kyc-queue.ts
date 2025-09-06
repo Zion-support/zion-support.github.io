@@ -5,15 +5,13 @@ import path from 'path';
 
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');
 const FILE = path.join(DATA_DIR, 'profiles.json');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 const DATA_DIR = path.join(process.cwd(), 'datakyc')
 const FILE = path.join(DATA_DIR, 'profiles.json')
 function load(): Record<string, KycProfile> {
   try {
-
-
-    const raw = fs.readFileSync(FILE, 'utf8');
-    return JSON.parse(raw);
+=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import type { KycProfile } from '../../../utils / kyc',
 import fs from 'fs',
@@ -24,13 +22,11 @@ function load (): Record < string, KycProfile> {
   try {
     const raw = fs.readFileSync (FILE, 'utf8'),
     return JSON.parse (raw);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   } catch {
     return {};
   }
-}
-
-  fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs.writeFileSync(FILE, JSON.stringify(db, null, 2));
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -73,6 +69,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(405).json({ error: 'Method not allowed' });
 }
+=======
 /**
  * save - Function description
  */
@@ -126,3 +123,5 @@ if (profile.status = 'needs_more_info', ) {
   return res.status (405).json ({ error: 'Method not allowed' });
 }
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

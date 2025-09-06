@@ -12,12 +12,10 @@ class ErrorBoundary extends React.Component {
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -25,14 +23,10 @@ import React from 'react';
 import Head from 'next / head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
 
-export default function WCAGScannerPage() {;
-  const service = extraServices && extraServices.find(s =>;
-    s && s.link.endsWith('/wcag-accessibility-scanner');
   );  if (!service) return null;import { Star } from 'lucide-react';
 export default function WCAGScannerPage() {;
   const service = extraServices && extraServices.find(s => s && s.link.endsWith('/wcag-accessibility-scanner'));
   if (!service) return null;
-
   return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -214,9 +208,6 @@ if (return null) {
           </div>;
         </div>;
       </div>;
-}
-import { Star } from 'lucide-react';
-export default function WCAGScannerPage() {
   const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner'));
   if (!service) return null;
 
@@ -262,11 +253,6 @@ export default function WCAGScannerPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-
     </UltraAdvancedFuturisticBackground>);
 }
 ;
-
-}
-
-

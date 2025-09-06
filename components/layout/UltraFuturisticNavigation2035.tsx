@@ -1,67 +1,7 @@
-import {;
-  Menu,;
-  ChevronDown,;
-  X,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ArrowRight,;
-  Brain,;
-  Rocket,;
-  Shield,;
-  Zap,;
-  Target,;
-  Atom,;
-  BookOpen,;
-  Truck,;
-  DollarSign,;
-  BarChart3,;
-  Globe,;
-  Users,;
-  Star,;
-  Sparkles,;
-  Cpu,;
-  Lock,;
-  Cloud,;
-  Settings,;
-  Eye,;
-  Award,;
-  Clock,;
-  Heart,;
-  Lightbulb,;
-  Search,;
-  Grid,;
-  List,;
-  TrendingUp,;
-  Shield as ShieldIcon,;
-  Globe as GlobeIcon,;
-  User,;
-  ShoppingCart,;
-  Bell,;
-  HelpCircle,;
-  FileText,;
-  Video,;
-  Headphones,;
-  Code,;
-  Database,;
-  Network,;
-  Server,;
-  Monitor,;
-  Smartphone,;
-  Camera,;
-  Gamepad2,;
-  Palette,;
-  Music,;
-  Film,;
-  BookOpenCheck,;
   Building,;
   MessageCircle,;
 } from 'lucide-react';
 
-interface NavigationItem {;
-  name: string;
-  href: string;  icon?: React && React.ReactNode;import { ;
-import { 
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles, ;
@@ -141,38 +81,10 @@ interface NavigationItem {
   Camera, Gamepad2, Palette, Music, Film, BookOpenCheck;
   Building, MessageCircle;
 } from 'lucide-react';
-;
-interface NavigationItem {
-  name: string,
-  href: string,
-  icon?: React.ReactNode;
   description?: string;
   children?: NavigationItem[];
   badge?: string;
   title?: string;
-
-const contactInfo = {
-
-  featured?: boolean
-}
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-
-const navigationItems: NavigationItem[] = [
-  {
-    name: 'Pricing',
-    href: '/pricing',
-    icon: <DollarSign className="w-5 h-5" />,
-    description: 'Plans and average market prices',
-    children: [
-      { name: 'Standard Pricing', href: '/pricing', description: 'Our plans' },
-      { name: 'Market Pricing', href: '/market-pricing', description: 'Compare market averages' }
-    ]
   featured?: boolean;  featured?: boolean;
 }
 const contact_info = {
@@ -192,9 +104,6 @@ const navigation_items: NavigationItem[] = [;
       {
         name: 'Market Pricing',
         href: '/market - pricing',
-
-        name: 'Market Pricing',
-        href: '/market-pricing',
         description: 'Compare market averages',
       },
     ],
@@ -202,23 +111,11 @@ const navigation_items: NavigationItem[] = [;
   {
     name: 'Resources',
     href: '/resources',
-
-    icon: <BookOpen className='w-5 h-5' />,
-    description: 'Guides, reports and tools',
-    children: [
-      { name: 'Blog', href: '/blog', description: 'Insights and updates' },
-      {
-        name: 'Case Studies',
-        href: '/case-studies',
-
         description: 'Proven results',
       },
       { name: 'Developer', href: '/developer', description: 'Docs and SDKs' },
       {
         name: 'Services Advertising',
-
-        href: '/services-advertising',
-
         description: 'Features, benefits and market pricing links',
       },
     ],
@@ -226,20 +123,6 @@ const navigation_items: NavigationItem[] = [;
   {
     name: 'Contact',
     href: '/contact',
-    icon: <Phone className='w - 5 h - 5' />,    description: 'Talk to our team',
-    featured: true,
-    children: [;
-      { name: 'Contact Sales', href: '/contact', description: 'Get a quote' },
-      { name: 'Support', href: '/support', description: 'Help center' },
-    ],
-  },    icon: <BookOpen className="w - 5 h - 5" />,
-    description: 'Guides, reports and tools';
-    children: [;
-      { name: 'Blog', href: '/blog', description: 'Insights and updates' },
-      { name: 'Case Studies', href: '/case - studies', description: 'Proven results' },
-      { name: 'Developer', href: '/developer', description: 'Docs and SDKs' },
-      { name: 'Services Advertising', href: '/services - advertising', description: 'Features, benefits and market pricing links' }
-    ];
   }
   {
     name: 'Resources'
@@ -262,13 +145,6 @@ const navigation_items: NavigationItem[] = [;
     ]
   }
   {
-    name: 'Contact',
-    href: '/contact',
-    icon: <Phone className="w - 5 h - 5" />,
-    description: 'Talk to our team',
-    featured: true,
-    children: [;
-      { name: 'Contact Sales', href: '/contact', description: 'Get a quote' },
       { name: 'Support', href: '/support', description: 'Help center' }
     ]
   },    icon: <BookOpen className="w-5 h-5" />
@@ -281,152 +157,10 @@ const navigation_items: NavigationItem[] = [;
     ]
   }
   {
-    name: 'Services',
-    href: '/services',
-    icon: <Grid className='w - 5 h - 5' />,
-    description: 'Browse by category',
-    badge: 'New',
-    children: [;
-      {
-        name: 'AI & Data',
-        href: '/services?filter = ai - consciousness',
-        description: 'AI, data, ML services',
-      },
-      {
-        name: 'Enterprise IT',
-        href: '/services?filter = enterprise - it',
-        description: 'Infra, security, platforms',
-      },
-      {
-        name: 'Quantum & Emerging',
-        href: '/services?filter = quantum - emerging',
-        description: 'Quantum, space, frontier',
-      },
-      {
-        name: 'Micro SAAS',
-        href: '/services?filter = micro - saas',
-        description: 'Business accelerators',
-      },
-      {
-        name: 'Creative & Media',
-        href: '/services?filter = creative - media',
-        description: 'Content, media, design',
       },
     ],
   },
   {
-    name: 'All Services',
-    href: '/comprehensive - services - showcase - 2025',
-    icon: <Globe className='w - 5 h - 5' />,    description: 'Complete portfolio of all technology services',
-    badge: 'Showcase',
-    featured: true,
-    children: [  {
-    name: 'Services',
-    href: '/services',
-    icon: <Grid className="w - 5 h - 5" />,
-    description: 'Browse by category',
-    badge: 'New',
-    children: [;
-      { name: 'AI & Data', href: '/services?filter = ai - consciousness', description: 'AI, data, ML services' }
-      { name: 'Enterprise IT', href: '/services?filter = enterprise - it', description: 'Infra, security, platforms' }
-      { name: 'Quantum & Emerging', href: '/services?filter = quantum - emerging', description: 'Quantum, space, frontier' }
-      { name: 'Micro SAAS', href: '/services?filter = micro - saas', description: 'Business accelerators' },
-      { name: 'Creative & Media', href: '/services?filter = creative - media', description: 'Content, media, design' }
-    ];
-  }
-  {
-      { name: 'Innovative Business Solutions', href: '/innovative-business-solutions', description: 'Business transformation services' }
-    ]
-    children: [;
-      {
-        name: 'View All Services',
-        href: '/comprehensive - services - showcase - 2025',
-        description: 'Complete services portfolio',
-      },
-      {
-        name: 'Ultimate 2035 Futuristic',
-        href: '/ultimate - 2035 - futuristic - services - showcase',
-        description: 'Revolutionary future technology',
-        featured: true,
-      },
-      {
-        name: 'Ultimate 2025 Micro SAAS',
-        href: '/ultimate - 2025 - micro - saas - showcase',
-        description: 'Latest innovative services',
-        featured: true,
-      },
-      {
-        name: 'Service Categories',
-        href: '/comprehensive - services - showcase - 2025#categories',
-        description: 'Browse by category',
-      },
-      {
-        name: 'Pricing Comparison',
-        href: '/comprehensive - services - showcase - 2025#pricing',
-        description: 'Compare service costs',
-      },
-      {
-        name: 'Service Search',
-        href: '/comprehensive - services - showcase - 2025#search',
-        description: 'Find specific services',
-      },
-      {
-        name: 'Market Pricing',
-        href: '/market - pricing',
-        description: 'Average market prices & references',
-      },
-      {
-        name: 'Latest Innovations',
-        href: '/revolutionary - 2025 - services - showcase',
-        description: 'Cutting - edge solutions',
-      },
-      {
-        name: '2026 Services',
-        href: '/revolutionary - 2026 - services',
-        description: 'Next generation solutions',
-      },
-      {
-        name: '2027 Services',
-        href: '/revolutionary - 2027 - services - showcase',
-        description: 'Future - ready services',
-      },
-      {
-        name: 'Ultimate 2026',
-        href: '/ultimate - 2026 - services - showcase',
-        description: 'Premium service collection',
-      },
-      {
-        name: 'Enterprise Solutions',
-        href: '/enterprise - solutions - showcase',
-        description: 'Enterprise - grade solutions',
-      },
-      {
-        name: 'Innovative Business Solutions',
-        href: '/innovative - business - solutions',
-        description: 'Business transformation services',
-      },
-    ],
-  },
-  {
-    name: 'AI & Consciousness',
-    href: '/ai - services',
-    icon: <Brain className='w - 5 h - 5' />,    description: 'Revolutionary AI consciousness and emotional intelligence',
-    badge: 'New',
-    featured: true,
-    children: [      { name: 'View All Services', href: '/comprehensive - services - showcase - 2025', description: 'Complete services portfolio' },
-      { name: 'Ultimate 2035 Futuristic', href: '/ultimate - 2035 - futuristic - services - showcase', description: 'Revolutionary future technology', featured: true },
-      { name: 'Ultimate 2025 Micro SAAS', href: '/ultimate - 2025 - micro - saas - showcase', description: 'Latest innovative services', featured: true },
-      { name: 'Service Categories', href: '/comprehensive - services - showcase - 2025#categories', description: 'Browse by category' },
-      { name: 'Pricing Comparison', href: '/comprehensive - services - showcase - 2025#pricing', description: 'Compare service costs' },
-      { name: 'Service Search', href: '/comprehensive - services - showcase - 2025#search', description: 'Find specific services' },
-      { name: 'Market Pricing', href: '/market - pricing', description: 'Average market prices & references' },
-      { name: 'Latest Innovations', href: '/revolutionary - 2025 - services - showcase', description: 'Cutting - edge solutions' },
-      { name: '2026 Services', href: '/revolutionary - 2026 - services', description: 'Next generation solutions' },
-      { name: '2027 Services', href: '/revolutionary - 2027 - services - showcase', description: 'Future - ready services' },
-      { name: 'Ultimate 2026', href: '/ultimate - 2026 - services - showcase', description: 'Premium service collection' },
-      { name: 'Enterprise Solutions', href: '/enterprise - solutions - showcase', description: 'Enterprise - grade solutions' },
-      { name: 'Innovative Business Solutions', href: '/innovative - business - solutions', description: 'Business transformation services' }
-    ];
   }
   {
       { name: 'Advanced AI Automation', href: '/advanced-ai-automation-services', description: 'AI automation for development, testing, DevOps, security, and data' }
@@ -931,16 +665,6 @@ const navigation_items: NavigationItem[] = [;
         description: 'Technical documentation'
       }
       {
-        name: 'API Reference',
-        href: '/api - documentation',
-        description: 'API documentation',
-      },
-      {
-        name: 'Case Studies',
-        href: '/case - studies',
-        description: 'Success stories',
-      },
-      { name: 'Blog & News', href: '/blog', description: 'Latest insights' },
       {
         name: 'Support Center'
         href: '/support'
@@ -955,17 +679,12 @@ const navigation_items: NavigationItem[] = [;
     ]
   }
 ];
-];
-
 const UltraFuturisticNavigation2035: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
@@ -974,16 +693,12 @@ const UltraFuturisticNavigation2035: React.FC = () => {
   }
   const closeDropdowns = () => {
     setActiveDropdown(null)
-  featured?: boolean;  featured?: boolean;
-}
-
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',};  website: 'https://ziontechgroup && ziontechgroup.com';
 };
-
 const navigationItems: NavigationItem[] = [;
   {;
     name: 'Pricing',;
@@ -1668,7 +1383,6 @@ const navigationItems: NavigationItem[] = [;
     ],;
   },;
 ];
-
 const quickActions = [;
   {;
     name: 'Get Started',;
@@ -1720,67 +1434,23 @@ const quickActions = [;
   { name: 'Services Advertising', href: '/services-advertising', icon: <Sparkles className="w-4 h-4" /> },;
   { name: 'Documentation', href: '/docs', icon: <BookOpen className="w-4 h-4" /> },;
   { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> }
-
 const UltraFuturisticNavigation2035: React.FC = () => {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 10);
     };
-
-    window && window.addEventListener('scroll', handleScroll);
-    return () => window && window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const toggleDropdown = (name: string) => {;
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
-
-  const closeDropdowns = () => {;
-    setActiveDropdown(null);  };
-
-  const closeMobileMenu = () => {;
-    setIsOpen(false);
-    closeDropdowns();    };
-
-    window && window.addEventListener('scroll', handleScroll);
-    return () => window && window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const toggleDropdown = (name: string) => {;
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
-
-  const closeDropdowns = () => {;
-    setActiveDropdown(null);
-  };
-
   const closeMobileMenu = () => {;
     setIsOpen(false);
     closeDropdowns();
   };
-
-
-    >;
       {/* Background Effects */}
       <div className='absolute inset-0'>;
         <div
           className={`absolute inset-0 transition-opacity duration-300 ${
             isScrolled ? 'opacity-100' : 'opacity-0'
-  };
-
-  const closeMobileMenu = () => {
-    setIsOpen(false);
-    closeDropdowns()
-  };
-
-
-            {/* Desktop Navigation */}  };
-
-
   return (
     <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled
@@ -1790,7 +1460,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5' />;
         </div>;
       </div>;
-
       <div className='relative z-10'>;
         <div className='container mx-auto px-4'>;
           <div className='flex items-center justify-between h-20'>;
@@ -1807,9 +1476,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                   Revolutionary Technology;
                 </div>              </div>;
             </Link>;
-
-            {/* Desktop Navigation */}  };
-
   return (
     <navaria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -1820,28 +1486,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
       <div className="absolute inset-0">;
         <divclassName={`absolute inset-0 transition-opacity duration-300 ${
           isScrolled ? 'opacity-100' : 'opacity-0'
-        }`}>;
-          <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/90 to-black/95" />;
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5" />;
-        </div>;
-      </div>;
-
-      <div className="relative z-10">;
-        <div className="container mx-auto px-4">;
-          <div className="flex items-center justify-between h-20">;
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">;
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">;
-                <Brain className="w-6 h-6 text-white" />;
-              </div>;
-              <div>;
-                <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
-                  Zion Tech Group;
-                </div>;
-                <div className="text-xs text-gray-400">Revolutionary Technology</div>;
-              </div>;
-            </Link>;
-
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center gap-8'>;
               {navigationItems && navigationItems.map(item => (;
@@ -1890,195 +1534,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                         item && item.badge === 'Future' ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30' :
                         item && item.badge === 'Enterprise' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :
                         item && item.badge === 'Industry' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :
-;
-const quick_actions = [;
-  {
-    name: 'Get Started',
-    href: '/contact',
-    icon: <ArrowRight className='w - 4 h - 4' />,
-    primary: true,
-  },
-  {
-    name: 'Get a Quote',
-    href: '/quote',
-    icon: <DollarSign className='w - 4 h - 4' />,
-  },
-  { name: 'Book Demo', href: '/demo', icon: <Video className='w - 4 h - 4' /> },
-  {
-    name: 'Live Chat',
-    href: '/chat',
-    icon: <MessageCircle className='w - 4 h - 4' />,
-  },
-  {
-    name: 'View Pricing',
-    href: '/pricing',
-    icon: <DollarSign className='w - 4 h - 4' />,
-  },
-  {
-    name: 'Market Pricing',
-    href: '/market - pricing',
-    icon: <BarChart3 className='w - 4 h - 4' />,
-  },
-  {
-    name: 'Services Advertising',
-    href: '/services - advertising',
-    icon: <Sparkles className='w - 4 h - 4' />,
-  },
-  {
-    name: 'Documentation',
-    href: '/docs',
-    icon: <BookOpen className='w - 4 h - 4' />,
-  },
-  {
-    name: 'Support',
-    href: '/support',
-    icon: <HelpCircle className='w - 4 h - 4' />,
-  }, ];  { name: 'Get Started', href: '/contact', icon: <ArrowRight className="w - 4 h - 4" />, primary: true },
-  { name: 'Get a Quote', href: '/quote', icon: <DollarSign className="w - 4 h - 4" /> },
-  { name: 'Book Demo', href: '/demo', icon: <Video className="w - 4 h - 4" /> },
-  { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w - 4 h - 4" /> },
-  { name: 'View Pricing', href: '/pricing', icon: <DollarSign className="w - 4 h - 4" /> },
-  { name: 'Market Pricing', href: '/market - pricing', icon: <BarChart3 className="w - 4 h - 4" /> },
-  { name: 'Services Advertising', href: '/services - advertising', icon: <Sparkles className="w - 4 h - 4" /> },
-  { name: 'Documentation', href: '/docs', icon: <BookOpen className="w - 4 h - 4" /> },
-  { name: 'Support', href: '/support', icon: <HelpCircle className="w - 4 h - 4" /> }
-const UltraFuturisticNavigation2035: React.FC = () => {
-  const [is_open, setIsOpen] = useState (false);
-  const [active_dropdown, setActiveDropdown] = useState < string | null>(null);
-  const [is_scrolled, setIsScrolled] = useState (false);
-;
-  useEffect (() => {
-    const handle_scroll = () =>: any {
-      setIsScrolled (window.scroll_y > 10);
-    }
-;
-    window.addEventListener ('scroll', handle_scroll);
-    return () => window.removeEventListener ('scroll', handle_scroll);
-  }, []);
-;
-  const toggle_dropdown = (name: string) =>: any {
-    setActiveDropdown (active_dropdown === name ? null : name);
-  }
-;
-  const close_dropdowns = () =>: any {
-    setActiveDropdown (null);  }
-;
-  const closeMobileMenu = () =>: any {
-    setIsOpen (false);
-    close_dropdowns ();    }
-;
-    window.addEventListener ('scroll', handle_scroll);
-    return () => window.removeEventListener ('scroll', handle_scroll);
-  }, []);
-;
-  const toggle_dropdown = (name: string) =>: any {
-    setActiveDropdown (active_dropdown === name ? null : name);
-  }
-;
-  const close_dropdowns = () =>: any {
-    setActiveDropdown (null);
-  }
-;
-  const closeMobileMenu = () =>: any {
-    setIsOpen (false);
-    close_dropdowns ();
-  }
-;
-    >;
-      {/* Background Effects */}
-      <div className='absolute inset - 0'>;
-        <div;
-          className={`absolute inset - 0 transition - opacity duration - 300 ${
-            is_scrolled ? 'opacity - 100' : 'opacity - 0';
-          }`}
-        >;
-          <div className='absolute inset - 0 bg - gradient - to - b from - black / 95 via - black / 90 to - black / 95' />;
-          <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 via - purple - 500 / 5 to - pink - 500 / 5' />;
-        </div>;
-      </div>;
-      <div className='relative z - 10'>;
-        <div className='container mx - auto px - 4'>;
-          <div className='flex items - center justify - between h - 20'>;
-            {/* Logo */}
-            <Link href='/' className='flex items - center gap - 3 group'>;
-              <div className='w - 10 h - 10 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300'>;
-                <Brain className='w - 6 h - 6 text - white' />;
-              </div>;
-              <div>;
-                <div className='text - xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent'>;
-                  Zion Tech Group;
-                </div>;
-                <div className='text - xs text - gray - 400'>;
-                  Revolutionary Technology;
-                </div>              </div>;
-            </Link>;
-            {/* Desktop Navigation */}  }
-;
-  return (
-    <nav aria - label="Primary" className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
-      is_scrolled;
-        ? 'bg - black / 95 backdrop - blur - xl border - b border - gray - 800 / 50 shadow - 2xl';
-        : 'bg - transparent';
-    }`}>;
-      {/* Background Effects */}
-      <div className="absolute inset - 0">;
-        <div className={`absolute inset - 0 transition - opacity duration - 300 ${
-          is_scrolled ? 'opacity - 100' : 'opacity - 0';
-        }`}>;
-          <div className="absolute inset - 0 bg - gradient - to - b from - black / 95 via - black / 90 to - black / 95" />;
-          <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 via - purple - 500 / 5 to - pink - 500 / 5" />;
-        </div>;
-      </div>;
-      <div className="relative z - 10">;
-        <div className="container mx - auto px - 4">;
-          <div className="flex items - center justify - between h - 20">;
-            {/* Logo */}
-            <Link href="/" className="flex items - center gap - 3 group">;
-              <div className="w - 10 h - 10 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300">;
-                <Brain className="w - 6 h - 6 text - white" />;
-              </div>;
-              <div>;
-                <div className="text - xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">;
-                  Zion Tech Group;
-                </div>;
-                <div className="text - xs text - gray - 400">Revolutionary Technology</div>;
-              </div>;
-            </Link>;
-            {/* Desktop Navigation */}
-            <div className='hidden lg:flex items - center gap - 8'>;
-              {navigation_items.map (item => (
-                <div key={item.name} className='relative group'>;
-                  <button;
-                    on_click={() => toggle_dropdown (item.name)}
-                    className='flex items - center gap - 2 px - 4 py - 2 text - gray - 300 hover:text - white transition - colors duration - 200 group - hover:text - cyan - 400'                  >;
-                    {item.icon}
-                    <span>{item.name}</span>;
-                    {item.badge && (            <div className="hidden lg:flex items - center gap - 8">;
-              {navigation_items.map ((item) => (
-                <div key={item.name} className="relative group">;
-                  <button;
-                    on_click={() => toggle_dropdown (item.name)}
-                    className="flex items - center gap - 2 px - 4 py - 2 text - gray - 300 hover:text - white transition - colors duration - 200 group - hover:text - cyan - 400";
-            {/* Desktop Navigation */}
-
-
-                  >
-                    {item.icon}
-                    <span>{item.name}</span>
-                    {item.badge && (
-
-                  </button>
-
-
-                    {item.icon}
-                    <span>{item.name}</span>;
-                    {item.badge && (
                         'bg-gray-500/20 text-gray-400 border border-gray-500/30'
                       }`}>;
                         {item && item.badge}
                       </span>;
                     )}
-                  </button>
 
                   {/* Dropdown Menu */}
                   <AnimatePresence>;
@@ -2086,95 +1546,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                       <motion&& motion.div
                         initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-                        transition={{ duration: 0 && 0.2 }}
-                        className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
-                      <span;
-                        className={`px - 2 py - 1 text - xs rounded - full ${
-                          item.badge === 'New';
-                            ? 'bg - green - 500 / 20 text - green - 400 border border - green - 500 / 30';
-                            : item.badge === 'Hot';
-                              ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30';
-                              : item.badge === 'Showcase';
-                                ? 'bg - cyan - 500 / 20 text - cyan - 400 border border - cyan - 500 / 30';
-                                : item.badge === 'Future';
-                                  ? 'bg - purple - 500 / 20 text - purple - 400 border border - purple - 500 / 30';
-                                  : item.badge === 'Enterprise';
-                                    ? 'bg - blue - 500 / 20 text - blue - 400 border border - blue - 500 / 30';
-                                    : item.badge === 'Industry';
-                                      ? 'bg - orange - 500 / 20 text - orange - 400 border border - orange - 500 / 30';
-                                      : 'bg - gray - 500 / 20 text - gray - 400 border border - gray - 500 / 30';
-                        }`}
-                      >;
-                        {item.badge}
-                      </span>)}
-                    <ChevronDown;
-                      className={`w - 4 h - 4 transition - transform duration - 200 ${
-                        active_dropdown === item.name ? 'rotate - 180' : '';
-                      }`}
-                    />                  </button>                      <span className={`px - 2 py - 1 text - xs rounded - full ${
-                        item.badge === 'New' ? 'bg - green - 500 / 20 text - green - 400 border border - green - 500 / 30' :;
-                        item.badge === 'Hot' ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30' :;
-                        item.badge === 'Showcase' ? 'bg - cyan - 500 / 20 text - cyan - 400 border border - cyan - 500 / 30' :;
-                        item.badge === 'Future' ? 'bg - purple - 500 / 20 text - purple - 400 border border - purple - 500 / 30' :;
-                        item.badge === 'Enterprise' ? 'bg - blue - 500 / 20 text - blue - 400 border border - blue - 500 / 30' :;
-                        item.badge === 'Industry' ? 'bg - orange - 500 / 20 text - orange - 400 border border - orange - 500 / 30' :;
-                        'bg - gray - 500 / 20 text - gray - 400 border border - gray - 500 / 30';
-                      }`}>;
-                        {item.badge}
-                      </span>)}
-                    <ChevronDown className={`w - 4 h - 4 transition - transform duration - 200 ${
-                      active_dropdown === item.name ? 'rotate - 180' : '';
-                    }`} />;
-                  {/* Dropdown Menu */}
-                  <AnimatePresence>;
-                    {active_dropdown === item.name && (
-                      <motion.div;
-                        initial={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
-                        animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
-                        exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
-                        transition={{ duration: 0.2 }}
-                        className='absolute top - full left - 0 mt - 2 w - 80 bg - gray - 900 / 95 backdrop - blur - xl border border - gray - 800 / 50 rounded - 2xl shadow - 2xl shadow - black / 50 overflow - hidden';
-                        onMouseLeave={close_dropdowns}
-                      >;
-                        <div className='p - 6'>;
-                          <div className='flex items - center gap - 3 mb - 4'>;
-                            {item.icon}
-                            <div>;
-                              <h3 className='font - semibold text - white'>;
-                                {item.title || item.name}
-                              </h3>;
-                              {item.description && (
-                                <p className='text - sm text - gray - 400'>;
-                                  {item.description}
-                        onMouseLeave={closeDropdowns}>;
-                        <div className='p-6'>;
-                          <div className='flex items-center gap-3 mb-4'>;
-                            {item && item.icon}
-                            <div>;
-                              <h3 className='font-semibold text-white'>;
-                                {item && item.title || item && item.name}
-                              </h3>;
-                              {item && item.description && (;
-                                <p className='text-sm text-gray-400'>;
-                                  {item && item.description}
-                                </p>;
-                              )}
-                            </div>;
-                          </div>;
-
-                          <div className='space-y-2'>;
-                            {item && item.children?.map(child => (                              <Link
-                                key={child && child.name}
-                                href={child && child.href}
                                 className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${
                                   child && child.featured
                                     ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20'                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
                                 }`}
-                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                        transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden"
-                        onMouseLeave={closeDropdowns}
                       >
                         <div className="p-6">
                           <div className="flex items-center gap-3 mb-4">
@@ -2188,33 +1563,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                           </div>
                           <div className="space-y-2">
                             {item.children?.map((child) => (
-                                onClick={closeDropdowns}>                        onMouseLeave={closeDropdowns}
-                      >;
-                        <div className="p-6">;
-                          <div className="flex items-center gap-3 mb-4">;
-                            {item && item.icon}
-                            <div>;
-                              <h3 className="font-semibold text-white">{item && item.title || item && item.name}</h3>;
-                              {item && item.description && (;
-                                <p className="text-sm text-gray-400">{item && item.description}</p>;
-                              )}
-                            </div>;
-                          </div>;
-
-                          <div className="space-y-2">;
-                            {item && item.children?.map((child) => (;
-                                onClick={closeDropdowns}
-
-                              >
-
-
                               <Link
                                 key={child && child.name}
                                 href={child && child.href}
                                 className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${
-                                  child && child.featured
-                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20'                                  child && child.featured 
-                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20' 
                                     : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
                                 }`}
                                 onClick={closeDropdowns}>;
@@ -2232,16 +1584,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                 </div>;
                                 <ArrowRight className='w-4 h-4 opacity-50' />                              </Link>                                <ArrowRight className="w-4 h-4 opacity-50" />;
                               </Link>;
-                                  child.featured 
-                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20' 
-                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
-                                }`}
-                                onClick={closeDropdowns}
-                              >
-
-
-
-                              </Link>
                             ))}
                           </div>;
                         </div>;
@@ -2250,46 +1592,12 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                   </AnimatePresence>;
                 </div>;
               ))}
-
-
-
-
-
-
-            </div>;
-
-            {/* Right Side Actions */}
-            <div className='hidden lg:flex items-center gap-4'>;
-              {/* Quick Actions */}
-
-              <div className='flex items-center gap-2'>
-
-                {quickActions.map(action => (                  <Link
-
-                  <Link
-
-
-
-                    key={action.name}
-                    href={action.href}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
-                      action.primary
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 shadow-lg shadow-cyan-500/25'
-                        : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
                     }`}
                   >;
                     {action && action.icon}
                     <span>{action && action.name}</span>;
                   </Link>;
                 ))}
-
-
-
-
-
-
-              </div>;
-
               {/* Contact Info */}
               <div className='flex items-center gap-4 text-sm text-gray-400'>;
                 <a
@@ -2299,68 +1607,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                   <span className='hidden xl:inline'>{contactInfo && contactInfo.mobile}</span>;
                 </a>;
                 <a
-                                </p>)}
-                            </div>;
-                          </div>;
-                          <div className='space - y-2'>;
-                            {item.children?.map (child => (                              <Link;
-                                key={child.name}
-                                href={child.href}
-                                className={`flex items - center gap - 3 p - 3 rounded - xl transition - all duration - 200 ${
-                                  child.featured;
-                                    ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 text - cyan - 400 hover:bg - cyan - 500 / 20'                                    : 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50';
-                                }`}
-                                on_click={close_dropdowns}
-                              >                        onMouseLeave={close_dropdowns}
-                      >;
-                        <div className="p - 6">;
-                          <div className="flex items - center gap - 3 mb - 4">;
-                            {item.icon}
-                            <div>;
-                              <h3 className="font - semibold text - white">{item.title || item.name}</h3>;
-                              {item.description && (
-                                <p className="text - sm text - gray - 400">{item.description}</p>)}
-                            </div>;
-                          </div>;
-                          <div className="space - y-2">;
-                            {item.children?.map ((child) => (
-                              <Link;
-                                key={child.name}
-                                href={child.href}
-                                className={`flex items - center gap - 3 p - 3 rounded - xl transition - all duration - 200 ${
-                                  child.featured;
-                                    ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 text - cyan - 400 hover:bg - cyan - 500 / 20'                                  child.featured;
-                                    ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 text - cyan - 400 hover:bg - cyan - 500 / 20';
-                                    : 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50';
-                                }`}
-                                on_click={close_dropdowns}
-                              >;
-                                {child.featured && (
-                                  <Star className='w - 4 h - 4 text - cyan - 400' />)}
-                                <div className='flex - 1'>;
-                                  <div className='font - medium'>;
-                                    {child.name}
-                                  </div>;
-                                    <div className='text - sm opacity - 75'>;
-                                      {child.description}
-                                    </div>)}
-                                </div>;
-                                <ArrowRight className='w - 4 h - 4 opacity - 50' />                              </Link>                                <ArrowRight className="w - 4 h - 4 opacity - 50" />;
-                              </Link>))}
-                          </div>;
-                        </div>;
-                      </motion.div>)}
-                  </AnimatePresence>;
-                </div>))}
-            </div>;
-            {/* Right Side Actions */}
-            <div className='hidden lg:flex items - center gap - 4'>;
-              {/* Quick Actions */}
-              <div className='flex items - center gap - 2'>;
-                {quick_actions.map (action => (                  <Link            <div className="hidden lg:flex items - center gap - 4">;
-              {/* Quick Actions */}
-              <div className="flex items - center gap - 2">;
-                {quick_actions.map ((action) => (
                     key={action.name}
                     href={action.href}
                     className={`flex items - center gap - 2 px - 4 py - 2 rounded - xl text - sm font - medium transition - all duration - 200 ${
@@ -2374,16 +1620,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                   </Link>))}
               </div>;
               {/* Contact Info */}
-                <a href={`tel:${contactInfo.mobile}`} className="flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200">
-                  <Phone className="w-4 h-4" />
-                  <span className="hidden xl:inline">{contactInfo.mobile}</span>
-                </a>
-                <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-2 hover:text-purple-400 transition-colors duration-200">
-                  <Mail className="w-4 h-4" />
-                  <span className="hidden xl:inline">{contactInfo.email}</span>
-                </a>
-              </div>
-            </div>
                   href={`mailto:${contactInfo && contactInfo.email}`}
                   className='flex items-center gap-2 hover:text-purple-400 transition-colors duration-200'>;
                   <Mail className='w-4 h-4' />;
@@ -2397,20 +1633,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                   <span className="hidden xl:inline">{contactInfo && contactInfo.email}</span>;
               </div>;
             </div>;
-
-
-
-
-
-
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-
-
-
-
 
             {/* Mobile Menu Button */}
             <button
@@ -2426,11 +1648,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
               aria-label="Toggle mobile menu";
             >;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
-              aria-label="Toggle mobile menu"
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
           </div>
         </div>
           </div>;
@@ -2440,123 +1657,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {
         <AnimatePresence>;
           {isOpen && (;
             <motion&& motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-                          activeDropdown === item.name ? 'rotate-180' : ''
-                        }`} />
-                      </button>
-
-
-              transition={{ duration: 0 && 0.3 }}
-              className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50'
-              <div className='container mx-auto px-4 py-6'>;
-                <div className='space-y-6'>;
-                  {/* Mobile Navigation Items */}
-                  {navigationItems && navigationItems.map(item => (;
-                    <div key={item && item.name}>;
-                      <button
-                        onClick={() => toggleDropdown(item && item.name)}
-                        className='flex items-center justify-between w-full p-3 text-left text-gray-300 hover:text-white transition-colors duration-200';
-                      >;
-                        <div className='flex items-center gap-3'>;
-                          {item && item.icon}
-                          <span>{item && item.name}</span>;
-                          {item && item.badge && (;
-                            <span
-                              className={`px-2 py-1 text-xs rounded-full ${
-                                item && item.badge === 'New'
-                                  ? 'bg-green-500/20 text-green-400'
-                                  : item && item.badge === 'Hot'
-                                    ? 'bg-red-500/20 text-red-400'
-                                    : item && item.badge === 'Showcase'
-                                      ? 'bg-cyan-500/20 text-cyan-400'
-                                      : 'bg-gray-500/20 text-gray-400'
-                              }`}>                              {item && item.badge}
-                            </span>;
-                          )}
-                        </div>                            <spanclassName={`px-2 py-1 text-xs rounded-full ${
-                              item && item.badge === 'New' ? 'bg-green-500/20 text-green-400' :
-                              item && item.badge === 'Hot' ? 'bg-red-500/20 text-red-400' :
-                              item && item.badge === 'Showcase' ? 'bg-cyan-500/20 text-cyan-400' :
-                              'bg-gray-500/20 text-gray-400'
-                            }`}>;
-                            </span>;
-                          )}
-                        </div>;
-                        <ChevronDown
-                          className={`w-4 h-4 transition-transform duration-200 ${
-                            activeDropdown === item && item.name ? 'rotate-180' : ''
-                          }`}
-              <div className='flex items - center gap - 4 text - sm text - gray - 400'>;
-                <a;
-                  href={`tel:${contact_info.mobile}`}
-                  className='flex items - center gap - 2 hover:text - cyan - 400 transition - colors duration - 200';
-                >;
-                  <Phone className='w - 4 h - 4' />;
-                  <span className='hidden xl:inline'>{contact_info.mobile}</span>;
-                </a>;
-                <a;
-                  href={`mailto:${contact_info.email}`}
-                  className='flex items - center gap - 2 hover:text - purple - 400 transition - colors duration - 200';
-                >;
-                  <Mail className='w - 4 h - 4' />;
-                  <span className='hidden xl:inline'>{contact_info.email}</span>                </a>              <div className="flex items - center gap - 4 text - sm text - gray - 400">;
-                <a href={`tel:${contact_info.mobile}`} className="flex items - center gap - 2 hover:text - cyan - 400 transition - colors duration - 200">;
-                  <Phone className="w - 4 h - 4" />;
-                  <span className="hidden xl:inline">{contact_info.mobile}</span>;
-                </a>;
-                <a href={`mailto:${contact_info.email}`} className="flex items - center gap - 2 hover:text - purple - 400 transition - colors duration - 200">;
-                  <Mail className="w - 4 h - 4" />;
-                  <span className="hidden xl:inline">{contact_info.email}</span>;
-              </div>;
-            </div>;
-            {/* Mobile Menu Button */}
-            <button;
-              on_click={() => setIsOpen (!is_open)}
-              className='lg:hidden p - 2 text - gray - 300 hover:text - white transition - colors duration - 200';
-              aria - label='Toggle mobile menu';
-            >;
-              {is_open ? (
-                <X className='w - 6 h - 6' />) : (
-                <Menu className='w - 6 h - 6' />)}            </button>              className="lg:hidden p - 2 text - gray - 300 hover:text - white transition - colors duration - 200";
-              aria - label="Toggle mobile menu";
-            >;
-              {is_open ? <X className="w - 6 h - 6" /> : <Menu className="w - 6 h - 6" />}
-          </div>;
-        </div>;
-        {/* Mobile Menu */}
-        <AnimatePresence>;
-          {is_open && (
-            <motion.div;
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className='lg:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border - gray - 800 / 50';
-              <div className='container mx - auto px - 4 py - 6'>;
-                <div className='space - y-6'>;
-                  {/* Mobile Navigation Items */}
-                  {navigation_items.map (item => (
-                    <div key={item.name}>;
-                      <button;
-                        on_click={() => toggle_dropdown (item.name)}
-                        className='flex items - center justify - between w - full p - 3 text - left text - gray - 300 hover:text - white transition - colors duration - 200';
-                      >;
-                        <div className='flex items - center gap - 3'>;
-                          {item.icon}
-                          <span>{item.name}</span>;
-                          {item.badge && (
-                          activeDropdown === item.name ? 'rotate-180' : ''
-                        }`} />
-                      </button>
                         />                      </button>                        <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${
                           activeDropdown === item && item.name ? 'rotate-180' : ''
                         }`} />;
                       </button>;
-
-
-
 
                       {/* Mobile Dropdown */}
                       <AnimatePresence>;
@@ -2565,29 +1669,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0 && 0.2 }}
-                            className='ml-6 mt-2 space-y-2'>;
-                            {item && item.children?.map(child => (                              <Link
-                                key={child && child.name}
-                                href={child && child.href}
-                                className={`block p-3 rounded-lg transition-colors duration-200 ${
-                                  child && child.featured
-                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-400'                                    : 'text-gray-400 hover:text-white hover:bg-gray-800/50'
-                                }`}
-                                onClick={closeMobileMenu}>                            className="ml-6 mt-2 space-y-2";
-                          >;
-                            {item && item.children?.map((child) => (;
-                            transition={{ duration: 0.2 }}
-                            className="ml-6 mt-2 space-y-2"
-                          >
-                            {item.children?.map((child) => (
                               <Link
                                 key={child && child.name}
                                 href={child && child.href}
                                 className={`block p-3 rounded-lg transition-colors duration-200 ${
-                                  child && child.featured
-                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-400'                                  child && child.featured 
-                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-400' 
                                     : 'text-gray-400 hover:text-white hover:bg-gray-800/50'
                                 }`}
                                 onClick={closeMobileMenu}>;
@@ -2598,45 +1683,17 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                   </div>                                )}                                <div className="font-medium">{child && child.name}</div>;
                                 {child && child.description && (;
                                   <div className="text-sm opacity-75 mt-1">{child && child.description}</div>;
-                                  child.featured 
-                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-400' 
-                                    : 'text-gray-400 hover:text-white hover:bg-gray-800/50'
-                                }`}
-                                onClick={closeMobileMenu}
-                              >
-                                <div className="font-medium">{child.name}</div>
-                                {child.description && (
-                                  <div className="text-sm opacity-75 mt-1">{child.description}</div>
                                 )}
-
-
-
-
-
-                              </Link>
+                              </Link>;
                             ))}
                           </motion && motion.div>;
                         )}
                       </AnimatePresence>;
                     </div>;
                   ))}
-                  {/* Mobile Quick Actions */}
-                  <div className='pt-4 border-t border-gray-800/50'>;
-                    <div className='space-y-3'>;
-                      {quickActions && quickActions.map(action => (                        <Link                  <div className="pt-4 border-t border-gray-800/50">;
-                    <div className="space-y-3">;
-                      {quickActions && quickActions.map((action) => (;
-                  <div className="pt-4 border-t border-gray-800/50">
-                    <div className="space-y-3">
-                      {quickActions.map((action) => (
                         <Link
-
-
-
-
-
-                          key={action.name}
-                          href={action.href}
+                          key={action && action.name}
+                          href={action && action.href}
                           className={`flex items-center gap-3 p-3 rounded-xl text-sm font-medium transition-all duration-200 ${
                             action && action.primary
                               ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
@@ -2647,30 +1704,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                           <span>{action && action.name}</span>;
                         </Link>;
                       ))}
-
-
-
-
-
-
-                    </div>;
-                  </div>;
-
                   {/* Mobile Contact Info */}
                   <div className='pt-4 border-t border-gray-800/50'>;
                     <div className='space-y-3 text-sm text-gray-400'>;
                       <a
-
-                        href={`tel:${contactInfo.mobile}`}
-                        className='flex items-center gap-3 p-3 rounded-lg hover:text-cyan-400 hover:bg-gray-800/50 transition-all duration-200'
-                      >
-                        <Phone className='w-4 h-4' />
-
-
-
-
-                        <span>{contactInfo.mobile}</span>
-                      </a>
                       <a
                         href={`mailto:${contactInfo && contactInfo.email}`}
                         className='flex items-center gap-3 p-3 rounded-lg hover:text-purple-400 hover:bg-gray-800/50 transition-all duration-200'>;
@@ -2701,32 +1738,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
   );
 }
 }, []);
-
-                  {/* Mobile Contact Info */}
-                  <div className="pt-4 border-t border-gray-800/50">
-                    <div className="space-y-3 text-sm text-gray-400">
-                      <a href={`tel:${contactInfo.mobile}`} className="flex items-center gap-3 p-3 rounded-lg hover:text-cyan-400 hover:bg-gray-800/50 transition-all duration-200">
-                        <Phone className="w-4 h-4" />
-                        <span>{contactInfo.mobile}</span>
-                      </a>
-                      <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-3 p-3 rounded-lg hover:text-purple-400 hover:bg-gray-800/50 transition-all duration-200">
-                        <Mail className="w-4 h-4" />
-                        <span>{contactInfo.email}</span>
-                      </a>
-                      <div className="flex items-center gap-3 p-3 rounded-lg">
-                        <MapPin className="w-4 h-4" />
-                        <span className="text-sm">{contactInfo.address}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-    </nav>
-  )
 };
 
 export default UltraFuturisticNavigation2035;
@@ -2955,4 +1966,3 @@ export default UltraFuturisticNavigation2035);
 ;
 export default UltraFuturisticNavigation2035;
 ;
-

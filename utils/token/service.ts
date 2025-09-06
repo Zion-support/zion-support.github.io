@@ -5,43 +5,12 @@ export interface TokenTransaction {
   type: 'issue' | 'redeem' | 'transfer';
   reason: string;
   timestamp: number;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 // Mock data storage - replace with actual database;
 let transactions: TokenTransaction[] = [];
-;
-export function issue_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-    user_id,
-    amount,
-    type: 'issue',
-    reason,
-    timestamp: Date.now ();
-  }
-;
-  transactions.push (transaction);
   return transaction;
-}
-export function redeem_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
-    user_id,
-    amount: -amount, // Negative for redemption;
-    type: 'redeem',
-    reason,
-    timestamp: Date.now ();
-  }
-;
-  transactions.push (transaction);
-
-    type: 'redeem',
-    reason,
-    timestamp: Date.now();
-  };
-  
-
-  transactions.push(transaction);
-  return transaction;
+=======
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -55,6 +24,7 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
 export function setConfig(
   partial: Partial<ReturnType<typeof getConfig>>
 ): void {
+=======
 // Token service utilities
 export interface TokenConfig {
   id: string;
@@ -152,9 +122,13 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
   }
   return [...tokenBalances];
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {
   const current = get_config ();
   // Update the configuration;
   Object.assign (current, partial);
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

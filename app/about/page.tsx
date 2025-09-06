@@ -1,11 +1,15 @@
+
 export const metadata = {;
   title: "About | Zion Tech Group",;
   description:;
     "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
+
+=======
   description:
 
     "Learn about Zion Tech Group's mission to deliver enterprise-grade AI,micro SaaS,and IT solutions that drive real business results.",;
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
 export default function AboutPage() {;
   return (
@@ -76,6 +80,7 @@ function AboutPage() {
             </div>{" "}
             <div>;
               {" "}
+
               <h2 className="text - 2xl font - bold text - gray - 900 mb - 4">;
                 Our Vision;
               </h2>{" "}
@@ -83,10 +88,12 @@ function AboutPage() {
                 {" "}
                 A world where every business can leverage advanced technology to;
                 compete effectively and scale efficiently, regardless of their;
+
                 technical expertise.{" "}
               </p>{" "}
             </div>{" "}
           </div>{" "}
+
           <div className="bg - gray - 50 rounded - lg p - 8 mb - 12">;
             {" "}
             <h2 className="text - 2xl font - bold text - gray - 900 mb - 6">;
@@ -119,11 +126,13 @@ function AboutPage() {
                   Partnership;
                 </h3>{" "}
                 <p className="text - sm text - gray - 600">;
+
                   We work as an extension of your team;
                 </p>{" "}
               </div>{" "}
             </div>{" "}
           </div>{" "}
+
           <div className="mb - 12">;
             {" "}
             <h2 className="text - 2xl font - bold text - gray - 900 mb - 6">;
@@ -137,6 +146,7 @@ function AboutPage() {
                   AI & Machine Learning;
                 </h3>{" "}
                 <ul className="text - gray - 600 space - y-2">;
+
                   {" "}
                   <li>• Large Language Model (LLM) applications</li>{" "}
                   <li>• Retrieval - Augmented Generation (RAG)</li>{" "}
@@ -144,12 +154,14 @@ function AboutPage() {
                   <li>• MLOps and model deployment</li>{" "}
                 </ul>{" "}
               </div>{" "}
+
               <div className="border border - gray - 200 rounded - lg p - 6">;
                 {" "}
                 <h3 className="font - semibold text - gray - 900 mb - 3">;
                   Cloud & Infrastructure;
                 </h3>{" "}
                 <ul className="text - gray - 600 space - y-2">;
+
                   {" "}
                   <li>• AWS, GCP, and Azure migration</li>{" "}
                   <li>• Kubernetes and containerization</li>{" "}
@@ -159,7 +171,9 @@ function AboutPage() {
               </div>{" "}
             </div>{" "}
           </div>{" "}
+
               Let's discuss how we can help your business leverage technology;
+
               for growth.{" "}
             </p>{" "}
             <a
@@ -185,5 +199,7 @@ function AboutPage() {
           </div>{" "}
         </div>{" "}
       </div>{" "}
+
     </div>);
+
 }

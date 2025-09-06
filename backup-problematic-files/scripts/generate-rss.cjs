@@ -1,14 +1,14 @@
 #!/usr/bin/env node;
-;
+
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
-;
+
 const siteUrl = process.env.SITE_URL || 'https://zion.app';
-;
-function getPosts() {;
+
+function getPosts() {
   const files = glob.sync('pages/blog/*.tsx', { ignore:['pages/blog/index.tsx'] });
-  return files.map((fp) => {;
+  return files.map((fp) => {
     const rel = '/' + path.relative(path.join(process.cwd(), 'pages'), fp).replace(/\\/g, '/').replace(/\.(t|j)sx?$/, '');
     const href = rel;
     const slug = rel.split('/').pop();
@@ -17,8 +17,8 @@ function getPosts() {;
     return { title, url:siteUrl + href, date:new Date(stat.mtimeMs).toUTCString() };
   }).sort((a, b) => b.date.localeCompare(a.date));
 }
-;
-function buildRss(posts) {;
+
+function buildRss(posts) {
   const items = posts.map(p => `    <item>;
       <title><![CDATA[${p.title}]]></title>;
       <link>${p.url}</link>;
@@ -36,13 +36,13 @@ ${items}
 </rss>;
 `;
 }
-;
-function main() {;
+
+function main() {
   const posts = getPosts();
   const rss = buildRss(posts);
   const out = path.join(process.cwd(), 'public', 'rss.xml');
   fs.mkdirSync(path.dirname(out), { recursive:true });  fs.writeFileSync(out, rss);
   console.log(`Generated ${out}`);
 }
-;
+
 main();

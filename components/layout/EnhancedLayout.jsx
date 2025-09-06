@@ -24,16 +24,17 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
-const EnhancedLayout = ({ children }) => {
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <div className="min - h-screen flex flex - col">;
       <EnhancedNavigation />;
       <main className="flex - 1">;
         {children}
+=======
       </main>;
       <EnhancedFooter />;
     </div>);
 },
 export default EnhancedLayout;
 ;
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

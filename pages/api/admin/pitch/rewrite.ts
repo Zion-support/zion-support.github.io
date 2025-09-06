@@ -11,6 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { slide } = req.body || {};
   if (!slide) return res.status(400).json({ error: 'Missing slide' });
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   try {
     const prompt = `Rephrase the following slide content for an investor deck. Keep it 120-150 words, punchy, and data-driven. Return JSON with keys title and content.
 Title: ${slide.title}\nContent:\n${slide.content}`
@@ -20,17 +21,6 @@ Title: ${slide.title}\nContent:\n${slide.content}`
       const chat = await client.chat.completions.create({
         model: 'gpt-4o-mini'
         messages: [
-    } catch (err) {
-      // keep original if AI fails;
-    }
-
-
-
-
-  }
-}
-
-
           { role: 'system', content: 'You rewrite concise investor content and return JSON only.' },
           { role: 'user', content: prompt }
         ],
@@ -40,6 +30,7 @@ Title: ${slide.title}\nContent:\n${slide.content}`
       const parsed = JSON.parse(raw);
       title = parsed.title || title;
       content = parsed.content || content
+=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { ensureAdminFromApi } from '../../../../utils / auth',
 import OpenAI from 'openai',
@@ -77,6 +68,8 @@ response_format: { type: 'json_object' } as any}),
       const parsed = JSON.parse (raw),
       title = parsed.title || title,
       content = parsed.content || content;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     } catch (err) {
       // keep original if AI fails;
     }
@@ -85,9 +78,12 @@ response_format: { type: 'json_object' } as any}),
     res.status(500).json({ error: e?.message || 'Rewrite failed' })
   }
 }
+=======
 res.status (200).json ({ title, content });
   } catch (e: any) {
     res.status (500).json ({ error: e?.message || 'Rewrite failed' });
   }
 }
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,30 +1,14 @@
-}
-}
 
 export function formatDate(date: Date | string | number): string {
-  return new Intl && Intl.DateTimeFormat("en-US", {
-    month: "long", day: "numeric",
-    year: "numeric",
-}
-
-    month: "long", day: "numeric"
-    year: "numeric"
-}
-
-  return new Intl && Intl.NumberFormat("en-US", {
-    style: "currency", currency,
 
     month: "long", day: "numeric"
     year: "numeric"
 }
 export function formatCurrency(amount: number, currency = "USD"): string {
-  return new Intl && Intl.NumberFormat("en-US", {
-    style: "currency", currency,
   }).format(amount);
 }
 }
 }
-
 import { type ClassValue, clsx  } from './clsx';
 import { tw_merge  } from './tailwind - merge';
 ;
@@ -46,9 +30,3 @@ export function format_currency (amount: number, currency = "USD"): string {
 }
 ;
 },
-
-
-
-
-};
-

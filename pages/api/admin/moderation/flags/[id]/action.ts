@@ -1,10 +1,7 @@
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdmin, parseUserFromRequest } from '../../../../../../utils/auth';
 import { updateFlagStatus } from '../../../../../../utils/moderationDb';
 import type { ModerationStatus } from '../../../../../../types/moderation';
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = parseUserFromRequest(req);
   try {
@@ -39,6 +36,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('Allow', 'POST');
   return res.status(405).end('Method Not Allowed');
 }
+=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { ensure_admin, parseUserFromRequest } from '../../../../../../utils / auth',
 import { updateFlagStatus } from '../../../../../../utils / moderation_db',
@@ -77,3 +75,5 @@ ban: 'banned'},
   return res.status (405).end ('Method Not Allowed');
 }
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

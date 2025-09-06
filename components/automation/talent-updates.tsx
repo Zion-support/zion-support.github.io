@@ -1,6 +1,3 @@
-</div>) );
-}</div> </div>) import fs from 'fs';
-import fs from 'fs';
 import path from 'path';
  </div>) ) ;
 }</div> </div>) import fs from 'fs';
@@ -52,8 +49,3 @@ function TalentUpdatesPage() {
           </div>))}
       </div>;
     </div>);
-}
-
-  );
-}
-

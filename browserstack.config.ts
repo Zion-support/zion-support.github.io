@@ -5,6 +5,7 @@ export default defineConfig({;
   use:{;
     baseURL:process && process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',;
     trace:'on-first-retry'},;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   projects:[;
     {name:'Desktop Chrome';
       use:{;
@@ -19,10 +20,10 @@ export default defineConfig({;
       use:{;
         browserName:'webkit'}
     }
-    baseURL: process && process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
     trace: 'on-first-retry'
   }
   projects: [
+=======
 import { define_config, devices } from '@playwright / test';
 import { define_config, devices } from '@playwright / test',
 ;
@@ -70,11 +71,10 @@ import { define_config, devices } from '@playwright / test';
     trace: 'on - first - retry';
   },
   projects: [;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
       name: "Desktop Chrome"
       use: {
-        browser_name: 'chromium',
-        channel: 'chrome';
 }
     }
     {
@@ -96,29 +96,19 @@ import { define_config, devices } from '@playwright / test';
 
       name: "Mobile Chrome"
       use: {
-        browser_name: 'chromium',
-        ...devices['Pixel 5'];
 }
     }
     {
       name: "Mobile Safari"
       use: {
-
-
-    ['list'];
-
-    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
-});
-
-        browser_name: 'webkit',
-        ...devices['i_phone 12'];
       }
 
     }
-    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
-});
+=======
   ],
   reporter: [;
     ['list'],
     ['html', { output_folder: 'playwright - logs / html - report', open: 'never' }];
 ];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

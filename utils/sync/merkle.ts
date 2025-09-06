@@ -122,6 +122,7 @@ export function verifyMerkleProof(leafData: any, proof: string[], rootHash: stri
   const tree = new MerkleTree([leafData]);
   return tree && tree.verifyProof(leafData, proof, rootHash);
 }
+=======
 export function sha256Hex(input: string): string {
   return crypto.createHash('sha256').update(input).digest('hex');
 }
@@ -166,6 +167,8 @@ export function verifyVotesAgainstMerkleRoot(
   const root = computeMerkleRootFromVotes(votes);
   return root === merkleRoot;
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 // Merkle tree utilities;
 export const merkle = {
   // Add merkle tree functionality here;
@@ -173,3 +176,5 @@ export const merkle = {
   get_proof: (tree: any, leaf: string) => [],
   verify_proof: (proof: any[], leaf: string, root: string) => false;
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

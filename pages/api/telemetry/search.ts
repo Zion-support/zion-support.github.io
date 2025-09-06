@@ -1,5 +1,3 @@
-const memoryStore: { q: string, ts: number }[] = [];
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     const { q } = req.body |{}
@@ -22,7 +20,6 @@ if ( {) {
 }
       memory_store.push ({ q: q.trim (), ts: Date.now () });
     }
-    return res.status (204).end ();
   }
   // Check condition
 if ( {) {
@@ -36,23 +33,3 @@ if ( {) {
   return res.status (405).end ();
 }
 ;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  return res.status(405).end();
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-

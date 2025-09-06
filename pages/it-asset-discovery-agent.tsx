@@ -1,5 +1,4 @@
 
-export default function ITAssetDiscoveryAgentPage() {;
   return (
     <UltraFuturisticBackground variant='space' intensity='high'>;
       <Head>;
@@ -93,33 +92,16 @@ function ITAssetDiscoveryAgentPage() {
                 </a>;
               </li>;
               <li>;
-                <a;
-                  className='text - cyan - 300 underline';
-                  href='https://azure.microsoft.com / pricing / details / monitor/';
-                  target='_blank';
-                  rel='noopener noreferrer';
-                >;
                   Azure Monitor;
                 </a>;
               </li>;
               <li>;
-                <a;
-                  className='text - cyan - 300 underline';
-                  href='https://cloud.google.com / asset - inventory / pricing';
-                  target='_blank';
-                  rel='noopener noreferrer';
-                >;
                   GCP Asset Inventory;
                 </a>;
               </li>;
             </ul>;
           </Card>;
         </div>;
-        <div className='mt - 8'>;
-          <a;
-            href='/contact';
-            className='px - 6 py - 3 rounded - xl bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
-          >;
             Contact Sales;
           </a>;
         </div>;
@@ -145,7 +127,6 @@ export default function ITAssetDiscoveryAgentPage() {
 							<li>Drift and anomaly alerts</li>
 						</ul>
 					</Card>
-					<Card className="p-6 bg-black/40 border border-gray-800">
 						<h2 className="font-semibold mb-2">References</h2>
 						<ul className="text-sm text-gray-300 space-y-2 list-disc list-inside">
 							<li><a className="text-cyan-300 underline" href="https://aws.amazon.com/config/pricing/" target="_blank" rel="noopener noreferrer">AWS Config</a></li>
@@ -159,8 +140,5 @@ export default function ITAssetDiscoveryAgentPage() {
 		</UltraFuturisticBackground>
 	)
 }
-
     </UltraFuturisticBackground>);
 ;
-
-

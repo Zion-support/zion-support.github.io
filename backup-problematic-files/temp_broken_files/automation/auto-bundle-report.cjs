@@ -1,12 +1,12 @@
 #!/usr/bin/env node;
- ;
+ 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-;
+
 function run(cmd) { return execSync(cmd, { stdio:'pipe' }).toString() }
-;
-try {;
+
+try {
   const out = run('npm run build');
   const lines = out.split(/\r?\n/);
   const startIdx = lines.findIndex(l => l.trim().startsWith('Page'));
@@ -21,6 +21,6 @@ try {;
   runGit('git commit -m "chore(automation):update bundle report" || true');
   try { runGit('git push') } catch {}
   console.log('[bundle] report updated');
-} catch (e) {;
+} catch (e) {
   console.log('[bundle] non-fatal', e.message);
 }

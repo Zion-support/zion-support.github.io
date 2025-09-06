@@ -55,29 +55,19 @@ const PerformanceMonitor: React.FC = () => {
     };
   }, []);
 
-  if (process.env.NODE_ENV !== 'development' || !isVisible) {
+  if (process.env.NODE_ENV !== 'development' || !isVisible || !metrics) {
     return null;
   }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-gray-900/90 backdrop-blur-sm border border-gray-700 rounded-lg p-4 text-white text-sm font-mono z-50">
-      <div className="flex items-center justify-between mb-2">
-        <span className="text-xs text-gray-400">Performance</span>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white text-xs"
-        >
-          ×
-        </button>
+    <div className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm border border-gray-700 rounded-lg p-4 text-white text-sm z-50">
+      <div className="font-semibold mb-2">Performance Metrics</div>
+      <div className="space-y-1">
+        <div>Load Time: {metrics.loadTime}ms</div>
+        <div>Render Time: {metrics.renderTime}ms</div>
+        <div>Memory: {metrics.memoryUsage}MB</div>
       </div>
-      {metrics && (
-        <div className="space-y-1">
-          <div>Load: {metrics.loadTime}ms</div>
-          <div>Render: {metrics.renderTime}ms</div>
-          <div>Memory: {metrics.memoryUsage}MB</div>
-        </div>
-      )}
-      <div className="text-xs text-gray-500 mt-2">
+      <div className="text-xs text-gray-400 mt-2">
         Press Ctrl+Shift+P to toggle
       </div>
     </div>

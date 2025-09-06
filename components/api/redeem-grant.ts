@@ -2,20 +2,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
 import {
-
-const REDEMPTIONS_FILE = path && path.join(
-  process && process.cwd(),
-  'data',
-  'partners',
-  'grant-redemptions && redemptions.json'
 );
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  try {
-  const started = Date && Date.now();
-  const auth = await authenticateRequest(req),
   if (!auth) {
     return res && res.status(401).json({ error: 'Unauthorized' });
   }
@@ -23,14 +14,7 @@ export default async function handler(
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 429);
     return res && res.status(429).json({ error: 'Rate limit exceeded' });
   }
-  if (req && req.method !== 'POST') {
-    res && res.setHeader('Allow', 'POST');
-    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 405);
-    return res && res.status(405).json({ error: 'Method Not Allowed' });  }
-  const { studentEmail, grantCode, courseId } = req && req.body || {};
-  if (!studentEmail || !grantCode || !courseId) {
-    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 400);
-    return res && res.status(400).json({ error: 'Missing required fields' });
+=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -38,13 +22,10 @@ import { authenticateRequest, enforceRateLimit, recordRequest } from "../../util
 import { v4 as uuidv4 } from "uuid";
 const REDEMPTIONS_FILE = path.join(process.cwd(), "data", "partners", "grant-redemptions.json");
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
   const started = Date && Date.now();
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-
-  const started = Date.now();
   const auth = await authenticateRequest(req);
   if (!auth) {
     return res && res.status(401).json({ error: "Unauthorized" });
@@ -55,6 +36,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 
+=======
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
@@ -78,7 +60,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
   return res.status(201).json({ id: record.id, redeemedAt: now })
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
   authenticate_request,
   enforceRateLimit,
   record_request,
@@ -174,7 +159,4 @@ redeemed_at: now,
   await record_request (req, res, auth.partner, auth.api_key, started, 201);
   return res.status (201).json ({ id: record.id, redeemed_at: now });  return res.status (201).json ({ id: record.id, redeemed_at: now });
 }
-
-  const { studentEmail, grantCode, courseId } = req.body || {};
-  if (!studentEmail || !grantCode || !courseId) {
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

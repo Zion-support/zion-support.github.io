@@ -47,6 +47,7 @@ export function isVersionGreater(a: string, b: string): boolean {
 export function isVersionEqual(a: string, b: string): boolean {
   return compareVersions(parseVersion(a), parseVersion(b)) === 0;
 }
+=======
 export function nextVersionFor(
   state: MultiverseState,
   entityKey: string
@@ -54,6 +55,8 @@ export function nextVersionFor(
   const current = state.latestVersionByEntityId[entityKey] || 0;
   return current + 1;
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 // Versioning utilities;
 export const versioning = {
   // Add versioning functionality here;
@@ -61,3 +64,5 @@ export const versioning = {
   compare_versions: (v1: string, v2: string) => 0,
   increment_version: (version: string) => version;
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

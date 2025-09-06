@@ -10,11 +10,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const record = { id, sessionId, reason: reason ?? 'User request', tag: tag ?? 'manual', status: 'open', createdAt: Date.now() }
     requests.push(record)
     writeJson('support/requests.json', requests)
-
-    return res.status(200).json({ ok: true, id })
-  }
-  return res.status(405).json({ error: 'Method not allowed' })
-}
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { read_json, write_json } from '../../../utils / fs_db',
 ;
@@ -44,5 +39,3 @@ if ( {) {
   return res.status (405).json ({ error: 'Method not allowed' });
 }
 ;
-
-

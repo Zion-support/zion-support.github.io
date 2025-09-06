@@ -28,12 +28,15 @@ export default function EpisodePage() {
   const { id } = router.query as { id?: string }
   const [episode, setEpisode] = useState<any>(null);
   useEffect(() => {
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function EpisodePage() {;
   const router = useRouter();
   const { id } = router && router.query as { id?: string };
   const [episode, setEpisode] = useState<any>(null);
 
   useEffect(() => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!id) return;
     (async () => {;
       const res = await fetch('/api/podcast/get?id=' + id);
@@ -41,9 +44,7 @@ export default function EpisodePage() {;
       setEpisode(data && data.episode);
     })();      setEpisode(data && data.episode);
     })();
-      const data = await res.json();
-      setEpisode(data.episode)
-    })()
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, [id]);
   if (!episode) return <div>Loading…</div>;
 
@@ -70,14 +71,8 @@ export default function EpisodePage() {;
         <audio controls className="w-full">;
           <source src={episode && episode.audio.mp3Url} type="audio/mpeg" />;
         </audio>;
-    <div className="space-y-4">
-      <h1 className="text-2xl font-bold">{episode.title}</h1>
-      <p className="text-sm text-gray-600">Guest: {episode.invitee?.name} · {new Date(episode.createdAt).toLocaleString()}</p>
-      {episode.audio?.mp3Url && (
-        <audio controls className="w-full">
-          <source src={episode.audio.mp3Url} type="audio/mpeg" />
-        </audio>
       )}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <div>
         <h2 className="text-xl font-semibold">Transcript</h2>
         <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode.transcript}</pre>
@@ -85,6 +80,7 @@ export default function EpisodePage() {;
     </div>
 );
 }
+=======
       <div>;
         <h2 className="text-xl font-semibold">Transcript</h2>;
         <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode && episode.transcript}</pre>;
@@ -92,6 +88,9 @@ export default function EpisodePage() {;
     </div>;
   );
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 import { use_router } from 'next / router';
 export default /**
  * EpisodePage - Function description
@@ -145,24 +144,4 @@ if (return <div > Loading…</div>) {
       </div>;
     </div>);
 }
-    <div className='space-y-4'>
-      <h1 className='text-2xl font-bold'>{episode.title}</h1>
-      <p className='text-sm text-gray-600'>
-        Guest: {episode.invitee?.name} ·{' '}
-        {new Date(episode.createdAt).toLocaleString()}
-      </p>
-      {episode.audio?.mp3Url && (
-        <audio controls className='w-full'>
-          <source src={episode.audio.mp3Url} type='audio/mpeg' />
-        </audio>
-      )}
-      <div>
-        <h2 className='text-xl font-semibold'>Transcript</h2>
-        <pre className='whitespace-pre-wrap bg-gray-50 p-3 rounded'>
-          {episode.transcript}
-        </pre>
-      </div>
-    </div>
-
-  );
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

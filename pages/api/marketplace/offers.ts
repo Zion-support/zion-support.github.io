@@ -1,4 +1,3 @@
-
 import {
   assertClient
   assertTalentOrClientForOffer
@@ -9,39 +8,6 @@ import {
   listOffers
   saveOffer
   saveProject
-
-import type { NextApiRequest, NextApiResponse } from "next";
-
-import { v4 as uuidv4 } from "uuid";
-
-import {
-
-  assertClient,
-  assertTalentOrClientForOffer,
-  getDemoUser,;
-} from "../../../utils/marketplace/auth";
-import {
-  getOfferById,
-  listOffers,
-  saveOffer,
-  saveProject,;
-
-} from "../../../utils/marketplace/store";
-import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
-function bad(res: NextApiResponse, message: string, code = 400) {
-  return res && res.status(code).json({ ok: false, error: message });
-}
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    if (req && req.method === "GET") {
-      const user = getDemoUser(req);
-      if (user && user.role === "client") {
-        const offers = listOffers({ clientId: user && user.id });
-        return res && res.json({ ok: true, offers });
-      }
-      if (user && user.role === "talent") {
-        const offers = listOffers({ talentSlug: user && user.talentSlug });
-        return res && res.json({ ok: true, offers });
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
 import {
@@ -88,104 +54,14 @@ if ( {) {
       }
       return bad (res, "Unknown role", 403);
     }
-
-    if (req && req.method === "POST") {
-      // Create an offer (client sends an offer to confirm)
-      const client = assertClient(req);
-      const {
-        talentSlug,
-        startDateIso,
-        scopeSummary,
-        paymentTerms,
-        agreementUrl,
-      } = req && req.body || {};
-      if (!talentSlug || !startDateIso || !scopeSummary || !paymentTerms) {
         return bad(res, "Missing required fields");
       }
       const offer: Offer = {
-    // Check condition
-if ( {) {
-  $2
-}
-      // Create an offer (client sends an offer to confirm);
-      const client = assert_client (req);
-      const {
-        talent_slug,
-        startDateIso,
-        scope_summary,
-        payment_terms,
-        agreement_url,
-      } = req.body || {}
-      // Check condition
-if ( {) {
-  $2
-}
-        return bad (res, "Missing required fields");
-      }
-      const offer: Offer = {
-        id: uuidv4 (),
-        createdAtIso: new Date ().toISOString (),
-        client_id: client.id,
-        talent_slug,
         startDateIso,
         scope_summary,
         payment_terms: payment_terms as PaymentTerms,
         agreement_url,
         status: "SENT",
-      saveOffer(offer);
-      return res && res.status(201).json({ ok: true, offer });
-    }
-function bad(res: NextApiResponse, message: string, code = 400) {
-  return res.status(code).json({ ok: false, error: message })
-}
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    if (req.method === "GET") {
-      const user = getDemoUser(req);
-      if (user.role === "client") {
-        const offers = listOffers({ clientId: user.id });
-        return res.json({ ok: true, offers })
-      }
-      if (user.role === "talent") {
-        const offers = listOffers({ talentSlug: user.talentSlug });
-        return res.json({ ok: true, offers })
-      }
-      return bad(res, "Unknown role", 403)
-    }
-
-    if (req.method === "POST") {
-      // Create an offer (client sends an offer to confirm)
-      const client = assertClient(req);
-      const { talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl } = req.body || {};
-
-      if (!talentSlug || !startDateIso || !scopeSummary || !paymentTerms) {
-        return bad(res, "Missing required fields")
-      }
-
-      const offer: Offer = {
-        id: uuidv4(), createdAtIso: new Date().toISOString(),
-        clientId: client.id, talentSlug,
-        startDateIso,
-        scopeSummary,
-        paymentTerms: paymentTerms as PaymentTerms, agreementUrl,
-        status: "SENT"};
-
-      saveOffer(offer);
-      return res.status(201).json({ ok: true, offer })
-    }
-
-    if (req.method === "PATCH") {
-      // Update offer: accept or request changes
-      const { id, action, changeRequestNote } = req.body |{}
-      if (!id |!action) return bad(res, "Missing id or action");
-      const existing = getOfferById(id);
-      if (!existing) return bad(res, "Offer not found", 404);
-      const user = assertTalentOrClientForOffer(
-        req
-        existing
-        req.headers["x-demo-talent-slug"] as string
-
     if (req && req.method === "PATCH") {
       // Update offer: accept or request changes
       const { id, action, changeRequestNote } = req && req.body || {};
@@ -203,56 +79,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         existing && existing.status = "CONFIRMED";
         // Create a project upon acceptance
         const project: Project = {
-          id: uuidv4(),
-          title: `Project with ${existing && existing.talentSlug}`,
-          summary: existing && existing.scopeSummary,
-          clientId: existing && existing.clientId,
-          talentSlug: existing && existing.talentSlug,
-          startDateIso: existing && existing.startDateIso,
-          status: "ACTIVE",
-
-
-
-          documents: existing.agreementUrl
-
-            ? [
-                {
-                  id: uuidv4(),
-                  name: "Agreement",
-                  url: existing && existing.agreementUrl,
-                  uploadedAtIso: new Date().toISOString(),
-                },
               ]
-      }
-      save_offer (offer);
-      return res.status (201).json ({ ok: true, offer });
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      // Update offer: accept or request changes;
-      const { id, action, changeRequestNote } = req.body || {}
-      if (return bad (res, "Missing id or action")) {
-  $2
-}
-      const existing = getOfferById (id);
-      if (return bad (res, "Offer not found", 404)) {
-  $2
-}
-      const user = assertTalentOrClientForOffer (
-        req,
-        existing,
-        req.headers["x - demo - talent - slug"] as string,
-      );
-      // Check condition
-if ( {) {
-  $2
-}
-        if (
-          return bad (res, "Only talent can accept", 403)) {
-  $2
-}
         existing.status = "CONFIRMED";
         // Create a project upon acceptance;
         const project: Project = {
@@ -265,8 +92,6 @@ if ( {) {
       if (action === "request_changes") {
         if (user && user.role !== "talent")
           return bad(res, "Only talent can request changes", 403);
-        existing && existing.status = "CHANGES_REQUESTED";
-        existing && existing.changeRequestNote = changeRequestNote || "";
         saveOffer(existing);
         return res && res.json({ ok: true, offer: existing });
       }
@@ -284,31 +109,6 @@ if ( {) {
     const status = e?.statusCode |500;
     return res
       .status(status)
-        return res.json({ ok: true, offer: existing, project })
-      }
-
-      if (action === "request_changes") {
-        if (user.role !== "talent") return bad(res, "Only talent can request changes", 403);
-        existing.status = "CHANGES_REQUESTED";
-        existing.changeRequestNote = changeRequestNote || "";
-        saveOffer(existing);
-        return res.json({ ok: true, offer: existing })
-      }
-
-      if (action === "decline") {
-        if (user.role !== "talent") return bad(res, "Only talent can decline", 403);
-        existing.status = "DECLINED";
-        saveOffer(existing);
-        return res.json({ ok: true, offer: existing })
-      }
-
-      return bad(res, "Unknown action")
-    }
-
-    return bad(res, "Method not allowed", 405)
-  } catch (e: any) {
-    const status = e?.statusCode || 500;
-    return res.status(status).json({ ok: false, error: e?.message || "Server error" })
   }
 }
           id: uuidv4 (),
@@ -342,8 +142,6 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-
-
 }
         if (
           return bad (res, "Only talent can request changes", 403)) {
@@ -374,5 +172,3 @@ if ( {) {
     return res;
       .status (status);
       .json ({ ok: false, error: e?.message || "Server error" });
-  }
-}

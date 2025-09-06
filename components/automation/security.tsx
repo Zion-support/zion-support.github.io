@@ -1,30 +1,13 @@
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-interface AuditReport {
-  generatedAt?: string;
-  metadata?: any;
-  vulnerabilities?: any;
-  error?: string;
-  raw?: string
 }
 </pre> </div>)
 
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-interface AuditReport {
-  generatedAt?: string;
-  metadata?: any;
-  vulnerabilities?: any;
-  error?: string;
-  raw?: string
-}
-</pre> </div>)
 export default function SecurityAudit({ report }: Props) {
+=======
 };
 </pre> </div>) ;
 export default function SecurityAudit(): any ({ report }: Props) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <div className="space-y-4">;
       <header className="space-y-1">;
@@ -35,6 +18,9 @@ export default function SecurityAudit(): any ({ report }: Props) {;
       {report && report.generatedAt && (;
         <div className="text-sm text-gray-500">Generated at: {new Date(report && report.generatedAt).toLocaleString()}</div>;
       )}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 }
 </pre> </div>);
 export default /**
@@ -55,3 +41,4 @@ function SecurityAudit() {
       </pre>;
     </div>);
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

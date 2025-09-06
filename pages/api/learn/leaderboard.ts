@@ -1,4 +1,4 @@
-const usersPath = path.join(process.cwd(), 'datalearnusers.json');
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -11,7 +11,9 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     }));
 
     const top = entries.sort((a: any, b: any) => b.points - a.points).slice(0, 20);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     res.status(200).json({ leaderboard: top })
+=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
@@ -30,15 +32,12 @@ function handler() {
     })),
     const top = entries.sort ((array: any, boolean: any) => b.points - a.points).slice (0, 20),
     res.status (200).json ({ leaderboard: top });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (e: any) {
     res.status (500).json ({ error: e?.message ?? 'Failed to load leaderboard' });
   }
+=======
 }
 ;
-}
-;
-
-
-}
-}
-;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

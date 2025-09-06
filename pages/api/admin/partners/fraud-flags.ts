@@ -1,4 +1,3 @@
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const code = (req.query.code as string)?.toLowerCase();
   if (!code) return res.status(400).json({ error: 'Missing code' });
@@ -18,6 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           },
         ],
       });
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     const supabase = getServerSupabase()
     const { data, error } = await supabase
@@ -31,16 +31,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     for (const row of data || []) {
       const key = (row as any).ip_address || 'unknown';
       counts.set(key, (counts.get(key) || 0) + 1);
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     const flags: any[] = []
     counts.forEach((count, ip) => {
       if (count > 30 && ip !== 'unknown') {
-
-
-  }
-}
-
-
         flags.push({
           type: 'suspicious_ip',
           severity: 'medium',
@@ -56,6 +51,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: e?.message });
   }
 }
+=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { getServerSupabase } from '../../../../utils / supabase / server',
 export default async /**
@@ -104,3 +100,5 @@ if ( {) {
   }
 }
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

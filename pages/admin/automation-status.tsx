@@ -1,9 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-
-import type { NextPage } from 'next';
-import Head from 'next/head';
 const AutomationStatus: NextPage = () => {
   return (
     <div>
@@ -16,17 +13,10 @@ const AutomationStatus: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-
-export default AutomationStatus,;
-
-  );
-};
-export default AutomationStatus;
-
-
   )
 }
 export default AutomationStatus;
+=======
 import type { NextPage } from 'next',
 import Head from 'next / head',
 const AutomationStatus: NextPage = () => {
@@ -43,3 +33,5 @@ const AutomationStatus: NextPage = () => {
     </div>);
 },
 export default AutomationStatus,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,12 +1,4 @@
 import type { NextPage } from 'next';
-const Verify: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>Verify - Zion Tech Solutions</title>
-        <meta name="description" content="Verify page" />
-      </Head>
-      
       <main>
         <h1>Verify</h1>
         <p>This page is under construction.</p>
@@ -14,6 +6,8 @@ const Verify: NextPage = () => {
     </div>
   )
 }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <main>;
         <h1>Verify</h1>;
         <p>This page is under construction.</p>;
@@ -22,7 +16,9 @@ const Verify: NextPage = () => {
   ),;
 };
 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Verify;
+=======
 import Head from 'next / head';
       <main>;
         <h1 > Verify</h1>;
@@ -33,5 +29,4 @@ import Head from 'next / head';
 ;
 export default Verify;
 ;
-
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

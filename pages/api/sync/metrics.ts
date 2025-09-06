@@ -1,57 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({
-    treasuryTotals: {},
-    topContributors: [],
-    totalVoteCount: 0,
-    lastSyncedAt: Date.now()
-  });
-import type { NextApiRequest, NextApiResponse } from "next",
-import { readState, filterEventsByScope } from "../../../utils/sync/storage",
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" }),
-  const state = readState(),
-  const events = filterEventsByScope(state.events, state.config.scope),
-
-
-  const totalsByToken: Record<string, number> = {},
-  const contributionsBySubject: Record<string, number> = {},
-  let globalVotes = 0,
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({
-    treasuryTotals: {},
-    topContributors: [],
-    totalVoteCount: 0,
-    lastSyncedAt: Date.now()
-  });
-import type { NextApiRequest, NextApiResponse } from "next",
-import { readState, filterEventsByScope } from "../../../utils/sync/storage",
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" }),
-  const state = readState(),
-  const events = filterEventsByScope(state.events, state.config.scope),
-
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({
-    treasuryTotals: {},
-    topContributors: [],
-    totalVoteCount: 0,
-    lastSyncedAt: Date.now()
-  });
-import type { NextApiRequest, NextApiResponse } from "next",
-import { readState, filterEventsByScope } from "../../../utils/sync/storage",
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" }),
-  const state = readState(),
-  const events = filterEventsByScope(state.events, state.config.scope),
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   for (const e of events) {
     if (e.type === "token_transfer") {
       const p = e.payload as any
@@ -60,9 +10,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const p = e.payload as any
       contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] |0) + (p.score |0)
     } else if (e.type === "proposal") {
-
-      const p = e.payload as any,
-
       const p = e.payload as any
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0
     }
@@ -76,6 +23,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     totalVoteCount: globalVotes,
     lastSyncedAt: state.lastSyncedAt})
 }
+=======
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { read_state, filterEventsByScope  } from '../../../utils / sync / storage';,
 ;
@@ -123,3 +71,5 @@ if ( {) {
     lastSyncedAt: state.lastSyncedAt});
 }
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

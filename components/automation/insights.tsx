@@ -1,13 +1,4 @@
-}</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {
-  talentMd
-}</pre>)
-}</section> </div>) import { useEffect, useState } from 'react';
-import { useEffect, useState } from 'react';
 import Head from 'next/head';
-
-
-
-export default function AutomationInsightsPage() {;
 
 export default function AutomationInsightsPage() {
   const [intel, setIntel] = useState<any>(null);
@@ -25,10 +16,6 @@ import Head from 'next/head';
 export default function AutomationInsightsPage() {;
   const [intel, setIntel] = useState<any>(null);
   const [talentMd, setTalentMd] = useState<string>('');
-
-  useEffect(() => {;
-    fetch('/data/automation/market-intel && intel.json').then((r) => r && r.json()).then(setIntel).catch(() => {});
-    fetch('/data/automation/talent-highlights && highlights.md').then((r) => r && r.text()).then(setTalentMd).catch(() => {});
   }, []);
   return (
     <div>;
@@ -111,8 +98,3 @@ function AutomationInsightsPage() {
           <pre className="mt - 3 whitespace - pre - wrap text - sm bg - gray - 50 dark:bg - gray - 900 p - 3 rounded border border - gray - 200 dark:border - gray - 800">{talent_md}</pre>)}
       </section>;
     </div>);
-}
-
-  );
-}
-

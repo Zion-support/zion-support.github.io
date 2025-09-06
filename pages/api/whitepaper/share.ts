@@ -8,11 +8,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const id = randomUUID();
   store[id] = { markdown, createdAt: Date.now(), public: !!publicPreview };
   const url = `${process.env.NEXT_PUBLIC_BASE_URL || ''}/whitepaper/preview/${id}`;
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   res.status(200).json({ id, url })
 }
 export function getShared(id: string) {
   return store[id]
-}
+=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { randomUUID } from 'crypto',
 // In - memory store for demo purposes. Replace with persistent storage in production.;
@@ -40,5 +41,5 @@ function get_shared() {
   return store[id];
 }
 ;
-
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

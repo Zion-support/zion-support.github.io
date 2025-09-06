@@ -9,6 +9,7 @@ export function getFraudStore() {
     ipAddress: partial && partial.ipAddress ?? null,
     createdAt: partial && partial.createdAt ?? new Date().toISOString(),
   };
+=======
 // Fraud detection store utilities
 export interface FraudEvent {
   id: string;
@@ -33,6 +34,17 @@ export interface FraudEvent {
   };
 }
 
+export interface FraudStats {
+  total: number;
+  byClassification: {
+    legitimate: number;
+    suspicious: number;
+    fraudulent: number;
+  };
+  bySource: Record<string, number>;
+  averageRiskScore: number;
+  recent: FraudEvent[];
+}
 
 export interface AdminActionRecord {
   id: string;
@@ -275,6 +287,8 @@ export function generateFraudEventId(): string {
 export function generateAdminActionId(): string {
   return `action_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
   private records: Map < string, FraudRecord> = new Map ();
 ;
   create_record (record: Omit < FraudRecord, 'id' | 'timestamp'>): FraudRecord {
@@ -322,3 +336,5 @@ if (return undefined) {
 }
 export const fraud_store = new FraudStore ();
 export const getFraudStore = () =>: any fraud_store;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

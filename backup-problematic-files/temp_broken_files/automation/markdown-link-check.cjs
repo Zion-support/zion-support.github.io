@@ -1,39 +1,39 @@
 #!/usr/bin/env node;
- ;
+ 
 const fs = require('fs');
 const path = require('path');
-;
+
 const ROOT = process.cwd();
-;
-function walk(dir) {;
+
+function walk(dir) {
   const out = [];
-  for (const e of fs.readdirSync(dir, { withFileTypes:true })) {;
+  for (const e of fs.readdirSync(dir, { withFileTypes:true })) {
     const full = path.join(dir, e.name);
     if (e.isDirectory()) out.push(...walk(full));
     else out.push(full);
   }
   return out;
 }
-;
-function isMarkdown(file) {;
+
+function isMarkdown(file) {
   return /\.(md|mdx)$/i.test(file);
 }
-;
-function findLinks(content) {;
+
+function findLinks(content) {
   const links = [];
   const regex = /\[[^\]]+\]\(([^)]+)\)/g;
   let m;
   while ((m = regex.exec(content))) links.push(m[1]);
   return links;
 }
-;
-function main() {;
+
+function main() {
   const files = walk(ROOT).filter(isMarkdown);
   const results = [];
-  for (const f of files) {;
+  for (const f of files) {
     const text = fs.readFileSync(f, 'utf8');
     const links = findLinks(text);
-    for (const l of links) {;
+    for (const l of links) {
       if (/^https?:\/\//i.test(l)) continue; // skip external;
       const target = path.resolve(path.dirname(f), l.split('#')[0]);
       const exists = fs.existsSync(target);
@@ -50,5 +50,5 @@ function main() {;
   fs.writeFileSync(path.join(docsDir, 'link-report.md'), md.join('\n'));
   console.log('markdown-link-check:updated docs/link-report.*');
 }
-;
+
 if (require.main === module) main();

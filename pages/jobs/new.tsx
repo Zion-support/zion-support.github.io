@@ -1,8 +1,3 @@
-export default function NewJobPage() {
-  const { notify } = useToast();
-  const [loading, setLoading] = useState(false);
-
-
   return (
     <div className="max-w-2xl mx-auto">
       <EnhancedCard>
@@ -24,8 +19,11 @@ export default function NewJobPage() {
       </EnhancedCard>;
     </div>;
   );
+=======
   )
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 import {useState} from 'react';
 import EnhancedCard from '../../components / ui / EnhancedCard';
 import EnhancedButton from '../../components / ui / EnhancedButton';
@@ -35,18 +33,5 @@ import { use_toast } from '../../components / ui / NotificationSystem';
       </EnhancedCard>;
     </div>);
 ;
-
-        )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      </EnhancedCard>;
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,3 +1,4 @@
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const Dashboard: NextPage = () => {
   return (
     <div className="space-y-6 pb-16">
@@ -5,31 +6,16 @@ const Dashboard: NextPage = () => {
         <title>Dashboard - Zion</title>
       </Head>
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <h1 className="text-2xl font-semibold">Dashboard</h1>
       <section>
         <h2 className="text-lg font-semibold mb-2">My Jobs</h2>
         <EmptyState
           title="No jobs yet"
           description="Post your first job to get quotes from top talent."
-
-
-          icon={<span>🧰</span>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          primaryAction={{ label: 'Post a job', href: '/jobs/post' }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          secondaryAction={{ label: 'Explore talent', href: '/talent' }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
+          icon={<span>🧰</span>}
+          primaryAction={{ label: 'Post a job', href: '/jobs/post' }}
+          secondaryAction={{ label: 'Explore talent', href: '/talent' }}
         />
       </section>
       <section>
@@ -45,6 +31,7 @@ const Dashboard: NextPage = () => {
   )
 }
 export default Dashboard;
+=======
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import EmptyState from '../../components / ui / EmptyState',
@@ -77,3 +64,5 @@ const Dashboard: NextPage = () => {
     </div>);
 },
 export default Dashboard,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
