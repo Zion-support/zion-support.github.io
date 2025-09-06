@@ -2,6 +2,14 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
+  Brain,
+  Rocket,
+  Shield,
+  Users,
+  Target,
+  Zap
+} from 'lucide-react';
+
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -9,13 +17,13 @@ const AboutPage: React.FC = () => {
       title: "Innovation First",
       description: "We push the boundaries of what's possible through cutting-edge technology and creative problem-solving.",
       color: "from-purple-500 to-pink-500"
-    };
+    },
     {
       icon: Shield,
       title: "Trust & Security",
-      description: "Building secure, reliable solutions that our clients can depend on for their most critical operations.";
+      description: "Building secure, reliable solutions that our clients can depend on for their most critical operations.",
       color: "from-red-500 to-orange-500"
-    };
+    },
     {
       icon: Users,
       title: "Human-Centric",

@@ -40,30 +40,30 @@ type Service = typeof enhancedRealMicroSaasServices[number];
     if (!slug) return undefined;
     const all: any[] = ([] as any[])
       .concat(
-        enhancedRealMicroSaasServices as any;
-        extraServices as any;
-        additionalEnhancedServices as any;
-        innovativeAIServices as any;
-        quantumSpaceServices as any;
-        enterpriseITServices as any;
-        newRealServices as any;
-        marketReadyServices as any;
-        realMarketServices as any;
-        new2025Services as any;
-        newRealInnovations as any;
-        emergingTechnologyServices as any;
-        comprehensiveITSolutions as any;
-        marketValidatedServices as any;
-        curatedMarketServices as any;
-        cuttingEdgeITServices as any;
-        nextGenerationAIServices as any;
-        nextGenAIServices as any;
-        industryRealServices as any;
-        professionalServices as any;
-        realEnterpriseServices2025 as any;
-        augmentedServicesBatch3 as any;
-        real2025Q3Additions as any;
-        realQ4Services2025 as any;
+        enhancedRealMicroSaasServices as any,
+        extraServices as any,
+        additionalEnhancedServices as any,
+        innovativeAIServices as any,
+        quantumSpaceServices as any,
+        enterpriseITServices as any,
+        newRealServices as any,
+        marketReadyServices as any,
+        realMarketServices as any,
+        new2025Services as any,
+        newRealInnovations as any,
+        emergingTechnologyServices as any,
+        comprehensiveITSolutions as any,
+        marketValidatedServices as any,
+        curatedMarketServices as any,
+        cuttingEdgeITServices as any,
+        nextGenerationAIServices as any,
+        nextGenAIServices as any,
+        industryRealServices as any,
+        professionalServices as any,
+        realEnterpriseServices2025 as any,
+        augmentedServicesBatch3 as any,
+        real2025Q3Additions as any,
+        realQ4Services2025 as any,
         require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any
       );
     const byLink = all.find(s => {
@@ -112,9 +112,9 @@ function toSlug(value: string): string {
 }
 
 function getExistingRootPageSlugs(): Set<string> {
-	const pagesDir = path.join(process.cwd(), 'pages');
-	const entries = fs.readdirSync(pagesDir, { withFileTypes: true }),
-	const reserved = new Set<string>(['apireportsservices']);
+        const pagesDir = path.join(process.cwd(), 'pages');
+        const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
+        const reserved = new Set<string>(['apireportsservices']);
 	const slugs = new Set<string>();
 	for (const entry of entries) {
 		if (entry.name.startsWith('_')) continue;
@@ -134,7 +134,7 @@ function getExistingRootPageSlugs(): Set<string> {
 			slugs.add(entry.name)
 		}
 	}
-	return slugs
+	return slugs;
 }
 
 export async function getStaticPaths() {
@@ -142,26 +142,26 @@ export async function getStaticPaths() {
 	const slugs = new Set<string>();
 	for (const s of services) {
 		if (s.id) slugs.add(toSlug(s.id));
-		else if (s.name) slugs.add(toSlug(s.name))
+		else if (s.name) slugs.add(toSlug(s.name));
 	}
 	const existing = getExistingRootPageSlugs();
 	const filtered = Array.from(slugs).filter((slug) => !existing.has(slug));
 	return {
 		paths: filtered.map((slug) => ({ params: { slug } })),
 		fallback: false
-	}
+	};
 }
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
 	const services = getAllServices();
 	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
-	let service: Service | undefined = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug),
+	let service: Service | undefined = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
 	if (!service) {
-		return { notFound: true }
+		return { notFound: true };
 	}
 	return {
 		props: { service }
-	}
+	};
 }
 
 export default function RootServiceDetailPage({ service }: { service: Service }) {

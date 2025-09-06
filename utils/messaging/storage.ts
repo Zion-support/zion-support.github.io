@@ -544,7 +544,7 @@ export async function searchMessages(query: string, userId: string, limit?: numb
 }
 
 // Utility functions
-export function createMessage(
+export function createMessageData(
   conversationId: string,
   senderId: string,
   recipientId: string,
@@ -560,7 +560,7 @@ export function createMessage(
   };
 }
 
-export function createConversation(
+export function createConversationData(
   participants: string[],
   additionalData?: Partial<Conversation>
 ): Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'> {

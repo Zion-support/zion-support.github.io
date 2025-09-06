@@ -32,9 +32,17 @@ export const innovativeAIServices: InnovativeAIService[] = [
     price: '$2,999',
     period: '/month', description: 'World\'s first quantum-enhanced AI with human-like reasoning capabilities. Achieve breakthrough discoveries with 1000% ROI within 6 months. Advanced neural signal processing with quantum encryption.',
     features: [
-      'Quantum neural signal processingReal-time brain activity monitoringAI-powered cognitive enhancementNeural pattern recognitionSecure quantum encryptionMulti-modal interface supportAdvanced analytics dashboardAPI for research integration';
-      'Compliance with medical standards24/7 quantum AI support'
-    ];
+      'Quantum neural signal processing',
+      'Real-time brain activity monitoring',
+      'AI-powered cognitive enhancement',
+      'Neural pattern recognition',
+      'Secure quantum encryption',
+      'Multi-modal interface support',
+      'Advanced analytics dashboard',
+      'API for research integration',
+      'Compliance with medical standards',
+      '24/7 quantum AI support'
+    ],
     popular: true, icon: '🧠',
     color: 'from-purple-600 to-indigo-700', textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/quantum-ai-brain-computer-interface', marketPosition: 'Revolutionary technology surpassing Neuralink and Kernel with quantum AI capabilities',
@@ -43,7 +51,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     category: 'Quantum AI & Neuroscience', realService: true,
     technology: ['Quantum ComputingNeural NetworksBrain-Computer InterfaceAI/MLQuantum Encryption'], integrations: ['Research APIsMedical devicesData analysis toolsCloud platforms'],
     useCases: ['Medical researchCognitive enhancementNeural rehabilitationAI development'], roi: '1000% ROI within 6 months through breakthrough discoveries and patents',
-    competitors: ['Neuralink ($10,000+/month)Kernel ($50,000+/month)Synchron'];
+    competitors: ['Neuralink ($10,000+/month)', 'Kernel ($50,000+/month)', 'Synchron'],
     marketSize: '$1.5B BCI market', growthRate: '300% annual growth',
     variant: 'quantum-neural-advanced',
     contactInfo: {
@@ -58,7 +66,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     launchDate: '2024-12-01', customers: 15,
     rating: 4.9,
     reviews: 8
-  };
+  },
   {
     id: 'autonomous-vehicle-ai-platform', name: 'Autonomous Vehicle AI Platform',
     tagline: 'Complete self-driving AI system for commercial fleets',
@@ -66,9 +74,17 @@ export const innovativeAIServices: InnovativeAIService[] = [
     period: '/month',
     description: 'Enterprise-grade autonomous driving platform with advanced AI, computer vision, and safety systems. Enable commercial fleets to operate autonomously with 99.99% safety record.',
     features: [
-      'Advanced computer vision AIReal-time decision makingMulti-sensor fusionPredictive maintenanceFleet management dashboardSafety compliance toolsWeather adaptationTraffic prediction';
-      'Emergency response systemsPerformance analytics'
-    ];
+      'Advanced computer vision AI',
+      'Real-time decision making',
+      'Multi-sensor fusion',
+      'Predictive maintenance',
+      'Fleet management dashboard',
+      'Safety compliance tools',
+      'Weather adaptation',
+      'Traffic prediction',
+      'Emergency response systems',
+      'Performance analytics'
+    ],
     popular: true, icon: '🚗',
     color: 'from-blue-600 to-cyan-700', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform', marketPosition: 'Competitive with Waymo and Cruise but more affordable and accessible for commercial use',
@@ -77,7 +93,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     category: 'Autonomous Transportation', realService: true,
     technology: ['Computer VisionDeep LearningLIDARRadarGPSEdge Computing'], integrations: ['Fleet management systemsGPS trackingMaintenance softwareInsurance platforms'],
     useCases: ['Commercial deliveryPassenger transportLogistics operationsEmergency services'], roi: '300% ROI within 12 months through reduced labor costs and increased efficiency',
-    competitors: ['Waymo ($50,000+/month)Cruise ($100,000+/month)Tesla FSD'];
+    competitors: ['Waymo ($50,000+/month)', 'Cruise ($100,000+/month)', 'Tesla FSD'],
     marketSize: '$556B autonomous vehicle market', growthRate: '250% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {

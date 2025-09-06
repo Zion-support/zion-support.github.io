@@ -19,7 +19,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
 
-  const signature = req.headers["x-zion-signature"], 
+  const signature = req.headers["x-zion-signature"];
   const payload = req.body;
   const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array.isArray(signature) ? signature[0] : undefined);
   if (!signatureValid) {

@@ -6,7 +6,9 @@ const localeLabelKey: Record<string, string> = {
   en: 'lang.english',
   pt: 'lang.portuguese',
   es: 'lang.spanish',
-  ar: 'lang.arabic'},
+  ar: 'lang.arabic'
+};
+
 export default function LanguageSwitchPrompt() {
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
@@ -14,13 +16,13 @@ export default function LanguageSwitchPrompt() {
   useEffect(() => {
     const key = 'langPromptShown';
     const preferred = localStorage.getItem('preferredLanguage');
-    if (preferred) return, // user has chosen
-    if (localStorage.getItem(key)) return, // already prompted
+    if (preferred) return; // user has chosen
+    if (localStorage.getItem(key)) return; // already prompted
 
     const detected = i18n.language || i18n.resolvedLanguage || navigator.language || 'en';
     const normalized = detected.split('-')[0];
     const suggestion = supportedLocales.includes(normalized as any) && normalized !== 'en' ? normalized : null;
-    if (suggestion) setSuggested(suggestion)
+    if (suggestion) setSuggested(suggestion);
   }, []);
 
   if (!suggested) return null;
@@ -28,15 +30,15 @@ export default function LanguageSwitchPrompt() {
   const accept = async () => {
     await i18n.changeLanguage(suggested!);
     localStorage.setItem('preferredLanguage', suggested!);
-    localStorage.setItem('langPromptShown1');
+    localStorage.setItem('langPromptShown1', 'true');
     document.documentElement.setAttribute('dir', isRtl(suggested!) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', suggested!);
-    setSuggested(null)
+    setSuggested(null);
   };
 
   const decline = () => {
-    localStorage.setItem('langPromptShown1');
-    setSuggested(null)
+    localStorage.setItem('langPromptShown1', 'true');
+    setSuggested(null);
   };
 
   return (

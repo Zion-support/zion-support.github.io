@@ -30,7 +30,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           x.fromRole !== r.fromRole &&
           x.toRole !== r.toRole &&
           x.approved &&
-          !x.removed;
+          !x.removed
       );
       return counterpartExists
     });
@@ -46,8 +46,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }
         if (r.anonymous) authorName = 'Anonymous';
         return {
-          ...r;
-          authorName}
+          ...r,
+          authorName
+        }
       });
 
     const totalReviews = publicReviews.length;
@@ -62,10 +63,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     )).length;
 
     const summary: ReviewsSummary = {
-      averageRating;
-      totalReviews;
-      totalCompletedProjects;
-      mostRecent: publicReviews.slice(0, 5)};
+      averageRating,
+      totalReviews,
+      totalCompletedProjects,
+      mostRecent: publicReviews.slice(0, 5)
+    };
 
     return res.status(200).json({ summary, reviews: publicReviews })
   } catch (error: any) {

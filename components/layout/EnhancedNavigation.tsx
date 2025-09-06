@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, X, ChevronDown, Search, User, 
-  Settings, LogOut, Bell, Globe, Zap
+  Settings, LogOut, Bell, Globe, Zap,
+  Brain, Rocket, Dna, DollarSign, Lock, Wifi, Truck, Gamepad2, Bot, Factory, Car
 } from 'lucide-react';
 import Link from 'next/link';
 interface EnhancedNavigationProps {
@@ -41,7 +42,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
         { name: 'Robotics & Automation', href: '/services?category=robotics', icon: <Bot className="w-4 h-4" /> },
         { name: 'Manufacturing', href: '/services?category=manufacturing', icon: <Factory className="w-4 h-4" /> },
         { name: 'Autonomous Vehicles', href: '/services?category=vehicles', icon: <Car className="w-4 h-4" /> }
-      ];
+      ],
       hasDropdown: true,
       dropdownItems: [
         { name: 'AI & Machine Learning', href: '/services?category=ai-ml' },
@@ -54,7 +55,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
         { name: 'Blockchain', href: '/services?category=blockchain' },
         { name: 'View All Services', href: '/services' }
       ]
-    };
+    },
     {
       name: 'Solutions',
       href: '/solutions',
@@ -66,7 +67,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ className = '' 
         { name: 'Healthcare Solutions', href: '/solutions?type=healthcare' },
         { name: 'Financial Solutions', href: '/solutions?type=financial' }
       ]
-    };
+    },
     { name: 'Pricing', href: '/pricing' },
     { name: 'Resources', href: '/resources' },
     { name: 'Blog', href: '/blog' },

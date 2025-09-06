@@ -11,12 +11,12 @@ interface UltraAdvancedFuturisticBackgroundProps {
 }
 
 const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgroundProps> = ({
-  intensity = 'high';
-  colorScheme = 'quantum-fusion';
-  particleCount = 300;
-  animationSpeed = 1.5;
-  enableHolographic = true;
-  enableQuantumEffects = true;
+  intensity = 'high',
+  colorScheme = 'quantum-fusion',
+  particleCount = 300,
+  animationSpeed = 1.5,
+  enableHolographic = true,
+  enableQuantumEffects = true,
   children
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -29,7 +29,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    let animationFrameId: number,
+    let animationFrameId: number;
     let particles: Array<{
       x: number,
       y: number,
@@ -61,21 +61,21 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         accent: '#ffff00',
         quantum: '#00ff88',
         holographic: '#ff0088'
-      };
+      },
       'neon-cyber': {
         primary: '#00ff41',
         secondary: '#ff0080',
         accent: '#00d4ff',
         quantum: '#ff6b35',
         holographic: '#9d4edd'
-      };
+      },
       'holographic': {
         primary: '#ff00ff',
         secondary: '#00ffff',
         accent: '#ffff00',
         quantum: '#00ff88',
         holographic: '#ff0088'
-      };
+      },
       'quantum-ai': {
         primary: '#00d4ff',
         secondary: '#ff6b35',
@@ -90,7 +90,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     // Initialize particles
     const initParticles = () => {
       particles = [];
-      for (let i = 0, i < particleCount, i++) {
+      for (let i = 0; i < particleCount; i++) {
         const type = Math.random() > 0.7 ? 'quantum' : 
                     Math.random() > 0.5 ? 'holographic' : 
                     Math.random() > 0.3 ? 'neon' : 'fusion';
@@ -104,7 +104,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           opacity: Math.random() * 0.8 + 0.2,
           color: type === 'quantum' ? colors.quantum :
                  type === 'holographic' ? colors.holographic :
-                 type === 'neon' ? colors.primary : colors.secondary;
+                 type === 'neon' ? colors.primary : colors.secondary,
           type
         })
       }
@@ -114,8 +114,8 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     const createQuantumEntanglement = () => {
       if (!enableQuantumEffects) return;
       
-      for (let i = 0, i < particles.length, i++) {
-        for (let j = i + 1, j < particles.length, j++) {
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
