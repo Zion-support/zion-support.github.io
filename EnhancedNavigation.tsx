@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigationItems = [
@@ -10,7 +9,6 @@ const EnhancedNavigation: React.FC = () => {
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
   ];
-
   return (
     <nav className="bg-white shadow-lg">
       <div className="container mx-auto px-4">
@@ -18,7 +16,6 @@ const EnhancedNavigation: React.FC = () => {
           <Link href="/" className="text-xl font-bold text-gray-800">
             Zion Tech Group
           </Link>
-
           <div className="hidden md:flex items-center space-x-8">
             {navigationItems.map((item) => (
               <Link
@@ -30,7 +27,6 @@ const EnhancedNavigation: React.FC = () => {
               </Link>
             ))}
           </div>
-
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 text-gray-700 hover:text-blue-600"
@@ -38,7 +34,6 @@ const EnhancedNavigation: React.FC = () => {
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
         {isOpen && (
           <div className="md:hidden bg-white border-t border-gray-200">
             <div className="px-4 py-2 space-y-2">
@@ -58,6 +53,5 @@ const EnhancedNavigation: React.FC = () => {
       </div>
     </nav>
   );
-};
-
+}
 export default EnhancedNavigation;

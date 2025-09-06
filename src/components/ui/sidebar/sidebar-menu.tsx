@@ -1,6 +1,7 @@
 
-import React, { forwardRef } from "react";
-import { ChevronDown } from 'lucide-react'import { cn } from "@/lib/utils";
+import React, { forwardRef } from "react",
+import { ChevronDown } from 'lucide-react'
+import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types";
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode;
@@ -17,11 +18,9 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
           href={href}
     return(<button
         ref={ref}
-SidebarMenuItem.displayName = "SidebarMenuItem";
+SidebarMenuItem.displayName = "SidebarMenuItem"
+export { SidebarMenuItem, SidebarMenuGroup }
+export { SidebarMenuItem, SidebarMenuGroup }
+}
+export { SidebarMenuItem, SidebarMenuGroup }
 
-
-export { SidebarMenuItem, SidebarMenuGroup };
-export { SidebarMenuItem, SidebarMenuGroup };
-};
-
-export { SidebarMenuItem, SidebarMenuGroup };

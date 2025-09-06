@@ -1,34 +1,35 @@
-import {
-  Bell,
-  FileText,
-  Home,
-  Mail,
-  Search,
-  Settings,
-  Users,;
-} from 'lucide-react';import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarMenuItem,
-  // SidebarMenu, // Removed
-  // SidebarMenuButton, // Removed
-  // SidebarGroupLabel, // Not needed
-  // SidebarGroupContent, // Not needed;
-} from '@/components/ui/sidebar';
-  // SidebarGroupContent, // Not needed
-} from "@/components/ui/sidebar";
-import {
-  Sidebar;
-  SidebarContent;
-  SidebarGroup;
-  SidebarMenuItem;
-  // SidebarMenu, // Removed
-  // SidebarMenuButton, // Removed
-  // SidebarGroupLabel, // Not needed
-  // SidebarGroupContent, // Not needed
-} from "@/components/ui/sidebar";
 
+import {
+
+  Bell
+  FileText
+  Home
+  Mail
+  Search
+  Settings
+  Users
+} from 'lucide-react'; import {
+  Sidebar
+  SidebarContent
+  SidebarGroup
+  SidebarMenuItem
+
+  // SidebarMenu, // Removed
+  // SidebarMenuButton, // Removed
+  // SidebarGroupLabel, // Not needed
+  // SidebarGroupContent, // Not needed
+} from '@/components/ui/sidebar'
+  // SidebarGroupContent, // Not needed
+} from "@/components/ui/sidebar"
+  Sidebar
+  SidebarContent
+  SidebarGroup
+  SidebarMenuItem
+  // SidebarMenu, // Removed
+  // SidebarMenuButton, // Removed
+  // SidebarGroupLabel, // Not needed
+  // SidebarGroupContent, // Not needed
+} from "@/components/ui/sidebar"
 export function AppSidebar() {
   return (
     <Sidebar>
@@ -44,7 +45,6 @@ export function AppSidebar() {
             <span>Notifications</span>
           </SidebarMenuItem>
         </SidebarGroup>
-
         <SidebarGroup title='Content'>
           <SidebarMenuItem href='/publish' icon={<FileText size={16} />}>
             <span>My Content</span>
@@ -53,7 +53,6 @@ export function AppSidebar() {
             <span>Analytics</span>
           </SidebarMenuItem>
         </SidebarGroup>
-
         <SidebarGroup title='Settings'>
           <SidebarMenuItem href='/profile' icon={<Users size={16} />}>
             <span>Profile</span>
@@ -67,7 +66,6 @@ export function AppSidebar() {
             <span>Notifications</span>
           </SidebarMenuItem>
         </SidebarGroup>
-        
         <SidebarGroup title="Content">
           <SidebarMenuItem href="/publish" icon={<FileText size={16} />}>
             <span>My Content</span>
@@ -76,7 +74,6 @@ export function AppSidebar() {
             <span>Analytics</span>
           </SidebarMenuItem>
         </SidebarGroup>
-        
         <SidebarGroup title="Settings">
           <SidebarMenuItem href="/profile" icon={<Users size={16} />}>
             <span>Profile</span>
@@ -87,5 +84,5 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
     </Sidebar>
-  );
+  )
 }

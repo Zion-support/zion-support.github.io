@@ -1,65 +1,63 @@
 import React from 'react';
+
 import { motion } from 'framer-motion';
 import {
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Zap,
-  Brain,
-  Atom,
-  Rocket,
-  Target,
-  Shield,
-  Cpu,
-  Globe,
-  Sparkles,;
+  ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Brain
+  Atom
+  Rocket
+  Target
+  Shield
+  Cpu
+  Globe
+  Sparkles;
 } from 'lucide-react';
-
 export default function UltraFuturisticHero2029() {
   const features = [
     {
-      icon: Brain,
-      text: 'AI Consciousness Evolution',
-      color: 'from-violet-500 to-purple-600',
-    },
+      icon: Brain
+      text: 'AI Consciousness Evolution'
+      color: 'from-violet-500 to-purple-600'
+    }
     {
-      icon: Atom,
-      text: 'Quantum Computing Solutions',
-      color: 'from-blue-500 to-cyan-600',
-    },
+      icon: Atom
+      text: 'Quantum Computing Solutions'
+      color: 'from-blue-500 to-cyan-600'
+    }
     {
-      icon: Rocket,
-      text: 'Space Technology Innovation',
-      color: 'from-emerald-500 to-teal-600',
-    },
+      icon: Rocket
+      text: 'Space Technology Innovation'
+      color: 'from-emerald-500 to-teal-600'
+    }
     {
-      icon: Target,
-      text: 'Micro SAAS Excellence',
-      color: 'from-orange-500 to-red-600',
-    },
+      icon: Target
+      text: 'Micro SAAS Excellence'
+      color: 'from-orange-500 to-red-600'
+    }
     {
-      icon: Shield,
-      text: 'Enterprise Security',
-      color: 'from-indigo-500 to-blue-600',
-    },
+      icon: Shield
+      text: 'Enterprise Security'
+      color: 'from-indigo-500 to-blue-600'
+    }
     {
-      icon: Cpu,
-      text: 'Autonomous IT Operations',
-      color: 'from-cyan-500 to-teal-600',
-    },  ];    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-violet-500 to-purple-600' },
-    { icon: Atom, text: 'Quantum Computing Solutions', color: 'from-blue-500 to-cyan-600' },
-    { icon: Rocket, text: 'Space Technology Innovation', color: 'from-emerald-500 to-teal-600' },
-    { icon: Target, text: 'Micro SAAS Excellence', color: 'from-orange-500 to-red-600' },
-    { icon: Shield, text: 'Enterprise Security', color: 'from-indigo-500 to-blue-600' },
+      icon: Cpu
+      text: 'Autonomous IT Operations'
+      color: 'from-cyan-500 to-teal-600'
+    },  ];    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-violet-500 to-purple-600' }
+    { icon: Atom, text: 'Quantum Computing Solutions', color: 'from-blue-500 to-cyan-600' }
+    { icon: Rocket, text: 'Space Technology Innovation', color: 'from-emerald-500 to-teal-600' }
+    { icon: Target, text: 'Micro SAAS Excellence', color: 'from-orange-500 to-red-600' }
+    { icon: Shield, text: 'Enterprise Security', color: 'from-indigo-500 to-blue-600' }
     { icon: Cpu, text: 'Autonomous IT Operations', color: 'from-cyan-500 to-teal-600' }
-
   const stats = [
-    { number: '500+', label: 'Innovative Services', icon: Sparkles },
-    { number: '$2.5B+', label: 'Market Opportunity', icon: TrendingUp },
-    { number: '99.9%', label: 'Success Rate', icon: Star },
-    { number: '24/7', label: 'AI Operations', icon: Zap },
+    { number: '500+', label: 'Innovative Services', icon: Sparkles }
+    { number: '$2.5B+', label: 'Market Opportunity', icon: TrendingUp }
+    { number: '99.9%', label: 'Success Rate', icon: Star }
+    { number: '24/7', label: 'AI Operations', icon: Zap }
   ];
-
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
       {/* Animated Background */}
@@ -71,20 +69,19 @@ export default function UltraFuturisticHero2029() {
               key={i}
               className='absolute w-1 h-1 bg-cyan-400 rounded-full opacity-20'
               animate={{
-                x: [0, Math.random() * 1000],
-                y: [0, Math.random() * 1000],
-                opacity: [0.2, 0.8, 0.2],
+                x: [0, Math.random() * 1000]
+                y: [0, Math.random() * 1000]
+                opacity: [0.2, 0.8, 0.2]
               }}
               transition={{
-                duration: Math.random() * 10 + 10,
-                repeat: Infinity,
-                ease: 'linear',
+                duration: Math.random() * 10 + 10
+                repeat: Infinity
+                ease: 'linear'
               }}
               style={{
-                left: Math.random() * 100 + '%',
-                top: Math.random() * 100 + '%',
+                left: Math.random() * 100 + '%'
+                top: Math.random() * 100 + '%'
               }}            />  ];
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
@@ -100,41 +97,37 @@ export default function UltraFuturisticHero2029() {
                 y: [0, Math.random() * 1000];
                 opacity: [0.2, 0.8, 0.2]}}
               transition={{
-                duration: Math.random() * 10 + 10,
-                repeat: Infinity,
+                duration: Math.random() * 10 + 10
+                repeat: Infinity
                 ease: "linear"
               }}
               style={{
-                left: Math.random() * 100 + '%',
+                left: Math.random() * 100 + '%'
                 top: Math.random() * 100 + '%'}}
             />
           ))}
         </div>
-
         {/* Grid Pattern */}
         <div className='absolute inset-0 opacity-10'>
           <div
             className='absolute inset-0'
             style={{
-              backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6, 182, 212, 0.3) 1px, transparent 0)`,
-              backgroundSize: '50px 50px',
+              backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6, 182, 212, 0.3) 1px, transparent 0)`
+              backgroundSize: '50px 50px'
             }}
           />
-        </div>
 
+        </div>
         {/* Gradient Orbs */}
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse' />
         <div className='absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000' />
       </div>
-
       {/* Content */}
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>        {/* Main Heading */}        </div>
-
         {/* Gradient Orbs */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
-
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main Heading */}
@@ -154,16 +147,14 @@ export default function UltraFuturisticHero2029() {
               Revolution
             </span>
           </h1>
-
           <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
             Experience the future of technology with Zion Tech Group's
             revolutionary 2029 services. From AI consciousness evolution to
-            quantum space mining, we're building tomorrow's solutions today.          </p>          
+            quantum space mining, we're building tomorrow's solutions today.          </p>
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Experience the future of technology with Zion Tech Group's revolutionary 2029 services. 
+            Experience the future of technology with Zion Tech Group's revolutionary 2029 services.
             From AI consciousness evolution to quantum space mining, we're building tomorrow's solutions today.
         </motion.div>
-
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -178,7 +169,6 @@ export default function UltraFuturisticHero2029() {
             <span>Explore Services</span>
             <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
           </Link>
-
           <Link
             href='/contact'
             className='px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 text-lg font-semibold rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 flex items-center justify-center space-x-2'
@@ -192,7 +182,6 @@ export default function UltraFuturisticHero2029() {
             <span>Explore Services</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
-          
           <Link
             href="/contact"
             className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 text-lg font-semibold rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 flex items-center justify-center space-x-2"
@@ -201,7 +190,6 @@ export default function UltraFuturisticHero2029() {
             <Zap className="w-5 h-5" />
           </Link>
         </motion.div>
-
         {/* Features Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -232,7 +220,6 @@ export default function UltraFuturisticHero2029() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -267,7 +254,6 @@ export default function UltraFuturisticHero2029() {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Scroll Indicator */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -296,7 +282,6 @@ export default function UltraFuturisticHero2029() {
           </motion.div>
         </motion.div>
       </div>
-
       {/* Floating Elements */}
       <motion.div
         animate={{ rotate: 360 }}

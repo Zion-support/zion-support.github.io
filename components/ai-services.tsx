@@ -1,21 +1,19 @@
- export default function AIServices () {
-  
-}> <Head> <title>AI Services | Zion Tech Group</title> </div>) ) 
-}</div>) ) 
-}</ul> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Our AI Service Portfolio </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business and accelerate innovation </p> </motion.div> </li>) ) 
-}</ul> <motion.a > Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </motion.a> </motion.div>) ) 
-}</div> </div> </section> <motion.div initial= {
-  opacity: 0, y: 20 
 
+export default function AIServices () {
+}> <Head> <title>AI Services | Zion Tech Group</title> </div>) )
+}</div>) )
+}</ul> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Our AI Service Portfolio </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business and accelerate innovation </p> </motion.div> </li>) )
+}</ul> <motion.a > Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </motion.a> </motion.div>) )
+}</div> </div> </section> <motion.div initial= {
+  opacity: 0, y: 20
 }animate= {
   {
-  opacity: 1, y: 0 
-
+  opacity: 1, y: 0
 }transition= {
   {
-  duration: 0.8, delay: 0.4 
-
+  duration: 0.8, delay: 0.4
 }> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business with AI? </h2> <p className="text-xl text-gray-400 mb-8" > Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <motion.button > Schedule Consultation </motion.button> <motion.button export default function AIServices() {
+
   return (
     <QuantumHolographicMatrixBackground intensity={1.5}>
       <Head>
@@ -23,14 +21,12 @@
         <meta name="description" content="LLM apps, RAG, MLOps, and AI research enablement with transparent pricing and measurable outcomes." />
         <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
       </Head>
-
       <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
         <ServiceAds heading="Featured AI Services" subheading="Production-ready offerings with transparent pricing." items={featuredAIAds} />
         <div className="text-center max-w-4xl mx-auto mb-12">
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">AI Services</h1>
           <p className="text-xl text-gray-300">From prototype to production, we build AI systems that are safe, observable, and cost-efficient.</p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {tracks.map((t) => (
             <div key={t.title} className="bg-black/30 border border-gray-700/50 rounded-2xl p-6">
@@ -40,7 +36,6 @@
             </div>
           ))}
         </div>
-
         <div className="max-w-6xl mx-auto mb-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {packages.map((p) => (
@@ -56,7 +51,6 @@
             </motion.div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -73,7 +67,6 @@
                 Comprehensive AI solutions designed to transform your business and accelerate innovation
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiServices.map((service, index) => (
                 <motion.div
@@ -112,7 +105,6 @@
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -148,5 +140,5 @@
         </section>
       </div>
     </>
-  ),
+  )
 }

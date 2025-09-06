@@ -1,18 +1,17 @@
-import { ChevronDown, ChevronUp } from 'lucide-react';
-import { Slider } from '@/components/ui/slider';
-import { PriceFilterProps } from '@/types/filters';
+import { ChevronDown, ChevronUp } from 'lucide-react'
 
+import { Slider } from '@/components/ui/slider'
+import { PriceFilterProps } from '@/types/filters'
 export function PriceFilter({
-  priceRange,
-  setPriceRange,
-  expanded,
-  toggleSection,
-  isMobileFilterOpen,
+  priceRange
+  setPriceRange
+  expanded
+  toggleSection
+  isMobileFilterOpen
 }: PriceFilterProps) {
   const handleChange = (values: number[]) => {
-    setPriceRange([values[0] || 0, values[1] || 500]);
-  };
-
+    setPriceRange([values[0] |0, values[1] |500])
+  }
   return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>
       <button
@@ -25,7 +24,6 @@ export function PriceFilter({
           <ChevronDown className='h-4 w-4 text-zion-slate-light' />
         )}
       </button>
-
       {expanded && (
         <div className='mt-6'>
           <div className='flex justify-between text-sm text-zion-slate-light mb-2'>            <span>${priceRange[0]}/hr</span>
@@ -35,14 +33,12 @@ export function PriceFilter({
             aria-label='Hourly rate range'            value={[priceRange[0], priceRange[1]]}
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
-
-import { ChevronDown, ChevronUp } from 'lucide-react'
-import { Slider } from "@/components/ui/slider";
-import { PriceFilterProps } from "@/types/filters";
+import { Slider } from "@/components/ui/slider"
+import { PriceFilterProps } from "@/types/filters"
 export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {
   const handleChange = (values: number[]) => {
-    setPriceRange([values[0] || 0, values[1] || 500])
-  };
+    setPriceRange([values[0] |0, values[1] |500])
+  }
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -57,7 +53,6 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
-      
       {expanded && (
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
@@ -77,5 +72,5 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
         </div>
       )}
     </div>
-  );
+  )
 }

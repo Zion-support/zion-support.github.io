@@ -1,16 +1,15 @@
-import React from "react";
-import SEO from "../components/SEO";
-import { Check, ExternalLink } from "lucide-react";
-
+import React from 'react',
+import SEO from '../components/SEO';
+import { Check, ExternalLink } from 'lucide-react';
 export default function ApiPerformanceTestingPage() {
-  const features = [
-    "k6/Gatling-compatible test runner",
-    "SLO-aware latency reports",
-    "Regression baselines per endpoint",
-    "CI checks and PR annotations",
-    "Synthetic traffic for staging",
-  ];
 
+  const features = [
+    "k6/Gatling-compatible test runner"
+    "SLO-aware latency reports"
+    "Regression baselines per endpoint"
+    "CI checks and PR annotations"
+    "Synthetic traffic for staging"
+  ];
   return (
     <>
       <SEO
@@ -132,3 +131,4 @@ export default function ApiPerformanceTestingPage() {
     </>
   );
 }
+

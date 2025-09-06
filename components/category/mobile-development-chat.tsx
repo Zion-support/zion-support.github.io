@@ -1,3 +1,4 @@
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -11,7 +12,6 @@ const MobileDevelopmentChat: NextPage = () => {
           content="MobileDevelopmentChat blog post"
         />{" "}
       </Head>
-
       <main>
         <h1>MobileDevelopmentChat</h1>
         <p>Blog content coming soon...</p>
@@ -19,6 +19,6 @@ const MobileDevelopmentChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
+}
 export default MobileDevelopmentChat;
+

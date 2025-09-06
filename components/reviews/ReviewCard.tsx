@@ -1,15 +1,14 @@
- > Report abuse </button> </div>) 
-}</div> </div>) };
-
+ > Report abuse </button> </div>)
+}</div> </div>) }
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   return (import React from 'react';
 import StarRating from './StarRating';
 import type { PublicReview } from '../../types/reviews';
+
 import {Star} from 'lucide-react';
 type Props = {
-  review: PublicReview,
+  review: PublicReview
   onReport?: (id: string) => void
-
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   return (
     <div className='enhanced-card hover:shadow-lg transition-shadow'>
@@ -45,7 +44,6 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
         )}
       </div>
       <p className='text-sm leading-6'>{review.text}</p>
-
       <div className='flex flex-wrap gap-2 mt-3'>
         {typeof review.categories?.communication === 'number' && (
           <span className='pill'>
@@ -65,14 +63,12 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
       </div>
     </div>
   );
-};
-
+}
 export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
           <span className="pill pill-success">Would work again</span>
         )}
       </div>
       <p className="text-sm leading-6">{review.text}</p>
-
       <div className="flex flex-wrap gap-2 mt-3">
         {typeof review.categories?.communication === 'number' && (
           <span className="pill">Communication: {review.categories.communication}★</span>
@@ -86,6 +82,6 @@ export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
       </div>
     </div>
   )
-};
-
+}
 export default ReviewCard;
+

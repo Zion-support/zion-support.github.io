@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
@@ -7,25 +8,46 @@ import { useCart } from '@/context/CartContext';
 import { toast } from '@/hooks/use-toast';
 import { SEO } from '@/components/SEO';
 import { logErrorToProduction } from '@/utils/productionLogger';
+=======
+import { useRouter } from 'next/router', // Changed from useParams
+import { useEffect, useState  } from 'react';
+import Image from 'next/image';
+import { Button  } from '@/components/ui/button';
+import { NEW_PRODUCTS  } from '@/data/newProductsData';
+import { useCart  } from '@/context/CartContext';
+import { toast  } from '@/hooks/use-toast';
+import { SEO  } from '@/components/SEO';
+import {logErrorToProduction} from '@/utils/productionLogger';
+export default function ProductPage() {
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 
 export default function ProductPage() {
   const router = useRouter();
   const { id: rawId } = router.query;
   const id = typeof rawId === 'string' ? rawId : undefined;
   const [product, setProduct] = useState(
-    NEW_PRODUCTS.find((p) => p.id === id) || null
+    NEW_PRODUCTS.find((p) => p.id === id) |null
   );
   const { items, dispatch } = useCart();
   const [adding, setAdding] = useState(false);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   useEffect(() => {
     // Update product if id changes and is available from router.query
     if (id) {
       const foundProduct = NEW_PRODUCTS.find((p) => p.id === id);
+<<<<<<< HEAD
       setProduct(foundProduct || null);
     }
   }, [id]);
 
+=======
+      setProduct(foundProduct |null);
+    }
+  }, [id]);
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   useEffect(() => {
     const fetchProduct = async () => {
       if (!id) return;
@@ -39,35 +61,41 @@ export default function ProductPage() {
         // Fail silently and fall back to local data
         logErrorToProduction('Error fetching product', { data: err });
       }
-    };
-
+    }
     // Only fetch if id is available (from router)
     if (id) {
       fetchProduct();
     }
+<<<<<<< HEAD
   }, [id]);
 
   if (!product && !id) {
     // If no id from router yet, it might still be loading
+=======
+  }, [id]), // id is now from router.query
+  if (!product && !id) { // If no id from router yet, it might still be loading
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
     return <div className="p-6 text-white">Loading product details...</div>;
   }
-
   if (!product) {
     return <div className="p-6 text-white">Product not found</div>;
   }
-
   const inCart = items.some(i => i.id === product.id);
-
   const handleAdd = () => {
     if (inCart) return;
     setAdding(true);
     dispatch({
-      type: 'ADD_ITEM',
+      type: 'ADD_ITEM'
       payload: { id: product.id, name: product.title, price: product.price ?? 0, quantity: 1 }
     });
     toast.success(`1× ${product.title} added`);
+<<<<<<< HEAD
     setTimeout(() => setAdding(false), 500);
   };
+=======
+    setTimeout(() => setAdding(false), 500)
+  }
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 
   return (
     <>
@@ -81,18 +109,45 @@ export default function ProductPage() {
         {product.images?.length ? (
           <div className="mb-4 relative w-full h-64">
             <Image
+<<<<<<< HEAD
               src={product.images[0] || '/placeholder.svg'}
               alt={product.title}
+=======
+              src = {product.images[0] |'/placeholder.svg',}
+              alt = {product.title,}
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
               className="object-cover rounded-md"
               fill
             />
           </div>
         ) : null}
         <p className="mb-6">{product.description}</p>
-        <Button onClick={handleAdd} disabled={adding || inCart}>
+        <Button onClick={handleAdd} disabled={adding |inCart}>
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
         </Button>
       </div>
     </>
   );
+<<<<<<< HEAD
+=======
+}
+//Only fetch if id is available (from router) ;
+}const inCart = items.some (i => i.id === product.id);
+const handleAdd = () => {if (inCart) return;
+setAdding (true);
+dispatch ({;
+  type: 'ADD ITEM';
+payload: {;
+  id: product.id, name: product.title,  price: product.price ?? 0, quantity: 1 ;
+});
+toast.success (`1× $ {product.title ;
+}added`);
+setTimeout ( () => setAdding (false), 500) ;
+}
+product.title ;
+}description= {product.description ;
+}ogImage= {product.images?.[0] ;
+}/> </Button> </div> </>) ;
+}';
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 }

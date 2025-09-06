@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react',
 import Link from 'next/link';
 import { useRole } from '../context/RoleContext';
 export default function OnboardingWizard() {
   const { role, setRole } = useRole();
   const [open, setOpen] = useState(false);
-
   useEffect(() => {
     try {
+
       const has =
         typeof window !== 'undefined'
           ? window.localStorage.getItem('zion_has_onboarded')
@@ -18,7 +18,6 @@ export default function OnboardingWizard() {
       }
     } catch {}
   }, []);
-
   function completeOnboarding() {
     try {
       if (typeof window !== 'undefined') {
@@ -29,7 +28,6 @@ export default function OnboardingWizard() {
       }
     } catch {}
     setOpen(false)
-
   if (!open) return null;
 
   return (
@@ -145,5 +143,5 @@ export default function OnboardingWizard() {
         </div>
       </div>
     </div>
-  );
+);
 }

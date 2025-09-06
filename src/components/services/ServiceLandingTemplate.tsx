@@ -1,38 +1,39 @@
-import React from 'react';
-
+import React from "react",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import Image from "next/image";
 export interface Benefit {
   title: string;
   description: string;
-  icon?: React.ReactNode;
+  icon?: React.ReactNode
 }
-
 export interface Testimonial {
   name: string;
   role?: string;
   text: string;
-  avatar?: string;
+  avatar?: string
 }
-
 interface ServiceLandingTemplateProps {
   title: string;
   subtitle: string;
+  heroImage?: string;
   description: string;
   benefits: Benefit[];
-  features?: string[];
-  stats?: Array<{ label: string; value: string }>;
+  testimonials: Testimonial[];
   ctaText: string;
-  ctaLink: string;
+  ctaLink: string
 }
-
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
-  title,
-  subtitle,
-  description,
-  benefits,
-  features = [],
-  stats = [],
-  ctaText,
-  ctaLink,
+
+  title
+  subtitle
+  description
+  benefits
+  features = []
+  stats = []
+  ctaText
+  ctaLink
 }) => {
   return (
     <div className="min-h-screen bg-white">
@@ -49,7 +50,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           </p>
         </div>
       </section>
-
       {benefits.length > 0 && (
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -72,7 +72,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           </div>
         </section>
       )}
-
       {features.length > 0 && (
         <section className="py-16 px-4 bg-gray-50">
           <div className="max-w-7xl mx-auto">
@@ -90,7 +89,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           </div>
         </section>
       )}
-
       {stats.length > 0 && (
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -107,7 +105,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           </div>
         </section>
       )}
-
       <section className="py-16 px-4 bg-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -125,5 +122,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
+

@@ -1,13 +1,13 @@
 import React from 'react';
-
 interface SkeletonLoaderProps {
   lines?: number, className?: string;
 }
-
 const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
-    lines = 3,
+
+    lines = 3
     className = ''
   }) => {
+
     <div className={`animate-pulse ${className}`}>
       {Array.from({ length: lines }).map((_, index) => (
         <div
@@ -17,8 +17,7 @@ const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
           }`}
         />
       ))}
-    </div>
+    </div>;
   );
-};
-
+}
 export default SkeletonLoader;

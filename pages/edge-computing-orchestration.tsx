@@ -1,141 +1,140 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
-import {motion} from 'framer-motion';
-import {Cpu, Network, Zap, Shield, Database, Globe, ArrowRight, CheckCircle, Star, TrendingUp, Users,} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Cpu, Network, Zap, Shield, Database, Globe;
+  ArrowRight, CheckCircle, Star, TrendingUp, Users
+ } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function EdgeComputingPage() {
+
   const features = [
     {
-      icon: Cpu,
-      title: 'Edge Orchestration',
+      icon: Cpu
+      title: 'Edge Orchestration'
       description:
-        'Intelligent distribution and management of computing workloads across edge nodes for optimal performance.',
-      color: 'from-blue-500 to-cyan-500',
-    },
+        'Intelligent distribution and management of computing workloads across edge nodes for optimal performance.'
+      color: 'from-blue-500 to-cyan-500'
+    }
     {
-      icon: Network,
-      title: 'IoT Management',
+      icon: Network
+      title: 'IoT Management'
       description:
-        'Comprehensive management of IoT devices with real-time monitoring and automated control systems.',
-      color: 'from-purple-500 to-pink-500',
-    },
+        'Comprehensive management of IoT devices with real-time monitoring and automated control systems.'
+      color: 'from-purple-500 to-pink-500'
+    }
     {
-      icon: Zap,
-      title: 'Real-time Processing',
+      icon: Zap
+      title: 'Real-time Processing'
       description:
-        'Ultra-low latency data processing at the network edge for mission-critical applications.',
-      color: 'from-green-500 to-emerald-500',
-    },
+        'Ultra-low latency data processing at the network edge for mission-critical applications.'
+      color: 'from-green-500 to-emerald-500'
+    }
     {
-      icon: Shield,
-      title: 'Edge Security',
+      icon: Shield
+      title: 'Edge Security'
       description:
-        'Advanced security protocols designed specifically for distributed edge computing environments.',
-      color: 'from-red-500 to-orange-500',
-    },
+        'Advanced security protocols designed specifically for distributed edge computing environments.'
+      color: 'from-red-500 to-orange-500'
+    }
     {
-      icon: Database,
-      title: 'Data Synchronization',
+      icon: Database
+      title: 'Data Synchronization'
       description:
-        'Seamless data synchronization between edge nodes and central systems with conflict resolution.',
-      color: 'from-indigo-500 to-purple-500',
-    },
+        'Seamless data synchronization between edge nodes and central systems with conflict resolution.'
+      color: 'from-indigo-500 to-purple-500'
+    }
     {
-      icon: Globe,
-      title: 'Global Distribution',
+      icon: Globe
+      title: 'Global Distribution'
       description:
-        'Worldwide edge network deployment with intelligent traffic routing and load balancing.',
-      color: 'from-yellow-500 to-orange-500',
-    },
+        'Worldwide edge network deployment with intelligent traffic routing and load balancing.'
+      color: 'from-yellow-500 to-orange-500'
+    }
   ];
-
   const benefits = [
-    'Reduce latency by 80-90% with edge processing',
-    'Cut bandwidth costs by 60% through local data processing',
-    'Improve reliability with distributed computing architecture',
-    'Scale seamlessly across global edge networks',
-    'Enable real-time AI and machine learning at the edge',
+    'Reduce latency by 80-90% with edge processing'
+    'Cut bandwidth costs by 60% through local data processing'
+    'Improve reliability with distributed computing architecture'
+    'Scale seamlessly across global edge networks'
+    'Enable real-time AI and machine learning at the edge'
     'Reduce central server load and improve overall performance',  ];
-
   const useCases = [
     {
-      industry: 'Manufacturing',
+      industry: 'Manufacturing'
       description:
-        'Real-time quality control, predictive maintenance, and production optimization',
-      results: '30% reduction in downtime, 25% improvement in product quality',
-    },
+        'Real-time quality control, predictive maintenance, and production optimization'
+      results: '30% reduction in downtime, 25% improvement in product quality'
+    }
     {
-      industry: 'Healthcare',
+      industry: 'Healthcare'
       description:
-        'Patient monitoring, medical device management, and telemedicine support',
-      results: '40% faster response times, improved patient outcomes',
-    },
+        'Patient monitoring, medical device management, and telemedicine support'
+      results: '40% faster response times, improved patient outcomes'
+    }
     {
-      industry: 'Transportation',
+      industry: 'Transportation'
       description:
-        'Autonomous vehicle support, traffic management, and fleet optimization',
-      results: '50% reduction in accidents, 35% improvement in efficiency',
-    },
+        'Autonomous vehicle support, traffic management, and fleet optimization'
+      results: '50% reduction in accidents, 35% improvement in efficiency'
+    }
     {
-      industry: 'Retail',
+      industry: 'Retail'
       description:
-        'Inventory management, customer analytics, and supply chain optimization',
+        'Inventory management, customer analytics, and supply chain optimization'
       results:
-        '45% reduction in stockouts, 30% improvement in customer satisfaction',
+        '45% reduction in stockouts, 30% improvement in customer satisfaction'
     },  ];
-
   const pricing = [
     {
-      plan: 'Starter',
-      price: '$399',
-      period: '/month',
-      description: 'Basic edge computing for small deployments',
+      plan: 'Starter'
+      price: '$399'
+      period: '/month'
+      description: 'Basic edge computing for small deployments'
       features: [
-        'Up to 10 edge nodes',
-        'Basic orchestration',
-        'Standard monitoring',
-        'Email support',
-        'Basic security features',
-        'Up to 100 IoT devices',
-      ],
-      popular: false,
-    },
+        'Up to 10 edge nodes'
+        'Basic orchestration'
+        'Standard monitoring'
+        'Email support'
+        'Basic security features'
+        'Up to 100 IoT devices'
+      ]
+      popular: false
+    }
     {
-      plan: 'Professional',
-      price: '$999',
-      period: '/month',
-      description: 'Advanced features for growing edge networks',
+      plan: 'Professional'
+      price: '$999'
+      period: '/month'
+      description: 'Advanced features for growing edge networks'
       features: [
-        'Everything in Starter',
-        'Up to 100 edge nodes',
-        'Advanced orchestration',
-        'Real-time monitoring',
-        'Priority support',
-        'Advanced security',
-        'Up to 1000 IoT devices',
-        'Custom integrations',
-      ],
-      popular: true,
-    },
+        'Everything in Starter'
+        'Up to 100 edge nodes'
+        'Advanced orchestration'
+        'Real-time monitoring'
+        'Priority support'
+        'Advanced security'
+        'Up to 1000 IoT devices'
+        'Custom integrations'
+      ]
+      popular: true
+    }
     {
-      plan: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'Full-scale solution for large organizations',
+      plan: 'Enterprise'
+      price: 'Custom'
+      period: ''
+      description: 'Full-scale solution for large organizations'
       features: [
-        'Everything in Professional',
-        'Unlimited edge nodes',
-        'Custom orchestration',
-        'Dedicated support team',
-        'Unlimited IoT devices',
-        'On-premise deployment',
-        'Custom training',
-        'SLA guarantees',
-      ],
-      popular: false,
+        'Everything in Professional'
+        'Unlimited edge nodes'
+        'Custom orchestration'
+        'Dedicated support team'
+        'Unlimited IoT devices'
+        'On-premise deployment'
+        'Custom training'
+        'SLA guarantees'
+      ]
+      popular: false
     },  ];
-
   return (
     <>
       <Head>
@@ -161,9 +160,7 @@ export default function EdgeComputingPage() {
           property='og:url'
           content='https://ziontechgroup.com/edge-computing-orchestration'
         />      </Head>
-
       <EnhancedNavigation />
-
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
         <div className='max-w-7xl mx-auto px-6'>          <motion.div
@@ -199,7 +196,6 @@ export default function EdgeComputingPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Features */}
       <section className='py-20 bg-white'>
         <div className='max-w-7xl mx-auto px-6'>          <motion.div
@@ -216,7 +212,6 @@ export default function EdgeComputingPage() {
               infrastructure.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -240,7 +235,6 @@ export default function EdgeComputingPage() {
           </div>
         </div>
       </section>
-
       {/* Benefits */}
       <section className='py-20 bg-slate-50'>
         <div className='max-w-7xl mx-auto px-6'>
@@ -256,6 +250,7 @@ export default function EdgeComputingPage() {
                 Edge computing brings processing power closer to where data is
                 generated, enabling faster response times, reduced bandwidth
                 usage, and improved reliability for distributed applications.
+
               </p>
               <div className='space-y-4'>                {benefits.map((benefit, index) => (
                   <motion.div
@@ -270,7 +265,6 @@ export default function EdgeComputingPage() {
                 ))}
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -303,7 +297,6 @@ export default function EdgeComputingPage() {
           </div>
         </div>
       </section>
-
       {/* Use Cases */}
       <section className='py-20 bg-white'>
         <div className='max-w-7xl mx-auto px-6'>          <motion.div
@@ -320,7 +313,6 @@ export default function EdgeComputingPage() {
               computing to transform their operations.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
@@ -344,7 +336,6 @@ export default function EdgeComputingPage() {
           </div>
         </div>
       </section>
-
       {/* Architecture */}
       <section className='py-20 bg-slate-900'>
         <div className='max-w-7xl mx-auto px-6'>          <motion.div
@@ -357,11 +348,10 @@ export default function EdgeComputingPage() {
               Edge Computing Architecture
             </h2>
             <p className='text-xl text-white/70 max-w-3xl mx-auto'>
-              Our distributed architecture ensures optimal performance,
+              Our distributed architecture ensures optimal performance
               reliability, and scalability.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -376,7 +366,6 @@ export default function EdgeComputingPage() {
                 Distributed computing nodes deployed at strategic locations for
                 optimal performance
               </p>            </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -393,7 +382,6 @@ export default function EdgeComputingPage() {
                 Intelligent workload distribution and management across the edge
                 network
               </p>            </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -413,7 +401,6 @@ export default function EdgeComputingPage() {
           </div>
         </div>
       </section>
-
       {/* Pricing */}
       <section className='py-20 bg-white'>
         <div className='max-w-7xl mx-auto px-6'>          <motion.div
@@ -430,7 +417,6 @@ export default function EdgeComputingPage() {
               include our core orchestration features.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (
               <motion.div
                 key={plan.plan}
@@ -445,7 +431,6 @@ export default function EdgeComputingPage() {
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium'>                    Most Popular
                   </div>
                 )}
-
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-slate-900 mb-2'>
                     {plan.plan}
@@ -458,7 +443,6 @@ export default function EdgeComputingPage() {
                   </div>
                   <p className='text-slate-600'>{plan.description}</p>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map(feature => (
                     <li key={feature} className='flex items-center space-x-3'>
@@ -466,7 +450,6 @@ export default function EdgeComputingPage() {
                       <span className='text-slate-700'>{feature}</span>                    </li>
                   ))}
                 </ul>
-
                 <a
                   href='/contact'
                   className='block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105'                >
@@ -477,7 +460,6 @@ export default function EdgeComputingPage() {
           </div>
         </div>
       </section>
-
       {/* CTA */}
       <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>
         <div className='max-w-4xl mx-auto px-6 text-center'>          <motion.div
@@ -507,7 +489,6 @@ export default function EdgeComputingPage() {
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </>
-  );
+);

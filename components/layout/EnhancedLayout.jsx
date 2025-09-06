@@ -9,7 +9,8 @@ import EnhancedFooter from './EnhancedFooter';
       </main>
       <EnhancedFooter />
     </div>
-  );
-},
 
+  );
+}
 export default EnhancedLayout;
+

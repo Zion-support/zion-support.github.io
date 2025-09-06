@@ -1,16 +1,15 @@
-import React from 'react';
+import React from 'react',
 import SEO from '../components/SEO';
-import {Check, ExternalLink} from 'lucide-react';
-
+import { Check, ExternalLink } from 'lucide-react';
 export default function BrowserAutomationCloudPage() {
-  const features = [
-    'Parallel Playwright/Puppeteer execution',
-    'Queued jobs with retries and rate limits',
-    'Artifacts: HAR, traces, screenshots, videos',
-    'Rotating proxies and geo targeting',
-    'Webhook callbacks and REST API',
-  ];
 
+  const features = [
+    'Parallel Playwright/Puppeteer execution'
+    'Queued jobs with retries and rate limits'
+    'Artifacts: HAR, traces, screenshots, videos'
+    'Rotating proxies and geo targeting'
+    'Webhook callbacks and REST API'
+  ];
   return (
     <>
       <SEO
@@ -71,6 +70,7 @@ export default function BrowserAutomationCloudPage() {
       </main>
     </>
   );	return (
+
 		<>
 			<SEO title="Browser Automation Cloud" description="Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies." />
 			<main id="main" className="container mx-auto px-4 py-24">
@@ -98,5 +98,5 @@ export default function BrowserAutomationCloudPage() {
 				</section>
 			</main>
 		</>
-	),
+	)
 }

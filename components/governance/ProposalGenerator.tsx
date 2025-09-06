@@ -6,7 +6,6 @@ export type ProposalType =
   | 'AI Ethics'
   | 'Digital ID'
   | 'Education';
-
 export type ProposalForm = {
   targetInstitution: string;
   type: ProposalType;
@@ -15,25 +14,24 @@ export type ProposalForm = {
   supportingMultiverses: string;
   language?: string;
   customPrompt?: string;};export type ProposalForm = {
-  targetInstitution: string,
-  type: ProposalType,
-  regionalScope: string,
-  budgetOrGoals: string,
-  supportingMultiverses: string,
+  targetInstitution: string
+  type: ProposalType
+  regionalScope: string
+  budgetOrGoals: string
+  supportingMultiverses: string
   language?: string;
   customPrompt?: string
-};
-
+}
 export default function ProposalGenerator() {
   const [form, setForm] = useState<ProposalForm>({
-    targetInstitution: 'UNDP',
-    type: 'Workforce Dev',
-    regionalScope: 'Global',
-    budgetOrGoals: '',
-    supportingMultiverses: '',
-    language: 'English',
+    targetInstitution: 'UNDP'
+    type: 'Workforce Dev'
+    regionalScope: 'Global'
+    budgetOrGoals: ''
+    supportingMultiverses: ''
+    language: 'English'
     customPrompt:
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
   });
   const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
@@ -44,9 +42,8 @@ export default function ProposalGenerator() {
     mdUrl?: string;
   } | null>(null);
   const [statusMessage, setStatusMessage] = useState('');
-
   function handleChange<K extends keyof ProposalForm>(
-    key: K,
+    key: K
     value: ProposalForm[K]
   ) {
     setForm(prev => ({ ...prev, [key]: value }));  }  const [isGenerating, setIsGenerating] = useState(false);
@@ -54,31 +51,29 @@ export default function ProposalGenerator() {
   const [draftJson, setDraftJson] = useState<any>(null);
   const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string, jsonUrl?: string, mdUrl?: string } | null>(null);
   const [statusMessage, setStatusMessage] = useState('');
-
   function handleChange<K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {
     setForm((prev) => ({ ...prev, [key]: value }))
   }
-
   async function handleGenerate() {
     setIsGenerating(true);
     setStatusMessage('Generating draft...');
     try {
       const res = await fetch('/api/proposals/generate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify(form)
       });
       const data = await res.json();
-      setDraftMarkdown(data.markdown || '');
-      setDraftJson(data.json || null);
+      setDraftMarkdown(data.markdown |'');
+      setDraftJson(data.json |null);
       setStatusMessage('Draft ready. You can edit and export.');
     } catch (e: any) {
       console.error(e);
       setStatusMessage('Failed to generate. You can edit manually and export.');
     } finally {
       setIsGenerating(false);    }      const data = await res.json();
-      setDraftMarkdown(data.markdown || '');
-      setDraftJson(data.json || null);
+      setDraftMarkdown(data.markdown |'');
+      setDraftJson(data.json |null);
       setStatusMessage('Draft ready. You can edit and export.')
     } catch (e: any) {
       console.error(e);
@@ -87,69 +82,66 @@ export default function ProposalGenerator() {
       setIsGenerating(false)
     }
   }
-
   async function handleExport() {
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {
       const res = await fetch('/api/proposals/export', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-          markdown: draftMarkdown,
-          json: draftJson,
-          meta: form,
-        }),
+          markdown: draftMarkdown
+          json: draftJson
+          meta: form
+        })
       });
       const data = await res.json();
       setExportLinks({
-        pdfUrl: data.pdfUrl,
-        jsonUrl: data.jsonUrl,
-        mdUrl: data.mdUrl,
+        pdfUrl: data.pdfUrl
+        jsonUrl: data.jsonUrl
+        mdUrl: data.mdUrl
       });
       setStatusMessage('Exported. Files saved.');
     } catch (e) {
       console.error(e);
       setStatusMessage('Export failed');    }      const data = await res.json();
-      setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl }),
+      setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl })
       setStatusMessage('Exported. Files saved.')
     } catch (e) {
       console.error(e);
       setStatusMessage('Export failed')
     }
   }
-
   async function handleSubmitBridge() {
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {
       const res = await fetch('/api/proposals/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-          markdown: draftMarkdown,
-          json: draftJson,
-          meta: form,
-        }),
+          markdown: draftMarkdown
+          json: draftJson
+          meta: form
+        })
       });
       const data = await res.json();
       setStatusMessage(
-        `Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfsCid || 'N/A'}`
+        `Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`
       );
     } catch (e) {
       console.error(e);
       setStatusMessage('Submission failed');    }
   }
-
   return (
     <div className='space-y-6'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
         <div className='space-y-4'>      const data = await res.json();
-      setStatusMessage(`Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfsCid || 'N/A'}`)
+      setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
     } catch (e) {
       console.error(e);
+
       setStatusMessage('Submission failed')
     }
   }
-
   return (
     <div className='space-y-6'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
@@ -384,5 +376,5 @@ export default function ProposalGenerator() {
         </div>
       </div>
     </div>
-  );
+);
 }

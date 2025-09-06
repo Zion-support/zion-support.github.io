@@ -5,34 +5,28 @@ type Question = {
   question: string;
   options: string[];
   answerIndex: number;
-};
-
+}
 type Props = {
   questions: Question[];
-  onComplete: (score: number) => void;};  id: string,
-  question: string,
-  options: string[],
+  onComplete: (score: number) => void;};  id: string
+  question: string
+  options: string[]
   answerIndex: number
-};
-
+}
 type Props = {
-  questions: Question[],
+  questions: Question[]
   onComplete: (score: number) => void
-
 export default function Quiz({ questions, onComplete }: Props) {
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
-
   const score = questions.reduce(
-    (acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0),
+    (acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0)
     0
   );
-
   function submit() {
     setSubmitted(true);
     onComplete(score);
   }
-
   return (
     <div className='space-y-4'>
       {questions.map((q, idx) => (
@@ -47,9 +41,9 @@ export default function Quiz({ questions, onComplete }: Props) {
                   type='radio'                  name={q.id}
   function submit() {
     setSubmitted(true);
+
     onComplete(score)
   }
-
   return (
     <div className="space-y-4">
       {questions.map((q, idx) => (
@@ -97,5 +91,5 @@ export default function Quiz({ questions, onComplete }: Props) {
   );      <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>
       {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
     </div>
-  );
+);
 }

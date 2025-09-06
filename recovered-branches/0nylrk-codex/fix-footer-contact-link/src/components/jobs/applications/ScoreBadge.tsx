@@ -1,11 +1,11 @@
+
 import { JobApplication } from "@/types/jobs";
 interface ScoreBadgeProps {
   application: JobApplication;
 }
-
 export function ScoreBadge({ application }: ScoreBadgeProps) {
-  const score = application.match_score || 0;
 
+  const score = application.match_score |0;
   // Determine color based on score
   let className = "text-gray-700 bg-gray-100";
   if (score >= 80) className = "text-green-700 bg-green-100";

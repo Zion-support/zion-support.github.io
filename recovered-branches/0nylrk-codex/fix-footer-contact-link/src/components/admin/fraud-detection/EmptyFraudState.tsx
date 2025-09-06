@@ -1,14 +1,15 @@
-import React from "react";
+
+import React from "react",
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
 interface EmptyFraudStateProps {
   hasFilters: boolean;
-  onResetFilters: () => void;
+  onResetFilters: () => void
 }
 
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
-  hasFilters,
-  onResetFilters,
+  hasFilters
+  onResetFilters
 }) => {
   return (
     <div className="text-center py-12">
@@ -26,4 +27,5 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       )}
     </div>
   );
-};
+}
+

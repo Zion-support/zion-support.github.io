@@ -1,3 +1,4 @@
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -11,7 +12,6 @@ const SystemAdministrationChat: NextPage = () => {
           content="SystemAdministrationChat service"
         />{" "}
       </Head>
-
       <main>
         <h1>SystemAdministrationChat</h1>
         <p>Service details coming soon...</p>
@@ -19,6 +19,6 @@ const SystemAdministrationChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
+}
 export default SystemAdministrationChat;
+

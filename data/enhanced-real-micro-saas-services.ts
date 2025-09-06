@@ -1,4 +1,5 @@
- name: string;
+
+name: string;
 tagline: string;
 price: string;
 period: string;
@@ -22,3 +23,4 @@ category: 'AI & Machine Learning';
 'Cybersecurity';
 'Cloud Computing';
 'Data Analytics' ];
+

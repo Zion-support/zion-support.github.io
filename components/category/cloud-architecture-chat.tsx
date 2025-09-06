@@ -1,3 +1,4 @@
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -11,7 +12,6 @@ const CloudArchitectureChat: NextPage = () => {
           content="CloudArchitectureChat blog post"
         />{" "}
       </Head>
-
       <main>
         <h1>CloudArchitectureChat</h1>
         <p>Blog content coming soon...</p>
@@ -19,6 +19,6 @@ const CloudArchitectureChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
+}
 export default CloudArchitectureChat;
+

@@ -4,166 +4,161 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
-  Brain,
-  Cloud,
-  RefreshCw,
-  Wifi,
-  Shield,
-  BarChart3,
-  ArrowRight,
-  Zap,;} from 'lucide-react';import { 
+  Brain
+  Cloud
+  RefreshCw
+  Wifi
+  Shield
+  BarChart3
+  ArrowRight
+  Zap;} from 'lucide-react';import {
   Brain;
-  Cloud, 
-  RefreshCw, 
-  Wifi, 
-  Shield, 
+  Cloud
+  RefreshCw
+  Wifi
+  Shield
   BarChart3;
   ArrowRight;
   Zap
-
 const ServicesSection: React.FC = () => {
   const services = [
     {
-      icon: Brain,
-      title: 'AI Development',
+      icon: Brain
+      title: 'AI Development'
       description:
-        'Custom AI solutions and machine learning models tailored to your business needs.',
+        'Custom AI solutions and machine learning models tailored to your business needs.'
       features: [
-        'Machine Learning Models',
-        'Natural Language Processing',
-        'Computer Vision',
-        'Predictive Analytics',
-      ],
-      color: 'from-blue-500 to-cyan-500',
-      href: '/services/ai-development',      color: 'from-blue-500 to-cyan-500',
+        'Machine Learning Models'
+        'Natural Language Processing'
+        'Computer Vision'
+        'Predictive Analytics'
+      ]
+      color: 'from-blue-500 to-cyan-500'
+      href: '/services/ai-development',      color: 'from-blue-500 to-cyan-500'
       href: '/services/ai-development'
-    };
+    }
     {
-      icon: Cloud,
-      title: 'Cloud Architecture',
-      description: 'Scalable cloud solutions and infrastructure design for modern applications.',
-      features: ['AWS/Azure/GCPMicroservicesServerless ArchitectureDevOps Automation'],
-      color: 'from-purple-500 to-pink-500',
+      icon: Cloud
+      title: 'Cloud Architecture'
+      description: 'Scalable cloud solutions and infrastructure design for modern applications.'
+      features: ['AWS/Azure/GCPMicroservicesServerless ArchitectureDevOps Automation']
+      color: 'from-purple-500 to-pink-500'
       href: '/services/cloud-architecture'
-    };
+    }
     {
-      icon: RefreshCw,
-      title: 'Digital Transformation',
-      description: 'End-to-end digital transformation services to modernize your business.',
-      features: ['Process AutomationLegacy System MigrationChange ManagementDigital Strategy'],
-      color: 'from-green-500 to-emerald-500',
-      href: '/services/digital-transformation',
-    },
+      icon: RefreshCw
+      title: 'Digital Transformation'
+      description: 'End-to-end digital transformation services to modernize your business.'
+      features: ['Process AutomationLegacy System MigrationChange ManagementDigital Strategy']
+      color: 'from-green-500 to-emerald-500'
+      href: '/services/digital-transformation'
+    }
     {
-      icon: Cloud,
-      title: 'Cloud Architecture',
+      icon: Cloud
+      title: 'Cloud Architecture'
       description:
-        'Scalable cloud solutions and infrastructure design for modern applications.',
+        'Scalable cloud solutions and infrastructure design for modern applications.'
       features: [
-        'AWS/Azure/GCP',
-        'Microservices',
-        'Serverless Architecture',
-        'DevOps Automation',
-      ],
-      color: 'from-purple-500 to-pink-500',
-      href: '/services/cloud-architecture',
-    },
+        'AWS/Azure/GCP'
+        'Microservices'
+        'Serverless Architecture'
+        'DevOps Automation'
+      ]
+      color: 'from-purple-500 to-pink-500'
+      href: '/services/cloud-architecture'
+    }
     {
-      icon: RefreshCw,
-      title: 'Digital Transformation',
+      icon: RefreshCw
+      title: 'Digital Transformation'
       description:
-        'End-to-end digital transformation services to modernize your business.',
+        'End-to-end digital transformation services to modernize your business.'
       features: [
-        'Process Automation',
-        'Legacy System Migration',
-        'Change Management',
-        'Digital Strategy',
-      ],
-      color: 'from-green-500 to-emerald-500',
-      href: '/services/digital-transformation',
+        'Process Automation'
+        'Legacy System Migration'
+        'Change Management'
+        'Digital Strategy'
+      ]
+      color: 'from-green-500 to-emerald-500'
+      href: '/services/digital-transformation'
     },    {
-      icon: Wifi,
-      title: 'IoT Platforms',
+      icon: Wifi
+      title: 'IoT Platforms'
       description: 'Connected device solutions and IoT platform development.',      href: '/services/digital-transformation'
-    };
+    }
     {
-      icon: Wifi,
-      title: 'IoT Platforms',
-      description: 'Connected device solutions and IoT platform development.',
+      icon: Wifi
+      title: 'IoT Platforms'
+      description: 'Connected device solutions and IoT platform development.'
       features: [
-        'Sensor Networks',
-        'Real-time Monitoring',
-        'Data Analytics',
-        'Edge Computing',
-      ],
-      color: 'from-orange-500 to-red-500',
-      href: '/services/iot-platforms',      color: 'from-orange-500 to-red-500',
+        'Sensor Networks'
+        'Real-time Monitoring'
+        'Data Analytics'
+        'Edge Computing'
+      ]
+      color: 'from-orange-500 to-red-500'
+      href: '/services/iot-platforms',      color: 'from-orange-500 to-red-500'
       href: '/services/iot-platforms'
-    };
+    }
     {
-      icon: Shield,
-      title: 'Blockchain Solutions',
-      description: 'Decentralized technology platforms and smart contract development.',
-      features: ['Smart ContractsDeFi ApplicationsNFT PlatformsSupply Chain Solutions'],
-      color: 'from-indigo-500 to-purple-500',
-      href: '/services/blockchain-solutions',
-    },
+      icon: Shield
+      title: 'Blockchain Solutions'
+      description: 'Decentralized technology platforms and smart contract development.'
+      features: ['Smart ContractsDeFi ApplicationsNFT PlatformsSupply Chain Solutions']
+      color: 'from-indigo-500 to-purple-500'
+      href: '/services/blockchain-solutions'
+    }
     {
-      icon: Shield,
-      title: 'Blockchain Solutions',
+      icon: Shield
+      title: 'Blockchain Solutions'
       description:
-        'Decentralized technology platforms and smart contract development.',
+        'Decentralized technology platforms and smart contract development.'
       features: [
-        'Smart Contracts',
-        'DeFi Applications',
-        'NFT Platforms',
-        'Supply Chain Solutions',
-      ],
-      color: 'from-indigo-500 to-purple-500',
-      href: '/services/blockchain-solutions',
+        'Smart Contracts'
+        'DeFi Applications'
+        'NFT Platforms'
+        'Supply Chain Solutions'
+      ]
+      color: 'from-indigo-500 to-purple-500'
+      href: '/services/blockchain-solutions'
     },    {
-      icon: BarChart3,
-      title: 'Data Analytics',
+      icon: BarChart3
+      title: 'Data Analytics'
       description: 'Advanced analytics and business intelligence solutions.',      href: '/services/blockchain-solutions'
-    };
+    }
     {
-      icon: BarChart3,
-      title: 'Data Analytics',
-      description: 'Advanced analytics and business intelligence solutions.',
+      icon: BarChart3
+      title: 'Data Analytics'
+      description: 'Advanced analytics and business intelligence solutions.'
       features: [
-        'Big Data Processing',
-        'Real-time Dashboards',
-        'Predictive Modeling',
-        'Data Visualization',
-      ],
-      color: 'from-teal-500 to-blue-500',
-      href: '/services/data-analytics',
-    },  ];      features: ['Big Data ProcessingReal-time DashboardsPredictive ModelingData Visualization'],
-      color: 'from-teal-500 to-blue-500',
+        'Big Data Processing'
+        'Real-time Dashboards'
+        'Predictive Modeling'
+        'Data Visualization'
+      ]
+      color: 'from-teal-500 to-blue-500'
+      href: '/services/data-analytics'
+    },  ];      features: ['Big Data ProcessingReal-time DashboardsPredictive ModelingData Visualization']
+      color: 'from-teal-500 to-blue-500'
       href: '/services/data-analytics'
     }
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
-        staggerChildren: 0.1,
-      },
-    },  };
-
+        staggerChildren: 0.1
+      }
+    },  }
   const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20 }
     visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
       }
     }
-  };
-
+  }
   const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
+    hidden: { opacity: 0, y: 20 }
+    visible: { opacity: 1, y: 0 }
+  }
   return (
     <section className='py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden'>
       {/* Background Elements */}
@@ -171,9 +166,7 @@ const ServicesSection: React.FC = () => {
         <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]' />
         <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]' />
       </div>
-
-      <div className='relative container mx-auto px-4'>        {/* Section Header */}  };
-
+      <div className='relative container mx-auto px-4'>        {/* Section Header */}  }
   return (
     <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
       {/* Background Elements */}
@@ -181,7 +174,6 @@ const ServicesSection: React.FC = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]" />
         <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]" />
       </div>
-
       <div className="relative container mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -200,22 +192,19 @@ const ServicesSection: React.FC = () => {
             <Zap className='w-5 h-5 text-blue-400' />
             <span className='text-blue-400 font-medium'>Our Services</span>
           </motion.div>
-
           <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
             Comprehensive Technology
             <span className='block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>
               Solutions
             </span>
           </h2>
-
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
-            We deliver cutting-edge technology solutions that drive innovation,
-            efficiency, and growth for businesses across all industries.          </p>          
+            We deliver cutting-edge technology solutions that drive innovation
+            efficiency, and growth for businesses across all industries.          </p>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth 
+            We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth
             for businesses across all industries.
         </motion.div>
-
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -238,41 +227,33 @@ const ServicesSection: React.FC = () => {
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
                 />
-
                 {/* Icon */}
                 <div
                   className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
                 >
                   <service.icon className='w-8 h-8 text-white' />
                 </div>
-
                 {/* Content */}
                 <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300'>
                   {service.title}
                 </h3>
-
                 <p className='text-gray-300 mb-6 leading-relaxed'>                  {service.description}
                 </p>
-
                 {/* Features */}            >
               <div className="relative h-full bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-gray-700 transition-all duration-300 overflow-hidden">
                 {/* Background Gradient */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
-                
                 {/* Icon */}
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-
                 {/* Content */}
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300">
                   {service.title}
                 </h3>
-                
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-
                 {/* Features */}
                 <ul className='space-y-2 mb-8'>
                   {service.features.map(feature => (
@@ -288,7 +269,6 @@ const ServicesSection: React.FC = () => {
                       <span className="text-sm">{feature}</span>
                   ))}
                 </ul>
-
                 {/* CTA */}
                 <Link
                   href={service.href}
@@ -297,20 +277,17 @@ const ServicesSection: React.FC = () => {
                   <span className='font-medium'>Learn More</span>
                   <ArrowRight className='w-4 h-4' />
                 </Link>
-
                 {/* Hover Effect */}
                 <div className='absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300' />              </div>                >
                   <span className="font-medium">Learn More</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-
                 {/* Hover Effect */}
                 <div className="absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300" />
               </div>
             </motion.div>
           ))}
         </motion.div>
-
         {/* Bottom CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -352,9 +329,8 @@ const ServicesSection: React.FC = () => {
       </div>
     </section>
   );
-};
-
+}
 export default ServicesSection;  )
-};
-
+}
 export default ServicesSection;
+

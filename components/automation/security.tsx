@@ -1,6 +1,7 @@
- 
-};
-</pre> </div>) 
+
+}
+</pre> </div>)
+
 export default function SecurityAudit({ report }: Props) {
   return (
     <div className="space-y-4">
@@ -16,5 +17,5 @@ export default function SecurityAudit({ report }: Props) {
 {JSON.stringify(report, null, 2)}
       </pre>
     </div>
-  );
+);
 }

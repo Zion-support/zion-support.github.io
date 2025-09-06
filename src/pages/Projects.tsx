@@ -1,7 +1,9 @@
-import React from 'react';
-import { useProjects } from '@/hooks/useProjects';
-import { SEO } from '@/components/SEO';
+
+import React from 'react'
+import { useProjects } from '@/hooks/useProjects'
+import { SEO } from '@/components/SEO'
 import {
+<<<<<<< HEAD
   Card,
   CardContent,
   CardDescription,
@@ -16,6 +18,24 @@ import { Clock, Briefcase } from 'lucide-react';
 
 function ProjectsContent() {
   const { projects, isLoading } = useProjects();
+=======
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import Link from 'next/link'
+
+import { Clock, Briefcase } from 'lucide-react'
+function ProjectsContent() { const { projects, isLoading  } = useProjects()
+function ProjectsContent() {
+
+  const { projects, isLoading } = useProjects()
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 
   return (
     <>
@@ -42,7 +62,7 @@ function ProjectsContent() {
                 <CardHeader>
                   <CardTitle className='flex items-center gap-2'>
                     <Briefcase className='h-5 w-5 text-primary' />
-                    <span>{project.job?.title || 'Project'}</span>
+                    <span>{project.job?.title |'Project'}</span>
                   </CardTitle>
                   <CardDescription className='flex items-center gap-2 mt-1'>
                     <Badge variant='outline'>{project.status}</Badge>
@@ -55,12 +75,21 @@ function ProjectsContent() {
                 </CardHeader>
                 <CardContent>
                   <p className='text-sm text-muted-foreground line-clamp-2'>
-                    {project.job?.description || 'Project details'}
+                    {project.job?.description |'Project details'}
                   </p>
                 </CardContent>
                 <CardFooter>
+<<<<<<< HEAD
                   <Button asChild variant='outline' className='w-full'>
                     <Link href={`/project/${project.id}`}>View Details</Link>
+=======
+                  <Button asChild variant='outline' className='w-full'>                    <Link href={`/project/${project.id}`}>View Details</Link>                  <p className="text-sm text-muted-foreground line-clamp-2">
+                    {project.job?.description |"Project details"}
+                  </p>
+                </CardContent>
+                <CardFooter>
+                  <Button asChild variant="outline" className="w-full">
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
                   </Button>
                 </CardFooter>
               </Card>
@@ -69,9 +98,17 @@ function ProjectsContent() {
         )}
       </main>
     </>
+<<<<<<< HEAD
   );
 }
 
 export default function Projects() {
   return <ProjectsContent />;
+=======
+  )
+export default function Projects() {
+  return <ProjectsContent /> }
+export default function Projects() {
+  return <ProjectsContent />
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 }

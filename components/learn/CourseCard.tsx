@@ -8,16 +8,15 @@ export type Course = {
   isFree: boolean;
   category: string;
   certificationBadge: string;
-  description?: string;};
-
+  description?: string;}
 export default function CourseCard({ course }: { course: Course }) {
-  return (  id: string,
-  title: string,
-  durationMinutes: number,
-  level: string,
-  isFree: boolean,
-  category: string,
-  certificationBadge: string,
+  return (  id: string
+  title: string
+  durationMinutes: number
+  level: string
+  isFree: boolean
+  category: string
+  certificationBadge: string
   description?: string
 
 export default function CourseCard({ course }: { course: Course }) {

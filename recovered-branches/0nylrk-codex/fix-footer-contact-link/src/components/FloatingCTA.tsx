@@ -1,34 +1,31 @@
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
 import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false);
   const [isClosed, setIsClosed] = useState(false);
-
   useEffect(() => {
+
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const threshold = 600; // Show CTA after scrolling 600px
-
       if (scrollPosition > threshold && !isClosed) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
       }
-    };
-
+    }
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
-    };
+    }
   }, [isClosed]);
-
   const handleClose = () => {
     setIsClosed(true);
     setIsVisible(false);
-  };
-
+  }
   if (!isVisible) return null;
 
   return (

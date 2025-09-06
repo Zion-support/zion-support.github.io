@@ -4,17 +4,17 @@ export type ModerationModalProps = {
   flag: any | null;
   onClose: () => void;
   onAction: (
-    action: 'approve' | 'remove' | 'warn' | 'ban',
+    action: 'approve' | 'remove' | 'warn' | 'ban'
     adminNotes?: string
   ) => Promise<void>;
-
 export default function ModerationModal({
-  flag,
-  onClose,
-  onAction,
+  flag
+  onClose
+  onAction
 }: ModerationModalProps) {
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
+
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>
       <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>
@@ -56,19 +56,19 @@ export default function ModerationModal({
             <div className='p-3 border rounded'>
               <div className='text-gray-500'>Toxicity</div>
               <div className='font-semibold'>
-                {Math.round((flag.aiScores?.toxicity || 0) * 100)}%
+                {Math.round((flag.aiScores?.toxicity |0) * 100)}%
               </div>
             </div>
             <div className='p-3 border rounded'>
               <div className='text-gray-500'>NSFW</div>
               <div className='font-semibold'>
-                {Math.round((flag.aiScores?.nsfw || 0) * 100)}%
+                {Math.round((flag.aiScores?.nsfw |0) * 100)}%
               </div>
             </div>
             <div className='p-3 border rounded'>
               <div className='text-gray-500'>Scam</div>
               <div className='font-semibold'>
-                {Math.round((flag.aiScores?.scam || 0) * 100)}%
+                {Math.round((flag.aiScores?.scam |0) * 100)}%
               </div>
             </div>
           </div>
@@ -119,5 +119,5 @@ export default function ModerationModal({
           <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
       </div>
     </div>
-  );
+);
 }

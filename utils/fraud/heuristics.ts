@@ -1,55 +1,55 @@
 import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types';
-
 const suspiciousLinkHosts = [
-  'paypal.me',
-  'cash.app',
-  'venmo.com',
-  'wa.me',
-  't.me',
-  'telegram.me',
-  'whatsapp.com',
-  'westernunion.com',
-  'moneygram.com',
+  'paypal.me'
+  'cash.app'
+  'venmo.com'
+  'wa.me'
+  't.me'
+  'telegram.me'
+  'whatsapp.com'
+  'westernunion.com'
+  'moneygram.com'
 ];
-
 const suspiciousPhrases = [
-  'whatsapp me',
-  'telegram me',
-  'contact me on whatsapp',
-  'cashapp only',
-  'crypto only',
-  'send crypto',
-  'wire transfer',
-  'gift card',
-  'western union',
-  'off-platform payment',
-  'outside payment',
-  'pay outside',
-  'pay me directly',
-  'dm me on',
-  'reach me on whatsapp',
-  'skype me',
-  'email me at',
+  'whatsapp me'
+  'telegram me'
+  'contact me on whatsapp'
+  'cashapp only'
+  'crypto only'
+  'send crypto'
+  'wire transfer'
+  'gift card'
+  'western union'
+  'off-platform payment'
+  'outside payment'
+  'pay outside'
+  'pay me directly'
+  'dm me on'
+  'reach me on whatsapp'
+  'skype me'
+  'email me at'
 ];
-
 const vagueScammyJobPhrases = [
-  'easy work',
-  'quick money',
-  'no experience needed',
-  'work from home and earn fast',
-  'daily payouts',
-  'earn $\\d+ per day',
+  'easy work'
+  'quick money'
+  'no experience needed'
+  'work from home and earn fast'
+  'daily payouts'
+  'earn $\\d+ per day'
 ];
-
 function containsSuspiciousHost(text: string): boolean {
   const lower = text.toLowerCase();
   return suspiciousLinkHosts.some(host => lower.includes(host));
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 function containsSuspiciousPhrase(text: string): string[] {
   const lower = text.toLowerCase();
   return suspiciousPhrases.filter(p => lower.includes(p));
 }
+<<<<<<< HEAD
 
 function containsVagueJobClaims(text: string): string[] {
   const lower = text.toLowerCase();
@@ -64,21 +64,35 @@ function containsVagueJobClaims(text: string): string[] {
   return reasons;
 }
 
+=======
+function containsVagueJobClaims(text: string): string[] {
+  const lower = text.toLowerCase();
+  const reasons: string[] = [];
+  vagueScammyJobPhrases.forEach(phrase => {
+    if (lower.includes(phrase)) {
+      reasons.push(`Contains suspicious job phrase: "${phrase}"`);
+    }
+  });
+  return reasons;
+}
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export interface HeuristicDeps {
   countEventsByIp: (
-    ip: string,
-    source: MonitoredSource,
+    ip: string
+    source: MonitoredSource
     withinMinutes: number
   ) => Promise<number>;
+<<<<<<< HEAD
 }
 
+=======
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export async function evaluateHeuristics(
-  event: FraudEvent,
+  event: FraudEvent
   deps: HeuristicDeps
 ): Promise<HeuristicEvaluation> {
   const reasons: string[] = [];
   let severity: HeuristicEvaluation['severity'] = 'low';
-
   if (event.source === 'signup' && event.ipAddress) {
     const recent = await deps.countEventsByIp(event.ipAddress, 'signup', 10);
     if (recent >= 3) {
@@ -88,11 +102,10 @@ export async function evaluateHeuristics(
       severity = recent >= 10 ? 'high' : 'medium';
     }
   }
-
   if (
-    (event.source === 'message' ||
-      event.source === 'job_post' ||
-      event.source === 'quote' ||
+    (event.source === 'message' |
+      event.source === 'job_post' |
+      event.source === 'quote' |
       event.source === 'review') &&
     event.content
   ) {
@@ -106,7 +119,6 @@ export async function evaluateHeuristics(
       if (severity === 'low') severity = 'medium';
     }
   }
-
   if (event.source === 'job_post' && event.content) {
     const vague = containsVagueJobClaims(event.content);
     if (vague.length > 0) {
@@ -131,18 +143,22 @@ export interface HeuristicResult {
 export function runHeuristics(data: any): HeuristicResult {
   // Mock implementation - in production, this would run actual fraud detection heuristics
   const flags = new Set<string>();
-  
   // Simple heuristics
   if (data.email && data.email.includes('test')) flags.add('test_email');
   if (data.amount && data.amount > 10000) flags.add('high_amount');
   if (data.frequency && data.frequency > 10) flags.add('high_frequency');
-  
   const confidence = flags.size > 0 ? 0.8 : 0.1;
   const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
-  
   return {
+<<<<<<< HEAD
     flagged: flags.size > 0,
     reasons: Array.from(flags),
     severity: flags.size > 0 ? 'medium' : 'low',
   };
+=======
+    flagged: reasons.length > 0
+    reasons
+    severity
+  }
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 }

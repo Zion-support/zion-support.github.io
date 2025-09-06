@@ -1,18 +1,21 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
-import {motion} from 'framer-motion';
-import {Users, Rocket, Brain, Atom, Shield, Cloud, ArrowRight, MapPin, Clock, DollarSign, Star, Zap} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Users, Rocket, Brain, Atom, Shield, Cloud;
+  ArrowRight, MapPin, Clock, DollarSign, Star, Zap
+ } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 export default function CareersPage() {
+
   const openPositions = [
     {
-      title: "Senior AI Engineer",
-      department: "AI & Machine Learning",
+      title: "Senior AI Engineer"
+      department: "AI & Machine Learning"
       location: "San Francisco, CA / Remote";
-      type: "Full-time",
-      experience: "5+ years",
+      type: "Full-time"
+      experience: "5+ years"
       salary: "$150,000 - $200,000";
-      description: "Lead the development of cutting-edge AI solutions and neural networks for enterprise clients",
+      description: "Lead the development of cutting-edge AI solutions and neural networks for enterprise clients"
       requirements: [
         "Advanced degree in Computer Science, AI, or related field";
         "Expertise in TensorFlow, PyTorch, and deep learning frameworks";
@@ -20,17 +23,17 @@ export default function CareersPage() {
         "Strong background in machine learning algorithms"
       ];
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work arrangements"];
-      icon: Brain,
+      icon: Brain
       color: "from-purple-500 to-pink-500"
-    };
+    }
     {
-      title: "Quantum Computing Researcher",
-      department: "Quantum Computing",
+      title: "Quantum Computing Researcher"
+      department: "Quantum Computing"
       location: "San Francisco, CA / Remote";
-      type: "Full-time",
-      experience: "3+ years",
+      type: "Full-time"
+      experience: "3+ years"
       salary: "$120,000 - $180,000";
-      description: "Research and develop quantum algorithms and quantum-resistant cryptography solutions",
+      description: "Research and develop quantum algorithms and quantum-resistant cryptography solutions"
       requirements: [
         "PhD in Physics, Computer Science, or related field";
         "Experience with quantum computing frameworks (Qiskit, Cirq)";
@@ -38,53 +41,53 @@ export default function CareersPage() {
         "Strong mathematical and analytical skills"
       ];
       benefits: ["Competitive salary", "Research funding", "Conference attendance", "Health insurance"];
-      icon: Atom,
+      icon: Atom
       color: "from-blue-500 to-cyan-500"
-    };
+    }
     {
-      title: "Cybersecurity Architect",
-      department: "Cybersecurity",
+      title: "Cybersecurity Architect"
+      department: "Cybersecurity"
       location: "San Francisco, CA / Remote";
-      type: "Full-time",
-      experience: "7+ years",
+      type: "Full-time"
+      experience: "7+ years"
       salary: "$160,000 - $220,000";
-      description: "Design and implement enterprise-level security architectures and zero-trust solutions",
+      description: "Design and implement enterprise-level security architectures and zero-trust solutions"
       requirements: [
         "Bachelor's degree in Computer Science or related field";
         "Expertise in security frameworks and compliance standards";
         "Experience with zero-trust architecture implementation";
         "Strong knowledge of threat detection and response"
-      ],
+      ]
       benefits: ["Competitive salary", "Security certifications", "Health insurance", "Remote work"];
-      icon: Shield,
+      icon: Shield
       color: "from-red-500 to-orange-500"
-    };
+    }
     {
-      title: "Cloud Infrastructure Engineer",
-      department: "Cloud Infrastructure",
+      title: "Cloud Infrastructure Engineer"
+      department: "Cloud Infrastructure"
       location: "San Francisco, CA / Remote";
-      type: "Full-time",
-      experience: "4+ years",
+      type: "Full-time"
+      experience: "4+ years"
       salary: "$130,000 - $180,000";
-      description: "Build and maintain scalable cloud infrastructure and DevOps automation systems",
+      description: "Build and maintain scalable cloud infrastructure and DevOps automation systems"
       requirements: [
-        "Bachelor's degree in Computer Science or related field",
+        "Bachelor's degree in Computer Science or related field"
         "Expertise in AWS, Azure, or GCP";
         "Experience with Kubernetes, Docker, and CI/CD";
         "Strong knowledge of infrastructure as code"
       ];
       benefits: ["Competitive salary", "Cloud certifications", "Health insurance", "Flexible hours"];
-      icon: Cloud,
+      icon: Cloud
       color: "from-emerald-500 to-teal-500"
-    };
+    }
     {
-      title: "Data Scientist",
-      department: "Data Analytics",
+      title: "Data Scientist"
+      department: "Data Analytics"
       location: "San Francisco, CA / Remote";
-      type: "Full-time",
-      experience: "3+ years",
+      type: "Full-time"
+      experience: "3+ years"
       salary: "$110,000 - $160,000";
-      description: "Develop predictive analytics models and data-driven insights for business clients",
+      description: "Develop predictive analytics models and data-driven insights for business clients"
       requirements: [
         "Master's degree in Data Science, Statistics, or related field";
         "Proficiency in Python, R, and SQL";
@@ -92,17 +95,17 @@ export default function CareersPage() {
         "Strong analytical and problem-solving skills"
       ];
       benefits: ["Competitive salary", "Learning budget", "Health insurance", "Remote work"];
-      icon: Zap,
+      icon: Zap
       color: "from-indigo-500 to-purple-500"
-    };
+    }
     {
-      title: "Product Manager",
-      department: "Product",
+      title: "Product Manager"
+      department: "Product"
       location: "San Francisco, CA / Remote";
-      type: "Full-time",
-      experience: "5+ years",
+      type: "Full-time"
+      experience: "5+ years"
       salary: "$140,000 - $190,000";
-      description: "Lead product strategy and development for our technology solutions portfolio",
+      description: "Lead product strategy and development for our technology solutions portfolio"
       requirements: [
         "Bachelor's degree in Business, Engineering, or related field";
         "Experience in B2B SaaS or technology products";
@@ -110,38 +113,36 @@ export default function CareersPage() {
         "Excellent communication and leadership abilities"
       ];
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Professional development"];
-      icon: Rocket,
+      icon: Rocket
       color: "from-yellow-500 to-orange-500"
     }
   ];
-
   const benefits = [
     {
-      title: "Competitive Compensation",
-      description: "Above-market salaries with equity options and performance bonuses",
-      icon: DollarSign,
+      title: "Competitive Compensation"
+      description: "Above-market salaries with equity options and performance bonuses"
+      icon: DollarSign
       color: "from-green-500 to-emerald-500"
-    };
+    }
     {
-      title: "Health & Wellness",
+      title: "Health & Wellness"
       description: "Comprehensive health, dental, and vision insurance for you and your family";
-      icon: Star,
+      icon: Star
       color: "from-blue-500 to-cyan-500"
-    };
+    }
     {
-      title: "Flexible Work",
-      description: "Remote work options and flexible hours to support work-life balance",
-      icon: Clock,
+      title: "Flexible Work"
+      description: "Remote work options and flexible hours to support work-life balance"
+      icon: Clock
       color: "from-purple-500 to-pink-500"
-    };
+    }
     {
-      title: "Professional Growth",
+      title: "Professional Growth"
       description: "Continuous learning opportunities, conferences, and career development";
-      icon: Rocket,
+      icon: Rocket
       color: "from-orange-500 to-red-500"
     }
   ];
-
   return (
     <UltraAdvancedFuturisticBackground>
       <div className="min-h-screen">
@@ -149,9 +150,7 @@ export default function CareersPage() {
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>
           <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />
         </Head>
-
       <EnhancedNavigation />
-
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
@@ -168,7 +167,6 @@ export default function CareersPage() {
               Build the future of technology with cutting-edge AI, quantum computing, and cybersecurity solutions
             </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -176,7 +174,7 @@ export default function CareersPage() {
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
-              Work alongside world-class engineers and researchers to solve the most complex 
+              Work alongside world-class engineers and researchers to solve the most complex
               technological challenges and shape the future of computing.
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
@@ -186,7 +184,6 @@ export default function CareersPage() {
           </motion.div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -202,7 +199,6 @@ export default function CareersPage() {
               We offer competitive benefits and a collaborative environment that fosters innovation and growth
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -223,7 +219,6 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
-
       {/* Open Positions */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -239,7 +234,6 @@ export default function CareersPage() {
               Join our team of innovators and help build the future of technology
             </p>
           </motion.div>
-
           <div className="space-y-6">
             {openPositions.map((position, index) => (
               <motion.div
@@ -261,9 +255,7 @@ export default function CareersPage() {
                         <p className="text-white/70">{position.department}</p>
                       </div>
                     </div>
-                    
                     <p className="text-white/80 mb-4">{position.description}</p>
-                    
                     <div className="flex flex-wrap gap-4 mb-4">
                       <div className="flex items-center gap-2 text-white/70">
                         <MapPin className="w-4 h-4" />
@@ -282,7 +274,6 @@ export default function CareersPage() {
                         <span>{position.salary}</span>
                       </div>
                     </div>
-                    
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Requirements</h4>
                       <ul className="space-y-1">
@@ -294,7 +285,6 @@ export default function CareersPage() {
                         ))}
                       </ul>
                     </div>
-                    
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Benefits</h4>
                       <div className="flex flex-wrap gap-2">
@@ -306,7 +296,6 @@ export default function CareersPage() {
                       </div>
                     </div>
                   </div>
-                  
                   <div className="lg:flex-shrink-0">
                     <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
                       Apply Now
@@ -318,7 +307,6 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -347,7 +335,7 @@ export default function CareersPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-};
+}
 
       <EnhancedFooter />
     </div>

@@ -1,13 +1,13 @@
 import Link from 'next/link';
-import {readJson} from '../../utils/fsDb';
+import { readJson  } from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
-
 export async function getStaticProps() {
-  const articles = readJson<HelpArticle[]>('help/articles.json', []);
-  return { props: { articles } };
 
+  const articles = readJson<HelpArticle[]>('help/articles.json', []);
+  return { props: { articles } }
 export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
   const categories = Array.from(new Set(articles.map(a => a.category)));
+
   return (
     <div className='space-y-8'>
       <h1 className='text-2xl font-semibold'>Help Center</h1>
@@ -30,4 +30,4 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
         </div>
       ))}
     </div>
-  );
+);

@@ -1,4 +1,5 @@
 
+
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {supabase} from "@/integrations/supabase/client";
@@ -11,15 +12,13 @@ import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {HireNowCTA} from "@/components/profile/HireNowCTA";
 import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2} from "lucide-react";
-
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-  const { profileId } = useParams() as { profileId?: string };
+  const { profileId } = useParams() as { profileId?: string }
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
-
   useEffect(() => {
     const fetchProfile = async () => {
       setIsLoading(true);
@@ -30,29 +29,25 @@ export default function ProfilePage() {
           .select("*")
           .eq("id", profileId)
           .single();
-
         if (error) {
           throw error
         }
-
         setProfileData(data)
       } catch (error) {
         console.error("Error fetching profile:", error);
         setIsError(true);
         toast({
-          title: "Error",
-          description: "Failed to load profile. Please try again later.",
+          title: "Error"
+          description: "Failed to load profile. Please try again later."
           variant: "destructive"})
       } finally {
         setIsLoading(false)
       }
-    };
-
+    }
     if (profileId) {
       fetchProfile()
     }
   }, [profileId]);
-
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -60,20 +55,18 @@ export default function ProfilePage() {
       </div>
     )
   }
-
-  if (isError || !profileData) {
+  if (isError |!profileData) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <p className="text-red-500">Failed to load profile.</p>
       </div>
     )
   }
-
   return (
     <>
       <SEO
         title={`${profileData.full_name} | Talent Profile`}
-        description={profileData.bio || "View the profile of this talented individual."}
+        description={profileData.bio |"View the profile of this talented individual."}
       />
       <AppHeader />
       <div className="container mx-auto px-4 py-8">
@@ -98,7 +91,6 @@ export default function ProfilePage() {
                     </div>
                   )}
                 </div>
-                
                 {/* Main Info */}
                 <div className="flex-1">
                   <div className="flex justify-between items-start">
@@ -108,7 +100,6 @@ export default function ProfilePage() {
                     </div>
                     {/* Add Save/Unsave Button Here */}
                   </div>
-                  
                   {/* Location & Availability */}
                   <div className="mt-2 flex flex-wrap gap-3 text-sm">
                     {profileData.location && (
@@ -126,7 +117,6 @@ export default function ProfilePage() {
                   </div>
                 </div>
               </div>
-              
               {/* Skills */}
               {profileData.skills && profileData.skills.length > 0 && (
                 <div className="mt-4">
@@ -139,13 +129,11 @@ export default function ProfilePage() {
                 </div>
               )}
             </div>
-            
             {/* Bio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>
-              <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
+              <p className="text-zion-slate-light">{profileData.bio |"No bio provided."}</p>
             </div>
-            
             {/* Portfolio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>
@@ -168,13 +156,11 @@ export default function ProfilePage() {
                 )}
               </div>
             </div>
-            
             {/* Experience Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
-              <p className="text-zion-slate-light">{profileData.experience || "No experience provided."}</p>
+              <p className="text-zion-slate-light">{profileData.experience |"No experience provided."}</p>
             </div>
-            
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>
@@ -212,15 +198,15 @@ export default function ProfilePage() {
               </div>
             </div>
           </div>
-        
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-12 lg:col-span-4 space-y-6">
             <HireNowCTA
               talentProfile={{
-                id: profileData?.id || '',
-                full_name: profileData?.full_name || '',
-                professional_title: profileData?.professional_title || '',
-                hourly_rate: profileData?.hourly_rate || 0
+                id: profileData?.id |''
+                full_name: profileData?.full_name |''
+                professional_title: profileData?.professional_title |''
+                hourly_rate: profileData?.hourly_rate |0
+
               }}
             />
             {/* Placeholder for other sidebar elements */}

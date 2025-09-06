@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 ;
 function fixSyntaxErrors(filePath) {;
   try {;
@@ -16,6 +17,122 @@ function fixSyntaxErrors(filePath) {;
     // Fix shebang issues;
     if (content.includes('#!/usr/bin/env node') && !content.startsWith('#!/usr/bin/env node')) {;
       content = content.replace(/.*#!/usr\/bin\/env node.*\n/g, '#!/usr/bin/env node\n');
+=======
+<<<<<<< HEAD
+const { execSync } = require('child_process');
+// Files with critical syntax errors that need immediate fixing
+const criticalFiles = [
+  'src/components/Footer.tsx',
+  'src/components/Header.tsx',
+  'src/components/Layout.tsx',
+  'src/components/layout/EnhancedFooter.tsx',
+  'src/components/layout/EnhancedNavigation.tsx',
+  'src/components/layout/Footer.tsx',
+  'src/components/layout/Header.tsx',
+  'src/components/layout/MainLayout.tsx',
+  'src/components/performance/LazyComponent.tsx',
+  'src/components/performance/OptimizedImage.tsx',
+  'src/components/ui/EnhancedMarketplaceCard.tsx',
+  'src/components/ui/InteractiveNavigation.tsx',
+  'src/components/ui/NotificationSystem.tsx',
+  'src/hooks/useDebounce.ts',
+  'src/hooks/useMessageChannelHandler.ts',
+  'src/lib/utils.ts',
+  'src/utils/messageChannelHandler.ts',
+  'src/utils/next-link-shim.tsx',
+  'src/utils/sanitizeHtml.ts',
+  'src/utils/serviceFinder.ts',
+  'src/utils/testing-system.tsx',
+  'src/utils/validation.ts',
+  'pages/about.tsx',
+  'pages/ai-services.tsx',
+  'pages/blog.tsx',
+  'pages/contact.tsx',
+  'pages/index.tsx',
+  'pages/it-services.tsx',
+  'pages/micro-saas.tsx',
+  'pages/services.tsx',
+  'pages/talent.tsx'
+];
+function fixMergeConflicts(content) {
+  // Remove merge conflict markers
+  return content
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+console.log(' Starting comprehensive syntax fixer...')
+  'src/components/Footer.tsx'
+  'src/components/Header.tsx'
+  'src/components/Layout.tsx'
+  'src/components/layout/EnhancedFooter.tsx'
+  'src/components/layout/EnhancedNavigation.tsx'
+  'src/components/layout/Footer.tsx'
+  'src/components/layout/Header.tsx'
+  'src/components/layout/MainLayout.tsx'
+  'src/components/performance/LazyComponent.tsx'
+  'src/components/performance/OptimizedImage.tsx'
+  'src/components/ui/EnhancedMarketplaceCard.tsx'
+  'src/components/ui/InteractiveNavigation.tsx'
+  'src/components/ui/NotificationSystem.tsx'
+  'src/hooks/useDebounce.ts'
+  'src/hooks/useMessageChannelHandler.ts'
+  'src/lib/utils.ts'
+  'src/utils/messageChannelHandler.ts'
+  'src/utils/next-link-shim.tsx'
+  'src/utils/sanitizeHtml.ts'
+  'src/utils/serviceFinder.ts'
+  'src/utils/testing-system.tsx'
+  'src/utils/validation.ts'
+  'pages/about.tsx'
+  'pages/ai-services.tsx'
+  'pages/blog.tsx'
+  'pages/contact.tsx'
+  'pages/index.tsx'
+  'pages/it-services.tsx'
+  'pages/micro-saas.tsx'
+  'pages/services.tsx'
+  'pages/talent.tsx'
+    .replace(/[\s\S]*?[\s\S]*?[^\n]+/g, '')
+    .replace(/[\s\S]*?[^\n]+/g, '')
+    .replace(/[\s\S]*?[^\n]+/g, '')
+  fixed = fixed.replace(/'([^']*)$/gm, '
+  fixed = fixed.replace(/"([^"]*)$/gm, '"$1"
+  fixed = fixed.replace(/className="([^"]*)"([^>]*?)>/g, 'className="$1"
+  fixed = fixed.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, 'import { $1 } from "$2"
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+=======
+
+class ComprehensiveSyntaxFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.fixedFiles = 0;
+    this.totalErrors = 0;
+  }
+
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`);
+  }
+
+  async fixAllSyntaxErrors() {
+    this.log('🔧 Starting comprehensive syntax error fixing...');
+    
+    try {
+      // Get all TypeScript and JavaScript files
+      const files = this.getAllCodeFiles();
+      this.log(`Found ${files.length} files to check`);
+      
+      for (const file of files) {
+        await this.fixFileSyntax(file);
+      }
+      
+      this.log(`✅ Fixed syntax errors in ${this.fixedFiles} files`);
+      this.log(`📊 Total errors fixed: ${this.totalErrors}`);
+      
+    } catch (error) {
+      this.log(`❌ Error during syntax fixing: ${error.message}`);
+      throw error;
+>>>>>>> origin/automation-improvements-final
     }
     ;
     // Fix missing commas in object literals;
@@ -96,6 +213,7 @@ for (const file of files) {;
 // Run the fixer
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.fixAllSyntaxErrors().catch(console.error);
+<<<<<<< HEAD
 }
 
     this.log(`📋 Found ${problematicFiles.length} files with syntax issues`);
@@ -193,3 +311,6 @@ if (require.main === module) {;
 }
 
 module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}))))))))))))
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final

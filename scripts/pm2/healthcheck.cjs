@@ -1,3 +1,32 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node
+const fs = require('fs');
+const http = require('http');
+const distOk = fs.existsSync('out/index.html');
+function pingPreview() {
+	return new Promise((resolve) => {
+		const req = http.request({ host: '127.0.0.1', port: 3000, path: '/', timeout: 2000 }, (res) => {
+			resolve(res.statusCode && res.statusCode < 500);
+		});
+		req.on('error', () => resolve(false));
+		req.end();
+	});
+}
+(async () => {
+	const ok = distOk && (await pingPreview());
+	if (!ok) {
+		console.error('Healthcheck failed');
+		process.exit(1);
+	}
+	console.log('Healthy');
+})();
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const http = require("http");"const distOk = fs.existsSync("dist/index.html");function pingPreview() {return new Promise((resolve) => {"const req = http.request({ host: "127.0.0.1", port: 4173, path: "/", timeout: 2000 }, (res) => {resolve(res.statusCode && res.statusCode < 500)});"req.on("error", () => resolve(false));req.end()})}(async () => {const ok = distOk && (await pingPreview());if (!ok) {"console.error("Healthcheck failed");process.exit(1)}"console.log("Healthy")})();''"
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
 #!/usr/bin/env node;
 const fs = require('fs');
 const http = require('http');
@@ -15,6 +44,15 @@ function pingPreview() {}
 	const ok = distOk && (await pingPreview());
 	if (!ok) {}
 		console.error('Healthcheck failed');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+		process.exit(1)}
+	})();
+		process.exit(1)};
+	console.log('Healthy')})();
+=======
+>>>>>>> origin/automation-improvements-final
 		process.exit(1)};
 	console.log('Healthy')})();    // Check disk space
 const path = require('path');
@@ -248,3 +286,8 @@ if (require.main === module) {
 }
 
 module.exports = HealthChecker;
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final

@@ -1,79 +1,69 @@
-import React, { useEffect, useState } from 'react';
-import { useInterviews } from '@/hooks/useInterviews';
-import { Interview } from '@/types/interview';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { SEO } from '@/components/SEO';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { InterviewCard } from '@/components/interviews/InterviewCard';
-import { Button } from '@/components/ui/button';
-import { Calendar, Clock, Video } from 'lucide-react';
-import { format, isAfter, parseISO, startOfDay } from 'date-fns';
 
+import React, { useEffect, useState } from "react",
+import { useInterviews } from "@/hooks/useInterviews",
+import { Interview } from "@/types/interview",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { InterviewCard } from "@/components/interviews/InterviewCard",
+import { Button } from "@/components/ui/button";
+import { Calendar, Clock, Video } from 'lucide-react'
+import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
-  const { interviews, isLoading, fetchInterviews } = useInterviews();
-  const [activeTab, setActiveTab] = useState('upcoming');
 
+  const { interviews, isLoading, fetchInterviews } = useInterviews()
+  const [activeTab, setActiveTab] = useState('upcoming')
   useEffect(() => {function InterviewsContent() {
-  const { interviews, isLoading, fetchInterviews } = useInterviews(),
-  const [activeTab, setActiveTab] = useState("upcoming"),
-  
+  const { interviews, isLoading, fetchInterviews } = useInterviews()
+  const [activeTab, setActiveTab] = useState("upcoming")
   useEffect((,) => {
     // Modified to handle Promise<Interview[]> return type
     const loadInterviews = async () => {
-      await fetchInterviews();
-    };
-
-    loadInterviews();
-  }, []);
-
+      await fetchInterviews()
+    }
+    loadInterviews()
+  }, [])
   // Filter interviews based on status and date
-  const now = new Date();
-  const today = startOfDay(now);
-
+  const now = new Date()
+  const today = startOfDay(now)
   const upcomingInterviews = interviews
     .filter(interview => {
-      const interviewDate = parseISO(interview.scheduled_date);
+      const interviewDate = parseISO(interview.scheduled_date)
       return (
         isAfter(interviewDate, now) &&
         ['confirmed', 'requested'].includes(interview.status)
-      );
+      )
     })
     .sort(
       (a, b) =>
         parseISO(a.scheduled_date).getTime() -
         parseISO(b.scheduled_date).getTime()
-    );
-
+    )
   const pendingInterviews = interviews.filter(
     interview => interview.status === 'requested'
-  );
+  )
   const pastInterviews = interviews.filter(interview => {
-    const interviewDate = parseISO(interview.scheduled_date);
+    const interviewDate = parseISO(interview.scheduled_date)
     return (
-      !isAfter(interviewDate, now) ||
+      !isAfter(interviewDate, now) |
       ['completed', 'declined', 'cancelled'].includes(interview.status)
-    );
-  });
-
+    )
+  })
   // Group interviews by date
   const groupInterviewsByDate = (interviews: Interview[]) => {
-    const grouped: Record<string, Interview[]> = {};
-
+    const grouped: Record<string, Interview[]> = {}
     interviews.forEach(interview => {
-      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');
+      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd')
       if (!grouped[dateKey]) {
-        grouped[dateKey] = [];
+        grouped[dateKey] = []
       }
-      grouped[dateKey].push(interview);
-    });
-
-    return grouped;
-  };
-
-  const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);
-  const pendingGrouped = groupInterviewsByDate(pendingInterviews);
-  const pastGrouped = groupInterviewsByDate(pastInterviews);
-
+      grouped[dateKey].push(interview)
+    })
+    return grouped
+  }
+  const upcomingGrouped = groupInterviewsByDate(upcomingInterviews)
+  const pendingGrouped = groupInterviewsByDate(pendingInterviews)
+  const pastGrouped = groupInterviewsByDate(pastInterviews)
   const renderInterviewGroups = (
     groupedInterviews: Record<string, Interview[]>
   ) => {
@@ -94,13 +84,13 @@ function InterviewsContent() {
                 key={interview.id}
                 interview={interview}
                 onRefresh={async () => {
-                  await fetchInterviews();                }}
+                  await fetchInterviews() }}
               />
             ))}
           </div>
         </div>
-      ));
-  };
+      ))
+  }
 
   return (
     <>
@@ -117,7 +107,6 @@ function InterviewsContent() {
             </p>
           </div>
         </div>
-
         <Tabs
           defaultValue={activeTab}
           onValueChange={setActiveTab}
@@ -143,7 +132,6 @@ function InterviewsContent() {
             </TabsTrigger>
             <TabsTrigger value='past'>Past</TabsTrigger>
           </TabsList>
-
           <TabsContent value='upcoming' className='space-y-6'>
             {isLoading ? (
               <div className='flex justify-center py-12'>
@@ -163,7 +151,6 @@ function InterviewsContent() {
               </div>
             )}
           </TabsContent>
-
           <TabsContent value='pending' className='space-y-6'>
             {isLoading ? (
               <div className='flex justify-center py-12'>
@@ -184,7 +171,6 @@ function InterviewsContent() {
               </div>
             )}
           </TabsContent>
-
           <TabsContent value='past' className='space-y-6'>
             {isLoading ? (
               <div className='flex justify-center py-12'>
@@ -205,13 +191,12 @@ function InterviewsContent() {
         </Tabs>
       </main>
     </>
-  );
-
+  )
 export default function Interviews() {
   return (
     <ProtectedRoute>
       <InterviewsContent />
     </ProtectedRoute>
-  );
+  )
 }
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -20,14 +21,22 @@ export interface DeployTemplateResult {
 export function getSourceMapWithExistence(): SourceNode[] {
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
+=======
+// Mock source map utility
+export function getSourceMapWithExistence() {
+  return {
+    nodes: []
+    edges: []
+  }
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 }
-
 export function getGitStatus() {
   return {
-    connected: false,
+    connected: false
     branch: 'main'
-  };
+  }
 }
+<<<<<<< HEAD
 
 function buildZionSourceMap(): SourceNode[] {
   return [
@@ -73,21 +82,31 @@ function markExistenceRecursive(node: SourceNode): SourceNode {
   };
 }
 
+=======
+export function getSourceMapWithExistence(): SourceNode[] {
+  const nodes = buildZionSourceMap();
+  return nodes.map(markExistenceRecursive);
+}
+export interface DeployTemplateResult {
+  createdPaths: string[];
+  skippedPaths: string[];
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export function ensureDirectory(dirPath: string): void {
   if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true });
   }
+<<<<<<< HEAD
 }
 
+=======
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export function deployBasicTemplateForPath(
   repoRelativePath: string
 ): DeployTemplateResult {
   const absoluteDir = path.join(ROOT, repoRelativePath);
   const createdPaths: string[] = [];
   const skippedPaths: string[] = [];
-
   ensureDirectory(absoluteDir);
-
   const keepFile = path.join(absoluteDir, '.keep');
   if (!fs.existsSync(keepFile)) {
     fs.writeFileSync(keepFile, '');
@@ -95,7 +114,6 @@ export function deployBasicTemplateForPath(
   } else {
     skippedPaths.push(keepFile);
   }
-
   const readmeFile = path.join(absoluteDir, 'README.md');
   if (!fs.existsSync(readmeFile)) {
     const readme = `# ${path.basename(absoluteDir)}\n\nThis module is part of the Zion OS modular source tree. Customize as needed.\n`;
@@ -104,6 +122,10 @@ export function deployBasicTemplateForPath(
   } else {
     skippedPaths.push(readmeFile);
   }
+<<<<<<< HEAD
 
   return { createdPaths, skippedPaths };
 }
+=======
+  return { createdPaths, skippedPaths }
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a

@@ -1,10 +1,8 @@
-import { useState } from 'react';
-import { Menu } from 'lucide-react';
-import Link from 'next/link';
+import { useState } from "react";
+import { Menu } from 'lucide-react'
 
-
-  const [ open, setOpen ] = useState(false),
-
+import Link from 'next/link'
+  const [ open, setOpen ] = useState(false)
   return (
     <nav className='sticky top-16 z-40 bg-card border-b border-border'>
       <div className='container mx-auto px-4 md:px-6'>
@@ -51,6 +49,7 @@ import Link from 'next/link';
                 Contact Us
               </Link>            </li>
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
+
 export function EnterpriseStickyNav() {
   const [open, setOpen] = useState(false);
   return (
@@ -82,6 +81,5 @@ export function EnterpriseStickyNav() {
         </div>
       </div>
     </nav>
-  );
+  )
 }
-;

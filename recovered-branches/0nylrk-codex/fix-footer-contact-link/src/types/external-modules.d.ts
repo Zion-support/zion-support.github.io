@@ -9,14 +9,12 @@ declare module "@radix-ui/react-navigation-menu";
 declare module "react-resizable-panels";
 declare module "@radix-ui/react-toggle-group";
 declare module "@radix-ui/react-toggle";
-
 declare module '@tanstack/react-query';
 declare module 'react-day-picker' {
   export interface DateRange {
     from?: Date;
     to?: Date
   }
-
   // Minimal placeholder for the DayPicker component used in the app
   // The actual library provides full typings but we stub them here so the
   // TypeScript compiler can understand the imports without requiring the real
@@ -26,10 +24,10 @@ declare module 'react-day-picker' {
 }
 declare module 'sonner';
 declare module 'lucide-react' {
-  import {FC, SVGProps} from 'react';
+
+import {FC, SVGProps} from 'react';
   export type LucideProps = SVGProps<SVGSVGElement>;
   export type LucideIcon = FC<LucideProps>;
-
   export const AlertCircle: LucideIcon;
   export const AlertTriangle: LucideIcon;
   export const Apple: LucideIcon;
@@ -220,14 +218,14 @@ declare module 'lucide-react' {
   export const Webhook: LucideIcon;
   export const X: LucideIcon;
   export const XCircle: LucideIcon;
-  export const Zap: LucideIcon,
-  const icons: { [key: string]: LucideIcon };
+  export const Zap: LucideIcon
+  const icons: { [key: string]: LucideIcon }
   export default icons
 }
 declare module 'child_process';
 declare module 'date-fns';
 declare module 'jspdf' {
-  export const jsPDF: any,
+  export const jsPDF: any
   export default jsPDF
 }
 declare module '@hookform/resolvers/zod';
@@ -267,15 +265,12 @@ declare module 'i18next';
 declare module 'i18next-browser-languagedetector';
 declare module 'react-helmet-async';
 declare module 'react-hook-form' {
-  import type { ComponentType, ReactElement, ReactNode } from 'react'
-
+  import type { ComponentType, ReactElement, ReactNode } from 'react';
   // Minimal generic typings to satisfy local usage without full type defs
   export type FieldValues = Record<string, any>
   export type FieldPath<TFieldValues extends FieldValues> =
     keyof TFieldValues & string
-
   export type Control<TFieldValues extends FieldValues = FieldValues> = any
-
   export interface UseFormReturn<
     TFieldValues extends FieldValues = FieldValues;
   > {
@@ -285,18 +280,15 @@ declare module 'react-hook-form' {
     formState: any
     [key: string]: any
   }
-
   export function useForm<
     TFieldValues extends FieldValues = FieldValues;
   >(options?: any): UseFormReturn<TFieldValues>
-
   export function useFieldArray<
     TFieldValues extends FieldValues = FieldValues;
   >(options: any): any
-
   export interface ControllerProps<
     TFieldValues extends FieldValues = FieldValues;
-    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
+    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
   > {
     name: TName
     control?: Control<TFieldValues>
@@ -304,19 +296,16 @@ declare module 'react-hook-form' {
     defaultValue?: any
     render: (props: any) => ReactElement
   }
-
   export const Controller: ComponentType<ControllerProps<any, any>>
-
   export interface FormProviderProps<
     TFieldValues extends FieldValues = FieldValues;
   > {
     children?: ReactNode
     [key: string]: any
   }
-
   export const FormProvider: ComponentType<FormProviderProps<any>>
   export function useFormContext<
-    TFieldValues extends FieldValues = FieldValues,
+    TFieldValues extends FieldValues = FieldValues
   >(): UseFormReturn<TFieldValues>
 }
 declare module 'react-i18next';
@@ -329,3 +318,4 @@ declare module 'ws';
 declare module 'recharts';
 declare module 'next-themes';
 declare module 'tailwind-merge';
+

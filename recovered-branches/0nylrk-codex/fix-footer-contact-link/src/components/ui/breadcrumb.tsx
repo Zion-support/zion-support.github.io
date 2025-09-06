@@ -2,9 +2,8 @@
 import * as React from "react"
 import {Slot} from "@radix-ui/react-slot"
 import {ChevronRight} from "lucide-react"
- 
+
 import {cn} from "@/lib/utils"
- 
 const Breadcrumb = React.forwardRef<
   HTMLElement;
   React.ComponentPropsWithoutRef<"nav"> & {
@@ -22,7 +21,6 @@ const Breadcrumb = React.forwardRef<
   />
 ))
 Breadcrumb.displayName = "Breadcrumb"
- 
 const BreadcrumbList = React.forwardRef<
   HTMLOListElement;
   React.ComponentPropsWithoutRef<"ol">
@@ -34,7 +32,6 @@ const BreadcrumbList = React.forwardRef<
   />
 ))
 BreadcrumbList.displayName = "BreadcrumbList"
- 
 const BreadcrumbItem = React.forwardRef<
   HTMLLIElement;
   React.ComponentPropsWithoutRef<"li">
@@ -46,7 +43,6 @@ const BreadcrumbItem = React.forwardRef<
   />
 ))
 BreadcrumbItem.displayName = "BreadcrumbItem"
- 
 const BreadcrumbLink = React.forwardRef<
   HTMLAnchorElement;
   React.ComponentPropsWithoutRef<"a"> & {
@@ -54,7 +50,6 @@ const BreadcrumbLink = React.forwardRef<
   }
 >(({ className, asChild = false, ...props }, ref) => {
   const Comp = asChild ? Slot : "a"
- 
   return (
     <Comp
       ref={ref}
@@ -64,7 +59,6 @@ const BreadcrumbLink = React.forwardRef<
   )
 })
 BreadcrumbLink.displayName = "BreadcrumbLink"
- 
 const BreadcrumbSeparator = ({
   children;
   className;
@@ -76,11 +70,10 @@ const BreadcrumbSeparator = ({
     className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
     {...props}
   >
-    {children || <ChevronRight className="h-4 w-4" />}
+    {children |<ChevronRight className="h-4 w-4" />}
   </li>
 )
 BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
- 
 const BreadcrumbEllipsis = ({
   className;
   ...props
@@ -91,11 +84,10 @@ const BreadcrumbEllipsis = ({
     className={cn("flex h-9 w-9 items-center justify-center", className)}
     {...props}
   >
-    &#8230,
+    &#8230
   </span>
 )
 BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
- 
 export {
   Breadcrumb;
   BreadcrumbList;
@@ -103,3 +95,4 @@ export {
   BreadcrumbLink;
   BreadcrumbSeparator;
   BreadcrumbEllipsis}
+

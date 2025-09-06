@@ -1,35 +1,33 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
+
 import {
-  Check,
-  Shield,
-  ShieldAlert,
-  Lock,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,;
+  Check
+  Shield
+  ShieldAlert
+  Lock
+  Phone
+  Mail
+  MapPin
+  ExternalLink;
 } from 'lucide-react';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-
 export default function AIGuardrailsPage() {
   const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-  };
-
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com'
+  }
   const features = [
-    'Prompt/output policy engine with allow/deny lists',
-    'Jailbreak and prompt injection detection',
-    'PII/PHI detection and redaction',
-    'Toxicity, bias and safety classifiers',
-    'Human handoff flows and escalation policies',
-    'Audit logs, alerting and exportable evidence',
+    'Prompt/output policy engine with allow/deny lists'
+    'Jailbreak and prompt injection detection'
+    'PII/PHI detection and redaction'
+    'Toxicity, bias and safety classifiers'
+    'Human handoff flows and escalation policies'
+    'Audit logs, alerting and exportable evidence'
   ];
-
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -52,7 +50,6 @@ export default function AIGuardrailsPage() {
               strong guarantees.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10'>
             <Card className='lg:col-span-2 bg-black/30 border border-rose-500/30'>
               <div className='p-6'>
@@ -92,7 +89,6 @@ export default function AIGuardrailsPage() {
               </div>
             </Card>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-12'>
             <Card className='p-6 bg-black/30 border border-purple-500/30'>
               <h3 className='text-lg font-semibold mb-2'>SDKs & Proxies</h3>
@@ -116,7 +112,6 @@ export default function AIGuardrailsPage() {
               </p>
             </Card>
           </div>
-
           <div className='bg-black/20 border border-rose-500/30 rounded-2xl p-6'>
             <h3 className='text-xl font-semibold text-white mb-4 text-center'>
               Contact
@@ -171,5 +166,5 @@ export default function AIGuardrailsPage() {
 				</div>
 			</section>
 		</UltraAdvancedFuturisticBackground>
-	);
+);
 }

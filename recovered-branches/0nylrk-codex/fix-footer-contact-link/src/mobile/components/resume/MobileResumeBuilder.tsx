@@ -1,4 +1,5 @@
 
+
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
@@ -7,12 +8,9 @@ import {Textarea} from "@/components/ui/textarea";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Label} from "@/components/ui/label";
 import {ChevronRight, Plus, Zap, Trash2} from "lucide-react";
-
 type ResumeStep = "basics" | "experience" | "education" | "skills";
-
 export function MobileResumeBuilder() {
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
-  
   const renderStepContent = () => {
     switch (currentStep) {
       case "basics": return <BasicsStep />;
@@ -25,8 +23,7 @@ export function MobileResumeBuilder() {
       default:
         return <BasicsStep />
     }
-  };
-  
+  }
   return (
     <div className="space-y-6 px-4 pb-24">
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">
@@ -59,20 +56,16 @@ export function MobileResumeBuilder() {
           Skills
         </Button>
       </div>
-      
       {renderStepContent()}
-      
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
       </Button>
-      
       <Button variant="default" className="w-full" size="lg">
         Save & Preview
       </Button>
     </div>
   )
 }
-
 function BasicsStep() {
   return (
     <Card>
@@ -99,9 +92,9 @@ function BasicsStep() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
-          <Textarea 
-            id="summary" 
-            placeholder="Write a brief summary about yourself" 
+          <Textarea
+            id="summary"
+            placeholder="Write a brief summary about yourself"
             rows={4}
           />
         </div>
@@ -109,19 +102,15 @@ function BasicsStep() {
     </Card>
   )
 }
-
 function ExperienceStep() {
-  const [experiences, setExperiences] = useState([{ id: '1' }]),
-  
+  const [experiences, setExperiences] = useState([{ id: '1' }])
   const addExperience = () => {
     const newId = (experiences.length + 1).toString();
     setExperiences([...experiences, { id: newId }])
-  };
-  
+  }
   const removeExperience = (id: string) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
-  };
-  
+  }
   return (
     <div className="space-y-4">
       {experiences.map((exp, index) => (
@@ -130,8 +119,8 @@ function ExperienceStep() {
             <div className="flex justify-between items-center">
               <h3 className="font-medium">Work Experience {index + 1}</h3>
               {experiences.length > 1 && (
-                <Button 
-                  variant="ghost" 
+                <Button
+                  variant="ghost"
                   size="icon"
                   onClick={() => removeExperience(exp.id)}
                 >
@@ -139,7 +128,6 @@ function ExperienceStep() {
                 </Button>
               )}
             </div>
-            
             <div className="space-y-2">
               <Label htmlFor={`title-${exp.id}`}>Job Title</Label>
               <Input id={`title-${exp.id}`} placeholder="e.g. Frontend Developer" />
@@ -160,19 +148,18 @@ function ExperienceStep() {
             </div>
             <div className="space-y-2">
               <Label htmlFor={`description-${exp.id}`}>Description</Label>
-              <Textarea 
-                id={`description-${exp.id}`} 
-                placeholder="Describe your responsibilities and achievements" 
+              <Textarea
+                id={`description-${exp.id}`}
+                placeholder="Describe your responsibilities and achievements"
                 rows={3}
               />
             </div>
           </CardContent>
         </Card>
       ))}
-      
-      <Button 
-        variant="outline" 
-        className="w-full gap-2" 
+      <Button
+        variant="outline"
+        className="w-full gap-2"
         onClick={addExperience}
       >
         <Plus className="h-4 w-4" /> Add Another Experience
@@ -180,19 +167,15 @@ function ExperienceStep() {
     </div>
   )
 }
-
 function EducationStep() {
-  const [educations, setEducations] = useState([{ id: '1' }]),
-  
+  const [educations, setEducations] = useState([{ id: '1' }])
   const addEducation = () => {
     const newId = (educations.length + 1).toString();
     setEducations([...educations, { id: newId }])
-  };
-  
+  }
   const removeEducation = (id: string) => {
     setEducations(educations.filter(edu => edu.id !== id))
-  };
-  
+  }
   return (
     <div className="space-y-4">
       {educations.map((edu, index) => (
@@ -201,8 +184,8 @@ function EducationStep() {
             <div className="flex justify-between items-center">
               <h3 className="font-medium">Education {index + 1}</h3>
               {educations.length > 1 && (
-                <Button 
-                  variant="ghost" 
+                <Button
+                  variant="ghost"
                   size="icon"
                   onClick={() => removeEducation(edu.id)}
                 >
@@ -210,7 +193,6 @@ function EducationStep() {
                 </Button>
               )}
             </div>
-            
             <div className="space-y-2">
               <Label htmlFor={`institution-${edu.id}`}>Institution</Label>
               <Input id={`institution-${edu.id}`} placeholder="School or university name" />
@@ -236,10 +218,9 @@ function EducationStep() {
           </CardContent>
         </Card>
       ))}
-      
-      <Button 
-        variant="outline" 
-        className="w-full gap-2" 
+      <Button
+        variant="outline"
+        className="w-full gap-2"
         onClick={addEducation}
       >
         <Plus className="h-4 w-4" /> Add Another Education
@@ -247,27 +228,23 @@ function EducationStep() {
     </div>
   )
 }
-
 function SkillsStep() {
   const [skills, setSkills] = useState([
     { id: '1', name: "", proficiency: "beginner" }
   ]);
-  
   const addSkill = () => {
     const newId = (skills.length + 1).toString();
     setSkills([...skills, { id: newId, name: "", proficiency: "beginner" }])
-  };
-  
+  }
   const removeSkill = (id: string) => {
     setSkills(skills.filter(skill => skill.id !== id))
-  };
-  
+  }
   const updateSkill = (id: string, field: string, value: string) => {
-    setSkills(skills.map(skill => 
+    setSkills(skills.map(skill =>
       skill.id === id ? { ...skill, [field]: value } : skill
     ))
-  };
-  
+  }
+
   return (
     <div className="space-y-4">
       <Card>
@@ -306,10 +283,9 @@ function SkillsStep() {
                 )}
               </div>
             ))}
-            
-            <Button 
-              variant="outline" 
-              className="w-full gap-2" 
+            <Button
+              variant="outline"
+              className="w-full gap-2"
               onClick={addSkill}
             >
               <Plus className="h-4 w-4" /> Add Another Skill
@@ -317,7 +293,6 @@ function SkillsStep() {
           </div>
         </CardContent>
       </Card>
-      
       <Card>
         <CardContent className="p-4">
           <div className="space-y-2">

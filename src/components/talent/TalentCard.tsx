@@ -1,53 +1,45 @@
-
-export const TalentCard = React.memo(TalentCardComponent);
-TalentCard.displayName = 'TalentCard';import React from 'react';
-import { useRouter } from 'next/router';
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
-import { FavoriteButton } from "@/components/FavoriteButton";
+import React from 'react';
+import { useRouter  } from 'next/router';
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
+import { FavoriteButton } from "@/components/FavoriteButton",
 import { TalentProfile } from "@/types/talent";
-import { RatingStars } from '@/components/RatingStars';
-import { useAuth } from '@/context/auth/AuthProvider';
+import { RatingStars  } from '@/components/RatingStars';
+import { useAuth  } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
 export interface TalentCardProps {
-  talent: TalentProfile,
-  onViewProfile: (id: string,) => void,
-  onRequestHire: (talent: TalentProfile,) => void,
+
+  talent: TalentProfile
+  onViewProfile: (id: string,) => void
+  onRequestHire: (talent: TalentProfile,) => void
   isAuthenticated: boolean
 }
-
 const TalentCardComponent = ({
-  talent,
-  onViewProfile,
-  onRequestHire,
+  talent
+  onViewProfile
+  onRequestHire
   isAuthenticated
 }: TalentCardProps,) => {
-  const router = useRouter(),
-  
+  const router = useRouter()
   const handleViewProfile = () => {
     // Navigate directly to the talent profile
-    router.push(`/talent/${talent.id}`),
-    
+    router.push(`/talent/${talent.id}`)
     // Also call the onViewProfile callback if provided
     if (onViewProfile) {
       onViewProfile(talent.id)
     }
-  },
-
+  }
   const handleRequestHire = (e: React.MouseEvent,) => {
-    e.preventDefault(),
-    e.stopPropagation(),
+    e.preventDefault()
+    e.stopPropagation()
     if (onRequestHire) {
       onRequestHire(talent)
     }
-  },
-
-
+  }
   // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) || [],
-
+  const skills = talent.skills?.slice(0, 5) |[]
   return (
     <Card
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
@@ -68,7 +60,7 @@ const TalentCardComponent = ({
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
-                  {talent.full_name?.charAt(0) || "T"}
+                  {talent.full_name?.charAt(0) |"T"}
                 </div>
               )}
             </div>
@@ -78,7 +70,6 @@ const TalentCardComponent = ({
               </div>
             )}
           </div>
-          
           {/* Main Info */}
           <div className="flex-1">
             <div className="flex justify-between items-start">
@@ -86,7 +77,6 @@ const TalentCardComponent = ({
               <FavoriteButton itemId={talent.id} className="-mt-1" />
             </div>
             <p className="text-white font-medium">{talent.professional_title}</p>
-            
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
@@ -104,28 +94,26 @@ const TalentCardComponent = ({
             </div>
           </div>
         </div>
-        
         {/* Skills */}
         {skills.length > 0 && (
           <div className="mt-4">
             <div className="flex flex-wrap gap-2">
               {skills.map((skill, index,) => (
-                <span 
+                <span
                   key = {index,}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
                 >
                   {skill}
                 </span>
               ))}
-              {(talent.skills?.length || 0) > 5 && (
+              {(talent.skills?.length |0) > 5 && (
                 <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
-                  +{(talent.skills?.length || 0) - 5} more
+                  +{(talent.skills?.length |0) - 5} more
                 </span>
               )}
             </div>
           </div>
         )}
-        
         {/* Hourly Rate & Actions */}
         <div className="mt-5 flex items-center justify-between">
           <div>
@@ -138,7 +126,6 @@ const TalentCardComponent = ({
               <div className="text-zion-slate-light">Rate not specified</div>
             )}
           </div>
-          
           <div className="flex items-center gap-2">
             {isAuthenticated && (
               <Button
@@ -154,7 +141,7 @@ const TalentCardComponent = ({
               size="sm"
               variant="ghost"
               onClick={(e,) => {
-                e.stopPropagation(),
+                e.stopPropagation()
                 handleViewProfile()
               }}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
@@ -166,10 +153,9 @@ const TalentCardComponent = ({
       </div>
     </Card>
   )
-},
+}
+export const TalentCard = React.memo(TalentCardComponent)
+TalentCard.displayName = 'TalentCard'
+export const TalentCard = React.memo(TalentCardComponent)
+TalentCard.displayName = 'TalentCard'
 
-export const TalentCard = React.memo(TalentCardComponent),
-TalentCard.displayName = 'TalentCard',
-
-export const TalentCard = React.memo(TalentCardComponent);
-TalentCard.displayName = 'TalentCard';

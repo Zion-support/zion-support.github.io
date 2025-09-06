@@ -1,19 +1,40 @@
+
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 import Link from 'next/link';
 import { useAuth } from '@/hooks/useAuth';
 import { useGetOrdersQuery } from '@/hooks/useOrders';
 import {
+<<<<<<< HEAD
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
+=======
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
+
+import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
+import Link from 'next/link', // Changed from react-router-dom
+import { useAuth  } from '@/hooks/useAuth';
+import { useGetOrdersQuery } from '@/hooks/useOrders';
+import { Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow } from '@/components/ui/table';
+import { Badge  } from '@/components/ui/badge';
 import Skeleton from '@/components/ui/skeleton';
 import { EmptyState } from '@/components/ui/empty-state';
-
 export default function OrdersPage() {
   const { user } = useAuth();
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
@@ -40,11 +61,15 @@ export default function OrdersPage() {
           <Badge variant='destructive' className='flex items-center gap-1'>
             <ShieldAlert className='h-3 w-3' /> Disputed
           </Badge>
+<<<<<<< HEAD
         );
+=======
+        )
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
       default:
         return status;
     }
-  };
+  }
 
   return (
     <div className='container max-w-4xl py-10'>

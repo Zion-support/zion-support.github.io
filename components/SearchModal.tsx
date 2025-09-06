@@ -1,150 +1,141 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Search, X, ArrowRight, Clock } from "lucide-react";
 import Link from "next/link";
-
 interface SearchResult {
   title: string;
   description: string;
   url: string;
   category: string;
 }
-
 interface SearchModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 const searchData: SearchResult[] = [
   // Services
   {
-    title: "AI Services",
-    description: "Machine learning, computer vision, NLP, and AI solutions",
-    url: "/ai-services",
-    category: "Services",
-  },
+    title: "AI Services"
+    description: "Machine learning, computer vision, NLP, and AI solutions"
+    url: "/ai-services"
+    category: "Services"
+  }
   {
-    title: "IT Services",
-    description: "Cloud infrastructure, cybersecurity, and IT solutions",
-    url: "/it-services",
-    category: "Services",
-  },
+    title: "IT Services"
+    description: "Cloud infrastructure, cybersecurity, and IT solutions"
+    url: "/it-services"
+    category: "Services"
+  }
   {
-    title: "Micro SaaS",
-    description: "Custom micro SaaS platforms and automation tools",
-    url: "/micro-saas",
-    category: "Services",
-  },
+    title: "Micro SaaS"
+    description: "Custom micro SaaS platforms and automation tools"
+    url: "/micro-saas"
+    category: "Services"
+  }
   {
-    title: "Cloud Solutions",
-    description: "AWS, Azure, GCP migration and cloud infrastructure",
-    url: "/cloud-solutions",
-    category: "Services",
-  },
+    title: "Cloud Solutions"
+    description: "AWS, Azure, GCP migration and cloud infrastructure"
+    url: "/cloud-solutions"
+    category: "Services"
+  }
   {
-    title: "Cybersecurity",
-    description: "Security audits, penetration testing, and compliance",
-    url: "/cybersecurity",
-    category: "Services",
-  },
+    title: "Cybersecurity"
+    description: "Security audits, penetration testing, and compliance"
+    url: "/cybersecurity"
+    category: "Services"
+  }
   {
-    title: "Blockchain Solutions",
-    description: "Smart contracts, DeFi, and blockchain development",
-    url: "/blockchain-services",
-    category: "Services",
-  },
-
+    title: "Blockchain Solutions"
+    description: "Smart contracts, DeFi, and blockchain development"
+    url: "/blockchain-services"
+    category: "Services"
+  }
   // Solutions
   {
-    title: "Digital Transformation",
-    description: "Complete digital transformation solutions",
-    url: "/digital-transformation",
-    category: "Solutions",
-  },
+    title: "Digital Transformation"
+    description: "Complete digital transformation solutions"
+    url: "/digital-transformation"
+    category: "Solutions"
+  }
   {
-    title: "Enterprise Solutions",
-    description: "Large-scale enterprise technology solutions",
-    url: "/enterprise-solutions",
-    category: "Solutions",
-  },
+    title: "Enterprise Solutions"
+    description: "Large-scale enterprise technology solutions"
+    url: "/enterprise-solutions"
+    category: "Solutions"
+  }
   {
-    title: "Startup Solutions",
-    description: "Technology solutions for startups and SMBs",
-    url: "/startup-solutions",
-    category: "Solutions",
-  },
-
+    title: "Startup Solutions"
+    description: "Technology solutions for startups and SMBs"
+    url: "/startup-solutions"
+    category: "Solutions"
+  }
   // Industries
   {
-    title: "Healthcare",
-    description: "Technology solutions for healthcare industry",
-    url: "/industries/healthcare",
-    category: "Industries",
-  },
+    title: "Healthcare"
+    description: "Technology solutions for healthcare industry"
+    url: "/industries/healthcare"
+    category: "Industries"
+  }
   {
-    title: "Finance",
-    description: "Financial technology and fintech solutions",
-    url: "/industries/finance",
-    category: "Industries",
-  },
+    title: "Finance"
+    description: "Financial technology and fintech solutions"
+    url: "/industries/finance"
+    category: "Industries"
+  }
   {
-    title: "Education",
-    description: "Educational technology and e-learning solutions",
-    url: "/industries/education",
-    category: "Industries",
-  },
+    title: "Education"
+    description: "Educational technology and e-learning solutions"
+    url: "/industries/education"
+    category: "Industries"
+  }
   {
-    title: "Manufacturing",
-    description: "Industrial IoT and manufacturing automation",
-    url: "/industries/manufacturing",
-    category: "Industries",
-  },
-
+    title: "Manufacturing"
+    description: "Industrial IoT and manufacturing automation"
+    url: "/industries/manufacturing"
+    category: "Industries"
+  }
   // Company
   {
-    title: "About Us",
-    description: "Learn about Zion Tech Group and our mission",
-    url: "/about",
-    category: "Company",
-  },
+    title: "About Us"
+    description: "Learn about Zion Tech Group and our mission"
+    url: "/about"
+    category: "Company"
+  }
   {
-    title: "Contact",
-    description: "Get in touch with our team",
-    url: "/contact",
-    category: "Company",
-  },
+    title: "Contact"
+    description: "Get in touch with our team"
+    url: "/contact"
+    category: "Company"
+  }
   {
-    title: "Careers",
-    description: "Join our team and build the future",
-    url: "/careers",
-    category: "Company",
-  },
+    title: "Careers"
+    description: "Join our team and build the future"
+    url: "/careers"
+    category: "Company"
+  }
   {
-    title: "Blog",
-    description: "Latest insights and technology trends",
-    url: "/blog",
-    category: "Company",
-  },
+    title: "Blog"
+    description: "Latest insights and technology trends"
+    url: "/blog"
+    category: "Company"
+  }
   {
-    title: "Pricing",
-    description: "Transparent pricing for all our services",
-    url: "/pricing",
-    category: "Company",
-  },
+    title: "Pricing"
+    description: "Transparent pricing for all our services"
+    url: "/pricing"
+    category: "Company"
+  }
 ];
-
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
-
   useEffect(() => {
     if (isOpen && inputRef.current) {
       inputRef.current.focus();
     }
   }, [isOpen]);
-
   useEffect(() => {
     // Load recent searches from localStorage
     const saved = localStorage.getItem("recent-searches");
@@ -152,14 +143,13 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
       setRecentSearches(JSON.parse(saved));
     }
   }, []);
-
   useEffect(() => {
     if (query.trim()) {
       const filtered = searchData.filter(
         (item) =>
-          item.title.toLowerCase().includes(query.toLowerCase()) ||
-          item.description.toLowerCase().includes(query.toLowerCase()) ||
-          item.category.toLowerCase().includes(query.toLowerCase()),
+          item.title.toLowerCase().includes(query.toLowerCase()) |
+          item.description.toLowerCase().includes(query.toLowerCase()) |
+          item.category.toLowerCase().includes(query.toLowerCase())
       );
       setResults(filtered);
     } else {
@@ -167,7 +157,6 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
     }
     setSelectedIndex(0);
   }, [query]);
-
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Escape") {
       onClose();
@@ -180,27 +169,22 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
     } else if (e.key === "Enter" && results[selectedIndex]) {
       handleResultClick(results[selectedIndex]);
     }
-  };
-
+  }
   const handleResultClick = (result: SearchResult) => {
     // Add to recent searches
     const newRecent = [
-      result.title,
-      ...recentSearches.filter((s) => s !== result.title),
+      result.title
+      ...recentSearches.filter((s) => s !== result.title)
     ].slice(0, 5);
     setRecentSearches(newRecent);
     localStorage.setItem("recent-searches", JSON.stringify(newRecent));
-
     // Navigate to result
     window.location.href = result.url;
-  };
-
+  }
   const handleRecentClick = (search: string) => {
     setQuery(search);
-  };
-
+  }
   if (!isOpen) return null;
-
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto">
       <div className="flex min-h-screen items-start justify-center p-4 pt-16">
@@ -209,7 +193,6 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
           className="fixed inset-0 bg-black bg-opacity-50 transition-opacity"
           onClick={onClose}
         />
-
         {/* Modal */}
         <div className="relative w-full max-w-2xl bg-white rounded-lg shadow-xl">
           {/* Search Input */}
@@ -231,7 +214,6 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
               <X className="w-5 h-5" />
             </button>
           </div>
-
           {/* Results */}
           <div className="max-h-96 overflow-y-auto">
             {query.trim() ? (
@@ -294,17 +276,16 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                     </div>
                   </div>
                 )}
-
                 <div>
                   <div className="text-sm text-gray-500 mb-3">
                     Popular Searches
                   </div>
                   <div className="grid grid-cols-2 gap-2">
                     {[
-                      "AI Services",
-                      "Cloud Solutions",
-                      "Cybersecurity",
-                      "Digital Transformation",
+                      "AI Services"
+                      "Cloud Solutions"
+                      "Cybersecurity"
+                      "Digital Transformation"
                     ].map((term) => (
                       <button
                         key={term}

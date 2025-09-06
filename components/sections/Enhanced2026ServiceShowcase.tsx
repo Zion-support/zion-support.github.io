@@ -1,14 +1,15 @@
 import React from 'react';
+
 import { motion } from 'framer-motion';
 import {
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Zap,
-  Shield,
-  Brain,
-  Globe,
-  Rocket,;
+  ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Shield
+  Brain
+  Globe
+  Rocket;
 } from 'lucide-react';
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
@@ -17,58 +18,54 @@ import { innovative2026AIServices } from '../../data/innovative-2026-ai-services
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
 import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
-      },
-    },  };
-
+        staggerChildren: 0.2
+        delayChildren: 0.1
+      }
+    },  }
   const itemVariants = {
     hidden: {
-      opacity: 0,
-      y: 50,
-      scale: 0.9,
-    },
+      opacity: 0
+      y: 50
+      scale: 0.9
+    }
     visible: {      opacity: 1,        delayChildren: 0.1
       }
     }
-  };
-
+  }
   const itemVariants = {
-    hidden: { 
-      opacity: 0,
-      y: 50,
+    hidden: {
+      opacity: 0
+      y: 50
       scale: 0.9
-    };
-    visible: { 
-      opacity: 1,
-      y: 0,
-      scale: 1,
+    }
+    visible: {
+      opacity: 1
+      y: 0
+      scale: 1
       transition: {
-        duration: 0.6,
-        ease: 'easeOut' as const,
-      },
+        duration: 0.6
+        ease: 'easeOut' as const
+      }
     },  };        ease: "easeOut" as const
       }
     }
-  };
-
+  }
   const cardVariants = {
     hover: {
-      y: -10,
-      scale: 1.02,
+      y: -10
+      scale: 1.02
       transition: {
-        duration: 0.3,
-        ease: 'easeOut' as const,
-      },
+        duration: 0.3
+        ease: 'easeOut' as const
+      }
     },  };        ease: "easeOut" as const
       }
     }
-  };
-
+  }
   const renderServiceCard = (service: any, index: number) => (
     <motion.div
       key={service.id}
@@ -82,7 +79,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
       >
         {/* Glowing border effect */}
         <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
-
         <div className='relative p-6'>
           {/* Service header */}
           <div className='flex items-start justify-between mb-4'>
@@ -104,7 +100,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
       >
         {/* Glowing border effect */}
         <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        
         <div className="relative p-6">
           {/* Service header */}
           <div className="flex items-start justify-between mb-4">
@@ -124,15 +119,12 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
               </div>
             )}
           </div>
-
           {/* Description */}
           <p className='text-slate-300 text-sm mb-4 leading-relaxed'>            {service.description}
           </p>
-
           {/* Features */}          <p className="text-slate-300 text-sm mb-4 leading-relaxed">
             {service.description}
           </p>
-
           {/* Features */}
           <div className='mb-4'>
             <h4 className='text-white font-semibold mb-2 text-sm'>
@@ -151,7 +143,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
                   </div>
                 ))}            </div>
           </div>
-
           {/* Price and CTA */}          <div className="mb-4">
             <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
             <div className="grid grid-cols-1 gap-1">
@@ -162,7 +153,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
                 </div>
               ))}
           </div>
-
           {/* Price and CTA */}
           <div className='flex items-center justify-between'>
             <div className='text-right'>
@@ -178,7 +168,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
               <span>Learn More</span>
               <ArrowRight className='w-4 h-4' />            </motion.button>
           </div>
-
           {/* Market info */}
           <div className='mt-4 pt-4 border-t border-slate-700/50'>
             <div className='flex items-center justify-between text-xs text-slate-500'>              <span>Market: {service.marketSize}</span>          <div className="flex items-center justify-between">
@@ -196,7 +185,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
               <span>Learn More</span>
               <ArrowRight className="w-4 h-4" />
           </div>
-
           {/* Market info */}
           <div className='mt-4 pt-4 border-t border-slate-700/50'>
             <div className='flex items-center justify-between text-xs text-slate-500'>          <div className="mt-4 pt-4 border-t border-slate-700/50">
@@ -206,22 +194,19 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             </div>
           </div>
         </div>
-
         {/* Hover glow effect */}
         <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />      </motion.div>        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover: opacity-100 transition-opacity duration-300" />
       </motion.div>
     </motion.div>
-  ),
+  )
 
   return (
     <section className='py-20 relative overflow-hidden'>
       {/* Background effects */}
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40' />
-
       <div className='container mx-auto px-4 relative z-10'>        {/* Section header */}    <section className="py-20 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40" />
-      
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -237,14 +222,12 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
               Innovation 2026
             </span>
           </div>
-
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
             Next-Generation
             <span className='block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
               AI & IT Services
             </span>
           </h2>
-
           <p className='text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed'>
             Discover our cutting-edge micro SAAS solutions, AI-powered
             platforms, and quantum-enhanced infrastructure services designed for
@@ -257,19 +240,16 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
               Innovation 2026
             </span>
           </div>
-          
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Next-Generation
             <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               AI & IT Services
             </span>
           </h2>
-          
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
             Discover our cutting-edge micro SAAS solutions, AI-powered platforms, and quantum-enhanced infrastructure services designed for the future of business.
           </p>
         </motion.div>
-
         {/* AI Services Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -283,7 +263,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
               AI-Powered Services
             </h3>
           </div>
-
           <motion.div
             variants={containerVariants}
             initial='hidden'
@@ -297,7 +276,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             <Brain className="w-6 h-6 text-cyan-400" />
             <h3 className="text-2xl font-bold text-white">AI-Powered Services</h3>
           </div>
-          
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -307,7 +285,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             {innovative2026AIServices.map((service, index) => renderServiceCard(service, index))}
           </motion.div>
         </motion.div>
-
         {/* IT Infrastructure Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -321,7 +298,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
               IT Infrastructure & Security
             </h3>
           </div>
-
           <motion.div
             variants={containerVariants}
             initial='hidden'
@@ -335,7 +311,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             <Globe className="w-6 h-6 text-purple-400" />
             <h3 className="text-2xl font-bold text-white">IT Infrastructure & Security</h3>
           </div>
-          
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -345,7 +320,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             {innovative2026ITInfrastructureServices.map((service, index) => renderServiceCard(service, index))}
           </motion.div>
         </motion.div>
-
         {/* Micro SAAS Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -358,7 +332,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
               Micro SAAS Solutions
             </h3>
           </div>
-
           <motion.div
             variants={containerVariants}
             initial='hidden'
@@ -368,7 +341,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             {innovative2026MicroSaasServices.map((service, index) =>
               renderServiceCard(service, index)
             )}          </motion.div>          </div>
-          
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -378,7 +350,6 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             {innovative2026MicroSaasServices.map((service, index) => renderServiceCard(service, index))}
           </motion.div>
         </motion.div>
-
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -427,5 +398,5 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
         </motion.div>
       </div>
     </section>
-  );
+);
 }

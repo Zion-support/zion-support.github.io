@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
-
 export default function IncubatorPage() {
   return (
     <EnhancedLayout>

@@ -1,169 +1,180 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
 import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
-  Eye, 
-  Ear, 
-  Hand, 
-  Brain, 
-  CheckCircle, 
-  AlertTriangle,
-  Globe,
-  Users,
-  Shield,
-  Zap,
-  FileText,
+  Eye
+  Ear
+  Hand
+  Brain
+  CheckCircle
+  AlertTriangle
+  Globe
+  Users
+  Shield
+  Zap
+  FileText
   Settings
 } from 'lucide-react';
 const accessibilityFeatures = [
   {
-    title: "Visual Accessibility",
-    description: "Features to support users with visual impairments",
-    icon: Eye,
+    title: "Visual Accessibility"
+    description: "Features to support users with visual impairments"
+    icon: Eye
     features: [
-      "High contrast color schemes",
-      "Scalable text and interface elements",
-      "Screen reader compatibility",
-      "Alternative text for images",
+      "High contrast color schemes"
+      "Scalable text and interface elements"
+      "Screen reader compatibility"
+      "Alternative text for images"
       "Keyboard navigation support"
     ]
-  },
+  }
   {
-    title: "Auditory Accessibility",
-    description: "Support for users with hearing impairments",
-    icon: Ear,
+    title: "Auditory Accessibility"
+    description: "Support for users with hearing impairments"
+    icon: Ear
     features: [
-      "Video captions and transcripts",
-      "Visual indicators for audio cues",
-      "Text-based communication options",
-      "Volume controls and audio descriptions",
+      "Video captions and transcripts"
+      "Visual indicators for audio cues"
+      "Text-based communication options"
+      "Volume controls and audio descriptions"
       "Sign language support where applicable"
     ]
-  },
+  }
   {
-    title: "Motor Accessibility",
-    description: "Features for users with motor impairments",
-    icon: Hand,
+    title: "Motor Accessibility"
+    description: "Features for users with motor impairments"
+    icon: Hand
     features: [
-      "Keyboard-only navigation",
-      "Voice control compatibility",
-      "Large click targets",
-      "Customizable interaction timing",
+      "Keyboard-only navigation"
+      "Voice control compatibility"
+      "Large click targets"
+      "Customizable interaction timing"
       "Switch control support"
     ]
-  },
+  }
   {
-    title: "Cognitive Accessibility",
-    description: "Support for users with cognitive differences",
-    icon: Brain,
+    title: "Cognitive Accessibility"
+    description: "Support for users with cognitive differences"
+    icon: Brain
     features: [
-      "Clear and simple language",
-      "Consistent navigation patterns",
-      "Error prevention and recovery",
-      "Progress indicators",
+      "Clear and simple language"
+      "Consistent navigation patterns"
+      "Error prevention and recovery"
+      "Progress indicators"
       "Customizable interface complexity"
     ]
   }
 ];
-
 const standardsCompliance = [
   {
-    standard: "WCAG 2.1 AA",
-    description: "Web Content Accessibility Guidelines 2.1 Level AA compliance",
-    status: "Compliant",
-    coverage: "95%",
+    standard: "WCAG 2.1 AA"
+    description: "Web Content Accessibility Guidelines 2.1 Level AA compliance"
+    status: "Compliant"
+    coverage: "95%"
     icon: Shield
-  },
+  }
   {
-    standard: "Section 508",
-    description: "U.S. federal accessibility requirements",
-    status: "Compliant",
-    coverage: "100%",
+    standard: "Section 508"
+    description: "U.S. federal accessibility requirements"
+    status: "Compliant"
+    coverage: "100%"
     icon: FileText
-  },
+  }
   {
-    standard: "ADA",
-    description: "Americans with Disabilities Act compliance",
-    status: "Compliant",
-    coverage: "100%",
+    standard: "ADA"
+    description: "Americans with Disabilities Act compliance"
+    status: "Compliant"
+    coverage: "100%"
     icon: Users
-  },
+  }
   {
-    standard: "EN 301 549",
-    description: "European accessibility standard for ICT products",
-    status: "Compliant",
-    coverage: "90%",
+    standard: "EN 301 549"
+    description: "European accessibility standard for ICT products"
+    status: "Compliant"
+    coverage: "90%"
     icon: Globe
   }
 ];
-
 const accessibilityTools = [
   {
-    name: "Screen Reader Testing",
-    description: "Regular testing with popular screen readers including NVDA, JAWS, and VoiceOver",
+    name: "Screen Reader Testing"
+    description: "Regular testing with popular screen readers including NVDA, JAWS, and VoiceOver"
     frequency: "Monthly"
-  },
+  }
   {
-    name: "Keyboard Navigation",
-    description: "Comprehensive keyboard navigation testing for all interactive elements",
+    name: "Keyboard Navigation"
+    description: "Comprehensive keyboard navigation testing for all interactive elements"
     frequency: "Weekly"
-  },
+  }
   {
-    name: "Color Contrast Analysis",
-    description: "Automated and manual color contrast testing to ensure readability",
+    name: "Color Contrast Analysis"
+    description: "Automated and manual color contrast testing to ensure readability"
     frequency: "With each design update"
-  },
+  }
   {
-    name: "User Testing",
-    description: "Regular testing with users who have disabilities to identify barriers",
+    name: "User Testing"
+    description: "Regular testing with users who have disabilities to identify barriers"
     frequency: "Quarterly"
   }
 ];
-
 const accessibilityGuidelines = [
   {
-    category: "Content",
+    category: "Content"
     guidelines: [
-      "Use clear and simple language",
-      "Provide alternative text for images",
-      "Use proper heading structure",
-      "Ensure sufficient color contrast",
+      "Use clear and simple language"
+      "Provide alternative text for images"
+      "Use proper heading structure"
+      "Ensure sufficient color contrast"
       "Provide captions for videos"
     ]
-  },
+  }
   {
-    category: "Navigation",
+    category: "Navigation"
     guidelines: [
-      "Logical tab order",
-      "Skip links for main content",
-      "Consistent navigation patterns",
-      "Breadcrumb navigation",
+      "Logical tab order"
+      "Skip links for main content"
+      "Consistent navigation patterns"
+      "Breadcrumb navigation"
       "Search functionality"
     ]
-  },
+  }
   {
-    category: "Forms",
+    category: "Forms"
     guidelines: [
-      "Clear labels and instructions",
-      "Error messages and validation",
-      "Required field indicators",
-      "Logical grouping of related fields",
+      "Clear labels and instructions"
+      "Error messages and validation"
+      "Required field indicators"
+      "Logical grouping of related fields"
       "Multiple input methods"
     ]
-  },
+  }
   {
-    category: "Interactive Elements",
+    category: "Interactive Elements"
     guidelines: [
-      "Keyboard accessible",
-      "Focus indicators",
-      "Adequate target sizes",
-      "No seizure-inducing content",
+      "Keyboard accessible"
+      "Focus indicators"
+      "Adequate target sizes"
+      "No seizure-inducing content"
       "Customizable timing"
     ]
   }
 ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import Head from 'next/head';
+import Layout from '../components/Layout';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
 
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function AccessibilityPage() {
   return (
     <MainLayout
@@ -187,6 +198,10 @@ export default function AccessibilityPage() {
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 Ensuring digital inclusion for everyone
               </p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
             </motion.div>
           </div>
         </section>
@@ -357,7 +372,6 @@ export default function AccessibilityPage() {
                 Ready to make your digital products accessible to everyone? Contact us for a free accessibility audit.
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {accessibilityGuidelines.map((category, index) => (
                 <motion.div
@@ -384,7 +398,6 @@ export default function AccessibilityPage() {
             </div>
           </div>
         </section>
-
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
@@ -414,7 +427,6 @@ export default function AccessibilityPage() {
             </div>
           </div>
         </section>
-
         <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <motion.div
@@ -439,6 +451,14 @@ export default function AccessibilityPage() {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+=======
+            </div>
+          </div>
+        </section>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
       </div>
     </MainLayout>
   );

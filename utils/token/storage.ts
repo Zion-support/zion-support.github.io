@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
+=======
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 
 export interface TokenConfig {
   tokenName: string;
@@ -11,6 +14,7 @@ export interface TokenConfig {
   minIssueAmount: number;
   maxIssueAmount: number;
 }
+<<<<<<< HEAD
 
 export interface Wallet {
   address: string;
@@ -54,25 +58,46 @@ function readFromDisk(): TokenStoreData | null {
   }
 }
 
+=======
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 class TokenStore {
   private config: TokenConfig = {
-    tokenName: 'ZION$',
-    tokenSymbol: 'ZION',
-    decimals: 18,
-    totalSupply: 1000000000,
-    issueRate: 1.0,
-    redeemRate: 1.0,
-    minIssueAmount: 1,
+    tokenName: 'ZION$'
+    tokenSymbol: 'ZION'
+    decimals: 18
+    totalSupply: 1000000000
+    issueRate: 1.0
+    redeemRate: 1.0
+    minIssueAmount: 1
     maxIssueAmount: 10000
+<<<<<<< HEAD
   };
 
+=======
+  }
+export interface TokenStoreData {
+  wallets: Record<string, Wallet>;
+  transactions: TokenTransaction[];
+  config: TokenConfig;
+}
+function readFromDisk(): TokenStoreData | null {
+  try {
+    ensureDataDir();
+    if (!fs.existsSync(STORE_FILE)) return null;
+    const raw = fs.readFileSync(STORE_FILE, 'utf8');
+    const parsed = JSON.parse(raw) as TokenStoreData;
+    return parsed;
+  } catch {
+    return null;
+  }
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   setConfig(newConfig: Partial<TokenConfig>): void {
-    this.config = { ...this.config, ...newConfig };
+    this.config = { ...this.config, ...newConfig }
   }
 
   getConfig(): TokenConfig {
     return { ...this.config };
   }
 }
-
 export const tokenStore = new TokenStore();
+
