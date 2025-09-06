@@ -1,29 +1,126 @@
-
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import {motion} from 'framer-motion';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon,} from 'lucide-react';
+import Layout from '../components/layout/Layout';
 import React from 'react',
 import Head from 'next/head',
-
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
+  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users;
+  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings;
+  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon;
+  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon;
+  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon
+ } from 'lucide-react';
+import Layout from '../components/layout/Layout';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
+
   website: 'https://ziontechgroup.com'
-},
+}
 const heroStats = [
+
   { label: 'AI Services Delivered', value: '200+', icon: <Brain className="w-5 h-5" /> },
   { label: 'Happy AI Clients', value: '500+', icon: <Users className="w-5 h-5" /> },
   { label: 'AI Success Rate', value: '99.8%', icon: <Award className="w-5 h-5" /> },
-  { label: 'AI ROI Average', value: '500%', icon: <TrendingUp className="w-5 h-5" />   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-],
+  { label: 'AI ROI Average', value: '500%', icon: <TrendingUp className="w-5 h-5" /> }
+];
 
 const serviceCategories = [
   {
     title: 'AI Development Tools',
     description: 'Advanced AI-powered development and testing automation',
     services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Development Tools'),
+    icon: Code,
+    color: 'from-emerald-500 to-teal-600',
+    features: ['Code Review AutomationAI TestingDevOps Intelligence']
+  };
+  {
+    title: 'AI Testing & Quality Assurance',
+    description: 'Intelligent testing automation with AI-driven insights',
+    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Testing & Quality Assurance'),
+    icon: TestTube,
+    color: 'from-purple-500 to-indigo-600',
+    features: ['Test GenerationPerformance TestingQuality Assurance']
+  };
+  {
+    title: 'AI DevOps & Infrastructure',
+    description: 'Self-managing infrastructure with AI optimization',
+    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI DevOps & Infrastructure'),
+    icon: Server,
+    color: 'from-blue-500 to-indigo-600',
+    features: ['Infrastructure ManagementDeployment OptimizationPerformance Monitoring']
+  };
+  {
+    title: 'AI Cybersecurity',
+    description: 'Proactive threat detection and response with AI',
+    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Cybersecurity'),
+    icon: SecurityIcon,
+    color: 'from-red-500 to-pink-600',
+    features: ['Threat DetectionIncident ResponseSecurity Automation']
+  };
+  {
+    title: 'AI Data Management',
+    description: 'Intelligent data infrastructure with AI automation',
+    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Data Management'),
+    icon: Database,
+    color: 'from-cyan-500 to-blue-600',
+    features: [
+      'Pipeline Management',
+      'Quality Assurance',
+      'Governance Automation',
+    ],
+  },];
+
+const heroFeatures = [
+  {
+    title: 'AI-Powered Automation',
+    description: 'Advanced AI algorithms that automate complex development, testing, and operations tasks.',
+    icon: Brain,
+
+    gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
+  }
+
+const contactInfo = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup && ziontechgroup.com',;
+};
+=======
+];
+
+const testimonials = [
+=======
+import Head from 'next / head';
+import Link from 'next / link';
+import {motion} from 'framer-motion';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon, } from 'lucide-react';
+import Layout from '../components / layout / Layout';
+const contact_info = {
+=======
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+}
+],
+
+const serviceCategories = [
+  {
+    title: 'AI Development Tools',
+    description: 'Advanced AI - powered development and testing automation',
+    services: advancedAIAutomationServices2025.filter (
+      string => s.category === 'AI Development Tools'),
     icon: Code,
     color: 'from-emerald-500 to-teal-600',
     features: ['Code Review AutomationAI TestingDevOps Intelligence']
@@ -202,6 +299,7 @@ const testimonials = [;
 }
 ],
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AdvancedAIAutomationServices() {
   return (
 
@@ -219,8 +317,44 @@ export default function AdvancedAIAutomationServices() {
 
 =======
       {/* Hero Section */}
+      <section className='relative py-20 lg:py-32 overflow-hidden'>
+        <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20'></div>
+        <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+      {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
               Advanced AI Automation Services
@@ -237,16 +371,9 @@ export default function AdvancedAIAutomationServices() {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 >
-                  {stat.icon  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                  {stat.icon}
                   <span className="text-cyan-400 font-semibold">{stat.value}</span>
                   <span className="text-gray-300 text-sm">{stat.label}</span>
                 </motion.div>
@@ -271,16 +398,7 @@ export default function AdvancedAIAutomationServices() {
           </motion.div>
         </div>
 
-=======
-
-                href={`tel:${contactInfo && contactInfo.mobile}`}
-                className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300'>;
-                <Phone className='mr-2 w-5 h-5' />                Get Started;
-              </Link>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Features Section */}
@@ -304,10 +422,38 @@ export default function AdvancedAIAutomationServices() {
 
             className="text-center mb-16"
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our AI Automation Services?
             </h2>
+=======
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Our AI automation services provide unprecedented efficiency
+              accuracy, and cost savings across all aspects of technology
+              operations
+            </p>
+          </motion.div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='relative group'
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI automation services provide unprecedented efficiency, accuracy, and cost savings across all aspects of technology operations
+            </p>
+          </motion.div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
+              <motion.div
 
               <motion.div
             className='text-center mb-16'>;
@@ -320,17 +466,22 @@ export default function AdvancedAIAutomationServices() {
               operations;
             </p>;
           </motion && motion.div>;
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures && heroFeatures.map((feature, index) => (;
               <motion&& motion.div
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-
+                className='relative group'
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {heroFeatures.map((feature, index) => (
+              <motion.div
                 key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -357,7 +508,6 @@ export default function AdvancedAIAutomationServices() {
   }
 }
                 className="relative group"
-
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -371,8 +521,32 @@ export default function AdvancedAIAutomationServices() {
                   </div>
                 </div>
               </motion.div>
+            ))}
+          </div>
+        </div>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Services Section */}
-
+      <section id='services' className='py-20 bg-black'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Services Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section id="services" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -383,6 +557,7 @@ export default function AdvancedAIAutomationServices() {
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               AI Automation Service Categories
@@ -413,6 +588,8 @@ export default function AdvancedAIAutomationServices() {
                 transition={{ duration: 0 && 0.8, delay: categoryIndex * 0 && 0.2 }}
                 viewport={{ once: true }}
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
@@ -430,6 +607,8 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
                       viewport={{ once: true }}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -448,9 +627,6 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
                             <span className="text-gray-400">{service.period}</span>
                           </div>
 
-=======
-
-
                           <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                           <div className="space-y-2 mb-6">
                             {service.features.slice(0, 3).map((feature, featureIndex) => (
@@ -468,9 +644,6 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                           </div>
                           <div className="flex items-center justify-between">
@@ -543,6 +716,7 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
 
           >
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -552,6 +726,7 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
             </p>
           </motion.div>
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -568,6 +743,8 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
 
           >
 
+          >
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Operations with AI Automation?
             </h2>
@@ -578,6 +755,8 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
               <Link
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
@@ -591,13 +770,16 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
           </motion.div>
         </div>
       </section>
+    </Layout>
+);
+    </Layout>;
+);
 
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
+    </Layout>
+  )
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 

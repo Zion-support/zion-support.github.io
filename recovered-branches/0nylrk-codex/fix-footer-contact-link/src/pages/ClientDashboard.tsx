@@ -1,22 +1,6 @@
 
-
-import { useState, useEffect } from "react",
-import { AppHeader } from "@/layout/AppHeader",
-import { Footer } from "@/components/Footer",
-import { JobsList } from "@/components/jobs/JobsList",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Link } from "react-router-dom",
-import { JobStatus } from "@/types/jobs",
-import { SEO } from "@/components/SEO",
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from "lucide-react",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { SuggestedTalents } from "@/components/jobs/SuggestedTalents",
-import { useJobs } from "@/hooks/useJobs",
-import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps",
-import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
-
+=======
+<<<<<<< HEAD
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
   const { jobs, isLoading } = useJobs(),
@@ -27,12 +11,6 @@ function ClientDashboardContent() {
 =======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  // Set the first job as selected when jobs are loaded (if any)
-  useEffect(() => {
-    if (jobs.length > 0 && !selectedJobId) {
-      setSelectedJobId(jobs[0].id),
-      setSelectedJobTitle(jobs[0].title)
-    }
 
   const handleJobSelect = (jobId: string, jobTitle: string) => {
     setSelectedJobId(jobId)
@@ -99,6 +77,8 @@ function ClientDashboardContent() {
           <div>
             <div className="sticky top-4 space-y-6">
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               {/* Active Projects Card */}
               <ActiveProjectsCard />;
 
@@ -122,6 +102,8 @@ function ClientDashboardContent() {
                   </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </div>
             </div>
           </div>
@@ -130,6 +112,14 @@ function ClientDashboardContent() {
       <Footer />
     </>
   )
+<<<<<<< HEAD
+;
+  // Set the first job as selected when jobs are loaded (if any);
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
               </div>;
             </div>;
@@ -139,32 +129,3 @@ function ClientDashboardContent() {
       <Footer />;
 
 
-=======
-
-;
-
-export default function ClientDashboard() {;
-  return (
-    <ProtectedRoute>;
-      <ClientDashboardContent />;
-    </ProtectedRoute>;
-  );
-}
-
-;
-
-
-=======
-    </>);
-}
-export default /**
- * ClientDashboard - Function description
- */
-function ClientDashboard() {
-  return (
-    <ProtectedRoute>;
-      <ClientDashboardContent />;
-    </ProtectedRoute>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

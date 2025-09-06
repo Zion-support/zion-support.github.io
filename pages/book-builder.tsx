@@ -1,4 +1,15 @@
+import dynamic from 'next/dynamic';
 
+
+export default function BookBuilderPage() {
+  return <BookBuilder />
+import dynamic from 'next/dynamic',;
+const BookBuilder = dynamic(() => import('../components/book/BookBuilder'), { ssr: false }),
+
+export default function BookBuilderPage() {
+  return <BookBuilder />;
+};
+import dynamic from 'next/dynamic';
 const BookBuilder = dynamic(() => import('../components/book/BookBuilder'), { ssr: false });
 export default function BookBuilderPage(req, res) {
   try {
@@ -7,6 +18,6 @@ export default function BookBuilderPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

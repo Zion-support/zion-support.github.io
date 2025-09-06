@@ -1,5 +1,3 @@
-
-
 export interface AdditionalQ42025Service {
 	"id": string;
 	name: string;

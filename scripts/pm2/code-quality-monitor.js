@@ -28,6 +28,8 @@
             message: 'Trailing spaces found';
             severity: 'low';
           });
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         };
 ,
         // Long lines (over 120 characters),
@@ -412,6 +414,8 @@ if ( {) {
 const monitor = new CodeQualityMonitor ();
 monitor.run ().catch (error = > { process.exit (1)});
 ;
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     } catch (error) {,;
       this.log(`❌ Error running code quality: monitor: ${error.message}`),;
       process.exit(1);
@@ -424,8 +428,7 @@ const monitor = new CodeQualityMonitor(),;
 monitor.run().catch(error => {,;
   process.exit(1);
 });
-=======
-monitor.run().catch(error = > {; process.exit(1)});
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

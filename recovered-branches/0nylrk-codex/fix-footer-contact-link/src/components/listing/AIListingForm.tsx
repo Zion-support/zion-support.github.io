@@ -1,11 +1,23 @@
 
-
+import React, { useState } from "react";
+import {useToast} from "@/hooks/use-toast";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Sparkles} from "lucide-react";
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea";
+import { Sparkles } from "lucide-react";
+import { Textarea } from "@/components/ui/textarea",
+import { Sparkles } from "lucide-react",
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface AIListingFormProps {
   onSubmit: (formData: {
 
@@ -14,13 +26,6 @@ interface AIListingFormProps {
     keyFeatures: string
     targetAudience: string
 
-=======
-import React, { useState } from "react";
-import {useToast} from "@/hooks/use-toast";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Sparkles} from "lucide-react";
   initialValues?: {
     title?: string,
     category?: string,
@@ -32,6 +37,16 @@ import {Sparkles} from "lucide-react";
 =======
 
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
+  const { toast } = useToast();
+  const [title, setTitle] = useState(initialValues.title |"");
+  const [category, setCategory] = useState(initialValues.category |"");
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures |"");
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience |"");
+  const { toast } = useToast(),
+  const [title, setTitle] = useState(initialValues.title || ""),
+  const [category, setCategory] = useState(initialValues.category || ""),
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const handleSubmit = () => {
@@ -49,6 +64,10 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       keyFeatures,
       targetAudience
     })
+=======
+  }
+  },
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <div className="space-y-4">
@@ -93,10 +112,31 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           onChange={(e) => setTargetAudience(e.target.value)}
           placeholder="e.g. Developers, Marketers, Startups"
           className="bg-zion-blue border border-zion-blue-light text-white"
-
+          disabled={isLoading}
+        />
+      </div>
+      <Button
         onClick={handleSubmit}
-        disabled={isLoading || !title || !category}
+        disabled={isLoading |!title |!category}
+      <Button 
+import React, { useState } from "react",;
+import { useToast } from "@/hooks/use-toast",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Sparkles } from "lucide-react",;
 
+interface AIListingFormProps {;
+  onSubmit: (formData: {;
+    title: string,;
+    category: string,;
+    keyFeatures: string,;
+    targetAudience: string;
+  }) => void;
+  isLoading: boolean,;
+  initialValues?: {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     title?: string;
     category?: string;
     keyFeatures?: string;
@@ -181,10 +221,7 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
         />;
       </div>;
       <Button;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

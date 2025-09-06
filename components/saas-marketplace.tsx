@@ -4,15 +4,23 @@ import Button from '../components/ui/Button';
 
 import {
 
-=======
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  Zap
+  Shield
+  BarChart3
+  Globe
+  Users
+  Lock
+  TrendingUp
+  Code
+  Database
+  Cloud
+  ArrowRight
+  Star
+  Check
+  ExternalLink;} from 'lucide-react';import {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Zap,
   Shield,
   BarChart3,
@@ -25,7 +33,10 @@ import {
   Cloud,
   ArrowRight,
   Star,
-
+  Check,
+  ExternalLink,;} from 'lucide-react';import { 
+  Check,;
+  ExternalLink,;} from 'lucide-react';import { ;
   Zap;
   Shield
   BarChart3
@@ -35,8 +46,6 @@ import {
   TrendingUp
   Code
   Database
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Cloud;
   ArrowRight;
   Star;
@@ -44,6 +53,39 @@ import {
   ExternalLink
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+        'Lightning fast',
+        'Beautiful design',
+        'Great keyboard shortcuts',
+        'Git integration',
+      ],
+      cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem'],
+    },;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  ];
+  const categories = [
+    'All'
+    'Automation'
+    'Productivity'
+    'Payments'
+    'Customer Support'
+    'Analytics'
+    'Database'
+    'Hosting'
+    'Project Management'
+  ];
+  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  const filteredServices =
+    selectedCategory === 'All'
+      ? microSaasServices
+      : microSaasServices.filter(
+          service => service.category === selectedCategory
+        );  const filteredServices = selectedCategory === 'All'
+    ? microSaasServices
+    : microSaasServices.filter(service => service.category === selectedCategory);
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     {
       name: 'Linear',
       description: 'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.',
@@ -144,6 +186,8 @@ import {
           </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 {microSaasServices.length}+
               </div>
               <div className='text-gray-400 text-sm'>Curated Services</div>
@@ -208,6 +252,9 @@ import {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -319,10 +366,20 @@ import {
         </div>
       </section>
 
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Services Grid */}
+      <section id='services' className='py-24 bg-black'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+              {selectedCategory === 'All'
+                ? 'All Services'
+                : `${selectedCategory} Services`}
 
-
+            </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               {selectedCategory === 'All'
                 ? 'Explore our curated selection of the best micro SaaS services for modern businesses.'
@@ -331,89 +388,7 @@ import {
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredServices.map((service, index) => (
-=======
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-              {selectedCategory === 'All';
-                ? 'Explore our curated selection of the best micro SaaS services for modern businesses.';
-                : `Discover the best ${selectedCategory && selectedCategory.toLowerCase()} tools to streamline your business operations.`}
-            </p>;
-          </div>;
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
-            {filteredServices && filteredServices.map((service, index) => (;
-              <Card
-                key={index}
-                className='group border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
-                <div className='flex items-start space-x-6'>;
-                  <div className='relative'>;
-                    <div
-
-      {/* Category Filter */}
-      <section className='py - 16 bg - gray - 900'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
-          <div className='flex flex - wrap justify - center gap - 4'>;
-            {categories.map (category => (              <button      <section className="py - 16 bg - gray - 900">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-          <div className="flex flex - wrap justify - center gap - 4">;
-            {categories.map ((category) => (
-                key={category}
-                on_click={() => setSelectedCategory (category)}
-                className={`px - 6 py - 3 rounded - full text - sm font - medium transition - all duration - 300 ${
-                  selected_category === category;
-                    ? 'bg - blue - 600 text - white shadow - lg';
-                    : 'bg - gray - 800 text - gray - 300 hover:bg - gray - 700 hover:text - white';
-                }`}
-              >;
-                {category}
-              </button>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Services Grid */}
-      <section id='services' className='py - 24 bg - black'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
-          <div className='text - center mb - 20'>;
-            <h2 className='text - 4xl sm:text - 5xl font - bold mb - 8 text - white leading - tight'>;
-              {selected_category === 'All';
-                ? 'All Services';
-                : `${selected_category} Services`}
-            <p className='text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
-              {selected_category === 'All';
-                ? 'Explore our curated selection of the best micro SaaS services for modern businesses.';
-                : `Discover the best ${selected_category.toLowerCase ()} tools to streamline your business operations.`}
-            </p>;
-          </div>;
-          <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
-            {filtered_services.map ((service, index) => (
-              <Card;
-                key={index}
-                className='group border border - gray - 800 hover:border - blue - 500 / 30 hover:bg - gray - 900 / 80 transition - all duration - 300 hover:-translate - y-1';
-                style={{ animation_delay: `${index * 0.1}s` }}
-              >;
-                <div className='flex items - start space - x-6'>;
-                  <div className='relative'>;
-                    <div;
-                      className={`w - 20 h - 20 rounded - 2xl flex items - center justify - center text - 3xl bg - gradient - to - br ${service.color} shadow - xl group - hover:scale - 110 transition - transform duration - 300`}
-                    >;
-
-                      {service.icon}
-                    </div>;
-                  </div>;
-                  <div className='flex - 1'>;
-                    <div className='flex items - center justify - between mb - 2'>;
-                      <h3 className='text - 2xl font - bold text - white group - hover:text - blue - 400 transition - colors duration - 300'>;
-                        {service.name}
-                      </h3>;
-                      <div className='flex items - center space - x-2'>;
-                        <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
-                        <span className='text - sm text - gray - 300'>;
-                          {service.rating}
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -423,57 +398,10 @@ import {
                           .slice(0, 4)
                           .map((feature, featureIndex) => (
 =======
-                      className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service && service.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
-                      {service && service.icon}
-                    </div>;
-                  </div>;
-                  <div className='flex-1'>;
-                    <div className='flex items-center justify-between mb-2'>;
-                      <h3 className='text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300'>;
-                        {service && service.name}
-                      </h3>;
-                      <div className='flex items-center space-x-2'>;
-                        <Star className='w-4 h-4 text-yellow-400 fill-current' />;
-                        <span className='text-sm text-gray-300'>;
-                          {service && service.rating}
-                        </span>;
-                      </div>;
-                    </div>;
-                    <div className='flex items-center space-x-4 mb-3 text-sm text-gray-400'>;
-                      <span className='px-2 py-1 bg-gray-800 rounded-full'>;
-                        {service && service.category}
-                      </span>;
-                      <span>{service && service.users} users</span>;
-                      <span className='text-green-400'>{service && service.pricing}</span>;
-                    </div>;
-                    <p className='text-gray-400 leading-relaxed mb-4'>;
-                      {service && service.description}
-                    </p>;
-                    <div className='mb-4'>;
-                      <h4 className='text-sm font-semibold text-gray-300 mb-2'>;
-                        Key Features:;
-                      </h4>;
-                      <div className='grid grid-cols-2 gap-2'>;
-                        {service && service.features;
-                          .slice(0, 4);
-                          .map((feature, featureIndex) => (;
-                            <div
-                              key={featureIndex}
-                              className='flex items-center text-sm text-gray-400'>;
-                              <Check className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />;
-                              {feature}
-                            </div>;
-                          ))}
-
-                      </div>;
-                    </div>;
-                    <div className='flex items-center justify-between'>;
-
-                      <Button
-                        href={service && service.website}
-                        variant='outline'
-                        size='sm'
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
       {/* CTA Section */}
 
@@ -495,6 +423,8 @@ import {
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our team of experts can help you select the perfect SaaS tools for
@@ -515,10 +445,13 @@ import {
               href='/services'
               variant='outline'
               size='lg'
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'            >              href="/services"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
+<<<<<<< HEAD
 
               View Our Services
             </Button>
@@ -536,15 +469,6 @@ import {
 
 
 =======
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-    </>);
-=======
-);
 <<<<<<< HEAD
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    </>);
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

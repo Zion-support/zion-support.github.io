@@ -1,3 +1,4 @@
+=======
 
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
@@ -36,6 +37,8 @@ import { NotificationCenter } from "@/components/NotificationCenter",
         <div className="container mx-auto px-4 py-8">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {/* Left Sidebar - User Profile */}
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
                 <div className="flex flex-col items-center text-center">
@@ -44,18 +47,15 @@ import { NotificationCenter } from "@/components/NotificationCenter",
                   </div>
                   <h2 className="text-xl font-bold text-white">{user.displayName}</h2>
                   <p className="text-zion-slate-light mb-2">{user.email}</p>
+<<<<<<< HEAD
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     className="bg-zion-purple text-white mb-4"
                   >
                     {user.userType ? user.userType.charAt(0).toUpperCase() + user.userType.slice(1) : "New User"}
                   </Badge>
-
-=======
-
+                  <Button
                   <Button 
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                     onClick={() => window.location.href = "/profile"}
                   >
@@ -99,7 +99,9 @@ import { NotificationCenter } from "@/components/NotificationCenter",
                       <Send size={16} className="text-zion-cyan" />
                       Send Test Notification
                     </Button>
-
+                    <Button
+                    <Button 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
@@ -114,7 +116,9 @@ import { NotificationCenter } from "@/components/NotificationCenter",
                       <Settings size={16} className="text-zion-purple" />
                       Send Onboarding Nudge
                     </Button>
-
+                    <Button
+                    <Button 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
@@ -226,3 +230,22 @@ import { NotificationCenter } from "@/components/NotificationCenter",
   )
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                  <CommunityDiscussion />;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+      <Footer />;
+
+    </>);
+}
+;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

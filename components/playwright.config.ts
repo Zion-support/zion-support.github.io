@@ -1,13 +1,14 @@
-
-
+ trace: on-first-retry'
+}
+ trace: on-first-retry' 
+// Playwright.config utility
+export const Playwright.config = () => {
+  // Implementation here
+  return null;
 };
 
 reporter: [ ['list'], ['json', {
   outputFile: playwright-logs/test-results.json'
-reporter: [ ['list'], ['json', {
-
-  outputFile: playwright-logs/test-results && results.json' 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 }], ['html', {
   outputFolder: playwright-logs/html-report', open: never'

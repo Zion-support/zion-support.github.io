@@ -3,7 +3,9 @@
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import {
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Card
   CardContent
   CardDescription
@@ -15,9 +17,7 @@ import {
   CardTitle;
 } from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
 
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -64,10 +64,22 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
     try {
       await fetch('/api/points/redeem', {
 
-} from '@/components / ui / card';import { Button } from '@/components / ui / button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
-import { use_auth } from '@/hooks / use_auth';
-import { use_points } from '@/hooks / use_points';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+
+        body: JSON.stringify({
+          userId: user.id
+          cost: reward.cost
+          reward: reward.title
+        })
+      });
+      await fetchLedger();
+    } finally {
+      setRedeeming(false);    }      });
+      await fetchLedger()
+    } finally {
+      setRedeeming(false)
+import React, { useState } from 'react',;
 import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
 import { use_auth } from '@/hooks / use_auth';
 import { use_points } from '@/hooks / use_points';
@@ -116,22 +128,46 @@ if (return) {
       await fetchLedger();
     } finally {
       setRedeeming(false);    }      });
-      await fetchLedger()
-    } finally {
-      setRedeeming(false)
-
+      icon: <Users className='h-5 w-5' />
+      title: 'Sign Up & Profile Setup'
+      description: 'Complete your profile and verify your email'
+      points: '50 pts'
+      action: isAuthenticated ? '✓ Completed' : 'Get Started'
     }
-  }
-
-
-      set_redeeming (false);    }      });
-      await fetch_ledger ();
-    } finally {
-      set_redeeming (false);
+      icon: <ShoppingBag className='h-5 w-5' />
+      title: 'First Purchase'
+      description: 'Make your first purchase on the marketplace'
+      points: '100 pts'
+      action: 'Browse Marketplace'
     }
-  }
-  const earning_opportunities = [;
+
     {
+
+      icon: <MessageSquare className='h - 5 w - 5' />,
+      title: 'Community Engagement',
+      description: 'Post in the community or comment on discussions',
+      points: '25 pts per post',
+      action: 'Join Community',
+    },
+    {
+      icon: <Users className='h - 5 w - 5' />,
+
+      title: 'Refer Friends',
+      description: 'Invite friends to join Zion marketplace',
+      points: '200 pts per referral',
+      action: 'Share Referral Link',
+
+
+
+      icon: <Users className="h-5 w-5" />,
+      title: "Sign Up & Profile Setup",
+      description: "Complete your profile and verify your email",
+      points: "50 pts",
+      action: isAuthenticated ? "✓ Completed" : "Get Started"
+
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
     },
     {
@@ -143,6 +179,31 @@ if (return) {
     },
     {
 
+=======
+      id: 'coupon25'
+      title: '$25 Off Coupon'
+      cost: 2000
+      category: 'Discount'
+    }
+    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    },
+    {
+      icon: <ShoppingBag className="h-5 w-5" />,
+      title: "First Purchase",
+      description: "Make your first purchase on the marketplace",
+      points: "100 pts",
+      action: "Browse Marketplace"
+    },
+    {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+    },  ];
+
+  const upcomingRewards = [
+    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       icon: <MessageSquare className="h-5 w-5" />,
       title: "Community Engagement",
       description: "Post in the community or comment on discussions",
@@ -177,58 +238,64 @@ if (return) {
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' },;
     },
     {
+      icon: <ShoppingBag className="h-5 w-5" />,
+      title: "First Purchase",
+      description: "Make your first purchase on the marketplace",
+      points: "100 pts",
+      action: "Browse Marketplace"
+    },
+    {
+      icon: <Users className='h-5 w-5' />,
+      title: 'Refer Friends',
+      description: 'Invite friends to join Zion marketplace',
+      points: '200 pts per referral',
+      action: 'Share Referral Link',
+    },  ];
 
-
+  const upcomingRewards = [
+    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",
+      icon: <MessageSquare className="h-5 w-5" />,
+      title: "Community Engagement",
+      description: "Post in the community or comment on discussions",
+      points: "25 pts per post",
+      action: "Join Community"
+    },
+    {
+      icon: <Users className="h-5 w-5" />,
+      title: "Refer Friends",
       description: "Invite friends to join Zion marketplace",
       points: "200 pts per referral",
       action: "Share Referral Link"
     }
-
-
-
-  if (!isAuthenticated) {;
-    return (
-
-    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },
-    { id: 'premium1', title: 'Premium Features (1 month)', cost: 1000, category: 'Subscription' },
-    { id: 'swag', title: 'Zion Swag Pack', cost: 1500, category: 'Merchandise' },
-    { id: 'coupon25', title: '$25 Off Coupon', cost: 2000, category: 'Discount' },
-    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
-  ],
+<<<<<<< HEAD
 
   if (!isAuthenticated) {
     return (
       <>
+=======
+      <>
+
+
+        <div className="container py-10 max-w-4xl">
+          <div className="text-center mb-8">
+            <Gift className="h-16 w-16 text-primary mx-auto mb-4" />
+            <h1 className="text-4xl font-bold mb-4">Zion Rewards Program</h1>
+            <p className="text-xl text-muted-foreground mb-6">
+              Earn points for every action you take and redeem them for exclusive rewards!
+            </p>
+<<<<<<< HEAD
 
             <Button onClick={() => setLoginOpen(true)} size="lg">
               Join Now to Start Earning
             </Button>
           </div>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <TrendingUp className="h-5 w-5" />
-
-                </CardTitle>
-                <CardDescription>
-                  Multiple ways to accumulate rewards
-                </CardDescription>
-              </CardHeader>
-
                     <div className="text-primary mt-1">{opportunity.icon}</div>
                     <div className="flex-1">
                       <h4 className="font-medium">{opportunity.title}</h4>
                       <p className="text-sm text-muted-foreground">{opportunity.description}</p>
                     </div>
-
-                    <Badge variant="secondary">{opportunity.points}</Badge>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
+<<<<<<< HEAD
 
                   <Gift className="h-5 w-5" />
                   Upcoming Rewards
@@ -238,221 +305,40 @@ if (return) {
                 </CardDescription>
               </CardHeader>
 
-                    <Badge variant="outline">{reward.cost}</Badge>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-          </div>
-
-          </Card>
-        </div>
-        <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
-      </>
-      <>;
-        <div className='container py-10 max-w-4xl'>;
-          <div className='text-center mb-8'>;
-            <Gift className='h-16 w-16 text-primary mx-auto mb-4' />;
-            <h1 className='text-4xl font-bold mb-4'>Zion Rewards Program</h1>;
-            <p className='text-xl text-muted-foreground mb-6'>;
-              Earn points for every action you take and redeem them for;
-              exclusive rewards!;
-            </p>;
-            <Button onClick={() => setLoginOpen(true)} size='lg'>              Join Now to Start Earning;
-            </Button>;
-          </div>;
-            <Button onClick={(,) => setLoginOpen(true)} size="lg">;
-            <Button onClick={() => setLoginOpen(true)} size="lg">;
-              Join Now to Start Earning;
-            </Button>;
-          </div>;
-
-          <div className='grid md:grid-cols-2 gap-8 mb-12'>;
-            <Card>;
-              <CardHeader>;
-                <CardTitle className='flex items-center gap-2'>;
-                  <TrendingUp className='h-5 w-5' />                  How to Earn Points          <div className="grid md:grid-cols-2 gap-8 mb-12">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle className="flex items-center gap-2">;
-                  <TrendingUp className="h-5 w-5" />;
-                </CardTitle>;
-                <CardDescription>;
-                  Multiple ways to accumulate rewards;
-                </CardDescription>;
-              </CardHeader>;
-              <CardContent className='space-y-4'>;
-                {earningOpportunities && earningOpportunities.map((opportunity, index) => (;
-                  <div
-                    key={index}
-                    className='flex items-start gap-3 p-3 rounded-lg border'>;
-                    <div className='text-primary mt-1'>{opportunity && opportunity.icon}</div>;
-                    <div className='flex-1'>;
-                      <h4 className='font-medium'>{opportunity && opportunity.title}</h4>;
-                      <p className='text-sm text-muted-foreground'>;
-                        {opportunity && opportunity.description}
-                      </p>                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">;
-                    <div className="text-primary mt-1">{opportunity && opportunity.icon}</div>;
-                    <div className="flex-1">;
-                      <h4 className="font-medium">{opportunity && opportunity.title}</h4>;
-                      <p className="text-sm text-muted-foreground">{opportunity && opportunity.description}</p>;
-                    </div>;
-                    <Badge variant='secondary'>{opportunity && opportunity.points}</Badge>                  </div>                    </div>;
-                    <Badge variant="secondary">{opportunity && opportunity.points}</Badge>;
-                  </div>;
-                ))}
-              </CardContent>;
-            </Card>;
-
-            <Card>;
-              <CardHeader>;
-                <CardTitle className='flex items-center gap-2'>;
-                  <Gift className='h-5 w-5' />                  Upcoming Rewards                <CardTitle className="flex items-center gap-2">;
-                  <Gift className="h-5 w-5" />;
-                  Upcoming Rewards;
-                </CardTitle>;
-                <CardDescription>;
-                  What you can redeem your points for;
-                </CardDescription>;
-              </CardHeader>;
-              <CardContent className='space-y-4'>;
-                {upcomingRewards && upcomingRewards.map((reward, index) => (;
-                  <div
-                    key={index}
-                    className='flex items-center justify-between p-3 rounded-lg border'>                    <div>;
-                      <h4 className='font-medium'>{reward && reward.title}</h4>;
-                      <p className='text-sm text-muted-foreground'>;
-                        {reward && reward.category}
-                      </p>;
-                    </div>;
-                    <Badge variant='outline'>{reward && reward.cost}</Badge>                  </div>;
-                    <Badge variant="outline">{reward && reward.cost}</Badge>;
-                {upcomingRewards && upcomingRewards.map((reward, index) => (;
-                  <div key={index} className="flex items-center justify-between p-3 rounded-lg border">;
-                    <div>;
-                      <h4 className="font-medium">{reward && reward.title}</h4>;
-                      <p className="text-sm text-muted-foreground">{reward && reward.category}</p>;
-                    </div>;
-                    <Badge variant="outline">{reward && reward.cost}</Badge>;
-                  </div>;
-                ))}
-              </CardContent>;
-            </Card>;
-          </div>;
-
-          <Card className='text-center'>;
-            <CardContent className='pt-6'>;
-              <Star className='h-12 w-12 text-primary mx-auto mb-4' />;
-              <h3 className='text-2xl font-bold mb-2'>Coming Soon</h3>;
-              <p className='text-muted-foreground mb-4'>;
-                Our full rewards system is launching soon! Sign up now to start;
-                earning points immediately.;
-              </p>;
-              <Button onClick={() => setLoginOpen(true)}>Create Account</Button>            </CardContent>          <Card className="text-center">;
-            <CardContent className="pt-6">;
-              <Star className="h-12 w-12 text-primary mx-auto mb-4" />;
-              <h3 className="text-2xl font-bold mb-2">Coming Soon</h3>;
-              <p className="text-muted-foreground mb-4">;
-                Our full rewards system is launching soon! Sign up now to start earning points immediately.;
-              </p>;
-              <Button onClick={() => setLoginOpen(true)}>;
-                      </p>                  <div key={index} className="flex items - start gap - 3 p - 3 rounded - lg border">;
-                    <div className="text - primary mt - 1">{opportunity.icon}</div>;
-                    <div className="flex - 1">;
-                      <h4 className="font - medium">{opportunity.title}</h4>;
-                      <p className="text - sm text - muted - foreground">{opportunity.description}</p>;
-                    </div>;
-                    <Badge variant='secondary'>{opportunity.points}</Badge>                  </div>                    </div>;
-                    <Badge variant="secondary">{opportunity.points}</Badge>;
-                  </div>))}
-              </CardContent>;
-            </Card>;
-            <Card>;
-              <CardHeader>;
-                <CardTitle className='flex items - center gap - 2'>;
-                  <Gift className='h - 5 w - 5' />                  Upcoming Rewards                <CardTitle className="flex items - center gap - 2">;
-                  <Gift className="h - 5 w - 5" />;
-                  Upcoming Rewards;
-                </CardTitle>;
-                <CardDescription>;
-                  What you can redeem your points for;
-                </CardDescription>;
-              </CardHeader>;
-              <CardContent className='space - y-4'>;
-                {upcoming_rewards.map ((reward, index) => (
-                  <div;
-                    key={index}
-                    className='flex items - center justify - between p - 3 rounded - lg border';
-                  >                    <div>;
-                      <h4 className='font - medium'>{reward.title}</h4>;
-                      <p className='text - sm text - muted - foreground'>;
-                        {reward.category}
-                      </p>;
-                    </div>;
-                    <Badge variant='outline'>{reward.cost}</Badge>                  </div>;
-                    <Badge variant="outline">{reward.cost}</Badge>;
-                {upcoming_rewards.map ((reward, index) => (
-                  <div key={index} className="flex items - center justify - between p - 3 rounded - lg border">;
-                    <div>;
-                      <h4 className="font - medium">{reward.title}</h4>;
-                      <p className="text - sm text - muted - foreground">{reward.category}</p>;
-                    </div>;
-                    <Badge variant="outline">{reward.cost}</Badge>;
-                  </div>))}
-              </CardContent>;
-            </Card>;
-          </div>;
-          <Card className='text - center'>;
-            <CardContent className='pt - 6'>;
-              <Star className='h - 12 w - 12 text - primary mx - auto mb - 4' />;
-              <h3 className='text - 2xl font - bold mb - 2'>Coming Soon</h3>;
-              <p className='text - muted - foreground mb - 4'>;
-                Our full rewards system is launching soon! Sign up now to start;
-                earning points immediately.;
-              </p>;
-              <Button on_click={() => setLoginOpen (true)}>Create Account</Button>            </CardContent>          <Card className="text - center">;
-            <CardContent className="pt - 6">;
-              <Star className="h - 12 w - 12 text - primary mx - auto mb - 4" />;
-              <h3 className="text - 2xl font - bold mb - 2">Coming Soon</h3>;
-              <p className="text - muted - foreground mb - 4">;
-                Our full rewards system is launching soon! Sign up now to start earning points immediately.;
-              </p>;
-              <Button on_click={() => setLoginOpen (true)}>;
-                Create Account;
-              </Button>;
-          </Card>;
-        </div>;
-
-
-    );
-  }
-  return (
-
-        </div>
-        <p className="text-xl text-muted-foreground">Points Available</p>
-        {!loading && balance === 0 && (
             </CardTitle>
             <CardDescription>
               More ways to boost your point balance
             </CardDescription>
           </CardHeader>
+=======
+          <CardContent className='space-y-4'>
+            {earningOpportunities.map((opportunity, index) => (
+              <div
+                key={index}
+                className='flex items-start gap-3 p-3 rounded-lg border'
+              >
+                <div className='text-primary mt-1'>{opportunity.icon}</div>
+                <div className='flex-1'>
+                  <h4 className='font-medium'>{opportunity.title}</h4>
+                  <p className='text-sm text-muted-foreground'>
+                    {opportunity.description}
+                  </p>              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+          <CardContent className="space-y-4">
+            {earningOpportunities.map((opportunity, index) => (
+              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+
+          <CardContent className="space-y-4">
+            {earningOpportunities.map((opportunity, index) => (
+              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                 <div className="text-primary mt-1">{opportunity.icon}</div>
                 <div className="flex-1">
                   <h4 className="font-medium">{opportunity.title}</h4>
                   <p className="text-sm text-muted-foreground">{opportunity.description}</p>
                 </div>
-
-                <div className="text-right">
-                  <Badge variant="secondary" className="mb-1">{opportunity.points}</Badge>
-                  <p className="text-xs text-muted-foreground">{opportunity.action}</p>
-                </div>
-              </div>
-            ))}
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader>
+<<<<<<< HEAD
 
               <Gift className="h-5 w-5" />
               Available Rewards
@@ -467,6 +353,10 @@ if (return) {
                   <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
                   {balance >= reward.cost ? (
 
+=======
+                    <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
+                      {redeeming ? 'Processing...' : 'Redeem'}
+<<<<<<< HEAD
             ))}
           </CardContent>
         </Card>
@@ -481,11 +371,21 @@ if (return) {
         </CardHeader>
         <CardContent>
           {ledger.length === 0 ? (
+<<<<<<< HEAD
 
                 {ledger.map(entry => (
                   <div key={entry.id} className="flex items-center justify-between py-2 border-b">
                     <div>
-
+                      <p className='font-medium capitalize'>
+                        {entry.reason |'adjustment'}
+                      </p>
+                      <p className='text-xs text-muted-foreground'>
+                        {formatDistanceToNow(new Date(entry.created_at), {
+                          addSuffix: true
+                        })}
+                      </p>
+                    </div>
+                    <Badge
                       variant='outline'
                       className={
                         entry.delta >= 0
@@ -496,6 +396,20 @@ if (return) {
                     >
                       {entry.delta >= 0 ? '+' : ''}                      {entry.delta} pts                    </Badge>
                   </div>
+                      <p className="font-medium capitalize">{entry.reason || 'adjustment'}</p>
+                      <p className="text-xs text-muted-foreground">
+                        {formatDistanceToNow(new Date(entry.created_at), { addSuffix: true })}
+                      </p>
+                    </div>
+                    <Badge
+                      variant="outline"
+                      className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
+                    >;
+                      {entry.delta >= 0 ? '+' : ''}
+                      {entry.delta} pts;
+                    </Badge>;
+                  </div>;
+<<<<<<< HEAD
 
                 ))}
               </div>;
@@ -504,11 +418,20 @@ if (return) {
         </CardContent>
       </Card>
 
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
           </p>
           <div className="flex gap-4 justify-center">
             <Button variant="outline" asChild>
               <Link href="/marketplace">Browse Marketplace</Link>
             </Button>
+=======
+            <Button variant='outline' asChild>
+              <Link href='/community'>Join Community</Link>            <Button variant="outline" asChild>
+            <Button variant="outline" asChild>
+<<<<<<< HEAD
+<<<<<<< HEAD
 
               <Link href="/community">Join Community</Link>
             </Button>
@@ -518,5 +441,3 @@ if (return) {
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

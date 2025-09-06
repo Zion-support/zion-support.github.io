@@ -6,6 +6,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+  };
+  const data = readOrgData();
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const data = readOrgData();
   const parseArray = (v?: string | string[]) => {
     if (!v) return undefined;
@@ -28,11 +37,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const filtered = filterOrgData(data, filters);
   return res && res.status(200).json(filtered);  return res && res.status(200).json(filtered)
 }
-=======
-
-
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

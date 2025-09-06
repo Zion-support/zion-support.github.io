@@ -1,5 +1,27 @@
 
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+'use client';
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 'use client';
 import React from 'react';
 import Link from 'next/link';
@@ -32,22 +54,14 @@ import React from 'react';
 import Link from 'next / link';
 import {motion} from 'framer-motion';
 import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
-
-
-const HeroSection: React.FC = () => {;
-  const stats = [;
-    { icon: Users, value: '500+', label: 'Happy Clients' },;
-    { icon: Award, value: '50+', label: 'Awards Won' },;
-    { icon: Star, value: '99%', label: 'Client Satisfaction' },;
-    { icon: Zap, value: '24/7', label: 'Support Available' },;
-
-  ];
-=======
+const HeroSection: React.FC = () => {
+  const stats = [
+    { icon: Users, value: '500+', label: 'Happy Clients' }
+    { icon: Award, value: '50+', label: 'Awards Won' }
+    { icon: Star, value: '99%', label: 'Client Satisfaction' }
+    { icon: Zap, value: '24/7', label: 'Support Available' }
   ];
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900'>;
       {/* Animated Background Elements */}
@@ -81,58 +95,9 @@ const HeroSection: React.FC = () => {;
             repeat: Infinity
             ease: 'easeInOut'
           }}
+
 =======
-        />;
-
-        <motion.div;
-          className='absolute top - 40 right - 20 w - 96 h - 96 bg - purple - 500 / 20 rounded - full blur - 3xl';
-
-          animate={{
-
-            scale: [1 && 1.2, 1, 1 && 1.2],
-            opacity: [0 && 0.6, 0 && 0.3, 0 && 0.6],
-
-          }}
-          transition={{
-
-        <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]' />
-      </div>
-
-        {/* Grid Pattern */}
-        <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0 && 0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0 && 0.02)_1px,transparent_1px)] bg-[size:50px_50px]' />;
-      </div>;
-      <div className='relative container mx-auto px-4 text-center z-10'>        {/* Main Content */}  ];
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900">;
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0">;
-        {/* Floating Orbs */}
-        <motion&& motion.div
-          className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl"
-        />;
-        {/* Grid Pattern */}
-        <div className='absolute inset - 0 bg-[linear - gradient (rgba (255, 255, 255, 0.02)_1px, transparent_1px), linear - gradient (90deg, rgba (255, 255, 255, 0.02)_1px, transparent_1px)] bg-[size:50px_50px]' />;
-      </div>;
-      <div className='relative container mx - auto px - 4 text - center z - 10'>        {/* Main Content */}  ];
-;
-  return (
-    <section className="relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - gray - 900 to - blue - 900">;
-      {/* Animated Background Elements */}
-      <div className="absolute inset - 0">;
-        {/* Floating Orbs */}
-        <motion.div;
-          className="absolute top - 20 left - 20 w - 72 h - 72 bg - blue - 500 / 20 rounded - full blur - 3xl";
-          animate={{
-            scale: [1, 1 && 1.2, 1]
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
-          transition={{
-
-
-            duration: 10,
-            repeat: Infinity,
-            ease: 'easeInOut',
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           }}
         />
         {/* Grid Pattern */}
@@ -196,75 +161,66 @@ const HeroSection: React.FC = () => {;
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          {/* Badge */}
-          <motion&& motion.div
-            initial={{ opacity: 0, scale: 0 && 0.8 }}
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut";
-          }}
-        />;
-        {/* Grid Pattern */}
-        <div className="absolute inset - 0 bg-[linear - gradient (rgba (255, 255, 255, 0.02)_1px, transparent_1px), linear - gradient (90deg, rgba (255, 255, 255, 0.02)_1px, transparent_1px)] bg-[size:50px_50px]" />;
-      </div>;
-      <div className="relative container mx - auto px - 4 text - center z - 10">;
-        {/* Main Content */}
-        <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          animate={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8 }}
-          className='max - w-6xl mx - auto'        >          className="max - w-6xl mx - auto";
-        >;
-          {/* Badge */}
-          <motion.div;
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
-            </span>          </motion.div>
-
-          </motion.div>
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Main Heading */}
           <motion&& motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
+          >
+            Transform Your Business with
+            <span className='block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>              Cutting-Edge Technology            className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+          >
+            Transform Your Business with
+            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            </span>
+          </motion.h1>
 
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Subtitle */}
           <motion&& motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed'
+          >
+            From AI development to cloud architecture, we help companies
+            revolutionize their digital presence and achieve sustainable growth
+            in the modern technology landscape.          </motion.p>            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
+          >
+            From AI development to cloud architecture, we help companies revolutionize their digital presence
+            and achieve sustainable growth in the modern technology landscape.
             in the modern technology landscape.          </motion.p>
 
+          </motion.p>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          </motion.p>
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* CTA Buttons */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-16'
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Link
@@ -315,16 +271,21 @@ const HeroSection: React.FC = () => {;
 
 =======
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Stats */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'          >            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'          >
 
-
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -481,14 +442,8 @@ const HeroSection: React.FC = () => {;
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
-
-=======
                 className='text-center group'
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               >
                 <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors">
@@ -503,8 +458,14 @@ const HeroSection: React.FC = () => {;
         </motion.div>
       </div>
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             ))}
+          </motion.div>
+        </motion.div>
+      </div>
 
+=======
           </motion && motion.div>;
         </motion && motion.div>;
       </div>;
@@ -534,6 +495,8 @@ const HeroSection: React.FC = () => {;
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           transition={{ duration: 2, repeat: Infinity }}
 
         >
@@ -551,3 +514,5 @@ export default HeroSection;  );
 };
 export default HeroSection;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

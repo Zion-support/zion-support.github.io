@@ -1,8 +1,11 @@
-
+import React from 'react',
+import Head from 'next/head',
+import React from 'react';
+import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Card from '../components/ui/Card';
 
-export default function ITAssetDiscoveryAgentPage() {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <UltraFuturisticBackground variant='space' intensity='high'>
       <Head>
@@ -42,6 +45,8 @@ export default function ITAssetDiscoveryAgentPage() {
                   className='text-cyan-300 underline'
                   href='https://aws.amazon.com/config/pricing/'
                   target='_blank'
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   rel='noopener noreferrer'
                 >
                   AWS Config
@@ -81,10 +86,44 @@ export default function ITAssetDiscoveryAgentPage() {
       </div>
     </UltraFuturisticBackground>;
   );
+<<<<<<< HEAD
 
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 import Card from '../components/ui/Card',
 
+                  AWS Config;
+                </a>;
+              </li>;
+              <li>;
+
+                <a;
+                  className='text - cyan - 300 underline';
+                  href='https://azure.microsoft.com / pricing / details / monitor/';
+                  target='_blank';
+                  rel='noopener noreferrer';
+                >;
+
+                  Azure Monitor;
+                </a>;
+              </li>;
+              <li>;
+
+                <a;
+                  className='text - cyan - 300 underline';
+                  href='https://cloud.google.com / asset - inventory / pricing';
+                  target='_blank';
+                  rel='noopener noreferrer';
+                >;
+
+                  GCP Asset Inventory;
+                </a>;
+              </li>;
+            </ul>;
+          </Card>;
+        </div>;
+
+            className='px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function ITAssetDiscoveryAgentPage() {
 	return (
 		<UltraFuturisticBackground variant="space" intensity="high">
@@ -101,15 +140,6 @@ export default function ITAssetDiscoveryAgentPage() {
 						<h2 className="font-semibold mb-2">Features</h2>
 						<ul className="text-sm text-gray-300 space-y-2 list-disc list-inside">
 
-							<li>Agentless cloud inventory</li>
-							<li>Network scan integrations</li>
-							<li>Export to CMDB/ITSM</li>
-							<li>Drift and anomaly alerts</li>
-						</ul>
-					</Card>
-=======
-<<<<<<< HEAD
-<Card className="p-6 bg-black/40 border border-gray-800">
 						<h2 className="font-semibold mb-2">References</h2>
 						<ul className="text-sm text-gray-300 space-y-2 list-disc list-inside">
 							<li><a className="text-cyan-300 underline" href="https://aws.amazon.com/config/pricing/" target="_blank" rel="noopener noreferrer">AWS Config</a></li>
@@ -122,9 +152,11 @@ export default function ITAssetDiscoveryAgentPage() {
 			</div>
 		</UltraFuturisticBackground>
 	)
+=======
 }
-</UltraFuturisticBackground>);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

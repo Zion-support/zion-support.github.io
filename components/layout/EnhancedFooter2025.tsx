@@ -1,14 +1,30 @@
 
-=======
-import React from 'react';
-import Link from 'next / link';
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { motion } from 'framer-motion';
 
-import { 
-
-=======
-
+import {
+  Phone
+  Mail
+  MapPin
+  Star
+  ArrowRight
+  Brain
+  Atom
+  Shield
+  Rocket
+  Target
+  Microscope
+  Zap
+  Globe
+  Database
+  Lock
+  Cloud
+  BarChart3
+  Twitter
+  Linkedin
+  Github
+  Youtube
+  Instagram;} from 'lucide-react';import {
   Phone,
   Mail,
   MapPin,
@@ -31,8 +47,10 @@ import {
   Github,
   Youtube,;
   Instagram,;} from 'lucide-react';import { ;
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Phone, Mail, MapPin, Star, ArrowRight;
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Zap, Globe, Database, Lock, Cloud, BarChart3;
@@ -188,9 +206,6 @@ const serviceCategories = [;
       { name: 'DataVault Hub', href: '/data-vault-hub' },
       { name: 'DevOps Automation Studio', href: '/devops-automation-studio' }
     ]
-=======
-import React from 'react',
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -532,6 +547,7 @@ const EnhancedFooter2025: React.FC = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Service Categories */}
             {serviceCategories && serviceCategories.map((category, index) => (;
               <motion&& motion.div
@@ -540,8 +556,11 @@ const EnhancedFooter2025: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+                className='space-y-4'
 
-
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               >
                 <div className='flex items-center space-x-3'>
                   <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
@@ -556,10 +575,7 @@ const EnhancedFooter2025: React.FC = () => {
                     <Link
                       key={service.name}
                       href={service.href}
-
-                className="space-y-4"
-              >
-
+                      className='block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm'                    >              >
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
                     <category.icon className="w-4 h-4 text-white" />
@@ -672,29 +688,19 @@ const EnhancedFooter2025: React.FC = () => {
                     <Link;
                       key={service.name}
                       href={service.href}
-                      className='block text - gray - 400 hover:text - cyan - 400 transition - colors duration - 200 text - sm'                    >              >;
-                <div className="flex items - center space - x-3">;
-                  <div className="w - 8 h - 8 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - lg flex items - center justify - center">;
-                    <category.icon className="w - 4 h - 4 text - white" />;
-                  </div>;
-                  <h3 className="text - lg font - semibold text - white">{category.title}</h3>;
-                </div>;
-                <div className="space - y-2">;
-                  {category.services.map ((service) => (
-                    <Link;
-
-                      key={service.name}
-                      href={service.href}
-                      className="block text - gray - 400 hover:text - cyan - 400 transition - colors duration - 200 text - sm";
-                    >;
-=======
-
+                      className="block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                    >
                       className='block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm'                    >
 
                     >
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {service.name}
 
@@ -704,20 +710,23 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Additional Links */}
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>
 
 
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Company Links */}
             <div>;
               <h4 className='text-white font-semibold mb-4'>Company</h4>;
               <div className='space-y-2'>;
                 {companyLinks && companyLinks.map(link => (;
                   <Link
-
-=======
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50">
-            {/* Company Links */}
+                    key={link.name}
+                    href={link.href}
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >            {/* Company Links */}
             <div>
               <h4 className="text-white font-semibold mb-4">Company</h4>
               <div className="space-y-2">
@@ -737,27 +746,27 @@ const EnhancedFooter2025: React.FC = () => {
                   <Link;
                     key={link.name}
                     href={link.href}
-                    className='block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm'                  >            {/* Company Links */}
-            <div>;
-              <h4 className="text - white font - semibold mb - 4">Company</h4>;
-              <div className="space - y-2">;
-                {company_links.map ((link) => (
-                  <Link;
-
-                    key={link.name}
-                    href={link.href}
-                    className="block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm";
-                  >;
-=======
-                    key={link.name}
-                    href={link.href}
-
+                    className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                  >
                     className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >
 
                   >
 
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {link.name}
 
@@ -765,26 +774,47 @@ const EnhancedFooter2025: React.FC = () => {
             </div>;
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Legal Links */}
 
 
                   <Link
-                    key={link && link.name}
-                    href={link && link.href}
+                    key={link.name}
+                    href={link.href}
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >              <h4 className="text-white font-semibold mb-4">Legal</h4>
+              <div className="space-y-2">
+                {legalLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
                     className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >
 
 
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {link.name}
                   </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
+              </div>
+            </div>
 
-              </div>;
-            </div>;
+            {/* Social Links */}
+            <div>
+              <h4 className='text-white font-semibold mb-4'>Follow Us</h4>
+              <div className='flex space-x-4'>
+                {socialLinks.map(social => (                  <a              <h4 className="text-white font-semibold mb-4">Follow Us</h4>
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <a
 
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 
@@ -794,6 +824,7 @@ const EnhancedFooter2025: React.FC = () => {
             {/* Social Links */}
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     key={social.name}
                     href={social.href}
                     className={`w-10 h-10 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 ${social.color} transition-all duration-200 border border-gray-700 hover:border-gray-600`}
@@ -802,78 +833,45 @@ const EnhancedFooter2025: React.FC = () => {
                     <social.icon className="w-5 h-5" />
                   </a>
 
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 ))}
+              </div>
+            </div>
+          </div>
+        </div>
 
-=======
-                  </Link>))}
-              </div>;
-            </div>;
-            {/* Legal Links */}
-            <div>;
-              <h4 className='text - white font - semibold mb - 4'>Legal</h4>;
-              <div className='space - y-2'>;
-                {legal_links.map (link => (
-                  <Link;
-                    key={link.name}
-                    href={link.href}
-                    className='block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm'                  >              <h4 className="text - white font - semibold mb - 4">Legal</h4>;
-              <div className="space - y-2">;
-                {legal_links.map ((link) => (
-                  <Link;
-                    key={link.name}
-                    href={link.href}
-                    className="block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm";
-                    {link.name}
-                  </Link>))}
-              </div>;
-            </div>;
-            {/* Social Links */}
-            <div>;
-              <h4 className='text - white font - semibold mb - 4'>Follow Us</h4>;
-              <div className='flex space - x-4'>;
-                {social_links.map (social => (                  <a              <h4 className="text - white font - semibold mb - 4">Follow Us</h4>;
-              <div className="flex space - x-4">;
-                {social_links.map ((social) => (
-                  <a;
-                    key={social.name}
-                    href={social.href}
-                    className={`w - 10 h - 10 bg - gray - 800 / 50 hover:bg - gray - 700 / 50 rounded - lg flex items - center justify - center text - gray - 400 ${social.color} transition - all duration - 200 border border - gray - 700 hover:border - gray - 600`}
-                    aria - label={social.name}
-                  >;
-                    <social.icon className='w - 5 h - 5' />                  </a>                    <social.icon className="w - 5 h - 5" />;
-                  </a>))}
-
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Newsletter Section */}
+        <div className='border-t border-gray-800/50'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+            <div className='text-center'>              <motion.h3        <div className="border-t border-gray-800/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="text-center">
+              <motion.h3
 
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }}
+                className='text-2xl md:text-3xl font-bold text-white mb-4'              >                className="text-2xl md:text-3xl font-bold text-white mb-4"
+                className='text-2xl md:text-3xl font-bold text-white mb-4'              >
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 Stay Ahead of the Future
               </motion.h3>
@@ -884,10 +882,19 @@ const EnhancedFooter2025: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 viewport={{ once: true }}
+                className='text-gray-400 mb-6 max-w-2xl mx-auto'
 
 =======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
                 Get the latest insights on AI, quantum computing, and emerging
                 technologies delivered to your inbox.
@@ -907,7 +914,14 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 viewport={{ once: true }}
+                className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <input
@@ -921,6 +935,8 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                   type="email"
                   placeholder="Enter your email"
                   className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 />
                 <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
                   Subscribe
@@ -938,6 +954,7 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
               </div>
               <div className='flex items-center space-x-6 text-sm text-gray-400'>                © {currentYear} Zion Tech Group. All rights reserved.
               </div>
+<<<<<<< HEAD
 
               <div className="flex items-center space-x-6 text-sm text-gray-400">
                 <div className="flex items-center space-x-2">
@@ -964,24 +981,15 @@ export default EnhancedFooter2025;  )
 }
 export default EnhancedFooter2025;
 };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default EnhancedFooter2025;
 
 
+}
+export default EnhancedFooter2025;
 =======
-    </footer>);
-}
-;
-export default EnhancedFooter2025);
-}
-;
-export default EnhancedFooter2025;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-};
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

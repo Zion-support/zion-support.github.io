@@ -7,56 +7,16 @@
             </div>
           </div>
 
-=======
-
           
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </div>
             <div>
               <h3 className="text-white font-medium">First Hour of Service</h3>
               <p className="text-zion-slate-light">The first hour of technical work at your site is included.</p>
             </div>
           </div>
-
-            </div>
-            <div>
-              <h3 className="text-white font-medium">Technical Assessment</h3>
-              <p className="text-zion-slate-light">Comprehensive evaluation of issues and required solutions.</p>
-            </div>
-          </div>
-        </div>
-
-            </div>
-            <div>
-              <h3 className="text-white font-medium">Basic Hardware Diagnostics</h3>
-              <p className="text-zion-slate-light">Component testing and hardware issue identification.</p>
-            </div>
-          </div>
-
-            </div>
-            <div>
-              <h3 className="text-white font-medium">Network Connectivity</h3>
-              <p className="text-zion-slate-light">Troubleshooting of basic network connectivity problems.</p>
-            </div>
-          </div>
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-              <h3 className="text-white font-medium">Service Documentation</h3>
-              <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-<<<<<<< HEAD
 import { Check } from 'lucide-react';
 export function ServiceIncludes() {;
   return (;
@@ -273,5 +233,7 @@ function ServiceIncludes() {
 }
 <<<<<<< HEAD
 ;
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+
+    </div>);
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

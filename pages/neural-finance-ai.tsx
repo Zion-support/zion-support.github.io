@@ -8,6 +8,108 @@ import {;
   BarChart, PieChart, LineChart, Activity;
 } from 'lucide-react',;
 import Layout from '../components/layout/Layout';
+    popular: false,
+    color: 'from-gray-500 to-gray-600'
+  };
+  {
+    name: 'Professional',
+    price: 499,
+    period: 'month',
+    description: 'Ideal for professional traders and growing investment firms',
+
+    features: [;
+      'Advanced AI models and algorithms',
+      'Automated trading with backtesting',
+      'Custom strategy development',
+      'Priority support and API access',
+      'Advanced risk management tools',
+      'Multi - portfolio management',
+      'Real - time market alerts',
+      'Custom reporting and dashboards',
+    ],
+    popular: true,
+    color: 'from - cyan - 500 to - purple - 600',
+  },  {
+
+    name: 'Enterprise',
+    price: 1499,
+    period: 'month',
+    description: 'For large investment firms and institutional investors',
+
+    features: [;
+      'Custom AI model training and development',
+      'White - label solution with branding',
+      'Dedicated account manager and support',
+      'Advanced compliance automation',
+      '24 / 7 monitoring and support',
+      'Custom integrations and APIs',
+      'Advanced security and audit trails',
+      'Multi - user access and permissions',
+    ],
+    popular: false,
+    color: 'from - purple - 500 to - pink - 600',
+  }, ];
+;
+const use_cases = [;
+  {
+    title: 'Algorithmic Trading Strategy Development',
+    description:;
+      'Develop, backtest, and deploy sophisticated trading algorithms using our AI - powered platform.',
+    icon: BarChart,
+    benefits: [;
+      'Increased trading efficiency',
+      'Reduced emotional bias',
+      '24 / 7 market monitoring',
+    ],
+  },
+  {
+    title: 'Portfolio Risk Management & Optimization',
+    description:;
+      'Advanced risk modeling and portfolio optimization using neural networks and machine learning.',
+    icon: PieChart,
+    benefits: [;
+      'Risk - adjusted returns',
+      'Portfolio diversification',
+      'Real - time risk monitoring',
+    ],
+  },
+  {
+    title: 'Market Trend Prediction & Analysis',
+    description:;
+      'Predict market movements and identify trading opportunities with AI - powered analytics.',
+    icon: LineChart,
+    benefits: [;
+      'Early trend detection',
+      'Improved timing',
+      'Higher success rates',
+    ],
+  },
+  {
+    title: 'Automated Financial Reporting',
+    description:;
+      'Generate comprehensive financial reports and compliance documentation automatically.',
+    icon: Activity,
+    benefits: ['Time savings', 'Regulatory compliance', 'Accurate reporting'],
+  }, ];
+;
+const integrations = [;
+
+  { name: 'Bloomberg Terminal', logo: '🔵', category: 'Market Data' },
+  { name: 'Reuters Eikon', logo: '🔴', category: 'Market Data' },
+  { name: 'TradingView', logo: '📊', category: 'Charting' },
+  { name: 'MetaTrader', logo: '📈', category: 'Trading Platform' },
+  { name: 'Interactive Brokers', logo: '🏦', category: 'Broker' },
+
+import { motion } from 'framer-motion';
+import {;
+  Brain, DollarSign, TrendingUp, Shield, Zap,;
+  CheckCircle, ArrowRight, Star, Users, Award,;
+  Clock, Globe, BarChart3, Target, Microscope,;
+  Phone, Mail, MapPin, ArrowUpRight, Play,;
+  BarChart, PieChart, LineChart, Activity;
+} from 'lucide-react',;
+import Layout from '../components/layout/Layout';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -158,12 +260,15 @@ const integrations = [;
   { name: 'TradingView', logo: '📊', category: 'Charting' },;
   { name: 'MetaTrader', logo: '📈', category: 'Trading Platform' },;
   { name: 'Interactive Brokers', logo: '🏦', category: 'Broker' },;
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   { name: 'TD Ameritrade', logo: '💼', category: 'Broker'   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ],
+<<<<<<< HEAD
 
 const NeuralFinanceAI: React.FC = () => {
   return (
@@ -176,6 +281,77 @@ const NeuralFinanceAI: React.FC = () => {
                 <span>AI-Powered Financial Intelligence</span>
               </div>
 
+  return (
+    <Layout>
+      <Head>
+        <title>
+          Neural Finance AI - Advanced AI-Powered Financial Analysis Platform
+          Zion Tech Group
+        </title>
+        <meta
+          name='description'
+          content='Transform your financial trading with Neural Finance AI. Advanced AI-powered market prediction, risk assessment, and automated portfolio optimization using neural networks.'
+        />;
+        <meta
+          name='keywords'
+          content='AI trading, financial analysis, neural networks, portfolio optimization, risk management, automated trading, Zion Tech Group'
+        />;
+        <link
+          rel='canonical'
+          href='https://ziontechgroup.com/neural-finance-ai'
+        />
+      </Head>
+      {/* Hero Section */}
+      <section className='relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden'>
+        <div className='absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black'></div>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]'></div>
+        <div className='relative z-10 max-w-7xl mx-auto'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+        <title>Neural Finance AI - Advanced AI-Powered Financial Analysis Platform | Zion Tech Group</title>
+        <meta name="description" content="Transform your financial trading with Neural Finance AI. Advanced AI-powered market prediction, risk assessment, and automated portfolio optimization using neural networks." />
+        <meta name="keywords" content="AI trading, financial analysis, neural networks, portfolio optimization, risk management, automated trading, Zion Tech Group" />
+        <link rel="canonical" href="https://ziontechgroup.com/neural-finance-ai" />
+      </Head>
+      {/* Hero Section */}
+      <section className='relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden'>
+        <div className='absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black'></div>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]'></div>
+        <div className='relative z-10 max-w-7xl mx-auto'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+      {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+        <div className="relative z-10 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, x: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             >
 
 
@@ -188,17 +364,15 @@ const NeuralFinanceAI: React.FC = () => {
                   Neural Finance AI
                 </span>
                 <br />
-                <span className="text-white">Revolutionary Trading Intelligence</span>
+                <span className='text-white'>
+                  Revolutionary Trading Intelligence
+                </span>
               </h1>
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
-              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-full text-sm text-violet-300 mb-6">
-                <Brain className="w-4 h-4" />
-                <span>AI-Powered Financial Intelligence</span>
-              </div>
-              
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   Neural Finance AI
                 </span>
                 <br />
@@ -206,6 +380,8 @@ const NeuralFinanceAI: React.FC = () => {
               </h1>
               
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <Link
                   href="#pricing"
                   className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2"
@@ -219,11 +395,10 @@ const NeuralFinanceAI: React.FC = () => {
                 </button>
               </div>
 
-=======
-
               <div className="flex flex-wrap gap-6 text-sm text-gray-400">
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -249,22 +424,8 @@ const NeuralFinanceAI: React.FC = () => {
 
               className="relative"
 
-            >
-              <div className="relative bg-gradient-to-br from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-3xl p-8 backdrop-blur-sm">
-                <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 to-purple-500/10 rounded-3xl"></div>
-                <div className="relative z-10">
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="bg-gray-800/50 rounded-xl p-4 border border-gray-700/50">
-                      <div className="text-2xl font-bold text-violet-400">$89.5B</div>
-                      <div className="text-sm text-gray-400">Market Size</div>
                     </div>
-                    <div className="bg-gray-800/50 rounded-xl p-4 border border-gray-700/50">
-                      <div className="text-2xl font-bold text-purple-400">94%</div>
-                      <div className="text-sm text-gray-400">Prediction Accuracy</div>
-                    </div>
-                  </div>
-
-                  <div className="space-y-4">
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     <div className="flex items-center justify-between p-3 bg-gray-800/50 rounded-lg border border-gray-700/50">
                       <span className="text-gray-300">AI Models</span>
                       <span className="text-violet-400 font-semibold">Advanced</span>
@@ -277,14 +438,12 @@ const NeuralFinanceAI: React.FC = () => {
         </div>
       </section>
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
@@ -318,18 +477,93 @@ const NeuralFinanceAI: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-
+                className='group bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-violet-500/50 transition-all duration-300 hover:transform hover:scale-105'
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="group bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-violet-500/50 transition-all duration-300 hover:transform hover:scale-105"
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-violet-400 transition-colors duration-300">
+=======
+                  {feature.title}
+                </h3>
+                <p className='text-gray-400 leading-relaxed'>                  {feature.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Use Cases Section */}
+      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>
+        <div className='max-w-7xl mx-auto'>          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'
+                <p className="text-gray-400 leading-relaxed">
+                  {feature.description  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </p>;
+              </motion.div>;
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+          </div>;
+        </div>;
+      </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {/* Use Cases Section */}
+      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>;
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -363,7 +597,37 @@ const NeuralFinanceAI: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-
+                className='bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8'
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, x: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -379,12 +643,7 @@ const NeuralFinanceAI: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-violet-400 flex-shrink-0" />
                           <span>{benefit}</span>
                         </div>
-
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -402,9 +661,46 @@ const NeuralFinanceAI: React.FC = () => {
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-900/50 backdrop-blur-sm border rounded-2xl p-8 ${
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                  plan.popular
+                    ? 'border-violet-500/50 bg-gradient-to-br from-violet-500/10 to-purple-500/10'                    : 'border-gray-700/50'
+                }`}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+                key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className={`relative bg-gray-900/50 backdrop-blur-sm border rounded-2xl p-8 ${;
+                  plan.popular;
+                    ? 'border-violet-500/50 bg-gradient-to-br from-violet-500/10 to-purple-500/10';
+                    : 'border-gray-700/50';
+                }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -414,6 +710,8 @@ const NeuralFinanceAI: React.FC = () => {
                   </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3 text-gray-300">
                       <CheckCircle className="w-5 h-5 text-violet-400 flex-shrink-0" />
@@ -421,6 +719,7 @@ const NeuralFinanceAI: React.FC = () => {
                     </li>
 
                 </ul>
+                
                 <Link
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-200 transform hover:scale-105 ${
@@ -429,6 +728,48 @@ const NeuralFinanceAI: React.FC = () => {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ? 'bg-gradient-to-r from-violet-500 to-purple-600 text-white hover:from-violet-600 hover:to-purple-700'
                       : 'bg-gray-800/50 text-white border border-gray-600 hover:bg-gray-700/50'
+=======
+                  }`}
+                >
+                  Get Started
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Integrations Section */}
+      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>
+        <div className='max-w-7xl mx-auto'>          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'
+                  }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                >;
+                  Get Started;
+                </Link>;
+              </motion.div>;
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+          </div>;
+        </div>;
+      </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {/* Integrations Section */}
+      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>;
+        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -436,6 +777,8 @@ const NeuralFinanceAI: React.FC = () => {
             viewport={{ once: true }}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
@@ -460,33 +803,68 @@ const NeuralFinanceAI: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 
             ))}
-
+          </div>
+        </div>
+      </section>
+      {/* Contact CTA */}
+      <section className='py-20 px-4 sm: px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto'>
+          <div className='bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-3xl p-12 text-center'>
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {integrations.map((integration, index) => (
+              <motion.div
+                key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, scale: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className="text-4xl mb-3">{integration.logo}</div>
+                <h3 className="text-sm font-semibold text-white mb-1">{integration.name}</h3>
+                <p className="text-xs text-gray-400">{integration.category}</p>
+              </motion.div>
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>;
         </div>;
       </section>;
-      {/* Contact CTA */}
-      <section className='py-20 px-4 sm: px-6 lg:px-8'>;
-        <div className='max-w-7xl mx-auto'>;
-          <div className='bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-3xl p-12 text-center'>;
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-              Ready to Transform Your Trading?;
-            </h2>;
-            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
-              Join leading investment firms using Neural Finance AI to gain;
-              competitive advantages in today's dynamic financial markets.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>;
-
-              <Link
-                href='/contact'
-                className='bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'>;
-                Start Free Trial;
-              </Link>;
-              <Link
-                href='/contact'
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+      {/* Contact CTA */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-3xl p-12 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               Ready to Transform Your Trading?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -494,6 +872,8 @@ const NeuralFinanceAI: React.FC = () => {
               in today's dynamic financial markets.
             </p>
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <Link
                 href="/contact"
                 className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
@@ -514,14 +894,69 @@ const NeuralFinanceAI: React.FC = () => {
             </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           </div>
         </div>
       </section>
     </Layout>
+  ),
+};
 
   )
-
+}
 export default NeuralFinanceAI;
+
+},
+export default NeuralFinanceAI,
+      <section className="py-20 px-4 sm: px-6 lg:px-8">;
+        <div className="max-w-7xl mx-auto">;
+          <div className="bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-3xl p-12 text-center">;
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
+              Ready to Transform Your Trading?;
+            </h2>;
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+              Join leading investment firms using Neural Finance AI to gain competitive advantages;
+              in today's dynamic financial markets.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">;
+              <Link;
+                href="/contact";
+                className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105";
+              >;
+                Start Free Trial;
+              </Link>;
+              <Link;
+                href="/contact";
+                className="border border-gray-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-200";
+              >;
+                Schedule Demo;
+              </Link>;
+            </div>;
+
+            <div className='text-sm text-gray-400'>;
+              <p>;
+                ✓ 30-Day Free Trial • ✓ No Credit Card Required • ✓ Instant;
+                Setup;
+              </p>;
+              <p className='mt-2'>;
+                ✓ 24/7 Support • ✓ 99 && 99.9% Uptime SLA • ✓ Global Infrastructure;
+
+=======
+                className='bg - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 / 50 rounded - xl p - 6 text - center hover:border - green - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105';
+              >;
+                <div className='text - 4xl mb - 3'>{integration.logo}</div>;
+                <h3 className='text - sm font - semibold text - white mb - 1'>;
+                  {integration.name}
+                </h3>;
+                <p className='text - xs text - gray - 400'>{integration.category}</p>              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+    </Layout>;
+  );
+},;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </p>            </div>;
           </div>;
         </div>;
@@ -531,12 +966,12 @@ export default NeuralFinanceAI;
 export default NeuralFinanceAI;
 
 
-=======
-    </Layout>),
-}
-;
-export default NeuralFinanceAI;
-<<<<<<< HEAD
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export default NeuralFinanceAI;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

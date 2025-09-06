@@ -1,6 +1,4 @@
 
-=======
-
 "use client",;
 import { useState } from "react",;
 import {;
@@ -102,8 +100,6 @@ export default function DeploymentNotification({;
     }
   },;
   if (updates.length === 0) return null,;
-
-
   return (;
     <div className="fixed top-4 right-4 z-50 space-y-3 max-w-md">;
       {updates.map((update) => (;
@@ -230,13 +226,13 @@ if ( {) {
           {/* Instance Details (if available) */}
 
 =======
-          {update.instance_name && (
-            <div className="mb - 3 p - 3 bg - white / 10 rounded - lg border border - white / 20">;
-              <div className="flex items - center gap - 2 mb - 2">;
-                <div className="p - 1 bg - white / 20 rounded">;
-                  {getVerticalIcon (update.vertical || 'GENERAL')}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+          {update.instanceName && (;
+            <div className="mb-3 p-3 bg-white/10 rounded-lg border border-white/20">;
+              <div className="flex items-center gap-2 mb-2">;
+                <div className="p-1 bg-white/20 rounded">;
+                  {getVerticalIcon(update.vertical |'GENERAL')}
+                  {getVerticalIcon(update.vertical || 'GENERAL')}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 </div>;
                 <span className="font - medium text - white text - sm">;
                   {update.instance_name}
@@ -258,9 +254,10 @@ if ( {) {
               </div>;
 
 =======
-            </div>)}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+            </div>;
+          )}
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           {/* Progress Bar (for deployment updates) */}
           {update.progress !== undefined && (
             <div className="mb - 3 space - y-2">;
@@ -276,9 +273,10 @@ if ( {) {
               </div>;
 
 =======
-            </div>)}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+            </div>;
+          )}
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           {/* Action Buttons */}
           {update.actions && update.actions.length > 0 && (
             <div className="flex gap - 2 pt - 2 border - t border - white / 20">;
@@ -288,11 +286,9 @@ if ( {) {
 
 =======
                   onClick={() => handleAction(update.id, action.action)}
-
+                  className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${action.action === 'deploy' |action.action === 'retry';
                   className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${;
                     action.action === 'deploy' || action.action === 'retry';
-
-
                       ? 'bg-blue-600 hover:bg-blue-700 text-white';
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       ? 'bg-blue-600 hover:bg-blue-700 text-white';
@@ -309,10 +305,12 @@ if ( {) {
                   <span>{action.label}</span>;
 
 =======
-                </button>))}
-            </div>)}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                </button>;
+              ))}
+            </div>;
+          )}
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           {/* Timestamp */}
           <div className="absolute bottom - 2 right - 4 text - xs text - white / 60">;
             {format_timestamp (update.timestamp)}
@@ -321,23 +319,6 @@ if ( {) {
     </div>);
 }
 
-=======
-export /**
- * DeploymentNotificationExample - Function description
- */
-function DeploymentNotificationExample() {
-  const [updates, set_updates] = useState < DeploymentUpdate[]>([;
-    {
-      id: "1",
-      type: "deployment_started",
-      title: "Deployment Started",
-      message: "Zion Health Network is now being deployed to production",
-      timestamp: new Date ().toISOString (),
-      instance_name: "Zion Health Network",
-      vertical: "HEALTH",
-      governance_type: "DAO_FULL",
-      domain: "health.zion.network",
-      progress: 25,
   return (;
 
     <DeploymentNotification;

@@ -35,6 +35,10 @@ export default function VendorProfilePage({ vendor }: Props) {;
 type Props = { vendor: Vendor | null };
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function VendorProfilePage({ vendor }: Props) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [message, setMessage] = useState<string | null>(null);
@@ -171,26 +175,55 @@ function submit_lead() {
                 ) : (;
                   <div className="w-full h-40 bg-gray-100 dark:bg-gray-900" />;
                 )}
-                <div className="p-3">;
-                  <div className="font-medium">{sp && sp.title}</div>;
-                  <div className="text-sm text-gray-500">{sp && sp.description}</div>;
-                </div>;
-              </div>;
+                <div className="p-3">
+                  <div className="font-medium">{sp.title}</div>
+                  <div className="text-sm text-gray-500">{sp.description}</div>
+                </div>
 
+    }
+  }
+
+  return (
+
+        </div>
+      </div>
+
+      <div>
+
+      </div>
+
+      {vendor.packages && vendor.packages.length > 0 && (
+        <div>
+
+                </div>
+
+        </div>
+      </div>
+
+      <div>
+
+      </div>
+
+      {vendor.packages && vendor.packages.length > 0 && (
+        <div>
+
+                </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
             ))}
           </div>;
         </div>;
       )}
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
       )}
-
-
-
 
       <div>
         <h2 className='text-lg font-medium mb-2'>Request a Quote</h2>
@@ -291,3 +324,45 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
 };
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+        </form>
+      </div>
+      <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
+    </div>
+  );
+
+export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
+  const slug = String(ctx.params?.slug |'');
+  const { getVendorBySlug } = await import('../../utils/vendor-store');
+  const vendor = slug ? getVendorBySlug(slug) |null : null;
+  return { props: { vendor } }
+export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
+  const slug = String(ctx.params?.slug || '');
+  const { getVendorBySlug } = await import('../../utils/vendor-store');
+  const vendor = slug ? getVendorBySlug(slug) || null : null;
+  return { props: { vendor } };
+};            {loading ? 'Submitting...' : 'Send'}
+          </button>
+          {message && <div className="text-sm">{message}</div>}
+        </form>
+      </div>
+      <div className="text-center text-xs text-gray-500">Powered by Zion</div>
+    </div>
+  );
+}
+export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
+  const slug = String(ctx.params?.slug |'');
+
+export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
+  const slug = String(ctx.params?.slug || '');
+  const { getVendorBySlug } = await import('../../utils/vendor-store');
+  const vendor = slug ? getVendorBySlug(slug) |null : null;
+  return { props: { vendor } }
+}
+
+  const vendor = slug ? getVendorBySlug(slug) || null : null;
+  return { props: { vendor } };
+};
+};
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

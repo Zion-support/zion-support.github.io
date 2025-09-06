@@ -5,6 +5,7 @@ Card,
   CardHeader,;
   CardTitle;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -20,6 +21,9 @@ import { useAuth } from '@/hooks/useAuth';
 import { useRouter } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function Partners() {;
         setAuthServiceAvailable(res && res.ok);
         logErrorToProduction('Partner login auth health check failed', {;
@@ -107,6 +111,10 @@ import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks
 import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
 import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
 import { PartnerResources } from "@/components/partners/PartnerResources",
+import { useAuth } from "@/hooks/useAuth";
+import { useRouter  } from 'next/router';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+export default function Partners() {
 
 <<<<<<< HEAD
   useEffect(() => {
@@ -258,6 +266,7 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
           </Card>
         </TabsContent>
 
+<<<<<<< HEAD
         <TabsContent value="resources" className="space-y-4">
           <PartnerResources />
         </TabsContent>
@@ -275,3 +284,4 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
 }</CardDescription> </CardHeader> <CardContent> </CardContent> </Card> </TabsContent> <TabsContent value="leaderboard" className="space-y-4" > <PartnerLeaderboard /> </TabsContent> <TabsContent value="resources" className="space-y-4" > <PartnerResources /> </TabsContent> </Tabs> </div>) ;
 }'"}
 }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

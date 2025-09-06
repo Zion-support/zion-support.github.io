@@ -4,7 +4,6 @@
 =======
 =======
 =======
-<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 #!/usr/bin/env node
 /**
@@ -30,11 +29,6 @@ class ESLintErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
     this.fixInterval = parseInt(process.env.FIX_INTERVAL) || 600000; // 10 minutes default
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -131,8 +125,6 @@ class ESLintErrorFixer {}
   async start() {}
     this.log('info', 'Starting ESLint Error Fixer Service...');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -262,9 +254,6 @@ class ESLintErrorFixer {}
     this.log('info', `Fixing ESLint errors in: ${filePath}`);
     try {
 
-=======
-=======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -352,7 +341,6 @@ class ESLintErrorFixer {}
       }
 });
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -668,14 +656,6 @@ class ESLintErrorFixer {}
   async createBackup(filePath) {
     try {
 
-=======
-    
-    const varName = varMatch[1];
-        
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-=======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -786,8 +766,6 @@ class ESLintErrorFixer {}
       }
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -883,10 +861,6 @@ fixer.start().catch(error => {
   fixer.log('error', 'Failed to start service', error);
   process.exit(1);
 });
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -897,11 +871,6 @@ fixer.start().catch(error => {
   generateRecommendations() {}
     const recommendations = [];
 
-=======
-
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

@@ -1,5 +1,3 @@
-
-
 export type Real2036SpecializedService = {;
   "id": string;
   name: string;

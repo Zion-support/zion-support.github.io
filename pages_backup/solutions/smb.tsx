@@ -1,5 +1,4 @@
 
-=======
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
@@ -55,8 +54,18 @@ export default function SMBSolutionsPage() {
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
+import { 
+  Building2, 
+  Users, 
+  DollarSign, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight ;
+} from 'lucide-react';
 
 
+export default function SMBSolutionsPage() {
+ursor/fix-syntax-push-and-merge-to-main-40de
 import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 export default function SMBSolutionsPage() {
   const smbServices = [;
@@ -92,17 +101,12 @@ export default function SMBSolutionsPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
   ];
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <Layout
       title="SMB Solutions - Zion Tech Group"
-
+      description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."
   
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
@@ -130,11 +134,13 @@ export default function SMBSolutionsPage() {
         </section>;
 
 =======
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -147,8 +153,6 @@ export default function SMBSolutionsPage() {
             </motion.div>
           </div>
         </section>
-
-
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -190,6 +194,54 @@ export default function SMBSolutionsPage() {
             </div>
           </div>
         </section>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+        {/* Services Section */}
+        <section className="py-20">"
+          <div className="container mx-auto px-4">";
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
+              {smbServices.map((service, index) => {}
+                const IconComponent = service.icon;
+                return (;
+                  <motion.div);
+                    key={index}
+                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >,
+                    <div className="text-orange-600 mb-4">";
+                      <IconComponent className="w-10 h-10" />";
+                    </div>;
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">";
+                      {service.title}
+                    </h3>,
+                    <p className="text-gray-600 mb-4">";
+                      {service.description}
+                    </p>,
+                    <ul className="space-y-2">";
+                      {service.features.map((feature, featureIndex) => (,
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
+                          {feature}
+                        </li>,
+                      ))}
+                    </ul>,
+                  </motion.div>;
+                );
+              })}
+            </div>,
+          </div>;
+        </section>;
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* CTA Section */}

@@ -14,6 +14,15 @@ import { Link } from "react-router-dom",
 // Form validation schema
 const loginSchema = z.object({
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
@@ -21,7 +30,28 @@ import {Input} from "@/components/ui/input";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Link} from "react-router-dom";
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+import { Link } from "react-router-dom",
+// Form validation schema
+const loginSchema = z.object({
+  email: z.string().email("Please enter a valid email").min(1, "Email is required");
+  password: z.string().min(6, "Password must be at least 6 characters")});
+type LoginFormValues = z.infer<typeof loginSchema>;
+export function LoginForm() {
+  const { login, isLoading } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
   password: z.string().min(6, "Password must be at least 6 characters")}),
 
@@ -38,18 +68,20 @@ type LoginFormValues = z.infer<typeof loginSchema>,
   const onSubmit = async (data: LoginFormValues) => {
 
 =======
-
+    if (isSubmitting) return;
     if (isSubmitting) return,
     
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     try {
       setIsSubmitting(true)
       await login(data.email, data.password)
     } finally {
       setIsSubmitting(false)
     }
+=======
+  }
+  },
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <Form {...form}>
@@ -78,6 +110,7 @@ type LoginFormValues = z.infer<typeof loginSchema>,
               <FormMessage className="text-red-400" />
             </FormItem>
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
   }
 
@@ -108,10 +141,6 @@ type LoginFormValues = z.infer<typeof loginSchema>,
               </FormControl>;
               <FormMessage className="text-red-400" />;
             </FormItem>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           )}
 
@@ -156,22 +185,3 @@ type LoginFormValues = z.infer<typeof loginSchema>,
             </FormItem>;
           )}
 <<<<<<< HEAD
-        />
-        <div className="flex items-center justify-between">
-          <div className="text-sm">
-            <Link to="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
-              Forgot your password?
-            </Link>
-          </div>
-        </div>
-        <Button
-          type="submit"
-          className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-          disabled={isLoading |isSubmitting}
-        >
-          {isLoading |isSubmitting ? "Logging in..." : "Login"}
-        </Button>
-      </form>
-    </Form>
-  )
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

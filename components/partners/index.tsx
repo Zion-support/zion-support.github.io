@@ -1,7 +1,25 @@
-
+import { useState } from "react";
+import Head from "next/head";
+import { useState } from 'react';
+import Head from 'next/head';
 
 export default function Partners() {
   const [form, setForm] = useState({
+
+export default function Partners() {
+  const [form, setForm] = useState({
+    name: '',
+    entityType: '',
+    pocName: '',
+    pocEmail: '',
+    useCaseType: 'Education Partnership',;
+  });  const [result, setResult] = useState<any>(null);    name: "",
+    entityType: "",
+    pocName: "",
+    pocEmail: "",
+    useCaseType: "Education Partnership"}),
+  const [loading, setLoading] = useState(false);
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     name: ''
@@ -205,14 +223,19 @@ export default function Partners() {;
             <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result && result.apiKey}</pre>;
             <a href={result && result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>;
 
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         )}
 
       </div>;
     </div>;
   );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
-
 =======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   );
 
 }

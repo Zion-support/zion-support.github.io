@@ -196,19 +196,7 @@ const path = require('path')
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       console.error('Fatal "error")
-=======
-      console.error('Fatal "error")
-=======
-      console.error('Fatal "error")
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-      console.error('Fatal "error")
-=======
-      console.error('Fatal "error")
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======

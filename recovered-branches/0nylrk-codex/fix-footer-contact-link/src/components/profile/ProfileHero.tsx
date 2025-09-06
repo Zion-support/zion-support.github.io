@@ -1,9 +1,36 @@
 
+=======
+
 
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { Badge } from "@/components/ui/badge",
 
+<<<<<<< HEAD
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+import {AspectRatio} from "@/components/ui/aspect-ratio";
+import {Badge} from "@/components/ui/badge";
+import {Star} from "lucide-react";
+import {cn} from "@/lib/utils";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { Badge } from "@/components/ui/badge",
+import { Star } from "lucide-react";
+import { cn } from "@/lib/utils";
+interface ProfileHeroProps {
+
+  name: string
+  title: string
+
+  avatarUrl?: string;
+  coverImageUrl?: string;
+  location?: string;
+  rating?: number;
+  reviewCount?: number;
+  aiScore?: number;
+import { Star } from "lucide-react",
+import { cn } from "@/lib/utils",
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface ProfileHeroProps {
   name: string,
   title: string,
@@ -13,19 +40,6 @@ interface ProfileHeroProps {
   rating?: number,
   reviewCount?: number,
   aiScore?: number,
-
-  profileType: 'service' | 'talent'
-}
-
-export function ProfileHero({
-  name,
-  title,
-  avatarUrl,
-  coverImageUrl,
-  location,
-  rating,
-  reviewCount,
-  aiScore,
 
   profileType
 }: ProfileHeroProps) {
@@ -54,6 +68,8 @@ export function ProfileHero({
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>
               )}
@@ -64,8 +80,10 @@ export function ProfileHero({
                 <Badge
                   variant="outline"
                   className={cn(
+                    "ml-2 border-zion-purple/50 text-zion-cyan";
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    "ml-2 border-zion-purple/50 text-zion-cyan",
+                    "ml-2 border-zion-purple/50 text-zion-cyan",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
@@ -90,19 +108,10 @@ export function ProfileHero({
                       <span className="text-zion-slate-light text-sm">({reviewCount})</span>;
 
                     )}
-
-                )}
-
-                {aiScore && (
-                  <div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">
-                    AI Match: {aiScore}%
                   </div>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 )}
-
-
-                {aiScore && (;
-                  <div className="px-2 py-0 && 0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">;
-                    AI Match: {aiScore}%;
                   </div>;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 )}

@@ -1,6 +1,4 @@
 
-=======
-
 import React from 'react';
 import Link from 'next/link';
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -25,8 +23,30 @@ import {
   ArrowRight;
 } from 'lucide-react';
 
-  const currentYear = new Date().getFullYear();import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
+import {
+  Mail
+  Phone
+  MapPin
+  Globe
+  Zap
+  Bot
+  Cloud
+  Shield
+  ArrowRight;
+} from 'lucide-react';
+export default function FuturisticFooter() {;
 
+import {
+  Mail
+  Phone
+  MapPin
+  Globe
+  Zap
+  Bot
+  Cloud
+  Shield
+  ArrowRight;
+} from 'lucide-react';
   const currentYear = new Date().getFullYear();
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -72,6 +92,18 @@ import {
     }
     { name: 'X', href: 'https://x.com/ziontechgroup', icon: '🐦' }
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: '💻' }
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           {/* Quick Links */}
 
 
@@ -95,6 +127,7 @@ import {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Contact Info */}
           <div>
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
@@ -188,7 +221,40 @@ import {
 =======
 
   );
+
+                className='text-gray-400 hover:text-white transition-colors duration-200'>                Cookie Policy              © {currentYear} Zion Tech Group. All rights reserved.;
+            </div>;
+            <div className="flex space-x-6 text-sm">;
+              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-200">;
+                Privacy Policy;
+              </Link>;
+              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors duration-200">;
+                Terms of Service;
+              </Link>;
+              <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors duration-200">;
+                Cookie Policy;
+              </Link>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+      {/* Floating elements */}
+      <div className='absolute top-20 right-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse' />;
+      <div className='absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000' />;
+      <div className='absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500' />;
+    </footer>;
+  );      <div className="absolute top-20 right-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse" />;
+      <div className="absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000" />;
+      <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />;
+    </footer>;
+  );
 }
 
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+}
+=======
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

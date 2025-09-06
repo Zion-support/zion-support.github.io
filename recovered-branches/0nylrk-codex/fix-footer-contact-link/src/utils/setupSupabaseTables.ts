@@ -1,7 +1,10 @@
 
-
-=======
+import { supabase } from "@/integrations/supabase/client";
 import { supabase } from "@/integrations/supabase/client",
+import {supabase} from "@/integrations/supabase/client";
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+import { supabase } from "@/integrations/supabase/client",
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -21,12 +24,6 @@ export const ensureProfilesTableExists = async () => {
 
         AND table_name = 'profiles'
 
-=======
-
-      ),`
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // If there's an error, log it and proceed with table creation
     if (error) {
       console && console.warn("Error checking if profiles table exists, attempting to create it:", error)
@@ -51,10 +48,8 @@ export const ensureProfilesTableExists = async () => {
             USING (auth && auth.uid() = id);
 
         END IF;
-      END;
+      END
       $$;
-
-
           CREATE POLICY "Users can view their own profile" 
             ON public.profiles FOR SELECT 
             USING (auth.uid() = id),
@@ -65,24 +60,9 @@ export const ensureProfilesTableExists = async () => {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-      DO $$
-      BEGIN
-        IF NOT EXISTS (
-
-          SELECT FROM pg_catalog && pg_catalog.pg_policies 
-          WHERE policyname = 'Users can update their own profile'
-          AND tablename = 'profiles'
-        ) THEN
-=======
-          CREATE POLICY "Users can update their own profile" 
-            ON public && public.profiles FOR UPDATE 
-            USING (auth && auth.uid() = id);
-
         END IF;
-      END;
+      END
       $$;
-
-
           CREATE POLICY "Users can update their own profile" 
             ON public.profiles FOR UPDATE 
             USING (auth.uid() = id),
@@ -93,18 +73,10 @@ export const ensureProfilesTableExists = async () => {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-      -- Set up trigger for new users
-      CREATE OR REPLACE FUNCTION public && public.handle_new_user()
-      RETURNS TRIGGER AS $$
-      BEGIN
-        INSERT INTO public.profiles (id, display_name, bio, headline)
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         RETURN new;
       END;
       $$ LANGUAGE plpgsql SECURITY DEFINER;
-
-        INSERT INTO public.profiles (id, display_name, bio, headline)
-
         VALUES (new.id, 
                 new.raw_user_meta_data->>'display_name', 
                 new.raw_user_meta_data->>'bio',
@@ -116,16 +88,25 @@ export const ensureProfilesTableExists = async () => {
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      -- Check if trigger exists before creating it
-      DO $$
-      BEGIN
-        IF NOT EXISTS (SELECT 1 FROM pg_trigger WHERE tgname = 'on_auth_user_created') THEN
-          CREATE TRIGGER on_auth_user_created
-            AFTER INSERT ON auth.users
-            FOR EACH ROW EXECUTE FUNCTION public.handle_new_user(),
-        END IF,
-      END
 
+      $$,
+    `,
+    
+    // Execute the creation query using RPC to avoid TypeScript errors
+    const { error: createError } = await supabase.rpc('exec', { sql: createTableQuery }),
+    
+    if (createError) {
+      console.error('Error creating profiles table:', createError)
+    } else {
+      console.log('Profiles table setup completed')
+    }
+  } catch (error) {
+    console.error('Error setting up profiles table:', error)
+  }
+};
+
+// Call this when the app starts to ensure the table exists
+export const initializeDatabase = async () => {
       // // // console.log('Profiles table setup completed')
 import { supabase } from "@/integrations/supabase/client",;
 /**;
@@ -225,27 +206,11 @@ export const ensureProfilesTableExists = async () => {;
 };
 // Call this when the app starts to ensure the table exists;
 export const initializeDatabase = async () => {;
-
   await ensureProfilesTableExists();
 };
-=======
-            AFTER INSERT ON auth.users
-            FOR EACH ROW EXECUTE FUNCTION public.handle_new_user(),
-        END IF,
-      END
-
-      $$,
-    `,
-    
-    // Execute the creation query using RPC to avoid TypeScript errors
-    const { error: createError } = await supabase.rpc('exec', { sql: createTableQuery }),
-    
-    if (createError) {
-      console.error('Error creating profiles table:', createError)
-    } else {
-
-  await ensureProfilesTableExists();
-};
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

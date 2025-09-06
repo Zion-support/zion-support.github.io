@@ -55,12 +55,7 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     icon: "Briefcase"
   },
 
-=======
-
   },
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   "announcements": {
     id: "announcements"
     name: "Announcements"
@@ -76,6 +71,53 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
+  user}: {
+  categoryId: string
+  category: ForumCategoryInfo
+  IconComponent: React.ComponentType<any>
+  user: any
+}) {
+<<<<<<< HEAD
+    ...recentPosts.filter(post => post.categoryId === categoryId)
+  ].filter((post, index, self) => 
+    // Remove duplicates by id
+    index === self.findIndex(p => p.id === post.id)
+  ),
+
+  )
+  ),
+
+  // Apply search filter
+  const filteredPosts = searchQuery
+    ? categoryPosts.filter(post =>
+        post.title.toLowerCase().includes(searchQuery.toLowerCase()) |
+        post.content.toLowerCase().includes(searchQuery.toLowerCase()) |
+        post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+      )
+    : categoryPosts
+  const canCreatePost = user && (!category.adminOnly |user.userType === 'admin' |user.role === 'admin')
+  const { isFollowed, follow, unfollow } = useFollowedCategories()
+  const { toast } = useToast()
+  const handleFollow = () => {
+    if (!user) {
+      toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
+
+    : categoryPosts,
+
+  const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin'),
+  const { isFollowed, follow, unfollow } = useFollowedCategories(),
+  const { toast } = useToast(),
+
+  const handleFollow = () => {
+    if (!user) {
+      toast({ title: 'Login required', description: 'Please sign in to follow this category' })
+      return
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+      return;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
     if (isFollowed(categoryId)) {
       unfollow(categoryId)
@@ -83,3 +125,87 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
       follow(categoryId)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+  logInfo('CategoryContent - categoryId:', { data: categoryId }),;
+  logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),;
+  logInfo('CategoryContent - filteredPosts:', { data: filteredPosts }),;
+  return (;
+    <div className="container py-8">;
+      <div className="flex items-center gap-3 mb-6">;
+        <Link href="/community" className="text-sm text-muted-foreground hover:text-foreground">;
+          Forum;
+        </Link>;
+        <span className="text-muted-foreground">/</span>;
+        <span className="font-medium">{category.name}</span>;
+      </div>;
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">;
+        <div className="flex items-center gap-4">;
+          <div className="p-3 bg-zion-purple/10 rounded-full">;
+            <IconComponent className="h-8 w-8 text-zion-purple" />;
+          </div>;
+          <div>;
+            <h1 className="text-3xl font-bold">{category.name}</h1>;
+            <p className="text-muted-foreground mt-1">{category.description}</p>;
+          </div>;
+        </div>;
+        <div className="flex items-center gap-2">;
+          {canCreatePost && <CreatePostButton categoryId={categoryId} />}
+          <Button;
+            variant={isFollowed(categoryId) ? 'outline' : 'default'}
+            onClick={handleFollow}
+          >;
+            {isFollowed(categoryId) ? 'Following' : 'Follow'}
+          </Button>
+        </div>
+      </div>
+
+/**
+ * CategoryContent - Function description
+ */
+function CategoryContent() {
+  const [search_query, setSearchQuery] = useState ("");
+  const { featured_posts, recent_posts } = use_community ();
+  // Filter posts by category from context data;
+  const category_posts = [;
+    ...featured_posts.filter (post => post.category_id === category_id);
+    ...recent_posts.filter (post => post.category_id === category_id);
+  ].filter ((post, index, self, ) =>;
+    // Remove duplicates by id;
+    index === self.find_index (p => p.id === post.id));
+  // Apply search filter;
+  const filtered_posts = search_query;
+    ? category_posts.filter (post =>;
+        post.title.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        post.content.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        post.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ())));
+    : category_posts;
+  const canCreatePost = user && (!category.admin_only || user.user_type === 'admin' || user.role === 'admin');
+  const { is_followed, follow, unfollow } = useFollowedCategories ();
+  const { toast } = use_toast ();
+  const handle_follow = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({ title: 'Login required', description: 'Please sign in to follow this category' }),
+      return;
+    }
+    if () {) {
+  $2
+}
+      unfollow (category_id);
+    } else {
+      follow (category_id);
+    }
+  }
+  log_info ('CategoryContent - category_id:', { data: category_id }),
+  log_info ('CategoryContent - category_posts:', { data: category_posts }),
+  log_info ('CategoryContent - filtered_posts:', { data: filtered_posts }),
+  const category = category_id ? categories_info[category_id] : null;
+  const IconComponent = category ? icon_map[category.icon as keyof typeof icon_map] : null;
+}
+  );
+}
+
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

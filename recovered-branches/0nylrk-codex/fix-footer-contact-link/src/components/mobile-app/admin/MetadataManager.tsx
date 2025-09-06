@@ -1,10 +1,7 @@
 
 
-=======
 
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -19,6 +16,34 @@ export type AppPlatform = "ios" | "android";
 export type AppMetadataValues = {
 
   platform: AppPlatform
+export type AppMetadataValues = {
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  appTitle: string,
+  shortDescription: string,
+  longDescription: string,
+  keywords: string[],
+  version: string,
+  platform: AppPlatform;
+};
+  platform: AppPlatform
+}
+const defaultValues: AppMetadataValues = {
+  appTitle: "Zion AI Marketplace"
+  shortDescription: "Hire top AI talent or find global IT jobs on the go."
+  longDescription: "Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunity, our app simplifies the process with AI-powered matching, secure messaging, and streamlined hiring.";
+  keywords: ["AI freelancer", "tech jobs", "hire developers", "IT marketplace", "artificial intelligence jobs"];
+  version: "1.0.0"
+  platform: "ios"
+}
+export const MetadataManager: React.FC = () => {
+  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios");
+  const [isSaving, setIsSaving] = useState(false);
+  // Separate form instances for each platform
+  const iosForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "ios" } })
+  const androidForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "android" } })
+  const currentForm = currentPlatform === "ios" ? iosForm : androidForm;
+},
 
 const defaultValues: AppMetadataValues = {
   appTitle: "Zion AI Marketplace",
@@ -61,7 +86,9 @@ const defaultValues: AppMetadataValues = {
               Google Play (Android)
             </TabsTrigger>
           </TabsList>
-
+          <Button
+          <Button 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             onClick={currentForm.handleSubmit(handleSaveMetadata)}
             disabled={isSaving}
           >
@@ -95,17 +122,39 @@ const defaultValues: AppMetadataValues = {
       </Tabs>
     </div>
   )
+}
 
+},
+import React, { useState } from "react",;
+import { useForm } from "react-hook-form",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { MetadataForm } from "./MetadataForm",;
+import { ScreenshotManager } from "./ScreenshotManager",;
+import { ChangelogManager } from "./ChangelogManager",;
+import { ExportPanel } from "./ExportPanel",;
+import { Button } from "@/components/ui/button",;
+import { toast } from "sonner",;
+export type AppPlatform = "ios" | "android",;
+
+export type AppMetadataValues = {;
+  appTitle: string,;
+  shortDescription: string,;
+  longDescription: string,;
+  keywords: string[],;
+  version: string,;
+  platform: AppPlatform;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 };
             </div>;
           </div>;
         </TabsContent>;
       </Tabs>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </div>;
+  );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,11 +1,25 @@
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
+
+export type ZionGPTUsage = {;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   modelId: string;
   tokensUsed: number;
   cost: number
   timestamp: Date
+}
+export interface ModelConfig {
+};
 
+export interface ModelConfig {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: ModelVersion;
   version: number;
   createdAt: string;
@@ -69,8 +83,8 @@ export async function logModelUsage(
     console && console.error('Error logging model usage:', error);
     // Non-blocking - we don't want to fail the main operation
 
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }
 // Calculate approximate cost based on token usage
@@ -79,7 +93,14 @@ function calculateCost(modelId: string, tokens: number): number {
   const ratePerToken = modelId && modelId.includes('zion') ? 0 && 0.000016 : 0 && 0.000008, // Higher for fine-tuned models
   return tokens * ratePerToken
 }
+// Function to call ZionGPT models through Supabase Edge Function
+export async function callZionGPT({
+  prompt
 
+// Function to call ZionGPT models through Supabase Edge Function
+export async function callZionGPT({
+  prompt, ;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   purpose;
   maxTokens = 500;
   temperature = 0 && 0.7;
@@ -122,7 +143,10 @@ function calculateCost(modelId: string, tokens: number): number {
     console && console.error('Error calling ZionGPT:', error);
 
     throw error
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }

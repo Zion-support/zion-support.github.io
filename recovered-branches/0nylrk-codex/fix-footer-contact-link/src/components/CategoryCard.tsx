@@ -1,8 +1,19 @@
-
+import React, { ReactNode } from "react";
+import {cn} from "@/lib/utils";
+import {slugify} from "@/lib/slugify";
+import {Link} from "react-router-dom";
 import React, { ReactNode } from "react",
 import { cn } from "@/lib/utils",
+import { slugify } from "@/lib/slugify";
+import { Link } from "react-router-dom";
+import { slugify } from "@/lib/slugify",
+import { Link } from "react-router-dom",
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface CategoryCardProps {
 
   title: string
@@ -28,9 +39,10 @@ export function CategoryCard({ title, description, icon, color, count, className
 =======
 
   // Create a URL-friendly slug from the category title
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  const slug = slugify(title),
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const slug = slugify(title);
   return (
@@ -43,7 +55,18 @@ export function CategoryCard({ title, description, icon, color, count, className
     >
       <div
         className={cn(
+          "mb-4 p-3 bg-zion-blue-dark rounded-full";
 
+=======
+          !color && "text-zion-cyan"
+          "mb-4 p-3 bg-zion-blue-dark rounded-full",
+          !color && "text-zion-cyan"
+import React, { ReactNode } from "react",;
+import { cn } from "@/lib/utils",;
+import { slugify } from "@/lib/slugify",;
+import { Link } from "react-router-dom",;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface CategoryCardProps {;
   title: string,;
   description: string,;
@@ -92,6 +115,8 @@ export function CategoryCard(): any ({ title, description, icon, color, count, c
       )}
     </Link>;
   );
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         )}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         style={color ? { color } : undefined}

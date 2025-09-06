@@ -269,6 +269,44 @@ if ( {) {
   $2
 }
         return this.props.fallback;
+=======
+      }
+      return (
+        <div className='flex min - h-screen items - center justify - center p - 4'>;
+          <div className='w - full max - w-md space - y-4'>;
+            <Alert variant='destructive'>;
+              <div className='flex items - center gap - 2'>;
+                {isNetworkError ? (
+                  <WifiOff className='h - 4 w - 4' />) : (
+                  <RefreshCw className='h - 4 w - 4' />)}
+
+                <AlertTitle>;
+                  {isNetworkError;
+                    ? 'Connection Problem';
+                    : 'Something went wrong'}
+                </AlertTitle>;
+              </div>;
+
+              </AlertDescription>;
+            </Alert>;
+        <div className="flex min-h-screen items-center justify-center p-4">
+          <div className="w-full max-w-md space-y-4">
+            <Alert variant="destructive">
+              <div className="flex items-center gap-2">
+                {isNetworkError ? (
+                  <WifiOff className="h-4 w-4" />
+                ) : (
+                  <RefreshCw className='h-4 w-4' />
+                )}
+                <AlertTitle>
+                  {isNetworkError
+                    ? 'Connection Problem'
+                    : 'Something went wrong'}
+                  <RefreshCw className="h-4 w-4" />
+                )}
+                <AlertTitle>;
+                  {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
@@ -283,6 +321,11 @@ if ( {) {
                 )}
               </AlertDescription>
             </Alert>
+            <div className='flex flex-col gap-2'>
+              <Button
+                onClick={this.handleRetry}
+                disabled={this.state.isRetrying}
+                className='w-full'              >
 
                 {this.state.isRetrying ? (
                   <>
@@ -304,6 +347,16 @@ if ( {) {
                 )}
               </Button>
               <Button
+=======
+                variant='outline'
+                onClick={() => window.location.reload()}
+                className='w-full'              >
+                variant="outline"
+                onClick={() => window.location.reload()}
+                className="w-full"
+              >
+<<<<<<< HEAD
+<<<<<<< HEAD
 
                 Reload Page
               </Button>
@@ -400,9 +453,33 @@ export const useApiErrorHandler = () =>: any {
                   Debug Info (Development Only)
                 </summary>
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}
+<<<<<<< HEAD
+
+}, ;
+  return { handleApiError };
+
+          </div>;
+        </div>;
+      );
+    }
+
+    return this && this.props.children;
+  }
+
+// Hook for accessing query client in function components;
+export const useApiErrorHandler = () => {;
+  const handleApiError = (error: Error) => {;
+    Sentry && Sentry.withScope(scope => {;
+      scope && scope.setTag('source', 'useApiErrorHandler');
+      scope && scope.setLevel('error');
+      Sentry && Sentry.captureException(error);
+    });
+  };
+  return { handleApiError }
 <<<<<<< HEAD

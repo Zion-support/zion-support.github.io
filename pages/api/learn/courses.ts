@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
 import fs from 'fs';
 import path from 'path';
 
@@ -48,9 +47,68 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
 }
+  try {
+    const raw = fs.readFileSync (data_path, 'utf - 8');
+    const courses = JSON.parse (raw);
+;
+    const { category, level, is_free } = req.query;
+;
+    const filtered = courses.filter ((c: any) => {
+      // Check condition
+if (return false) {
+  $2
+}
+      // Check condition
+if (return false) {
+  $2
+}
+      // Check condition
+if ( {) {
+  $2
+}
+        const free_val = is_free === 'true' || is_free === true;
+        // Check condition
+if (return false) {
+  $2
+}
+      }
+      return true;
+    });
+    res.status(200).json({ courses: filtered });
+  } catch (error) {
+    res.status(500).json({ error: e?.message ?? 'Failed to load courses' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+}
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

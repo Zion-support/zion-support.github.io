@@ -20,41 +20,19 @@ import { useAuth } from "@/hooks/useAuth",
 
 import { Sparkles } from 'lucide-react'
 interface TalentRateRecommenderProps {
-
+  skills: string[]
+  yearsExperience: number
+  location?: string
+  onSuggestionApplied: (value: number,) => void
+  skills: string[],
+  yearsExperience: number,
+  location?: string,
+  onSuggestionApplied: (value: number,) => void,
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   rateType: "hourly" | "fixed"
+}
 
-    }
-    setIsLoading(true)
-    try {
-      const params: TalentRateParams = {
-        skills
-        yearsExperience
-        location}
-      const result = await getTalentRateSuggestion(params)
-      setSuggestion(result)
-    } catch (error) {
-      logErrorToProduction('Error generating rate suggestion:', { data: error })
-    } finally {
-      setIsLoading(false)
-    }
-  }
-  const handleApplySuggestion = () => {
-    if (suggestion) {
-      // We'll use the middle of the range as the suggested rate
-      const suggestedRate = Math.round((suggestion.minRate + suggestion.maxRate) / 2)
-      onSuggestionApplied(suggestedRate)
-
-      // Track this suggestion application
-      if (user && user.id) {
-        trackPricingSuggestion({
-          userId: user.id
-          suggestionType: "talent"
-          suggestedMin: suggestion.minRate
-          suggestedMax: suggestion.maxRate
-          actualValue: suggestedRate
-          accepted: true
-        })
-interface TalentRateRecommenderProps {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <div className="space-y-4">
@@ -75,7 +53,6 @@ interface TalentRateRecommenderProps {;
           </Button>;
         ) : (;
           <PricingSuggestionBox
-<<<<<<< HEAD
 
 
   rateType 
@@ -84,7 +61,10 @@ interface TalentRateRecommenderProps {;
 };
 '"};
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 
     <div className="space - y-4">;

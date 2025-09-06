@@ -49,6 +49,10 @@ function useMessageChannelHandler() {
     (event: MessageEvent < unknown>) => {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+  onError
+}: MessageChannelHandlerProps = {}) {
+  const handleMessage = useCallback(
+    (event: MessageEvent<unknown>) => {
       try {
         // Check condition
 if ( {) {
@@ -71,21 +75,6 @@ if ( {) {
       if (onError) {
         onError(error as Error);
 
-      }
-    }
-    [onMessage, onError]
-  );
-  useEffect(() => {
-
-    window && window.addEventListener('message', handleMessage);
-    return () => {
-      window && window.removeEventListener('message', handleMessage);
-    };
-
-  }, [handleMessage]);
-
-}
->>>>>>> origin/automation-improvements-final
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -104,3 +93,16 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+}
+}
+ursor/integrate-build-improve-and-re-verify-8f7d
+import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}
+import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+}
+origin/main
+origin/automation-improvements-final
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,4 +1,5 @@
 
+=======
 
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
@@ -19,13 +20,86 @@ interface ApplyToJobFormProps {
   job: Job
 
   onSuccess?: () => void
+import {useState} from "react";
+import {useNavigate} from "react-router-dom";
+import {useJobApplications} from "@/hooks/useJobApplications";
+import {useResume} from "@/hooks/useResume";
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {Textarea} from "@/components/ui/textarea";
+import {Label} from "@/components/ui/label";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Alert, AlertDescription} from "@/components/ui/alert";
+import {AlertCircle, FileText, Loader2} from "lucide-react";
+import {formatDistanceToNow} from "date-fns";
+import {Job} from "@/types/jobs";
+import {toast} from "sonner";
+import { useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { useResume } from "@/hooks/useResume",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { Label } from "@/components/ui/label",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import { AlertCircle, FileText, Loader2 } from "lucide-react",
+import { formatDistanceToNow } from "date-fns",
+import { Job } from "@/types/jobs";
+import { toast } from "sonner";
+import { Job } from "@/types/jobs",
+import { toast } from "sonner",
+interface ApplyToJobFormProps {
+
+  job: Job
+
+  onSuccess?: () => void
 }
+import { useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { useResume } from "@/hooks/useResume",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { Label } from "@/components/ui/label",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import { AlertCircle, FileText, Loader2 } from "lucide-react",
+import { formatDistanceToNow } from "date-fns",
+import { Job } from "@/types/jobs";
+import { toast } from "sonner";
+interface ApplyToJobFormProps {
+
+  job: Job
+
+  onSuccess?: () => void
+}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 
   const { resumes, isLoading: isResumesLoading } = useResume(),
   const navigate = useNavigate(),
 
+  const navigate = useNavigate();
+
+  const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job && job.title}" position and would like to apply. My skills and experience align well with this role.`);
+  const [selectedResumeId, setSelectedResumeId] = useState<string>("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+  const { user } = useAuth(),
+  const { applyToJob } = useJobApplications(),
+  const { resumes, isLoading: isResumesLoading } = useResume(),
+  const navigate = useNavigate(),
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`),
   const [selectedResumeId, setSelectedResumeId] = useState<string>(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -47,8 +121,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       return;
     }
 
-=======
-
     
     setIsSubmitting(true),
     setError(null),
@@ -59,96 +131,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      if (success) {
-        toast.success("Your application has been submitted!");
-        if (onSuccess) {
-          onSuccess()
-        }
-      }
-    } catch (err: any) {
-      setError(err.message |"Failed to submit application")
-      toast.error("Failed to submit application")
-
-import { useState } from './react';
-import { use_navigate } from './react-router-dom';
-import { useJobApplications } from '@/hooks / useJobApplications';
-import { use_resume } from '@/hooks / use_resume';
-import { use_auth } from '@/hooks / use_auth';
-import { Button } from '@/components / ui / button';
-import { Textarea } from '@/components / ui / textarea';
-import { Label } from '@/components / ui / label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
-import { Alert, AlertDescription } from '@/components / ui / alert';
-import { AlertCircle, FileText, Loader2 } from './lucide-react';
-import { formatDistanceToNow } from './date - fns';
-import { Job } from '@/types / jobs';
-import { toast } from './sonner';
-interface ApplyToJobFormProps {
-  job: Job,
-  on_success?: () => void;
-}
-export /**
- * ApplyToJobForm - Function description
- */
-function ApplyToJobForm() {
-  const { user } = use_auth ();
-  const { applyToJob } = useJobApplications ();
-  const { resumes, is_loading: isResumesLoading } = use_resume (),
-  const navigate = use_navigate ();
-;
-  const [cover_letter, setCoverLetter] = useState (`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`);
-  const [selectedResumeId, setSelectedResumeId] = useState < string>("");
-  const [is_submitting, setIsSubmitting] = useState (false);
-  const [error, set_error] = useState < string | null>(null);
-;
-  const handle_submit = async (e: React.FormEvent) => {
-    e.prevent_default ();
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      toast.error ("You must be logged in to apply"),
-      navigate ("/login", { state: { return_to: `/jobs/${job.id}` } }),
-      return;
-    }
-    if () {) {
-  $2
-}
-      set_error ("Please provide a cover letter");
-      return;
-    }
-    setIsSubmitting (true);
-    set_error (null);
-;
-    try {
-      const success = await applyToJob (job.id, cover_letter, selectedResumeId || undefined);
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        toast.success ("Your application has been submitted!");
-        // Check condition
-if ( {) {
-  $2
-}
-          on_success ();
-        }
-      }
-    } catch (err: any) {
-      set_error (err.message || "Failed to submit application"),
-      toast.error ("Failed to submit application");
-
-    } finally {
-      setIsSubmitting (false);
-    }
-  }
-
-    } finally {
-      setIsSubmitting(false)
-    }
-
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -228,7 +210,6 @@ if ( {) {
           type="button"
           variant="outline"
 
-=======
 import { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -340,8 +321,9 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
       </div>;
 
       <div className="flex justify-end gap-2">;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        <Button;
+          type="button";
+          variant="outline";
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           disabled={isSubmitting}
           onClick={() => {;

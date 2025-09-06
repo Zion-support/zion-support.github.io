@@ -1,5 +1,6 @@
 
-
+ 
+ 
 }function getAllServices () : Service[] {
   return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[])
 }return {
@@ -14,12 +15,26 @@ fallback: false
   service: Service
 }) {
   return (<Layout> <Head> <title> {
-
+  service.name
+}| Zion Tech Group</title>
+}
+null;
+2)
 }/> </Head> </li>) )
 }</ul> </div>) )
 }</ul> </div> <div>) )
+2) 
+  service.name 
+}| Zion Tech Group</title> ;
+};
+null;
+2)
+2) 
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+}/> </Head> </li>) ) 
+}</ul> </div>) ) 
+}</ul> </div> <div>) ) 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }</div> </div> </div> </div> </div> </div> </div> <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Contact</h3> <div className="space-y-3 text-sm" > <div className="flex items-center gap-2 text-cyan-400" ><Phone className="w-4 h-4" /><a href= {
   `tel:$ {
   contactInfo.mobile.replace (/[^+\\d]/g, '')
@@ -42,14 +57,17 @@ fallback: false
   /* Market Position & ROI */
 }<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg" > <h3 className="text-white font-semibold mb-3" >Market & ROI</h3> <div className="space-y-3 text-sm text-gray-300" > {
   service.marketPosition && <p className="leading-relaxed" ><span className="text-gray-400" >Position:</span> {
-
-=======
-
+  service.marketPosition
+}</p>
+}{
+  service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
+  service.roi
   service.marketPosition 
 }</p>
 }{
   service.roi && <p className="leading-relaxed" ><span className="text-gray-400" >ROI:</span> {
   service.roi 
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -58,9 +76,12 @@ fallback: false
   service.competitors?.length ? () : null
 }<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title> </Head> </div> </EnhancedLayout> return (<EnhancedLayout> <Head> <title> {
 }
-
 export default ServiceDetail
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,20 +1,6 @@
 
-
-import React, { useState } from "react",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Switch } from "@/components/ui/switch",
-
-  FormMessage} from "@/components/ui/form",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from "lucide-react",
-import { toast } from "@/components/ui/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-
+=======
+<<<<<<< HEAD
 // Define form schema
 
 const serviceProfileSchema = z.object({
@@ -51,6 +37,19 @@ const serviceProfileSchema = z.object({
       setServiceTags([...serviceTags, serviceInput]),
       form.setValue("services", "")
     }
+=======
+  }
+  // Handle removing service tags
+  const handleRemoveService = (service: string) => {
+    setServiceTags(serviceTags.filter((s) => s !== service))
+  }
+  },
+
+  // Handle removing service tags
+  const handleRemoveService = (service: string) => {
+    setServiceTags(serviceTags.filter((s) => s !== service))
+  },
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   // Handle key press in services input (add on enter)
   const handleServiceKeyPress = (e: React.KeyboardEvent) => {
@@ -61,34 +60,11 @@ const serviceProfileSchema = z.object({
 
   };
 
-      setServiceTags([...serviceTags, serviceInput]);
-      form && form.setValue("services", "");
-    }
-
-  },;
-  // Handle removing service tags;
-  const handleRemoveService = (service: string) => {;
-    setServiceTags(serviceTags.filter((s) => s !== service));
-  },;
-  // Handle key press in services input (add on enter);
-  const handleServiceKeyPress = (e: React.KeyboardEvent) => {;
-    if (e.key === "Enter") {;
-      e.preventDefault(),;
-      handleAddService();
-    }
-  },;
-  // Handle avatar upload;
-  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {;
-    const file = e.target.files?.[0],;
-    if (file) {;
-      const reader = new FileReader(),;
-      reader.onloadend = () => {;
-        setUploadedAvatar(reader.result as string);
-      },;
-      reader.readAsDataURL(file);
-    }
-  },
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 
 
@@ -99,17 +75,49 @@ const serviceProfileSchema = z.object({
     const formData = form.getValues(),
     if (!formData.bio || formData.bio.length < 20) {
 
-      toast({
-        title: "More information needed"
-        description: "Please provide at least a detailed bio before generating enhanced content."})
-      return
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
 
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  },;
+  // Generate enhanced profile with AI;
+  const generateEnhancedProfile = async () => {;
+    const formData = form.getValues(),;
+    if (!formData.bio || formData.bio.length < 20) {;
+      toast({;
+        title: "More information needed",;
+        description: "Please provide at least a detailed bio before generating enhanced content."}),;
+      return;
+    }
+;
+    try {;
+      setIsGenerating(true),;
+      // Call the Supabase Edge Function;
+      const { data, error } = await supabase.functions.invoke('service-profile-enhancer', {;
+        body: {;
+          providerData: {;
+            name: formData.name,;
+            title: formData.title,;
+            bio: formData.bio,;
+            services: serviceTags,;
+            location: formData.location;
+          }
+        }
+      }),;
+      if (error) {;
+        throw new Error(error.message);
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
 
       setGeneratedContent(data as { summary: string, services: string[] }),
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+      
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       toast({
         title: "Enhanced Profile Generated"
         description: "AI has created a professional bio and suggested additional services for your profile."})
@@ -125,32 +133,13 @@ const serviceProfileSchema = z.object({
 
         if (newServices.length > 0) {
           setServiceTags([...serviceTags, ...newServices])
-=======
-;
-  // Apply generated content to form;
-  const applyGeneratedContent = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      form.set_value ("bio", generated_content.summary);
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        const new_services = generated_content.services.filter (
-          service => typeof service === 'string' && service && !service_tags.includes (service));
-;
-        // Check condition
-if ( {) {
-  $2
-}
-          setServiceTags ([...service_tags, ...new_services]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
       }
     }
+=======
+  }
+  },
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   // Handle form submission
   const onSubmit = async (values: ServiceFormValues) => {
@@ -167,7 +156,6 @@ if ( {) {
       if (!user?.id) {
         throw new Error("User not authenticated")
 
-=======
 ;
       setGeneratedContent(data as { summary: string, services: string[] }),;
       toast({;
@@ -250,14 +238,22 @@ if ( {) {
             body: {
 
 
-          }
-        } catch (error) {
-          console.error("Error enhancing profile:", error),
-          // Continue with submission even if enhancement fails
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+        } catch (error) {;
+          console && console.error("Error enhancing profile:", error);
+          // Continue with submission even if enhancement fails;
+        }
+      } else if (generatedContent) {;
 
+        finalSummary = generatedContent.summary,;
+        finalServices = [...new Set([...serviceTags, ...generatedContent.services])];
 =======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
 
 
@@ -285,83 +281,6 @@ if ( {) {
       */
       // Send notification email if available
       if (userEmail && values.enhancedProfile) {
-=======
-              provider_data: {
-                name: values.name,
-                title: values.title,
-                bio: values.bio,
-                services: service_tags,
-                location: values.location;
-              }
-            }
-          });
-;
-          // Check condition
-if ( {) {
-  $2
-}
-            final_summary = (ai_data as any).summary || values.bio;
-            // Merge AI suggested services with user - provided services;
-            const ai_services = (ai_data as any).services || [];
-            final_services = [...new Set ([...service_tags, ...ai_services])];
-          }
-        } catch (error) {
-          console.error ("Error enhancing profile:", error);
-          // Continue with submission even if enhancement fails;
-        }
-      } else // Check condition
-if ( {) {
-  $2
-}
-        final_summary = generated_content.summary;
-        final_services = [...new Set ([...service_tags, ...generated_content.services])];
-      }
-      // Get user email for notification;
-      const { data: user_data } = await supabase.auth.get_user (),
-      const user_email = user_data.user?.email;
-;
-      // Create the service profile;
-      const { data: profile_data, error } = await supabase;
-        .from ('profiles');
-        .update ({
-          display_name: values.name,
-          bio: final_summary,
-          user_type: "creator", // Set as service provider;
-          profile_complete: true,
-          updated_at: new Date ().toISOString (),
-          headline: values.title,
-          // Additional fields that might be in profiles table;
-        });
-        .eq ('id', user.id);
-        .select ();
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      // Store service - specific data in service_profiles table;
-      // (This assumes you have a service_profiles table in your database);
-      /*;
-      const { error: service_error } = await supabase;
-        .from ('service_profiles');
-        .insert ({
-          user_id: user.id,
-          services: final_services,
-          hourly_rate: Number (values.hourly_rate),
-          availability_status: values.availability,
-          location: values.location,
-          website: values.website || null}),
-      // Check condition
-if (throw service_error) {
-  $2
-}
-      */;
-      // Send notification email if available;
-      // Check condition
-if ( {) {
-  $2
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         try {
           await supabase.functions.invoke ('send - email', {
             body: {
@@ -499,6 +418,7 @@ if ( {) {
                           <FormMessage className="text-red-400" />
                         </FormItem>
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             }
           });
         } catch (emailError) {;
@@ -692,6 +612,7 @@ if ( {) {
                     />;
                   </div>;
                 </div>;
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -731,107 +652,6 @@ if ( {) {
                     </label>;
                   </div>;
                   <p className="text-sm text-zion-slate">;
-=======
-                          <FormMessage className="text - red - 400" />;
-                        </FormItem>)}
-                    />;
-                  </div>;
-                </div>;
-                {/* Upload Avatar */}
-                <div className="space - y-2">;
-                  <FormLabel className="text - zion - slate - light">Profile Picture</FormLabel>;
-                  <div className="flex items - center gap - 6">;
-                    <div className="relative w - 24 h - 24 rounded - full overflow - hidden bg - zion - blue - light border border - zion - blue - light">;
-                      {uploaded_avatar ? (
-                        <AspectRatio ratio={1 / 1}>;
-                          <img;
-                            src={uploaded_avatar}
-                            alt="Avatar preview";
-                            className="w - full h - full object - cover";
-                          />;
-                        </AspectRatio>) : (
-                        <div className="flex items - center justify - center h - full">;
-                          <UserRound className="h - 10 w - 10 text - zion - slate opacity - 50" />;
-                        </div>)}
-                    </div>;
-                    <label className="flex items - center justify - center px - 4 py - 2 rounded - md bg - zion - purple hover:bg - zion - purple - dark text - white cursor - pointer transition - colors">;
-                      <Upload className="mr - 2 h - 4 w - 4" />;
-                      <span > Upload Photo</span>;
-                      <input;
-                        type="file";
-                        accept="image/*";
-                        className="hidden";
-                        on_change={handleAvatarUpload}
-                      />;
-                    </label>;
-                  </div>;
-                  <p className="text - sm text - zion - slate">;
-
-                    For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.;
-                  </p>;
-                </div>;
-              </div>;
-
-                        />;
-                      </FormControl>;
-                      <FormMessage className="text-red-400" />;
-                      <FormDescription className="text-zion-slate">;
-                        {field && field.value?.length || 0}/1000 characters;
-                      </FormDescription>;
-                    </FormItem>;
-                  )}
-                />;
-
-
-                {/* AI Enhancement Option */}
-                <FormField
-                  control={form && form.control}
-                  name="enhancedProfile"
-                  render={({ field }) => (;
-                    <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">;
-                      <div className="space-y-0 && 0.5">;
-                        <FormLabel className="text-white flex items-center">;
-                          <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />;
-                          AI Profile Enhancement;
-                        </FormLabel>;
-                        <FormDescription className="text-zion-slate-light">;
-=======
-              <Separator className="bg - zion - blue - light / 50" />;
-              {/* Bio Section */}
-              <div className="space - y-4">;
-                <h3 className="text - lg font - medium text - white">Service Description</h3>;
-                <FormField;
-                  control={form.control}
-                  name="bio";
-                  render={({ field }) => (
-                    <FormItem>;
-                      <FormLabel className="text - zion - slate - light">About Your Services</FormLabel>;
-                      <FormControl>;
-                        <Textarea;
-                          className="h - 32 min - h-[128px] bg - zion - blue border - zion - blue - light text - white";
-                          placeholder="Describe your services, expertise, and what sets you apart from others...";
-                          {...field}
-                        />;
-                      </FormControl>;
-                      <FormMessage className="text - red - 400" />;
-                      <FormDescription className="text - zion - slate">;
-                        {field.value?.length || 0}/1000 characters;
-                      </FormDescription>;
-                    </FormItem>)}
-                />;
-                {/* AI Enhancement Option */}
-                <FormField;
-                  control={form.control}
-                  name="enhanced_profile";
-                  render={({ field }) => (
-                    <FormItem className="flex flex - row items - center justify - between p - 3 border border - zion - blue - light bg - zion - blue / 30 rounded - md">;
-                      <div className="space - y-0.5">;
-                        <FormLabel className="text - white flex items - center">;
-                          <Sparkles className="w - 4 h - 4 mr - 2 text - zion - purple" />;
-                          AI Profile Enhancement;
-                        </FormLabel>;
-                        <FormDescription className="text - zion - slate - light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           Let AI help optimize your service description for better visibility and client engagement;
                         </FormDescription>;
                       </div>;
@@ -1022,13 +842,14 @@ if ( {) {
                       <p className="text-zion-slate text-sm italic">No services added yet</p>;
                     )}
 
-=======
                   </div>;
                 </div>;
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 {/* Pricing and Availability Section */}
                 <div className="space-y-4">;
@@ -1147,46 +968,12 @@ if ( {) {
                           </div>;
                         </FormControl>;
 
-=======
-                        <FormMessage className="text - red - 400" />;
-                      </FormItem>)}
-
-                  />;
-                </div>;
-              </div>;
-            </CardContent>;
-
-=======
-            <CardFooter className="border - t border - zion - blue - light pt - 6">;
-              <div className="flex flex - col sm:flex - row gap - 4 w - full sm:justify - between">;
-                <Button;
-                  type="button";
-                  variant="outline";
-                  className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white";
-                >;
-                  Save as Draft;
-                </Button>;
-                <Button;
-                  type="submit";
-                  className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white";
-                  disabled={is_submitting}
-                >;
-                  {is_submitting ? "Creating Profile..." : "Create Service Profile"}
-
-                </Button>;
-              </div>;
-            </CardFooter>;
-          </form>;
-        </Form>;
-      </Card>;
-
-    </div>);
 }
-
-=======
-
 }
 ;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,9 +1,19 @@
 
-
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {CategoriesSection} from "@/components/CategoriesSection";
+import {GradientHeading} from "@/components/GradientHeading";
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
+import { CategoriesSection } from "@/components/CategoriesSection";
+import { GradientHeading } from "@/components/GradientHeading";
+import { CategoriesSection } from "@/components/CategoriesSection",
+import { GradientHeading } from "@/components/GradientHeading",
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function Categories() {
   return (
     <>
@@ -20,11 +30,7 @@ export default function Categories() {
             </p>
           </div>
 
-=======
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {CategoriesSection} from "@/components/CategoriesSection";
-import {GradientHeading} from "@/components/GradientHeading";
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -48,6 +54,7 @@ function Categories() {
               Find exactly what you're looking for to enhance your business or personal projects.;
             </p>;
           </div>;
+=======
 
 
 
@@ -60,10 +67,4 @@ function Categories() {
     </>
   )
 <<<<<<< HEAD
-=======
-
-}
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

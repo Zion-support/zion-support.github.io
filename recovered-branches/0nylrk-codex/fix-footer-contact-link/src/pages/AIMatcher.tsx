@@ -1,5 +1,16 @@
 
-
+import {useState} from "react";
+import {useNavigate} from "react-router-dom";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {GradientHeading} from "@/components/GradientHeading";
+import {AIMatchmaker} from "@/components/AIMatchmaker";
+import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
+import {toast} from "@/hooks/use-toast";
+import {MatchResult} from "@/lib/ai-matchmaking";
+export default function AIMatcherPage() {;
+  const navigate = useNavigate();
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Header } from "@/components/Header",
@@ -7,7 +18,25 @@ import { Footer } from "@/components/Footer",
 import { GradientHeading } from "@/components/GradientHeading",
 import { AIMatchmaker } from "@/components/AIMatchmaker",
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
+import { toast } from "@/hooks/use-toast";
+import { MatchResult } from "@/lib/ai-matchmaking";
+export default function AIMatcherPage() {
 
+  const navigate = useNavigate();
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const handleMatchSelect = (match: MatchResult) => {
+    // Get the item type from the category
+    let itemType = "service";
+    const category = match.item.category.toLowerCase()
+    if (category.includes("talent") |category === "engineering" |
+        category === "data science" |category === "development") {
+import { toast } from "@/hooks/use-toast",
+import { MatchResult } from "@/lib/ai-matchmaking",
+export default function AIMatcherPage() {
+  const navigate = useNavigate(),
+  const [selectedCategory, setSelectedCategory] = useState<string>("all"),
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const handleMatchSelect = (match: MatchResult) => {
     // Get the item type from the category
     let itemType = "service",
@@ -32,12 +61,11 @@ import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@
     })
 
 =======
+  }
 
   },
   
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <>
       <Header />
@@ -66,7 +94,20 @@ import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@
                 </SelectContent>
               </Select>
             </div>
-
+            <AIMatchmaker
+              serviceType={selectedCategory === "all" ? "" : selectedCategory}
+              onMatchSelect={handleMatchSelect}
+            />
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  )
+}
+            
+            <AIMatchmaker 
+            <AIMatchmaker 
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
 import { useState } from "react",;
 import { useNavigate } from "react-router-dom",;
@@ -77,6 +118,7 @@ import { AIMatchmaker } from "@/components/AIMatchmaker",;
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
 import { toast } from "@/hooks/use-toast",;
 import { MatchResult } from "@/lib/ai-matchmaking",;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function AIMatcherPage() {;
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -137,6 +179,7 @@ export default function AIMatcherPage() {;
             </div>;
             <AIMatchmaker;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
             />;
@@ -150,3 +193,5 @@ export default function AIMatcherPage() {;
 =======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

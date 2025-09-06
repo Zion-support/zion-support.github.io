@@ -68,21 +68,10 @@ import { TalentProfile } from "@/types/talent",
 import { ContractForm, ContractFormValues } from "./components/ContractForm",
 import { ContractPreview } from "./components/ContractPreview",
 
-  }
-
-<<<<<<< HEAD
-  return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle>Contract Builder</DialogTitle>
-        </DialogHeader>
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">
-          <div className="flex justify-between items-center">
-            <TabsList className="grid grid-cols-2">
-              <TabsTrigger value="form">Contract Details</TabsTrigger>
-              <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
-            </TabsList>
+=======
+import { TemplateManager } from "./templates/TemplateManager",
+import { SmartContractBuilder } from "./SmartContractBuilder",
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
             <div className="flex gap-2">
               <Button
@@ -98,18 +87,28 @@ import { ContractPreview } from "./components/ContractPreview",
               <Button
                 variant="secondary"
                 size="sm"
+
+              <Button
+                variant="secondary"
+                size="sm"
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 onClick={() => setShowSmartContractBuilder(true)}
               >
                 Smart Contract Builder
               </Button>
             </div>
           </div>
+            <ContractForm
+
+            <ContractForm 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
               talent = {talent,}
               clientName = {clientName,}
               initialValues = {formValues,}
               onFormValuesChange = {setFormValues,}
               onContractGenerated = {handleContractGenerated,}
+<<<<<<< HEAD
             />
           </TabsContent>
           <TabsContent value="preview" className="pt-4">
@@ -135,6 +134,7 @@ import { ContractPreview } from "./components/ContractPreview",
       </DialogContent>
     </Dialog>
   )
+<<<<<<< HEAD
 }
 }/>)
 }</TabsList> <div className="flex gap-2" > <Button > <Save className="h-4 w-4" /> Templates </Button> <Button > Smart Contract Builder </Button> </div> </div> <TabsContent value="form" className="pt-4" > <ContractForm talent= {

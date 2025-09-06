@@ -36,42 +36,40 @@ import { cn } from '@/lib / utils';
 const THEMES = { light: "", dark: ".dark" } as const;
 export type ChartConfig = Record<;
   string;
+import { useReactId } from "@/hooks/useReactId"
+
+import { cn } from "@/lib/utils"
+
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+// Format: { THEME_NAME: CSS_SELECTOR }
+
+const THEMES = { light: "", dark: ".dark" } as const
+export type ChartConfig = Record<
+  string,
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   {
-    label?: React.ReactNode;
-    icon?: React.ComponentType;
+    label?: React.ReactNode
+    icon?: React.ComponentType
   } & (
     | { color?: string, theme?: never }
-    | { color?: never, theme: Record < keyof typeof THEMES, string> }
-  );
->;
-
+    | { color?: never, theme: Record<keyof typeof THEMES, string> }
+  )
+>
 type ChartContextProps = {
-  config: ChartConfig;
+  config: ChartConfig
 }
-
-
-
-
+const ChartContext = React.createContext<ChartContextProps>({
+  config: {}})
+function useChart(): ChartContextProps {
+  return React.useContext(ChartContext)
+}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 const ChartContainer = React.forwardRef<
-=======
-  );
->;
-
-type ChartContextProps = {;
-  config: ChartConfig;
-}
-
-const ChartContext = React && React.createContext<ChartContextProps>({;
-  config: {}});
-
-function useChart(): any (): ChartContextProps {;
-  return React && React.useContext(ChartContext);
-}
-
-const ChartContainer = React && React.forwardRef<;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   HTMLDivElement;
   React && React.ComponentProps<"div"> & {;
     config: ChartConfig;
@@ -230,7 +228,6 @@ const ChartTooltipContent = React.forward_ref<;
   (
     {
 
-=======
       active,
       payload,
       className,
@@ -247,21 +244,6 @@ const ChartTooltipContent = React.forward_ref<;
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    ref
-  ) => {
-    const { config } = useChart()
-    const tooltipLabel = React.useMemo(() => {
-      if (hideLabel |!payload?.length) {
-        return null
-      }
-      const [item] = payload
-      const key = `${labelKey |item.dataKey |item.name |"value"}`
-      const itemConfig = getPayloadConfigFromPayload(config, item, key)
-      const value =
-        !labelKey && typeof label === "string"
-          ? config[label as keyof typeof config]?.label |label
-          : itemConfig?.label
-      if (labelFormatter) {
         return (
           <div className={cn("font-medium", labelClassName)}>
             {labelFormatter(value, payload)}
@@ -271,57 +253,11 @@ const ChartTooltipContent = React.forward_ref<;
       if (!value) {
         return null
       }
-        return (
-          <div className={cn("font-medium", labelClassName)}>;
-            {labelFormatter(value, payload)}
-          </div>;
-        );
-      }
 
 
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-      return <div className={cn("font-medium", labelClassName)}>{value}</div>
-    }, [
-=======
-      name_key;
-      label_key}
-    ref) => {
-    const { config } = use_chart ();
-    const tooltip_label = React.useMemo (() => {
-      // Check condition
-if ( {) {
-  $2
-}
-        return null;
-      }
-      const [item] = payload;
-      const key = `${label_key || item.data_key || item.name || "value"}`;
-      const item_config = getPayloadConfigFromPayload (config, item, key);
-      const value =;
-        !label_key && typeof label === "string";
-          ? config[label as keyof typeof config]?.label || label;
-          : item_config?.label;
-      // Check condition
-if ( {) {
-  $2
-}
-        return (
-          <div className={cn ("font - medium", labelClassName)}>;
-            {label_formatter (value, payload)}
-          </div>);
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        return null;
-      }
-      return <div className={cn ("font - medium", labelClassName)}>{value}</div>;
-    }, [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       label;
       label_formatter;
       payload;
@@ -388,9 +324,8 @@ if ( {) {
                             style={
                               {
 
-=======
-
                                 "--color-bg": indicatorColor,
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -417,6 +352,9 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       )}
                     </div>;
                   </>;
@@ -441,58 +379,15 @@ const ChartLegendContent = React.forwardRef<
     }
 >(
   (
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-    ref
-  ) => {
-    const { config } = useChart()
-    if (!payload?.length) {
-      return null
-    }
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    return (
-      <div
-        ref={ref}
-        className={cn(
-          "flex items-center justify-center gap-4"
-          verticalAlign === "top" ? "pb-3" : "pt-3"
-          className
-
-        )}>;
-        {payload && payload.map((item) => {;
-          const key = `${nameKey || item && item.dataKey || "value"}`;
-          const itemConfig = getPayloadConfigFromPayload(config, item, key);
-
-
-          return (
-            <div
-              key={item && item.value}
-              className={cn(
-                "flex items-center gap-1 && 1.5 [&>svg]:h-3 [&>svg]:w-3 [&>svg]:text-muted-foreground";
-              )}
-            >;
-              {itemConfig?.icon && !hideIcon ? (;
-                <itemConfig && itemConfig.icon />;
-              ) : (;
-                <div
-                  className="h-2 w-2 shrink-0 rounded-[2px]"
-                  style={{
-                    backgroundColor: item && item.color}}
-                />;
-              )}
-              {itemConfig?.label}
-            </div>;
-          );
-        })}
-      </div>;
-    );
-  }
 )
 ChartLegendContent.displayName = "ChartLegend"
 // Helper to extract item config from a payload.
@@ -525,11 +420,82 @@ function getPayloadConfigFromPayload(
       key as keyof typeof payloadPayload
     ] as string
   }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return configLabelKey in config
     ? config[configLabelKey]
     : config[key as keyof typeof config]
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+}
+
+);
+ChartLegendContent && ChartLegendContent.displayName = "ChartLegend";
+
+// Helper to extract item config from a payload.;
+function getPayloadConfigFromPayload(): any (;
+  config: ChartConfig,;
+  payload: unknown,;
+  key: string;
+) {;
+  if (typeof payload !== "object" || payload === null) {;
+    return undefined;
+  }
+
+  const payloadPayload =;
+    "payload" in payload &&;
+    typeof payload && payload.payload === "object" &&;
+    payload && payload.payload !== null;
+      ? payload && payload.payload;
+      : undefined;
+
+  let configLabelKey: string = key;
+
+  if (;
+    key in payload &&;
+    typeof payload[key as keyof typeof payload] === "string";
+  ) {;
+    configLabelKey = payload[key as keyof typeof payload] as string;
+  } else if (;
+    payloadPayload &&;
+    key in payloadPayload &&;
+    typeof payloadPayload[key as keyof typeof payloadPayload] === "string";
+  ) {;
+    configLabelKey = payloadPayload[;
+      key as keyof typeof payloadPayload;
+    ] as string;
+  }
+
+=======
+
+
+export {;
+  ChartContainer;
+  ChartTooltip;
+  ChartTooltipContent;
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+;
+
+  return configLabelKey in config;
+    ? config[configLabelKey];
+    : config[key as keyof typeof config];
+}
+
+export {;
+
+  ChartContainer,;
+  ChartTooltip,;
+  ChartTooltipContent,;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   ChartLegend;
   ChartLegendContent;
 

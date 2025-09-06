@@ -1,6 +1,13 @@
 
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {Button} from "@/components/ui/button";
+import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay} from "@/components/ui/dialog";
+import {DisputeForm} from "./DisputeForm";
+import {useNavigate} from "react-router-dom";
+import {ShieldAlert} from "lucide-react";
+=======
 
-import {
 import { 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Dialog;
@@ -11,6 +18,9 @@ import {
   DialogOverlay
 } from "@/components/ui/dialog",
 import { DisputeForm } from "./DisputeForm",
+import { useNavigate } from "react-router-dom";
+import { ShieldAlert } from "lucide-react";
+interface RaiseDisputeButtonProps {
 
 =======
 import {Button} from "@/components/ui/button";
@@ -27,9 +37,16 @@ interface RaiseDisputeButtonProps {;
   className?: string;
 }
 
-
+  milestoneId
+  variant = "outline"
+  size;
+  className
+}: RaiseDisputeButtonProps) {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const navigate = useNavigate();
 import { useNavigate } from "react-router-dom",
 import { ShieldAlert } from "lucide-react",
+=======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface RaiseDisputeButtonProps {
@@ -51,6 +68,7 @@ interface RaiseDisputeButtonProps {
   const handleDisputeCreated = (disputeId: string) => {
     setIsDialogOpen(false)
     navigate(`/dashboard/disputes/${disputeId}`)
+  }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
@@ -72,7 +90,10 @@ interface RaiseDisputeButtonProps {
               Please provide details about the issue you're experiencing with this project.
             </DialogDescription>
           </DialogHeader>
-
+          <DisputeForm
+          
+          <DisputeForm 
+          <DisputeForm 
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {;
@@ -100,6 +121,7 @@ export function RaiseDisputeButton({;
   variant = "outline",;
   size,;
   className;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }: RaiseDisputeButtonProps) {;
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const navigate = useNavigate();
@@ -125,3 +147,4 @@ export function RaiseDisputeButton({;
         <DialogContent className="sm:max-w-[550px]">;
           <DialogHeader>;
             <DialogTitle>Raise a Dispute</DialogTitle>;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

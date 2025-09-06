@@ -11,17 +11,10 @@ import {
   Shield,
   Star,;
 
-} from "lucide-react";
-import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
-import Button from "../components/ui/Button";
-import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
-export default function QuantumInternetSecurityPage() {
-  const service = enhancedRealMicroSaasServices.find((s) =>
-
 =======
+    s.link.endsWith("/quantum-internet-security-platform")
     s.link.endsWith("/quantum-internet-security-platform"),;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   );
   if (!service) return null;
 

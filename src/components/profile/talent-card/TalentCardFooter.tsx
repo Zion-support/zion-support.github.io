@@ -56,16 +56,39 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
               <span className="text-zion-slate-light">{profile.years_experience} years exp.</span>
             </div>
           )}
-
+        </div>
+        </div>
+        </div>;
         {/* Action Buttons */}
         <div className="flex gap-2">
-
+          <Button
+            variant="default"
+            size="sm"
+            onClick = {handleRequestHire,}
+          <Button 
+            variant="default" 
+            size="sm" 
+            onClick={handleRequestHire}
+            onClick = {handleRequestHire,}
+            onClick={handleRequestHire}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Hire
           </Button>
-
+          <Button
+            variant="outline"
+            size="sm"
+          <Button 
+            variant="outline" 
+            size="sm" 
             onClick = {handleViewProfile,}
+          
+          <Button 
+            variant="outline" 
+            size="sm" 
+            onClick={handleViewProfile}
+<<<<<<< HEAD
 
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           >
@@ -75,32 +98,6 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
         </div>
       </div>
 <<<<<<< HEAD
-=======
-
-        </div>;
-
-        {/* Action Buttons */}
-        <div className="flex gap-2">;
-          <Button
-            variant="default" 
-            size="sm" 
-            onClick = {handleRequestHire,}
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white">;
-            Hire;
-          </Button>;
-
-          <Button
-            variant="outline" 
-            size="sm" 
-            onClick = {handleViewProfile,}
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;
-            View;
-            <ExternalLink className="h-3 w-3 ml-1" />;
-          </Button>;
-        </div>;
-      </div>;
-
-
       {/* Hire Request Modal */}
       <HireRequestModal
         talent = {profile,}
@@ -122,6 +119,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
     </>;
   );
 }
+<<<<<<< HEAD
 
 
 

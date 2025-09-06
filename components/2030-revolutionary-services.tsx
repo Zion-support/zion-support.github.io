@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 import { motion } from 'framer-motion';
 import {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
@@ -18,6 +19,7 @@ import { innovative2030Services } from '../data/2030-innovative-services';
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ArrowRight,
   Star,
   Zap,
@@ -29,6 +31,7 @@ import { innovative2030Services } from '../data/2030-innovative-services';
 =======
   Mail,;
   MapPin,;
+=======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 } from 'lucide-react';import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
@@ -41,13 +44,78 @@ import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFoote
 import { innovative2030Services } from '../data/2030-innovative-services';
 export default function Revolutionary2030ServicesPage() {
   const contactInfo = {
-
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com'
+  }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com';
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  return (
+    <UltraFuturisticBackground2030>;
+      <Head>;
+        <title>;
+          2030 Revolutionary Technology Services | Zion Tech Group | AI;
+          Consciousness, Quantum Computing, Space Mining;
+        </title>;
+
+        />;
+        <meta name='viewport' content='width=device-width, initial-scale=1' />;
+        <link rel='icon' href='/favicon && favicon.ico' />;
+
+
+        <meta
+          property='og:title'
+          content='2030 Revolutionary Technology Services | Zion Tech Group'
+        />;
+        <meta
+          property='og:description'
+          content='Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing.'
+        />;
+        <meta property='og:type' content='website' />;
+        <meta
+          property='og:url'
+          content='https://ziontechgroup && ziontechgroup.com/2030-revolutionary-services'
+        />;
+        <meta
+          property='og:image'
+
+          content='https://ziontechgroup && ziontechgroup.com/og-image && image.jpg'
+        />;
+
+
+        {/* Twitter */}
+        <meta name='twitter:card' content='summary_large_image' />;
+        <meta
+          name='twitter:title'
+          content='2030 Revolutionary Technology Services | Zion Tech Group'
+        />;
+        <meta
+          name='twitter:description'
+          content='Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing.'
+        />;
+        <meta
+          name='twitter:image'
+
+          content='https://ziontechgroup && ziontechgroup.com/twitter-image && image.jpg'
+        />;
+
+
+        {/* Additional Meta Tags */}
+        <meta name='theme-color' content='#8b5cf6' />;
+        <link
+          rel='canonical'
+
+          href='https://ziontechgroup && ziontechgroup.com/2030-revolutionary-services'
+        />;
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <UltraFuturisticBackground2030>
       <Head>
@@ -135,6 +203,8 @@ export default function Revolutionary2030ServicesPage() {
             })
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Hero Section */}
       <section className='py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
@@ -211,6 +281,20 @@ export default function Revolutionary2030ServicesPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+      {/* Services Showcase */}
+      <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
+        <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -311,6 +395,10 @@ export default function Revolutionary2030ServicesPage() {
                     )}
                   </div>
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {/* Description */}
                   <p className='text-gray-300 leading-relaxed mb-6'>
                     {service.description}
@@ -425,6 +513,13 @@ export default function Revolutionary2030ServicesPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {/* Call to Action */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -462,10 +557,6 @@ export default function Revolutionary2030ServicesPage() {
           <motion.div
 =======
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -477,6 +568,13 @@ export default function Revolutionary2030ServicesPage() {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+=======
+      {/* Contact Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -518,3 +616,80 @@ export default function Revolutionary2030ServicesPage() {
         </div>
       </section>
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+                2030 Technology?;
+              </span>;
+            </h2>;
+            <p className='text-xl text-gray-300 mb-8'>;
+              Contact our team of technology experts to discuss how our;
+              revolutionary 2030 services can transform your business and propel;
+              you into the future.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>;
+              <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>;
+                Schedule Consultation;
+              </button>;
+              <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'>                View Pricing;
+              </button>;
+            </div>;
+            <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300'>;
+              <div className='flex items-center justify-center space-x-2'>;
+                <Phone className='w-5 h-5 text-cyan-400' />              Ready to Transform Your Business with;
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
+                {' '}2030 Technology?;
+              </span>;
+            </h2>;
+            <p className="text-xl text-gray-300 mb-8">;
+              Contact our team of technology experts to discuss how our revolutionary 2030 services ;
+              can transform your business and propel you into the future.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">;
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">;
+                Schedule Consultation;
+              </button>;
+              <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">;
+                View Pricing;
+              </button>;
+            </div>;
+            <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300'>;
+              <div className='flex items-center justify-center space-x-2'>;
+                <Phone className='w-5 h-5 text-cyan-400' />;
+                <span>{contactInfo && contactInfo.mobile}</span>;
+              </div>;
+              <div className='flex items-center justify-center space-x-2'>;
+                <Mail className='w-5 h-5 text-purple-400' />;
+                <span>{contactInfo && contactInfo.email}</span>;
+              </div>;
+              <div className='flex items-center justify-center space-x-2'>;
+                <MapPin className='w-5 h-5 text-pink-400' />;
+                <span className='text-sm'>{contactInfo && contactInfo.address}</span>              </div>                <span>{contactInfo && contactInfo.mobile}</span>;
+              </div>;
+              <div className="flex items-center justify-center space-x-2">;
+                <Mail className="w-5 h-5 text-purple-400" />;
+                <span>{contactInfo && contactInfo.email}</span>;
+              </div>;
+              <div className="flex items-center justify-center space-x-2">;
+                <MapPin className="w-5 h-5 text-pink-400" />;
+                <span className="text-sm">{contactInfo && contactInfo.address}</span>;
+              </div>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+      {/* Footer */}
+      <UltraFuturisticFooter2030 />;
+    </UltraFuturisticBackground2030>;
+  );  );
+
+=======
+  )
+}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+}
+  );
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

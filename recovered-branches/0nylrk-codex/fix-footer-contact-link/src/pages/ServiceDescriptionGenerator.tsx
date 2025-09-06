@@ -1,5 +1,17 @@
 
 
+import React, { useState } from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {ServiceDescriptionForm} from "@/components/services/ServiceDescriptionForm";
+import {GeneratedDescriptionDisplay} from "@/components/services/GeneratedDescriptionDisplay";
+import {SEO} from "@/components/SEO";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+export default function ServiceDescriptionGenerator() {;
+  const { isAuthenticated, isLoading } = useAuth();
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -7,6 +19,16 @@ import { ServiceDescriptionForm } from "@/components/services/ServiceDescription
 import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",
 import { SEO } from "@/components/SEO",
 
+  const { isAuthenticated, isLoading } = useAuth();
+
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+export default function ServiceDescriptionGenerator() {
+  const { isAuthenticated, isLoading } = useAuth(),
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // Show loading while checking authentication
   if (isLoading) {
     return (
@@ -24,13 +46,6 @@ import { SEO } from "@/components/SEO",
   const handleDescriptionSave = (editedDescription: string) => {
     setGeneratedDescription(editedDescription)
     // Here you could also save to database if needed
-=======
-
-
-  },
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
@@ -49,8 +64,8 @@ import { SEO } from "@/components/SEO",
           <div className="space-y-8">
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />
             {generatedDescription && (
-
-<<<<<<< HEAD
+              <GeneratedDescriptionDisplay
+              <GeneratedDescriptionDisplay 
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -62,6 +77,7 @@ import { Navigate } from "react-router-dom",;
 export default function ServiceDescriptionGenerator() {;
   const { isAuthenticated, isLoading } = useAuth(),;
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // Show loading while checking authentication;
   if (isLoading) {;
     return (
@@ -105,6 +121,8 @@ export default function ServiceDescriptionGenerator() {;
               <GeneratedDescriptionDisplay;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 description={generatedDescription}
                 onSave={handleDescriptionSave}
               />;

@@ -1,17 +1,24 @@
 
-
+return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
 }</ul> </div> </div>)
-
+ return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
+return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
+ return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
+}</ul> </div> </div>) 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {
   talentMd
 }</pre>)
 }</section> </div>) import { useEffect, useState } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
+import Head from 'next/head';
 
-=======
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function AutomationInsightsPage() {
 
   const [intel, setIntel] = useState<any>(null);
@@ -21,6 +28,23 @@ export default function AutomationInsightsPage() {
     fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {})
 =======
 
+=======
+      </section>;
+      <section id="talent" className="mb-8">;
+        <h2 className="font-medium">Talent Highlights</h2>;
+        {!talentMd ? (;
+          <div className="text-sm text-gray-500">Loading…</div>;
+        ) : (;
+          <pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800">{talentMd}</pre>;
+        )}
+      </section>
+    </div>
+);
+}
+  );
+}
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 {Object.entries(intel.insights.keywordCounts).map(([k, v]: any) => (
                   <li key={k}>{k}: {v as any}</li>
                 ))}

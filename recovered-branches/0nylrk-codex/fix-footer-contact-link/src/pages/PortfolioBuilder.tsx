@@ -1,10 +1,31 @@
 
+import { useState  } from 'react';
+import { AppHeader  } from '@/layout/AppHeader';
+import { Footer  } from '@/components/Footer';
+import { SEO  } from '@/components/SEO';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
+import { ResumeWizard  } from '@/components/resume-builder/ResumeWizard';
+import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builder/portfolio/PortfolioBuilder';
+function PortfolioBuilderContent() {
+  const [activeTab, setActiveTab] = useState('resume');
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import {useState} from 'react';
+import {AppHeader} from '@/layout/AppHeader';
+import {Footer} from '@/components/Footer';
+import {SEO} from '@/components/SEO';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
+import {ResumeWizard} from '@/components/resume-builder/ResumeWizard';
+import {PortfolioBuilder, as, PortfolioSection} from '@/components/resume-builder/portfolio/PortfolioBuilder';
+=======
 
 function PortfolioBuilderContent() {
   const [activeTab, setActiveTab] = useState('resume'),
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <>
       <SEO
@@ -73,5 +94,21 @@ function PortfolioBuilderContent() {;
     </>;
   );
 }
+=======
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+;
+
+export default function PortfolioBuilder() {;
+  return (
+    <ProtectedRoute>;
+      <PortfolioBuilderContent />;
+    </ProtectedRoute>;
+  );
+}
+
+;
+;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

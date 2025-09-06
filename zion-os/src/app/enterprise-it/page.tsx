@@ -1,6 +1,4 @@
 
-=======
-
 import Link from "next/link",;
 export const metadata = {;
   title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",;
@@ -8,8 +6,6 @@ export const metadata = {;
   keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions"},;
 export default function EnterpriseITPage() {;
   return (;
-
-
     <div className="min-h-screen">;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="min-h-screen">;
@@ -38,10 +34,10 @@ export default function EnterpriseITPage() {;
                 </h2>;
 
 =======
-                <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
-                  In today's digital - first world, enterprises need agile, scalable,
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                <p className="text-gray-300 text-lg mb-6 leading-relaxed">;
+                  In today's digital-first world, enterprises need agile, scalable;
+                  In today's digital-first world, enterprises need agile, scalable,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   and secure IT infrastructure to compete and thrive. Our comprehensive;
                   solutions help organizations modernize their technology stack while;
                   maintaining operational excellence.;
@@ -100,11 +96,11 @@ export default function EnterpriseITPage() {;
               </div>;
 
 =======
-              <h3 className="text - xl font - semibold mb - 3">Cloud Migration & Strategy</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                Seamless migration to cloud platforms with strategic planning,
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+              <h3 className="text-xl font-semibold mb-3">Cloud Migration & Strategy</h3>;
+              <p className="text-gray-400 mb-4">;
+                Seamless migration to cloud platforms with strategic planning;
+                Seamless migration to cloud platforms with strategic planning,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 cost optimization, and performance tuning.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -127,11 +123,11 @@ export default function EnterpriseITPage() {;
               </div>;
 
 =======
-              <h3 className="text - xl font - semibold mb - 3">DevOps & Automation</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                Streamline development and operations with automated CI / CD pipelines,
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+              <h3 className="text-xl font-semibold mb-3">DevOps & Automation</h3>;
+              <p className="text-gray-400 mb-4">;
+                Streamline development and operations with automated CI/CD pipelines;
+                Streamline development and operations with automated CI/CD pipelines,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 infrastructure as code, and monitoring solutions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -153,11 +149,11 @@ export default function EnterpriseITPage() {;
               </div>;
 
 =======
-              <h3 className="text - xl font - semibold mb - 3">Infrastructure Management</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                Comprehensive infrastructure management including server provisioning,
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+              <h3 className="text-xl font-semibold mb-3">Infrastructure Management</h3>;
+              <p className="text-gray-400 mb-4">;
+                Comprehensive infrastructure management including server provisioning;
+                Comprehensive infrastructure management including server provisioning,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 network configuration, and performance optimization.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -179,11 +175,11 @@ export default function EnterpriseITPage() {;
               </div>;
 
 =======
-              <h3 className="text - xl font - semibold mb - 3">Data Management</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                Enterprise data solutions including warehousing, analytics,
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+              <h3 className="text-xl font-semibold mb-3">Data Management</h3>;
+              <p className="text-gray-400 mb-4">;
+                Enterprise data solutions including warehousing, analytics;
+                Enterprise data solutions including warehousing, analytics,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 and business intelligence platforms.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -227,11 +223,11 @@ export default function EnterpriseITPage() {;
               </div>;
 
 =======
-              <h3 className="text - xl font - semibold mb - 3">Managed Services</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                24 / 7 managed IT services including monitoring, maintenance,
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+              <h3 className="text-xl font-semibold mb-3">Managed Services</h3>;
+              <p className="text-gray-400 mb-4">;
+                24/7 managed IT services including monitoring, maintenance;
+                24/7 managed IT services including monitoring, maintenance,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 and support for enterprise infrastructure.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -316,11 +312,11 @@ export default function EnterpriseITPage() {;
               </div>;
 
 =======
-              <h3 className="text - xl font - semibold mb - 3">Assessment</h3>;
-              <p className="text - gray - 400">;
-                Comprehensive evaluation of current infrastructure,
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+              <h3 className="text-xl font-semibold mb-3">Assessment</h3>;
+              <p className="text-gray-400">;
+                Comprehensive evaluation of current infrastructure;
+                Comprehensive evaluation of current infrastructure,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 identifying opportunities and challenges.;
               </p>;
             </div>;

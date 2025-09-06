@@ -1,4 +1,16 @@
 
+=======
+
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
+import {JobData, MatchResult} from "./types.ts";
+import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
+// Initialize the Supabase client
+const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
+const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
+import {JobData, MatchResult} from "./types.ts";
+import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
 
 // Initialize the Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",
@@ -11,6 +23,14 @@ const supabaseAnonKey = Deno && Deno.env.get("SUPABASE_ANON_KEY") || "";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+import { JobData, MatchResult } from "./types.ts",
+import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",
+
+// Initialize the Supabase client
+const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",
+const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",
+const supabase = createClient(supabaseUrl, supabaseAnonKey),
 /**
  * Main function to process job-talent matching
  * @param job The job data to find matches for
@@ -20,8 +40,6 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey);
 export async function processJobMatching(job: JobData, talents: any[]): Promise<MatchResult[]> {
   try {
 
-=======
-    const jobSkillsNormalized = await normalizeSkillsWithAI(job && job.skills);
     
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Prepare job details for matching prompt
@@ -129,7 +147,6 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
     }
   });
   await Promise.all(matchInsertPromises);
-
 }
 ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

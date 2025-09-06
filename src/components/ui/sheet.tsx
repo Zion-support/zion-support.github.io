@@ -12,12 +12,7 @@ const SheetOverlay = React.forwardRef<
   <SheetPrimitive.Overlay
     className={cn(
 
-=======
-
       "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       className
     )}
     {...props}
@@ -26,7 +21,7 @@ const SheetOverlay = React.forwardRef<
 ))
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 const sheetVariants = cva(
-
+<<<<<<< HEAD
         right:
           "inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm"}},
 
@@ -97,6 +92,8 @@ const SheetContent = React.forward_ref<;
       {children}
 <<<<<<< HEAD
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>
   </SheetPortal>
@@ -109,18 +106,15 @@ const SheetHeader = ({
   <div
     className={cn(
 
-      className
-    )}
-    {...props}
-  />
-)
-
 const SheetFooter = ({
   className
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
     className={cn(
+<<<<<<< HEAD
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
       className
     )}
@@ -157,6 +151,8 @@ const SheetHeader = ({
 ));
 SheetTitle.displayName = SheetPrimitive.Title.displayName;
 const SheetDescription = React.forwardRef<;
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>;
 >(({ className, ...props }, ref) => (;

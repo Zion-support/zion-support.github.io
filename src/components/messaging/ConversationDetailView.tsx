@@ -1,4 +1,6 @@
 
+=======
+<<<<<<< HEAD
 
   const { user } = useAuth()
   const {
@@ -91,15 +93,6 @@
             <div key={group.date}>
               <DateDivider date={new Date(group.date)} />
               <div className="space-y-3">
-
-        )}
-        <div ref={messagesEndRef} />
-      </div>
-      {/* Input */}
-      <div className="p-3 border-t border-zion-purple/20">
-        <form onSubmit={handleSendMessage} className="flex items-start gap-2">
-          <textarea
-
           />
           <Button
 
@@ -112,6 +105,7 @@
 
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <textarea;
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}

@@ -3,11 +3,9 @@ import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -20,6 +18,33 @@ import { DollarSign,
   Shield,
   BarChart3,
 
+=======
+import { DollarSign, ;
+  Brain, ;
+  Shield, ;
+  BarChart3, ;
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+ursor/fix-syntax-push-and-merge-to-main-40de
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import Layout from '../../components/Layout';
+import { DollarSign, Brain, Shield, BarChart3, CheckCircle, ArrowRight, TrendingUp, Lock, CreditCard, Database, FileText, Users } from 'lucide-react';;
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+import { DollarSign, 
+  Brain, 
+  Shield, 
+  BarChart3, 
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {
   DollarSign,
   Brain,
@@ -120,9 +145,6 @@ const services = [
     ];
   }
 
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ;];
 const benefits = [;
   {}
@@ -131,7 +153,6 @@ const benefits = [;
     icon: Shield;
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 ];
 const benefits = [
   {
@@ -158,8 +179,9 @@ const benefits = [
   }
 
 =======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ;];
 export default function FinancePage() {
   return (;
@@ -293,8 +315,9 @@ export default function FinancePage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 
 =======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">";
@@ -326,14 +349,21 @@ export default function FinancePage() {
                 </motion.div>;
               ))}
 
-=======
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
             </div>,
           </div>;
         </section>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+            </div>,
+          </div>;
+        </section>;
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+            </div>,
+          </div>;
+        </section>;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             </div>
           </div>
         </section>
@@ -386,14 +416,21 @@ export default function FinancePage() {
                 </motion.div>;
               ))}
 
-=======
-
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
             </div>,
           </div>;
         </section>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+            </div>,
+          </div>;
+        </section>;
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+            </div>,
+          </div>;
+        </section>;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             </div>
           </div>
         </section>
@@ -428,11 +465,13 @@ export default function FinancePage() {
     </Layout>;
 
 =======
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Financial Services?

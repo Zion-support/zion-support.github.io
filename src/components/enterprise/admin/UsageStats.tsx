@@ -4,6 +4,7 @@ export function UsageStats() {
 
   const handleSaveChanges = () => {
     toast({
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <div className="space-y-8">
@@ -46,6 +47,9 @@ export function UsageStats() {
             </Button>
           </CardFooter>
         </Card>
+=======
+        
+<<<<<<< HEAD
 
         <Card>
           <CardHeader>
@@ -79,95 +83,3 @@ export function UsageStats() {
             </Button>
           </CardFooter>
         </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>AI Features</CardTitle>
-            <CardDescription>
-              Set the AI usage limits for matching and content generation
-            </CardDescription>
-          </CardHeader>
-          <CardContent className='space-y-4'>
-            <div>
-              <div className='flex items-center justify-between mb-2'>
-                <div className='text-sm font-medium'>AI matching credits</div>
-                <Badge variant='outline'>435 / 1000</Badge>
-              </div>
-              <Progress value={43.5} className='h-2' />
-            </div>
-            <div className='grid gap-4'>
-              <div className='grid grid-cols-3 items-center gap-4'>
-                <div className='text-sm'>New limit:</div>
-                <div className='col-span-2'>
-                  <Input type='number' min='1' defaultValue='1000' />
-                </div>
-              </div>
-            </div>
-          </CardContent>
-          <CardFooter>
-            <Button size='sm' onClick={handleSaveChanges}>
-              Save Changes
-            </Button>
-          </CardFooter>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <CardTitle>Budget Controls</CardTitle>
-            <CardDescription>
-              Set spending caps for premium features and services
-            </CardDescription>
-          </CardHeader>
-          <CardContent className='space-y-4'>
-            <div>
-              <div className='flex items-center justify-between mb-2'>
-                <div className='text-sm font-medium'>Monthly budget</div>
-                <Badge variant='outline'>$1,250 / $5,000</Badge>
-              </div>
-              <Progress value={25} className='h-2' />
-            </div>
-            <div className='grid gap-4'>
-              <div className='grid grid-cols-3 items-center gap-4'>
-                <div className='text-sm'>Monthly budget:</div>
-                <div className='col-span-2'>
-                  <Input type='number' min='0' step='100' defaultValue='5000' />
-                </div>
-              </div>
-              <div className='grid grid-cols-3 items-center gap-4'>
-                <div className='text-sm'>Alert threshold:</div>
-                <div className='col-span-2'>
-                  <select className='w-full flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring'>
-                    <option value='75'>75% of limit</option>
-                    <option value='80'>80% of limit</option>
-                    <option value='90'>90% of limit</option>
-                    <option value='95'>95% of limit</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </CardContent>
-          <CardFooter>
-            <Button size='sm' onClick={handleSaveChanges}>
-              Save Changes
-            </Button>
-          </CardFooter>
-        </Card>
-      </div>
-
-          </div>
-          <div>
-            <h3 className='font-medium'>Need higher limits?</h3>
-            <p className='text-sm text-muted-foreground'>
-              Contact your account manager to discuss custom limits for your
-              enterprise.
-            </p>
-          </div>
-        </div>
-        <Button>Contact Us</Button>
-      </div>
-
-import React from "react",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { toast } from "@/hooks/use-toast",;

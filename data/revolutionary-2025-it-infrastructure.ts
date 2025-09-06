@@ -1,3 +1,4 @@
+import { ServiceVariant } from '../types/service-variants';
 
 =======
 
@@ -45,7 +46,67 @@
     description:
       'Revolutionary cybersecurity platform that combines quantum encryption, AI threat detection, and zero-trust architecture to provide unhackable security for enterprises and governments.'
     features: [
+      'Quantum encryption algorithms'
+      'AI-powered threat detection'
+      'Zero-trust architecture'
+      'Real-time threat response'
+      'Quantum key distribution'
+      'Advanced malware protection'
+      'Compliance automation'
+      'Security orchestration'
+    ]
+    popular: true
+    icon: '🔒'
+    color: 'from-red-600 to-pink-700'
+    textColor: 'text-red-400'
+    link: 'https://ziontechgroup.com/quantum-cybersecurity-platform'
+    marketPosition:
+      'Most advanced cybersecurity platform. Traditional security solutions are vulnerable to quantum attacks and lack AI integration.'
+    targetAudience:
+      'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors'
+    trialDays: 30
+    setupTime: '8 hours'
+    category: 'Cybersecurity & Quantum Security'
+    realService: true
+    technology: [
+      'Quantum Computing'
+      'AI/ML'
+      'Zero Trust'
+      'Python'
+      'Quantum APIs'
+      'Cloud Security'
+    ]
+    integrations: [
+      'SIEM systems'
+      'Firewalls'
+      'Identity providers'
+      'Security tools'
+    ]
+    useCases: [
+      'Enterprise security'
+      'Government security'
+      'Financial security'
+      'Healthcare security'
+      'Defense security'
+    ]
+    roi: 'Enterprises see 4000%+ ROI through unhackable security and reduced breach risks.'
+    competitors: ['Palo Alto Networks', 'CrowdStrike', 'SentinelOne']
+    marketSize: '$200B cybersecurity market',    features: [
 
+      'Quantum encryption algorithmsAI-powered threat detectionZero-trust architectureReal-time threat responseQuantum key distributionAdvanced malware protectionCompliance automationSecurity orchestration'
+      'Quantum encryption algorithmsAI-powered threat detectionZero-trust architectureReal-time threat responseQuantum key distributionAdvanced malware protectionCompliance automationSecurity orchestration';
+    ];
+    popular: true;
+    icon: '🔒';
+    color: 'from-red-600 to-pink-700';
+    textColor: 'text-red-400';
+    link: 'https://ziontechgroup.com/quantum-cybersecurity-platform';
+
+    marketPosition: 'Most advanced cybersecurity platform. Traditional security solutions are vulnerable to quantum attacks and lack AI integration.'
+    targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors';
+
+    trialDays: 30;
+    setupTime: '8 hours';
     category: 'Cybersecurity & Quantum Security';
     real_service: true;
     technology: ['Quantum ComputingAI / MLZero TrustPythonQuantum APIsCloud Security'];
@@ -888,3 +949,6 @@ export default revolutionary2025ITServices;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export default revolutionary2025ITServices;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -16,32 +16,21 @@ export const QrCodeDownload: React.FC = () => {
               <p className="text-lg text-gray-300 mb-8">
                 Scan the QR code with your phone camera to download the app instantly, or use the buttons below to get it from your app store of choice.
               </p>
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <div className="flex gap-2 items-center text-sm text-gray-400">
                 <span className="block h-1 w-1 rounded-full bg-zion-purple"></span>
                 <span>Compatible with iOS 14+ and Android 8.0+</span>
               </div>
             </div>
+=======
+            
+<<<<<<< HEAD
 
             <div className="flex-shrink-0">
               <div className="bg-white dark:bg-zion-blue-dark p-6 rounded-xl shadow-lg">
                 <div className="w-48 h-48 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
                   <QrCode className="w-full h-full p-4" />
-                  {/* This would be replaced with an actual QR code in production */}
-                </div>
-                <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">
-                  Scan to download
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-},
-import React from "react",;
-import { QrCode } from 'lucide-react';
-import { AppStoreButtons } from "./AppStoreButtons",;
 export const QrCodeDownload: React.FC = () => {;
   // App store links - these would come from environment variables in production;
   const appStoreUrl = "#", // Replace with actual App Store URL;
@@ -86,6 +75,24 @@ export const QrCodeDownload: React.FC = () => {;
   );
 };
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+"
+
+
+";
+                  {/* This would be replaced with an actual QR code in production */}
+                </div>
+                <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">
+                  Scan to download
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  )
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

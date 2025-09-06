@@ -1,5 +1,7 @@
 
 } from '../data/2025-emerging-tech-services-enhanced';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   innovativeRealMicroSaasServices2025 ;
 } from '../data/2025-innovative-real-micro-saas-services';
 import { ;
@@ -10,9 +12,11 @@ import { ;
 } from '../data/2025-innovative-it-services-enhanced';
 import { ;
   emergingTechServicesEnhanced2025 ;
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '../data/2025-emerging-tech-services-enhanced';
 
 
@@ -26,6 +30,8 @@ import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026'
 import Link from 'next/link';
 import {
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 } from 'lucide-react';
 interface Homepage2025Props {
   showInternalNav?: boolean;
@@ -46,6 +52,42 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       setCurrentServiceIndex(
         prev => (prev + 1) % innovativeRealMicroSaasServices2025.length
       );
+  ArrowRight,
+  Star,
+  Brain,
+  Atom,
+  Shield,
+  Zap,
+  Users,
+  Globe,
+  TrendingUp,
+  Rocket,
+  Cpu,
+  Lock,
+  BarChart3,;
+  Cloud,;
+} from 'lucide-react';
+;
+interface Homepage2025Props {
+  showInternalNav?: boolean;
+;
+const Homepage2025: React.FC < Homepage2025Props> = ({
+  showInternalNav = true,
+}) => {  const [active_section, setActiveSection] = useState ('hero');} from 'lucide-react';
+;
+interface Homepage2025Props { showInternalNav?: boolean }
+const Homepage2025: React.FC < Homepage2025Props> = ({ showInternalNav = true }) => {
+  const [active_section, setActiveSection] = useState ('hero');
+  const [currentServiceIndex, setCurrentServiceIndex] = useState (0);
+  const [is_visible, setIsVisible] = useState (false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false);
+;
+  useEffect (() => {
+    setIsVisible (true);
+    const interval = set_interval (() => {
+      setCurrentServiceIndex (
+        prev => (prev + 1) % innovativeRealMicroSaasServices2025.length);
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }, 5000);
     return () => clearInterval(interval);  }, []);      setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length)
     }, 5000);
@@ -195,6 +237,34 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   ))}
                 </div>
 
+
+  return (
+    <UltraFuturisticBackground2026 intensity="medium" theme="quantum">
+      {showInternalNav && (
+        <>
+          {/* Navigation */}
+          <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex justify-between items-center h-16">
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  className="flex items-center space-x-2"
+                >
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg"></div>
+                  <span className="text-white font-bold text-xl">ZionTech Group</span>
+                </motion.div>
+                {/* Desktop Navigation */}
+                <div className="hidden lg:flex space-x-8">
+                  {navigationSections.map((section) => (
+                    <button
+                  {navigationSections.map(section => (                    <button
+
+                    <button
+
+                    <button
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       key={section.id}
                       on_click={() => scrollToSection (section.id)}
                       className={`flex items - center space - x-2 text - sm font - medium transition - all duration - 300 ${
@@ -202,15 +272,13 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                           ? 'text - cyan - 400 border - b-2 border - cyan - 400';
                           : 'text - gray - 300 hover:text - cyan - 400';
                       }`}
+                    >
+                      <span>{section.icon}</span>
+                      <span>{section.label}</span>
+                    </button>
+                  ))}
+                </div>
 
-                </div>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 {/* Contact Info */}
@@ -253,7 +321,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     className='lg:hidden border-t border-white/10'
                   >
                     <div className='py-4 space-y-2'>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Mobile Navigation Menu */}
               <AnimatePresence>;
                 {isMobileMenuOpen && (;
@@ -261,9 +331,21 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
+                    className='lg:hidden border-t border-white/10'
+                  >
+                    <div className='py-4 space-y-2'>
+                      {navigationSections.map(section => (                        <button                    className="lg:hidden border-t border-white/10"
+                  >
+                    <div className="py-4 space-y-2">
+                      {navigationSections.map((section) => (
+                      {navigationSections.map(section => (                        <button
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           key={section.id}
                           onClick={() => scrollToSection(section.id)}
                           className={`flex items-center space-x-3 w-full text-left px-4 py-2 rounded-lg transition-all duration-300 ${
@@ -304,7 +386,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       )}
 =======
 
-
+      {/* Hero Section */}
       <section
         id='hero'
         className='relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16'>;
@@ -316,14 +398,10 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             <motion&& motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
-
-
+              className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'            >      <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
+        <div className="text-center z-10 max-w-6xl mx-auto">
               className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'            >
 
-
-
-          <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -349,6 +427,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               animate={{ coordinate_y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Enhanced CTA Section */}
               <motion&& motion.div
@@ -356,6 +435,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
       <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
         <div className="text-center z-10 max-w-6xl mx-auto">
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -397,86 +477,36 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 </Link>
               </motion.div>              >
 
-                <Star className="w-5 h-5" />
-                <span>Innovation Leader 2025-2026</span>
-              </motion.div>
-              <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Zion Tech Group
-              </h1>
-              <p className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-                Pioneering the future of technology with innovative solutions that drive business transformation
-              </p>
               {/* Enhanced CTA Section */}
               <motion.div
                 variants={itemVariants}
-                className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
+                className='flex flex-col sm:flex-row gap-4 justify-center mb-8'
               >
-                <Link href="/comprehensive-services-showcase-2026">
-                  <button className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
-                    <span className="flex items-center gap-2">
+                <Link href='/comprehensive-services-showcase-2026'>
+                  <button className='group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25'>
+                    <span className='flex items-center gap-2'>
                       Explore 2026 Services
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
                     </span>
                   </button>
                 </Link>
-                <Link href="/comprehensive-services-showcase-2025">
-                  <button className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105">
+                <Link href='/comprehensive-services-showcase-2025'>
+                  <button className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105'>
                     2025 Services Showcase
                   </button>
                 </Link>
-                <Link href="/get-started">
-                  <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
-                    Get Started
+                <Link href='/get-started'>
+                  <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>                    Get Started
                   </button>
                 </Link>
-              </motion.div>
-
-              {/* Trust Indicators */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className='flex items-center justify-center space-x-6 text-sm text-gray-400'
-              >              >
-
-                <div className="flex items-center space-x-2">
-                  <Shield className="w-4 h-4 text-green-400" />
-                  <span>Enterprise Security</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Globe className="w-4 h-4 text-blue-400" />
-                  <span>Global Reach</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <TrendingUp className="w-4 h-4 text-purple-400" />
-                  <span>Proven Results</span>
-                </div>
-              </motion.div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-=======
-
+              </motion.div>              >
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              {/* Trust Indicators */}
-              <motion&& motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-
-
-      {/* Features Section */}
-      <section className='py-20 px-4 relative'>;
-        <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="py-20 px-4 relative">;
-        <div className="max-w-7xl mx-auto">;
-          <motion&& motion.div
-
 =======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Features Section */}
       <section className="py-20 px-4 relative">
@@ -485,14 +515,26 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+            className='text-center mb-20'
 
 =======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Comprehensive Technology Solutions
@@ -507,6 +549,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               <motion.div
                 key={index}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             className='text-center mb-20'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Comprehensive Technology Solutions;
@@ -535,6 +578,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -550,10 +596,32 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>
 
 =======
+            ))}
+          </div>
+        </div>
+      </section>
+
+          </div>;
+        </div>;
+      </section>;
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Enhanced Services Preview */}
+      <section className='py-20 px-4'>;
+        <div className='max-w-6xl mx-auto'>;
+          <motion&& motion.div
+            className='text-center mb-16'            initial={{ opacity: 0, y: 40 }}      <section className="py-20 px-4">;
+        <div className="max-w-6xl mx-auto">;
+          <motion&& motion.div
+            className="text-center mb-16"
+      {/* Enhanced Services Preview */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 40 }}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Enhanced Services Preview */}
       <section className='py-20 px-4'>
@@ -562,6 +630,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             whileInView={{ opacity: 1, y: 0 }}
 
                 className='inline - flex items - center space - x-2 px - 6 py - 3 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 400 / 30 rounded - full text - cyan - 400 text - lg font - medium backdrop - blur - sm';
@@ -923,9 +994,46 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </div>
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -10, scale: 1.02 }}
+                onClick={() => (window.location.href = service.link)}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
+                />
+                <div className='relative p-6'>
+                  <div
+                    className={`w-12 h-12 rounded-lg bg-gradient-to-br ${service.gradient} p-3 mb-4`}
+                  >
+                    <service.icon className='w-full h-full text-white' />
+                  </div>
+                  <h3 className='text-xl font-semibold text-white mb-3'>
+                    {service.title}
+                  </h3>
+                  <p className='text-gray-300 leading-relaxed mb-4'>
+                    {service.description}
+                  </p>
+                  <a
+                    href={service.link}
+                    className='flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors'
+                  >
+                    <span className='text-sm font-medium'>Explore Service</span>
+                    <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />                  </a>                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-300 leading-relaxed mb-4">{service.description}</p>
+                  <a href={service.link} className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                    <span className="text-sm font-medium">Explore Service</span>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          {/* Call to Action for Services Showcase */}
+          <motion.div
+            className='text-center mt-16'            initial={{ opacity: 0, y: 40 }}            className="text-center mt-16"
 
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -945,6 +1053,9 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             whileInView={{ opacity: 1, y: 0 }}
 
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -982,6 +1093,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           <motion.div
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -1005,30 +1118,28 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
           </motion.div>
         </div>
       </section>
+=======
+              Website;
+            </a>;
+          </div>;
+        </div>;
+      </footer>;
 
-            <p className="mt-2">
-              Address: 364 E Main St STE 1008 Middletown DE 19709
-              Phone: +1 302 464 0950
-              Email: kleber@ziontechgroup.com
-            </p>
-          </div>
-          <div className="flex justify-center space-x-6">
-            <a href="/comprehensive-services-showcase-2026" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              2026 Services
-            </a>
-            <a href="/comprehensive-services-showcase-2025" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              2025 Services
-            </a>
-            <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              Website
-            </a>
-          </div>
-        </div>
-      </footer>
-    </UltraFuturisticBackground2026>
 
-export default Homepage2025;  )
-}
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default Homepage2025;
+
+export default Homepage2025;
+export default Homepage2025;
+=======
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

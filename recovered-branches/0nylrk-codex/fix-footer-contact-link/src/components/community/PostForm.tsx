@@ -1,6 +1,16 @@
 
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import {useState} from "react";
+import {useForm} from "react-hook-form";
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Textarea} from "@/components/ui/textarea";
+import {ForumCategory} from "@/types/community";
+=======
 
-import {
 import { 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Card;
@@ -22,6 +32,7 @@ import { Button } from "@/components/ui/button",
 
 interface PostFormValues {
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface PostFormValues {
   title: string,
   content: string,
@@ -29,6 +40,16 @@ interface PostFormValues {
   tags: string
 =======
 
+  title: string
+  content: string
+  categoryId: ForumCategory
+
+  tags: string
+}
+interface PostFormProps {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void,
   isEditing?: boolean
@@ -37,8 +58,43 @@ interface PostFormValues {
 export const PostForm = ({;
   initialValues;
   onSubmit;
+=======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import { useState } from "react",;
+import { useForm } from "react-hook-form",;
+import {;
+  Card,;
+  CardContent,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle;
+} from "@/components/ui/card",;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage;
+} from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import { ForumCategory } from "@/types/community",;
+interface PostFormValues {;
+  title: string,;
+  content: string,;
+  categoryId: ForumCategory,;
+  tags: string;
+}
+;
+interface PostFormProps {;
+  initialValues?: Partial<PostFormValues>,;
+  onSubmit: (values: PostFormValues) => void,;
+  isEditing?: boolean;
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void
@@ -48,47 +104,9 @@ export const PostForm = ({
   initialValues,
   onSubmit,
 
-  isEditing = false
-}: PostFormProps) => {
-  const form = useForm<PostFormValues>({
-    defaultValues: {
-
 =======
-import {useState} from "react";
-import {useForm} from "react-hook-form";
-import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Textarea} from "@/components/ui/textarea";
-import {ForumCategory} from "@/types/community";
-interface PostFormValues {;
-  title: string,;
-  content: string,;
-  categoryId: ForumCategory,;
-  tags: string;
-}
-
-interface PostFormProps {;
-  initialValues?: Partial<PostFormValues>;
-  onSubmit: (values: PostFormValues) => void,;
-  isEditing?: boolean;
-}
-
-export const PostForm = ({;
-  initialValues;
-  onSubmit;
-  isEditing = false;
-}: PostFormProps) => {;
-  const form = useForm<PostFormValues>({;
-    defaultValues: {;
-      title: initialValues?.title || "",;
-      content: initialValues?.content || "",;
-      categoryId: initialValues?.categoryId || "project-help",;
-      tags: initialValues?.tags || "";
-
-    }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -138,6 +156,7 @@ export const PostForm = ({
 
   }),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const handleSubmit = async (values: PostFormValues) => {;
     setIsSubmitting(true),;
     try {;
@@ -242,3 +261,5 @@ export const PostForm = ({
     </Card>
   )
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -134,18 +134,27 @@ async function main() {
   try {
     await generateIdeasIfPossible()
   } catch {}
+  console.log('Cloud autonomous run complete:', status.updatedAt)
+}
+
+main().catch((e) => { console.error(e), process.exit(1) });
+
+main().catch((e) => { console.error(e), process.exit(1) }),;
+;
+  // Generate automation ideas if key present;
+  try {;
+    await generateIdeasIfPossible();
+  } catch {}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   try {
     await generateIdeasIfPossible ();
   } catch {}
+<<<<<<< HEAD
 
 
   console && console.log('Cloud autonomous run complete:', status && status.updatedAt)
 }
 ;
 main().catch((e) => { console.error(e), process.exit(1) }),;
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

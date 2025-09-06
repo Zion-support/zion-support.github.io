@@ -1,7 +1,21 @@
 
-
+import {useState} from "react";
+import {MessageSquare} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {ChatAssistant} from "@/components/ChatAssistant";
+export function ChatAssistantTrigger() {;
+  const [isOpen, setIsOpen] = useState(false);
 import { useState } from "react",
 import { MessageSquare } from "lucide-react",
+import { Button } from "@/components/ui/button";
+import { ChatAssistant } from "@/components/ChatAssistant";
+export function ChatAssistantTrigger() {
+  const [isOpen, setIsOpen] = useState(false);
+import { Button } from "@/components/ui/button",
+import { ChatAssistant } from "@/components/ChatAssistant",
+export function ChatAssistantTrigger() {
+  const [isOpen, setIsOpen] = useState(false),
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   // Handle sending messages to the AI chat assistant
 
@@ -11,8 +25,6 @@ import { MessageSquare } from "lucide-react",
         method: "POST"
         headers: {
 
-=======
-
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
@@ -21,20 +33,14 @@ import { MessageSquare } from "lucide-react",
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      if (!response.ok) {
-        throw new Error("Failed to get response from AI assistant")
-      }
-      return Promise.resolve()
-    } catch (error) {
-      console.error("Error in AI chat:", error);
-      return Promise.resolve()
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
   }
   return (
     <>;
 
       <Button;
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,5 +1,9 @@
-
-
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -10,7 +14,18 @@ import react from "eslint-plugin-react";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 
 import js from '@eslint/js';
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import next from '@next/eslint-plugin-next';
 
+export default [
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ["**/*.{js,jsx,ts,tsx}"],
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     ignores: [
       '.next/**',
       'out/**',
@@ -59,6 +74,9 @@ import react from 'eslint-plugin-react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 
 export default [
+  },
+  js && js.configs.recommended,
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   {
 
       parserOptions: {
@@ -98,7 +116,7 @@ export default [
         beforeEach: "readonly",
         afterEach: "readonly",
         beforeAll: "readonly",
-
+        afterAll: "readonly",
         React: 'readonly',
 
 import typescript from '@typescript-eslint/eslint-plugin';
@@ -118,6 +136,9 @@ export default [
           jsx: true
         }
 
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       },
       globals: {
 
@@ -160,6 +181,7 @@ export default [
         { allowConstantExport: true }
       ],
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         describe: 'readonly',
         it: 'readonly',
         beforeEach: 'readonly',
@@ -168,17 +190,61 @@ export default [
     },
     plugins: {
 
-      '@typescript-eslint': typescript,
-      'react': react,
-      'react-hooks': reactHooks
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    },
+    settings: {
+      react: {
+        version: "detect"
+      }
+    }
+  },
+  {
+    files: [
+      "**/*.cjs",
+      "**/scripts/**/*.js",
+      "**/automation/**/*.js",
+      "**/pm2/**/*.js"
+    ],
+    languageOptions: {
+      ecmaVersion: 2021,
+      sourceType: "script",
+      globals: {
+        ...globals && globals.node,
+        console: "readonly",
+        process: "readonly",
+        require: "readonly",
+        module: "readonly",
+        exports: "readonly",
+        __dirname: "readonly",
+        __filename: "readonly",
+        Buffer: "readonly",
+        global: "readonly"
+      }
     },
     rules: {
+      "no-unused-vars": "warn",
+      "no-console": "warn",
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-      'no-unused-vars': 'off',
-      'no-console': 'warn',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
-
+      "no-undef": "error"
+    }
+  }
+];
+      "no-undef": "error",
+    },
+  },;
+];
+      '@typescript-eslint': typescript,
+      react: react,
+      'react-hooks': reactHooks,
+      '@next/next': next,
+    },
+    rules: {
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...next.configs.recommended.rules,
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'no-undef': 'error'
@@ -215,6 +281,17 @@ export default [
       'supabase/',
       'working-automation-suite.cjs'
     ]
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+  }
+];
+origin/automation-improvements-final
 
   }
 ];
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

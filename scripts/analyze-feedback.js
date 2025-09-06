@@ -1,9 +1,15 @@
+const fs = require('fs');
+const path = require('path');
+const { OpenAI } = require('openai');
+const DATA_DIR = path.join(process.cwd(), 'data');
+const FEEDBACK_FILE = path.join(DATA_DIR, 'feedback_logs.json');
+const REPORT_DIR = path.join(DATA_DIR, 'reportsfeedback');
+function readAll() {
+  try {
 
 
   } catch (e) {
-    return [];
-=======
-
+    return []
 const fs = require('fs'),;
 const path = require('path'),;
 const { OpenAI } = require('openai'),;
@@ -16,6 +22,7 @@ function readAll() {;
     return JSON.parse(raw || '[]');
   } catch (e) {;
     return [];
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -64,11 +71,17 @@ async function main() {
   const md = `# Weekly Feedback Analysis (low-rated)\n\nDate: ${new Date().toISOString()}\n\n## Summary\n${text}\n`
   fs.writeFileSync(summaryPath, md)
   // Append to prompt improvements
-
+  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : ''
+  fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`)
+  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
+  fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
   console.log('Analysis written to', summaryPath)
 }
 main().catch((e) => { console.error(e), process.exit(1) });
 
+  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
+  fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
+main().catch((e) => { console.error(e), process.exit(1) }),;
   // // // console.log('Analysis written to', summaryPath)
   const all = readAll(),;
   const recent = all.filter(lastNDays(7)),;
@@ -79,6 +92,7 @@ main().catch((e) => { console.error(e), process.exit(1) });
   if (downs.length === 0) {;
     fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),;
     // // // console.log('No low-rated feedback to analyze.'),;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     return;
   }
   const prompt = `You are an AI QA analyst. Analyze the following low - rated AI responses feedback entries and propose concrete prompt - base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system / user prompts\n\n_entries (JSON):\n${JSON.stringify (downs.slice (-100), null, 2)}`,
@@ -99,10 +113,5 @@ main().catch((e) => { console.error(e), process.exit(1) });
 }
 ;
 main().catch((e) => { console.error(e), process.exit(1) }),;
-=======
-
-  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
-  fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

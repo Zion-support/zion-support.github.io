@@ -1,18 +1,23 @@
+import React from 'react';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function AIEthicsGovernanceFramework() {
+	return (
+		<ServiceLanding
 
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 			title="AI Ethics & Governance Framework"
 			slug="ai-ethics-governance-framework"
 			description="Operationalize responsible AI with policies, risk assessments, model monitoring, and documentation. Align with global standards and regulatory expectations."
 			subtitle="Ship trustworthy AI with auditable controls and continuous oversight."
+<<<<<<< HEAD
 
-=======
-
-
-=======
 			pricePerMonthUSD={1599  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -26,7 +31,12 @@
 				"Prompt governance and access controls",
 				"Regulatory mapping (EU AI Act, NIST AI RMF)",
 				"Training and incident response runbooks"
-
+			]}
+			industries={["Finance", "Healthcare", "Public Sector", "SaaS"]}
+			canonical="https: //ziontechgroup.com/ai-ethics-governance-framework"
+		/>
+	)
+};
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -37,7 +47,6 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
 			canonical="https: //ziontechgroup.com/ai-ethics-governance-framework"
 		/>
 	)
@@ -49,4 +58,4 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

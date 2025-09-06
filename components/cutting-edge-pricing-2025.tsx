@@ -39,6 +39,214 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+visible: {
+  opacity: 1, transition: {
+  staggerChildren: 0.1
+}
+const itemVariants = {
+  hidden: {
+  y: 20, opacity: 0
+}
+visible: {
+  y: 0, opacity: 1, transition: {
+  duration: 0.5
+}
+const pricingTiers = [
+  {
+    name: 'Starter'
+    price: 99
+    period: 'month'
+    description: 'Perfect for small businesses and startups'
+    features: [
+      'Up to 5 team membersBasic AI content generationStandard supportCore integrationsBasic analyticsEmail support'
+    ]
+    icon: <Target className="w-6 h-6" />
+    color: 'from-blue-500 to-cyan-500'
+    cta: 'Start Free Trial'
+    ctaLink: '/contact'
+    popular: false
+  }
+  {
+    name: 'Professional'
+    price: 299
+    period: 'month'
+    description: 'Ideal for growing businesses and teams'
+    features: [
+      'Up to 25 team membersAdvanced AI featuresPriority supportAdvanced integrationsAdvanced analyticsPhone & email supportCustom brandingAPI access'
+    ]
+    icon: <Zap className="w-6 h-6" />
+    color: 'from-purple-500 to-pink-500'
+    cta: 'Start Free Trial'
+    ctaLink: '/contact'
+    popular: true
+  }
+  {
+    name: 'Enterprise'
+    price: 999
+    period: 'month'
+    description: 'For large organizations with complex needs'
+    features: [
+      'Unlimited team membersFull AI suite access24/7 dedicated supportCustom integrationsAdvanced analytics & reportingDedicated account managerCustom developmentSLA guarantees';
+      'On-premise optionsCompliance certifications'
+    ]
+    icon: <Shield className="w-6 h-6" />
+    color: 'from-green-500 to-emerald-500'
+    cta: 'Contact Sales'
+    ctaLink: '/contact'
+    popular: false
+  }
+const serviceCategories = [
+  {
+    name: 'AI & Consciousness Services'
+    icon: <Brain className='w-8 h-8' />
+    services: cuttingEdgeAIServices2025.slice(0, 6)
+    description:
+      'Revolutionary AI platforms with consciousness and emotional intelligence'
+  }
+  {
+    name: 'Quantum & Emerging Tech'
+    icon: <Atom className='w-8 h-8' />
+    color: 'from-purple-500 to-pink-500'
+    services: cuttingEdgeQuantumServices2025.slice(0, 6)
+    description:
+      'Breakthrough quantum computing and space technology solutions'
+  }
+  {
+    name: 'Enterprise IT Solutions'
+    icon: <Shield className='w-8 h-8' />
+    color: 'from-blue-500 to-cyan-500'
+    services: cuttingEdgeEnterpriseITServices2025.slice(0, 6)
+    description: 'Advanced enterprise infrastructure and security solutions'
+  }
+  {
+    name: 'Micro SAAS Solutions'
+    icon: <Rocket className='w-8 h-8' />
+    color: 'from-teal-500 to-emerald-500'
+    services: cuttingEdgeMicroSaasServices2025.slice(0, 6)
+    description: 'Innovative business solutions for modern enterprises'
+  }
+];
+
+=======
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+visible: {
+  opacity: 1, transition: {
+  staggerChildren: 0.1
+}
+const itemVariants = {
+  hidden: {
+  y: 20, opacity: 0
+}
+visible: {
+  y: 0, opacity: 1, transition: {
+  duration: 0.5
+}
+const pricingTiers = [
+  {
+    name: 'Starter'
+    price: 99
+    period: 'month'
+    description: 'Perfect for small businesses and startups'
+    features: [
+      'Up to 5 team membersBasic AI content generationStandard supportCore integrationsBasic analyticsEmail support'
+    ]
+    icon: <Target className="w-6 h-6" />
+    color: 'from-blue-500 to-cyan-500'
+    cta: 'Start Free Trial'
+    ctaLink: '/contact'
+    popular: false
+  }
+  {
+    name: 'Professional'
+    price: 299
+    period: 'month'
+    description: 'Ideal for growing businesses and teams'
+    features: [
+      'Up to 25 team membersAdvanced AI featuresPriority supportAdvanced integrationsAdvanced analyticsPhone & email supportCustom brandingAPI access'
+    ]
+    icon: <Zap className="w-6 h-6" />
+    color: 'from-purple-500 to-pink-500'
+    cta: 'Start Free Trial'
+    ctaLink: '/contact'
+    popular: true
+  }
+  {
+    name: 'Enterprise'
+    price: 999
+    period: 'month'
+    description: 'For large organizations with complex needs'
+    features: [
+      'Unlimited team membersFull AI suite access24/7 dedicated supportCustom integrationsAdvanced analytics & reportingDedicated account managerCustom developmentSLA guarantees';
+      'On-premise optionsCompliance certifications'
+    ]
+    icon: <Shield className="w-6 h-6" />
+    color: 'from-green-500 to-emerald-500'
+    cta: 'Contact Sales'
+    ctaLink: '/contact'
+    popular: false
+  }
+const serviceCategories = [
+  {
+    name: 'AI & Consciousness Services'
+    icon: <Brain className='w-8 h-8' />
+    services: cuttingEdgeAIServices2025.slice(0, 6)
+    description:
+      'Revolutionary AI platforms with consciousness and emotional intelligence'
+  }
+  {
+    name: 'Quantum & Emerging Tech'
+    icon: <Atom className='w-8 h-8' />
+    color: 'from-purple-500 to-pink-500'
+    services: cuttingEdgeQuantumServices2025.slice(0, 6)
+    description:
+      'Breakthrough quantum computing and space technology solutions'
+  }
+  {
+    name: 'Enterprise IT Solutions'
+    icon: <Shield className='w-8 h-8' />
+    color: 'from-blue-500 to-cyan-500'
+    services: cuttingEdgeEnterpriseITServices2025.slice(0, 6)
+    description: 'Advanced enterprise infrastructure and security solutions'
+  }
+  {
+    name: 'Micro SAAS Solutions'
+    icon: <Rocket className='w-8 h-8' />
+    color: 'from-teal-500 to-emerald-500'
+    services: cuttingEdgeMicroSaasServices2025.slice(0, 6)
+    description: 'Innovative business solutions for modern enterprises'
+  }
+];
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+} from 'lucide-react';
+
+import Layout from '../components/layout/Layout';
+import { cuttingEdgeAIServices2025  } from '../data/2025-cutting-edge-ai-services';
+import { cuttingEdgeQuantumServices2025  } from '../data/2025-cutting-edge-quantum-services';
+import { cuttingEdgeEnterpriseITServices2025  } from '../data/2025-cutting-edge-enterprise-it';
+import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const stats = [
   {
     number: '25+'
@@ -67,10 +275,17 @@ const stats = [
   { number: '$500B+', label: 'Market Coverage', icon: TrendingUp, color: 'text-purple-400' }
   { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' }
   { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-400' }
-
 export default function CuttingEdgePricing2025() {
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+export default function CuttingEdgePricing2025() {;
+=======
+
+export default function CuttingEdgePricing2025() {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [selectedCategory, setSelectedCategory] = useState('all');
   const allServices = [
 
@@ -215,6 +430,12 @@ export default function CuttingEdgePricing2025() {;
     ...cuttingEdgeEnterpriseITServices2025;
     ...cuttingEdgeMicroSaasServices2025;
   ];
+  const filteredServices = selectedCategory === 'all'
+    ? allServices
+    : allServices.filter(service => service.category === selectedCategory);
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
 
   const containerVariants = {
     hidden: { opacity: 0 }
@@ -303,9 +524,13 @@ export default function CuttingEdgePricing2025() {;
               >
                 Cutting-Edge
 
-  return (
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -314,19 +539,21 @@ export default function CuttingEdgePricing2025() {;
                   Pricing 2025
                 </span>
               </motion.h1>
-
-
+              <motion.p
               <motion.p 
-
-
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you 
-
+                Experience revolutionary technology at competitive prices. Our
+                cutting-edge services are designed to give you a competitive
+                advantage while maintaining affordability and value.
+              </motion.p>
+              {/* Hero Stats */}
+              <motion.div
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Experience revolutionary technology at competitive prices. Our cutting-edge services are designed to give you
                 a competitive advantage while maintaining affordability and value.
               </motion.p>
 {/* Hero Stats */}
@@ -392,6 +619,13 @@ export default function CuttingEdgePricing2025() {;
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
@@ -404,8 +638,15 @@ export default function CuttingEdgePricing2025() {;
                     </div>
                     <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.number}</div>
                     <div className="text-sm text-white/70">{stat.label}</div>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 ))}
+              </motion.div>
+            </motion.div>
+          </div>
+        </section>
 
+=======
               </motion && motion.div>;
             </motion && motion.div>;
           </div>;
@@ -413,16 +654,13 @@ export default function CuttingEdgePricing2025() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Pricing Tiers Section */}
         <section className='py-20 bg-gradient-to-b from-black via-purple-900/10 to-black'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
 
-=======
-=======
-                    <div className='text-sm text-white/70'>{stat.label}</div>                  </div>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
                 ))}
               </motion.div>
@@ -437,6 +675,9 @@ export default function CuttingEdgePricing2025() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -670,12 +911,120 @@ export default function CuttingEdgePricing2025() {;
                       </span>
                     </div>
                   )}
+=======
+
+                  <div
+                    className={`relative p-8 rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
+                      tier.popular
+                        ? 'border-cyan-500/50 shadow-cyan-500/20'
+                        : ''
+                    }`}
+                  >
+                    <div className='text-center mb-8'>
+                      <div
+                        className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${tier.color} mb-4`}
+                      >
+                        {tier.icon}
+                      </div>
+                      <h3 className='text-2xl font-bold text-white mb-2'>
+                        {tier.name}
+                      </h3>
+                      <p className='text-white/70 mb-6'>{tier.description}</p>
+                      <div className='text-4xl font-bold text-white mb-2'>
+                        ${tier.price}
+                        <span className='text-lg font-normal text-white/60'>
+                          /{tier.period}
+                        </span>
+                      </div>
+                    </div>
+                    <ul className='space-y-4 mb-8'>
+                      {tier.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className='flex items-start'>
+                          <Check className='w-5 h-5 text-cyan-400 mt-0.5 mr-3 flex-shrink-0' />
+                          <span className='text-white/80'>{feature}</span>                        </li>                        {tier.icon}
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                      <p className="text-white/70 mb-6">{tier.description}</p>
+                      <div className="text-4xl font-bold text-white mb-2">
+                        ${tier.price}
+                        <span className="text-lg font-normal text-white/60">/{tier.period}</span>
+                      </div>
+                    </div>
+                    <ul className="space-y-4 mb-8">
+                      {tier.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-start">
+                          <Check className="w-5 h-5 text-cyan-400 mt-0.5 mr-3 flex-shrink-0" />
+                          <span className="text-white/80">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
 
                         </li>
 
                       ))}
                     </ul>
 
+                  <div
+                    className={`relative p-8 rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-black/80 via-purple-900/10 to-black/80 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
+                      tier.popular
+                        ? 'border-cyan-500/50 shadow-cyan-500/20'
+                        : ''
+                    }`}
+                  >
+                    <div className='text-center mb-8'>
+                      <div
+                        className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${tier.color} mb-4`}
+                      >
+                        {tier.icon}
+                      </div>
+                      <h3 className='text-2xl font-bold text-white mb-2'>
+                        {tier.name}
+                      </h3>
+                      <p className='text-white/70 mb-6'>{tier.description}</p>
+                      <div className='text-4xl font-bold text-white mb-2'>
+                        ${tier.price}
+                        <span className='text-lg font-normal text-white/60'>
+                          /{tier.period}
+                        </span>
+                      </div>
+                    </div>
+                    <ul className='space-y-4 mb-8'>
+                      {tier.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className='flex items-start'>
+                          <Check className='w-5 h-5 text-cyan-400 mt-0.5 mr-3 flex-shrink-0' />
+                          <span className='text-white/80'>{feature}</span>                        </li>                        {tier.icon}
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                      <p className="text-white/70 mb-6">{tier.description}</p>
+                      <div className="text-4xl font-bold text-white mb-2">
+                        ${tier.price}
+                        <span className="text-lg font-normal text-white/60">/{tier.period}</span>
+                      </div>
+                    </div>
+                    <ul className="space-y-4 mb-8">
+                      {tier.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-start">
+                          <Check className="w-5 h-5 text-cyan-400 mt-0.5 mr-3 flex-shrink-0" />
+                          <span className="text-white/80">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                        </li>
+
+                      ))}
+                    </ul>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+                        </li>
+
+                      ))}
+                    </ul>
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <a
                       href={tier && tier.ctaLink}
                       className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
@@ -714,20 +1063,32 @@ export default function CuttingEdgePricing2025() {;
                       }`}
                     >;
                       {tier.cta}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+                    </a>
+                  </div>
+                </motion.div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
+            </div>
+          </div>
+        </section>
 
+=======
             </div>;
           </div>;
         </section>;
 
 
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Service Categories Section */}
         <section className='py-20 bg-gradient-to-b from-black via-purple-900/10 to-black'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">;
@@ -752,6 +1113,9 @@ export default function CuttingEdgePricing2025() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -765,6 +1129,7 @@ export default function CuttingEdgePricing2025() {;
             <div className='flex flex-wrap justify-center gap-4 mb-12'>            <div className="flex flex-wrap justify-center gap-4 mb-12">
               <button
 
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -782,6 +1147,7 @@ export default function CuttingEdgePricing2025() {;
               {serviceCategories.map((category) => (
                 <button
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   key={category.name}
                   onClick={() => setSelectedCategory(category.name)}
                   className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -794,9 +1160,18 @@ export default function CuttingEdgePricing2025() {;
                   {category && category.name} ({category && category.services.length});
                 </button>;
               ))}
+            </div>
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             {/* Services Grid */}
             <motion&& motion.div
               variants={containerVariants}
@@ -975,7 +1350,6 @@ export default function CuttingEdgePricing2025() {;
 
                     {/* Tags */}
 
-=======
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
@@ -984,19 +1358,25 @@ export default function CuttingEdgePricing2025() {;
                         >
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           {tag}
                         </span>;
                       ))}
-
-
+                    </div>
+                    {/* Market Info */}
+                    <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
 
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
 
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <span>Market: {service.marketSize}</span>
                       <span className='text-cyan-400'>{service.category}</span>
                     </div>
@@ -1099,28 +1479,21 @@ export default function CuttingEdgePricing2025() {;
                 </motion.div>
 
               ))}
-=======
-                  {/* Hover Effect Overlay */}
-                  <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                </motion.div>
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               ))}
+            </motion.div>
+          </div>
+        </section>
 
+=======
             </motion && motion.div>;
           </div>;
         </section>;
 
 
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Contact CTA Section */}
         <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">;
@@ -1138,8 +1511,9 @@ export default function CuttingEdgePricing2025() {;
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <motion.div
 
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -1228,6 +1602,6 @@ export default function CuttingEdgePricing2025() {;
         </section>
       </Layout>
     </>
-
-}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,4 +1,5 @@
 
+export interface ProfileSkill {
 
 =======
 
@@ -10,8 +11,11 @@
   endorsements?: number;
 
 }
+<<<<<<< HEAD
 export interface ProfileProject {
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   title: string;
   description: string;
@@ -24,6 +28,7 @@ export interface ProfileProject {
 }
 <<<<<<< HEAD
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   role: string;
   company: string;
@@ -34,6 +39,7 @@ export interface ProfileProject {
   current?: boolean;
 }
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   status: 'available' | 'limited' | 'unavailable';
   next_available?: string;
   message?: string,
@@ -41,6 +47,7 @@ export interface ProfileProject {
 
 }
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   name: string;
   title: string;
@@ -63,3 +70,5 @@ export interface ProfileProject {
 }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

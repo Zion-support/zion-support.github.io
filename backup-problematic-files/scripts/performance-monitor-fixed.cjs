@@ -23,7 +23,6 @@ const path = require("path")
 =======
 =======
 =======
-<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 class PerformanceMonitor {
   constructor() {
@@ -478,7 +477,4 @@ class PerformanceMonitor {
         "Reduce First Input Delay - minimize JavaScript execution time"
         "Improve Cumulative Layout Shift - add size attributes to images and videos"
         "Reduce bundle size - remove unused dependencies and optimize imports"
-=======
-        "Optimize memory usage - check for memory leaks and optimize data structures"
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

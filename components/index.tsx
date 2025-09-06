@@ -31,6 +31,12 @@ import {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
  } from 'lucide-react';
@@ -277,6 +283,7 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
 
         {/* Floating Elements */}
 
+=======
             animate={{ y: [0, -20, 0] }}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -308,14 +315,25 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
           <motion.div
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+            className='text-center mb-16'
 
 =======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
               Revolutionary Technology Solutions
@@ -344,7 +362,9 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
                 viewport={{ once: true }}
 =======
 
-
+              >
+                <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
+                <div className='relative z-10'>
                   <div
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 mb-6 flex items-center justify-center`}>;
                     <service && service.icon className='w-8 h-8 text-white' />;
@@ -389,14 +409,19 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
                     <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
 
             ))}
-
-          </div>;
-        </div>;
-      </section>;
-
+          </div>
+        </div>
+      </section>
+      {/* Stats Section */}
+      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
+        <div className='max-w-7xl mx-auto'>
+          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>            {stats.map((stat, index) => (      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
 
       {/* Stats Section */}
 
+=======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             {stats.map((stat, index) => (
@@ -763,11 +788,9 @@ function HomePage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
-=======
-                className='text-center'
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
               >
                 <div className='w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center'>
@@ -790,26 +813,41 @@ function HomePage() {
         <EnhancedServicesShowcase />
       </div>
 
+=======
+=======
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
+          </div>
+        </div>
+      </section>
+      {/* Enhanced Services Showcase */}
+      <div id='services'>        <EnhancedServicesShowcase />      <div id="services">
 
-      <div id="services">
+      {/* Enhanced Services Showcase */}
+      <div id='services'>        <EnhancedServicesShowcase />
 
+<<<<<<< HEAD
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <EnhancedServicesShowcase />
       </div>
-      {/* Enhanced Testimonials Section */}
-      <EnhancedTestimonialsSection />
 
-          </div>;
-        </div>;
-      </section>;
-      {/* Enhanced Services Showcase */}
-      <div id='services'>        <EnhancedServicesShowcase />      <div id="services">;
-        <EnhancedServicesShowcase />;
-      </div>;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
       {/* Enhanced Testimonials Section */}
       <EnhancedTestimonialsSection />;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Latest Updates Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="py-20 px-6">;
@@ -825,11 +863,18 @@ function HomePage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+            className='text-center mb-16'
 
+=======
+          >
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
               Latest Autonomous Updates
             </h2>
@@ -899,17 +944,18 @@ function HomePage() {
         <div className="max-w-7xl mx-auto">
           <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+            className='text-center mb-16'
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
               Ready to Get Started?
@@ -930,12 +976,7 @@ function HomePage() {
       </section>
       <EnhancedFooter />
     </div>
-
-and digital transformation solutions that drive innovation and growth. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="#services" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2" > Explore Services <ArrowRight className="w-5 h-5" /> </a> <a href="mailto:kleber@ziontechgroup.com" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </a> </div> </motion.div> </div> /> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Revolutionary Technology Solutions </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Discover our cutting-edge services that are transforming industries and driving the future of technology </p> </motion.div> </div> </div> </motion.div>) )
-}</div> </div> </section> > <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center" > <stat.icon className="w-8 h-8 text-white" /> </div> </motion.div>) )
-}</div> </div> </section> <EnhancedServicesShowcase /> </div> {
-  /* Enhanced Testimonials Section */
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 
           <EnhancedContactForm />;
         </div>;
@@ -950,3 +991,5 @@ and digital transformation solutions that drive innovation and growth. </p> <div
 }<EnhancedTestimonialsSection /> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Latest Autonomous Updates </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Stay updated with our latest innovations and autonomous system developments </p> </motion && motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0508</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0507" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0507</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0457</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> </div> </div> </section> > Ready to Get Started? </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Let's discuss your project and explore how our cutting-edge technology solutions can transform your business </p> </motion && motion.div> <EnhancedContactForm /> </div> </section> <EnhancedFooter /> </div>) }
 
 
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

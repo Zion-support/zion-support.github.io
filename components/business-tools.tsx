@@ -1,6 +1,4 @@
 
-=======
-
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
@@ -45,10 +43,56 @@ import {
   ChartBar,
   Clock,
   CheckCircle,
-
+=======
+  AlertCircle,;
+  MessageSquare,;
+} from 'lucide-react';import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
 } from 'lucide-react';
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import {
+  ExternalLink
+  Check
+  Star
+  Zap
+  Users
+  Globe
+  BarChart3
+  Bot
+  Cloud
+  Lock
+  Database
+  Code
+  Palette
+  Search
+  Mail
+  Calendar
+  CreditCard
+  FileText
+  Video
+  Music
+  Image
+  Globe2
+  Smartphone
+  Monitor
+  Server
+  Cpu
+  HardDrive
+  Brain
+  Target
+  TrendingUp
+  Shield
+  Rocket
+  Briefcase
+  Cog
+  Lightbulb
+  ChartBar
+  Clock
+  CheckCircle
+  AlertCircle
+  MessageSquare;
+} from 'lucide-react';import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function BusinessToolsPage() {
   const businessTools = [
     {
@@ -102,7 +146,17 @@ export default function BusinessToolsPage() {
           icon: <Calendar className='w-6 h-6' />
           color: 'bg-gradient-to-br from-red-500 to-pink-600'
         }
-
+      ]
+    },    {          icon: <Calendar className="w-6 h-6" />
+          color: 'bg-gradient-to-br from-red-500 to-pink-600'
+        }
+      ]
+    }
+      category: 'Communication & Collaboration'
+      ];
+    };
+      category: 'Communication & Collaboration',
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       tools: [
         {
           name: 'Slack'
@@ -376,8 +430,55 @@ export default function BusinessToolsPage() {
           color: 'bg-gradient-to-br from-purple-500 to-pink-600'
         }
       ]
+    },  ];          icon: <TrendingUp className="w-6 h-6" />
+          color: 'bg-gradient-to-br from-purple-500 to-pink-600'
+        }
+      ]
+    }
+    }
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  ];
+
+  ];
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+      category: 'Analytics & Business Intelligence',
+      tools: [;
+        {
+          name: 'Google Analytics',
+
+
+    }
+
+  ];
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const businessInsights = [
     {
       title: 'Remote Work Tools'
@@ -673,6 +774,8 @@ export default function BusinessToolsPage() {
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <h3 className="text-xl font-bold text-white mb-3">{insight.title}</h3>
@@ -681,7 +784,12 @@ export default function BusinessToolsPage() {
                   {insight.trend}
                 </div>
               </Card>
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             ))}
+          </div>
+        </div>
+      </section>
 
       {/* Business Tools */}
       <section className='section-padding bg-gradient-cursor'>
@@ -696,6 +804,8 @@ export default function BusinessToolsPage() {
               and business impact.            </p>
           </div>
           {businessTools.map((category, categoryIndex) => (      <section className="section-padding bg-gradient-cursor">
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Business Tools */}
 
       <section className="section-padding bg-gradient-cursor">
@@ -938,40 +1048,43 @@ export default function BusinessToolsPage() {
                             {feature}
                           </li>;
                         ))}
+                      </ul>
+                    </div>
 
-                      </ul>;
-                    </div>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    <Button
+                      href={tool.website}
+                      variant='primary'
+                      size='sm'
+                      className='w-full group-hover:scale-105 transition-transform duration-300'
+                      external
+                    >
+                      Visit Website
+                      <ExternalLink className='w-4 h-4 ml-2' />                    </Button>                      variant="primary"
+                      size="sm"
+                      className="w-full group-hover:scale-105 transition-transform duration-300"
+                      external
+                    >
+                      Visit Website
+                      <ExternalLink className="w-4 h-4 ml-2" />
+                  </Card>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <Button
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 ))}
-              </div>;
-            </div>;
+              </div>
+            </div>
           ))}
-=======
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Productivity Tips */}
-
-
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-16'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
               Productivity Tips & Best Practices
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Maximize the value of your business tools with these proven
@@ -1042,6 +1155,15 @@ export default function BusinessToolsPage() {
               href='/contact'
               variant='outline'
               size='lg'
+            ))}
+          </div>
+        </div>
+      </section>
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
@@ -1062,16 +1184,18 @@ export default function BusinessToolsPage() {
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8'>
 
-
             Ready to Transform Your Business Operations?
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             These business tools can streamline your operations, improve team
@@ -1092,40 +1216,6 @@ export default function BusinessToolsPage() {
               variant='outline'
               size='lg'
 
-=======
-      <section className="section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
-        <div className="container-cursor text-center relative z-10">
-          <h2 className="text-responsive-lg font-bold text-white mb-8">
-            Ready to Transform Your Business Operations?
-          </h2>
-          <p className="text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-            These business tools can streamline your operations, improve team collaboration, and drive growth. 
-            Start with the essentials and build your tech stack strategically.
-          </p>
-          <div className="flex flex-col sm: flex-row gap-6 justify-center">
-<Button
-              href="/micro-saas"
-              variant="secondary"
-              size="lg"
-              className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl"
-            <Button
-              href=&quot;/micro-saas&quot;
-              variant=&quot;secondary&quot;
-              size=&quot;lg&quot;
-              className=&quot;bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl&quot;
-
-            >
-              Explore Micro SaaS
-            </Button>
-            <Button
-href="/contact"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"
-            >
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Get Business Consultation
 
 =======
@@ -1178,10 +1268,22 @@ href="/contact"
               Explore Micro SaaS
             </Button>
 <<<<<<< HEAD
-=======
-
             <Button
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              href='/contact'
+              variant='outline'
+              size='lg'
+              className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'              href="/contact"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"
+              Get Business Consultation
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+);
+}
+            <Button
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

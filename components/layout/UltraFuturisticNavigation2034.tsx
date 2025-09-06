@@ -1,16 +1,154 @@
 
 =======
-
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+  Menu
+  X
+  ChevronDown
+  Search
+  Phone
+  Mail
+  MapPin
+  Rocket
+  Brain
+  Atom
+  Globe
+  Zap
+  Sparkles
+  Shield
+  Microscope
+  DollarSign
+  Home
+  Users
+  Briefcase
+  BookOpen
+  MessageCircle
+  Star
+  TrendingUp
+  Target
+  Layers
+  Cpu
+  Database
+  Cloud
+  Lock
+  ShieldCheck
+  Earth
+  Factory
+  Car
+  Building
+  GraduationCap
+  Scale
+  Palette
+  Camera
+  Video
+  Music
+  Gamepad2
+  Heart
+  Leaf
+  Sun
+  Moon
+  Wind
+  Droplets
+  Mountain
+  Code
+  Wrench
+  Smartphone
+  BarChart3
+  Eye
+  Network
+  Server
+  HardDrive
+  Monitor
+  Laptop
+  Watch
+  Headphones
+  Speaker
+  Mic
+  Keyboard
+  Mouse
+  CpuIcon
+  DatabaseIcon
+  CloudIcon
+  LockIcon
+  ShieldIcon
+  GlobeIcon
+  ZapIcon
+  SparklesIcon
+  BrainIcon
+  AtomIcon
+  HeartIcon
+  RocketIcon
+  ShieldIcon as ShieldIcon2
+  TargetIcon
+  MicroscopeIcon
+  StarIcon
+  ArrowRight
+  Infinity
+  Crown
+  Gem
+  Sparkles as SparklesIcon2
+  ShoppingCart
+  UserCheck
+  FileText
+  BarChart
+  PaletteIcon
+  VideoIcon
+  LockIcon as LockIcon2
+  GlobeIcon as GlobeIcon2
+  CpuIcon as CpuIcon2
+  Handshake
+  LifeBuoy
+  Activity
+  Linkedin
+  Twitter
+  Facebook
+  Instagram
+  Youtube
+  Github;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
+  Microscope, DollarSign, Home, Users, Briefcase
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+=======
+import {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Menu,
   X,
   ChevronDown,
@@ -113,6 +251,12 @@ import {
   Facebook,
   Instagram,
 
+  Youtube,;
+  Github,;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, DollarSign, Home, Users, Briefcase, ;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -140,6 +284,7 @@ const serviceCategories = [
     color: 'from-violet-600 via-purple-600 to-indigo-600'
     description: 'Next-generation AI consciousness and creativity'
     services: [
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home }
@@ -208,13 +353,50 @@ const certifications = [
 
   { name: 'Status', href: '/status', icon: Activity }
 ];
-
-
+const socialLinks = [
+  {
+    name: 'LinkedIn'
+    href: 'https://linkedin.com/company/ziontechgroup'
+    icon: Linkedin
+  }
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
+  {
+    name: 'Instagram'
+    href: 'https://instagram.com/ziontechgroup'
+    icon: Instagram
+  }
+  {
+    name: 'YouTube'
+    href: 'https://youtube.com/@ziontechgroup'
+    icon: Youtube
+  }
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
+];
+const certifications = [
+  'ISO 27001 Certified'
+  'SOC 2 Type II Compliant'
+  'GDPR Compliant'
+  'HIPAA Compliant'
+  'PCI DSS Level 1'
+  'FedRAMP Authorized'
+  'Quantum Security Certified'
+  'AI Ethics Compliant',];];
+const socialLinks = [
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin }
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube }
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
+];
+const certifications = [
+  'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
+];
+export default function UltraFuturisticNavigation2034() {
 
 export default function UltraFuturisticNavigation2034() {;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -328,7 +510,9 @@ export default function UltraFuturisticNavigation2034() {;
       {/* Top Contact Bar */}
 =======
 
-
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                 {contactInfo.mobile}
               </span>
             </div>
@@ -378,65 +562,7 @@ export default function UltraFuturisticNavigation2034() {;
         </div>
       </div>
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>;
-        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>;
-          <div className='flex items-center space-x-6'>;
-            <div className='flex items-center space-x-2'>;
-              <Phone className='w-4 h-4 text-cyan-400' />;
-              <span className='hover:text-cyan-400 transition-colors'>;
-                {contactInfo && contactInfo.mobile}
-              </span>;
-            </div>;
-            <div className='flex items-center space-x-2'>;
-              <Mail className='w-4 h-4 text-blue-400' />;
-              <span className='hover:text-blue-400 transition-colors'>;
-                {contactInfo && contactInfo.email}
-              </span>;
-            </div>;
-            <div className='flex items-center space-x-2'>;
-              <MapPin className='w-4 h-4 text-purple-400' />;
-              <span className='hover:text-purple-400 transition-colors'>                {contactInfo && contactInfo.address}
-              </span>;
-            </div>;
-          </div>                {contactInfo && contactInfo.mobile}
-              </span>;
-            </div>;
-            <div className="flex items-center space-x-2">;
-              <Mail className="w-4 h-4 text-blue-400" />;
-              <span className="hover:text-blue-400 transition-colors">;
-                {contactInfo && contactInfo.email}
-              </span>;
-            </div>;
-            <div className="flex items-center space-x-2">;
-              <MapPin className="w-4 h-4 text-purple-400" />;
-              <span className="hover:text-purple-400 transition-colors">;
-                {contactInfo && contactInfo.address}
-              </span>;
-            </div>;
-          </div>;
-          <div className='flex items-center space-x-4'>;
-            <div className='flex items-center space-x-2'>;
-              <Star className='w-4 h-4 text-yellow-400' />;
-              <span className='text-yellow-400 font-semibold'>5 && 5.0 Rating</span>;
-            </div>;
-            <div className='flex items-center space-x-2'>;
-              <Users className='w-4 h-4 text-green-400' />;
-              <span className='text-green-400 font-semibold'>;
-                50K+ Customers;
-              </span>            </div>          <div className="flex items-center space-x-4">;
-            <div className="flex items-center space-x-2">;
-              <Star className="w-4 h-4 text-yellow-400" />;
-              <span className="text-yellow-400 font-semibold">5 && 5.0 Rating</span>;
-            </div>;
-            <div className="flex items-center space-x-2">;
-              <Users className="w-4 h-4 text-green-400" />;
-              <span className="text-green-400 font-semibold">50K+ Customers</span>;
-          </div>;
-        </div>;
-      </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Main Navigation */}
 
         }`}>;
@@ -456,6 +582,8 @@ export default function UltraFuturisticNavigation2034() {;
               transition={{ duration: 0.5 }}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             >
               <div className='relative'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>
@@ -518,7 +646,7 @@ export default function UltraFuturisticNavigation2034() {;
             </motion && motion.div>;
             {/* Desktop Navigation */}
 
-=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   {link.name}
                 </Link>
               ))}
@@ -526,6 +654,8 @@ export default function UltraFuturisticNavigation2034() {;
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   {link.name}
                 </Link>
               ))}
@@ -533,6 +663,7 @@ export default function UltraFuturisticNavigation2034() {;
                   {link.name}
                 </Link>
               ))}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               {/* Services Dropdown */}
               <div className="relative group">
                 <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
@@ -781,33 +912,13 @@ function UltraFuturisticNavigation2034() {
                             <Link;
                               key={service.name}
                               href={service.href}
-                              className='block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors'                            >              {/* Services Dropdown */}
-              <div className="relative group">;
-                <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium">;
-                  <span > Services</span>;
-                  <ChevronDown className="w - 4 h - 4" />;
-                </button>;
-                <div className="absolute top - full left - 0 w - 96 bg - black / 95 backdrop - blur - xl border border - cyan - 500 / 20 rounded - xl p - 4 opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 transform translate - y-2 group - hover:translate - y-0">;
-                  <div className="grid grid - cols - 2 gap - 4">;
-                    {service_categories.slice (0, 4).map ((category) => (
-                      <div key={category.title} className="p - 3 rounded - lg hover:bg - cyan - 500 / 10 transition - colors">;
-                        <div className="flex items - center space - x-2 mb - 2">;
-                          <category.icon className="w - 5 h - 5 text - cyan - 400" />;
-                          <h3 className="text - sm font - semibold text - white">{category.title.split (' ')[0]}</h3>;
-                        </div>;
-                        <p className="text - xs text - gray - 400 mb - 2">{category.description}</p>;
-                        <div className="space - y-1">;
-                          {category.services.slice (0, 2).map ((service) => (
-                            <Link;
+                              className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors"
 
-                              key={service.name}
-                              href={service.href}
-                              className="block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors";
-                            >;
-                              {service.name}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             >
                               {service.name}
                             </Link>
@@ -902,6 +1013,9 @@ function UltraFuturisticNavigation2034() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -909,6 +1023,8 @@ function UltraFuturisticNavigation2034() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               transition={{ duration: 0.3 }}
               className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20'
             >
@@ -921,6 +1037,36 @@ function UltraFuturisticNavigation2034() {
                     {link.name}
                   </Link>
                 ))}
+<<<<<<< HEAD
+                {/* Mobile Services Accordion */}
+                {serviceCategories.map(category => (
+                  <div
+                    key={category.title}
+                    className='border-b border-cyan-500/20 pb-4'
+                  >
+                    <button
+                      onClick={() => toggleDropdown(category.title)}
+                      className='flex items-center justify-between w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'
+                    >
+                      <span>{category.title}</span>
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform duration-200 ${
+                          activeDropdown === category.title ? 'rotate-180' : ''
+                        }`}
+                      />                    </button>                {/* Mobile Services Accordion */}
+                {serviceCategories.map((category) => (
+                  <div key={category.title} className="border-b border-cyan-500/20 pb-4">
+                    <button
+                      onClick={() => toggleDropdown(category.title)}
+                      className="flex items-center justify-between w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+                    >
+                      <span>{category.title}</span>
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                        activeDropdown === category.title ? 'rotate-180' : ''
+                      }`} />
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
               className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20"
             >
@@ -932,6 +1078,7 @@ function UltraFuturisticNavigation2034() {
                   </Link>
                 ))}
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </button>
                     <AnimatePresence>
                       {activeDropdown === category.title && (
@@ -1043,19 +1190,10 @@ function UltraFuturisticNavigation2034() {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
-
-}
-
 =======
-            </motion.div>)}
-        </AnimatePresence>;
-      </nav>;
-      {/* Spacer for fixed navigation */}
-      <div className='h - 20'></div>;
-    </>);      <div className="h - 20"></div>;
-    </>);
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

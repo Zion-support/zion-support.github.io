@@ -34,23 +34,33 @@
 
     </div>
   )
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         />
       </div>
       <textarea value={coverLetter} onChange={e => setCoverLetter(e.target.value)} rows={14} className="mt-2 w-full rounded-md border p-3" />
     </div>
   )
+}
+export default NewProposal;
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+},
+export default NewProposal,
+},
 =======
 
 },
 export default NewProposal,
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
 },
-
 export default NewProposal,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+export default NewProposal,;
+export default NewProposal,
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

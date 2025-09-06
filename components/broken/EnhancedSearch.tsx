@@ -1,43 +1,11 @@
 
-
-}];
-setIsSearching (true);
-//Simulate API call delay setTimeout ( () => {
-  const filteredResults = mockSearchResults.filter (result => {
-  const matchesQuery = result.name.toLowerCase () .includes (searchQuery.toLowerCase () ) |result.description.toLowerCase () .includes (searchQuery.toLowerCase () ) |result.category.toLowerCase () .includes (searchQuery.toLowerCase () );
-const matchesFilters = selectedFilters.length === 0 |selectedFilters.some (filter => result.category.toLowerCase () .includes (filter.toLowerCase () ) |result.type.toLowerCase () .includes (filter.toLowerCase () ) );
-setResults (sortedResults);
-setShowResults (true);
-setIsSearching (false)
-}, 300)
-}, 300);
-[selectedFilters]);
-[selectedFilters]);
-//Close search on outside click useEffect ( () => {
-  const handleClickOutside = (event: MouseEvent) => {
-  if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {
-}, []);
-//Handle filter toggle const toggleFilter = (filterId: string) => {
-  setSelectedFilters (prev => prev.includes (filterId) ? prev.filter (id => id !== filterId)
-}> {
-  /* Search Form */
-}<form onSubmit= {
-  handleSearch
-}className="relative"> <div className="relative"> <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /> <input /> {
-  /* Clear Button */
-}{
-  query && (<button type="button" onClick= {
-  clearSearch
-}className="absolute right-16 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors" > <X className="w-4 h-4" /> </button>)
-}{
-  /* Search Button */
-}<button type="submit" className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-1.5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50" > Search </button> </div> </form> {
-  /* Search Results Dropdown */
-}<AnimatePresence> {
-  showResults && (<motion.div initial= {
-  {
-  opacity: 0, y: -10, scale: 0.95
-
+//Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+ //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+//Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+ //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+  
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }];
 setIsSearching (true);
 
@@ -206,20 +174,6 @@ setIsSearching (false) ;
 }exit= {
   {
 
-=======
-// Debounce utility function
-function debounce<T extends (...args: any[]) => any>(
-  func: T
-  wait: number
-): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout
-  return (...args: Parameters<T>) => {
-=======
-clearTimeout(timeout)
-    timeout = setTimeout(() => func(...args), wait)
-  }
-  opacity: 0, y: -10 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10"> {;
   /* Quick Actions */ ;
@@ -317,6 +271,29 @@ function debounce<T extends (...args: any[]) => any>(;
 }
 export default EnhancedSearch;
 
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+}
+// Debounce utility function function debounce < T extends (...args: unknown[]) => any> (func: T;
+wait: number;
+}export default EnhancedSearch;
+// Debounce utility function;
+function debounce < T extends (...args: any[]) => any>(
+  func: T,
+  wait: number): (...args: Parameters < T>) => void {
+  let timeout: NodeJS.Timeout,
+  return (...args: Parameters < T>) => {
+    clear_timeout (timeout),
+    timeout = set_timeout (() => func (...args), wait);
+  }
+}
+}
+}
+}
+}
+}
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

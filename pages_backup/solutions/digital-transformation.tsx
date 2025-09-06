@@ -1,11 +1,9 @@
 
 import React from 'react';
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { RefreshCw, Target, Rocket, TrendingUp } from 'lucide-react';
@@ -138,8 +136,9 @@ export default function DigitalTransformationPage() {;
     }
 
 =======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ;  ];
   return (;
     <Layout );
@@ -186,11 +185,13 @@ export default function DigitalTransformationPage() {;
         </section>;
 
 =======
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -241,7 +242,6 @@ export default function DigitalTransformationPage() {;
 
         {/* Services Section */}
 
-=======
                 return (
                   <motion.div
                     key={index}
@@ -251,7 +251,6 @@ export default function DigitalTransformationPage() {;
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Services Section */}
-
                 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -288,8 +287,10 @@ export default function DigitalTransformationPage() {;
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
 
 =======
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   >,
                     <div className="text-purple-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
@@ -317,13 +318,6 @@ export default function DigitalTransformationPage() {;
         </section>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-            </div>,
-          </div>;
-        </section>;
-            </div>
-          </div>
-        </section>
-:pages/solutions/digital-transformation.tsx
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">

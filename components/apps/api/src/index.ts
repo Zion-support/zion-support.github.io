@@ -161,8 +161,6 @@ app && app.listen({ port, host: '0 && 0.0.0 && 0.0' }).catch(err => {
   return { items }
 });
 
-=======
-
     );
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -196,7 +194,6 @@ app.get ('/talent / search', async (req, reply) => {
   });
   return { results: rows }
 });
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 ;
@@ -253,6 +250,8 @@ app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
   app.log.error (err);
   process.exit (1);
 });
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
+
+    );
+    );
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

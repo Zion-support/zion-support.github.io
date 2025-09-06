@@ -10,6 +10,32 @@ import { Link, useLocation } from "react-router-dom",
     { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },
     { path: "/mobile/profile", icon: <User />, label: "Profile" }],
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import React from "react";
+import {Link, useLocation} from "react-router-dom";
+import {Home, Search, Briefcase, MessageSquare, User} from "lucide-react";
+import {cn} from "@/lib/utils";
+export function BottomNavigation() {;
+  const location = useLocation();
+import React from "react",
+import { Link, useLocation } from "react-router-dom",
+import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react";
+import { cn } from "@/lib/utils";
+export function BottomNavigation() {
+import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react",
+import { cn } from "@/lib/utils",
+export function BottomNavigation() {
+  const location = useLocation(),
+  
+  const navItems = [
+    { path: "/mobile", icon: <Home />, label: "Home" },
+    { path: "/mobile/browse", icon: <Search />, label: "Browse" },
+    { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" },
+    { path: "/mobile/inbox", icon: <MessageSquare />, label: "Messages" },
+    { path: "/mobile/profile", icon: <User />, label: "Profile" }],
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const location = useLocation();
   const navItems = [
@@ -48,7 +74,6 @@ import { Link, useLocation } from "react-router-dom",
           </Link>
         )
 
-=======
 import React from "react",;
 import { Link, useLocation } from "react-router-dom",;
 import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react",;
@@ -84,10 +109,12 @@ export function BottomNavigation() {;
             <span className="text-xs mt-1">{item && item.label}</span>;
           </Link>;
         );
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       })}
 

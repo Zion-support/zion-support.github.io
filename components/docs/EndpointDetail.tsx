@@ -1,9 +1,16 @@
-
+=======
+import React from 'react',
+import CodeSamples from './CodeSamples',
+import React from 'react';
+import CodeSamples from './CodeSamples';
 import TryItConsole from './TryItConsole';
 import { EndpointSpec } from '../../data/api-docs/types';
 
 export default function EndpointDetail({
-
+  endpoint
+}: {
+  endpoint,
+}: {;
   endpoint: EndpointSpec;
 }) {
 
@@ -27,40 +34,12 @@ export default function EndpointDetail({
             {endpoint.visibility}
           </span>        </div>
       </div>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     <div className='space-y-4'>
 
       <div>
         <div className='text-xl font-semibold text-high-contrast'>
-=======
-import { EndpointSpec } from '../../data / api - docs / types';
-;
-export default /**
- * EndpointDetail - Function description
- */
-function EndpointDetail() {
-    <div className='space - y-4'>;
-      <div>;
-        <div className='text - xl font - semibold text - high - contrast'>;
-          {endpoint.title}
-        </div>;
-        <div className='text - sm text - high - contrast - muted'>;
-          {endpoint.description}
-        </div>;
-        <div className='mt - 2 inline - flex items - center gap - 2 text - xs'>;
-          <span className='px - 2 py - 0.5 rounded bg - high - contrast - tertiary border border - high - contrast - secondary'>;
-            {endpoint.method}
-          </span>;
-          <code className='px - 2 py - 0.5 rounded bg - high - contrast - tertiary border border - high - contrast - secondary'>;
-            {endpoint.path}
-          </code>;
-          <span className='px - 2 py - 0.5 rounded bg - high - contrast - tertiary border border - high - contrast - secondary'>;
-            {endpoint.visibility}
-
-export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec }) {
-  return (
-    <div className="space-y-4">
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <div>
         <div className='font-medium mb-2'>Code Examples</div>        <CodeSamples samples={endpoint.samples} />
 
@@ -163,6 +142,20 @@ export default function EndpointDetail(): any ({;
         <div>
           <div className="font-medium mb-2">Rate Limits</div>
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
+=======
+            {endpoint.rateLimits.map((r, idx) => (
+              <li key={idx}>{r.tier}: {r.limitPerMinute}/min{r.burst ? `, burst ${r.burst}` : ''}</li>
+            ))}
+
+<<<<<<< HEAD
+
+
+
+          </ul>
+        </div>
+      )}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
       {endpoint && endpoint.rateLimits && endpoint && endpoint.rateLimits.length > 0 && (;
         <div>;
@@ -193,23 +186,46 @@ export default function EndpointDetail(): any ({;
 
             ))}
 =======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+            ))}
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </ul>
         </div>
       )}
-{(endpoint.errors && endpoint.errors.length > 0) && (
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+      {endpoint.errors && endpoint.errors.length > 0 && (
         <div>
-          <div className="font-medium mb-2">Error Codes</div>
+          <div className='font-medium mb-2'>Error Codes</div>
+          <ul className='list-disc pl-5 text-sm text-high-contrast-muted'>
+            {endpoint.errors.map(e => (
+              <li key={e.code}>
+                <strong>{e.code}</strong> ({e.httpStatus}) - {e.message}
+              </li>            ))}          <div className="font-medium mb-2">Error Codes</div>
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
             {endpoint.errors.map((e) => (
               <li key={e.code}><strong>{e.code}</strong> ({e.httpStatus}) - {e.message}</li>
-            ))}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+          </ul>
+        </div>
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       )}
     </div>
+  );
+<<<<<<< HEAD
+=======
 
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+}
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

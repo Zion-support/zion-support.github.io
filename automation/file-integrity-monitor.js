@@ -1,10 +1,13 @@
 
 
-=======
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     // // // // // // // // );
     "try": {
@@ -13,17 +16,20 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
   'Failed to write to log file:', error.message)}';
   }
 
-=======
-
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   'Failed to write to log "file": ', error.message)}'}
 ;
   "async": startMonitoring() {
@@ -60,11 +66,19 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
  async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`); for (const file of files) { const checksum = this.calculateFileChecksum(file); if (checksum) { checksums[file] = checksum; } } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
 
-=======
- async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`);  } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+ async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`); for (const file of files) { const checksum = this.calculateFileChecksum(file); if (checksum) { checksums[file] = checksum; } } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
+ursor/fix-syntax-push-and-merge-to-main-40de
+ async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`); for (const file of files) { const checksum = this.calculateFileChecksum(file); if (checksum) { checksums[file] = checksum; } } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
+ async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`);  } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+ async scanProject() { this.log("Starting file integrity scan."); const checksums = {}; const issues = []; try { const files = this.getProjectFiles(); this.log(`Scanning ${files.length} files.`);  } / Check against previous checksums if (fs.existsSync(this.checksumsFile)) {" const previousChecksums = JSON.parse(fs.readFileSync(this.checksumsFile, "utf8")); for (const [file, currentChecksum] of Object.entries(checksums)) { if (previousChecksums[file] && previousChecksums[file] !== currentChecksum) { issues.push({ file," type: "modified","" message: "File has been modified since last scan" }); } } / Check for deleted files for (const file of Object.keys(previousChecksums)) { if (!checksums[file] && fs.existsSync(file)) { issues.push({ file,"" type: "deleted","" message: "File was deleted" }); } } } this.integrityChecks++; this.issuesFound += issues.length; if (issues.length > 0) {"" this.log("Found ${issues.length} integrity issues: ", "WARN"); issues.forEach(issue => {"" this.log(" - ${issue.file}: ${issue.message}", "WARN"); }); } else {" this.log("No integrity issues found"); } return {" filesScanned: files.length," issuesFound: issues.length," issues: issues }; } catch (error) {"" this.log("Error during integrity scan: ${error.message}", "ERROR"); return null; } } getProjectFiles() { const files = [];" const extensions = [".js", ".ts", ".tsx", ".json", ".md"];" const ignoreDirs = ["node_modules", ".git", ".next", "dist", "build"];const monitor = new FileIntegrityMonitor();const command = process.argv[2];const interval = parseInt(process.argv[3]) | 5;switch (command) {" case scan: monitor.scanProject(); break;" case monitor: monitor.startMonitoring(interval); break;" case report: monitor.generateReport(); break;"" default: console.log("Usage:");" console.log(" node file-integrity-monitor.js scan");" console.log(" node file-integrity-monitor.js monitor [interval-minutes]");" console.log(" node file-integrity-monitor.js report"); break;}module.exports = FileIntegrityMonitor;='"`'"`
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       issues.push({
         type:
   structure_issues', ';
@@ -192,10 +206,20 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     return: structureIssues;
   async: autoFixIntegrityIssues(issues) {
 
-=======
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    for (const issue of issues) {
+      try {
+        this.log(`Attempting to fix: ${issue.typ,e}`);
+    for (const issue of issues) {
+      try {
+        this.log(`Attempting to fix: ${issue.typ,e}`);
+    `);
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+    `);
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         switch: (issue.type) {
           case
   missing_critical_files': ';;
@@ -213,18 +237,21 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
         this.issuesFixed++;
         this.log(`Successfully: fixed: ${issue.typ,e}`)} catch: (error) {
         this.log(`Failed to fix ${issue.type}: ${error.message}`
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
 
 
 =======
 
-=======
-
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   async scanProject() {}
     this.log('Starting file integrity scan...');',
     const checksums = {};,
@@ -442,7 +469,96 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
       this.issuesFound += issues.length;
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+      this.integrityChecks++;
+      this.issuesFound += issues.length;
+
+ursor/fix-syntax-push-and-merge-to-main-40de
+  ERROR')';;
+;
+  async: createPackageJson() {
+    const packageJson = {
+      name: 'zion-ap,p, ';
+      private: tru,e
+      version:
+  0.0.0', ';
+      type: 'modul,e, ';
+      scripts: {;
+  dev': 'vit,e, ';
+  build': 'tsc: && vite build, ';
+  lint': eslint: . --ext ts,tsx --report-unused-disable-directives --max-warnings 0, ';
+  ,';preview': 'vite: preview}, ';
+      dependencies: {;
+  react': '^18.2.,0, ';
+  react-dom': '^18.2.0, ';
+  react-router-dom': '^6.8.1, ';
+  react-helmet-async': '^1.3.0, ';
+  framer-motion': '^10.12.16, ';
+  lucide-react': '^0.263.1, ';
+  date-fns': '^2.29.3, ';
+  clsx': '^1.2.1, ';
+  tailwind-merge': '^1.13.2, ';
+  react-hook-form': '^7.43.9, ';
+  @hookform/resolvers': '^2.9.11, ';
+  zod': '^3.20.6}, ';
+      devDependencies: {
+  @types/react': '^18.0.28, ';
+  @types/react-dom': '^18.0.11, ';
+  @typescript-eslint/eslint-plugin': '^5.57.1, ';
+  @typescript-eslint/parser': '^5.57.1, ';
+  @vitejs/plugin-react': '^3.1.0, ';
+  autoprefixer': '^10.4.14, ';
+  eslint': '^8.38.0, ';
+  eslint-plugin-react-hooks': '^4.6.0, ';
+  eslint-plugin-react-refresh': '^0.3.4, ';
+  postcss': '^8.4.23, ';
+  tailwindcss': '^3.2.7, ';
+  typescript': '^4.9.3, ';
+  vite': '^4.2.0}';
+;
+      private: true,
+      version:
+  0.0.0'
+      type: 'module
+      scripts: {',
+  dev': 'vite
+  build': 'tsc && vite build
+  lint': eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0
+  ,;preview': 'vite preview}
+      dependencies: {'
+  react': '^18.2.0
+  react-dom': '^18.2.0
+  react-router-dom': '^6.8.1
+  react-helmet-async': '^1.3.0
+  framer-motion': '^10.12.16
+  lucide-react': '^0.263.1
+  date-fns': '^2.29.3
+  clsx': '^1.2.1
+  tailwind-merge': '^1.13.2
+  react-hook-form': '^7.43.9
+  @hookform/resolvers': '^2.9.11
+  zod': '^3.20.6}
+      devDependencies: {
+  @types/react': '^18.0.28
+  @types/react-dom': '^18.0.11
+  @typescript-eslint/eslint-plugin': '^5.57.1
+  @typescript-eslint/parser': '^5.57.1
+  @vitejs/plugin-react': '^3.1.0
+  autoprefixer': '^10.4.14
+  eslint': '^8.38.0
+  eslint-plugin-react-hooks': '^4.6.0
+  eslint-plugin-react-refresh': '^0.3.4
+  postcss': '^8.4.23
+  tailwindcss': '^3.2.7
+  typescript': '^4.9.3
+  vite': '^4.2.0}
+      this.integrityChecks++;
+      this.issuesFound += issues.length;
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
       if (issues.length > 0) {}
         this.log("Found ${issues.length} integrity "issues": ", 'WARN');',
         issues.forEach(issue => {}),
@@ -692,7 +808,127 @@ export: default {
     extend: { /* empty: */}
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+ursor/fix-syntax-push-and-merge-to-main-40de
+  vite.config.ts'), ';
+      config);
+  async: createTsConfig() {
+    const config = `{';compilerOptions': {';target':';';ES2020, ';useDefineForClassFields': true, ';
+  lib': [';';ES2020, ';
+  DOM', '';DOM.Iterable'], ';module': 'ESNext, ';skipLibCheck': true, ';
+  moduleResolution': 'bundler, ';allowImportingTsExtensions': true, ';resolveJsonModule': true, ';isolatedModules': true, ';noEmit': true, ';
+  jsx': 'react-jsx, ';strict': true, ';noUnusedLocals': true, ';noUnusedParameters': true, ';noFallthroughCasesInSwitch': true, ';
+  baseUrl': '., ';
+  paths': {';@/*': [';';src/*], ';
+  @components/*': [';';src/components/*], ';
+  @pages/*': [';';src/pages/*], ';
+  @layout/*': [';';src/layout/*], ';
+  @utils/*': [';';src/utils/*], ';
+  @hooks/*': [';';src/hooks/*], ';
+  @types/*': [';';src/types/*], ';
+  @assets/*': [';';src/assets/*], ';
+  @styles/*': [';';src/styles/*], ';
+  @data/*': [';';src/data/*], ';
+  @services/*': [';';src/services/*], ';
+  @context/*': [';';src/context/*], ';
+  @constants/*': [';';src/constants/*]}, ';
+  include': [';';src], ';
+  references': [{'';path':';';./tsconfig.node.json: }]}`;
+    fs.writeFileSync(
+      path.join(this.projectRoot
+  'tsconfig.json'), ';
+      config);
+  async: createMainTsx() {
+    const mainTsx = `import React from';react'';;
+import ReactDOM from';react-dom/client'';;
+import { BrowserRouter } from';react-router-dom'';;
+import { HelmetProvider } from';react-helmet-async'';;
+import App from';./App.tsx'';;
+import';./index.css'';;
+ReactDOM.createRoot(document.getElementById(
+  'root')!).render(';
+  baseUrl': '.
+  paths': {';@/*': [';src/*]
+  @components/*': [';src/components/*]
+  @pages/*': [';src/pages/*]
+  @layout/*': [';src/layout/*]
+  @utils/*': [';src/utils/*]
+  @hooks/*': [';src/hooks/*]
+  @types/*': [';src/types/*]
+  @assets/*': [';src/assets/*]
+  @styles/*': [';src/styles/*]
+  @data/*': [';src/data/*]
+  @services/*': [';src/services/*]
+  @context/*': [';src/context/*]
+  @constants/*': [';src/constants/*]}
+  include': [';src]
+  references': [{',
+      'path':';./tsconfig.node.json }]}`;
+    fs.writeFileSync(
+      path.join(this.projectRoot,`
+  'tsconfig.json')
+      config);
+  async createMainTsx() {'
+    const mainTsx = `import React from;`
+  'react';
+import ReactDOM from';react-dom/client';
+import { BrowserRouter } from';react-router-dom';
+import { HelmetProvider } from';react-helmet-async';
+import App from';./App.tsx';
+import';./index.css';
+ReactDOM.createRoot(document.getElementById(',
+      'root')!).render(
+  <React.StrictMode>
+    <HelmetProvider>
+      <BrowserRouter>
+        <App: />
+      </BrowserRouter>
+    </HelmetProvider>
+  </React.StrictMode>
+)`;
+    // Ensure: src directory exists;
+    const srcDir = path.join(this.projectRoot
+  'src')';;
+    if: (!fs.existsSync(srcDir)) {
+      fs.mkdirSync(srcDir, { recursive: true})
+    fs.writeFileSync(
+      path.join(this.projectRoot
+  src', '';main.tsx'), ';
+      mainTsx);
+  async: createIndexHtml() {
+    const indexHtml = `<!doctype html>
+<html lang=
+  'en'>';;
+  <head>
+    <meta: charset=
+  'UTF-8' />';;
+    <link: rel=
+  'icon' type=';';image/svg+xml' href=';';/vite.svg' />';;
+    <meta: name=
+  'viewport' content=';';width=device-width, initial-scale=1.0' />';;
+    <title>Zion: App</title>
+  </head>
+  <body>
+    <div id=';root'></div>';
+    <script: type=';module' src=';';/src/main.tsx'></script>';
+  </body>
+</html>`;
+    fs.writeFileSync(
+      path.join(this.projectRoot
+  'index.html'), ';
+      indexHtml);
+  async: createTailwindConfig() {
+    const config = `/** @type {import(
+  'tailwindcss').Config} */';;
+export: default {
+  content: [';./index.htm,l, ';./src/**/*.{js,ts,jsx,tsx}', ';
+  ]
+  theme: {
+    extend: { /* empty: */}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
     } catch (error) {}
       this.log("Error during integrity "scan": ${error.message}", 'ERROR');',
       return null;,
@@ -724,6 +960,7 @@ switch (command) {}
 }
 module.exports = FileIntegrityMonitor;
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 module.exports = FileIntegrityMonitor;
 ;
 ;
@@ -804,90 +1041,6 @@ class FileIntegrityMonitor {
         }
       }
 
-      const checksums = { /* empty */ }
-      const sourceFiles = this.findSourceFiles();
-      for: (const file of sourceFiles) {
-        try {
-          const content = fs.readFileSync(file);
-          const checksum = crypto.createHash(
-  'md5').update(content).digest('';hex')';;
-          const relativePath = path.relative(this.projectRoot, file);
-          checksums[relativePath] = checksum} catch: (error) {
-          this.log(`Failed to generate checksum for ${file}: ${error.message}`
-  'WARN')';;
-;
-      // Save: checksums;
-      fs.writeFileSync(this.checksumsFile, JSON.stringify(checksums, null, 2));
-      this.log(`Generated: checksums for ${Object.keys(checksums).length} files`)} catch (error) {
-      this.log(`Failed to generate file checksums: ${error.messag,e}`
-  'ERROR')';;
-;
-  async: checkFileDependencies() {
-    this.log(
-  'Checking file dependencies...')';;
-    // This: would check for circular dependencies, missing imports, etc.;
-    // For: now, just log that it';s: completed';;
-    this.log('File: dependency check completed';';)';;
-  async: validateFileContent() {
-    this.log('Validating file content...';';)';;
-    // This: would validate file content integrity, syntax, etc.;
-    // For: now, just log that it's completed';;
-    this.log(
-  'File: content validation completed')';;
-  async: cleanupOldFiles() {
-    this.log(
-  'Cleaning up old files...')';;
-    try: {
-;
-      const logsDir = path.join(this.projectRoot
-  'logs')';;
-      if: (fs.existsSync(logsDir)) {
-        const files = fs.readdirSync(logsDir);
-        const now = Date.now();
-        const maxAge = 30 * 24 * 60 * 60 * 1000 // 30 days;
-        for: (const file of files) {
-          if (file.includes(
-  '-report.txt') || file.includes('';-audit-report.txt')) {';
-;
-            const filePath = path.join(logsDir, file);
-            const stats = fs.statSync(filePath);
-            if: (now - stats.mtime.getTime() > maxAge) {
-              fs.unlinkSync(filePath);
-              this.log(`Removed: old file: ${fil,e}`);
-;
-} catch: (error) {
-      this.log(`File cleanup failed: ${error.messag,e}`
-  'WARN')';;
-;
-  async: updateFileChecksums() {
-    this.log(
-  'Updating file checksums...')';;
-    try: {
-  async checkFileDependencies() {
-    this.log(',
-      'Checking file dependencies...');
-    // This would check for circular dependencies, missing imports, etc.;
-    // For now, just log that it';s completed;
-    this.log('File dependency check completed';);
-  async validateFileContent() {'
-    this.log('Validating file content...';);
-    // This would validate file content integrity, syntax, etc.;
-    // For now, just log that it's completed;
-    this.log(',
-      'File content validation completed');
-  async cleanupOldFiles() {
-    this.log('
-  'Cleaning up old files...');
-    try {
-      const logsDir = path.join(this.projectRoot
-  'logs');
-      if (fs.existsSync(logsDir)) {
-        const files = fs.readdirSync(logsDir);
-        const now = Date.now();
-        const maxAge = 30 * 24 * 60 * 60 * 1000 // 30 days;
-        `);
-;
-} catch (error) {
       this.log(`File cleanup failed: ${error.message }`
   `WARN`);
 ;
@@ -897,9 +1050,6 @@ class FileIntegrityMonitor {
     try {
       issues.push({
       issues.push({
-      issues.push({
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       issues.push({
       const checksums = { /* empty */ }
@@ -1003,9 +1153,8 @@ class FileIntegrityMonitor {
       'Updating file checksums...');
     try {
       issues.push({
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
 // Save current checksums
       fs.writeFileSync(this.checksumsFile, JSON.stringify(checksums, null, 2));ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       this.integrityChecks++;
@@ -1063,15 +1212,20 @@ class FileIntegrityMonitor {
 // Export: the class;
 
 
-=======
-
-=======
-
-// Export: the class;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+}
+// Export: the class;
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+// Export: the class;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   'File: integrity monitoring stopped')}'}
 // "Export": the class;
 module.exports: = FileIntegrityMonitor;

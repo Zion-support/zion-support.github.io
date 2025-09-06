@@ -55,6 +55,12 @@ interface ApplicationsTableProps {
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>,
   onViewScore: (application: JobApplication) => void
 }
+      ) : (
+        <User className="h-4 w-4" />
+      )}
+    </AvatarPrimitive>
+  )
+}
 
 // Sub-component for avatar to handle its own error state
 const ApplicationAvatar = ({ application }: { application: JobApplication }) => {
@@ -76,7 +82,55 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }) => 
       description: "Offer has been sent to the talent."
     })
   },
+  applications,
+  processingId,
+  onViewApplication,
+},
 
+export function ApplicationsTable({ 
+  applications, 
+  processingId, 
+  onViewApplication, 
+  onStatusChange,
+  onViewScore
+}: ApplicationsTableProps) {
+  const [hireModalOpen, setHireModalOpen] = useState(false)
+  const [selectedApplication, setSelectedApplication] =
+    useState<JobApplication | null>(null)
+  const handleHireClick = (application: JobApplication) => {
+    setSelectedApplication(application)
+    setHireModalOpen(true)
+  }
+  const handleHireConfirmed = () => {
+    toast({
+      title: 'Hiring process initiated'
+      description: 'Offer has been sent to the talent.'
+    })
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  const [hireModalOpen, setHireModalOpen] = useState(false),
+  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
+  
+  const handleHireClick = (application: JobApplication) => {
+    setSelectedApplication(application),
+    setHireModalOpen(true)
+  },
+  
+  const handleHireConfirmed = () => {
+    toast({
+      title: "Hiring process initiated",
+      description: "Offer has been sent to the talent."
+    })
+  },
+  
+=======
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <>
       <div className="rounded-md border">
@@ -91,6 +145,7 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }) => 
             </TableRow>
           </TableHeader>
           <TableBody>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                 <TableCell>
                   <div className="flex items-center gap-3">
@@ -107,14 +162,6 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }) => 
                 <TableCell className="hidden md:table-cell">
                   <StatusBadge status={application.status} />
                 </TableCell>
-
-                      {application.match_score}%
-                    </ClickableBadge>
-                  ) : (
-                    <span className="text-muted-foreground text-sm">Not scored</span>
-                  )}
-                </TableCell>
-
 };"
 return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   applications.map ( (application) => (<TableRow key= {

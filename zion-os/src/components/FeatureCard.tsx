@@ -1,5 +1,4 @@
 
-=======
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
@@ -39,7 +38,6 @@ export function FeatureCard({;
       onClick={onClick}
       onKeyDown={(e) => {;
         if (e.key === 'Enter' || e.key === ' ') {;
-
           e.preventDefault();
           onClick();
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

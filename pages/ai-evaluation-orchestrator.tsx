@@ -1,5 +1,11 @@
 =======
 
+const AIEvaluationOrchestrator: React.FC = () => {
+import React from 'react',
+import Head from 'next/head';
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <Layout>;
@@ -120,18 +126,13 @@
       </main>;
 
 
-=======
-import Button from '../components/ui/Button';
-export default function AIEvaluationOrchestratorPage() {
-=======
-=======
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 import React from 'react',
 
+=======
+import Head from 'next/head',
+import Button from '../components/ui/Button',
+export default function AIEvaluationOrchestratorPage() {
   return (
     <>
       <Head>
@@ -142,11 +143,26 @@ import React from 'react',
           <header className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">AI Evaluation Orchestrator</h1>
 
+=======
+import Button from '../components/ui/Button';
+export default function AIEvaluationOrchestratorPage() {
+  return (
+    <>
+      <Head>
+        <title>AI Evaluation Orchestrator | Zion Tech Group</title>
+        <meta name="description" content="Define evals, run batch tests, score prompts and models, and prevent regressions." />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-evaluation-orchestrator" />
+      </Head>
+      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
+        <div className="max-w-6xl mx-auto space-y-10">
+          <header className="text-center">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">AI Evaluation Orchestrator</h1>
+            <p className="text-gray-300 text-lg">Automated LLM and prompt evaluations with dashboards, baselines, and CI gates.</p>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           </header>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
 
-<<<<<<< HEAD
           </section>
           <div className="text-center">
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Talk to Sales</Button>
@@ -154,3 +170,6 @@ import React from 'react',
         </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

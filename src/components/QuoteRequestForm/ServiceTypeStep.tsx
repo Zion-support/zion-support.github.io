@@ -23,6 +23,10 @@ interface ServiceTypeStepProps {
   updateFormData: (data: Partial<QuoteFormData>) => void
 }
 
+=======
+<<<<<<< HEAD
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState(""),
   const debouncedQuery = useDebounce(searchQuery, 300),
@@ -30,6 +34,8 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
   const [loading, setLoading] = useState(false),
   const [error, setError] = useState<string | null>(null),
   const isMounted = useIsMounted(),
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   // Fetch services when the service type or query changes
   useEffect(() => {

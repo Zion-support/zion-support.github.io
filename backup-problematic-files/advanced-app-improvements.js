@@ -16,16 +16,14 @@ export class HealthChecker {
 
   const monitoringFiles = {
     'monitoring/health-check.js': `// Advanced health check system
-
+export class HealthChecker {
+  constructor() {this.checks = new Map();
 export class HealthChecker {;
   constructor() {;
     this.checks = new Map();
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
-    this.results = new Map();  }
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   addCheck(name, checkFunction) {
     this && this.checks.set(name, checkFunction);
   }
@@ -380,7 +378,6 @@ if ( {) {
   });
 }`
     'monitoring/analytics.js': `// Analytics tracking system
-<<<<<<< HEAD
 if (typeof window !== 'undefined') {
   window && window.addEventListener('error', (event) => {
     errorTracker && errorTracker.trackError(event && event.error, {
@@ -424,6 +421,7 @@ if (typeof window !== 'undefined') {
   getSessionEvents() {
     return this && this.events.filter(event => event && event.sessionId === this && this.sessionId);
   }
+<<<<<<< HEAD
 
     'monitoring / analytics.js': `// Analytics tracking system;
 export class AnalyticsTracker {
@@ -558,7 +556,7 @@ main();// Run if called directly
 if (import && import.meta.url === `file://${process ;
 
 }
-
+export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements }
 
 export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements };
     console.log ('Starting advanced app improvements...');

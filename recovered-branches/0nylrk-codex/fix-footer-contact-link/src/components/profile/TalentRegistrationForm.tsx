@@ -1,3 +1,4 @@
+=======
 
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
@@ -37,6 +38,7 @@ interface CategorizedSkills {
   softSkills: string[]
   other: string[]
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -54,8 +56,69 @@ import {toast} from "@/components/ui/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {useAuth} from "@/hooks/useAuth";
-=======
+import React, { useState } from "react",
+import { useForm } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Switch } from "@/components/ui/switch",
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import {
+  Form;
+  FormControl;
+  FormDescription;
+  FormField;
+  FormItem;
+  FormLabel;
+import { Badge } from "@/components/ui/badge",
+import { Separator } from "@/components/ui/separator",
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from "lucide-react",
+import { toast } from "@/components/ui/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useAuth } from "@/hooks/useAuth";
+import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { useAuth } from "@/hooks/useAuth",
+// Define form schema
 
+const talentProfileSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters long"),
+  title: z.string().min(5, "Professional title is required"),
+  bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),
+  location: z.string().min(2, "Location is required"),
+  skills: z.string().min(2, "Enter at least one skill"),
+  hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
+    message: "Hourly rate must be a number"})
+  availability: z.enum(["available", "limited", "unavailable"]);
+  enhancedProfile: z.boolean().default(true)})
+type TalentFormValues = z.infer<typeof talentProfileSchema>;
+type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other';
+    message: "Hourly rate must be a number"}),
+  availability: z.enum(["available", "limited", "unavailable"]),
+  enhancedProfile: z.boolean().default(true)}),
+
+type TalentFormValues = z.infer<typeof talentProfileSchema>,
+
+type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other',
+
+interface CategorizedSkills {
+  programming: string[]
+  devops: string[]
+  platforms: string[]
+  softSkills: string[]
+  other: string[]
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -104,9 +167,7 @@ interface CategorizedSkills {;
   softSkills: string[],;
   other: string[];
 
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 interface EnhancedProfile {
   summary: string
@@ -132,10 +193,6 @@ interface EnhancedProfile {
     if (skillInput && !skillTags.includes(skillInput)) {
 
 
-=======
-      setSkillTags([...skillTags, skillInput]),
-      form.setValue("skills", "")
-    }
 
   // Handle key press in skills input (add on enter)
   const handleSkillKeyPress = (e: React.KeyboardEvent) => {
@@ -146,34 +203,11 @@ interface EnhancedProfile {
 
   };
 
-      setSkillTags([...skillTags, skillInput]);
-      form && form.setValue("skills", "");
-    }
-
-  },;
-  // Handle removing skill tags;
-  const handleRemoveSkill = (skill: string) => {;
-    setSkillTags(skillTags.filter((s) => s !== skill));
-  },;
-  // Handle key press in skills input (add on enter);
-  const handleSkillKeyPress = (e: React.KeyboardEvent) => {;
-    if (e.key === "Enter") {;
-      e.preventDefault(),;
-      handleAddSkill();
-    }
-  },;
-  // Handle avatar upload;
-  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {;
-    const file = e.target.files?.[0],;
-    if (file) {;
-      const reader = new FileReader(),;
-      reader.onloadend = () => {;
-        setUploadedAvatar(reader.result as string);
-      },;
-      reader.readAsDataURL(file);
-    }
-  },
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 
 
@@ -184,39 +218,61 @@ interface EnhancedProfile {
     const formData = form.getValues(),
     if (!formData.bio || formData.bio.length < 20) {
 
-      toast({
-        title: "More information needed"
-        description: "Please provide at least a detailed bio before generating enhanced content."})
-      return
+    }
+    try {
+      setIsGenerating(true);
+      // Call the Supabase Edge Function
+      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
+        body: {
+          talentData: {
+            name: formData.name
+            title: formData.title
+            bio: formData.bio
+            skills: skillTags
+            location: formData.location
+          }
+        }
+      });
+      if (error) {
+        throw new Error(error.message)
+      }
+      setGeneratedContent(data as EnhancedProfile);
+  },;
 
+  // Generate enhanced profile with AI;
+  const generateEnhancedProfile = async () => {;
+    const formData = form && form.getValues();
+    if (!formData && formData.bio || formData && formData.bio.length < 20) {;
+      toast({;
+        title: "More information needed",;
+        description: "Please provide at least a detailed bio before generating enhanced content."}),;
+      return;
+    }
+
+    try {;
+      setIsGenerating(true);
+
+      // Call the Supabase Edge Function;
+      const { data, error } = await supabase && supabase.functions.invoke('talent-profile-enhancer', {;
+        body: {;
+          talentData: {;
+            name: formData && formData.name,;
+            title: formData && formData.title,;
+            bio: formData && formData.bio,;
+            skills: skillTags,;
+            location: formData && formData.location;
+          }
+        }
+
+      }),;
+      if (error) {;
+        throw new Error(error.message);
 =======
-  };
 
-  // Handle removing skill tags;
-  const handleRemoveSkill = (skill: string) => {;
-    setSkillTags(skillTags && skillTags.filter((s) => s !== skill));
-  };
 
-  // Handle key press in skills input (add on enter);
-  const handleSkillKeyPress = (e: React && React.KeyboardEvent) => {;
-    if (e && e.key === "Enter") {;
-      e && e.preventDefault(),;
-      handleAddSkill();
-    }
-  };
 
-  // Handle avatar upload;
-  const handleAvatarUpload = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
-    const file = e && e.target.files?.[0];
-    if (file) {;
-      const reader = new FileReader(),;
-      reader && reader.onloadend = () => {;
-        setUploadedAvatar(reader && reader.result as string);
-      };
-      reader && reader.readAsDataURL(file);
-    }
-  };
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -245,35 +301,21 @@ interface EnhancedProfile {
       }
       setGeneratedContent(data as EnhancedProfile);
 
-import React, { useState } from './react';
-import { use_form } from './react - hook - form';
-import { zod_resolver } from '@hookform / resolvers / zod';
-import { z } from './zod';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Textarea } from '@/components / ui / textarea';
-import { Switch } from '@/components / ui / switch';
-import { Badge } from '@/components / ui / badge';
-import { Separator } from '@/components / ui / separator';
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
-import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from './lucide-react';
-import { toast } from '@/components / ui / use - toast';
-import { supabase } from '@/integrations / supabase / client';
-import { AspectRatio } from '@/components / ui / aspect - ratio';
-import { use_auth } from '@/hooks / use_auth';
-// Define form schema;
-const talentProfileSchema = z.object ({
-  name: z.string ().min (2, "Name must be at least 2 characters long");
-  title: z.string ().min (5, "Professional title is required");
-  bio: z.string ().min (50, "Bio must be at least 50 characters long").max (1000, "Bio cannot exceed 1000 characters");
-  location: z.string ().min (2, "Location is required");
-  skills: z.string ().min (2, "Enter at least one skill");
-  hourly_rate: z.string ().refine ((val) => !isNaN (Number (val)), {
-    message: "Hourly rate must be a number"}),
-  availability: z.enum (["available", "limited", "unavailable"]);
-  enhanced_profile: z.boolean ().default (true)}),
-type TalentFormValues = z.infer < typeof talentProfileSchema>;
+  // Apply generated content to form
+  const applyGeneratedContent = () => {
+    if (generatedContent) {
+      form.setValue("bio", generatedContent.summary),
+      
+      // Extract all skills from categorized skills and properly type cast them
+      const allCategorizedSkills = generatedContent.categorizedSkills,
+      const newSkills: string[] = [],
+      
+      // Safely extract and flatten skills from each category
+      Object.values(allCategorizedSkills).forEach(categorySkills => {
+        if (Array.isArray(categorySkills)) {
+          categorySkills.forEach(skill => {
+            if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
+              newSkills.push(skill)
 ;
 type CategoryType = 'programming' | 'devops' | 'platforms' | 'soft_skills' | 'other';
 ;
@@ -321,8 +363,20 @@ function TalentRegistrationForm() {
       setSkillTags ([...skill_tags, skill_input]);
       form.set_value ("skills", "");
     }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  },;
+  // Apply generated content to form;
+  const applyGeneratedContent = () => {;
+    if (generatedContent) {;
+      form.setValue("bio", generatedContent.summary),;
+      // Extract all skills from categorized skills and properly type cast them;
+      const allCategorizedSkills = generatedContent.categorizedSkills,;
+      const newSkills: string[] = [],;
+      // Safely extract and flatten skills from each category;
+      Object.values(allCategorizedSkills).forEach(categorySkills => {;
+        if (Array.isArray(categorySkills)) {;
+          categorySkills.forEach(skill => {;
+            if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {;
+              newSkills.push(skill);
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             }
           });
@@ -381,31 +435,82 @@ function TalentRegistrationForm() {
                 location: values.location
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
-=======
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        setSkillTags ([...skill_tags, ...new_skills]);
+    try {
+      await supabase.functions.invoke('send-email', {
+        body: {
+          to: email
+          subject: "Your Zion Talent Profile Has Been Enhanced"
+          html: `
+          <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">
+            <h2 style="color: #6D28D9,">Profile Enhancement Complete</h2>
+            <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>
+            <p>We've added a professional summary and categorized your skills to help you stand out.</p>
+            <p>You can review and edit these enhancements in your profile dashboard.</p>
+            <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee,">
+              <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>
+            </div>
+          </div>
+          `
+        }
+      })
+    } catch (error) {
+      console.error("Failed to send notification email:", error)
+    }
+  }
+  },
+
+  // Handle form submission
+  const onSubmit = async (values: TalentFormValues) => {
+    if (skillTags.length === 0) {
+      toast({
+        title: "Skills required"
+        description: "Please add at least one skill to your profile."
+        variant: "destructive"})
+      return
+    }
+    setIsSubmitting(true);
+
+    setIsSubmitting(true),
+
+    try {
+      // For actual implementation with Supabase
+      if (!user?.id) {
+        throw new Error("User not authenticated")
       }
-    }
-  }
-;
-  // Get category color;
-  const getCategoryColor = (category: CategoryType) =>: any {
-    switch (category) {
-      case 'programming': return 'bg - blue - 500 / 20 hover:bg - blue - 500 / 30 text - blue - 500';
-      case 'devops': return 'bg - green - 500 / 20 hover:bg - green - 500 / 30 text - green - 500';
-      case 'platforms': return 'bg - amber - 500 / 20 hover:bg - amber - 500 / 30 text - amber - 500';
-      case 'soft_skills': return 'bg - purple - 500 / 20 hover:bg - purple - 500 / 30 text - purple - 500';
-      case 'other': return 'bg - gray - 500 / 20 hover:bg - gray - 500 / 30 text - gray - 500',
-      default: return 'bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple';
-    }
-  }
-;
+      // Enhance profile if not already done
+      let finalSummary = "";
+      let finalSkills = skillTags;
+      let finalSummary = "",
+      let finalSkills = skillTags,
+      
+      if (values.enhancedProfile && !generatedContent) {
+        try {
+          const { data: aiData } = await supabase.functions.invoke('talent-profile-enhancer', {
+            body: {
+              talentData: {
+                name: values.name
+                title: values.title
+                bio: values.bio
+                skills: skillTags
+                location: values.location
+              }
+            }
+          });
+          if (aiData) {
+            finalSummary = (aiData as EnhancedProfile).summary;
+            // Safely merge AI suggested skills with user-provided skills
+            const categorizedSkills = (aiData as EnhancedProfile).categorizedSkills;
+            const aiSkills: string[] = []
+            // Extract skills from each category and ensure they're strings
+            Object.values(categorizedSkills).forEach(categorySkills => {
+              if (Array.isArray(categorySkills)) {
+                categorySkills.forEach(skill => {
+                  if (typeof skill === 'string' && skill) {
+                    aiSkills.push(skill)
+  },;
   // Send notification email;
   const sendEnhancementNotification = async (user_id: string, email: string) => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -560,6 +665,7 @@ if ( {) {
                 categorySkills.forEach(skill => {;
                   if (typeof skill === 'string' && skill) {;
                     aiSkills.push(skill);
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -568,29 +674,18 @@ if ( {) {
                 });
               }
 
-=======
-
-            // Create a unique set of skills;
-            finalSkills = [...new Set([...skillTags, ...aiSkills])];
-
-          }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           }
         } catch (error) {
           console.error("Error enhancing profile:", error),
           // Continue with submission even if enhancement fails
           finalSummary = ""
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         } catch (error) {;
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
           finalSummary = "";
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         }
       } else if (generatedContent) {;
@@ -635,6 +730,8 @@ if ( {) {
       setIsSubmitting(false)
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               {/* Basic Information */}
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;
@@ -674,25 +771,6 @@ if ( {) {
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="e && e.g., Senior Software Developer"
-=======
-                          <FormMessage className="text - red - 400" />;
-                        </FormItem>)}
-                    />;
-                  </div>;
-                  <div className="col - span - 1">;
-                    <FormField;
-                      control={form.control}
-                      name="title";
-                      render={({ field }) => (
-                        <FormItem>;
-                          <FormLabel className="text - zion - slate - light">Professional Title</FormLabel>;
-                          <FormControl>;
-                            <div className="relative">;
-                              <Briefcase className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />;
-                              <Input;
-                                className="pl - 10 bg - zion - blue border - zion - blue - light text - white";
-                                placeholder="e.g., Senior Software Developer";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                                 {...field}
                               />;
                             </div>;
@@ -949,253 +1027,6 @@ if ( {) {
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-                {/* Generated Content Display */}
-                {generatedContent && (;
-                  <div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">;
-                    <div className="flex items-center justify-between mb-3">;
-                      <h4 className="text-white font-medium flex items-center">;
-                        <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />;
-                        AI-Generated Content;
-                      </h4>;
-                      <Button
-                        type="button"
-                        size="sm"
-                        className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-
-                        onClick={applyGeneratedContent}>;
-                        <Check className="mr-1 h-3 w-3" /> Apply;
-                      </Button>;
-                    </div>;
-
-                    <div className="space-y-4">;
-                      <div>;
-                        <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5>;
-                        <p className="text-zion-slate italic">{generatedContent && generatedContent.summary}</p>;
-                      </div>;
-
-                      {generatedContent && generatedContent.categorizedSkills && (;
-                        <div>;
-                          <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5>;
-                          <div className="flex flex-wrap gap-2 mt-1">;
-                            {Object && Object.entries(generatedContent && generatedContent.categorizedSkills).map(([category, skills]) => (;
-                              <div key={category} className="flex items-center gap-2">;
-
-                                <Badge
-                                  className={`w-fit ${getCategoryColor(category as CategoryType)}`}>;
-                                  {category}
-                                </Badge>;
-                                <div className="flex flex-wrap gap-1">;
-                                  {skills && skills.map(skill => (;
-                                    <Badge
-                                      key={skill}
-                                      className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none">;
-                                      {skill}
-                                    </Badge>;
-                                  ))}
-                                </div>;
-                              </div>;
-                            ))}
-                          </div>;
-                        </div>;
-                      )}
-                    </div>;
-                  </div>;
-                )}
-
-              </div>;
-
-              <Separator className="bg-zion-blue-light/50" />;
-
-
-              {/* Skills and Availability */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-                {/* Skills Section */}
-                <div className="space-y-4">;
-                  <h3 className="text-lg font-medium text-white">Skills & Expertise</h3>;
-                  <FormField
-                    control={form && form.control}
-                    name="skills"
-                    render={({ field }) => (;
-                      <FormItem>;
-                        <FormLabel className="text-zion-slate-light">Skills</FormLabel>;
-                        <div className="flex gap-2">;
-                          <FormControl>;
-                            <Input
-                              className="flex-1 bg-zion-blue border-zion-blue-light text-white"
-                              placeholder="Add a skill..."
-                              {...field}
-                              onKeyDown={handleSkillKeyPress}
-                            />;
-                          </FormControl>;
-
-                  />;
-
-                  <div className="flex flex-wrap gap-2 mt-2">;
-                    {skillTags && skillTags.map(skill => (;
-
-                      <Badge
-                        key={skill}
-                        className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1 && 1.5 flex items-center gap-1">;
-                        {skill}
-                        <button
-                          type="button"
-                          onClick={() => handleRemoveSkill(skill)}
-                          className="rounded-full hover:bg-zion-purple-dark/20 p-0 && 0.5";
-                        >;
-                          <X className="h-3 w-3" />;
-                        </button>;
-                      </Badge>;
-                    ))}
-                    {skillTags && skillTags.length === 0 && (;
-                      <p className="text-zion-slate text-sm italic">No skills added yet</p>;
-                    )}
-
-                  </div>;
-                </div>;
-
-
-                {/* Availability Section */}
-                <div className="space-y-4">;
-                  <h3 className="text-lg font-medium text-white">Availability</h3>;
-                  <FormField
-                    control={form && form.control}
-                    name="availability"
-                    render={({ field }) => (;
-                      <FormItem className="space-y-4">;
-                        <FormLabel className="text-zion-slate-light">Current Status</FormLabel>;
-                        <FormControl>;
-                          <div className="space-y-2">;
-                            <div className="flex items-center space-x-2">;
-                              <input
-                                type="radio"
-                                id="available"
-                                value="available"
-
-                                checked={field && field.value === "available"}
-                                onChange={() => field && field.onChange("available")}
-                                className="text-zion-purple focus:ring-zion-purple";
-                              />;
-                              <label htmlFor="available" className="text-white flex items-center gap-2">;
-                                <div className="h-2 w-2 rounded-full bg-green-500"></div>;
-                                Available Now;
-                              </label>;
-                            </div>;
-
-                            <div className="flex items-center space-x-2">;
-
-                              <input
-                                type="radio"
-                                id="limited"
-                                value="limited"
-
-                                checked={field && field.value === "limited"}
-                                onChange={() => field && field.onChange("limited")}
-                                className="text-zion-purple focus:ring-zion-purple";
-                              />;
-                              <label htmlFor="limited" className="text-white flex items-center gap-2">;
-                                <div className="h-2 w-2 rounded-full bg-yellow-500"></div>;
-                                Limited Availability;
-                              </label>;
-                            </div>;
-
-                            <div className="flex items-center space-x-2">;
-
-                              <input
-                                type="radio"
-                                id="unavailable"
-                                value="unavailable"
-                                checked={field && field.value === "unavailable"}
-                                onChange={() => field && field.onChange("unavailable")}
-                                className="text-zion-purple focus:ring-zion-purple";
-                              />;
-                              <label htmlFor="unavailable" className="text-white flex items-center gap-2">;
-                                <div className="h-2 w-2 rounded-full bg-red-500"></div>;
-=======
-                          <Button;
-                            type="button";
-                            variant="outline";
-                            className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white";
-                            on_click={handleAddSkill}
-                          >;
-                            Add;
-                          </Button>;
-                        </div>;
-                        <FormDescription className="text - zion - slate">;
-                          Press Enter or click Add to include a skill;
-                        </FormDescription>;
-                        <FormMessage className="text - red - 400" />;
-                      </FormItem>)}
-                  />;
-                  <div className="flex flex - wrap gap - 2 mt - 2">;
-                    {skill_tags.map (skill => (
-                      <Badge;
-                        key={skill}
-                        className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none pl - 2 pr - 1 py - 1.5 flex items - center gap - 1";
-                      >;
-                        {skill}
-                        <button;
-                          type="button";
-                          on_click={() => handleRemoveSkill (skill)}
-                          className="rounded - full hover:bg - zion - purple - dark / 20 p - 0.5";
-                        >;
-                          <X className="h - 3 w - 3" />;
-                        </button>;
-                      </Badge>))}
-                    {skill_tags.length === 0 && (
-                      <p className="text - zion - slate text - sm italic">No skills added yet</p>)}
-                  </div>;
-                </div>;
-                {/* Availability Section */}
-                <div className="space - y-4">;
-                  <h3 className="text - lg font - medium text - white">Availability</h3>;
-                  <FormField;
-                    control={form.control}
-                    name="availability";
-                    render={({ field }) => (
-                      <FormItem className="space - y-4">;
-                        <FormLabel className="text - zion - slate - light">Current Status</FormLabel>;
-                        <FormControl>;
-                          <div className="space - y-2">;
-                            <div className="flex items - center space - x-2">;
-                              <input;
-                                type="radio";
-                                id="available";
-                                value="available";
-                                checked={field.value === "available"}
-                                on_change={() => field.on_change ("available")}
-                                className="text - zion - purple focus:ring - zion - purple";
-                              />;
-                              <label html_for="available" className="text - white flex items - center gap - 2">;
-                                <div className="h - 2 w - 2 rounded - full bg - green - 500"></div>;
-                                Available Now;
-                              </label>;
-                            </div>;
-                            <div className="flex items - center space - x-2">;
-                              <input;
-                                type="radio";
-                                id="limited";
-                                value="limited";
-                                checked={field.value === "limited"}
-                                on_change={() => field.on_change ("limited")}
-                                className="text - zion - purple focus:ring - zion - purple";
-                              />;
-                              <label html_for="limited" className="text - white flex items - center gap - 2">;
-                                <div className="h - 2 w - 2 rounded - full bg - yellow - 500"></div>;
-                                Limited Availability;
-                              </label>;
-                            </div>;
-                            <div className="flex items - center space - x-2">;
-                              <input;
-                                type="radio";
-                                id="unavailable";
-                                value="unavailable";
-                                checked={field.value === "unavailable"}
-                                on_change={() => field.on_change ("unavailable")}
-                                className="text - zion - purple focus:ring - zion - purple";
-                              />;
-                              <label html_for="unavailable" className="text - white flex items - center gap - 2">;
-                                <div className="h - 2 w - 2 rounded - full bg - red - 500"></div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                                 Currently Unavailable;
                               </label>;
                             </div>;

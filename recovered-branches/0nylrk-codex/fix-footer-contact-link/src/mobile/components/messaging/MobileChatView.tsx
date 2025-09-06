@@ -1,4 +1,6 @@
 
+=======
+
 
 import React, { useState } from "react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
@@ -11,6 +13,24 @@ interface Message {
   id: string,
   content: string,
   timestamp: string,
+import React, { useState } from "react";
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {useNavigate} from "react-router-dom";
+import {toast} from "sonner";
+import React, { useState } from "react",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",
+import { cn } from "@/lib/utils",
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface Message {
   id: string,
   content: string,
@@ -23,8 +43,16 @@ interface MobileChatViewProps {
     id: string
     name: string
     avatar?: string;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+    status?: string
+  }
+  messages: Message[]
+  onBack: () => void
+import { useNavigate } from "react-router-dom",
+import { toast } from "sonner",
+interface Message {
+  id: string,
+  content: string,
+  timestamp: string,
   isMe: boolean,
   sender?: string,
   avatar?: string,
@@ -59,18 +87,67 @@ interface MobileChatViewProps {;
   onBack: () => void,;
   onSendMessage: (content: string) => void;
 }
+=======
 
   onSendMessage: (content: string) => void
 }
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+  onSendMessage: (content: string) => void
+}
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
+  const [newMessage, setNewMessage] = useState("");
+
+  const navigate = useNavigate();
+
+
+  const handleSend = () => {;
+    if (newMessage && newMessage.trim() !== "") {;
+
+      onSendMessage(newMessage);
+      setNewMessage("");
+    }
+  }
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault()
+      handleSend()
+    }
+  }
+  const [newMessage, setNewMessage] = useState(""),
+  const navigate = useNavigate(),
+  
+  const handleSend = () => {
+    if (newMessage.trim() !== "") {
+      onSendMessage(newMessage),
+      setNewMessage("")
+;
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
+  const [newMessage, setNewMessage] = useState(""),;
+  const navigate = useNavigate(),;
+  const handleSend = () => {;
+    if (newMessage.trim() !== "") {;
+      onSendMessage(newMessage),;
+      setNewMessage("");
+    }
+  },;
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
+    if (e.key === 'Enter' && !e.shiftKey) {;
+      e.preventDefault(),;
+      handleSend();
+    }
+  },
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`;
     toast.success("Starting video call", {
       description: `Connecting with ${contact.name}...`
-
-=======
 
     }),
     
@@ -81,11 +158,6 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  const startAudioCall = () => {
-    const roomId = `mobile-audio-${contact.id}`;
-    toast.success("Starting audio call", {
-      description: `Connecting with ${contact.name}...`
-
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -135,11 +207,13 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             >
               <p>{message.content}</p>
               <div className={cn(
+                "text-xs mt-1 flex justify-end";
 
   },;
   const startVideoCall = () => {;
     const roomId = `mobile-${contact.id}`,;
     toast.success("Starting video call", {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       description: `Connecting with ${contact.name}...`;
     });
 ;
@@ -295,6 +369,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
                   ? "bg-primary text-primary-foreground rounded-tr-none" 
                   : "bg-muted rounded-tl-none"
               )}>;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 )}
               </div>;
             </div>;

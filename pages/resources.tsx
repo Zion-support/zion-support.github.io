@@ -9,16 +9,6 @@ export default function ResourcesPage() {
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    <UltraFuturisticBackground intensity="high" variant="quantum">
-      <SEO title="Resources | Zion Tech Group" description="Guides, case studies, support, training, and market pricing links." canonical="https://ziontechgroup.com/resources/" />
-      <div className="container mx-auto px-4 py-16 text-white">
-        <div className="text-center max-w-3xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Resources</h1>
-          <p className="mt-3 text-gray-300">Docs, guides, and references to help you evaluate and deploy faster. Contact: +1 302 464 0950 • kleber@ziontechgroup.com</p>
-        </div>
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-
           ].map((it) => (
             <Link key={it.href} href={it.href} className="p-6 rounded-2xl bg-black/50 border border-gray-800 hover:border-cyan-500/50 transition-colors block">
               <div className="text-sm text-gray-400">Resource</div>
@@ -29,6 +19,8 @@ export default function ResourcesPage() {
             </Link>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Whitepapers & Guides</h2>
@@ -40,6 +32,7 @@ export default function ResourcesPage() {
             {whitepapers.map((paper, index) => (
               <motion.div
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
               >
                 <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-8">
@@ -48,6 +41,9 @@ export default function ResourcesPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     </span>
                     <span className="text-white/80 text-sm">{paper.pages} pages</span>
                   </div>
@@ -62,6 +58,8 @@ export default function ResourcesPage() {
                     <a
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
                     >
                       <Download className="w-5 h-5" />
@@ -72,6 +70,8 @@ export default function ResourcesPage() {
               </motion.div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Case Studies</h2>
@@ -101,15 +101,21 @@ export default function ResourcesPage() {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3 leading-tight">{paper.title}</h3>
                   <p className="text-blue-100 leading-relaxed">{paper.description}</p>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+                className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6">
+                  <FileText className="w-8 h-8 text-white" />
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 </div>
                 <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
-
-
+                  {study.industry}
                   {study.industry  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -126,8 +132,6 @@ export default function ResourcesPage() {
                         <span>{result}</span>
                       </li>
 
-=======
-
                     ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -141,9 +145,6 @@ export default function ResourcesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
                 >
@@ -151,6 +152,8 @@ export default function ResourcesPage() {
                   <ArrowRight className="w-4 h-4" />
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Video Resources</h2>
@@ -162,6 +165,7 @@ export default function ResourcesPage() {
             {videos.map((video, index) => (
               <motion.div
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300"
               >
                 <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-6 text-center">
@@ -170,6 +174,9 @@ export default function ResourcesPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   </span>
                 </div>
                 <div className="p-6">
@@ -181,6 +188,8 @@ export default function ResourcesPage() {
                   <a
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
                   >
                     Watch Video
@@ -193,71 +202,6 @@ export default function ResourcesPage() {
                   <span>Read Case Study</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
-              </motion.div>
-
-                  </span>;
-                </div>;
-                <div className="p - 6">;
-                  <h3 className="text - lg font - bold text - white mb - 3 leading - tight">{video.title}</h3>;
-                  <p className="text - white / 70 text - sm leading - relaxed mb - 4">{video.description}</p>;
-                  <div className="flex items - center justify - between mb - 4">;
-                    <span className="text - white / 60 text - sm">{video.duration}</span>;
-                  </div>;
-                  <a;
-                    href={video.watch_url}
-                    className="block w - full bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 text - white text - center py - 3 rounded - xl font - medium transition - all duration - 200 transform hover:scale - 105";
-                  >;
-                    Watch Video;
-                  </a>;
-                </div>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-
-      {/* Documentation */}
-      <section className="py - 20 bg - white">;
-        <div className="max - w-7xl mx - auto px - 6">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
-
-
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </div>;
-      </section>;
-      {/* Documentation */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.6 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             className="text-center mb-16"
           >
@@ -284,18 +228,20 @@ export default function ResourcesPage() {
                   <span className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm text-white">
                     {video.category}
                   </span>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+                className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6">
+                  <BookOpen className="w-8 h-8 text-white" />
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 </div>
                 <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
-
-
+                  {doc.type}
                   {doc.type  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 </span>
                 <h3 className="text-xl font-bold text-slate-900 mb-4 leading-tight">{doc.title}</h3>
@@ -306,16 +252,11 @@ export default function ResourcesPage() {
                 </div>
                 <a
 
-=======
-
                   href={doc.downloadUrl  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
                 >
@@ -323,6 +264,7 @@ export default function ResourcesPage() {
                 </a>
               </motion.div>
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
@@ -344,29 +286,13 @@ export default function ResourcesPage() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Need More Resources?</h2>
             <p className="text-xl text-blue-100 mb-8">
+              Can't find what you're looking for? Our team is here to help with custom research
 
-              personalized consultations, and tailored solutions for your specific needs.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
-              >
-                Contact Our Experts
-              </a>
-              <a
-                href="/contact"
-                className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
-              >
-                Request Custom Research
-              </a>
-
-            </div>
-          </motion.div>
-        </div>
-      </section>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              Can't find what you're looking for? Our team is here to help with custom research,
+              Can't find what you're looking for? Our team is here to help with custom research, 
+              Can't find what you're looking for? Our team is here to help with custom research,
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               personalized consultations, and tailored solutions for your specific needs.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -390,52 +316,6 @@ export default function ResourcesPage() {
     </>
   )
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-          >;
-            <h2 className="text - 4xl font - bold text - white mb - 6">Need More Resources?</h2>;
-            <p className="text - xl text - blue - 100 mb - 8">;
-              Can't find what you're looking for? Our team is here to help with custom research,
-              personalized consultations, and tailored solutions for your specific needs.;
-            </p>;
-            <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
-              <a;
-                href="/contact";
-                className="bg - white text - blue - 600 hover:bg - blue - 50 px - 8 py - 4 rounded - xl font - semibold text - lg transition - all duration - 200 transform hover:scale - 105";
-              >;
-                Contact Our Experts;
-              </a>;
-              <a;
-                href="/contact";
-                className="border border - white / 20 text - white hover:bg - white / 10 px - 8 py - 4 rounded - xl font - semibold text - lg transition - all duration - 200";
-              >;
-                Request Custom Research;
-              </a>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-      <EnhancedFooter />;
-    </>);
-              <a
-                href=&quot;/contact&quot;
-                className=&quot;bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105&quot;
-              >
-                Contact Our Experts
-              </Link>
-              <a
-                href=&quot;/contact&quot;
-                className=&quot;border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200&quot;
-              >
-                Request Custom Research
-              </Link>
-=======
-=======
-                key={doc.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

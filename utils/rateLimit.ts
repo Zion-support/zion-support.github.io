@@ -1,8 +1,12 @@
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes
 const RATE_LIMIT_MAX_REQUESTS = 100; // 100 requests per window
 export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
+<<<<<<< HEAD
 
              'unknown';
   const now = Date.now();
@@ -18,15 +22,15 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   }
   if (current.count >= RATE_LIMIT_MAX_REQUESTS) {
     res.status(429).json({ error: 'Too Many Requests' });
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     return false;
   }
   current.count++;
   rateLimitMap.set(key, current);
   return true;
 }
-=======
 
+import type { NextApiRequest, NextApiResponse } from 'next';
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

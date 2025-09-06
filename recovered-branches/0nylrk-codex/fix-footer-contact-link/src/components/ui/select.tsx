@@ -1,3 +1,14 @@
+=======
+import * as React from &quot;react&quot;
+import * as SelectPrimitive from &quot;@radix-ui/react-select&quot;
+import { Check, ChevronDown, ChevronUp } from &quot;lucide-react&quot;
+import { cn } from &quot;@/lib/utils&quot;
+import * as React from "react"
+import * as SelectPrimitive from "@radix-ui/react-select"
+import { Check, ChevronDown, ChevronUp } from "lucide-react"
+
+import { cn } from "@/lib/utils"
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 const Select = SelectPrimitive.Root
 const SelectGroup = SelectPrimitive.Group
@@ -10,12 +21,6 @@ const SelectTrigger = React.forwardRef<
     ref={ref}
     className={cn(
 
-=======
-
-      "flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       className
     )}
     {...props}
@@ -23,6 +28,8 @@ const SelectTrigger = React.forwardRef<
     {children}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ))
@@ -112,13 +119,13 @@ const SelectItem = React.forwardRef<;
 >(({ className, children, ...props }, ref) => (;
   <SelectPrimitive.Item;
     ref={ref}
-
-=======
-
+className={cn(
+      &quot;relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;
     className={cn(
       "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      &quot;relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
+    className={cn(
+      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       className
     )}
@@ -172,8 +179,6 @@ export {
   SelectSeparator;
   SelectScrollUpButton;
   SelectScrollDownButton}
-=======
-
 export {;
   Select,;
   SelectGroup,;
@@ -186,6 +191,9 @@ export {;
   SelectScrollUpButton;
   SelectScrollDownButton}
 ;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

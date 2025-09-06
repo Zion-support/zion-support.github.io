@@ -1,32 +1,13 @@
 
 
 =======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
-
+import {
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -38,12 +19,192 @@ import Layout from './components/Layout';
   DizzyFace2
 } from 'lucide-react';
 >>>>>>> origin/automation-improvements-final
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+origin/automation-improvements-final
+import {
+  Mail,
+  Lock,
+  Eye,
+  EyeOff,
+  ArrowRight,
+  CheckCircle,
+  AlertCircle,
+  User,
+  Shield,
+  Globe,
+  Smartphone,
+  Monitor,
+  Server,
+  Database,
+  Cloud,
+  Brain,
+  Code,
+  Settings,
+  Wrench,
+  Cog,
+  Activity,
+  PieChart,
+  BarChart,
+  TrendingUp,
+  DollarSign,
+  ShoppingCart,
+  Home,
+  Trash2,
+  Camera,
+  Heart,
+  ClipboardList,
+  TreePine,
+  Droplets,
+  Building,
+  Rocket,
+  Lightbulb,
+  Target,
+  MessageSquare,
+  HelpCircle,
+  Info,
+  XCircle,
+  Plus,
+  Minus,
+  ChevronUp,
+  ChevronRight,
+  ChevronLeft,
+  ChevronDown,
+  ArrowUp,
+  ArrowDown,
+  ArrowLeft,
+  Pause,
+  Stop,
+  SkipForward,
+  SkipBack,
+  Volume2,
+  VolumeX,
+  Maximize,
+  Minimize,
+  RotateCcw,
+  RotateCw,
+  RefreshCw,
+  Upload,
+  Share,
+  Copy,
+  Edit,
+  Trash,
+  Save,
+  Unlock,
+  Bell,
+  BellOff,
+  Star as StarIcon,
+  Heart as HeartIcon,
+  ThumbsUp,
+  ThumbsDown,
+  MessageCircle,
+  Send,
+  Paperclip,
+  Smile,
+  Frown,
+  Meh,
+  Laugh,
+  Angry,
+  Sad,
+  Surprised,
+  Wink,
+  Kiss,
+  Tongue,
+  Wink2,
+  KissWinkHeart,
+  KissClosedEyes,
+  StuckOutTongue,
+  StuckOutTongueWinkingEye,
+  StuckOutTongueClosedEyes,
+  Disappointed,
+  Worried,
+  Angry2,
+  Rage,
+  Cry,
+  Scream,
+  Confounded,
+  Hugging,
+  Smirk,
+  NoMouth,
+  NeutralFace,
+  Expressionless,
+  Unamused,
+  RollingEyes,
+  Thinking,
+  LyingFace,
+  HandOverMouth,
+  ShushingFace,
+  ExplodingHead,
+  CowboyHatFace,
+  DisguisedFace,
+  Sunglasses,
+  NerdFace,
+  MonocleFace,
+  Confused,
+  WorriedFace,
+  SlightlyFrowningFace,
+  OpenMouth,
+  Hushed,
+  Astonished,
+  Flushed,
+  PleadingFace,
+  FrowningFace,
+  AnguishedFace,
+  FearfulFace,
+  ColdSweat,
+  DisappointedRelieved,
+  CryFace,
+  LoudlyCryingFace,
+  ScreamFace,
+  StuckOutTongueFace,
+  DroolingFace,
+  UnamusedFace,
+  SweatSmile,
+  Sweat,
+  WearyFace,
+  TiredFace,
+  SleepyFace,
+  YawningFace,
+  DizzyFace,
+  ExplodingHeadFace,
+  CowboyHatFace2,
+  DisguisedFace2,
+  SunglassesFace,
+  NerdFace2,
+  MonocleFace2,
+  ConfusedFace,
+  WorriedFace2,
+  SlightlyFrowningFace2,
+  OpenMouthFace,
+  HushedFace,
+  AstonishedFace,
+  FlushedFace,
+  PleadingFace2,
+  FrowningFace2,
+  AnguishedFace2,
+  FearfulFace2,
+  ColdSweatFace,
+  DisappointedRelievedFace,
+  CryFace2,
+  LoudlyCryingFace2,
+  ScreamFace2,
+  StuckOutTongueFace2,
+  DroolingFace2,
+  UnamusedFace2,
+  SweatSmileFace,
+  SweatFace,
+  WearyFace2,
+  TiredFace2,
+  SleepyFace2,
+  YawningFace2,
+  DizzyFace2,
+  DizzyFace2,;
+} from "lucide-react";
+  DizzyFace2
+} from 'lucide-react';
+origin/automation-improvements-final
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   Mail
   Lock
@@ -221,26 +382,35 @@ import Layout from './components/Layout';
   YawningFace2
   DizzyFace2
 } from "lucide-react";
-
 export default function LoginPage() {
   const [formData, setFormData] = useState({
-
-
+    email: ""
+    password: ""
+    email: "",
+    password: "",;
+  });
+  const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev
+      [name]: value
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       ...prev,
       [name]: value,
   const [error, setError] = useState('');
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
+origin/automation-improvements-final
       ...prev
       [name]: value
 
-=======
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function LoginPage() {
   const [formData, setFormData] = useState({
 
@@ -255,6 +425,8 @@ export default function LoginPage() {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
@@ -266,6 +438,7 @@ export default function LoginPage() {
       // Simulate API call
 
       await new Promise((resolve) => setTimeout(resolve, 1000));
+
       // For demo purposes, accept any email/password;
       if (formData && formData.email && formData && formData.password) {;
         // Redirect to dashboard or home page;
@@ -276,11 +449,12 @@ export default function LoginPage() {
       }
     } catch (err) {;
       setError("Login failed. Please try again.");
-
     setError('');
+
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
+      
       // For demo purposes, accept any email/password
       if (formData.email && formData.password) {
         // Redirect to dashboard or home page
@@ -291,15 +465,17 @@ export default function LoginPage() {
     } catch (err) {
       setError('Login failed. Please try again.');
 
-=======
-    } finally {
-=======
->>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     } finally {
+=======
+origin/automation-improvements-final
+    } finally {
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     } finally {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setIsLoading(false);
     }
   }
@@ -351,11 +527,13 @@ export default function LoginPage() {
             <p className="mt-2 text-sm text-gray-600">;
               Or{" "}
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+              Or{" "}
+              Or{" "}
+              Or{' '}
+origin/automation-improvements-final
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <Link
                 href="/contact"
 
@@ -364,6 +542,7 @@ export default function LoginPage() {
               </Link>;
             </p>;
           </motion && motion.div>;
+
           <motion&& motion.div
 
             className="mt-8 bg-white py-8 px-6 shadow-lg rounded-lg"
@@ -382,17 +561,24 @@ export default function LoginPage() {
                 </motion && motion.div>;
               )}
 
-=======
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+origin/automation-improvements-final
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   Email address
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Mail className="h-5 w-5 text-gray-400" />
                   </div>
+=======
+
               <div>;
                 <label
                   htmlFor="email"
@@ -403,6 +589,7 @@ export default function LoginPage() {
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;
                     <Mail className="h-5 w-5 text-gray-400" />;
                   </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <input
                     id="email"
                     name="email"
@@ -426,9 +613,11 @@ export default function LoginPage() {
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Lock className="h-5 w-5 text-gray-400" />
                   </div>
+=======
                   />;
                 </div>;
               </div>;
+
               <div>;
                 <label
                   htmlFor="password"
@@ -439,6 +628,7 @@ export default function LoginPage() {
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;
                     <Lock className="h-5 w-5 text-gray-400" />;
                   </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <input
                     id="password"
                     name="password"
@@ -464,6 +654,7 @@ export default function LoginPage() {
                   </button>;
                 </div>;
               </div>;
+
               <div className="flex items-center justify-between">;
                 <div className="flex items-center">;
 
@@ -498,11 +689,7 @@ export default function LoginPage() {
                   </span>
 
                   <span className="px-2 bg-white text-gray-500">Or continue with</span>
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+origin/automation-improvements-final
                 </div>
               </div>
               <div className="mt-6 grid grid-cols-2 gap-3">
@@ -559,11 +746,13 @@ export default function LoginPage() {
             <p className="text-sm text-gray-600">;
               Don't have an account?{" "}
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+              Don't have an account?{" "}
+              Don't have an account?{" "}
+              Don't have an account?{' '}
+origin/automation-improvements-final
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <Link
                 href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500">;
@@ -575,6 +764,7 @@ export default function LoginPage() {
       </div>;
     </Layout>;
   );
+=======
               <div>;
                 <button;
                   type="submit";
@@ -635,4 +825,5 @@ export default function LoginPage() {
         </div>;
       </div>;
     </Layout>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

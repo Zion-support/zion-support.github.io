@@ -17,8 +17,6 @@ const { execSync } = require('child_process')
 
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // console.log(' Comprehensive Syntax Fixer v2.0')
@@ -44,19 +42,7 @@ console.log('==')
         content = 'import React from "react";
 // console.log('\n "Summary")
       console.log('\n� Fixed "files")
-=======
-// console.log('\n� "Errors")
-=======
-    console.log('\n� Report saved "to")
-=======
-    console.log('\n� Report saved "to")
-=======
-    console.log('\n� Report saved "to")    console.log('\n� Report saved "to")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

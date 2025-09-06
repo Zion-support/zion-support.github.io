@@ -1,11 +1,22 @@
 
+import React, { useState } from 'react';
+import { useParams  } from 'react-router-dom';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';
+import { SEO  } from '@/components/SEO';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
+import { MessageSquare, FileText, Video, Calendar, Users, Settings, X  } from 'lucide-react';
+import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
+import { toast  } from 'sonner';
+export default function ProjectRoom() {
 
-=======
-
+  const { projectId } = useParams() as { projectId: string }
   const { projectId } = useParams() as { projectId: string },;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [activeTab, setActiveTab] = useState('chat');
   const [isInCall, setIsInCall] = useState(false);
   const [callParticipants, setCallParticipants] = useState<Array<{
@@ -33,22 +44,13 @@ import {VideoCallRoom} from '@/components / video / VideoCallRoom';
 import {toast} from 'sonner';
 
   ]),
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  const startVideoCall = () => {
-    setIsInCall(true),
-    toast.success("Video call started", {
-      description: "Others can join with the project room link"
-    }),
-    // Switch to video tab if not already there
-    if (activeTab !== 'video') {
-      setActiveTab('video')
-    }
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const endVideoCall = () => {
     setIsInCall(false);
@@ -90,6 +92,8 @@ import {toast} from 'sonner';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <>;
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />;
@@ -256,3 +260,8 @@ import {toast} from 'sonner';
     </>
   )
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+}
+;
+;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

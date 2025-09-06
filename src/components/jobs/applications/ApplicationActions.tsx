@@ -13,25 +13,40 @@ import { Button } from '@/components/ui/button'
 import { Eye, ChevronDown, Loader2 } from 'lucide-react'
 import { JobApplication, ApplicationStatus } from "@/types/jobs";
 interface ApplicationActionsProps {
+=======
+  application: JobApplication,
+  processingId: string | null,
+  onViewApplication: (applicationId: string) => Promise<void>,
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
+}
 
 <<<<<<< HEAD
+
             Reject
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-
+<<<<<<< HEAD
+      <Button variant='default' size='sm' asChild>        <Link href={`/messages?talentId=${application.talent_id}`}>
       <Button
         variant="default"
         size="sm"
         asChild
       >
+      
 
-          Contact
-        </Link>
-      </Button>
-    </div>
-  )
+      
+      
 
+
+      <Button 
+        variant="default" 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+        size="sm"
+        asChild
+      >
+<<<<<<< HEAD
+<<<<<<< HEAD
 import Link from "next/link",;
 import {;
   DropdownMenu,;
@@ -40,6 +55,8 @@ import {;
   DropdownMenuTrigger;
 } from "@/components/ui/dropdown-menu",;
 import { Button } from "@/components/ui/button",;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { Eye, ChevronDown, Loader2 } from 'lucide-react';
 import { JobApplication, ApplicationStatus } from "@/types/jobs",;
 interface ApplicationActionsProps {;

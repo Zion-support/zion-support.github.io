@@ -1,22 +1,33 @@
 
-
+import React from "react";
+import {cn} from "@/lib/utils";
+import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
 import React from "react",
-
+import { cn } from "@/lib/utils";
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
 interface SeverityIndicatorProps {
-  severity: "safe" | "suspicious" | "dangerous",
-  showIcon?: boolean,
-  showText?: boolean,
-  size?: "sm" | "md" | "lg",
-  className?: string
+
+interface SeverityIndicatorProps {;
+  severity: "safe" | "suspicious" | "dangerous",;
+
+  showIcon?: boolean;
+  showText?: boolean;
+  size?: "sm" | "md" | "lg";
+  className?: string;
 }
 
 export function SeverityIndicator({
-  severity,
-  showIcon = true,
-
+  severity
+  showIcon = true
+  showText = true
+  size = "md";
   className
+import { cn } from "@/lib/utils",
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }: SeverityIndicatorProps) {
   const getSeverityIcon = () => {
     switch (severity) {
@@ -50,13 +61,16 @@ export function SeverityIndicator(): any ({ ;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-  return (
-    <div className={cn("flex items-center gap-1", className)}>
-      {showIcon && getSeverityIcon()}
-      {showText && <span className="capitalize text-sm">{severity}</span>}
-    </div>
-  )
-
+import React from "react",;
+import { cn } from "@/lib/utils",;
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
+interface SeverityIndicatorProps {;
+  severity: "safe" | "suspicious" | "dangerous",;
+  showIcon?: boolean,;
+  showText?: boolean,;
+  size?: "sm" | "md" | "lg",;
+  className?: string;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 ;
           "text-destructive"
@@ -82,7 +96,10 @@ export function SeverityIndicator(): any ({ ;
 
     </div>;
   );
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

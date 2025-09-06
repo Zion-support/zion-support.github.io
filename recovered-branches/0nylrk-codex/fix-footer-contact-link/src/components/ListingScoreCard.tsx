@@ -1,8 +1,26 @@
 
+=======
+
 
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
 
+import {cn} from "@/lib/utils";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {StarIcon} from "lucide-react";
+import { cn } from "@/lib/utils",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button";
+import { StarIcon } from "lucide-react";
+interface ListingScoreCardProps {
+  title: string,
+  description: string,
+
+  image?: string;
+  category: string,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   tags?: string[];
   author?: string;
   author_image?: string;
@@ -22,8 +40,13 @@ export function ListingScoreCard(): any ({ ;
   aiScore = 0;
   rating = 0;
   reviewCount = 0;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  className
+}: ListingScoreCardProps) {
+  return (
+    <div className={cn(
+      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover: border-zion-purple/50 transition-all duration-300 group"
+import { Button } from "@/components/ui/button",
+import { StarIcon } from "lucide-react",
 interface ListingScoreCardProps {
   title: string,
   description: string,
@@ -54,8 +77,7 @@ interface ListingScoreCardProps {
       "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
 
 =======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       className
     )}>
       {image && (
@@ -120,7 +142,17 @@ interface ListingScoreCardProps {
                 <StarIcon
                   key={star}
                   className={cn(
+                    "h-4 w-4"
+                    star <= Math.round(rating)
+                      ? "text-zion-cyan fill-zion-cyan"
 
+=======
+                      : "text-zion-slate-light"
+                    "h-4 w-4", 
+                    star <= Math.round(rating) 
+                      ? "text-zion-cyan fill-zion-cyan" 
+                      : "text-zion-slate-light"
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -164,6 +196,7 @@ export function ListingScoreCard({;
             alt={title} ;
             className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105";
           />;
+<<<<<<< HEAD
         </div>;
       )}
       <div className="flex flex-col p-4 flex-grow">;
@@ -178,6 +211,24 @@ export function ListingScoreCard({;
             </div>;
           )}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+        </div>;
+        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>;
+        <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>;
+
+        {/* Rating */}
+        {rating > 0 && (;
+          <div className="flex items-center gap-1 mb-4">;
+            <div className="flex">;
+              {[1, 2, 3, 4, 5].map((star) => (;
+                <StarIcon
+                  key={star}
+                  className={cn(;
+                    "h-4 w-4";
+                    star <= Math.round(rating);
+                      ? "text-zion-cyan fill-zion-cyan";
+                      : "text-zion-slate-light";
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   )}
                 />;
               ))}
@@ -195,9 +246,16 @@ export function ListingScoreCard({;
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;
 
                 {tag}
-
+              </Badge>
+            ))}
+          </div>
         )}
-
+              </Badge>;
+            ))}
+          </div>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+        )}
+        
         <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
           Request Quote
         </Button>
@@ -209,23 +267,7 @@ export function ListingScoreCard({;
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">
                 {author.charAt(0)}
               </div>
-        )}
-
-
-        <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
-          Request Quote;
-        </Button>;
-
-        {author && (;
-          <div className="flex items-center mt-4 pt-4 border-t border-zion-blue-light">;
-            {authorImage ? (;
-              <img src={authorImage} alt={author} className="h-8 w-8 rounded-full mr-2" />;
-            ) : (;
-              <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">;
-                {author && author.charAt(0)}
-              </div>;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             )}
             <span className="text-sm text-zion-slate-light">{author}</span>;
           </div>;

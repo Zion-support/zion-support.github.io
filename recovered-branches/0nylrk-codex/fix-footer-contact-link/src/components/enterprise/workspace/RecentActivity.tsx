@@ -1,17 +1,41 @@
 
-
+import React from "react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
 import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function RecentActivity() {
   // Mock activity data
 
   const activities = [
     {
-
+      id: "act-1"
+      user: "Michael Chen"
+      action: "posted a new job"
+      target: "Senior React Developer"
+      timestamp: "1h ago"
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+      id: "act-1",
+      user: "Michael Chen",
+      action: "posted a new job",
+      target: "Senior React Developer",
+      timestamp: "1h ago",
+      type: "job";
+    };
       type: "job"
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+    }
+    },
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     {
       id: "act-2"
       user: "Sarah Wilson"
@@ -21,11 +45,9 @@ export function RecentActivity() {
       type: "candidate"
 
 =======
-
+    }
     },
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     {
       id: "act-3"
       user: "David Johnson"
@@ -42,6 +64,10 @@ export function RecentActivity() {
       timestamp: "2d ago"
       type: "comment"
     }
+=======
+  ];
+  ],
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const getBadgeForType = (type: string) => {
     switch (type) {
@@ -93,9 +119,52 @@ export function RecentActivity() {
       </CardContent>
     </Card>
   )
-
 }
-;
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+
+export function RecentActivity() {;
+  // Mock activity data;
+  const activities = [;
+    {;
+      id: "act-1",;
+      user: "Michael Chen",;
+      action: "posted a new job",;
+      target: "Senior React Developer",;
+      timestamp: "1h ago",;
+      type: "job";
+    };
+    {;
+      id: "act-2",;
+      user: "Sarah Wilson",;
+      action: "shortlisted",;
+      target: "5 candidates for UI/UX Designer",;
+      timestamp: "3h ago",;
+      type: "candidate";
+    };
+    {;
+      id: "act-3",;
+      user: "David Johnson",;
+      action: "scheduled an interview with",;
+      target: "Alex Morgan",;
+      timestamp: "Yesterday",;
+      type: "interview";
+    };
+    {;
+      id: "act-4",;
+      user: "Emily Davis",;
+      action: "added comments to",;
+      target: "Frontend Developer application",;
+      timestamp: "2d ago",;
+      type: "comment";
+    }
+  ];
+
+  const getBadgeForType = (type: string) => {;
+    switch (type) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>;
       case "candidate":;
         return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>;
@@ -145,8 +214,7 @@ export function RecentActivity() {
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </Card>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+}
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

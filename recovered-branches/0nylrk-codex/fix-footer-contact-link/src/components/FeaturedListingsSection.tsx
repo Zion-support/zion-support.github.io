@@ -1,4 +1,15 @@
 
+=======
+import {ProductListingCard} from "@/components/ProductListingCard";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
+import { ProductListingCard } from "@/components/ProductListingCard",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
 
 import { ProductListingCard } from "@/components/ProductListingCard",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -20,14 +31,6 @@ function FeaturedListingsSection() {
       rating: 4.8,
       reviewCount: 124,
 
-      author: {
-        name: "TechAI Labs"
-        id: "tech-ai-labs"
-        avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format"
-      }
-
-=======
-
     },
     {
       id: "image-generation-service",
@@ -44,11 +47,6 @@ function FeaturedListingsSection() {
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      author: {
-        name: "VisualAI"
-        id: "visual-ai"
-      }
-
     {
       id: "fullstack-ai-dev"
       title: "Full-Stack AI Development"
@@ -85,6 +83,7 @@ function FeaturedListingsSection() {
               key={listing.id}
               listing={listing}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
     }];
 ;
@@ -119,9 +118,6 @@ function FeaturedListingsSection() {
             <ProductListingCard
               key={listing.id}
               listing={listing}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               view="grid"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onRequestQuote={() => {}}
@@ -139,6 +135,29 @@ function FeaturedListingsSection() {
       </div>
     </section>
   )
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+              view="grid"
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              onRequestQuote={() => {}}
+            />
+          ))}
+        </div>
+        <div className="mt-10 text-center">
+        </div>;
+
+        <div className="mt-10 text-center">;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+          <Button
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-6"
+            asChild
+          >
+            <Link to="/marketplace">View All Listings</Link>
+          </Button>
+        </div>
+      </div>
+    </section>
+  )
 
 }
 ;
@@ -146,15 +165,12 @@ function FeaturedListingsSection() {
           </Button>;
         </div>;
       </div>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </section>;
+  );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </section>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

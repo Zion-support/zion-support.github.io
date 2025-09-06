@@ -3,7 +3,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
 import {
-
+  authenticateRequest
+  enforceRateLimit
+  recordRequest;
+  authenticateRequest,
+  enforceRateLimit,;
+  recordRequest,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -20,6 +26,26 @@ export default async function handler(
   const auth = await authenticateRequest(req);
   if (!auth) {
     return res.status(401).json({ error: 'Unauthorized' });
+  };
+  records && records.push(record);
+  await fs && fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });
+  await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201);
+  return res && res.status(201).json({ id: record && record.id });  return res && res.status(201).json({ id: record && record.id })
+
+
+}
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs-extra";
+import path from "path";
+import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
+import { v4 as uuidv4 } from "uuid";
+const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const started = Date.now();
+  const auth = await authenticateRequest(req);
+  if (!auth) {
+    return res.status(401).json({ error: "Unauthorized" });
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
   if (!(await enforceRateLimit(auth.apiKey))) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
@@ -110,8 +136,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 }
 
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

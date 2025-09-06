@@ -1,5 +1,35 @@
 #!/usr/bin/env node;
 
+}
+try {
+    // Ensure clean working directory;
+    const status = exec_sync ('git status --porcelain', { encoding: 'utf8' }),
+    if () {) {
+  $2
+}
+        console.log ('⚠️  Working directory has changes. Stashing...'),
+        exec_sync ('git stash push -m "Auto - stash before merge process"');
+    }
+    // Fetch latest changes;
+    console.log ('📥 Fetching latest changes...'),
+    exec_sync ('git fetch --all --prune'),
+    // Switch to main branch;
+    console.log ('🔄 Switching to main branch...'),
+    exec_sync ('git checkout main'),
+    // Pull latest changes;
+    console.log ('📥 Pulling latest changes from main...'),
+    try {
+        exec_sync ('git pull origin main');
+    } catch (error) {
+        console.log ('⚠️  Merge conflicts detected. Resolving...'),
+        // Find files with merge conflicts;
+        const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
+        if (conflictFiles.trim()) {console.log('Found merge conflicts in:', conflictFiles.trim());
+const { execSync } = require('child_process'),;
+const fs = require('fs'),;
+const { execSync } = require('child_process');
+const fs = require('fs');
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 console.log('🚀 Starting merge process for all open PRs...'),;
 try {;
     // Check if we're in a git repository;
@@ -34,9 +64,11 @@ try {;
         const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }),;
         if (conflictFiles.trim()) {;
             console.log('Found merge conflicts in:', conflictFiles.trim()),;
-
+=======
             // Resolve conflicts by accepting our version;
-
+            const files = conflictFiles.trim().split('\n');
+            const files = conflictFiles.trim().split('\n'),;
+            const files = conflictFiles.trim().split('\n');
             for (const file of files) {;
                 if (file.trim()) {;
 
@@ -46,17 +78,12 @@ try {;
                 }
             }
 
-=======
-
-;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             // Commit the merge;
             exec_sync ('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
         }
     }
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     console.log(`Found ${branchList.length} branches to merge: `),;
     branchList.forEach(branch => console.log(`  - ${branch}`)),;
     // Merge each branch;
@@ -85,6 +112,9 @@ try {;
     console.log('✅ Repository is now clean and up to date');
 } catch (error) {;
     console.error('❌ Error during merge process:', error.message),;
+<<<<<<< HEAD
 
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     process.exit(1);
 }

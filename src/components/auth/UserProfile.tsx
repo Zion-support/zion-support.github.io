@@ -1,6 +1,6 @@
 
-
   if (loading) {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     return (
       <Card className='w-full max-w-sm'>;
         <CardHeader>;
@@ -19,6 +19,9 @@
     );
   }
   return (
+=======
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     <Card className="w-full max-w-sm">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -45,18 +48,59 @@
             </span>
           </div>
         </div>
+<<<<<<< HEAD
+          Sign Out
+        </Button>;
+      </CardContent>;
+    </Card>;
+  );
+}
+}
+<<<<<<< HEAD
 
           Sign Out
         </Button>
       </CardContent>
     </Card>
 <<<<<<< HEAD
-=======
-        
-        <Button onClick={handleSignOut} variant="outline" className="w-full">
-          <LogOut className="h-4 w-4 mr-2" />
+
+    <Card className='w-full max-w-sm'>;
+      <CardHeader>;
+        <CardTitle className='flex items-center gap-2'>;
+          <User className='h-5 w-5' />;
+          User Profile;
+        </CardTitle>;
+      </CardHeader>;
+      <CardContent className='space-y-4'>;
+        <div className='space-y-2'>;
+          <div className='flex items-center gap-2'>;
+            <span className='text-sm font-medium'>Email:</span>;
+            <span className='text-sm'>{user && user.email}</span>;
+          </div>;
+          <div className='flex items-center gap-2'>;
+            <span className='text-sm font-medium'>Status:</span>;
+            <Badge variant={user && user.email_confirmed_at ? 'default' : 'secondary'}>;
+              {user && user.email_confirmed_at ? 'Verified' : 'Unverified'}
+            </Badge>;
+          </div>;
+          <div className='flex items-center gap-2'>;
+            <span className='text-sm font-medium'>Joined:</span>;
+            <span className='text-sm'>;
+              {new Date(user && user.created_at).toLocaleDateString()}
+            </span>;
+          </div>;
+        </div>;
+
+        <Button onClick={handleSignOut} variant='outline' className='w-full'>;
+          <LogOut className='h-4 w-4 mr-2' />;
+          Sign Out;
+        </Button>;
+      </CardContent>;
+    </Card>;
+  );
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   )
 } 
-
-    </Card>);
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+<<<<<<< HEAD

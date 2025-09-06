@@ -1,6 +1,24 @@
 
+import React from "react";
+import { Control } from "react-hook-form";
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormDescription
+  FormMessage
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormDescription,
+  FormMessage,;
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 } from "@/components/ui/form";
 
 import { Textarea } from "@/components/ui/textarea";
@@ -23,7 +41,10 @@ export function DescriptionFields(): any ({;
   return (
     <>;
       <FormField
+        control;
+                  field.onChange(e.target.value)
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import React from 'react',
 import { Control } from 'react-hook-form',
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",
@@ -48,31 +69,28 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
   return (;
     <>;
       <FormField;
-
 =======
 
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         control={control}
         name="description"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Job Description</FormLabel>
             <FormControl>
-
               <Textarea
-
+              <Textarea 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 value={editorContent}
                 onChange={(e) => {;
                   handleEditorChange(e.target.value);
                   field.onChange(e.target.value);
-
-                value={editorContent}
-                onChange={(e) => {;
-                  handleEditorChange(e && e.target.value);
-                  field && field.onChange(e && e.target.value);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 }}
                 className="min-h-[200px]";
                 placeholder="Enter a detailed description of the job role";
@@ -233,12 +251,13 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
           </FormItem>
         )}
 
-=======
       />;
     </>;
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   );
 }

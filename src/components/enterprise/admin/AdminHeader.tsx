@@ -3,6 +3,29 @@
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { Download, Settings } from 'lucide-react'
+=======
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
+export function AdminHeader() {
+  // const { user } = useAuth(), // Unused but available
+  const { company } = useCompanyWorkspace();
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
+export function AdminHeader() {
+  // const { user } = useAuth(), // Unused but available
+  const { company } = useCompanyWorkspace(),
+
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Download, Settings } from 'lucide-react'
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
+
+export function AdminHeader() { // const { user  } = useAuth(), // Unused but available
+  const { company  } = useCompanyWorkspace(),
+
+
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <div className="space-y-4">
@@ -20,38 +43,7 @@ import { Download, Settings } from 'lucide-react'
             <Settings className="h-4 w-4" />
             Settings
           </Button>
-
-          <Button variant="outline" size="sm" className="gap-2">
-            <Download className="h-4 w-4" />
-            Export Data
-=======
-import React from 'react'
-import { Button } from '@/components/ui/button'
-import { Download, Settings } from 'lucide-react'
-import { useCompanyWorkspace } from '@/hooks/useCompanyWorkspace';
-export function AdminHeader() {;
-  // const { user } = useAuth(); // Unused but available
-  const { company } = useCompanyWorkspace()
-
-
-
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Download, Settings } from 'lucide-react'
-import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
-
-export function AdminHeader() { // const { user  } = useAuth(), // Unused but available
-  const { company  } = useCompanyWorkspace(),
-
-
-
-
-
-  return (
-    <div className="space-y-4">
-          <Button variant='outline' size='sm' className='gap-2'>
-            <Download className='h-4 w-4' />            Export Data
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+<<<<<<< HEAD
           </Button>
         </div>
       </div>        <div className="flex items-center gap-2">
@@ -63,15 +55,10 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
 
               className="max-h-10 max-w-10"
 
-            <h2 className="font-medium">{company?.name || "Company Name"}</h2>
-            <p className="text-sm text-muted-foreground">
-              Workspace URL: {company?.workspaceUrl || "loading..."}
-
-            </p>
+=======
 <<<<<<< HEAD
-          </div>
-        </div>
-        <Button>Customize Workspace</Button>
-      </div>
-    </div>
-  )
+            <h2 className="font-medium">{company?.name |"Company Name"}</h2>
+            <p className="text-sm text-muted-foreground">
+              Workspace URL: {company?.workspaceUrl |"loading..."}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

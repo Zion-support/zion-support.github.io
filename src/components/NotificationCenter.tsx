@@ -2,6 +2,11 @@
 
     unreadCount,
     markAsRead,
+
+
+    unreadCount, 
+    markAsRead, 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     markAllAsRead,
     dismissNotification,
     loading,
@@ -15,6 +20,13 @@
   const [loadedOnce, setLoadedOnce] = useState(false),
   const enqueueSnackbar = useEnqueueSnackbar(),
 
+=======
+  const handleFilterChange = (newFilter: FilterType,) => {
+    setFilter(newFilter as any)
+  }
+  return (
+    <Popover open={open} onOpenChange={(v,) => setOpen(v ?? false)}>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // Refresh notifications when popover opens, but avoid duplicate
   useEffect(() => {
     if (open && !loadedOnce) {
@@ -77,6 +89,8 @@ export const NotificationCenter: React.FC = () => {;
       loadNotifications();
     }
   }, [open, loadedOnce, fetchNotifications]),
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <PopoverTrigger asChild>
         <Button variant="ghost" size="icon" className="relative" aria-label="Open notifications">
           <Bell className="h-5 w-5 text-zion-slate-light" />
@@ -88,6 +102,36 @@ export const NotificationCenter: React.FC = () => {;
       </PopoverTrigger>
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
 
+
+  return (
+
+
+
+          )}
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
+        <NotificationHeader
+          unreadCount = {unreadCount,}
+          onMarkAllAsRead = {handleMarkAllAsRead,}
+        />;
+
+        <NotificationFilter
+          filter = {filter as FilterType,}
+          onFilterChange = {handleFilterChange,}
+        />;
+
+
+        <NotificationList
+        <NotificationHeader 
+          unreadCount = {unreadCount,}
+          onMarkAllAsRead = {handleMarkAllAsRead,}
+        />
+        <NotificationFilter 
+          filter = {filter as FilterType,}
+          onFilterChange = {handleFilterChange,}
+        />
+        <NotificationList 
           loading = {loading,}
           error = {error,}
           notifications = {filteredNotifications,}
@@ -116,10 +160,3 @@ export const NotificationCenter: React.FC = () => {;
           onMarkAsRead={markAsRead}
           onDismiss={dismissNotification}
           onRetry={fetchNotifications}
-        />;
-
-        <NotificationFooter onClose={() => setOpen(false)} />;
-      </PopoverContent>;
-    </Popover>;
-  );
-};

@@ -1,5 +1,6 @@
 =======
-
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
@@ -7,15 +8,16 @@ import { classifyWithGPT } from "../../../utils/fraud/gpt";
 import { getFraudStore, newEvent } from "../../../utils/fraud/store";
 import { extractClientIp } from "../../../utils/ip";
 import {
-
-
+  AdminActionRecord
+  GptClassification
+  GptClassificationLabel
+  MonitoredSource
+  StoredFraudRecord
   AdminActionRecord,
   GptClassification,
   GptClassificationLabel,
   MonitoredSource,
   StoredFraudRecord,;
-
-
 } from "../../../utils/fraud/types";
 import { sendWarningEmail } from "../../../utils/email";
 const allowedSources: MonitoredSource[] = [
@@ -41,6 +43,11 @@ import { classifyWithGPT } from "../../../utils/fraud/gpt";
 import { getFraudStore, newEvent } from "../../../utils/fraud/store";
 import { extractClientIp } from "../../../utils/ip";
 import {
+
+    const ip = extractClientIp(req);
+    const store = getFraudStore();
+
+      countEventsByIp: (ip, s, m) => store && store.countEventsByIp(ip, s, m),
 
   AdminActionRecord,
   GptClassification,
@@ -88,6 +95,7 @@ export default async function handler(
     });
     const heuristic = await evaluateHeuristics(event, {
       countEventsByIp: (ip, s, m) => store.countEventsByIp(ip, s, m)
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     });
     // Privacy opt-out check for content analysis
     let gpt: GptClassification | undefined = undefined;
@@ -140,19 +148,46 @@ export default async function handler(
       .status(500)
 
     });
+
   } catch (e: any) {
-
-
-      .json({ error: "Internal error", details: e?.message || String(e) });
-
-
-=======
+    res
+      .status(500)
       .json({ error: "Internal error", details: e?.message |String(e) });
+      .json({ error: "Internal error", details: e?.message || String(e) });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'Fraud ingest endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { evaluateHeuristics } from '../../../utils/fraud/heuristics';
+import { classifyWithGPT } from '../../../utils/fraud/gpt';
+import { getFraudStore, newEvent } from '../../../utils/fraud/store';
+import { extractClientIp } from '../../../utils/ip';
+import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types';
+import { sendWarningEmail } from '../../../utils/email';
+const allowedSources: MonitoredSource[] = ['signupjob_postmessagequotereview'];
+export default async function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 =======
+    res
+      .status(500)
+      .json({ error: "Internal error", details: e?.message |String(e) });
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
       status: 'PENDING'};
+
     const saved = await store.saveEvent(stored);
+
     if (process.env.FRAUD_EMAIL_WARNINGS === 'true' && userId) {
       const prior = await store.countFlaggedForUser(userId);
       if (prior <= 1 && combinedLabel !== 'SAFE') {
@@ -161,6 +196,7 @@ export default async function handler(
           body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`})
       }
     }
+
     res.status(200).json({
       id: saved.id, flagged: combinedLabel !== 'SAFE',
       label: combinedLabel, heuristic,
@@ -230,10 +266,12 @@ export default async function handler(
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 }

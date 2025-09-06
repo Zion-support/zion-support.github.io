@@ -1,4 +1,36 @@
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+import { motion } from 'framer-motion';
+import {
+  ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Brain
+  Rocket
+  Globe
+  Sparkles;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
@@ -19,11 +51,6 @@ import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-d
   Brain,
   Rocket,
 
-=======
-  Globe,;
-  Sparkles,;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 } from 'lucide-react';import Link from 'next/link';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
@@ -34,7 +61,10 @@ import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-service
 import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
 export default function Revolutionary2026ServicesShowcase() {
+  // Get featured services from each category
 
+  // Get featured services from each category;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const featuredAIServices = aiAutonomousServices2026.slice(0, 3);
   const featuredQuantumServices = quantumSpaceTechServices2026.slice(0, 3);
   const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(
@@ -77,6 +107,7 @@ export default function Revolutionary2026ServicesShowcase() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const containerVariants = {;
     hidden: { opacity: 0 },;
@@ -90,11 +121,11 @@ export default function Revolutionary2026ServicesShowcase() {
     }
   };
 
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  return (
+    <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
   return (
     <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Enhanced Background Effects */}
 
       <div className='absolute inset-0'>;
@@ -108,7 +139,7 @@ export default function Revolutionary2026ServicesShowcase() {
 =======
   };
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
+    <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Enhanced Background Effects */}
 
       <div className="absolute inset-0">;
@@ -121,28 +152,26 @@ export default function Revolutionary2026ServicesShowcase() {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Enhanced Header */}
-        <motion&& motion.div
-=======
-
-      <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}  };
-
-
-
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}
 
         {/* Enhanced Header */}
 
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
+          className='text-center mb-20'
 
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         >
           <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6'>
             <Sparkles className='w-5 h-5 text-purple-400' />
@@ -362,12 +391,18 @@ export default function Revolutionary2026ServicesShowcase() {
                 key={service.id}
                 variants={itemVariants}
                 className='group relative'          viewport={{ once: true }}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-        {/* AI Autonomous Services Section */}
-        <motion&& motion.div
-          variants={containerVariants}
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           viewport={{ once: true }}
 
               </div>;
@@ -533,14 +568,13 @@ export default function Revolutionary2026ServicesShowcase() {
                       <span className="text-gray-400 text-sm">({service.reviews})</span>
                     </div>
                   </div>
-
-=======
-
+                  <Link
+                    href={service.link}
                   <Link 
                     href={service.link} 
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -549,6 +583,20 @@ export default function Revolutionary2026ServicesShowcase() {
               </motion.div>
             ))}
           </div>
+          <div className='text-center mt-8'>
+            <Link
+              href='/services?category=ai-autonomous'
+              className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
+            >
+              View All AI Autonomous Services{' '}
+              <ArrowRight className='w-5 h-5 ml-2' />            </Link>          <div className="text-center mt-8">
+            <Link
+              href="/services?category=ai-autonomous"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
+            >
+              View All AI Autonomous Services <ArrowRight className="w-5 h-5 ml-2" />
+          </div>
+        </motion.div>
 
             <Link
               href='/services?category=ai-autonomous'
@@ -563,6 +611,138 @@ export default function Revolutionary2026ServicesShowcase() {
             </Link>
           </div>
         </motion.div>
+          className='mb-20'>;
+          <div className='flex items-center space-x-3 mb-12'>;
+            <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center'>;
+              <Brain className='w-6 h-6 text-white' />;
+            </div>;
+            <div>;
+              <h3 className='text-3xl font-bold text-white'>;
+                AI Autonomous Services;
+              </h3>;
+              <p className='text-blue-300'>;
+                Fully autonomous AI systems that run your business;
+              </p>;
+            </div>;
+          </div>;
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredAIServices && featuredAIServices.map((service, index) => (;
+              <motion&& motion.div
+                key={service && service.id}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        {/* Quantum Space Tech Services Section */}
+        <motion.div
+          variants={containerVariants}
+          initial='hidden'
+          whileInView='visible'
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+          viewport={{ once: true }}
+          className='mb-20'
+        >
+          <div className='flex items-center space-x-3 mb-12'>
+            <div className='w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center'>
+              <Rocket className='w-6 h-6 text-white' />
+            </div>
+            <div>
+              <h3 className='text-3xl font-bold text-white'>
+                Quantum Space Technology
+              </h3>
+              <p className='text-indigo-300'>
+                Revolutionary quantum-powered space exploration and technology
+              </p>
+            </div>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredQuantumServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+                variants={itemVariants}
+                className='group relative'          viewport={{ once: true }}
+          className="mb-20">;
+          <div className="flex items-center space-x-3 mb-12">;
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">;
+              <Brain className="w-6 h-6 text-white" />;
+            </div>;
+            <div>;
+              <h3 className="text-3xl font-bold text-white">AI Autonomous Services</h3>;
+              <p className="text-blue-300">Fully autonomous AI systems that run your business</p>;
+            </div>;
+          </div>;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {featuredAIServices && featuredAIServices.map((service, index) => (;
+              <motion&& motion.div
+                key={service && service.id}
+                variants={itemVariants}
+                className='group relative'>;
+                <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500'></div>;
+                <div className='relative bg-black/40 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300 h-full'>;
+                  <div className='flex items-center space-x-3 mb-4'>;
+                    <div className='text-3xl'>{service && service.icon}</div>;
+                    <div>;
+                      <h4 className='text-xl font-bold text-white'>;
+                        {service && service.name}
+                      </h4>;
+                      <p className='text-blue-300 text-sm'>{service && service.tagline}</p>;
+                    </div>;
+                  </div>;
+                  <p className='text-gray-300 mb-4 text-sm leading-relaxed'>;
+                    {service && service.description}
+                  </p>;
+                  <div className='space-y-3 mb-6'>;
+                    {service && service.features.slice(0, 3).map((feature, idx) => (;
+                      <div key={idx} className='flex items-center space-x-2'>;
+                        <div className='w-2 h-2 bg-blue-400 rounded-full'></div>;
+                        <span className='text-gray-400 text-sm'>{feature}</span>                      </div>;
+                    ))}                  </div>;
+                  <div className='flex items-center justify-between mb-4'>                  <div className="space-y-3 mb-6">;
+                    {service && service.features.slice(0, 3).map((feature, idx) => (;
+                      <div key={idx} className="flex items-center space-x-2">;
+                        <div className="w-2 h-2 bg-blue-400 rounded-full"></div>;
+                        <span className="text-gray-400 text-sm">{feature}</span>;
+                      </div>;
+                    ))}
+                  </div>;
+                  <div className='flex items-center justify-between mb-4'>;
+                    <div>;
+                      <span className='text-2xl font-bold text-blue-400'>;
+                        {service && service.price}
+                      </span>;
+                      <span className='text-gray-400'>{service && service.period}</span>;
+                    </div>;
+                    <div className='flex items-center space-x-1'>;
+                      <Star className='w-4 h-4 text-yellow-400 fill-current' />;
+                      <span className='text-yellow-400 text-sm'>;
+                        {service && service.rating}
+                      </span>;
+                      <span className='text-gray-400 text-sm'>;
+                        ({service && service.reviews});
+                      </span>;
+                    </div>;
+                  </div>;
+                  <Link
+                    href={service && service.link}
+                    className='inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium'>;
+                    Learn More <ArrowRight className='w-4 h-4 ml-2' />                  </Link>                    <div>;
+                      <span className="text-2xl font-bold text-blue-400">{service && service.price}</span>;
+                      <span className="text-gray-400">{service && service.period}</span>;
+                    </div>;
+                    <div className="flex items-center space-x-1">;
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />;
+                      <span className="text-yellow-400 text-sm">{service && service.rating}</span>;
+                      <span className="text-gray-400 text-sm">({service && service.reviews})</span>;
+                    </div>;
+                  </div>;
+                  <Link
+                    href={service && service.link} 
+                    className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium">;
+                    Learn More <ArrowRight className="w-4 h-4 ml-2" />;
+                  </Link>;
+                </div>;
+              </motion && motion.div>;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
         {/* Quantum Space Tech Services Section */}
         <motion&& motion.div
@@ -744,7 +924,11 @@ export default function Revolutionary2026ServicesShowcase() {
                       <span className="text-gray-400 text-sm">({service.reviews})</span>
                     </div>
                   </div>
-
+                  <Link
+                    href={service.link}
+                  <Link 
+                    href={service.link} 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -775,16 +959,15 @@ export default function Revolutionary2026ServicesShowcase() {
         {/* Metaverse & Digital Reality Services Section */}
         <motion&& motion.div
           variants={containerVariants}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-        {/* Metaverse & Digital Reality Services Section */}
-        <motion&& motion.div
-          variants={containerVariants}
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           viewport={{ once: true }}
 
                       </span>;
@@ -958,7 +1141,11 @@ export default function Revolutionary2026ServicesShowcase() {
                       <span className="text-gray-400 text-sm">({service.reviews})</span>
                     </div>
                   </div>
-
+                  <Link
+                    href={service.link}
+                  <Link 
+                    href={service.link} 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     className="inline-flex items-center text-pink-400 hover:text-pink-300 transition-colors text-sm font-medium"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -991,6 +1178,7 @@ export default function Revolutionary2026ServicesShowcase() {
         <motion.div
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Call to Action Section */}
         <motion&& motion.div
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -998,9 +1186,11 @@ export default function Revolutionary2026ServicesShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
+          className='text-center'
 
           <div className='bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
             <h3 className='text-4xl font-bold text-white mb-6'>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               Ready to Experience the Future?
             </h3>
             <p className='text-gray-300 text-xl mb-8 max-w-3xl mx-auto'>
@@ -1048,7 +1238,6 @@ export default function Revolutionary2026ServicesShowcase() {
         </motion.div>
       </div>
     </section>
-
 <<<<<<< HEAD
-}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

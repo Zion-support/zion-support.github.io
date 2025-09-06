@@ -1,3 +1,5 @@
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       color: "from-blue-500 to-cyan-500"
     }
@@ -52,7 +54,45 @@ const AutonomousBusinessOperationsPlatform = () => {
       title: "Retail"
       description: "Inventory management, customer service, and sales optimization"
     }
-
+  ]
+  const benefits = [
+    {
+      icon: TrendingUp
+      title: "Increased Efficiency"
+      value: "300%"
+      description: "Boost in operational efficiency"
+    }
+    {
+      icon: DollarSign
+      title: "Cost Reduction"
+      value: "40%"
+      description: "Reduction in operational costs"
+    }
+    {
+      icon: Clock
+      title: "Time Savings"
+      value: "80%"
+      description: "Faster decision making"
+    }
+    {
+      icon: Users
+      title: "Team Productivity"
+      value: "250%"
+      description: "Increase in team productivity"
+    }
+  ]
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
+import { 
+  Bot, Brain, Cpu, Zap, Shield, Globe, 
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import {
+  Bot, Brain, Cpu, Zap, Shield, Globe,
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign,
   Building2, Gauge, BarChart3, Settings, Workflow
@@ -65,26 +105,36 @@ const AutonomousBusinessOperationsPlatform = () => {
       description: "Fully autonomous business operations with intelligent decision-making",
       color: "from-blue-500 to-cyan-500"
     },
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+    {
+      icon: Bot,
+      title: "AI Autonomous Management",
+      description: "Fully autonomous business operations with intelligent decision-making",
+      color: "from-blue-500 to-cyan-500"
+    },
     {
       icon: Workflow,
       title: "Automated Workflows",
       description: "Seamless automation of complex business processes and operations",
 
-=======
-      color: "from-emerald-500 to-teal-500"
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     },
     {
       icon: Shield,
       title: "Intelligent Security",
 
+=======
+      description: "AI-powered security monitoring and threat prevention",
+      color: "from-red-500 to-orange-500"
+    }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ],
   const capabilities = [
     "24/7 autonomous operation",
@@ -95,7 +145,10 @@ const AutonomousBusinessOperationsPlatform = () => {
     "Resource management",
     "Performance monitoring",
     "Risk assessment",
+    "Compliance automation"
+  ],
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const industries = [
     {
       title: "Manufacturing",
@@ -112,13 +165,12 @@ const AutonomousBusinessOperationsPlatform = () => {
     {
       title: "Retail",
       description: "Inventory management, customer service, and sales optimization"
-
+    }
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
   ],
   const benefits = [
 
@@ -126,30 +178,37 @@ const AutonomousBusinessOperationsPlatform = () => {
       icon: TrendingUp,
       title: "Increased Efficiency",
       value: "300%",
-
-      } catch (error) {
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+              animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            >
+              <div className="flex justify-center mb-6">
+                <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full">
+                  <Bot className="w-8 h-8 text-white" />
+                </div>
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Autonomous Business
+                <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                  Operations Platform
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 
-  ],
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  return (
-    <>
-      <Head>
-        <title>Autonomous Business Operations Platform - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered autonomous business operations platform that manages your entire business with intelligent automation and decision-making capabilities." />
-        <meta name="keywords" content="autonomous business, AI automation, business operations, intelligent automation, process optimization" />
-        <meta property="og:title" content="Autonomous Business Operations Platform - Zion Tech Group" />
-        <meta property="og:description" content="Revolutionary AI-powered autonomous business operations platform." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/autonomous-business-operations-platform" />
-      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
@@ -182,30 +241,11 @@ const AutonomousBusinessOperationsPlatform = () => {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-
-        <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-        {/* Hero Section */}
-        <section className="relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8">;
-          <div className="absolute inset - 0 bg - gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20"></div>;
-          <div className="relative max - w-7xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-
-
+                Transform your business with AI-powered autonomous operations that work 24/7
                 Transform your business with AI-powered autonomous operations that work 24/7,
-
-=======
                 Transform your business with AI-powered autonomous operations that work 24/7, 
-=======
                 Transform your business with AI-powered autonomous operations that work 24/7,
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -219,6 +259,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 </Link>
                 <Link href="/services" className="inline-flex items-center px-8 py-3 border border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200">
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Features Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -244,9 +285,6 @@ const AutonomousBusinessOperationsPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="text-center mb-16"
             >
@@ -263,6 +301,8 @@ const AutonomousBusinessOperationsPlatform = () => {
                 <motion.div
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
                 >
                   <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
@@ -280,6 +320,8 @@ const AutonomousBusinessOperationsPlatform = () => {
               viewport={{ once: true }}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -295,6 +337,8 @@ const AutonomousBusinessOperationsPlatform = () => {
                 <motion.div
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" />
@@ -309,6 +353,8 @@ const AutonomousBusinessOperationsPlatform = () => {
               viewport={{ once: true }}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -326,6 +372,8 @@ const AutonomousBusinessOperationsPlatform = () => {
                 <motion.div
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   className="text-center"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50">
@@ -391,6 +439,8 @@ const AutonomousBusinessOperationsPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+              className="text-center mb-16"
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             >
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Automate Your Business?
@@ -415,58 +465,103 @@ const AutonomousBusinessOperationsPlatform = () => {
     </>
   )
 
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
-=======
-                  className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 p - 8 rounded - xl border border - slate - 700 / 50";
-                >;
-                  <h3 className="text - 2xl font - semibold text - white mb - 4">{industry.title}</h3>;
-                  <p className="text - gray - 400 text - lg">{industry.description}</p>;
-                </motion.div>))}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl border border-slate-700/50"
+                >
+                  <h3 className="text-2xl font-semibold text-white mb-4">{industry.title}</h3>
+                  <p className="text-gray-400 text-lg">{industry.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* CTA Section */}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-        {/* CTA Section */}
-        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-          <div className="max - w-4xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-
-};
+        {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
 
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            >
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
+                Ready to Automate Your Business?
+              </h2>
+              <p className="text-xl text-gray-400 mb-8">
+                Join the autonomous business revolution and transform your operations today
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 text-lg">
+                  Start Automation
+                  <Bot className="ml-2 w-6 h-6" />
+                </Link>
+                <Link href="/services" className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200 text-lg">
+                  Explore All Services
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+  )
+}
 export default AutonomousBusinessOperationsPlatform;
 
-=======
 },
-=======
+<<<<<<< HEAD
 
 export default AutonomousBusinessOperationsPlatform,;
 ;
 export default AutonomousBusinessOperationsPlatform,
             >;
-              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">;
+              <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
                 Ready to Automate Your Business?;
               </h2>;
-              <p className="text-xl text-gray-400 mb-8">;
+              <p className="text - xl text - gray - 400 mb - 8">;
                 Join the autonomous business revolution and transform your operations today;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 text-lg">;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+                <Link href="/contact" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - cyan - 500 text - white font - semibold rounded - lg hover:from - blue - 600 hover:to - cyan - 600 transition - all duration - 200 text - lg">;
                   Start Automation;
-                  <Bot className="ml-2 w-6 h-6" />;
+                  <Bot className="ml - 2 w - 6 h - 6" />;
                 </Link>;
-                <Link href="/services" className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200 text-lg">;
+                <Link href="/services" className="inline - flex items - center px - 8 py - 4 border border - blue - 500 text - blue - 400 font - semibold rounded - lg hover:bg - blue - 500 hover:text - white transition - all duration - 200 text - lg">;
                   Explore All Services;
                 </Link>;
               </div>;
@@ -474,8 +569,13 @@ export default AutonomousBusinessOperationsPlatform,
           </div>;
         </section>;
       </div>;
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     </>;
   );
 },;
 export default AutonomousBusinessOperationsPlatform;
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

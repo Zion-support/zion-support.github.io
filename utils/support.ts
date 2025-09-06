@@ -1,25 +1,28 @@
-
-export const logSupportEventToOperator = (event: any) => {
-  // Add support event logging functionality here;
-  return null;
-
+// Support utilities
+export const support = {
+  // Add support functionality here
+  logEvent: (event: any) => null
+  getArticles: () => []
+  getArticleById: (id: string) => null
 }
-=======
-  // Add support functionality here;
-  log_event: (event: any) => null,
-  get_articles: () => [],
+  logEvent: (event: any) => null,
+  getArticles: () => [],
   getArticleById: (id: string) => null;
 };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here;
   return null;
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export const logSupportEventToOperator = (event: any) => {
+  // Add support event logging functionality here;
+  return null;
+}
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

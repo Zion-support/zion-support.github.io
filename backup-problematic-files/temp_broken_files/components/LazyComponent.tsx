@@ -15,24 +15,10 @@ const LazyComponent: React.FC<LazyComponentProps> = ({component;
   );
 }
 export default LazyComponent;
-=======
-
-  ...props;
-}) => {const LazyLoadedComponent = lazy(component);
-  return (;
-    <Suspense fallback={fallback}>;
-      <LazyLoadedComponent {...props} />;
-    </Suspense>;
-  );
-}
-export default LazyComponent;
-
-=======
 ;
 const LazyComponent: React.FC<LazyComponentProps> = ({;
   component,;
   fallback = <div>Loading...</div>,;
-
   ...props;
 }) => {const LazyLoadedComponent = lazy(component);
   return (;

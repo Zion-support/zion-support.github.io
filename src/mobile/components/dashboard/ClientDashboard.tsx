@@ -30,13 +30,6 @@ xport function ClientDashboard() {
                   </div>
                 </div>
 
-                <Button size="sm" variant="outline">View Details</Button>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </section>
-
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Suggested Talents</h2>
@@ -46,103 +39,22 @@ xport function ClientDashboard() {
             </Button>
           </Link>
         </div>
-
-          <Card>
-            <CardContent className="p-4">
-              <div className="flex justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <UserCheck className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Sarah Johnson</h3>
-                    <p className="text-sm text-muted-foreground">UX Designer • 5 years exp</p>
-                  </div>
-                </div>
-                <div className="bg-primary/10 text-primary font-medium self-start rounded-full px-2 py-1 text-xs">
-                  95% match
-                </div>
-              </div>
-              <div className="mt-3 flex gap-1 flex-wrap">
-                <Badge variant="outline" className="text-xs">UI/UX</Badge>
-                <Badge variant="outline" className="text-xs">Figma</Badge>
-                <Badge variant="outline" className="text-xs">User Testing</Badge>
-              </div>
-              <div className="flex gap-2 mt-3">
-                <Button size="sm">View Profile</Button>
-                <Button size="sm" variant="outline">Message</Button>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent className="p-4">
-              <div className="flex justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <UserCheck className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Michael Chen</h3>
-                    <p className="text-sm text-muted-foreground">Full Stack Dev • 8 years exp</p>
-                  </div>
-                </div>
-                <div className="bg-primary/10 text-primary font-medium self-start rounded-full px-2 py-1 text-xs">
-                  89% match
-                </div>
-              </div>
-
-                <Badge variant="outline" className="text-xs">React</Badge>
-                <Badge variant="outline" className="text-xs">Node.js</Badge>
-                <Badge variant="outline" className="text-xs">AWS</Badge>
-              </div>
-              <div className="flex gap-2 mt-3">
-                <Button size="sm">View Profile</Button>
-                <Button size="sm" variant="outline">Message</Button>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      <section>
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-medium">Recent Updates</h2>
-        </div>
-
-        <Card>
-          <CardContent className="p-4 space-y-4">
-            <div className="flex gap-3 items-start">
-              <div className="bg-primary/10 p-2 rounded-full">
-                <Bell className="h-5 w-5 text-primary" />
-              </div>
-              <div>
-                <p className="text-sm">
-                  <strong>Website Redesign: </strong> Sarah submitted Milestone 2 for review
-                </p>
-                <p className="text-xs text-muted-foreground">2 hours ago</p>
-              </div>
-            </div>
-
-              </div>
-              <div>
-                <p className="text-sm">
-                  <strong>Mobile App Development:</strong> 3 new applicants for your job post
-                </p>
-                <p className="text-xs text-muted-foreground">1 day ago</p>
-              </div>
-            </div>
-
-<<<<<<< HEAD
             <Button variant="outline" className="w-full">View All Notifications</Button>
           </CardContent>
         </Card>
       </section>
-
+    </div>;
+  );
+};
+}
+    </div>
+  )
+}
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
 import Link from "next/link";
 export function ClientDashboard() {;

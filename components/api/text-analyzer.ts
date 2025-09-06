@@ -279,6 +279,52 @@ export default async function handler(
     const detectedLanguage = isEnglish ? 'en' : 'unknown';
     const confidence = isEnglish ? 0.95 : 0.5;
 
+      language: {
+
+        topWords,
+        bigrams,
+        trigrams,
+      },
+    };
+    res && res.status(200).json(result);
+
+  } catch (error) {
+    console && console.error('Text analysis error:', error);
+    res && res.status(500).json({ error: 'Internal server error' });
+  }        score: sentimentScore;
+        label: sentimentLabel;
+
+        positiveWords: textWords && textWords.filter(word => positiveWords && positiveWords.includes(word));
+        negativeWords: textWords && textWords.filter(word => negativeWords && negativeWords.includes(word))};
+
+      language: {
+
+=======
+      text;
+      statistics: {
+        characters;
+        charactersNoSpaces;
+        words;
+        sentences;
+        paragraphs;
+        syllables;
+        readingTime;
+        speakingTime
+    },
+    readability: {
+        fleschReadingEase: Math.round(fleschReadingEase * 100) / 100, fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100,
+        gunningFog: Math.round(gunningFog * 100) / 100, smog: Math.round(smog * 100) / 100,
+        colemanLiau: Math.round(colemanLiau * 100) / 100, automatedReadability: Math.round(automatedReadability * 100) / 100,
+        averageGrade};
+      sentiment: {
+        score: sentimentScore, label: sentimentLabel,
+        positiveWords: textWords.filter(word => positiveWords.includes(word)),
+        negativeWords: textWords.filter(word => negativeWords.includes(word))
+    },
+    language: {
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         detectedLanguage;
         confidence;
         isEnglish}
@@ -322,13 +368,8 @@ export default async function handler(
 
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    const result: TextAnalysisResult = {
+    const result: TextAnalysisResult = {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

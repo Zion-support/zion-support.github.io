@@ -1,3 +1,34 @@
+export interface RealMicroSaasService {
+export interface RealMicroSaasService {;
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
 
   id: string;
   name: string;
@@ -1386,6 +1417,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
 export const realMicroSaasServices: RealMicroSaasService[] = [
   // AI-Powered Business Solutions
   {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
     id: 'ai-legal-document-generator'
     name: 'AI Legal Document Generator'
@@ -2822,11 +2854,17 @@ reviews: 14
 
 
 export const serviceCategories = [
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   return realMicroSaasServices.filter(service => service.category === category)
 };
+=======
+];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
+
+=======
+  return realMicroSaasServices.filter(service => service.category === category)
+};
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const getServicesByPriceRange = (min: number, max: number) => {
   return realMicroSaasServices.filter(service => {
     const price = parseFloat(service.price.replace('$', '').replace(, ''));
@@ -2869,16 +2907,13 @@ export const service_categories = [;
   'Biotechnology & Healthcare',
   'Financial Technology',
   'Education Technology',
-  'Enterprise IT',
+  'Enterprise IT',;
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
-  'Enterprise IT';
+  'Enterprise IT'
 ];
 
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   id: string,;
   name: string,;
   tagline: string,;
@@ -2912,6 +2947,53 @@ export const service_categories = [;
   }
 }
 ;
+=======
+  'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
+  'Enterprise IT';
+];
+
+
+=======
+;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+export interface RealMicroSaasService {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  }
+}
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export const realMicroSaasServices: RealMicroSaasService[] = [;
   // AI-Powered Business Solutions;
   {;
@@ -3727,4 +3809,7 @@ export const serviceCategories = [;
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology',;
   'Enterprise IT';
 ];
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

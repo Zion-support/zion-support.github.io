@@ -1,4 +1,43 @@
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+
+import { motion } from 'framer-motion';
+import {
+  ChevronDown
+  Star
+  TrendingUp
+  Zap
+  Brain
+  Cpu
+  Shield
+  Rocket
+  Globe
+  Database
+  Lock
+  Cloud
+  Eye
+  Timer
+  Sparkles;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   ChevronDown,
   Star,
   TrendingUp,
@@ -250,6 +289,8 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <section className="py-20 relative overflow-hidden">;
       {/* Background Elements */}
@@ -264,19 +305,38 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Header */}
-        <motion&& motion.div
-=======
 
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
+
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
+  return (
+    <section className="py-20 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
+      </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+=======
+          className='text-center mb-16'        >          className="text-center mb-16"
+          className='text-center mb-16'        >
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -287,21 +347,19 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
             {title}
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             {title}
           </motion && motion.h2>;
           <motion&& motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-
-
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+          >
             {subtitle}
-
-          </motion && motion.p>;
-        </motion && motion.div>;
-
-
-=======
-
+          </motion.p>
+        </motion.div>
             className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >
 
           >
@@ -310,6 +368,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
           </motion.p>
         </motion.div>
 
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -334,6 +393,9 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${;
@@ -344,6 +406,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
                 >;
                   {category === 'all' ? 'All Categories' : category}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <select
               value={sortBy}
               onChange={e => setSortBy(e && e.target.value as any)}
@@ -363,15 +426,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
           </div>;
 
 
-=======
-
-
-          {/* Sort Options */}
-          <div className='flex items-center space-x-2'>
-            <span className='text-gray-300 text-sm font-medium'>Sort by:</span>
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <select
               value={sortBy}
@@ -383,6 +437,9 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Services Grid */}
         <motion&& motion.div
           variants={containerVariants}
@@ -415,23 +472,30 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
           transition={{ duration: 0.8, delay: 0.4 }}
           className='text-center mt-16'
           ))}
+        </motion.div>
+                className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'              />
 
-        </motion && motion.div>;
+              />
 
-
-=======
+            </motion.div>
+          ))}
         </motion.div>
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className='text-center mt-16'
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <div className='bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -474,13 +538,17 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             </div>
           </div>
         </motion.div>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Innovation Stats */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className='mt-20'
 
-
+        >
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             {[
               {
@@ -537,20 +605,15 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
               {
                 label: 'Average Rating'
                 value: (
-
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-20"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },
-              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
-              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
+                  services.reduce((sum, s) => sum + s.rating, 0) /
+                  services.length
+                ).toFixed(1)
+                icon: TrendingUp
+                color: 'from-green-500 to-teal-500'
+              },            ].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' }
+              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' }
+              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' }
               { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-            ].map((stat, index) => (
-
-=======
-
                 ).toFixed(1),
                 icon: TrendingUp,
                 color: 'from-green-500 to-teal-500',
@@ -559,11 +622,12 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
               { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
               { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            ].map((stat, index) => (
+
+
+            ].map((stat, index) => (
+
               <motion.div
-=======
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
         {/* Innovation Stats */}
         <motion.div
@@ -601,6 +665,13 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
                   services.reduce((sum, s) => sum + s.rating, 0) /
                   services.length
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <motion.div
 <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>;
             {[;
@@ -643,7 +714,11 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
                 whileInView={{ opacity: 1, y: 0 }}
 
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+=======
+                className='text-center'
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div
@@ -662,15 +737,29 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-400">{stat.label}</div>
               </motion.div>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ))}
           </div>
         </motion.div>
       </div>
     </section>
+=======
+  );
+<<<<<<< HEAD
+}
+};
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export default UltraFuturistic2029ServiceShowcase;  )
 }
 export default UltraFuturistic2029ServiceShowcase;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

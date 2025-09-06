@@ -2,7 +2,9 @@
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface EmailValidationResult {
   email: string;
   is_valid: boolean;

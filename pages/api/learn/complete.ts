@@ -3,6 +3,7 @@
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
@@ -21,6 +22,14 @@ res.setHeader('AllowPOST')
   if (!courseId) return res.status(400).json({ error: 'courseId required' })
   try {
 
+=======
+    return res.status(200).json({ ok: true, user })
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message ?? 'Failed to complete course' })
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -82,6 +91,7 @@ export default function handler(req, res) {
   const { userId = 'demo-user', courseId, enableBoost } = req.body || {},;
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} },;
+<<<<<<< HEAD
     if (!user.certifications.includes(courseId)) user.certifications.push(courseId);
     if (!user.badges.includes(course.certificationBadge)) user.badges.push(course.certificationBadge);
     if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost;
@@ -98,26 +108,16 @@ export default function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    if (!user.certifications.includes(courseId)) user.certifications.push(courseId);
+    if (!user.badges.includes(course.certificationBadge)) user.badges.push(course.certificationBadge);
+    if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost;
 
-  }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    // Mark progress complete
+    user.progress[courseId] = { completed: true, percent: 100, completedLessons: (course.lessons || []).map((l: any) => l.id) };
+
+    users[userId] = user;
+    writeJson(usersPath, users);
+
+    return res.status(200).json({ ok: true, user })
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,6 +1,4 @@
 
-=======
-
 'use client',;
 import React, { forwardRef } from 'react',;
 import Link from 'next/link',;
@@ -58,8 +56,6 @@ const Button = forwardRef<HTMLButtonElement ButtonProps>(({;
   },;
   const widthClasses = fullWidth ? 'w-full' : '',;
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${roundedClasses[rounded]} ${widthClasses} ${className}`,;
-
-
   const content = (;
     <>;
       {loading && <LoadingSpinner size="sm" color="white" className="mr-2" />}
@@ -117,11 +113,7 @@ const Button = forward_ref < HTMLButtonElement ButtonProps>(({
       </Link>);
   }
 
-=======
-
 ;
-
-
   return (;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (;
@@ -169,11 +161,20 @@ function GhostButton() {
 }
 // Icon button variant;
 
+=======
+export function IconButton({;
+  icon,;
+  children,;
+  ...props;
+}: ButtonProps & { icon: React.ReactNode }) {;
+  return (;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     <Button {...props} icon={icon} iconPosition="left" size="sm">;
 
       {children}
     </Button>);
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,5 +1,3 @@
-
-
 export interface AddedService {
   "id": string;
   name: string;

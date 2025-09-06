@@ -1,6 +1,15 @@
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
+
+export function AddMilestoneForm({;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   onSubmit;
   isSubmitting;
   onCancel;
@@ -8,10 +17,63 @@
   projectStartDate = '';
   projectEndDate = null;
 
-=======
-      });
-      return
+import React from 'react',;
+import { useForm } from 'react-hook-form',;
+import { zodResolver } from '@hookform/resolvers/zod',;
+import { z } from 'zod',;
+import { CalendarIcon, Loader2 } from 'lucide-react',;
+import { format } from 'date-fns',;
+import { Button } from '@/components/ui/button',;
+import { Calendar } from '@/components/ui/calendar',;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from '@/components/ui/form',;
+import { Input } from '@/components/ui/input',;
+import { Textarea } from '@/components/ui/textarea',;
+import {;
+  Popover,;
+  PopoverContent,;
+  PopoverTrigger} from '@/components/ui/popover',;
+import { AIMilestoneGenerator } from './AIMilestoneGenerator',;
+import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator',;
+const formSchema = z.object({;
+  title: z.string().min(1, 'Title is required'),;
+  description: z.string().optional(),;
+  due_date: z.date().optional(),;
+  amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0')}),;
+type MilestoneFormValues = z.infer<typeof formSchema>,;
+interface AddMilestoneFormProps {;
+  onSubmit: (data: MilestoneFormValues) => void,;
+  isSubmitting: boolean,;
+  onCancel?: () => void,;
+  projectScope?: string,;
+  projectStartDate?: string,;
+  projectEndDate?: string,;
+  projectType?: string;
+}
+;
+export function AddMilestoneForm({;
+  onSubmit,;
+  isSubmitting,;
+  onCancel,;
+  projectScope = '',;
+  projectStartDate = '',;
+  projectEndDate = null,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+      });
+      return;
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
 
     // If there are multiple milestones, submit them one by one
@@ -23,51 +85,10 @@
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
       })
     })
-
-      });
-      return;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    }
-
-
+  }
   },
 
 
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  const handleAddMilestone = (milestone: GeneratedMilestone) => {
-    onSubmit({
-      title: milestone.title
-      description: milestone.description
-      due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
-      amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
-    })
-=======
-
-
-    // If there are multiple milestones, submit them one by one;
-    milestones && milestones.forEach(milestone => {;
-      onSubmit({;
-        title: milestone && milestone.title,;
-        description: milestone && milestone.description,;
-        due_date: milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,;
-        amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
-      });
-    });
-  };
-
-  const handleAddMilestone = (milestone: GeneratedMilestone) => {;
-    onSubmit({;
-      title: milestone && milestone.title,;
-      description: milestone && milestone.description,;
-      due_date: milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,;
-      amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
-    });
-  };
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
@@ -86,11 +107,9 @@
       )}
 
 =======
-
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
           <FormField

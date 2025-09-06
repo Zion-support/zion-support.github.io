@@ -1,4 +1,6 @@
 
+=======
+
 
 import React, { useState } from "react",
 import { Star } from "lucide-react",
@@ -22,103 +24,8 @@ import { HireRequestModal } from "@/components/profile/hire-request",;
 import { useAuthStatus } from "@/hooks/talent",;
 import { UserProfile } from "@/types/auth",;
 import { useNavigate } from "react-router-dom",;
-interface TalentCardFooterProps {;
-  profile: TalentProfile,;
-  onViewProfile: (id: string) => void,;
-  onRequestHire?: (profile: TalentProfile) => void;
-}
-
-export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {;
-
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
-  const { userDetails } = useAuthStatus();
-
-
-import React, { useState } from './react';
-import { Star } from './lucide-react';
-import { Button } from '@/components / ui / button';
-import { ExternalLink } from './lucide-react';
-import { TalentProfile } from '@/types / talent';
-import { HireRequestModal } from '@/components / profile / hire - request';
-import { useAuthStatus } from '@/hooks / talent';
-import { UserProfile } from '@/types / auth';
-import { use_navigate } from './react-router-dom';
-interface TalentCardFooterProps {
-  profile: TalentProfile,
-  onViewProfile: (id: string) => void,
-  onRequestHire?: (profile: TalentProfile) => void;
-}
-export /**
- * TalentCardFooter - Function description
- */
-function TalentCardFooter() {
-  const [isHireModalOpen, setIsHireModalOpen] = useState (false);
-  const { user_details } = useAuthStatus ();
-  const navigate = use_navigate ();
-;
-  // Create a compatible UserProfile from UserDetails;
-  const user_profile: UserProfile = {
-    id: user_details?.id,
-    display_name: user_details?.name || '',
-    email: user_details?.email || '',
-    user_type: '',
-    profile_complete: false,
-    created_at: new Date ().toISOString (),
-    updated_at: new Date ().toISOString ();
-  }
-;
-  // Handle request to hire;
-  const handleRequestHire = (e: React.MouseEvent) =>: any {
-    e.stop_propagation (),
-    // Check condition
-if ( {) {
-  $2
-}
-      onRequestHire (profile);
-
-    } else {
-      // Open hire modal directly if no handler provided;
-      setIsHireModalOpen (true);
-    }
-  }
-
-  // Create a compatible UserProfile from UserDetails;
-  const userProfile: UserProfile = {;
-    id: userDetails?.id,;
-    displayName: userDetails?.name || '',;
-    email: userDetails?.email || '',;
-    userType: '',;
-    profileComplete: false,;
-    createdAt: new Date().toISOString(),;
-    updatedAt: new Date().toISOString();
-  };
-
-  // Handle request to hire;
-  const handleRequestHire = (e: React && React.MouseEvent) => {;
-    e && e.stopPropagation(),;
-
-    if (onRequestHire) {;
-      onRequestHire(profile);
-    } else {;
-      // Open hire modal directly if no handler provided;
-      setIsHireModalOpen(true);
-    }
-  };
-
-  // Handle view profile;
-  const handleViewProfile = (e: React && React.MouseEvent) => {;
-    e && e.stopPropagation(),;
-
-    // Navigate to the talent profile page;
-    navigate(`/talent/${profile && profile.id || ''}`);
-
-    // Also call the onViewProfile callback if provided;
-    if (onViewProfile) {;
-      onViewProfile(profile && profile.id || '');
-
-    }
-  },
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <>;
@@ -145,15 +52,15 @@ if ( {) {
           >
             Hire
           </Button>
-
-=======
-
+          <Button
+            variant="outline"
+            size="sm"
           <Button 
             variant="outline" 
             size="sm" 
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             onClick={handleViewProfile}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           >
@@ -165,9 +72,22 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Hire Request Modal */}
       <HireRequestModal
         talent={profile}
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}
         userDetails={userProfile}
+=======
+      />
+    </>
+  )
+}
+      />;
+    </>;
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

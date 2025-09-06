@@ -1,10 +1,7 @@
 
 
-=======
 
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React, { useState } from "react";
 import {Dispute, DisputeStatus} from "@/types/disputes";
 import {Button} from "@/components/ui/button";
@@ -24,6 +21,27 @@ type DisputesListProps = {
     : disputes.filter(dispute => dispute.status === statusFilter),
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+type DisputesListProps = {
+  disputes: Dispute[]
+  isLoading: boolean
+}
+export function DisputesList({ disputes, isLoading }: DisputesListProps) {
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
+  const filteredDisputes = statusFilter === "all"
+    ? disputes
+    : disputes.filter(dispute => dispute.status === statusFilter);
+},
+
+export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
+export function DisputesList({ disputes, isLoading }: DisputesListProps) {
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all"),
+
+  const filteredDisputes = statusFilter === "all" 
+    ? disputes 
+    : disputes.filter(dispute => dispute.status === statusFilter),
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "open": return "default";
@@ -33,6 +51,7 @@ type DisputesListProps = {
         return "outline", // Changed from "success" to "outline"
       case "closed":
 
+=======
 
   if (isLoading) {
     return (
@@ -65,49 +84,42 @@ type DisputesListProps = {
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>
                 </TableRow>
 
-<<<<<<< HEAD
-=======
-import React, { useState } from './react';
-import { Dispute, DisputeStatus } from '@/types / disputes';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
-import { Skeleton } from '@/components / ui / skeleton';
-import { formatDistanceToNow } from './date - fns';
-import { ShieldAlert } from './lucide-react';
-import { Link } from './react-router-dom';
-type DisputesListProps = {
-  disputes: Dispute[],
-  is_loading: boolean;
-}
-;
-export /**
- * DisputesList - Function description
- */
-function DisputesList() {
-  const [status_filter, setStatusFilter] = useState < DisputeStatus | "all">("all");
-;
-  const filtered_disputes = status_filter === "all";
-    ? disputes;
-    : disputes.filter (dispute => dispute.status === status_filter);
-;
-  const getStatusBadgeVariant = (status: DisputeStatus) =>: any {
-    switch (status) {
-      case "open": return "default";
-      case "under_review":;
-        return "secondary",
-      case "resolved":;
-        return "outline", // Changed from './success'; to "outline";
-      case "closed":;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         return "outline";
       default:;
         return "default";
     }
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  };
+  if (isLoading) {;
+    return (;
+      <div className="space-y-4">;
+        <div className="flex gap-2 mb-4">;
+          {["All", "Open", "Under Review", "Resolved", "Closed"].map((status) => (;
+            <Skeleton key={status} className="h-10 w-24" />;
+          ))}
+        </div>;
+        <div className="border rounded-md">;
+          <Table>;
+            <TableHeader>;
+              <TableRow>;
+                <TableHead>Case ID</TableHead>;
+                <TableHead>Project</TableHead>;
+                <TableHead>Parties</TableHead>;
+                <TableHead>Created</TableHead>;
+                <TableHead>Status</TableHead>;
+                <TableHead className="text-right">Actions</TableHead>;
+              </TableRow>;
+            </TableHeader>;
+            <TableBody>;
+              {[...Array(5)].map((_, i) => (;
+                <TableRow key={i}>;
+                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>;
+                  <TableCell><Skeleton className="h-4 w-40" /></TableCell>;
+                  <TableCell><Skeleton className="h-4 w-32" /></TableCell>;
+                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>;
+                  <TableCell><Skeleton className="h-6 w-20" /></TableCell>;
+                  <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>;
+                </TableRow>;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               ))}
             </TableBody>;

@@ -1,4 +1,35 @@
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { motion } from 'framer-motion';
+import {
+  Phone
+  Mail
+  MapPin
+  Globe
+  Github
+  Linkedin
+  ExternalLink;
+} from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Phone,
   Mail,
   MapPin,
@@ -13,12 +44,44 @@ const contactInfo = {
 export default function NeoFuturisticFooter() {
 
 export default function NeoFuturisticFooter() {
+const contactInfo = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup && ziontechgroup.com',};
+export default function NeoFuturisticFooter() {;
+  return (  website: 'https://ziontechgroup && ziontechgroup.com';
+};
+export default function NeoFuturisticFooter() {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
 
 };
 
 export default function NeoFuturisticFooter() {
   return (
+                href='https://www && www.linkedin.com/company/zion-tech-group/'
+                className='text-slate-400 hover:text-white'>;
+                <Linkedin className='w-5 h-5' />;
+              </a>            </div>;
+          </div>;
+        </div>;
+          <div className="space-y-2 text-sm">;
+            <div className="font-semibold text-slate-100 mb-2">Resources</div>;
+            <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/market-pricing"><ExternalLink className="w-4 h-4" /> Market Pricing</a>;
+            <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/services"><ExternalLink className="w-4 h-4" /> Services</a>;
+            <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/contact"><ExternalLink className="w-4 h-4" /> Contact</a>;
+            <div className="flex items-center gap-3 pt-2">;
+              <a aria-label="GitHub" href="https://github && github.com/Zion-Holdings" className="text-slate-400 hover:text-white"><Github className="w-5 h-5" /></a>;
+              <a aria-label="LinkedIn" href="https://www && www.linkedin.com/company/zion-tech-group/" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>;
+          </div>;
+        </div>;
+
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
           <div className='space - y-2 text - sm'>;
             <div className='font - semibold text - slate - 100 mb - 2'>Contact</div>;
@@ -125,8 +188,11 @@ export default function NeoFuturisticFooter() {
     </footer>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  return (
+
+
+export default function NeoFuturisticFooter() {
+  return (
 =======
 
 

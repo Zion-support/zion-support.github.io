@@ -1,7 +1,7 @@
 
 
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Education} from '@/types / resume';
@@ -10,13 +10,11 @@ import {format} from 'date - fns';
 import {EducationFormProps} from './types';
 import {EducationList} from './EducationList';
 import {EducationFormFields} from './EducationFormFields';
-
-=======
-
+export function EducationForm({
 export function EducationForm({ ;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   resumeId;
   educationEntries
   onComplete
@@ -45,6 +43,24 @@ export function EducationForm({ ;
       success = await updateEducation(editingId, educationData)
     } else {
       success = await addEducation(resumeId, educationData)
+=======
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Education } from '@/types/resume',;
+import { useResume } from '@/hooks/useResume',;
+import { format } from 'date-fns',;
+import { EducationFormProps } from './types',;
+import { EducationList } from './EducationList',;
+import { EducationFormFields } from './EducationFormFields',;
+export function EducationForm({;
+  resumeId,;
+  educationEntries,;
+  onComplete,;
+  onBack;
+}: EducationFormProps) {;
+  const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
+  const [editingId, setEditingId] = useState<string | null>(null);
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
     }
     if (success) {
@@ -56,11 +72,13 @@ export function EducationForm({ ;
       success = await updateEducation(editingId, educationData);
     } else {;
       success = await addEducation(resumeId, educationData);
+    }
+    if (success) {
+      setEditingId(null)
+    }
+  }
+  };
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 
 
@@ -83,6 +101,23 @@ export function EducationForm({ ;
       setEditingId(null)
     } else {
       onBack()
+    }
+
+  },
+
+  return (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-xl font-semibold mb-2">Education</h2>
+        <p className="text-muted-foreground">
+          Add your educational background and academic achievements.
+        </p>
+      </div>
+      <EducationList
+        educationEntries={educationEntries}
+      <EducationList 
+        educationEntries={educationEntries} 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
 
@@ -91,15 +126,11 @@ export function EducationForm({ ;
         educationEntries={educationEntries} 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         onEdit={handleEdit}
         onDelete={handleDelete}
       />
 
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">

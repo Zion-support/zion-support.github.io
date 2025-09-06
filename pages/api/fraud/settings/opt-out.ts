@@ -1,40 +1,27 @@
 
-=======
-import type { NextApiRequest, NextApiResponse } from './next';
-import { getFraudStore  } from '../../../../utils / fraud / store';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const store = getFraudStore ();
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    const user_id = (req.query.user_id as string) || "";
-    if (return res.status (400).json ({ error: "Missing user_id" })) {
-  $2
-}
-    const settings = await store.getPrivacySettings (user_id);
-    return res.status (200).json (settings);
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getFraudStore } from "../../../../utils/fraud/store";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  const store = getFraudStore();
+
+    return res.status(200).json(settings)
   }
-  // Check condition
-if ( {) {
-  $2
-}
-    const { user_id, opt_out } = req.body || {}
-    if (
-      return res.status (400).json ({ error: "Missing user_id or opt_out" })) {
-  $2
-}
-    const updated = await store.setPrivacySettings (user_id, opt_out);
-    return res.status (200).json (updated);
+
+  if (req.method === 'POST') {
+    const { userId, optOut } = req.body || {};
+    if (!userId || typeof optOut !== 'boolean') return res.status(400).json({ error: 'Missing userId or optOut' });
+    const updated = await store.setPrivacySettings(userId, optOut);
+    return res.status(200).json(updated)
+
   }
-  res.status (405).json ({ error: "Method not allowed" });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  res.status(405).json({ error: "Method not allowed" });
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
 
@@ -49,6 +36,19 @@ export default async function handler(
 ) {;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getFraudStore } from '../../../../utils/fraud/store';
+export default async function handler(req, res) {
+  try {
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const store = getFraudStore();
   if (req.method === 'GET') {
     const userId = (req.query.userId as string) || '';
@@ -79,7 +79,10 @@ export default async function handler(
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 
+res.status(405).json({ error: "Method not allowed" });
+}
 }
   } catch (error) {
     console.error("Error:", error);
@@ -100,4 +103,7 @@ export default async function handler(
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+}
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

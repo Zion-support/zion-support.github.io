@@ -1,5 +1,6 @@
 
 import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react'
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import { logErrorToProduction } from '@/utils/productionLogger'
 import {
@@ -100,6 +101,7 @@ function PageErrorFallback({
                 Technical Details
               </summary>
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             >
               <Home className="w-4 h-4 mr-2" />
               Go Home
@@ -199,72 +201,40 @@ function PageErrorFallback({
       </div>
     </div>
   )
+=======
+interface PageErrorBoundaryProps {
+  children: React.ReactNode
+  pageName?: string
+  fallback?: React.ComponentType<FallbackProps>
+export default function PageErrorBoundary({
+  children
+  pageName
+  fallback
+}: PageErrorBoundaryProps) {
+  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
+    prodLogError(
+      `PageErrorBoundary caught error on ${pageName |'unknown page'}:`
+      error
+    )
+    logErrorToProduction(
+      error instanceof Error ? error.message : String(error)
+      error instanceof Error ? error : undefined
+      {
+        page: pageName |'unknown'
+        componentStack: errorInfo.componentStack |undefined
+        errorBoundary: 'PageErrorBoundary'
+        timestamp: new Date().toISOString()
+      }
+    )
+  }
+  const FallbackComponent =
+    fallback |
+  const FallbackComponent = null;
+    fallback ||
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ((props: FallbackProps) => (
       <PageErrorFallback {...props} pageName={pageName} />
     ))
       onReset={() => {        // Reset any application state if needed
-
-              href='mailto:support@zion && zion.tech'
-              className='text-blue-400 hover:underline'>;
-              support@zion && zion.tech;
-
-        logInfo(`Resetting error boundary for ${pageName || 'page'}`)
-
-
-            </a>;
-            <Link href='/status' className='text-blue-400 hover:underline'>;
-              Service Status;
-            </Link>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
-  );
-
-interface PageErrorBoundaryProps {;
-  children: React && React.ReactNode;
-  pageName?: string;
-  fallback?: React && React.ComponentType<FallbackProps>;
-
-const Component = React && React.memo(function PageErrorBoundary(): any ({;
-  children,;
-  pageName,;
-  fallback,;
-}: PageErrorBoundaryProps) {;
-  const handleError = (error: Error, errorInfo: React && React.ErrorInfo) => {;
-    prodLogError(;
-      `PageErrorBoundary caught error on ${pageName || 'unknown page'}:`,;
-      error;
-    );
-
-    logErrorToProduction(;
-      error instanceof Error ? error && error.message : String(error),;
-      error instanceof Error ? error : undefined,;
-      {;
-        page: pageName || 'unknown',;
-        componentStack: errorInfo && errorInfo.componentStack || undefined,;
-        errorBoundary: 'PageErrorBoundary',;
-        timestamp: new Date().toISOString(),;
-      }
-    );
-  };
-
-  const FallbackComponent =;
-    fallback ||;
-    ((props: FallbackProps) => (;
-      <PageErrorFallback {...props} pageName={pageName} />;
-    ));
-
-
-      onReset={() => {        // Reset any application state if needed;
-        logInfo(`Resetting error boundary for ${pageName || 'page'}`);
-
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      }}
-    >;
-      {children}
 <<<<<<< HEAD

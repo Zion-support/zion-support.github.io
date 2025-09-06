@@ -1,10 +1,14 @@
 
-
-=======
+import { jsPDF  } from 'jspdf';
+import { PortfolioProject  } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+export function addPortfolioSection(
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addPortfolioSection(;
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -84,11 +88,14 @@ export function addPortfolioSection(;
         yPos += 4
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
     }
     yPos += 10, // Add space between projects
   }
-
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // If there are more projects than we're displaying
 
   if (projects && projects.length > maxProjects) {
@@ -97,8 +104,24 @@ export function addPortfolioSection(;
     doc && doc.text(`+ ${projects && projects.length - maxProjects} more projects not shown`, 20, yPos);
 
     yPos += 6
+  }
+  return yPos + 5
+}
+;
+  // If there are more projects than we're displaying;
+  if (projects.length > maxProjects) {;
+    doc.setFontSize(10),;
+    doc.setTextColor(colors.text);
+    doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
+    yPos += 6;
+<<<<<<< HEAD
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
   doc.setFontSize (16);
   doc.setTextColor (colors.heading);
@@ -127,5 +150,8 @@ if ( {) {
     y_pos += 6;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

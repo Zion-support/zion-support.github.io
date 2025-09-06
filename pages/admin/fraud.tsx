@@ -1,8 +1,33 @@
-
 import React, { useEffect, useMemo, useState } from 'react';
-
+import React, { useEffect, useMemo, useState } from 'react',;
+;
+import React, { useEffect, useMemo, useState } from 'react';
 interface FraudItem {
 
+=======
+
+export default function FraudAdminPage() {
+  const [items, setItems] = useState<FraudItem[]>([])
+  const [adminToken, setAdminToken] = useState<string>('')
+  const [loading, setLoading] = useState<boolean>(false)
+  const [error, setError] = useState<string | null>(null)
+  useEffect(() => {
+
+    const saved = localStorage.getItem('admin-token') || '';
+    setAdminToken(saved)
+  }, []);
+
+
+    const saved = localStorage.getItem('admin-token') |''
+    setAdminToken(saved)
+  }, [])
+  const fetchItems = async () => {
+    setLoading(true)
+    setError(null)
+    try {
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     } finally {
 
       set_loading (false);
@@ -13,6 +38,7 @@ interface FraudItem {
     fetchItems();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [adminToken]);
+
   const onSaveToken = () => {
     localStorage.setItem('admin-token', adminToken);
 
@@ -41,11 +67,32 @@ interface FraudItem {
           placeholder="Admin token (optional)"
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         />
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
       </div>
+      {loading && <div>Loading...</div>}
+      {error && <div className="text-red-600">{error}</div>}
 
+      {loading && <div>Loading...</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      {error && <div className="text-red-600">{error}</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <div className="overflow-x-auto">
         <table className="min-w-full border">
           <thead>
@@ -63,12 +110,6 @@ interface FraudItem {
             {items.map((it) => (
               <tr key={it.id} className="border-t">
 
-=======
-
-                <td className="p-2 border">{it.userId || '—'}</td>
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <td className="p-2 border">{it.source}</td>
                 <td className="p-2 border">{new Date(it.createdAt).toLocaleString()}</td>
                 <td className="p-2 border">
@@ -77,6 +118,8 @@ interface FraudItem {
                       <div key={idx} className="text-gray-700">{r}</div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   </div>
                 </td>
                 <td className="p-2 border">
@@ -94,14 +137,12 @@ interface FraudItem {
                   </div>
                 </td>
               </tr>
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+            ))}
           </tbody>
         </table>
       </div>
     </div>
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

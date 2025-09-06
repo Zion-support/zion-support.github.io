@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -91,6 +92,12 @@ const Header: React.FC = () => {
             className={`menu-toggle ${isMenuOpen ? 'menu-open' : ''}`}
             onClick={toggleMenu}
             aria-label="Toggle menu"
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMenu}
+            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <span></span>
             <span></span>
@@ -113,9 +120,11 @@ const Header: React.FC = () => {
         )}
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       </div>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     </header>
   );
 };
 
-<<<<<<< HEAD
 export default Header;
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

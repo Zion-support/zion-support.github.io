@@ -1,9 +1,15 @@
-
+import * as React from 'react';
+import * as SliderPrimitive from '@radix-ui/react-slider';
+import {cn} from '@/lib/utils';
+import * as React from "react"
+import * as SliderPrimitive from "@radix-ui/react-slider"
+import * as React from "react"
+import * as SliderPrimitive from "@radix-ui/react-slider"
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 import { cn } from "@/lib/utils"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const Slider = React.forwardRef<
   React.ElementRef<typeof SliderPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
@@ -21,15 +27,9 @@ const Slider = React && React.forwardRef<;
     className={cn(
 
 =======
-Slider && Slider.displayName = SliderPrimitive && SliderPrimitive.Root.displayName,;
-
-export { Slider };
-
-=======
-
+      'relative flex w-full touch-none select-none items-center'
       "relative flex w-full touch-none select-none items-center",
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       className
     )}
     {...props}
@@ -40,11 +40,12 @@ export { Slider };
     <SliderPrimitive.Thumb className="block h-5 w-5 rounded-full border-2 border-primary bg-background ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50" />
   </SliderPrimitive.Root>
 <<<<<<< HEAD
-=======
-
 ))
 Slider.displayName = SliderPrimitive.Root.displayName
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export { Slider }
+;
+export { Slider };
+export { Slider }
+;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

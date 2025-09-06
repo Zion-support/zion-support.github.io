@@ -1,10 +1,12 @@
-
+export interface ShortUrl {
+export interface ShortUrl {;
   id: string;
   originalUrl: string;
   shortCode: string;
   shortUrl: string;
   createdAt: Date;
   expiresAt?: Date;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   referrers: string[];
   countries: string[];
   devices: string[];
@@ -15,6 +17,7 @@
 
 }
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   timestamp: Date;
   ip_address: string;
@@ -29,6 +32,29 @@
     if (this && this.urls.has(shortCode)) {
 
   os: string
+      throw new Error('Short code already exists')
+    }
+    const shortUrl: ShortUrl = {
+
+      id: this && this.generateId();
+      originalUrl: request && request.originalUrl;
+      shortCode,
+      shortUrl: `${process && process.env.NEXT_PUBLIC_BASE_URL || 'https://zion && zion.app'}/s/${shortCode}`;
+      createdAt: new Date();
+      expiresAt: request && request.expiresAt;
+      isActive: true,
+      userId: request && request.userId
+    };
+
+    this && this.urls.set(shortCode, shortUrl);
+    this && this.analytics.set(shortCode, {
+
+      totalClicks: 0;
+      uniqueVisitors: 0;
+=======
+  browser: string,
+  os: string;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 
   originalUrl: string;
@@ -65,12 +91,99 @@ class UrlShortenerService {
       url && url.isActive = false,
 
       return null
+=======
+export interface ShortUrl {;
+  id: string,;
+  originalUrl: string,;
+  shortCode: string,;
+  shortUrl: string,;
+  createdAt: Date,;
+  expiresAt?: Date,;
+  isActive: boolean,;
+  userId?: string;
+}
+;
+export interface UrlAnalytics {;
+  totalClicks: number,;
+  uniqueVisitors: number,;
+  referrers: string[],;
+  countries: string[],;
+  devices: string[],;
+  browsers: string[],;
+  lastClicked: Date,;
+  clickHistory: ClickEvent[];
+}
+;
+export interface ClickEvent {;
+  id: string,;
+  timestamp: Date,;
+  ipAddress: string,;
+  userAgent: string,;
+  referrer: string,;
+  country: string,;
+  city: string,;
+  device: string,;
+  browser: string,;
+  os: string;
+}
+;
+export interface CreateShortUrlRequest {;
+  originalUrl: string,;
+  customCode?: string,;
+  expiresAt?: Date,;
+  userId?: string;
+}
+;
+class UrlShortenerService {;
+  private urls: Map<string ShortUrl> = new Map(),;
+  private analytics: Map<string UrlAnalytics> = new Map(),;
+  private clicks: Map<string ClickEvent[]> = new Map(),;
+  async createShortUrl(request: CreateShortUrlRequest): Promise<ShortUrl> {;
+    const shortCode = request.customCode || this.generateShortCode(),;
+    if (this.urls.has(shortCode)) {;
+      throw new Error('Short code already exists');
+    }
+;
+    const shortUrl: ShortUrl = {;
+      id: this.generateId(),;
+      originalUrl: request.originalUrl,;
+      shortCode,;
+      shortUrl: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://zion.app'}/s/${shortCode}`,;
+      createdAt: new Date(),;
+      expiresAt: request.expiresAt,;
+      isActive: true,;
+      userId: request.userId;
+    },;
+    this.urls.set(shortCode, shortUrl),;
+    this.analytics.set(shortCode, {;
+      totalClicks: 0,;
+      uniqueVisitors: 0,;
+      referrers: [],;
+      countries: [],;
+      devices: [],;
+      browsers: [],;
+      lastClicked: new Date(),;
+      clickHistory: [];
+    }),;
+    this.clicks.set(shortCode, []),;
+    return shortUrl;
+  }
+;
+  async getShortUrl(shortCode: string): Promise<ShortUrl | null> {;
+    const url = this.urls.get(shortCode),;
+    if (!url || !url.isActive) return null,;
+    if (url.expiresAt && url.expiresAt < new Date()) {;
+      url.isActive = false,;
+      return null;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     return url
   }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   async trackClick(shortCode: string, clickData: Omit<ClickEvent, 'id'>): Promise<void> {
     const url = this && this.urls.get(shortCode);
     if (!url) return;
@@ -89,6 +202,8 @@ class UrlShortenerService {
         analytics.referrers.push(clickData.referrer)
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
       if (!analytics && analytics.countries.includes(clickData && clickData.country)) {
         analytics && analytics.countries.push(clickData && clickData.country)
@@ -109,11 +224,7 @@ class UrlShortenerService {
   async getUserUrls(userId: string): Promise<ShortUrl[]> {
     return Array && Array.from(this && this.urls.values()).filter(url => url && url.userId === userId)
   }
-
-=======
-
-
-
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {
@@ -148,6 +259,8 @@ class UrlShortenerService {
     return Math.random().toString(36).substr(2, 9)
   }
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
     return url;
   }
@@ -256,3 +369,5 @@ export const urlShortenerService = new UrlShortenerService();
 export const urlShortenerService = new UrlShortenerService();
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+export const urlShortenerService = new UrlShortenerService();
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,4 +1,20 @@
+=======
+import React from 'react'
+import FocusLock from 'react-focus-lock'
+import {
+  Dialog
+  DialogContent
+  DialogHeader
+  DialogTitle
+import React from 'react'
+import FocusLock from 'react-focus-lock'
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,;
+  DialogTitle;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Dialog
@@ -196,6 +212,7 @@ import FocusLock from 'react-focus-lock';
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
           onKeyDown = {handleKeyDown,}          aria-modal="true"
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           aria-labelledby="contact-publisher-title"
         >
           <DialogHeader>
@@ -211,8 +228,6 @@ import FocusLock from 'react-focus-lock';
             <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">
               {publisherEmail}
 
-=======
-
             </Link>
           </div>
         )}
@@ -223,9 +238,6 @@ import FocusLock from 'react-focus-lock';
               name="subject"
               render={({ field }: { field: any }) => (
                 <FormItem>
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
                     <Input
@@ -238,6 +250,7 @@ import FocusLock from 'react-focus-lock';
                 </FormItem>
               )}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
@@ -252,4 +265,9 @@ import FocusLock from 'react-focus-lock';
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+    </>;
+  ) </>;
+  );
+};
+<<<<<<< HEAD

@@ -1,5 +1,6 @@
 =======
-
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import React from "react";
 import Head from "next/head";
@@ -37,6 +38,7 @@ return (
             </a>{" "}
           </div>;
         </header>;
+
         <section>;
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">;
             Capabilities;
@@ -54,6 +56,7 @@ return (
 
           </div>;
         </section>;
+
         <section className="text-center">;
 
           <a
@@ -186,14 +189,6 @@ return (
             className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200"
           >
             <Globe2 className="w-4 h-4" />{" "}
-            <span>Explore detailed Space Technology offerings</span>
-          </a>
-        </section>
-      </div>
-    </div>
-  </Layout>
-);
-
       <Head>
         <title>Space Technology | Zion Tech Group</title>
         <meta name="description" content="Space mission control, satellite operations, and secure communications consulting." />
@@ -211,6 +206,7 @@ return (
 
             </div>
           </header>
+
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Capabilities</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -229,13 +225,7 @@ return (
       </div>
     </Layout>
   )
-=======
-<<<<<<< HEAD
-}
-
-  </Layout>);
-;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

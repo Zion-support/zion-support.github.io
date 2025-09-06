@@ -1,6 +1,4 @@
 
-=======
-
 "use client",;
 import { useState } from "react",;
 import Link from "next/link",;
@@ -26,25 +24,9 @@ export default function SignInPage() {;
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  return (;
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
-      <div className="max-w-md w-full space-y-8 p-8">;
-        <div className="text-center">;
-          <h1 className="text-3xl font-bold text-white mb-2">Welcome Back</h1>;
-          <p className="text-zinc-400">;
-            Sign in to access your Zion OS dashboard and continue building;
-          </p>;
-        </div>;
-        <div className="bg-zinc-800/50 backdrop-blur-sm rounded-xl p-6 border border-zinc-700/50">;
-          <form onSubmit={handleSubmit} className="space-y-6">;
-            {error && (;
-              <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3">;
-                <p className="text-red-400 text-sm">{error}</p>;
-              </div>;
-            )}
-
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <div>;
               <label html_for="email" className="block text - sm font - medium text - zinc - 300 mb - 2">;
                 Email Address;

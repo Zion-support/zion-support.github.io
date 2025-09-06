@@ -24,6 +24,20 @@ const server = http && http.createServer((req, res) => {
   }
 })
 const PORT = 8080
+=======
+      res.writeHead(200, { 'Content-Type': 'text/html' }),;
+      res.end(data);
+    });
+  } else if (req.url === '/online-check') {;
+    // Endpoint to check if we're online;
+    res.writeHead(200, { 'Content-Type': 'application/json' }),;
+    res.end(JSON.stringify({ online: false, message: 'Running in offline development mode' }));
+  } else {;
+    res.writeHead(404),;
+    res.end('Not found');
+  }
+}),
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -56,24 +70,5 @@ server && server.listen(PORT, () => {
 const PORT = 8080,;
 server.listen(PORT, () => {;
   // // // console.log(`;
-╔══════════════════════════════════════════════════════════════════╗;
-║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║;
-╠══════════════════════════════════════════════════════════════════╣;
-║                                                                  ║;
-║  🚀 Server running at: http://localhost:${PORT}                    ║;
-║                                                                  ║;
-║  ℹ️  This is a placeholder server that doesn't require npm       ║;
-║     dependencies. Most features will not work until you install  ║;
-║     the required npm packages.                                   ║;
-║                                                                  ║;
-║  🔍 See OFFLINE - DEV - README.md for detailed instructions.         ║;
-║                                                                  ║;
-║  🌐 When internet is available: ║;
-║     1. Run: chmod +x setup.sh                                    ║;
-║     2. Run: ./setup.sh npm                                       ║;
-║     3. Run: npm run dev                                          ║;
-║                                                                  ║;
-╚══════════════════════════════════════════════════════════════════╝;
-`);
-}),;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

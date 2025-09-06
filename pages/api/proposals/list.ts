@@ -1,5 +1,4 @@
-
-=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -24,20 +23,52 @@ export default async function handler(
   } catch (error: any) {
     return res
       .status(500)
+      .json({ error: error?.message |"Failed to list proposals" });
+      .json({ error: error?.message || "Failed to list proposals" });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { listProposals } from '../../../utils/data/proposals';
-
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
     const proposals = listProposals();
-    res.status(200).json({ proposals });
+    res.status(200).json({ proposals })
   } catch (error: any) {
     res.status(500).json({ error: error?.message || 'Failed to list proposals' });
-
   }
+}
+}
+    res.set_header ("Allow", "GET");
+    return res.status (405).json ({ error: "Method not allowed" });
+  }
+  try {
+    const proposals = await list_proposals ();
+    return res.status (200).json ({ proposals });
+  } catch (error: any) {
+    return res;
+      .status (500);
+      .json ({ error: error?.message || "Failed to list proposals" });
+  }
+}
 
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

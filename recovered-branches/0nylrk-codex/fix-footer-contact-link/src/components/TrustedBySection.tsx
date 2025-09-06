@@ -1,11 +1,12 @@
 
-
-=======
-
+import { GradientHeading } from "./GradientHeading";
+import { useState } from "react";
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import {GradientHeading} from "./GradientHeading";
+import {useState} from "react";
+import { GradientHeading } from "./GradientHeading",
+import { useState } from "react",
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 // Real company logos for trusted partners - with more reliable image URLs
 
@@ -16,11 +17,9 @@ const trustedCompanies = [
     alt: "NVIDIA logo"
 
 =======
-
+  }
   },
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   {
     name: "American Express"
     logo: "/logos/amex-logo.svg"
@@ -116,6 +115,19 @@ const trustedCompanies = [
     logo: "/logos/thomson-reuters-logo.svg"
     alt: "Thomson Reuters logo"
   }
+=======
+];
+export function TrustedBySection() {
+  // Use state to track logos that failed to load
+  const [failedLogos, setFailedLogos] = useState<Record<string, boolean>>({});
+],
+
+export function TrustedBySection() {
+  // Use state to track logos that failed to load;
+  const [failedLogos, setFailedLogos] = useState<Record<string, boolean>>({});
+  // Use state to track logos that failed to load
+  const [failedLogos, setFailedLogos] = useState<Record<string boolean>>({}),
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const handleImageError = (companyName: string) => {
     setFailedLogos(prev => ({
@@ -142,9 +154,17 @@ const trustedCompanies = [
                   {company.name}
                 </div>
               ) : (
-
+                <img
+                  src={company.logo}
+                  alt={company.alt}
+                  className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
+                <img 
+                  src={company.logo} 
+                  alt={company.alt} 
+                  className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
 import { GradientHeading } from "./GradientHeading",;
 import { useState } from "react",;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Real company logos for trusted partners - with more reliable image URLs;
 const trustedCompanies = [;
   {;
@@ -284,6 +304,7 @@ export function TrustedBySection() {;
                   alt={company.alt} ;
                   className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert";
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   onError={() => handleImageError(company.name)}
                 />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

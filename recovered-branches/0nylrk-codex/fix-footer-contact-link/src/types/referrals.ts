@@ -1,6 +1,18 @@
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+export type ReferralStatus = 'pending' | 'completed' | 'expired';
+;
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+export interface ReferralCode {
+export type ReferralStatus = 'pending' | 'completed' | 'expired';
+
+export interface ReferralCode {;
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   user_id: string;
   code: string;
@@ -11,6 +23,11 @@
 }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+export interface Referral {
+
+export interface Referral {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   referrer_id: string;
   referred_id: string | null;
@@ -27,8 +44,15 @@
   reward_issued_at: string | null;
 
 }
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+export interface ReferralReward {
+
+export interface ReferralReward {;
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   user_id: string;
   referral_id: string;
@@ -38,6 +62,7 @@
   expires_at: string | null
 }
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   totalReferrals: number;
   pendingReferrals: number;
   completedReferrals: number
@@ -46,3 +71,5 @@
 }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

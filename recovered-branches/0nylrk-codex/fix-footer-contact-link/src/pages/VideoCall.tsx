@@ -1,7 +1,13 @@
 
-
-=======
-
+import { useState, useEffect  } from 'react';
+import { useParams, useNavigate  } from 'react-router-dom';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';
+import { SEO  } from '@/components/SEO';
+import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
+import { Button  } from '@/components/ui/button';
+import { toast } from 'sonner';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState, useEffect} from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
 import {Header} from '@/components/Header';
@@ -10,6 +16,7 @@ import {SEO} from '@/components/SEO';
 import {VideoCallRoom} from '@/components/video/VideoCallRoom';
 import {Button} from '@/components/ui/button';
 import {toast} from 'sonner';
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -83,19 +90,20 @@ function VideoCall() {
       description: "You have left the meeting";
     });
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+  const handleJoinCall = () => {
+    setIsJoining(true),
+    // Simulate connection delay
+    setTimeout(() => {
+      setHasJoined(true),
+      setIsJoining(false),
+      toast.success("Call joined", {
+        description: `You have joined meeting room ${roomId}`
+      })
+    }, 1500)
+  }
   },
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  const handleLeaveCall = () => {
-    setHasJoined(false),
-    toast.info("Call ended", {
-      description: "You have left the meeting"
-
-=======
-    }),
-    
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -140,6 +148,8 @@ function VideoCall() {
     }
   },
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
 
@@ -175,13 +185,38 @@ function VideoCall() {
           </div>
         )}
             {/* This button is just for demo/testing purposes */}
-            <div className="flex justify-center mt-4">;
-              <Button variant="outline" onClick={simulateUserJoining} className="text-sm">;
-                Simulate user joining (demo only);
-              </Button>;
-            </div>;
-          </div>;
+            <div className="flex justify-center mt-4">
+              <Button variant="outline" onClick={simulateUserJoining} className="text-sm">
+                Simulate user joining (demo only)
+              </Button>
+            </div>
+          </div>
         )}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      </main>
+      <Footer />
+    </>
+  )
+}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+      </main>;
+      <Footer />;
+    </>;
+  );
+}
+
+      id: 'user - 1',
+      name: 'You',
+      isVideoEnabled: true,
+      is_muted: false;
+    }
+  ]);
+;
+;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

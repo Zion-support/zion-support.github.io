@@ -1,12 +1,14 @@
 
 
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneActivity} from './types';
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export const useLoadMilestones = (projectId?: string) => {;
   const { user } = useAuth();
   const [milestones, setMilestones] = useState<Milestone[]>([]);
@@ -39,7 +41,9 @@ export const useLoadMilestones = (projectId?: string) => {;
           .eq('milestone_id', milestone.id)
           .order('created_at', { ascending: false });
         if (activitiesError) throw activitiesError;
+<<<<<<< HEAD
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
 
       setActivities(activitiesMap),
@@ -77,6 +81,12 @@ export const useLoadMilestones = (projectId?: string) => {;
 
   }
 };
+      console && console.error("Error fetching milestones:", err);
+      setError("Failed to fetch milestones: " + err && err.message),
+      toast && toast.error("Failed to fetch milestones")
+
+        
+        activitiesMap[milestone.id] = activitiesData || []
       return;
     }
     try {
@@ -109,10 +119,18 @@ if (throw milestones_error) {
           .order('created_at', { ascending: false }),;
         if (activitiesError) throw activitiesError,;
         activitiesMap[milestone.id] = activitiesData || [];
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      }
+      
+      setActivities(activitiesMap),
+      setError(null)
+    } catch (err: any) {
+      console.error("Error fetching milestones:", err),
+      setError("Failed to fetch milestones: " + err.message),
+      toast.error("Failed to fetch milestones")
+    } finally {
+      setIsLoading(false)
+    }
+  };
       }
       set_activities (activities_map);
       set_error (null);
@@ -140,12 +158,31 @@ if ( {) {
     activities;
     is_loading;
     error;
-    refetch: fetch_milestones;
-=======
-      setIsLoading(false)
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    refetch: fetchMilestones
+;
+      setActivities(activitiesMap),;
+      setError(null);
+    } catch (err: any) {;
+      console.error("Error fetching milestones:", err),;
+      setError("Failed to fetch milestones: " + err.message),;
+      toast.error("Failed to fetch milestones");
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+  // Fetch milestones when component mounts or projectId changes;
+  useEffect(() => {;
+    if (projectId) {;
+      fetchMilestones();
+    }
+  }, [projectId]),;
+  return {;
+    milestones,;
+    activities,;
+    isLoading,;
+    error;
+    refetch: fetchMilestones;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 

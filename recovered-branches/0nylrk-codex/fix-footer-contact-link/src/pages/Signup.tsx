@@ -16,6 +16,15 @@ import { Footer } from "@/components/Footer",
 // Form validation schema
 const signupSchema = z
   .object({
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
@@ -25,16 +34,30 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Checkbox } from "@/components/ui/checkbox",
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+// Form validation schema
+const signupSchema = z
+  .object({
+    displayName: z.string().min(2, "Name must be at least 2 characters");
+    email: z.string().email("Please enter a valid email")
     displayName: z.string().min(2, "Name must be at least 2 characters"),
     email: z.string().email("Please enter a valid email"),
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-    password: z.string()
-      .min(8, "Password must be at least 8 characters")
-      .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
-      .regex(/[a-z]/, "Password must contain at least one lowercase letter")
 
   // Initialize react-hook-form
   const form = useForm({
@@ -48,8 +71,6 @@ import {Footer} from "@/components/Footer";
   // Form submission handler
   const onSubmit = async (data: SignupFormValues) => {
     if (isSubmitting) return, // Prevent multiple submissions
-
-=======
 
     try {
       await signup(data.email, data.password, data.displayName)
@@ -111,6 +132,7 @@ import {Footer} from "@/components/Footer";
                         <FormMessage className="text-red-400" />
                       </FormItem>
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     setIsSubmitting(true);
     try {;
       await signup(data && data.email, data && data.password, data && data.displayName);
@@ -151,10 +173,29 @@ import {Footer} from "@/components/Footer";
                 </Link>;
               </p>;
             </div>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            <div className="bg-zion-blue-dark rounded-lg p-6">;
+              <Form {...form}>;
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" noValidate>;
+                  <FormField;
+                    control={form.control}
+                    name="displayName"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
+                        <FormControl>
+                          <div className="relative">
+                            <Input
+                              placeholder="John Doe"
+                              className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                              {...field}
+                              aria-autocomplete="none";
+                              autoComplete="off";
+                            />;
+                            <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+                          </div>;
+                        </FormControl>;
+                        <FormMessage className="text-red-400" />;
+                      </FormItem>;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     )}
 

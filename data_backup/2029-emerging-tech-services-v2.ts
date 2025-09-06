@@ -1,5 +1,3 @@
-
-
 export interface EmergingTechService2029V2 {
   "id": string;
   name: string;

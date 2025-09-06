@@ -14,21 +14,8 @@ interface SearchFilters {
   minRating: number,
   sort: string
 
-import React from 'react',;
-import { X } from 'lucide-react';
-import { Button } from '@/components/ui/button',;
-import { Badge } from '@/components/ui/badge',;
-interface SearchFilters {;
-  types: string[],;
-  category: string,;
-  minPrice: number,;
-  maxPrice: number,;
-  minRating: number,;
-  sort: string;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 interface ActiveFiltersBarProps {;
@@ -319,6 +306,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
             size="sm"
             className="h-4 w-4 p-0 hover:bg-transparent"
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             aria-label={`Remove ${filter.label} filter`}
           >
             <X className="h-3 w-3" />
@@ -328,6 +316,10 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       <Button
         variant="ghost"
         size="sm"
+=======
+        onClick = {onClearAll,}
+        onClick={onClearAll}
+<<<<<<< HEAD
 
         className="text-xs h-6 px-2"
       >
@@ -335,23 +327,36 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       </Button>
     </div>
   )
-
+}
+export default ActiveFiltersBar
+},
+interface Filter {
+  key: string
+  value: string
+  label: string
 interface Filter {
   key: string
   value: string
   label: string
 }
-
-interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
+interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
+  filters: Filter[]
+  onRemoveFilter: key: string void
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+      </button>
+    </div>
+  )}
+'"
 
   filters: Filter[];
   onRemoveFilter: key: string void;
-
   onClearAll: : unknown void}
-        className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
-      >
-        Clear all
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+        className="text - sm text - zion - slate - light hover: text - zion - cyan transition - colors underline";
+      >;
+        Clear all;
+      </button>;
+    </div>)}
+'";
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

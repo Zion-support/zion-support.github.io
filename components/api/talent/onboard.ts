@@ -274,13 +274,6 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
       }
     }
 <<<<<<< HEAD
-=======
-    aggregate.push (record);
-    await fse.writeJSON (aggregate_path, aggregate, { spaces: 2 });
-;
-    // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup);
-    // For now, just return success with AI data;
-    return res.status (200).json ({ ok: true, id, summary, tags });
   } catch (error) {
     return res.status (500).json ({ error: 'Internal server error' });
   }    return res.status (200).json ({ ok: true, id, summary, tags });
@@ -290,5 +283,6 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
   }
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  }
+  }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

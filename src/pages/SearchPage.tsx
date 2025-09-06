@@ -1,5 +1,28 @@
 
 
+import { SearchSuggestion } from "@/types/search";
+import {logErrorToProduction} from '@/utils/productionLogger';
+import {
+  Tabs;
+  TabsContent;
+  TabsList;
+  TabsTrigger} from "@/components/ui/tabs",
+import { Loader2 } from 'lucide-react'
+  const pageKey = `search-${routeKey}-${router.asPath}`
+import { useRouter } from 'next/router'
+import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady'
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput"
+import { generateSearchSuggestions } from "@/data/marketplaceData"
+import { SearchSuggestion } from "@/types/search"
+import {logErrorToProduction} from '@/utils/productionLogger'
+import {
+  Tabs
+  TabsContent
+  TabsList
+  TabsTrigger} from "@/components/ui/tabs"
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Loader2 } from 'lucide-react'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 import { Loader2 } from 'lucide-react'
 
 interface SearchResult {
@@ -22,6 +45,14 @@ function highlight(text: string, term: string) {
         regex.test(part) ? (
           <mark key={i} className="bg-yellow-200 text-black">
 
+=======
+  const [loading, setLoading] = useState(false);
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),;
+  // Force re-render and reset state when route changes;
+  const routeKey = useRouteChange(() => {;
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     setResults([]);    setLoading(false)
   })
   const productResults = results.filter(
@@ -36,6 +67,12 @@ function highlight(text: string, term: string) {
 
     if (urlQuery !== query) {
       setQuery(urlQuery)
+  },;
+  const handleSubmit = (e: React.FormEvent) => {;
+    e.preventDefault(),;
+    if (query.trim()) {;
+      router.push(`/search?q=${encodeURIComponent(query.trim())}`);
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
   }, [router.isReady, router.query.q]), // Fixed dependency array
   // Fetch results when query changes
@@ -76,6 +113,9 @@ function highlight(text: string, term: string) {
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
+            onSelectSuggestion={(suggestion) => {
+              const searchTerm = suggestion.text.trim()
+              setQuery(searchTerm);              router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
 
 =======
 
@@ -85,9 +125,6 @@ function highlight(text: string, term: string) {
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
             }}
             searchSuggestions={suggestions}
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             placeholder="Search talent, jobs, and projects..."
           />
         </form>

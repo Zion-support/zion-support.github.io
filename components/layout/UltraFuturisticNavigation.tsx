@@ -24,6 +24,29 @@ import React, { useState, useEffect } from 'react';
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import Link from 'next/link';
 
+
+  className = '',;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import {
+  Menu
+  X
+  ChevronDown
+  Search
+  Phone
+  Mail
+  MapPin
+  Rocket
+  Brain
+  Atom
+  Shield;
+} from 'lucide-react';
+interface UltraFuturisticNavigationProps {
+  className?: string;
+export default function UltraFuturisticNavigation({
+  className = ''
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }: UltraFuturisticNavigationProps) {  const [isOpen, setIsOpen] = useState(false);
 interface UltraFuturisticNavigationProps {;
   className?: string;
@@ -35,13 +58,9 @@ interface UltraFuturisticNavigationProps {
   className?: string
 
 }
-
-
-
-export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -52,11 +71,24 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
     { name: 'Solutions', href: '/solutions' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Pricing', href: '/pricing' },  ];
 
-=======
+  ];
+    { name: 'Pricing', href: '/pricing' },  ];        { name: 'AI & Machine Learning', href: '/services/ai-ml', icon: Brain, color: 'from-purple-500 to-pink-600' },
+        { name: 'Quantum Computing', href: '/services/quantum', icon: Atom, color: 'from-cyan-500 to-blue-600' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, color: 'from-red-500 to-pink-600' },
+        { name: 'IT Solutions', href: '/services/it-solutions', icon: Rocket, color: 'from-green-500 to-emerald-600' },
+        { name: 'View All Services', href: '/services', icon: Rocket, color: 'from-gray-500 to-gray-600' }
+      ]
+    };
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Pricing', href: '/pricing' }
+    { name: 'Pricing', href: '/pricing' },  ];
 
+  ];
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const contactInfo = {
     mobile: '+1 302 464 0950'
@@ -103,8 +135,19 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
       isScrolled 
         ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl' 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         : 'bg-transparent'
+    } ${className}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className='flex items-center space-x-3'
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           >
@@ -157,7 +200,15 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                   <div
                     onMouseEnter={() => setActiveDropdown(item && item.name)}
                     onMouseLeave={() => setActiveDropdown(null)}
+                  >
+                    <button className='flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50'>
+                      <span>{item.name}</span>
+                      <ChevronDown className='w-4 h-4 transition-transform duration-300 group-hover:rotate-180' />
+                    </button>                      <span>{item.name}</span>
+                      <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
+                    </button>
 
+=======
                   >;
                     <button className='flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50'>;
                       <span>{item && item.name}</span>;
@@ -168,6 +219,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {/* Dropdown Menu */}
                     <AnimatePresence>;
                       {activeDropdown === item && item.name && (;
@@ -270,11 +322,26 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                                   >
                                     <dropdownItem.icon className='w-5 h-5 text-white' />
                                   </div>
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                                  <div>
+                                    <div className='text-white font-medium group-hover/item:text-cyan-300 transition-colors'>
+                                      {dropdownItem.name}
+                                    </div>
+                                    {dropdownItem.name ===
+                                      'View All Services' && (
+                                      <div className='text-xs text-gray-400'>
+                                        Explore our complete portfolio
+                                      </div>                                    )}                                >
+                                  <div className={`w-10 h-10 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300`}>
+                                    <dropdownItem.icon className="w-5 h-5 text-white" />
+                                  </div>
+                                  <div>
+                                    <div className="text-white font-medium group-hover/item:text-cyan-300 transition-colors">
+                                      {dropdownItem.name}
+                                    </div>
+                                    {dropdownItem.name === 'View All Services' && (
+                                      <div className="text-xs text-gray-400">Explore our complete portfolio</div>
+                                    )}
+                                  </div>
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                                 </Link>
                               ))}
@@ -288,6 +355,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                   <Link
                     href={item.href}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   >
                     {item.name}
                   </Link>
@@ -312,18 +380,10 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                 )}
               </div>;
             ))}
-
-                    href={item.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50"
-                  >
-          </div>;
-=======
           </div>
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Contact Info & CTA */}
 
 
@@ -337,13 +397,8 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
 
               </div>
             </div>
-
-            <div className="flex items-center space-x-4 text-sm text-gray-300">;
-              <div className="flex items-center space-x-2">;
-                <Phone className="w-4 h-4 text-cyan-400" />;
-              </div>;
-            </div>;
-=======
+            {/* CTA Button */}
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
 
 
 
@@ -352,19 +407,11 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <Link
                 href='/contact'
                 className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/30'>;
                 <Rocket className='w-4 h-4 mr-2' />                Get Started              <Link
-=======
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <Link
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 href="/contact"
@@ -379,21 +426,22 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
 
           {/* Mobile Menu Button */}
           <div className='lg:hidden'>;
+=======
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className='text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50';
-            >;
-              {isOpen ? (;
-                <X className='w-6 h-6' />;
-              ) : (;
-                <Menu className='w-6 h-6' />;
+              className='text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50'
+            >
+              {isOpen ? (
+                <X className='w-6 h-6' />
+              ) : (
+                <Menu className='w-6 h-6' />
               )}            </button>            <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50";
-            >;
+              className="text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50"
+            >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -402,6 +450,9 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -434,6 +485,8 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                       </button>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       {activeDropdown === item.name && (
                         <motion.div
 =======
@@ -448,7 +501,11 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
+=======
+                          className='ml-4 mt-2 space-y-2'
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         >
                           {item.dropdownItems?.map(dropdownItem => (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -464,14 +521,26 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                                 <dropdownItem.icon className='w-4 h-4 text-white' />
                               </div>
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                             <Link
                               key={dropdownItem && dropdownItem.name}
                               href={dropdownItem && dropdownItem.href}
                               className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-300"
                               onClick={() => setIsOpen(false)}
+                            >
+                              <div className={`w-8 h-8 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items-center justify-center`}>
+                                <dropdownItem.icon className="w-4 h-4 text-white" />
+                              </div>
+                              <span className="text-gray-300 hover:text-white transition-colors">
+                                {dropdownItem.name}
+                              <span className='text-gray-300 hover:text-white transition-colors'>                                {dropdownItem.name}
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                               </span>
                             </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -483,6 +552,15 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                   ) : (;
                     <Link
                       href={item.href}
+=======
+                      className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false)}                      className="block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50"
+                      onClick={() => setIsOpen(false)}
+                      className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false)}
+
+                      onClick={() => setIsOpen(false)}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     >
                       {item.name}
                     </Link>
@@ -491,7 +569,15 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                 </div>;
               ))}
 
+              {/* Mobile Contact Info */}
+              <div className='pt-6 border-t border-gray-700/50 space-y-3'>
+                <div className='flex items-center space-x-3 text-gray-300'>
+                  <Phone className='w-4 h-4 text-cyan-400' />
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <span>{contactInfo.mobile}</span>
                 </div>
                 <div className='flex items-center space-x-3 text-gray-300'>
@@ -687,8 +773,22 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
+      </AnimatePresence>
+    </nav>
+);
+  );
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+}
+
+=======
 
 }
+=======
+
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
   );
@@ -702,8 +802,10 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
       </AnimatePresence>
     </nav>
 );
-<<<<<<< HEAD
 =======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+}
+}
+}
+  );
+}

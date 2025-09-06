@@ -1,9 +1,6 @@
 
-
-import { Link } from "react-router-dom",
-import { Button } from "@/components/ui/button",
-import { Header } from "@/components/Header",
-
+=======
+<<<<<<< HEAD
 export default function Unauthorized() {
   return (
     <>
@@ -38,9 +35,14 @@ export default function Unauthorized() {
       <Footer />
     </>
   )
-
 }
-;
+import { Link } from "react-router-dom",;
+import { Button } from "@/components/ui/button",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { ShieldAlert } from "lucide-react";
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function Unauthorized() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
@@ -109,13 +111,13 @@ function Unauthorized() {
         </div>;
       </div>;
       <Footer />;
-
-    </>);
+    </>;
+  );
 }
-
-=======
 ;
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

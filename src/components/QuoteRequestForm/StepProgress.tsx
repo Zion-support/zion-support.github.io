@@ -1,5 +1,14 @@
 
 
+  currentStep: QuoteRequestSteps;
+export function StepProgress({ currentStep }: StepProgressProps) {;
+  const steps: { id: QuoteRequestSteps; label: string }[] = [
+    { id: 'service', label: 'Service' },
+    { id: 'details', label: 'Details' },
+    { id: 'timeline', label: 'Timeline' },
+    { id: 'budget', label: 'Budget' },
+    { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [
+<<<<<<< HEAD
     { id: "service", label: "Service" },
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
@@ -8,7 +17,13 @@
   ],
 
   const getStepStatus = (stepId: QuoteRequestSteps) => {
-
+    const stepOrder = steps.findIndex(s => s.id === stepId)
+    const currentStepOrder = steps.findIndex(s => s.id === currentStep)
+    if (stepOrder < currentStepOrder) return 'complete'
+    if (stepOrder === currentStepOrder) return 'current'
+    return 'upcoming'
+  const getStepStatus = (stepId: QuoteRequestSteps,) => {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     const stepOrder = steps.findIndex(s => s.id === stepId),
     const currentStepOrder = steps.findIndex(s => s.id === currentStep),
 
@@ -33,7 +48,39 @@
                   <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>
                 )}
               </div>
+              <span
+                className={cn(
+                  'text-xs mt-2 font-medium'
+                  status === 'complete'
+                    ? 'text-zion-cyan'
+                    : status === 'current'
+                      ? 'text-white'
+                      : 'text-zion-slate-light'                )}                  "text-xs mt-2 font-medium"
 
+
+                  "text-zion-slate-light"
+
+                )}
+              <span
+                className = {cn(
+                  "text-xs mt-2 font-medium"
+                  status === "complete" ? "text-zion-cyan" :
+                  status === "current" ? "text-white" :
+                  "text-zion-slate-light"
+                ),}
+              >
+                {step.label}
+              </span>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+  (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100
+}%`
+  (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100 
+}%` 
 }/> </div>
 }className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {
   steps.findIndex (s => s.id === step.id) + 1
@@ -51,30 +98,7 @@
   )
 }
 <<<<<<< HEAD
-=======
-  currentStep: QuoteRequestSteps
-export function StepProgress({ currentStep }: StepProgressProps) {
-  const steps: { id: QuoteRequestSteps; label: string }[] = [
-    { id: 'service', label: 'Service' }
-    { id: 'details', label: 'Details' }
-    { id: 'timeline', label: 'Timeline' }
-    { id: 'budget', label: 'Budget' }
-    { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [
-
-
-  return (
-
-
-  currentStep: QuoteRequestSteps;
-export function StepProgress({ currentStep }: StepProgressProps) {;
-  const steps: { id: QuoteRequestSteps; label: string }[] = [
-    { id: 'service', label: 'Service' },
-    { id: 'details', label: 'Details' },
-    { id: 'timeline', label: 'Timeline' },
-    { id: 'budget', label: 'Budget' },
-    { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [
-
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 
                 ),}>;
@@ -82,6 +106,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
 
 ;
 
+<<<<<<< HEAD
 
 
   const getStepStatus = (step_id: QuoteRequestSteps) =>: any {

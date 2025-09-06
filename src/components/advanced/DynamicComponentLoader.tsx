@@ -57,15 +57,17 @@ const EnhancedLoading: React.FC<{;
           {showProgress && (
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
               style={{
 
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
 
-            <motion.div
-              className="absolute inset-0 rounded-full border-2 border-primary"
-              style={{
+
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Enhanced Error Component
 const EnhancedError: React.FC<{
   error: Error
@@ -74,51 +76,66 @@ const EnhancedError: React.FC<{
   retryCount: number
   maxRetries: number
 }> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
-
-          ) : (
-            <WifiOff className='h-6 w-6 text-red-600' />
-        </div>;
-      </div>;
-    </CardContent>;
-  </Card>;
-);
-
-// Enhanced Error Component;
-const EnhancedError: React.FC<{;
-  error: Error;
-  retry: () => void;
-  isOnline: boolean;
-  retryCount: number;
-  maxRetries: number;
-}> = ({ error, retry, isOnline, retryCount, maxRetries }) => (;
-  <Card className='w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10'>;
-    <CardContent className='p-6'>;
-      <div className='flex flex-col items-center space-y-4'>;
-        <div className='p-3 rounded-full bg-red-100 dark:bg-red-900/20'>          {isOnline ? (;
-            <AlertTriangle className='h-6 w-6 text-red-600' />;
-          ) : (;
-            <WifiOff className='h-6 w-6 text-red-600' />;
-          )}
-        </div>;
-        <div className='text-center'>;
-          <h3 className='font-semibold text-red-900 dark:text-red-100'>;
-            {isOnline ? 'Loading Failed' : 'Offline'}
-          </h3>
-
-              Retry {retryCount}/{maxRetries}
-            </p>;
-          )}
-
-        </div>
-        {retryCount < maxRetries && (
-
             Try Again
           </Button>
         )}
       </div>
     </CardContent>
   </Card>
+=======
+)
+// Network Status Hook
+const useNetworkStatus = () => {
+  const [isOnline, setIsOnline] = useState(true)
+  useEffect(() => {
+    const updateOnlineStatus = () => setIsOnline(navigator.onLine)
+    window.addEventListener('online', updateOnlineStatus)
+    window.addEventListener('offline', updateOnlineStatus)
+    return () => {
+      window.removeEventListener ('online', updateOnlineStatus);
+      window.removeEventListener ('offline', updateOnlineStatus);
+    }
+  }, []);
+  return is_online;
+}
+// Advanced Dynamic Component Loader
+export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
+  importFn
+  fallback
+  errorFallback
+  loadingComponent
+  enableRetry = true
+  maxRetries = 3
+  prefetch = false
+  className
+  children
+  ...props
+},) => {
+  const [loadingState, setLoadingState] = useState<LoadingState>({
+    isLoading: true
+    error: null
+    retryCount: 0
+    isOnline: true
+  })
+  const [progress, setProgress] = useState(0)
+  const [DynamicComponent, setDynamicComponent] =
+    useState<ComponentType<any> | null>(null)
+  const isOnline = useNetworkStatus()
+  // Simulate loading progress for better UX
+  useEffect((,) => {
+    if (loadingState.isLoading && !loadingState.error) {
+      const interval = setInterval((,) => {
+        setProgress(prev => {
+          if (prev >= 90) return prev
+          return prev + Math.random() * 10
+        })
+      }, 100)
+      return () => clearInterval(interval)
+    }
+    };
+;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return () => {}; // Return empty cleanup function for other paths
   }, [loadingState.isLoading, loadingState.error])
   // Load component
@@ -203,6 +220,9 @@ const EnhancedError: React.FC<{;
       </motion.div>
     )
 
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
   }
   // Success state
   if (DynamicComponent) {
@@ -218,6 +238,12 @@ const EnhancedError: React.FC<{;
 // Predefined dynamic loaders for common heavy components
 // Note: These are examples - uncomment and install types as needed
 // export const DynamicChartComponent = createDynamicComponent(
+// Predefined dynamic loaders for common heavy components
+// Note: These are examples - uncomment and install types as needed
+// export const DynamicChartComponent = createDynamicComponent(
+//   (,) => import('recharts').then(module => ({ default: module.LineChart }))
+//   () => import('recharts').then(module => ({ default: module.LineChart })),
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 //   {
 //     loadingComponent: () => (
@@ -232,12 +258,12 @@ const EnhancedError: React.FC<{;
 
 <<<<<<< HEAD
 //   {
-//     loading_component: () => (
-//       <div className="w - full h - 64 bg - muted animate - pulse rounded - lg flex items - center justify - center">;
-//         <span className="text - muted - foreground">Loading chart...</span>;
-//       </div>;
-//     ),
-//     prefetch: true;
+//     loadingComponent: () => (
+//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
+//         <span className="text-muted-foreground">Loading 3D renderer...</span>
+//       </div>
+//     )
 //   }
+<<<<<<< HEAD
 
 // );

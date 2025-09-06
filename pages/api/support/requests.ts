@@ -1,5 +1,9 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-
+import { readJson, writeJson } from '../../../utils/fsDb';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { readJson, writeJson } from '../../../utils/fsDb',;
+;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const requests = readJson<any[]>('support/requests.json', [])
@@ -12,6 +16,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const record = { id, sessionId, reason: reason ?? 'User request', tag: tag ?? 'manual', status: 'open', createdAt: Date.now() }
     requests.push(record)
     writeJson('support/requests.json', requests)
+
     return res.status(200).json({ ok: true, id })
   }
 
@@ -30,6 +35,7 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }
   } catch (error) {
@@ -37,6 +43,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   if (req.method === 'GET') {
     const { sessionId, reason, tag } = req.body as { sessionId: string, reason?: string, tag?: string },;
     const requests = readJson<any[]>('support/requests.json', []),;
@@ -71,9 +79,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

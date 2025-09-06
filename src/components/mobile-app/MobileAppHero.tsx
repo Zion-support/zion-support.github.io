@@ -36,14 +36,17 @@ export const MobileAppHero: React.FC = () => {
               </Button>
             </Link>
           </div>
+=======
+          
+<<<<<<< HEAD
+<<<<<<< HEAD
 
           <div className="flex-1 flex justify-center">
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
 <<<<<<< HEAD
-=======
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 
 
@@ -102,5 +105,5 @@ export const MobileAppHero: React.FC = () => {;
     </section>;
   );
 };
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+<<<<<<< HEAD
+<<<<<<< HEAD

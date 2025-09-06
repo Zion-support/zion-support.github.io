@@ -1,5 +1,16 @@
 
-=======
+import { useState  } from 'react';
+import { Skill  } from '@/types/resume';
+import { Button  } from '@/components/ui/button';
+import { Alert, AlertDescription  } from '@/components/ui/alert';
+import { useResume  } from '@/hooks/useResume';
+import { SkillsFormProps  } from './types';
+import { SkillsList  } from './SkillsList';
+import { AddSkillForm  } from './AddSkillForm';
+import { BulkAddSkills } from './BulkAddSkills';
+export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState} from 'react';
 import {Skill} from '@/types / resume';
 import {Button} from '@/components / ui / button';
@@ -11,9 +22,11 @@ import {AddSkillForm} from './AddSkillForm';
 import {BulkAddSkills} from './BulkAddSkills';
 
 export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {;
+=======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { addSkill, deleteSkill, fetchResume } = useResume();
 
   const [error, setError] = useState<string | null>(null);
@@ -56,14 +69,10 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       if (resumeData && resumeData.skills) {
         setLocalSkills(resumeData.skills)
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       const resumeData = await fetchResume(resumeId);
       if (resumeData && resumeData.skills) {;
         setLocalSkills(resumeData.skills);
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }
 
@@ -71,14 +80,16 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       setError(err && err.message || 'Failed to refresh skills');
 
     }
-=======
-
-
+  };
   },
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
 
     <div className="space-y-6">;
@@ -112,16 +123,6 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       </div>
     </div>
   )
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-export /**
- * SkillsForm - Function description
- */
-function SkillsForm() {
-  const { add_skill, delete_skill, fetch_resume } = use_resume ();
-  const [error, set_error] = useState < string | null>(null);
-  const [local_skills, setLocalSkills] = useState < Skill[]>(skills);
-;
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

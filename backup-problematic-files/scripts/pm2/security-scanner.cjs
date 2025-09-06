@@ -4,7 +4,6 @@
 =======
 =======
 =======
-<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 #!/usr/bin/env node
 const fs = require('fs');
@@ -392,11 +391,6 @@ class SecurityScanner {}
   log(message) {}
     const timestamp = new Date().toISOString();
 
-=======
-    const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
-    );
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
@@ -412,7 +406,6 @@ class SecurityScanner {}
     try {}
       this.log('Scanning dependencies for vulnerabilities...');
 
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -601,12 +594,6 @@ class SecurityScanner {}
       };
       this.log(`Found ${configIssues.length} configuration security issues`);
 
-=======
-
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -756,6 +743,3 @@ if (require.main === module) {}
   const securityScanner = new SecurityScanner();
   securityScanner.start().catch(console.error);
 <<<<<<< HEAD
-=======
-module.exports = SecurityScanner;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

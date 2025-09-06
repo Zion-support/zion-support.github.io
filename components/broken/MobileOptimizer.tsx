@@ -1,8 +1,13 @@
 =======
+<<<<<<< HEAD
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+setIsMobile (isMobileDevice);
+ setIsMobile (isMobileDevice);
+setIsMobile (isMobileDevice);
+ setIsMobile (isMobileDevice);
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 setIsTablet (isTabletDevice);
 
 //Apply mobile - specific optimizations // Check condition
@@ -271,8 +276,18 @@ useEffect ( () => {;
 }, [optimizeForMobile]);
 useEffect ( () => {;
   if (typeof window === 'undefined') return;
-
-
+//Set up event listeners window.addEventListener ('orientationchange', handleOrientationChange);
+window.addEventListener ('resize', handleResize);
+//Set up orientation change detection const mediaQuery = window.matchMedia (' (orientation: portrait) ');
+const handleMediaQueryChange = (e: MediaQueryListEvent) => {
+  setCurrentOrientation (e.matches ? 'portrait' : 'landscape')
+}
+if (!showPanel |!isVisible) return null;
+}
+const getStatusIcon = (status: string) => {
+  switch (status) {
+}
+children
   setCurrentOrientation (e.matches ? 'portrait' : 'landscape') 
 };
 if (!showPanel || !isVisible) return null;
@@ -284,8 +299,6 @@ const getStatusIcon = (status: string) => {
 
 };
 children 
-
-
 }{
   /* Mobile Optimization Panel */
 }<AnimatePresence> {
@@ -301,39 +314,7 @@ children
 }</style> </>)
 }
 
-//Set up event listeners window && window.addEventListener ('orientationchange', handleOrientationChange);
-window && window.addEventListener ('resize', handleResize);
-//Set up orientation change detection const mediaQuery = window && window.matchMedia (' (orientation: portrait) ');
-const handleMediaQueryChange = (e: MediaQueryListEvent) => {;
-  setCurrentOrientation (e && e.matches ? 'portrait' : 'landscape') ;
-};
-if (!showPanel || !isVisible) return null;
-};
-const getStatusIcon = (status: string) => {;
-  switch (status) {;
-};
-children ;
-}{;
-  /* Mobile Optimization Panel */ ;
-}<AnimatePresence> {;
-  showMobilePanel && (<motion && motion.div > <div className="p-6" > <div className="flex items-center justify-between mb-6" > <h2 className="text-xl font-bold text-white" >Mobile Optimizer</h2> <button > × </button> </div> </div>) ) ;
-}</div> </div> > Scroll to Top </button> <button > Scroll to Bottom </button> </div> </div> </div> </motion && motion.div>) ;
-}</AnimatePresence> {;
-  /* Mobile Toggle Button */ ;
-}<button </svg> </button> {;
-  /* Global Mobile Styles */ ;
-}<style jsx global> {;
-  `.mobile-optimized * {;
-}` ;
-}</style> </>) ;
-};
-
-export default MobileOptimizer;
-
-export default MobileOptimizer;
-
-
-=======
+<<<<<<< HEAD
     checkDevice(),
     window.addEventListener('resize', checkDevice),
     return () => window.removeEventListener('resize', checkDevice)
@@ -924,8 +905,6 @@ if (return null) {
   $2
 }
 }
-const getStatusIcon = (status: string) =>: any {
-  switch (status) {
 }
 
 }{
@@ -944,9 +923,10 @@ const getStatusIcon = (status: string) =>: any {
 }
 export default MobileOptimizer;
 export default MobileOptimizer;
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

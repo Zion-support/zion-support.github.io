@@ -9,6 +9,16 @@ export function SeverityIndicator({
   showIcon = true,
   showText = true,
 
+
+  className?: string
+}
+
+export function SeverityIndicator({ 
+  severity, 
+  showIcon = true, 
+  showText = true, 
+<<<<<<< HEAD
+
   size = "md",
   className
 }: SeverityIndicatorProps) {
@@ -53,12 +63,4 @@ export function SeverityIndicator ({
   return (
 
     <div className={cn("flex items-center gap-1", className)}>
-
-      {showIcon && getSeverityIcon()}
-      {showText && <span className="capitalize text-sm">{severity}</span>}
-
-    </div>;
-  );
 <<<<<<< HEAD
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

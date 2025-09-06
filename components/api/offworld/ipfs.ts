@@ -1,16 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 =======
-
-
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {
   addJSON,
   publishManifesto,
   OFFWORLD_TOPICS,;
 } from '@/utils/offworld/ipfs';
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+<<<<<<< HEAD
 
 import {
   addJSON
@@ -18,7 +14,11 @@ import {
   OFFWORLD_TOPICS;
 } from '@/utils/offworld/ipfs';
 export default async function handler(
-
+  req: NextApiRequest
+  res: NextApiResponse
+  req: NextApiRequest,
+  res: NextApiResponse;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ) {  const { action } = req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
 
@@ -47,17 +47,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res && res.status(500).json({ error: e && e.message });
   }    }
-=======
-
-    if (req && req.method === 'POST' && action === 'broadcast') {
-      const ok = await publishManifesto(OFFWORLD_TOPICS && OFFWORLD_TOPICS.manifesto, body?.message || '');
-      return res && res.status(200).json({ ok })
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
     }
     return res && res.status(400).json({ error: 'Unsupported action' })
   } catch (e: any) {
-<<<<<<< HEAD
 =======
 
 

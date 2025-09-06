@@ -1,4 +1,18 @@
 
+=======
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Server, Clock, MapPin } from "lucide-react";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Server, Clock, MapPin} from "lucide-react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Server, Clock, MapPin } from "lucide-react",
+
+interface ServiceDetailsProps {
+  country: string
+}
+// Component to show service details for the selected country
+export function ServiceDetails({ country }: ServiceDetailsProps) {
+  // Get datacenters for regions (simplified - in production this would come from a real database)
 
 interface ServiceDetailsProps {
   country: string
@@ -24,18 +38,11 @@ interface ServiceDetailsProps {;
 export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
   // Get datacenters for regions (simplified - in production this would come from a real database);
   const getDatacenters = (country: string): string[] => {;
+
+  const getDatacenters = (country: string): string[] => {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     const dataCenters: Record<string, string[]> = {;
 
-=======
-// Component to show service details for the selected country;
-export /**
- * ServiceDetails - Function description
- */
-function ServiceDetails() {
-  // Get datacenters for regions (simplified - in production this would come from a real database);
-  const get_datacenters = (country: string): string[] => {
-    const data_centers: Record < string, string[]> = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"];
       "United Kingdom": ["London", "Manchester", "Birmingham"];
       "Germany": ["Frankfurt", "Berlin", "Munich"];
@@ -43,8 +50,6 @@ function ServiceDetails() {
       "Australia": ["Sydney", "Melbourne", "Perth"];
       "Singapore": ["Singapore Central"];
       "Canada": ["Toronto", "Montreal", "Vancouver"];
-
-
     const dataCenters: Record<string string[]> = {
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
       "United Kingdom": ["London", "Manchester", "Birmingham"],
@@ -58,7 +63,6 @@ function ServiceDetails() {
       // Default for other countries
       "default": ["Major metropolitan areas"]
 
-=======
     },
     
     return dataCenters[country] || dataCenters["default"]
@@ -67,24 +71,6 @@ function ServiceDetails() {
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  // Get region-specific image
-  const getRegionalImage = (country: string): string => {
-    // In a real app, you'd have specific images for each region
-    const regions: Record<string, string> = {
-      "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa";
-      "United Kingdom": "https://source.unsplash.com/featured/900x700/?datacenter,uk";
-      "Germany": "https://source.unsplash.com/featured/900x700/?datacenter,germany";
-      "Japan": "https://source.unsplash.com/featured/900x700/?datacenter,japan";
-      "Australia": "https://source.unsplash.com/featured/900x700/?datacenter,australia";
-      "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore";
-      // Default placeholder
-      "default": "https://source.unsplash.com/featured/900x700/?datacenter"
-
-      "Japan": "JST";
-      "Australia": "AEST / ACDT / AWST depending on location";
-      "Singapore": "SGT";
-
-
     },
     
     return regions[country] || regions["default"]
@@ -92,18 +78,6 @@ function ServiceDetails() {
   
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  // Get region-specific instructions
-  const getRegionalInstructions = (country: string): string => {
-    // In a real implementation, this would be much more detailed and specific
-    const timeZones: Record<string string> = {
-      "United States": "EST/CST/PST depending on location",
-      "United Kingdom": "GMT/BST",
-      "Germany": "CET/CEST",
-      "Japan": "JST",
-      "Australia": "AEST/ACDT/AWST depending on location",
-      "Singapore": "SGT",
-      "default": "Local timezone"
-
     return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
            `Response times are typically within 4 hours for metropolitan areas. ` +
            `Please have site access permissions and contact details ready for our technicians. ` +
@@ -144,6 +118,8 @@ function ServiceDetails() {
                 >
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   {dc}
                 </div>;
               ))}

@@ -8,9 +8,7 @@ import { supabase } from '@/integrations/supabase/client'
 import { describe, it, expect, beforeEach, vi } from 'vitest'
 
 =======
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 jest.mock('@prisma/client'
           this.name = 'PrismaClientKnownRequestError'
 jest.mock('@/integrations/supabase/client'
@@ -24,13 +22,14 @@ describe('/api/reviews API Endpoint'
         "role"
         "userType"
         "productId"
-        "comment"'"
+        "comment"
         user: { id: 'supaUserId', "email"
         "access_token"
         "refresh_token"
         "token_type"
-        "method"'"body": { productId: 'prod1', "rating": 5, "comment"
-          "comment"'"
+        "method"
+        "body": { productId: 'prod1', "rating": 5, "comment"
+          "comment"
         user: { id: 'supaUserId', "email"
         "access_token"
         "refresh_token"
@@ -40,7 +39,8 @@ describe('/api/reviews API Endpoint'
         "method"
           "comment"
         "error"
-        "method"'"body": { productId: 'prod1', "rating": 6, "comment"
+        "method"
+        "body": { productId: 'prod1', "rating": 6, "comment"
         "error"
         "method"
         "error"

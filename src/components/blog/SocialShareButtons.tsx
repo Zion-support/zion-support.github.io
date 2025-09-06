@@ -20,20 +20,46 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
       '_blank'
     )
+=======
+  }
+  const shareToFacebook = () =>: any {
+    window.open (
+      `https://www.facebook.com / sharer / sharer.php?u=${share_url}`,
+      '_blank');
+  }
+  const shareToLinkedIn = () =>: any {
+    window.open (
+      `https://www.linkedin.com / sharing / share - offsite/?url=${share_url}`,
+      '_blank');
+
+  }
+<<<<<<< HEAD
 
   const copyLink = () => {
     if (typeof window === 'undefined') return,
-
     navigator.clipboard
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
       .catch(() => toast.error('Failed to copy link'))
 <<<<<<< HEAD
 
-    </div>;
-  );
-};
-};
+  return (
+    <div className='mt-12 flex flex-wrap gap-2'>
+      {buttons.map(btn => (
+        <Button
+          key={btn.label}
+          variant='outline'
+          size='sm'
+          onClick={btn.onClick}
+          aria-label={btn.label}
+        >          {btn.icon}
+          <span>{btn.label}</span>
+        </Button>
+      ))}
+    </div>
+  )
+}
+}
 
 ;
 <<<<<<< HEAD

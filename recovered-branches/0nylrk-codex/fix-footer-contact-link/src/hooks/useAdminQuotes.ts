@@ -1,16 +1,13 @@
-
-=======
-
+import { useState  } from 'react';
+import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
+import { quoteRequestService  } from '@/services/quoteRequestService';
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
-import { useToast } from '@/components/ui/use-toast';
-import type { DateRange } from '@/types/dateRange';
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all');
@@ -30,6 +27,17 @@ import type { DateRange } from '@/types/dateRange';
     if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {
       return false
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+    }
+    // Archive filter
+    if (archiveFilter === 'active' && quote && quote.is_archived) {
+      return false
+    }
+    if (archiveFilter === 'archived' && !quote && quote.is_archived) {
+      return false
+    }
+    
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     // Search filter
     if (searchQuery) {
       const query = searchQuery && searchQuery.toLowerCase();
@@ -57,7 +65,50 @@ import type { DateRange } from '@/types/dateRange';
         return false
       }
     }
+    return true
+  });
+  // Update quote status mutation
+  const updateStatusMutation = useMutation({
+    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>
+      quoteRequestService.updateStatus(id, status);
+    
+;
+    // Search filter;
+    if (searchQuery) {;
+      const query = searchQuery.toLowerCase(),;
+      if (;
+        !quote.requester_name.toLowerCase().includes(query) &&;
+        !quote.project_name.toLowerCase().includes(query) &&;
+        !quote.project_summary.toLowerCase().includes(query) &&;
+        !(quote.talent_name && quote.talent_name.toLowerCase().includes(query));
+      ) {;
+        return false;
+      }
+    }
+;
+    // Date range filter;
+    if (dateRange?.from) {;
+      const createdAt = new Date(quote.created_at),;
+      if (createdAt < dateRange.from) {;
+        return false;
+      }
+    }
+;
+    if (dateRange?.to) {;
+      const createdAt = new Date(quote.created_at),;
+      const endDate = new Date(dateRange.to),;
+      endDate.setHours(23, 59, 59, 999), // End of day;
+      if (createdAt > endDate) {;
+        return false;
+      }
+    }
+    
+=======
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     return true
   }),
 
@@ -94,6 +145,7 @@ import type { DateRange } from '@/types/dateRange';
       }),
       queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     onError: (error: Error) => {
       toast({
         title: "Error";
@@ -120,21 +172,6 @@ import type { DateRange } from '@/types/dateRange';
       toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation.mutate(id)}
 }
-  return {
-    quotes: filtered_quotes;
-    is_loading;
-    error;
-    status_filter;
-    setStatusFilter;
-    archive_filter;
-    setArchiveFilter;
-    search_query;
-    setSearchQuery;
-
-
-    toggleArchive: (id: string, isArchived: boolean) => 
-
-=======
     },
     onError: (error: Error) => {
       toast({
@@ -218,23 +255,11 @@ import type { DateRange } from '@/types/dateRange';
     updateStatus: (id: string, status: QuoteStatus) =>;
       updateStatusMutation.mutate({ id, status }),;
     toggleArchive: (id: string, isArchived: boolean) =>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation.mutate(id)}
 }
 
-=======
-    setDateRange,
-    updateStatus: (id: string, status: QuoteStatus) => 
-      updateStatusMutation && updateStatusMutation.mutate({ id, status });
-    toggleArchive: (id: string, isArchived: boolean) => 
-      toggleArchiveMutation && toggleArchiveMutation.mutate({ id, isArchived });
-    deleteQuote: (id: string) => deleteMutation && deleteMutation.mutate(id)}
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     date_range;
     setDateRange,

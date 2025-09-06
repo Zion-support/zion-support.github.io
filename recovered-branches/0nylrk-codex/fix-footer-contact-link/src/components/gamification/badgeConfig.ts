@@ -1,15 +1,34 @@
 
 
+<<<<<<< HEAD
 import {LucideIcon} from "lucide-react";
 import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization} from "lucide-react";
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import {LucideIcon} from "lucide-react";
+import {BadgeCheck, //, publishing, a, listing, Award, //, top, contributor, Star, //, profile, complete, Trophy, //, featured, creator, BadgePlus, //, first, action, BadgeDollarSign, //, monetization} from "lucide-react";
+import { LucideIcon } from "lucide-react",
+import {
+  BadgeCheck, // publishing a listing
+  Award,      // top contributor
+  Star,       // profile complete
+  Trophy,     // featured creator
+  BadgePlus,  // first action
+  BadgeDollarSign // monetization
+} from "lucide-react",
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export type BadgeKey =
   | "first_listing"
   | "top_contributor"
   | "profile_complete"
   | "featured_creator"
+  | "first_action";
+  | "monetized";
 
   color: string,
 
@@ -76,6 +95,7 @@ import {;
   BadgePlus,  // first action;
   BadgeDollarSign // monetization;
 } from "lucide-react",;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export type BadgeKey =;
   | "first_listing";
   | "top_contributor";
@@ -154,13 +174,6 @@ export const badge_list: BadgeMeta[] = [;
   badgeList && badgeList.find((b) => b && b.key === key),
 
 
-=======
-    icon: BadgeDollarSign,
-    color: "#22C55E", // Soft Green;
-    bg: "#F2FCE2",    // Soft Green;
-  }];
-export const getBadgeMeta = (key: BadgeKey) =>;
-  badgeList.find((b) => b.key === key);
 =======
 
   | "first_action"

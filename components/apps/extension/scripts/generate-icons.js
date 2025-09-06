@@ -29,7 +29,6 @@ for (const size of sizes) {
 
 =======
   console.log('generated', out)
-
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

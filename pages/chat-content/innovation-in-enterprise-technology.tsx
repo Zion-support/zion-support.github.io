@@ -1,18 +1,47 @@
+import type { NextPage } from 'next';
+import Head from 'next/head';
 
-
+import type { NextPage } from 'next',
+import Head from 'next/head',
+const InnovationInEnterpriseTechnology: NextPage = () => {
+  return (
     <div>
       <Head>
         <title>InnovationInEnterpriseTechnology - Zion Tech Solutions</title>
         <meta name="description" content="InnovationInEnterpriseTechnology page" />
       </Head>
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <main>
         <h1>InnovationInEnterpriseTechnology</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
+  ),
+};
 
+export default InnovationInEnterpriseTechnology;
   )
+}
+export default InnovationInEnterpriseTechnology;
+
+},
+export default InnovationInEnterpriseTechnology,
+export default InnovationInEnterpriseTechnology;
+
+
+=======
+import Head from 'next / head';
+      <main>;
+        <h1 > InnovationInEnterpriseTechnology</h1>;
+        <p > This page is under construction.</p>;
+      </main>;
+    </div>),
+}
+;
+export default InnovationInEnterpriseTechnology;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
 

@@ -7,6 +7,41 @@ import { useInterviews } from "@/hooks/useInterviews",
 import { Interview } from "@/types/interview",
 import { format, isPast, parseISO } from "date-fns",
 import { Link } from "react-router-dom",
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import React, { useEffect, useState } from "react";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {useInterviews} from "@/hooks/useInterviews";
+import {Interview} from "@/types/interview";
+import {format, isPast, parseISO} from "date-fns";
+import {Link} from "react-router-dom";
+import {Calendar, Clock, Video} from "lucide-react";
+import {Avatar} from "@/components/ui/avatar";
+export function UpcomingInterviewsCard() {;
+  const { fetchInterviews } = useInterviews();
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+import React, { useEffect, useState } from "react",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { useInterviews } from "@/hooks/useInterviews",
+import { Interview } from "@/types/interview",
+import { format, isPast, parseISO } from "date-fns",
+import { Link } from "react-router-dom",
+import { Calendar, Clock, Video } from "lucide-react";
+import { Avatar } from "@/components/ui/avatar";
+export function UpcomingInterviewsCard() {
+  const { fetchInterviews } = useInterviews();
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+import { Calendar, Clock, Video } from "lucide-react",
+import { Avatar } from "@/components/ui/avatar",
+export function UpcomingInterviewsCard() {
+  const { fetchInterviews } = useInterviews(),
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   useEffect(() => {
 
@@ -15,12 +50,12 @@ import { Link } from "react-router-dom",
       try {
 
 =======
+        const interviews = await fetchInterviews();
+        const now = new Date();
         const interviews = await fetchInterviews(),
         const now = new Date(),
         
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         // Filter for confirmed interviews in the future
         const upcoming = interviews
           .filter(interview =>
@@ -57,6 +92,7 @@ function UpcomingInterviewsCard() {
         const interviews = await fetch_interviews ();
         const now = new Date ();
 ;
+=======
   if (isLoading) {
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
@@ -77,7 +113,6 @@ function UpcomingInterviewsCard() {
                 </div>
               </div>
 
-=======
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -158,6 +193,7 @@ export function UpcomingInterviewsCard() {;
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>;
                 </div>;
               </div>;
+=======
 
 
 
@@ -204,6 +240,14 @@ export function UpcomingInterviewsCard() {;
       <CardContent>
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
+            const interviewDate = parseISO(interview.scheduled_date);
+            const formattedDate = format(interviewDate, 'EEE, MMM d');
+            const formattedTime = format(interviewDate, 'h: mm a')
+            // Determine if interview is happening soon (within 30 minutes)
+            const now = new Date();
+            const isStartingSoon =
+              interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
+              interviewDate.getTime() > now.getTime();
 
             return (
               <div key={interview.id} className="flex items-center gap-3">
@@ -249,19 +293,3 @@ export function UpcomingInterviewsCard() {;
       </CardContent>
     </Card>
   )
-                    )}
-                  </div>;
-                  <div className="flex items-center text-sm text-muted-foreground">;
-                    <Clock className="h-3 w-3 mr-1" />;
-                    {formattedDate} at {formattedTime}
-                  </div>;
-                </div>;
-              </div>;
-            );
-          })}
-
-        </div>;
-
-        <div className="mt-4 pt-3 border-t border-zion-blue-light/40">;
-          <Button asChild size="sm" variant="outline" className="w-full">;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

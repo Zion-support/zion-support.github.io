@@ -1,12 +1,6 @@
-
-import React from './react';
-import { Button  } from '@/components / ui / button';
-import { ShieldAlert  } from './lucide-react';
-interface EmptyFraudStateProps {
-  has_filters: boolean;
-=======
-
-
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { ShieldAlert } from "lucide-react";
 interface EmptyFraudStateProps {
   hasFilters: boolean,
   onResetFilters: () => void
@@ -15,7 +9,6 @@ interface EmptyFraudStateProps {
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
   hasFilters,
   onResetFilters 
-
 }) => {
   return (
     <div className="text-center py-12">
@@ -27,11 +20,16 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
           : "You don't have any fraud flags yet"}
       </p>
       {hasFilters && (
+        <Button variant="outline" onClick={onResetFilters}>
+          Clear Filters
+        </Button>
+      )}
+    </div>
+  );
+}
 
     </div>;
 );
-
-=======
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -62,18 +60,10 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
           ? "Try adjusting your filters";
           : "You don't have any fraud flags yet"}
       </p>;
-      {has_filters && (
-        <Button variant="outline" on_click={onResetFilters}>;
-          Clear Filters;
-        </Button>)}
-    </div>);
-}
-;
-
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {hasFilters && (;
+        <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>;
+      )}
+    </div>;
+  );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

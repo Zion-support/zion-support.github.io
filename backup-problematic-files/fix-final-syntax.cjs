@@ -300,7 +300,6 @@ const fixes = [// Fix missing semicolons in import statements
   }
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -325,20 +324,6 @@ const fixes = [// Fix missing semicolons in import statements
     "pattern": /return\s*\(\s*<div[^>]*>\s*$/gm,
     "replacement": 'return (\n    <div className="min-h-screen bg-white">'
   },
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-  // Fix malformed JSX attributes
-  {
-    "pattern": /className="([^"]*);\s*"/g,
-    "replacement": 'className="$1"'
-  },
-  // Fix missing semicolons in object properties
-  {
-    "pattern": /(\w+):\s*'([^']*)',\s*;/g,
-    "replacement": '$1: \'$2\','
-  },
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   // Fix malformed return statements
   {
     "pattern": /return\s*\(\s*<div";"/g,

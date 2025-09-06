@@ -1,7 +1,8 @@
 
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
@@ -80,8 +81,12 @@ if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
 }
 export default PerformanceMonitor;
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default PerformanceMonitor;
 
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

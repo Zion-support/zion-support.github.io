@@ -22,6 +22,76 @@ import { BLOG_POSTS } from '@/data/blog-posts'
 import { Search } from 'lucide-react'
 
 // Categories for filtering
+=======
+
+const CATEGORIES = [
+  'All Categories'
+  'Trends'
+  'Marketing'
+  'Sustainability'
+  'Ethics'
+  'Recruitment'
+  'Infrastructure'
+]
+export interface BlogProps {
+  posts?: BlogPost[]
+export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
+  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts })
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('All Categories')
+  const [posts, setPosts] = useState<BlogPost[]>([...initialPosts])
+  const query = useDebounce(searchQuery, 300)
+  const [isLoading, setIsLoading] = useState(false)
+  const router = useRouter()
+  "All Categories",
+  "Trends",
+  "Marketing",
+  "Sustainability",
+  "Ethics",
+  "Recruitment",
+  "Infrastructure"
+],
+
+export interface BlogProps {
+  posts?: BlogPost[]
+}
+
+export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
+  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts }),
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [selectedCategory, setSelectedCategory] = useState("All Categories"),
+  const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]),
+  const query = useDebounce(searchQuery, 300),
+  const [isLoading, setIsLoading] = useState(false),
+  const router = useRouter(),
+
+<<<<<<< HEAD
+
+        setPosts(data)
+      } catch (err) {
+        logErrorToProduction ('Failed to fetch blog posts', { data: err });
+      } finally {
+        setIsLoading (false);
+      }
+    }
+    fetchPosts()
+  }, [query])
+    },
+
+    fetchPosts()
+  }, [query]),
+
+  // Filter blog posts based on selected category only.
+  // Search filtering is handled server-side.
+  const filteredPosts = posts.filter(post => {
+    const matchesCategory =
+      selectedCategory === 'All Categories' |
+  // Filter blog posts based on selected category only.
+  // Search filtering is handled server-side.
+  const filteredPosts = posts.filter(post => {
+    const matchesCategory = null;
+      selectedCategory === 'All Categories' ||
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       post.category === selectedCategory
     return matchesCategory
   })
@@ -29,6 +99,28 @@ import { Search } from 'lucide-react'
   const featuredPosts = posts.filter(post => post.isFeatured)
   logInfo('BlogPage filteredPosts:', { data: filteredPosts })
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+    },
+
+    fetchPosts()
+  }, [query]),
+
+  // Filter blog posts based on selected category only.
+  // Search filtering is handled server-side.
+  const filteredPosts = posts.filter(post => {
+    const matchesCategory =
+      selectedCategory === "All Categories" || post.category === selectedCategory,
+
+    return matchesCategory
+  }),
+  
+  // Get featured posts
+  const featuredPosts = posts.filter(post => post.isFeatured),
+
+  logInfo('BlogPage filteredPosts:', { data: filteredPosts }),
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <>
       <SEO
@@ -42,51 +134,6 @@ import { Search } from 'lucide-react'
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <GradientHeading>AI & Tech Insights</GradientHeading>
-=======
-import { Search } from 'lucide-react'
-import { fetchWithRetry  } from '@/utils/fetchWithRetry';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-import { useState, useEffect } from "react",
-import Link from "next/link",
-import { useRouter } from "next/router",
-import { useDebounce } from "@/hooks/useDebounce",
-import { GradientHeading } from "@/components/GradientHeading",
-import { SEO } from "@/components/SEO",
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
-import { BlogPost } from "@/types/blog",
-import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost",
-import { BLOG_POSTS } from "@/data/blog-posts",
-import { Search } from 'lucide-react'
-import { fetchWithRetry } from '@/utils/fetchWithRetry',
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
-
-
-  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts }),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [selectedCategory, setSelectedCategory] = useState("All Categories"),
-  const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]),
-  const query = useDebounce(searchQuery, 300),
-  const [isLoading, setIsLoading] = useState(false),
-  const router = useRouter(),
-
-
-        setPosts(data)
-      } catch (err) {
-
-
-    },
-
-    fetchPosts()
-  }, [query]),
-
-  // Filter blog posts based on selected category only.
-  // Search filtering is handled server-side.
-  const filteredPosts = posts.filter(post => {
-    const matchesCategory =
-
             )
 import { useState, useEffect } from "react",;
 import Link from "next/link",;
@@ -292,6 +339,10 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                           Read Article
                         </Link>
                       </Button>
+
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   ))}
                 </SelectContent>;
               </Select>;
@@ -316,71 +367,55 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                       />
                     </div>
 
+                  asChild
+                  className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg"
+                >
+                  <Link href={`/blog/${post.slug}`} className='block group'>
+                    <div className='aspect-[16/9] relative overflow-hidden'>
+                      <img
+                        src={post.featuredImage}
+                        alt={post.featuredImageAlt |post.title}
+                        className='object-cover w-full h-full hover:scale-105 transition-transform duration-300'
+                        onError={e => {
+                          const target = e.currentTarget as HTMLImageElement
+                          target.src = '/images/blog-placeholder.svg' }}
+                  <Link href={`/blog/${post.slug}`} className="block group">
+                  <div className="aspect-[16/9] relative overflow-hidden">
+                    <img
+                      src={post.featuredImage}
+                      alt={post.featuredImageAlt || post.title}
+                      className="object-cover w-full h-full hover: scale-105 transition-transform duration-300"
+                      onError={(e) => {
+                        const target = e.currentTarget as HTMLImageElement,
+                        target.src = "/images/blog-placeholder.svg"
+                      }}
+                    />
+                  </div>
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full">
+                        {post.category}
+                      </span>
+                      <div className="text-xs text-zion-slate-light">
+                        {post.publishedDate} • {post.readTime}
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3">
+                      {post.title}
+                    </h3>
+                    <p className="text-zion-slate-light mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center">
+                      <img
+                        src={post.author.avatarUrl}
+                        alt={post.author.name}
+                        className="w-8 h-8 rounded-full mr-2"
+                        onError={(e) => {
+                          const target = e.currentTarget as HTMLImageElement,
+                          target.src = "/images/blog-placeholder.svg"
+                        }}
 <<<<<<< HEAD
-=======
-                </div>);
-            })()}
-          {/* Filters and Search */}
-          <div className='bg - zion - blue - dark rounded - lg p - 6 mb - 8 border border - zion - blue - light'>;
-            <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-              <div className='relative'>;
-                <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate' />;
-                <Input;
-                  type='text';
-                  placeholder='Search articles...';
-                  value={search_query}
-                  on_change={e => setSearchQuery (e.target.value)}
-                  className='pl - 10 bg - zion - blue border border - zion - blue - light text - white'                />;
-              </div>;
-              <Select;
-                value={selected_category}
-                onValueChange={setSelectedCategory}
-              >;
-                <SelectTrigger;
-                  className='bg - zion - blue border border - zion - blue - light text - white';
-                  aria - label='Filter by category';
-                >;
-                  <SelectValue placeholder='Select Category' />;
-                </SelectTrigger>;
-                <SelectContent className='bg - zion - blue - dark border border - zion - blue - light'>;
-                  {CATEGORIES.map (category => (
-                    <SelectItem;
-                      key={category}
-                      value={category}
-                      className='text - white';
-                    >                      {category}
-                    </SelectItem>))}
-                </SelectContent>;
-              </Select>;
-            </div>;
-            {is_loading && (
-              <div className='text - center py - 4 text - white'>;
-                Loading articles...;
-              </div>)}
-          </div>;
-          {/* Blog Posts Grid */}
-          {!is_loading && filtered_posts.length > 0 ? (
-            <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
-              {filtered_posts.map (post => (                <Card;
-                  key = {post.id, }
-                  as_child;
-                  className='bg - zion - blue - dark border border - zion - blue - light hover:border - zion - purple transition - all duration - 300 group - hover:shadow - lg';
-                >;
-                  <Link href={`/blog/${post.slug}`} className='block group'>;
-                    <div className='aspect-[16 / 9] relative overflow - hidden'>;
-                      <img;
-                        src={post.featured_image}
-                        alt={post.featuredImageAlt || post.title}
-                        className='object - cover w - full h - full hover:scale - 105 transition - transform duration - 300';
-                        on_error={e => {
-                          const target = e.current_target as HTMLImageElement;
-                          target.src = '/images / blog - placeholder.svg' }}
-                      />;
-                    </div>;
-                    <CardContent className='p - 6'>;
-                      <div className='flex items - center justify - between mb - 3'>;
-                        <span className='text - xs text - zion - cyan bg - zion - blue px - 3 py - 1 rounded - full'>;
-
                           {post.category}
                         </span>
                         <div className='text-xs text-zion-slate-light'>
@@ -429,6 +464,9 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
 
                           }}
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               ))}
             </div>
           ) : null}
@@ -438,7 +476,13 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
               <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>
               <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>
               <Button
+                variant='outline'
+                onClick={() => {
+                  setSearchQuery('')
+                  setSelectedCategory('All Categories') }}
+                className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       image: &quot,/api/placeholder/600/400&quot,"
       title: "Quantum Computing Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.","
       author: "Prof. Michael Rodriguez", date: "2025-01-12","
@@ -1533,5 +1577,4 @@ key = "{post.id}
   )})))))))));
 }
 <<<<<<< HEAD
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+<<<<<<< HEAD

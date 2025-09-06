@@ -1,6 +1,8 @@
 =======
 
-
+useEffect ( () => {
+  const updateDimensions = () => {
+  setDimensions ({
   updateDimensions ();
 window && window.addEventListener ('resize', updateDimensions);
 setIsVisible (true);
@@ -43,38 +45,31 @@ color: string;
 life: number;
 
 =======
+  // Bounce off edges // Check condition
+if (this.vx *= -1) {
+  $2
+}
+// Check condition
+if (this.vy *= -1) {
+  $2
+}
+// Quantum tunneling effect // Check condition
+if (< 0.001 * intensity_multiplier) {) {
+  $2
+}
 
-  children,
-  intensity = 'high',
-  colorScheme = 'quantum',
-  particleCount = 300,
-  animationSpeed = 1.5,
-  className = '',
-}: UltraQuantumHolographicBackgroundProps) {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
-export default function UltraQuantumHolographicBackground(): any ({;
-=======
-maxLife: number;
-type: 'quantum' | 'holographic' | 'energy' | 'matrix';
-constructor () {
-  // Bounce off edges if (this.x <= 0 |this.x >= dimensions.width) this.vx *= -1;
-if (this.y <= 0 |this.y >= dimensions.height) this.vy *= -1;
-// Quantum tunneling effect if (Math.random () < 0.001 * intensityMultiplier) {
   switch (this.type) {
-  case 'quantum': // Quantum particle with wave function case 'holographic': // Holographic projection ctx.beginPath ();
-ctx.moveTo (this.x - this.size, this.y);
-ctx.lineTo (this.x + this.size, this.y);
-ctx.lineTo (this.x, this.y - this.size);
-ctx.lineTo (this.x - this.size, this.y);
-ctx.fillStyle = this.color;
+  case 'quantum': // Quantum particle with wave function case 'holographic': // Holographic projection ctx.begin_path ();
+ctx.move_to (this.x - this.size, this.y);
+ctx.line_to (this.x + this.size, this.y);
+ctx.line_to (this.x, this.y - this.size);
+ctx.line_to (this.x - this.size, this.y);
+ctx.fill_style = this.color;
 ctx.fill ();
-// Holographic grid ctx.strokeStyle = this.color;
-ctx.lineWidth = 0.5;
-ctx.globalAlpha = alpha * 0.5;
-ctx.strokeRect (this.x - this.size, this.y - this.size, this.size * 2, this.size * 2);
+// Holographic grid ctx.stroke_style = this.color;
+ctx.line_width = 0.5;
+ctx.global_alpha = alpha * 0.5;
+ctx.stroke_rect (this.x - this.size, this.y - this.size, this.size * 2, this.size * 2);
 break;
 case 'energy': // Energy field
 }ctx.restore ()
@@ -86,7 +81,21 @@ export default function UltraQuantumHolographicBackground({
   animationSpeed = 1.5
   className = ''
 }: UltraQuantumHolographicBackgroundProps) {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+  children,
+  intensity = 'high',
+  colorScheme = 'quantum',
+  particleCount = 300,
+  animationSpeed = 1.5,
+  className = '',
+}: UltraQuantumHolographicBackgroundProps) {;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
+export default function UltraQuantumHolographicBackground(): any ({;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
 export default function UltraQuantumHolographicBackground({;
@@ -206,20 +215,14 @@ if (return) {
           this.vy += 0.1;
           if (this.y > dimensions.height) {
             this.y = -10;
+            this.vy = Math.random() * 2 + 1;          }            this.vy = Math.random() * 2 + 1
+            this.vy = Math.random() * 2 + 1;          }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
           }
         }
       }
 
-      draw() {
-
-          }
-        }
-      }
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       draw() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         if (this.life <= 0) return;
@@ -303,6 +306,13 @@ if (return) {
           const p2 = particles[j];
           const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
 
+=======
+          
+          if (distance < 100 && p1.life > 0 && p2.life > 0) {
+            ctx.beginPath();
+            ctx.moveTo(p1.x, p1.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.stroke();          }            ctx.stroke()
           }
         }
       }
@@ -315,25 +325,13 @@ if (return) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      // Draw holographic grid
-      ctx.strokeStyle = colors.secondary;
-      ctx.lineWidth = 0.3;
-      ctx.globalAlpha = 0.2;
-
-      for (let x = 0, x < dimensions.width, x += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, dimensions.height);
-        ctx.stroke()
-
       {/* Quantum Holographic Canvas Background */}
       <canvas
         ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
+        className='fixed inset-0 w-full h-full pointer-events-none z-0'
         style={{
-          background: colors.background,
-          filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px'})`;
-        }}
+          background: colors.background
+          filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px'})`,        }}
       />
       {/* Holographic Overlay Effects */}
       <div className='fixed inset-0 z-10 pointer-events-none'>        className="fixed inset-0 w-full h-full pointer-events-none z-0"
@@ -341,31 +339,38 @@ if (return) {
           background: colors.background
           filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px'})`;
       />
+      {/* Holographic Overlay Effects */}
+      <div className='fixed inset-0 z-10 pointer-events-none'>
+
+
+      {/* Holographic Overlay Effects */}
+
+          }}
+        />
+
+        {/* Holographic Scan Lines */}
+
+          }}
 
         />
       </div>
 
       {/* Content Layer */}
-              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www && www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0 && 0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www && www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0 && 0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-              `inset 0 0 100px ${colors.primary}20`;
-            ];
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: 'easeInOut',            ease: "easeInOut";
-          }}
-      }
-    }
-  }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]);
-  return (
-    <div className={`relative min-h-screen overflow-hidden ${className}`}>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      {/* Quantum Holographic Canvas Background */}
-      <canvas
-        ref={canvasRef}
+      <div className='relative z-20'>{children}</div>
 
+      {/* Quantum Noise Effect */}
+      <div className='fixed inset-0 z-30 pointer-events-none opacity-5'>
 
+      {/* Holographic Overlay Effects */}
+      <div className='fixed inset-0 z-10 pointer-events-none'>
+        <motion.div
+          className='absolute inset-0'
+          animate={{
+            background: [
+              `radial-gradient(circle at 20% 20%, ${colors.primary}10 0%, transparent 50%)`
+              `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)`
+              `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`
+              `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`
             ],          }}
           transition={{
             duration: 8
@@ -460,26 +465,41 @@ if (return) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               }}
               transition={{
-
-                duration: 2,
-                delay: i * 0 && 0.1,
-                repeat: Infinity,
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                duration: 2
+                delay: i * 0.1
+                repeat: Infinity
+                ease: "easeInOut"
+              }}
+            />
+          ))}
+        {/* Quantum Fluctuations */}
+        <motion.div
+          className='absolute inset-0'
+          animate={{
+            boxShadow: [
+              `inset 0 0 100px ${colors.primary}20`
+              `inset 0 0 200px ${colors.secondary}20`
+              `inset 0 0 150px ${colors.tertiary}20`
+              `inset 0 0 100px ${colors.primary}20`
+            ],          }}
+          transition={{
+            duration: 6
+            repeat: Infinity
+            ease: 'easeInOut',          }}              `inset 0 0 100px ${colors.primary}20`;
+              `inset 0 0 200px ${colors.secondary}20`;
+              `inset 0 0 150px ${colors.tertiary}20`;
+              `inset 0 0 100px ${colors.primary}20`
+            ]
+          transition={{
+            duration: 6
+            repeat: Infinity
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
           }}
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />
       </div>
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-        />;
-      </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Content Layer */}
 
 
@@ -516,10 +536,25 @@ if (return) {
             ]
           }}
           transition={{
-
+            duration: 4
+            repeat: Infinity
+            ease: 'easeInOut',            ease: "easeInOut"
             duration: 4,
             repeat: Infinity,
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+        />
+      </div>
+    </div>
+);  )
+}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          }}
+        />
+      </div>
+    </div>
+);  )
+}
+    </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

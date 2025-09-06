@@ -1,15 +1,14 @@
-
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {Link} from "react-router-dom";
 import {GradientHeading} from "./GradientHeading";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {Button} from "./ui/button";
 import {Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle} from "lucide-react";
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function FeaturesGuideSection() {
   const features = [
     {
@@ -25,6 +24,62 @@ export function FeaturesGuideSection() {
       link: "/match"
       buttonText: "Try AI Matcher"
 
+      instructions: [;
+        "Navigate to the AI Matcher page from the homepage or marketplace";
+        "Fill in your project requirements and specifications";
+        "Review the AI-recommended matches tailored to your needs";
+      instructions: [
+        "Navigate to the AI Matcher page from the homepage or marketplace",
+        "Fill in your project requirements and specifications",
+        "Review the AI-recommended matches tailored to your needs",
+        "Connect with matched talents or services directly"
+      ]
+      link: "/match"
+      buttonText: "Try AI Matcher"
+    }
+    {
+      id: "talent - directory",
+      title: "Talent Directory",
+      description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.";
+      icon: <Users className="h - 10 w - 10 text - zion - purple" />,
+      instructions: [;
+        "Access the talent directory from the main navigation",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        "Use filters to narrow down by skills, experience, and pricing";
+        "Save favorite profiles for future reference";
+        "Contact talents directly or request quotes through their profiles";
+      ];
+
+      link: "/talents",
+      button_text: "Explore Talents";
+
+    }
+    {
+      id: "services"
+      title: "Services Marketplace"
+      description: "Discover professional services for your AI and tech needs, from development to consulting.";
+      icon: <Zap className="h-10 w-10 text-zion-cyan" />
+    },
+    {
+      id: "talent-directory",
+      title: "Talent Directory",
+      description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.",
+      icon: <Users className="h-10 w-10 text-zion-purple" />,
+      instructions: [
+        "Access the talent directory from the main navigation",
+        "Use filters to narrow down by skills, experience, and pricing",
+        "Save favorite profiles for future reference",
+        "Contact talents directly or request quotes through their profiles"
+      ],
+      link: "/talents",
+      buttonText: "Explore Talents"
+    },
+    {
+      id: "services",
+      title: "Services Marketplace",
+      description: "Discover professional services for your AI and tech needs, from development to consulting.",
+      icon: <Zap className="h-10 w-10 text-zion-cyan" />,
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       instructions: [
         "Browse service categories on the marketplace",
         "Compare service offerings and pricing options",
@@ -35,12 +90,6 @@ export function FeaturesGuideSection() {
       link: "/services"
       buttonText: "View Services"
 
-=======
-
-    },
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     {
       id: "equipment"
       title: "Equipment Catalog"
@@ -63,22 +112,9 @@ export function FeaturesGuideSection() {
       link: "/equipment",
       button_text: "Browse Equipment";
 
-    }
-    {
-      id: "analytics"
-      title: "Marketplace Analytics"
-      description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.";
 
-
-    },
-    {
-      id: "analytics",
-      title: "Marketplace Analytics",
-      description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.",
-      icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       instructions: [
         "Access analytics from your user dashboard";
         "View interactive charts on market trends and rates";
@@ -191,6 +227,8 @@ export function FeaturesGuideSection() {
             {features.slice(4).map(feature => (
               <TabsTrigger
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 key={feature.id}
                 value={feature.id}
 
@@ -293,72 +331,27 @@ export function FeaturesGuideSection() {
     </section>
   )
 =======
-
 };
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+        </Tabs>;
 
-
+        <div className="mt-12 text-center">;
+          <Button
+            variant="outline" 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             className="border-zion-cyan text-zion-cyan hover: bg-zion-cyan/10"
             asChild>;
             <Link to="/marketplace">;
               Explore Full Marketplace;
               <ArrowRight className="ml-2 h-4 w-4" />;
-=======
-              </TabsTrigger>))}
-          </TabsList>;
-          {features.map (feature => (
-            <TabsContent key={feature.id} value={feature.id} className="mt - 8">;
-              <div className="bg - zion - blue rounded - lg border border - zion - blue - light p - 6 md:p - 8 flex flex - col md:flex - row gap - 8">;
-                <div className="md:w - 1/3 flex flex - col items - center md:items - start">;
-                  <div className="bg - zion - blue - dark p - 4 rounded - xl mb - 4">;
-                    {feature.icon}
-                  </div>;
-                  <h3 className="text - 2xl font - bold text - white mb - 3">{feature.title}</h3>;
-                  <p className="text - zion - slate - light mb - 6">{feature.description}</p>;
-                  <Button;
-                    className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
-                    as_child;
-                  >;
-                    <Link to={feature.link}>;
-                      {feature.button_text}
-                      <ArrowRight className="ml - 2 h - 4 w - 4" />;
-                    </Link>;
-                  </Button>;
-                </div>;
-                <div className="md:w - 2/3 bg - zion - blue - dark p - 6 rounded - lg">;
-                  <h4 className="text - xl font - semibold text - white mb - 4">How to Use</h4>;
-                  <ol className="list - decimal list - inside space - y-3 pl - 4">;
-                    {feature.instructions.map ((instruction, idx) => (
-                      <li key={idx} className="text - zion - slate - light">;
-                        <span className="text - zion - cyan mr - 2">{idx + 1}.</span>;
-                        {instruction}
-                      </li>))}
-                  </ol>;
-                </div>;
-              </div>;
-            </TabsContent>))}
-        </Tabs>;
-        <div className="mt - 12 text - center">;
-          <Button;
-            variant="outline";
-            className="border - zion - cyan text - zion - cyan hover: bg - zion - cyan / 10";
-            as_child;
-          >;
-            <Link to="/marketplace">;
-              Explore Full Marketplace;
-              <ArrowRight className="ml - 2 h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </Link>;
           </Button>;
         </div>;
       </div>;
-
-    </section>);
-
+    </section>;
+  );
 }
-=======
-
 }
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

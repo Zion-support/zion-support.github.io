@@ -6,14 +6,30 @@ interface AIMilestoneGeneratorProps {;
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
 
-
-
-
+  scope
+  startDate
+  endDate
+  projectType
+  onAddMilestones
+  onAddMilestone
+}: AIMilestoneGeneratorProps) {
+  const {
+    generateMilestones
+    generatedMilestones
+    isGenerating
+    clearGeneratedMilestones
+  } = useMilestoneGenerator()
+  const [selectedMilestones, setSelectedMilestones] = useState<
+    Record<string, boolean>
+  >({})
+  const handleGenerateMilestones = async () => {
+    if (!scope |!startDate |!projectType) {
+      return
     if (!scope || !startDate || !projectType) {
       return;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     const input: MilestoneInput = {
       scope
@@ -105,20 +121,14 @@ if ( {) {
     }
   }
 
-  return (
-    <div className="space-y-4">
-      <div className="flex items-center justify-between">
-        <h3 className="text-lg font-medium flex items-center">
-          <Sparkles className="w-5 h-5 mr-2 text-primary" />
-          AI Milestone Generator
-        </h3>
-        <Button
-
 =======
 
-          disabled={isGenerating || !scope || !startDate || !projectType}        >
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           {isGenerating ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -141,13 +151,20 @@ if ( {) {
               </p>
 
 <<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                             AI Suggested
                           </Badge>
                         </div>
                       </AccordionTrigger>
                     </div>
                     <Button
-
+                      variant='ghost'
+                      size='sm'
+                      onClick={e => {
+                        e.stopPropagation()
+                        handleAddSingleMilestone(milestone) }}
+                      className='mr-2'
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     >
                       <Plus className="h-4 w-4" />
                     </Button>
@@ -192,6 +209,7 @@ if ( {) {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     </div>;
   );
 }

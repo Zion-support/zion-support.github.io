@@ -3,11 +3,41 @@ import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 import Link from 'next/link'; // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth';
 import { useGetOrdersQuery } from '@/hooks/useOrders';
+import {
+
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+
+
+
+=======
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,;
+  TableHeader;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from '@/components/ui/table';
+import { Badge } from '@/components/ui/badge';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import {
   Table,
   TableBody,
   TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from '@/components/ui/table',
+import { Badge } from '@/components/ui/badge',
+import Skeleton from '@/components/ui/skeleton',
+import { EmptyState } from '@/components/ui/empty-state',
+export default function OrdersPage() {
+  const { user } = useAuth(),
+  const { data: orders, isLoading } = useGetOrdersQuery(user?.id),
 
   TableHead,
   TableHeader,
@@ -19,8 +49,35 @@ export default function OrdersPage() {
   const { user } = useAuth(),
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id),
 
+<<<<<<< HEAD
 
   const getStatusBadge = (status: string) => {
+    switch (status) {
+      case 'in_escrow':
+        return (
+          <Badge variant="warning" className="flex items-center gap-1">
+            <Clock className="h-3 w-3" /> In Escrow
+          </Badge>
+        ),
+      case 'released':
+      case 'completed':
+        return (
+          <Badge variant="success" className="flex items-center gap-1">
+            <CheckCircle2 className="h-3 w-3" /> Released
+          </Badge>
+        ),
+      case 'disputed':
+        return (
+          <Badge variant="destructive" className="flex items-center gap-1">
+            <ShieldAlert className="h-3 w-3" /> Disputed
+          </Badge>
+        )
+      default:
+        return status
+    }
+  }
+  },
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 
   return (
@@ -63,6 +120,14 @@ export default function OrdersPage() {
         </Table>
       ) : orders.length === 0 ? (
         <EmptyState
+=======
+          icon={<FileText className='h-10 w-10' />}
+          title='No Orders'          description="You haven't purchased anything yet."
+          icon={<FileText className="h-10 w-10" />}
+          title="No Orders"
+          description="You haven't purchased anything yet."
+<<<<<<< HEAD
+<<<<<<< HEAD
 
         />
       ) : (
@@ -77,6 +142,14 @@ export default function OrdersPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
+=======
+            {orders.map(order => (              <TableRow key={order.orderId}>
+                <TableCell className='font-medium'>{order.orderId}</TableCell>
+            {orders.map((order) => (
+              <TableRow key={order.orderId}>
+                <TableCell className="font-medium">{order.orderId}</TableCell>
+<<<<<<< HEAD
+<<<<<<< HEAD
 
                 <TableCell>{formatDate(order.date)}</TableCell>
                 <TableCell>{order.total}</TableCell>
@@ -119,5 +192,3 @@ export default function OrdersPage() {
               </TableRow>;
             ))}
 <<<<<<< HEAD
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

@@ -36,6 +36,7 @@ import { motion } from 'framer-motion';
   life: number;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   children: React.ReactNode;
 
 }) {  const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -56,19 +57,20 @@ import { motion } from 'framer-motion';
   life: number,;
   maxLife: number;
 }
+export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {
 
-interface EnergyField {;
-  x: number,;
-  y: number,;
-  radius: number,;
-  intensity: number,;
-  color: string,;
-  pulse: number;
-}
 
-export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
+=======
+=======
+
+
+export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
@@ -259,7 +261,36 @@ interface EnergyField {
           transition={{
 
           }}
+=======
+          transition={{
+            duration: 10
+            repeat: Infinity
+            ease: 'easeInOut',            ease: "easeInOut"
+            duration: 10,
+            repeat: Infinity,
+<<<<<<< HEAD
 
+          }}
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+
+          }}
+
+
+          }}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+          }}
+
+
+            duration: 10,
+            repeat: Infinity,
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />
       </div>
       {/* Gradient overlays for depth */}
@@ -288,9 +319,17 @@ interface EnergyField {
 =======
       <div className='relative z-10'>{children}</div>
     </div>
-
+  );      {/* Content */}
+      <div className="relative z-10">
+        {children}
+      </div>
+    </div>
+  )
+}
   );
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

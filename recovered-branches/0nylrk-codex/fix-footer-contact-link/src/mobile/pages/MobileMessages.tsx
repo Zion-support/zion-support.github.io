@@ -1,10 +1,21 @@
 
-
+import React, { useState } from "react";
+import {MobileHeader} from "../components/common/MobileHeader";
+import {BottomNavigation} from "../components/common/BottomNavigation";
+import {MobileConversationList} from "../components/messaging/MobileConversationList";
+import {MobileChatView} from "../components/messaging/MobileChatView";
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
+import { MobileConversationList } from "../components/messaging/MobileConversationList";
+import { MobileChatView } from "../components/messaging/MobileChatView";
+import { MobileConversationList } from "../components/messaging/MobileConversationList",
+import { MobileChatView } from "../components/messaging/MobileChatView",
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Mock data for demonstration
 
 const mockConversations = [
@@ -61,19 +72,61 @@ const mockMessages: Message[] = [
     isMe: false
     status: "read"}
   {
-
+    id: "4"
+    content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?";
+    timestamp: "10:40 AM"
+    isMe: true
+    status: "read"}
+    id: "4",
+    content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?",
+    timestamp: "10:40 AM",
+    isMe: true,
+    status: "read"},
   {
+    id: "5"
+    content: "That works for us. I'll send over a detailed brief later today. Would you be available for a quick call tomorrow to discuss further?"
+    timestamp: "10:45 AM"
+    isMe: false
+    status: "read"}]
+    id: "5",
+    content: "That works for us. I'll send over a detailed brief later today. Would you be available for a quick call tomorrow to discuss further?",
+    timestamp: "10:45 AM",
+    isMe: false,
+    status: "read"}],
 
+export function MobileMessages() {;
+  const [activeConversation, setActiveConversation] = useState<string | null>(null);
+  const [messages, setMessages] = useState<Message[]>(mockMessages);
 export function MobileMessages() {
-
+  const [activeConversation, setActiveConversation] = useState<string | null>(null);
+  const [messages, setMessages] = useState<Message[]>(mockMessages);
+  const handleSelectConversation = (id: string) => {
+    setActiveConversation(id)
+  }
+  const handleBack = () => {
+    setActiveConversation(null)
+  }
+  const handleSendMessage = (content: string) => {
+    const newMessage: Message = {
+      id: `${Date.now()}`
+      content;
+      timestamp: "Just now"
+      isMe: true
+      status: "sent"}
+    setMessages([...messages, newMessage])
+  }
+  const currentContact = mockConversations.find(c => c.id === activeConversation);
+  const [activeConversation, setActiveConversation] = useState<string | null>(null),
+  const [messages, setMessages] = useState<Message[]>(mockMessages),
+  
   const handleSelectConversation = (id: string) => {
     setActiveConversation(id)
   },
-
+  
   const handleBack = () => {
     setActiveConversation(null)
   },
-
+  
   const handleSendMessage = (content: string) => {
     const newMessage: Message = {
       id: `${Date.now()}`,
@@ -83,20 +136,27 @@ export function MobileMessages() {
       status: "sent"},
     setMessages([...messages, newMessage])
   },
-
+  
   const currentContact = mockConversations.find(c => c.id === activeConversation),
-
+  
   return (
     <div className="min-h-screen flex flex-col">
       {activeConversation ? (
         <MobileChatView
           contact={{
+            id: currentContact?.id |""
+            name: currentContact?.name |""
 
+            status: "Online"
+            id: currentContact?.id || "",
+            name: currentContact?.name || "",
+            status: "Online"
 import React, { useState } from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
 import { MobileConversationList } from "../components/messaging/MobileConversationList",;
 import { MobileChatView } from "../components/messaging/MobileChatView",;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Mock data for demonstration;
 const mockConversations = [;
   {;
@@ -200,6 +260,7 @@ export function MobileMessages() {;
             name: currentContact?.name || "";
             status: "Online";
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
     id: "4",

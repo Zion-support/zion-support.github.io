@@ -1,10 +1,7 @@
 
 
-=======
 
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -17,12 +14,21 @@ type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const timeRangeToInterval = {
   '1d': { days: 1, interval: 'hour' }
   '7d': { days: 7, interval: 'day' }
   '30d': { days: 30, interval: 'day' }
   '90d': { days: 90, interval: 'week' }
   '365d': { days: 365, interval: 'month' }
+}
+export function PageViewsTable() {
+  const [timeRange, setTimeRange] = useState<TimeRange>('7d');
+},
 
   const { data: pageViews, isLoading } = useQuery({
     queryKey: ['page-views-data', timeRange],
@@ -35,6 +41,13 @@ const timeRangeToInterval = {
         .eq('event_typepage_view')
         .gte('created_at', new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString())
         .order('count', { ascending: false })
+const timeRangeToInterval = {;
+  '1d': { days: 1, interval: 'hour' },;
+  '7d': { days: 7, interval: 'day' },;
+  '30d': { days: 30, interval: 'day' },;
+  '90d': { days: 90, interval: 'week' },;
+  '365d': { days: 365, interval: 'month' }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   // Format path names for better display
   const formatPathName = (path: string) => {
@@ -104,6 +117,8 @@ const timeRangeToInterval = {
             </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           )}
 
         </div>;

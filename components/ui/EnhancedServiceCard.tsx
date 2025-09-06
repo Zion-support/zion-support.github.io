@@ -1,11 +1,53 @@
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+;
+const EnhancedServiceCard: React.FC < EnhancedServiceCardProps> = ({
+  service,
+}) => {
+  const card_variants = {
+    hidden: { opacity: 0, coordinate_y: 20, scale: 0.95 },
+    visible: {      opacity: 1,    visible: {
+      opacity: 1,
+      coordinate_y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: 'ease_out' as const,
+      },
+    },    hover: {        ease: "ease_out" as const;
+      }
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+import { motion } from 'framer-motion';
+import {
+  Star
+  ExternalLink
+  ArrowRight
+  TrendingUp
+  Users
+  Clock
+  Shield
+  Zap;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Star,
   ExternalLink,
   ArrowRight,
   TrendingUp,
   Users,
   Clock,
+<<<<<<< HEAD
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 
 interface EnhancedServiceCardProps {
@@ -55,20 +97,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
       scale: 1,
       transition: {
         duration: 0.6,
-=======
-        ease: 'back_out' as const,
-      },
-    },    hover: {        ease: "ease_out" as const;
-
-      }
-    }
-  }
-;
-  const icon_variants = {
-    hidden: { rotate: -180, scale: 0 },
-
-    visible: {    visible: {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       rotate: 0,
       scale: 1,
@@ -80,6 +108,9 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
       transition: {
         duration: 0.6,
 
+=======
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     >
       {/* Background Glow */}
       <div
@@ -102,12 +133,18 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
             POPULAR
           </motion.div>
         </div>
-
       )}
+<<<<<<< HEAD
 
       {/* Card Content */}
       <div className='relative p-6'>
 
+      {/* Card Content */}
+      <div className='relative p-6'>
+
+        {/* Header */}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className='flex items-start justify-between mb-4'>
           <motion.div
             className={`text-4xl ${service.textColor}`}
@@ -155,12 +192,18 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
         </div>
         {/* Title & Tagline */}
-
-
+        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
+          {service.name}
+        </h3>
+        <p className='text-gray-300 text-sm mb-4 leading-relaxed'>          {service.tagline}
+        </p>
+        {/* Description */}
+        <p className='text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3'>          {service.description}
+        </p>
+        {/* Key Metrics */}
         {/* Key Metrics */}          
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <div className="text-right">
             <div className="text-2xl font-bold text-white">{service.price}</div>
             <div className="text-sm text-gray-400">{service.period}</div>
@@ -183,6 +226,8 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         {/* Key Metrics */}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           </div>
           <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>
             <div className='text-purple-400 text-lg font-bold'>
@@ -268,14 +313,12 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
             ))}
             {service.features.length > 3 && (
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 {feature}
               </motion && motion.div>;
             ))}
 
-=======
-            {service.features.length > 3 && (
-              <div className="text-xs text-gray-500 mt-2">
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 +{service.features.length - 3} more features
               </div>
 
@@ -295,8 +338,17 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
             </span>
             <span className='text-xs text-cyan-400'>{service.marketSize}</span>
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Market Info */}
+        <div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10'>
+          <div className='flex items-center justify-between mb-2'>
+            <span className='text-xs font-semibold text-white'>
+              Market Size
+            </span>
+            <span className='text-xs text-cyan-400'>{service.marketSize}</span>
 
+=======
 
 
 
@@ -327,10 +379,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         </div>
         {/* Trial & Setup Info */}
 
-=======
-        <div className="flex items-center justify-between mb-6 text-sm">
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <div className="flex items-center gap-2 text-gray-400">
             <Clock className="w-4 h-4" />
             {service.trialDays} day trial
@@ -338,6 +386,10 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
           <div className="flex items-center gap-2 text-gray-400">
             <Shield className="w-4 h-4" />
 
+=======
+            {service.setupTime}
+
+<<<<<<< HEAD
           </div>
         </div>
           </div>;
@@ -400,6 +452,21 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
           <motion.a
             href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+          </div>
+        </div>
+        {/* Action Buttons */}
+        <div className='flex gap-3'>
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <motion.a
             href={service.link}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -441,7 +508,9 @@ export default EnhancedServiceCard;    </motion.div>
   )
 }
 export default EnhancedServiceCard;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
         </div>
       </div>
@@ -471,8 +540,17 @@ whileHover={{ scale: 1 && 1.05 }}
 };
 export default EnhancedServiceCard;    </motion && motion.div>;
   );
+}
+};
+
+export default EnhancedServiceCard;    </motion.div>
+  )
+}
+export default EnhancedServiceCard;
 
 };
 export default EnhancedServiceCard;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+export default EnhancedServiceCard;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

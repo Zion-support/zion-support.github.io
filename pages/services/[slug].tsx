@@ -1,3 +1,8 @@
+import React from 'react',
+import Head from 'next/head',
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
+import Button from '../../components/ui/Button',
+import Card from '../../components/ui/Card';
 
 import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
 import {enhancedRealMicroSaasServices} from '../../data/enhanced-real-micro-saas-services';
@@ -11,6 +16,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 function getAllServices(): Service[] {
   return enhancedRealMicroSaasServices.concat(
@@ -35,6 +41,11 @@ function extractServiceSlugFromLink(link: string): string | null {
   } catch {
     return null;
   }
+export async function getStaticPaths() {
+
+export async function getStaticPaths() {;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
   const services = getAllServices();
   const slugs = new Set<string>();
@@ -58,6 +69,51 @@ function extractServiceSlugFromLink(link: string): string | null {
         toSlug(s.name |'') === incomingSlug
     );
   }
+  const services = getAllServices();
+  const slugs = new Set<string>();
+
+
+    // Fall back to normalized id or name to provide a stable URL under /services/*;
+    if (s && s.id) slugs && slugs.add(toSlug(s && s.id));
+    else if (s && s.name) slugs && slugs.add(toSlug(s && s.name));
+  }
+  return {
+    paths: Array.from(slugs).map(slug => ({ params: { slug } }))
+    fallback: false
+  }
+export async function getStaticProps({ params }: { params: { slug: string } }) {
+    paths: Array.from(slugs).map(slug => ({ params: { slug } })),
+    fallback: false,
+  };
+
+export async function getStaticProps({ params }: { params: { slug: string } }) {;
+  const services = getAllServices();
+  const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
+
+  let service: Service | undefined = services && services.find(s => {;
+    if (!s && s.link) return false;
+    const fromLink = extractServiceSlugFromLink(s && s.link);
+    return fromLink === incomingSlug;
+  });
+
+  if (!service) {;
+    service = services && services.find(;
+      s =>;
+        toSlug(s && s.id || '') === incomingSlug ||;
+        toSlug(s && s.name || '') === incomingSlug;
+    );
+  }
+
+  if (!service) {;
+    return { notFound: true };
+  }
+
+  return {;
+    props: { service },;
+  };
+
+export default function ServiceDetailPage(): any ({ service }: { service: Service }) {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   if (!service) {
     return { notFound: true }
@@ -165,6 +221,8 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
                     href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`}
                     target='_blank'
                     rel='noopener noreferrer'
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     className='text-xs hover:underline'
                   >
                     {contactInfo.address}
@@ -177,7 +235,9 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
       </div>
     </UltraFuturisticBackground>;
   );
+<<<<<<< HEAD
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
@@ -187,6 +247,7 @@ import { marketReadyServices } from '../../data/market-ready-services';
 type Service = typeof enhancedRealMicroSaasServices[number];
 
 }
+
 export default function ServiceDetailPage({ service }: { service: Service }) {
 	return (
 		<UltraFuturisticBackground variant="quantum" intensity="high">
@@ -195,6 +256,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 				<meta name="description" content={service.tagline || service.description} />
 				<link rel="canonical" href={service.link} />
 			</Head>
+
 			<div className="container mx-auto px-4 py-16">
 				<div className="text-center mb-10">
 					<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
@@ -202,12 +264,14 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 					</h1>
 					<p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>
 				</div>
+
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
 					<div className="lg:col-span-2 space-y-6">
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
 							<p className="text-gray-300 leading-relaxed">{service.description}</p>
 						</Card>
+
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
@@ -226,6 +290,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 								<Button href={service.link} variant="outline" className="flex-1 border border-gray-600 text-gray-200"><ExternalLink className="w-4 h-4 mr-2" /> Learn More</Button>
 							</div>
 						</Card>
+
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white font-semibold mb-3">Contact</h3>
 							<div className="space-y-3 text-sm">
@@ -237,11 +302,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 			</div>
 		</UltraFuturisticBackground>
 	)
-=======
-<<<<<<< HEAD
-}
-    </UltraFuturisticBackground>);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

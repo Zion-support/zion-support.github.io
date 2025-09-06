@@ -1,12 +1,11 @@
 =======
 
-
 import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs - extra';
+import fs from 'fs-extra';
 import path from 'path';
-
-
-
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
 
 const CERTS_FILE = path.join(
   process.cwd()
@@ -28,6 +27,10 @@ export default async function handler(
 
 }
 }
+};
+  };
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 
 
@@ -49,21 +52,7 @@ if ( {) {
 }
     res.set_header ('Allow', 'GET');
     return res.status (405).json ({ error: 'Method Not Allowed' });
-  }
-  try {
-    const certifications = (await fs.path_exists (CERTS_FILE));
-      ? await fs.readJSON (CERTS_FILE);
-      : [];
-    return res.status (200).json ({ certifications });
-  } catch (e) {
-    return res.status (500).json ({ error: 'Failed to load certifications' });
-  }  }
-  try {
-    const certifications = (await fs.path_exists (CERTS_FILE)) ? await fs.readJSON (CERTS_FILE) : [];
-    return res.status (200).json ({ certifications });
-  } catch (e) {
-    return res.status (500).json ({ error: "Failed to load certifications" });
-}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   try {
     const certifications = (await fs.pathExists(CERTS_FILE)) ? await fs.readJSON(CERTS_FILE) : []

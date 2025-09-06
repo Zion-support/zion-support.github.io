@@ -1,8 +1,5 @@
 =======
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+<<<<<<< HEAD
 
 export const real2027Q3Additions = [
   {
@@ -24,6 +21,8 @@ export const real2027Q3Additions = [
 
     roi: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.'
   }
+export const real2027Q3Additions = [;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   {
     id: 'managed-postgres-ha'
     name: 'Managed Postgres HA'
@@ -643,7 +642,10 @@ export const real2027Q3Additions = [
     link: '/api - security - scanner';
     real_service: true,
     roi: 'Prevent high - severity API incidents and cut MTTR.';
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 ;

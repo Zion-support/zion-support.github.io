@@ -1,7 +1,8 @@
-
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import { useEffect, useState } from 'react',;
+;
+export default function AdminLearn() {
+  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),
+  const [message, setMessage] = useState(''),
 import { useEffect, useState } from 'react';
 export default function AdminLearn() {
 
@@ -22,6 +23,10 @@ export default function AdminLearn() {
   }
 }
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+    })
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     const data = await resp.json()
     if (data.ok) setMessage('Saved')
     else setMessage('Error: ' + (data.error |'unknown'))
@@ -32,6 +37,16 @@ export default function AdminLearn() {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+    }),
+    const data = await resp.json(),
+    if (data.ok) setMessage('Saved'),
+    else setMessage('Error: ' + (data.error || 'unknown'))
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  }
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-semibold">Learning Admin</h1>
@@ -55,10 +70,10 @@ export default function AdminLearn() {
         <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={form.isFree} onChange={(e) => setForm({ ...form, isFree: e.target.checked })} /> Free</label>
       </div>
       <button onClick={saveCourse} className="px-4 py-2 bg-blue-600 text-white rounded">Save Course</button>
-
+      {message && <div className="text-sm">{message}</div>}
     </div>
-  )
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  );
+};
 =======
 
     </div>
@@ -66,21 +81,19 @@ export default function AdminLearn() {
 };
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {message && <div className="text-sm">{message}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     </div>
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
 }
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

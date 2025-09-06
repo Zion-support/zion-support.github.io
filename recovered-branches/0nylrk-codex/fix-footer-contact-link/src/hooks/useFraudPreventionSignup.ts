@@ -1,11 +1,16 @@
 
-
-=======
+import { useState, useCallback  } from 'react';
+import { checkSignupPatterns  } from '@/services/fraud/signupCheck';
+import { supabase  } from '@/integrations/supabase/client';
+import { toast } from '@/hooks/use-toast';
+export function useFraudPreventionSignup() {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState, useCallback} from 'react';
 import {checkSignupPatterns} from '@/services/fraud/signupCheck';
 import {supabase} from '@/integrations/supabase/client';
 import {toast} from '@/hooks/use-toast';
 export function useFraudPreventionSignup() {;
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -23,9 +28,33 @@ export function useFraudPreventionSignup() {;
       console && console.error('Error getting IP:', error);
       return undefined
     }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+  };
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import { useState, useCallback } from 'react',;
+import { checkSignupPatterns } from '@/services/fraud/signupCheck',;
+import { supabase } from '@/integrations/supabase/client',;
+import { toast } from '@/hooks/use-toast',;
+export function useFraudPreventionSignup() {;
+  const [isCheckingFraud, setIsCheckingFraud] = useState(false),;
+  // Get the user's IP address (in a real app, you'd do this server-side);
+  const getIP = async (): Promise<string | undefined> => {;
+    try {;
+      const response = await fetch('https: //api.ipify.org?format=json'),;
+      const data = await response.json(),;
+      return data.ip;
+    } catch (error) {;
+      console.error('Error getting IP:', error),;
+      return undefined;
+    }
+  },
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // Check if the signup attempt might be fraudulent
   const checkFraudBeforeSignup = useCallback(async (email: string): Promise<boolean> => {
     setIsCheckingFraud(true);
@@ -49,6 +78,12 @@ export function useFraudPreventionSignup() {;
         }
         // Otherwise, allow but flag for review
         return true
+          return false;
+        }
+
+        // Otherwise, allow but flag for review;
+        return true;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
       // No suspicious patterns found
       return true
@@ -60,9 +95,8 @@ export function useFraudPreventionSignup() {;
       setIsCheckingFraud(false)
     }
   }, []);
-  return {
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     isCheckingFraud;
 
     checkFraudBeforeSignup}

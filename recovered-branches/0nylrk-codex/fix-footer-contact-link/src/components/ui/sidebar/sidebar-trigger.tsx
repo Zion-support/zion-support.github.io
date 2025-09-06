@@ -1,4 +1,16 @@
 
+=======
+import * as React from &quot;react&quot;
+import { PanelLeft } from &quot;lucide-react&quot;
+import { Button } from &quot;@/components/ui/button&quot;
+import { cn } from &quot;@/lib/utils&quot;
+import { useSidebar } from &quot;./sidebar-context&quot;
+import * as React from "react"
+import { PanelLeft } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+import { useSidebar } from "./sidebar-context"
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export const SidebarTrigger = React.forwardRef<
   React.ElementRef<typeof Button>
@@ -28,11 +40,6 @@ export const SidebarTrigger = React.forward_ref<;
       on_click={(event) => {
         props.on_click?.(event);
         toggle_sidebar ();
-=======
-  return (
-    <Button
-
-=======
       ref={ref}
       data-sidebar="trigger"
       variant="ghost"
@@ -40,18 +47,10 @@ export const SidebarTrigger = React.forward_ref<;
       className={cn("h-7 w-7", props.className)}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      onClick={(event) => {
-        props.onClick?.(event)
-        toggleSidebar()
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }}
       {...props}
 <<<<<<< HEAD
-    >
-      <PanelLeft />
-      <span className="sr-only">Toggle Sidebar</span>
-    </Button>
-  )
-})
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+SidebarTrigger.displayName = &quot;SidebarTrigger&quot;
+SidebarTrigger.displayName = "SidebarTrigger"
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,4 +1,36 @@
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+type Props = {
+  room: Room | null;
+  onLeave: () => void;
+  accent?: 'blue' | 'cyan';};type Props = {
+  room: Room | null
+  onLeave: () => void
+  accent?: 'blue' | 'cyan'
+export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
+
+export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [micEnabled, setMicEnabled] = React.useState(true);
   const [camEnabled, setCamEnabled] = React.useState(true);
   const [sharing, setSharing] = React.useState(false);
@@ -49,16 +81,37 @@
       setSharing(enabled)
     } catch (e) {
       console.warn('Screen share failed', e)
-    }
+  }
 
-  };
-
-  return (      const enabled = await room && room.localParticipant.setScreenShareEnabled(!sharing);
-      setSharing(enabled);
-    } catch (e) {;
-      console && console.warn('Screen share failed', e);
-  };
   return (
+    <div className='flex items-center gap-3'>
+      <button
+        onClick={toggleMic}
+        className={`px-4 py-2 rounded ${accentClass} text-white`}
+      >
+      </button>
+      <button
+        onClick={toggleCam}
+        className={`px-4 py-2 rounded ${accentClass} text-white`}
+      >
+        {camEnabled ? 'Stop Video' : 'Start Video'}
+      </button>
+      <button
+        onClick={toggleScreenShare}
+        className='px-4 py-2 rounded bg-gray-700 text-white'
+      >
+        {sharing ? 'Stop Share' : 'Share Screen'}
+      </button>
+      <button
+        onClick={onLeave}
+        className='px-4 py-2 rounded bg-red-600 text-white'
+      >
+        Leave
+      </button>
+    </div>
+);
+}
+
 
         className='px-4 py-2 rounded bg-red-600 text-white'>;
         Leave;
@@ -163,10 +216,5 @@ if (return) {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,7 +1,12 @@
-
+import { Button } from "@/components/ui/button";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Link } from "react-router-dom";
 
 import { Button } from "@/components/ui/button",
-
+import { GradientHeading } from "@/components/GradientHeading";
+import { Link } from "react-router-dom";
+import { GradientHeading } from "@/components/GradientHeading",
+import { Link } from "react-router-dom",
 export function HeroSection() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -10,6 +15,8 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Animated floating particles */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-zion-purple-light opacity-40 animate-pulse"></div>
@@ -18,9 +25,8 @@ export function HeroSection() {
         <div className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light opacity-20 animate-pulse"></div>
       </div>
 
-=======
-
       
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -51,6 +57,7 @@ export function HeroSection() {
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
 
   )
 import { Button } from "@/components/ui/button",;
@@ -60,6 +67,7 @@ export function HeroSection() {;
   return (;
     <section className="relative overflow-hidden py-20 md:py-32">;
       {/* Background gradient effect */}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>;
 
       {/* Animated floating particles */}
@@ -141,9 +149,5 @@ function HeroSection() {
         </div>;
       </div>;
 
-    </section>;
-  );
-}
-;
-}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

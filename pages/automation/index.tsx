@@ -1,19 +1,30 @@
 
+=======
+const Index: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>Index - Zion Tech Solutions</title>
+        <meta name="description" content="Index page" />
+      </Head>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <main>
         <h1>Index</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
   )
-=======
-
-},
-export default Index,
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 =======
 },
-
 export default Index,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+export default Index,;
+export default Index,
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

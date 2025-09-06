@@ -1,7 +1,24 @@
 
-
-=======
-
+import { useForm  } from 'react-hook-form';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import { z  } from 'zod';
+import { format  } from 'date-fns';
+import { Loader2  } from 'lucide-react';
+import { Button  } from '@/components/ui/button';
+import { Textarea  } from '@/components/ui/textarea';
+import { Input  } from '@/components/ui/input';
+import { Checkbox  } from '@/components/ui/checkbox';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage } from '@/components/ui/form';
+import { useState  } from 'react';
+import { EducationFormFieldsProps  } from './types';
+import { Education } from '@/types/resume';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {z} from 'zod';
@@ -16,6 +33,7 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/
 import {useState} from 'react';
 import {EducationFormFieldsProps} from './types';
 import {Education} from '@/types/resume';
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -31,7 +49,18 @@ const educationSchema = z.object({
   description: z.string().optional()
   location: z.string().optional()})
 type EducationFormValues = z.infer<typeof educationSchema>;
+export function EducationFormFields({
+  isEditing
+  onSubmit
+  onCancel
+}: EducationFormFieldsProps) {
 
+export function EducationFormFields({ 
+  isEditing, 
+  onSubmit, 
+  onCancel 
+}: EducationFormFieldsProps) {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const form = useForm<EducationFormValues>({
@@ -54,13 +83,74 @@ type EducationFormValues = z.infer<typeof educationSchema>;
     } finally {
       setIsLoading(false)
     }
+import { useForm } from 'react-hook-form',;
+import { zodResolver } from '@hookform/resolvers/zod',;
+import { z } from 'zod',;
+import { format } from 'date-fns',;
+import { Loader2 } from 'lucide-react',;
+import { Button } from '@/components/ui/button',;
+import { Textarea } from '@/components/ui/textarea',;
+import { Input } from '@/components/ui/input',;
+import { Checkbox } from '@/components/ui/checkbox',;
+import { Alert, AlertDescription } from '@/components/ui/alert',;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from '@/components/ui/form',;
+import { useState } from 'react',;
+import { EducationFormFieldsProps } from './types',;
+import { Education } from '@/types/resume',;
+
+// Define schema for form validation;
+const educationSchema = z && z.object({;
+  institution: z && z.string().min(1, 'Institution is required');
+  degree: z && z.string().min(1, 'Degree is required');
+  field_of_study: z && z.string().optional(),;
+  start_date: z && z.string().min(1, 'Start date is required');
+  end_date: z && z.string().optional(),;
+  is_current: z && z.boolean().default(false),;
+  description: z && z.string().optional(),;
+  location: z && z.string().optional()}),;
+
+type EducationFormValues = z && z.infer<typeof educationSchema>;
+
+export function EducationFormFields(): any ({ ;
+  isEditing, ;
+  onSubmit, ;
+  onCancel ;
+}: EducationFormFieldsProps) {;
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const form = useForm<EducationFormValues>({;
+    resolver: zodResolver(educationSchema),;
+    defaultValues: {;
+      institution: '',;
+      degree: '',;
+      field_of_study: '',;
+      start_date: format(new Date(), 'yyyy-MM-dd');
+      is_current: false,;
+      description: '',;
+      location: ''}}),;
+
+  const handleSubmit = async (data: EducationFormValues) => {;
+    setIsLoading(true);
+    setError(null),;
+    try {;
+      await onSubmit(data);
+    } catch (err: any) {;
+      setError(err && err.message || 'An error occurred');
+    } finally {;
+      setIsLoading(false);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
 
   },
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   return (
@@ -156,42 +246,47 @@ type EducationFormValues = z.infer<typeof educationSchema>;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
 
           <FormField
-            control={form && form.control}
-            name="start_date"
-
-
-                  <Input 
-                    type="date" 
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-                    {...field}
-                    value={field.value |''}
-                  />
+            control={form.control}
+            name="degree"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Degree</FormLabel>
+                <FormControl>
+                  <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <div className="space-y-4">
-=======
-            render={({ field }) => (;
-              <FormItem>;
-                <FormLabel>Start Date</FormLabel>;
-                <FormControl>;
+        </div>
+        <FormField
+          control={form.control}
+          name="field_of_study"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Field of Study</FormLabel>
+              <FormControl>
+                <Input placeholder="Computer Science, Engineering, etc." {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <FormField
+            control={form.control}
+            name="start_date"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Start Date</FormLabel>
+                <FormControl>
                   <Input
+                    type="date"
+                  <Input 
                     type="date" 
-                    {...field}
-                    value={field && field.value || ''} 
-                  />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>;
-            )}
-          />;
 
-          <div className="space-y-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
             <FormField
               control={form && form.control}
               name="is_current"
@@ -244,69 +339,6 @@ type EducationFormValues = z.infer<typeof educationSchema>;
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Location (Optional)</FormLabel>;
-=======
-            </FormItem>)}
-        />;
-        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-          <FormField;
-            control={form.control}
-            name="start_date";
-            render={({ field }) => (
-              <FormItem>;
-                <FormLabel > Start Date</FormLabel>;
-                <FormControl>;
-                  <Input;
-                    type="date";
-                    {...field}
-                    value={field.value || ''}
-                  />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>)}
-          />;
-          <div className="space - y-4">;
-            <FormField;
-              control={form.control}
-              name="is_current";
-              render={({ field }) => (
-                <FormItem className="flex flex - row items - start space - x-3 space - y-0 py - 2">;
-                  <FormControl>;
-                    <Checkbox;
-                      checked={field.value}
-                      onCheckedChange={field.on_change}
-                    />;
-                  </FormControl>;
-                  <div className="space - y-1 leading - none">;
-                    <FormLabel > I am currently studying here</FormLabel>;
-                  </div>;
-                </FormItem>)}
-            />;
-            {!form.watch ('is_current') && (
-              <FormField;
-                control={form.control}
-                name="end_date";
-                render={({ field }) => (
-                  <FormItem>;
-                    <FormLabel > End Date</FormLabel>;
-                    <FormControl>;
-                      <Input;
-                        type="date";
-                        {...field}
-                        value={field.value || ''}
-                      />;
-                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>)}
-              />)}
-          </div>;
-        </div>;
-        <FormField;
-          control={form.control}
-          name="location";
-          render={({ field }) => (
-            <FormItem>;
-              <FormLabel > Location (Optional)</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               <FormControl>;
                 <Input placeholder="Cambridge, MA" {...field} />;
               </FormControl>;
@@ -367,10 +399,9 @@ type EducationFormValues = z.infer<typeof educationSchema>;
     </Form>
   )
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-
+}
 }
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

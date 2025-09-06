@@ -15,7 +15,13 @@ export function CountrySelector({;
 }
   // Set top/popular countries
   useEffect(() => {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const popular = [
       'United States'
       'United Kingdom'
@@ -29,19 +35,27 @@ export function CountrySelector({;
       .filter(item => popular.includes(item.country))
       .sort((a, b) => a.country.localeCompare(b.country))
 
+=======
+    const popular = ["United States", "United Kingdom", "Canada", "Germany", "Australia", "Japan", "Singapore"],
+    const top = onsiteServicePricing.filter(item => 
+      popular.includes(item.country)
+    ).sort((a, b) => a.country.localeCompare(b.country)),
+<<<<<<< HEAD
+<<<<<<< HEAD
     setTopCountries(top)
   }, [])
   // Handle country selection
   const handleCountryChange = (countryName: string) => {
-
+    const country =
+      onsiteServicePricing.find(item => item.country === countryName) |null
+    const country = null;
+      onsiteServicePricing.find(item => item.country === countryName) || null
     onCountryChange(country)
+  }
+  },
 
-  return (
-    <div className="mb-6">
-      <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
-        <Globe className="mr-2 h-5 w-5 text-zion-cyan" />
-        {selectedCountry ? `IT Onsite Service in ${selectedCountry.country}` : "Select Country for IT Onsite Service"}
-      </h3>
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
               <SelectItem key={item.country} value={item.country} className="text-white">
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
@@ -49,20 +63,9 @@ export function CountrySelector({;
             ))}
 <<<<<<< HEAD
 =======
-import { useState, useEffect } from "react",
-import { Globe } from 'lucide-react'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",
-    <div className="mb-6">
-              .map(item => (
-                <SelectItem
-                  key={item.country}
-                  value={item.country}
-                  className='text-white'
-                >
-                  {item.country} - ${item.pricePerIncident.toFixed(2)}
-                </SelectItem>
-              ))}          </div>              .map((item) => (
-              .sort((a, b,) => a.country.localeCompare(b.country))
-              .map((item,) => (
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+        </SelectContent>
+      </Select>
+    </div>
+  )
+}
+<<<<<<< HEAD

@@ -57,14 +57,42 @@ export default function PdfExportButton(): any ({ targetRef, fileName = 'resume 
       html2canvas: { scale: 2, useCORS: true },;
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },;
     } as any;
-
-
+    html2pdf().set(opt).from(element).save();
+  }
 html2pdf () .set (opt) .from (element) .save () 
 };
 
 export default function PdfExportButton({
   targetRef,
+  fileName = 'resume.pdf',
+}: PdfExportButtonProps) {  const onClick = async () => {
 
+
+  fileName = 'resume.pdf',;
+}: PdfExportButtonProps) {  const onClick = async () => {import React from 'react';
+export type PdfExportButtonProps = {
+  targetRef: React.RefObject<HTMLDivElement>,;
+  fileName?: string;
+  theme?: 'light' | 'dark'
+};
+
+export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: PdfExportButtonProps) {;
+    if (!targetRef.current) return;
+    const element = targetRef.current;
+
+    const html2pdf = (await import('html2pdf.js')).default;
+
+    const opt = {
+      margin: [10, 10, 10, 10],
+
+      filename: fileName,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2, useCORS: true },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+    } as any;
+
+    html2pdf().set(opt).from(element).save();
+  };
 
       >
       Download as PDF
@@ -130,3 +158,6 @@ export default function PdfExportButton({
     </button>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

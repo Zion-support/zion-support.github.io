@@ -1,14 +1,6 @@
 
-
-import { useState, useEffect } from "react",
-import { AppHeader } from "@/layout/AppHeader",
-import { Footer } from "@/components/Footer",
-import { SEO } from "@/components/SEO",
-import { TalentCard } from "@/components/talent/TalentCard",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
@@ -98,6 +90,7 @@ if ( {) {
 
           );
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         if (error) {;
           throw error;
 =======
@@ -126,34 +119,79 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      } catch (error) {
-
-        console.error ("Error fetching saved talents:", error);
-        toast ({
-          title: "Error",
-          description: "Failed to load saved talents. Please try again later.",
-          variant: "destructive"});
-
-      } finally {
-        setIsLoading (false);
-      }
 
   const handleRequestHire = (talent: TalentProfile) => {
     console.log("Request to hire:", talent);
     toast({
       title: "Hire Request Sent"
       description: `A hire request has been sent to ${talent.full_name}.`})
+=======
+  }
+  },
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {
     try {
       if (!user) {
         console.warn("User not authenticated.")
         return
-
+      }
+      if (isCurrentlySaved) {
+        // Remove from saved talents
+        const { error } = await supabase
+          .from('saved_talents')
+          .delete()
+          .eq('user_id', user.id)
+          .eq('talent_id', talentId);
+        if (error) {
+          throw error
         }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+      } catch (error) {;
+        console.error("Error fetching saved talents:", error),;
+        toast({;
+          title: "Error",;
+          description: "Failed to load saved talents. Please try again later.",;
+          variant: "destructive"});
+      } finally {;
+        setIsLoading(false);
+      }
+    },;
+    fetchSavedTalents();
+  }, [user]),;
+  const handleViewProfile = (talentId: string) => {;
+    navigate(`/talent/${talentId}`);
+  },;
+  const handleRequestHire = (talent: TalentProfile) => {;
+    // // // console.log("Request to hire:", talent),;
+    toast({;
+      title: "Hire Request Sent",;
+      description: `A hire request has been sent to ${talent.full_name}.`});
+  },;
+  const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {;
+    try {;
+      if (!user) {;
+        console.warn("User not authenticated."),;
+        return;
+      }
+;
+      if (isCurrentlySaved) {;
+        // Remove from saved talents;
+        const { error } = await supabase;
+          .from('saved_talents');
+          .delete();
+          .eq('user_id', user.id);
+          .eq('talent_id', talentId),;
+        if (error) {;
+          throw error;
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+        }
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
         );
@@ -174,13 +212,6 @@ if ( {) {
           .select('*')
           .eq('id', talentId)
 
-=======
-
-          .single(),
-  
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         if (talentError) {
           console.error("Error fetching talent profile:", talentError);
           toast({
@@ -327,6 +358,8 @@ if ( {) {
               <TalentCard
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 key={talent.id}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 talent={talent}

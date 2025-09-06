@@ -1,4 +1,5 @@
 
+import React from "react";
 
 =======
 
@@ -11,24 +12,9 @@ import {
   Calendar, 
   Briefcase 
 } from "lucide-react",
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-export const HELP_CATEGORIES: HelpCategory[] = [
-  {
-    id: "getting-started"
-    name: "Getting Started"
-    description: "Learn the basics of using the Zion AI Marketplace"
-    icon: <HelpCircle className="h-6 w-6 text-zion-purple" />
-    articles: [
-      {
-
-        lastUpdated: "2023-11-15",
-        tags: ["account", "registration", "setup"]
-      },
-
       {
         id: "complete-profile"
         title: "Completing your profile"
@@ -250,3 +236,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
 ;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  }
+];
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

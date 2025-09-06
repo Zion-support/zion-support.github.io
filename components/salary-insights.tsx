@@ -11,6 +11,7 @@ import {;
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '../components/salary/InsightCharts';
 type InsightResponse = {;
   recommendedHourlyUsd: number;
@@ -19,6 +20,12 @@ type InsightResponse = {;
   minHourlyUsd: number;
   maxHourlyUsd: number;
   confidence: number;
+=======
+  trend_monthly: { label: string; value: number }[];
+  regional_comparison: { region: string; medianHourlyUsd: number }[];
+  tags: string[];
+<<<<<<< HEAD
+<<<<<<< HEAD
 
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
@@ -31,6 +38,7 @@ type InsightResponse = {;
     'contract' | 'freelance' | 'full-time'
   >('contract');  const [loading, setLoading] = useState(false);  const [experienceLevel, setExperienceLevel] = useState<'Junior' | 'Mid' | 'Senior' | 'Lead'>('Senior');
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
@@ -114,15 +122,10 @@ function SalaryInsightsPage() {
       if (!res && res.ok) throw new Error('Failed to fetch insights');
       const json = (await res && res.json()) as InsightResponse;
       setData(json);
-
-          roleTitle;
-          skills: skills.split().map((s) => s.trim()).filter(Boolean),
-          region;
-          experienceLevel;
-          remote;
-          employmentType})});
-      if (!res.ok) throw new Error('Failed to fetch insights');
-
+    } catch (e: any) {
+      setError(e.message |'Unexpected error');
+    } finally {
+      setLoading(false);    }      if (!res.ok) throw new Error('Failed to fetch insights');
       const json = (await res.json()) as InsightResponse;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       setData(json)
@@ -130,24 +133,19 @@ function SalaryInsightsPage() {
       setError(e.message |'Unexpected error')
     } finally {
       setLoading(false)
+=======
 
     }
   }
 
-=======
-
       setLoading(false);    }
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
 
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  useEffect(() => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     fetchInsights();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -182,6 +180,13 @@ function SalaryInsightsPage() {
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       } catch {}
     })();
   }
@@ -190,57 +195,6 @@ function SalaryInsightsPage() {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  const donutData = useMemo(() => {
-    if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {}
-    })()
-  }
-  const donutData = useMemo(() => {
-    if (!data) return [] as { label: string, value: number }[]
-
-    const min = data.minHourlyUsd;
-    const median = data.medianHourlyUsd;
-    const max = data.maxHourlyUsd;
-    const lower = Math.max(0, median - min);
-    const upper = Math.max(0, max - median);
-    return [
-
-=======
-
-  const donutData = useMemo(() => {;
-    if (!data) return [] as { label: string; value: number }[];    const min = data && data.minHourlyUsd;      } catch {}
-    })();
-  }
-  const donutData = useMemo(() => {;
-    if (!data) return [] as { label: string, value: number }[],;
-    const min = data && data.minHourlyUsd;
-    const median = data && data.medianHourlyUsd;
-    const max = data && data.maxHourlyUsd;
-    const lower = Math && Math.max(0, median - min);
-    const upper = Math && Math.max(0, max - median);
-    return [;
-      { label: 'Below Median', value: lower || 1 },;
-      { label: 'Median', value: median || 1 },;
-      { label: 'Above Median', value: upper || 1 },;
-
-    ];  }, [data]);
-  return (
-
-      { label: 'Below Median', value: lower || 1 },
-      { label: 'Median', value: median || 1 },
-      { label: 'Above Median', value: upper || 1 }]
-
-                  <option>Junior</option>
-                  <option>Mid</option>
-                  <option>Senior</option>
-                  <option>Lead</option>
-                </select>
-              </div>
-              <div>
-
-=======
-
-                <label className="block text-sm mb-2" htmlFor="input-Employment">Employment</label>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <select value={employmentType} onChange={(e) => setEmploymentType(e.target.value as any)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
                   <option value="contract">Contract</option>
@@ -629,8 +583,7 @@ function SalaryInsightsPage() {
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />;
               )}
 
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     ))}
                   </tbody>;
                 </table>;
@@ -728,6 +681,8 @@ function SalaryInsightsPage() {
               ) : (;
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />;
 
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               )}
 
 
@@ -741,6 +696,7 @@ function SalaryInsightsPage() {
 
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
             </div>
@@ -803,75 +759,8 @@ function SalaryInsightsPage() {
   );
 }
 
-=======
-  );
-}
-                      donut_data.map ((d, i) => ({
-                        label: d.label,
-                        value: d.value,
-                      })) as any;
-                    }
-                  />;
-                  <div className='flex gap - 2 flex - wrap justify - center text - xs'>;
-                    {donut_data.map (d => (
-                      <span;
-                        key={d.label}
-                        className='rounded - full border border - gray - 300 dark:border - gray - 700 px - 2 py - 0.5';
-                      >;
-                        {d.label}
-                      </span>                    ))}
-                  </div>;
-                </div>) : (
-                <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />              )}                <div className="flex flex - col items - center gap - 3">;
-                  <DonutChart slices={donut_data.map ((d, i) => ({ label: d.label, value: d.value })) as any} />;
-                  <div className="flex gap - 2 flex - wrap justify - center text - xs">;
-                    {donut_data.map ((d) => (
-                      <span key={d.label} className="rounded - full border border - gray - 300 dark:border - gray - 700 px - 2 py - 0.5">{d.label}</span>;
-                  </div>;
-                </div>) : (
-                <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />                <div className="h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded" />)}
-            </div>;
-          </div>;
-          {data?.gpt_recommendation && (
-            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
-              <h3 className='font - medium mb - 2'>GPT Recommendation</h3>;
-              <p className='text - sm text - gray - 700 dark:text - gray - 300 whitespace - pre - wrap'>;
-                {data.gpt_recommendation}
-              </p>            </div>)}
-          {data && (            <div className="rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4">;
-              <h3 className="font - medium mb - 2">GPT Recommendation</h3>;
-              <p className="text - sm text - gray - 700 dark:text - gray - 300 whitespace - pre - wrap">{data.gpt_recommendation}</p>;
-            </div>)}
-          {data && (
-            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
-              <h3 className='font - medium mb - 3'>Signals</h3>;
-              <div className='flex gap - 2 flex - wrap'>;
-                <span className='rounded - full bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py - 1 text - xs'>;
-                  Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr;
-                </span>;
-                {data.tags.map (t => (
-                  <span;
-                    key={t}
-                    className='rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py - 1 text - xs';
-                  >;
-                    {t}
-                  </span>                ))}            <div className="rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4">;
-              <h3 className="font - medium mb - 3">Signals</h3>;
-              <div className="flex gap - 2 flex - wrap">;
-                <span className="rounded - full bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py - 1 text - xs">Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr</span>;
-                {data.tags.map ((t) => (
-                  <span key={t} className="rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py - 1 text - xs">{t}</span>;
-              </div>;
-            </div>)}
-        </div>;
-      </div>;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
           {data && (
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

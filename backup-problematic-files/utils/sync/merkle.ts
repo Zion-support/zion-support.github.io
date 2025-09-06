@@ -8,7 +8,6 @@
 
 
 <<<<<<< HEAD
-=======
 export class MerkleTree {
   private root: MerkleNode | null = null;
   private leaves: MerkleNode[] = [];

@@ -1,6 +1,27 @@
 
 import { Twitter, Linkedin } from 'lucide-react'
 
+  name: string,
+  title: string,
+  avatar: string,
+  twitter?: string
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import Image from "next/image",
+import { Twitter, Linkedin } from 'lucide-react'
+
+interface Speaker {
+  name: string,
+  title: string,
+  avatar: string,
+  twitter?: string,
+  linkedin?: string
+}
+  linkedin?: string
+}
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   name: string
   title: string
   avatar: string
@@ -40,7 +61,9 @@ export function SpeakersSection() {
                     <Linkedin className="h-4 w-4" aria-hidden="true" />
                     <span className="sr-only">LinkedIn</span>
 
+<<<<<<< HEAD
                 )}
               </div>
             </div>
           ))}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

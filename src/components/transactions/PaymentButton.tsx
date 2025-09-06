@@ -8,6 +8,7 @@ interface PaymentButtonProps {
   redirectUrl?: string
 }
 export function PaymentButton({
+=======
 
   amount
   serviceId
@@ -74,12 +75,14 @@ export function PaymentButton({;
       if (onPaymentInitiated) {;
         onPaymentInitiated();
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
 
       // Call the create-checkout edge function
       const { data, error } = await supabase.functions.invoke("create-checkout", {
         body: {
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           providerId,
           userId: user?.id,
           successUrl: redirectUrl || window.location.href,
@@ -118,3 +121,5 @@ export function PaymentButton({;
       ) : (
         buttonText
       )}
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,25 +1,16 @@
 
-
-import React from "react",
-import { useHireRequestForm, FormValues } from "./useHireRequestForm",
-import { Button } from "@/components/ui/button",
-import { DialogFooter } from "@/components/ui/dialog",
-import { Form } from "@/components/ui/form",
-import { Loader2 } from "lucide-react",
-import { TalentProfile } from "@/types/talent",
-import { PersonalInfoFields } from "./PersonalInfoFields",
-import { ProjectDetailsField } from "./ProjectDetailsField",
-
+=======
+<<<<<<< HEAD
   userDetails?: {
     name?: string,
     email?: string,
     id?: string
 
-=======
-  },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  }
+  },
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   onSubmitSuccess?: () => void
 }
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
@@ -49,6 +40,8 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
             Cancel
           </Button>
 
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <Button
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -60,10 +53,12 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
               </>;
             ) : (;
               'Submit Request';
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             )}
 

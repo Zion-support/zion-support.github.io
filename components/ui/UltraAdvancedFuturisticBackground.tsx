@@ -241,83 +241,7 @@ if ( {) {
             ctx.lineWidth = 1;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-
-        holographic: '#ff0088',
-      },    }        holographic: '#ff0088';
-      }
-    }
-;
-    const colors = color_schemes[color_scheme];
-;
-    // Initialize particles;
-    const init_particles = () =>: any {
-      particles = [];
-      for (let index = 0; i < particle_count; i++) {
-        const type =;
-          Math.random () > 0.7;
-            ? 'quantum';
-            : Math.random () > 0.5;
-              ? 'holographic';
-              : Math.random () > 0.3;
-                ? 'neon';
-                : 'fusion';      for (let index = 0, i < particle_count, i++) {
-        const type = Math.random () > 0.7 ? 'quantum' :;
-                    Math.random () > 0.5 ? 'holographic' :;
-                    Math.random () > 0.3 ? 'neon' : 'fusion';
-;
-          coordinate_x: Math.random () * canvas.width,
-          coordinate_y: Math.random () * canvas.height,
-          vx: (Math.random () - 0.5) * 2 * animation_speed,
-          vy: (Math.random () - 0.5) * 2 * animation_speed,
-          size: Math.random () * 3 + 1,
-          opacity: Math.random () * 0.8 + 0.2,
-          color:;
-            type === 'quantum';
-              ? colors.quantum;
-              : type === 'holographic';
-                ? colors.holographic;
-                : type === 'neon';
-                  ? colors.primary;
-                  : colors.secondary,
-          type,
-        });      }          color: type === 'quantum' ? colors.quantum :;
-                type === 'holographic' ? colors.holographic :;
-                type === 'neon' ? colors.primary : colors.secondary,
-          type;
-        });
-    }
-;
-    // Quantum entanglement effect;
-    const createQuantumEntanglement = () =>: any {
-      // Check condition
-if (return) {
-  $2
-}
-      for (let index = 0; i < particles.length; i++) {
-        for (let inner_index = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const distance = Math.sqrt (dx * dx + dy * dy);
-;
-          if ( {            ctx.begin_path ()) {
-  $2
-}
-      for (let index = 0, i < particles.length, i++) {
-        for (let inner_index = i + 1, j < particles.length, j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const distance = Math.sqrt (dx * dx + dy * dy);
-;
-          // Check condition
-if ( {) {
-  $2
-}
-            ctx.stroke_style = `rgba (0, 255, 136, ${0.3 * (1 - distance / 100)})`;
-            ctx.line_width = 1;
-            ctx.move_to (particles[i].x, particles[i].y);
-            ctx.line_to (particles[j].x, particles[j].y);
-            ctx.stroke ();          }            ctx.stroke ();
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+            ctx.stroke();          }            ctx.stroke()
 
           }
         }
@@ -366,6 +290,8 @@ if ( {) {
             ctx.lineWidth = strength * 2;
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.stroke();          }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
           }
         }
@@ -561,16 +487,16 @@ if (return) {
 
             ctx.stroke();          }
 
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }
         }
       }
-
+    }
     };
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -590,11 +516,6 @@ if (return) {
       gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)');
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-=======
-
-      
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       // Create effects
       createHolographicGrid();
       createQuantumEntanglement();
@@ -715,9 +636,6 @@ if (return) {
 
   return (
     <div ref={containerRef} className='relative w-full h-full overflow-hidden'>
-  return (
-    <div ref={containerRef} className='relative w-full h-full overflow-hidden'>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full pointer-events-none'
@@ -794,28 +712,7 @@ export default UltraAdvancedFuturisticBackground;
   )
 }
 export default UltraAdvancedFuturisticBackground;
-        {/* Holographic elements */}
-        {enableHolographic && (;
-          <>;
-            <div
-              className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-pink-500/10 rounded-full animate-spin'
-              style={{ animationDuration: '20s' }}></div>;
-            <div
-              className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin'
-              style={{
-
-                animationDuration: '15s',
-                animationDirection: 'reverse',
-              }}></div>;
-          </>;
-        )}
-      </div>;
-
-      {children}
-    </div>;
-  );
-}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default UltraAdvancedFuturisticBackground;
   return (
     <div ref={containerRef} className="relative w-full h-full overflow-hidden">;
@@ -865,6 +762,7 @@ export default UltraAdvancedFuturisticBackground;
 export default UltraAdvancedFuturisticBackground;
 
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
       {children}
     </div>

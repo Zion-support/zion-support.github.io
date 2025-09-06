@@ -2,7 +2,116 @@
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  Calendar,
+  Clock,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Video,
+  MessageSquare,
+  Building,;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "lucide-react";
+const timeSlots = [
+  { time: "9:00 AM", available: true, type: "Video Call" }
+  { time: "9:30 AM", available: true, type: "Phone Call" }
+  { time: "10:00 AM", available: false, type: "Video Call" }
+  { time: "10:30 AM", available: true, type: "In-Person" }
+  { time: "11:00 AM", available: true, type: "Video Call" }
+  { time: "11:30 AM", available: true, type: "Phone Call" }
+  { time: "1:00 PM", available: true, type: "Video Call" }
+  { time: "1:30 PM", available: false, type: "In-Person" }
+  { time: "2:00 PM", available: true, type: "Video Call" }
+  { time: "2:30 PM", available: true, type: "Phone Call" }
+  { time: "3:00 PM", available: true, type: "In-Person" }
+  { time: "3:30 PM", available: true, type: "Video Call" }
+  { time: "4:00 PM", available: false, type: "Phone Call" }
+  { time: "4:30 PM", available: true, type: "Video Call" }
+  { time: "5:00 PM", available: true, type: "Phone Call" }
+];
+const consultationTypes = [
+  {
+    title: "Free Discovery Call"
+    duration: "30 minutes"
+    description:
+      "Discuss your project requirements and explore how we can help"
+    price: "Free"
+    icon: MessageSquare
+    features: [
+      "Project assessment"
+      "Solution recommendations"
+      "Timeline discussion"
+      "Budget estimation"
+    ]
+  }
+  {
+    title: "Technical Consultation"
+    duration: "60 minutes"
+    description:
+      "Deep dive into technical requirements and architecture planning"
+    price: "$200"
+    icon: Building
+    features: [
+      "Technical architecture review"
+      "Technology stack recommendations"
+      "Implementation planning"
+      "Risk assessment"
+    ]
+  }
+  {
+    title: "Strategy Session"
+    duration: "90 minutes"
+    description:
+      "Comprehensive business strategy and digital transformation planning"
+    price: "$500"
+    icon: Users
+    features: [
+      "Business analysis"
+      "Digital strategy planning"
+      "ROI projections"
+      "Implementation roadmap"
+    ]
+  }
+];
+const teamMembers = [
+  {
+    name: "Sarah Johnson"
+    role: "CEO & Founder"
+    expertise: "Strategic Planning, AI Strategy"
+    image: "/images/team/sarah-johnson.jpg"
+    available: true
+  }
+  {
+    name: "Michael Chen"
+    role: "CTO"
+    expertise: "Cloud Architecture, Quantum Computing"
+    image: "/images/team/michael-chen.jpg"
+    available: true
+  }
+  {
+    name: "Dr. Emily Rodriguez"
+    role: "Head of AI Research"
+    expertise: "Machine Learning, AI Research"
+    image: "/images/team/emily-rodriguez.jpg"
+    available: false
+  }
+  {
+    name: "David Kim"
+    role: "Head of Cybersecurity"
+    expertise: "Cybersecurity, Risk Management"
+    image: "/images/team/david-kim.jpg"
+    available: true
+  }
+];
+export default function CalendarPage() {
+} from "lucide-react";
+
 const timeSlots = [;
   { time: "9:00 AM", available: true, type: "Video Call" },;
   { time: "9:30 AM", available: true, type: "Phone Call" },;
@@ -20,6 +129,7 @@ const timeSlots = [;
   { time: "4:30 PM", available: true, type: "Video Call" },;
   { time: "5:00 PM", available: true, type: "Phone Call" },;
 ];
+
 const consultationTypes = [;
   {;
     title: "Free Discovery Call",;
@@ -64,6 +174,7 @@ const consultationTypes = [;
     ],;
   },;
 ];
+
 const teamMembers = [;
   {;
     name: "Sarah Johnson",;
@@ -94,7 +205,9 @@ const teamMembers = [;
     available: true,;
   },;
 ];
+
 export default function CalendarPage() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;
       <Head>;
@@ -274,6 +387,7 @@ export default function CalendarPage() {;
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">;
             {timeSlots && timeSlots.map((slot, index) => (;
               <motion&& motion.button
+=======
 import React from './react';
 import Head from './next / head';
 import Link from './next / link';
@@ -562,6 +676,7 @@ function CalendarPage() {
           <div className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 5 gap - 4">;
             {time_slots.map ((slot, index) => (
               <motion.button;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 key={index}
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -606,6 +721,7 @@ function CalendarPage() {
                   <div>;
                     <div className="font-semibold text-gray-900">Office</div>;
                     <div className="text-gray-600">;
+=======
                 transition={{ duration: 0.8, delay: index * 0.05 }}
                 disabled={!slot.available}
                 className={`p - 4 rounded - lg text - center transition - all ${
@@ -658,6 +774,7 @@ function CalendarPage() {
                   <div>;
                     <div className="font - semibold text - gray - 900">Office</div>;
                     <div className="text - gray - 600">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       123 Tech Street, San Francisco, CA;
                     </div>;
                   </div>;
@@ -742,6 +859,7 @@ function CalendarPage() {
 
     </div>;
   );
+=======
               <div className="mt - 8">;
                 <Link;
                   href="/contact";
@@ -789,4 +907,5 @@ function CalendarPage() {
         </div>;
       </section>;
     </div>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

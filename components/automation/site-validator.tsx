@@ -1,4 +1,4 @@
-
+ 
 
 }
 type Props = { report: Report | null }
@@ -36,6 +36,8 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
   }
 
 export default function SiteValidator({ report }: Props) {
+export default function SiteValidator(): any ({ report }: Props) {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   if (!report) return <div>No validation report yet.</div>;
 
@@ -69,6 +71,14 @@ export default function SiteValidator({ report }: Props) {
         </section>
       )}
     </div>
+export default function SiteValidator({ report }: Props) {
+=======
+export default function SiteValidator({ report }: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   if (!report) return <div>No validation report yet.</div>;
   return (
     <div className="space-y-6">;

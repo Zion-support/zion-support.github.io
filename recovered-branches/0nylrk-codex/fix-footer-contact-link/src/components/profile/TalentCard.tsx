@@ -1,5 +1,25 @@
 
+import { Button } from "@/components/ui/button",
+import { Card } from "@/components/ui/card",
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
+import { Link } from "react-router-dom";
+import { TalentProfile } from "@/types/talent";
+export interface TalentCardProps {
 
+
+  isAuthenticated: boolean
+}
+export function TalentCard({
+import {Button} from "@/components/ui/button";
+import {Card} from "@/components/ui/card";
+import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
+import {Link} from "react-router-dom";
+import {TalentProfile} from "@/types/talent";
+import { Button } from "@/components/ui/button",
+import { Card } from "@/components/ui/card",
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
+import { Link } from "react-router-dom",
+import { TalentProfile } from "@/types/talent",
 export interface TalentCardProps {
   talent: TalentProfile,
   onViewProfile: (id: string) => void,
@@ -7,12 +27,55 @@ export interface TalentCardProps {
   isSaved: boolean,
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean
+}
 
+export function TalentCard({;
+  talent;
+  onViewProfile;
+  onRequestHire;
+  isSaved;
+  onToggleSave;
+  isAuthenticated
+}: TalentCardProps) {
+
+  const handleViewProfile = () => {
+    if (onViewProfile) {
+      onViewProfile(talent.id)
+    }
+  }
+  const handleRequestHire = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation()
+    if (onRequestHire) {
+      onRequestHire(talent)
+    }
+  }
+  const handleToggleSave = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation()
+    if (onToggleSave) {
+      onToggleSave(talent.id, !isSaved)
+    }
+  }
+  // Extract skills - limit to 5 for display
+  const skills = talent.skills?.slice(0, 5) |[];
+import { Link } from "react-router-dom",
+import { TalentProfile } from "@/types/talent",
+export interface TalentCardProps {
+  talent: TalentProfile,
+  onViewProfile: (id: string) => void,
+  onRequestHire: (talent: TalentProfile) => void,
+  isSaved: boolean,
+  onToggleSave: (id: string, isSaved: boolean) => void,
+  isAuthenticated: boolean
+  };
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;
 import { Link } from "react-router-dom",;
 import { TalentProfile } from "@/types/talent",;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export interface TalentCardProps {;
   talent: TalentProfile,;
   onViewProfile: (id: string) => void,;
@@ -56,6 +119,10 @@ export function TalentCard(): any ({;
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) || [],
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+  // Extract skills - limit to 5 for display
+  const skills = talent.skills?.slice(0, 5) || [],
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>;
@@ -105,6 +172,9 @@ export function TalentCard(): any ({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
               {talent && talent.location && (;
@@ -120,7 +190,7 @@ export function TalentCard(): any ({;
                 </div>;
               )}
 
-=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <span
                   key={index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
@@ -150,10 +220,7 @@ export function TalentCard(): any ({;
               </div>;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             )}
 

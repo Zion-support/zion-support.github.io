@@ -1,7 +1,6 @@
 
 =======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { NextApiRequest, NextApiResponse } from 'next'
 import { createMocks, RequestMethod } from 'node-mocks-http'
 import handler from '@/pages/api/admin/generate-pitch-deck'
@@ -31,15 +30,15 @@ describe('/api/admin/generate-pitch-deck API Endpoint'
       "data"
       "data"
     const { req, res } = createMocks({ "method"
-      "method"'"
+      "method"
       '"Unauthorized"
       "error"
       "method"
-      "headers"'"
+      "headers"
       '"Unauthorized"
       "data"
       "method"
-      "headers"'"
+      "headers"
       '"Forbidden"
       "data"
       "data"

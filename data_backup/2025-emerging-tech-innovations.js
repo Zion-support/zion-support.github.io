@@ -1,5 +1,3 @@
-
-
 export const emergingTechInnovations2025 = [// Quantum Computing Services
     {
         id:,

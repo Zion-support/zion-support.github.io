@@ -4,6 +4,8 @@ import useEmblaCarousel from "embla-carousel-react"
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
 
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
 type CarouselOptions = {
@@ -24,7 +26,8 @@ type CarouselContextProps = {
   scrollNext: () => void
   canScrollPrev: boolean
   canScrollNext: boolean
-
+  }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 ;
 
@@ -36,7 +39,6 @@ const Carousel = React.forwardRef<
 >(
   (
     {
-
       opts,
       setApi,
       plugins,
@@ -69,7 +71,7 @@ const Carousel = React.forwardRef<
           event.preventDefault()
           scrollNext()
         }
-
+<<<<<<< HEAD
       [scrollPrev, scrollNext];
     );
     React.useEffect(() => {;
@@ -128,7 +130,12 @@ if ( {) {
 }
         return;
       }
+onSelect(api)
+      api.on(&quot;reInit&quot; onSelect)
+      api.on(&quot;select&quot; onSelect)
 
+      return () => {
+        api?.off(&quot;select&quot; onSelect)
 
       return () => {
         api?.off("select", onSelect)
@@ -161,6 +168,19 @@ on_select (api);
           orientation:
 
           canScrollNext}}
+    </Button>
+  )
+})
+CarouselPrevious.displayName = "CarouselPrevious"
+
+const CarouselNext = React.forwardRef<
+  HTMLButtonElement
+  React.ComponentProps<typeof Button>
+>(({ className, variant = &quot;outline&quot; size = &quot;icon&quot; ...props }, ref) => {
+>(({ className, variant = "outline", size = "icon", ...props }, ref) => {
+
+  const { orientation, scrollNext, canScrollNext } = useCarousel()
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >;
       <ArrowLeft className=&quot;h - 4 w - 4&quot; />;
       <span className=&quot;sr - only & quot;>Previous slide</span>;
@@ -180,6 +200,8 @@ const CarouselNext = React.forward_ref<;
       size={size}
 
       className={cn(
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
         className
       )}

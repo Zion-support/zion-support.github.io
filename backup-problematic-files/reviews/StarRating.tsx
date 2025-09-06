@@ -17,8 +17,49 @@ type Props = {
   onChange: (val: number) => void,
 
 =======
+  value
+  onChange
+  size = 24
+  readOnly
+}) => {  const [hovered, setHovered] = useState<number | null>(null);import React, { useState } from 'react';
+:components/reviews/StarRating.tsx
+type Props = {
+  value: number
+  onChange: (val: number) => void
+main:components/reviews/StarRating.tsx
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  value,
+  onChange,
+  size = 24,
+  readOnly,;
+}) => {  const [hovered, setHovered] = useState<number | null>(null);import React, { useState } from 'react';
+:components/reviews/StarRating.tsx
+main:components/reviews/StarRating.tsx
+
+:backup-problematic-files/reviews/StarRating.tsx
+type Props = {
+  value: number,
+  onChange: (val: number) => void,
+:backup-problematic-files/reviews/StarRating.tsx
+  size?: number,
+  readOnly?: boolean
+},
+
+
+  const stars = [1, 2, 3, 4, 5],
+
+  return (
+    <div className="flex items-center gap-1">
+      {stars.map((star) => {
+        const active = (hovered ?? value) >= star,
+        return (
+          <button
+            key={star}
+            type="button"
+            className={`transition-transform ${readOnly ? 'cursor-default' : 'hover:scale-110'}`}
+            onMouseEnter={() => !readOnly && setHovered(star)}
+:backup-problematic-files/reviews/StarRating.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   size?: number;
   readOnly?: boolean
 }

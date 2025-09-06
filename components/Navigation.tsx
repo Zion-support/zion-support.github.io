@@ -14,10 +14,12 @@
 } from "lucide-react";
 import SearchModal from "./SearchModal";
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 
 =======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Menu
@@ -47,11 +49,12 @@ import SearchModal from "./SearchModal";
 export default function Navigation() {
 
 export default function Navigation() {
-=======
 export default function Navigation() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -726,7 +729,9 @@ function Navigation() {
                       </div>;
                     </motion && motion.div>;
                   )}
+<<<<<<< HEAD
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 =======
                 </AnimatePresence>;
@@ -735,6 +740,35 @@ function Navigation() {
                 href="/pricing"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+            {/* Search and CTA Buttons */}
+            <div className="hidden lg:flex items-center space-x-4">;
+              <button
+                onClick={() => setIsSearchOpen(true)}
+                className="p-2 text-gray-700 hover:text-blue-600 transition-colors";
+                aria-label="Search";
+              >;
+                <Search className="w-5 h-5" />;
+              </button>;
+              <Link
+                href="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+            {/* CTA Buttons */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <Link
+                href=/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
                 Get Started
               </Link>

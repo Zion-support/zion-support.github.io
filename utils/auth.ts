@@ -1,4 +1,7 @@
 =======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
@@ -12,6 +15,8 @@ export interface User {
   role: string;
   isAdmin: boolean;
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 
   try {;
@@ -48,14 +53,11 @@ if ( {) {
     throw error;
   }
 }
-export async function ensureAdminFromApi (req: NextApiRequest): Promise<{ allowed: boolean }> {
+export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
+
   try {
     const user = parseUserFromRequest (req);
     ensure_admin (user);
-=======
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 }
 
@@ -82,6 +84,10 @@ export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed
 
     ensureAdmin(user);
 
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     return { allowed: true }
   } catch {
     return { allowed: false }
@@ -98,20 +104,42 @@ export interface DemoUser {
   role: 'admin' | 'user' | 'guest';
   email: string;
 }
-
-=======
-
+const demoUsers: DemoUser[] = [];
+export function ensureDemoUsers(): void {
+  if (demoUsers.length === 0) {
+    demoUsers.push(
+      { id: 'admin-1', name: 'Admin User', role: 'admin', email: 'admin@zion.os' }
+      { id: 'user-1', name: 'Regular User', role: 'user', email: 'user@zion.os' }
       { id: 'admin-1', name: 'Admin User', role: 'admin', email: 'admin@zion.os' },
       { id: 'user-1', name: 'Regular User', role: 'user', email: 'user@zion.os' };
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     );
   }
 }
 export function generateUser(name: string, role: 'admin' | 'user' | 'guest'): DemoUser {
   return {
+    id: `user-${Date.now()}`
+    name
+    role
+    email: `${name.toLowerCase().replace(/\s+/g, '.')}@zion.os`
+  }
+}
+export function upsertUser(user: DemoUser): void {
+    id: `user-${Date.now()}`,
+    name,
+    role,
+    email: `${name.toLowerCase().replace(/\s+/g, '.')}@zion.os`;
+  };
+}
 
+export function upsertUser(user: DemoUser): void {;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const index = demoUsers.findIndex(u => u.id === user.id);
   if (index >= 0) {
     demoUsers[index] = user;
@@ -119,7 +147,19 @@ export function generateUser(name: string, role: 'admin' | 'user' | 'guest'): De
     demoUsers.push(user);
   }
 }
+export function setUserCookie(res: NextApiResponse, user: DemoUser): void {
+  res.setHeader('Set-Cookie', `user=${JSON.stringify(user)}; Path=/; HttpOnly`);
+}
+export function getUserFromRequest(req: NextApiRequest): DemoUser | null {
+  const cookieHeader = req.headers.cookie |'';
 
+export function setUserCookie(res: NextApiResponse, user: DemoUser): void {;
+  res.setHeader('Set-Cookie', `user=${JSON.stringify(user)}; Path=/; HttpOnly`);
+}
+
+export function getUserFromRequest(req: NextApiRequest): DemoUser | null {;
+  const cookieHeader = req.headers.cookie || '';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const match = cookieHeader.match(/user=([^;]+)/);
   if (!match) return null;
   try {
@@ -127,14 +167,27 @@ export function generateUser(name: string, role: 'admin' | 'user' | 'guest'): De
   } catch {
     return null;
   }
-
-}
 }
 
-export function isModerator(session: AuthSession | null): boolean {
-  return hasRole(session, 'moderator') || isAdmin(session);
 
+  }
 }
+<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+export function isAuthenticated(session: AuthSession | null): boolean {
+    if (!session) return false;
+
+
+  }
+
+export function hasRole(session: AuthSession | null, role: string): boolean {
+    if (!session || !isAuthenticated(session)) return false;
+
+
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+}
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

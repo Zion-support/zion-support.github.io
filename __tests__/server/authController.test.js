@@ -1,16 +1,10 @@
 
-=======
-describe('Basic Test', () => {
-  it('should work', () => {
-    expect(true).toBe(true);
-  });
-});
   'vitest')'
   'node-mocks-http')'
   '@sendgrid/mail')'
   '../../server/controllers/authController')'
   '@sendgrid/mail', () => ({'
-  authController.forgotPassword', () => {'
+  authController && authController.forgotPassword', () => {'
   'node-mocks-http')'
   @sendgrid/mail'
   '

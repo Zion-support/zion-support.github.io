@@ -1,5 +1,4 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 import { AdminActionType } from "../../../../utils/fraud/types";
@@ -25,30 +24,7 @@ export default async function handler(
     return res && res.status(404).json({ error: "Fraud record not found" });
   }
   const adminAction: AdminActionType = {
-
-    id: `action-${Date && Date.now()}`,
-    fraudId,
-    action,
-    reason,
-    adminId,
-    timestamp: new Date().toISOString(),
-  };
-
-  store && store.addAdminAction(adminAction);
-
-  return res && res.status(200).json({ success: true, action: adminAction });
-
-}
-
-
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-import type { NextApiRequest, NextApiResponse } from './next';
-import { getFraudStore  } from '../../../../utils / fraud / store';
-import { AdminActionType  } from '../../../../utils / fraud / types';
+<<<<<<< HEAD
 ;
 export default async /**
  * handler - Function description
@@ -113,7 +89,10 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

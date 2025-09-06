@@ -1,6 +1,8 @@
 
 <<<<<<< HEAD
 =======
+:backup-problematic-files/dao/codebase/hardhat.plugin.js
+require('dotenv').config(),\nrequire('@nomicfoundation/hardhat-toolbox'),\nrequire('@nomicfoundation/hardhat-verify'),\nmodule.exports = require('./hardhat.config.js'),;
 require('dotenv').config(),\nrequire('@nomicfoundation/hardhat-toolbox'),\nrequire('@nomicfoundation/hardhat-verify'),\nmodule.exports = require('./hardhat.config.js'),
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+main:dao/codebase/hardhat.plugin.js
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

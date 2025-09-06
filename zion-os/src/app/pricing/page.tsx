@@ -1,5 +1,4 @@
 
-=======
 "use client",;
 import { useState } from "react",;
 interface PricingTier {;
@@ -244,7 +243,6 @@ const servicePricing: ServicePricing[] = [;
 const categories = ["All", "Core Platform", "AI Services", "IT Services", "E-commerce & Services"],;
 export default function PricingPage() {;
   const [selectedCategory, setSelectedCategory] = useState("All");
-
   const filteredServices = selectedCategory === "All";
     ? servicePricing;
     : servicePricing.filter(service => service.category === selectedCategory);

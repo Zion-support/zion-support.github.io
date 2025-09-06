@@ -1,18 +1,23 @@
+import React from 'react';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function AIAutonomousBusinessOperations() {
+	return (
+		<ServiceLanding
 
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 			title="AI‑Powered Autonomous Business Operations"
 			slug="ai-autonomous-business-operations"
 			description="Continuous AI agents coordinate workflows across sales, support, finance, and operations. They monitor KPIs, trigger automations, and collaborate with humans to keep your business always-on."
 			subtitle="From reactive to autonomous: 24/7 operations with measurable outcomes."
+<<<<<<< HEAD
 
-=======
-
-
-=======
 			pricePerMonthUSD={3500  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -26,7 +31,12 @@
 				"Playbooks for incident response and customer recovery",
 				"Compliance logging and role-based access",
 				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
-
+			]}
+			industries={["SaaS", "Healthcare", "Finance", "Retail"]}
+			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations"
+		/>
+	)
+};
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -37,7 +47,6 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
 			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations"
 		/>
 	)
@@ -49,4 +58,4 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

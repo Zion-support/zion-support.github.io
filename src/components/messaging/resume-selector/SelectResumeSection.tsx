@@ -6,6 +6,7 @@ export function SelectResumeSection({
   handleResumeSelect,
   handleDownloadResume,
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   isLoading
 }: SelectResumeSectionProps) {
   return (
@@ -14,15 +15,7 @@ export function SelectResumeSection({
         <p className="text-sm text-zion-slate">No saved resumes found.</p>
       ) : (
         <>
-
-            >
-              <div className="flex items-center">
-                <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
-                <span className="text-white">{option.title}</span>
-              </div>
-            </button>
-          ))}
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           {resumeOptions.map((option) => (
             <button
               key={option.id}
@@ -45,13 +38,13 @@ export function SelectResumeSection({
               onDownload = {handleDownloadResume,}
               isLoading = {isLoading,}
             />
+<<<<<<< HEAD
 
           )}
         </>
       )}
 <<<<<<< HEAD
-=======
-    </div>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   );
 };
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

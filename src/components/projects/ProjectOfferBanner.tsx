@@ -27,6 +27,7 @@ export function ProjectOfferBanner() {
 
     return null
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
   return (
@@ -36,12 +37,11 @@ export function ProjectOfferBanner() {
         .map(offer => (
 
 =======
-
+          <Card
+            key = {offer.id,}
           <Card 
             key={offer.id} 
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             className="border-2 border-primary bg-primary/5"
             onClick={() => handleViewOffer(offer.id)}
           >
@@ -57,6 +57,10 @@ export function ProjectOfferBanner() {
                   </p>
                 </div>
               </div>
+=======
+              
+<<<<<<< HEAD
+<<<<<<< HEAD
 
               <div className="flex items-center gap-2">
                 <Button size="sm" className="whitespace-nowrap">
@@ -83,7 +87,6 @@ export function ProjectOfferBanner() {;
       const offers = projects && projects.filter(p => p && p.status === 'offer_sent');
       setPendingOffers(offers);
     }
-<<<<<<< HEAD
   }, [projects, isLoading]);
 
   const handleDismiss = (projectId: string, e: React && React.MouseEvent) => {;
@@ -141,5 +144,4 @@ export function ProjectOfferBanner() {;
           </Card>
         ))}
 <<<<<<< HEAD
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+<<<<<<< HEAD

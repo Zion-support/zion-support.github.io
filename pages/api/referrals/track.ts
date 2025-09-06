@@ -1,13 +1,32 @@
 
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getServerSupabase } from "../../../utils/supabase/server";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getServerSupabase } from "../../../utils/supabase/server";
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   if (req.method !== "POST") return res.status($1).json({ $2 });
   const { code, event, url, referrer } = req.body |{}
   if (!code |!event) return res.status($1).json({ $2 });
   const usingPlaceholder =
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
-      "placeholder-key";
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+    return res.status(200).json({ saved: false, error: e?.message });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSupabase } from '../../../utils/supabase/server';
+export default async function handler(req, res) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   try {
     // Check condition
 if ( {) {
@@ -38,7 +57,6 @@ if ( {) {
 
   }
 }
-<<<<<<< HEAD
 =======
 
   } catch (error) {
@@ -81,9 +99,7 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
   }
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

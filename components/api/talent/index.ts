@@ -63,11 +63,11 @@ if (throw error) {
     }
   }
 =======
-<<<<<<< HEAD
 return res;
     .set_header ('Allow', 'GET, POST');
     .status (405);
     .end ('Method Not Allowed');  return res.set_header ('AllowGET, POST').status (405).end ('Method Not Allowed');
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

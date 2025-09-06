@@ -1,5 +1,9 @@
+import React, { useState } from "react";
+import React, { useState } from 'react';
 
+export interface TreeNode {;
 
+<<<<<<< HEAD
   name: string;
   path: string;
 
@@ -52,68 +56,26 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
       body: JSON.stringify({ path: node.path })
     });  };      headers: {
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   name: string;
   path: string;
   type: 'folder' | 'file';
   exists?: boolean;
   children?: TreeNode[];
-
-
-
 interface TreeProps {
   nodes: TreeNode[];
   onDeploy?: (path: string) => void;
 
-
+interface TreeProps {
+  nodes: TreeNode[];
+  onDeploy?: (path: string) => void;
 
 function NodeItem({
   node
   depth
   onDeploy
-=======
-;
-interface TreeProps {
-  nodes: TreeNode[];
-  on_deploy?: (path: string) => void;
-;
-function NodeItem ({
-  node,
-  depth,
-  on_deploy,
-}: {
-interface TreeProps {;
-  nodes: TreeNode[];
-  onDeploy?: (path: string) => void;
-function NodeItem(): any ({;
-  node,;
-  depth,;
-  onDeploy,;
-}: {;
-  node: TreeNode;
-  depth: number;
-
-import React, { useState } from "react";
-
-
-export interface TreeNode {
-
-
-  const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
-  const toggle = () => setOpen(v => !v);
-  const copyPath = async () => {;
-    await navigator && navigator.clipboard.writeText(node && node.path);  };
-export interface TreeNode {;
-  name: string,;
-  path: string,;
-  type: "folder" | "file",;
-
-=======
-
-  name: string,
-  path: string,
-  type: "folder" | "file",;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   exists?: boolean;
   children?: TreeNode[];
 }
@@ -149,7 +111,12 @@ function NodeItem(): any ({ node, depth, onDeploy }: { node: TreeNode, depth: nu
         ) : (
           <span className="inline-block w-4" />
         )}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           ))}
         </div>
       )}
@@ -227,7 +194,17 @@ export default Tree;
 }depth= {
   0
 }onDeploy= {
+  onDeploy
+}/>) )
+}</div>)
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  onDeploy 
+}/>) ) ;
+}</div>) ;
 
-}export default Tree;}
 export default Tree;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

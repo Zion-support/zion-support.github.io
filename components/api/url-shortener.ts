@@ -86,78 +86,26 @@ export default async function handler(
       error: 'Method not allowed',
     });
   }
-
-
+// Handle redirects for short URLs
+export async function getServerSideProps({
+  params
+}: {
+  params: { shortCode: string }
+}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
   params,
 }: {;
   params: { shortCode: string };
 }) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {;
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const shortCode = params.shortCode;
   const shortUrl = urlStorage.get(shortCode);
   if (!shortUrl |!shortUrl.isActive) {
-=======
-  params: { shortCode: string };
-}) {  const shortCode = params && params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
-  const shortCode = params && params.shortCode;
-  const shortUrl = urlStorage && urlStorage.get(shortCode);
-
-=======
-      data: urls as any
-    })
-  } else {
-    res.status(405).json({
-      success: false,
-      error: 'Method not allowed'
-    })
-  }
-}
-// Handle redirects for short URLs
-export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
-  const shortCode = params.shortCode;
-  const shortUrl = urlStorage.get(shortCode);
-  if (!shortUrl || !shortUrl.isActive) {
-    return {
-      notFound: true
-
-    };
-  }
-  if (!shortUrl || !shortUrl && shortUrl.isActive) {
-    return {
-      notFound: true,    };      notFound: true
-    }
-  }
-  // Increment click count
-
-  shortUrl && shortUrl.clicks++;
-  urlStorage && urlStorage.set(shortCode, shortUrl);
-
-  // Redirect to original URL
-  return {
-    redirect: {
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       permanent: false
     }
 }
-
-
-=======
-// Handle redirects for short URLs;
-export async /**
- * getServerSideProps - Function description
- */
-function getServerSideProps() {  const short_code = params.short_code;export async /**
- * getServerSideProps - Function description
- */
-function getServerSideProps() {
-  const short_code = params.short_code;
-  const short_url = url_storage.get (short_code);
-;
-  // Check condition
-if ( {) {
-  $2
 }
 =======
       console.error('URL shortening error:', error);
@@ -201,7 +149,6 @@ export async function getServerSideProps({
   return {
     redirect: {
 =======
-<<<<<<< HEAD
       destination: short_url.original_url,
       permanent: false,
     },
@@ -211,4 +158,7 @@ export async function getServerSideProps({
 }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

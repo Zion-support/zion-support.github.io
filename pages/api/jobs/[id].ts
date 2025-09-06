@@ -1,24 +1,29 @@
-
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../utils/db";
 import type { Job } from "../../../utils/types";
 import { rateLimit } from "../../../utils/rateLimit";
 import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
 const FILE = "jobs.json";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   if (!rateLimit(req, res)) return;
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
 
 
   if (idx === -1) {
-    res && res.status(404).json({ error: "Job not found" });
+    res.status(404).json({ error: "Job not found" });
+    return;
+  }
+  if (req.method === "GET") {
+    res.status(200).json({ job: jobs[idx] });
     return;
   }
 
@@ -34,9 +39,6 @@ const FILE = "jobs.json";
     res.status(200).json({ job: jobs[idx] });
     return
   }
-
-  if (req && req.method === "PATCH") {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const userEmail = getRequestUserEmail(req);
     const job = jobs[idx];
     const isOwner = userEmail && userEmail === job && job.clientEmail;
@@ -47,15 +49,79 @@ const FILE = "jobs.json";
     }
     const {
 
-      title,
-      description,
-      category,
-      required_skills,
-      budgetMinUsd,
-      budgetMaxUsd,
-      deliveryDeadlineIso,
-      status,
-
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'GET') {
+    res.status(200).json({ job: { id: req.query.id } });
+  } else if (req.method === 'PATCH') {
+    res.status(200).json({ message: 'Job updated' });
+  } else {
+    res.setHeader('Allow', ['GET', 'PATCH']);
+    res.status(405).end('Method Not Allowed');
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJsonFile, writeJsonFile } from '../../../utils/db';
+import type { Job } from '../../../utils/types';
+import { rateLimit } from '../../../utils/rateLimit';
+import { getRequestUserEmail, isAdminEmail } from '../../../utils/auth';
+const FILE = 'jobs.json';
+export default function handler(req, res) {
+  try {
+  if (!rateLimit(req, res)) return,;
+  const { id } = req.query;
+  const jobs = readJsonFile<Job[]>(FILE, []),;
+  const idx = jobs.findIndex((j) => j.id === id);
+  if (idx === -1) {;
+    res.status(404).json({ error: 'Job not found' });
+    return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  if (req.method === 'GET') {
+    res.status(200).json({ job: jobs[idx] });
+    return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  if (req.method === 'GET') {
+    const userEmail = getRequestUserEmail(req);
+    const job = jobs[idx];
+    const isOwner = userEmail && userEmail === job.clientEmail;
+    if (!isOwner && !isAdminEmail(userEmail)) {;
       res.status(403).json({ error: 'Forbidden' });
       return
     }
@@ -122,13 +188,50 @@ if (job.status = status as Job["status"]) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    const {
+      title,
+      description,
+      category,
+      requiredSkills,
+      budgetMinUsd,
+      budgetMaxUsd,
+      deliveryDeadlineIso,
+      status,
+    } = req.body || {};
+    if (typeof title === "string") job.title = title;
+    if (typeof description === "string") job.description = description;
+    if (typeof category === "string") job.category = category;
+    if (Array.isArray(requiredSkills))
+      job.requiredSkills = requiredSkills.map(String);
+    if (typeof budgetMinUsd === "number" || budgetMinUsd === null)
+      job.budgetMinUsd = budgetMinUsd ?? undefined;
+    if (typeof budgetMaxUsd === "number" || budgetMaxUsd === null)
+      job.budgetMaxUsd = budgetMaxUsd ?? undefined;
+    if (typeof deliveryDeadlineIso === "string" || deliveryDeadlineIso === null)
+      job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
+    if (typeof status === "string") job.status = status as Job["status"];
+
+    job.updatedAtIso = new Date().toISOString();
+    jobs[idx] = job;
+    writeJsonFile<Job[]>(FILE, jobs);
+
+    res.status(200).json({ job });
+    return;
+  }
+
+res.setHeader("Allow", "GET, PATCH");
+  res.status(405).end("Method Not Allowed");
+}
+}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

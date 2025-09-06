@@ -23,6 +23,30 @@ export function ZapierIntegration() {
     toast.success("API key copied to clipboard")
   },
 
+
+import React, { useState } from "react",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { toast } from "sonner",
+import { Check, Copy, ExternalLink } from "lucide-react",
+
+export function ZapierIntegration() {
+  const [copied, setCopied] = useState(false),
+  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R"),
+  
+  const handleCopyApiKey = () => {
+    navigator.clipboard.writeText(apiKey),
+    setCopied(true),
+    setTimeout(() => setCopied(false), 2000),
+    toast.success("API key copied to clipboard")
+  },
+  
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="space-y-6">
       <div className="grid md:grid-cols-3 gap-6">
@@ -41,9 +65,8 @@ export function ZapierIntegration() {
               to set up integrations.
             </p>
 
-=======
-
             
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -79,10 +102,6 @@ export function ZapierIntegration() {
           <CardContent>;
 
 
-        
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <Card>
           <CardHeader>
@@ -118,6 +137,8 @@ export function ZapierIntegration() {
       </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <Card>
         <CardHeader>
           <h3 className="text-lg font-semibold">Zapier Webhook Triggers</h3>
@@ -129,6 +150,8 @@ export function ZapierIntegration() {
           </p>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <div className="grid md: grid-cols-3 gap-4">
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Job Posted</h4>
@@ -141,6 +164,8 @@ export function ZapierIntegration() {
             </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Application</h4>
               <p className="text-xs text-muted-foreground mb-3">
@@ -152,6 +177,8 @@ export function ZapierIntegration() {
             </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">Contract Signed</h4>
               <p className="text-xs text-muted-foreground mb-3">
@@ -165,10 +192,58 @@ export function ZapierIntegration() {
         </CardContent>
       </Card>
     </div>
-
   );
 }
-;
+  )
+import React, { useState } from "react",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
+import { Input } from "@/components/ui/input",;
+import { toast } from "sonner",;
+import { Check, Copy, ExternalLink } from "lucide-react",;
+export function ZapierIntegration() {;
+  const [copied, setCopied] = useState(false),;
+  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R"),;
+  const handleCopyApiKey = () => {;
+    navigator.clipboard.writeText(apiKey),;
+    setCopied(true),;
+    setTimeout(() => setCopied(false), 2000);
+    toast.success("API key copied to clipboard");
+  };
+  return (;
+    <div className="space-y-6">;
+      <div className="grid md:grid-cols-3 gap-6">;
+        <Card className="md:col-span-2">;
+          <CardHeader>;
+            <div className="flex items-center justify-between">;
+              <h3 className="text-lg font-semibold">Zapier Connection</h3>;
+              <Badge variant="outline" className="bg-blue-100 text-blue-800">Active</Badge>;
+            </div>;
+          </CardHeader>;
+          <CardContent>;
+            <p className="text-sm text-muted-foreground mb-4">;
+              Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.;
+            </p>;
+            <div className="space - y-4">;
+              <div className="space - y-2">;
+                <label className="text - sm font - medium">Your Zion API Key</label>;
+                <div className="flex gap - 2">;
+                  <Input;
+                    value={api_key}
+                    read_only;
+                    className="font - mono text - sm";
+                  />;
+                  <Button;
+                    size="sm";
+                    variant="outline";
+                    on_click={handleCopyApiKey}
+                  >;
+                    {copied ? (
+                      <Check className="h - 4 w - 4" />) : (
+                      <Copy className="h - 4 w - 4" />)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   </Button>;
                 </div>;
               </div>;
@@ -267,10 +342,8 @@ export function ZapierIntegration() {
       </Card>;
 
     </div>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

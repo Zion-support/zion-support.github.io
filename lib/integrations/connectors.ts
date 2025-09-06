@@ -1,6 +1,9 @@
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+import { ProviderConnection, SyncLogEntry } from "./types";
+import { v4 as uuidv4 } from "uuid";
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
 async function mockProviderCall<T>(
@@ -26,6 +29,7 @@ export const crm = {
   async syncContact(
 
     return mockProviderCall(connection, "sync_contact", { contact });
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
   async addEmailTouchpoint(
     connection: ProviderConnection
@@ -59,6 +63,7 @@ export const email = {
 };
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   async createCandidate(
     connection: ProviderConnection,
@@ -67,6 +72,15 @@ export const email = {
     return executeProviderAction(connection, 'createCandidate', { candidate });
   },
 };
+<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+// Email actions
+export const email = {
+  async sendNotification(
+    connection: ProviderConnection,
+    notification: Record<string, any>
+  ) {
+    return executeProviderAction(connection, 'sendNotification', { notification });
+  },
+};
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

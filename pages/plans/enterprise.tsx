@@ -1,12 +1,14 @@
-
+import Link from 'next/link';
+import Link from 'next/link',;
 const features = [
-import Link from 'next / link',
-const features = [;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   { key: 'private_portal', label: 'Private hiring portal' },
   { key: 'dedicated_talent_pool', label: 'Dedicated talent pool' },
   { key: 'custom_sla', label: 'Custom SLA' },
   { key: 'branded_onboarding', label: 'Branded onboarding' },
   { key: 'admin_dashboards', label: 'Admin dashboards' }],
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const features = [
   { key: 'private_portal', label: 'Private hiring portal' }
@@ -72,26 +74,25 @@ export default function EnterprisePlans() {
               ))}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             </tbody>
           </table>
         </div>
       </section>
 
-=======
-
-      <section style={{ marginTop: '2rem', display: 'flex', gap: 16, alignItems: 'center' }}>
-        <div style={{ display: 'flex', gap: 8 }}>
-          <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SSL</span>
-          <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>ISO 27001</span>
-          <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SOC 2</span>
-        </div>
-        <div style={{ marginLeft: 'auto' }}>
-          <Link href="/enterprise/admin">Admin Dashboard</Link>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         </div>
       </section>
     </main>
-
+  );
+};
   )
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,6 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
+import {
+  createSessionCookie
+  validateCredentials;
+  createSessionCookie,;
+  validateCredentials,;
 } from '../../../utils/auth-utils';import { createSessionCookie, validateCredentials } from '../../../utils/auth-utils';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });
@@ -18,34 +23,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.setHeader('Set-Cookie', cookie);
   return res.status(200).json({ ok: true })
-
-  if (!result && result.ok || !result && result.role) {
-    return res && res.status(401).json({ error: 'Invalid credentials' });
-  }
-  const cookie = createSessionCookie({
-    email,
-    role: result && result.role,
-    twofaVerified: true,
-  });
-  res && res.setHeader('Set-Cookie', cookie);
-  return res && res.status(200).json({ ok: true });  const cookie = createSessionCookie({ email, role: result && result.role, twofaVerified: true });
-  res && res.setHeader('Set-Cookie', cookie);
-  return res && res.status(200).json({ ok: true })
 }
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-  createSessionCookie,
-  validate_credentials,
-} from '../../../utils / auth - utils';import { createSessionCookie, validate_credentials } from '../../../utils / auth - utils';
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
 }
     return res.status (405).json ({ error: 'Method not allowed' });
   }

@@ -4,7 +4,6 @@
 =======
 =======
 =======
-<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 #!/usr/bin/env node
 const fs = require('fs');
@@ -344,11 +343,6 @@ class BuildOptimizer {}
   log(message) {}
     const timestamp = new Date().toISOString();
 
-=======
-    const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
-    );
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

@@ -139,15 +139,15 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Structured Data */}
-      <script;
-        type="application / ld + json";
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{
 
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts && fonts.googleapis.com" />;
-      <link rel="preconnect" href="https://fonts && fonts.gstatic.com" crossOrigin="anonymous" />;
-      <link rel="preconnect" href="https://images && images.unsplash.com" />;
-    </Head>;
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://images.unsplash.com" />
+    </Head>
   );
 <<<<<<< HEAD
 

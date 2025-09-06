@@ -1,12 +1,23 @@
 
 import { Menu } from 'lucide-react'
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
   return (
     <nav className="sticky top-16 z-40 bg-card border-b border-border">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-12">
           <button
 
+=======
+            className="md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle navigation";
+            aria-expanded={open}
+<<<<<<< HEAD
+          >
+            <Menu className="h-6 w-6" />
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           </button>
           <ul className={`${open ? "flex" : "hidden"} flex-col gap-4 md:flex md:flex-row md:gap-8 w-full md:w-auto`}>
             <li>
@@ -19,7 +30,9 @@ import { Menu } from 'lucide-react'
               <Link href="#testimonials" className="text-sm font-medium hover:text-primary">Testimonials</Link>
             </li>
             <li>
+<<<<<<< HEAD
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
             </li>
           </ul>
@@ -40,6 +53,8 @@ export function EnterpriseStickyNav() {;
             onClick={() => setOpen(!open)}
             aria-label="Toggle navigation";
             aria-expanded={open}
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >;
             <Menu className="h-6 w-6" />;
           </button>;

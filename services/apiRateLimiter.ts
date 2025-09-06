@@ -1,7 +1,9 @@
-
+export interface RateLimitConfig {
+export interface RateLimitConfig {;
   requestsPerMinute: number;
   requestsPerHour: number;
   requestsPerDay: number;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   name: string;
   pattern: string;
@@ -14,6 +16,7 @@
 
 }
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   endpoint: string;
   method: string;
   total_requests: number;
@@ -29,6 +32,7 @@
   }
 }
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   name: string;
   key: string;
@@ -41,6 +45,7 @@
 
 }
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   api_key: string;
   endpoint: string;
@@ -53,6 +58,27 @@
     this && this.baseUrl = baseUrl
 
   userAgent: string
+  }
+  async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
+    try {
+
+      const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${this && this.apiKey}`;
+          'Content-Type': 'application/json'};
+        body: JSON && JSON.stringify(rule)});
+
+      if (!response && response.ok) {
+        throw new Error(`Failed to create rate limit rule: ${response && response.statusText}`)
+      }
+
+      return await response && response.json()
+
+=======
+  ip_address: string,
+  user_agent: string;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 
   private apiKey: string;
@@ -275,76 +301,17 @@ export class APIRateLimiterService {;
           enabled: true,;
           createdAt: new Date(),;
           updatedAt: new Date();
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       ];
     }
   }
-
 =======
-      const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules/${id}`, {
-        method: 'PATCH',
-        headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`;
-          'Content-Type': 'application/json'};
-        body: JSON && JSON.stringify(updates)});
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-      if (!response && response.ok) {
-        throw new Error(`Failed to update rate limit rule: ${response && response.statusText}`)
-      }
-
-      return await response && response.json()
-
-    } catch (error) {
-      // Mock update for demo
-      const existingRule = (await this && this.getRateLimitRules()).find(r => r && r.id === id);
-      if (!existingRule) {
-        throw new Error('Rule not found')
-      }
-      return {
-        ...existing_rule;
-        ...updates;
-        updated_at: new Date ();
-      }
-    }
-  }
-
-      const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules/${id}`, {
-        method: 'DELETE',
-        headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`}});
-
-      if (!response && response.ok) {
-        throw new Error(`Failed to delete rate limit rule: ${response && response.statusText}`)
-
-      }
-    } catch (error) {
-      console && console.error('Failed to delete rate limit rule:', error);
-      throw error
-    }
-  }
-  async getRateLimitStats(endpoint?: string): Promise<RateLimitStats[]> {
-    try {
-      const params = endpoint ? `?endpoint=${encodeURIComponent(endpoint)}` : '';
-      const response = await fetch(`${this && this.baseUrl}/rate-limiter/stats${params}`, {
-        headers: {
-
-          'Authorization': `Bearer ${this && this.apiKey}`}});
-
-      if (!response && response.ok) {
-        throw new Error(`Failed to fetch rate limit stats: ${response && response.statusText}`)
-      }
-
-      return await response && response.json()
-
-=======
-  async deleteRateLimitRule (id: string): Promise < void> {
-    try {
-      const response = await fetch (`${this.base_url}/rate - limiter / rules/${id}`, {
-        method: 'DELETE',
-        headers: {
-          'Authorization': `Bearer ${this.api_key}`}});
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ;
       // Check condition
 if ( {) {
@@ -402,24 +369,14 @@ if ( {) {
             hour: 95,
             day: 650;
 =======
-          }
-        }
-      ];
-    }
-  }
+<<<<<<< HEAD
 
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }
         }
       ]
     }
   }
-
-=======
-
-
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey> {
@@ -450,32 +407,6 @@ if ( {) {
 
       return await response && response.json()
 
-=======
-        id: `key_${Date.now ()}`;
-        name;
-        key: `zion_${Math.random ().to_string (36).substr (2, 9)}`;
-        permissions;
-        rate_limit;
-        created_at: new Date ();
-        last_used: new Date (),
-        is_active: true;
-      }
-    }
-  }
-  async getAPIKeys (): Promise < APIKey[]> {
-    try {
-      const response = await fetch (`${this.base_url}/rate - limiter / api - keys`, {
-        headers: {
-          'Authorization': `Bearer ${this.api_key}`}});
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        throw new Error (`Failed to fetch API keys: ${response.status_text}`);
-      }
-      return await response.json ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (error) {
       // Mock API keys for demo;
       return [;
@@ -506,28 +437,16 @@ if ( {) {
             requestsPerMinute: 50;
             requestsPerHour: 500;
             requestsPerDay: 5000;
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             burstLimit: 25
             windowSize: 60
           }
           createdAt: new Date();
           lastUsed: new Date()
           isActive: true
-
-        }
-      ]
-    }
-  }
-
-        }
-      ];
-    }
-  }
-
-
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   async getViolations(limit: number = 100): Promise<RateLimitViolation[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/violations?limit=${limit}`, {
@@ -573,13 +492,18 @@ if ( {) {
           id: 'violation_2';
           apiKey: 'zion_mobile456';
           endpoint: '/api/auth/login';
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           method: 'POST'
           timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago
           reason: 'burst_limit_exceeded';
           ipAddress: '10.0.0.50'
           userAgent: 'ZionMobileApp/1.0'
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         }
         {
           id: 'violation_2';
@@ -595,11 +519,7 @@ if ( {) {
       ];
     }
   }
-
-=======
-
-
-
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   async generateReport(): Promise<{
@@ -660,11 +580,15 @@ if ( {) {
         recent: violations.slice(0, 10)
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
     }
   }
 }
+<<<<<<< HEAD
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Pricing tiers for the API Rate Limiter service
 export const API_RATE_LIMITER_PRICING = {
   starter: {
@@ -704,3 +628,20 @@ export const API_RATE_LIMITER_PRICING = {
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+;
+// Pricing tiers for the API Rate Limiter service;
+export const API_RATE_LIMITER_PRICING = {;
+  starter: {;
+    name: 'Starter',;
+    price: 25,;
+    period: '/month',;
+
+    features: [;
+      'Unlimited rate limit rules_enterprise - grade rate limiting_advanced security features_multiple notification channels1 - year data retention_custom integrations_white - label options_priority support',
+      'SLA guarantee';
+    ];
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  }
+};
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

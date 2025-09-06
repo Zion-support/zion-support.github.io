@@ -1,5 +1,76 @@
 
+=======
+  class_name?: string;
+  placeholder?: 'blur' | 'shimmer' | 'color' | 'none' | 'empty';
+  placeholder_color?: string;
+  priority?: boolean;
+  quality?: number;
+  sizes?: string;
+  on_load?: () => void;
+  on_error?: () => void;
+  fallback_src?: string;
+  aspect_ratio?: string;
+  object_fit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale - down';
+  lazy?: boolean;
+  retry_count?: number;
+  showLoadingProgress?: boolean;
+  fill?: boolean;
+  blurDataURL?: string;
+  loading?: 'lazy' | 'eager';
+  style?: React.CSSProperties;
+  object_position?: string;
+export const OptimizedImage: React.FC < OptimizedImageProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  class_name,
+  placeholder = 'shimmer',
+  placeholder_color = '#f3f4f6',
+  priority = false,
+  quality = 75,
+  sizes,
+  on_load,
+  on_error,
+  fallback_src,
+  aspect_ratio,
+  object_fit = 'cover',
+  lazy = true,
+  retry_count = 3,
+  showLoadingProgress = false,
+  fill = false,
+  blurDataURL,
+  loading = 'lazy',
+  style,
+  object_position = 'center',
+  ...props;
+}) => {
+  const [isLoading, setIsLoading] = useState(true)
+  const [hasError, setHasError] = useState(false)
+  const [isInView, setIsInView] = useState(!lazy |priority)
+  const [currentSrc, setCurrentSrc] = useState(src)
+  const [retries, setRetries] = useState(0)
+  const [loadProgress, setLoadProgress] = useState(0)
+  const imgRef = useRef<HTMLImageElement>(null)
+  const observerRef = useRef<IntersectionObserver>()
+  const [metrics, setMetrics] = useState<ImageMetrics | null>(null)
+  const loadStartTime = useRef<number>(0)
+  // Intersection Observer for lazy loading
+  useEffect(() => {
+    if (!lazy |priority |isInView) return
+    observerRef.current = new IntersectionObserver(
+      entries => {
+        const [entry] = entries;        // Check condition
+if ( {) {
+  $2
+}
+          setIsInView (true);
+          observer_ref.current?.disconnect ();
 
+  useEffect(() => {;
+    if (!lazy || priority || isInView) return;
+    observerRef.current = new IntersectionObserver(;
+      entries => {;
         const [entry] = entries;        if (entry && entry.isIntersecting) {
           setIsInView(true)
           observerRef.current?.disconnect()
@@ -30,7 +101,6 @@
         const entries = list.getEntries()
         entries.forEach(entry => {          if (entry.name === src && entry.entryType === 'resource') {
             const resourceEntry = entry as PerformanceResourceTiming
-
               resourceEntry.responseEnd - resourceEntry.requestStart
             setMetrics({
               loadTime
@@ -158,6 +228,7 @@ if ( {) {
   // Simulate loading progress for demo purposes
   useEffect(() => {
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const interval = setInterval((,) => {
       setLoadProgress(prev => {
         if (prev >= 90) {
@@ -183,6 +254,12 @@ if ( {) {
               />
       )
 =======
+
+  loading?: 'lazy' | 'eager';
+  style?: React && React.CSSProperties;
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React, { useState, useRef, useEffect } from 'react',;
 import Image from 'next/image',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -387,10 +464,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
           style={{ backgroundColor: placeholderColor }}
         />;
       );
+=======
 
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
 
     return (
@@ -398,11 +477,25 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
         <ImageIcon className="h-8 w-8 text-gray-400" />
       </div>
     )
+  }
+      >;
+      <AnimatePresence>;
+
+  },
+
+  },
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   // Container styles
   const containerStyle: React.CSSProperties = {
     aspectRatio: aspectRatio || (width && height ? `${width}/${height}` : undefined),
     width: width ? `${width}px` : undefined,
+    height: height ? `${height}px` : undefined,
+  }
+      >
+      <AnimatePresence>
+    height: height ? `${height}px` : undefined},
 
     height: height ? `${height}px` : undefined},
 
@@ -438,70 +531,102 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
 
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
 
+=======
+
+
+            className="absolute inset-0"
+          >
+            {generatePlaceholder()}
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             {/* Loading progress */}
             {showLoadingProgress && isLoading && loadProgress > 0 && (
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-200">
                 <motion.div
-
-                  initial={{ width: 0 }}
-                  animate={{ width: `${loadProgress}%` }}
-                  transition={{ duration: 0.3 }}
-                />
-              </div>
-            )}
-          </motion.div>
-        )}
-        {/* Error state */}
-        {hasError && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-
           >
             <AlertTriangle className="h-8 w-8 mb-2" />
             <span className="text-sm">Failed to load image</span>
             {retries > 0 && (
+=======
+              <span className='text-xs mt-1'>Retried {retries} times</span>
+              <span className="text-xs mt-1">Retried {retries} times</span>
+<<<<<<< HEAD
 
             )}
           </motion.div>
         )}
         {/* Actual image */}
-
-            )}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: isLoading ? 0 : 1 }}
-            transition={{ duration: 0.3 }}
-          />
-        )}
-
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export const ImageGallery: React.FC<ImageGalleryProps> = ({
   images,
   columns = 3,
   aspectRatio = '16/9',
   className,
+  onImageClick,
+}) => {
+  const [loadedCount, setLoadedCount] = useState(0)
+  const handleImageLoad = () => {
+    setLoadedCount(prev => prev + 1)
+  }
+  onImageClick
+}) => {
+  const [loadedCount, setLoadedCount] = useState(0),
 
   onImageClick
 }) => {
   const [loadedCount, setLoadedCount] = useState(0),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  return (
+    <div className={cn('space-y-4', className)}>
+      <div className="flex justify-between items-center">
+        <h3 className="text-lg font-semibold">Gallery</h3>
+        <span className="text-sm text-muted-foreground">
+          {loadedCount}/{images.length} loaded
+        </span>
+      </div>
+      <div
+        className={`grid gap-4`}
+        style={{
+          gridTemplateColumns: `repeat(${columns}, 1fr)`,        }}
+      >
+        {images.map((image, index,) => (
+          <motion.div
+            key = {index,}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
+            className='group cursor-pointer'
+            onClick={() => onImageClick?.(index)}          >
+            <div className='relative'>
+      
+      <div 
+        className={`grid gap-4`}
+        style={{;
+          gridTemplateColumns: `repeat(${columns}, 1fr)`;
+        }}
+      >;
+        {images.map((image, index) => (;
+          <motion.div;
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
+            className="group cursor-pointer"
+            onClick={() => onImageClick?.(index)}
+          >
+            <div className="relative">
               <OptimizedImage
                 src={image.src}
                 alt={image.alt}
                 aspectRatio={aspectRatio}
-
-                </div>
-              />;
-
-              {image && image.caption && (;
-                <div className='absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg'>;
-                  <p className='text-sm'>{image && image.caption}</p>;
-                </div>;
-              )}
-            </div>
-          </motion.div>
-        ))}
-
     alt
       .split(' ')
       .map(n => n[0])
@@ -560,7 +685,206 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
       ) : (
         <div className='w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-semibold'>
 
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
           {initials}
         </div>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+},;
+};
+}
+
+
+    </div>;
+  );
+};
+
+
+
+        {(is_loading || !isInView) && !has_error && (
+          <motion.div;
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className='absolute inset - 0';
+          >;
+            {generate_placeholder ()}
+            {/* Loading progress */}
+            {showLoadingProgress && is_loading && load_progress > 0 && (
+              <div className='absolute bottom - 0 left - 0 right - 0 h - 1 bg - gray - 200'>;
+                <motion.div;
+                  className='h - full bg - blue - 500';
+                  initial={{ width: 0 }}
+                  animate={{ width: `${load_progress}%` }}
+                  transition={{ duration: 0.3 }}
+                />;
+              </div>)}
+          </motion.div>)}
+        {/* Error state */}
+        {has_error && (
+          <motion.div;
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className='absolute inset - 0 flex flex - col items - center justify - center bg - gray - 100 text - gray - 400';
+          >;
+            <AlertTriangle className='h - 8 w - 8 mb - 2' />;
+            <span className='text - sm'>Failed to load image</span>;
+            {retries > 0 && (
+              <span className='text - xs mt - 1'>Retried {retries} times</span>)}
+          </motion.div>)}
+        {/* Actual image */}
+        {isInView && !has_error && (
+          <motion.img;
+            src = {optimized_src, }
+            src_set = {src_set, }
+            alt = {alt, }
+            loading = {priority ? 'eager' : 'lazy', }
+            on_load = {handle_load, }
+            on_error = {handle_error, }
+            className={cn (
+              'w - full h - full transition - opacity duration - 300',
+              `object-${object_fit}`,
+              is_loading ? 'opacity - 0' : 'opacity - 100')}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: is_loading ? 0 : 1 }}
+            transition={{ duration: 0.3 }}
+          />)}
+      </AnimatePresence>;
+    </div>);
+}
+//Container styles;
+}> <AnimatePresence> {
+  /* Placeholder */;
+}{
+  (is_loading || !isInView) && !has_error && (<motion.div > {
+  generate_placeholder ();
+}/> </div>);
+}</motion.div>);
+}{
+  /* Error state */;
+}{
+  has_error && (<motion.div);
+}</motion.div>);
+}{
+  /* Actual image */;
+}{
+  isInView && !has_error && (<motion.img src= {
+  optimized_src;
+}src_set= {
+  src_set;
+}alt= {
+  alt;
+}loading= {';
+  priority ? 'eager' : 'lazy';
+}on_load= {
+  handle_load;
+}on_error= {
+  handle_error;
+}className= {';
+  cn ('w - full h - full transition - opacity duration - 300', `object-$ {
+  object_fit;
+}`;';
+is_loading ? 'opacity - 0' : 'opacity - 100');
+}initial= {
+  {
+  opacity: 0;
+export const ImageGallery: React.FC < ImageGalleryProps> = ({
+  images,
+  columns = 3,
+  aspect_ratio = '16 / 9',
+  class_name,
+  onImageClick,
+}) => {
+  const [loaded_count, setLoadedCount] = useState (0);
+  const handleImageLoad = () =>: any {
+    setLoadedCount (prev => prev + 1);
+  }
+  return (
+    <div className={cn ('space - y-4', class_name)}>;
+      <div className='flex justify - between items - center'>;
+        <h3 className='text - lg font - semibold'>Gallery</h3>;
+        <span className='text - sm text - muted - foreground'>;
+          {loaded_count}/{images.length} loaded;
+        </span>;
+      </div>;
+      <div;
+        className={`grid gap - 4`}
+        style={{
+          gridTemplateColumns: `repeat (${columns}, 1fr)`,        }}
+      >;
+        {images.map ((image, index, ) => (
+          <motion.div;
+            key = {index, }
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ delay: index * 0.1 }}
+            className='group cursor - pointer';
+            on_click={() => onImageClick?.(index)}          >;
+            <div className='relative'>;
+              <OptimizedImage;
+                src={image.src}
+                alt={image.alt}
+                aspect_ratio={aspect_ratio}
+                className='rounded - lg group - hover:scale - 105 transition - transform duration - 300';
+                on_load={handleImageLoad}                priority={index < 3} // Prioritize first 3 images;
+              />;
+              {image.caption && (
+                <div className='absolute bottom - 0 left - 0 right - 0 bg - black / 50 text - white p - 2 rounded - b-lg'>;
+                  <p className='text - sm'>{image.caption}</p>;
+                </div>)}
+            </div>;
+          </motion.div>))}
+      </div>;
+    </div>);
+}
+//Gallery component with optimized loading </span> </div> <div className= {
+  `grid gap - 4`;
+}style= {
+  {
+  gridTemplateColumns: `repeat ($ {
+  columns;
+}, 1fr) `;
+export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({
+  src,
+  alt,
+  size = 'md',
+  fallback,
+  class_name,
+}) => {  const size_classes = {
+    sm: 'h - 8 w - 8',
+    md: 'h - 10 w - 10',
+    lg: 'h - 12 w - 12',
+    xl: 'h - 16 w - 16',
+  }
+  const initials =;
+    fallback ||;
+    alt;
+      .split (' ');
+      .map (number => n[0]);
+      .join ('');
+      .toUpperCase ();
+      .slice (0, 2);
+    >;
+      {src ? (
+        <OptimizedImage;
+          src={src}
+          alt={alt}
+          aspect_ratio='1 / 1';
+          object_fit='cover';
+          fallback_src={`https://ui - avatars.com / api/?name=${encodeURIComponent (initials)}&background = random`}
+          placeholder='color';
+          placeholder_color='#f3f4f6';
+          priority={true}
+          className='rounded - full'        />) : (
+        <div className='w - full h - full bg - gradient - to - br from - blue - 400 to - purple - 500 flex items - center justify - center text - white font - semibold'>;
+          {initials}
+        </div>)}
+    </div>);
+}
+},
+},
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

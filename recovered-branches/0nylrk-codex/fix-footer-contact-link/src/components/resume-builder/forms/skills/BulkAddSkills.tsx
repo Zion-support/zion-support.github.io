@@ -1,7 +1,7 @@
 
 
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Loader2, Sparkles} from 'lucide-react';
@@ -76,134 +76,39 @@ if ( {) {
         } catch (err) {
           setError('Failed to parse categorized skills. Please try again.')
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       }
     } catch (err: any) {;
       setError(err && err.message || 'Failed to categorize skills');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
+  }
+  },
+  };
+  },
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="bg-muted/40 p-6 rounded-lg">
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
       <div className="space-y-4">
         <div className="space-y-2">
           <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>
-
+          <Textarea
+          <Textarea 
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
             value={bulkSkills}
             onChange={(e) => setBulkSkills(e.target.value)}
           />
         </div>
-
-          onClick={handleCategorizeSkills}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return (
-
-    <div className="bg-muted/40 p-6 rounded-lg">;
-      <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>;
-      <div className="space-y-4">;
-        <div className="space-y-2">;
-          <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>;
-
-          <Textarea
-=======
-
-          <Textarea 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            className="min-h-24"
-            placeholder="Python, React, TypeScript, Project Management, Communication..."
-            value={bulkSkills}
-
-
+        <Button
         <Button 
-
           onClick={handleCategorizeSkills}
-
+          disabled={isEnhancing |!bulkSkills.trim()}
           disabled={isEnhancing || !bulkSkills.trim()}
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-          className="gap-2"
-        >
-          {isEnhancing ? (
-            <Loader2 className="h-4 w-4 animate-spin" />
-          ) : (
-            <Sparkles className="h-4 w-4" />
-          )}
-          Categorize with AI
-        </Button>
-        <p className="text-xs text-muted-foreground mt-1">
-          AI will identify skills and categorize them automatically. This may take a moment to process.
-        </p>
-        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-      </div>
-    </div>
-  )
-=======
-
-            onChange={(e) => setBulkSkills(e && e.target.value)}
-          />;
-        </div>;
-
-        <Button
-          onClick={handleCategorizeSkills}
-          disabled={isEnhancing || !bulkSkills && bulkSkills.trim()}
-          className="gap-2">;
-          {isEnhancing ? (;
-            <Loader2 className="h-4 w-4 animate-spin" />;
-          ) : (;
-            <Sparkles className="h-4 w-4" />;
-          )}
-          Categorize with AI;
-        </Button>;
-
-        <p className="text-xs text-muted-foreground mt-1">;
-          AI will identify skills and categorize them automatically. This may take a moment to process.;
-        </p>;
-
-        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-      </div>;
-    </div>;
-  );
-=======
-      set_error (err.message || 'Failed to categorize skills');
-    }
-  }
-;
-  return (
-    <div className="bg - muted / 40 p - 6 rounded - lg">;
-      <h3 className="text - md font - medium mb - 4">Bulk Add & AI Categorization</h3>;
-      <div className="space - y-4">;
-        <div className="space - y-2">;
-          <label className="text - sm font - medium">Enter multiple skills (comma separated)</label>;
-          <Textarea;
-            className="min - h-24";
-            placeholder="Python, React, TypeScript, Project Management, Communication...";
-            value={bulk_skills}
-            on_change={(e) => setBulkSkills (e.target.value)}
-          />;
-        </div>;
-        <Button;
-          on_click={handleCategorizeSkills}
-          disabled={is_enhancing || !bulk_skills.trim ()}
-          className="gap - 2";
-        >;
-          {is_enhancing ? (
-            <Loader2 className="h - 4 w - 4 animate - spin" />) : (
-            <Sparkles className="h - 4 w - 4" />)}
-          Categorize with AI;
-        </Button>;
-        <p className="text - xs text - muted - foreground mt - 1">;
-          AI will identify skills and categorize them automatically. This may take a moment to process.;
-        </p>;
-        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-      </div>;
-    </div>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

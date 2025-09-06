@@ -65,17 +65,7 @@ export function ResumeWizard() {
       </div>
     )
   }
-
-  if (error) {
-    return (
-      <Alert variant="destructive" className="mb-6">
-        <AlertCircle className="h-4 w-4" />
-        <AlertTitle>Error</AlertTitle>
-        <AlertDescription>{error}</AlertDescription>
-      </Alert>
-    )
-  }
-
+  
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
   }
@@ -96,27 +86,6 @@ export function ResumeWizard() {
     );
   }
 
-=======
-
-
-  
-
-;
-  if (!resume && !showNewResumeForm) {;
-    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
-  }
-;
-  if (showNewResumeForm) {;
-    return (;
-      <CreateResumeForm;
-        onCreateResume={handleCreateNewResume}
-        onCancel={() => setShowNewResumeForm(false)}
-        isLoading={isLoading}
-      />;
-    );
-  }
-  
-
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
@@ -135,22 +104,6 @@ export function ResumeWizard() {
           </Button>
         </div>
       </div>
-
-      <Card>
-        <CardContent className="pt-6">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-            <h2 className="text-xl font-semibold">{resume?.basic_info?.title |'My Resume'}</h2>
-            <ResumeProgress resume={resume} progress={progress} />
-          </div>
-
-<<<<<<< HEAD
-          <Tabs value={activeTab} onValueChange={setActiveTab}>
-            <ResumeSteps
-              steps = {RESUME_STEPS,}
-              activeTab = {activeTab,}
-              onChange = {setActiveTab,}
-            />
-
                 activeTab = {activeTab,}
                 resume = {resume as Resume,}
                 onNextStep = {nextStep,}

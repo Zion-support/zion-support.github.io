@@ -85,8 +85,14 @@ export function ContactSection() {
       headers: { "Content-Type": "application/json" }
       body: JSON.stringify(formData)})
       .then(async (res) => {
-
-=======
+        setIsSubmitting(false)
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({}));          throw new Error(data.error |"Failed to send message")
+        }
+        toast({
+          title: "Message Sent"
+          description: "We've received your message and will get back to you soon."})
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           const data = await res.json().catch(() => ({}));          throw new Error(data.error || "Failed to send message")
         setIsSubmitting(false),
         if (!res.ok) {
@@ -94,26 +100,47 @@ export function ContactSection() {
           throw new Error(data.error || "Failed to send message")
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+        setSubmitted(true)
+        setTimeout(() => setSubmitted(false), 2000)
+        setFormData({ name: "", email: "", subject: "", message: "" })
+      })
+      .catch((err) => {
+        setIsSubmitting(false);        toast({
+          title: "Submission Error"
+          description: err.message
+          variant: "destructive"})
+      })
+  }
+        setIsSubmitting(false),
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({})),
+          throw new Error(data.error || "Failed to send message")
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         }
         toast({
           title: "Message Sent",
           description: "We've received your message and will get back to you soon."}),
 
-        setSubmitted(true),
-        setTimeout(() => setSubmitted(false), 2000),
-        setFormData({ name: "", email: "", subject: "", message: "" })
-      })
-      .catch((err) => {
-        setIsSubmitting(false),
-        toast({
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
           title: "Submission Error",
           description: err.message,
           variant: "destructive"})
       })
+  }
+  },
+
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   },
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <section className="py-20 bg-zion-blue" id="contact">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -202,6 +229,7 @@ export function ContactSection() {
                     id="message"
                     name="message"
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                     required
                   />
@@ -213,6 +241,13 @@ export function ContactSection() {
                   <Button
                     type="submit"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+=======
+                    disabled = {isSubmitting,}
+                  >
+                    disabled={isSubmitting}
+                  >;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>

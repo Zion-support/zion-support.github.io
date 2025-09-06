@@ -1,8 +1,10 @@
-
+export interface ContentGenerationRequest {
+export interface ContentGenerationRequest {;
   type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description';
   topic: string;
   tone: 'professional' | 'casual' | 'friendly' | 'formal';
   length: 'short' | 'medium' | 'long';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   content: string;
   word_count: number;
   seo_score: number;
@@ -17,6 +19,7 @@
   }
 }
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   name: string;
   description: string;
@@ -28,14 +31,68 @@
 
   price: number
 }
-
-  private apiKey: string;
-
-  private baseUrl: string
-  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
-    this.apiKey = apiKey
-    this.baseUrl = baseUrl
-
+  }
+  async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {
+    try {
+      // In a real implementation, this would call OpenAI, Claude, or similar API
+      const response = await fetch(`${this.baseUrl}/content/generate`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`;
+          'Content-Type': 'application/json'}
+        body: JSON.stringify(request)});
+      if (!response.ok) {
+        throw new Error(`Content generation failed: ${response.statusText}`)
+export interface ContentGenerationRequest {;
+  type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description',;
+  topic: string,;
+  tone: 'professional' | 'casual' | 'friendly' | 'formal',;
+  length: 'short' | 'medium' | 'long',;
+  keywords?: string[],;
+  targetAudience?: string;
+}
+;
+export interface ContentGenerationResponse {;
+  content: string,;
+  wordCount: number,;
+  seoScore: number,;
+  readabilityScore: number,;
+  suggestions: string[],;
+  metadata: {;
+    title: string,;
+    description: string,;
+    tags: string[];
+  }
+}
+;
+export interface ContentTemplate {;
+  id: string,;
+  name: string,;
+  description: string,;
+  type: string,;
+  preview: string,;
+  price: number;
+}
+;
+export class AIContentGeneratorService {;
+  private apiKey: string,;
+  private baseUrl: string,;
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {;
+    this.apiKey = apiKey,;
+    this.baseUrl = baseUrl;
+  }
+;
+  async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {;
+    try {;
+      // In a real implementation, this would call OpenAI, Claude, or similar API;
+      const response = await fetch(`${this.baseUrl}/content/generate`, {;
+        method: 'POST',;
+        headers: {;
+          'Authorization': `Bearer ${this.apiKey}`,;
+          'Content-Type': 'application/json'},;
+        body: JSON.stringify(request)}),;
+      if (!response.ok) {;
+        throw new Error(`Content generation failed: ${response.statusText}`);
       }
       return await response.json()
 =======
@@ -57,11 +114,6 @@
       return this && this.generateMockContent(request)
     }
   }
-
-=======
-
-
-
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   async getTemplates(): Promise<ContentTemplate[]> {
@@ -105,12 +157,17 @@
         preview: 'Turn visitors into customers with compelling copy...'
         price: 59
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
     ];
   }
   private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
     const mockContent = `# ${request.topic}
 
+=======
+  private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
+    const mockContent = `# ${request.topic}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.
 ## Key Points
 - Point 1: ${request.topic} is essential for modern businesses
@@ -156,6 +213,27 @@ ${request && request.topic} represents a significant opportunity for organizatio
     keywordDensity: Record<string, number>
   }> {
     // Mock content analysis
+=======
+    return {
+      seoScore: Math.floor(Math.random() * 30) + 70;
+      readabilityScore: Math.floor(Math.random() * 30) + 70;
+      suggestions: [
+        'Add more headings for better structureInclude internal links to related contentOptimize meta description'
+      ];
+      keywordDensity: {
+        'content': 2.1;
+        'seo': 1.8
+        'marketing': 1.5
+;
+This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.;
+## Key Points;
+- Point 1: ${request.topic} is essential for modern businesses;
+- Point 2: Implementing ${request.topic} can improve efficiency;
+- Point 3: Best practices for ${request.topic} implementation;
+## Conclusion;
+${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     return {
       seoScore: Math.floor(Math.random() * 30) + 70;
       readabilityScore: Math.floor(Math.random() * 30) + 70;
@@ -175,17 +253,6 @@ ${request && request.topic} represents a significant opportunity for organizatio
         'marketing': 1 && 1.5
 
 =======
-      seo_score: Math.floor (Math.random () * 30) + 70;
-      readability_score: Math.floor (Math.random () * 30) + 70;
-      suggestions: [;
-        'Add more headings for better structure_include internal links to related content_optimize meta description';
-      ];
-      keyword_density: {
-        'content': 2.1;
-        'seo': 1.8,
-        'marketing': 1.5;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     return {;
       seoScore: Math.floor(Math.random() * 30) + 70,;
       readabilityScore: Math.floor(Math.random() * 30) + 70,;
@@ -196,6 +263,7 @@ ${request && request.topic} represents a significant opportunity for organizatio
         'content': 2.1,;
         'seo': 1.8,;
         'marketing': 1.5;
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -205,13 +273,10 @@ ${request && request.topic} represents a significant opportunity for organizatio
     }
   }
 }
+<<<<<<< HEAD
 
-=======
-
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+// Pricing tiers for the AI Content Generator
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Pricing tiers for the AI Content Generator
 export const AI_CONTENT_PRICING = {
   starter: {
@@ -237,10 +302,13 @@ export const AI_CONTENT_PRICING = {
   enterprise: {
     name: 'Enterprise';
     price: 299;
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     period: '/month'
     features: [
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
     ]
+<<<<<<< HEAD
 
   }
 };
@@ -249,3 +317,36 @@ export const AI_CONTENT_PRICING = {
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+;
+// Pricing tiers for the AI Content Generator;
+export const AI_CONTENT_PRICING = {;
+  starter: {;
+    name: 'Starter',;
+    price: 29,;
+    period: '/month',;
+
+    features: [;
+      'Unlimited content generations_custom templates_advanced analytics_dedicated support_highest quality_white - label options_custom integrationsSLA guarantee';
+    ];
+
+  },;
+  professional: {;
+    name: 'Professional',;
+    price: 99,;
+    period: '/month',;
+    features: [;
+      '500 content generations per monthPremium templatesAdvanced SEO analysisPriority supportHigh quality outputCustom brandingAPI access';
+    ];
+  },;
+  enterprise: {;
+    name: 'Enterprise',;
+    price: 299,;
+    period: '/month',;
+    features: [;
+      'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee';
+    ];
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  }
+};
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

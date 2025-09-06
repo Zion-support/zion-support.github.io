@@ -15,10 +15,8 @@
 // Type declarations for global augmentation
 declare global {
 
-  var __awaiter: any
-// CRITICAL: Self polyfill - must be first
 
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   var __awaiter: any
 }
 
@@ -183,18 +181,6 @@ function __extends_helper() {
           Object.prototype.propertyIsEnumerable.call(s, symbol)
         )
 
-          t[symbol] = s[symbol]
-      }
-    }
-    return t
-
-  __decorate: function (
-    decorators: any[]
-    target: any
-    key?: string | symbol
-    desc?: any
-  ) {
-    let c = arguments.length
       r =
         c < 3
           ? target
@@ -215,10 +201,69 @@ function __extends_helper() {
           r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) |r
     return (c > 3 && r && key && Object.defineProperty(target, key, r), r)
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   },
 
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
 
+    function adopt(value: any) {
+      return value instanceof P
+        ? value
+        : new P(function (resolve: any) {
+            resolve(value)
+          })
+    }
+    return new (P |(P = Promise))(function (resolve: any, reject: any) {
+      function fulfilled(value: any) {
+        try {
+
+          step(generator && generator.next(value));
+
+    );
+  })(),
+  __rest: function (string: any, e: string[]) {
+    let t: any = {}
+    for (let p in s);
+      if (&& e.index_of (p) < 0)) {
+  $2
+}
+//CRITICAL: Webpack chunk array polyfill if (typeof b !== "function" && b !== null) throw new TypeError ("Class extends value " + String (b) + "is not a constructor or null")
+}return t
+}
+}
+awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {
+  function adopt (value: any) {
+  return value instanceof P ? value : new P (function (resolve: any) {
+  resolve (value)
+})
+}return new (P |(P = Promise) ) (function (resolve: any, reject: any) {
+  step ( (generator = generator.apply (thisArg, arguments |[]) ) .next () )
+})
+// Error prevention for common webpack issues
+try {
+  // Prevent webpack chunk loading errors
+  if (
+    selfRef.webpackChunk_N_E &&
+    typeof selfRef.webpackChunk_N_E.push === 'function'
+  ) {
+    const originalPush = selfRef.webpackChunk_N_E.push
+    selfRef.webpackChunk_N_E.push = function (chunk: any) {
+      try {
+        return originalPush.call(this, chunk)
+      } catch (error) {
+        console.warn('Webpack chunk loading error prevented:', error)
+        return 0
+  },
+  
+  __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {
+    let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d,
+    if (typeof Reflect === "object" && typeof (Reflect as any).decorate === "function") r = (Reflect as any).decorate(decorators, target, key, desc),
+    else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r,
+    return c > 3 && r && key && Object.defineProperty(target, key, r), r
+  },
+  
+  __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     function adopt(value: any) { return value instanceof P ? value : new P(function (resolve: any) { resolve(value) }) }
     return new (P || (P = Promise))(function (resolve: any, reject: any) {
       function fulfilled(value: any) { try { step(generator.next(value)) } catch (e) { reject(e) } }
@@ -236,6 +281,7 @@ function __extends_helper() {
       for (let i = 0, i < symbols.length, i++) {;
         const symbol = symbols[i],;
         if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol));
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           t[symbol] = s[symbol];
       }
     }
@@ -254,6 +300,62 @@ function __extends_helper() {
       function rejected(value: any) { try { step(generator["throw"](value)) } catch (e) { reject(e) } }
       function step(result: any) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected) }
       step((generator = generator.apply(thisArg, _arguments || [])).next());
+    );
+      r = (Reflect as any).decorate (decorators, target, key, desc);
+    else;
+      for (let index = decorators.length - 1; i >= 0; i--);
+        if ()) {
+  $2
+}
+          r = (c < 3 ? d (r) : c > 3 ? d (target, key, r) : d (target, key)) || r;
+    return (c > 3 && r && key && Object.define_property (target, key, r), r);
+  },
+  __awaiter: function (this_arg: any, _arguments: any, P: any, generator: any) {
+    /**
+ * adopt - Function description
+ */
+function adopt() {
+      return value instanceof P;
+        ? value;
+        : new P (function (resolve: any) {
+            resolve (value);
+          });
+    }
+    return new (P || (P = Promise))(function (resolve: any, reject: any) {
+      /**
+ * fulfilled - Function description
+ */
+function fulfilled() {
+        try {
+          step (generator.next (value));
+        } catch (e) {
+          reject(e)
+        }
+      }
+      function rejected(value: any) {
+        try {
+          step(generator['throw'](value))
+        } catch (e) {
+          reject(e)
+        }
+      }
+
+        result && result.done
+          ? resolve(result && result.value)
+          : adopt(result && result.value).then(fulfilled, rejected);
+      }
+      step((generator = generator && generator.apply(thisArg, _arguments || [])).next());
+
+      /**
+ * step - Function description
+ */
+function step() {
+        result.done;
+          ? resolve (result.value);
+          : adopt (result.value).then (fulfilled, rejected);
+      }
+      step ((generator = generator.apply (this_arg, _arguments || [])).next ());
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     });
   }
 },;
@@ -301,9 +403,7 @@ if (typeof window !== 'undefined') {;
     }
   }
 
-=======
-  const originalOnUnhandledRejection = window.onunhandledrejection
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Export a verification function for testing
 export const verifyPolyfills = () => {
   const checks = {
@@ -341,3 +441,5 @@ if (process.env.NODE_ENV === 'development') {;
 }
 
 export default {}, // Ensure this can be imported as a module;
+export default {}, // Ensure this can be imported as a module;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,3 +1,4 @@
+=======
 
 import React from "react",
 import { useForm } from "react-hook-form",
@@ -5,14 +6,6 @@ import { zodResolver } from "@hookform/resolvers/zod",
 import z from "zod",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
-
-  FormMessage} from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-
 // Define the form schema with zod
 
 const productSchema = z.object({
@@ -48,6 +41,34 @@ const productSchema = z.object({
       return
     }
 
+=======
+  // Apply AI-generated content to the form
+  const handleApplyGenerated = (content: any) => {
+    form.setValue("description", content.description),
+    form.setValue("tags", content.tags.join(", ")),
+    
+    // Set a default price as the middle of the suggested range
+    const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2),
+    form.setValue("price", averagePrice),
+    
+    // Switch to the manual tab to show applied content
+    setActiveTab("manual")
+  },
+
+  // Handle form submission
+  const onSubmit = async (values: ProductFormValues) => {
+    if (!user) {
+      toast({
+        title: "Authentication Required"
+        description: "You must be logged in to publish products"
+        variant: "destructive"})
+      return
+    }
+    setIsSubmitting(true);
+
+    setIsSubmitting(true),
+    
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     try {
       // Create the product listing
       const productData = {
@@ -65,6 +86,7 @@ const productSchema = z.object({
         .from('product_listings')
         .insert([productData])
         .select('id')
+<<<<<<< HEAD
 
       }
       // If we have an image, upload it
@@ -133,6 +155,7 @@ export function ProductSubmissionForm() {;
   const [activeTab, setActiveTab] = React.useState("manual"),;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // Initialize the form;
   const form = useForm<ProductFormValues>({;
     resolver: zodResolver(productSchema),;
@@ -222,6 +245,7 @@ export function ProductSubmissionForm() {;
         if (updateError) {;
           throw new Error(updateError.message);
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       }
 
@@ -314,56 +338,6 @@ export function ProductSubmissionForm() {;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
 
-=======
-            <FormField
-              control={form.control}
-              name="title"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Product Title</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Enter product title" {...field} />
-                  </FormControl>
-                  <FormDescription>
-                    Create a compelling title that describes your product
-                  </FormDescription>
-                  <FormMessage />
-                </FormItem>
-
-=======
-;
-      // Show success message;
-      toast({;
-        title: "Product Published!",;
-        description: "Your product has been successfully published on Zion."}),;
-      // Redirect to product page;
-      navigate(`/marketplace/listing/${productRecord.id}`);
-    } catch (error) {;
-      toast({;
-        title: "Publication Failed",;
-        description: error instanceof Error ? error.message : "An unknown error occurred",;
-        variant: "destructive"});
-    } finally {;
-      setIsSubmitting(false);
-    }
-  };
-  return (;
-
-    <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
-      <TabsList className="grid grid-cols-2 mb-6">;
-        <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">;
-          Manual Creation;
-        </TabsTrigger>;
-        <TabsTrigger value="ai" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">;
-          <Sparkles className="h-4 w-4 mr-2" />;
-          AI-Powered Creation;
-        </TabsTrigger>;
-      </TabsList>;
-
-      <TabsContent value="manual">;
-        <Form {...form}>;
-          <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <FormField
               control={form && form.control}
               name="title"
@@ -379,6 +353,7 @@ export function ProductSubmissionForm() {;
                   <FormMessage />;
 
                 </FormItem>;
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -400,74 +375,6 @@ export function ProductSubmissionForm() {;
                       placeholder="Describe your product in detail..." 
                       className="min-h-32" 
                       {...field} 
-=======
-                </FormItem>)}
-            />;
-            <FormField;
-              control={form.control}
-              name="description";
-              render={({ field }) => (
-                <FormItem>;
-                  <FormLabel > Description</FormLabel>;
-                  <FormControl>;
-                    <Textarea;
-                      placeholder="Describe your product in detail...";
-                      className="min - h-32";
-                      {...field}
-
-                    />;
-                  </FormControl>;
-                  <FormDescription>;
-                    Provide a detailed description of what you're offering;
-                  </FormDescription>;
-                  <FormMessage />;
-
-                </FormItem>)}
-            />;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
-              <FormField;
-                control={form.control}
-                name="price";
-                render={({ field }) => (
-                  <FormItem>;
-                    <FormLabel > Price (USD)</FormLabel>;
-                    <FormControl>;
-                      <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;
-
-                    </FormControl>;
-                    <FormDescription>;
-                      Set your price in USD;
-                    </FormDescription>;
-                    <FormMessage />;
-
-              />;
-
-
-              <FormField
-                control={form && form.control}
-                name="category"
-                render={({ field }) => (;
-                  <FormItem>;
-                    <FormLabel>Category</FormLabel>;
-                    <FormControl>;
-                      <select
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-                        {...field}>;
-=======
-                  </FormItem>)}
-              />;
-              <FormField;
-                control={form.control}
-                name="category";
-                render={({ field }) => (
-                  <FormItem>;
-                    <FormLabel > Category</FormLabel>;
-                    <FormControl>;
-                      <select;
-                        className="flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - base ring - offset - background placeholder:text - muted - foreground focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50 md:text - sm";
-                        {...field}
-                      >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         <option value="">Select a category</option>;
                         <option value="digital_product">Digital Product</option>;
                         <option value="service">Service</option>;

@@ -1,4 +1,33 @@
 
+=======
+import {useState} from "react";
+import {useParams} from "react-router-dom";
+import {AppHeader} from "@/layout/AppHeader";
+import {Footer} from "@/components/Footer";
+import {KanbanBoard} from "@/components/hiring-tracker/KanbanBoard";
+import {HiringAnalytics} from "@/components/hiring-tracker/HiringAnalytics";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {SEO} from "@/components/SEO";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {Briefcase} from "lucide-react";
+function HiringTrackerContent() {
+  const { jobId } = useParams() as { jobId?: string }
+  const [activeTab, setActiveTab] = useState<string>("kanban");
+import { useState } from "react",
+import { useParams } from "react-router-dom",
+import { AppHeader } from "@/layout/AppHeader",
+import { Footer } from "@/components/Footer",
+import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",
+import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { Briefcase } from "lucide-react",
+function HiringTrackerContent() {
+  const { jobId } = useParams() as { jobId?: string },
+  const [activeTab, setActiveTab] = useState<string>("kanban"),
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <>
@@ -35,13 +64,11 @@
       <Footer />
     </>
   )
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
-=======
-
-
-=======
 import { useState } from "react",;
 import { useParams } from "react-router-dom",;
 import { AppHeader } from "@/layout/AppHeader",;
@@ -94,26 +121,16 @@ function HiringTrackerContent() {;
       <Footer />;
     </>;
   );
-
-import { useState } from './react';
-import { use_params } from './react-router-dom';
-import { AppHeader } from '@/layout / AppHeader';
-import { Footer } from '@/components / Footer';
-import { KanbanBoard } from '@/components / hiring - tracker / KanbanBoard';
-import { HiringAnalytics } from '@/components / hiring - tracker / HiringAnalytics';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { SEO } from '@/components / SEO';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-import { Briefcase } from './lucide-react';
-/**
- * HiringTrackerContent - Function description
- */
-function HiringTrackerContent() {
-  const { job_id } = use_params () as { job_id?: string }
-  const [active_tab, setActiveTab] = useState < string>("kanban");
-=======
-
-
+}
+;
+export default function HiringTracker() {;
+  return (;
+    <ProtectedRoute>;
+      <HiringTrackerContent />;
+    </ProtectedRoute>;
+  );
+}
+;
 }
 
 export default function HiringTracker() {
@@ -125,6 +142,7 @@ export default function HiringTracker() {
 }
 
 ;
+=======
   return (
     <>;
       <SEO;
@@ -170,4 +188,5 @@ function HiringTracker() {
     </ProtectedRoute>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

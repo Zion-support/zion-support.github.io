@@ -18,7 +18,11 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import { useEffect, useMemo, useState } from 'react';
+import { useRouter } from 'next/router';
+import { TALENT_PROFILES } from '../data/talent';
+export default function RequestToHirePage() {
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
   const selected = useMemo(
@@ -39,95 +43,6 @@ import { useEffect, useMemo, useState } from 'react';
       setError(err.message |'Something went wrong')
     } finally {
       setSubmitting(false)
-=======
-
-    }
-  }
-  if (result) {;
-    return (
-      <div className='max-w-xl mx-auto py-12'>;
-        <h1 className='text-2xl font-semibold mb-2'>Thanks!</h1>;
-        <p className='text-gray-600 mb-4'>;
-          We received your request. We will notify the appropriate team.;
-        </p>;
-        <div className='text-sm text-gray-500'>;
-          Confirmation ID: {result && result.id}
-        </div>;
-      </div>;
-    );
-  }
-  return (
-    <div className='max-w-xl mx-auto'>;
-      <h1 className='text-2xl font-semibold mb-4'>;
-        Request to Hire{selected ? ` — ${selected && selected.name}` : ''}
-      </h1>;
-      <form className='space-y-4' onSubmit={onSubmit}>;
-        <div>;
-          <label className='block text-sm font-medium mb-1'>Your Name</label>;
-          <input
-            className='w-full border rounded px-3 py-2'
-            value={form && form.name}
-            onChange={e => setForm({ ...form, name: e && e.target.value })}
-          />;
-        </div>;
-        <div>;
-          <label className='block text-sm font-medium mb-1'>Email</label>;
-          <input
-            type='email'
-            className='w-full border rounded px-3 py-2'
-            value={form && form.email}
-            onChange={e => setForm({ ...form, email: e && e.target.value })}
-          />;
-        </div>;
-        <div>;
-          <label className='block text-sm font-medium mb-1'>Budget (USD)</label>;
-          <input
-            className='w-full border rounded px-3 py-2'
-            placeholder='$5,000'
-            value={form && form.budget}
-            onChange={e => setForm({ ...form, budget: e && e.target.value })}
-          />;
-        </div>;
-        <div>;
-          <label className='block text-sm font-medium mb-1'>Timeline</label>;
-          <input
-            className='w-full border rounded px-3 py-2'
-            placeholder='2-3 months'
-            value={form && form.timeline}
-            onChange={e => setForm({ ...form, timeline: e && e.target.value })}
-          />;
-        </div>;
-        <div>;
-          <label className='block text-sm font-medium mb-1'>;
-            Project Description;
-          </label>;
-          <textarea
-            className='w-full border rounded px-3 py-2'
-            rows={5}
-            value={form && form.description}
-            onChange={e => setForm({ ...form, description: e && e.target.value })}
-          />;
-        </div>;
-        {error && <div className='text-sm text-red-600'>{error}</div>}
-        <button
-          disabled={submitting}
-          className='px-4 py-2 rounded bg-black text-white'>          {submitting ? 'Submitting…' : 'Submit Request'}      </div>;
-    );
-
-=======
-    }
-  };
-
-  if (result) {
-    return (
-      <div className="max-w-xl mx-auto py-12">
-        <h1 className="text-2xl font-semibold mb-2">Thanks!</h1>
-        <p className="text-gray-600 mb-4">We received your request. We will notify the appropriate team.</p>
-        <div className="text-sm text-gray-500">Confirmation ID: {result.id}</div>
-      </div>
-    )
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   return (
     <div className="max-w-xl mx-auto">;
@@ -157,10 +72,11 @@ import { useEffect, useMemo, useState } from 'react';
 
 
           {submitting ? 'Submitting…' : 'Submit Request'}
-
-        </button>;
-      </form>;
-    </div>;
+        </button>
+      </form>
+    </div>
+);
+}
   );
 }
 

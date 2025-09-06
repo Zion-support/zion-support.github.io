@@ -1,8 +1,21 @@
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
 
 import Button from '../components/ui/Button';
 
 import {
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  Settings,;
+  Trash2,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
 =======
@@ -11,9 +24,11 @@ import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function URLShortenerPage() {;
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [longUrl, setLongUrl] = useState('');
   const [customAlias, setCustomAlias] = useState('');
   const [shortenedUrls, setShortenedUrls] = useState<any[]>([]),
@@ -25,23 +40,17 @@ export default function URLShortenerPage() {;
     setLongUrl('');
     setCustomAlias('');
     setIsShortening(false);
-
-  };
-
-  const generateRandomAlias = () => {;
-    const chars =;
-
+  }
+  const generateRandomAlias = () => {
+    const chars =
       'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
-    for (let i = 0; i < 6; i++) {;
-      result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length));
+    for (let i = 0; i < 6; i++) {
+      result += chars.charAt(Math.floor(Math.random() * chars.length));
     }
     return result;
-
-
+  }
   };
-
-
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
@@ -74,22 +83,6 @@ export default function URLShortenerPage() {;
       createdAt: new Date().toISOString()
       qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`
     }
-=======
-    
-    setIsShortening(true);
-    
-    // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    const alias = customAlias.trim() || generateRandomAlias();
-    const shortUrl = `https://zion.tech/${alias}`;
-    
-=======
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Link,
   Copy,
   BarChart3,
@@ -283,6 +276,76 @@ import {
                         </div>
                       </div>
 </div>;
+
+                <Button
+                  onClick={generateShortUrl}
+                  disabled={!longUrl && longUrl.trim() || isShortening}
+                  className='w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed'>;
+                  {isShortening ? (;
+                    <>;
+                      <RefreshCw className='w-5 h-5 mr-2 animate-spin' />                      Creating Short URL...;
+                    </>;
+                  ) : (;
+                    <>;
+                      <Link className='w-5 h-5 mr-2' />                      Create Short URL                  className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed";
+                >;
+                  {isShortening ? (;
+                    <>;
+                      <RefreshCw className="w-5 h-5 mr-2 animate-spin" />;
+                      Creating Short URL...;
+                    </>;
+                  ) : (;
+                    <>;
+                      <Link className='w-5 h-5 mr-2' />                      <Link className="w-5 h-5 mr-2" />;
+                      Create Short URL;
+                    </>;
+                  )}
+                </Button>;
+                <div className='text-sm text-gray-400'>                  <p>• Professional, branded short URLs</p>                <div className="text-sm text-gray-400">;
+                  <p>• Professional, branded short URLs</p>;
+                  <p>• Click tracking and analytics</p>;
+                  <p>• QR code generation</p>;
+                  <p>• Custom aliases available</p>;
+                </div>;
+              </div>;
+            </Card>;
+            {/* Statistics */}
+            <Card className='p-8 bg-gray-800 border border-gray-700'>;
+              <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>;
+                <BarChart3 className='w-6 h-6 mr-3 text-red-400' />;
+                Your Statistics;
+              </h3>;
+              <div className='space-y-6'>;
+                <div className='grid grid-cols-2 gap-4'>;
+                  <div className='text-center p-4 bg-gray-700 rounded-lg'>;
+                    <div className='text-3xl font-bold text-orange-400 mb-2'>;
+                      {getTotalUrls()}
+                    </div>
+                    <div className='text-sm text-gray-400'>Total URLs</div>
+                  </div>
+                  <div className='text-center p-4 bg-gray-700 rounded-lg'>
+                    <div className='text-3xl font-bold text-red-400 mb-2'>
+                      {getTotalClicks()}
+                    </div>
+                    <div className='text-sm text-gray-400'>Total Clicks</div>                  </div>
+                </div>
+                {shortenedUrls.length === 0 ? (                Your Statistics
+              </h3>
+              <div className="space-y-6">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="text-center p-4 bg-gray-700 rounded-lg">
+                    <div className="text-3xl font-bold text-orange-400 mb-2">
+                      {getTotalUrls()}
+                    </div>
+                    <div className="text-sm text-gray-400">Total URLs</div>
+                  </div>
+                  <div className="text-center p-4 bg-gray-700 rounded-lg">
+                    <div className="text-3xl font-bold text-red-400 mb-2">
+                      {getTotalClicks()}
+
+
+                    </div>;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     <div className="text-sm text-gray-400">Total Clicks</div>;
                   </div>;
                 </div>;
@@ -321,8 +384,13 @@ import {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
-                  </div>;
+                  </div>
                 )}
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
 
       {/* Shortened URLs List */}
       {shortenedUrls.length > 0 && (
@@ -335,6 +403,8 @@ import {
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>                Manage and track all your shortened URLs in one place.
               </p>
             </div>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Shortened URLs List */}
       {shortenedUrls.length > 0 && (
 
@@ -599,10 +669,9 @@ onClick={() => deleteUrl(url && url.id)}
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
 
-      {/* Features */}
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to create, manage, and track your shortened
@@ -749,6 +818,11 @@ onClick={() => deleteUrl(url && url.id)}
     </>
 
 }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <section className='py-20 bg-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
           <div className='text-center mb-16'>;
@@ -1484,8 +1558,10 @@ onClick={() => deleteUrl(url && url.id)}
     </>);
 =======
 );
-<<<<<<< HEAD
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

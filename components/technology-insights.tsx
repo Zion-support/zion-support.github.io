@@ -8,13 +8,15 @@ export default function TechnologyInsightsPage() {
       id: 'quantum-computing'
       title: 'Quantum Computing in 2025'
       description:
-
-=======
-
+        'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech'
+      readTime: '15 min read'
+      featured: true
+    }
         'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
       readTime: '15 min read',
       featured: true;
     };
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -199,11 +201,18 @@ class ErrorBoundary extends React.Component {
                     >
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   </div>
                 ))}
               </div>
             </div>
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             {/* Research Areas */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -212,6 +221,8 @@ class ErrorBoundary extends React.Component {
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 {researchAreas.map((area, index) => (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div
@@ -239,15 +250,24 @@ class ErrorBoundary extends React.Component {
                       {area.focus.map((focus, focusIndex) => (
                         <li key={focusIndex} className="text-sm text-white/60 flex items-center">
                           <span className="text-cyan-400 mr-2">•</span>
+=======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           {focus}
-                        </li>;
+                        </li>
                       ))}
-                    </ul>;
-                  </div>;
+                    </ul>
+                  </div>
                 ))}
+              </div>
+            </div>
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             {/* Whitepapers */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -256,6 +276,8 @@ class ErrorBoundary extends React.Component {
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 {whitepapers.map((paper, index) => (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div
@@ -275,12 +297,29 @@ class ErrorBoundary extends React.Component {
                     </h3>
                     <p className='text-white/70 mb-4'>{paper.description}</p>
                     <Link
+=======
+                      href={paper.downloadUrl}
+                      className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
+                    >
+                      Download PDF <span className='ml-1'>→</span>                    </Link>                {whitepapers.map((paper, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{paper.category}</span>
+                      <span className="text-white/60 text-sm">{paper.pages} pages</span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 text-white">{paper.title}</h3>
+                    <p className="text-white/70 mb-4">{paper.description}</p>
+                    <Link
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       href={paper.downloadUrl}
                       className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
                     >
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   </div>
                 ))}
               </div>
@@ -294,13 +333,16 @@ class ErrorBoundary extends React.Component {
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             {/* Innovation Lab */}
+            <div className='mb-16'>
+              <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
+                Innovation Lab
+              </h2>
+              <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <div>
                     <h3 className='text-2xl font-bold mb-4 text-cyan-400'>
@@ -333,7 +375,6 @@ class ErrorBoundary extends React.Component {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
 
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
@@ -356,6 +397,14 @@ class ErrorBoundary extends React.Component {
         </main>
       </div>
     </>
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

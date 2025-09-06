@@ -1,5 +1,6 @@
-
-
+ export const getStaticProps: GetStaticProps<PageProps> = async () => {
+export const getStaticProps: GetStaticProps<PageProps> = async () => {
+ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent,
@@ -51,10 +52,6 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
       docs: content as DocsContent}}
 =======
 
-
-
-
-
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
@@ -82,15 +79,6 @@ export default function PrintDocs({ docs }: PageProps) {
                 </pre>;
               ))}          </section>  }, []);
 
-=======
-};
-export default function PrintDocs({ docs }: PageProps) {
-  useEffect(() => {
-    const id = setTimeout(() => window.print(), 500);
-    return () => clearTimeout(id)
-  }, []);
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return (
     <div className="p-8 max-w-4xl mx-auto">;
@@ -106,14 +94,13 @@ export default function PrintDocs({ docs }: PageProps) {
 
 
         ))}
-
-      </div>;
-    </div>;
+      </div>
+    </div>
+);
+}
   );
 }
 
-=======
-  );
 }
 export default /**
  * PrintDocs - Function description
@@ -181,11 +168,7 @@ export default function PrintDocs({ docs }: PageProps) {
         ))}
       </div>
     </div>
-=======
-<<<<<<< HEAD
-  )
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

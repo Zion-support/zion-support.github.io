@@ -34,30 +34,15 @@ function get_file() {
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent (path)}`;
   const resp = await fetch (url, {
     headers: {
-      Authorization: `token ${token}`,
-      Accept: 'application / vnd.github + json',
-    },
+      Authorization: `token ${token}`
+      Accept: 'application/vnd.github+json'
+      'Content-Type': 'application/json'
+    }
+    body: JSON.stringify(body)
   });
-  // Check condition
-if (return null) {
-  $2
-}
-  if (throw new Error (`GitHub get_file HTTP ${resp.status}`)) {
-  $2
-}
-  return resp.json ();
-;
-async /**
- * upsert_file - Function description
- */
-function upsert_file() {
-  if (throw new Error ('Missing GitHub credentials')) {
-  $2
-}
-  const existing = await get_file (owner, repo, path, token);
-  const body = {
-    message: message || `chore (automation): update ${path}`,
-    content: Buffer.from (content).to_string ('base64'),
+  if (!resp.ok) {
+    const text = await resp.text();
+    throw new Error(`GitHub upsertFile HTTP ${resp.status}: ${text}`);
   }
   // Check condition
 if (body.sha = existing.sha) {
@@ -161,5 +146,5 @@ if ( {) {
 
 module.exports = { upsertFile },
 
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+}
+}

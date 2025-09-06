@@ -27,6 +27,7 @@ export default function ProductPage() {;
     const fetchProduct = async () => {
       if (!id) return;
       try {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         const res = await fetch(`/api/products/${id}`);
         if (res.ok) {
           const data = await res.json();
@@ -37,7 +38,10 @@ export default function ProductPage() {;
         // Fail silently and fall back to local data
         logErrorToProduction('Error fetching product', { data: err })
       }
+    }
+    };
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     // Only fetch if id is available (from router)
     if (id) {
       fetchProduct()
@@ -58,9 +62,22 @@ export default function ProductPage() {;
 
               className="object-cover rounded-md"
 =======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+    }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }, [id]), // id is now from router && router.query;
 
 
+  return (
+    <>
+      <SEO
+        title = {product.title,}
+        description = {product.description,}
+        ogImage = {product.images?.[0],}
     return <div className="p-6 text-white">Product not found</div>
   }, [id]), // id is now from router.query;
 
@@ -95,13 +112,16 @@ export default function ProductPage() {;
         </Button>
       </div>
     </>
+        </Button>;
+      </div>;
+    </>;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   );
 
 }
 //Only fetch if id is available (from router) ;
 
 }
-<<<<<<< HEAD
 
 import Image from 'next / image';
 import {Button} from '@/components / ui / button';
@@ -127,7 +147,9 @@ function ProductPage() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         </Button>;
       </div>;
     </>;

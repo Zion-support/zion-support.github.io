@@ -1,4 +1,8 @@
+'use client';
+import React, { useState } from 'react';
+export default function OSDeployPage() {
 
+export default function OSDeployPage() {;
 const [loading, setLoading] = useState(false);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -6,17 +10,14 @@ const [loading, setLoading] = useState(false);
     // Simulate deployment
     setTimeout(() => {
       setLoading(false);
-
     }, 3000);
   }
-;
-  const [message, set_message] = useState ('');
-  const [message_type, setMessageType] = useState<'success' | 'error' | 'info'>('success');
-;
-  // Mock feature keys and functions;
+  const [message, setMessage] = useState('');
+  const [messageType, setMessageType] = useState<'success' | 'error' | 'info'>('success');
+  // Mock feature keys and functions
   const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];
-;
-  const label_for = (key: string) =>: any {
+  const labelFor = (key: string) => {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     const labels: { [key: string]: string } = {
       ai: 'AI Integration'
       blockchain: 'Blockchain Technology'
@@ -541,11 +542,17 @@ ai: 'Advanced AI capabilities and automation',
                 {message}
               </div>;
             )}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 {message}
               </div>;
             )}
-
-
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
           </div>;
         </form>;
       </div>;
@@ -593,7 +600,9 @@ function getFeatureDescription(key: string) {;
   }
 }
 }
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

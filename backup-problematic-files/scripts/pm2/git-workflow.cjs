@@ -4,7 +4,6 @@
 =======
 =======
 =======
-<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 #!/usr/bin/env node
 const fs = require('fs');
@@ -501,10 +500,6 @@ class GitWorkflow {}
           let content = fs.readFileSync(file, 'utf8');
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
           // Remove conflict markers and keep both versions (simplified);
           content = content.replace(/\n/g, '');

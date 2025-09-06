@@ -1,5 +1,12 @@
 
+=======
+=======
 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function FeaturesPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -43,9 +50,8 @@ export default function FeaturesPage() {
           <p className="mt-1 text-sm opacity-80">Track deliverables and approvals anywhere.</p>
       </div>
     </EnhancedLayout>
-
   );
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+  );
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

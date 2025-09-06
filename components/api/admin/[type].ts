@@ -28,8 +28,18 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     pageSize: pageSize ? Number(pageSize) : 20,
     filters,
     format: (format as any) || undefined,
+  };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  };    search;
+    sort;
+    order: (order as any) |'desc';
+    page: page ? Number(page) : 0;
+    pageSize: pageSize ? Number(pageSize) : 20;
+    filters,
+    format: (format as any) || undefined}
+}
+  };
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     filters
     format: (format as any) |undefined}
@@ -46,61 +56,17 @@ function toCsv(rows: any[]): string {
   const lines = [headers && headers.join(',')].concat(
     rows && rows.map(r => headers && headers.map(h => escape(r[h])).join(','))
   );
-  return lines && lines.join('\n');
-
+  return lines.join('\n');
 
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-
-
-
-
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-
+  const type = (req.query.type as AdminType) |'';
 ) {;
   const type = (req.query.type as AdminType) || '';
-
-
   if (!ADMIN_TYPES.includes(type))
     return res.status(400).json({ error: 'Invalid type' });  }
-=======
-    return '"' + s.replace(/"/g, '""') + '"'
-  };
-  const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join()));
-  return lines.join('\n')
-
-  try {
-  const type = (req && req.query.type as AdminType) || '';
-  if (!ADMIN_TYPES && ADMIN_TYPES.includes(type))
-    return res && res.status(400).json({ error: 'Invalid type' });  };
-  const lines = [headers && headers.join()].concat(rows && rows.map((r) => headers && headers.map((h) => escape(r[h])).join()));
-  return lines && lines.join('\n')
-
-}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-
-}
-
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const type = (req.query.type as AdminType) || '';
-
-
-  if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
-
-  try {
-  const type = (req && req.query.type as AdminType) || '';
-  if (!ADMIN_TYPES && ADMIN_TYPES.includes(type)) return res && res.status(400).json({ error: 'Invalid type' });
-
-
-  const useSupabase = isSupabaseConfigured();
-
-  if (req && req.method === 'GET') {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const params = parseListParams(req);
     if (useSupabase) {
       const table = type;
@@ -225,6 +191,11 @@ export default async function handler(
         for (const [k, v] of Object.entries(params.filters)) {
           filtered = filtered.filter((r: any) => String((r as any)[k]) === String(v))
 
+      }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       if (params.sort) {
         filtered.sort((a: any, b: any) => {
 
@@ -252,31 +223,75 @@ export default async function handler(
 =======
 
         return res.status(200).send(toCsv(pageItems));
+=======
 
 
       }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      return res.status(200).json({ items: pageItems, total });
+    }
+  }
+
+      }
+
+      }
+      return res.status(200).json({ items: pageItems, total });
+    }
+  }
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   if (req.method === 'PATCH') {
     const { id, updates } = req.body as {
       id: string;
       updates: Record<string, any>;
     }
     if (!id) return res.status(400).json({ error: 'Missing id' });
-=======
-
-  if (req && req.method === 'PATCH') {
-    const { id, updates } = req && req.body as {
-=======
-        return res.status(200).send(toCsv(pageItems));
       return res.status(200).json({ items: pageItems, total });
     }
   }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  if (req.method === 'PATCH') {
+    const { id, updates } = req.body as {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+      id: string;
+      updates: Record<string, any>;
+    };
+    if (!id) return res && res.status(400).json({ error: 'Missing id' });
+    if (useSupabase) {
+      const { data, error } = await client
+        .from(type)
+        .update({ ...updates, updated_at: new Date().toISOString() })
+        .eq('id', id)
+        .select('*')
+        .single();
+      if (error) return res && res.status(500).json({ error: error && error.message });
+      return res && res.status(200).json({ item: data });
+    } else {
+
+
+      const updated = {
+        ...list[idx]
+        ...updates
+        updated_at: new Date().toISOString()
+      }
+      list[idx] = updated as any;
+      return res.status(200).json({ item: updated });    }      return res.status(200).json({ item: updated })
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
   }
+      return res.status(200).json({ item: updated });    }
+
+    }
+
+=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  }
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) |'';
     if (!id) return res.status(400).json({ error: 'Missing id' });
@@ -288,9 +303,6 @@ export default async function handler(
   if (req && req.method === 'DELETE') {
     const id = (req && req.query.id as string) || '';
     if (!id) return res && res.status(400).json({ error: 'Missing id' });
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       return res.status(200).json({ item: updated });    }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -321,6 +333,11 @@ export default async function handler(
   return res && res.status(405).json({ error: 'Method not allowed' });
 }return res && res.status (200) .send (toCsv (data || []) );
 }return res && res.status (200) .send (toCsv (pageItems) );
+return res.status(405).json({ error: 'Method not allowed' });
+}return res.status (200) .send (toCsv (data |[]) );
+}return res.status (200) .send (toCsv (pageItems) );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
       return res.status(200).json({ ok: true })
     } else {
@@ -331,7 +348,7 @@ export default async function handler(
       return res.status(200).json({ ok: true })
     }
   }
-=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 

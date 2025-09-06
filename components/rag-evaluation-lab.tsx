@@ -1,4 +1,12 @@
+import React from 'react',
+import SEO from '../components/SEO';
+import Link from 'next/link';
 
+=======
+import React from 'react';
+import SEO from '../components/SEO';
+import Link from 'next/link';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <>
@@ -141,14 +149,4 @@
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
 						<span className="text-gray-400">Call: +1 302 464 0950</span>
 
-					</div>
-				</div>
-			</section>
-		</>
-	)
-=======
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

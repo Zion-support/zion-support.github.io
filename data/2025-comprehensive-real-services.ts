@@ -1,4 +1,5 @@
-
+export interface ComprehensiveService {
+export interface ComprehensiveService {;
   id: string;
   name: string;
   tagline: string;
@@ -17,42 +18,6 @@
   contact: {
     phone: string;
     email: string;
-];      phone: '+1 302 464 0950';
-
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-    }
-    trial_days: 60;
-    setup_time: '4 - 6 weeks';
-
-    competitors: ['PTCSiemensGE DigitalRockwell Automation'];
-    roi: 'Average customer sees 600% ROI through operational improvements';
-    launch_date: '2024 - 01 - 10';
-    customers: 950;
-
-    rating: 4 && 4.9,
-
-    reviews: 520
-  }
-];
-  id: string, name: string,
-  tagline: string, description: string,
-  price: string, period: string,
-  features: string[], category: string,
-  marketSize: string, targetAudience: string,
-  competitiveAdvantage: string, useCases: string[],
-  integrations: string[], compliance: string[],
-  website: string,
-  contact: {
-    phone: string, email: string,
-    address: string
-    },
-    trialDays: number, setupTime: string,
-  competitors: string[], roi: string,
-  launchDate: string, customers: number,
-  rating: number,
-  reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 export const comprehensiveRealServices: ComprehensiveService[] = [
   // AI & Machine Learning Services
@@ -329,15 +294,20 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     website: 'https://ziontechgroup.com/ai-manufacturing-optimizer',
     contact: {
 
+      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+=======
+      phone: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
     trialDays: 60, setupTime: '4-6 weeks',
     competitors: ['PTCSiemensGE DigitalRockwell Automation'], roi: 'Average customer sees 600% ROI through operational improvements',
     launchDate: '2024-01-10', customers: 950,
     rating: 4.9,
-    reviews: 520;
-  }
-
+    reviews: 520,
+  },;
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -353,7 +323,9 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.9
 
     reviews: 520
-
+  }
+];
+export interface ComprehensiveService {;
   id: string,;
   name: string,;
   tagline: string,;
@@ -744,12 +716,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     customers: 950,;
     rating: 4.9,;
     reviews: 520;
-
   }
 ];
-  }
-];
-
-;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -11,11 +11,75 @@ import { SeverityIndicator } from "../common/SeverityIndicator",
 
 interface Milestone {
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface Milestone {
   id: string,
   title: string,
   due_date: string,
   status: "completed" | "in_progress" | "pending",
+=======
+  paymentStatus: "paid" | "pending" | "overdue",
+  amount: string
+}
+
+  id: string
+  title: string
+  dueDate: string
+  status: "completed" | "in_progress" | "pending"
+  paymentStatus: "paid" | "pending" | "overdue"
+
+  amount: string
+}
+interface ProjectViewProps {
+  project: {
+
+    id: string
+    title: string
+    client: {
+
+
+export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
+  const navigate = useNavigate();
+import React from "react",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
+import { CheckCircle, ChevronRight, FileText, MessageSquare, Video } from "lucide-react",;
+import { Progress } from "@/components/ui/progress",;
+import { SeverityIndicator } from "../common/SeverityIndicator",;
+import { useNavigate } from "react-router-dom",;
+import { toast } from "sonner",;
+interface Milestone {;
+  id: string,;
+  title: string,;
+  dueDate: string,;
+  status: "completed" | "in_progress" | "pending",;
+  paymentStatus: "paid" | "pending" | "overdue",;
+  amount: string;
+}
+;
+interface ProjectViewProps {;
+  project: {;
+    id: string,;
+    title: string,;
+    client: {;
+      name: string,;
+      avatar?: string;
+    },;
+    startDate: string,;
+    endDate?: string,;
+    status: string,;
+    totalAmount: string,;
+    progress: number,;
+    description: string;
+  },;
+  milestones: Milestone[];
+}
+
+export function MobileProjectView({ project, milestones }: ProjectViewProps) {
+  const navigate = useNavigate(),
+  
   paymentStatus: "paid" | "pending" | "overdue",
   amount: string
 
@@ -26,8 +90,6 @@ interface Milestone {
     toast.success("Starting project call", {
       description: "Initializing video connection..."
 
-=======
-
     }),
     
     navigate(`/call/${roomId}`)
@@ -36,12 +98,6 @@ interface Milestone {
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  const messageClient = () => {
-    toast.info("Opening message thread with client", {
-      description: `Messaging ${project.client.name}...`
-    });
-    // Navigate to messaging with this client
-
   return (
     <div className="space-y-6 px-4 pb-24">
       <Card>
@@ -235,7 +291,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                     variant={;
                       milestone.paymentStatus === "paid" ? "default" :;
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline";
-
                     }
                   >
                     {milestone.paymentStatus}
@@ -266,6 +321,8 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
             </Card>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           ))}
         </div>
       </section>

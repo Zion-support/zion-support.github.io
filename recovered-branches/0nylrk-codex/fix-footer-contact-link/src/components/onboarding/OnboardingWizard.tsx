@@ -1,11 +1,16 @@
 
-
-=======
+import { useState, useEffect  } from 'react';
+import { useNavigate  } from 'react-router-dom';
+import { useAuth  } from '@/hooks/useAuth';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useAuth} from '@/hooks/useAuth';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -21,8 +26,40 @@ import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
 import {cn} from '@/lib / utils';
 
 interface WizardStep {
+  title: string,
+  description: string,
+  icon: React.ReactNode,
+  action: {
+    text: string,
+    url: string
+  };
+  skipText?: string
+}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+interface OnboardingWizardProps {
+  type: 'client' | 'talent',
+  onComplete: () => void,
+  onSkip: () => void,
+  className?: string
+}
+
+export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {;
+  const [currentStep, setCurrentStep] = useState(0);
+  const navigate = useNavigate();
+  const { user } = useAuth();
+=======
+
+}
+export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
+  const [currentStep, setCurrentStep] = useState(0);
+
+  const navigate = useNavigate();
+  const { user } = useAuth();
+  const [currentStep, setCurrentStep] = useState(0),
+  const navigate = useNavigate(),
+  const { user } = useAuth(),
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
@@ -76,7 +113,10 @@ interface WizardStep {
       description: "Let our AI find the perfect opportunities for you"
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />
       action: {
-
+        text: "Enable Matchmaking"
+        url: "/talent-dashboard"
+      }
+    }
   ];
   const steps = type === 'client' ? clientSteps : talentSteps;
   // Navigate to the specified URL
@@ -98,7 +138,12 @@ interface WizardStep {
       // Last step
       onSkip()
     }
-
+  }
+        text: "Enable Matchmaking",
+        url: "/talent-dashboard"
+      }
+    }
+  };
   ],;
   const steps = type === 'client' ? clientSteps : talentSteps,;
   // Navigate to the specified URL;
@@ -121,8 +166,10 @@ interface WizardStep {
       onSkip();
     }
   },
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
       <CardHeader>
@@ -140,6 +187,7 @@ interface WizardStep {
               <div
                 key={index}
                 className={cn(
+                  "h-2 w-2 rounded-full mx-1";
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   index === currentStep

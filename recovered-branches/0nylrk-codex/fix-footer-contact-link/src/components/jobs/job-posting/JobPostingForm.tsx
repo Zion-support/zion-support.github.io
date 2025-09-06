@@ -3,12 +3,11 @@
 import React, { useState, useEffect, useCallback } from 'react',
 import { useNavigate } from 'react-router-dom',
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { toast } from "sonner",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
 import { Button } from "@/components/ui/button",
-
-=======
 
 import { Form } from "@/components/ui/form",
 import { useJobForm } from './useJobForm',
@@ -17,6 +16,7 @@ import { DateFields } from './DateFields',
 import { DescriptionFields } from './DescriptionFields',
 import { useJobs } from "@/hooks/useJobs",
 import { JobSchemaType } from './validation',
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -49,22 +49,6 @@ interface JobPostingFormProps {
   on_success?: () => void;
 }
 
-export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
-
-    form;
-    is_loading;
-    start_date;
-    setStartDate;
-    end_date;
-    setEndDate;
-    is_remote;
-    setIsRemote;
-
-
-=======
-
-
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const {
     form,
@@ -76,6 +60,15 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
     isRemote,
     setIsRemote,
     submitJob
+=======
+  } = useJobForm({ jobId, onSuccess });
+  const { handleSubmit, setValue, formState } = form;
+  const { isSubmitting } = formState;
+  } = useJobForm({ jobId, onSuccess }),
+
+  const { handleSubmit, setValue, formState } = form,
+  const { isSubmitting } = formState,
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   useEffect(() => {
     if (jobId) {
@@ -103,7 +96,6 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
                 } catch (e) {
                   // Skip fields that don't exist in our form
 
-=======
 import React, { useState, useEffect, useCallback } from 'react',;
 import { useNavigate } from 'react-router-dom',;
 import { toast } from "sonner",;
@@ -219,6 +211,9 @@ if ( {) {
                   // Skip fields that don't exist in our form;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 }
               }
             });
@@ -245,7 +240,6 @@ if ( {) {
         toast.success("Job updated successfully!")
       } else {
 
-=======
         await createJob(jobData),
         toast.success("Job posted successfully!"),
         form.reset(),
@@ -274,10 +268,6 @@ if ( {) {
         toast && toast.success("Job posted successfully!");
         form && form.reset();
         setEditorContent("");
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       }
 
@@ -304,7 +294,6 @@ if ( {) {
           </p>
         </div>
         <BasicInfoFields control={form.control} />
-
           setStartDate={setStartDate}
           endDate={endDate}
           setEndDate={setEndDate}
@@ -312,9 +301,29 @@ if ( {) {
         <div>
           <Label htmlFor="isRemote">
 
+=======
+            <Input
+              type="checkbox"
+              id="isRemote"
+              checked={isRemote}
+              className="mr-2"
+              onChange={(e) => setIsRemote(e.target.checked)}
+            />
+            Remote
+          </Label>
+        </div>
+        <DescriptionFields
+          control={form.control}
+          handleEditorChange={handleEditorChange}
+          editorContent={editorContent}
+        />
+        <Button type="submit" disabled={isSubmitting |isFormLoading}>
+          {isSubmitting |isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               className="mr-2"
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <DescriptionFields 
           control={form.control} 
           handleEditorChange={handleEditorChange}
@@ -322,14 +331,20 @@ if ( {) {
         />
         <Button type="submit" disabled={isSubmitting || isFormLoading}>
           {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
+=======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </Button>
       </form>
     </Form>
   )
+<<<<<<< HEAD
 =======
-
-              onChange={(e) => setIsRemote(e && e.target.checked)}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+}
+}
+;
+;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

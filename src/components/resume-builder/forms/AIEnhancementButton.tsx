@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-=======
-import { Button } from '@/components/ui/button'
-import { Sparkles, Loader2 } from 'lucide-react'
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer'
-interface AIEnhancementButtonProps {
-  currentContent: string
-  enhancementType:
-    | 'summary'
-    | 'work-description'
-    | 'skill-categorization'
-    | 'general'
-  context?: string
-  onEnhanced: (enhancedContent: string) => void
-  buttonText?: string
-  className?: string
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
@@ -54,7 +37,7 @@ if (.length < 10) {) {
   $2
       on_enhanced (enhanced_content);
     }
-<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <Button
@@ -62,23 +45,54 @@ if (.length < 10) {) {
       variant="ghost"
       size="sm"
       className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
-
     >
       {isEnhancing ? (
         <Loader2 className="h-3 w-3 animate-spin" />
       ) : (
-
+        <Sparkles className="h-3 w-3" />
+      )}
+      <span className="text-xs">{buttonText}</span>
+    </Button>
+        <Sparkles className='h-3 w-3' />;
+      )};
+      <span className='text-xs'>{buttonText}</span>;
+    </Button>;
   );      onClick={handleEnhance}
       disabled={isEnhancing}
     >
       {isEnhancing ? (
         <Loader2 className="h-3 w-3 animate-spin" />
       ) : (
-
         <Sparkles className="h-3 w-3" />
       )}
       <span className="text-xs">{buttonText}</span>
     </Button>
+  )
+}
+
+    <Button;
+      type="button";
+      variant="ghost";
+      size="sm";
+      className={`h - 6 gap - 1 text - primary hover:text - primary ${class_name}`}
+      on_click = {handle_enhance, }
+      disabled = {is_enhancing, }
+    >;
+      {is_enhancing ? (
+        <Loader2 className='h - 3 w - 3 animate - spin' />) : (
+        <Sparkles className='h - 3 w - 3' />)}
+      <span className='text - xs'>{button_text}</span>;
+    </Button>);      on_click={handle_enhance}
+      disabled={is_enhancing}
+    >;
+      {is_enhancing ? (
+        <Loader2 className="h - 3 w - 3 animate - spin" />) : (
+        <Sparkles className="h - 3 w - 3" />)}
+      <span className="text - xs">{button_text}</span>;
+    </Button>);
+}
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   )
 }
 =======

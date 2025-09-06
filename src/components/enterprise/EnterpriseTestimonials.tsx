@@ -46,6 +46,7 @@ export function EnterpriseTestimonials() {
           </p>
         </div>
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function EnterpriseTestimonials() {
   return (
     <section id="testimonials" className="py-20 px-4 md:px-6">
@@ -77,6 +78,7 @@ export function EnterpriseTestimonials() {
                       <img
 <<<<<<< HEAD
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <CarouselNext />
           </div>
         </Carousel>
@@ -85,8 +87,13 @@ export function EnterpriseTestimonials() {
   );
 };
 }
-
-
+<<<<<<< HEAD
+            <CarouselNext />
+          </div>
+        </Carousel>
+      </div>
+    </section>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
           </CarouselContent>;
           <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className="flex justify-center gap-2 mt-8">;

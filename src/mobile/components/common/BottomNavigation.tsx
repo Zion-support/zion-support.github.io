@@ -34,7 +34,6 @@ export function BottomNavigation() {
           </Link>
         )
 <<<<<<< HEAD
-=======
               {React.cloneElement(item.icon as React.ReactElement, { 
                 className: cn("h-5 w-5", isActive ? "stroke-primary" : "stroke-muted-foreground") 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

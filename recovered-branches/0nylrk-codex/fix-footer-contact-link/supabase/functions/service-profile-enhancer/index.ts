@@ -1,5 +1,7 @@
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface ServiceProfileData {
   name: string;
   title: string;
@@ -7,10 +9,9 @@ interface ServiceProfileData {
 
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
-=======
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";
-=======
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -21,13 +22,6 @@ interface ServiceProfileData {
   services?: string[],
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  location: string
-}
-serve(async (req) => {
-  try {
-    // CORS headers
-
-    const headers = {
 
     // Handle CORS preflight request
     if (req && req.method === "OPTIONS") {
@@ -39,6 +33,7 @@ serve(async (req) => {
       return new Response(
         JSON.stringify({
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   location: string;
 }
 serve (async (req) => {
@@ -71,20 +66,27 @@ if ( {) {
         { headers, status: 400 }
       );
     }
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    // Get OpenAI API key from environment
-    const apiKey = Deno && Deno.env.get("OPENAI_API_KEY");
-    if (!apiKey) {
-      return new Response(
-        JSON.stringify({
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+          error: "OpenAI API key not configured"});
+          error: "OpenAI API key not configured"}),
+;
+    // Get OpenAI API key from environment;
+    const apiKey = Deno.env.get("OPENAI_API_KEY"),;
+    if (!apiKey) {;
+      return new Response(;
+        JSON.stringify({;
+          error: "OpenAI API key not configured"}),;
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         { headers, status: 500 }
       );
     }
@@ -98,28 +100,26 @@ if ( {) {
     Current Bio: ${providerData.bio}
 
       ? `Current Services: ${providerData.services.join(", ")}`
-=======
-
-    Service Provider Name: ${providerData && providerData.name}
-    Business/Service Title: ${providerData && providerData.title}
-    Location: ${providerData && providerData.location}
-    Current Bio: ${providerData && providerData.bio}
-    ${providerData && providerData.services && providerData && providerData.services.length > 0 
-      ? `Current Services: ${providerData && providerData.services.join(", ")}`
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       : "No services listed yet."}
     Focus on highlighting their unique value proposition, expertise, and professionalism.
+=======
+    Only respond with JSON in this exact format: {
+      "summary": "Professional summary goes here..."
+      "services": ["Service 1", "Service 2", "Service 3", ...]
+    }
+    `;
+    Only respond with JSON in this exact format:
+    {
+      "summary": "Professional summary goes here...",
+      "services": ["Service 1", "Service 2", "Service 3", ...]
+    }
+    `,
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
       headers: {
 
-=======
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json"},
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       body: JSON.stringify({
         model: "gpt-4";
         messages: [
@@ -129,7 +129,8 @@ if ( {) {
       console.error("OpenAI API error:", responseData);
       return new Response(
         JSON.stringify({
-
+          error: "Failed to generate enhanced profile content"
+          error: "Failed to generate enhanced profile content",
           details: responseData});
         { headers, status: 500 }
       )
@@ -141,19 +142,38 @@ if ( {) {
         JSON.stringify({
           summary: parsedContent.summary
           services: parsedContent.services});
+          error: "Failed to generate enhanced profile content",
+          details: responseData}),
+    ${providerData.services && providerData.services.length > 0;
+      ? `Current Services: ${providerData.services.join(", ")}`;
+      : "No services listed yet."}
+;
+    const response_data = await response.json ();
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      console.error ("OpenAI API error:", response_data);
+      return new Response (
+        JSON.stringify ({
+          error: "Failed to generate enhanced profile content",
+          details: response_data});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         { headers, status: 500 }
       );
     }
-    try {
+;
+    try {;
+      const content = responseData.choices[0].message.content,;
+      const parsedContent = JSON.parse(content),;
+      return new Response(;
+        JSON.stringify({;
+          summary: parsedContent.summary,;
+          services: parsedContent.services}),;
 
-      const content = responseData && responseData.choices[0].message && message.content;
-      const parsedContent = JSON && JSON.parse(content);
-      
-=======
-
-          error: "Failed to generate enhanced profile content",
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         { headers, status: 200 }
       )
     } catch (error) {
@@ -170,6 +190,8 @@ if ( {) {
         JSON.stringify({;
           error: "Failed to parse AI response",;
           raw: responseData.choices[0]?.message?.content}),;
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
       const content = response_data.choices[0].message.content;
       const parsed_content = JSON.parse (content);
@@ -199,6 +221,7 @@ if ( {) {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         { headers, status: 500 }
       );
     }
@@ -216,13 +239,18 @@ if ( {) {
         status: 500;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
     );
   }
 });
 =======
 
+<<<<<<< HEAD
 
 ;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

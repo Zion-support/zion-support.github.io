@@ -15,6 +15,69 @@ import { Handshake, MessageSquare } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
 import { UserProfile } from "@/types/auth",
+import React, { useState, useEffect } from "react";
+import {useParams, useNavigate} from "react-router-dom";
+import {TalentProfile} from "@/components/profile/TalentProfile";
+import {ProfileLoadingState} from "@/components/profile/ProfileLoadingState";
+import {ProfileErrorState} from "@/components/profile/ProfileErrorState";
+import {BackToDirectoryButton} from "@/components/profile/BackToDirectoryButton";
+import {useTalentProfile} from "@/hooks/useTalentProfile";
+import {HireRequestModal} from "@/components/profile/hire-request";
+import {useAuthStatus} from "@/hooks/talent";
+import {MessageTalentModal} from "@/components/messaging/MessageTalentModal";
+import {StickyAction} from "@/components/ui/sticky-action";
+import {Handshake, MessageSquare} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {useAuth} from "@/hooks/useAuth";
+import {UserProfile} from "@/types/auth";
+import {toast} from "@/hooks/use-toast";
+export default function TalentProfilePage() {;
+  // Cast to specify the expected route param type since useParams may be untyped;
+  const { id } = useParams() as { id?: string };
+
+  const navigate = useNavigate();
+  const { profile, isLoading, error } = useTalentProfile(id);
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
+  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
+  const { userDetails } = useAuthStatus();
+  const { isAuthenticated, user } = useAuth();
+import React, { useState, useEffect } from "react",
+import { useParams, useNavigate } from "react-router-dom",
+import { TalentProfile } from "@/components/profile/TalentProfile",
+import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",
+import { ProfileErrorState } from "@/components/profile/ProfileErrorState",
+import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton",
+import { useTalentProfile } from "@/hooks/useTalentProfile",
+import { HireRequestModal } from "@/components/profile/hire-request",
+import { useAuthStatus } from "@/hooks/talent",
+import { MessageTalentModal } from "@/components/messaging/MessageTalentModal",
+import { StickyAction } from "@/components/ui/sticky-action",
+import { Handshake, MessageSquare } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { useAuth } from "@/hooks/useAuth",
+import { UserProfile } from "@/types/auth",
+import { toast } from "@/hooks/use-toast";
+export default function TalentProfilePage() {
+  // Cast to specify the expected route param type since useParams may be untyped
+
+  const { id } = useParams() as { id?: string }
+  const navigate = useNavigate();
+  const { profile, isLoading, error } = useTalentProfile(id);
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
+  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
+  const { userDetails } = useAuthStatus();
+  const { isAuthenticated, user } = useAuth();
+import { toast } from "@/hooks/use-toast",
+export default function TalentProfilePage() {
+  // Cast to specify the expected route param type since useParams may be untyped
+  const { id } = useParams() as { id?: string },
+  const navigate = useNavigate(),
+  const { profile, isLoading, error } = useTalentProfile(id),
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false),
+  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false),
+  const { userDetails } = useAuthStatus(),
+  const { isAuthenticated, user } = useAuth(),
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   // Create a compatible UserProfile from UserDetails or the authenticated user
   const userProfile: UserProfile = user ? {
@@ -35,6 +98,10 @@ import { UserProfile } from "@/types/auth",
     createdAt: new Date().toISOString(), // Default value since userDetails doesn't have this property
     updatedAt: new Date().toISOString(), // Default value since userDetails doesn't have this property
     role: '' // Default empty string since userDetails doesn't have this property
+=======
+  }
+  },
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   // Handle loading error gracefully
   useEffect(() => {
@@ -43,8 +110,6 @@ import { UserProfile } from "@/types/auth",
         title: "Error loading profile"
         description: "There was a problem loading this talent profile. Please try again."
         variant: "destructive"})
-
-=======
 
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
@@ -102,9 +167,6 @@ export default function TalentProfilePage() {;
   }, [error]),;
   if (isLoading) {;
     return <ProfileLoadingState />;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
   if (error |!profile) {
@@ -132,6 +194,7 @@ export default function TalentProfilePage() {;
       return
     }
     setIsMessageModalOpen(true)
+  }
 
 ;
   const handleRequestHire = () => {;
@@ -160,7 +223,6 @@ export default function TalentProfilePage() {;
     <div className="min-h-screen bg-zion-blue pb-12">;
       <TalentProfile;
         profile={profile} ;
-
         onRequestHire={handleRequestHire}
         onMessageTalent={handleMessageTalent}
       />
@@ -189,6 +251,8 @@ export default function TalentProfilePage() {;
       </StickyAction>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Request to Hire Modal */}
       <HireRequestModal
         talent={profile}
@@ -198,6 +262,17 @@ export default function TalentProfilePage() {;
       />
       {/* Message Talent Modal */}
       <MessageTalentModal
+=======
+        talent={profile}
+        isOpen={isMessageModalOpen}
+        onClose={() => setIsMessageModalOpen(false)}
+      />
+    </div>
+  )
+}
+      />;
+
+
         talent={profile}
         isOpen={isMessageModalOpen}
         onClose={() => setIsMessageModalOpen(false)}
@@ -213,6 +288,9 @@ export default function TalentProfilePage() {;
 
 =======
 ;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

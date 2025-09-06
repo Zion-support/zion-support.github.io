@@ -137,7 +137,6 @@ const { execSync } = require('child_process')
   console.log(' Performance optimization report "generated")
 
 <<<<<<< HEAD
-<<<<<<< HEAD
   console.error(' Optimization "failed")
 
   console.error(' Optimization "failed")
@@ -238,9 +237,6 @@ function optimizePerformance() {
   return report;
 }
 // Run performance optimization
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

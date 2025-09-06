@@ -1,7 +1,10 @@
-
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+:src.disabled/layout/PrimaryNav.jsx
+"export\": function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useNavigate() const [query,setQuery] = useState(\') const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging.unreadCount} catch {\''\'";\";
+export: function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useNavigate() const [query,setQuery] = useState(") const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging.unreadCount} catch {"""";";'"'"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+"export\": function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useNavigate() const [query,setQuery] = useState(\') const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging.unreadCount} catch {\''\'";\";
+export: function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useNavigate() const [query,setQuery] = useState(") const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging.unreadCount} catch {"""";";'"'"
+:temp_exclude/src.disabled/layout/PrimaryNav.jsx
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 "export": function PrimaryNav() { const [mobileMenuOpen,setMobileMenuOpen] = useState(false) const { user } = useAuth() const isMobile = useIsMobile() const { t } = useTranslation() const router = useRouter() const [query,setQuery] = useState(') const suggestions = generateSearchSuggestions() let unreadCount = 0 try { const messaging = useMessaging() unreadCount = messaging.unreadCount} catch {'''";";""}
 =======

@@ -31,6 +31,14 @@ export function TenantsList() {
         .order('created_at', { ascending: false })
 
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+        .order ('created_at', { ascending: false }),
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 <<<<<<< HEAD
 

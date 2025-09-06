@@ -1,8 +1,10 @@
 
 =======
-import React, { useState } from './react';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
+
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export const MobileEmailCapture: React.FC = () => {
   const [email, set_email] = useState ("");
   const [is_submitting, setIsSubmitting] = useState (false);
@@ -43,18 +45,21 @@ if (return) {
       await new Promise(resolve => setTimeout(resolve, 1000));
       setIsSuccess(true);
       setEmail("");
-
-      setTimeout(() => {;
-        setIsSuccess(false);
-      }, 5000);
-    } catch (error) {;
-      console && console.error("Error subscribing:", error);
-    } finally {;
-      setIsSubmitting(false);
-
-    }
-  }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+export const MobileEmailCapture: React.FC = () => {;
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+export const MobileEmailCapture: React.FC = () => {
+  const [email, setEmail] = useState(""),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isSuccess, setIsSuccess] = useState(false),
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
@@ -114,8 +119,10 @@ if (return) {
   )
 
 };
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple/30">;
       <div className="container mx-auto px-4">;
         <div className="max-w-3xl mx-auto text-center">;
@@ -188,16 +195,11 @@ if (return) {
           </p>;
         </div>;
       </div>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </section>;
+  );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </section>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

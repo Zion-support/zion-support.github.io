@@ -1,3 +1,5 @@
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 export default function InfrastructureDriftDetectorPage() {
@@ -11,6 +13,15 @@ export default function InfrastructureDriftDetectorPage() {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import React from 'react',;
+import Head from 'next/head',;
+import { Building, Phone, Mail, MapPin, Check, ArrowRight, GitPullRequest, Star } from 'lucide-react',;
+import Layout from '../components/layout/Layout',;
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
+export default function InfrastructureDriftDetectorPage() {
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/infrastructure-drift-detector'))
+  if (!service) return null,
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <Layout>
       <Head>
@@ -33,16 +44,16 @@ export default function InfrastructureDriftDetectorPage() {
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-indigo-400 mt-0.5"><Check /><span>{feat}</span></li>
 
-=======
-
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </ul>
             </div>
@@ -56,6 +67,8 @@ export default function InfrastructureDriftDetectorPage() {
               </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </div>
             </div>
           </div>
@@ -64,3 +77,5 @@ export default function InfrastructureDriftDetectorPage() {
     </Layout>
   )
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

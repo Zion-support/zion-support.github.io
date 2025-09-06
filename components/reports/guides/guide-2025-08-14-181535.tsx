@@ -1,6 +1,8 @@
 =======
 
-
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export default function Page() {
 
 
@@ -26,11 +28,10 @@ export default function Page() {
         <div
           className='mt-4'
           dangerouslySetInnerHTML={{
-
-=======
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/explore</a></p><h2>Overview</h2><p>Focus: autonomous content systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p>',;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+            __html:
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup.com/explore</a></p><h2>Overview</h2><p>Focus: autonomous content systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>'
+            __html:;
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup.com/explore</a></p><h2>Overview</h2><p>Focus: autonomous content systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>',
           }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
@@ -47,6 +48,7 @@ export default function Page() {
             __html:;
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/explore" target="_blank" rel="noopener">https://ziontechgroup.com/explore</a></p><h2>Overview</h2><p>Focus: autonomous content systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>',
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }}
         />
         <p className='mt-6 text-white/60 text-sm'>
@@ -95,3 +97,5 @@ export default function Page(req, res) {
 }
 ;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

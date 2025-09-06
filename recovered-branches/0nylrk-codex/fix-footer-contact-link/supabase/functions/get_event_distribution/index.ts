@@ -1,6 +1,15 @@
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -9,15 +18,6 @@ const corsHeaders = {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-serve(async (req) => {
-  // Handle CORS preflight request
-  if (req && req.method === "OPTIONS") {
-    return new Response("ok", { headers: corsHeaders })
-  }
-  try {
-    const supabaseClient = createClient(
-
-    const { days_back = 7 } = await req && req.json();
     // Query analytics events
     const { data, error } = await supabaseClient
       .from("analytics_events")
@@ -30,19 +30,13 @@ serve(async (req) => {
     }
     // Group events by date and event type
 
-=======
-
-    const eventsByDate = {},
-    
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     data.forEach((event) => {
       const date = new Date(event.created_at).toISOString().split("T")[0];
       if (!eventsByDate[date]) {
 
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         eventsByDate[date] = { date }
       }
       if (!eventsByDate[date][event.event_type]) {
@@ -73,7 +67,12 @@ serve(async (req) => {
         ...corsHeaders,;
         "Content-Type": "application/json"},;
       status: 500});
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

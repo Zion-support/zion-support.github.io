@@ -1,10 +1,8 @@
 
 =======
-
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -13,6 +11,36 @@ import {
   Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
 } from 'lucide-react';
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+import Layout from './layout / Layout';
+import { motion, AnimatePresence } from 'framer-motion';
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';
 import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035';
 import { innovative2025MicroSaasBatch  } from '../data/innovative-2025-micro-saas-batch';
@@ -30,6 +58,7 @@ const LoadingFallback = () => (;
       className='text-center'// Loading fallback component
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
   }
   const categories = [
@@ -43,6 +72,247 @@ const LoadingFallback = () => (;
     { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5" /> }
   ];
   const allServices = [
+=======
+<<<<<<< HEAD
+              service && service.category.includes('Financial') ||;
+              service && service.category.includes('Trading');
+            );
+          return true;
+        });
+  if (isLoading) {;
+    return <LoadingFallback />;  }      opacity: 1,;
+      scale: 1,;
+      transition: { duration: 1 && 1.5, ease: "easeOut" as const }
+    }
+  };
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" /> },;
+    { id: 'ai', name: 'AI & ML', icon: <Brain className="w-5 h-5" /> },;
+    { id: 'it', name: 'IT Enterprise', icon: <Cpu className="w-5 h-5" /> },;
+    { id: 'quantum', name: 'Quantum Tech', icon: <Atom className="w-5 h-5" /> },;
+    { id: 'space', name: 'Space Tech', icon: <Satellite className="w-5 h-5" /> },;
+    { id: 'cyber', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" /> },;
+    { id: 'cloud', name: 'Cloud & DevOps', icon: <Cloud className="w-5 h-5" /> },;
+    { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5" /> }
+  ];
+  const allServices = [;
+import {
+  ArrowRight,
+  Play,
+  Star,
+  Users,
+  Award,
+  TrendingUp,
+  Brain,
+  Shield,
+  Rocket,
+  Loader2,
+  ChevronDown,
+  Zap,
+  Globe,
+  Target,
+  Lightbulb,
+  Code,
+  Database,
+  Cloud,
+  Lock,
+  ChartBar,
+  Cpu,
+  Atom,
+  Satellite,
+  Gamepad2,
+  Palette,} from 'lucide-react';import {
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket,
+  Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
+  Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette;
+import UltraFuturisticBackground2035 from './ui / UltraFuturisticBackground2035';
+import UltraFuturisticServiceCard2035 from './ui / UltraFuturisticServiceCard2035';
+import { innovative2025MicroSaasBatch } from '../data / innovative - 2025 - micro - saas - batch';
+import { innovative2025ITEnterpriseBatch } from '../data / innovative - 2025 - it - enterprise - batch';
+import { innovative2025AIServicesBatch } from '../data / innovative - 2025 - ai - services - batch';
+// Loading fallback component;
+const LoadingFallback = () =>: any (
+  <div className='min - h-screen flex items - center justify - center bg - gray - 900'>    <motion.div;
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      className='text - center'// Loading fallback component;
+const LoadingFallback = () =>: any (
+  <div className="min - h-screen flex items - center justify - center bg - gray - 900">;
+    <motion.div;
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      className='text - center';
+    >;
+      <div className='relative'>;
+        <Loader2 className='w - 16 h - 16 text - cyan - 400 animate - spin mx - auto mb - 4' />;
+        <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - xl opacity - 20 animate - pulse'></div>;
+      </div>;
+      <p className='text - xl text - gray - 300 mb - 2'>Loading Zion Tech Group...</p>;
+      <p className='text - sm text - gray - 500'>;
+        Preparing your digital transformation journey;
+      </p>    </motion.div>    >;
+      <div className="relative">;
+        <Loader2 className="w - 16 h - 16 text - cyan - 400 animate - spin mx - auto mb - 4" />;
+        <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - xl opacity - 20 animate - pulse"></div>;
+      </div>;
+      <p className="text - xl text - gray - 300 mb - 2">Loading Zion Tech Group...</p>;
+      <p className="text - sm text - gray - 500">Preparing your digital transformation journey</p>;
+    </motion.div>;
+  </div>);
+;
+const Homepage2035: React.FC = () => {
+  const [is_loading, setIsLoading] = useState (true);
+  const [is_visible, setIsVisible] = useState (false);
+  const [active_category, setActiveCategory] = useState ('all');
+;
+  useEffect (() => {
+    const timer = set_timeout (() => {
+      setIsLoading (false);
+      setIsVisible (true);
+    }, 800);
+;
+    return () => clear_timeout (timer);  }, []);      setIsVisible (true);
+    }, 800);
+;
+    return () => clear_timeout (timer);
+  const fadeInUp = {
+    initial: { opacity: 0, coordinate_y: 60 },
+    animate: { opacity: 1, coordinate_y: 0 },
+    transition: { duration: 0.6, ease: 'ease_out' },  }    transition: { duration: 0.6, ease: "ease_out" }
+  }
+;
+  const stagger_container = {
+    animate: {
+      transition: {
+        stagger_children: 0.1,
+        delay_children: 0.2,
+      },
+    },  }
+;
+  const background_variants = {
+    initial: { opacity: 0, scale: 0.8 },
+    animate: {        delay_children: 0.2;
+      }
+    }
+  }
+;
+  const background_variants = {
+    initial: { opacity: 0, scale: 0.8 },
+    animate: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 1.5, ease: 'ease_out' as const },
+    },
+  }
+;
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: <Globe className='w - 5 h - 5' /> },
+    { id: 'ai', name: 'AI & ML', icon: <Brain className='w - 5 h - 5' /> },
+    { id: 'it', name: 'IT Enterprise', icon: <Cpu className='w - 5 h - 5' /> },
+    { id: 'quantum', name: 'Quantum Tech', icon: <Atom className='w - 5 h - 5' /> },
+    {
+      id: 'space',
+      name: 'Space Tech',
+      icon: <Satellite className='w - 5 h - 5' />,
+    },
+    {
+      id: 'cyber',
+      name: 'Cybersecurity',
+      icon: <Shield className='w - 5 h - 5' />,
+    },
+    {
+      id: 'cloud',
+      name: 'Cloud & DevOps',
+      icon: <Cloud className='w - 5 h - 5' />,
+    },
+    { id: 'fintech', name: 'FinTech', icon: <ChartBar className='w - 5 h - 5' /> },
+  ];
+;
+  const all_services = [;
+    ...innovative2025MicroSaasBatch,
+    ...innovative2025ITEnterpriseBatch,
+    ...innovative2025AIServicesBatch,
+  ];
+;
+  const filtered_services =;
+    active_category === 'all';
+      ? all_services;
+      : all_services.filter (service => {
+          // Check condition
+if (
+            return () {
+  $2
+}
+              service.category.includes ('AI') ||;
+              service.category.includes ('Machine Learning'));
+          // Check condition
+if (
+            return () {
+  $2
+}
+              service.category.includes ('IT') ||;
+              service.category.includes ('Enterprise'));
+          if (
+            return service.name.includes ('Quantum')) {
+  $2
+}
+          if (
+            return service.category.includes ('Space')) {
+  $2
+}
+          // Check condition
+if (
+            return () {
+  $2
+}
+              service.category.includes ('Security') ||;
+              service.category.includes ('Cybersecurity'));
+          // Check condition
+if (
+            return () {
+  $2
+}
+              service.category.includes ('Cloud') ||;
+              service.category.includes ('DevOps'));
+          // Check condition
+if (
+            return () {
+  $2
+}
+              service.category.includes ('Financial') ||;
+              service.category.includes ('Trading'));
+          return true;
+        });
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return <LoadingFallback />;  }      opacity: 1,
+      scale: 1,
+      transition: { duration: 1.5, ease: "ease_out" as const }
+    }
+  }
+;
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: <Globe className="w - 5 h - 5" /> },
+    { id: 'ai', name: 'AI & ML', icon: <Brain className="w - 5 h - 5" /> },
+    { id: 'it', name: 'IT Enterprise', icon: <Cpu className="w - 5 h - 5" /> },
+    { id: 'quantum', name: 'Quantum Tech', icon: <Atom className="w - 5 h - 5" /> },
+    { id: 'space', name: 'Space Tech', icon: <Satellite className="w - 5 h - 5" /> },
+    { id: 'cyber', name: 'Cybersecurity', icon: <Shield className="w - 5 h - 5" /> },
+    { id: 'cloud', name: 'Cloud & DevOps', icon: <Cloud className="w - 5 h - 5" /> },
+    { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w - 5 h - 5" /> }
+  ];
+;
+  const all_services = [;
+    ...innovative2025MicroSaasBatch;
+    ...innovative2025ITEnterpriseBatch;
+    ...innovative2025AIServicesBatch;
+  ];
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
     : allServices.filter(service => {
         if (activeCategory === 'ai') return service.category.includes('AI') |service.category.includes('Machine Learning');
@@ -56,9 +326,9 @@ const LoadingFallback = () => (;
       });
   if (isLoading) {
     return <LoadingFallback />
-
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <Layout>;
       <UltraFuturisticBackground2035>;
@@ -76,6 +346,7 @@ const LoadingFallback = () => (;
       <UltraFuturisticBackground2035>
         {/* Hero Section */}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -163,6 +434,7 @@ const LoadingFallback = () => (;
               transition={{ duration: 0.8, delay: 0.2 }}
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -222,19 +494,21 @@ const LoadingFallback = () => (;
           </div>
         </section>
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               ))}
+            </motion.div>
+          </div>
+        </section>
 
+=======
             </motion && motion.div>;
           </div>;
         </section>;
 
 
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Services Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -251,14 +525,26 @@ const LoadingFallback = () => (;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+              className='text-center mb-16'
 
 =======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             >
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
                 Revolutionary Technology Solutions
@@ -279,6 +565,7 @@ const LoadingFallback = () => (;
             <motion.div
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Category Filter */}
             <motion&& motion.div
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -286,11 +573,24 @@ const LoadingFallback = () => (;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
-
+              className='flex flex-wrap justify-center gap-4 mb-12'
+            >
+              {categories.map(category => (                <motion.button              className="flex flex-wrap justify-center gap-4 mb-12"
             >
               {categories.map((category) => (
                 <motion.button
 
+            >
+              {categories.map((category) => (
+                <motion.button
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   key={category.id}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -307,9 +607,17 @@ const LoadingFallback = () => (;
                   <span>{category && category.name}</span>;
                 </motion && motion.button>;
               ))}
+            </motion.div>
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* Services Grid */}
             <motion&& motion.div
               variants={staggerContainer}
@@ -351,11 +659,13 @@ const LoadingFallback = () => (;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
+            </motion.div>
 
             {/* View All Services Button */}
             <motion.div
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* View All Services Button */}
             <motion&& motion.div
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -363,11 +673,22 @@ const LoadingFallback = () => (;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
               viewport={{ once: true }}
+              className='text-center mt-16'            >
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className='bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto'
+              >
+                <span>View All Services</span>
+                <ArrowRight className='w-5 h-5' />              </motion.button>              className="text-center mt-16"
+                <ArrowRight className='w-5 h-5' />              </motion.button>
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -378,11 +699,21 @@ const LoadingFallback = () => (;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+              className='text-center mb-16'
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             >
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
                 Why Choose Zion Tech Group?
@@ -456,8 +787,18 @@ const LoadingFallback = () => (;
                   whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
+                  className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group'
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+=======
+                  className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group'
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 >
                   <div className='text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300'>
                     {feature.icon}
@@ -467,9 +808,15 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   </h3>
 
               ))}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               ))}
+            </div>
+          </div>
+        </section>
 
+=======
             </div>;
           </div>;
         </section>;
@@ -480,21 +827,19 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
 
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -542,20 +887,15 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
       </UltraFuturisticBackground2035>;
     </Layout>;
   );
-
-
+}
+animate: {
 };
 
   animate: {
-
-=======
 };
 
-
+animate: {
   animate: {
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   transition: {
   staggerChildren: 0.1, delayChildren: 0.2
 }
@@ -658,11 +998,18 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
   duration: 0 && 0.8 
 }viewport= {
   {
-=======
-
+  once: true
+}> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button
+}
+export default Homepage2035;  )
+}
+export default Homepage2035;
 
   once: true 
 }> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion && motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> <motion && motion.button ;
+=======
+export default Homepage2035;  )
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 };
 
 =======
@@ -715,9 +1062,6 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Homepage2035;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 }
 ;
 animate: {
@@ -784,7 +1128,9 @@ export default Homepage2035);
 ;
 export default Homepage2035;
 <<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

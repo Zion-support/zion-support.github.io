@@ -1,11 +1,16 @@
 
-
-=======
+import { useState, useEffect  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { Resume  } from '@/types/resume';
+import { useAuth } from '@/hooks/useAuth';
+export function useResumeList() {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useResumeList() {;
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -48,50 +53,7 @@ export function useResumeList() {;
           headline: resume && resume.headline,
           summary: resume && resume.summary
         };
-=======
-          headline: resume.headline,
-          summary: resume.summary;
-        }
-
-        work_experience: [];
-        education: [];
-        skills: [];
-        certifications: [],
-
-        is_active: resume.is_active;
-      }));
-;
-      set_resumes (transformed_resumes);
-      return transformed_resumes;
-    } catch (e: any) {
-      console.error ('Error fetching resumes:', e);
-      set_error (e.message);
-      return [];
-
-    } finally {
-      setIsLoading (false);
-    }
-  }
-
-;
-  // Fetch resumes when the component mounts;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      fetch_resumes ();
-    }
-  }, [user]);
-;
-
-  return {
-    is_loading;
-    error;
-    resumes;
-
-    fetchResumes
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }

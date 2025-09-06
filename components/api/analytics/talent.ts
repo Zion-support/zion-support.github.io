@@ -1,5 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+=======
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {;
+    const supabase = createServerClient();
+    const talentId = (req.query.talentId as string) |null
+    const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       supabase
         .from('profile_views')
         .select('id, talent_id')
@@ -151,20 +161,4 @@ function handler() {
         { label: 'node', value: 1 },
         { label: 'ai', value: 1 },
       ],
-    });
-
-  }
-
 }
-=======
-
-
-  }
-
-}
-
-}
-
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

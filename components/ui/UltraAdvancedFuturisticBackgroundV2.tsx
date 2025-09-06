@@ -148,125 +148,68 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
             opacity: [0.1, 0.2, 0.1];
           }}
           transition={{
-
-          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20"
-        />;
-        <motion.div;
-          className='absolute bottom - 20 right - 20 w - 28 h - 28 border border - green - 400 opacity - 20';
-          animate={{
-            rotate: [360, 0],
-            scale: [1, 0.9, 1],
-            opacity: [0.1, 0.3, 0.1],          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            ease: 'easeInOut',          }}          }}
-        />;
-        <motion.div;
-          className="absolute bottom - 20 right - 20 w - 28 h - 28 border border - green - 400 opacity - 20";
-          animate={{
-
-          }}
-          transition={{
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             duration: 7
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
-=======
-            rotate: [360, 0];
-            scale: [1, 0.9, 1];
-            opacity: [0.1, 0.3, 0.1];
-
           }}
           transition={{
-=======
-            duration: 7,
-            repeat: Infinity,
-
-
-          }}
-
-        />;
-      </div>;
-
-
-      {/* Quantum Energy Particles */}
-
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         />
       </div>
       {/* Quantum Energy Particles */}
       <div className='fixed inset-0 pointer-events-none z-20'>
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {[...Array(20)].map((_, i) => (
           <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             key={i}
             className='absolute w - 2 h - 2 bg - cyan - 400 rounded - full';
             style={{
-
-
+              left: `${Math.random() * 100}%`
+              top: `${Math.random() * 100}%`
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-
-
             }}
             animate={{
               y: [0, -100, 0]
               opacity: [0, 1, 0]
               scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (
           <motion.div
-=======
-              left: `${Math.random () * 100}%`,
-              top: `${Math.random () * 100}%`,
-            }}
-            animate={{
-              coordinate_y: [0, -100, 0],
-              opacity: [0, 1, 0],
-              scale: [0, 1, 0],            }}        {[...Array (20)].map ((_, i) => (
-          <motion.div;
-=======
-            duration: 7
-            repeat: Infinity
-            ease: 'easeInOut',            ease: "easeInOut"
-          }}
-
-        />
-      </div>
-      {/* Quantum Energy Particles */}
-      <div className='fixed inset-0 pointer-events-none z-20'>
-
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-
-            key={i}
-            className="absolute w - 2 h - 2 bg - cyan - 400 rounded - full";
-            style={{
-
-            }}
-            animate={{
-              y: [0, -100, 0]
-              opacity: [0, 1, 0]
-              scale: [0, 1, 0]
-            }}
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             }}
           />;
         ))}
-
-      </div>;
+      </div>
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
-
+              ease: 'easeInOut',            }}              ease: "easeInOut"
+            }}
+          />
+        ))}
+      </div>
               ease: 'easeInOut',            }}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
+          />
+        ))}
+      </div>
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Neural Network Connections */}
       <div className='fixed inset-0 pointer-events-none z-30'>;
         <svg className='w-full h-full'>;
@@ -329,59 +272,64 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
               x2={Math.random() * 100}
               y2={Math.random() * 100}
               transition={{
-
-
+                duration: 4 + Math.random() * 2
+                repeat: Infinity
+                delay: Math.random() * 2
+                ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
-            />;
-=======
-
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
+                ease: 'easeInOut',              }}
 
+              }}
+
+                ease: 'easeInOut',              }}
+
+              }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
+        </svg>
+      </div>
 
-        </svg>;
-      </div>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Content */}
+      <div className='relative z-40'>{children}</div>
+    </div>
+  );
+}
+};
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Content */}
 
 
 };
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default UltraAdvancedFuturisticBackgroundV2;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
-                delay: Math.random () * 2,
-                ease: 'easeInOut',              }}                ease: "easeInOut";
-              }}
-            />))}
-        </svg>;
-      </div>;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Content */}
-      <div className='relative z - 40'>{children}</div>;
-    </div>);
+      <div className='relative z-40'>{children}</div>
+    </div>
+  );
 }
-;
-export default UltraAdvancedFuturisticBackgroundV2;    </div>);
-}
-;
-export default UltraAdvancedFuturisticBackgroundV2;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+export default UltraAdvancedFuturisticBackgroundV2;
+export default UltraAdvancedFuturisticBackgroundV2;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

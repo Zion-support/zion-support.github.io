@@ -1,3 +1,29 @@
+=======
+export default function ForumPostPage() {
+  // Using `useParams` without type arguments avoids issues when TypeScript
+  // can't determine the generic type for the helper from React Router.
+  // Cast the result instead to provide the expected shape.
+  const router = useRouter()
+  const postId = router.query.postId as string
+  const { user } = useAuth()
+  const { toast } = useToast()
+  const [post, setPost] = useState(mockPost)
+  const [replies, setReplies] = useState(mockReplies)
+  // Check if this is the user's own post
+  const isAuthor = user?.id === post?.authorId
+  // Check if user is admin/mod
+  const isAdminOrMod = user?.userType === 'admin' |user?.role === 'admin'
+      return
+    }
+  const handlePinPost = () => {
+    if (!isAdminOrMod) return
+    setPost({ ...post, isPinned: !post.isPinned })
+  const handleLockPost = () => {
+    if (!isAdminOrMod) return
+    setPost({ ...post, isLocked: !post.isLocked })
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
+  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")
+}
 
 import {useState} from "react"
 import Link from "next/link"

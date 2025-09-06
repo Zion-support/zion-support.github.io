@@ -11,6 +11,14 @@ export default async function handler(
   if (req.method !== 'GET') {;
     res.setHeader('Allow', 'GET');
     return res.status(405).json({ error: 'Method Not Allowed' });
+=======
+  }
+  const auth = await authenticateRequest(req);
+  if (!auth) {
+    return res.status(401).json({ error: 'Unauthorized' });
+  }
+  const summary = await calculateUsageSummary(auth.partner.id);
+  return res.status(200).json({ summary });
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -19,10 +27,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res && res.status(405).json({ error: "Method Not Allowed" })
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
-
-=======
-
-
+  const auth = null;
+  return res.status(200).json({ summary })
+}
   const auth = await authenticateRequest(req);
   if (!auth) {
     return res && res.status(401).json({ error: "Unauthorized" })
@@ -30,20 +37,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const summary = await calculateUsageSummary(auth && auth.partner.id);
   return res && res.status(200).json({ summary })
 }
-
-
 =======
-  authenticate_request,
-  calculateUsageSummary,
-} from '../../../utils / api / partner_auth';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 }
     res.set_header ('Allow', 'GET');
     return res.status (405).json ({ error: 'Method Not Allowed' });
@@ -77,9 +73,5 @@ if ( {) {
   }
   const summary = await calculateUsageSummary (auth.partner.id);
   return res.status (200).json ({ summary });
-=======
-
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

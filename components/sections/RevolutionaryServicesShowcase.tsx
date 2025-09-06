@@ -26,16 +26,29 @@ const RevolutionaryServicesShowcase: React.FC = () => {
       y: 0
       transition: {
 
-        duration: 0.5
-      }
-    }
-  }
 
   return (
     <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-7xl mx-auto'>
         {/* Header */}
         <motion.div
+  return (
+    <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <motion.div
+          className="text-center mb-16"
+=======
+          className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+        <motion&& motion.div
+          className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  }
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
@@ -44,12 +57,58 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         <motion.div
           className="text-center mb-16"
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
 
+=======
+        <motion&& motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0 && 0.8 }}
+          viewport={{ once: true }}>;
+          <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
+            <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>;
+              Revolutionary 2025;
+            </span>;
+            <br />;
+            <span className='text-white'>Services</span>;
+          </h2>;
+          <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>;
+            Experience the future with our cutting-edge AI, quantum computing,;
+            and emerging technology solutions. Transform your business with;
+            services that were once science fiction.          </p>;
+        </motion && motion.div>;
+
+
+        {/* Category Filter */}
+        <motion&& motion.div
+          className='flex flex-wrap justify-center gap-4 mb-12'          initial={{ opacity: 0, y: 20 }}              Revolutionary 2025
+
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              Revolutionary 2025
+
+            </span>
+            <br />
+            <span className="text-white">Services</span>
+          </h2>
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Experience the future with our cutting-edge AI, quantum computing, and emerging technology solutions.
+            Transform your business with services that were once science fiction.
+          </p>
+        </motion.div>
+        {/* Category Filter */}
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -68,9 +127,21 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                   ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25';
                   : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600/50';
               }`}
+            >
+              {category.name}
+              <span className='ml-2 px-2 py-1 bg-white/20 rounded-full text-xs'>                {category.count}              <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">
+                {category.count}
+              <span className='ml-2 px-2 py-1 bg-white/20 rounded-full text-xs'>                {category.count}
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </span>
             </button>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -79,6 +150,9 @@ const RevolutionaryServicesShowcase: React.FC = () => {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Services Grid */}
         <motion&& motion.div
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
@@ -94,11 +168,16 @@ const RevolutionaryServicesShowcase: React.FC = () => {
               variants={itemVariants}
               className='group relative cursor-pointer'
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               style={{ perspective: '1000px' }}
             >
               <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>
               <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 {/* Background Effects */}
 
                 <div className='absolute inset-0 rounded-2xl overflow-hidden'>;
@@ -251,6 +330,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <div>
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
 =======
@@ -467,30 +547,70 @@ const RevolutionaryServicesShowcase: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
-            className="text-center"
-
-            className="text-center"
-
 =======
 
+                {/* Floating Particles */}
+                <div className='absolute inset-0 pointer-events-none overflow-hidden'>;
+                  <div
+                    className='absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60'
+                    style={{ left: '20%', top: '30%' }}></div>;
+                  <div
+                    className='absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60'
+                    style={{ left: '35%', top: '40%' }}></div>;
+                  <div
+                    className='absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60'
+                    style={{ left: '50%', top: '50%' }}></div>;
+                  <div
+                    className='absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60'
+                    style={{ left: '65%', top: '60%' }}></div>;
+                  <div
+                    className='absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60'
+                    style={{ left: '80%', top: '70%' }}></div>                </div>                <div className="absolute inset-0 pointer-events-none overflow-hidden">;
+                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '20%', top: '30%' }}></div>;
+                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '35%', top: '40%' }}></div>;
+                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '50%', top: '50%' }}></div>;
+                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '65%', top: '60%' }}></div>;
+                  <div className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" style={{ left: '80%', top: '70%' }}></div>;
+              </div>;
+            </motion && motion.div>;
+          ))}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        </motion && motion.div>;
+        {/* Load More Button */}
+        {visibleServices < filteredServices.length && (
+          <motion.div
+            className='text-center'            initial={{ opacity: 0 }}          <motion.div
+            className='text-center'            initial={{ opacity: 0 }}          <motion.div 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+            className="text-center"
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+            className="text-center"
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}>;
             <button
               onClick={loadMore}
+              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'            >              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
+              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'            >
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             >
               Load More Revolutionary Services
             </button>
           </motion.div>
         )}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -512,15 +632,13 @@ const RevolutionaryServicesShowcase: React.FC = () => {
               href="/pricing"
               className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 };
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default RevolutionaryServicesShowcase;
 
-
-=======
-
-};
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default RevolutionaryServicesShowcase;
+export default RevolutionaryServicesShowcase;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

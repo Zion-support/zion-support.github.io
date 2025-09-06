@@ -1,8 +1,9 @@
-
-=======
 export interface EmergingTechService2028 {
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  id: string;
+export interface EmergingTechService2028 {  id: string;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   name: string;
   tagline: string;
   price: string;
@@ -14,16 +15,40 @@ export interface EmergingTechService2028 {
   contactInfo: {
     mobile: string;
     email: string;
-
-
+    address: string;
+  };
+export interface EmergingTechService2028 {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  description: string,;
+  features: string[],;
+  link: string,;
+  category: string,;
+  realImplementation: boolean,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string;
+  }
+}
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     address: string;
   }
 export const emergingTech2028Services: EmergingTechService2028[] = [
   {
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -59,6 +84,8 @@ export const emergingTech2028Services: EmergingTechService2028[] = [
   }
 ];
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

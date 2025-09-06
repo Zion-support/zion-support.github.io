@@ -1,5 +1,4 @@
 
-=======
 "use client",;
 import { useState } from "react",;
 interface AIService {;
@@ -192,7 +191,6 @@ const aiServices: AIService[] = [;
 ],;
 export default function AISolutionsPage() {;
   const [selectedService, setSelectedService] = useState<string | null>(null);
-
   return (;
     <div className="space-y-8">;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

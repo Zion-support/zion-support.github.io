@@ -1,13 +1,25 @@
-
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Crown, Gem, Infinity, Brain, Atom, Microscope, Phone, Mail, MapPin
 } from 'lucide-react'
 import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations';
 import { innovativeITServices2033 } from '../data/2033-innovative-it-services';
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import { motion } from 'framer-motion',;
+import { 
+  Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Crown, Gem, Infinity, Brain, Atom, Microscope, Phone, Mail, MapPin
+} from 'lucide-react',;
+import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations',;
+import { innovativeITServices2033 } from '../data/2033-innovative-it-services',;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const contactInfo = {
 
   mobile: '+1 302 464 0950',
@@ -20,33 +32,11 @@ export default function Pricing2033Page() {
 
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+
   // Enhanced service categories with pricing
   const serviceCategories = [
-import React, { useState } from 'react',
-import Head from 'next / head',
-import { motion } from 'framer-motion',
-import {
-  Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Crown, Gem, Infinity, Brain, Atom, Microscope, Phone, Mail, MapPin;
-} from 'lucide-react',
-import { cuttingEdge2033Services } from '../data / 2033 - cutting - edge - innovations',
-import { innovativeITServices2033 } from '../data / 2033 - innovative - it - services',
-const contact_info = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com';
-},
-export default /**
- * Pricing2033Page - Function description
- */
-function Pricing2033Page() {
-  const [billing_cycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
-  const [selected_plan, setSelectedPlan] = useState < string | null>(null),
-  // Enhanced service categories with pricing;
-  const service_categories = [;
 
-    {
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -130,6 +120,176 @@ function Pricing2033Page() {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import {;
+  Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Crown, Gem, Infinity, Brain, Atom, Microscope, Phone, Mail, MapPin;
+} from 'lucide-react',;
+import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations';
+import { innovativeITServices2033 } from '../data/2033-innovative-it-services';
+const contactInfo = {;
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
+};
+export default function Pricing2033Page(req, res) {
+  try {
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+  // Enhanced service categories with pricing;
+  const serviceCategories = [;
+    {;
+      name: 'Revolutionary AI Services';
+      description: 'AI consciousness evolution and emotional intelligence';
+      services: ['AI Consciousness EvolutionAI Emotional IntelligenceAI Creativity OrchestratorAI Autonomous Business Manager'];
+      avgPrice: '$11,499/month',;
+      savings: 'Save 60-80% vs. competitors',;
+      icon: Brain,;
+      color: 'from-violet-500 to-purple-500';
+    },;
+    {;
+      name: 'Quantum & Emerging Tech',;
+      description: 'Quantum computing and DNA-based solutions',;
+      services: ['Quantum DNA ComputingQuantum Internet SecurityQuantum Financial TradingQuantum Creativity Studio'],;
+      avgPrice: '$19,999/month',;
+      savings: 'Save 70-85% vs. competitors',;
+      icon: Atom,;
+      color: 'from-indigo-500 to-blue-500';
+    },;
+    {;
+      name: 'Enterprise IT Solutions',;
+      description: 'Autonomous operations and zero-trust security',;
+      services: ['Autonomous DevOpsZero Trust ArchitectureEdge Computing OrchestrationAI IT Operations Center'],;
+      avgPrice: '$649/month',;
+      savings: 'Save 50-70% vs. competitors',;
+      icon: Cpu,;
+      color: 'from-blue-500 to-cyan-500';
+    },;
+    {;
+      name: 'Space & Metaverse Tech',;
+      description: 'Space mining and metaverse development',;
+      services: ['Space Mining AutomationMetaverse AI DevelopmentAI Health AnalyticsHolographic Events'],;
+      avgPrice: '$14,999/month',;
+      savings: 'Save 65-80% vs. competitors',;
+      icon: Rocket,;
+      color: 'from-teal-500 to-emerald-500';
+    },;
+    {;
+      name: 'Innovative Micro SAAS',;
+      description: 'Cutting-edge solutions for every business',;
+      services: ['AI Business IntelligenceQuantum-Secure CommunicationAI Customer SuccessBlockchain Supply Chain'],;
+      avgPrice: '$374/month',;
+      savings: 'Save 40-60% vs. competitors',;
+      icon: Target,;
+      color: 'from-green-500 to-yellow-500';
+    },;
+    {;
+      name: 'Research & Development',;
+      description: 'Breakthrough technologies and innovations',;
+      services: ['Neuromorphic ComputingPhotonic ComputingSwarm RoboticsBiotech Automation'],;
+      avgPrice: '$1,099/month',;
+      savings: 'Save 55-75% vs. competitors',;
+      icon: Microscope,;
+      color: 'from-orange-500 to-red-500';
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  // Enhanced pricing tiers with more realistic and comprehensive offerings;
+  const pricingTiers = [;
+    {;
+      name: 'Starter';
+      description: 'Perfect for small businesses and startups';
+      price: billingCycle === 'monthly' ? 99 : 79;
+      period: billingCycle === 'monthly' ? '/month' : '/month';
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',;
+      features: [;
+        'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeBasic Security Features',;
+        'API Access (1000 calls/month)Community Support';
+      ],;
+      popular: false,;
+      color: 'from-gray-500 to-gray-600';
+    },;
+    {;
+      name: 'Professional',;
+      description: 'Ideal for growing businesses and teams',;
+      price: billingCycle === 'monthly' ? 299 : 239,;
+      period: billingCycle === 'monthly' ? '/month' : '/month',;
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',;
+      features: [;
+        'Access to 200+ Advanced ServicesAdvanced AI IntegrationPriority Support (24/7)60-Day Free TrialAdvanced Analytics DashboardPhone & Email Support99.9% Uptime GuaranteeAdvanced Security Features',;
+        'API Access (10,000 calls/month)Dedicated Account ManagerCustom IntegrationsAdvanced Reporting';
+      ],;
+      popular: true,;
+      color: 'from-purple-500 to-cyan-500';
+    },;
+    {;
+      name: 'Enterprise',;
+      description: 'For large organizations and enterprises',;
+      price: billingCycle === 'monthly' ? 999 : 799,;
+      period: billingCycle === 'monthly' ? '/month' : '/month',;
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',;
+      features: [;
+        'Access to All 500+ ServicesFull AI & Quantum IntegrationPremium Support (24/7)90-Day Free TrialEnterprise Analytics SuiteDedicated Support Users99.99% Uptime GuaranteeEnterprise Security Features',;
+        'Unlimited API AccessDedicated Success ManagerCustom DevelopmentAdvanced ComplianceWhite-label SolutionsSLA Guarantees';
+      ],;
+      popular: false,;
+      color: 'from-blue-500 to-indigo-500';
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  // Popular services with pricing;
+  const popularServices = [;
+    {;
+      name: 'AI Consciousness Evolution Platform';
+      price: '$24,999/month',;
+      description: 'Develop genuine AI consciousness through advanced neural architecture',;
+      category: 'AI & Consciousness',;
+      features: ['Multi-dimensional consciousness mappingEmotional intelligence evolutionSelf-awareness development'],;
+      savings: 'Save 70% vs. competitors';
+    },;
+    {;
+      name: 'Quantum DNA Computing Platform',;
+      price: '$35,999/month',;
+      description: 'Breakthrough platform combining quantum computing with DNA-based computation',;
+      category: 'Quantum & Biotech',;
+      features: ['DNA-based quantum algorithmsBiological quantum entanglementDNA memory systems'],;
+      savings: 'Save 75% vs. competitors';
+    },;
+    {;
+      name: 'Space Mining Automation Platform',;
+      price: '$45,999/month',;
+      description: 'Revolutionary platform for automated asteroid mining and resource extraction',;
+      category: 'Space Technology',;
+      features: ['Asteroid identification and mappingAutomated mining operationsResource extraction algorithms'],;
+      savings: 'Save 80% vs. competitors';
+    },;
+    {;
+      name: 'AI Business Intelligence Suite',;
+      price: '$299/month',;
+      description: 'Comprehensive business intelligence platform powered by artificial intelligence',;
+      category: 'Micro SAAS',;
+      features: ['AI-powered analyticsPredictive insightsAutomated reporting'];
+      savings: 'Save 50% vs. competitors';
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  ],
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <>
       <Head>
@@ -151,6 +311,8 @@ function Pricing2033Page() {
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -158,6 +320,8 @@ function Pricing2033Page() {
               <motion.div
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 transition={{ duration: 0.6 }} className="mb-6">
                 <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium">
                   <Crown className="w-4 h-4" />
@@ -167,6 +331,8 @@ function Pricing2033Page() {
               <motion.h1
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 transition={{ duration: 0.6, delay: 0.1 }} className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
                   Revolutionary Technology
@@ -177,6 +343,8 @@ function Pricing2033Page() {
               <motion.p
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 transition={{ duration: 0.6, delay: 0.3 }} className="flex items-center justify-center space-x-4 mb-8">
                 <span className={`text-sm ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
                   Monthly
@@ -203,8 +371,6 @@ function Pricing2033Page() {
         </div>;
 
         {/* Pricing Tiers */}
-
-
         {/* Pricing Tiers */  } catch (error) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     console.error("Error:", error);
@@ -225,6 +391,8 @@ function Pricing2033Page() {
         </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -291,16 +459,12 @@ function Pricing2033Page() {
                       {tier.savings && (
                         <div className="text-green-400 text-sm font-medium">{tier.savings}</div>
 
-=======
-
                       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     </div>
                     <ul className="space-y-4 mb-8">
@@ -311,6 +475,8 @@ function Pricing2033Page() {
                         </li>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -329,6 +495,9 @@ function Pricing2033Page() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+                  transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   <div className="flex items-center space-x-3 mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}>
                       <category.icon className="w-6 h-6 text-white" />
@@ -348,11 +517,7 @@ function Pricing2033Page() {
                         <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-sm text-gray-300">{service}</span>
                       </li>
-                    ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                    ))}
                   </ul>
                   <a
                     href="/services" className="inline-flex items-center space-x-2 text-purple-400 hover:text-cyan-400 transition-colors duration-200 text-sm font-medium">
@@ -360,6 +525,8 @@ function Pricing2033Page() {
                     <ArrowRight className="w-4 h-4" />
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -376,6 +543,8 @@ function Pricing2033Page() {
                 <motion.div
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
@@ -383,17 +552,6 @@ function Pricing2033Page() {
                       <p className="text-gray-400 text-sm mb-3">{service.description}</p>
                       <div className="inline-flex items-center px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full">
 
-                        {service.category}
-
-
-                        {service.category  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       </div>
                     </div>
@@ -408,11 +566,7 @@ function Pricing2033Page() {
                         <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                         <span className="text-sm text-gray-300">{feature}</span>
                       </li>
-                    ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                    ))}
                   </ul>
 
                   <div className="flex space-x-3">
@@ -428,6 +582,8 @@ function Pricing2033Page() {
                 </motion.div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -436,9 +592,8 @@ function Pricing2033Page() {
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-
+                Join the future of technology with our revolutionary AI, quantum computing, and cutting-edge solutions. 
                 Join the future of technology with our revolutionary AI, quantum computing, and cutting-edge solutions.
-
                 Get in touch with our experts to discuss your transformation journey and pricing options.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -448,6 +603,8 @@ function Pricing2033Page() {
                   <ArrowRight className="w-5 h-5 ml-2 inline" />
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <a
                   href={`tel:${contactInfo.mobile}`} className="px-8 py-4 bg-gray-800/50 border border-purple-500/30 text-purple-300 font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200">
                   <Phone className="w-5 h-5 mr-2 inline" />
@@ -456,6 +613,8 @@ function Pricing2033Page() {
               </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <div className="mt-12 pt-8 border-t border-purple-500/20">
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-300">
                   <div className="flex items-center space-x-2">
@@ -477,7 +636,15 @@ function Pricing2033Page() {
         </div>
       </div>
     </>
-
+  );
+};
   )
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

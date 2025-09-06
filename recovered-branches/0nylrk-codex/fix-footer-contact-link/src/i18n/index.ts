@@ -1,6 +1,7 @@
 
 
 export default i18n;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Initialize i18next;
 i18n;
   .use (LanguageDetector) // Detect user language;
@@ -45,9 +46,15 @@ i18n.on ('language_changed', (lng) => {
   // This will be implemented in the LanguageContext;
 
 }),;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default i18n;
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

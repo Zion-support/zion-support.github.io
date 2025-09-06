@@ -1,9 +1,15 @@
-
-
-const LOG_DIR = path.join(process.cwd(), 'dataanalytics')
-const LOG_FILE = path.join(LOG_DIR, 'events.log.jsonl')
-function ensureLogFile() {
-  if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR, { recursive: true });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
+const LOG_DIR = path.join(process.cwd(), 'dataanalytics'),
+const LOG_FILE = path.join(LOG_DIR, 'events.log.jsonl'),
+  try {
+    ensureLogFile (),
+    fs.appendFileSync (LOG_FILE, JSON.stringify (event) + '\n');
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   } catch (e) {
     // ignore file errors in serverless;

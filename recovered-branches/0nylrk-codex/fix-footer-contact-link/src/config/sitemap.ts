@@ -1,6 +1,8 @@
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   path: string;
   label: string;
   description?: string;
@@ -503,8 +505,8 @@ export const getAccessibleRoutes = (
     if (userType === 'creator' |userType === 'jobSeeker') {
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes]
 
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
     if (userType === 'employer' |userType === 'buyer') {
       accessibleRoutes = [...accessibleRoutes, ...clientRoutes]
@@ -513,7 +515,30 @@ export const getAccessibleRoutes = (
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes]
     }
   }
-
-};
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return accessibleRoutes
+}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    required_auth: true;
+    required_roles: ['admin'];
+    priority: 0.8;
+    change_freq: 'daily',
+    lastmod: current_date}];
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+;
+  return accessibleRoutes;
+  
+  return accessibleRoutes
+;
+
+  return accessibleRoutes;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+};
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

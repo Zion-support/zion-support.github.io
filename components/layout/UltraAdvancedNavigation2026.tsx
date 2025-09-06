@@ -1,15 +1,42 @@
 
 =======
-
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-
+  Menu
+  X
+  ChevronDown
+  Search
+  Phone
+  Mail
+  MapPin
+  Rocket
+  Brain
+  Atom
+  Globe
+  Zap
+  Sparkles
+  Shield
+  Microscope
+  DollarSign
+  Home
+  Users
+  Briefcase
+  BookOpen
+  MessageCircle;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
+  Microscope, DollarSign, Home, Users, Briefcase
+  BookOpen, MessageCircle
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Menu,
   X,
   ChevronDown,
@@ -29,7 +56,20 @@ import {
   Home,
   Users,
   Briefcase,
+=======
+  BookOpen,;
+  MessageCircle,;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, DollarSign, Home, Users, Briefcase, 
+  BookOpen, MessageCircle 
 
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
 const serviceCategories = [
@@ -482,210 +522,25 @@ const UltraAdvancedNavigation2026 = () => {;
         { name: 'Data Analytics', href: '/services?category=analytics', description: 'Business intelligence and analytics' },;
 
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ];
     }
 
+  ];
 
+  ];
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const contactInfo = {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
   }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-  const contactInfo = {;
-    phone: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup && ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709';
-
-=======
-        { name: 'AI Autonomous Agents', href: '/services?category=ai-autonomous', description: 'Fully autonomous AI systems' },
-        { name: 'AI Consciousness', href: '/services?category=ai-consciousness', description: 'Consciousness simulation and interfaces' },
-        { name: 'AI Healthcare', href: '/services?category=ai-healthcare', description: 'Medical AI and diagnostics' },
-        { name: 'AI Education', href: '/services?category=ai-education', description: 'Educational AI systems' },
-        { name: 'AI Legal', href: '/services?category=ai-legal', description: 'Legal AI and compliance' },
-        { name: 'AI Creative', href: '/services?category=ai-creative', description: 'Creative AI and content generation' }
-      ]
-
-  const contactInfo = {
-    phone: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709',  };    address: '364 E Main St STE 1008 Middletown DE 19709'
-
-  }
-const company_links = [;
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'About Us', href: '/about', icon: Users },
-  { name: '2026 Services', href: '/2026 - services - showcase', icon: Rocket },
-  {
-    name: 'Innovative 2026',
-    href: '/2026 - innovative - services - showcase',
-    icon: Zap,
-  },
-  {
-    name: 'Ultimate 2026',
-    href: '/ultimate - 2026 - services - showcase',
-    icon: Sparkles,
-  },
-  {
-    name: '2026 Pricing',
-    href: '/revolutionary - 2026 - pricing',
-    icon: DollarSign,
-  },
-  { name: 'Case Studies', href: '/case - studies', icon: Briefcase },
-  { name: 'Blog & Resources', href: '/blog', icon: BookOpen },
-  { name: 'Careers', href: '/careers', icon: Users },
-  { name: 'Contact', href: '/contact', icon: MessageCircle }, ];  { name: 'Innovative 2026', href: '/2026 - innovative - services - showcase', icon: Zap },
-  { name: 'Ultimate 2026', href: '/ultimate - 2026 - services - showcase', icon: Sparkles },
-  { name: '2026 Pricing', href: '/revolutionary - 2026 - pricing', icon: DollarSign },
-  { name: 'Case Studies', href: '/case - studies', icon: Briefcase },
-  { name: 'Blog & Resources', href: '/blog', icon: BookOpen },
-  { name: 'Careers', href: '/careers', icon: Users },
-  { name: 'Contact', href: '/contact', icon: MessageCircle }
-const UltraAdvancedNavigation2026 = () =>: any {
-  const [is_open, setIsOpen] = useState (false);
-  const [is_scrolled, setIsScrolled] = useState (false);
-  const [active_dropdown, setActiveDropdown] = useState < string | null>(null);
-;
-  useEffect (() => {
-    const handle_scroll = () =>: any {
-      setIsScrolled (window.scroll_y > 20);
-    }
-    window.addEventListener ('scroll', handle_scroll);
-    return () => window.removeEventListener ('scroll', handle_scroll);  }, []);      setIsScrolled (window.scroll_y > 20);
-    }
-    window.addEventListener ('scroll', handle_scroll);
-    return () => window.removeEventListener ('scroll', handle_scroll);
-  const navigation_items = [;
-    {
-      name: 'AI Services',
-      href: '/services?category = ai',
-      icon: Brain,
-      color: 'from - blue - 500 to - cyan - 500',
-      description: 'Autonomous AI systems and consciousness interfaces',
-      sub_items: [;
-        {
-          name: 'AI Autonomous Agents',
-          href: '/services?category = ai - autonomous',
-          description: 'Fully autonomous AI systems',
-        },
-        {
-          name: 'AI Consciousness',
-          href: '/services?category = ai - consciousness',
-          description: 'Consciousness simulation and interfaces',
-        },
-        {
-          name: 'AI Healthcare',
-          href: '/services?category = ai - healthcare',
-          description: 'Medical AI and diagnostics',
-        },
-        {
-          name: 'AI Education',
-          href: '/services?category = ai - education',
-          description: 'Educational AI systems',
-        },
-        {
-          name: 'AI Legal',
-          href: '/services?category = ai - legal',
-          description: 'Legal AI and compliance',
-        },
-        {
-          name: 'AI Creative',
-          href: '/services?category = ai - creative',
-          description: 'Creative AI and content generation',
-        },
-      ],
-    },    {        { name: 'AI Autonomous Agents', href: '/services?category = ai - autonomous', description: 'Fully autonomous AI systems' },
-        { name: 'AI Consciousness', href: '/services?category = ai - consciousness', description: 'Consciousness simulation and interfaces' },
-        { name: 'AI Healthcare', href: '/services?category = ai - healthcare', description: 'Medical AI and diagnostics' },
-        { name: 'AI Education', href: '/services?category = ai - education', description: 'Educational AI systems' },
-        { name: 'AI Legal', href: '/services?category = ai - legal', description: 'Legal AI and compliance' },
-        { name: 'AI Creative', href: '/services?category = ai - creative', description: 'Creative AI and content generation' }
-      ];
-    }
-
-      name: 'Quantum Tech',
-      href: '/services?category = quantum',
-      icon: Atom,
-      color: 'from - purple - 500 to - indigo - 500',
-      description: 'Quantum computing and space technology',
-
-      sub_items: [;
-        {
-          name: 'Quantum Space Tech',
-          href: '/services?category = quantum - space',
-          description: 'Space exploration and communication',
-        },
-        {
-          name: 'Quantum Computing',
-          href: '/services?category = quantum - computing',
-          description: 'Advanced quantum systems',
-        },
-        {
-          name: 'Quantum AI',
-          href: '/services?category = quantum - ai',
-          description: 'Quantum - powered AI',
-        },
-        {
-          name: 'Quantum Security',
-          href: '/services?category = quantum - security',
-          description: 'Quantum encryption and security',
-        },
-      ],
-    },    {        { name: 'Quantum Space Tech', href: '/services?category = quantum - space', description: 'Space exploration and communication' },
-        { name: 'Quantum Computing', href: '/services?category = quantum - computing', description: 'Advanced quantum systems' },
-        { name: 'Quantum AI', href: '/services?category = quantum - ai', description: 'Quantum - powered AI' },
-        { name: 'Quantum Security', href: '/services?category = quantum - security', description: 'Quantum encryption and security' }
-      ];
-    }
-
-      name: 'Metaverse',
-      href: '/services?category = metaverse',
-      icon: Globe,
-      color: 'from - pink - 500 to - rose - 500',
-      description: 'Virtual worlds and digital reality',
-
-      sub_items: [;
-        {
-          name: 'Metaverse Platforms',
-          href: '/services?category = metaverse - platforms',
-          description: 'Virtual world platforms',
-        },
-        {
-          name: 'Digital Reality',
-          href: '/services?category = digital - reality',
-          description: 'Immersive experiences',
-        },
-        {
-          name: 'Holographic Tech',
-          href: '/services?category = holographic',
-          description: '3D holographic systems',
-        },
-        {
-          name: 'Consciousness Interface',
-          href: '/services?category = consciousness - interface',
-          description: 'Brain - computer interfaces',
-        },
-      ],
-    },    {        { name: 'Metaverse Platforms', href: '/services?category = metaverse - platforms', description: 'Virtual world platforms' },
-        { name: 'Digital Reality', href: '/services?category = digital - reality', description: 'Immersive experiences' },
-        { name: 'Holographic Tech', href: '/services?category = holographic', description: '3D holographic systems' },
-        { name: 'Consciousness Interface', href: '/services?category = consciousness - interface', description: 'Brain - computer interfaces' }
-      ];
-    }
-
-      name: 'Enterprise IT',
-      href: '/services?category = enterprise',
-      icon: Zap,
-      color: 'from - green - 500 to - emerald - 500',
-      description: 'Enterprise solutions and infrastructure',
-
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Logo */}
 
       sub_items: [;
@@ -919,22 +774,9 @@ const UltraAdvancedNavigation2026 = () =>: any {
                                 </div>
                                 <div className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200">
 
-                  {/* Dropdown Menu */}
-                  <AnimatePresence>;
-                    {activeDropdown === item && item.name && (;
-                      <motion&& motion.div
-                        initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
+=======
+            {/* Desktop Navigation */}
 
-
-                              <Link
-                                key={subItem && subItem.name}
-                                href={subItem && subItem.href}
-                                className="block p-3 rounded-xl hover:bg-purple-500/10 transition-colors duration-200 group"
-                                onClick={() => setActiveDropdown(null)}
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                                   {subItem.description}
                                 </div>
                               </Link>
@@ -988,12 +830,7 @@ const UltraAdvancedNavigation2026 = () =>: any {
               ))}
 =======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              {/* Quick Links */}
-
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Link
                   href='/pricing'
                   className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'>;
@@ -1117,6 +954,8 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 Get Started
+              </Link>
+            </div>
 
             {/* Mobile Menu Button */}
             <button
@@ -1179,25 +1018,13 @@ const UltraAdvancedNavigation2026 = () =>: any {
                 </button>
               </div>
               {/* Mobile Navigation Items */}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-
-
-            </button>;
-          </div>;
-        </div>;
-      </nav>;
-
-
 =======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>;
         {isOpen && (;
@@ -1211,19 +1038,17 @@ const UltraAdvancedNavigation2026 = () =>: any {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-
-
+            transition={{ duration: 0.2 }}
+            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden"
             onClick={() => setIsOpen(false)}
-          >;
-            <motion&& motion.div
-=======
-
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}
 
             onClick={() => setIsOpen(false)}
 
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1246,6 +1071,31 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
 
               {/* Mobile Navigation Items */}
+              <div className='space-y-4'>
+                {navigationItems.map(item => (
+                  <div
+                    key={item.name}
+                    className='border-b border-gray-700/50 pb-4'
+                  >
+                      href={item.href}
+                      className='flex items-center space-x-3 text-white hover:text-purple-300 transition-colors duration-200 py-2'
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <div
+                        className={`w-8 h-8 bg-gradient-to-br ${item.color} rounded-lg flex items-center justify-center`}
+                      >
+                        <item.icon className='w-4 h-4 text-white' />
+                      </div>
+                      <span className='font-medium'>{item.name}</span>
+                    </Link>
+                    {/* Mobile Sub-items */}
+                    <div className='mt-3 ml-11 space-y-2'>
+                      {item.subItems.slice(0, 3).map(subItem => (
+                        <Link
+                          key={subItem.name}
+                          href={subItem.href}
+                          className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm py-1'                          onClick={() => setIsOpen(false)}                          className="block text-gray-400 hover: text-white transition-colors duration-200 text-sm py-1"
+                          onClick={() => setIsOpen(false)}
 
                         className={`w-8 h-8 bg-gradient-to-br ${item && item.color} rounded-lg flex items-center justify-center`}>;
                         <item && item.icon className='w-4 h-4 text-white' />;
@@ -1254,6 +1104,10 @@ const UltraAdvancedNavigation2026 = () =>: any {
                     </Link>;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                         >
                           {subItem.name}
                         </Link>
@@ -1489,25 +1343,13 @@ const UltraAdvancedNavigation2026 = () =>: any {
         )}
       </AnimatePresence>
 
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   );
 }
 export default UltraAdvancedNavigation2026;
 
 
-=======
-            </motion.div>;
-          </motion.div>)}
-      </AnimatePresence>;
-      {/* Spacer for fixed navigation */}
-      <div className='h - 20'></div>;
-    </>);
-}
-;
-export default UltraAdvancedNavigation2026;    </>);
-}
-export default UltraAdvancedNavigation2026;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
@@ -1517,10 +1359,14 @@ export default UltraAdvancedNavigation2026;
       <div className='h-20'></div>
     </>
   );
+}
+};
 
 export default UltraAdvancedNavigation2026;    </>
   );
 }
 export default UltraAdvancedNavigation2026;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+export default UltraAdvancedNavigation2026;
+export default UltraAdvancedNavigation2026;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

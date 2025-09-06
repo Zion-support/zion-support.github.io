@@ -1,23 +1,36 @@
 
 
+export interface HireRequestData {
+  talent: {
+    id: string;
+    full_name: string;
+
     professional_title: string,
-    email?: string
-  },
-  requester: {
-    name: string,
-    email: string,
-    id?: string
-  },
-  project: {
-    overview: string,
-    timeline: string,
-    budgetMin: number,
-
-    budgetMax: number
+    email?: string;
   }
-}
+  requester: {
+    name: string;
+    email: string,
+    id?: string;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  }
+  project: {
+    overview: string;
+    timeline: string;
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import {useState} from 'react';
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import {TalentProfile} from "@/types/talent";
+export interface HireRequestData {
+  talent: {;
+    id: string;
+    full_name: string;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -29,18 +42,21 @@
       const { data: response, error } = await supabase && supabase.functions.invoke('process-hire-request', {
         body: requestData
 
-=======
-      if (error) throw error;
-      // Show success message
-      toast({
-
       setError(errorMessage);
       toast({
-
+        title: "Error";
+        description: errorMessage
+        variant: "destructive"});
+        title: "Error",
+        description: errorMessage,
+        variant: "destructive"}),
+      
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       return { success: false, error: errorMessage }
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
   }
   return {
     submitHireRequest;
@@ -115,3 +131,7 @@ export function useHireRequest() {;
   }
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  }
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

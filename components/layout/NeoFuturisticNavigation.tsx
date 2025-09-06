@@ -28,10 +28,6 @@ import { useRouter } from 'next/router';
                 Zion Tech Group;
               </div>;
               <div className='text-xs text-gray-400'>;
-=======
-import Link from 'next / link';
-import { use_router } from 'next / router';
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import {
   Menu,
   X,
@@ -82,7 +78,118 @@ import {
   Eye,
 
 export default function NeoFuturisticNavigation() {
+=======
+import React, { useState, useEffect } from 'react',
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+import {
+  Menu
+  X
+  ChevronDown
+  ChevronRight
+  Phone
+  Mail
+  MapPin
+  Globe
+  ArrowRight
+  Sparkles
+  Brain
+  Atom
+  Shield
+  DollarSign
+  FileText
+  BarChart3
+  MessageSquare
+  Truck
+  Users
+  Database
+  Cpu
+  Cloud
+  Play
+  Search
+  ShieldCheck
+  TrendingUp
+  Rocket
+  Zap
+  Check
+  Star
+  Clock
+  Target
+  Building
+  Award
+  ChartBar
+  Lock
+  Smartphone
+  Palette
+  Calendar
+  CreditCard
+  Settings
+  Code
+  BookOpen
+  Activity
+  Bot
+  ChevronRight as ChevronRightIcon
+  Eye
+  FlaskConical
+  Link as LinkIcon;
+import Button from '../ui/Button';
+import {
+  Menu,
+  X,
+  ChevronDown,
+  ChevronRight,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Sparkles,
+  Brain,
+  Atom,
+  Shield,
+  DollarSign,
+  FileText,
+  BarChart3,
+  MessageSquare,
+  Truck,
+  Users,
+  Database,
+  Cpu,
+  Cloud,
+  Play,
+  Search,
+  ShieldCheck,
+  TrendingUp,
+  Rocket,
+  Zap,
+  Check,
+  Star,
+  Clock,
+  Target,
+  Building,
+  Award,
+  ChartBar,
+  Lock,
+  Smartphone,
+  Palette,
+  Calendar,
+  CreditCard,
+  Settings,
+  Code,
+  BookOpen,
+  Activity,
+  Bot,
+  ChevronRight as ChevronRightIcon,
+  Eye,
+  FlaskConical,;
+  Link as LinkIcon,;
+import Button from '../ui/Button';
+export default function NeoFuturisticNavigation() {;
+
+export default function NeoFuturisticNavigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -716,12 +823,16 @@ export default function NeoFuturisticNavigation() {
                   <span>Services</span>;
                   <ChevronRight
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}
+                  />
+                </button>
 
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
                     {serviceCategories.map((category, index) => (
@@ -786,6 +897,7 @@ export default function NeoFuturisticNavigation() {
                   </div>
                 )}
               </div>
+<<<<<<< HEAD
               {/* Resources Section */}
               <div>
                 <button
@@ -838,7 +950,9 @@ export default function NeoFuturisticNavigation() {
                   </div>
                 </div>
                 <div className='mt-6 space-y-3'>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Company Section */}
               <div>;
                 <button

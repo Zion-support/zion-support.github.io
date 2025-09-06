@@ -128,6 +128,8 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
         } catch (err) {;
           setError('Failed to parse categorized skills. Please try again.');
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
   return (
     <div className="bg-muted/40 p-6 rounded-lg">
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
@@ -147,6 +149,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
           onClick={handleCategorizeSkills}
           disabled={isEnhancing || !bulkSkills.trim()}
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           className="gap-2"
         >
           {isEnhancing ? (
@@ -156,8 +159,42 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
           )}
           Categorize with AI
         </Button>
+        <p className="text-xs text-muted-foreground mt-1">
+          AI will identify skills and categorize them automatically. This may take a moment to process.
+        </p>
+        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+      </div>;
+    </div>);
+}
 
+            onChange = {(e,) => setBulkSkills(e && e.target.value),}
+          />;
+        </div>;
+
+        <Button
+          onClick = {handleCategorizeSkills,}
+          disabled = {isEnhancing || !bulkSkills && bulkSkills.trim(),}
+          className="gap-2">;
+          {isEnhancing ? (;
+            <Loader2 className="h-4 w-4 animate-spin" />;
+          ) : (;
+            <Sparkles className="h-4 w-4" />;
+          )}
+          Categorize with AI;
+        </Button>;
+
+        <p className="text-xs text-muted-foreground mt-1">;
+          AI will identify skills and categorize them automatically. This may take a moment to process.;
+        </p>;
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>
     </div>
+<<<<<<< HEAD
   )
+
+'"
+
+'";
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

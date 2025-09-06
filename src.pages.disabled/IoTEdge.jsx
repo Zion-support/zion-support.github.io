@@ -1,6 +1,7 @@
 import React from 'react';
 interface IoTEdgeProps {
   // Add props here as needed
+}
 
 =======
 
@@ -13,5 +14,19 @@ export default function IoTEdge({ }: IoTEdgeProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+:src.pages.disabled/IoTEdge.jsx
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
 
-<<<<<<< HEAD
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+:src.pages.disabled/IoTEdge.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/IoTEdge.jsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

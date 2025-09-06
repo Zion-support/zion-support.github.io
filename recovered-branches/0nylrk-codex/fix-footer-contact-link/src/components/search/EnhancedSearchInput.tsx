@@ -1,9 +1,43 @@
 
+=======
+
 
 import React, { useState, useEffect, useRef } from "react",
 import { Search, X } from "lucide-react",
 import { Input } from "@/components/ui/input",
+import React, { useState, useEffect, useRef } from "react";
+import {Search, X} from "lucide-react";
+import {Input} from "@/components/ui/input";
+import {AutocompleteSuggestions} from "@/components/search/AutocompleteSuggestions";
+import {SearchSuggestion} from "@/types/search";
+import React, { useState, useEffect, useRef } from "react",
+import { Search, X } from "lucide-react",
+import { Input } from "@/components/ui/input",
+import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
+import { SearchSuggestion } from "@/types/search";
+interface EnhancedSearchInputProps {
 
+  value: string
+  onChange: (value: string) => void
+
+  placeholder?: string;
+  searchSuggestions: SearchSuggestion[];
+}
+
+
+export function EnhancedSearchInput(): any ({ ;
+  value;
+  onChange, ;
+  placeholder = "Search...", ;
+  searchSuggestions ;
+}: EnhancedSearchInputProps) {;
+
+  const [isFocused, setIsFocused] = useState(false);
+  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
+import { SearchSuggestion } from "@/types/search",
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -20,17 +54,59 @@ interface EnhancedSearchInputProps {
   const inputRef = useRef<HTMLInputElement>(null),
   const containerRef = useRef<HTMLDivElement>(null),
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import React, { useState, useEffect, useRef } from "react",;
+import { Search, X } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",;
+import { SearchSuggestion } from "@/types/search",;
+interface EnhancedSearchInputProps {;
+  value: string,;
+  onChange: (value: string) => void,;
+  placeholder?: string,;
+  searchSuggestions: SearchSuggestion[];
+}
+;
+export function EnhancedSearchInput({;
+  value,;
+  onChange,;
+  placeholder = "Search...",;
+  searchSuggestions;
+}: EnhancedSearchInputProps) {;
+  const [isFocused, setIsFocused] = useState(false),;
+  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),;
+  const inputRef = useRef<HTMLInputElement>(null),;
+  const containerRef = useRef<HTMLDivElement>(null),;
+  // Filter suggestions based on input value;
+  useEffect(() => {;
+    if (!value) {;
+      // Show recent searches when input is empty;
+      setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent')),;
+      return;
+    }
+;
+    const filtered = searchSuggestions.filter(suggestion =>;
+      suggestion.text.toLowerCase().includes(value.toLowerCase());
+    ),;
+    // Sort suggestions to prioritize those that start with the search term;
+    filtered.sort((a, b) => {;
+      const aStartsWith = a.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0,;
+      const bStartsWith = b.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0,;
+      return aStartsWith - bStartsWith;
+    }),;
+    setFilteredSuggestions(filtered.slice(0, 8)), // Limit to 8 suggestions;
+  }, [value, searchSuggestions]),;
+  // Handle clicks outside the component to close suggestions;
+  useEffect(() => {;
+    function handleClickOutside(event: MouseEvent) {;
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {;
+        setIsFocused(false);
 =======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  // Filter suggestions based on input value
-  useEffect(() => {
-    if (!value) {
-      // Show recent searches when input is empty
-      setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent'));
-      return
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
     }
 
@@ -56,8 +132,6 @@ interface EnhancedSearchInputProps {
           ref={inputRef}
           type="text"
 
-=======
-
 ;
     document.addEventListener("mousedown", handleClickOutside),;
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -76,9 +150,7 @@ interface EnhancedSearchInputProps {
         <Input;
           ref={inputRef}
           type="text";
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           value={value}
           onChange={(e) => onChange(e && e.target.value)}

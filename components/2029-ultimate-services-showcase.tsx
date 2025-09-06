@@ -10,40 +10,48 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
 import {
+  Rocket
+  Brain
+  Atom
+  Globe
+  Zap
+  Sparkles
+  Shield
+  Target
+  Crown
+  Star
+  TrendingUp
+  ArrowRight
+  CheckCircle
+  DollarSign
+  Users
+  Clock
+  Award
+  Zap as ZapIcon
+  Search
+  Phone
+  Mail
+  MapPin
+  Heart
+  Leaf
+  Car
+  GraduationCap
+  Scale
+  Building
+  Factory
+  Camera
+  Video
+  Music
+  Gamepad2
+  Eye
+  Globe2
+  Satellite
+  Dna
+  Battery
+  Gamepad
+  Cpu as CpuIcon;} from 'lucide-react';import {
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
 
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-import Head from 'next / head';
-import Link from 'next / link';
-import { motion, AnimatePresence } from 'framer-motion';
-
-=======
-import {
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Rocket,
   Brain,
@@ -84,13 +92,12 @@ import {
   Dna,
   Battery,
 
-=======
   Gamepad,;
   Cpu as CpuIcon,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Target, Crown, Star, TrendingUp, ArrowRight;
   CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon;
   Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale;
@@ -110,12 +117,27 @@ export default function UltimateServicesShowcase2029() {;
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
 
   const _filteredServices = allServices.filter(service => {_const _matchesCategory = selectedCategory === 'all' ||
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+              >
+                Get Started Today
+              </Link>
+              <Link
+                href="/pricing"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500/10 transition-all duration-200 text-lg"
               >
                 View Pricing
               </Link>
             </div>
 
+=======
 
 
 
@@ -177,6 +199,8 @@ export default function UltimateServicesShowcase2029() {;
                 <button
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
@@ -208,6 +232,35 @@ export default function UltimateServicesShowcase2029() {;
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+                  key={range.id}
+                  onClick={() => setSelectedPriceRange(range.id)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                    selectedPriceRange === range.id
+                      ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg'
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'                  }`}                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50';
+                  }`}
+                >
+                  {range.name}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+=======
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Services Grid */}
 
 
@@ -284,8 +337,16 @@ export default function UltimateServicesShowcase2029() {;
                         <span
                           key={cat}
                           className="px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20"
-=======
-
+                          {cat}
+                        </span>
+                      ))}
+                      {service.category.length > 3 && (
+                        <span className='px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg'>                          +{service.category.length - 3}                        <span className="px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg">
+                          +{service.category.length - 3}
+                        </span>
+                      )}
+                    </div>
+                  </div>
                           className='px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20'                        >
 
 
@@ -293,9 +354,6 @@ export default function UltimateServicesShowcase2029() {;
 {cat}
                         </span>;
                       ))}
-
-=======
-                      {service.category.length > 3 && (
 
                   {/* Features Preview */}
                   <div className='mb-6'>
@@ -344,16 +402,17 @@ export default function UltimateServicesShowcase2029() {;
                   </div>
                   {/* Action Button */}
                   <div className='mt-auto'>                  <div className="mb-6 space-y-2">
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       )}
+                    </ul>
+                  </div>
 
+=======
                     </div>;
                   </div>;
 
 
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {/* Features Preview */}
 
@@ -365,6 +424,7 @@ export default function UltimateServicesShowcase2029() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {/* Market Info */}
 
                   <div className="mb-6 space-y-2">
@@ -401,7 +461,14 @@ export default function UltimateServicesShowcase2029() {;
 
                   <div className="mt-auto">
                     <Link
-
+                      href={`/services/${service.id}`}
+                      className='w-full px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 text-center block group-hover:scale-105 transform transition-transform duration-200'
+                    >
+                      Learn More
+                      <ArrowRight className='inline-block ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200' />                    </Link>
+                  </div>
+                  {/* Hover Effect */}
+                  <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                </div>                    <Link
                       href={`/services/${service.id}`}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -413,6 +480,7 @@ export default function UltimateServicesShowcase2029() {;
                   </div>;
                   {/* Hover Effect */}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 </div>
               </motion.div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -421,6 +489,13 @@ export default function UltimateServicesShowcase2029() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {/* No Results */}
           {filteredServices && filteredServices.length === 0 && (;
             <div className='text-center py-20'>;
@@ -446,6 +521,8 @@ export default function UltimateServicesShowcase2029() {;
               <p className="text-gray-400 mb-8">Try adjusting your search criteria or browse all services</p>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 onClick={() => {
                   setSelectedCategory('all');
                   setSearchTerm('');
@@ -457,9 +534,14 @@ export default function UltimateServicesShowcase2029() {;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
+        </div>
+      </section>
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Contact CTA */}
       <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20'>;
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">;
@@ -473,11 +555,8 @@ export default function UltimateServicesShowcase2029() {;
           <motion.div
 
 =======
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -514,3 +593,6 @@ Join the future of technology with our revolutionary services.
       </section>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

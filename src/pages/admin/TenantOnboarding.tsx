@@ -26,7 +26,16 @@ import { supabase } from "@/integrations/supabase/client",
     custom_domain: ""
 
     is_co_branded: true
-
+  });
+  // Check if user has admin role
+  const isAdmin = null;
+  })
+  // Check if user has admin role
+  const isAdmin = user?.role === "admin";
+      };
+  );
+};
+<<<<<<< HEAD
   return (
     <>
       <SEO
@@ -558,6 +567,7 @@ export default function TenantOnboarding() {;
     </>;
   );
 }
+<<<<<<< HEAD
 
 
 import React, { useState } from './react';

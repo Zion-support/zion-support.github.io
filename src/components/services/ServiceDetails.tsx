@@ -14,6 +14,7 @@ interface ServiceDetailsProps {
   country: string
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Get region-specific image
   const getRegionalImage = (country: string): string => {
     // In a real app, you'd have specific images for each region
@@ -25,13 +26,42 @@ interface ServiceDetailsProps {
       "Australia": "https://source.unsplash.com/featured/900x700/?datacenter,australia",
       "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",
       // Default placeholder
-
+      default: 'https://source.unsplash.com/featured/900x700/?datacenter',
+    }
+    return (
+      regions[country] ||
+      regions['default'] ||
+      'https://source.unsplash.com/featured/900x700/?datacenter'
+    )
+  }
+  // Get region-specific instructions
+  const getRegionalInstructions = (country: string): string => {
+    // In a real implementation, this would be much more detailed and specific
+    const timeZones: Record<string, string> = {
+      'United States': 'EST/CST/PST depending on location',
+      'United Kingdom': 'GMT/BST',
+      Germany: 'CET/CEST',
+      Japan: 'JST',
+      Australia: 'AEST/ACDT/AWST depending on location',
+      Singapore: 'SGT',
+      default: 'Local timezone',
+    }
+    const timezone = null;
+      timeZones[country] || timeZones['default'] || 'Local timezone'
+    return (
+      `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
+      `Response times are typically within 4 hours for metropolitan areas. ` +
+      `Please have site access permissions and contact details ready for our technicians. ` +
+      `For remote locations, additional travel fees may apply.`
+    )
+  }
+  const datacenters = getDatacenters(country)
       "default": "https://source.unsplash.com/featured/900x700/?datacenter"
     },
-
+    
     return regions[country] || regions["default"] || "https: //source.unsplash.com/featured/900x700/?datacenter"
   },
-
+  
   // Get region-specific instructions
   const getRegionalInstructions = (country: string): string => {
     // In a real implementation, this would be much more detailed and specific
@@ -44,6 +74,40 @@ interface ServiceDetailsProps {
       "Singapore": "SGT",
       "default": "Local timezone"
     },
+    
+    const timezone = timeZones[country] || timeZones["default"] || "Local timezone",
+    
+    return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
+           `Response times are typically within 4 hours for metropolitan areas. ` +
+           `Please have site access permissions and contact details ready for our technicians. ` +
+           `For remote locations, additional travel fees may apply.`
+  },
+  
+  const datacenters = getDatacenters(country),
+  
+  return (
+    <Card className="bg-zion-blue-dark border-zion-blue-light">
+      <CardHeader>
+        <CardTitle className="text-white flex items-center">
+          <Server className="mr-2 h-5 w-5 text-zion-cyan" /> 
+          IT Onsite Service in {country}
+        </CardTitle>
+        <CardDescription className="text-zion-slate-light">
+          Details about our service locations and capabilities in {country}
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="overflow-hidden rounded-lg mb-4 relative h-48">
+          <Image
+            src={getRegionalImage(country)}
+            alt={`Datacenter in ${country}`}
+            className="object-cover transform transition-transform duration-500 hover:scale-110"
+            loading="lazy"
+          />
+        </div>
+        <div className='space-y-4'>
+        
+        <div className="space-y-4">
 
     const timezone = timeZones[country] || timeZones["default"] || "Local timezone",
 
@@ -145,41 +209,12 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
               <MapPin className="mr-2 h-4 w-4 text-zion-purple" />;
               Service Locations;
             </h4>;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+<<<<<<< HEAD
                   {dc}
                 </div>;
               ))}
             </div>
           </div>
-
-          <div>
-            <h4 className="text-lg font-medium text-white mb-2 flex items-center">
-              <Clock className="mr-2 h-4 w-4 text-zion-purple" />
-              Service Instructions
-            </h4>
-            <p className="text-zion-slate-light">
-              {getRegionalInstructions(country)}
-            </p>
-          </div>
-
-              <li>Transportation to your site</li>
-              <li>First hour of onsite technical support</li>
-              <li>Basic hardware diagnosis</li>
-              <li>Network connectivity troubleshooting</li>
-              <li>Equipment installation assistance</li>
-            </ul>
-          </div>
-        </div>
-      </CardContent>
-
-        </p>
-      </CardFooter>
-    </Card>
-  )
-
-};"
-return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardDescription> </CardHeader> <CardContent className="space-y-4" > <div className="overflow-hidden rounded-lg mb-4 relative h-48" > <Image /> </div> <div className="space-y-4" > <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <MapPin className="mr-2 h-4 w-4 text-zion-purple" /> Service Locations </h4> <div key= {
   idx "
 }className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"> {;
   dc ;

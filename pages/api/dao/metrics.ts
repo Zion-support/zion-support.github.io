@@ -1,4 +1,5 @@
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -7,6 +8,7 @@ const cachePath = path.join(process.cwd(), "data", "dao", "metrics.json");
 
 async function fetchJson(url: string) {
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
 
@@ -22,47 +24,52 @@ function writeJson(p: string, v: any) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
+function readJson(p: string) {
+  return JSON.parse(fs.readFileSync(p, "utf-8"));
+;
+function readJson(p: string) {;
+  return JSON.parse(fs.readFileSync(p, 'utf-8'));
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 function writeJson(p: string, v: any) {
-  fs.writeFileSync(p, JSON.stringify(v, null, 2))
+  fs.writeFileSync(p, JSON.stringify(v, null, 2));
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
-
-
-
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
 ) {
-
-=======
-  if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-  return resp.json()
-}
-
-function readJson(p: string) {
-  return JSON.parse(fs.readFileSync(p, 'utf-8'))
-}
-
-function writeJson(p: string, v: any) {
-  fs.writeFileSync(p, JSON.stringify(v, null, 2))
-}
-
-export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+;
+export default async function handler(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   try {
 
+  try {;
+;
+export default async function handler(req, res) {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  try {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
     const now = Date && Date.now();
     const oneWeekMs = 7 * 24 * 60 * 60 * 1000;
+<<<<<<< HEAD
 
   }
     const uniqueAddresses = new Set(txs.flatMap((t: any) => [t.from?.toLowerCase(), t.to?.toLowerCase()]).filter(Boolean));
@@ -80,15 +87,18 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
   }
 }
 }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
     const transfersUrl = `${cfg && cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ""}`;
     const transfersJson = await fetchJson(transfersUrl);
 
     const txs = transfersJson?.result || [];
+
     const holderToDelta: Record<string, bigint> = {};
 
 
     const entries = Object && Object.entries(holderToDelta)
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       .map(([address, delta]) => ({ address, netDelta: delta }))
       .sort((a, b) => (b && b.netDelta > a && a.netDelta ? 1 : -1))
       .slice(0, 10);
@@ -139,12 +149,17 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     }
     writeJson(cachePath, result);
 
-    return res && res.status(200).json(result);
-
-=======
-import { NextApiRequest, NextApiResponse  } from './next';
-import fs from './fs';
-import path from './path';
+  } catch (e: any) {
+    return res
+      .status(500)
+      .json({ error: e?.message ?? "Failed to load DAO metrics" });
+    if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {;
+      return res.status(200).json({ ...cache, cached: true });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 ;
 const config_path = path.join (process.cwd (), "data", "dao", "config.json");
 const cache_path = path.join (process.cwd (), "data", "dao", "metrics.json");
@@ -244,6 +259,7 @@ if ( {) {
     }
     write_json (cache_path, result);
     return res.status (200).json (result);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (e: any) {
 
     return res;
@@ -254,8 +270,9 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

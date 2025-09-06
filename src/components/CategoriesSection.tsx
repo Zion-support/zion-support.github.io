@@ -32,12 +32,7 @@ interface CategoryType {
     link: "/services"
     color: "from-purple-500 to-indigo-600", // Keep color for styling
 
-=======
-
   },
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   {
     id: "talents"
     name: t('categories.talents')
@@ -58,6 +53,8 @@ interface CategoryType {
 const getIcon = (iconName?: string,) => {
   switch (iconName) {
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
   // Use fetchedCategories if provided, otherwise fallback to defaultCategories
   const displayCategories = fetchedCategories && fetchedCategories.length > 0
     ? fetchedCategories.map(cat => ({
@@ -69,7 +66,12 @@ const getIcon = (iconName?: string,) => {
         // Assign a default color or implement logic to assign colors
         color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
-
+        ...cat
+        title: cat.name
+        icon: getIcon(cat.iconName)}))
+        ...cat,
+        ...cat,
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         title: cat.name,
         icon: getIcon(cat.iconName)})),
 
@@ -84,9 +86,24 @@ const getIcon = (iconName?: string,) => {
           </p>
           <p className="text-zion-slate-light text-md">
             {t('home.no_categories_support')}
+          </p>
+        </div>
+      </section>
+    )
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+  }
+
+  }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
 
   }
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>;
       <div className="container mx-auto px-4">;
@@ -99,6 +116,7 @@ const getIcon = (iconName?: string,) => {
           </div>;
         )}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <Link
               key={category.id}
               href={category.link || '#'}
@@ -116,19 +134,16 @@ const getIcon = (iconName?: string,) => {
               </div>
             </Link>
           ))}
+=======
+        </div>
+        </div>;
+<<<<<<< HEAD
 
         {/* Special services section with translations */}
         <div className="mt-8">
           <h3 className="text-center text-xl font-bold text-white mb-6">{t('home.featured_services')}</h3>
           <div className="flex flex-wrap justify-center gap-4">
-
-        <div className="mt-12 flex justify-center">
-          <Link
-            href="/categories/all"
-            className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
-          >
-            {t('home.view_all_categories')}
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: cat.id;"
 title: cat.name,  //Map name to title description: cat.description |"No description available."
 icon: getIcon (cat.iconName), //Get icon component link: cat.link |`/category/$ {

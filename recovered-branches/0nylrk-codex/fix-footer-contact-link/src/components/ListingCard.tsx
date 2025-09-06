@@ -1,7 +1,19 @@
 
-
+import {cn} from "@/lib/utils";
+import {Badge} from "@/components/ui/badge";
+import {Link} from "react-router-dom";
 import { cn } from "@/lib/utils",
+import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
+interface ListingCardProps {
 
+  id?: string;
+  title: string,;
+  description: string,;
+  image?: string;
+  category: string,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   tags?: string[];
   author?: string;
 
@@ -29,8 +41,12 @@ export function ListingCard(): any ({ ;
       className={cn(
         "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer"
 
+import { Badge } from "@/components/ui/badge",
+import { Link } from "react-router-dom",
 =======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface ListingCardProps {
   id?: string,
   title: string,
@@ -42,6 +58,7 @@ interface ListingCardProps {
   authorImage?: string,
   className?: string,
   profileType?: 'service' | 'talent'
+}
 
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
@@ -78,6 +95,10 @@ export function ListingCard({;
     <Link;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+      to={`/profile/${profileId}`}
+      className={cn(
+        "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer",
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         className
 
       )}>;
@@ -112,12 +133,6 @@ export function ListingCard({;
           </div>;
         )}
 
-=======
-
-        
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {authorImage ? (

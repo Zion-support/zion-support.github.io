@@ -49,6 +49,8 @@ const serviceCategories = [
 
 ];
 export default function CuttingEdgeServicesShowcase2025() {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Brain,
   Atom,
   Shield,
@@ -77,17 +79,16 @@ export default function CuttingEdgeServicesShowcase2025() {
 
   Mail,;
   MapPin,;} from 'lucide-react';import { ;
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;
   CheckCircle, ArrowRight, Zap, Target, Microscope;
   Lock, Cloud, BarChart3, Settings, Eye, Code, Palette;
 
   Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin;
 
-=======
-} from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
@@ -95,6 +96,99 @@ import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantu
 import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
 
+import { Zap, Star } from 'lucide-react';
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+const heroStats = [
+  {
+    label: 'Cutting-Edge Services'
+    value: '25+'
+    icon: <Star className='w-5 h-5' />
+  }
+  {
+    label: 'Innovation Areas'
+    value: '8+'
+    icon: <Brain className='w-5 h-5' />
+  }
+  {
+    label: 'Market Coverage'
+    value: '$500B+'
+    icon: <TrendingUp className='w-5 h-5' />
+  }
+  {
+    label: 'Success Rate'
+    value: '99.9%'
+    icon: <Award className='w-5 h-5' />
+  },];  { label: 'Cutting-Edge Services', value: '25+', icon: <Star className="w-5 h-5" /> }
+  { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> }
+  { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w-5 h-5" /> }
+  { label: 'Success Rate', value: '99.9%', icon: <Award className="w-5 h-5" /> }
+const serviceCategories = [
+  {
+    title: 'AI & Consciousness'
+    description:
+      'Revolutionary AI platforms with consciousness and emotional intelligence',    services: cuttingEdgeAIServices2025
+    icon: Brain
+    color: 'from-violet-500 to-purple-600'
+    gradient: 'bg-gradient-to-r from-violet-500 to-purple-600',    description: 'Revolutionary AI platforms with consciousness and emotional intelligence'
+    services: cuttingEdgeAIServices2025
+    icon: Brain
+    color: 'from-violet-500 to-purple-600'
+    gradient: 'bg-gradient-to-r from-violet-500 to-purple-600'
+    count: cuttingEdgeAIServices2025.length
+  }
+  {
+    title: 'Quantum & Emerging Tech'
+    description:
+      'Breakthrough quantum computing and space technology solutions',    services: cuttingEdgeQuantumServices2025
+    icon: Atom
+    color: 'from-indigo-500 to-blue-600'
+    gradient: 'bg-gradient-to-r from-indigo-500 to-blue-600'
+    count: cuttingEdgeQuantumServices2025.length
+  },  {    count: cuttingEdgeAIServices2025.length
+  }
+  {
+    title: 'Quantum & Emerging Tech'
+    description: 'Breakthrough quantum computing and space technology solutions'
+    icon: Atom
+    color: 'from-indigo-500 to-blue-600'
+    gradient: 'bg-gradient-to-r from-indigo-500 to-blue-600'
+    count: cuttingEdgeQuantumServices2025.length
+  },    count: cuttingEdgeQuantumServices2025.length
+  }
+  {
+    title: 'Enterprise IT'
+    description: 'Advanced enterprise infrastructure and security solutions'
+    services: cuttingEdgeEnterpriseITServices2025
+    icon: Shield
+    color: 'from-blue-500 to-cyan-600'
+    gradient: 'bg-gradient-to-r from-blue-500 to-cyan-600'
+    count: cuttingEdgeEnterpriseITServices2025.length
+  },  {    count: cuttingEdgeEnterpriseITServices2025.length
+  }
+  {
+    title: 'Micro SAAS'
+    description: 'Innovative business solutions for modern enterprises'
+    services: cuttingEdgeMicroSaasServices2025
+    icon: Rocket
+    color: 'from-teal-500 to-emerald-600'
+    gradient: 'bg-gradient-to-r from-teal-500 to-emerald-600'
+    count: cuttingEdgeMicroSaasServices2025.length
+  },];    count: cuttingEdgeMicroSaasServices2025.length
+  }
+      'Revolutionary AI platforms with consciousness and emotional intelligence',    services: cuttingEdgeAIServices2025,
+    icon: Brain,
+    color: 'from-violet-500 to-purple-600',
+    gradient: 'bg-gradient-to-r from-violet-500 to-purple-600',
+
+    services: cuttingEdgeAIServices2025,
+    icon: Brain,
+    color: 'from-violet-500 to-purple-600',
+    gradient: 'bg-gradient-to-r from-violet-500 to-purple-600',
 
   {
     title: 'Quantum & Emerging Tech',
@@ -137,9 +231,11 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
     count: cuttingEdgeMicroSaasServices2025.length,
   },];
 
+];
+export default function CuttingEdgeServicesShowcase2025() {
+export default function CuttingEdgeServicesShowcase2025() {;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -235,20 +331,80 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
       }
     }
   }
-=======
-
         duration: 0.5,
       },
     },  };
 
   };
 
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
+    <>
+      <Head>
+        <title>
+          Cutting-Edge Services Showcase 2025 - Zion Tech Group | Future
+          Technology Solutions
+        </title>
+        <meta
+          name='description'
+          content='Explore our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions. Transform your business with future technology.'
+        />
+        <meta
+          name='keywords'
+          content='cutting-edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology'
+        />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link rel='icon' href='/favicon.ico' />      </Head>
+      <Layout>
+        {/* Hero Section */}
+        <section className='relative overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>
+          <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32'>            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center'
+            >
+              <motion.h1
+                className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'                initial={{ opacity: 0, scale: 0.9 }}        <title>Cutting-Edge Services Showcase 2025 - Zion Tech Group | Future Technology Solutions</title>
+        <meta name="description" content="Explore our revolutionary cutting-edge services including AI consciousness, quantum computing, space mining, and advanced enterprise solutions. Transform your business with future technology." />
+        <meta name="keywords" content="cutting-edge services, AI consciousness, quantum computing, space mining, enterprise IT, micro SAAS, future technology" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      <Layout>
+        {/* Hero Section */}
+        <section className='relative overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>
+          <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32'>        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center'
+            >
+              <motion.h1
+                className='text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'              className="text-center"
+            >
+              <motion.h1
+                className="text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6"
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.2 }}
+              >
+                Cutting-Edge Services
+                <span className='block text-2xl md:text-3xl lg:text-4xl mt-4 text-white/90'>
+                  Showcase 2025
+                </span>
+              </motion.h1>
 
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               <motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -259,13 +415,11 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
                   Showcase 2025
                 </span>
               </motion.h1>
-
-=======
-
+              <motion.p
               <motion.p 
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
 
                 initial={{ opacity: 0, y: 20 }}
@@ -276,6 +430,13 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
               </motion.p>
               {/* Hero Stats */}
               <motion.div
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
@@ -293,11 +454,15 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
               </motion && motion.div>;
               {/* CTA Buttons */}
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 className="flex flex-col sm:flex-row gap-4 justify-center"
 
                 className="flex flex-col sm:flex-row gap-4 justify-center"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}>;
@@ -311,15 +476,21 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}>;
               {/* Search */}
+              <div className='relative flex-1 max-w-md'>
+                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-cyan-400 w-5 h-5' />
 
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <input
                   type='text'
                   placeholder='Search services...'
@@ -333,6 +504,29 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
               {/* Category Filter */}
 
                 <button
+                <button
+              <div className='flex flex-wrap gap-2'>                <button
+
+                />
+              </div>
+
+              {/* Category Filter */}
+
+                <button
+
+                  onClick={() => setSelectedCategory('all')}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                    selectedCategory === 'all'
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
+                      : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10'
+                  }`}
+                >
+                  All ({allServices.length})
+                </button>
+                {serviceCategories.map(category => (                  <button                {serviceCategories.map((category) => (
+                  <button
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   onClick={() => setSelectedCategory('all')}
@@ -347,6 +541,13 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
                 {serviceCategories.map((category) => (
                   <button
 
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     key={category.title}
                     onClick={() => setSelectedCategory(category.title)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -366,12 +567,11 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
               {/* View Mode Toggle */}
               <div className='flex items-center gap-2'>                <button              <div className="flex items-center gap-2">;
 
-=======
-              </div>
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <button
 
+=======
 
 
 
@@ -413,11 +613,16 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
                     viewMode === 'list' ? 'flex flex-col lg:flex-row' : ''
                   }`}>;
                   {/* Service Header */}
+                  <div
+                    className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}
+                  >
+                    <div className='flex items-start justify-between mb-4'>
+                      <div className='flex-1'>
+                        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                           {service.name}
                         </h3>;
                         <p className='text - white / 70 text - sm leading - relaxed'>;
@@ -470,6 +675,11 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
                         <span
                           key={tagIndex}
                           className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20"
+=======
+                        >
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {tag}
                         </span>;
@@ -480,14 +690,11 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
                       <span>Market: {service.marketSize}</span>
                       <span className='text-cyan-400'>{service.category}</span>                    </div>
-=======
-=======
-                          className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
                           {tag}
                         </span>;
@@ -536,6 +743,9 @@ className='flex items-start text-sm text-white/80'>;
                     </div>;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       </div>
                     </div>
                     </div>;
@@ -579,6 +789,7 @@ className='flex items-start text-sm text-white/80'>;
                   <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </motion.div>
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   {/* Hover Effect Overlay */}
@@ -594,6 +805,7 @@ className='flex items-start text-sm text-white/80'>;
 =======
             </motion.div>
 
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -603,10 +815,16 @@ className='flex items-start text-sm text-white/80'>;
               <motion&& motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
+                className='text-center py-20'
 
 =======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
                 <div className='text-6xl mb-4'>🔍</div>
                 <h3 className='text-2xl font-bold text-white mb-2'>
@@ -638,16 +856,18 @@ className='flex items-start text-sm text-white/80'>;
 
 
             )}
+=======
+          </div>
+        </section>
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Contact CTA Section */}
         <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">;
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-=======
-          </div>
-        </section>
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
         {/* Contact CTA Section */}
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
@@ -655,6 +875,8 @@ className='flex items-start text-sm text-white/80'>;
             <motion.div
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -743,6 +965,15 @@ className='flex items-start text-sm text-white/80'>;
         </section>
       </Layout>
     </>
+=======
+);
+  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) |service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) |const containerVariants = {
+  );
+  );
+<<<<<<< HEAD
+
+  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   hidden: {
   opacity: 0
 }
@@ -815,205 +1046,6 @@ visible: {;
   duration: 0 && 0.5 ;
 };}
 
-=======
-                        </span>                      </div>;
-                    </div>;
-                    {/* CTA */}
-                    <div className='flex items - center justify - between'>                        Starting From;
-                      </h4>;
-                      <div className="text - 2xl font - bold text - white">;
-                        ${service.pricing.starter.price}
-                        <span className="text - sm font - normal text - white / 60">/{service.pricing.starter.period}</span>;
-                      </div>;
-                    </div>;
-                    {/* CTA */}
-                    <div className='flex items - center justify - between'>;
-                      <a;
-                        href={service.website}
-                        className='inline - flex items - center text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300 text - sm font - medium';
-                      >;
-                        Learn More;
-                        <ExternalLink className='ml - 1 w - 4 h - 4' />;
-                      </a>;
-                      <a;
-                        href='/contact';
-                        className='inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white text - sm font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105';
-                      >;
-                        Get Started;
-                        <ArrowRight className='ml - 2 w - 4 h - 4' />                      </a>                      <a;
-                        href={service.website}
-                        className="inline - flex items - center text - cyan - 400 hover: text - cyan - 300 transition - colors duration - 300 text - sm font - medium";
-                      >;
-                        Learn More;
-                        <ExternalLink className="ml - 1 w - 4 h - 4" />;
-                      </a>;
-                      <a;
-                        href="/contact";
-                        className="inline - flex items - center px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white text - sm font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105";
-                      >;
-                        Get Started;
-                        <ArrowRight className="ml - 2 w - 4 h - 4" />;
-                      </a>;
-                    </div>;
-                  </div>;
-                  {/* Hover Effect Overlay */}
-                  <div className='absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500 pointer - events - none' />                </motion.div>                  <div className="absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 5 to - transparent opacity - 0 group - hover:opacity - 100 transition - opacity duration - 500 pointer - events - none" />;
-                </motion.div>))}
-            </motion.div>;
-            {/* No Results */}
-            {filtered_services.length === 0 && (
-              <motion.div;
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className='text - center py - 20';
-              >;
-                <div className='text - 6xl mb - 4'>🔍</div>;
-                <h3 className='text - 2xl font - bold text - white mb - 2'>;
-                  No services found;
-                </h3>;
-                <p className='text - white / 70 mb - 6'>;
-                  Try adjusting your search terms or category filter;
-                </p>;
-                <button;
-                  on_click={() => {
-                    setSearchTerm ('');
-                    setSelectedCategory ('all');
-                  }}
-                  className='px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300'                >              >;
-                <div className="text - 6xl mb - 4">🔍</div>;
-                <h3 className="text - 2xl font - bold text - white mb - 2">No services found</h3>;
-                <p className="text - white / 70 mb - 6">Try adjusting your search terms or category filter</p>;
-                <button;
-                  on_click={() => {
-                    setSearchTerm ('');
-                    setSelectedCategory ('all');
-                  }}
-                  className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300";
-                >;
-                  Clear Filters;
-                </button>;
-              </motion.div>)}
-          </div>;
-        </section>;
-        {/* Contact CTA Section */}
-        <section className='py - 20 bg - gradient - to - br from - black via - purple - 900 / 20 to - black'>;
-          <div className='max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8'>            <motion.div        <section className="py - 20 bg - gradient - to - br from - black via - purple - 900 / 20 to - black">;
-          <div className="max - w-4xl mx - auto text - center px - 4 sm:px - 6 lg:px - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >;
-              <h2 className='text - 3xl md:text - 4xl font - bold text - white mb - 6'>;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className='text - xl text - white / 80 mb - 8 leading - relaxed'>;
-                Our cutting - edge services are designed to give you a competitive;
-                advantage in the rapidly evolving technology landscape. Let's;
-                discuss how we can help you achieve your goals.;
-              </p>;
-              <div className='flex flex - col sm:flex - row gap - 4 justify - center mb - 8'>;
-                <a;
-                  href='/contact';
-                  className='inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - full hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105 shadow - lg hover:shadow - cyan - 500 / 25';
-                >;
-                  Start Your Journey;
-                  <ArrowRight className='ml - 2 w - 5 h - 5' />;
-                </a>;
-                <a;
-                  href={`tel:${contact_info.mobile}`}
-                  className='inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - full hover:bg - cyan - 500 / 10 transition - all duration - 300 transform hover:scale - 105';
-                >;
-                  <Phone className='mr - 2 w - 5 h - 5' />                  Call Now                Ready to Transform Your Business?;
-              </h2>;
-              <p className="text - xl text - white / 80 mb - 8 leading - relaxed">;
-                Our cutting - edge services are designed to give you a competitive advantage in the rapidly evolving technology landscape.;
-                Let's discuss how we can help you achieve your goals.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center mb - 8">;
-                <a;
-                  href="/contact";
-                  className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - full hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105 shadow - lg hover:shadow - cyan - 500 / 25";
-                >;
-                  Start Your Journey;
-                  <ArrowRight className="ml - 2 w - 5 h - 5" />;
-                </a>;
-                <a;
-                  href={`tel:${contact_info.mobile}`}
-                  className="inline - flex items - center px - 8 py - 4 border - 2 border - cyan - 500 / 50 text - cyan - 400 font - semibold rounded - full hover:bg - cyan - 500 / 10 transition - all duration - 300 transform hover:scale - 105";
-                >;
-                  <Phone className="mr - 2 w - 5 h - 5" />;
-                  Call Now;
-                </a>;
-              </div>;
-              {/* Contact Info */}
-              <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - center'>;
-                <div className='flex flex - col items - center'>;
-                  <div className='w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center mb - 3'>;
-                    <Phone className='w - 6 h - 6 text - cyan - 400' />;
-                  </div>;
-                  <div className='text - white font - semibold'>Phone</div>;
-                  <a;
-                    href={`tel:${contact_info.mobile}`}
-                    className='text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300';
-                  >;
-                    {contact_info.mobile}
-                  </a>;
-                </div>;
-                <div className='flex flex - col items - center'>;
-                  <div className='w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center mb - 3'>;
-                    <Mail className='w - 6 h - 6 text - cyan - 400' />;
-                  </div>;
-                  <div className='text - white font - semibold'>Email</div>;
-                  <a;
-                    href={`mailto:${contact_info.email}`}
-                    className='text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300';
-                  >;
-                    {contact_info.email}
-                  </a>;
-                </div>;
-                <div className='flex flex - col items - center'>;
-                  <div className='w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center mb - 3'>;
-                    <MapPin className='w - 6 h - 6 text - cyan - 400' />;
-                  </div>;
-                  <div className='text - white font - semibold'>Address</div>;
-                  <div className='text - white / 70 text - sm'>;
-                    {contact_info.address}
-                  </div>                </div>                  </div>;
-                  <div className="text - white font - semibold">Phone</div>;
-                  <a href={`tel:${contact_info.mobile}`} className="text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300">;
-                    {contact_info.mobile}
-                  </a>;
-                </div>;
-                <div className="flex flex - col items - center">;
-                  <div className="w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center mb - 3">;
-                    <Mail className="w - 6 h - 6 text - cyan - 400" />;
-                  </div>;
-                  <div className="text - white font - semibold">Email</div>;
-                  <a href={`mailto:${contact_info.email}`} className="text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300">;
-                    {contact_info.email}
-                  </a>;
-                </div>;
-                <div className="flex flex - col items - center">;
-                  <div className="w - 12 h - 12 rounded - full bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 500 / 30 flex items - center justify - center mb - 3">;
-                    <MapPin className="w - 6 h - 6 text - cyan - 400" />;
-                  </div>;
-                  <div className="text - white font - semibold">Address</div>;
-                  <div className="text - white / 70 text - sm">{contact_info.address}</div>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </Layout>;
-    </>);
-;
-  const matches_search = service.name.toLowerCase () .includes (search_term.toLowerCase () ) || service.description.toLowerCase () .includes (search_term.toLowerCase () ) || const container_variants = {
-=======
-);
-  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) |service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) |const containerVariants = {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
@@ -1032,3 +1064,5 @@ const item_variants = {
 visible: {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

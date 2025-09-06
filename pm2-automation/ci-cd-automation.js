@@ -88,8 +88,8 @@ class CICDAutomation {
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
 
 =======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     this.log(`Report generated: ${this.reportFile}`);
     return report;
   }

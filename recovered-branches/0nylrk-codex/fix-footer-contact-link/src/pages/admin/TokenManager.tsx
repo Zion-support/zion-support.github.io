@@ -1,5 +1,30 @@
-
-=======
+import { useEffect, useState  } from 'react';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { useAuth  } from '@/hooks/useAuth';
+import { supabase  } from '@/integrations/supabase/client';
+import { TokenTransaction  } from '@/types/tokens';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
+import { useToast } from '@/hooks/use-toast';
+export default function TokenManager() {
+import {useEffect, useState} from 'react';
+import {Header} from '@/components/Header';
+import {Footer} from '@/components/Footer';
+import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
+import {TokenTransaction} from '@/types/tokens';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
+import {useToast} from '@/hooks/use-toast';
+export default function TokenManager() {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const { user } = useAuth();
   const { toast } = useToast();
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
@@ -75,7 +100,62 @@ if ( {) {
         variant: 'destructive'
       })
     }
+  }
+  };
+import { useEffect, useState } from 'react',;
+import { Header } from '@/components/Header',;
+import { Footer } from '@/components/Footer',;
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { useAuth } from '@/hooks/useAuth',;
+import { supabase } from '@/integrations/supabase/client',;
+import { TokenTransaction } from '@/types/tokens',;
+import { ProtectedRoute } from '@/components/ProtectedRoute',;
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',;
+import { useToast } from '@/hooks/use-toast',;
+export default function TokenManager() {;
+  const { user } = useAuth(),;
+  const { toast } = useToast(),;
+  const [transactions, setTransactions] = useState<TokenTransaction[]>([]),;
+  const [userId, setUserId] = useState(''),;
+  const [amount, setAmount] = useState(0),;
+  const isAdmin = user?.userType === 'admin',;
 
+  useEffect(() => {;
+    if (isAdmin) fetchTransactions();
+  }, [isAdmin]);
+
+  const fetchTransactions = async () => {;
+    const { data, error } = await supabase;
+      .from('token_transactions');
+      .select('*');
+      .order('created_at', { ascending: false });
+      .limit(100);
+    if (!error) setTransactions(data || []);
+  };
+
+  const handleIssue = async (type: 'earn' | 'burn') => {;
+    if (!userId || amount <= 0) return,;
+    const res = await fetch(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON && JSON.stringify({ userId, amount })});
+    if (res && res.ok) {;
+      toast({;
+        title: 'Success',;
+        description: 'Transaction processed';
+      });
+      fetchTransactions();
+    } else {;
+      const err = await res && res.json();
+      toast({;
+        title: 'Error',;
+        description: err && err.error || 'Failed',;
+        variant: 'destructive';
+      });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
 
   },
@@ -115,9 +195,11 @@ if ( {) {
         variant: 'destructive';
       });
     }
-  }
-;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  },
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <ProtectedRoute admin_only>;
       <div>;

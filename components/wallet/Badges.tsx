@@ -5,12 +5,17 @@
 import React from 'react';
   id: string;
 label: string;
-
-
+threshold: number, //token balance threshold
+}
+const BADGES: Badge[] = [
+  { id: 'starter', label: 'Starter', threshold: 50 }
+  { id: 'rising', label: 'Rising Star', threshold: 200 }
+  { id: 'pro', label: 'Pro', threshold: 500 }
+  { id: 'elite', label: 'Elite', threshold: 1000 }
+];
+export function currentBadge(balance: number): Badge | null {
 
 export function currentBadge(balance: number): Badge | null {;
-
-
   let current: Badge | null = null;
 =======
 threshold: number, //token balance threshold ;
@@ -74,71 +79,9 @@ export default function Badges(): any ({ balance }: { balance: number }) {;
   }
   return current;
 }
-
-
-
-  return (
-    <div className='flex gap-2 items-center flex-wrap'>;
-      {BADGES && BADGES.map(b => (    <div className="flex gap-2 items-center flex-wrap">;
-      {BADGES && BADGES.map((b) => (;
-        <span
-          key={b && b.id}
-          className={`px-3 py-1 rounded-full text-xs border ${
-            balance>= b && b.threshold;
-              ? 'bg-yellow-100 border-yellow-300 text-yellow-800';
-              : 'bg-gray-100 border-gray-200 text-gray-500'              ? "bg-yellow-100 border-yellow-300 text-yellow-800";
-              : "bg-gray-100 border-gray-200 text-gray-500";
-          }`}
-          title={`Requires ${b && b.threshold} ZION$`}
-        >;
-          {b && b.label}
-        </span>;
-      ))}
-      {active && (;
-        <span className='ml-2 text-xs text-green-600'>;
-          Current: {active && active.label}
-        </span>;
-      )}
-
-    </div>;
-  );        <span className="ml-2 text-xs text-green-600">Current: {active && active.label}</span>;
-
-      )}
-    </div>;
-  );
-}
-              ? "bg-yellow-100 border-yellow-300 text-yellow-800"
-              : "bg-gray-100 border-gray-200 text-gray-500"
-  }
-  return current;
-}
-export default /**
- * Badges - Function description
- */
-function Badges() {
-  const active = current_badge (balance);
-  return (
-    <div className='flex gap - 2 items - center flex - wrap'>;
-      {BADGES.map (boolean => (    <div className="flex gap - 2 items - center flex - wrap">;
-      {BADGES.map ((b) => (
-        <span;
-          key={b.id}
-          className={`px - 3 py - 1 rounded - full text - xs border ${
-            balance >= b.threshold;
-              ? 'bg - yellow - 100 border - yellow - 300 text - yellow - 800';
-              : 'bg - gray - 100 border - gray - 200 text - gray - 500'              ? "bg - yellow - 100 border - yellow - 300 text - yellow - 800";
-              : "bg - gray - 100 border - gray - 200 text - gray - 500";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 
-
-=======
-export default function Badges({ balance }: { balance: number }) {;
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function Badges({ balance }: { balance: number }) {
 
   const active = currentBadge(balance);
@@ -151,11 +94,13 @@ export default function Badges({ balance }: { balance: number }) {
           key={b.id}
           className={`px-3 py-1 rounded-full text-xs border ${
             balance >= b.threshold
+              ? 'bg-yellow-100 border-yellow-300 text-yellow-800'
+              : 'bg-gray-100 border-gray-200 text-gray-500'              ? "bg-yellow-100 border-yellow-300 text-yellow-800"
+              : "bg-gray-100 border-gray-200 text-gray-500"
 
 =======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           }`}
@@ -164,8 +109,8 @@ export default function Badges({ balance }: { balance: number }) {
           {b.label}
         </span>))}
       {active && (
-<<<<<<< HEAD
         <span className='ml-2 text-xs text-green-600'>
+<<<<<<< HEAD
           Current: {active.label}
         </span>
       )}

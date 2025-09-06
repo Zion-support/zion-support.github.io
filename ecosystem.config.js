@@ -1,8 +1,6 @@
-
-
 =======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 module.exports = {;
 =======
@@ -107,10 +105,17 @@ module && module.exports = {;
     }
   ]
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+},
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/fix-syntax-push-and-merge-to-main-40de
+}
+origin/main
+origin/automation-improvements-final
+},
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default {
   apps: [;
     {
@@ -309,31 +314,106 @@ module.exports = {
     out_file: "./logs/out.log"
     log_file: "./logs/combined.log"
     time: true
-  apps: [{
-
-    },
-    max_memory_restart: "1G",
-    node_args: "--max-old-space-size=1024",
-    error_file: "./logs/err && err.log",
-    out_file: "./logs/out && out.log",
-    log_file: "./logs/combined && combined.log",
-
-    time: true
-
-
-
-
-=======
-=======
+  }]
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+};
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+}
+origin/main
+origin/automation-improvements-final
+}
+  }];
+};
+;
+;
+module.exports = {;
+  apps: [;
+    {;
+      name: 'error-fixer',;
+      script: 'automation/lint-error-fixer.cjs',;
+      args: 'continuous',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '1G',;
+      env: {;
+        NODE_ENV: 'production';
+      },;
+      error_file: './logs/error-fixer-error.log',;
+      out_file: './logs/error-fixer-out.log',;
+      log_file: './logs/error-fixer-combined.log',;
+      time: true;
+    },;
+    {;
+      name: 'intelligent-orchestrator',;
+      script: 'automation/intelligent-orchestrator.cjs',;
+      args: 'continuous',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '1G',;
+      env: {;
+        NODE_ENV: 'production';
+      },;
+      error_file: './logs/orchestrator-error.log',;
+      out_file: './logs/orchestrator-out.log',;
+      log_file: './logs/orchestrator-combined.log',;
+      time: true;
+    },;
+    {;
+      name: 'automation-dashboard',;
+      script: 'automation/automation-dashboard.cjs',;
+      args: 'start',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '1G',;
+      env: {;
+        NODE_ENV: 'production',;
+        PORT: 3001;
+      },;
+      error_file: './logs/dashboard-error.log',;
+      out_file: './logs/dashboard-out.log',;
+      log_file: './logs/dashboard-combined.log',;
+      time: true;
+    },;
+    {;
+      name: 'code-quality-monitor',;
+      script: 'automation/code-quality-monitor.cjs',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '512M',;
+      env: {;
+        NODE_ENV: 'production';
+      },;
+      error_file: './logs/code-quality-error.log',;
+      out_file: './logs/code-quality-out.log',;
+      log_file: './logs/code-quality-combined.log',;
+      time: true;
+    },;
+    {;
+      name: 'performance-optimizer',;
+      script: 'automation/performance-optimizer.cjs',;
+      instances: 1,;
+      autorestart: true,;
+      watch: false,;
+      max_memory_restart: '512M',;
+      env: {;
+        NODE_ENV: 'production';
+      },;
+      error_file: './logs/performance-error.log',;
+      out_file: './logs/performance-out.log',;
+      log_file: './logs/performance-combined.log',;
+      time: true;
+    }
+  ];
+},;
 
 
 }
 
-=======
-
->>>>>>> origin/automation-improvements-final
 =======
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

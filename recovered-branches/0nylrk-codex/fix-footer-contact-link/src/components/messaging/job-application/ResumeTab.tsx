@@ -1,4 +1,6 @@
 
+import React from 'react',
+import React from "react";
 import { ResumeSelector, ResumeOption } from "../resume-selector";
 import { Button } from "@/components/ui/button";
 export interface ResumeTabProps {;
@@ -28,9 +30,16 @@ export function ResumeTab({
   return (
     <div className="space-y-4">
       <ResumeSelector onResumeSelected={handleResumeSelected} />
+      {onApply && (
+        <div className="mt-6">
+          <Button
+            onClick={onApply}
+            disabled={!selectedResumeId |isSubmitting}
 
+import React from 'react',
 import { ResumeSelector, ResumeOption } from "../resume-selector",
 import { Button } from "@/components/ui/button",
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export interface ResumeTabProps {
 
   selectedResumeId?: string | null;
@@ -65,15 +74,8 @@ export function ResumeTab(): any ({;
             onClick={onApply}
             disabled={!selectedResumeId || isSubmitting}
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-            className="w-full"
-          >
-            {isSubmitting ? "Submitting..." : "Submit Application"}
-          </Button>
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           {!selectedResumeId && (
             <p className="text-sm text-muted-foreground mt-2">
               Please select a resume to continue
@@ -82,12 +84,12 @@ export function ResumeTab(): any ({;
         </div>;
       )}
 
-=======
-
     </div>;
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   );
 }

@@ -2,7 +2,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
-
+import type {
+  CreateGrantPayload
+  GrantApplication;
+  CreateGrantPayload,;
+  GrantApplication,;
 } from '../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
@@ -21,9 +25,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {;
     const { status, sector, region, program } = req.query;
     const list = readAllGrants().filter(g => {      return (function ensureDir() {
-
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true })
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }
 function readAllGrants(): GrantApplication[] {
@@ -171,8 +175,34 @@ if ( {) {
       const id = uuidv4 ();
       const now = new Date ().toISOString ();
       const record: GrantApplication = {
-
-
+        id
+        program: payload.program |'grant'
+        projectName: payload.projectName
+        teamInfo: payload.teamInfo
+        proposalSummary: payload.proposalSummary
+        timeline: payload.timeline
+        budgetAmount: payload.budgetAmount |0
+        budgetCurrency: payload.budgetCurrency |'USDC'
+        supportingLinks: payload.supportingLinks |[]
+        pitchDeckUrl: payload.pitchDeckUrl
+        region: payload.region
+        sector: payload.sector
+        status: payload.submit ? 'Submitted' : 'Draft'
+        createdAt: now
+        updatedAt: now
+        milestones: []
+        fundsReleased: 0
+        updates: []
+        votes: []
+      }
+      fs.writeFileSync(
+        path.join(GRANTS_DIR, `${id}.json`)
+        JSON.stringify(record, null, 2)
+        'utf8'
+      );
+      res.status(201).json({ id, record });
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message |'Failed to create grant' });
     }
     return;
   }
@@ -186,6 +216,21 @@ if ( {) {
 
 =======
   res.setHeader('Allow', 'GET, POST');
+  res.status(405).end('Method Not Allowed');
+  res.status(405).end('Method Not Allowed');    } catch (e: any) {
+      res.status(500).json({ error: e?.message || 'Failed to create grant' })
+    }
+    return
+  }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  res.setHeader('AllowGET, POST');
+  res.status(405).end('Method Not Allowed')
+}
+
+}
+}
+}
+  res.status(405).end('Method Not Allowed');
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,32 +1,4 @@
 
-=======
-'use client',
-import React, { useState } from 'react',
-import Link from 'next / link',
-interface InteractiveCardProps {
-  title: string,
-  description: string,
-  icon: string,
-  href: string,
-  color?: string,
-  class_name?: string,
-  children?: React.ReactNode;
-}
-export default /**
- * InteractiveCard - Function description
- */
-function InteractiveCard() {
-  const [is_hovered, setIsHovered] = useState (false),
-  return (
-
-    <Link;
-      href={href}
-      className={`group block p - 8 rounded - 2xl border border - white / 10 hover:border - white / 30 bg - black / 20 hover:bg - black / 40 transition - all duration - 500 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm hover - lift ${class_name}`}
-      onMouseEnter={() => setIsHovered (true)}
-      onMouseLeave={() => setIsHovered (false)}
-      aria - label={`Navigate to ${title} page`}
->;
-      <div className=&quot;relative & quot;>;
   return (;
     <Link;
       href={href}
@@ -35,9 +7,9 @@ function InteractiveCard() {
       onMouseLeave={() => setIsHovered(false)}
       aria-label={`Navigate to ${title} page`}
 
-=======
     >
       <div className="relative">
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -51,6 +23,8 @@ function InteractiveCard() {
             {title}
           </h3>
           <p className="text-gray-400 leading-relaxed text-lg mb-6">
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             {title}
           </h3>;
           <p className=&quot;text - gray - 400 leading - relaxed text - lg mb - 6&quot;>;
@@ -58,10 +32,18 @@ function InteractiveCard() {
             {description}
           </p>;
           {/* Custom children or default arrow */}
-
+{children |(
+{children || (
             <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
+          {children || (
+            <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <span>Learn More</span>
               <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
@@ -83,14 +65,6 @@ function InteractiveCard() {
     </Link>);
 }
 
-=======
-export /**
- * FeatureCard - Function description
- */
-function FeatureCard() {
-  return (
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <InteractiveCard;
       title={title}
       description={description}
@@ -106,16 +80,48 @@ function FeatureCard() {
 }
 
 =======
-export /**
- * TestimonialCard - Function description
- */
-function TestimonialCard() {
-  return (
-    <div className={`bg - black / 30 backdrop - blur - sm border border - white / 10 rounded - 2xl p - 8 hover:bg - black / 50 transition - all duration - 300 transform hover:scale - 105 ${class_name}`}>;
+export function TestimonialCard({quote;
+  author;
+  position;
+  company;
+  rating = 5;
+  className = '';
+}: {quote: string;
+  author: string;
+  position: string;
+  company: string;
+  rating?: number;
+  className?: string;
+}) {return (;
+    <div className={`bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-black/50 transition-all duration-300 transform hover:scale-105 ${className}`}>;
       {/* Quote icon */}
-<div className=&quot;text - 4xl mb - 4&quot;>💬</div>;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+<div className=&quot;text-4xl mb-4&quot;>💬</div>
+;
+export function TestimonialCard({;
+  quote,;
+  author,;
+  position,;
+  company,;
+  rating = 5,;
+  className = '';
+}: {;
+  quote: string,;
+  author: string,;
+  position: string,;
+  company: string;
+  rating?: number;
+  className?: string;
+}) {;
+  return (;
+    <div className={`bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-black/50 transition-all duration-300 transform hover:scale-105 ${className}`}>;
+      {/* Quote icon */}
+      <div className="text-4xl mb-4">💬</div>
+      
+<div className=&quot;text-4xl mb-4&quot;>💬</div>
+      <div className="text-4xl mb-4">💬</div>
+      
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Rating */}
       <div className="flex mb-4">
         {Array.from({ length: rating }).map((_, i) => (
@@ -126,17 +132,14 @@ function TestimonialCard() {
       </div>;
       {/* Quote */}
 
-=======
-
       <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
         "{quote}"
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </blockquote>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       </blockquote>
       {/* Author info */}

@@ -1,4 +1,5 @@
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../../utils/supabase/server";
 export default async function handler(
@@ -6,28 +7,48 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const usingPlaceholder =
+=======
+    (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
+      "placeholder-key";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   try {
     if (usingPlaceholder) {
       return res && res.status(200).json({
         partners: [
-import type { NextApiRequest, NextApiResponse } from './next';
-import { getServerSupabase  } from '../../../../utils / supabase / server';
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const using_placeholder =;
-    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes ("placeholder") ||;
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder - key") ===;
-      "placeholder - key";
-;
-  try {
-    // Check condition
-if ( {) {
-  $2
-}
-      return res.status (200).json ({
-        partners: [;
+          {
+            code: "aihub"
+            name: "AI Hub"
+            status: "approved"
+            commission_rate: 0.2
+          }
+          {
+            code: "promptpro"
+            name: "Prompt Pro"
+            status: "pending"
+            commission_rate: 0.15
+          }
+        ]
+      });
+    }
+    const supabase = getServerSupabase();
+    const { data, error } = await supabase
+      .from("partners")
+      .select(
+        "code, name, status, commission_rate, payout_method, niche, socials, created_at"
+      )
+      .order("created_at", { ascending: false });
+    if (error) return res.status(500).json({ error: error.message });
+
+    return res.status(200).json({ partners: data });
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message });
+import type { NextApiRequest, NextApiResponse } from 'next';
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
+      "placeholder-key";
+import type { NextApiRequest, NextApiResponse } from 'next';
           {
 
             code: "aihub",
@@ -48,17 +69,7 @@ if ( {) {
 
   } catch (e: any) {
     return res && res.status(500).json({ error: e?.message });
-=======
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-=======
-    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
-      "placeholder-key";
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -80,15 +91,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.setHeader('Allow', 'GET');
       res.status(405).end('Method Not Allowed');
     }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (e: any) {
-    return res.status(500).json({ error: e?.message });
-  }
-}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 ;
     }
     const supabase = getServerSupabase ();
@@ -106,15 +115,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
 =======
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-=======
-    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
-      "placeholder-key";
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
@@ -139,5 +139,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(405).end('Method Not Allowed');
     }
 
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

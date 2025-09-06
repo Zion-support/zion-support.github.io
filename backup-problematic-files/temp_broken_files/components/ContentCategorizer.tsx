@@ -1,26 +1,33 @@
 
-=======
 import React, { useState, useEffect, useMemo } from 'react',;
 import {;
   Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,;
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings,;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  BarChart3, Globe, Database, Cpu, Rocket, Brain;
-} from 'lucide-react';
-interface ContentItem {id: string;
-  title: string;
-  href: string;
-  desc: string;
-  category: string;
-  subcategory?: string;
-  date: string;
-  relevance: 'high' | 'medium' | 'low';
-  tags: string[];
-  source: string;
-  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature';
+=======
+import React, { useState, useEffect, useMemo } from 'react',
+import { 
+  Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,
+  BookOpen, Zap, AlertTriangle, Lightbulb, Settings,
+  BarChart3, Globe, Database, Cpu, Rocket, Brain
+} from 'lucide-react',
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+interface ContentItem {
+  id: string,
+  title: string,
+  href: string,
+  desc: string,
+  category: string,
+  subcategory?: string,
+  date: string,
+  relevance: 'high' | 'medium' | 'low',
+  tags: string[],
+  source: string,
+  type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature'
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 interface ContentCategory {id: string;
   name: string;
@@ -347,12 +354,59 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
         {selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
       </div>;
       {/* Content Grid */}
+:components/ContentCategorizer.tsx
 
                   {item.type}
                 </div>;
               </div>;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+                  {item.type}
+                </div>;
+              </div>;
+      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">        {filteredItems.map((item) => {
+          const CategoryIcon = getCategoryIcon(item.category),
+          const TypeIcon = getTypeIcon(item.type),
+          const category = categories.find(c => c.id === item.category),
+      {_/* Results Summary */}
+      <div className="text-sm text-white/60">
+        Showing {filteredItems.length} of {contentItems.length} items
+        {searchTerm && ` matching "${searchTerm}"`}
+        {selectedCategory !== 'all' && ` in ${categories.find(c => c.id === selectedCategory)?.name}`}
+        {selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
+      </div>
+
+      {_/* Content Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filteredItems.map(_(item) => {
+          const CategoryIcon = getCategoryIcon(item.category);
+          const TypeIcon = getTypeIcon(item.type);
+          const category = categories.find(c => c.id === item.category);
+          
+          return (
+            <div key={item.id} className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105&quot;>
+              <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
+              
+              {/* Header with Category and Type */}
+              <div className=&quot;flex items-center justify-between mb-3&quot;>
+                <div className=&quot;flex items-center gap-2&quot;>
+                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${category?.color || 'from-gray-500 to-gray-600'} p-2 flex items-center justify-center`}>
+                    <CategoryIcon className=&quot;w-4 h-4 text-white&quot; />
+                  </div>
+                  <span className=&quot;text-xs text-white/60 uppercase tracking-wider&quot;>
+                    {category?.name}
+                  </span>
+                </div>
+                <div className=&quot;flex items-center gap-1 text-xs text-white/50&quot;>
+                  <TypeIcon className=&quot;w-3 h-3&quot; />
+                  {item.type}
+                </div>;
+              </div>;
+;
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+:backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               {/* Title and Description */}
 <h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
                 {item.title}

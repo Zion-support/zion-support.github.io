@@ -23,12 +23,6 @@ import React from 'react';
 import type { GetServerSideProps } from 'next';
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-import path from 'path';
-import fs from 'fs';
-
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   id: string;
   title: string;
   html?: string;
@@ -41,20 +35,20 @@ type DocsContent = {
   title: string;
   sections: Section[];
 }
-
-
+type PageProps = {
+  docs: DocsContent;
+}
+export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
 };
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
-
   const contentPath = path.join(process.cwd(), 'data', 'docs', 'content.json');
   const raw = fs.readFileSync(contentPath, 'utf8');
   const docs = JSON.parse(raw) as DocsContent;
-
+  return { props: { docs } }
+}
   return { props: { docs } };
 };
-
-
 
 export default function ApiDocsPage({ docs }: PageProps) {
       nav={docs.sections.map(s => ({ id: s.id, title: s.title }))}
@@ -80,28 +74,31 @@ export default function ApiDocsPage({ docs }: PageProps) {
           )}
           {section.code && section.code.length > 0 && (
 =======
+            <div className='space-y-4 mt-4'>
+              {section.code.map((c, idx) => (
+                <CodeBlock key={idx} language={c.language}>
+                  {c.content}
+                </CodeBlock>              ))}            <div className="space-y-4 mt-4">
+              {section.code.map((c, idx) => (
+                <CodeBlock key={idx} language={c.language}>{c.content}</CodeBlock>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               ))}
             </div>;
           )}
         </section>;
       ))}
-
-    </DocsLayout>;
+    </DocsLayout>
+);
   );
-=======
-
-  );
-
-
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
+    </DocsLayout>;
+);
+}
     </DocsLayout>
   );
 }
+<<<<<<< HEAD
 
 ;
 type PageProps = {
@@ -152,3 +149,8 @@ function ApiDocsPage() {
                 <CodeBlock key={idx} language={c.language}>{c.content}</CodeBlock>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

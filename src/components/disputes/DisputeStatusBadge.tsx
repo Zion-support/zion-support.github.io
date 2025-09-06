@@ -19,6 +19,7 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
     default:
       break
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     default:
       break
   }
@@ -62,6 +63,7 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
   }
 ;
   return (;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     <Tooltip>;
       <TooltipTrigger asChild>;
         <Badge variant={variant} className='flex items-center gap-1'>;
@@ -80,6 +82,7 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
       <TooltipContent>;
         <p>{message}</p>;
       </TooltipContent>;
+<<<<<<< HEAD
 
 
 

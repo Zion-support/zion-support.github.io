@@ -1,3 +1,100 @@
+import fs from 'fs';
+import path from 'path';
+import { MultiverseState, InstanceConfig, SyncEvent } from './types';
+const defaultState: SyncState = {
+  config: {
+    instanceId: 'default-instance'
+    peers: []
+    scope: 'global'
+    optIn: false
+    paused: false
+  }
+  lastSyncedAt: new Date().toISOString()
+}
+let state: SyncState = { ...defaultState }
+export function readState(): SyncState {
+  return { ...state }
+}
+export function updateState(updates: Partial<SyncState>): void {
+  state = { ...state, ...updates }
+};
+
+
+export function readState(): SyncState {;
+  return { ...state };
+}
+
+export function updateState(updates: Partial<SyncState>): void {;
+  state = { ...state, ...updates };
+}
+export function upsertEvent(
+  state: MultiverseState
+  event: SyncEvent
+): MultiverseState {;
+  if (state.seenEventIds[event.eventId]) return state;
+  const entityId = getEntityId(event);
+  const currentVersion = state.latestVersionByEntityId[entityId] |0;
+  const isNewer = event.version > currentVersion;
+  if (event.type === 'proposal' && event.merkleRoot && isNewer) {
+    state.proposalMerkleById[entityId] = event.merkleRoot;
+  }
+  if (isNewer) {
+    state.latestVersionByEntityId[entityId] = event.version;
+  }
+  state.events.push(event);
+  state.seenEventIds[event.eventId] = true;
+  state.lastSyncedAt = Math.max(state.lastSyncedAt |0, event.timestamp |0);
+  return state;
+export function getEntityId(event: SyncEvent): string {
+  switch (event.type) {
+    case 'proposal':;
+      return (event.payload as any).proposalId;
+    case 'token_transfer':
+      return (event.payload as any).txId;
+    case 'talent_mobility':
+      return (
+        (event.payload as any).personId + ':' + (event.payload as any).startDate
+      );
+    case 'dao_endorsement':
+      return (event.payload as any).resolutionId;
+    case 'leaderboard_entry':
+      return (
+        (event.payload as any).subjectId + ':' + (event.payload as any).period
+      );
+    default:
+      return (event.payload as any).id |event.eventId;
+  }
+export function filterEventsByScope(
+  events: SyncEvent[]
+  scope: InstanceConfig['scope']
+): SyncEvent[] {;
+  if (scope === 'full') return events;
+  if (scope === 'dao') {
+    return events.filter(
+      e => e.type === 'proposal' |e.type === 'dao_endorsement'
+    );
+  }
+  if (scope === 'marketplace') {
+    return events.filter(
+      e =>
+        e.type === 'token_transfer' |
+        e.type === 'talent_mobility' |
+        e.type === 'leaderboard_entry'
+    );
+  }
+  return events;export function resetState(): void {
+  state = { ...defaultState }
+}
+
+  return events;export function resetState(): void {;
+  state = { ...defaultState };
+}
+
+}
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
 
 }
 export function upsertEvent(
@@ -55,6 +152,8 @@ export function filterEventsByScope(
         e.type === 'leaderboard_entry'
     );
   }
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 
 
@@ -143,3 +242,8 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

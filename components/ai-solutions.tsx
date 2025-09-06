@@ -1,23 +1,34 @@
 
 =======
-
+import React from 'react',
 import React from 'react';
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import Head from 'next/head';
 import Link from 'next/link';
 export default function AISolutionsPage() {
 
   const aiSolutions = [
     {
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       id: 'machine-learning'
       title: 'Machine Learning Solutions'
       description:
         'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.'
       features: [
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+        'Predictive Analytics',
+        'Pattern Recognition',
+        'Anomaly Detection',
+        'Recommendation Systems',
+      ],      icon: '🧠',
+      category: 'Core AI',
+      complexity: 'Advanced';
+    };
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     {
       id: 'natural-language-processing'
       title: 'Natural Language Processing'
@@ -155,6 +166,19 @@ export default function AISolutionsPage() {
                 ))}
               </div>
             </div>
+                    </ul>
+
+                    <Link
+                      href={`/services#${solution.id}`}
+                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
+                    >
+                      Learn More <span className='ml-1'>→</span>                    </Link>                      href={`/services#${solution.id}`}
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                    >
+                      Learn More <span className="ml-1">→</span>
+                    </Link>
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {feature}
                         </li>;
@@ -170,11 +194,17 @@ export default function AISolutionsPage() {
                     </Link>;
                   </div>;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
+              </div>
+            </div>
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
               </div>;
             </div>;
 
@@ -183,6 +213,7 @@ export default function AISolutionsPage() {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Industry Use Cases */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -205,6 +236,8 @@ export default function AISolutionsPage() {
                           key={solutionIndex}
                           className='text-sm text-white/70'
                         >                          {solution}                {useCases.map((useCase, index) => (
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 {useCases.map((useCase, index) => (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div
@@ -249,6 +282,8 @@ export default function AISolutionsPage() {
             </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             {/* Technologies */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -343,22 +378,18 @@ export default function AISolutionsPage() {
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
 
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       {tech}
                     </span>;
                   ))}
+                </div>
+              </div>
+            </div>
 
-                </div>;
-              </div>;
-            </div>;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Success Stories */}
 
 
@@ -531,9 +562,15 @@ export default function AISolutionsPage() {
         </main>
       </div>
     </>
+=======
 
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

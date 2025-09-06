@@ -1,12 +1,11 @@
 
 
 =======
-
+export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none';
+export interface SmartContractInfo {
 
 export interface SmartContractInfo {;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   transactionHash?: string;
   networkName?: BlockchainNetwork;
@@ -35,6 +34,11 @@ export interface SmartContractInfo {
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+export interface EscrowContractDetails {
+
+export interface EscrowContractDetails {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   client: string;
   talent: string;
   amount: number;
@@ -44,6 +48,7 @@ export interface SmartContractInfo {
   arbitrator?: string
 }
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   network: BlockchainNetwork;
   walletAddress?: string;
   useEscrow: boolean
@@ -51,4 +56,7 @@ export interface SmartContractInfo {
   deployToChain: boolean
 }
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

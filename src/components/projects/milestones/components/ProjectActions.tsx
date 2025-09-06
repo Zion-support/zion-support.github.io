@@ -42,12 +42,17 @@ export function ProjectActions(): any ({;
       {isUnderDispute && disputeId ? (
         <Button variant="outline" asChild>
           <Link href={`/dashboard/disputes/${disputeId}`}>
-
+            <ShieldAlert className='h-4 w-4 mr-2' />            View Active Dispute
+          </Link>
+        </Button>
+      ) : (
+        <RaiseDisputeButton projectId={projectId} variant='outline' />            <ShieldAlert className="h-4 w-4 mr-2" />
+            <ShieldAlert className="h-4 w-4 mr-2" />
             View Active Dispute
           </Link>
         </Button>
       ) : (
-<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import React from 'react';
 import { Button  } from '@/components/ui/button';
@@ -74,6 +79,7 @@ xport function ProjectActions({
   isTalent,
         <RaiseDisputeButton projectId={projectId} variant='outline' />            <ShieldAlert className="h-4 w-4 mr-2" />
       )}
+<<<<<<< HEAD
 
 import React from 'react';
 import {Button} from '@/components / ui / button';

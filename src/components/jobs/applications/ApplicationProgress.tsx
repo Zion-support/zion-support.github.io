@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 =======
 
 import { ApplicationStatus } from "@/types/jobs"
@@ -22,12 +21,15 @@ function ApplicationProgress() {
   // Define the progress value based on status;
   const getProgressValue = () =>: any {
     switch (status) {
+<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
 
 import { ApplicationStatus } from "@/types/jobs",
 import { Progress } from "@/components/ui/progress";
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
@@ -57,20 +59,16 @@ import { CheckCircle2, Circle, CircleDot } from 'lucide-react'
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {
   // Helper to determine if this step is active, completed, or inactive
 
+
+
+
+
+
+  const currentRank = statusRank[current],
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const statusRank_ = statusRank[status],
 
-  if (currentRank < statusRank_) {
-    // This step is complete
-    return <CheckCircle2 className="h-4 w-4 text-green-500" />
-  } else if (currentRank === statusRank_) {
-    // This is the current step
-    return <CircleDot className="h-4 w-4 text-blue-500" />
-  } else {
-
-import { ApplicationStatus } from "@/types/jobs",;
-import { Progress } from "@/components/ui/progress",;
-import { CheckCircle2, Circle, CircleDot } from 'lucide-react';
-import { cn } from "@/lib/utils",;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface ApplicationProgressProps {;
   status: ApplicationStatus,;
   className?: string;

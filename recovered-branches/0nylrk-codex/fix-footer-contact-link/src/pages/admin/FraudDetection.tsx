@@ -1,4 +1,12 @@
-
+import React, { useState, useEffect } from "react";
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {Card, CardContent} from "@/components/ui/card";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Button} from "@/components/ui/button";
+import {toast} from "@/hooks/use-toast";
+import {supabase} from "@/integrations/supabase/client";
+import {FraudFlag, FraudStats} from "@/types/fraud";
 import React, { useState, useEffect } from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
@@ -6,7 +14,15 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Button } from "@/components/ui/button",
 import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client";
+import { FraudFlag, FraudStats } from "@/types/fraud";
+// Import refactored components
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Import refactored components
 import {
   FraudStatsCards,
@@ -53,8 +69,6 @@ import {
         variant: "destructive"})
     } finally {
       setIsLoading(false)
-
-=======
 
 import React, { useState, useEffect } from "react",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -132,6 +146,7 @@ export default function FraudDetection() {;
           flag.content_excerpt.toLowerCase().includes(query) ||;
           flag.reason.toLowerCase().includes(query);
       );
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -245,7 +260,6 @@ export default function FraudDetection() {;
             <Button;
               onClick={fetchFraudFlags} ;
               className="bg-zion-purple hover:bg-zion-purple-light";
-
               disabled={isLoading}
             >
               Refresh Data
@@ -263,6 +277,8 @@ export default function FraudDetection() {;
           </TabsList>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <TabsContent value="all" className="mt-6">
           <TabsList>;
             <TabsTrigger value="all">All Flags</TabsTrigger>;

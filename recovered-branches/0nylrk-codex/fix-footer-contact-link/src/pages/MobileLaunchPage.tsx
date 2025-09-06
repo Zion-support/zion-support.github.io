@@ -1,4 +1,6 @@
 
+=======
+
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -13,7 +15,7 @@ import {AppStoreBanner} from "@/components/mobile-app/AppStoreBanner";
 import {QrCodeDownload} from "@/components/mobile-app/QrCodeDownload";
 import {CommunityTrust} from "@/components/mobile-app/CommunityTrust";
 
-=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const MobileLaunchPage: React.FC = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -35,6 +37,13 @@ const MobileLaunchPage: React.FC = () => {
       <AppStoreBanner />
     </AppLayout>
   )
+=======
+}
+export default MobileLaunchPage;
+
+<<<<<<< HEAD
+},
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export default MobileLaunchPage,
 import React from "react",;
@@ -49,6 +58,8 @@ import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload",;
 import { CommunityTrust } from "@/components/mobile-app/CommunityTrust",;
 const MobileLaunchPage: React.FC = () => {;
   return (;
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     <AppLayout>;
       <SEO;
         title="Get the Zion App - AI Marketplace in Your Pocket";
@@ -72,3 +83,6 @@ export default MobileLaunchPage;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export default MobileLaunchPage;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

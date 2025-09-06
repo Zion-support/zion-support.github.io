@@ -1,10 +1,16 @@
 =======
 
+import React, { useEffect, useMemo, useState } from 'react';
+import Badges from './Badges';
+import React, { useEffect, useMemo, useState } from 'react';
+import Badges from './Badges';
 
+=======
+=======
 
-
-
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 type Tx = {
 
 
@@ -15,6 +21,25 @@ type Tx = {
   amount: number;
   reason: string;
 
+=======
+};
+type Summary = {;
+  wallet: { userId: string; balance: number };
+  transactions: Tx[];
+  config: { usdPerToken: number; symbol: string };
+};
+function getUserId(): any (): string {;
+
+  if (typeof window === 'undefined') return 'demo-user';
+  const fromStorage = window && window.localStorage.getItem('zion_user_id');
+  if (fromStorage) return fromStorage;
+  const generated = 'demo-user';
+  window && window.localStorage.setItem('zion_user_id', generated);
+  return generated;
+export default function WalletPanel() {
+
+export default function WalletPanel() {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings'
@@ -60,24 +85,21 @@ export default function WalletPanel() {;
 type Summary = {;
   wallet: { userId: string, balance: number },;
   transactions: Tx[],;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   config: { usdPerToken: number, symbol: string }
 };
 function getUserId(): any (): string {;
 
   if (typeof window === "undefined") return "demo-user";
-  const fromStorage = window && window.localStorage.getItem("zion_user_id");
+  const fromStorage = window.localStorage.getItem("zion_user_id");
   if (fromStorage) return fromStorage;
   const generated = "demo-user";
-  window && window.localStorage.setItem("zion_user_id", generated);
-  return generated;
+  window.localStorage.setItem("zion_user_id", generated);
+  return generated
 }
-
+export default function WalletPanel() {
 
 export default function WalletPanel() {;
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
   const [ethAddress, setEthAddress] = useState<string | null>(null);
@@ -318,3 +340,26 @@ export default function WalletPanel() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+          </div>
+
+        )}
+      </div>
+    </div>
+);
+}
+
+          </div>
+
+        )}
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+}
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,23 +1,51 @@
 
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+import type {;
+  RemoteParticipant,;
+  LocalParticipant,;
+  TrackPublication,;
+  Track,;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 } from 'livekit-client';
 
 type Props = {;
   participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
   displayName?: string;
+=======
+}
+export default function ParticipantTile({
+  participant
+  isLocal
+  displayName
+  participant,
+  isLocal,
+  displayName,;
+}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
+type Props = {
+  participant: RemoteParticipant | LocalParticipant
+  isLocal?: boolean;
+  displayName?: string
+}
+export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
+};
+
+export default function ParticipantTile({ participant, isLocal, displayName }: Props) {;
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  useEffect(() => {
+    const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
+      if (track.kind === 'video' && videoRef.current) {
+        track.attach(videoRef.current);
 
 }: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
 type Props = {;
   participant: RemoteParticipant | LocalParticipant,;
 
-=======
-import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
-
-type Props = {
-  participant: RemoteParticipant | LocalParticipant,
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   isLocal?: boolean;
 
 export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
@@ -30,6 +58,7 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
 
       if (track.kind === 'video' && videoRef.current) {
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       if (track.kind === 'audio' && audioRef.current) {
         track.attach(audioRef.current)
@@ -264,9 +293,12 @@ if ( {) {
 =======
       </div>
     </div>
-
+);
+}
   );
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

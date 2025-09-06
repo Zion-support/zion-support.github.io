@@ -1,23 +1,14 @@
-<<<<<<< HEAD
-=======
-import React from 'react'
-import { Button } from '@/components/ui/button'
 
-import React from 'react';
-import { Button } from "@/components/ui/button";
-import { Star } from 'lucide-react'
+
 import { Star } from 'lucide-react';
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-
-
-
-  talentId: string
-  onSave: (talentId: string,) => void
-
-  isSaved: boolean
+interface SaveTalentButtonProps {;
+  talentId: string,;
+  onSave: (talentId: string,) => void,;
+  isSaved: boolean;
 }
-<<<<<<< HEAD
-export function SaveTalentButton({ talentId, onSave, isSaved }: SaveTalentButtonProps) {
+
+export function SaveTalentButton(): any ({ talentId, onSave, isSaved }: SaveTalentButtonProps) {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <Button
       onClick = {(,) => onSave(talentId),}

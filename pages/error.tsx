@@ -12,6 +12,8 @@
                 This could be due to:
               </p>
               <ul className="text-sm text-muted-foreground space-y-1 text-left">
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             </div>
             <CardTitle className=&quot;text-2xl font-bold&quot;>Authentication Error</CardTitle>
             <p className=&quot;text-sm text-muted-foreground&quot;>
@@ -36,6 +38,8 @@
                 </Button>
                 <Button asChild variant="outline" className="w-full">
                   <Link href="/">
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     Try Again
                   </Link>
                 </Button>
@@ -47,13 +51,13 @@
                 </Button>
               </div>
 
-=======
-
               <div className="text-center text-sm text-muted-foreground pt-4">
                 Need help? <Link href="/contact" className="hover:text-primary">Contact Support</Link>
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </div>
             </div>
@@ -65,3 +69,12 @@
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

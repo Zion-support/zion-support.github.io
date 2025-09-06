@@ -1,7 +1,22 @@
 
-
+import React, { useState } from "react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import {CodeBlock} from "@/components/developers/CodeBlock";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+export function ApiReference() {;
+  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
 import React, { useState } from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+import { CodeBlock } from "@/components/developers/CodeBlock";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+export function ApiReference() {
+  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
+import { CodeBlock } from "@/components/developers/CodeBlock",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+
+export function ApiReference() {
+  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   // Sample endpoint data
 
@@ -13,8 +28,6 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
       description: "Retrieve a list of job postings with optional filtering"
       parameters: [
 
-=======
-
         { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" },
         { name: "category", type: "string", description: "Filter by job category" },
         { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
@@ -22,105 +35,6 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      responses: {
-        "200": {
-          description: "A list of jobs"
-          example: `{
-  "jobs": [
-    {
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-import React, { useState } from "react";
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-import {CodeBlock} from "@/components/developers/CodeBlock";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-
-export function ApiReference() {;
-  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
-
-  // Sample endpoint data;
-  const endpoints = [;
-    {;
-      id: "get-jobs",;
-      method: "GET",;
-      path: "/api/jobs",;
-      description: "Retrieve a list of job postings with optional filtering",;
-      parameters: [;
-        { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" };
-        { name: "category", type: "string", description: "Filter by job category" },;
-        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },;
-        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],;
-      responses: {;
-        "200": {;
-          description: "A list of jobs",;
-          example: `{;
-  "jobs": [;
-    {;
-
-      "id": "job-123";
-      "title": "Senior React Developer";
-      "description": "We're looking for an experienced React developer...";
-      "category": "development";
-      "budget": {;
-        "min": 5000;
-
-        "max": 10000,
-        "currency": "USD";
-      }
-      "status": "open";
-      "created_at": "2023 - 05 - 10T15:30:00Z";
-    }
-    // More jobs...;
-  ];
-  "count": 42;
-  "limit": 20;
-  "offset": 0;
-}`;
-
-        }
-        "401": {
-          description: "Unauthorized"
-          example: `{
-
-  "error": "invalid_token",
-  "message": "The provided API key is invalid or expired";
-}`;
-
-        }
-        "429": {
-          description: "Rate limit exceeded"
-          example: `{
-  "error": "rate_limit_exceeded";
-
-      "id": "job-123",
-      "title": "Senior React Developer",
-      "description": "We're looking for an experienced React developer...",
-      "category": "development",
-      "budget": {
-
-=======
         "min": 5000,
         "max": 10000,
         "currency": "USD"
@@ -130,13 +44,6 @@ export function ApiReference() {;
     },
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    // More jobs...
-  ],
-  "count": 42,
-  "limit": 20,
-  "offset": 0
-}`
-
         "401": {
           description: "Unauthorized"
           example: `{
@@ -159,11 +66,14 @@ export function ApiReference() {;
         "201": {
           description: "Job created successfully"
           example: `{
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   "id": "job-456",
   "title": "UX Designer",
   "description": "Looking for a UX designer with 3+ years experience...",
   "category": "design",
   "budget": {
+<<<<<<< HEAD
 
         "400": {
           description: "Bad request"
@@ -208,6 +118,7 @@ export function ApiReference() {;
       "category": "development",;
       "budget": {;
         "min": 5000,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         "max": 10000,;
         "currency": "USD";
       };
@@ -259,9 +170,6 @@ export function ApiReference() {;
           example: `{;
 
   "id": "job-456";
-=======
-  "id": "job - 456";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   "title": "UX Designer";
   "description": "Looking for a UX designer with 3+ years experience...";
   "category": "design";
@@ -311,6 +219,7 @@ export function ApiReference() {;
         }
       },
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       requestExample: `curl -X POST \\
   https://api.zionai.com/v1/api/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -342,7 +251,6 @@ export function ApiReference() {;
     "category": "design",
     "budget": {
 
-=======
       "min": 3000,
       "max": 5000,
       "currency": "USD"
@@ -354,13 +262,6 @@ export function ApiReference() {;
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    {
-      id: "get-talent"
-      method: "GET"
-      path: "/api/talent"
-      description: "Search for talent profiles with optional filtering"
-      parameters: [
-
       responses: {
         "200": {
           description: "A list of talent profiles"
@@ -381,17 +282,19 @@ export function ApiReference() {;
   "limit": 20;
   "offset": 0;
 }`;
-        }
-
-
-      },
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       requestExample: `curl -X GET \\
   https://api.zionai.com/v1/api/talent?skills=React,Node.js&limit=10 \\
   -H "Authorization: Bearer YOUR_API_KEY"`
     }
+=======
+  ];
+  // Find the active endpoint data
+  const activeEndpointData = endpoints.find(e => e.id === activeEndpoint);
+  ],
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <ApiDocsLayout>;
@@ -555,111 +458,11 @@ export function ApiReference() {;
                         <CodeBlock
                           code={response && response.example} 
 
-=======
-
-                        
-=======
-
                         <CodeBlock 
                           code={response.example} 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-                          language="json"
-                          showLineNumbers={true}
-                        />;
-                      </div>;
-                    ))}
-                  </div>;
-                </TabsContent>;
-                <TabsContent value="try">;
-                  <div className="p-8 border border-zinc-800 rounded-lg flex items-center justify-center">;
-                    <div className="text-center">;
-                      <p className="text-zinc-400 mb-3">Interactive API tester coming soon</p>;
-                      <p className="text-zinc-600 text-sm">Try the Postman collection in the meantime</p>;
-=======
-            <div>;
-              <div className="flex items - center mb - 6">;
-                <span className={`inline - block px - 2 py - 1 text - xs font - medium rounded mr - 3 ${
-                  activeEndpointData.method === "GET" ? "bg - green - 950 text - green - 500" :;
-                  activeEndpointData.method === "POST" ? "bg - blue - 950 text - blue - 500" :;
-                  "bg - yellow - 950 text - yellow - 500";
-                }`}>;
-                  {activeEndpointData.method}
-                </span>;
-                <span className="font - mono text - lg text - white">{activeEndpointData.path}</span>;
-              </div>;
-              <p className="text - zinc - 400 mb - 8">{activeEndpointData.description}</p>;
-              <Tabs default_value="docs">;
-                <TabsList className="mb - 6">;
-                  <TabsTrigger value="docs">Documentation</TabsTrigger>;
-                  <TabsTrigger value="try">Try It</TabsTrigger>;
-                </TabsList>;
-                <TabsContent value="docs">;
-                  {/* Request section */}
-                  <div className="mb - 8">;
-                    <h3 className="text - xl font - semibold text - white mb - 4">Request</h3>;
-                    {activeEndpointData.parameters && activeEndpointData.parameters.length > 0 && (
-                      <>;
-                        <h4 className="text - lg font - medium text - white mb - 3">Parameters</h4>;
-                        <div className="overflow - x-auto mb - 6">;
-                          <table className="w - full border - collapse">;
-                            <thead>;
-                              <tr className="border - b border - zinc - 800">;
-                                <th className="text - left py - 2 px - 4 text - zinc - 400 font - medium">Name</th>;
-                                <th className="text - left py - 2 px - 4 text - zinc - 400 font - medium">Type</th>;
-                                <th className="text - left py - 2 px - 4 text - zinc - 400 font - medium">Required</th>;
-                                <th className="text - left py - 2 px - 4 text - zinc - 400 font - medium">Description</th>;
-                              </tr>;
-                            </thead>;
-                            <tbody>;
-                              {activeEndpointData.parameters.map ((param, index) => (
-                                <tr key={param.name} className={index < activeEndpointData.parameters.length - 1 ? "border - b border - zinc - 800" : ""}>;
-                                  <td className="py - 2 px - 4 text - white font - mono">{param.name}</td>;
-                                  <td className="py - 2 px - 4 text - blue - 400 font - mono">{param.type}</td>;
-                                  <td className="py - 2 px - 4 text - zinc - 300">{param.required ? "Yes" : "No"}</td>;
-                                  <td className="py - 2 px - 4 text - zinc - 300">{param.description}</td>;
-                                </tr>))}
-                            </tbody>;
-                          </table>;
-                        </div>;
-                      </>)}
-                    <h4 className="text - lg font - medium text - white mb - 3">Example Request</h4>;
-                    <CodeBlock;
-                      code={activeEndpointData.request_example}
-                      language="bash";
-                      showLineNumbers={true}
-                    />;
-                  </div>;
-                  {/* Response section */}
-                  <div>;
-                    <h3 className="text - xl font - semibold text - white mb - 4">Responses</h3>;
-                    {Object.entries (activeEndpointData.responses).map (([status, response]) => (
-                      <div key={status} className="mb - 6">;
-                        <div className="flex items - center mb - 3">;
-                          <span className={`inline - block px - 2 py - 1 text - xs font - medium rounded mr - 3 ${
-                            status.starts_with ('2') ? 'bg - green - 950 text - green - 500' :;
-                            status === '401' || status === '403' ? 'bg - orange - 950 text - orange - 500' :;
-                            'bg - red - 950 text - red - 500';
-                          }`}>;
-                            {status}
-                          </span>;
-                          <span className="text - white">{response.description}</span>;
-                        </div>;
-                        <CodeBlock;
-                          code={response.example}
-                          language="json";
-                          showLineNumbers={true}
-                        />;
-                      </div>))}
-                  </div>;
-                </TabsContent>;
-                <TabsContent value="try">;
-                  <div className="p - 8 border border - zinc - 800 rounded - lg flex items - center justify - center">;
-                    <div className="text - center">;
-                      <p className="text - zinc - 400 mb - 3">Interactive API tester coming soon</p>;
-                      <p className="text - zinc - 600 text - sm">Try the Postman collection in the meantime</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     </div>;
                   </div>;
                 </TabsContent>;
@@ -686,3 +489,8 @@ export default ApiReference;
 
 export default ApiReference;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+export default ApiReference;
+
+;
+export default ApiReference;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

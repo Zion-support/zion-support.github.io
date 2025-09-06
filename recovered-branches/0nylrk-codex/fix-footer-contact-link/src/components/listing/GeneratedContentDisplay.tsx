@@ -5,23 +5,22 @@ import {
 
 } from "@/components/ui/card";
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Card,
   CardContent,
   CardFooter,
   CardHeader,
+=======
 
   key_points: string[];
 
 }
 interface GeneratedContentDisplayProps {
 =======
-interface GeneratedContentDisplayProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   CardTitle,;
-
 } from "@/components/ui/card";
-
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -29,6 +28,7 @@ import { Badge } from "@/components/ui/badge",
 import { ArrowRight } from "lucide-react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 
+=======
 
 
 
@@ -38,39 +38,27 @@ interface GeneratedContent {
   description: string,
   tags: string[],
   suggestedPrice: {
+    min: number;
 
   content: GeneratedContent;
   onApply: () => void
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   content: GeneratedContent;
-
-
+  onApply: () => void
+}
+export function GeneratedContentDisplay({
+  content
+  onApply
+}: GeneratedContentDisplayProps) {
 
 export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  return (
-    <Card className="border border-zion-blue-light bg-zion-blue-dark">
-      <CardHeader>
-        <CardTitle className="text-white">Generated Content</CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-4">
-        <div>
-          <h3 className="text-sm font-medium text-zion-slate-light mb-2">
-            Description
-          </h3>
-          <p className="text-white">{content.description}</p>
-        </div>
-
-=======
-
         
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
@@ -81,6 +69,9 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 {tag}
               </Badge>;
             ))}
@@ -88,6 +79,8 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Suggested Price Range
@@ -99,6 +92,8 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Key Selling Points
@@ -107,56 +102,6 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
             {content.keyPoints.map((point, index) => (
               <li key={index}>{point}</li>
             ))}
-=======
-  on_apply: () => void;
-}
-export /**
- * GeneratedContentDisplay - Function description
- */
-function GeneratedContentDisplay() {
-  return (
-    <Card className="border border - zion - blue - light bg - zion - blue - dark">;
-      <CardHeader>;
-        <CardTitle className="text - white">Generated Content</CardTitle>;
-      </CardHeader>;
-      <CardContent className="space - y-4">;
-        <div>;
-          <h3 className="text - sm font - medium text - zion - slate - light mb - 2">;
-            Description;
-          </h3>;
-          <p className="text - white">{content.description}</p>;
-        </div>;
-        <div>;
-          <h3 className="text - sm font - medium text - zion - slate - light mb - 2">;
-            Tags;
-          </h3>;
-          <div className="flex flex - wrap gap - 2">;
-            {content.tags.map ((tag, index) => (
-              <Badge;
-                key={index}
-                className="bg - zion - purple / 20 text - zion - purple hover:bg - zion - purple / 30";
-              >;
-                {tag}
-              </Badge>))}
-          </div>;
-        </div>;
-        <div>;
-          <h3 className="text - sm font - medium text - zion - slate - light mb - 2">;
-            Suggested Price Range;
-          </h3>;
-          <p className="text - white">;
-            ${content.suggested_price.min.to_fixed (2)} - $;
-            {content.suggested_price.max.to_fixed (2)}
-          </p>;
-        </div>;
-        <div>;
-          <h3 className="text - sm font - medium text - zion - slate - light mb - 2">;
-            Key Selling Points;
-          </h3>;
-          <ul className="list - disc pl - 5 text - white space - y-1">;
-            {content.key_points.map ((point, index) => (
-              <li key={index}>{point}</li>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </ul>;
         </div>;
       </CardContent>;
@@ -183,3 +128,8 @@ function GeneratedContentDisplay() {
 ;
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+    </Card>;
+  );
+}
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

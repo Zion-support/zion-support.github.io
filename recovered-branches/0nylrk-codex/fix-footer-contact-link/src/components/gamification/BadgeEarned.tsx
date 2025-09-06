@@ -1,17 +1,17 @@
 
 
+interface BadgeEarnedProps {
+
+  badge: BadgeKey
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   size?: number;
+  showName?: boolean;
+  showDesc?: boolean;
+import {getBadgeMeta, BadgeKey} from "./badgeConfig";
+import React from "react",
+import { getBadgeMeta, BadgeKey } from "./badgeConfig",
 
-
-export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
-
-=======
-  show_name?: boolean;
-  show_desc?: boolean;
-  earned_date?: string;
-}
-export const BadgeEarned: React.FC < BadgeEarnedProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   badge;
 
   size = 44;
@@ -42,11 +42,6 @@ interface BadgeEarnedProps {
   showName?: boolean,
   showDesc?: boolean,
 
-  earnedDate?: string
-}
-
-export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
-
   showDesc = false,
   earnedDate}) => {
   const meta = getBadgeMeta(badge),
@@ -54,6 +49,8 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
   const Icon = meta.icon,
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div className="flex flex-col items-center text-center gap-1 px-2">;
       <div
@@ -76,7 +73,6 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
       {showName && (
         <span className="text-xs font-semibold mt-1" style={{ color: meta.color }}>
 
-=======
 import React from "react",;
 import { getBadgeMeta, BadgeKey } from "./badgeConfig",;
 interface BadgeEarnedProps {;
@@ -114,6 +110,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
       </div>;
       {showName && (;
         <span className="text-xs font-semibold mt-1" style={{ color: meta.color }}>;
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -129,8 +126,15 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
       {showDesc && (;
         <span className="text-xs text-zion-slate-light">{meta && meta.description}</span>;
       )}
+    </div>
+  )
+}
 
-};
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    </div>;
+  );
+    </div>;
+  );
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+};
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

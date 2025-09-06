@@ -1,6 +1,8 @@
 =======
+<<<<<<< HEAD
 
-
+//Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
@@ -23,11 +25,32 @@ import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 ...innovativeITServicesExpansion2025V3;
 ...innovativeAIServicesExpansion2025V3...innovative2025ITInfrastructureServices;
 ...innovative2025AIAutonomousServices ];
-
-};
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+//Filter services by category //Animation variants const containerVariants = {
+  hidden: {
+  opacity: 0
+}
+  opacity: 0 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import React from 'react';
+
+interface EnhancedHomepageProps {
+  className?: string;
+}
+
+const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>EnhancedHomepage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+};
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 visible: {
   opacity: 1, transition: {
   duration: 0.8, staggerChildren: 0.1
@@ -128,73 +151,6 @@ const EnhancedHomepage: React.FC = () => {;
   // Combine all revolutionary services;
   const allRevolutionaryServices = [;
 
-=======
-//Filter services by category //Animation variants const container_variants = {
-  hidden: {
-  opacity: 0;
-}
-visible: {
-  opacity: 1, transition: {
-  duration: 0.8, stagger_children: 0.1;
-}
-;
-}
-;
-}
-;
-}
-;
-}
-export default EnhancedHomepage;import EnhancedServiceCard from './ui / EnhancedServiceCard';
-import PerformanceMonitor from './PerformanceMonitor';
-import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
-// Import service data;
-import { revolutionary2044AdvancedMicroSaas } from '../data / revolutionary - 2044 - advanced - micro - saas';
-import { revolutionary2044ITServices } from '../data / revolutionary - 2044 - it - services';
-import { revolutionary2044AIServices } from '../data / revolutionary - 2044 - ai - services';
-import { realEnterpriseMicroSaas2025 } from '../data / 2025 - real - enterprise - micro - saas';
-import { innovativeITServicesExpansion2025V3 } from '../data / 2025 - innovative - it - services - expansion - v3';
-import { innovativeAIServicesExpansion2025V3 } from '../data / 2025 - innovative - ai - services - expansion - v3';
-import { innovative2025ITInfrastructureServices } from '../data / 2025 - innovative - it - infrastructure - services';
-import { innovative2025AIAutonomousServices } from '../data / 2025 - innovative - ai - autonomous - services';
-const EnhancedHomepage: React.FC = () => {
-  const [is_visible, setIsVisible] = useState (false);
-  const [selected_category, setSelectedCategory] = useState ('all');
-  const [mouse_position, setMousePosition] = useState ({ coordinate_x: 0, coordinate_y: 0 }),
-  const [currentServiceIndex, setCurrentServiceIndex] = useState (0);
-  const [color_scheme, setColorScheme] = useState<'cyber' | 'quantum' | 'neon' | 'holographic'>('cyber');
-  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState (false);
-;
-  useEffect (() => {
-    setIsVisible (true);
-;
-    // Auto - rotate featured services;
-    const interval = set_interval (() => {
-      setCurrentServiceIndex ((prev) => (prev + 1) % 6);
-    }, 6000);
-;
-    // Track mouse movement for parallax effects;
-    const handleMouseMove = (e: MouseEvent) =>: any {
-      setMousePosition ({ coordinate_x: e.client_x, coordinate_y: e.client_y });
-    }
-;
-    // Show performance monitor after 5 seconds;
-    const performance_timer = set_timeout (() => {
-      setShowPerformanceMonitor (true);
-    }, 5000);
-;
-    window.addEventListener ('mousemove', handleMouseMove);
-;
-    return () => {
-      clear_interval (interval);
-      clear_timeout (performance_timer);
-      window.removeEventListener ('mousemove', handleMouseMove);
-    }
-  }, []);
-;
-  // Combine all revolutionary services;
-  const allRevolutionaryServices = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     ...revolutionary2044AdvancedMicroSaas;
     ...revolutionary2044ITServices;
@@ -313,6 +269,7 @@ const EnhancedHomepage: React.FC = () => {
       setColorScheme(category && category.scheme);
     }
   }
+=======
   return (
 
     <>;
@@ -347,22 +304,32 @@ const EnhancedHomepage: React.FC = () => {
           animate="visible">;
           <div className="relative z-10 text-center max-w-6xl mx-auto">;
             {/* Main Heading */}
-
-
+            <motion.h1
+              className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+              variants={itemVariants}
+            >
+              Zion Tech Group
+            </motion.h1>
+            <motion.p
             
-=======
-
             <motion.p 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-              className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
-              variants={itemVariants}
-            >
-              Pioneering the Future of Technology with Revolutionary AI Consciousness
-              Quantum Computing, and Autonomous Solutions
-            </motion.p>
 
+=======
+            <motion&& motion.h1 
+              className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+              variants={itemVariants}>;
+              Zion Tech Group;
+            </motion && motion.h1>;
+            <motion&& motion.p 
+              className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
+              variants={itemVariants}>;
+              Pioneering the Future of Technology with Revolutionary AI Consciousness,;
+              Quantum Computing, and Autonomous Solutions;
+            </motion && motion.p>;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             {/* CTA Buttons */}
             <motion.div
 
@@ -423,48 +390,67 @@ const EnhancedHomepage: React.FC = () => {
         <motion.section
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            <motion.div 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               className="flex flex-wrap justify-center gap-4 mb-12"
-              variants={itemVariants}>;
-              {categories && categories.map((category) => (;
-                <motion&& motion.button
-                  key={category && category.id}
-                  onClick={() => handleCategoryChange(category && category.id)}
-                  className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${;
-                    selectedCategory === category && category.id;
-                      ? 'bg-gradient-to-r ' + category && category.color + ' text-white shadow-2xl';
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600';
+              variants={itemVariants}
+            >
+              {categories.map((category) => (
+                <motion.button
+                  key={category.id}
+                  onClick={() => handleCategoryChange(category.id)}
+                  className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
+                    selectedCategory === category.id
+                      ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-2xl'
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600'
                   }`}
-                  whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{ scale: 0 && 0.95 }}
-                >;
-                  <category && category.icon className="inline-block w-5 h-5 mr-2" />;
-                  {category && category.name}
-                </motion && motion.button>;
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <category.icon className="inline-block w-5 h-5 mr-2" />
+                  {category.name}
+                </motion.button>
               ))}
-
-
-
+            </motion.div>
+          </div>
+        </motion.section>
+        {/* Services Grid */}
+        <motion.section
 =======
 
+            
+            <motion.div 
+              className="flex flex-wrap justify-center gap-4 mb-12"
+              variants={itemVariants}
+            >
+              {categories.map((category) => (
+                <motion.button
+                  key={category.id}
+                  onClick={() => handleCategoryChange(category.id)}
+                  className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 ${
+                    selectedCategory === category.id
+                      ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-2xl'
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600'
+                  }`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <category.icon className="inline-block w-5 h-5 mr-2" />
+                  {category.name}
+                </motion.button>
+              ))}
+            </motion.div>
+          </div>
+        </motion.section>
+        {/* Services Grid */}
+        <motion.section
 
         {/* Services Grid */}
         <motion.section 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-          className="py-16 px-4 lg:px-8"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <div className="max-w-7xl mx-auto">
-
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-              variants={containerVariants}
-            >
-              {getFilteredServices().slice(0, 12).map((service, index) => (
-
-                <EnhancedServiceCard
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}>;
               {getFilteredServices().slice(0, 12).map((service, index) => (;
@@ -675,6 +661,10 @@ if ( {) {
         <motion.section
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+        {/* Featured Service Showcase */}
+        <motion.section 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
           initial="hidden"
@@ -687,28 +677,10 @@ if ( {) {
             >
               Explore Our Revolutionary Services
             </motion.h2>
-
-          </div>;
-        </motion && motion.section>;
-        {/* Featured Service Showcase */}
-        <motion&& motion.section 
-          className="py-16 px-4 lg:px-8"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible">;
-          <div className="max-w-6xl mx-auto">;
-            <motion&& motion.h2 
-              className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
-              variants={itemVariants}>;
-              Featured Revolutionary Services;
-            </motion && motion.h2>;
-            <motion&& motion.div 
-
 =======
 
             <motion.div 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
               variants={itemVariants}>;
               <AnimatePresence mode="wait">;
@@ -741,10 +713,8 @@ if ( {) {
                         </span>
                       ))}
                     </div>
-
+                    <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug |featuredServices[currentServiceIndex]?.id}`}>
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
-
-
                       <motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
@@ -786,11 +756,15 @@ if ( {) {
             >
               Ready to Transform Your Business?
             </motion.h2>
-
-              className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
+            <motion.p
+            <motion.p 
+              className="text-xl text-gray-300 mb-8"
               variants={itemVariants}
             >
-              <AnimatePresence mode="wait">
+              Join the future of technology with Zion Tech Group's revolutionary solutions.
+              Get started today and experience the power of AI consciousness and quantum computing.
+            </motion.p>
+<<<<<<< HEAD
 
                 <motion.div
 
@@ -848,6 +822,8 @@ if ( {) {
             </motion.p>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               variants={itemVariants}>;
               <Link href="/quote">;
@@ -864,7 +840,9 @@ if ( {) {
   )
 }
 export default EnhancedHomepage;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Performance Monitor */}
       <AnimatePresence>;
         {showPerformanceMonitor && (;
@@ -881,164 +859,6 @@ export default EnhancedHomepage;
 
 
 
-=======
-                  type={(service as any).type || service.category}
-                  features={service.features?.map (function => ({ name: f, description: f }))}
-                  slug={(service as any).slug || service.id}
-                  index={index}
-                  is_popular={Math.random () > 0.7}
-                  is_new={Math.random () > 0.8}
-                  rating={4.0 + Math.random () * 1.0}
-                  review_count={Math.floor (Math.random () * 100) + 10}
-                  estimated_delivery="2 - 4 weeks";
-                  technologies={['AICloudSecurityAutomation']}
-                />))}
-            </motion.div>;
-            {getFilteredServices ().length > 12 && (
-              <motion.div;
-                className="text - center mt - 12";
-                variants={item_variants}
-              >;
-                <Link href="/services">;
-                  <motion.button;
-                    className="px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 font - bold rounded - xl text - lg hover:bg - cyan - 400 hover:text - black transition - all duration - 300";
-                    while_hover={{ scale: 1.05 }}
-                    while_tap={{ scale: 0.95 }}
-                  >;
-                    View All Services;
-                    <ArrowRight className="inline - block ml - 2 w - 5 h - 5" />;
-                  </motion.button>;
-                </Link>;
-              </motion.div>)}
-          </div>;
-        </motion.section>;
-        {/* Featured Service Showcase */}
-        <motion.section;
-          className="py - 16 px - 4 lg:px - 8";
-          variants={container_variants}
-          initial="hidden";
-          animate="visible";
-        >;
-          <div className="max - w-6xl mx - auto">;
-            <motion.h2;
-              className="text - 3xl md:text - 4xl font - bold text - center text - white mb - 12";
-              variants={item_variants}
-            >;
-              Featured Revolutionary Services;
-            </motion.h2>;
-            <motion.div;
-              className="bg - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 / 50 rounded - 2xl p - 8";
-              variants={item_variants}
-            >;
-              <AnimatePresence mode="wait">;
-                <motion.div;
-                  key={currentServiceIndex}
-                  initial={{ opacity: 0, coordinate_x: 20 }}
-                  animate={{ opacity: 1, coordinate_x: 0 }}
-                  exit={{ opacity: 0, coordinate_x: -20 }}
-                  transition={{ duration: 0.5 }}
-                  className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8 items - center";
-                >;
-                  <div>;
-                    <h3 className="text - 2xl font - bold text - white mb - 4">;
-                      {featured_services[currentServiceIndex]?.name}
-                    </h3>;
-                    <p className="text - gray - 300 mb - 6 leading - relaxed">;
-                      {featured_services[currentServiceIndex]?.description}
-                    </p>;
-                    <div className="flex flex - wrap gap - 4 mb - 6">;
-                      {featured_services[currentServiceIndex]?.features?.slice (0, 3).map ((feature, idx) => (
-                        <span key={idx} className="text - xs text - gray - 400 bg - gray - 800 / 50 px - 3 py - 1 rounded - full border border - gray - 600">;
-                          {feature}
-                        </span>))}
-                    </div>;
-                    <Link href={`/services/${(featured_services[currentServiceIndex] as any)?.slug || featured_services[currentServiceIndex]?.id}`}>;
-                      <motion.button;
-                        className="px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - medium rounded - lg hover: from - cyan - 600 hover:to - blue - 700 transition - all duration - 300";
-                        while_hover={{ scale: 1.05 }}
-                        while_tap={{ scale: 0.95 }}
-                      >;
-                        Learn More;
-                        <ArrowRight className="inline - block ml - 2 w - 4 h - 4" />;
-                      </motion.button>;
-                    </Link>;
-                  </div>;
-                  <div className="relative">;
-                    <div className="w - full h - 64 bg - gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded - xl border border - cyan - 500 / 30 flex items - center justify - center">;
-                      <div className="text - center">;
-                        <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 600 rounded - full flex items - center justify - center mx - auto mb - 4">;
-                          <Rocket className="w - 8 h - 8 text - white" />;
-                        </div>;
-                        <p className="text - cyan - 400 font - medium">Revolutionary Technology</p>;
-                      </div>;
-                    </div>;
-                  </div>;
-                </motion.div>;
-              </AnimatePresence>;
-            </motion.div>;
-          </div>;
-        </motion.section>;
-        {/* Call to Action */}
-        <motion.section;
-          className="py - 16 px - 4 lg:px - 8";
-          variants={container_variants}
-          initial="hidden";
-          animate="visible";
-        >;
-          <div className="max - w-4xl mx - auto text - center">;
-            <motion.h2;
-              className="text - 3xl md:text - 4xl font - bold text - white mb - 6";
-              variants={item_variants}
-            >;
-              Ready to Transform Your Business?;
-            </motion.h2>;
-            <motion.p;
-              className="text - xl text - gray - 300 mb - 8";
-              variants={item_variants}
-            >;
-              Join the future of technology with Zion Tech Group's revolutionary solutions.;
-              Get started today and experience the power of AI consciousness and quantum computing.;
-            </motion.p>;
-            <motion.div;
-              className="flex flex - col sm:flex - row gap - 4 justify - center items - center";
-              variants={item_variants}
-            >;
-              <Link href="/quote">;
-                <motion.button;
-                  className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - bold rounded - xl text - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105";
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
-                >;
-                  Get Started Today;
-                  <ArrowRight className="inline - block ml - 2 w - 5 h - 5" />;
-                </motion.button>;
-              </Link>;
-              <Link href="/contact">;
-                <motion.button;
-                  className="px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 font - bold rounded - xl text - lg hover:bg - cyan - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105";
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
-                >;
-                  Contact Us;
-                  <Phone className="inline - block ml - 2 w - 5 h - 5" />;
-                </motion.button>;
-              </Link>;
-            </motion.div>;
-          </div>;
-        </motion.section>;
-      </UltraFuturisticBackground>;
-      {/* Performance Monitor */}
-      <AnimatePresence>;
-        {showPerformanceMonitor && (
-          <PerformanceMonitor />)}
-      </AnimatePresence>;
-    </>);
-}
-;
-export default EnhancedHomepage;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

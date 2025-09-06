@@ -1,7 +1,15 @@
+import React from 'react';
 
 
 type Props = {
   message: string;
+<<<<<<< HEAD
+  onJoin?: () => void;
+  canJoin?: boolean
+}
+          className={`px-3 py-2 rounded ${canJoin ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-400'}`}>          Join Meetingtype Props = {;
+  message: string,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   onJoin?: () => void;
   canJoin?: boolean;
 }
@@ -38,3 +46,6 @@ function InviteBanner() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

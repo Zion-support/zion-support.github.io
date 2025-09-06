@@ -1,5 +1,3 @@
-
-
 export interface SpaceMetaverseService2029 {
   "id": string;
   name: string;

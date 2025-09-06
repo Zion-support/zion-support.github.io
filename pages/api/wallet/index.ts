@@ -1,10 +1,17 @@
-
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getWalletSummary } from "../../../utils/token/service";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import {getWalletSummary} from '../../../utils/token/service';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { userId } = req.query;
-
-  if (!userId |typeof userId !== 'string') {
-    return res.status(400).json({ error: 'Missing userId' });
-
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
+}
   try {
     const summary = null;
     return res.status(200).json(summary)

@@ -1,13 +1,42 @@
+import React from 'react';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function AiPoweredDecisionEngine() {
+	return (
+		<ServiceLanding
 
+=======
+			title="AI-Powered Decision Engine"
+			description="Operationalize policy, risk, pricing, and routing decisions with explainable AI and guardrails. Deploy strategies, test variants, and monitor outcomes."
+			subtitle="Make better decisions, continuously"
+			pricePerMonthUSD={279}
+			implementationWeeks="3-7 days"
+			roiNote="Teams report 2–5x ROI via faster, consistent decisions and uplift from experimentation"
+			features={[
+				"Policy and risk decisioning with constraints"
+				"Online experimentation (A/B, multi-armed bandits)"
+				"Explainability and audit trails"
+				"Rules + ML hybrid strategies"
+				"Real-time feature engineering and caching"
+				"Integrations: Kafka, Snowflake, Redis, REST/gRPC"
+				"Drift monitoring and alerts"
+
+				"Versioned strategies with canary rollouts"
+			]}
+			industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]}
+			title="AI-Powered Decision Engine"
+			description="Operationalize policy, risk, pricing, and routing decisions with explainable AI and guardrails. Deploy strategies, test variants, and monitor outcomes."
+			subtitle="Make better decisions, continuously"
+			pricePerMonthUSD={279}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 			pricePerMonthUSD={279  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 			implementationWeeks="3-7 days"
 			roiNote="Teams report 2–5x ROI via faster, consistent decisions and uplift from experimentation"
 			features={[
@@ -19,7 +48,12 @@
 				"Integrations: Kafka, Snowflake, Redis, REST/gRPC",
 				"Drift monitoring and alerts",
 				"Versioned strategies with canary rollouts"
-
+			]}
+			industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]}
+			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
+		/>
+	)
+};
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -30,7 +64,6 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
 			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
 		/>
 	)
@@ -42,4 +75,7 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

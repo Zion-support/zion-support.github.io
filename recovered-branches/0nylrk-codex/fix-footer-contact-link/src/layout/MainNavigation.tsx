@@ -1,8 +1,6 @@
 
-
-import { Link, useLocation } from "react-router-dom",
-import { cn } from "@/lib/utils",
-
+=======
+<<<<<<< HEAD
 interface MainNavigationProps {
   isAdmin?: boolean,
   unreadCount?: number,
@@ -65,6 +63,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   }
 
 
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <nav className={cn("ml-6 hidden md:flex", className)}>;
       <ul className="flex items-center gap-1">;
@@ -78,6 +78,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 link.matches(location.pathname);
                   ? "bg-zion-purple/20 text-zion-cyan";
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -97,6 +98,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             <Link
               to="/messages"
               className={cn(
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative";
+                location.pathname === "/messages" |location.pathname === "/inbox"
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   ? "bg-zion-purple/20 text-zion-cyan"
@@ -108,17 +111,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
                   {unreadCount}
 
-=======
-
-
                 </span>;
               )}
             </Link>;
           </li>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         )}
 

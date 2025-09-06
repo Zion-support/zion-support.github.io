@@ -1,6 +1,6 @@
 =======
 
-
+}const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
 
@@ -178,6 +178,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
     .slice(0, 8);
+=======
+<<<<<<< HEAD
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 export default async /**
  * handler - Function description
@@ -189,13 +193,9 @@ if ( {  } catch {) {
     return undefined;
   }
 }
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
+
+
+  // Tags
 }
     return res.status (405).json ({ error: 'Method not allowed' });
   }
@@ -332,5 +332,10 @@ return res.status (200).json (response);  return res.status (200).json (response
 
 <<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+}
+}
+}
+}
+  // Tags
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

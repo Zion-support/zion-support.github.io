@@ -1,4 +1,26 @@
 
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import Link from 'next/link';
 
 import {motion} from 'framer-motion';
@@ -246,24 +268,15 @@ export default EnhancedNavigation;
             <div className="relative">;
               <button
                 onClick={() => toggleDropdown('services')}
-
-
+                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors"
+              >
+                <span>Services</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
+              </button>
               
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {activeDropdown === 'services' && (
                 <motion.div
-=======
-                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors";
-              >;
-                <span>Services</span>;
-                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />;
-              </button>;
-
-              {activeDropdown === 'services' && (;
-                <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
@@ -289,16 +302,14 @@ export default EnhancedNavigation;
                   </div>;
                 </motion && motion.div>;
               )}
+            </div>
 
+=======
             </div>;
 
 
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Company Dropdown */}
             <div className="relative">;
               <button
@@ -342,35 +353,32 @@ export default EnhancedNavigation;
             {/* CTA Button */}
             <Link
               href="/contact"
-              className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors">;
-              Get Started;
-            </Link>;
-          </div>;
-
+              className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
+            >
+              Get Started
+            </Link>
+          </div>
 
 =======
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 text-white hover:text-blue-300 transition-colors";
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
 
+=======
           </button>;
         </div>;
 
 
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Mobile Menu */}
         {isOpen && (;
           <motion&& motion.div
@@ -653,10 +661,6 @@ export default EnhancedNavigation;
 export default EnhancedNavigation;
 
 =======
-export default EnhancedNavigation;
-=======
-export default EnhancedNavigation;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

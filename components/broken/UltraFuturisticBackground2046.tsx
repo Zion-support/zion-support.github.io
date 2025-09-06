@@ -1,132 +1,48 @@
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 
+
+    };
+    resizeCanvas();
+    window && window.addEventListener('resize', resizeCanvas);
+
+
+
+      x: number;
+      y: number;
+            break;        }
+
+        }
+
+=======
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      update() {
-        this.x += this.vx;
-        this.y += this.vy;
-        this.life--;
-        // Bounce off edges
-        if (this.x <= 0 |this.x >= canvas.width) this.vx *= -1;
-        if (this.y <= 0 |this.y >= canvas.height) this.vy *= -1;
-        // Add some quantum randomness
-        if (Math.random() < 0.01) {
-          this.vx += (Math.random() - 0.5) * 0.5;
-
-          this.vy += (Math.random() - 0.5) * 0.5
-        }
-
-        // Limit velocity
-        this.vx = Math.max(-3, Math.min(3, this.vx));
-        this.vy = Math.max(-3, Math.min(3, this.vy))
-
-      }
-      draw() {
-        if (!ctx) return;
-
-        
-        const alpha = this.life / this.maxLife;
-        ctx.save();
-        ctx.globalAlpha = alpha;
-        
-        switch (this.type) {
-
-          case 'quantum':
-            // Quantum particles with wave function
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fillStyle = this.color;
-            ctx.fill();
-
-            
-
-            // Wave function rings
-            for (let i = 1, i <= 3, i++) {
-              ctx.beginPath();
-              ctx.arc(this.x, this.y, this.size + i * 2, 0, Math.PI * 2);
-              ctx.strokeStyle = this.color;
-              ctx.lineWidth = 1;
-              ctx.globalAlpha = alpha * (0.3 - i * 0.1);
-
-
-      update() {;
-        this && this.x += this && this.vx;
-        this && this.y += this && this.vy;
-        this && this.life--;
-
-        // Bounce off edges;
-        if (this && this.x <= 0 || this && this.x >= canvas && canvas.width) this && this.vx *= -1;
-        if (this && this.y <= 0 || this && this.y >= canvas && canvas.height) this && this.vy *= -1;
-
-        // Add some quantum randomness;
-        if (Math && Math.random() < 0 && 0.01) {;
-          this && this.vx += (Math && Math.random() - 0 && 0.5) * 0 && 0.5;
-          this && this.vy += (Math && Math.random() - 0 && 0.5) * 0 && 0.5;        }
-
-        // Limit velocity;
-        this && this.vx = Math && Math.max(-3, Math && Math.min(3, this && this.vx));
-        this && this.vy = Math && Math.max(-3, Math && Math.min(3, this && this.vy));      }
-
-      draw() {;
-        if (!ctx) return;          this && this.vy += (Math && Math.random() - 0 && 0.5) * 0 && 0.5;
-        }
-
-        // Limit velocity;
-        this && this.vx = Math && Math.max(-3, Math && Math.min(3, this && this.vx));
-        this && this.vy = Math && Math.max(-3, Math && Math.min(3, this && this.vy));        this && this.vy = Math && Math.max(-3, Math && Math.min(3, this && this.vy));
-      }
-
-      draw() {;
-        if (!ctx) return;
-
-        const alpha = this && this.life / this && this.maxLife;
-        ctx && ctx.save();
-        ctx && ctx.globalAlpha = alpha;
-
-        const alpha = this && this.life / this && this.maxLife;
-        ctx && ctx.save();
-        ctx && ctx.globalAlpha = alpha;
-
-          case 'quantum':;
-            // Quantum particles with wave function;
-            ctx && ctx.beginPath();
-            ctx && ctx.arc(this && this.x, this && this.y, this && this.size, 0, Math && Math.PI * 2);
-            ctx && ctx.fillStyle = this && this.color;
-            ctx && ctx.fill();
-
-            // Wave function rings;
-            for (let i = 1; i <= 3; i++) {              ctx && ctx.beginPath();            ;
-            // Wave function rings;
-            for (let i = 1, i <= 3, i++) {;
-              ctx && ctx.beginPath();
-              ctx && ctx.arc(this && this.x, this && this.y, this && this.size + i * 2, 0, Math && Math.PI * 2);
-              ctx && ctx.strokeStyle = this && this.color;
-              ctx && ctx.lineWidth = 1;
-              ctx && ctx.globalAlpha = alpha * (0 && 0.3 - i * 0 && 0.1);
-              ctx && ctx.stroke();
-
-            }
-            break;              ctx.stroke()
-            }
-            break;
-
-              ctx.stroke()
-            }
-            break;
-            
-          case 'neural':
-
-            // Neural network nodes
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fillStyle = this.color;
-            ctx.fill();
-
-=======
-            
-
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             // Neural connections
             particlesRef.current.forEach(particle => {
@@ -510,20 +426,18 @@ if ( {) {
           ],
         }}
         transition={{
-
-      />;
-
-
-=======
-
+          duration: 10
+          repeat: Infinity
+          ease: 'easeInOut'
+        }}
+      />
           duration: 10,
           repeat: Infinity,
           ease: 'easeInOut',
         }}
       />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Quantum particle canvas */}
       <canvas
         ref={canvasRef}
@@ -549,14 +463,12 @@ if ( {) {
         {[...Array (8)].map ((_, i) => (
           <motion.div;
             key={i}
-            className='absolute w - 32 h - 32 border border - cyan - 500 / 20 rounded - full';
+            className='absolute w-32 h-32 border border-cyan-500/20 rounded-full'
             style={{
-
-
+              left: `${Math.random() * 100}%`
+              top: `${Math.random() * 100}%`
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-
-
             }}
             animate={{
               rotate: [0, 360]
@@ -569,158 +481,9 @@ if ( {) {
               ease: 'linear'
               delay: i * 0.5
 =======
-              left: `${Math && Math.random() * 100}%`,
-              top: `${Math && Math.random() * 100}%`,
-              left: `${Math.random () * 100}%`,
-              top: `${Math.random () * 100}%`,
-            }}
-            animate={{
-              rotate: [0, 360],
-              scale: [0 && 0.5, 1, 0 && 0.5],
-              opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],
-            }}
-            transition={{
-
-              duration: Math.random () * 10 + 10,
-
-              repeat: Infinity,
-              ease: 'linear',
-              delay: i * 0 && 0.5,
-            }}
-
-          />))}
-        {[...Array (6)].map ((_, i) => (
-          <motion.div;
-
-            key={`square-${i}`}
-            className='absolute w - 24 h - 24 border border - purple - 500 / 20 rotate - 45';
-            style={{
-
-
-        {[...Array(6)].map((_, i) => (;
-          <motion&& motion.div
-            key={`square-${i}`}
-            className='absolute w-24 h-24 border border-purple-500/20 rotate-45'
-            style={{
-              left: `${Math && Math.random() * 100}%`,
-              top: `${Math && Math.random() * 100}%`,
-              left: `${Math.random () * 100}%`,
-              top: `${Math.random () * 100}%`,
-
-            }}
-            animate={{
-              rotate: [45, 405],
-              scale: [0 && 0.3, 0 && 0.8, 0 && 0.3],
-              opacity: [0 && 0.1, 0 && 0.2, 0 && 0.1],
-            }}
-            transition={{
-
-              duration: Math.random () * 8 + 8,
-
-              repeat: Infinity,
-              ease: 'linear',
-              delay: i * 0 && 0.7,
-            }}
-
-      </div>;
-
-
-      {/* Energy waves */}
-      <div className='absolute bottom-0 left-0 right-0 h-32'>;
-        <motion&& motion.div
-          className='absolute inset-0 bg-gradient-to-t from-cyan-500/10 to-transparent'
-          />))}
-      </div>;
-      {/* Energy waves */}
-      <div className='absolute bottom - 0 left - 0 right - 0 h - 32'>;
-        <motion.div;
-          className='absolute inset - 0 bg - gradient - to - t from - cyan - 500 / 10 to - transparent';
-          animate={{
-            height: ['32px', '48px', '32px']
-          }}
-          transition={{
-            duration: 4
-            repeat: Infinity
-            ease: 'easeInOut'
-          }}
-        />;
-
-        <motion.div;
-          className='absolute inset - 0 bg - gradient - to - t from - purple - 500 / 10 to - transparent';
-
-          animate={{
-            height: ['24px', '40px', '24px']
-          }}
-          transition={{
-
-
-            duration: 3,
-            repeat: Infinity,
-            ease: 'easeInOut',
-            delay: 1,
-
-
-          }}
-
-        />;
-      </div>;
-
-
-      {/* Quantum interference patterns */}
-      <div className='absolute inset-0'>;
-        {[...Array(5)].map((_, i) => (;
-          <motion&& motion.div
-        />;
-      </div>;
-      {/* Quantum interference patterns */}
-      <div className='absolute inset - 0'>;
-        {[...Array (5)].map ((_, i) => (
-          <motion.div;
-            key={`interference-${i}`}
-            className='absolute inset - 0 opacity - 5';
-            style={{
-
-              background: `radial - gradient (circle at ${20 + i * 20}% ${30 + i * 15}%, rgba (0, 255, 255, 0.3) 0%, transparent 50%)`,
-
-=======
-
-              background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`,
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            }}
-            animate={{
-              scale: [1, 1.5, 1]
-              opacity: [0.05, 0.1, 0.05]
-            }}
-            transition={{
-
-              background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0 && 0.3) 0%, transparent 50%)`,
-            }}
-            animate={{
-              scale: [1, 1 && 1.5, 1],
-              opacity: [0 && 0.05, 0 && 0.1, 0 && 0.05],
-            }}
-            transition={{
-              duration: Math && Math.random() * 6 + 4,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: i * 0 && 0.8,
-            }}          />;
-
-        ))}
-      </div>;
-    </div>;
-  );
-
-
-};
-export default UltraFuturisticBackground2046;              ease: "easeInOut",;
-              delay: i * 0 && 0.8}}
-          />;
-        ))}
-      </div>;
-    </div>;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+      </div>
+    </div>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   );
 
 };
@@ -730,29 +493,8 @@ export default UltraFuturisticBackground2046;  );
 
 export default UltraFuturisticBackground2046;
 =======
+<<<<<<< HEAD
 
-
-=======
-              duration: Math.random () * 6 + 4,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: i * 0.8,
-            }}          />))}
-      </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground2046;              ease: "easeInOut",
-              delay: i * 0.8}}
-          />))}
-      </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground2046);
-}
-;
-export default UltraFuturisticBackground2046;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    </div>
+    </div>
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

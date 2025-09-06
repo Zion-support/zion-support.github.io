@@ -1,11 +1,10 @@
 
-
+return (<UltraAdvancedFuturisticBackground> <Head> <title> {
   service.name
 }- Zion Tech Group</title>) )
-
-}</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+ return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+ return (<UltraAdvancedFuturisticBackground> <Head> <title> {
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 
 
@@ -22,6 +21,8 @@ import Button from '../components/ui/Button';
 export default function IncidentAutomationSuitePage() {
 
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/incident-automation-suite'));
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   if (!service) return null;
 
   return (
@@ -35,7 +36,12 @@ export default function IncidentAutomationSuitePage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+;
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

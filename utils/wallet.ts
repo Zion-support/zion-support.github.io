@@ -1,8 +1,12 @@
-
+export async function connectMetaMask(): Promise<string[]> {
+  if (typeof window === 'undefined' |!window.ethereum) {
+  if (typeof window === 'undefined' || !window.ethereum) {;
 =======
-  if (typeof window === 'undefined' || !window && window.ethereum) {
+  if (typeof window === 'undefined' || !window.ethereum) {;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -30,6 +34,8 @@ if ( {) {
 export async function getAccounts(): Promise<string[]> {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     return [];
   }
   try {
@@ -57,6 +63,8 @@ if ( {) {
 export async function getBalance(address: string): Promise<string> {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -85,6 +93,8 @@ if ( {) {
 export async function signMessage(message: string, address: string): Promise<string> {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -119,8 +129,10 @@ declare global {
       request: (args: { method: string; params?: any[] }) => Promise<any>;
       on: (event: string, callback: (accounts: string[]) => void) => void;
       removeListener: (event: string, callback: (accounts: string[]) => void) => void;
+    }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    };
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }

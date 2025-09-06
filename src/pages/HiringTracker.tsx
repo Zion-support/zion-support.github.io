@@ -9,6 +9,9 @@ import { ProtectedRoute } from '@/components/ProtectedRoute'
 import { Briefcase } from 'lucide-react'
 function HiringTrackerContent() {
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+        title='Hiring Tracker | Zion AI Marketplace'
+        description='Manage your candidate pipeline in the Zion AI Marketplace.'
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const router = useRouter()
   const jobId = router.query.jobId as string
@@ -42,9 +45,39 @@ import { Briefcase } from 'lucide-react'
             </p>
           </div>
         </div>
+=======
+        <Tabs
+          defaultValue='kanban'
+          onValueChange={setActiveTab}
+          className='mb-8'
+        >
+
+        <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
+<<<<<<< HEAD
+<<<<<<< HEAD
 
           <TabsList>
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
 
+
+          <TabsContent value="analytics" className="mt-6">
+            <HiringAnalytics jobId={jobId} />
+          </TabsContent>
+        </Tabs>
+      </main>
+    </>
+  )
+}
+
+
+export default function HiringTracker() {
+  return (
+    <ProtectedRoute>
+<<<<<<< HEAD
+      <HiringTrackerContent />;
+    </ProtectedRoute>;
+  );
+};
+<<<<<<< HEAD

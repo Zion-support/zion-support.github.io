@@ -10,6 +10,10 @@ const Pagination = ({ class_name, ...props }: React.ComponentProps<&quot;nav & q
 
 const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
 
+import { cn } from "@/lib/utils"
+import { ButtonProps, buttonVariants } from "@/components/ui/button"
+
+const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
   <nav
 
     {...props}
@@ -27,6 +31,7 @@ const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
 >(({ className, ...props }, ref) => (
 
 ))
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 interface PaginationButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -34,6 +39,13 @@ interface PaginationButtonProps
   isActive?: boolean
 }
 const PaginationLink = ({
+=======
+  className
+  isActive
+  size = &quot;icon&quot;
+  className,
+  isActive,
+<<<<<<< HEAD
 
   ...props
 }: PaginationLinkProps) => (
@@ -41,8 +53,9 @@ const PaginationLink = ({
     aria-current={isActive ? "page" : undefined}
     className={cn(
       buttonVariants({
+<<<<<<< HEAD
 
-        size}),
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
         className;
       )}
@@ -82,6 +95,7 @@ const PaginationNext = ({
     <ChevronRight className="h-4 w-4" />
   </PaginationLink>
 )
+<<<<<<< HEAD
 
 const PaginationEllipsis = ({
   className

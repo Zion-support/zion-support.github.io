@@ -1,4 +1,7 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
 
+import type { NextApiRequest, NextApiResponse } from 'next',;
+;
 const templates = {
   lulu: {
     sizes: [
@@ -14,7 +17,10 @@ const templates = {
       { name: 'Letter', widthIn: 8.5, heightIn: 11, bleedIn: 0.125, marginIn: 0.75 }]}}
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-
+  res.status(200).json(templates)
+  res.status(200).json(templates);
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
 const templates = {;
   lulu: {;
     sizes: [;
@@ -35,8 +41,6 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

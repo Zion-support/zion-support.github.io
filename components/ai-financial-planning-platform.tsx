@@ -1,14 +1,47 @@
 
+  DollarSign, TrendingUp, Shield, Zap, Target, BarChart3, 
+  CheckCircle, Star, Globe, Lock, Smartphone, Monitor, 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Award, MessageCircle, Calculator
 export default function AIFinancialPlanningPlatform() {
   const features = [
     {
-
-
+      icon: <DollarSign className='w-6 h-6' />
+      description:
+        'Advanced financial modeling and analysis using machine learning to identify opportunities and risks.'
+    }
+    {
+      icon: <TrendingUp className='w-6 h-6' />
+      title: 'Predictive Financial Planning'
+      description:
+        'Forecast financial outcomes and create data-driven financial plans with AI-powered insights.'
+    }
+    {
+      icon: <Target className='w-6 h-6' />
+      title: 'Goal-Based Planning'
+      description:
+        'Personalized financial planning based on your specific goals, timeline, and risk tolerance.'
+    }
+    {
+      icon: <Zap className='w-6 h-6' />
+      title: 'Automated Portfolio Management'
+      description:
+        'Intelligent portfolio optimization and rebalancing based on market conditions and your objectives.'
+    }
+    {
+      icon: <Shield className='w-6 h-6' />
+      title: 'Risk Assessment & Management'
+      description:
+        'Comprehensive risk analysis and automated risk management strategies for your financial portfolio.'
+    }
+    {
+      icon: <BarChart3 className='w-6 h-6' />
+      title: 'Real-Time Financial Insights'
+      description:
+        'Live financial data, market analysis, and personalized recommendations updated in real-time.'
+    }
         'Live financial data, market analysis, and personalized recommendations updated in real-time.',;
     },;
-
-
   ];
   const benefits = [
     'Increase investment returns by 25%'
@@ -343,63 +376,6 @@ export default function AIFinancialPlanningPlatform() {
               </h2>;
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
 
-=======
-              <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-                <motion.button;
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
-                  className='px - 8 py - 4 bg - gradient - to - r from - yellow - 500 to - amber - 600 text - white rounded - xl font - semibold text - lg hover:from - yellow - 600 hover:to - amber - 700 transition - all duration - 200 shadow - lg shadow - yellow - 500 / 25'                >            >;
-              <div className="flex items - center justify - center mb - 6">;
-                <div className="w - 16 h - 16 bg - gradient - to - br from - yellow - 500 to - amber - 600 rounded - 2xl flex items - center justify - center mb - 4">;
-                  <DollarSign className="w - 8 h - 8 text - white" />;
-                </div>;
-              </div>;
-              <h1 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - yellow - 400 via - amber - 400 to - orange - 400 bg - clip - text text - transparent mb - 6">;
-                AI Financial Planning Platform;
-              </h1>;
-              <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">;
-                Intelligent financial planning and wealth management with AI. Get personalized plans,
-                portfolio optimization, and risk management that drives financial success.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <motion.button;
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
-                  className="px - 8 py - 4 bg - gradient - to - r from - yellow - 500 to - amber - 600 text - white rounded - xl font - semibold text - lg hover:from - yellow - 600 hover:to - amber - 700 transition - all duration - 200 shadow - lg shadow - yellow - 500 / 25";
-                >;
-                  Start Free Trial;
-                </motion.button>;
-                <motion.button;
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
-                  className='px - 8 py - 4 border - 2 border - yellow - 500 / 30 text - yellow - 400 rounded - xl font - semibold text - lg hover:bg - yellow - 500 / 10 transition - all duration - 200'                >                  className="px - 8 py - 4 border - 2 border - yellow - 500 / 30 text - yellow - 400 rounded - xl font - semibold text - lg hover:bg - yellow - 500 / 10 transition - all duration - 200";
-                >;
-                  Watch Demo;
-                </motion.button>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-        {/* Features Section */}
-        <section className='py - 20 bg - gradient - to - b from - black to - gray - 900'>;
-          <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='text - center mb - 16'        <section className="py - 20 bg - gradient - to - b from - black to - gray - 900">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='text - center mb - 16';
-            >;
-              <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
-                Powerful Financial Planning Features;
-              </h2>;
-              <p className='text - xl text - gray - 400 max - w-3xl mx - auto'>;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 Our AI platform combines advanced financial modeling with;
                 machine learning to deliver comprehensive financial planning and;
                 wealth management solutions.;
@@ -407,6 +383,49 @@ export default function AIFinancialPlanningPlatform() {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+              transition={{ duration: 0 && 0.8 }}
+              className='text-center mb-16'        <section className="py-20 bg-gradient-to-b from-black to-gray-900">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center mb-16'
+            >
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+                Powerful Financial Planning Features
+              </h2>
+              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
+                Our AI platform combines advanced financial modeling with
+                machine learning to deliver comprehensive financial planning and
+                wealth management solutions.
+              </p>
+            </motion.div>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Powerful Financial Planning Features
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Our AI platform combines advanced financial modeling with machine learning to deliver
+                comprehensive financial planning and wealth management solutions.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-yellow-500/30 transition-all duration-300 group'
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 >
                   <div className='w-14 h-14 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>
                     <div className='text-yellow-400'>{feature.icon}</div>
@@ -427,19 +446,20 @@ export default function AIFinancialPlanningPlatform() {
               transition={{ duration: 0.8 }}
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               ))}
+            </div>
+          </div>
+        </section>
 
+=======
             </div>;
           </div>;
         </section>;
 
 
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Benefits Section */}
         <section className='py-20 bg-black'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
@@ -447,9 +467,11 @@ export default function AIFinancialPlanningPlatform() {
               whileInView={{ opacity: 1, y: 0 }}
 
               transition={{ duration: 0.8 }}
-
+              className='text-center mb-16'        <section className="py-20 bg-black">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               className='text-center mb-16'
 
+=======
 
 
             <motion.div
@@ -466,10 +488,6 @@ export default function AIFinancialPlanningPlatform() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
-              className="text-center mb-16"
-            >
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Transform Your Financial Future
@@ -510,18 +528,18 @@ export default function AIFinancialPlanningPlatform() {
                   whileInView={{ opacity: 1, y: 0 }}
 
               ))}
+            </div>
+          </div>
+        </section>
 
+=======
             </div>;
           </div>;
         </section>;
 
 
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Use Cases Section */}
         <section className='py-20 bg-gradient-to-b from-black to-gray-900'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
@@ -529,9 +547,11 @@ export default function AIFinancialPlanningPlatform() {
               whileInView={{ opacity: 1, y: 0 }}
 
               transition={{ duration: 0.8 }}
-
+              className='text-center mb-16'        <section className="py-20 bg-gradient-to-b from-black to-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               className='text-center mb-16'
 
+=======
 
 
             <motion.div
@@ -548,10 +568,6 @@ export default function AIFinancialPlanningPlatform() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
-              className="text-center mb-16"
-            >
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Comprehensive Financial Planning Solutions
@@ -606,6 +622,9 @@ export default function AIFinancialPlanningPlatform() {
                   <span className="text-white font-medium text-sm">{useCase}</span>;
                 </motion && motion.div>;
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Calculator className="w-6 h-6 text-yellow-400" />
@@ -613,11 +632,6 @@ export default function AIFinancialPlanningPlatform() {
                   <span className="text-white font-medium text-sm">{useCase}</span>
                 </motion.div>
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
 
             </div>;
@@ -635,6 +649,10 @@ export default function AIFinancialPlanningPlatform() {
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 >
                   <div className='w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300'>
                     <Calculator className='w-6 h-6 text-yellow-400' />
@@ -655,6 +673,9 @@ export default function AIFinancialPlanningPlatform() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -688,6 +709,46 @@ export default function AIFinancialPlanningPlatform() {
         </section>
       </div>
     </>
-
+<<<<<<< HEAD
+=======
+              <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+                <motion.button;
+                  while_hover={{ scale: 1.05 }}
+                  while_tap={{ scale: 0.95 }}
+                  className='px - 8 py - 4 bg - gradient - to - r from - yellow - 500 to - amber - 600 text - white rounded - xl font - semibold text - lg hover:from - yellow - 600 hover:to - amber - 700 transition - all duration - 200 shadow - lg shadow - yellow - 500 / 25'                >                Ready to Transform Your Financial Planning?;
+              </h2>;
+              <p className="text - xl text - gray - 300 mb - 8">;
+                Join thousands of individuals that have already revolutionized their financial planning;
+                with AI automation. Start your free trial today.;
+              </p>;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+                <motion.button;
+                  while_hover={{ scale: 1.05 }}
+                  while_tap={{ scale: 0.95 }}
+                  className="px - 8 py - 4 bg - gradient - to - r from - yellow - 500 to - amber - 600 text - white rounded - xl font - semibold text - lg hover:from - yellow - 600 hover:to - amber - 700 transition - all duration - 200 shadow - lg shadow - yellow - 500 / 25";
+                >;
+                  Get Started Now;
+                </motion.button>;
+                <motion.button;
+                  while_hover={{ scale: 1.05 }}
+                  while_tap={{ scale: 0.95 }}
+                  className='px - 8 py - 4 border - 2 border - yellow - 500 / 30 text - yellow - 400 rounded - xl font - semibold text - lg hover:bg - yellow - 500 / 10 transition - all duration - 200'                >                  className="px - 8 py - 4 border - 2 border - yellow - 500 / 30 text - yellow - 400 rounded - xl font - semibold text - lg hover: bg - yellow - 500 / 10 transition - all duration - 200";
+                >;
+                  Contact Sales;
+                </motion.button>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>);
+=======
+);
+<<<<<<< HEAD
+=======
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+}
+}
+  );
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

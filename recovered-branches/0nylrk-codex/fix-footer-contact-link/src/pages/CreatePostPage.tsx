@@ -1,13 +1,27 @@
 
-
+import {useState, useEffect} from "react";
+import {Link, useNavigate, useSearchParams} from "react-router-dom";
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {Button} from "@/components/ui/button";
+import PostForm from "@/components/community/PostForm";
+import {useToast} from "@/hooks/use-toast";
+import {ForumCategory} from "@/types/community";
 import { useState, useEffect } from "react",
 import { Link, useNavigate, useSearchParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
 import { Button } from "@/components/ui/button",
 import PostForm from "@/components/community/PostForm",
+import { useToast } from "@/hooks/use-toast";
+import { ForumCategory } from "@/types/community";
+import { useToast } from "@/hooks/use-toast",
+import { ForumCategory } from "@/types/community",
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface PostFormValues {
 
   title: string
@@ -17,11 +31,28 @@ interface PostFormValues {
   tags: string
 }
 
+export default function CreatePostPage() {;
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [searchParams] = useSearchParams();
 export default function CreatePostPage() {
 
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [searchParams] = useSearchParams();
+  // Get category from URL query params if available
+  const initialCategory = searchParams.get("category") as ForumCategory | null;
+  const initialValues: Partial<PostFormValues> = {
+    categoryId: initialCategory |"project-help"
+  }
+  const navigate = useNavigate(),
+  const { toast } = useToast(),
+  const [searchParams] = useSearchParams(),
+  
   // Get category from URL query params if available
   const initialCategory = searchParams.get("category") as ForumCategory | null,
-
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const initialValues: Partial<PostFormValues> = {
     categoryId: initialCategory || "project-help"
   },
@@ -32,12 +63,6 @@ export default function CreatePostPage() {
       // For now, we'll just simulate a successful post creation
       // Parse tags into an array
 
-=======
-
-      const tagsArray = values.tags.split(",").map(tag => tag.trim()),
-      
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       toast({
         title: "Post created"
         description: "Your post has been published successfully"
@@ -101,6 +126,10 @@ export default function CreatePostPage() {;
       });
 
     }
+=======
+  }
+  },
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
 
@@ -124,5 +153,9 @@ export default function CreatePostPage() {;
       </div>
     </AppLayout>
   )
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

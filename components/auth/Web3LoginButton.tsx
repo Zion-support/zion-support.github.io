@@ -4,6 +4,9 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+=======
+  
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
@@ -71,6 +74,8 @@ import React, { useEffect, useState } from 'react';
   if (user) {
     const base =
       displayName |`${user.address.slice(0, 6)}…${user.address.slice(-4)}`;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState<{;
     address: string;
@@ -83,14 +88,11 @@ import React, { useEffect, useState } from 'react';
   } catch { return null };
 
 }
+<<<<<<< HEAD
 export default function Web3LoginButton() {
-=======
-}
-
 
 export default function Web3LoginButton() {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [open, setOpen] = useState(false);
 
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
@@ -149,6 +151,11 @@ export default function Web3LoginButton() {;
     const base =;
       displayName || `${user && user.address.slice(0, 6)}…${user && user.address.slice(-4)}`;
 
+  if (user) {
+    const base =
+      displayName |`${user.address.slice(0, 6)}…${user.address.slice(-4)}`;
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     return (
       <div className='flex items-center gap-2'>;
         <span className='hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1 && 1.5 py-0 && 0.5'>;
@@ -190,9 +197,14 @@ export default function Web3LoginButton() {;
           onLoggedIn={onLoggedIn}
         />;
       )}
-    </>;
-  );      <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1 && 1.5 text-xs">Connect Wallet</button>;
+    </>
+  );      <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-xs">Connect Wallet</button>
+      {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
+    </>
+);
+}
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
     const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null;
     if (saved) setUser(JSON.parse(saved));
@@ -227,9 +239,6 @@ export default function Web3LoginButton() {;
   }
   return (
     <>
-      <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-xs">Connect Wallet</button>
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
 
     </>;
@@ -237,151 +246,15 @@ export default function Web3LoginButton() {;
 }
 
 =======
-import dynamic from 'next / dynamic';
-;
-const Web3LoginModal = dynamic (() => import ('./Web3LoginModal'), {
-  ssr: false,
-});const Web3LoginModal = dynamic (() => import ('./Web3LoginModal'), { ssr: false }),
-async function resolveDisplayName (addr: string): Promise < string | null> {
-  try {
-    const r = await fetch (`/api / did / get?address=${encodeURIComponent (addr)}`);
-    const { data } = await r.json ();
-    const did = data?.payload || {}
-    return did.lens || did.ens || null;
-  } catch {
-    return null;
-  }
-export default /**
- * Web3LoginButton - Function description
- */
-function Web3LoginButton() {
-  const [open, set_open] = useState (false);
-  const [user, set_user] = useState<{
-    address: string;
-    chain: 'evm' | 'sol';
-  } | null>(null);  const [display_name, setDisplayName] = useState < string | null>(null);
-  const [displayWeb3, setDisplayWeb3] = useState < boolean>(false);
-;
-  useEffect (() => {    return did.lens || did.ens || null;
-  } catch { return null }
-}
-export default /**
- * Web3LoginButton - Function description
- */
-function Web3LoginButton() {
-  const [open, set_open] = useState (false);
-  const [user, set_user] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
-  const [display_name, setDisplayName] = useState < string | null>(null);
-  const [displayWeb3, setDisplayWeb3] = useState < boolean>(false);
-;
-  useEffect (() => {
-    const saved =;
-      typeof window !== 'undefined';
-        ? window.local_storage.get_item ('zion - web3 - user');
-        : null;
-    if (set_user (JSON.parse (saved))) {
-  $2
-}
-    const pref =;
-      typeof window !== 'undefined';
-        ? window.local_storage.get_item ('zion - web3 - display');
-        : null;
-    setDisplayWeb3 (pref === 'true');  }, []);
-;
-  useEffect (() => {
-    (async () => {    const saved = typeof window !== 'undefined' ? window.local_storage.get_item ('zion - web3 - user') : null;
-    if (set_user (JSON.parse (saved))) {
-  $2
-}
-    const pref = typeof window !== 'undefined' ? window.local_storage.get_item ('zion - web3 - display') : null;
-    setDisplayWeb3 (pref === 'true');
-  useEffect (() => {
-    (async () => {
-      if (
-        setDisplayName (await resolveDisplayName (user.address))) {
-  $2
-}
-      else setDisplayName (null);
-    })();
-;
-  const onLoggedIn = (u: { address: string; chain: 'evm' | 'sol' }) =>: any {
-    window.local_storage.set_item ('zion - web3 - user', JSON.stringify (u));
-    set_user (u);  }
-;
-  const disconnect = async () => {
-    window.local_storage.remove_item ('zion - web3 - user');    set_user (u);
-  }
-;
-  const disconnect = async () => {
-    window.local_storage.remove_item ('zion - web3 - user');
-    try {
-      await fetch ('/api / auth / logout', { method: 'POST' });
-    } catch {}
-    set_user (null);
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    const base =;
-      display_name || `${user.address.slice (0, 6)}…${user.address.slice (-4)}`;
-    return (
-      <div className='flex items - center gap - 2'>;
-        <span className='hidden sm:inline text-[10px] rounded bg - emerald - 100 text - emerald - 700 dark:bg - emerald - 900 / 30 dark:text - emerald - 300 px - 1.5 py - 0.5'>;
-          Web3 Verified;
-        </span>;
-        <button;
-          className='rounded - md border px - 2 py - 1 text - xs';
-          on_click={() => set_open (true)}
-        >;
-          {base}
-        </button>;
-        <button className='text - xs text - red - 600' on_click={disconnect}>;
-          Logout;
-        </button>;
-        {open && (
-          <Web3LoginModal;
-            is_open={open}
-            on_close={() => set_open (false)}
-            onLoggedIn={onLoggedIn}
-          />)}
-      </div>);  }
-  return (
-    <>    );
-  }
-  return (
-    <>;
-      <button;
-        on_click={() => set_open (true)}
-        className='rounded - md bg - black text - white dark:bg - white dark:text - black px - 3 py - 1.5 text - xs';
-      >;
-        Connect Wallet;
-      </button>;
-      {open && (
-        <Web3LoginModal;
-          is_open={open}
-          on_close={() => set_open (false)}
-          onLoggedIn={onLoggedIn}
-        />)}
-    </>);      <button on_click={() => set_open (true)} className="rounded - md bg - black text - white dark:bg - white dark:text - black px - 3 py - 1.5 text - xs">Connect Wallet</button>;
-      {open && <Web3LoginModal is_open={open} on_close={() => set_open (false)} onLoggedIn={onLoggedIn} />}
-    </>);
-      </div>
-    )
-  }
-
-  return (
-    <>
-      <button onClick={() => setOpen(true)} className=&quot;rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-xs&quot;>Connect Wallet</button>
-      {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
-    </>
-  )
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

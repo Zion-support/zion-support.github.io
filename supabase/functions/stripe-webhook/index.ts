@@ -1,5 +1,26 @@
+.eq('id', orderId)}}; return new Response(JSON.stringify({ "received": true }), { "status": 200 })}; return new Response('Not found', { "status": 404 })}); return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+;
+  return new Response('Not found', { "status": 404 })});    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
 
-
+          .eq('id', orderId)};
+};
+    return new Response(JSON.stringify({ "received":true }), { "status":200 })};
+;
+  return new Response('Not found', { "status":404 })}),;
+;
+    return new Response(JSON.stringify({ "received":true }), { "status":200 })};
+;          .eq('id', orderId)};
+};
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+  return new Response('Not found', { "status": 404 })});
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+          .eq('id', orderId)};
+    };
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+  return new Response('Not found', { "status": 404 })}),
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+ursor/integrate-build-improve-and-re-verify-8f7d
 import { serve } from
   "https": //deno.land/std@0.190.0/http/server.ts'';
 import Stripe from';https://esm.sh/stripe@14.21.0';
@@ -55,28 +76,39 @@ if (event.type === 'checkout.session.completed') {const session = event.data.obj
     }
     return new Response(JSON.stringify({ received: true }), { status: 200 })}
   return new Response('Not found', { status: 404 })})
+origin/automation-improvements-final
+.eq('id', orderId)}}; return new Response(JSON.stringify({ "received": true }), { "status": 200 })}; return new Response('Not found', { "status": 404 })}); return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+;
+  return new Response('Not found', { "status": 404 })});
 
+=======
+          .eq('id', orderId)};
+};
+    return new Response(JSON.stringify({ &quot;received&quot;: true }), { &quot;status&quot;: 200 })};
+
+  return new Response('Not found', { "status": 404 })}),
+
+ursor/fix-lint-push-and-merge-to-main-28da
     return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
 
+  return new Response('Not found', { &quot;status&quot;: 404 })}),
+    return new Response(JSON.stringify({ &quot;received&quot;: true }), { &quot;status&quot;: 200 })};
+origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+.eq('id', orderId)}}; return new Response(JSON.stringify({ "received": true }), { "status": 200 })}; return new Response('Not found', { "status": 404 })}); return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+;
+  return new Response('Not found', { "status": 404 })});
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+
+  return new Response('Not found', { "status": 404 })}),
+    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           .eq('id', orderId)}
 },;
     return new Response(JSON.stringify({ "received": true }), { "status": 200 })},;
   return new Response('Not found', { "status": 404 })}),;
     return new Response(JSON.stringify({ "received": true }), { "status": 200 })},;
-=======
 .eq('id', orderId)}}; return new Response(JSON.stringify({ "received": true }), { "status": 200 })}; return new Response('Not found', { "status": 404 })}); return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
   return new Response('Not found', { "status": 404 })});
     return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-.eq ('id', order_id)}} return new Response (JSON.stringify ({ "received": true }), { "status": 200 })} return new Response ('Not found', { "status": 404 })}); return new Response (JSON.stringify ({ "received": true }), { "status": 200 })}
-;
-  return new Response ('Not found', { "status": 404 })});
-    return new Response (JSON.stringify ({ "received": true }), { "status": 200 })}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

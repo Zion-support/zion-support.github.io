@@ -1,4 +1,7 @@
 
+=======
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Microscope, Star, ArrowRight, Play, CheckCircle;
   Phone, Mail, MapPin
 const contactInfo = {
@@ -209,30 +212,6 @@ export default function UltraFuturisticHero2032() {;
 
   return (
 
-=======
-
-export default function UltraFuturisticHero2032() {;
-
-  return (
-    <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-purple-900/20 to-black'>;
-      {/* Animated Background Elements */}
-      <div className='absolute inset-0'>;
-        {/* Floating Particles */}
-        <div className='absolute inset-0'>;
-          {[...Array(50)].map((_, i) => (;
-            <motion&& motion.div
-    color: 'from - indigo - 600 to - blue - 600',
-    href: '/quantum - internet - security - gateway',
-  }, ];
-;
-export default /**
- * UltraFuturisticHero2032 - Function description
- */
-function UltraFuturisticHero2032() {
-  return (
-    <section className='relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - purple - 900 / 20 to - black'>    href: '/quantum - internet - security - gateway';
-  }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 ];
 ;
 export default /**
@@ -279,6 +258,8 @@ function UltraFuturisticHero2032() {
             />
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Gradient Orbs */}
 
         <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
@@ -325,13 +306,21 @@ function UltraFuturisticHero2032() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Main Heading */}
         <motion&& motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight'
+=======
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         >
           <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
             The Future of
@@ -372,32 +361,38 @@ function UltraFuturisticHero2032() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Subheading */}
         <motion&& motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
-
+          technologies that were once science fiction.
         </motion.p>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
 
-=======
-=======
         </motion.p>
 
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* CTA Buttons */}
         <motion&& motion.div
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'
 
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Link
@@ -451,10 +446,6 @@ function UltraFuturisticHero2032() {
         </motion.div>
 
 =======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* Stats Grid */}
@@ -462,7 +453,14 @@ function UltraFuturisticHero2032() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
+=======
+          className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+          className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         >
           {heroStats.map((stat, index) => (
             <motion.div
@@ -585,8 +583,20 @@ function UltraFuturisticHero2032() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
+              className='text-center group'
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+        </motion && motion.div>;
+
+
+=======
+              className='text-center group'
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             >
               <div
                 className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r ${stat.color} rounded-2xl transform transition-all duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:shadow-lg`}
@@ -599,13 +609,21 @@ function UltraFuturisticHero2032() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Featured Services */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
           className='mb-16'
+=======
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         >
           <h2 className='text-2xl md:text-3xl font-bold text-white mb-8'>
             Featured Revolutionary Services
@@ -613,6 +631,8 @@ function UltraFuturisticHero2032() {
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {featuredServices.map((service, index) => (        >
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Link
@@ -648,13 +668,18 @@ function UltraFuturisticHero2032() {
         <motion.div
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Contact Information */}
         <motion&& motion.div
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.6 }}
+          className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto'
 
-
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         >
           <h3 className='text-2xl font-bold text-white mb-6 text-center'>
             Ready to Transform Your Business?
@@ -760,163 +785,62 @@ function UltraFuturisticHero2032() {
         transition={{ duration: 0.8, delay: 2 }}
         className='fixed bottom-8 right-8 z-50'
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      {/* Floating Action Button */}
-      <motion&& motion.div
-                className='group';
-              >;
-                <Link;
-                  href={service.href}
-                  className='block relative bg - gradient - to - br from - gray - 900 / 80 to - gray - 800 / 80 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl p - 6 h - full transform transition - all duration - 500 hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - 2xl hover:shadow - purple - 500 / 20 hover:border - purple - 500 / 50';
-                >;
-                  <div;
-                    className={`w - 16 h - 16 bg - gradient - to - r ${service.color} rounded - 2xl flex items - center justify - center mb - 6 transform transition - transform duration - 300 group - hover:shadow - lg hover:shadow - cyan - 400 / 40`}
-                  >;
-                    <service.icon className='w - 8 h - 8 text - white' />;
-                  </div>;
-                  <h3 className='text - xl font - bold text - white mb - 3 group - hover:text - transparent group - hover:bg - gradient - to - r group - hover:from - cyan - 400 group - hover:to - purple - 400 group - hover:bg - clip - text transition - all duration - 300'>                    {service.name}
-                  </h3>;
-                  <p className='text - gray - 400 text - sm mb - 4 leading - relaxed'>;
-                    {service.description}
-                  </p>;
-                  <div className='flex items - center justify - between'>;
-                    <div className='text - 2xl font - bold text - cyan - 400'>;
-                      {service.price}
-                    </div>;
-                    <div className='text - purple - 400 group - hover:text - cyan - 400 transition - colors'>;
-                      <ArrowRight className='w - 5 h - 5 group - hover:translate - x-1 transition - transform' />;
-                    </div>;
-                  </div>;
-                  <div className='absolute inset - 0 bg - gradient - to - br from - purple - 500 / 5 to - cyan - 500 / 5 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 pointer - events - none' />                </Link>;
-                  <div className="absolute inset - 0 bg - gradient - to - br from - purple - 500 / 5 to - cyan - 500 / 5 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />;
-                </Link>;
-              </motion.div>))}
-          </div>;
-        </motion.div>;
-        {/* Contact Information */}
-        <motion.div;
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          animate={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 1.6 }}
-          className='bg - gradient - to - r from - purple - 900 / 50 to - cyan - 900 / 50 backdrop - blur - xl border border - purple - 500 / 30 rounded - 3xl p - 8 max - w-4xl mx - auto';
-        >;
-          <h3 className='text - 2xl font - bold text - white mb - 6 text - center'>;
+=======
+          <div className='text-center'>;
+            <Link
+              href='/contact'
+              className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:shadow-purple-500/25'>;
+              <span>Get Started Today</span>;
+              <ArrowRight className='w-5 h-5' />            </Link>        >;
+          <h3 className="text-2xl font-bold text-white mb-6 text-center">;
             Ready to Transform Your Business?;
           </h3>;
-          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 6'>;
-            <div className='flex items - center space - x-3 text - gray - 300'>;
-              <Phone className='w - 5 h - 5 text - cyan - 400' />;
-              <a;
-                href={`tel:${contact_info.mobile}`}
-                className='hover:text - cyan - 400 transition - colors';
-              >;
-                {contact_info.mobile}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">;
+            <div className="flex items-center space-x-3 text-gray-300">;
+              <Phone className="w-5 h-5 text-cyan-400" />;
+              <a href={`tel:${contactInfo && contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors">;
+                {contactInfo && contactInfo.mobile}
               </a>;
             </div>;
-            <div className='flex items - center space - x-3 text - gray - 300'>;
-              <Mail className='w - 5 h - 5 text - purple - 400' />;
-              <a;
-                href={`mailto:${contact_info.email}`}
-                className='hover:text - purple - 400 transition - colors';
-              >;
-                {contact_info.email}
+            <div className="flex items-center space-x-3 text-gray-300">;
+              <Mail className="w-5 h-5 text-purple-400" />;
+              <a href={`mailto:${contactInfo && contactInfo.email}`} className="hover:text-purple-400 transition-colors">;
+                {contactInfo && contactInfo.email}
               </a>;
             </div>;
-            <div className='flex items - center space - x-3 text - gray - 300'>;
-              <MapPin className='w - 5 h - 5 text - green - 400' />;
-              <span>{contact_info.address}</span>;
+            <div className="flex items-center space-x-3 text-gray-300">;
+              <MapPin className="w-5 h-5 text-green-400" />;
+              <span>{contactInfo && contactInfo.address}</span>;
             </div>;
           </div>;
-          <div className='text - center'>;
-            <Link;
-              href='/contact';
-              className='inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - xl hover:shadow - purple - 500 / 25';
-            >;
-              <span > Get Started Today</span>;
-              <ArrowRight className='w - 5 h - 5' />            </Link>        >;
-          <h3 className="text - 2xl font - bold text - white mb - 6 text - center">;
-            Ready to Transform Your Business?;
-          </h3>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 6">;
-            <div className="flex items - center space - x-3 text - gray - 300">;
-              <Phone className="w - 5 h - 5 text - cyan - 400" />;
-              <a href={`tel:${contact_info.mobile}`} className="hover:text - cyan - 400 transition - colors">;
-                {contact_info.mobile}
-              </a>;
-            </div>;
-            <div className="flex items - center space - x-3 text - gray - 300">;
-              <Mail className="w - 5 h - 5 text - purple - 400" />;
-              <a href={`mailto:${contact_info.email}`} className="hover:text - purple - 400 transition - colors">;
-                {contact_info.email}
-              </a>;
-            </div>;
-            <div className="flex items - center space - x-3 text - gray - 300">;
-              <MapPin className="w - 5 h - 5 text - green - 400" />;
-              <span>{contact_info.address}</span>;
-            </div>;
-          </div>;
-          <div className="text - center">;
-            <Link;
-              href="/contact";
-              className="inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - xl hover:shadow - purple - 500 / 25";
-            >;
-              <span > Get Started Today</span>;
-              <ArrowRight className="w - 5 h - 5" />;
+          <div className="text-center">;
+            <Link
+              href="/contact"
+              className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:shadow-purple-500/25">;
+              <span>Get Started Today</span>;
+              <ArrowRight className="w-5 h-5" />;
             </Link>;
           </div>;
-        </motion.div>;
+        </motion && motion.div>;
       </div>;
-      {/* Floating Action Button */}
-      <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
 
-
-}
-
-          href={`tel:${contactInfo && contactInfo.mobile}`}
-          className="group w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl shadow-purple-500/25 transform transition-all duration-300 hover: shadow-lg hover:shadow-cyan-400/40 hover:shadow-2xl hover:shadow-purple-500/40">;
-          <Phone className="w-7 h-7 text-white group-hover:rotate-12 transition-transform" />;
-        </Link>;
-      </motion && motion.div>;
-    </section>;
-  );
-}
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-        className='fixed bottom - 8 right - 8 z - 50';
-      >;
-        <Link;
-          href={`tel:${contact_info.mobile}`}
-          className='group w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - full flex items - center justify - center shadow - 2xl shadow - purple - 500 / 25 transform transition - all duration - 300 hover:shadow - lg hover:shadow - cyan - 400 / 40 hover:shadow - 2xl hover:shadow - purple - 500 / 40';
-        >;
-          <Phone className='w - 7 h - 7 text - white group - hover:rotate - 12 transition - transform' />;
-        </Link>;
-      </motion.div>;
-    </section>);      >;
-        <Link;
-          href={`tel:${contact_info.mobile}`}
-          className="group w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - full flex items - center justify - center shadow - 2xl shadow - purple - 500 / 25 transform transition - all duration - 300 hover: shadow - lg hover:shadow - cyan - 400 / 40 hover:shadow - 2xl hover:shadow - purple - 500 / 40";
-        >;
-          <Phone className="w - 7 h - 7 text - white group - hover:rotate - 12 transition - transform" />;
-        </Link>;
-      </motion.div>;
-    </section>);
-        >
-          <Phone className=&quot;w-7 h-7 text-white group-hover:rotate-12 transition-transform&quot; />
-        </a>
-      </motion.div>
-    </section>
-  )
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
         className='fixed bottom-8 right-8 z-50'
 
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -929,7 +853,8 @@ function UltraFuturisticHero2032() {
           <Phone className='w-7 h-7 text-white group-hover:rotate-12 transition-transform' />
         </Link>
       </motion.div>
-
+    </section>
+    </section>;
   );      >
         <Link
           href={`tel:${contactInfo.mobile}`}
@@ -941,4 +866,8 @@ function UltraFuturisticHero2032() {
     </section>
   )
 }
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  );
+    </section>
+  );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

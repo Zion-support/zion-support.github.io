@@ -4,6 +4,7 @@ import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
 import { Circle } from 'lucide-react'
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+import { cn } from "@/lib/utils"
 
 const RadioGroup = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>
@@ -27,21 +28,26 @@ onst RadioGroup = React.forwardRef<
 RadioGroup.displayName = RadioGroupPrimitive.Root.displayName;
 const RadioGroupItem = React.forwardRef<;
 
+
+
+
+  React.ElementRef<typeof RadioGroupPrimitive.Item>,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>;
 >(({ className, ...props }, ref) => {;
   return (;
     <RadioGroupPrimitive.Item;
       ref={ref}
-
-        className
-      )}
-      {...props}
-    >
-      <RadioGroupPrimitive.Indicator className="flex items-center justify-center">
-        <Circle className="h-2.5 w-2.5 fill-current text-current" />
-      </RadioGroupPrimitive.Indicator>
-    </RadioGroupPrimitive.Item>
-  )
-})
-RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
 <<<<<<< HEAD
+export { RadioGroup, RadioGroupItem }
+
+
+export { RadioGroup, RadioGroupItem }
+;
+<<<<<<< HEAD
+
+export { RadioGroup, RadioGroupItem };
+
+export { RadioGroup, RadioGroupItem }
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

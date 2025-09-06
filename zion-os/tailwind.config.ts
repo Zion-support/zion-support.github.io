@@ -2,6 +2,16 @@
 import type { Config } from 'tailwindcss';
 const config: Config = {
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+    &quot;./src / pages/**/*.{js, ts, jsx, tsx, mdx}&quot;,
+    &quot;./src / components/**/*.{js, ts, jsx, tsx, mdx}&quot;,
+    &quot;./src / app/**/*.{js, ts, jsx, tsx, mdx}&quot;],
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   theme: {
     extend: {
       colors: {
@@ -25,6 +35,5 @@ const config: Config = {
 <<<<<<< HEAD
 =======
 ;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default config;

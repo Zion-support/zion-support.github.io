@@ -8,6 +8,21 @@ import { useProjects } from "@/hooks/useProjects",
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { Project, ProjectStatus } from "@/types/projects",
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+
+} from '@/components / ui / card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   AlertDialog,
   AlertDialogAction,
@@ -18,6 +33,24 @@ import { Project, ProjectStatus } from "@/types/projects",
   AlertDialogHeader,
   AlertDialogTitle,
 
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+  AlertDialog
+  AlertDialogAction
+  AlertDialogCancel
+  AlertDialogContent
+  AlertDialogDescription
+  AlertDialogFooter
+  AlertDialogHeader
+  AlertDialogTitle
+  AlertDialogTrigger
+  AlertDialogTrigger,
 } from '@/components/ui/alert-dialog'
 import { Avatar } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
@@ -442,6 +475,8 @@ function ProjectDetailsContent() {
                   </CardContent>
                 </Card>
               </TabsContent>
+                        )}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                 <Card>
                   <CardHeader>
@@ -482,11 +517,13 @@ function ProjectDetailsContent() {
                           </div>
                         )}
                       </div>
+<<<<<<< HEAD
+
 
                           <Button
                             onClick={handleSubmitNote}
                             disabled={!newNote.trim() || isSubmittingNote}
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                           >
                             {isSubmittingNote ? "Posting..." : "Post Note"}
                           </Button>
@@ -516,96 +553,16 @@ function ProjectDetailsContent() {
               </div>;
             </div>;
 
-=======
 
-            {/* Action Buttons Based on Role and Status */}
-            <div className='space-x-2'>;
-              {isTalent && isOfferPending && (;
-                <>;
-                  <AlertDialog>;
-                    <AlertDialogTrigger asChild>;
-                      <Button variant='default'>;
-                        <CheckCircle2 className='mr-2 h-4 w-4' /> Accept Offer;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className='container mx - auto py - 8'>;
-        <Card>;
-          <CardContent className='flex flex - col items - center justify - center py - 10'>;
-            <AlertCircle className='h - 10 w - 10 text - muted - foreground mb - 4' />;
-            <h2 className='text - xl font - bold mb - 2'>Project Not Found</h2>;
-            <p className='text - muted - foreground mb - 4'>;
-              The project you're looking for doesn't exist or you don't have;
-              access to it.;
-            </p>;
-            <Button on_click={() => router.push ('/dashboard')}>              Return to Dashboard;
-            </Button>;
-          </CardContent>;
-        </Card>;
-      </div>);
-  }
-  // Check if user is either the client or the talent;
-  const is_client = user?.id === project.client_id;
-  const is_talent = user?.id === project.talent_id;
-  // Check condition
-if ( {) {
-  $2
-}
-    router.push ('/unauthorized');
-    return null;
-  }
-  const isOfferPending = project.status === 'offer_sent';
-  const isOfferAccepted = [;
-    'offer_accepted',
-    'in_progress',
-    'completed',
-  ].includes (project.status);
-  const isActiveProject = ['offer_accepted', 'in_progress'].includes (
-    project.status);
-  return (
-    <>;
-      <SEO;
-        title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`}
-        description='View and manage your project details and collaboration.';
-      />;
-      <main className='container mx - auto px - 4 py - 8'>;
-        <div className='mb - 6'>;
-          <div className='flex flex - col md:flex - row justify - between md:items - center gap - 4 mb - 2'>;
-            <div>;
-              <h1 className='text - 3xl font - bold'>;
-                {project.job?.title || 'Project'}
-              </h1>;
-              <div className='flex items - center gap - 2 mt - 1'>;
-                {getStatusBadge (project.status)}
-                <span className='text - muted - foreground'>;
-                  Started on {format (new Date (project.start_date), 'PPP')}
-                </span>;
-              </div>;
-            </div>;
-            {/* Action Buttons Based on Role and Status */}
-            <div className='space - x-2'>;
-              {is_talent && isOfferPending && (
-                <>;
-                  <AlertDialog>;
-                    <AlertDialogTrigger as_child>;
-                      <Button variant='default'>;
-                        <CheckCircle2 className='mr - 2 h - 4 w - 4' /> Accept Offer;
-                      </Button>;
-                    </AlertDialogTrigger>;
-                    <AlertDialogContent>;
-                      <AlertDialogHeader>;
-                        <AlertDialogTitle>;
-                          Accept Project Offer?;
-                        </AlertDialogTitle>;
-                        <AlertDialogDescription>;
-                          By accepting this offer, you agree to the project;
-                          terms and timeline. This will initiate the contract;
-                          and start the project.;
-                        </AlertDialogDescription>;
-                      </AlertDialogHeader>;
-                      <AlertDialogFooter>;
+
+                <ProjectReviewSection project={project} />
+              </TabsContent>
+            </Tabs>
+          </div>
+          <div className='order-1 lg:order-2 lg:col-span-1'>
+          
+          <div className="order-1 lg:order-2 lg:col-span-1">
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -614,7 +571,57 @@ if ( {) {
                 <CardTitle>Project Participants</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className='space-y-6'>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <Avatar className="h-10 w-10">
+                      {project.talent_profile?.profile_picture_url ? (
+                        <img
+                          src={project.talent_profile.profile_picture_url}
+                          alt={project.talent_profile.full_name}
+                          loading='lazy'                        />
+                          loading="lazy"
+                        />
+                      ) : (
+                        <User className="h-6 w-6" />
+                      )}
+                    </Avatar>
+                    <div>
+                      <h3 className='font-semibold'>
+                        {project.talent_profile?.full_name |'Talent'}
+                      </h3>
+                      <p className='text-sm text-muted-foreground'>
+                        {project.talent_profile?.professional_title |
+                          'Professional'}
+                      </p>
+                      {isClient && (
+                        <Button
+                          variant='outline'
+                          size='sm'
+                          className='mt-2'
+                          onClick={() =>
+                            router.push(
+                              `/messages?talentId=${project.talent_id}`
+                            )
+                          }                        >
+                          <MessageSquare className='mr-1 h-3 w-3' /> Message
+                      <h3 className="font-semibold">
+                        {project.talent_profile?.full_name || "Talent"}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {project.talent_profile?.professional_title || "Professional"}
+                      </p>
+                      {isClient && (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="mt-2"
+                          onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
+                        >
+                          <MessageSquare className="mr-1 h-3 w-3" /> Message
+                        </Button>
+                      )}
+                    </div>
+                  </div>
                   <div className='flex items-start gap-4'>
                     <Avatar className='h-10 w-10'>
                         <Button variant='outline' size='sm' as_child>;
@@ -640,236 +647,6 @@ if ( {) {
               <TabsContent value='notes'>;
                 <Card>;
                   <CardHeader>;
-                    <CardTitle>Project Scope</CardTitle>;
-                    <CardDescription>;
-                      Project details and expectations;
-                    </CardDescription>;
-                  </CardHeader>;
-                  <CardContent>;
-                    <div className='space-y-4'>;
-                      <div>;
-                        <h3 className='font-semibold mb-2'>;
-                          Project Description;
-                        </h3>;
-                        <div className='bg-muted/30 p-4 rounded-md'>;
-                          <p className='whitespace-pre-wrap'>;
-                            {project && project.scope_summary}
-                          </p>;
-                        </div>;
-                      </div>;
-
-                      <div>;
-                        <h3 className='font-semibold mb-2'>Payment Terms</h3>;
-                        <Badge variant='outline' className='capitalize'>;
-                          {project && project.payment_terms} Payment;
-                        </Badge>;
-                      </div>;
-
-                      <div>;
-                        <h3 className='font-semibold mb-2'>Job Details</h3>;
-                        <div className='bg-muted/30 p-4 rounded-md'>;
-                          <p className='whitespace-pre-wrap'>;
-                            {project && project.job?.description}
-                          </p>;
-                        </div>;
-                      </div>;
-                    </div>;
-                  </CardContent>;
-                </Card>;
-              </TabsContent>;
-
-              <TabsContent value='timeline'>;
-                <Card>;
-                  <CardHeader>;
-                    <CardTitle>Project Timeline</CardTitle>;
-                    <CardDescription>Key dates and milestones</CardDescription>;
-                  </CardHeader>;
-                  <CardContent>;
-                    <div className='space-y-4'>;
-                      <div className='flex items-start gap-3 p-3 bg-muted/30 rounded-md'>;
-                        <Calendar className='h-5 w-5 text-primary mt-0 && 0.5' />;
-                        <div>;
-                          <h3 className='font-semibold'>Start Date</h3>;
-                          <p>{format(new Date(project && project.start_date), 'PPP')}</p>;
-                        </div>;
-                      </div>;
-
-                      <div className='flex items-start gap-3 p-3 bg-muted/30 rounded-md'>;
-                        <Clock className='h-5 w-5 text-primary mt-0 && 0.5' />;
-                        <div>;
-                          <h3 className='font-semibold'>Project Status</h3>;
-                          <div className='mt-1'>;
-                            {getStatusBadge(project && project.status)}
-                          </div>;
-                        </div>;
-                      </div>;
-                    </div>;
-                  </CardContent>;
-                </Card>;
-              </TabsContent>;
-
-              <TabsContent value='documents'>;
-                <Card>;
-                  <CardHeader>;
-                    <CardTitle>Project Documents</CardTitle>;
-                    <CardDescription>;
-                      Agreements and relevant files;
-                    </CardDescription>;
-                  </CardHeader>;
-                  <CardContent>;
-                    {project && project.agreement_url ? (;
-                      <div className='flex items-center justify-between bg-muted/30 p-4 rounded-md'>;
-                        <div className='flex items-center gap-3'>;
-                          <FileText className='h-5 w-5 text-primary' />;
-                          <div>;
-                            <h3 className='font-semibold'>Project Agreement</h3>;
-                            <p className='text-sm text-muted-foreground'>;
-                {project.status === 'completed' && (
-                  <TabsTrigger value='reviews'>Reviews</TabsTrigger>)}
-              </TabsList>;
-              <TabsContent value='details'>;
-                <Card>;
-                  <CardHeader>;
-                    <CardTitle > Project Scope</CardTitle>;
-                    <CardDescription>;
-                      Project details and expectations;
-                    </CardDescription>;
-                  </CardHeader>;
-                  <CardContent>;
-                    <div className='space - y-4'>;
-                      <div>;
-                        <h3 className='font - semibold mb - 2'>;
-                          Project Description;
-                        </h3>;
-                        <div className='bg - muted / 30 p - 4 rounded - md'>;
-                          <p className='whitespace - pre - wrap'>;
-                            {project.scope_summary}
-                          </p>;
-                        </div>;
-                      </div>;
-                      <div>;
-                        <h3 className='font - semibold mb - 2'>Payment Terms</h3>;
-                        <Badge variant='outline' className='capitalize'>;
-                          {project.payment_terms} Payment;
-                        </Badge>;
-                      </div>;
-                      <div>;
-                        <h3 className='font - semibold mb - 2'>Job Details</h3>;
-                        <div className='bg - muted / 30 p - 4 rounded - md'>;
-                          <p className='whitespace - pre - wrap'>;
-                            {project.job?.description}
-                          </p>;
-                        </div>;
-                      </div>;
-                    </div>;
-                  </CardContent>;
-                </Card>;
-              </TabsContent>;
-              <TabsContent value='timeline'>;
-                <Card>;
-                  <CardHeader>;
-                    <CardTitle > Project Timeline</CardTitle>;
-                    <CardDescription > Key dates and milestones</CardDescription>;
-                  </CardHeader>;
-                  <CardContent>;
-                    <div className='space - y-4'>;
-                      <div className='flex items - start gap - 3 p - 3 bg - muted / 30 rounded - md'>;
-                        <Calendar className='h - 5 w - 5 text - primary mt - 0.5' />;
-                        <div>;
-                          <h3 className='font - semibold'>Start Date</h3>;
-                          <p>{format (new Date (project.start_date), 'PPP')}</p>;
-                        </div>;
-                      </div>;
-                      <div className='flex items - start gap - 3 p - 3 bg - muted / 30 rounded - md'>;
-                        <Clock className='h - 5 w - 5 text - primary mt - 0.5' />;
-                        <div>;
-                          <h3 className='font - semibold'>Project Status</h3>;
-                          <div className='mt - 1'>;
-                            {getStatusBadge (project.status)}
-                          </div>;
-                        </div>;
-                      </div>;
-                    </div>;
-                  </CardContent>;
-                </Card>;
-              </TabsContent>;
-              <TabsContent value='documents'>;
-                <Card>;
-                  <CardHeader>;
-                    <CardTitle > Project Documents</CardTitle>;
-                    <CardDescription>;
-                      Agreements and relevant files;
-                    </CardDescription>;
-                  </CardHeader>;
-                  <CardContent>;
-                    {project.agreement_url ? (
-                      <div className='flex items - center justify - between bg - muted / 30 p - 4 rounded - md'>;
-                        <div className='flex items - center gap - 3'>;
-                          <FileText className='h - 5 w - 5 text - primary' />;
-                          <div>;
-                            <h3 className='font - semibold'>Project Agreement</h3>;
-                            <p className='text - sm text - muted - foreground'>;
-                              Uploaded when project was created;
-                            </p>;
-                          </div>;
-                        </div>;
-
-
-              
-              <TabsContent value="notes">
-
-
-                              key={note && note.id}
-                              className='bg-muted/30 p-3 rounded-md'>;
-                              <div className='flex items-center gap-2 mb-2'>;
-                                <Avatar className='h-6 w-6'>;
-                                  {note && note.created_by_profile?.avatar_url ? (;
-
-                          notes.map((note) => (
-                            <div key={note.id} className="bg-muted/30 p-3 rounded-md">
-                              <div className="flex items-center gap-2 mb-2">
-                                <Avatar className="h-6 w-6">
-
-                                  {note.created_by_profile?.avatar_url ? (
-                      {project.talent_profile?.profile_picture_url ? (
-                        <img
-                          src={project.talent_profile.profile_picture_url}
-                          alt={project.talent_profile.full_name}
-
-                      {project.talent_profile?.profile_picture_url ? (
-                        <img
-                          src={project.talent_profile.profile_picture_url}
-                          alt={project.talent_profile.full_name}
-
-                      ) : (
-                        <User className="h-6 w-6" />
-                      )}
-                    </Avatar>
-                    <div>
-
-                      </h3>
-                      <p className='text-sm text-muted-foreground'>
-                        Project Owner
-                      </p>
-                      {isTalent && (
-                        <Button
-
-              <CardHeader>
-                <CardTitle>Project Status</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">Current Status:</span>
-                    <div>{getStatusBadge(project.status)}</div>
-                  </div>
-
-                    </span>
-                  </div>
-                </div>
-              </CardContent>
-
-<<<<<<< HEAD
               {/* Conditional Footer Based on Status */}
               {project.status === "changes_requested" && isClient && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
@@ -877,6 +654,8 @@ if ( {) {
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.
                   </p>
 
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   </Button>
                 </CardFooter>
               )}
@@ -890,71 +669,12 @@ if ( {) {
                 </CardFooter>
               )}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             </Card>
           </div>
         </div>
       </main>
     </>
-  )
-    </>);
-
-}
-setIsSubmittingNote (true)
-try {
-
-  // Check condition
-if (throw error) {
-  $2
-}
-//Refresh notes;
-}catch (err: any) {';
-  logErrorToProduction ('Error adding note:', {
-  data: err;
-});
-toast ({
-}finally {
-  setIsSubmittingNote (false);
-}
-const handleStatusChange = async (new_status: ProjectStatus) => {
-  // Check condition
-if (return) {
-  $2
-}
-const success = await updateProjectStatus (project.id, new_status);
-// Check condition
-if ( {) {
-  $2
-}
-  set_project ({
-  ...project;
-status: new_status;
-});
-//If offer was accepted, show a special toast // Check condition
-if ( {) {
-  $2
-}
-
-  toast ({
-}";
-case "offer accepted": return <Badge className="bg - green - 100 text - green - 800">Offer Accepted</Badge>;";
-case "changes requested": return <Badge variant="secondary">Changes Requested</Badge>;";
-case "in progress": return <Badge className="bg - blue - 100 text - blue - 800">In Progress</Badge>;";
-case "completed": return <Badge variant="default">Completed</Badge>;";
-case "canceled": return <Badge variant="destructive">Canceled</Badge>;";
-default: return <Badge variant="outline"> {
-
-}</Badge>
-};'"
-<p>Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex-col items-center justify-center py-10" > <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" /> <h2 className="text-xl font-bold mb-2" >Project Not Found</h2> <p className="text-muted-foreground mb-4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button onClick={"
-  () => router.push ("/dashboard")
-}> Return to Dashboard </Button> </CardContent> </Card> </div>) "
-}//Check if user is either the client or the talent container mx-auto px-4 py-8"> <div className=" mb-6"> <div className=" flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2"> <div> </span> </div> </div> <AlertDialog> <AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4"/> Accept Offer </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Accept Project Offer?</AlertDialogTitle> <AlertDialogDescription> By accepting this offer, you agree to the project terms and timeline. This will initiate the contract and start the project. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction onClick={"
-  () => handleStatusChange (" offer accepted")
-}> Accept Offer </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Button> </>) "
-}<AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4"/> Mark as Completed </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Mark Project as Completed?</AlertDialogTitle> <AlertDialogDescription> This will finalize the project and mark it as complete. Make sure all deliverables have been provided and approved. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction onClick={"
-  () => handleStatusChange (" completed")
-}> Mark as Completed </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog>)
-}<Link href= {
   `/project/[id]/milestones` "
 }> <Layers className=" mr-2 h-4 w-4"/> Milestones </Link> </Button>) ;
 }<Linkhref= {
@@ -1114,5 +834,4 @@ export default function ProjectDetails() {;
   );
 }
 ;
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

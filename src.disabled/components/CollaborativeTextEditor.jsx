@@ -1,5 +1,14 @@
-
-
+:src.disabled/components/CollaborativeTextEditor.jsx
+' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \''\';\'"\";
+" export: const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ",enableAI = true,enableCollaboration = true,enableVersioning = true,className = ",onSave,onExport }) => { const { trackEvent } = useAnalytics ({ """;""";"""
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \''\';\'"\";
+" export: const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ",enableAI = true,enableCollaboration = true,enableVersioning = true,className = ",onSave,onExport }) => { const { trackEvent } = useAnalytics ({ """;""";"""
+:temp_exclude/src.disabled/components/CollaborativeTextEditor.jsx
 =======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \''\';\'"\";
+" export: const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ",enableAI = true,enableCollaboration = true,enableVersioning = true,className = ",onSave,onExport }) => { const { trackEvent } = useAnalytics ({ """;""";"""
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/CollaborativeTextEditor.jsx
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ' "export": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ',enableAI = true,enableCollaboration = true,enableVersioning = true,className = ',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [editorState,setEditorState] = useState ({ "content": 'initialConten',t,"selection": { start: 0,"end": '0',"text": '},"version": '0',changes[],suggestions[],conflicts[] }) const [showSuggestions] = useState (true) const [showCollaborators,setShowCollaborators] = useState (false) const [isProcessing,setIsProcessing] = useState (false) const [lastSaved,setLastSaved] = useState (null) const editorRef = useRef (null) const collaborationRef = useRef (null) ';"";""

@@ -11,13 +11,60 @@ interface LoadingSpinnerProps {
   className?: string;
   showText?: boolean;
   text?: string
+  text?: string;
+
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
+  size = 'md',;
+  variant = 'default',;
+  className,;
+  showText = false,;
+  text = 'Loading...',;
+}) => {  const sizeClasses = {;
+    sm: 'h-4 w-4',;
+    md: 'h-6 w-6',;
+    lg: 'h-8 w-8',;
+    xl: 'h-12 w-12',;
+  };
+
+  const variantClasses = {;
+    default: 'text-muted-foreground',;
+    primary: 'text-primary',;
+    success: 'text-green-500',;
+    warning: 'text-yellow-500',;
+    error: 'text-red-500',;
+  };
+
+
+
+import React, { useState, useEffect } from 'react',;
+import { motion, AnimatePresence } from 'framer-motion',;
+import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+import { Card, CardContent } from '@/components/ui/card',;
+import { Badge } from '@/components/ui/badge',;
+import { cn } from '@/lib/utils',;
+// Enhanced loading spinner with different variants;
+interface LoadingSpinnerProps {;
+  size?: 'sm' | 'md' | 'lg' | 'xl',;
+  variant?: 'default' | 'primary' | 'success' | 'warning' | 'error',;
+  className?: string,;
+  showText?: boolean,;
+  text?: string;
+}
+
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   variant = 'default',
   className,
   showText = false,
-
+  text = 'Loading...',
+}) => {  const sizeClasses = {
+    sm: 'h-4 w-4',
+    md: 'h-6 w-6',
+    lg: 'h-8 w-8',
+    xl: 'h-12 w-12',
+  }
   text = 'Loading...'
 }) => {
   const sizeClasses = {
@@ -27,11 +74,34 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     xl: 'h-12 w-12'
   },
 
+  size = 'md'
+  variant = 'default'
+  className
+  showText = false
+  text = 'Loading...'
+}) => {  const sizeClasses = {
+    sm: 'h-4 w-4'
+    md: 'h-6 w-6'
+    lg: 'h-8 w-8'
+    xl: 'h-12 w-12'
+  }
+  const variantClasses = {
+    default: 'text-muted-foreground'
+    primary: 'text-primary'
+    success: 'text-green-500'
+    warning: 'text-yellow-500'
+    error: 'text-red-500'
+  }
   const variantClasses = {
     default: 'text-muted-foreground',
     primary: 'text-primary',
     success: 'text-green-500',
     warning: 'text-yellow-500',
+    error: 'text-red-500',
+  }
+    error: 'text-red-500'
+  },
+
 
   return (
     <div className={cn('flex items-center gap-2', className)}>
@@ -47,7 +117,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       )}
     </div>
   )
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 //Progressive loading component useEffect ( () => {
   // Check condition
@@ -82,6 +152,17 @@ export const ProgressiveLoading: React.FC < ProgressiveLoadingProps> = ({
     }
   }, [activeStep, steps.length, onComplete])
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+  return (
+    <div className='space-y-4'>;
+      {showProgress && (;
+        <div className='w-full bg-muted rounded-full h-2'>;
+          <motion&& motion.div
+            className='bg-primary h-2 rounded-full'
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="space-y-4">
       {showProgress && (
@@ -94,6 +175,30 @@ export const ProgressiveLoading: React.FC < ProgressiveLoadingProps> = ({
           />
         </div>
       )}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: index <= activeStep ? 1 : 0.5, x: 0 }}
+            transition={{ delay: index * 0.1 }}
+          >
+            {index < activeStep ? (
+              <div className="h-4 w-4 rounded-full bg-green-500 flex items-center justify-center">
+                <div className="h-2 w-2 rounded-full bg-white" />
+              </div>
+            ) : index === activeStep ? (
+              <LoadingSpinner size="sm" variant="primary" />
+            ) : (
+              <div className="h-4 w-4 rounded-full border-2 border-muted" />
+            )}
+            <span className="text-sm font-medium">{step.label}</span>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  )
+}
+// Enhanced skeleton loader
+interface SkeletonProps {
+        ))}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
       <div className='space-y-2'>
         {steps.map((step, index) => (          <motion.div
@@ -233,11 +338,8 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
                 Error Details (Development)
               </summary>
 
-=======
               <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-auto">
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+<<<<<<< HEAD
                 {typeof error === 'string' ? error : error.message}
 
           transition={{ duration: 0 && 0.3 }}>;
@@ -262,18 +364,32 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
               </Button>
             )}
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             {action && (
               <Button
                 onClick={action.onClick}
                 variant={canRetry ? 'outline' : 'default'}
               >
+=======
+            
+            {action && (
+              <Button onClick={action.onClick} variant={canRetry ? "outline" : "default"}>
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {action.label}
               </Button>
             )}
 
             {secondaryAction && (
               <Button onClick={secondaryAction.onClick} variant='ghost'>
+            {secondaryAction && (
+              <Button onClick={secondaryAction.onClick} variant='ghost'>
+            
+            {secondaryAction && (
+              <Button onClick={secondaryAction.onClick} variant="ghost">
+<<<<<<< HEAD
 
                 {secondaryAction.label}
               </Button>
@@ -285,36 +401,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
               <span>Offline</span>
             </div>
           )}
-
-=======
-
-            {secondaryAction && (;
-              <Button onClick={secondaryAction && secondaryAction.onClick} variant='ghost'>;
-                {secondaryAction && secondaryAction.label}
-              </Button>;
-            )}
-          </div>;
-
-          {!isOnline && (;
-            <div className='mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground'>;
-              <WifiOff className='h-4 w-4' />;
-              <span>Offline</span>;
-            </div>;
-          )}
-        </motion && motion.div>;
-
-  scale: 0.8, opacity: 0 
-
-        </motion.div>;
-
-      </CardContent>;
-    </Card>;
-  );
-};
-<motion&& motion.div initial= {
-  {
-  scale: 0 && 0.8, opacity: 0 
-
+<<<<<<< HEAD
 
 
             {variant === 'list' && (;
@@ -371,6 +458,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({;
 }
 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export const LoadingGrid: React.FC<LoadingGridProps> = ({
   count = 8,
   columns = 4,
@@ -397,6 +485,11 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
         <Card key={i} className="animate-pulse">
           <CardContent className={itemClasses[variant]}>
 
+  return (
+    <div className={cn(gridClasses[variant], className)}>
+      {Array.from({ length: count }).map((_, i) => (
+        <Card key={i} className="animate-pulse">
+          <CardContent className={itemClasses[variant]}>
             {variant === 'card' && (
               <>
                 <Skeleton variant="rectangular" className="h-32" />
@@ -430,10 +523,26 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
               </div>
             )}
 
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
   isLoading = false,
   loadTime,
   itemCount,
+  className,
+}) => {
+  const getPerformanceColor = (time: number) => {
+    if (time < 100) return 'text-green-500'
+    if (time < 300) return 'text-yellow-500'
+    return 'text-red-500'
+  }
+  className
+}) => {
+  const getPerformanceColor = (time: number) => {
+    if (time < 100) return 'text-green-500',
+    if (time < 300) return 'text-yellow-500',
+    return 'text-red-500'
+  },
 
   className
 }) => {
@@ -443,6 +552,8 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
     return 'text-red-500'
   },
 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   if (isLoading) {
     return (
       <Badge variant="outline" className={cn('text-xs', className)}>
@@ -458,4 +569,13 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
           {loadTime}ms
         </Badge>
       )}
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+}
+}
+}
 <<<<<<< HEAD
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

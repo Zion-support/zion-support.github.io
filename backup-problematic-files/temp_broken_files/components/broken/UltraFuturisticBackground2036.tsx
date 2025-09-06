@@ -215,6 +215,10 @@ export default function UltraFuturisticBackground2036({variant = 'default';
       }
       window.removeEventListener('resize', resizeCanvas)
     }
+  }, [variant, intensity]),
+:backup-problematic-files/temp_broken_files/components/broken/UltraFuturisticBackground2036.tsx
+:components/broken/UltraFuturisticBackground2036.tsx
+}, [variant, intensity]),
 
 =======
 

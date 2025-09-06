@@ -43,3 +43,71 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const existing = fs && fs.existsSync(statusPath) ? JSON && JSON.parse(fs && fs.readFileSync(statusPath, 'utf8')) : { agents: [] };
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+}
+    res.status (405).json ({ error: 'Method Not Allowed' });
+    return;
+  }
+  if () {) {
+  $2
+}
+    res.status (401).json ({ error: 'Unauthorized' });
+    return;
+  }
+  const body = req.body || {}
+  const data_dir = path.join (process.cwd (), 'data', 'admin');
+  if () fs.mkdir_sync (data_dir, { recursive: true })) {
+  $2
+}
+  const status_path = path.join (data_dir, 'agents - status.json');
+  const existing = fs.exists_sync (status_path);
+    ? JSON.parse (fs.readFileSync (status_path, 'utf8'));
+    : { agents: [] }
+;
+  const merged = {
+    ...existing,
+    ...body,
+    updated_at: new Date ().toISOString (),
+  }
+  fs.writeFileSync (status_path, JSON.stringify (merged, null, 2));
+  res.status (200).json ({ ok: true });export default /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.status (405).json ({ error: 'Method Not Allowed' });
+    return;
+  }
+  if () {) {
+  $2
+}
+    res.status (401).json ({ error: 'Unauthorized' });
+    return;
+  }
+  const body = req.body || {}
+  const data_dir = path.join (process.cwd (), 'dataadmin');
+  if () fs.mkdir_sync (data_dir, { recursive: true })) {
+  $2
+}
+  const status_path = path.join (data_dir, 'agents - status.json');
+  const existing = fs.exists_sync (status_path) ? JSON.parse (fs.readFileSync (status_path, 'utf8')) : { agents: [] }
+;
+  const merged = {
+    ...existing;
+    ...body;
+    updated_at: new Date ().toISOString ()}
+  fs.writeFileSync (status_path, JSON.stringify (merged, null, 2));
+  res.status (200).json ({ ok: true });
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  res.status(200).json({ ok: true })
+}
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

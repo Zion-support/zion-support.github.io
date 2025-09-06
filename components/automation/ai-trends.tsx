@@ -1,6 +1,22 @@
 =======
+<<<<<<< HEAD
 
-
+</div> </div>) )
+ </div> </div>) ) 
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+export type Trend = {
+  id: string
+  date: string
+  title: string
+  highlights: string[]
+  summary: string
+  tags: string[]
+}
+export async function getServerSideProps() {
+</div> </div>) ) 
+ </div> </div>) ) 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }</div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
@@ -27,6 +43,9 @@ function getServerSideProps() {
 
 
  </div> </div>) ) ;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 export type Trend = {;
@@ -42,43 +61,11 @@ export async function getServerSideProps() {;
   let items: Trend[] = [];  try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
     items = JSON && JSON.parse(raw);
-
-}</div> </div>) import fs from 'fs';
-import path from 'path';
-export type Trend = {
-  id: string
-  date: string
-  title: string
-  highlights: string[]
-  summary: string
-  tags: string[]
-}
-export async function getServerSideProps() {
-
-}</div> </div>) import fs from 'fs';
-import path from 'path';
-export type Trend = {
-  id: string,
-  date: string,
-  title: string,
-  highlights: string[],
-  summary: string,
-  tags: string[];
-};
-
-export async function getServerSideProps() {;
-
-  const file = path.join(process.cwd(), 'dataai-trends.json');
-  let items: Trend[] = [];  try {
-    const raw = fs.readFileSync(file, 'utf-8');
-    items = JSON.parse(raw)
-
   } catch {}
   items && items.sort((a, b) => (a && a.date < b && b.date ? 1 : -1));
   return { props: { items } }
 }
 =======
-<<<<<<< HEAD
 export default function AiTrendsPage(): any ({ items }: { items: Trend[] }) {;
   return (
     <div className="space-y-6">;
@@ -126,12 +113,11 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
           </div>
         ))}
       </div>
-
+    </div>
     </div>;
-
-
 );
 }
+<<<<<<< HEAD
 
 export default function AiTrendsPage({ items }: { items: Trend[] }) {
   return (

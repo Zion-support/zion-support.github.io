@@ -1,11 +1,24 @@
 
-
+import React from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {TransactionHistory} from "@/components/transactions/TransactionHistory";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { TransactionHistory } from "@/components/transactions/TransactionHistory",
+import { GradientHeading } from "@/components/GradientHeading";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { GradientHeading } from "@/components/GradientHeading",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function Payments() {
   return (
     <>
@@ -93,12 +106,16 @@ export default function Payments() {
     </>
   )
 }
+// Import UI components for Payment Settings tab
 
+// Import UI components for Payment Settings tab;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {Button} from "@/components/ui/button";
 import {Switch} from "@/components/ui/switch";
 import {Label} from "@/components/ui/label";
 import {Checkbox} from "@/components/ui/checkbox";
 
+// Import UI components for Payment Settings tab
 import { Button } from "@/components/ui/button",
 import { Switch } from "@/components/ui/switch",
 import { Label } from "@/components/ui/label",
@@ -111,6 +128,7 @@ import { GradientHeading } from "@/components/GradientHeading",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 export default function Payments() {;
   return (;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     <>;
       <Header />;
       <div className="min - h-screen bg - zion - blue py - 12 px - 4">;
@@ -199,8 +217,5 @@ import { Button } from "@/components/ui/button",;
 import { Switch } from "@/components/ui/switch",;
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

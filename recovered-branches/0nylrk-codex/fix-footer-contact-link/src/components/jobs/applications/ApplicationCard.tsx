@@ -1,14 +1,6 @@
 
-
-import { useState } from "react",
-import { formatDistanceToNow } from "date-fns",
-import { JobApplication } from "@/types/jobs",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from "lucide-react",
-import { Link } from "react-router-dom",
-import { StatusBadge } from "./StatusBadge",
-
+=======
+<<<<<<< HEAD
 interface ApplicationCardProps {
   application: JobApplication
 }
@@ -18,15 +10,19 @@ interface ApplicationCardProps {
 }
 
 =======
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+export function ApplicationCard({ application }: ApplicationCardProps) {;
+  const [expanded, setExpanded] = useState(false);
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
 
   const handleDownloadResume = () => {
     // This would typically download the resume file
     toast.info("Resume download functionality will be implemented soon")
+=======
+  }
+  },
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const renderActionButtons = () => {
     switch (application.status) {
@@ -162,10 +158,6 @@ function ApplicationCard() {
 
             )}
           </div>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         )}
 
@@ -191,6 +183,7 @@ function ApplicationCard() {
           </div>
         </div>
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           size="sm"
           className="w-full"
           asChild
@@ -202,11 +195,3 @@ function ApplicationCard() {
       </CardFooter>
     </Card>
   )
-=======
-
-              variant="outline" 
-              size="sm"
-              asChild>;
-              <Link to={`/jobs/${application && application.job_id}`}>;
-                <ExternalLink className="h-4 w-4 mr-1" /> View Job;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

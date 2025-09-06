@@ -17,7 +17,76 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
-
+import Head from 'next/head';
+import {
+  Check
+  Star
+  Zap
+  Shield
+  Users
+  Globe
+  ArrowRight
+  ExternalLink
+  TrendingUp
+  Clock
+  Target
+  Building
+  Rocket
+  Award
+  DollarSign
+  ChartBar
+  Lock
+  Cpu
+  Database
+  Cloud
+  Smartphone
+  Palette
+  Search
+  MessageSquare
+  FileText
+  Calendar
+  CreditCard
+  BarChart3
+  Settings
+  Zap as ZapIcon
+  Code
+  BookOpen
+  Activity
+  Database as DatabaseIcon
+  Play
+  Mail
+  Phone
+  MapPin
+  Filter
+  Grid
+  List
+  ChevronDown
+  ChevronUp
+  Sparkles
+  FlaskConical
+  Dna
+  Car
+  Leaf
+  Factory
+  Truck
+  Microscope
+  GraduationCap
+  ShieldCheck
+  Brain
+  Atom
+  Globe2
+  Bot
+  Eye
+  Trophy
+  FlaskConical as FlaskIcon
+  Dna as DnaIcon
+  Car as CarIcon
+  Leaf as LeafIcon
+  Factory as FactoryIcon
+  Truck as TruckIcon
+  Microscope as MicroscopeIcon
+  GraduationCap as GraduationCapIcon
+  ShieldCheck as ShieldCheckIcon;
   Check,
   Star,
   Zap,
@@ -84,7 +153,35 @@ import React, { useState } from 'react';
   Factory as FactoryIcon,
   Truck as TruckIcon,
   Microscope as MicroscopeIcon,
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  GraduationCap as GraduationCapIcon,;
+  ShieldCheck as ShieldCheckIcon,;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+} from 'lucide-react';
+import Button from '../components/ui/Button';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import {
+  revolutionaryMicroSaasServices
+  revolutionaryServiceCategories
+  getRevolutionaryServicesByCategory
+  getPopularRevolutionaryServices
+  getRevolutionaryServicesByPriceRange;
+  revolutionaryMicroSaasServices,
+  revolutionaryServiceCategories,
+  getRevolutionaryServicesByCategory,
+  getPopularRevolutionaryServices,;
+  getRevolutionaryServicesByPriceRange,;
+} from '../data/revolutionary-micro-saas-services';
+import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
+
+=======
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
+import Button from '../components/ui/Button';
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
@@ -353,6 +450,13 @@ export default function RevolutionaryServicesPage() {;
       }
     }
   }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const containerVariants = {
     hidden: { opacity: 0 }
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
@@ -470,15 +574,24 @@ export default function RevolutionaryServicesPage() {;
       opacity: 1
       transition: {
 
-=======
-
         duration: 0.5,
       },
     },
 
+  };
 
+  };
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+  };
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
       <div className='min-h-screen'>
@@ -601,8 +714,9 @@ export default function RevolutionaryServicesPage() {;
 
                 className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
                 animate={{ opacity: 1, y: 0 }}
-
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                transition={{ duration: 0.8 }}
+              >
+                <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                   Revolutionary
 
                 </span>
@@ -613,32 +727,20 @@ export default function RevolutionaryServicesPage() {;
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
 
 =======
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
-                Experience the future of technology with our revolutionary micro;
-                SaaS platform. Quantum AI, autonomous systems, space technology,;
-                and cutting-edge solutions that redefine what's possible.                  Revolutionary;
-                </span>;
-                <br />;
-                <span className="text-white">Micro SaaS Services</span>;
-              </motion && motion.h1>;
-              <motion&& motion.p 
-                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
-                Experience the future of technology with our revolutionary micro;
-                SaaS platform. Quantum AI, autonomous systems, space technology,;
-                and cutting-edge solutions that redefine what's possible.;
-              </motion && motion.p>;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                Experience the future of technology with our revolutionary micro
+                SaaS platform. Quantum AI, autonomous systems, space technology
+                and cutting-edge solutions that redefine what's possible.
+              </motion.p>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               {/* Service Count Stats */}
               <motion&& motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}
@@ -651,6 +753,8 @@ export default function RevolutionaryServicesPage() {;
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -782,9 +886,13 @@ export default function RevolutionaryServicesPage() {;
               variants={containerVariants}
               initial="hidden"
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   variants={itemVariants}
-                  whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{ scale: 0 && 0.95 }}>;
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   <UltraFuturisticCard
                     variant="quantum-advanced"
                     size="small"
@@ -800,6 +908,8 @@ export default function RevolutionaryServicesPage() {;
                     <div className="text-xs text-gray-500">Services</div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Popular Services Showcase */}
 
         <section className="py-16">
@@ -811,43 +921,12 @@ export default function RevolutionaryServicesPage() {;
 =======
               initial={{ opacity: 0, y: 20 }}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
 
-=======
-            </motion && motion.div>;
-          </div>;
-        </section>;
-        {/* Popular Services Showcase */}
-        <section className='py-16'>;
-          <div className='container mx-auto px-4'>;
-            <motion&& motion.div
-              className='text-center mb-12'              initial={{ opacity: 0, y: 20 }}        <section className="py-16">;
-          <div className="container mx-auto px-4">;
-            <motion&& motion.div 
-              className="text-center mb-12"
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0 && 0.6 }}>;
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>;
-                <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>;
-                  Most Popular;
-                </span>;
-                <br />;
-                <span className='text-white'>Revolutionary Services</span>;
-              </h2>;
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-                Discover our most sought-after revolutionary micro SaaS services;
-                that are transforming industries worldwide.;
-              </p>;
-            </motion && motion.div>;
-            <motion&& motion.div
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
               variants={containerVariants}
               initial='hidden'
@@ -865,12 +944,28 @@ export default function RevolutionaryServicesPage() {;
             </motion.div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {popularServices.slice(0, 6).map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  variants={itemVariants}
+                  whileHover={{ y: -10 }}
+                >
+                  <UltraFuturisticCard
+                    variant={service.variant as any}
+                    size='large'
+                    className='h-full cursor-pointer'
 
-
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                     onClick={() => setSelectedService(service)}
 
                   variants={item_variants}
@@ -1013,6 +1108,8 @@ export default function RevolutionaryServicesPage() {;
                   <div className='relative'>
                     <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
 
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
@@ -1161,12 +1258,6 @@ export default function RevolutionaryServicesPage() {;
 
               className={viewMode === 'grid' 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
-              whileInView='visible'              viewport={{ once: true }}            <motion.div 
-              className={viewMode === 'grid' 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
@@ -1174,7 +1265,15 @@ export default function RevolutionaryServicesPage() {;
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
+=======
+              whileInView='visible'              viewport={{ once: true }}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -1333,6 +1432,14 @@ export default function RevolutionaryServicesPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -1476,6 +1583,9 @@ export default function RevolutionaryServicesPage() {;
                     </div>
                   </div>
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </div>
             </motion.div>
           </div>
@@ -1484,3 +1594,13 @@ export default function RevolutionaryServicesPage() {;
     </UltraFuturisticBackground>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+  );
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

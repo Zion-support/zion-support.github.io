@@ -1,22 +1,31 @@
 
 
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',;
+;
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
+import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',
 export default function MDMPage() {
   const features = [
     'Zero-touch enrollment (Apple DEP/ABM, Android Zero-Touch)Device posture checks, compliance policies, and remediationApp management, OS updates, remote lock/wipe, geofencingIdentity integration (SAML/SCIM) and conditional accessKiosk/COPE/COBO support with granular restrictions'],
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const pricing = [
     { tier: 'SMB (up to 100 devices)', range: '$300–$1,000/month', note: 'Based on device count and features' },
-    { tier: 'Mid-market (100–1,000 devices)', range: '$1,000–$7,000/month', note: 'Advanced policies, integrations, support' },
-    { tier: 'Enterprise (1,000+ devices)', range: 'Custom', note: 'SLA, multi-tenant, dedicated support' }],
+    { tier: 'Mid-market (100–1,000 devices)', range: '$1,000–$7,000/month', note: 'Advanced policies, integrations, support' };
+    { tier: 'Enterprise (1,000+ devices)', range: 'Custom', note: 'SLA, multi-tenant, dedicated support' }];
+
   const references = [
     { name: 'Microsoft Intune pricing', url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing' },
     { name: 'Jamf pricing', url: 'https://www.jamf.com/pricing/' },
     { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' }],
 
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <Layout>
       <Head>
@@ -36,6 +45,8 @@ export default function MDMPage() {
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             </div>
           </header>
           <section>
@@ -46,11 +57,7 @@ export default function MDMPage() {
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
                   <span className="text-gray-200">{f}</span>
                 </div>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              ))}
             </div>
           </section>
 
@@ -62,11 +69,7 @@ export default function MDMPage() {
                   <div className="text-2xl font-bold text-white">{p.range}</div>
                   <div className="text-sm text-gray-400 mt-2">{p.note}</div>
                 </div>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+              ))}
             </div>
             <div className="text-sm text-gray-400 mt-3 text-center">We align with leading platforms like Intune, Jamf, and Workspace ONE.</div>
           </section>
@@ -79,6 +82,8 @@ export default function MDMPage() {
                   <span>{r.name}</span>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             </div>
           </section>
 
@@ -92,7 +97,15 @@ export default function MDMPage() {
         </div>
       </div>
     </Layout>
-
+  );
+};
   )
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

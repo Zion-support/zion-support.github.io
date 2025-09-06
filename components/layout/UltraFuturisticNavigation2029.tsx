@@ -1,16 +1,103 @@
 
 =======
-
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+  Menu
+  X
+  ChevronDown
+  Phone
+  Mail
+  MapPin
+  Rocket
+  Brain
+  Atom
+  Globe
+  Zap
+  Sparkles
+  Shield
+  Microscope
+  DollarSign
+  Home
+  Briefcase
+  BookOpen
+  MessageCircle
+  Star
+  TrendingUp
+  Target
+  Layers
+  Cpu
+  Database
+  Cloud
+  Lock
+  ShieldCheck
+  Earth
+  Factory
+  Car
+  Building
+  GraduationCap
+  Scale
+  Palette
+  Camera
+  Video
+  Music
+  Gamepad2
+  Heart
+  Leaf
+  Sun
+  Moon
+  Wind
+  Droplets
+  Mountain
+  Code
+  Wrench
+  Smartphone
+  BarChart3
+  Eye
+  Timer;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Phone, Mail, MapPin
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
+  Microscope, DollarSign, Home, Briefcase
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+=======
+import {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Menu,
   X,
   ChevronDown,
@@ -62,6 +149,12 @@ import {
   Smartphone,
   BarChart3,
 
+  Eye,;
+  Timer,;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Phone, Mail, MapPin, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, DollarSign, Home, Briefcase, ;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -76,6 +169,7 @@ const serviceCategories = [
     color: 'from-purple-600 to-pink-600'
     description: 'Beyond human consciousness simulation'
     services: [
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 const mainNavItems = [
   { name: 'Home', href: '/', icon: Home }
@@ -85,6 +179,20 @@ const mainNavItems = [
   { name: 'Resources', href: '/resources', icon: BookOpen }
   { name: 'News', href: '/news', icon: TrendingUp }
   { name: 'Support', href: '/support', icon: MessageCircle }
+=======
+  { name: 'Contact', href: '/contact', icon: Phone },];  { name: 'Contact', href: '/contact', icon: Phone }
+
+];
+export default function UltraFuturisticNavigation2029() {
+
+export default function UltraFuturisticNavigation2029() {;
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 const mainNavItems = [;
   { name: 'Home', href: '/', icon: Home },;
@@ -116,6 +224,71 @@ const mainNavItems = [;
   return (
     <>;
       {/* Top Contact Bar */}
+=======
+      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white text-sm py-2 px-4'>
+        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>
+          <div className='flex items-center space-x-6'>
+            <a
+              href={`tel:${contactInfo.mobile}`}
+              className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
+            >
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+              <Phone size={14} />
+              <span>{contactInfo.mobile}</span>
+            </a>
+=======
+      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white text-sm py-2 px-4'>
+        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>
+          <div className='flex items-center space-x-6'>
+            <a
+              href={`tel:${contactInfo.mobile}`}
+              className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
+            >
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+              <Phone size={14} />
+              <span>{contactInfo.mobile}</span>
+            </a>
+            <a
+              href={`mailto:${contactInfo.email}`}
+              className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
+            >
+              <Mail size={14} />
+              <span>{contactInfo.email}</span>
+            </a>
+            <div className='flex items-center space-x-2'>              <MapPin size={14} />
+              <span>{contactInfo.address}</span>
+            </div>
+          </div>              <Phone size={14} />
+              <span>{contactInfo.mobile}</span>
+            </a>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+            <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-300 transition-colors">
+              <Mail size={14} />
+              <span>{contactInfo.email}</span>
+            </a>
+            <div className="flex items-center space-x-2">
+              <MapPin size={14} />
+              <span>{contactInfo.address}</span>
+            </div>
+          </div>
+          <div className='flex items-center space-x-4'>
+            <a
+              href={contactInfo.website}
+              className='hover:text-cyan-300 transition-colors'
+            >              {contactInfo.website.replace('https://', '')}          <div className="flex items-center space-x-4">
+            <a href={contactInfo.website} className="hover:text-cyan-300 transition-colors">
+              {contactInfo.website.replace('https://', '')}
+
+              {contactInfo.website.replace('https://', '')}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             </a>
           </div>
         </div>
@@ -153,10 +326,6 @@ const mainNavItems = [;
             </motion && motion.div>;
             {/* Desktop Navigation */}
 
-=======
-            <div className="hidden lg:flex items-center space-x-8">
-              {mainNavItems.map((item) => (
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <Link
                   key={item.name}
                   href={item.href}
@@ -172,26 +341,21 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
               ))}
               {/* Services Dropdown */}
-
-                  />;
-                </button>;
-
-
+              <div className='relative group'>
+                <button className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200'>
+                  <Briefcase
+                    size={16}
+                    className='group-hover:text-cyan-400 transition-colors'
+                  />
+                  <ChevronDown
+                    size={14}
+                    className='group-hover:rotate-180 transition-transform duration-200'
+                  />
+                </button>
                 {/* Mega Menu */}
-                <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>;
-                  <div className='p-6 grid grid-cols-2 lg:grid-cols-3 gap-6'>                    {serviceCategories && serviceCategories.map((category, index) => (                <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">;
-                  <div className="p-6 grid grid-cols-2 lg:grid-cols-3 gap-6">;
-                    {serviceCategories && serviceCategories.map((category, index) => (;
-                      <motion&& motion.div
-                        key={category && category.title}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0 && 0.1 }}
-                        className='group'>;
-=======
-            <div className='hidden lg:flex items-center space-x-8'>
-              {mainNavItems.map(item => (
-
+                <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>
+                  <div className='p-6 grid grid-cols-2 lg:grid-cols-3 gap-6'>                    {serviceCategories.map((category, index) => (                <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                  <div className="p-6 grid grid-cols-2 lg:grid-cols-3 gap-6">
 
               </div>
             </motion.div>
@@ -208,6 +372,14 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     {serviceCategories.map((category, index) => (
                       <motion.div
                         key={category.title}
@@ -218,6 +390,8 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
                       >
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -277,6 +451,9 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                                 <p className="text-xs text-gray-500 mt-1">{service && service.description}</p>;
                               </Link>;
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                             ))}
                           </div>;
                         </div>;
@@ -287,6 +464,8 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
               </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               {/* CTA Button */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -294,6 +473,9 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
                 Get Started
               </motion.button>
@@ -306,14 +488,17 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
         </div>
       </nav>
 
-=======
-
                 className='text-gray-300 hover:text-white transition-colors'              >
 
               >
 
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
 
@@ -367,7 +552,12 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             className='fixed inset-0 z-50 lg:hidden'
+=======
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div
@@ -452,11 +642,65 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                                 <span className="text-sm text-gray-300">{service.name}</span>
                                 <span className="text-xs text-cyan-400 font-mono">{service.price}</span>
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Mobile Services */}
+                <div className='mt-8'>
+                  <h3 className='text-lg font-semibold text-white mb-4'>
+                    Our Services
+                  </h3>
+                  <div className='space-y-3'>
+                    {serviceCategories.slice(0, 6).map(category => (
+                      <div
+                        key={category.title}
+                        className='p-3 rounded-lg bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20'
+                      >
+                        <h4 className='font-medium text-white mb-2'>
+                          {category.title}
+                        </h4>
+                        <p className='text-sm text-gray-400 mb-3'>
+                          {category.description}
+                        </p>
+                        <div className='space-y-2'>
+                          {category.services.slice(0, 2).map(service => (                            <Link
+                              key={service.name}
+                              href={service.href}
+                              onClick={closeMenu}                <div className="mt-8">
+                  <h3 className="text-lg font-semibold text-white mb-4">Our Services</h3>
+                  <div className="space-y-3">
+                    {serviceCategories.slice(0, 6).map((category) => (
+                      <div key={category.title} className="p-3 rounded-lg bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20">
+                        <h4 className="font-medium text-white mb-2">{category.title}</h4>
+                        <p className="text-sm text-gray-400 mb-3">{category.description}</p>
+                        <div className="space-y-2">
+                          {category.services.slice(0, 2).map((service) => (
+                              key={service.name}
+                              href={service.href}
+                              onClick={closeMenu}
+                              className='block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200'
+                            >
+                              <div className='flex items-center justify-between'>
+                                <span className='text-sm text-gray-300'>
+                                  {service.name}
+                                </span>
+                                <span className='text-xs text-cyan-400 font-mono'>
+                                  {service.price}
+                                </span>                              </div>                              className="block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200"
+                            >
+                              <div className="flex items-center justify-between">
+                                <span className="text-sm text-gray-300">{service.name}</span>
+                                <span className="text-xs text-cyan-400 font-mono">{service.price}</span>
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                             </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -466,11 +710,13 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                     ))}
 =======
 
+=======
                   </div>;
                 </div>;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Mobile CTA */}
                 <div className='mt-8'>;
                   <motion&& motion.button
@@ -506,8 +752,6 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
           </motion.div>
         )}
       </AnimatePresence>
-=======
-
     </>
       </AnimatePresence>;
       {/* Spacer for fixed navigation */}
@@ -519,11 +763,4 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
-
-}
-
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,12 +1,26 @@
 import { BadgeCheck } from 'lucide-react'
 
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
 export interface Achievement {
   id: string,
   title: string,
   description: string,
   achieved: boolean
+}
 
 }
+  achievements: Achievement[];
+}
+=======
+export interface Achievement {
+  id: string
+  title: string
+  description: string
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   achieved: boolean
 }
@@ -53,18 +67,17 @@ export function AchievementBadges(): any ({ achievements }: AchievementBadgesPro
       <CardHeader>
         <CardTitle>Achievements</CardTitle>
       </CardHeader>
-
               <p className="font-medium">{a.title}</p>
               <p className="text-sm text-muted-foreground">{a.description}</p>
             </div>
           </div>
         ))}
-<<<<<<< HEAD
 =======
 
 
 
       </CardContent>;
+<<<<<<< HEAD
 
   );
 }

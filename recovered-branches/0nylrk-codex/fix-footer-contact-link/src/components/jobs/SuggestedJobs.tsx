@@ -1,13 +1,34 @@
 
-
+import {useAuth} from "@/hooks/useAuth";
+import {Loader2} from "lucide-react";
+import {Badge} from "@/components/ui/badge";
+import {useJobSuggestions} from "@/hooks/useJobSuggestions";
+import {JobMatchesCard} from "./JobMatchesCard";
+import {NoJobsCard} from "./NoJobsCard";
 import { useAuth } from "@/hooks/useAuth",
 import { Loader2 } from "lucide-react",
 import { Badge } from "@/components/ui/badge",
 import { useJobSuggestions } from "@/hooks/useJobSuggestions",
-
+import { JobMatchesCard } from "./JobMatchesCard";
+import { NoJobsCard } from "./NoJobsCard";
+import { JobMatchesCard } from "./JobMatchesCard",
+import { NoJobsCard } from "./NoJobsCard",
 interface SuggestedJobsProps {
   talentId?: string
 }
+interface SuggestedJobsProps {
+  talentId?: string
+}
+
+export function SuggestedJobs({ talentId }: SuggestedJobsProps) {;
+  const { user } = useAuth();
+  const currentTalentId = talentId || user?.id;
+export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
+  const { user } = useAuth();
+  const { user } = useAuth(),
+  const currentTalentId = talentId || user?.id,
+  const { 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     isLoading,
     updateJobMatchStatus,
     categorizedMatches: {
@@ -21,19 +42,6 @@ interface SuggestedJobsProps {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-  const currentTalentId = talentId |user?.id;
-  const {
-    isLoading;
-    updateJobMatchStatus
-    categorizedMatches: {
-      newMatches
-      viewedMatches
-      appliedMatches
-    }
-  } = useJobSuggestions(currentTalentId);
-  const handleApply = (matchId: string, jobId: string) => {
-    updateJobMatchStatus(matchId, 'applied');
-    // In a real app, this might redirect to application form or open a modal
 
   if (isLoading) {
     return (
@@ -42,6 +50,7 @@ interface SuggestedJobsProps {
       </div>
     )
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   if (isLoading) {;
     return (
@@ -49,10 +58,12 @@ interface SuggestedJobsProps {
         <Loader2 className="w-6 h-6 animate-spin text-primary" />;
       </div>;
     );
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 
@@ -83,44 +94,56 @@ interface SuggestedJobsProps {
                 onApply={handleApply}
                 onDecline={handleDecline}
               />
-            ))}
-          </div>
-        </div>
-      )}
-      {/* Previously Viewed Section */}
-      {viewedMatches.length > 0 && (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h3 className="text-lg font-medium">Previously Viewed</h3>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2">
-            {viewedMatches.map(match => (
-              <JobMatchesCard
-                key={match.id}
-                match={match}
-                onApply={handleApply}
-                onDecline={handleDecline}
-              />
-            ))}
-          </div>
-        </div>
-      )}
-      {/* Applied Jobs Section */}
-      {appliedMatches.length > 0 && (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h3 className="text-lg font-medium">Applied Jobs</h3>
-          </div>
-          <div className="grid gap-4 md:grid-cols-2">
-            {appliedMatches.map(match => (
+                match={match} 
+                onApply={handleApply} 
+                onDecline={handleDecline} 
+              />;
 
-              />
             ))}
-          </div>
-        </div>
+          </div>;
+        </div>;
       )}
-    </div>
-  )
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+      {/* Previously Viewed Section */}
+      {viewedMatches && viewedMatches.length > 0 && (;
+        <div className="space-y-4">;
+          <div className="flex items-center justify-between">;
+            <h3 className="text-lg font-medium">Previously Viewed</h3>;
+          </div>;
+
+          <div className="grid gap-4 md:grid-cols-2">;
+            {viewedMatches && viewedMatches.map(match => (;
+              <JobMatchesCard
+                key={match && match.id} 
+                match={match} 
+                onApply={handleApply} 
+                onDecline={handleDecline} 
+              />;
+
+            ))}
+          </div>;
+        </div>;
+      )}
+
+
+      {/* Applied Jobs Section */}
+      {appliedMatches && appliedMatches.length > 0 && (;
+        <div className="space-y-4">;
+          <div className="flex items-center justify-between">;
+            <h3 className="text-lg font-medium">Applied Jobs</h3>;
+          </div>;
+
+          <div className="grid gap-4 md:grid-cols-2">;
+            {appliedMatches && appliedMatches.map(match => (;
+              <JobMatchesCard
+                key={match && match.id} 
+                match={match} 
+                onApply={handleApply} 
+
+                onDecline={handleDecline}
+                showApplied={true}
+              />;
+;
+              />;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

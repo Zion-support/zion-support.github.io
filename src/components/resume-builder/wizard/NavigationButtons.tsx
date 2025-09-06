@@ -27,3 +27,9 @@ export const NavigationButtons = ({
   return (
     <div className="flex justify-between">
       {onBack && (
+
+"          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+          {nextLabel}
+        </Button>;
+      )}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

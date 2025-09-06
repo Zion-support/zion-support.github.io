@@ -1,4 +1,3 @@
-
 =======
 
 import React, { useState } from 'react',;
@@ -8,9 +7,9 @@ export default function ToolPage() {
   const [currentQuestion, setCurrentQuestion] = useState(0),
   const [answers, setAnswers] = useState<{ [key: string]: number }>({}),
   const [showResults, setShowResults] = useState(false),
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -43,51 +42,100 @@ export default function ToolPage() {
 
   const handleAnswer = (questionId: string, value: number) => {
     setAnswers(prev => ({ ...prev, [questionId]: value }))
-
+  }
+  const calculateScore = () => {
+    const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0)
+    const maxScore = questions.length * 5
+    const percentage = (totalScore / maxScore) * 100
+    if (percentage >= 80) return { level: 'Advanced', color: 'text-green-400', description: 'Your organization is well-positioned for advanced automation initiatives.' }
+    if (percentage >= 60) return { level: 'Intermediate', color: 'text-yellow-400', description: 'You have a solid foundation and can move forward with strategic automation.' }
+    if (percentage >= 40) return { level: 'Beginner', color: 'text-orange-400', description: 'You have some groundwork to do before major automation projects.' }
+    return { level: 'Foundation', color: 'text-red-400', description: 'Focus on building fundamentals before automation projects.' }
+  }
   const nextQuestion = () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1)
-
-  },
-  const calculate_score = () =>: any {
-    const total_score = Object.values (answers).reduce ((sum, score) => sum + score, 0),
-    const max_score = questions.length * 5,
-    const percentage = (total_score / max_score) * 100,
-    // Check condition
-if (return { level: 'Advanced', color: 'text - green - 400', description: 'Your organization is well - positioned for advanced automation initiatives.' }, ) {
-  $2
-}
-    // Check condition
-if (return { level: 'Intermediate', color: 'text - yellow - 400', description: 'You have a solid foundation and can move forward with strategic automation.' }, ) {
-  $2
-}
-    // Check condition
-if (return { level: 'Beginner', color: 'text - orange - 400', description: 'You have some groundwork to do before major automation projects.' }, ) {
-  $2
-}
-    return { level: 'Foundation', color: 'text - red - 400', description: 'Focus on building fundamentals before automation projects.' }
-  },
-  const next_question = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      setCurrentQuestion (current_question + 1);
     } else {
-      setShowResults (true);
+      setShowResults(true)
     }
+  }
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+export default function ToolPage(req, res) {
+  try {
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [answers, setAnswers] = useState<{ [key: string]: number }>({});
+  const [showResults, setShowResults] = useState(false);
+  const questions = [;
+    {
+      id: 'current - automation',
+      question: 'What is your current level of automation?',
+      options: [;
+        'No automation - everything is manual_basic automation - some repetitive tasks automated_moderate automation - multiple processes automated_advanced automation - most processes automated_fully automated - autonomous systems in place';
+      ];
+    },
+    {
+      id: 'team - expertise',
+      question: 'How would you rate your team's AI / automation expertise?',
+      options: [;
+        'No expertise - team needs training_beginner - some basic knowledge_intermediate - can implement basic solutions_advanced - can build complex systems_expert - can innovate and lead';
+      ];
+    },
+    {
+      id: 'data - quality',
+      question: 'How would you assess your data quality and accessibility?',
+      options: [;
+        'Poor - data is scattered and unreliable_fair - some data available but needs cleaning_good - most data is accessible and clean_very good - comprehensive data with good structure_excellent - real - time, high - quality data streams';
+      ];
+    },
+    {
+      id: 'budget - commitment',
+      question: 'What is your budget commitment for automation initiatives?',
+      options: [;
+        'No budget allocated_limited budget - under $50KModerate budget - $50K to $200KSignificant budget - $200K to $1MUnlimited budget - whatever it takes';
+      ];
+    },
+    {
+      id: 'executive - support',
+      question: 'How strong is executive support for automation?',
+      options: [;
+        'No support - resistance to change_weak support - some interest but no action_moderate support - willing to try pilot projects_strong support - actively championing automation_full support - automation is strategic priority';
+      ];
 
-    setCurrentQuestion(0);
-    setAnswers({});
-    setShowResults(false)
-  };
-
-
-=======
-
-  },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const handleAnswer = (questionId: string, value: number) => {;
+    setAnswers(prev => ({ ...prev, [questionId]: value }));
+  },;
+  const calculateScore = () => {;
+    const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0),;
+    const maxScore = questions.length * 5;
+    const percentage = (totalScore / maxScore) * 100;
+    if (percentage >= 80) return { level: 'Advanced', color: 'text-green-400', description: 'Your organization is well-positioned for advanced automation initiatives.' },;
+    if (percentage >= 60) return { level: 'Intermediate', color: 'text-yellow-400', description: 'You have a solid foundation and can move forward with strategic automation.' },;
+    if (percentage >= 40) return { level: 'Beginner', color: 'text-orange-400', description: 'You have some groundwork to do before major automation projects.' },;
+    return { level: 'Foundation', color: 'text-red-400', description: 'Focus on building fundamentals before automation projects.'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  },;
+  const nextQuestion = () => {;
+    if (currentQuestion < questions.length - 1) {;
+      setCurrentQuestion(currentQuestion + 1);
+    } else {;
+      setShowResults(true);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   if (showResults) {
     const result = calculateScore()
@@ -127,16 +175,25 @@ if ( {) {
 }
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button 
 
+                    onClick={resetAssessment}
                   <button
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    onClick={resetAssessment}
+                    onClick={resetAssessment  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Retake Assessment
                   </button>
-
+                  <Link
+                  <Link 
+                  <Link
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     href="/contact"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
 
@@ -150,9 +207,6 @@ if ( {) {
         </div>
       </>
     )
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
 
   return (
@@ -204,16 +258,13 @@ if ( {) {
               <h1 className="text-4xl font-bold text-white mb-4">Automation Readiness Assessment</h1>
               <p className="text-white/80 text-lg">Evaluate your organization's readiness for AI automation</p>
               <div className="mt-4 text-cyan-400">
-
-
+                Question {currentQuestion + 1} of {questions.length}
                 Question {currentQuestion + 1} of {questions.length  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
             </div>
 
@@ -225,8 +276,10 @@ if ( {) {
                   <label key={index} className="flex items-center p-4 bg-white/10 rounded-lg border border-white/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer">
                     <input
                       type="radio"
-
-
+                      name={currentQ.id}
+                      value={index + 1}
+                      checked={answers[currentQ.id] === index + 1}
+                      onChange={() => handleAnswer(currentQ.id, index + 1)}
   },;
   const resetAssessment = () => {;
     setCurrentQuestion(0);
@@ -351,34 +404,82 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       className="mr-3 text-cyan-400 focus:ring-cyan-400"
 
                     />
                     <span className="text-white/90">{option}</span>
                   </label>
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                ))}
               </div>
 
 
               <div className="flex justify-between">
-
+                <button 
+                  onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
+                  disabled={currentQuestion === 0}
                 <button
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                  onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
+                  disabled={currentQuestion === 0}
+                  onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  disabled={currentQuestion === 0  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   className="px-6 py-3 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Previous
                 </button>
+                <button
+                  onClick={nextQuestion}
+                  disabled={!answers[currentQ.id]}
+                <button 
+                  onClick={nextQuestion}
+                  disabled={!answers[currentQ.id]}
+                  className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'}
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </>
+  );
+};
+                <button
+                  onClick={nextQuestion  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 =======
+  },
+  const reset_assessment = () =>: any {
+    setCurrentQuestion (0),
+    set_answers ({}),
+    setShowResults (false);
+  },
+  // Check condition
+if ( {) {
+  $2
+}
+                  className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
   const current_q = questions[current_question],
   return (
@@ -435,9 +536,6 @@ if ( {) {
 =======
   );
 };
-=======
-                <button
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   onClick={nextQuestion  } catch (error) {
     console.error("Error:", error);
@@ -458,13 +556,14 @@ if ( {) {
   }
 }
 
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 </button>;
               </div>;
             </div>;
           </div>;
         </main>;
       </div>;
-<<<<<<< HEAD
 =======
 
     </>;
@@ -473,9 +572,7 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
+<<<<<<< HEAD
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

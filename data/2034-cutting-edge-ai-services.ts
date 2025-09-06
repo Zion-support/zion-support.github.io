@@ -1,3 +1,9 @@
+=======
+<<<<<<< HEAD
+export type CuttingEdgeAIService = {
+      'CBT-guided prompts',
+  launch_date?: string;
+  real_service?: boolean;
 
   id: string;
   name: string;
@@ -42,43 +48,19 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
     real_service: true,
   },
   {
-    id: 'ai - product - spec - writer',
-    name: 'AI Product Spec Writer',
-    description:;
-      'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.',
-    category: 'AI Business Management',
-    pricing: { starter: '$79 / mo' },
-    features: [;
-
-      'PRD templates',
-      'Story generation',
-      'Acceptance criteria',
-      'Analytics alignment',
-    ],
-    integrations: ['Jira', 'Linear'],
-
-    use_cases: ['Faster planning', 'Better alignment'],
-    link: 'https://ziontechgroup.com / services / ai - product - spec - writer',
-    real_service: true,
-
-  },
   {
 
-=======
       'Brand kit',
       'Image & video gen',
       'Review & approvals',
       'Rights management',
     ],
     integrations: ['Canva', 'Figma'],
-
-=======
-    use_cases: ['Marketing velocity', 'Cost savings'],
-    link: 'https://ziontechgroup.com / services / ai - creative - studio',
-    real_service: true,
-
-  },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    useCases: ['Marketing velocity', 'Cost savings'],
+    link: 'https://ziontechgroup.com/services/ai-creative-studio',
+    realService: true,
+  },;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];	id: string;
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -151,9 +133,8 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 =======
 <<<<<<< HEAD
 	}
-];
-
-
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ];
 ;
 =======

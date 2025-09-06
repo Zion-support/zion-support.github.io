@@ -1,3 +1,4 @@
+import { ServiceVariant } from '../types/service-variants';
 
 =======
 
@@ -1158,16 +1159,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
 ];
 
     ];
-    market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
-=======
+    marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
+  }
+];
 
       'Most advanced AI climate prediction platform with research-grade accuracy',
   },;
 ];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
-
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedInnovativeService {;
   id: string,;
@@ -1679,14 +1679,28 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
       'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development';
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    ];
+    market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
+=======
+
+      'Most advanced AI climate prediction platform with research-grade accuracy',
+  },;
+];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
+    ];
+    marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedInnovativeService {;
@@ -2200,9 +2214,9 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
 <<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 ];

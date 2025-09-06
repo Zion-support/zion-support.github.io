@@ -3,13 +3,18 @@ import type { GetServerSideProps } from 'next';
 export default function AgencyDashboardPage({ vendor }: Props) {
 
 export default function AgencyDashboardPage({ vendor }: Props) {
-=======
-type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },;
-export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
+type Props = { vendor: Vendor | null };
+
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
+export default function AgencyDashboardPage({ vendor }: Props) {;
+type Props = { vendor: Vendor | null };
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export default function AgencyDashboardPage({ vendor }: Props) {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
   const [pkgDesc, setPkgDesc] = useState('');
@@ -54,20 +59,19 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
     // For MVP, update via direct API not implemented, keep local preview only;
     setActiveVendor(updated);
   }
-
-
-  function addPackage() {;
+  function addPackage() {
+    if (!pkgTitle |!pkgPrice |!activeVendor) return;
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
-    const packages = [;
-      ...(activeVendor && activeVendor.packages || []),;
-      {;
-        id: `pkg_${Date && Date.now()}`,;
-        title: pkgTitle,;
-        description: pkgDesc,;
-        priceUsd: Number(pkgPrice),;
-      },;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+    const packages = [
+      ...(activeVendor.packages |[])
+      {
+        id: `pkg_${Date.now()}`
+        title: pkgTitle
+        description: pkgDesc
+        priceUsd: Number(pkgPrice)
+      }
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ];
     setActiveVendor({ ...activeVendor, packages });
     setPkgTitle('');
@@ -125,6 +129,8 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
       <section className='space-y-3'>
         <h2 className='text-lg font-medium'>Publish Packages</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>    setActiveVendor({ ...activeVendor, packages });
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div className='space-y-8'>;
       <div className='flex items-center justify-between'>;
@@ -210,6 +216,8 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
     setPkgPrice('')
   }
   return (
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     <div className="space-y-8">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Agency Dashboard</h1>
@@ -235,10 +243,12 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
           </div>
         </form>
       </section>
+<<<<<<< HEAD
 
       <section className='space-y-3'>
         <h2 className='text-lg font-medium'>Publish Packages</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <div
               key={p.id}
               className='border border-gray-200 dark:border-gray-800 rounded p-4'
@@ -288,6 +298,16 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
         </form>
       </section>
 
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 function Pipeline({ vendorId }: { vendorId: string }) {
 
               className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;
@@ -348,10 +368,12 @@ function Pipeline({ vendorId }: { vendorId: string }) {
     fetchItems();
 
   useEffect(() => {
+  useEffect(() => {;
 
-    fetchItems();
-  }, []);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+  useEffect(() => {
   return (
     <div className='space-y-2'>;
       {items && items.length === 0 && (;
@@ -369,6 +391,7 @@ function Pipeline({ vendorId }: { vendorId: string }) {
           </div>;
           <select
 =======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             defaultValue={item && item.status}
             onChange={e => changeStatus(item && item.id, e && e.target.value)}
             className='border rounded px-2 py-1 bg-transparent text-sm';
@@ -392,19 +415,63 @@ function Pipeline({ vendorId }: { vendorId: string }) {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+=======
+export const getServerSideProps: GetServerSideProps<Props> = async () => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] |null; // tie to auth later
   return { props: { vendor } }
 };  )
 }
 
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] || null; // tie to auth later;
   return { props: { vendor } };
 };  );
+=======
+            defaultValue={item.status}
+            onChange={e => changeStatus(item.id, e.target.value)}
+            className='border rounded px-2 py-1 bg-transparent text-sm'
+          >
+            <option value='lead'>Lead</option>
+            <option value='qualified'>Qualified</option>
+            <option value='proposal'>Proposal</option>
+            <option value='in_progress'>In Progress</option>
+            <option value='complete'>Complete</option>
+            <option value='lost'>Lost</option>          </select>
+        </div>
+      ))}
+    </div>          <select defaultValue={item.status} onChange={e => changeStatus(item.id, e.target.value)} className="border rounded px-2 py-1 bg-transparent text-sm">
+            <option value="lead">Lead</option>
+            <option value="qualified">Qualified</option>
+            <option value="proposal">Proposal</option>
+            <option value="in_progress">In Progress</option>
+            <option value="complete">Complete</option>
+            <option value="lost">Lost</option>
+        </div>
+      ))}
+    </div>
+  );
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+  const { listVendors } = await import('../utils/vendor-store');
+  const vendor = listVendors()[0] |null; // tie to auth later
+  return { props: { vendor } }
+};  )
+}
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+  const { listVendors } = await import('../utils/vendor-store');
+  const vendor = listVendors()[0] |null, // tie to auth later
+  return { props: { vendor } }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] || null, // tie to auth later;
   return { props: { vendor } }
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,19 +1,35 @@
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+interface CreateKeyRequest {
+  name: string;
+  scopes: string[]
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface CreateKeyRequest {
   name: string,
   scopes: string[],
   expiresAt?: string | null
-
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',;
 interface CreateKeyRequest {;
   name: string,;
   scopes: string[],;
   expiresAt?: string | null;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+}
+;
+interface RegenerateKeyRequest {;
+  keyId: string;
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   expiresAt?: string | null
 =======
@@ -52,6 +68,7 @@ if ( {) {
       headers: {
         'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         key_prefix: prefix;
         key_hash: hash_data;
         name: name;
@@ -370,9 +387,10 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {
       .select('id')
       .eq('user_id', userId);
     if (keyError) {
-
-        'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
-
+      console.error('Error fetching API keys for logs:', keyError);
+      return new Response(JSON.stringify({ error: 'Failed to fetch API logs' }), {
+        status: 500
+        headers: { 'Content-Type': 'application/json' }})
 ;
 // Create a Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,;
@@ -628,6 +646,7 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       return new Response(JSON.stringify({ error: 'Failed to fetch API logs' }), {;
         status: 500,;
         headers: { 'Content-Type': 'application/json' }});
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -636,19 +655,6 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
     if (!keyIds |keyIds.length === 0) {
       return new Response(JSON.stringify({ logs: [], count: 0 }), {
         status: 200
-=======
-      console && console.error('Error fetching API keys for logs:', keyError);
-      return new Response(JSON && JSON.stringify({ error: 'Failed to fetch API logs' }), {
-        status: 500,
-        headers: { 'Content-Type': 'application/json' }})
-    }
-
-=======
-
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Get logs for those keys
     const ids = keyIds && keyIds.map(k => k && k.id);
     const { data: logs, error: logsError, count } = await supabase
@@ -677,6 +683,38 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+;
+    // Get logs for those keys;
+    const ids = keyIds.map(k => k.id),;
+    const { data: logs, error: logsError, count } = await supabase;
+      .from('api_logs');
+      .select('*', { count: 'exact' });
+      .in('api_key_id', ids);
+      .order('created_at', { ascending: false });
+      .range(offset, offset + limit - 1),;
+    if (logsError) {;
+      console.error('Error fetching API logs:', logsError),;
+      return new Response(JSON.stringify({ error: 'Failed to fetch API logs' }), {;
+        status: 500,;
+        headers: { 'Content-Type': 'application/json' }});
+    }
+;
+    return new Response(JSON.stringify({ logs, count }), {;
+      status: 200,;
+      headers: { 'Content-Type': 'application/json' }});
+  } catch (error) {;
+    console.error('Error in getApiLogs:', error),;
+    return new Response(JSON.stringify({ error: 'Internal server error' }), {;
+      status: 500;
+      headers: { 'Content-Type': 'application/json' }});
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }
 async /**
@@ -691,6 +729,9 @@ function getApiLogs() {
       .eq ('user_id', user_id);
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

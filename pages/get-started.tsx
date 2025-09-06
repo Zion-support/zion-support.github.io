@@ -1,7 +1,430 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
+
+export default function GetStarted() {
+  const [selectedPath, setSelectedPath] = useState<string>(''),
+  const [currentStep, setCurrentStep] = useState(1);
+
+  const onboardingSteps = [
+    {
+      step: 1
+      title: 'Choose Your Path'
+      description: 'Select the technology area that best fits your needs'
+      icon: <Target className='w-8 h-8 text-cyan-400' />
+    },    {
+      step: 2
+      title: 'Define Requirements'
+      description: 'Tell us about your project goals and constraints'
+      icon: <FileText className='w-8 h-8 text-purple-400' />
+    },    {
+      step: 3
+      title: 'Get Your Proposal'
+      description: 'Receive a detailed proposal and implementation plan'
+      icon: <Star className='w-8 h-8 text-yellow-400' />
+    },    {
+      step: 4
+      title: 'Begin Implementation'
+      description: 'Start your journey with our expert team'
+      icon: <Rocket className='w-8 h-8 text-green-400' />
+    },  ];
+  const technologyPaths = [
+    {
+      id: 'ai-consciousness'
+      name: 'AI Consciousness & Emotional Intelligence'
+      description:
+        'Develop AI systems with genuine self-awareness and emotional intelligence'
+      icon: <Brain className='w-8 h-8 text-cyan-400' />
+      features: [
+        'AI consciousness development'
+        'Emotional intelligence training'
+        'Self-aware neural networks'
+        'Autonomous decision making'
+      ]
+      useCases: [
+        'Customer Success'
+        'HR Analytics'
+        'Mental Health'
+        'Education'
+      ]
+      timeline: '6-12 months'
+      complexity: 'Advanced'
+    }
+    {
+      id: 'quantum-computing'
+      name: 'Quantum Computing Solutions'
+      description:
+        'Leverage quantum computing for cryptography, optimization, and simulation'
+      icon: <Atom className='w-8 h-8 text-purple-400' />
+      features: [
+        'Quantum algorithms'
+        'Post-quantum cryptography'
+        'Quantum machine learning'
+        'Quantum simulation'
+      ]
+      useCases: [
+        'Financial Services'
+        'Healthcare'
+        'Research'
+        'Cybersecurity'
+      ]
+      timeline: '8-18 months'
+      complexity: 'Expert'
+    }
+    {
+      id: 'autonomous-systems'
+      name: 'Autonomous Business Systems'
+      description:
+        'Build self-managing and self-optimizing business operations'
+      icon: <Rocket className='w-8 h-8 text-green-400' />
+      features: [
+        'Process automation'
+        'Self-healing infrastructure'
+        'Predictive maintenance'
+        'Autonomous operations'
+      ]
+      useCases: ['Manufacturing', 'DevOps', 'Customer Service', 'Supply Chain']
+      timeline: '3-9 months'
+      complexity: 'Intermediate'
+    }
+    {
+      id: 'enterprise-solutions'
+      name: 'Enterprise Technology Platform'
+      description:
+        'Modernize your infrastructure with cloud-native and AI-powered solutions'
+      icon: <Building className='w-8 h-8 text-blue-400' />
+      features: [
+        'Cloud migration'
+        'Microservices architecture'
+        'AI-powered analytics'
+        'Security automation'
+      ]
+      useCases: [
+        'Digital Transformation'
+        'Legacy Modernization'
+        'Data Analytics'
+        'Security'
+      ]
+      timeline: '4-12 months'
+      complexity: 'Intermediate'
+    },  ];
+  const quickStartOptions = [
+    {
+      title: 'Free Consultation'
+      description: '30-minute session to discuss your needs'
+      duration: '30 min'
+      icon: <Users className='w-6 h-6' />
+      action: 'Schedule Call'
+      color: 'from-cyan-500 to-blue-600'
+    },    {
+      title: 'Demo Session'
+      description: 'See our technology in action'
+      duration: '45 min'
+      icon: <Video className='w-6 h-6' />
+      action: 'Book Demo'
+      color: 'from-purple-500 to-pink-600'
+    },    {
+      title: 'Technical Assessment'
+      description: 'Evaluate your current technology stack'
+      duration: '2 hours'
+      icon: <Code className='w-6 h-6' />
+      action: 'Start Assessment'
+      color: 'from-green-500 to-emerald-600'
+    },    {
+      title: 'Pilot Project'
+      description: 'Small-scale implementation to prove value'
+      duration: '4-8 weeks'
+      icon: <Rocket className='w-6 h-6' />
+      action: 'Discuss Pilot'
+      color: 'from-orange-500 to-red-600'
+    },  ];
+  const handlePathSelection = (pathId: string) => {
+    setSelectedPath(pathId);
+    setCurrentStep(2);  }
+  const handleNextStep = () => {
+    if (currentStep < 4) {
+      setCurrentStep(currentStep + 1);    }
+  }
+  const handlePreviousStep = () => {
+    if (currentStep > 1) {
+      setCurrentStep(currentStep - 1);    }
+  }
+import {
+  Rocket,
+  CheckCircle,
+  ArrowRight,
+  Brain,
+  Atom,
+  Shield,
+  Zap,
+  Users,
+  Clock,
+  Target,
+  Star,
+  FileText,
+  Video,
+  Code,
+
+      step: 1,
+      title: 'Choose Your Path',
+      description: 'Select the technology area that best fits your needs',
+  const onboardingSteps = [
+    {
+      step: 1,
+      title: 'Choose Your Path',
+      description: 'Select the technology area that best fits your needs',
+      icon: <Target className="w-8 h-8 text-cyan-400" />
+    },
+    {
+      step: 2,
+      title: 'Define Requirements',
+      description: 'Tell us about your project goals and constraints',
+      icon: <FileText className="w-8 h-8 text-purple-400" />
+    },
+    {
+      step: 3,
+      title: 'Get Your Proposal',
+      description: 'Receive a detailed proposal and implementation plan',
+      icon: <Star className="w-8 h-8 text-yellow-400" />
+    },
+    {
+      step: 4,
+      title: 'Begin Implementation',
+      description: 'Start your journey with our expert team',
+      icon: <Rocket className="w-8 h-8 text-green-400" />
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  const technologyPaths = [
+    {
+      id: 'ai-consciousness',
+      name: 'AI Consciousness & Emotional Intelligence',
+      description: 'Develop AI systems with genuine self-awareness and emotional intelligence',
+      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      features: [
+        'AI consciousness developmentEmotional intelligence trainingSelf-aware neural networksAutonomous decision making'
+      ],
+      useCases: ['Customer SuccessHR AnalyticsMental HealthEducation'],
+      timeline: '6-12 months',
+      complexity: 'Advanced'
+    },
+    {
+      id: 'quantum-computing',
+      name: 'Quantum Computing Solutions',
+      description: 'Leverage quantum computing for cryptography, optimization, and simulation',
+      icon: <Atom className="w-8 h-8 text-purple-400" />,
+      features: [
+        'Quantum algorithmsPost-quantum cryptographyQuantum machine learningQuantum simulation'
+      ],
+      useCases: ['Financial ServicesHealthcareResearchCybersecurity'],
+      timeline: '8-18 months',
+      complexity: 'Expert'
+    },
+    {
+      id: 'autonomous-systems',
+      name: 'Autonomous Business Systems',
+      description: 'Build self-managing and self-optimizing business operations',
+      icon: <Rocket className="w-8 h-8 text-green-400" />,
+      features: [
+        'Process automationSelf-healing infrastructurePredictive maintenanceAutonomous operations'
+      ],
+      useCases: ['ManufacturingDevOpsCustomer ServiceSupply Chain'],
+      timeline: '3-9 months',
+      complexity: 'Intermediate'
+    },
+    {
+      id: 'enterprise-solutions',
+      name: 'Enterprise Technology Platform',
+      description: 'Modernize your infrastructure with cloud-native and AI-powered solutions',
+      icon: <Building className="w-8 h-8 text-blue-400" />,
+      features: [
+        'Cloud migrationMicroservices architectureAI-powered analyticsSecurity automation'
+      ],
+      useCases: ['Digital TransformationLegacy ModernizationData AnalyticsSecurity'],
+      timeline: '4-12 months',
+      complexity: 'Intermediate'
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  const quickStartOptions = [
+    {
+      title: 'Free Consultation',
+      description: '30-minute session to discuss your needs',
+      duration: '30 min',
+      icon: <Users className="w-6 h-6" />,
+      action: 'Schedule Call',
+      color: 'from-cyan-500 to-blue-600'
+    },
+    {
+      title: 'Demo Session',
+      description: 'See our technology in action',
+      duration: '45 min',
+      icon: <Video className="w-6 h-6" />,
+      action: 'Book Demo',
+      color: 'from-purple-500 to-pink-600'
+    },
+    {
+      title: 'Technical Assessment',
+      description: 'Evaluate your current technology stack',
+      duration: '2 hours',
+      icon: <Code className="w-6 h-6" />,
+      action: 'Start Assessment',
+      color: 'from-green-500 to-emerald-600'
+    },
+    {
+      title: 'Pilot Project',
+      description: 'Small-scale implementation to prove value',
+      duration: '4-8 weeks',
+      icon: <Rocket className="w-6 h-6" />,
+      action: 'Discuss Pilot',
 =======
+      color: 'from-orange-500 to-red-600',
+    },  ];
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  Globe,;
+  Building,;} from 'lucide-react';
+
+export default function GetStarted() {;
+  const [selectedPath, setSelectedPath] = useState<string>('');
+  const [currentStep, setCurrentStep] = useState(1);
+
+import React, { useState } from 'react',
+import { motion } from 'framer-motion',
+import {
+  Rocket, CheckCircle, ArrowRight, Brain, Atom,
+  Shield, Zap, Users, Clock, Target, Star,
+  FileText, Video, Code, Globe, Building
+} from 'lucide-react',
+export default function GetStarted() {
+  const [selectedPath, setSelectedPath] = useState<string>(''),
+  const [currentStep, setCurrentStep] = useState(1),
+  const onboardingSteps = [
+    {
+      step: 1,
+      title: 'Choose Your Path',
+      description: 'Select the technology area that best fits your needs',
+      icon: <Target className="w-8 h-8 text-cyan-400" />
+    },
+    {
+      step: 2,
+      title: 'Define Requirements',
+      description: 'Tell us about your project goals and constraints',
+      icon: <FileText className="w-8 h-8 text-purple-400" />
+    },
+    {
+      step: 3,
+      title: 'Get Your Proposal',
+      description: 'Receive a detailed proposal and implementation plan',
+      icon: <Star className="w-8 h-8 text-yellow-400" />
+    },
+    {
+      step: 4,
+      title: 'Begin Implementation',
+      description: 'Start your journey with our expert team',
+      icon: <Rocket className="w-8 h-8 text-green-400" />
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  const technologyPaths = [
+    {
+      id: 'ai-consciousness',
+      name: 'AI Consciousness & Emotional Intelligence',
+      description: 'Develop AI systems with genuine self-awareness and emotional intelligence',
+      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      features: [
+        'AI consciousness developmentEmotional intelligence trainingSelf-aware neural networksAutonomous decision making'
+      ],
+      useCases: ['Customer SuccessHR AnalyticsMental HealthEducation'],
+      timeline: '6-12 months',
+      complexity: 'Advanced'
+    },
+    {
+      id: 'quantum-computing',
+      name: 'Quantum Computing Solutions',
+      description: 'Leverage quantum computing for cryptography, optimization, and simulation',
+      icon: <Atom className="w-8 h-8 text-purple-400" />,
+      features: [
+        'Quantum algorithmsPost-quantum cryptographyQuantum machine learningQuantum simulation'
+      ],
+      useCases: ['Financial ServicesHealthcareResearchCybersecurity'],
+      timeline: '8-18 months',
+      complexity: 'Expert'
+    },
+    {
+      id: 'autonomous-systems',
+      name: 'Autonomous Business Systems',
+      description: 'Build self-managing and self-optimizing business operations',
+      icon: <Rocket className="w-8 h-8 text-green-400" />,
+      features: [
+        'Process automationSelf-healing infrastructurePredictive maintenanceAutonomous operations'
+      ],
+      useCases: ['ManufacturingDevOpsCustomer ServiceSupply Chain'],
+      timeline: '3-9 months',
+      complexity: 'Intermediate'
+    },
+    {
+      id: 'enterprise-solutions',
+      name: 'Enterprise Technology Platform',
+      description: 'Modernize your infrastructure with cloud-native and AI-powered solutions',
+      icon: <Building className="w-8 h-8 text-blue-400" />,
+      features: [
+        'Cloud migrationMicroservices architectureAI-powered analyticsSecurity automation'
+      ],
+      useCases: ['Digital TransformationLegacy ModernizationData AnalyticsSecurity'],
+      timeline: '4-12 months',
+      complexity: 'Intermediate'
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  const quickStartOptions = [
+    {
+      title: 'Free Consultation',
+      description: '30-minute session to discuss your needs',
+      duration: '30 min',
+      icon: <Users className="w-6 h-6" />,
+      action: 'Schedule Call',
+      color: 'from-cyan-500 to-blue-600'
+    },
+    {
+      title: 'Demo Session',
+      description: 'See our technology in action',
+      duration: '45 min',
+      icon: <Video className="w-6 h-6" />,
+      action: 'Book Demo',
+      color: 'from-purple-500 to-pink-600'
+    },
+    {
+      title: 'Technical Assessment',
+      description: 'Evaluate your current technology stack',
+      duration: '2 hours',
+      icon: <Code className="w-6 h-6" />,
+      action: 'Start Assessment',
+      color: 'from-green-500 to-emerald-600'
+    },
+    {
+      title: 'Pilot Project',
+      description: 'Small-scale implementation to prove value',
+      duration: '4-8 weeks',
+      icon: <Rocket className="w-6 h-6" />,
+      action: 'Discuss Pilot',
+      color: 'from-orange-500 to-red-600',
+    },  ];
+
+
+
   Rocket,
   CheckCircle,
   ArrowRight,
@@ -34,7 +457,8 @@
 
   const handleNextStep = () => {
     if (currentStep < 4) {
-      setCurrentStep(currentStep + 1);    }
+      setCurrentStep(currentStep + 1)
+    }
   };
 
   const handlePreviousStep = () => {
@@ -45,6 +469,8 @@
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
 
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       color: 'from-orange-500 to-red-600'
       } catch (error) {
     console.error("Error:", error);
@@ -74,6 +500,7 @@
   }
 }
   },
+<<<<<<< HEAD
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -110,6 +537,7 @@
   }
   return (
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </div>
@@ -118,29 +546,37 @@
         </div>
       </section>
 
-=======
-
-            transition={{ duration: 0 && 0.8 }}
-            className='text-center max-w-4xl mx-auto'>;
-            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>;
-              Get Started Today;
-            </h1>;
-            <p className='text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed'>;
-
-              Begin your journey into the future of AI consciousness, quantum;
-              computing, and autonomous systems. Our expert team will guide you;
-              every step of the way.;
-            </p>;
-
-
       {/* Onboarding Steps */}
       <section className='py-20'>;
         <div className='container mx-auto px-4'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+            transition={{ duration: 0.8 }}
+            className='text-center mb-16'
+      {/* Onboarding Steps */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Simple 4-Step Process
@@ -148,29 +584,39 @@
             <p className="text-xl text-gray-400">From initial consultation to full implementation</p>
           </motion.div>
 
-=======
-
-
           <div className="grid md:grid-cols-4 gap-8">
             {onboardingSteps.map((step, index) => (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
-
-
-            transition={{ duration: 0 && 0.8 }}
-            className='text-center mb-16'>;
-            <h2 className='text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>;
-              Simple 4-Step Process;
-            </h2>;
-            <p className='text-xl text-gray-400'>;
-              From initial consultation to full implementation;
-            </p>;
-          </motion && motion.div>;
-          <div className='grid md:grid-cols-4 gap-8'>            {onboardingSteps && onboardingSteps.map((step, index) => (;
-              <motion&& motion.div
-                key={step && step.step}
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                key={step.step  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className={`text-center p-6 rounded-2xl border transition-all duration-300 ${;
+                  currentStep === step.step;
+                    ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-cyan-500/50';
+                    : 'bg-gradient-to-br from-gray-900/30 to-black/30 border-gray-800/50';
+                }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -181,10 +627,12 @@
                     : 'bg-gradient-to-br from-gray-900/30 to-black/30 border-gray-800/50'
                 }`}
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
 
       {/* Technology Paths */}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
@@ -193,6 +641,7 @@
       </section>;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {currentStep === 1 && (
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
           <div className="container mx-auto px-4">
@@ -206,6 +655,7 @@
             </motion.div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <motion.div
 
               transition={{ duration: 0 && 0.8 }}
@@ -217,6 +667,7 @@
                 Select the area that best aligns with your business goals;
               </p>;
             </motion && motion.div>;
+
             <div className='grid lg:grid-cols-2 gap-8'>              {technologyPaths && technologyPaths.map((path, index) => (;
                 <motion&& motion.div
                   key={path && path.id}
@@ -304,6 +755,8 @@
                   transition={{ duration: 0.8, delay: index * 0.1 }}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 >
                   <div className="p-8 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                     <div className="flex items-start gap-4 mb-6">
@@ -317,6 +770,8 @@
                     </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       <div>
                         <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Key Features</h4>
                         <ul className="space-y-2">
@@ -344,6 +799,56 @@
   }
 }
 
+                        </div>;
+                      </div>;
+                    </div>;
+
+                    <div className='flex items-center justify-between pt-6 border-t border-gray-800/50'>;
+                      <div className='flex gap-4 text-sm text-gray-400'>;
+                        <span className='flex items-center gap-1'>;
+                          <Clock className='w-4 h-4' />;
+                          {path && path.timeline}
+                        </span>;
+                        <span className='flex items-center gap-1'>;
+                          <Target className='w-4 h-4' />;
+                          {path && path.complexity}
+                        </span>;
+                      </div>;
+                      <div className='flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300'>;
+                        <span className='font-medium'>Select Path</span>;
+                        <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />                      </div>;
+                    </div>;
+                  </div>;
+                </motion && motion.div>;
+
+
+              ))}
+            </div>;
+          </div>;
+        </section>;
+      )}
+      {/* Requirements Definition */}
+      {currentStep === 2 && (;
+        <section className='py-20 bg-gradient-to-r from-gray-900/50 to-black'>;
+          <div className='container mx-auto px-4'>            <motion&& motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+
+                    
+                    <div className="flex items-center justify-between pt-6 border-t border-gray-800/50">
+                      <div className="flex gap-4 text-sm text-gray-400">
+                        <span className="flex items-center gap-1">
+                          <Clock className="w-4 h-4" />
+                          {path.timeline  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Target className="w-4 h-4" />
+                          {path.complexity}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                         </span>
                       </div>
                       <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
@@ -354,8 +859,8 @@
                   </div>
                 </motion.div>
 
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {currentStep === 2 && (
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
           <div className="container mx-auto px-4">
@@ -370,15 +875,21 @@
             </motion.div>
 
 =======
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+            <div className='max-w-4xl mx-auto'>
+              <div className='bg-gradient-to-br from-gray-900/30 to-black/30 rounded-2xl p-8 border border-gray-800/50'>
+                <div className='text-center mb-8'>
+                  <h3 className='text-2xl font-bold text-white mb-4'>
+                    Selected Path:{' '}
+                    {technologyPaths.find(p => p.id === selectedPath)?.name}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <div className="max-w-4xl mx-auto">
               <div className="bg-gradient-to-br from-gray-900/30 to-black/30 rounded-2xl p-8 border border-gray-800/50">
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   </h3>
                   <p className="text-gray-300">
                     Now let's gather more details about your specific needs
@@ -386,6 +897,8 @@
                 </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">Project Timeline</label>
                       <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300">
@@ -409,16 +922,66 @@
                     </div>
                   </div>
 
+=======
+              transition={{ duration: 0 && 0.8 }}
+              className='text-center mb-16'>;
+              <h2 className='text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>;
+                Define Your Requirements;
+              </h2>;
+              <p className='text-xl text-gray-400'>;
+                Help us understand your project goals and constraints;
+              </p>;
+            </motion && motion.div>;
+
+            <div className='max-w-4xl mx-auto'>;
+              <div className='bg-gradient-to-br from-gray-900/30 to-black/30 rounded-2xl p-8 border border-gray-800/50'>;
+                <div className='text-center mb-8'>;
+                  <h3 className='text-2xl font-bold text-white mb-4'>;
+                    Selected Path:{' '}
+                    {technologyPaths && technologyPaths.find(p => p && p.id === selectedPath)?.name}
+                  </h3>;
+                  <p className='text-gray-300'>;
+                    Now let's gather more details about your specific needs;
+                  </p>;
+                </div>;
+
+                <div className='space-y-6'>;
+                  <div className='grid md:grid-cols-2 gap-6'>;
+                    <div>;
+                      <label className='block text-sm font-medium text-gray-300 mb-2'>;
+                        Project Timeline;
+                      </label>;
+                      <select className='w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300'>                        <option>Immediate (1-2 weeks)</option>;
+                        <option>1-3 months</option>;
+                        <option>3-6 months</option>;
+                        <option>6+ months</option>;
+                      </select>;
+                    </div>;
+
+                    <div>;
+                      <label className='block text-sm font-medium text-gray-300 mb-2'>;
+                        Budget Range;
+                      </label>;
+                      <select className='w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300'>                        <option>Under $50K</option>;
+                      Next Step;
+                    </button>;
+                  </div>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Project Description</label>
+                    <textarea
+                      rows={6}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
                       placeholder="Describe your project goals, challenges, and specific requirements..."
                     />
                   </div>
 
-=======
-                    <button
-                      onClick={handlePreviousStep}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     <button
@@ -428,6 +991,12 @@
   }
 }
 
+=======
+                  <div className='flex justify-between pt-6'>
+                  <div className="flex justify-between pt-6">
+                    <button
+                      onClick={handlePreviousStep}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       className="px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-300"
                     >
                       Previous
@@ -445,17 +1014,14 @@
           </div>
         </section>
 
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Quick Start Options
             </h2>
             <p className="text-xl text-gray-400">Get started immediately with these quick options</p>
           </motion.div>
-
-=======
-
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {quickStartOptions.map((option, index) => (
@@ -509,12 +1075,43 @@
               Get started immediately with these quick options;
             </p>;
           </motion && motion.div>;
+
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>            {quickStartOptions && quickStartOptions.map((option, index) => (;
               <motion&& motion.div
                 key={option && option.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+=======
+                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                className='group cursor-pointer'>;
+                <div className='p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300'>;
+                  <div className='flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>;
+                    {option && option.icon}
+                  </div>;
 
+                  <h3 className='text-xl font-bold text-white mb-3 text-center'>;
+                    {option && option.title}
+                  </h3>;
+                  <p className='text-gray-300 mb-4 text-center leading-relaxed'>;
+                    {option && option.description}
+                  </p>;
+
+                  <div className='text-center mb-4'>;
+                    <span className='inline-flex items-center gap-1 px-3 py-1 bg-gray-800/50 text-gray-300 rounded-full text-sm'>;
+                      <Clock className='w-4 h-4' />;
+                      {option && option.duration}
+                    </span>;
+                  </div>;
+
+
+                  <button
+                    className={`w-full py-3 px-4 bg-gradient-to-r ${option && option.color} text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300`}>                    {option && option.action}
+                  </button>;
+                </div>;
+              </motion && motion.div>;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -525,6 +1122,7 @@
 }
                   </div>
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
@@ -562,8 +1160,24 @@
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Ready to Begin Your Journey?
@@ -588,7 +1202,10 @@
         </div>
       </section>
     </div>
+)
+),
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -618,6 +1235,7 @@
   option && option.action ;
 }</button> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
   opacity: 0, y: 20
 }whileInView= {
@@ -632,7 +1250,6 @@
           </motion.div>;
         </div>;
       </section>;
-<<<<<<< HEAD
 =======
 
     </div>;
@@ -643,8 +1260,5 @@
   }
 }
 ;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

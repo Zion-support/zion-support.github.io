@@ -4,9 +4,25 @@
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+
+
+
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const innovativeITInfrastructureServices2025 = [
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+=======
+      'SOC2',
+      'ISO 27001',
+      'Uptime Institute',
+      'Energy Star',
+      'Industry-specific regulations',
+    ],;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   },];
     id: 'quantum-edge-computing-orchestrator', name: 'Quantum Edge Computing Orchestrator',
     description: 'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.',
@@ -26,15 +42,17 @@ export const innovativeITInfrastructureServices2025 = [
 =======
       'Industry-specific regulations',
     ],;
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },];
       'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
     ];
     integrations: ['Data center infrastructureMonitoring systemsEnergy managementSecurity platformsCompliance tools'];
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry-specific regulations']
+  }
+];
 
-
-=======
 export const innovativeITInfrastructureServices2025 = [;
   {;
     id: 'quantum-edge-computing-orchestrator',;
@@ -240,11 +258,13 @@ export const innovativeITInfrastructureServices2025 = [;
     ],;
     integrations: ['Data center infrastructureMonitoring systemsEnergy managementSecurity platformsCompliance tools'],;
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry-specific regulations'];
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

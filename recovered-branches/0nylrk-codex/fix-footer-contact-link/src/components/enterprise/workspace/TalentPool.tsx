@@ -1,9 +1,19 @@
 
-
+import React from "react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function TalentPool() {
   // Mock talent data
 
@@ -77,6 +87,7 @@ export function TalentPool() {
               <div className="mt-2 flex flex-wrap gap-1">
                 {talent.skills.map((skill, index) => (
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       case "available": return <Badge className="bg-green-500">Available</Badge>;
       case "interviewing":;
         return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Interviewing</Badge>;
@@ -109,6 +120,7 @@ export function TalentPool() {
               </div>
               <div className="mt-2 flex flex-wrap gap-1">
                 {talent.skills.map((skill, index) => (
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -124,44 +136,3 @@ export function TalentPool() {
               </div>;
             </div>;
           ))}
-=======
-
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-}
-
-      <CardContent className="p - 0">;
-        <div className="divide - y divide - border">;
-          {talents.map ((talent) => (
-            <div key={talent.id} className="p - 4">;
-              <div className="flex items - center justify - between">;
-                <div>;
-                  <p className="font - semibold">{talent.name}</p>;
-                  <p className="text - sm text - muted - foreground">{talent.role}</p>;
-                </div>;
-                <div className="flex items - center gap - 2">;
-                  {getStatusBadge (talent.status)}
-                  <Badge variant="outline" className="bg - purple - 100 text - purple - 800 border - purple - 200">;
-                    {talent.match}% Match;
-                  </Badge>;
-                </div>;
-              </div>;
-              <div className="mt - 2 flex flex - wrap gap - 1">;
-                {talent.skills.map ((skill, index) => (
-                  <Badge key={index} variant="secondary" className="text - xs">;
-                    {skill}
-                  </Badge>))}
-              </div>;
-              <div className="mt - 3 flex gap - 2">;
-                <Button size="sm" variant="outline">View Profile</Button>;
-                <Button size="sm">Contact</Button>;
-              </div>;
-            </div>))}
-        </div>;
-      </CardContent>;
-    </Card>);
-}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

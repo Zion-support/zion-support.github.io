@@ -1,27 +1,29 @@
 
 =======
-
+import React from 'react',
 import React from 'react';
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import Head from 'next/head';
 
 import {
-
-  const features = [
-    'Golden datasets and synthetic evals'
-    'Hallucination and grounding score'
-    'Toxicity, bias and safety metrics'
-    'LLM version comparison reports'
-    'CI quality gates and webhooks'
-    'Latency and cost KPIs with budgets'
+  Check
+  ShieldCheck
+  TrendingUp
+  Clock
+  Phone
+  Mail
+  MapPin
+  ExternalLink;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Check,
   ShieldCheck,
   TrendingUp,
   Clock,
   Phone,
   Mail,
-
+=======
+  MapPin,;
+  ExternalLink,;
 } from 'lucide-react';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -34,6 +36,7 @@ export default function AIEvalsPage() {
     website: 'https://ziontechgroup.com'
   }
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AIEvalsPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -42,6 +45,7 @@ export default function AIEvalsPage() {
     website: 'https://ziontechgroup.com',;
   };
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const features = [
     'Golden datasets and synthetic evals'
     'Hallucination and grounding score'
@@ -81,6 +85,8 @@ export default function AIEvalsPage() {
                   {features.map(f => (
                     <li
                       key={f}
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       className='flex items-start gap-2 text-gray-200'
                     >
                       <Check className='w-5 h-5 text-emerald-400 mt-0.5' />{' '}
@@ -179,6 +185,7 @@ export default function AIEvalsPage() {
       </section>
     </QuantumHolographicMatrixBackground>
   );					<div className="bg-black/20 border border-cyan-500/30 rounded-2xl p-6">
+<<<<<<< HEAD
 
 						<h3 className="text-xl font-semibold text-white mb-4 text-center">Contact</h3>
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
@@ -195,25 +202,6 @@ export default function AIEvalsPage() {
 		</QuantumHolographicMatrixBackground>
 
 }
-	);
-}
-
-
-=======
-    </QuantumHolographicMatrixBackground>);					<div className="bg - black / 20 border border - cyan - 500 / 30 rounded - 2xl p - 6">;
-      <h3 className="text - xl font - semibold text - white mb - 4 text - center">Contact</h3>;
-      <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - sm">;
-      <div className="flex items - center justify - center gap - 2 text - cyan - 400"><Phone className="w - 4 h - 4" /> <a href={`tel:${contact_info.mobile.replace (/[^+\d]/g, '')}`}>{contact_info.mobile}</a></div>;
-      <div className="flex items - center justify - center gap - 2 text - purple - 400"><Mail className="w - 4 h - 4" /> <a href={`mailto:${contact_info.email}`}>{contact_info.email}</a></div>;
-      <div className="flex items - center justify - center gap - 2 text - emerald - 400"><MapPin className="w - 4 h - 4" /> <a href={`https://maps.google.com/?q=${encodeURIComponent (contact_info.address)}`} target="_blank" rel="noopener noreferrer" className="text - xs">{contact_info.address}</a></div>;
-      </div>;
-      <div className="text - center mt - 6">;
-      <Button href="/services" variant="outline" className="border - cyan - 500 text - cyan - 400">Explore Services <ExternalLink className="w - 4 h - 4 ml - 2" /></Button>;
-      </div>;
-    </div>;
-    </div>;
-  </section>;
-  </QuantumHolographicMatrixBackground>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

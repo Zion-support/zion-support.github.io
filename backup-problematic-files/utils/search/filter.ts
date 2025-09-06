@@ -5,7 +5,6 @@
 
 
 <<<<<<< HEAD
-=======
 export interface SearchResults {
   all: SearchResult[];
   talent: SearchResult[];

@@ -1,9 +1,7 @@
 
-=======
 "use client",;
 export default function BlockchainWeb3Page() {;
   return (;
-
     <div className="space-y-8">;
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">Blockchain & Web3 Solutions</h1>;

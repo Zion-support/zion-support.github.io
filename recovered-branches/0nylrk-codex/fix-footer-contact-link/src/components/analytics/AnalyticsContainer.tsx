@@ -1,10 +1,21 @@
-
+import React from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { Navigate } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
 
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { SEO } from "@/components/SEO",
-
+import { Navigate } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
+import { Navigate } from "react-router-dom",
+import { useAuth } from "@/hooks/useAuth",
+interface AnalyticsContainerProps {
+  children: React.ReactNode
+}
 interface AnalyticsContainerProps {
   children: React.ReactNode
 }
@@ -12,8 +23,16 @@ interface AnalyticsContainerProps {
 interface AnalyticsContainerProps {
   children: React.ReactNode
 }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
+  const { isAuthenticated, isLoading, user } = useAuth();
+  // Check if user is admin (using either role or userType)
+
+  const isAdmin = user?.role === "admin" |user?.userType === "admin";
 
   // Check if user is admin (using either role or userType)
   const isAdmin = user?.role === 'admin' || user?.userType === 'admin',
@@ -29,8 +48,7 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
 
 =======
   
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // If not authenticated, redirect
   if (!isAuthenticated) {
     return <Navigate to="/login" state={{ from: '/analytics' }} replace />
@@ -55,6 +73,26 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
             Track user behavior, page views, and conversion rates
           </p>
         </div>
+=======
+        {children}
+      </main>
+      <Footer />
+    </div>
+  );
+}
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { SEO } from "@/components/SEO",;
+import { Navigate } from "react-router-dom",;
+import { useAuth } from "@/hooks/useAuth",;
+interface AnalyticsContainerProps {;
+  children: React.ReactNode;
+}
+;
+export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const { isAuthenticated, isLoading, user } = useAuth();
 
   // Check if user is admin (using either role or userType);
@@ -105,10 +143,5 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
     </div>);
 
 }
-=======
-}
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

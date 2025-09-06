@@ -2,8 +2,31 @@
 
 
 =======
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle,;
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import {;
+  BarChart,;
+  DollarSign,;
+  LineChart,;
+  TrendingUp,;
+  Users,;
+} from 'lucide-react';
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+=======
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -11,11 +34,30 @@ export function PartnerDashboard() {
     pendingReferrals: 8,
     completedReferrals: 34,
     conversionRate: 18.5,
+    totalRevenue: 850.0,
+    pendingRevenue: 200.0,
 
     totalRevenue: 850.00,
     pendingRevenue: 200.00
   },
+  return (
+    <div className="space-y-6">
+      {/* Stats Overview */}
 
+
+export function PartnerDashboard() {
+  // Placeholder data - would come from API in real implementation
+  const stats = {
+    totalReferrals: 42,
+    pendingReferrals: 8,
+    completedReferrals: 34,
+    conversionRate: 18.5,
+    totalRevenue: 850.00,
+    pendingRevenue: 200.00
+  },
+  
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="space-y-6">
       {/* Stats Overview */}
@@ -26,26 +68,6 @@ export function PartnerDashboard() {
             <Users className="h-4 w-4 text-zion-cyan" />
           </CardHeader>
           <CardContent>
-
-            <p className="text-xs text-zion-slate-light">
-              {stats.completedReferrals} completed, {stats.pendingReferrals} pending
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="bg-zion-blue-dark border-zion-blue-light">
-          <CardHeader className="flex flex-row items-center justify-between pb-2">
-            <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>
-            <TrendingUp className="h-4 w-4 text-zion-purple" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{stats.conversionRate}%</div>
-            <p className="text-xs text-zion-slate-light">
-              Of clicks that convert to sign-ups
-            </p>
-          </CardContent>
-        </Card>
-
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Total Earnings</CardTitle>
@@ -54,34 +76,11 @@ export function PartnerDashboard() {
           <CardContent>
             <div className="text-2xl font-bold">${stats.totalRevenue}</div>
             <p className="text-xs text-zion-slate-light">
+=======
+              ${stats.pendingRevenue} pending payout
+<<<<<<< HEAD
 
             </p>
           </CardContent>
         </Card>
       </div>
-
-      <Card className="bg-zion-blue-dark border-zion-blue-light">
-        <CardHeader>
-          <CardTitle>Performance Overview</CardTitle>
-          <CardDescription>Track your referral performance over time</CardDescription>
-        </CardHeader>
-        <CardContent className="flex justify-center items-center p-6">
-          <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg w-full">
-            <LineChart className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
-            <p className="text-zion-slate-light">Detailed analytics will be available soon</p>
-          </div>
-        </CardContent>
-      </Card>
-
-        </CardHeader>
-        <CardContent>
-          <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
-            <Users className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
-            <p className="text-zion-slate-light mb-4">No referrals yet</p>
-            <p className="text-xs text-zion-slate-light">
-              Start sharing your referral links to earn rewards
-            </p>
-          </div>
-        </CardContent>
-      </Card>
-<<<<<<< HEAD

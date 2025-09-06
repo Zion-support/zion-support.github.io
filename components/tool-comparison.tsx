@@ -4,15 +4,23 @@ import Button from '../components/ui/Button';
 
 import {
 
-=======
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  Search
+  Filter
+  TrendingUp
+  DollarSign
+  Users
+  Star
+  Check
+  X
+  ArrowRight
+  ExternalLink
+  Zap
+  Brain
+  Globe
+  Rocket;} from 'lucide-react';import {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Search,
   Filter,
   TrendingUp,
@@ -25,19 +33,15 @@ import {
   ExternalLink,
   Zap,
   Brain,
-
-=======
-
-
-  Search;
-  Filter,
-  TrendingUp,
-  DollarSign,
-  Users,
-=======
+  Globe,
+  Rocket,;} from 'lucide-react';import { 
   Globe,;
   Rocket,;} from 'lucide-react';import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  Search;
+  Filter
+  TrendingUp
+  DollarSign
+  Users
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Search;
   Filter
@@ -121,6 +125,8 @@ import {
       users: '100K+'
       bestFor: 'Marketing teams, content creators, businesses'
       pros: [
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [sortBy, setSortBy] = React.useState('rating');
@@ -336,6 +342,8 @@ function ToolComparisonPage() {
           </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 {allTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>Tools Analyzed</div>
@@ -414,6 +422,9 @@ function ToolComparisonPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -434,13 +445,13 @@ function ToolComparisonPage() {
               <Filter className='w-5 h-5 text-gray-400' />;
             </div>
 
-=======
 
 
             {/* Sort */}
             <div className='flex items-center space-x-2'>
               <Filter className='w-5 h-5 text-gray-400' />
 
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -455,24 +466,6 @@ function ToolComparisonPage() {
                 <option value='name'>Sort by Name</option>              </select>              <select
                 value={sortBy}
 
-=======
-      <section id="comparison" className="py-24 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
-              Tool Comparison
-            </h2>
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Compare features, pricing, and user ratings to find the perfect tools for your business needs.
-            </p>
-          </div>
-
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead>
-                <tr className="border-b border-gray-800">
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Tool</th>
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Category</th>
                   <th className="text-left py-4 px-6 text-gray-300 font-medium">Pricing</th>
@@ -612,22 +605,29 @@ function ToolComparisonPage() {
               <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
               <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
+=======
           )}
         </div>
       </section>
 
 
 
+            </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+          )}
+        </div>
+      </section>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Detailed Comparison Cards */}
-
-
+      <section className='py-24 bg-gray-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
 
               Detailed Analysis
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Deep dive into each tool's pros, cons, and use cases to make the
@@ -636,72 +636,6 @@ function ToolComparisonPage() {
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {sortedTools.slice(0, 6).map((tool, index) => (
-=======
-              </tbody>;
-            </table>;
-          </div>;
-          {sortedTools && sortedTools.length === 0 && (;
-            <div className='text-center py-20'>;
-              <Search className='w-16 h-16 text-gray-600 mx-auto mb-4' />;
-              <h3 className='text-xl font-semibold text-gray-400 mb-2'>;
-                No tools found;
-              </h3>;
-              <p className='text-gray-500'>;
-                Try adjusting your search criteria or category filter.;
-              </p>            </div>            <div className="text-center py-20">;
-              <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />;
-              <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>;
-              <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>;
-          )}
-        </div>;
-      </section>;
-      {/* Detailed Comparison Cards */}
-      <section className='py-24 bg-gray-900'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-          <div className='text-center mb-20'>;
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>;
-            </h2>;
-            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-              Deep dive into each tool's pros, cons, and use cases to make the;
-              best decision for your business.;
-            </p>;
-          </div>;
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
-            {sortedTools && sortedTools.slice(0, 6).map((tool, index) => (;
-=======
-              </tbody>
-            </table>
-          </div>
-          {sortedTools.length === 0 && (
-            <div className='text-center py-20'>
-              <Search className='w-16 h-16 text-gray-600 mx-auto mb-4' />
-              <h3 className='text-xl font-semibold text-gray-400 mb-2'>
-                No tools found
-              </h3>
-              <p className='text-gray-500'>
-                Try adjusting your search criteria or category filter.
-              </p>            </div>            <div className="text-center py-20">
-              <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
-              <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
-          )}
-        </div>
-      </section>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-=======
-
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Best For:</h4>
-                  <p className="text-sm text-gray-400">{tool.bestFor}</p>
-                </div>
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <div>
                     <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center">
@@ -734,10 +668,35 @@ function ToolComparisonPage() {
                   </span>;
                   <Button
 
+=======
+                <div className="flex items-center justify-between">
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+                <div className='flex items-center justify-between'>
+                  <span
+                    className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}
+                  >                    {tool.pricing}
+                  </span>
+                  <Button
+                    href={tool.website}                <div className="flex items-center justify-between">
+                  <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
+                    href={tool.website}
+
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     {tool.pricing}
                   </span>
                   <Button
@@ -755,12 +714,19 @@ function ToolComparisonPage() {
           </div>
         </div>
       </section>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 </div>
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
+          </div>
+        </div>
+      </section>
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
           </div>;
         </div>;
       </section>;
@@ -770,6 +736,7 @@ function ToolComparisonPage() {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -777,6 +744,8 @@ function ToolComparisonPage() {
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our experts can analyze your business needs and recommend the
@@ -796,10 +765,13 @@ function ToolComparisonPage() {
               href='/saas-marketplace'
               variant='outline'
               size='lg'
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'            >              href="/saas-marketplace"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
+<<<<<<< HEAD
 
               Explore All Tools
             </Button>
@@ -817,15 +789,15 @@ function ToolComparisonPage() {
 
 
 =======
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 =======
 );
-<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

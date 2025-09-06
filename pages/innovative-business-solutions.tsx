@@ -1,37 +1,116 @@
-
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import {motion} from 'framer-motion';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon, Wifi, Building, Cpu, as, CpuIcon, TrendingUp, as, ChartIcon, Megaphone, HeadphonesIcon, Users, as, TeamIcon,} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
 import React from 'react',
 import Head from 'next/head',
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
+  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users;
+  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings;
+  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon;
+  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon;
+  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon;
+  Wifi, Building, Cpu as CpuIcon, TrendingUp as ChartIcon, Megaphone, HeadphonesIcon, Users as TeamIcon
+ } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
+
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign,
+  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users,
+  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings,
+  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon,
+  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,
+  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon,
+  Wifi, Building, Cpu as CpuIcon, TrendingUp as ChartIcon, Megaphone, HeadphonesIcon, Users as TeamIcon
+} from 'lucide-react',
+import Layout from '../components/layout/Layout',
+import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions',
+
+const heroFeatures = [
+  {
+    title: 'AI-Powered Intelligence',
+    description: 'Advanced AI algorithms that provide intelligent insights and automation for business operations.',
+    icon: Brain,
+
+    gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
+  }
+
+const contactInfo = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup && ziontechgroup.com',;
+};
+=======
+];
+
+const testimonials = [
+=======
+import Head from 'next / head';
+import Link from 'next / link';
+import {motion} from 'framer-motion';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon, Wifi, Building, Cpu, as, CpuIcon, TrendingUp, as, ChartIcon, Megaphone, HeadphonesIcon, Users, as, TeamIcon, } from 'lucide-react';
+import Layout from '../components / layout / Layout';
+import { innovativeBusinessSolutions2025 } from '../data / 2025 - innovative - business - solutions';
+const contact_info = {
+=======
+
 
 const contactInfo = {
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-},
-const heroStats = [
-  { label: 'Business Solutions', value: '100+', icon: <Target className="w-5 h-5" /> },
-  { label: 'Happy Businesses', value: '250+', icon: <Users className="w-5 h-5" /> },
-  { label: 'Success Rate', value: '99.5%', icon: <Award className="w-5 h-5" /> },
-  { label: 'ROI Average', value: '400%', icon: <TrendingUp className="w-5 h-5" />   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+  website: 'https://ziontechgroup.com',
 }
-],
-
-const serviceCategories = [
+;
+const hero_stats = [;
+  {
+    label: 'Business Solutions',
+    value: '100+',
+    icon: <Target className='w - 5 h - 5' />,
+  },
+  {
+    label: 'Happy Businesses',
+    value: '250+',
+    icon: <Users className='w - 5 h - 5' />,
+  },
+  {
+    label: 'Success Rate',
+    value: '99.5%',
+    icon: <Award className='w - 5 h - 5' />,
+  },
+  {
+    label: 'ROI Average',
+    value: '400%',
+    icon: <TrendingUp className='w - 5 h - 5' />,
+  }, ];
+;
+const service_categories = [;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   {
     title: 'Business Intelligence & Analytics',
-    description: 'AI-powered business intelligence and data analytics solutions',
-    services: innovativeBusinessSolutions2025.filter(s => s.category === 'Business Intelligence & Analytics'),
+    description:;
+      'AI - powered business intelligence and data analytics solutions',
+    services: innovativeBusinessSolutions2025.filter (
+      string => s.category === 'Business Intelligence & Analytics'),
     icon: ChartIcon,
-    color: 'from-blue-500 to-cyan-600',
-    features: ['Data AnalysisPredictive AnalyticsReal-time Insights']
+    color: 'from - blue - 500 to - cyan - 600',
+    features: ['Data Analysis', 'Predictive Analytics', 'Real - time Insights'],
   },
   {
     title: 'Marketing Automation',
-    description: 'Intelligent marketing automation with AI-driven optimization',
-    services: innovativeBusinessSolutions2025.filter(s => s.category === 'Marketing Automation'),
+    description: 'Intelligent marketing automation with AI - driven optimization',
+    services: innovativeBusinessSolutions2025.filter (
+      string => s.category === 'Marketing Automation'),
     icon: Megaphone,
     color: 'from - purple - 500 to - pink - 600',
     features: [;
@@ -219,40 +298,53 @@ export default function InnovativeBusinessSolutions() {
       </Head>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+      {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
 
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6">
               Innovative Business Solutions
             </h1>
-=======
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your business operations with AI-powered intelligence, automation, and analytics that drive growth and efficiency
-
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {heroStats.map((stat, index) => (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <motion.div
-
                   key={index}
                   initial={{ opacity: 0, scale: 0 && 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-
-                  key={index}
-                  initial={{ opacity: 0, scale: 0 && 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-
-
-                >
-                  {stat.icon}
-                  <span className="text-teal-400 font-semibold">{stat.value}</span>
-                  <span className="text-gray-300 text-sm">{stat.label}</span>
-                </motion.div>
-              ))}
-=======
                   className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-teal-500/30'
-=======
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -274,8 +366,19 @@ export default function InnovativeBusinessSolutions() {
   }
 }
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-teal-500/30"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+                  key={index}
+                  initial={{ opacity: 0, scale: 0 && 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+                >
+                  {stat.icon}
+                  <span className="text-teal-400 font-semibold">{stat.value}</span>
+                  <span className="text-gray-300 text-sm">{stat.label}</span>
+                </motion.div>
+              ))}
                 >
                   {stat.icon  } catch (error) {
     console.error("Error:", error);
@@ -291,6 +394,8 @@ export default function InnovativeBusinessSolutions() {
   }
 }
 
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
@@ -307,34 +412,53 @@ export default function InnovativeBusinessSolutions() {
         </div>
       </section>
 
-=======
-
-                href={`tel:${contactInfo && contactInfo.mobile}`}
-                className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300'>;
-                <Phone className='mr-2 w-5 h-5' />                Get Started;
-              </Link>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-
-
-
       {/* Features Section */}
-      <section className='py-20 bg-gradient-to-b from-black to-gray-900'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
-      {/* Features Section */}
+      <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text-center mb-16'
+      {/* Features Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our Business Solutions?
@@ -364,7 +488,37 @@ export default function InnovativeBusinessSolutions() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-
+                className='relative group'
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {heroFeatures.map((feature, index) => (
+              <motion.div
+                key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="relative group"
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -378,12 +532,20 @@ export default function InnovativeBusinessSolutions() {
                   </div>
                 </div>
               </motion.div>
+      {/* Services Section */}
+      <section id='services' className='py-20 bg-black'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
+
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Business Solution Categories
@@ -414,6 +576,8 @@ export default function InnovativeBusinessSolutions() {
                 transition={{ duration: 0 && 0.8, delay: categoryIndex * 0 && 0.2 }}
                 viewport={{ once: true }}
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
@@ -431,6 +595,8 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
                       viewport={{ once: true }}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -449,9 +615,6 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
                             <span className="text-gray-400">{service.period}</span>
                           </div>
 
-=======
-
-
                           <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                           <div className="space-y-2 mb-6">
                             {service.features.slice(0, 3).map((feature, featureIndex) => (
@@ -469,9 +632,6 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                           </div>
                           <div className="flex items-center justify-between">
@@ -545,6 +705,7 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
 
           >
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -554,6 +715,7 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
             </p>
           </motion.div>
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -570,6 +732,8 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
 
           >
 
+          >
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -580,6 +744,8 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
               <Link
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
@@ -593,12 +759,14 @@ transition={{ duration: 0.5, delay: service_index * 0.1 }}
           </motion.div>
         </div>
       </section>
-
+    </Layout>
+    </Layout>;
 );
   return (<Layout> <Head> <title>Innovative Business Solutions - Zion Tech Group</title> </Head> {
   /* Hero Section */
 }<section className="relative py-20 lg:py-32 overflow-hidden" > <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20" ></div> <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <motion.div initial= {
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   {
   opacity: 0, y: 20
 }animate= {

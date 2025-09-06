@@ -1,20 +1,23 @@
 
-
-import { useState, useEffect } from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client",
-import { Job, JobStatus } from "@/types/jobs",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Loader2, Edit, X, Eye } from "lucide-react",
-
+=======
+<<<<<<< HEAD
 interface JobsListProps {
   filter?: JobStatus,
   onSelectJob?: (jobId: string, jobTitle: string) => void
 }
 
+export function JobsList({ filter, onSelectJob }: JobsListProps) {;
+  const { user } = useAuth();
+  const [jobs, setJobs] = useState<Job[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
+  const { user } = useAuth();
+  const [jobs, setJobs] = useState<Job[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+  const { user } = useAuth(),
+  const [jobs, setJobs] = useState<Job[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   useEffect(() => {
 
@@ -39,14 +42,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
       }
 
   if (isLoading) {
-=======
-    };
-
-    fetchJobs();
-  }, [user, filter]);
-
-  if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="flex justify-center items-center p-8">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
@@ -115,6 +110,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
               {job.skills.slice(0, 3).map((skill, index) => (
                 <Badge key={index} variant="outline" className="text-xs">
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           }
         </p>;
         <Button asChild className="mt-4">;
@@ -174,6 +170,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
             <div className="flex flex-wrap gap-1 mt-2">;
               {job && job.skills.slice(0, 3).map((skill, index) => (;
                 <Badge key={index} variant="outline" className="text-xs">;
+=======
 
 
 

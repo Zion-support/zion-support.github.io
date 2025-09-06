@@ -2,6 +2,7 @@
 interface ExportPanelProps {
 
 import { log_info, logErrorToProduction } from '@/utils / production_logger';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ExportPanelProps {
   platform: AppPlatform,
   metadata: AppMetadataValues;
@@ -9,15 +10,11 @@ interface ExportPanelProps {
 export const ExportPanel: React.FC < ExportPanelProps> = ({ platform, metadata }, ) => {
   const handle_export = (format: 'json' | 'csv', ) =>: any {
     try {
-      let content: string,
-      let file_name: string,
-      // Check condition
-if ( {) {
-  $2
-}
-        content = JSON.stringify (metadata, null, 2);
-        file_name = `zion - app - metadata-${platform}-${metadata.version}.json`;
-
+      let content: string
+      let fileName: string
+      if (format === 'json') {
+        content = JSON.stringify(metadata, null, 2)
+        fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
       } else {
         // Convert object to CSV format
         const headers = ['appTitleshortDescriptionlongDescriptionversionplatform']
@@ -54,6 +51,9 @@ if ( {) {
     toast.success("Analytics tracking enabled")
   }
   return (
+=======
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
         <CardTitle className="text-lg">Export & Analytics</CardTitle>
@@ -88,6 +88,14 @@ if ( {) {
         </div>
       </CardContent>
     </Card>
+<<<<<<< HEAD
 
 import { toast } from "sonner",
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+
+
+
+    </Card>);
+},
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

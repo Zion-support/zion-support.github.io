@@ -1,6 +1,5 @@
 
 
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 ;
@@ -655,11 +654,6 @@ console.log('\n🎯 Syntax error fixing completed!');
     return false;
   }
 }
-=======
-
-console.log('\n🎯 Syntax error fixing completed!');
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

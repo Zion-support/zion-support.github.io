@@ -1,5 +1,22 @@
 
   const response = NextResponse.next();
+  
+origin/main
+  // Security headers
+  response.headers.set("X-Frame-Options", "DENY");
+  response.headers.set("X-Content-Type-Options", "nosniff");
+  response.headers.set("Referrer-Policy", "origin-when-cross-origin");
+  response.headers.set(
+    "Permissions-Policy"
+    "camera=(), microphone=(), geolocation=()"
+  );
+  // CSP header
+  response.headers.set(
+    "Content-Security-Policy"
+    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
+  );
+  
+ursor/integrate-build-improve-and-re-verify-8f7d
 
   // Security headers
   response && response.headers.set("X-Frame-Options", "DENY");
@@ -45,11 +62,16 @@ function middleware() {
     'Content-Security-Policy',
     "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
   );
+  
+  return response;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
 
-
+  return response;
+    return response;
+ursor/fix-lint-push-and-merge-to-main-ae4e
 }
-
-=======
   
 =======
 =======
@@ -61,6 +83,8 @@ function middleware() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   
   return response;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
 
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -87,8 +111,12 @@ function middleware() {
 <<<<<<< HEAD
 export const config = {
 export const config = {
-
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"]
+}
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],;
 };
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

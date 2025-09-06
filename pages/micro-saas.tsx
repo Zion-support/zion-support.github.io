@@ -1,6 +1,6 @@
+ursor/integrate-build-improve-and-re-verify-8f7d
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+origin/main
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import React from 'react';
 import Layout from '../components/layout/Layout';
@@ -220,27 +220,30 @@ import {
   Sprout
 } from 'lucide-react';
 
+=======
+origin/main
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const microSaasProducts = [
   {
-    id: 1
-    title: "AI-Powered Voice Assistant Builder"
-    description: "Create custom voice assistants for your business with our no-code platform"
-    icon: Mic
-    category: "Voice Technology"
-    pricing: "$99/month"
-    features: ["No-code voice assistant creation", "Multi-language support", "Custom wake words", "Analytics dashboard"]
-    benefits: ["95% accuracy rate", "24/7 availability", "Easy integration", "Custom branding"]
-  }
+    id: 1,
+    title: "AI - Powered Voice Assistant Builder",
+    description: "Create custom voice assistants for your business with our no - code platform",
+    icon: Mic,
+    category: "Voice Technology",
+    pricing: "$99 / month",
+    features: ["No - code voice assistant creation", "Multi - language support", "Custom wake words", "Analytics dashboard"],
+    benefits: ["95% accuracy rate", "24 / 7 availability", "Easy integration", "Custom branding"];
+  },
   {
-    id: 2
-    title: "Smart IoT Device Manager"
-    description: "Centralized management platform for all your IoT devices and sensors"
-    icon: Cpu
-    category: "IoT Management"
-    pricing: "$149/month"
-    features: ["Device monitoring", "Remote control", "Data visualization", "Alert system"]
-    benefits: ["Real-time monitoring", "Energy savings", "Predictive maintenance", "Scalable solution"]
-  }
+    id: 2,
+    title: "Smart IoT Device Manager",
+    description: "Centralized management platform for all your IoT devices and sensors",
+    icon: Cpu,
+    category: "IoT Management",
+    pricing: "$149 / month",
+    features: ["Device monitoring", "Remote control", "Data visualization", "Alert system"],
+    benefits: ["Real - time monitoring", "Energy savings", "Predictive maintenance", "Scalable solution"];
+  },
   {
     id: 3
     title: "AI-Powered Cybersecurity Monitor"
@@ -251,6 +254,151 @@ const microSaasProducts = [
     features: ["Threat detection", "Automated response", "Compliance reporting", "Security dashboard"]
     benefits: ["99.9% threat detection", "Automated response", "Compliance ready", "24/7 monitoring"]
 
+  return (
+import Link from 'next/link';
+import Head from 'next/head';
+import { useState, useEffect } from 'react';
+import { ContactInfo } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
+export default function MicroSaaS(req, res) {
+  try {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  useEffect(() => {;
+    const timer = setTimeout(() => setIsLoaded(true), 100),;
+    return () => clearTimeout(timer);
+  }, []),;
+  const contact: ContactInfo = {;
+    phone: '+1 302 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    site: 'https://ziontechgroup.com';
+  },;
+  const categories = [;
+    { id: 'all', name: 'All Products', count: 150 },;
+    { id: 'ai', name: 'AI-Powered', count: 45 },;
+    { id: 'analytics', name: 'Analytics', count: 30 },;
+    { id: 'automation', name: 'Automation', count: 25 },;
+    { id: 'security', name: 'Security', count: 20 },;
+    { id: 'productivity', name: 'Productivity', count: 15 },;
+    { id: 'marketing', name: 'Marketing', count: 15   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const products = [;
+    {;
+      id: 1;
+      name: 'AI-Powered Video Clip Maker';
+      description: 'Automatically create engaging video clips from long-form content using advanced AI algorithms.';
+      category: 'ai';
+      features: ['AI Content AnalysisAuto-EditingMultiple FormatsCloud Processing'],;
+      price: '$29/month',;
+      popular: true;
+    },;
+    {;
+      id: 2,;
+      name: 'Smart Contract Analyzer',;
+      description: 'Comprehensive analysis and security auditing for blockchain smart contracts.',;
+      category: 'security',;
+      features: ['Vulnerability DetectionGas OptimizationCode ReviewAudit Reports'],;
+      price: '$99/month',;
+      popular: false;
+    },;
+    {;
+      id: 3,;
+      name: 'Cybersecurity Threat Intelligence',;
+      description: 'Real-time threat monitoring and intelligence gathering for enhanced security.',;
+      category: 'security',;
+      features: ['Threat DetectionRisk AssessmentIncident ResponseCompliance Monitoring'],;
+      price: '$149/month',;
+      popular: true;
+    },;
+    {;
+      id: 4,;
+      name: 'Multi-Language Website Translator',;
+      description: 'Automatically translate websites into multiple languages with context awareness.',;
+      category: 'automation',;
+      features: ['100+ LanguagesContext TranslationSEO OptimizationReal-time Updates'],;
+      price: '$49/month',;
+      popular: false;
+    },;
+    {;
+      id: 5,;
+      name: 'Predictive Inventory Optimizer',;
+      description: 'AI-driven inventory management with demand forecasting and optimization.',;
+      category: 'analytics',;
+      features: ['Demand ForecastingStock OptimizationCost AnalysisIntegration APIs'],;
+      price: '$79/month',;
+      popular: true;
+    },;
+    {;
+      id: 6,;
+      name: 'Real-Time Analytics Dashboard',;
+      description: 'Comprehensive business intelligence dashboard with real-time data visualization.',;
+      category: 'analytics',;
+      features: ['Real-time DataCustom DashboardsAlert SystemExport Capabilities'],;
+      price: '$59/month',;
+      popular: false;
+    },;
+    {;
+      id: 7,;
+      name: 'Automated Customer Support',;
+      description: 'AI-powered customer support system with natural language processing.',;
+      category: 'ai',;
+      features: ['Chatbot IntegrationTicket ManagementKnowledge BaseMulti-channel Support'],;
+      price: '$89/month',;
+      popular: true;
+    },;
+    {;
+      id: 8,;
+      name: 'Blockchain Transaction Monitor',;
+      description: 'Monitor and analyze blockchain transactions across multiple networks.',;
+      category: 'analytics',;
+      features: ['Multi-chain SupportTransaction TrackingAlert SystemAPI Access'],;
+      price: '$69/month',;
+      popular: false;
+    },;
+    {;
+      id: 9,;
+      name: 'Social Media Scheduler',;
+      description: 'Advanced social media management with AI-powered content optimization.',;
+      category: 'marketing',;
+      features: ['Multi-platformContent CalendarAnalyticsAuto-posting'],;
+      price: '$39/month',;
+      popular: false;
+    },;
+    {;
+      id: 10,;
+      name: 'Document Processing AI',;
+      description: 'Intelligent document processing with OCR and data extraction capabilities.',;
+      category: 'ai',;
+      features: ['OCR TechnologyData ExtractionFormat ConversionBatch Processing'],;
+      price: '$59/month',;
+      popular: true;
+    },;
+    {;
+      id: 11,;
+      name: 'Workflow Automation Engine',;
+      description: 'Create and manage complex business workflows with drag-and-drop interface.',;
+      category: 'automation',;
+      features: ['Visual BuilderIntegration HubConditional LogicMonitoring'],;
+      price: '$79/month',;
+      popular: false;
+    },;
+    {;
+      id: 12,;
+      name: 'Email Marketing Optimizer',;
+      description: 'AI-powered email marketing with personalization and performance optimization.',;
+      category: 'marketing',;
+      features: ['PersonalizationA/B TestingAnalyticsTemplate Library'],;
+      price: '$49/month',;
+      popular: true;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }
   ],
@@ -258,11 +406,41 @@ const microSaasProducts = [
     ? products
     : products.filter(product => product.category === selectedCategory),
   return (
-
+=======
+    <Layout
+      title="Micro SaaS Solutions - Zion Tech Group"
+      description="Discover our innovative micro SaaS solutions designed to solve specific business problems with powerful, focused tools."
+      keywords="micro saas, saas solutions, business tools, automation, productivity"
+    >
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Micro SaaS Solutions
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Powerful, focused tools that solve specific business problems with precision and efficiency
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Get Started
+                </Link>
+                <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                  View Demo
+                </Link>
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-242d
 </Link>
-
-</Link>
->>>>>>> origin/main
+origin/main
+</Link>;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 </Link>;
@@ -272,17 +450,19 @@ import Head from 'next / head';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
 
-=======
-    return () => clearTimeout(timer);
->>>>>>> origin/automation-improvements-final
 
+export default function MicroSaaS() {
 =======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-  Cloud,
-  Zap,
-  BarChart3,
-=======
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoaded(true), 100);
+    return () => clearTimeout(timer)
+  }, []);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> origin/automation-improvements-final
 
 import { 
   Cloud, 
@@ -329,14 +509,11 @@ import {
   Link as LinkIcon,
   Award as AwardIcon,
 =======
-  Star as StarIcon,
-  Home;
-} from 'lucide-react';
+=======
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-import Layout from '../components/Layout';
-export default function MicroSaaS() {;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   useEffect(() => {
@@ -344,6 +521,8 @@ export default function MicroSaaS() {;
     const timer = setTimeout(() => setIsLoaded(true), 100);
 
   }, []);
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 
   const contact: ContactInfo = {
     phone: '+1 302 464 0950'
@@ -544,6 +723,18 @@ export default function MicroSaaS() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const contact: ContactInfo = {
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    site: 'https://ziontechgroup.com',  }
+  const categories = [
+    { id: 'all', name: 'All Products', count: 150 }
+    { id: 'ai', name: 'AI-Powered', count: 45 }
+    { id: 'analytics', name: 'Analytics', count: 30 }
+    { id: 'automation', name: 'Automation', count: 25 }
+    { id: 'security', name: 'Security', count: 20 }
+    { id: 'productivity', name: 'Productivity', count: 15 }
+    { id: 'marketing', name: 'Marketing', count: 15 },  ];
 
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -622,14 +813,6 @@ export default function MicroSaas() {
               </div>
             </div>
           </section>
-  return (
-
-    <Layout>
-
-=======
-    <>
-
-
       <Head>
         <title>Micro SaaS Products - Zion Tech Group</title>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -640,13 +823,13 @@ export default function MicroSaas() {
         <meta
           name='keywords'
           content='micro SaaS, SaaS products, AI tools, analytics, automation, security, productivity, marketing tools'
-
-        />;
-        <meta name='viewport' content='width=device-width, initial-scale=1 && 1.0' />;
-        <meta name='robots' content='index, follow' />;
-        <link rel='canonical' href={`${contact && contact.site}/micro-saas`} />;
-      </Head>;
-
+        />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta name='robots' content='index, follow' />
+        <link rel='canonical' href={`${contact.site}/micro-saas`} />
+      </Head>
+      <ErrorBoundary level='page'>
+        <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
           {/* Hero Section */}
 
 
@@ -662,35 +845,84 @@ export default function MicroSaas() {
                         ? 'bg-blue-600 text-white';
                         : 'bg-slate-800 text-slate-300 hover:bg-slate-700';
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
-          <section className="py-20 px-4 text-center" role="banner">
-            <div className="max-w-4xl mx-auto">
-              <h1 
-                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              >
-                Micro SaaS Products
-              </h1>
-              <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                150+ Innovative Solutions for Modern Businesses
-              </p>
-              <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                Discover our comprehensive collection of micro SaaS products designed to solve specific business challenges 
-                with focused, efficient, and cost-effective solutions.
-              </p>
-            </div>
-          </section>
-
-          {/* Category Filter */}
 =======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Products Grid */}
           <section className='py-16 px-4' role='main'>
             <div className='max-w-7xl mx-auto'>
               <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
-
 =======
+
+      <ErrorBoundary level="page">
+        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+          {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <section className="py-20 px-4 text-center" role="banner">
+            <div className="max-w-4xl mx-auto">
+              <h1
+                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              >;
+                Micro SaaS Products;
+              </h1>;
+              <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
+                150+ Innovative Solutions for Modern Businesses;
+              </p>;
+              <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
+                Discover our comprehensive collection of micro SaaS products designed to solve specific business challenges;
+                with focused, efficient, and cost-effective solutions.;
+              </p>;
+            </div>;
+          </section>;
+          {/* Category Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+          <section className="py-8 px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex flex-wrap justify-center gap-4 mb-8">
+                {categories.map((category) => (
+                  <button
+
+              </div>;
+            </div>;
+          </section>;
+
+
+          {/* Products Grid */}
+          <section className='py-16 px-4' role='main'>;
+            <div className='max-w-7xl mx-auto'>;
+              <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+                {filteredProducts && filteredProducts.map((product, index) => (;
+                  <div                    key={product && product.id}
+                    className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                    style={{ transitionDelay: `${index * 100}ms` }}
+                  >;
+                    {product && product.popular && (;
+                      <div className='absolute -top-2 -right-2 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full'>;
+                        Popular;
+                      </div>;
+                    )}
+
+
+          {/* Products Grid */}
+          <section className="py-16 px-4" role="main">
+            <div className="max-w-7xl mx-auto">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 {filteredProducts.map((product, index) => (
                   <div 
                     key={product.id}
@@ -1010,6 +1242,11 @@ function MicroSaas() {
                       <span className="text-2xl font-bold text-green-400">{product.price}</span>
                       <span className="text-xs text-slate-500 capitalize">{product.category}</span>
                     </div>
+=======
+                    
+                    <button className="w-full py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+                      Learn More
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                     </button>
                   </div>
@@ -1077,6 +1314,7 @@ function MicroSaas() {
                   <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>Lightning Fast</h3>
@@ -1084,19 +1322,8 @@ function MicroSaas() {
                     Quick setup and deployment in minutes, not months
                   </p>
                 </div>
-
-                      />;
-                    </svg>;
-                  </div>;
-                  <h3 className='text-xl font-bold mb-2'>Lightning Fast</h3>;
-                  <p className='text-slate-400'>;
-                    Quick setup and deployment in minutes, not months;
-                  </p>;
-                </div>;
-                <div className='text-center'>;
-                  <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                <div className='text-center'>
+                  <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -1106,7 +1333,13 @@ function MicroSaas() {
                         strokeLinecap='round'
                         strokeLinejoin='round'
                         strokeWidth={2}
-
+                        d='M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1'
+                      />
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>Cost Effective</h3>
@@ -1115,10 +1348,10 @@ function MicroSaas() {
                     contracts
                   </p>
                 </div>
-
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -1129,7 +1362,12 @@ function MicroSaas() {
                         strokeLinejoin='round'
                         strokeWidth={2}
                         d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
-
+                      />
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>Focused Solutions</h3>
@@ -1137,10 +1375,10 @@ function MicroSaas() {
                     Specialized tools that solve specific business problems
                   </p>
                 </div>
-
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -1150,56 +1388,77 @@ function MicroSaas() {
                         strokeLinecap='round'
                         strokeLinejoin='round'
                         strokeWidth={2}
-
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">Lightning Fast</h3>
-                  <p className="text-slate-400">Quick setup and deployment in minutes, not months</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">Cost Effective</h3>
-                  <p className="text-slate-400">Affordable pricing with no hidden costs or long-term contracts</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">Focused Solutions</h3>
-                  <p className="text-slate-400">Specialized tools that solve specific business problems</p>
-                </div>
+                        d='M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z'
+                      />
                 <div className="text-center">
                   <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold mb-2">Easy Integration</h3>
-                  <p className="text-slate-400">Seamless integration with your existing tools and workflows</p>
-                </div>
+                  <h3 className='text-xl font-bold mb-2'>Easy Integration</h3>
+                  <p className='text-slate-400'>
+                    Seamless integration with your existing tools and workflows
+                  </p>                </div>
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className='py-16 px-4'>
             <div className='max-w-4xl mx-auto text-center'>
               <h2 className='text-3xl md:text-4xl font-bold mb-8'>
-
+          {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <section className="py-16 px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8">
                 Ready to Get Started?
               </h2>
               <p className='text-lg text-slate-300 mb-8'>
                 Contact our experts to discuss which micro SaaS products are
                 right for your business and get started with a free trial.
               </p>
+              <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
+              <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                        d='M4 && M4.318 6 && 6.318a4.5 4 && 4.5 0 000 6 && 6.364L12 20 && 20.364l7.682-7 && 7.682a4.5 4 && 4.5 0 00-6 && 6.364-6 && 6.364L12 7 && 7.636l-1 && 1.318-1 && 1.318a4.5 4 && 4.5 0 00-6 && 6.364 0z'
+                      />;
+                    </svg>;
+                  </div>;
+                  <h3 className='text-xl font-bold mb-2'>Easy Integration</h3>;
+                  <p className='text-slate-400'>;
+                    Seamless integration with your existing tools and workflows;
+                  </p>                </div>;
+              </div>;
+            </div>;
+          </section>;
+
+          {/* CTA Section */}
+          <section className='py-16 px-4'>;
+            <div className='max-w-4xl mx-auto text-center'>;
+              <h2 className='text-3xl md:text-4xl font-bold mb-8'>;
+                Ready to Get Started?;
+              </h2>;
+              <p className='text-lg text-slate-300 mb-8'>;
+                Contact our experts to discuss which micro SaaS products are;
+                right for your business and get started with a free trial.;
+              </p>;
+
+              <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <Link
                   href='/contact'
                   className='px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'>;
@@ -1213,6 +1472,8 @@ function MicroSaas() {
                 >
                   Call {contact.phone}
                 </a>
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <a
                   href={`mailto:${contact.email}`}
                   className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'                >
@@ -1224,22 +1485,12 @@ function MicroSaas() {
           </div>
         </section>
 
-=======
-
-                  href={`mailto:${contact && contact.email}`}
-                  className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'>;
-                  Email Us;
-                </a>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-
-
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+origin/automation-improvements-final
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Products Grid */}
         <section className="py-20 bg-gray-50">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -1248,6 +1499,21 @@ function MicroSaas() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+=======
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our Micro SaaS Products
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Each product is designed to solve a specific business challenge with powerful, easy-to-use tools
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {microSaasProducts.map((product, index) => (
+                <motion.div
+                  key={product.id}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Solutions Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -1284,20 +1550,14 @@ function MicroSaas() {
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
                   className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
                 >
                   <div className="flex items-center mb-4">
@@ -1471,6 +1731,7 @@ function MicroSaas() {
                     <product.icon className="w-8 h-8 text-blue-600 mr-3" />
                     <span className="text-sm font-semibold text-blue-600 bg-blue-100 px-3 py-1 rounded-full">
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       {product.category}
                     </span>;
                   </div>;
@@ -1512,19 +1773,21 @@ function MicroSaas() {
                         {feature}
                       </div>;
                     ))}
-
+                  </div>
                 >
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                     <solution.icon className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{solution.title}</h3>
                   <p className="text-gray-600 mb-4">{solution.description}</p>
+                  
                   <div className="mb-4">
                     <span className="text-2xl font-bold text-blue-600">{solution.pricing}</span>
                     {solution.marketPrice && (
                       <span className="text-gray-500 ml-2">(Market: {solution.marketPrice})</span>
                     )}
                   </div>
+
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                     <ul className="text-sm text-gray-600 space-y-1">
@@ -1556,7 +1819,9 @@ function MicroSaas() {
           </div>
         </section>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+origin/automation-improvements-final
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* Categories */}
         <section className="py-20 bg-white">;
@@ -1582,6 +1847,7 @@ function MicroSaas() {
                 We cover a wide range of business domains with specialized micro SaaS solutions;
               </p>;
             </motion && motion.div>;
+
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">;
               {categories && categories.map((category, index) => (;
                 <motion&& motion.div
@@ -1642,6 +1908,25 @@ function MicroSaas() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+=======
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl mb-8 max-w-3xl mx-auto">
+                Discover how our micro SaaS solutions can solve your specific business challenges
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Get Started Today
+                </Link>
+                <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                  Schedule Demo
+                <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                  Schedule Demo
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <Link
                   href="/it-services"
                   className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
@@ -1655,134 +1940,102 @@ function MicroSaas() {
           </div>
         </section>
       </div>
-    </Layout>;
+    </Layout>
   );
-
-}
-
-=======
-
-=======
-
-          <section className="py-16 px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">
-                Ready to Get Started?
-              </h2>
-              <p className="text-lg text-slate-300 mb-8">
-                Contact our experts to discuss which micro SaaS products are right for your business 
-                and get started with a free trial.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link 
-                  href="/contact" 
-                  className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
-                >
-                  Get Free Trial
-                </Link>
-                <a 
-                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
-className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
-                >
-                  Call {contact.phone}
-                </a>
-                <a 
-                  href={`mailto:${contact.email}`} 
-                  className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
-                >
-                  Email Us
-                </a>
-                >
-                  Email Us
-                </Link>
-
-              </div>
-
-            </div>
->>>>>>> origin/automation-improvements-final
-=======
-
-            </div>
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+=======
+
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+}
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+}
+            </div>
+origin/automation-improvements-final
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           </section>
         </main>
       </ErrorBoundary>
     </>
   )
-
+}
+}
+          <section className="py-16 px-4 bg-slate-900/40">;
+            <div className="max-w-6xl mx-auto">;
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">;
+                Why Choose Our Micro SaaS Products?;
+              </h2>;
+              <p className="text-xl mb-8 max-w-3xl mx-auto">;
+                Discover how our micro SaaS solutions can solve your specific business challenges;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">;
+                  Get Started Today;
+                </Link>;
+                <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">;
+                  Schedule Demo;
+                </Link>;
+              </div>;
+            </div>;
+          </section>;
+          {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+ursor/integrate-build-improve-and-re-verify-b76c
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+origin/cursor/integrate-build-improve-and-re-verify-242d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+}
+origin/main
+                </a>;
+                <a;
+                  href={`mailto:${contact.email}`} ;
+                  className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors";
+                >;
+                  Email Us;
+                </a>;
+              </div>;
+            </div>;
+          </section>;
+        </main>;
+      </ErrorBoundary>;
+    </>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 }
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
+ursor/fix-lint-push-and-merge-to-main-ae4e
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-                  className="bg - gray - 50 rounded - lg p - 4 text - center hover:bg - blue - 50 transition - colors";
-                >;
-                  <span className="text - sm font - medium text - gray - 700">;
-                    {category}
-                  </span>;
-                </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className="py - 20 bg - blue - 600 text - white">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">;
-Ready to Transform Your Business?;
-              </h2>;
-              <p className="text - xl mb - 8 max - w-3xl mx - auto">;
-                Discover how our micro SaaS solutions can solve your specific business challenges;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <Link href="/contact" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - gray - 100 transition - colors">;
-                  Get Started Today;
-                </Link>;
-                <Link href="/demo" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">;
-                  Schedule Demo;
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>);
-}
-          </section>;
-        </main>;
-      </ErrorBoundary>;
-    </>);
-}
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

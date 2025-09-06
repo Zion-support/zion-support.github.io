@@ -140,11 +140,48 @@ import { useAuth } from "@/hooks/useAuth",;
 import { useNavigate } from "react-router-dom",;
 export default function Partners() {;
   const [activeTab, setActiveTab] = useState("overview"),;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {CheckCircle, FileDown, FileText, PieChart, Users} from "lucide-react";
+import {useState} from "react";
+import {PartnerRegistrationForm} from "@/components/partners/PartnerRegistrationForm";
+import {PartnerReferralLinks} from "@/components/partners/PartnerReferralLinks";
+import {PartnerDashboard} from "@/components/partners/PartnerDashboard";
+import {PartnerLeaderboard} from "@/components/partners/PartnerLeaderboard";
+import {PartnerResources} from "@/components/partners/PartnerResources";
+import {useAuth} from "@/hooks/useAuth";
+import {useNavigate} from "react-router-dom";
+export default function Partners() {;
+  const [activeTab, setActiveTab] = useState("overview");
+  const { user, isAuthenticated } = useAuth();
+  const navigate = useNavigate();
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { CheckCircle, FileDown, FileText, PieChart, Users } from "lucide-react",
+import { useState } from "react",
+import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm",
+import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks",
+import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
+import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
+import { PartnerResources } from "@/components/partners/PartnerResources",
+import { useAuth } from "@/hooks/useAuth";
+import { useNavigate } from "react-router-dom";
+export default function Partners() {
+  const [activeTab, setActiveTab] = useState("overview");
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const { user, isAuthenticated } = useAuth();
   const navigate = useNavigate();
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
     return (
@@ -266,10 +303,13 @@ export default function Partners() {;
           >;
             Apply to Join;
           </Button>;
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <Button;
             size="lg";
             variant="outline";
             className="text-zion-cyan border-zion-cyan";
+<<<<<<< HEAD
 
             onClick={() => navigate('/login')}
           >
@@ -292,6 +332,7 @@ export default function Partners() {;
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   // Authenticated user view - Partner Dashboard
@@ -344,18 +385,3 @@ export default function Partners() {;
       </Tabs>
     </div>
   )
-=======
-
-
-  // Authenticated user view - Partner Dashboard;
-  return (
-    <div className="container max-w-7xl py-10">;
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">;
-        <div>;
-          <h1 className="text-3xl font-bold tracking-tight text-white">Partner Dashboard</h1>;
-          <p className="text-zion-slate-light">Manage your referral links and track your performance</p>;
-        </div>;
-        <div className="flex gap-2">;
-          <Button variant="outline" className="flex items-center gap-2" onClick={() => window && window.print()}>;
-            <FileDown className="h-4 w-4" />;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

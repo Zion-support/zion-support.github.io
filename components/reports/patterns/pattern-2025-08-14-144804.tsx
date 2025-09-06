@@ -1,6 +1,4 @@
 
-=======
-
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
@@ -27,6 +25,8 @@
         <div
           className='mt-4'
           dangerouslySetInnerHTML={{
+=======
+<<<<<<< HEAD
 
           }}
         />;
@@ -37,6 +37,7 @@
     </div>;
   );export default function Page() {;
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
 
     <div className="min-h-screen bg-slate-950 text-white">
@@ -45,7 +46,9 @@
 
             __html:;
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>',
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }}
         />
         <p className='mt-6 text-white/60 text-sm'>
@@ -55,13 +58,11 @@
     </div>
   );export default function Page() {
   return (
-=======
 
 export default function Page() {
   return (
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <div className="min-h-screen bg-slate-950 text-white">
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <Head>
@@ -101,3 +102,5 @@ export default function Page(req, res) {
 }
 ;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

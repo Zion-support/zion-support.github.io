@@ -1,17 +1,35 @@
-
+import React from 'react',
+import Head from 'next/head';
+import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check  } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import ServiceAds from '../components/sections/ServiceAds';
+export default function ApiMockContractTestingPage() {
+import {FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check,} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import ServiceAds from '../components/sections/ServiceAds';
+export default function ApiMockContractTestingPage() {
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup.com',  };
 
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     website: 'https://ziontechgroup.com',  }
   const adItems = [
     {
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       title: '🧪 API Mock & Contract Testing Platform'
       description:
         'Spin up OpenAPI/GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.'
       price: 'Starting at $69/month'
       features: [
+<<<<<<< HEAD
 
   ];
   const tiers = [
@@ -33,6 +51,11 @@
 
   return (
 
+    },  ];
+;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  return (
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     <Layout>
       <Head>
         <title>API Mock & Contract Testing | Zion Tech Group</title>
@@ -53,11 +76,6 @@
             </div>
             <div className="text-center">
 
-=======
-              <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Book a Demo</Link>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -66,12 +84,15 @@
       </div>
     </Layout>
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   )
 }
 
     </Layout>);
 ;
+=======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

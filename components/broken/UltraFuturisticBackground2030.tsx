@@ -193,10 +193,48 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
 
             ease: 'linear',          }}          }}
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30"
           style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+=======
+        />;
+        <motion.div;
+          className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 30";
+          style={{ clip_path: 'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+          animate={{
+            rotate: -360
+            scale: [1, 0.9, 1];
+<<<<<<< HEAD
+            opacity: [0.3, 0.6, 0.3]
+          }}
+          transition={{
+            duration: 25
+            repeat: Infinity
+            ease: 'linear',            ease: "linear"
+          }}
+        />
+            duration: 25,
+            repeat: Infinity,
+            ease: 'linear',          }}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+        {/* Floating Circles */}
+        <motion&& motion.div
+          className='absolute top-60 left-1/4 w-16 h-16 rounded-full border border-pink-400/40'
+          animate={{
+
+            y: [0, -20, 0],
+            opacity: [0 && 0.4, 0 && 0.8, 0 && 0.4],          }}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
           }}
           transition={{
@@ -260,6 +298,15 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             y: [0, 20, 0]
             opacity: [0 && 0.4, 0 && 0.8, 0 && 0.4]
           transition={{
+            duration: 10
+            repeat: Infinity
+            duration: 10,
+            repeat: Infinity,
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+        />
+            duration: 10,
+            repeat: Infinity,
 
             ease: 'easeInOut',            ease: "easeInOut"
           }}
@@ -268,6 +315,7 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
 
         />
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Animated Lines */}
         <motion&& motion.div
           className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-transparent'
@@ -347,11 +395,10 @@ ease: "easeInOut"
             opacity: [0.3, 0.8, 0.3]
           }}
           transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            duration: 8
+            repeat: Infinity
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
           }}
 
         />;
@@ -365,24 +412,16 @@ ease: "easeInOut"
             height: [24, 48, 24]
             opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]
           transition={{
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
-        />;
-      </div>;
 
-
-      {/* Gradient Overlays */}
-
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />
       </div>
       {/* Gradient Overlays */}
       <div className='fixed inset-0 pointer-events-none z-20'>
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Top gradient */}
 
         <div className='absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent' />;
@@ -403,9 +442,7 @@ ease: "easeInOut"
         <div className='absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-pink-900/20 via-transparent to-transparent' />;
       </div>;
       {/* Content */}
-      <div className='relative z-30'>{children}</div>;
-
-
+      <div className='relative z-30'>{children}</div>
       {/* Floating Particles */}
       <div className='fixed inset-0 pointer-events-none z-15'>;
         {[...Array(20)].map((_, i) => (;
@@ -446,14 +483,17 @@ ease: "easeInOut"
         {[...Array (20)].map ((_, i) => (
           <motion.div;
             key={i}
-            className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full';
+            className='absolute w-1 h-1 bg-cyan-400 rounded-full'
             style={{
-
+              left: `${Math.random() * 100}%`
+              top: `${Math.random() * 100}%`
 =======
-              left: `${Math && Math.random() * 100}%`,
-              top: `${Math && Math.random() * 100}%`,
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             }}
             animate={{
               y: [0, -100, 0]
@@ -516,8 +556,14 @@ ease: "easeInOut"
               opacity: [0, 1, 0]
               scale: [0, 1, 0]
             }}
-
             transition={{
+              duration: Math.random() * 10 + 10
+              repeat: Infinity
+              delay: Math.random() * 10
+              ease: 'easeInOut',            }}              ease: "easeInOut"
+
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
               delay: Math.random() * 10,
@@ -544,8 +590,7 @@ ease: "easeInOut"
             }}
           />;
         ))}
-
-      </div>;
+      </div>
 
 
       {/* Neon Glow Effects */}
@@ -574,17 +619,22 @@ export default UltraFuturisticBackground2030;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 
-
 =======
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             transition={{
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
               delay: Math.random() * 10,
+              ease: 'easeInOut',            }}              ease: "easeInOut"
+            }}
+          />
+        ))}
+      </div>
+              ease: 'easeInOut',            }}
 
+
+          />
+        ))}
+      </div>
 
       {/* Neon Glow Effects */}
       <div className='fixed inset-0 pointer-events-none z-25'>
@@ -592,16 +642,24 @@ export default UltraFuturisticBackground2030;
         <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl' />
         <div className='absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl' />
 
-
-
+      </div>
+    </div>
+  );
+}
       </div>
     </div>
   );
 };
 
+export default UltraFuturisticBackground2030;      </div>
+    </div>
+  )
+}
+export default UltraFuturisticBackground2030;
 
 export default UltraFuturisticBackground2030;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+export default UltraFuturisticBackground2030;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

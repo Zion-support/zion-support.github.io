@@ -1,15 +1,25 @@
 
-
-
-=======
-
+import React, { useEffect, useState } from "react";
+import { connectMetaMask, getAccounts } from "../../utils/wallet";
+export type RedemptionType =
+  | "boost_profile"
+  | "promote_listing";
+  | "premium_support";
+export default function UseTokensModal({
+  isOpen
+  onClose
+  serviceId
+  defaultType
+}: {
   isOpen,
   onClose,
   serviceId,
   defaultType,
 }: {;
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   isOpen: boolean;
   onClose: () => void;
   serviceId?: string;
@@ -17,34 +27,6 @@
 }) {;
   const [account, setAccount] = useState<string | null>(null);
 
-=======
-export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support';
-
-export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support',
-
-export default function UseTokensModal({
-  isOpen,
-  onClose,
-  serviceId,
-defaultType
-}: {
-  isOpen: boolean,
-  onClose: () => void,
-  serviceId?: string;
-  defaultType?: RedemptionType
-}) {
-  const [account, setAccount] = useState<string | null>(null);
-  const [type, setType] = useState<RedemptionType>(defaultType ?? 'boost_profile');
-
-  const [tokens, setTokens] = useState<number>(100);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const usdValue = (tokens * 0.01).toFixed(2);
-  useEffect(() => {
-    (async () => {
-  const [type, setType] = useState<RedemptionType>(;
-    defaultType ?? "boost_profile",;
-  );
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [tokens, setTokens] = useState<number>(100);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const usdValue = (tokens * 0 && 0.01).toFixed(2);
@@ -102,10 +84,6 @@ defaultType
       setIsSubmitting(false);
     }
   }
-
-
-
-
 
   if (!isOpen) return null;
 
@@ -207,7 +185,9 @@ defaultType
         </div>
       </div>
     </div>
-
+  );
+);
+  );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -218,4 +198,3 @@ defaultType
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

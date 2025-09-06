@@ -11,6 +11,8 @@
 }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Attach handlers once the DOM is fully loaded to avoid null element errors
 
 document && document.addEventListener('DOMContentLoaded', () => {
@@ -19,6 +21,17 @@ document && document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('post-job')?.addEventListener('click', () => {
     chrome.runtime.sendMessage({ type: 'post-job' })
   })
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+  document.getElementById('resume-search')?.addEventListener('click', () => {
+    chrome.runtime.sendMessage({ type: 'resume-search' })
+  })
+  document.getElementById('view-notifications')?.addEventListener('click', () => {
+    chrome.runtime.sendMessage({ type: 'view-notifications' })
+<<<<<<< HEAD
+  })
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
   document.getElementById('resume-search')?.addEventListener('click', () => {
     chrome.runtime.sendMessage({ type: 'resume-search' })
   })
@@ -26,5 +39,26 @@ document && document.addEventListener('DOMContentLoaded', () => {
     chrome.runtime.sendMessage({ type: 'view-notifications' })
   })
 
+});
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+}),
+;
+;
+// Attach handlers once the DOM is fully loaded to avoid null element errors;
+document.addEventListener('DOMContentLoaded', () => {;
+  document.getElementById('ask')?.addEventListener('click', ask),;
+  document.getElementById('post-job')?.addEventListener('click', () => {;
+    chrome.runtime.sendMessage({ type: 'post-job' });
+  }),;
+  document.getElementById('resume-search')?.addEventListener('click', () => {;
+    chrome.runtime.sendMessage({ type: 'resume-search' });
+  }),;
+  document.getElementById('view-notifications')?.addEventListener('click', () => {;
+    chrome.runtime.sendMessage({ type: 'view-notifications' });
+  });
+}),;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

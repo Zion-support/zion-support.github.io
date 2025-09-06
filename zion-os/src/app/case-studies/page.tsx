@@ -1,8 +1,6 @@
 
-=======
 export default function CaseStudiesPage() {;
   return (;
-
     <div className="min-h-screen py-20">;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     <div className="min-h-screen py-20">;

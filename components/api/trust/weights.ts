@@ -1,16 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 =======
-
-
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {
   getTrustWeights,
   setTrustWeights,
   getDefaultWeights,;
 } from '../../../utils/trust/weights';
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+<<<<<<< HEAD
 
 import {
   getTrustWeights
@@ -44,23 +40,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res && res.setHeader('AllowGET, PUT');
   return res && res.status(405).json({ error: 'Method not allowed' })
 }
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-import {
-  getTrustWeights,
-  setTrustWeights,
-  getDefaultWeights,
-} from '../../../utils / trust / weights';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
 }
     const current = await getTrustWeights ();
     return res.status (200).json ({ current, defaults: getDefaultWeights () });  }

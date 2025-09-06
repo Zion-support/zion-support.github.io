@@ -5,6 +5,7 @@ import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button";
 import { Leaf, Server, Cloud } from 'lucide-react'
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <>;
@@ -22,6 +23,15 @@ import { Leaf, Server, Cloud } from 'lucide-react'
               Sustainable technology solutions that reduce environmental impact without compromising performance
             </p>
           </div>
+=======
+          <div className='mb-16'>
+            <div className='bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16'>
+              <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
+          
+          <div className="mb-16">
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<<<<<<< HEAD
 
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>
@@ -35,6 +45,7 @@ import { Leaf, Server, Cloud } from 'lucide-react'
                     for reducing your carbon footprint.
                   </p>
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   <div className="mt-8">
                     <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                       Explore Green IT Solutions
@@ -42,13 +53,12 @@ import { Leaf, Server, Cloud } from 'lucide-react'
                   </div>
                 </div>
 
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                   <img
                     src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80"
                     alt="Green IT sustainability"
                     className="object-cover"
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [expandedSection, setExpandedSection] = useState<string | null>(null);'
   const [selectedCategory, setSelectedCategory] = useState('all')}
   return()
@@ -629,6 +639,10 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                     <h3 className="text-white font-medium text-xl text-center mb-3">{solution.title}</h3>
                     <p className="text-zion-slate-light text-center">{solution.description}</p>
 
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
                 {greenITSolutions.map((solution, index) => (
                   <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">
                     <div className="flex justify-center mb-4">
@@ -640,11 +654,30 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                 ))}
               </div>
             </div>
+              </div>;
+            </div>;
+                    <h3 className="text-white font-medium text-xl text-center mb-3">{solution && solution.title}</h3>;
+                    <p className="text-zion-slate-light text-center">{solution && solution.description}</p>;
+                {greenITSolutions && greenITSolutions.map((solution, index) => (;
+                  <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">;
+                    <div className="flex justify-center mb-4">;
+                      <solution && solution.icon className="h-12 w-12 text-zion-cyan" />;
+                    </div>;
+                    <h3 className="text-white font-medium text-xl text-center mb-3">{solution && solution.title}</h3>;
+                    <p className="text-zion-slate-light text-center">{solution && solution.description}</p>;
+                  </div>;
+                ))}
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
                     <li>• Decreased electronic waste through better lifecycle management</li>
                     <li>• Support for renewable energy initiatives</li>
                   </ul>
                 </div>
+=======
+                
+<<<<<<< HEAD
 
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                   <h3 className="text-white font-medium text-xl mb-4">Business Benefits</h3>
@@ -659,9 +692,3 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
             </div>
           </div>
 
-          </div>
-        </div>
-      </main>
-    </>
-  )
-<<<<<<< HEAD

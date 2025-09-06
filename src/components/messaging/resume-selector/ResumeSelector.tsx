@@ -18,3 +18,9 @@ import { exportResumeToPDF } from "@/utils/pdfExport",
         logErrorToProduction('Error loading resumes:', { data: error })
       } finally {
         setIsLoading(false)
+<<<<<<< HEAD
+  ;
+};
+  );
+};
+<<<<<<< HEAD

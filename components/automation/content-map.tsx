@@ -1,11 +1,34 @@
 =======
 
-
+}
+) )
+}</ul> </section> <section>) )
+}</ul> </section> </div>)
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>)
+export default function ContentMap({ report }: Props) {;
+ 
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>) 
 export default function ContentMap({ report }: Props) {
   if (!report) return <div>No content map yet. Check back later.</div>;
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
 
 
+=======
+ 
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>) 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function ContentMap({ report }: Props) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   if (!report) return <div>No content map yet. Check back later.</div>;
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
 
@@ -26,6 +49,7 @@ export default function ContentMap({ report }: Props) {
             <li key={sec} className="flex justify-between"><span>{sec |'root'}</span><span className="text-gray-500">{n}</span></li>
 =======
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           ))}
         </ul>
       </section>

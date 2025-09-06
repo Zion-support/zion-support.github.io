@@ -1,7 +1,11 @@
+=======
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 
 ;
 #!/usr/bin/env node,;
@@ -27,3 +31,4 @@ class AutoCommitFixes {,;
     } catch (error) {,;
       console.error('Error writing to log: file:', error.message);
     },;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

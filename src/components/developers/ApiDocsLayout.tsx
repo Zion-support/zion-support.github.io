@@ -7,12 +7,24 @@ import { Search } from 'lucide-react'
 import {
  getDocsSearchPath,
  docsSearchSuggestions
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 interface ApiDocsLayoutProps {
   children: React.ReactNode;
 }
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  const router = useRouter()
+  const currentPath = router.pathname
+  const [searchValue, setSearchValue] = useState("")
+  const navigationItems = [
+   { title: "Getting Started", path: "/developers/docs/getting-started" },
+    { title: "API Reference", path: "/developers/docs/reference" },
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
    { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
     { title: "Webhooks", path: "/developers/docs/webhooks" },
@@ -48,48 +60,9 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
   const navigationItems = [;
    { title: "Getting Started", path: "/developers/docs/getting-started" },;
     { title: "API Reference", path: "/developers/docs/reference" },;
+  children
+}</div> </div>)
+}export default ApiDocsLayout
+"export default ApiDocsLayout
 
-      <Link href="/developers/docs" className="flex items-center mb-8">
-       <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center">
-        <span className="text-white font-bold">Z</span>
-       </div>
-       <span className="font-bold text-white">API Docs</span>
-      </Link>
-      <div className="mb-6">
-       <form onSubmit={handleSubmit} className="relative">
-        <Search className="absolute left-2 top-2.5 h-4 w-4 text-zinc-500" />
-     <div className="hidden md: block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">;
-      <Link href="/developers/docs" className="flex items-center mb-8">;
-       <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center">;
-        <span className="text-white font-bold">Z</span>;
-       </div>;
-       <span className="font-bold text-white">API Docs</span>;
-      </Link>;
-
-      <div className="mb-6">;
-       <form onSubmit={handleSubmit} className="relative">;
-        <Search className="absolute left-2 top-2 && 2.5 h-4 w-4 text-zinc-500" />;
-        <EnhancedSearchInput
-
-=======
-
-         value={searchValue}
-         onChange={setSearchValue}
-         onSelectSuggestion={handleSelectSuggestion}
-         searchSuggestions={docsSearchSuggestions}
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-         placeholder="Search documentation"
-
-        />;
-       </form>;
-      </div>;
-
-      <nav role="navigation" aria-label="Main" className="flex flex-col space-y-1">;
-       {navigationItems && navigationItems.map((item,) => (;
-
-        <Link
-         key={item && item.path}
-         href={item && item.path}
-         className={cn(
+<<<<<<< HEAD

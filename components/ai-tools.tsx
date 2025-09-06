@@ -17,7 +17,10 @@
   Star,
   ExternalLink,
   CheckCircle,
-
+  TrendingUp,
+  Shield,;} from 'lucide-react';import { 
+  TrendingUp,;
+  Shield,;} from 'lucide-react';import { ;
   Brain;
   MessageSquare
   Image
@@ -25,14 +28,22 @@
   Code
   FileText
   Zap
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   Star;
   ExternalLink;
   CheckCircle;
   TrendingUp;
   Shield
+        'Advanced reasoning & analysis',
+        'Web browsing & real-time info',
+        'Plugin ecosystem access',
+        'Code generation & debugging',
+        'Professional writing assistance',
+      ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance';
+=======
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       ];
       pricing: '$20/month'
       marketPrice: '$20/month'
@@ -223,26 +234,26 @@ export default function AiToolsPage() {;
       features: [;
         'Intelligent code completionMulti-language supportIDE integrationCode explanationSecurity vulnerability detection';
       ];
-      pricing: '$10/month',;
-      marketPrice: '$10-20/month',;
-      website: 'https://github && github.com/features/copilot',;
-      color: 'bg-gradient-to-br from-gray-500 to-black',;
-      textColor: 'text-gray-400',;
-      gradient: 'from-gray-400 to-black',;
-      popular: true,;
-      category: 'Code Generation',;
-    },;
-      icon: <Video className='w-8 h-8 text-white' />,;
-      title: 'Runway ML',;
-      description:;
-        'Professional AI video generation and editing tools for filmmakers, marketers, and content creators.',;
-      features: [;
-        'AI video generation',;
-        'Video editing tools',;
-        'Motion tracking',;
-        'Green screen removal',;
-        'Professional workflows',;
-      ],      pricing: '$12-76/month',        'AI video generationVideo editing toolsMotion trackingGreen screen removalProfessional workflows';
+      pricing: '$20/month'
+      marketPrice: '$20/month'
+      website: 'https://claude.ai'
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+      textColor: 'text-orange-400'
+      gradient: 'from-orange-400 to-red-500'
+      popular: false
+      category: 'Conversational AI'
+    }
+      icon: <FileText className='w-8 h-8 text-white' />
+      title: 'Jasper AI'
+      description:
+        'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.'
+      features: [
+        'Content generation'
+        'Brand voice training'
+        'SEO optimization'
+        'Team collaboration'
+        'Enterprise integrations'
+      ],      pricing: '$39-125/month',        'Content generationBrand voice trainingSEO optimizationTeam collaborationEnterprise integrations'
       ];
       pricing: '$12-76/month',;
       marketPrice: '$15-100/month',;
@@ -426,89 +437,6 @@ export default function AiToolsPage() {;
             Curated AI tools and services that actually work. Each tool has been
             tested and verified to provide real value for professionals and
             businesses. No hype - just results.          </p>      </Head>
-  ];
-
-;
-  const aiMarketStats = [;
-
-    {
-
-      title: 'AI Market Size',
-      value: '$136.6B',
-      growth: '+37% YoY',
-      description: 'Global AI market value in 2024'
-    };
-    {
-      title: 'AI Adoption Rate',
-      value: '35%',
-      growth: '+12% YoY',
-      description: 'Businesses actively using AI tools'
-    };
-    {
-      title: 'AI Investment',
-      value: '$93.5B',
-      growth: '+28% YoY',
-      description: 'Global AI investment in 2024'
-    };
-    {
-      title: 'AI Productivity Gain',
-      value: '40%',
-      growth: '+15% YoY',
-
-    }
-  ];
-;
-  return (
-    <>;
-      <Head>;
-        <title>;
-          AI Tools & Services | Zion Tech Group - Real AI Solutions with Pricing;
-        </title>;
-
-      name: 'Conversational AI',
-      description: 'Chatbots, virtual assistants, and language models',
-    tools: 3,
-      avgPrice: '$20/month'
-    };
-    {
-      name: 'Image Generation',
-      description: 'AI-powered art, design, and visual content creation',
-    tools: 1,
-      avgPrice: '$20/month'
-    };
-    {
-      name: 'Code Generation',
-      description: 'AI-assisted programming and development tools',
-      tools: 1,
-      avgPrice: '$10/month'
-    };
-    {
-      name: 'Video Generation',
-      description: 'AI video creation and editing tools',
-      tools: 1,
-      avgPrice: '$44/month'
-    };
-    {
-      name: 'Content Creation',
-      description: 'AI-powered writing and content generation',
-      tools: 1,
-      avgPrice: '$82/month'
-
-    }
-  ];
-
-  return (
-
-    <>
-      <Head>
-        <title>AI Tools & Services | Zion Tech Group - Real AI Solutions with Pricing</title>
-        <meta name="description" content="Discover real AI tools and services including ChatGPT, Midjourney, GitHub Copilot, and more. All tools include real pricing, features, and direct links." />
-        <meta property="og:title" content="AI Tools & Services | Zion Tech Group" />
-        <meta property="og:description" content="Real AI tools with pricing and direct links to help boost your productivity and creativity." />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
@@ -543,19 +471,17 @@ export default function AiToolsPage() {;
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
             ))}
+          </div>
+        </div>
+      </section>
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* AI Tools Grid */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               Curated AI Tools & Services
             </h2>
@@ -717,11 +643,6 @@ export default function AiToolsPage() {;
                       ))}
                     </ul>
 
-=======
-                    <div className="flex items-center justify-between">
-                      <Button
-                        href={tool.website}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         variant="primary"
                         size="sm"
@@ -738,17 +659,21 @@ export default function AiToolsPage() {;
                   </div>
                 </div>
               </Card>
+=======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ))}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* AI Categories Overview */}
-
-
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
               AI Tool Categories
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Understanding the different types of AI tools helps you build a
@@ -804,19 +729,17 @@ export default function AiToolsPage() {;
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
             ))}
+          </div>
+        </div>
+      </section>
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* AI Implementation Guide */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               Getting Started with AI Tools
             </h2>
@@ -879,16 +802,4 @@ export default function AiToolsPage() {;
       </section>
               Get AI Consultation
 
-=======
-              className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'            >              href="/micro-saas"
-              variant="primary"
-              size="lg"
-              className="bg-cursor-blue hover:bg-cursor-blue-dark"
-              Explore More Tools
-            </Button>
-
-            <Button
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

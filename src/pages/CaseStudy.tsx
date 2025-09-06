@@ -2,6 +2,8 @@
 
 import { ArrowLeft } from 'lucide-react'
 
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {  Breadcrumb
   BreadcrumbList
   BreadcrumbItem
@@ -10,7 +12,17 @@ import {  Breadcrumb
 } from '@/components/ui/breadcrumb'
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import { getBreadcrumbsForPath } from '@/utils/routeUtils'
+<<<<<<< HEAD
+export default function CaseStudy() {;
+  const router = useRouter();
+  const slug = router.query.slug as string;
+  const study = CASE_STUDIES.find(s => s.slug === slug);  const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator} from '@/components/ui/breadcrumb',
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function CaseStudy() {
   const router = useRouter()
   const slug = router.query.slug as string
@@ -27,6 +39,8 @@ import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import { getBreadcrumbsForPath } from '@/utils/routeUtils';
 
 
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   if (!study) {
     return (
 
@@ -62,54 +76,41 @@ export default function CaseStudy() {;
     <>
       <SEO title={study.title} description={study.excerpt} />
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <BreadcrumbJsonLd breadcrumbs={breadcrumbs} />
           <Breadcrumb className="mb-4 text-sm text-muted-foreground">
             <BreadcrumbList>
               <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-
-                  <Link href="/">Home</Link>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbLink asChild>
-
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-
-                  <span>{study.title}</span>
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-          <Button
-            variant="outline"
-            className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
-            asChild
-          >
-
-          </Button>
-          <img
-            src={study.companyLogo}
-            alt={`${study.company} logo`}
-
-          />
-          <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>
-          <p className="text-zion-slate-light mb-8">{study.excerpt}</p>
-          {study.pdf && (
-
-            </Button>
-          )}
-          <div
-            className="prose prose-invert"
-            dangerouslySetInnerHTML={{ __html: study.content }}
-          />
 <<<<<<< HEAD
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
 =======
-  Breadcrumb,
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+          </p>;
+        </div>;
+      </div>;
+    </>;
+  );
+}
+<<<<<<< HEAD
+
+  );
+}
+
+import Link from 'next / link';
+import { use_router } from 'next / router';
+import { CASE_STUDIES } from '@/data / case - studies';
+import { SEO } from '@/components / SEO';
+import { Button } from '@/components / ui / button';
+import { ArrowLeft } from 'lucide-react';
+import {  Breadcrumb,
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,

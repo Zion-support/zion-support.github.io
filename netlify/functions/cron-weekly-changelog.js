@@ -118,22 +118,16 @@ exports.handler = async function() {
     await upsertFile({ owner, repo, path: 'data/reports/changelog/weekly-changelog.json', content: JSON.stringify(summary, null, 2), message: 'chore(automation): weekly changelog summary', token }),
     return { statusCode: 200, body: JSON.stringify({ ok: true, commits: commits.length }) }
   } catch (e) {
-    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }
+}
+    await upsertFile({ owner, repo, path: 'data/reports/changelog/weekly-changelog.json', content: JSON.stringify(summary, null, 2), message: 'chore(automation): weekly changelog summary', token })
+    return { statusCode: 200, body: JSON.stringify({ ok: true, commits: commits.length }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 
 },
-
-=======
-      path: 'data / reports / changelog / weekly - changelog.json',
-      content: JSON.stringify (summary, null, 2),
-      message: 'chore (automation): weekly changelog summary',
-      token,
-    });
-    return {
-      status_code: 200,
-      body: JSON.stringify ({ ok: true, commits: commits.length }),
-    }
-=======
 
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
@@ -154,7 +148,10 @@ exports.handler = async function() {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 },
+<<<<<<< HEAD
 
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

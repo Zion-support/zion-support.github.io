@@ -85,27 +85,40 @@ export function PartnerReferralLinks() {;
   const [selectedCampaign, setSelectedCampaign] = useState<string>('default');
   const [customParam, setCustomParam] = useState<string>('');
   const [generatedLinks, setGeneratedLinks] = useState<;
-    { name: string; link: string }[];
-  >([]);
+    { name: string; link: string }[]
+  >([])
+  // Get the base referral link
+  const baseLink = getReferralLink()
+  const handleCopyLink = (link: string) => {
+    navigator.clipboard.writeText(link);    toast({
+      title: 'Link copied!'
+      description: 'The referral link has been copied to your clipboard'
+      variant: 'default'
+    })
+  }
+  const handleGenerateLink = () => {
+    if (baseLink) {
+      const url = new URL(baseLink)
+      // Add custom campaign parameter if selected
+      if (selectedCampaign !== 'default') {
+        url.searchParams.append('campaign', selectedCampaign)
+      }
 
-  // Get the base referral link;
-  const baseLink = getReferralLink();
+      // Add custom parameter if provided;
+      if (customParam) {;
+        url && url.searchParams.append('source', customParam);
+      }
 
-  const handleCopyLink = (link: string) => {;
-    navigator && navigator.clipboard.writeText(link);    toast({;
-      title: 'Link copied!',;
-      description: 'The referral link has been copied to your clipboard',;
-      variant: 'default',;
-    });
-  };
+      const newLink = {;
+        name: `${selectedCampaign}${customParam ? `-${customParam}` : ''}`,;
+        link: url && url.toString(),;
+      };
 
-  const handleGenerateLink = () => {;
-    if (baseLink) {;
-      const url = new URL(baseLink);
-
-      // Add custom campaign parameter if selected;
-      if (selectedCampaign !== 'default') {;
-        url && url.searchParams.append('campaign', selectedCampaign);
+      setGeneratedLinks(prev => [...prev, newLink]);
+      setIsDialogOpen(false);
+      setCustomParam('');
+    }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   };
 
   const handleDownloadLinks = () => {;
@@ -153,12 +166,24 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Label } from "@/components/ui/label",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 
+=======
 
         url.searchParams.append("source", customParam)
       }
       
       const newLink = {
         url.searchParams.append('source', customParam)
+      }
+      
+      // Add custom parameter if provided
+      if (customParam) {
+        url.searchParams.append("source", customParam)
+      }
+      
+      const newLink = {
+        url.searchParams.append('source', customParam)
+        url.searchParams.append("source", customParam)
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
       
       const newLink = {
@@ -190,12 +215,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
         link: url.toString()
       },
       
+<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-      setGeneratedLinks(prev => [...prev, newLink]),
-      setIsDialogOpen(false),
-      setCustomParam("")
-    }
-  },
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const handleDownloadLinks = () => {
     const allLinks = [
@@ -225,41 +248,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <span>Your Referral Link</span>
-
-                </CardTitle>
-              </CardHeader>
-              <CardContent className='pb-4'>
-                <div className='flex space-x-2'>
-                className='bg-zion-purple hover:bg-zion-purple-dark'>;
-                Generate Link;
-              </Button>;
-            </DialogFooter>;
-          </DialogContent>;
-        </Dialog>;
-      </div>;
-
-      <div className='grid gap-4'>;
-        {generatedLinks && generatedLinks.length > 0 ? (;
-          generatedLinks && generatedLinks.map((item, index) => (;
-            <Card
-              key={index}
-              className='bg-zion-blue-dark border-zion-blue-light'>;
-              <CardHeader className='pb-2'>;
-                <CardTitle className='text-base flex items-center justify-between'>;
-                  <div className='flex items-center gap-2'>;
-                    <Link className='h-4 w-4 text-zion-purple' />;
-                    <span>{item && item.name || 'Campaign Link'}</span>                  </div>;
-                </CardTitle>;
-              </CardHeader>;
-              <CardContent className='pb-4'>;
-                <div className='flex space-x-2'>;
-                  <Input
-                    value={item.link}
-                    readOnly
-
-                    className="font-mono text-xs"
-                  />
-
                   </Button>
                 </div>
               </CardContent>

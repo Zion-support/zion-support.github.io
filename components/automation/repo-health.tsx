@@ -1,3 +1,20 @@
+import fs from 'fs',
+import path from 'path';
+import type { GetStaticProps } from 'next';
+interface Report {
+  generatedAt: string;
+  commits: { last7d: number, last30d: number },
+  changes: { last7dFiles: string[] },
+  largestFiles: { file: string, bytes: number }[],
+  stalePages: { file: string, lastCommitAt: string }[]
+}
+ 
+
+ 
+
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -11,6 +28,7 @@ interface Report {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -50,6 +68,8 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
   }
 
 export default function RepoHealth({ report }: Props) {
+export default function RepoHealth(): any ({ report }: Props) {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   if (!report) return <div>No report yet. Check back soon.</div>;
 
@@ -80,6 +100,14 @@ export default function RepoHealth({ report }: Props) {
         </ul>
       </section>
     </div>
+export default function RepoHealth({ report }: Props) {
+=======
+export default function RepoHealth({ report }: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   if (!report) return <div>No report yet. Check back soon.</div>;
   return (
 
@@ -109,10 +137,11 @@ export default function RepoHealth({ report }: Props) {
           {report && report.stalePages.map((p, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.file}</span><span className="text-gray-500">{new Date(p && p.lastCommitAt).toLocaleDateString()}</span></li>;
           ))}
-
-        </ul>;
-      </section>;
-    </div>;
+        </ul>
+      </section>
+    </div>
+);
+}
   );
 }
 

@@ -1,20 +1,8 @@
 
-
-import { useState, useEffect } from "react",
-import { useSearchParams } from "react-router-dom",
-import { AppLayout } from "@/layout/AppLayout",
-import { ITServicePricingTable } from "@/components/services/ITServicePricingTable",
-import { GlobalServiceSection } from "@/components/GlobalServiceSection",
-import { QuoteFormSection } from "@/components/QuoteFormSection",
-import { TrustedBySection } from "@/components/TrustedBySection",
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",
-import { toast } from "@/hooks/use-toast",
-import { PageHero } from "@/components/services/PageSections/PageHero",
-import { CountryTabs } from "@/components/services/PageSections/CountryTabs",
-import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection",
-import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // Show success toast if redirected from successful payment
   useEffect(() => {
     if (success === "true") {
@@ -22,8 +10,6 @@ import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceP
         title: "Payment Successful"
         description: "Your IT onsite service request has been received. Our team will contact you shortly."})
     }
-
-=======
 
   }, [success]),
   
@@ -33,14 +19,6 @@ import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceP
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  // Filter countries based on search query
-  const filteredCountries = onsiteServicePricing
-    .filter(country =>
-      country.country.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-    .sort((a, b) => {
-      // First, sort by popular status
-
   const handleCountrySelect = (country: CountryPricing) => {
     setSelectedCountry(country)
     // Scroll to the service details section
@@ -53,11 +31,13 @@ import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceP
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <AppLayout>;
       <section className="py-16 bg-zion-blue">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
+=======
 
 
 
@@ -114,3 +94,5 @@ import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceP
     </AppLayout>
   )
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

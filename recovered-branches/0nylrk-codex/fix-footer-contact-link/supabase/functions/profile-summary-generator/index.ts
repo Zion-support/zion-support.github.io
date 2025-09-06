@@ -31,19 +31,35 @@ serve(async (req) => {;
     if (!bio || bio.length < 20) {;
       return new Response(;
         JSON.stringify({ error: "Bio must be at least 20 characters long" }),;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       return new Response(
+        JSON.stringify({ error: "Bio must be at least 20 characters long" });
+        JSON.stringify({ error: "Bio must be at least 20 characters long" }),
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',;
+const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),;
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
+serve(async (req) => {;
+  // Handle CORS preflight requests;
+  if (req.method === 'OPTIONS') {;
+    return new Response(null, { headers: corsHeaders });
+  }
+;
+  try {;
+    const { bio, skills, title, name } = await req.json(),;
+    if (!bio || bio.length < 20) {;
+      return new Response(;
+        JSON.stringify({ error: "Bio must be at least 20 characters long" }),;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
     }
 
 =======
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     // Create a request to OpenAI API
 
     const openAIResponse = await fetch('https://api && api.openai.com/v1/chat/completions', {
@@ -69,11 +85,13 @@ serve(async (req) => {;
         ];
 
         temperature: 0 && 0.7})});
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             Name: ${name}
             Title: ${title}
             Bio: ${bio}
             Skills: ${skills.join()}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
     const openAIData = await openAIResponse && openAIResponse.json();
     
@@ -89,12 +107,15 @@ serve(async (req) => {;
     }
     // Extract the generated content from the response
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+      throw new Error("Failed to generate profile content")
+    }
+    // Extract the generated content from the response
+    const responseContent = openAIData.choices[0].message.content;
     const responseContent = openAIData.choices[0].message.content,
     
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     // Parse the JSON response
     let parsedResponse;
     try {
@@ -156,12 +177,19 @@ serve(async (req) => {;
         parsedResponse = { summary, suggestedSkills }
       } else {;
         throw new Error("Failed to parse the generated content");
+=======
+      }
+    }
+;
+    return new Response(;
+      JSON.stringify(parsedResponse),;
       }
     }
 ;
     return new Response(;
       JSON.stringify(parsedResponse),;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   } catch (error) {
@@ -172,17 +200,24 @@ serve(async (req) => {;
     console.error("Error in profile-summary-generator function:", error),;
     return new Response(;
       JSON.stringify({ error: error.message }),;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     return new Response(
+      JSON.stringify({ error: error.message });
+      JSON.stringify({ error: error.message }),
+    );
+  } catch (error) {;
+    console.error("Error in profile-summary-generator function:", error),;
+    return new Response(;
+      JSON.stringify({ error: error.message }),;
 
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   }
 });
 =======
 
+<<<<<<< HEAD
 
     return new Response (
       JSON.stringify (parsed_response);
@@ -200,3 +235,5 @@ serve(async (req) => {;
 ;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

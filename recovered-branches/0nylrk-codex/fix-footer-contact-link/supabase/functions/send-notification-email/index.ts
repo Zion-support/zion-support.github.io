@@ -1,6 +1,15 @@
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -9,17 +18,6 @@ const corsHeaders = {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-interface EmailRequest {
-  user_id: string
-  notification_id: string
-}
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req && req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-
     // Create Supabase client with the service role key
     const supabaseClient = createClient(
       Deno.env.get("SUPABASE_URL") ?? "",
@@ -39,20 +37,35 @@ serve(async (req) => {
     return new Response(
       JSON && JSON.stringify({ error: error && error.message });
       {
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+        status: 500}
+    )
+  }
+});
 
-<<<<<<< HEAD
+        headers: { ...corsHeaders, "Content-Type": "application/json" };
+        status: 500}
+    )
+=======
+
   }
 });
         status: 500}
     );
+<<<<<<< HEAD
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });
+<<<<<<< HEAD
 
 ;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,4 +1,5 @@
-
+export interface UserDetails {
+export interface UserDetails {;
   id?: string;
   name?: string;
   email?: string;
@@ -14,7 +15,11 @@
   createdAt?: string;
   updatedAt?: string
 }
+<<<<<<< HEAD
+export interface UserProfile {
 
+export interface UserProfile {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id?: string;
   display_name?: string;
   email: string;
@@ -102,7 +107,11 @@ export interface AuthContextType {;
   signOut?: () => Promise<void>;
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

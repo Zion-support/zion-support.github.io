@@ -1,15 +1,131 @@
+import { useEffect, useMemo, useState  } from 'react';
+import { useRouter  } from 'next/router';
+import ProgressBar from '../../components/learn/ProgressBar',
+import Quiz from '../../components/learn/Quiz',
+import CertificatePreview from '../../components/learn/CertificatePreview';
+import CoachWidget from '../../components/learn/CoachWidget';
+export default function CourseView() {
 
+import {useEffect, useMemo, useState} from 'react';
+import {useRouter} from 'next/router';
+import { useEffect, useMemo, useState } from 'react';
+import { useRouter } from 'next/router';
 import ProgressBar from '../../components/learn/ProgressBar';
 import Quiz from '../../components/learn/Quiz';
 import CertificatePreview from '../../components/learn/CertificatePreview';
 import CoachWidget from '../../components/learn/CoachWidget';
+export default function CourseView() {;
+  const router = useRouter();
+  const { courseId } = router.query as { courseId: string }
+  const [course, setCourse] = useState<any>(null);
+  const [progress, setProgress] = useState<any>({
+    percent: 0
+    completedLessons: []
+  });  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
+  const [finalPassed, setFinalPassed] = useState(false);
+  useEffect(() => {
+    if (!courseId) return;
+    async function load() {
+      const [courseResp, progResp] = await Promise.all([
+        fetch(`/api/learn/courses/${courseId}`)
+        fetch(`/api/learn/progress?userId=demo-user`),      ]);
+      const courseData = await courseResp.json();
+      const progData = await progResp.json();
+      setCourse(courseData.course);
+      const cp = (progData.progress && progData.progress[courseId]) |{
+        percent: 0
+        completedLessons: []
+      }
+      setProgress(cp);
+      setCurrentLessonId(courseData?.course?.lessons?.[0]?.id |null);
+    }
+    load();
+  }, [courseId]);
+
+  async function onFinalQuizComplete(score: number) {
+    const needed = course?.finalQuiz?.passThreshold |0;
+=======
+=======
+        fetch(`/api/learn/courses/${courseId}`);
+        fetch(`/api/learn/progress?userId=demo-user`)
+      ]);
+      const courseData = await courseResp.json();
+      const progData = await progResp.json();
+      setCourse(courseData.course);
+      const cp = (progData.progress && progData.progress[courseId]) || { percent: 0, completedLessons: [] },
+      setProgress(cp);
+      setCurrentLessonId(courseData?.course?.lessons?.[0]?.id || null)
+    }
+    load()
+  }, [courseId]);
+
+  const currentLesson = useMemo(() => course?.lessons?.find((l: any) => l.id === currentLessonId), [course, currentLessonId]);
+
+  async function markLessonComplete(lessonId: string) {
+    const completedCount = (progress.completedLessons || []).includes(lessonId)
+      ? (progress.completedLessons || []).length
+      : (progress.completedLessons || []).length + 1;
+    const percent = Math.round((completedCount / (course?.lessons?.length || 1)) * 100);
+    const resp = await fetch('/api/learn/progress', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId: 'demo-user', courseId, lessonId, percent })
+    });
+    const data = await resp.json();
+    setProgress(data.progress)
+  }
+
+  function onModuleQuizComplete(score: number) {
+    // For demo, simply mark as completed when quiz attempted
+    if (currentLessonId) markLessonComplete(currentLessonId)
+  }
+
+  async function onFinalQuizComplete(score: number) {
+    const needed = course?.finalQuiz?.passThreshold || 0;
+    const passed = score >= needed;
+    setFinalPassed(passed)
+  }
+
+
+  const currentLesson = useMemo(;
+    () => course?.lessons?.find((l: any) => l && l.id === currentLessonId),;
+    [course, currentLessonId];
+  );
+  async function markLessonComplete(): any (lessonId: string) {;
+    const completedCount = (progress && progress.completedLessons || []).includes(lessonId);
+      ? (progress && progress.completedLessons || []).length;
+      : (progress && progress.completedLessons || []).length + 1;
+    const percent = Math && Math.round(;
+      (completedCount / (course?.lessons?.length || 1)) * 100;
+    );
+    const resp = await fetch('/api/learn/progress', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON && JSON.stringify({;
+        userId: 'demo-user',;
+        courseId,;
+        lessonId,;
+        percent,;
+      }),;
+    });
+    const data = await resp && resp.json();
+    setProgress(data && data.progress);  }
+
+  function onModuleQuizComplete(): any (score: number) {;
+    // For demo, simply mark as completed when quiz attempted;
+    if (currentLessonId) markLessonComplete(currentLessonId);  }
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   async function onFinalQuizComplete(): any (score: number) {;
     const needed = course?.finalQuiz?.passThreshold || 0;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const passed = score >= needed;
     setFinalPassed(passed);  }
 
   if (!course) return <div>Loading...</div>;
+
+=======
   return (
 
                   <button
@@ -19,15 +135,6 @@ import CoachWidget from '../../components/learn/CoachWidget';
                   </button>;
                 </li>;
 
-=======
-    <div className="grid lg:grid-cols-3 gap-6">
-      <div className="lg:col-span-2 space-y-4">
-        <div>
-=======
-
-import {useEffect, useMemo, useState} from 'react';
-import {useRouter} from 'next/router';
-=======
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -35,9 +142,74 @@ import ProgressBar from '../../components/learn/ProgressBar';
 import Quiz from '../../components/learn/Quiz';
 import CertificatePreview from '../../components/learn/CertificatePreview';
 import CoachWidget from '../../components/learn/CoachWidget';
+export default function CourseView(req, res) {
+  try {
+  const router = useRouter();
+  const { courseId } = router.query as { courseId: string };
+  const [course, setCourse] = useState<any>(null);
+  const [progress, setProgress] = useState<any>({ percent: 0, completedLessons: [] }),;
+  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
+  const [finalPassed, setFinalPassed] = useState(false);
+  useEffect(() => {;
+    if (!courseId) return,;
+    async function load() {;
+      const [courseResp, progResp] = await Promise.all([;
+        fetch(`/api/learn/courses/${courseId}`);
+        fetch(`/api/learn/progress?userId=demo-user`);
+      ]),;
+      const courseData = await courseResp.json();
+      const progData = await progResp.json();
+      setCourse(courseData.course);
+      const cp = (progData.progress && progData.progress[courseId]) || { percent: 0, completedLessons: [] },;
+      setProgress(cp);
+      setCurrentLessonId(courseData?.course?.lessons?.[0]?.id || null);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    load();
+  }, [courseId]),;
+  const currentLesson = useMemo(() => course?.lessons?.find((l: any) => l.id === currentLessonId), [course, currentLessonId]),;
+  async function markLessonComplete(lessonId: string) {;
+    const completedCount = (progress.completedLessons || []).includes(lessonId);
+      ? (progress.completedLessons || []).length;
+      : (progress.completedLessons || []).length + 1;
+    const percent = Math.round((completedCount / (course?.lessons?.length || 1)) * 100);
+    const resp = await fetch('/api/learn/progress', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON.stringify({ userId: 'demo-user', courseId, lessonId, percent });
+    }),;
+    const data = await resp.json();
+    setProgress(data.progress);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  function onModuleQuizComplete(score: number) {;
+    // For demo, simply mark as completed when quiz attempted;
+    if (currentLessonId) markLessonComplete(currentLessonId);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  async function onFinalQuizComplete(score: number) {;
+    const needed = course?.finalQuiz?.passThreshold || 0;
+    const passed = score >= needed;
+    setFinalPassed(passed);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  if (!course) return <div>Loading...</div>,
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="grid lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2 space-y-4">
@@ -61,6 +233,18 @@ import CoachWidget from '../../components/learn/CoachWidget';
           <section className="lg:col-span-3 space-y-4">
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                  </button>;
+                </li>;
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </ul>
+          </aside>
+          <section className="lg:col-span-3 space-y-4">
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             {currentLesson ? (
               <div className="border rounded p-4">
                 <div className="font-medium">{currentLesson.title}</div>
@@ -86,6 +270,8 @@ import CoachWidget from '../../components/learn/CoachWidget';
         </div>
       </div>
     </div>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <CoachWidget />
         <div className="border rounded p-3">
           <div className="font-medium">Profile Boost</div>
@@ -94,20 +280,11 @@ import CoachWidget from '../../components/learn/CoachWidget';
         </div>
       </div>
     </div>
-
-
+);
 
 }
-
-=======
-
   )
 }
-
-    </div>);
-;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 

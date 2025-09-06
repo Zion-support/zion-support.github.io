@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline';
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const contactMethods = [
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
@@ -56,33 +57,29 @@ const faqs = [;
     question: 'Do you provide ongoing support?'
     answer: 'Yes, we provide comprehensive ongoing support including technical assistance, updates, training, and optimization services to ensure your AI solutions continue to deliver value.'}
   {
+    question: 'What security measures do you have?'
+    answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}]
 
-    question: 'What security measures do you have?',
-    answer: 'We implement enterprise - grade security including end - to - end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}];
-export default /**
- * ContactPage - Function description
- */
-function ContactPage() {
-
+export default function ContactPage() {;
+  return (;
+    <div className=&quot;bg-black&quot;>
+export default function ContactPage() {
   return (
-    <div className=&quot;bg - black & quot;>;
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    <div className="bg-black">
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
           <div className=&quot;text - center & quot;>;
             <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
               Get in{' '}
-
-
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                Touch
+              </span>
+            </h1>
+            <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+              Ready to transform your business with AI? Let's discuss how our cutting-edge
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Ready to transform your business with AI? Let's discuss how our cutting-edge 
-
-
               technology can accelerate your growth and innovation.
             </p>
           </div>
@@ -101,31 +98,33 @@ function ContactPage() {
         </div>;
       </div>;
       {/* Contact methods */}
-      <div className=&quot;mx - auto max - w-7xl px - 6 sm:px - 6 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
-          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Contact Us</h2>;
-          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            Multiple ways to reach us;
-          </p>;
-        </div>;
-        <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
-          <dl className=&quot;grid max - w-xl grid - cols - 1 gap - x-8 gap - y-16 lg:max - w-none lg:grid - cols - 3&quot;>;
-            {contact_methods.map ((method) => (
-              <div key={method.name} className=&quot;flex flex - col group & quot;>;
-                <dt className=&quot;flex items - center gap - x-3 text - base font - semibold leading - 7 text - white & quot;>;
-                  <method.icon className=&quot;h - 5 w - 5 flex - none text - blue - 400 & quot; aria - hidden=&quot;true & quot; />;
+      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Contact Us</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Multiple ways to reach us
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+            {contactMethods.map((method) => (
+              <div key={method.name} className="flex flex-col group">
+                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                  <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {method.name}
-
                 </dt>
-
+                <dd className=&quot;mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300&quot;>
+                  <p className=&quot;flex-auto&quot;>{method.description}</p>
+                  <p className=&quot;mt-6&quot;>
+                    <a
+                      href={method.href}
+                      className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200&quot;
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
                   <p className="flex-auto">{method.description}</p>
                   <p className="mt-6">
                     <a 
                       href={method.href} 
                       className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
-
-
                     >
                       {method.value} <span aria-hidden=&quot;true&quot;>→</span>
                     </Link>
@@ -232,14 +231,18 @@ export default function ContactPage() {
         </div>;
       </div>;
       {/* Contact form */}
-
-
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
+          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Send us a message</h2>
+          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Send us a message</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             Let's start a conversation
           </p>
         </div>
@@ -448,14 +451,14 @@ export default function ContactPage() {
         </div>;
       </div>;
       {/* FAQ */}
-
-
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
+          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Frequently Asked</h2>
+          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Frequently Asked</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-
-
             Common questions
           </p>
         </div>
@@ -468,13 +471,6 @@ export default function ContactPage() {
                   {faq.question}
                 </dt>;
                 <dd className=&quot;text - base leading - 7 text - gray - 300 & quot;>;
-=======
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Frequently Asked</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Common questions
           </p>
@@ -495,13 +491,17 @@ export default function ContactPage() {
         </div>;
       </div>;
       {/* CTA section */}
-
-
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl text-center&quot;>
+          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             Ready to get started?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">

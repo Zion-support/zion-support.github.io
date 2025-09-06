@@ -37,9 +37,15 @@ function handler() {
     { label: 'CAC/LTV ratio', value: '1:5.6', trend: 0.4 }];
   res.status(200).json(data)
 =======
+}
+
+=======
     { label: 'CAC / LTV ratio', value: '1:5.6', trend: 0.4 }];
   res.status (200).json (data);
 
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

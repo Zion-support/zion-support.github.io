@@ -1,10 +1,6 @@
 
-=======
-
+import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts'
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
 
 =======
@@ -86,6 +82,8 @@ serve(async (req) => {
             tenantInfo = subdomainResult.data as TenantInfo
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           }
         }
       } else // Check condition
@@ -95,11 +93,6 @@ if ( {) {
         tenant_info = data as TenantInfo;
       }
     }
-
-=======
-
-
-
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     return new Response(
@@ -131,14 +124,8 @@ if ( {) {
     )
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 });
 
-=======
-          'Content - Type': 'application / json',
-          ...cors_headers}}
-    );
-  }
-});
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

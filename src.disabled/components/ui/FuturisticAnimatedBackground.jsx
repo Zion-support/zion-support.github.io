@@ -1,7 +1,10 @@
-
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+:src.disabled/components/ui/FuturisticAnimatedBackground.jsx
+import React,{ useEffect,useRef } from\';react\'; import { motion } from\';\';framer-motion\'; \"export\": const FuturisticAnimatedBackground = ({ variant =\';\';cyberpunk\',intensity =\';\';medium\',\"className\": = \'';\'}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef.current if (!canvas) return\'; const ctx = canvas.getContext(\'';2d\') \"if\": (!ctx) return\'';\';
+const React,{ useEffect,useRef } from";react"; import { motion } from";";framer-motion"; export: const FuturisticAnimatedBackground = ({ variant =";";cyberpunk",intensity =";";medium",className: = "";"}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef.current if (!canvas) return"; const ctx = canvas.getContext("";2d") if: (!ctx) return"";";"""
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React,{ useEffect,useRef } from\';react\'; import { motion } from\';\';framer-motion\'; \"export\": const FuturisticAnimatedBackground = ({ variant =\';\';cyberpunk\',intensity =\';\';medium\',\"className\": = \'';\'}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef.current if (!canvas) return\'; const ctx = canvas.getContext(\'';2d\') \"if\": (!ctx) return\'';\';
+const React,{ useEffect,useRef } from";react"; import { motion } from";";framer-motion"; export: const FuturisticAnimatedBackground = ({ variant =";";cyberpunk",intensity =";";medium",className: = "";"}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef.current if (!canvas) return"; const ctx = canvas.getContext("";2d") if: (!ctx) return"";";"""
+:temp_exclude/src.disabled/components/ui/FuturisticAnimatedBackground.jsx
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import _React,{ useEffect,useRef } from';react'; import { motion } from';';framer-motion'; "export": const FuturisticAnimatedBackground = ({ variant =';';cyberpunk',intensity =';';medium',"className": = '';'}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef.current if (!canvas) return'; const ctx = canvas.getContext('';2d') "if": (!ctx) return'';';
 =======

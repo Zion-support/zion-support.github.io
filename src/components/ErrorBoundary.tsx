@@ -1,20 +1,22 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import './ErrorBoundary.css';
+interface Props {
+  children: ReactNode;
+}
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+}
+
+class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
   }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo,
-    });
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
   }
 
   handleReload = () => {
@@ -58,13 +60,5 @@ import './ErrorBoundary.css';
                 Reload Page
               </button>
             </div>
-          </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-<<<<<<< HEAD
-
+export default ErrorBoundary;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

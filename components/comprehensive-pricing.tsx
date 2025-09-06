@@ -3,12 +3,181 @@ import Head from 'next/head';
 
 import {
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+=======
+    
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+import Head from 'next/head';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+import {
+  Check
+  Star
+  Zap
+  Shield
+  Users
+  Globe
+  ArrowRight
+  ExternalLink
+  TrendingUp
+  Clock
+  Target
+  Building
+  Rocket
+  Award
+  DollarSign
+  ChartBar
+  Lock
+  Cpu
+  Database
+  Cloud
+  Smartphone
+  Palette
+  Search
+  MessageSquare
+  FileText
+  Calendar
+  CreditCard
+  BarChart3
+  Settings
+  Zap as ZapIcon
+  Code
+  BookOpen
+  Activity
+  Database as DatabaseIcon
+  Play
+  Mail
+  Phone
+  MapPin
+  Filter
+  Grid
+  List
+  ChevronDown
+  ChevronUp
+  Sparkles
+  FlaskConical
+  Dna
+  Car
+  Leaf
+  Factory
+  Truck
+  Microscope
+  GraduationCap
+  ShieldCheck
+  Brain
+  Atom
+  Globe2
+  Bot
+  Eye
+  Trophy
+  FlaskConical as FlaskIcon
+  Dna as DnaIcon
+  Car as CarIcon
+  Leaf as LeafIcon
+  Factory as FactoryIcon
+  Truck as TruckIcon
+  Microscope as MicroscopeIcon
+  GraduationCap as GraduationCapIcon
+  ShieldCheck as ShieldCheckIcon
+  Crown
+  Gem
+  Diamond;
+  Check,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Clock,
+  Target,
+  Building,
+  Rocket,
+  Award,
+  DollarSign,
+  ChartBar,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Settings,
+  Zap as ZapIcon,
+  Code,
+  BookOpen,
+  Activity,
+  Database as DatabaseIcon,
+  Play,
+  Mail,
+  Phone,
+  MapPin,
+  Filter,
+  Grid,
+  List,
+  ChevronDown,
+  ChevronUp,
+  Sparkles,
+  FlaskConical,
+  Dna,
+  Car,
+  Leaf,
+  Factory,
+  Truck,
+  Microscope,
+  GraduationCap,
+  ShieldCheck,
+  Brain,
+  Atom,
+  Globe2,
+  Bot,
+  Eye,
+  Trophy,
+  FlaskConical as FlaskIcon,
+  Dna as DnaIcon,
+  Car as CarIcon,
+  Leaf as LeafIcon,
+  Factory as FactoryIcon,
+  Truck as TruckIcon,
+  Microscope as MicroscopeIcon,
+  GraduationCap as GraduationCapIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Crown,
+  Gem,;
+  Diamond,;
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import {
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '../data/revolutionary-micro-saas-services';import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import Button from '../components/ui/Button';
@@ -122,22 +291,31 @@ export default function ComprehensivePricingPage() {;
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
-  // Pricing tiers
-  const pricingTiers = [
-    {
-      name: 'Starter'
-      price: '$49'
-      period: '/month'
-      description: 'Perfect for small businesses and startups'
-      features: [
-        'Basic service access'
-        'Email support'
-        'Standard features'
-        'Community forum access'
-        'Basic analytics'
-      ]
-      icon: <Star className="w-6 h-6" />
-      color: 'from-blue-500 to-cyan-600'
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+    }
+  });
+;
+  const contact_info = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+      metric: '2000%+',
+      label: 'Average ROI',
+      description: 'Proven business value',
+
+<<<<<<< HEAD
+
+
+=======
+        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
+      ];
+      icon: <Star className="w-6 h-6" />,
+      color: 'from-blue-500 to-cyan-600',
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       popular: false
     },    {        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
       ];
@@ -244,134 +422,16 @@ export default function ComprehensivePricingPage() {;
       color: 'from - purple - 500 to - pink - 600',
       popular: true,
     },    {        'Advanced service access_priority support_advanced featuresAPI access_advanced analytics_custom integrations';
-      ];
-      icon: <Gem className="w - 6 h - 6" />,
-      color: 'from - purple - 500 to - pink - 600',
-      popular: true;
-    }
 
-      name: 'Enterprise',
-      price: '$499',
-      period: '/month',
-      description: 'For large organizations and enterprises',
-
-      features: [;
-        'Full service access',
-        '24 / 7 dedicated support',
-        'All features',
-        'Custom development',
-        'Enterprise analytics',
-        'White - label options',
-        'SLA guarantees',
-      ],
-      icon: <Crown className="w - 6 h - 6" />,
-      color: 'from - yellow - 500 to - orange - 600',
-      popular: false,
-    },  ];        'Full service access24 / 7 dedicated support_all features_custom development_enterprise analytics_white - label optionsSLA guarantees';
-
-      ];
-      icon: <Crown className="w - 6 h - 6" />,
-      color: 'from - yellow - 500 to - orange - 600',
-      popular: false;
-    }
-
-  // Market statistics;
-  const market_stats = [;
-
-    {
-      metric: '$15.2B',
-      label: 'Total Market Size',
-      description: 'Combined market value of all services',
-
-      icon: <ChartBar className='w - 6 h - 6' />,
-    },    {
-      metric: '400+',
-      label: 'Services Available',
-      description: 'Comprehensive micro SaaS portfolio',
-      icon: <Database className='w - 6 h - 6' />,
-    },    {
-      metric: '99.99%',
-      label: 'Uptime Guarantee',
-      description: 'Enterprise - grade reliability',
-      icon: <Shield className='w - 6 h - 6' />,
-    },    {
       metric: '2000%+',
       label: 'Average ROI',
       description: 'Proven business value',
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-  ];
-  const containerVariants = {
-    hidden: { opacity: 0 }
-    visible: {
-      opacity: 1
-      transition: {
-        staggerChildren: 0.1
-      }
-    },  };        staggerChildren: 0.1
-      }
+      icon: <TrendingUp className='w-6 h-6' />,
+    },      icon: <TrendingUp className="w-6 h-6" />
     }
-  }
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 }
-    visible: {
-      y: 0
-      opacity: 1
-      transition: {
 
-  return (
-    <UltraFuturisticBackground variant='holographic' intensity='high'>
-      <div className='min-h-screen'>
-        <Head>
-          <title>
-            Comprehensive Pricing | Zion Tech Group - Micro SaaS Services
-            Pricing & Plans
-          </title>
-          <meta
-            name='description'
-            content='Explore comprehensive pricing for all Zion Tech Group micro SaaS services. Transparent pricing, market analysis, ROI guarantees, and flexible plans for every business size.'
-          />
-          <meta
-            name='keywords'
-            content='micro SaaS pricing, service pricing, business pricing, ROI guarantees, market analysis, transparent pricing, enterprise pricing'
-          />
-          <meta name='author' content='Zion Tech Group' />
-          <meta
-            property='og:title'
-            content='Comprehensive Pricing | Zion Tech Group'
-          />
-          <meta
-            property='og:description'
-            content='Transparent pricing for all micro SaaS services with market analysis and ROI guarantees.'
-          />
-          <meta
-            property='og:url'
-            content='https://ziontechgroup.com/comprehensive-pricing'
-          />
-          <meta property='og:type' content='website' />
-          <link
-            rel='canonical'
-            href='https://ziontechgroup.com/comprehensive-pricing'
-          />
-        </Head>
-        {/* Hero Section */}
-        <section className='relative py-20 overflow-hidden'>
-          <div className='container mx-auto px-4 text-center'>
-            <div className='max-w-5xl mx-auto'>
-              <motion.h1
-                className='text-6xl md:text-8xl font-bold mb-8 futuristic-glow'                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>        <section className="relative py-20 overflow-hidden">
-          <div className="container mx-auto px-4 text-center">
-            <div className="max-w-5xl mx-auto">
-              <motion.h1
-                className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <UltraFuturisticBackground variant='holographic' intensity='high'>;
       <div className='min - h-screen'>;
@@ -406,8 +466,9 @@ export default function ComprehensivePricingPage() {;
 
                 className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
                 animate={{ opacity: 1, y: 0 }}
-
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                transition={{ duration: 0.8 }}
+              >
+                <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                   Comprehensive
 
                 </span>
@@ -416,10 +477,8 @@ export default function ComprehensivePricingPage() {;
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-=======
-                transition={{ duration: 0.8 }}
-              >
 
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -429,7 +488,41 @@ export default function ComprehensivePricingPage() {;
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
+                Transparent pricing for all our revolutionary micro SaaS
+                services. Choose the perfect plan for your business with
+                guaranteed ROI and enterprise-grade reliability.
+              </motion.p>
+              {/* Market Stats */}
+              <motion.div
+                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
+                Transparent pricing for all our revolutionary micro SaaS;
+                services. Choose the perfect plan for your business with;
+                guaranteed ROI and enterprise-grade reliability.                  Comprehensive;
+                </span>;
+                <br />;
+                <span className="text-white">Pricing & Plans</span>;
+              </motion && motion.h1>;
+              <motion&& motion.p 
+                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
+                Transparent pricing for all our revolutionary micro SaaS;
+                services. Choose the perfect plan for your business with;
+                guaranteed ROI and enterprise-grade reliability.;
+              </motion && motion.p>;
+              {/* Market Stats */}
+              <motion&& motion.div
+                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}              </motion && motion.p>;
+              {/* Market Stats */}
+              <motion&& motion.div 
+                className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -449,13 +542,20 @@ export default function ComprehensivePricingPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               {/* CTA Buttons */}
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >              <motion.div
+              >              <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              >
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 initial={{ opacity: 0, y: 20 }}
@@ -496,6 +596,9 @@ export default function ComprehensivePricingPage() {;
               {/* CTA Buttons */}
               <motion.div
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -539,8 +642,18 @@ variant="primary"
         <section id="pricing-tiers" className="py-20">
 
           <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+            <motion.div 
+              className="text-center mb-16"
 
+              initial={{ opacity: 0, y: 20 }}
+
+
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -563,6 +676,8 @@ variant="primary"
             </motion.div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
               variants={containerVariants}
               initial="hidden"
@@ -620,6 +735,9 @@ variant="primary"
 
         {/* Services Pricing Grid */}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Services Pricing Grid */}
         <section id="services-pricing" className="py-20">
           <div className="container mx-auto px-4">
@@ -634,8 +752,9 @@ variant="primary"
               className="mb-8"
 
 
-        {/* Services Pricing Grid */}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         <section id='services-pricing' className='py-20'>
           <div className='container mx-auto px-4'>
             {/* Filters and Controls */}
@@ -686,7 +805,9 @@ variant="primary"
                   <div className='relative'>
                     <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
@@ -848,7 +969,15 @@ variant="primary"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
+=======
+              whileInView='visible'              viewport={{ once: true }}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -856,8 +985,12 @@ variant="primary"
                   variants={itemVariants}
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard
+                    variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                     size={viewMode === 'grid' ? 'large' : 'medium'}
@@ -1309,16 +1442,18 @@ variant="primary"
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0 && 0.6 }}>              <motion&& motion.div
                 className="text-center py-16"
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0 && 0.6 }}>;
-                <div className='text-6xl mb-4'>🔍</div>;
-                <h3 className='text-2xl font-bold text-white mb-2'>;
-                  No Services Found;
-                </h3>;
-                <p className='text-gray-400 mb-6'>;
-                  Try adjusting your search criteria or filters.;
-                </p>;
+                transition={{ duration: 0.6 }}
+              >
+                <div className='text-6xl mb-4'>🔍</div>
+                <h3 className='text-2xl font-bold text-white mb-2'>
+                  No Services Found
+                </h3>
+                <p className='text-gray-400 mb-6'>
+                  Try adjusting your search criteria or filters.
+                </p>
                 <Button
                   variant='primary'
                   onClick={() => {;
@@ -1459,6 +1594,9 @@ variant="primary"
                   <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
                   <div className="text-white font-semibold">{contactInfo.address}</div>
                   <div className="text-gray-400 text-sm">Visit our office</div>
+=======
+                </div>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 
                 initial={{ opacity: 0 }}
@@ -1469,8 +1607,6 @@ variant="primary"
 
                 </div>
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               </div>
@@ -1479,11 +1615,4 @@ variant="primary"
         </section>
       </div>
     </UltraFuturisticBackground>
-<<<<<<< HEAD
-=======
-
-  );
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

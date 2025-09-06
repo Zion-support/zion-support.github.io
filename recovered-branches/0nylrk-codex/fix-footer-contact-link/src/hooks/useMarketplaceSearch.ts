@@ -1,14 +1,47 @@
 
-
+import {useState, useMemo} from "react";
+import {ProductListing} from "@/types/listings";
+import {SearchSuggestion, FilterOptions} from "@/types/search";
+import {generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS} from "@/data/marketplaceData";
+export function useMarketplaceSearch() {
+  // Search state;
+  const [searchQuery, setSearchQuery] = useState("");
 import { useState, useMemo } from "react",
 import { ProductListing } from "@/types/listings",
+import { SearchSuggestion, FilterOptions } from "@/types/search";
+import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
+export function useMarketplaceSearch() {
+  // Search state
+  const [searchQuery, setSearchQuery] = useState("");
+  // Filter states
+  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
+  const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
+  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
+  const [selectedRating, setSelectedRating] = useState<number | null>(null);
+  // Generate search suggestions and filter options
+  const searchSuggestions: SearchSuggestion[] = useMemo(
+    () => generateSearchSuggestions();
+    [];
+  );
 
+  const filterOptions: FilterOptions = useMemo(
+    () => generateFilterOptions();
+    [];
+  );
+import { SearchSuggestion, FilterOptions } from "@/types/search",
+import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+export function useMarketplaceSearch() {
+  // Search state
+  const [searchQuery, setSearchQuery] = useState(""),
+  
   // Filter states
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]),
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
-
+  
   // Generate search suggestions and filter options
   const searchSuggestions: SearchSuggestion[] = useMemo(
     () => generateSearchSuggestions(),
@@ -16,13 +49,11 @@ import { ProductListing } from "@/types/listings",
   const filterOptions: FilterOptions = useMemo(
     () => generateFilterOptions(),
     []),
-
+  
   // Filter listings based on current search query and filters
   const filteredListings = useMemo(() => {
     return MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.filter(listing => {
       // Search query filter
-
-=======
 
       const matchesSearch = !searchQuery || 
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -44,23 +75,11 @@ import { ProductListing } from "@/types/listings",
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      // Rating filter
-      const matchesRating = selectedRating === null |
-        (listing.rating !== undefined && listing.rating >= selectedRating)
-      return matchesSearch &&
-        matchesProductType &&
-        matchesLocation &&
-        matchesAvailability &&
-        matchesRating
-    })
-
 =======
-
+  }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),
   
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // Handle filter changes
   const handleFilterChange = (filterType: string, value: string) => {
     switch (filterType) {
@@ -180,6 +199,7 @@ function useMarketplaceSearch() {
 
     filter_options;
 
+=======
   // Clear all filters
   const clearAllFilters = () => {
     setSearchQuery(""),
@@ -187,7 +207,41 @@ function useMarketplaceSearch() {
     setSelectedLocations([]),
     setSelectedAvailability([]),
     setSelectedRating(null)
+  }
+  return {
+    searchQuery;
+    setSearchQuery;
+    searchSuggestions;
+    selectedProductTypes;
+    selectedLocations;
+    selectedAvailability;
+    selectedRating;
+    setSelectedRating;
+    filteredListings;
+    handleFilterChange;
+    clearAllFilters;
 
+=======
+    filterOptions
+  }
+}
+  },
+  
+  return {
+    searchQuery,
+    setSearchQuery,
+    searchSuggestions,
+    selectedProductTypes,
+    selectedLocations,
+    selectedAvailability,
+    selectedRating,
+    setSelectedRating,
+    filteredListings,
+    handleFilterChange,
+    clearAllFilters,
+    filterOptions
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { useState, useMemo } from "react",;
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion, FilterOptions } from "@/types/search",;
@@ -276,6 +330,7 @@ export function useMarketplaceSearch() {;
     handleFilterChange;
     clearAllFilters;
     filterOptions;
+<<<<<<< HEAD
 
   }
 }
@@ -283,3 +338,8 @@ export function useMarketplaceSearch() {;
   }
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  }
+}
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

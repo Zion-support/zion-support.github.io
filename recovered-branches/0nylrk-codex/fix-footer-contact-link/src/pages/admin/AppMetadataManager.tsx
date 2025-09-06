@@ -1,4 +1,6 @@
 
+=======
+
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -7,7 +9,7 @@ import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
 import {MetadataManager} from "@/components/mobile-app/admin/MetadataManager";
 
-=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const AppMetadataManager: React.FC = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -25,6 +27,13 @@ const AppMetadataManager: React.FC = () => {
       </div>
     </AppLayout>
   )
+=======
+}
+export default AppMetadataManager;
+
+<<<<<<< HEAD
+},
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export default AppMetadataManager,
 import React from "react",;
@@ -33,6 +42,8 @@ import { SEO } from "@/components/SEO",;
 import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager",;
 const AppMetadataManager: React.FC = () => {;
   return (;
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     <AppLayout>;
       <SEO;
         title="App Metadata Manager";
@@ -52,3 +63,6 @@ export default AppMetadataManager;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export default AppMetadataManager;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

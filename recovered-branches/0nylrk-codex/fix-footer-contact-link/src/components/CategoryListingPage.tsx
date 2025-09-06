@@ -1,3 +1,4 @@
+=======
 
 import { useState } from "react",
 import { Header } from "@/components/Header",
@@ -7,6 +8,116 @@ import { ListingScoreCard } from "@/components/ListingScoreCard",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 
+import {useState} from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {GradientHeading} from "@/components/GradientHeading";
+import {ListingScoreCard} from "@/components/ListingScoreCard";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Select, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
+import {Search, Filter, ArrowDownAZ, ArrowUpZA} from "lucide-react";
+import { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { GradientHeading } from "@/components/GradientHeading",
+import { ListingScoreCard } from "@/components/ListingScoreCard",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react";
+// Example listing type
+interface Listing {
+
+  id: string
+  title: string
+  description: string
+  category: string
+
+  subcategory?: string;
+  image?: string;
+  tags?: string[];
+  author?: string;
+  authorImage?: string;
+  aiScore?: number;
+  rating?: number;
+  reviewCount?: number;
+  price?: number | null;
+  createdAt: string
+}
+interface CategoryListingPageProps {
+
+  title: string
+  description: string
+  listings: Listing[]
+  sortOptions?: { label: string, value: string }[]
+  filterOptions?: { label: string, value: string }[]
+}
+export function CategoryListingPage({
+  title
+  description;
+  listings: initialListings
+  sortOptions = [
+    { label: 'Newest First', value: 'newest' }
+    { label: 'Oldest First', value: 'oldest' }
+    { label: 'Highest Rating', value: 'rating-high' }
+    { label: 'Highest AI Match', value: 'ai-match' }
+    { label: 'A-Z', value: 'a-z' }
+    { label: 'Z-A', value: 'z-a' }]
+  filterOptions = [
+    { label: 'All', value: 'all' }
+    { label: 'Highly Rated', value: 'high-rating' }
+    { label: 'Best AI Match', value: 'best-match' }]
+}: CategoryListingPageProps) {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedSort, setSelectedSort] = useState(sortOptions[0].value);
+  const [selectedFilter, setSelectedFilter] = useState(filterOptions[0].value);
+  // Process listings based on filters and search
+  const processedListings = initialListings
+    .filter(listing => {
+      // Apply search filter
+      const matchesSearch =
+        listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
+        listing.description.toLowerCase().includes(searchQuery.toLowerCase()) |
+        (listing.tags && listing.tags.some(tag =>
+          tag.toLowerCase().includes(searchQuery.toLowerCase())
+        ));
+      // Apply category filters
+      if (selectedFilter === 'all') return matchesSearch;
+      if (selectedFilter === 'high-rating') return matchesSearch && (listing.rating |0) >= 4;
+      if (selectedFilter === 'best-match') return matchesSearch && (listing.aiScore |0) >= 85;
+      return matchesSearch
+    })
+    .sort((a, b) => {
+      // Apply sorting
+      switch (selectedSort) {
+        case 'newest':
+          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+        case 'oldest':
+          return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
+        case 'rating-high':
+          return (b.rating |0) - (a.rating |0);
+        case 'ai-match':
+          return (b.aiScore |0) - (a.aiScore |0);
+        case 'a-z':
+          return a.title.localeCompare(b.title);
+        case 'z-a':
+          return b.title.localeCompare(a.title);
+        default: return 0
+      }
+    });
+  return (
+    <>
+      <Header />
+      <div className="min-h-screen bg-zion-blue py-12 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <GradientHeading>{title}</GradientHeading>
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
+import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react",
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Example listing type
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface Listing {
@@ -16,44 +127,8 @@ interface Listing {
   category: string,
 
 
-=======
-  subcategory?: string,
-  image?: string,
-  tags?: string[],
-  author?: string,
-  authorImage?: string,
-  aiScore?: number,
-  rating?: number,
-  reviewCount?: number,
-  price?: number | null,
-  createdAt: string
 
-import { useState } from "react",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { ListingScoreCard } from "@/components/ListingScoreCard",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react",;
-// Example listing type;
-interface Listing {;
-  id: string,;
-  title: string,;
-  description: string,;
-  category: string,;
-  subcategory?: string,;
-  image?: string,;
-  tags?: string[],;
-  author?: string,;
-  authorImage?: string,;
-  aiScore?: number,;
-  rating?: number,;
-  reviewCount?: number,;
-  price?: number | null,;
-  createdAt: string;
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {description}
 
             </p>;
@@ -69,6 +144,8 @@ interface Listing {;
                   type="text"
                   placeholder="Search listings..."
                   value={searchQuery}
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e.target.value)}
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white"
                 />
@@ -80,6 +157,8 @@ interface Listing {;
                       <ArrowDownAZ className="mr-2 h-4 w-4" />
                     ) : selectedSort === 'z-a' ? (
                       <ArrowUpZA className="mr-2 h-4 w-4" />
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     ) : null}
                     <span>
                       {sortOptions.find(option => option.value === selectedSort)?.label |'Sort By'}
@@ -122,25 +201,13 @@ interface Listing {;
           </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           {/* Listings Grid */}
           {processedListings.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {processedListings.map((listing) => (
                 <ListingScoreCard
-=======
-          {/* Results Count */}
-          <div className="mb - 6">;
-            <p className="text - zion - slate - light">;
-              Showing {processed_listings.length} results;
-              {search_query && ` for "${search_query}"`}
-            </p>;
-          </div>;
-          {/* Listings Grid */}
-          {processed_listings.length > 0 ? (
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-              {processed_listings.map ((listing) => (
-                <ListingScoreCard;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={listing.id}
                   title={listing.title}
                   description={listing.description}
@@ -171,8 +238,6 @@ interface Listing {;
               </Button>
             </div>
 
-=======
-
             </div>;
           ) : (;
             <div className="text-center py-20">;
@@ -191,9 +256,11 @@ interface Listing {;
                 Clear all filters
               </Button>
             </div>
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           )}
         </div>;

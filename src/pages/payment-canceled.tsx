@@ -1,19 +1,14 @@
+=======
+import React from 'react';
+import { Button } from '@/components/ui/button';
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useRouter } from 'next/router'; // Changed from useNavigate
 
-import { XCircle } from 'lucide-react'
-import { useRouter } from 'next/router', // Changed from useNavigate
-export default function PaymentCanceled() {
-  const router = useRouter(), // Changed from navigate
 
   return (
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-    <div className="flex flex-1 bg-zion-blue items-center justify-center p-4">
-        <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
-          <div className="inline-flex h-12 w-12 rounded-full bg-red-100 mb-4 items-center justify-center">
-            <XCircle className="h-6 w-6 text-red-600" />
-          </div>
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
         <div className="flex flex-col space-y-3">
           <Button
@@ -22,7 +17,21 @@ export default function PaymentCanceled() {
           >
             Try Again
           </Button>
+          <Button
+            variant="outline"
+            onClick={() => router.push('/dashboard')} // Changed to router.push
+            className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
+export default function PaymentCanceled() {
+          <Button 
+            variant="outline";
+            onClick={() => router.push('/dashboard')} // Changed to router.push;
+            className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white';
+export default function PaymentCanceled() {;
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const router = useRouter(); // Changed from navigate
   return (
     <div className='flex flex-1 bg-zion-blue items-center justify-center p-4'>
@@ -46,7 +55,43 @@ export default function PaymentCanceled() {
             variant='outline'
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'          >
+<<<<<<< HEAD
 
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import React from 'react';
+import { Button } from '@/components/ui/button';
+
+import { useRouter } from 'next/router'; // Changed from useNavigate;
+
+import { XCircle } from 'lucide-react';
+import React from 'react';
+          >
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             Return to Dashboard
           </Button>
         </div>

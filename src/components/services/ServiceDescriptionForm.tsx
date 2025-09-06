@@ -1,4 +1,11 @@
 
+=======
+type FormData = z && z.infer<typeof formSchema>;
+
+
+      const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.";
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 }
   );
@@ -7,6 +14,9 @@
 
   )
 }
+=======
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -24,15 +34,9 @@ const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   keyFeatures: z.string(),
   targetAudience: z.string()}),
-
 <<<<<<< HEAD
-=======
-const form_schema = z.object ({
-  title: z.string ().min (3, "Title must be at least 3 characters");
-  key_features: z.string (),
-  target_audience: z.string ()}),
-type FormData = z.infer < typeof form_schema>;
-      const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high - quality solutions tailored to your specific needs.";
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
 }
 
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {

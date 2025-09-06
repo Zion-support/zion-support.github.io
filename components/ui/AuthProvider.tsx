@@ -1,6 +1,15 @@
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+      if (stored === 'talent' || stored === 'client') {
+        setRoleState(stored);      }        setRoleState(stored)
+        setRoleState(stored);      }
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
     } catch {}
   }, []);
@@ -86,25 +95,8 @@ export function useAuth() {;
 }
 
 =======
-    <AuthContext.Provider value={{ role, set_role }}>;
-      {children}
-    </AuthContext.Provider>);
-;
-export /**
- * use_auth - Function description
- */
-function use_auth() {
-  return useContext (AuthContext);    <AuthContext.Provider value={{ role, set_role }}>{children}</AuthContext.Provider>);
-}
-export /**
- * use_auth - Function description
- */
-function use_auth() {
-return useContext (AuthContext);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function useAuth() {;
   return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
@@ -112,13 +104,12 @@ export function useAuth() {;
 }
 
 export function useAuth() {;
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 return useContext(AuthContext);
 }
-=======
   return (
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

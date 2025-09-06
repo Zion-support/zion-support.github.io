@@ -22,17 +22,16 @@ class ErrorBoundary extends React.Component {
 
 import React from "react";
 import Head from "next/head";
+origin/main
+origin/automation-improvements-final
 
 
 
 
 
-=======
-import React from './react';
-import Head from './next / head';
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface SEOProps {
 interface SEOProps {;
   title?: string;
@@ -71,15 +70,14 @@ const SEO: React.FC<SEOProps> = ({;
   keywords = "AI services, IT solutions, micro SaaS, technology consulting",;
 }) => {;
   return (
-    <Head>;
-      <title>{title}</title>;
-      <meta name="description" content={description} />;
-      <meta name="keywords" content={keywords} />;
-      <meta name="viewport" content="width=device-width, initial-scale=1 && 1.0" />;
-    </Head>;
+    <Head>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </Head>
   );
-
-
+}
 };
 
 export default SEO;
@@ -109,10 +107,6 @@ export default function SEO({
 export default SEO;
 
 =======
-}
-export default SEO;
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
     <Head>;
       <title>{title}</title>;
       <meta name="description" content={description} />;
@@ -125,3 +119,28 @@ export default SEO;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    <Head>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:type" content={type} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      <link rel="canonical" href={canonicalUrl} />
+    </Head>
+  );
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+}
+export default SEO;
+origin/main
+origin/automation-improvements-final
+}
+export default SEO;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

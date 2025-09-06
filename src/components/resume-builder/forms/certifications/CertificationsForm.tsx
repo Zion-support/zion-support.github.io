@@ -181,6 +181,17 @@ export function CertificationsForm({
         setEditingId(null)
       }
     } catch (err: any) {
+      )}
+
+
+
+        <CertificationsList 
+          certifications={certifications} 
+          onEdit={handleEdit} 
+          onDelete={handleDelete} 
+        />
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
     setEditingId(cert.id!);    form.reset({
       ...cert
@@ -208,24 +219,49 @@ export function CertificationsForm({
       </div>
       {certifications.length > 0 && (
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       )}
 
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
+<<<<<<< HEAD
 
+
+
+
+
+            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+
+            <div className="flex justify-between pt-2">
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <Button
                 type="button"
                 variant="outline"
                 onClick={() => {
                   if (editingId) {
+                    setEditingId(null)
+                    form.reset({
+                      name: ''
+                      issuing_organization: ''
+                      issue_date: ''
+                      expiration_date: ''
+                      credential_id: ''
+                      credential_url: ''
+                    })
 
+                    setEditingId(null),
+                    setEditingId(null),
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     form.reset({
                       name: '',
                       issuing_organization: '',
                       issue_date: '',
                       expiration_date: '',
                       credential_id: '',
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   } else {
                     onBack()
 
@@ -269,6 +305,25 @@ export function CertificationsForm({
                 {editingId ? 'Cancel' : 'Back'}
 
               </Button>
+=======
+              <div className='flex gap-2'>
+                <Button type='submit' disabled={isLoading}>
+                  {isLoading && (
+                    <Loader2 className='mr-2 h-4 w-4 animate-spin' />
+                  )}
+                  {editingId ? 'Update' : 'Add'} Certification
+                </Button>
+                <Button type='button' onClick={onComplete}>
+
+              <div className="flex gap-2">
+                <Button type="submit" disabled={isLoading}>
+                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                  {editingId ? 'Update' : 'Add'} Certification
+                </Button>
+
+                <Button type="button" onClick={onComplete}>
+<<<<<<< HEAD
+<<<<<<< HEAD
 
                   Next
                 </Button>
@@ -281,5 +336,3 @@ export function CertificationsForm({
   )
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

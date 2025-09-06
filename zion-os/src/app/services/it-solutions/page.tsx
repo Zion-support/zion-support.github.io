@@ -1,5 +1,4 @@
 
-=======
 "use client",;
 import { useState } from "react",;
 interface ITService {;
@@ -291,7 +290,6 @@ const itServices: ITService[] = [;
 ],;
 export default function ITSolutionsPage() {;
   return (;
-
     <div className="space-y-8">;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   industries: string[];

@@ -1,19 +1,49 @@
 
-
+import React from "react";
+import {cn} from "@/lib/utils";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
 import React from "react",
 import { cn } from "@/lib/utils",
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface EmptyStateProps {
 
   icon: React.ReactNode
   title: string
   description: string
   action?: {
+    text: string
 
   className?: string
 }
 
+    text: string,
+    href?: string,
+    onClick?: () => void
+  },
+  secondaryAction?: {
+    text: string,
+    href?: string,
+    onClick?: () => void
+  },
+  className?: string
+}
+
+export function EmptyState({;
+  icon;
+  title;
+  description;
+  action;
+  secondaryAction;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function EmptyState({
   icon,
   title,
@@ -21,6 +51,7 @@ export function EmptyState({
   action,
   secondaryAction,
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   className}: EmptyStateProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -80,23 +111,6 @@ export function EmptyState({;
       )}
     >
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">
-        {icon}
-
-      </div>;
-      <h3 className="text-2xl font-semibold text-white mb-3">{title}</h3>;
-      <p className="text-zion-slate text-lg mb-8 max-w-md">{description}</p>;
-
-      <div className="flex flex-col sm:flex-row gap-4">;
-        {action && (;
-          action && action.href ? (;
-            <Button asChild size="lg" className="bg-zion-purple hover:bg-zion-purple-light">;
-              <Link to={action && action.href}>{action && action.text}</Link>;
-            </Button>;
-          ) : (;
-            <Button;
-              size="lg";
-              className="bg-zion-purple hover:bg-zion-purple-light";
-
               onClick={action.onClick}
             >
               {action.text}
@@ -109,14 +123,12 @@ export function EmptyState({;
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-        {secondaryAction && (
-          secondaryAction.href ? (
-            <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">
-              <Link to={secondaryAction.href}>{secondaryAction.text}</Link>
-            </Button>
-          ) : (
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+            <Button
+              variant="outline"
+            <Button 
+              variant="outline" 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               size="lg"
               className="border-zion-blue-light hover:bg-zion-blue-light"
               onClick={secondaryAction && secondaryAction.onClick}>;

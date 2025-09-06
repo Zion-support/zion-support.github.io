@@ -1,6 +1,6 @@
 
-
-=======
+import { useState  } from 'react';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState} from 'react';
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -17,8 +17,11 @@ import {cn} from "@/lib/utils";
 import {ProductListing} from "@/types/listings";
 import {toast} from '@/hooks/use-toast';
 import {supabase} from "@/integrations/supabase/client";
+=======
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import { useState } from 'react',
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -32,14 +35,9 @@ import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react",
 import { cn } from "@/lib/utils",
 
-=======
-
 import { ProductListing } from "@/types/listings",
 import { toast } from '@/hooks/use-toast',
 import { supabase } from "@/integrations/supabase/client",
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface ServiceQuoteModalProps {
 
@@ -145,31 +143,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 <Label htmlFor="description" className="text-white">Project Description</Label>
 
 
-=======
-                <Textarea
-                  id="description"
-                  name="description"
-                  value={formData.description}
-                  onChange={handleInputChange}
-                  placeholder="Describe your project needs in detail..."
-                  className="h-32 bg-zion-blue-dark border-zion-blue-light text-white resize-none"
-                  required
-                />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="budget" className="text-white">Estimated Budget</Label>
-                <Select
-                  value={formData.budget}
-                  onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
-                >
-                  <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
-                    <SelectValue placeholder="Select your budget range" />
-                  </SelectTrigger>
-                  <SelectContent className="bg-zion-blue-dark border-zion-blue-light">
-                    {BUDGET_RANGES.map((range) => (
-                      <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">
-
-=======
 import { useState } from 'react',;
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",;
 import { Button } from "@/components/ui/button",;
@@ -320,8 +293,10 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 
                     {BUDGET_RANGES.map((range) => (;
                       <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">;
+=======
 
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         {range.label}
                       </SelectItem>
@@ -440,26 +415,14 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                       <span className="text-white">{format(endDate, "PPP")}</span>
                     </div>
                   )}
-
+                </div>
+              </div>
+            </div>
           )}
-
-          <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">
-            {currentStep !== 'details' && (
-                  )}
-                  {endDate && (;
-                    <div className="flex justify-between">;
-                      <span className="text-zion-slate-light">End Date:</span>;
-                      <span className="text-white">{format(endDate, "PPP")}</span>;
-                    </div>;
-                  )}
                 </div>;
               </div>;
             </div>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           )}
 
 

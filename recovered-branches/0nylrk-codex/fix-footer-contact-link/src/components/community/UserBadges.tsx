@@ -1,4 +1,15 @@
 
+=======
+<<<<<<< HEAD
+import {Trophy, Award, BadgeCheck, Star, MessageSquare} from "lucide-react";
+import {Badge} from "@/types/community";
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
+import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react",
+import { Badge } from "@/types/community";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Badge } from "@/types/community",
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
+
 
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from "lucide-react",
 
@@ -31,36 +42,14 @@ const iconMap = {
       {badges.map((badge) => {
         // Get the correct icon component based on the badge's icon name
   return (
-
-
+    <div className="flex flex-wrap gap-2">
+      {badges.map((badge) => {
+        // Get the correct icon component based on the badge's icon name
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] |Trophy;
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
         
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-        return (
-          <TooltipProvider key={badge.id}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <div
-                  style={{ backgroundColor: badge.color + '20' }}
-                  className="w-8 h-8 rounded-full flex items-center justify-center cursor-pointer"
-                >
-                  <IconComponent
-                    style={{ color: badge.color }}
-                    className="w-4 h-4"
-                  />
-                </div>
-              </TooltipTrigger>
-              <TooltipContent>
-                <div className="text-center">
-                  <div className="font-medium">{badge.name}</div>
-                  <div className="text-xs text-gray-500">{badge.description}</div>
-                </div>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        )
-
 export default UserBadges;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

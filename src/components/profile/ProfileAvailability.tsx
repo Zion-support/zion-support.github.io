@@ -1,5 +1,15 @@
+=======
+import { Calendar, Clock, Check } from 'lucide-react'
+import { Calendar } from 'lucide-react'
+interface ProfileAvailabilityProps {
+  availability: Availability
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function ProfileAvailability({
   availability
 }: ProfileAvailabilityProps) {
@@ -56,7 +66,10 @@ function ProfileAvailability() {
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4">Availability</h3>
       <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4">
-
+        <Badge
+          variant="outline"
+        <Badge 
+          variant="outline" 
         >
           {getStatusText(availability.status)}
         </Badge>
@@ -72,7 +85,9 @@ function ProfileAvailability() {
       {availability.message && (
         <p className='text-zion-slate mb-4'>{availability.message}</p>
       )}
+<<<<<<< HEAD
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {availability.availableHours &&
         availability.availableHours.length > 0 && (
           <div className='mt-4'>
@@ -90,38 +105,17 @@ function ProfileAvailability() {
                     <Clock className='h-4 w-4 text-zion-cyan' />
                     <span>{slot.hours}</span>
                   </div>
-
-      {availability.availableHours && availability.availableHours.length > 0 && (
-        <div className="mt-4">
-          <h4 className="text-zion-slate-light text-sm mb-2">Weekly Availability</h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-
-                <div className="w-20 text-zion-slate-light">{slot.day}:</div>
-                <div className="flex items-center gap-1">
-                  <Clock className="h-4 w-4 text-zion-cyan" />
-                  <span>{slot.hours}</span>
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 </div>
               </div>
             ))}
           </div>
         </div>
-
-=======
-import { Availability } from '@/types/profile'
-import { Badge } from '@/components/ui/badge'
-
-import { Availability } from "@/types/profile";
-import { Badge } from "@/components/ui/badge";
-import { Availability } from "@/types/profile",;
-import { Badge } from "@/components/ui/badge",;
-import { Calendar, Clock, Check } from 'lucide-react';
-interface ProfileAvailabilityProps {;
-  availability: Availability;
-    </div>
-  )
-}
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+<<<<<<< HEAD
     </div>;
   );
 };

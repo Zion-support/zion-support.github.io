@@ -1,17 +1,26 @@
 
-
-=======
-
+import { Trophy } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
 import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import {Trophy} from "lucide-react";
+import {Progress} from "@/components/ui/progress";
+import { Trophy } from "lucide-react",
+import { Progress } from "@/components/ui/progress",
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface ReputationDisplayProps {
 
   reputation: number
   size?: 'sm' | 'md' | 'lg'
 }
+export const ReputationDisplay = ({
+  reputation;
+  size = 'md'
+}: ReputationDisplayProps) => {
+  // Calculate next milestone
+  const currentLevel = Math.floor(reputation / 100);
+  const nextMilestone = (currentLevel + 1) * 100;
+  const progress = ((reputation % 100) / 100) * 100;
 
   size = 'md'
 }: ReputationDisplayProps) => {
@@ -27,8 +36,6 @@ interface ReputationDisplayProps {
       icon: "w-3 h-3"
       progress: "h-1"
 
-=======
-
     },
     md: {
       container: "text-sm",
@@ -38,12 +45,6 @@ interface ReputationDisplayProps {
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    lg: {
-      container: "text-base"
-      icon: "w-5 h-5"
-      progress: "h-3"
-    }
-
   return (
     <div className="space-y-1">
       <div className={`flex items-center gap-1 ${sizeClasses[size].container}`}>
@@ -57,10 +58,13 @@ interface ReputationDisplayProps {
       </div>
     </div>
   )
+}
+export default ReputationDisplay;
 
 export default ReputationDisplay,
 import { Trophy } from "lucide-react",;
 import { Progress } from "@/components/ui/progress",;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface ReputationDisplayProps {;
   reputation: number,;
   size?: 'sm' | 'md' | 'lg';
@@ -113,3 +117,6 @@ export default ReputationDisplay;
 export default ReputationDisplay;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export default ReputationDisplay;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

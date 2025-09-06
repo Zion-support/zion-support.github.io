@@ -1,7 +1,19 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { randomUUID } from 'crypto',;
+// In-memory store for demo purposes. Replace with persistent storage in production.
+const store: Record<string, { markdown: string, createdAt: number, public: boolean }> = {},
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  return store[id]
 
-
+=======
+}
+  return store[id];
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // In-memory store for demo purposes. Replace with persistent storage in production.;
 const store: Record<string { markdown: string, createdAt: number, public: boolean }> = {};
 export default async function handler(req, res) {
@@ -26,8 +38,4 @@ export function getShared(id: string) {;
   }
 }
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

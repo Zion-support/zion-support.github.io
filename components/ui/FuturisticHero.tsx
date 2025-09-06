@@ -2,7 +2,9 @@
 import Link from 'next / link';
 import AnimatedBackground from './AnimatedBackground';
 
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function FuturisticHero() {
 
 
@@ -54,18 +56,6 @@ function FuturisticHero() {
 
   );
 }
-=======
-export default function FuturisticHero() {
-  return (
-    <section className="relative py-20 sm:py-28">
-      <AnimatedBackground />
-      <div className="text-center max-w-4xl mx-auto">
-        <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight">
-          Build and Hire with Zion AI Marketplace
-        </h1>
-        <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <p className="text-sm text-gray-700 dark:text-gray-300">
             Talent marketplace • Project accelerators • Secure contracts • Integrated AI toolchain
           </p>
@@ -107,3 +97,6 @@ function FuturisticHero() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

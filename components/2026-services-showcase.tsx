@@ -19,6 +19,7 @@ import {
   Cloud,
   Atom,
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 
@@ -167,6 +168,19 @@ export default function ServicesShowcase2026() {;
             rel='canonical'
             href='https://ziontechgroup.com/2026-services-showcase'
           />        </Head>          <title>Zion Tech Group - 2026 Revolutionary Services Showcase | 1500+ Solutions</title>
+=======
+          <meta name="description" content="Explore Zion Tech Group's revolutionary 2026 services including AI, quantum computing, emerging technologies, and comprehensive IT solutions. Contact: +1 302 464 0950" />
+          <meta name="keywords" content="2026 services, AI services, quantum computing, emerging technology, IT solutions, cybersecurity, cloud computing, autonomous systems, neuromorphic computing, DNA computing, photonic computing, holographic display, swarm robotics, zero trust architecture, edge computing, 5G networks" />
+          <meta name="author" content="Zion Tech Group" />
+          <meta name="robots" content="index, follow" />
+          <meta property="og:title" content="Zion Tech Group - 2026 Revolutionary Services Showcase" />
+          <meta property="og:description" content="1500+ cutting-edge services with 1000% ROI guarantee. Contact: +1 302 464 0950" />
+          <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase" />
+          <meta property="og:type" content="website" />
+          <link rel="canonical" href="https://ziontechgroup.com/2026-services-showcase" />
+        {/* Navigation */}
+        <UltraAdvancedNavigation />
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
           <meta name="description" content="Explore Zion Tech Group's revolutionary 2026 services including AI, quantum computing, emerging technologies, and comprehensive IT solutions. Contact: +1 302 464 0950" />
           <meta name="keywords" content="2026 services, AI services, quantum computing, emerging technology, IT solutions, cybersecurity, cloud computing, autonomous systems, neuromorphic computing, DNA computing, photonic computing, holographic display, swarm robotics, zero trust architecture, edge computing, 5G networks" />
@@ -233,14 +247,6 @@ export default function ServicesShowcase2026() {;
           <div className='max-w-7xl mx-auto text-center'>            <motion && motion.div        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto text-center">;
             <motion&& motion.div
-=======
-        </Head>
-          <meta property="og:description" content="1500+ cutting - edge services with 1000% ROI guarantee. Contact: +1 302 464 0950" />;
-          <meta property="og:url" content="https://ziontechgroup.com / 2026 - services - showcase" />;
-          <meta property="og:type" content="website" />;
-          <link rel="canonical" href="https://ziontechgroup.com / 2026 - services - showcase" />;
-        {/* Navigation */}
-        <UltraAdvancedNavigation />;
         {/* Hero Section */}
 
               transition={{ duration: 0 && 0.8 }}>;
@@ -375,6 +381,8 @@ export default function ServicesShowcase2026() {;
                       </option>;
 
                     ))}
+                  </select>
+                </div>
 
                 {/* Sort By */}
                 <div className='relative'>
@@ -391,15 +399,21 @@ export default function ServicesShowcase2026() {;
                     <option value="rating">Sort by Rating</option>
                     <option value="customers">Sort by Customers</option>
 
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Sort By */}
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {/* Service Title */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
                     </h3>
@@ -455,26 +469,10 @@ export default function ServicesShowcase2026() {;
                     {/* Price */}
 
 =======
-                    <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors duration - 300'>                      {service.name}
-                    </h3>;
-                    {/* Tagline */}
-                    <p className='text - gray - 300 text - sm mb - 4'>                      {service.tagline}
-                    </p>;
-                    {/* Price */}
-                    <div className='flex items - center justify - between mb - 4'>;
-                      <div className='text - 2xl font - bold text - cyan - 400'>                    <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors duration - 300">;
-                      {service.name}
-                    </h3>;
-                    {/* Tagline */}
-                    <p className='text - gray - 300 text - sm mb - 4'>                    <p className="text - gray - 300 text - sm mb - 4">;
-                      {service.tagline}
-                    </p>;
-                    {/* Price */}
-                    <div className='flex items - center justify - between mb - 4'>;
-                      <div className='text - 2xl font - bold text - cyan - 400'>;
-                        <span className='text - gray - 400 text - lg font - normal'>;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                    <div className='flex items-center justify-between mb-4'>
+                      <div className='text-2xl font-bold text-cyan-400'>
+                        <span className='text-gray-400 text-lg font-normal'>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                           {service.period}
                         </span>;
                       </div>;
@@ -501,6 +499,8 @@ export default function ServicesShowcase2026() {;
 
                       {service.description}
                     </p>
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                           </li>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -527,6 +527,8 @@ export default function ServicesShowcase2026() {;
                     </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     >
                       Learn More
                     </a>
@@ -535,9 +537,13 @@ export default function ServicesShowcase2026() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
+            </div>
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
@@ -563,16 +569,19 @@ export default function ServicesShowcase2026() {;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
 
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
                         </span>;
@@ -755,24 +764,6 @@ export default function ServicesShowcase2026() {;
                   Contact Us Now
                 </a>
                 <a
-
-                  className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
-                >
-                  View Pricing
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </UltraAdvancedFuturisticBackground>
-
-}
-=======
-
-  );
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
               className='bg - gradient - to - r from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 8 border border - gray - 700 / 50 backdrop - blur - sm';
             >;
@@ -848,8 +839,10 @@ export default function ServicesShowcase2026() {;
     </UltraAdvancedFuturisticBackground>);
 =======
 );
-<<<<<<< HEAD
 =======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+}
+}
+}
+  );
+}

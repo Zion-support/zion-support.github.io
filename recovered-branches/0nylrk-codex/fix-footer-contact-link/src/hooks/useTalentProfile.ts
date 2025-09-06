@@ -1,10 +1,34 @@
 
-
+import {useState, useEffect} from "react";
+import {TalentProfile, as, TalentProfileType} from "@/types/talent";
+import {ProfileData} from "@/types/profile";
+import {MOCK_TALENTS} from "@/data/mockTalents";
+import {MOCK_PROFILES} from "@/data/mockProfiles";
+import {convertProfileToTalentProfile} from "@/utils/profileConverter";
+export function useTalentProfile(id: string | undefined) {;
+  const [profile, setProfile] = useState<TalentProfileType | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null);
 import { useState, useEffect } from "react",
 import { TalentProfile as TalentProfileType } from "@/types/talent",
 import { ProfileData } from "@/types/profile",
 import { MOCK_TALENTS } from "@/data/mockTalents",
 import { MOCK_PROFILES } from "@/data/mockProfiles",
+import { convertProfileToTalentProfile } from "@/utils/profileConverter";
+export function useTalentProfile(id: string | undefined) {
+  const [profile, setProfile] = useState<TalentProfileType | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const [error, setError] = useState<string | null>(null);
+  const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null);
+import { convertProfileToTalentProfile } from "@/utils/profileConverter",
+export function useTalentProfile(id: string | undefined) {
+  const [profile, setProfile] = useState<TalentProfileType | null>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),
+  const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null),
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -20,10 +44,10 @@ import { MOCK_PROFILES } from "@/data/mockProfiles",
         setTimeout(() => {
 
 =======
-          const foundProfile = MOCK_TALENTS && MOCK_TALENTS.find(talent => talent && talent.id === id);
+          const foundProfile = MOCK_TALENTS.find(talent => talent.id === id);
+          const foundProfile = MOCK_TALENTS.find(talent => talent.id === id),
           
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           if (foundProfile) {
             setProfile(convertProfileToTalentProfile(foundProfile))
 =======
@@ -90,6 +114,10 @@ if ( {) {
         console.error("Error fetching profile:", err),
         setError("Failed to load profile data"),
         setIsLoading(false)
+      }
+    }
+    fetchProfile()
+  }, [id]);
 
 =======
 import { useState, useEffect } from "react",;
@@ -143,9 +171,11 @@ export function useTalentProfile(id: string | undefined) {;
     };
     fetchProfile();
   }, [id]);
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return { profile, isLoading, error, mockProfileData }
 }

@@ -1,10 +1,14 @@
 
-
-=======
+import { useState  } from 'react';
+import { TALENT_PROFILES  } from '@/data/talentData';
+import { TalentProfile } from '@/types/talent';
+export function useTalentData() {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState} from 'react';
 import {TALENT_PROFILES} from '@/data/talentData';
 import {TalentProfile} from '@/types/talent';
 export function useTalentData() {;
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -19,14 +23,12 @@ export function useTalentData() {;
     talents;
     isLoading
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return {
     talents;
 
     isLoading;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 }

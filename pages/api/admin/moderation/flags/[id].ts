@@ -8,6 +8,9 @@ import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth';
 import { getFlagById } from '../../../../../utils/moderationDb';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const user = parseUserFromRequest(req)
   try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode |403).json({ error: 'Forbidden' }) }
   const { id } = req.query
@@ -18,6 +21,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!flag) return res.status(404).json({ error: 'Not found' });
     return res.status(200).json({ flag });
   }
+
   res.setHeader('Allow', 'GET');
   return res.status(405).end('Method Not Allowed');
 }
@@ -25,3 +29,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

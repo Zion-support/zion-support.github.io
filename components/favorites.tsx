@@ -1,11 +1,10 @@
 
 =======
-
+import { useEffect, useMemo, useState  } from 'react';
+import Head from 'next/head',
 import {useEffect, useMemo, useState} from 'react';
 import Head from 'next/head';
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import Link from 'next/link';
 import { TALENT_PROFILES } from '../data/talent';
 
@@ -37,8 +36,16 @@ import { TALENT_PROFILES } from '../data/talent';
           ))}
 </div>;
       )}
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     </div>;
   );
 }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

@@ -1,5 +1,21 @@
 
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import React, { useEffect, useState } from "react";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Label} from "@/components/ui/label";
+import {ClickableBadge} from "@/components/ui/clickable-badge";
+import {PlusCircle, Save, Trash, Play} from "lucide-react";
+import {useWebhooks, WebhookEventType} from "@/hooks/useWebhooks";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {toast} from "sonner";
+export function WebhookManager() {;
+  const { ;
+    webhooks;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -10,6 +26,22 @@ import { PlusCircle, Save, Trash, Play } from "lucide-react",
 import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
 
     loading,
+
+    error;
+    testResult;
+    fetchWebhooks;
+    createWebhook;
+    toggleWebhook;
+    deleteWebhook;
+    testWebhook;
+  } = useWebhooks();
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { toast } from "sonner",
+export function WebhookManager() {
+  const { 
+    webhooks,
+    loading, 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     error,
     testResult,
     fetchWebhooks,
@@ -28,19 +60,29 @@ import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
 
     secret: ""
 
-=======
-
-  }),
-  
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const eventOptions: { value: WebhookEventType, label: string }[] = [
     { value: "new_application", label: "New Application Received" }
     { value: "quote_received", label: "Quote Request Received" }
     { value: "milestone_approved", label: "Milestone Approved" }
     { value: "talent_hired", label: "Talent Hired" }
+  ];
+  useEffect(() => {
+    fetchWebhooks()
+  }, []);
 
+=======
+  const handleAddEvent = () => {
+    if (!newWebhook.selectedEvent) return;
+  ],
+  
+  useEffect(() => {
+    fetchWebhooks()
+  }, []),
+  
+  const handleAddEvent = () => {
+    if (!newWebhook.selectedEvent) return,
+    
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error("This event is already added");
       return
@@ -199,7 +241,6 @@ export function WebhookManager() {;
               <Input;
                 id="webhook-url";
                 placeholder="https://example.com/webhook";
-
                 value={newWebhook.url}
                 onChange={(e) => setNewWebhook({...newWebhook, url: e.target.value})}
               />
@@ -292,26 +333,9 @@ export function WebhookManager() {;
                         <span className="text-sm">{webhook.is_active ? 'Active' : 'Inactive'}</span>
                       </div>
                       <div className="flex-shrink-0">
-        {loading ? (
-          <p > Loading webhooks...</p>) : error ? (
-          <p className="text - red - 500">{error}</p>) : webhooks.length === 0 ? (
-          <p > No webhooks configured yet. Create your first webhook above.</p>) : (
-          <div className="space - y-4">;
-            {webhooks.map (webhook => (
-              <Card key={webhook.id}>;
-                <CardHeader className="pb - 2">;
-                  <div className="flex justify - between items - start">;
-                    <div>;
-                      <CardTitle className="text - lg">{webhook.name}</CardTitle>;
-                      <CardDescription className="truncate max - w-md">;
-                        {webhook.url}
 
-
-                        <Button 
-                          variant="outline" 
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                           size="sm"
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
                         >
@@ -378,19 +402,6 @@ export function WebhookManager() {;
                     <div className="text - xs text - muted - foreground">;
                       {webhook.last_triggered_at;
                         ? `Last triggered: ${new Date (webhook.last_triggered_at).toLocaleString ()}`;
-
-                        : 'Never triggered'}
-                    </div>;
-                  </div>;
-                </CardContent>;
-
-                    onClick={() => deleteWebhook(webhook && webhook.id)}
-                  >;
-                    <Trash className="h-4 w-4 mr-2" /> Delete;
-                  </Button>;
-
-                  <Select
-                    onValueChange={(value) => handleTestWebhook(webhook && webhook.id, value as WebhookEventType)}
 
                       ))}
                     </SelectContent>;

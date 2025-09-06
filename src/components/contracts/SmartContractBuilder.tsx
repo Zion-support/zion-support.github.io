@@ -183,6 +183,8 @@ interface SmartContractBuilderProps {
   on_deploy?: (contract_content: string) => void}
 // Helper to ensure milestones are always an array;
 }
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return []}
 export function SmartContractBuilder({
   isOpen
@@ -204,6 +206,7 @@ export function SmartContractBuilder({
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false)
   const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
     network: 'ethereum', // Default network
+<<<<<<< HEAD
 
   const [deployStatus, setDeployStatus] = useState<string>(''); // e.g., 'deploying', 'deployed', 'error'
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null); // Existing from Solidity part
@@ -222,6 +225,7 @@ export function SmartContractBuilder({
   // Prefill form with talent and client name(existing useEffect)
   useEffect(() => {
   // TODO: Add dependencies if needed
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return () => {
     // Cleanup function;
 }
@@ -427,6 +431,7 @@ if ( {) {
 
 import { toast } from "sonner",
 import {logErrorToProduction} from '@/utils/productionLogger',
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
           <DialogTitle>Smart Contract Builder</DialogTitle>;
@@ -702,6 +707,108 @@ if ( {) {
               onContractGenerated={handleFormSubmit}
             />
           </TabsContent>
+<<<<<<< HEAD
+                  generatedContract = {generatedContract,}
+                  talent = {talent,}
+                  onClose = {onClose,}
+                  deploymentInfo = {deploymentInfo,}
+                />
+                {!deploymentInfo && deployOptions.deployToChain && (
+                  <div className="mt-6 flex justify-center">
+                    <Button 
+                      onClick = {handleDeployContract,}
+                      disabled = {deployStatus === 'deploying',}
+                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">;
+                      {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
+                    </Button>;
+                  </div>                )}
+              </div>;
+            )}
+
+          </TabsContent>;
+        </Tabs>;
+
+
+        <TemplateManager
+          isOpen = {templateManagerOpen,}
+          onClose = {() => setTemplateManagerOpen(false),}
+          onSelectTemplate = {handleLoadTemplate,}
+          currentValues = {formValues,}
+
+        />;
+      </DialogContent>;
+    </Dialog>;
+  );
+
+};
+//Modified to match the expected interface const handleFormSubmit = (contract: string) => {';
+  //This should be a function that takes a string (contract content) //Since we need to adapt the interface, we'll implement the simplest solution that works if (onContractGenerated) {;
+  setGeneratedContract (contract);";
+setActiveTab ("preview");
+};";
+  talent ;
+}clientName= {;
+  clientName ;
+}initialValues= {;
+  formValues ;
+}onFormValuesChange= {;
+  setFormValues ;
+}onContractGenerated= {;
+  handleFormSubmit ;
+}/> </TabsContent> <div> <ContractPreviewgeneratedContract= {
+  generatedContract 
+}talent= {
+  talent 
+}onClose= {
+  onClose 
+}deploymentInfo= {
+  deploymentInfo 
+}/> > {';
+  deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain' ;
+}</Button> </div>) ;
+}</div>) ;
+}</TabsContent> </Tabs> <TemplateManagerisOpen= {
+  templateManagerOpen 
+}onClose= {
+  () => setTemplateManagerOpen (false) ;
+}onSelectTemplate= {;
+  handleLoadTemplate ;
+}currentValues= {;
+  formValues ;
+}/> </DialogContent> </Dialog>) ;
+
+}'"            {!enableOnChainAgreement && <p className="text-muted-foreground p-4 text-center">Enable on-chain agreement to deploy this contract to a blockchain.</p>}
+            {/* Fallback for old Solidity preview if needed, or remove if fully replaced by on-chain flow */}
+            {/* {generatedSolidityContract && !deployOptions.deployToChain && !enableOnChainAgreement && ( ... )} */}
+          </TabsContent>
+        </Tabs>
+        <TemplateManager
+                  generatedContract={generatedContract}
+                  talent={talent}
+                  onClose={onClose}
+                  deploymentInfo={deploymentInfo}
+                />
+                
+                {!deploymentInfo && deployOptions.deployToChain && (
+                  <div className="mt-6 flex justify-center">
+                    <Button 
+                      onClick={handleDeployContract}
+                      disabled={deployStatus === 'deploying'}
+                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                    >
+                      {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
+                    </Button>;
+                  </div>;
+                )}
+              </div>;
+            )}
+            {!generatedMarkdownContract && !isLoadingLegalDraft && <p>Generate a legal draft to preview and download.</p>}
+          </TabsContent>;
+        </Tabs>;
+
+        <TemplateManager
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
@@ -733,7 +840,11 @@ if ( {) {
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
 <<<<<<< HEAD
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ;
+<<<<<<< HEAD
 
 
 

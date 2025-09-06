@@ -1,7 +1,33 @@
 
-
+import { useState  } from 'react';
+import { SmartContractBuilder  } from '@/components/contracts/SmartContractBuilder';
+import { ContractBuilder  } from '@/components/contracts/ContractBuilder';
+import { ContractHeader  } from './ContractHeader';
+import { ContractTypeCards  } from './ContractTypeCards';
+import { RecentContractsTable  } from './RecentContractsTable';
+import { TalentProfile  } from '@/types/talent';
+import { useAuth } from '@/hooks/useAuth';
+import {useState} from 'react';
+import {SmartContractBuilder} from '@/components/contracts/SmartContractBuilder';
+import {ContractBuilder} from '@/components/contracts/ContractBuilder';
+import {ContractHeader} from './ContractHeader';
+import {ContractTypeCards} from './ContractTypeCards';
+import {RecentContractsTable} from './RecentContractsTable';
+import {TalentProfile} from '@/types/talent';
+import {useAuth} from '@/hooks/useAuth';
 // Mock data for demo purposes
 
+const mockTalent: TalentProfile = {
+  id: 'talent-123'
+  user_id: 'user-abc-123'
+  full_name: 'Alex Chen'
+  professional_title: 'Full Stack Developer'
+  hourly_rate: 85
+  profile_picture_url: ''
+  skills: ['ReactNode.jsSmart Contracts']}
+export function ContractBuilderContent() {
+export function ContractBuilderContent() {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const { user } = useAuth();
   const [showBuilderType, setShowBuilderType] = useState<'none' | 'standard' | 'smart'>('none');
   const [recentContracts, setRecentContracts] = useState([
@@ -23,17 +49,49 @@
     }
   ]);
 =======
-
-
-
+import { useState } from 'react',;
+import { SmartContractBuilder } from '@/components/contracts/SmartContractBuilder',;
+import { ContractBuilder } from '@/components/contracts/ContractBuilder',;
+import { ContractHeader } from './ContractHeader',;
+import { ContractTypeCards } from './ContractTypeCards',;
+import { RecentContractsTable } from './RecentContractsTable',;
+import { TalentProfile } from '@/types/talent',;
+import { useAuth } from '@/hooks/useAuth',;
+// Mock data for demo purposes;
+const mockTalent: TalentProfile = {;
+  id: 'talent-123',;
+  user_id: 'user-abc-123',;
+  full_name: 'Alex Chen',;
+  professional_title: 'Full Stack Developer',;
+  hourly_rate: 85,;
+  profile_picture_url: '',;
+  skills: ['ReactNode.jsSmart Contracts']},;
+export function ContractBuilderContent() {;
+  const { user } = useAuth(),;
+  const [showBuilderType, setShowBuilderType] = useState<'none' | 'standard' | 'smart'>('none'),;
+  const [recentContracts, setRecentContracts] = useState([;
+    {;
+      id: 'contract-1',;
+      title: 'Website Redesign',;
+      client: 'Acme Corp',;
+      talent: 'Alex Chen',;
+      date: '2025-05-15',;
+      isSmartContract: true;
+    },;
+    {;
+      id: 'contract-2',;
+      title: 'Mobile App Development',;
+      client: 'TechStart Inc',;
+      talent: 'Sarah Williams',;
+      date: '2025-05-10',;
+      isSmartContract: false;
+    }
+  ]),
 
   const handleContractGenerated = (content: string) => {
     // // // console.log('Contract generated:', content.substring(0, 100) + '...')
   },
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const handleViewContract = (contractId: string) => {
     console.log('Viewing contract:', contractId);
@@ -55,7 +113,9 @@
     <>;
       <ContractHeader onCreateClick={() => setShowBuilderType('smart')} />;
       <ContractTypeCards;
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         onStandardClick={() => setShowBuilderType('standard')}
         onSmartClick={() => setShowBuilderType('smart')}
       />

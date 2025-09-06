@@ -20,7 +20,6 @@ export default function TranslationPreview() {
       <div className="grid md:grid-cols-2 gap-4">
         {targets.map((lng) => (
 
-=======
           <div key={lng} className=&quot;border rounded p-3&quot;>
             <div className=&quot;text-xs uppercase opacity-70 mb-2&quot;>{lng}</div>
             <div className=&quot;whitespace-pre-wrap text-sm min-h-[4rem]&quot;>

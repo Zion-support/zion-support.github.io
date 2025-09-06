@@ -1,9 +1,19 @@
 
-
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Search, Sliders} from "lucide-react";
+import {Input} from "@/components/ui/input";
 import React from "react",
 import { Button } from "@/components/ui/button",
+import { Search, Sliders } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Search, Sliders } from "lucide-react",
+import { Input } from "@/components/ui/input",
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface MobileFilterBarProps {
 
   searchTerm: string
@@ -11,6 +21,8 @@ interface MobileFilterBarProps {
 
   setIsMobileFilterOpen: (isOpen: boolean) => void
 }
+export function MobileFilterBar({
+  searchTerm;
 
   setSearchTerm,
   setIsMobileFilterOpen
@@ -45,3 +57,6 @@ import {Search, Sliders} from "lucide-react";
 import {Input} from "@/components/ui/input";
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

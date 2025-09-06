@@ -2,14 +2,20 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
-
-=======
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,;
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -23,6 +29,8 @@ import { WebhookManager } from "./WebhookManager";
 import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <div className="flex gap-2">
           <Button variant="outline">View Documentation</Button>
           <Button>Connect New Integration</Button>
@@ -30,6 +38,8 @@ import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
       </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card>
           <CardHeader className="pb-2">
@@ -61,6 +71,8 @@ import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
         </Card>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <Card className="md:col-span-2">
           <CardHeader className="pb-2">
             <CardTitle className="text-lg">Recent Activity</CardTitle>
@@ -101,6 +113,8 @@ import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
       </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="grid grid-cols-3 md: w-[400px]">
           <TabsTrigger value="marketplace">Marketplace</TabsTrigger>
@@ -109,12 +123,16 @@ import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
         </TabsList>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <div className="mt-6">
           <TabsContent value="marketplace" className="m-0">
             <IntegrationCards />
           </TabsContent>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <TabsContent value="webhooks" className="m-0">
             <Card>
               <CardHeader>
@@ -130,6 +148,8 @@ import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
             </Card>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <Card className="mt-6">
               <CardHeader>
                 <CardTitle>Synchronization Log</CardTitle>
@@ -146,9 +166,43 @@ import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
         </div>
       </Tabs>
     </div>
-
   );
 }
+  )
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { IntegrationCards } from "./IntegrationCards",;
+import { ZapierIntegration } from "./ZapierIntegration",;
+import { Badge } from "@/components/ui/badge",;
+import { WebhookManager } from "./WebhookManager",;
+import { IntegrationsSyncLog } from "./IntegrationsSyncLog",;
+export function IntegrationsHub() {;
+  const [activeTab, setActiveTab] = useState("marketplace");
+  return (;
+
+    <div className="space-y-6">;
+      <div className="flex justify-between items-center">;
+        <div>;
+          <h1 className="text-3xl font-bold">Integrations Hub</h1>;
+          <p className="text-muted-foreground mt-1">;
+            Connect your platform with the tools and services you use every day;
+          </p>;
+        </div>;
+
+        <div className="flex gap-2">;
+          <Button variant="outline">View Documentation</Button>;
+          <Button>Connect New Integration</Button>;
+        </div>;
+      </div>;
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
+        <Card>;
+          <CardHeader className="pb-2">;
+            <div className="flex justify-between items-center">;
+              <CardTitle className="text-lg">Status</CardTitle>;
+              <Badge variant="outline" className="bg-green-100 text-green-800">;
 ;
                 Healthy;
               </Badge>;
@@ -268,10 +322,13 @@ import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
       </Tabs>;
 
     </div>;
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

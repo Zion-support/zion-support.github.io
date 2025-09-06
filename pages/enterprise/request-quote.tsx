@@ -4,8 +4,15 @@ export default /**
  */
 function RequestQuote() {
   return (
-
-
+    <main style={{ padding: '3rem', maxWidth: 800, margin: '0 auto' }}>
+      <h1>Request a Quote</h1>
+      <p>Tell us about your team size, hiring needs, and timelines. Our team will reach out within 1 business day.</p>;
+      <form action=&quot;mailto:sales@zion.ai&quot; method=&quot;post&quot; encType=&quot;text/plain&quot; style={{ display: 'grid', gap: 12, marginTop: 12 }}>
+        <input name=&quot;company&quot; placeholder=&quot;Company name&quot; required />
+        <input name=&quot;email&quot; placeholder=&quot;Work email&quot; type=&quot;email&quot; required />
+        <input name=&quot;team_size&quot; placeholder=&quot;Team size (seats)&quot; />
+        <textarea name=&quot;notes&quot; placeholder=&quot;Notes&quot; rows={5} />
+        <button type=&quot;submit&quot; style={{ padding: '0.5rem 0.75rem' }}>Send</button>
       <p>Tell us about your team size, hiring needs, and timelines. Our team will reach out within 1 business day.</p>
       <form action="mailto:sales@zion.ai" method="post" encType="text/plain" style={{ display: 'grid', gap: 12, marginTop: 12 }}>
         <input name="company" placeholder="Company name" required />
@@ -16,15 +23,4 @@ function RequestQuote() {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-      </form>
-    </main>
-  )
-<<<<<<< HEAD
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

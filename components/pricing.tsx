@@ -4,7 +4,119 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+  Check
+  Star
+  Users
+  TrendingUp
+  DollarSign
+  Clock
+  Shield
+  Zap
+  Rocket
+  Brain
+  Atom
+  Globe
+  Target
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  ExternalLink;} from 'lucide-react';
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
+  Check, Star, Users, TrendingUp, DollarSign, Clock
 
+  Check,
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  Shield,
+  Zap,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Target,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,;
+  ExternalLink,;} from 'lucide-react';
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
+  Check, Star, Users, TrendingUp, DollarSign, Clock, ;
+=======
+
+=======
+
+  Check,
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  Shield,
+  Zap,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Target,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,;
+  ExternalLink,;} from 'lucide-react';
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
+  Check, Star, Users, TrendingUp, DollarSign, Clock, ;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  Shield, Zap, Rocket, Brain, Atom, Globe, Target;
+  ArrowRight, Phone, Mail, MapPin, ExternalLink
+ } from 'lucide-react';
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
+// Import all service data
+import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
+import { innovativeAIServices2029  } from '../data/2029-innovative-ai-services';
+import { quantumSpaceInnovations2029  } from '../data/2029-quantum-space-innovations';
+import { enterpriseITInnovations2029  } from '../data/2029-enterprise-it-innovations';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+import {
+  Check
+  Star
+  Users
+  TrendingUp
+  DollarSign
+  Clock
+  Shield
+  Zap
+  Rocket
+  Brain
+  Atom
+  Globe
+  Target
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  ExternalLink;} from 'lucide-react';
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
+  Check, Star, Users, TrendingUp, DollarSign, Clock
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Shield, Zap, Rocket, Brain, Atom, Globe, Target;
   ArrowRight, Phone, Mail, MapPin, ExternalLink
  } from 'lucide-react';
@@ -153,21 +265,18 @@ export default function PricingPage() {;
     'AllContent & MarketingDevelopment & DevOpsSales & CRMLegal & ComplianceHuman ResourcesAnalytics & DataFinance & Accounting';
     'Project ManagementCustomer ExperienceSecurity & Compliance'
   ];
-
-
-
-
+  const filteredServices = selectedCategory === 'All'
+    ? microSaasServices
+    : microSaasServices.filter(service => service.category === selectedCategory);
 
   const yearlyDiscount = 0.2, // 20% discount for yearly billing
-
 =======
 
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
 
         />;
@@ -256,6 +365,7 @@ export default function PricingPage() {;
                 ))}
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 ))}
 
 
@@ -321,8 +431,6 @@ export default function PricingPage() {;
                           </div>
                         )}
 
-
-
                         {/* ROI Information */}
                         {service.roi && (
                           <div className="mb-6 p-3 bg-green-900/20 border border-green-500/20 rounded-lg">
@@ -331,13 +439,13 @@ export default function PricingPage() {;
                             </p>
                           </div>
                         )}
-
+                        {/* CTA */}
+                        <div className="flex items-center justify-between">
+                          <Link href={service.link |`/services/${service.id}`}>
 
                         {/* CTA */}
                         <div className="flex items-center justify-between">
                           <Link href={service.link || `/services/${service.id}`}>
-
-
                             <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
                               <span className="flex items-center">
                                 Learn More
@@ -370,17 +478,11 @@ export default function PricingPage() {;
             ))}
 
 
-        {/* Contact CTA Section */}
-        <section className='py-20 px-4 sm:px-6 lg:px-8'>;
-          <div className='max-w-4xl mx-auto text-center'>        <section className="py-20 px-4 sm:px-6 lg:px-8">;
-          <div className="max-w-4xl mx-auto text-center">;
-            <motion&& motion.div
+          </div>
 =======
 
-
-          </div>
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </section>
         {/* Contact CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
@@ -388,9 +490,7 @@ export default function PricingPage() {;
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -414,6 +514,9 @@ export default function PricingPage() {;
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -486,13 +589,9 @@ export default function PricingPage() {;
 =======
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
-
-
+);
   );
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -621,9 +720,11 @@ export default function PricingPage() {;
 }viewport= {
   {
 =======
-<<<<<<< HEAD
   once: true;
 }> <h2 className="text - 3xl sm:text - 4xl lg:text - 5xl font - bold text - white mb - 6" > Ready to Get Started with <span className="bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent" > Revolutionary Technology?</span> </h2> <p className="text - xl text - gray - 300 mb - 8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center mb - 8" > <Link href="/contact" > <button className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - xl font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 200 transform hover:scale - 105" > <Phone className="inline - block w - 5 h - 5 mr - 2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt - 12 p - 6 bg - gray - 900 / 30 rounded - 2xl border border - cyan - 500 / 20"> <h3 className="text - xl font - semibold text - white mb - 4">Why Choose Zion Tech Group?</h3> <div className="grid grid - cols - 1 md: grid - cols - 2 gap - 4 text - sm text - gray - 300"> <div className="flex items - center space - x-2"> <Check className="w - 4 h - 4 text - green - 400" /> flex items - center space - x-2"> <Check className=" w - 4 h - 4 text - green - 400"/> <span > Proven ROI and customer success stories</span> </div> <div className=" flex items - center space - x-2"> <Check className=" w - 4 h - 4 text - green - 400"/> <span > Comprehensive support and implementation</span> </div> <div className=" flex items - center space - x-2"> <Check className=" w - 4 h - 4 text - green - 400" /> <span > Cutting - edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

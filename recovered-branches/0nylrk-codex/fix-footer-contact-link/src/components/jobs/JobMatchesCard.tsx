@@ -1,15 +1,20 @@
 
-=======
-
-import {;
-  Card,;
-  CardContent,;
-  CardHeader,;
-  CardTitle,;
-  CardDescription,;
+import { useState } from "react";
+import {
+  Card
+  CardContent
+  CardHeader
+  CardTitle
+  CardDescription
+  CardFooter
+import { useState } from "react";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
   CardFooter,;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -17,6 +22,15 @@ import { DollarSign, Calendar, CheckCircle, XCircle } from "lucide-react";
 
 import { format } from "date-fns";
 import { JobMatch } from "@/types/jobs";
+=======
+interface JobMatchCardProps {
+  match: JobMatch;
+  onApply: (matchId: string, jobId: string) => void;
+  onDecline: (matchId: string) => void;
+  showApplied?: boolean
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 export function JobMatchesCard(): any ({;
@@ -32,6 +46,34 @@ export function JobMatchesCard(): any ({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+interface JobMatchCardProps {
+  match: JobMatch,
+  onApply: (matchId: string, jobId: string) => void,
+  onDecline: (matchId: string) => void,
+  showApplied?: boolean
+}
+
+export function JobMatchesCard({
+  match,
+  onApply,
+  onDecline,
+  showApplied = false,
+}: JobMatchCardProps) {;
+  const job = match.job;
+
+  if (!job) return null;
+
+export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
+  const job = match.job,
+  
+  if (!job) return null,
+  
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <Card className="overflow-hidden border-l-4 border-l-blue-500">;
       <CardHeader className="p-4 pb-2">;
@@ -58,6 +100,8 @@ export function JobMatchesCard(): any ({;
         </p>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {match.matched_skills?.length > 0 && (
           <div className="mb-3">
             <p className="text-xs text-muted-foreground mb-1">
@@ -94,6 +138,7 @@ export function JobMatchesCard(): any ({;
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
@@ -101,6 +146,18 @@ export function JobMatchesCard(): any ({;
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />$
             {job.budget.min} - ${job.budget.max}
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+          </div>
+          <div className="flex items-center text-sm">
+            <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />
+            Due: {format(new Date(job.deadline), "MMM d, yyyy")}
+          </div>
+        </div>
+      </CardContent>
+      <CardFooter className="p-4 pt-0">
+        {match.status === "applied" |showApplied ? (
+        {match.status === 'applied' || showApplied ? (
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <div className="w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md">
             <CheckCircle className="h-4 w-4 mr-2" />
             Applied
@@ -121,6 +178,9 @@ export function JobMatchesCard(): any ({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               className="flex-1"
               onClick={() => onDecline(match && match.id)}
             >;
@@ -130,5 +190,7 @@ export function JobMatchesCard(): any ({;
         )}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   );
 }

@@ -1,6 +1,4 @@
 
-=======
-
   id: string;
   name: string;
   tagline: string;
@@ -13,12 +11,10 @@
   contact_info: {
     mobile: string;
     email: string;
-
-
     address: string;
   };
-
-
+}
+}
 
     address: string;
   }
@@ -26,6 +22,7 @@ export const extraServices: ExtraService[] = [
   {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   name: string;
   tagline: string;
@@ -110,6 +107,8 @@ export const extraServices: ExtraService[] = [
       email: "kleber@ziontechgroup.com",
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

@@ -2,6 +2,8 @@
 import { cn } from '@/lib/utils';interface InteractiveFeaturesProps {
   className?: string
   style?: React.CSSProperties
+  style?: React.CSSProperties;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 interface InteractiveFeaturesProps {
   className?: string
@@ -59,11 +61,14 @@ export function InteractiveFeatures({
           </p>
         </div>
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
               key={index}
               onMouseEnter={() => setOpenIndex(index)}
               onMouseLeave={() => setOpenIndex(null)}
               onClick={() => handleToggle(index)}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 {feature.icon}
                 <div>
                   <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
@@ -74,16 +79,42 @@ export function InteractiveFeatures({
               </CardHeader>
               <div
                 className={cn(
-
-=======
                   'transition-all duration-300'
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
                   openIndex === index
                     ? 'max-h-48 opacity-100 p-6 pt-0'
                     : 'max-h-0 opacity-0 p-0'
                 )}              >
                 <CardContent className='text-sm text-zion-slate-light p-0'>
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+                  'transition-all duration-300',
 
+                  openIndex === index
+                    ? 'max-h-48 opacity-100 p-6 pt-0'
+                    : 'max-h-0 opacity-0 p-0'
+                )}>;
+                <CardContent className='text-sm text-zion-slate-light p-0'>;
+                  <p>{feature && feature.details}</p>;
+                  <Button
+                    asChild
+                    variant='link'
+                    className='mt-3 p-0 h-auto text-primary'>;
+                    <Link
+                      href={feature && feature.link}
+                      className='flex items-center gap-1'>;
+                      Learn more <ArrowRight className='h-4 w-4' />;
+
+                  "transition-all duration-300",
+                  openIndex === index ? "max-h-48 opacity-100 p-6 pt-0" : "max-h-0 opacity-0 p-0"
+                )}
+              >
+                <CardContent className="text-sm text-zion-slate-light p-0">
+=======
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <p>{feature.details}</p>
                   <Button asChild variant="link" className="mt-3 p-0 h-auto text-primary">
                     <Link href={feature.link} className="flex items-center gap-1">
@@ -94,4 +125,9 @@ export function InteractiveFeatures({
               </div>
             </Card>
           ))}
+<<<<<<< HEAD
+export default InteractiveFeatures;
+;
+}
+}
 <<<<<<< HEAD

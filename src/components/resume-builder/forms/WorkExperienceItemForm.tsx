@@ -47,7 +47,15 @@ export function WorkExperienceItemForm({
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
-
+      company_name: initialData?.company_name || "",
+      role_title: initialData?.role_title || "",
+      start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
+      end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
+      is_current: initialData?.is_current || false,
+      description: initialData?.description || '',
+      location: initialData?.location || '',
+    },
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   })
   const { isSubmitting } = form.formState
   const watchIsCurrent = form.watch('is_current')
@@ -71,7 +79,63 @@ export function WorkExperienceItemForm({
     form.setValue('description', content, { shouldDirty: true })
     setIsEnhancementDialogOpen(false)
   }
+  })
+  const { isSubmitting } = form.formState
+  const watchIsCurrent = form.watch('is_current')
+  const watchRoleTitle = form.watch('role_title')
+  const watchCompanyName = form.watch('company_name')
+  const handleFormSubmit = async (values: FormValues,) => {
+    // Create a properly typed WorkExperience object with all required fields
+    const workExperience: WorkExperience = {
+      id: initialData?.id
+      company_name: values.company_name, // Required
+      role_title: values.role_title, // Required
+      start_date: values.start_date, // Required
+      end_date: values.end_date, // Optional
+      is_current: values.is_current, // Required
+      description: values.description, // Optional
+      location: values.location, // Optional
+    }
+    await onSubmit(workExperience)
+  }
+  const handleAIEnhancement = (content: string) => {
+    form.setValue('description', content, { shouldDirty: true })
+    setIsEnhancementDialogOpen(false)
+  }
+      description: initialData?.description || "",
+      location: initialData?.location || ""}}),
+  
+  const { isSubmitting } = form.formState,
+  const watchIsCurrent = form.watch("is_current"),
+  const watchRoleTitle = form.watch("role_title"),
+  const watchCompanyName = form.watch("company_name"),
 
+  const handleFormSubmit = async (values: FormValues) => {
+    // Create a properly typed WorkExperience object with all required fields
+    const workExperience: WorkExperience = {
+      id: initialData?.id,
+      company_name: values.company_name,  // Required
+      role_title: values.role_title,      // Required
+      start_date: values.start_date,      // Required
+      end_date: values.end_date,          // Optional
+      is_current: values.is_current,      // Required
+      description: values.description,    // Optional
+      location: values.location,          // Optional
+    },
+    
+    await onSubmit(workExperience)
+  },
+
+  const handleAIEnhancement = (content: string) => {
+    form.setValue("description", content, { shouldDirty: true }),
+    setIsEnhancementDialogOpen(false)
+  },
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <>
       <Form {...form}>
@@ -80,6 +144,7 @@ export function WorkExperienceItemForm({
             <FormField
               control={form.control}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   <FormLabel>Company Name</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. Acme Corporation" {...field} />
@@ -96,54 +161,6 @@ export function WorkExperienceItemForm({
               )}
             />
           </div>
-=======
-
-import { useState } from 'react'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
-import { WorkExperience } from '@/types/resume'
-import { Button } from '@/components/ui/button'
-import { Calendar } from '@/components/ui/calendar'
-import {
-  Form
-  FormControl
-  FormField
-  FormItem
-  FormLabel
-  FormMessage
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-  Popover
-  PopoverContent
-  PopoverTrigger
-} from '@/components/ui/popover'
-import { Textarea } from '@/components/ui/textarea'
-import { cn } from '@/lib/utils'
-import { Switch } from '@/components/ui/switch'
-import { format } from 'date-fns'
-
-import { CalendarIcon, Loader2 } from 'lucide-react'
-import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
-import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
-import { useState } from 'react',
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm } from "react-hook-form",
-import { z } from "zod",
-import { WorkExperience } from "@/types/resume",
-import { Button } from "@/components/ui/button",
-import { Calendar } from "@/components/ui/calendar",
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { Textarea } from "@/components/ui/textarea",
-import { cn } from "@/lib/utils",
-import { Switch } from "@/components/ui/switch",
-import { format } from "date-fns",
-import { CalendarIcon, Loader2 } from 'lucide-react'
-import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
-import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
-
 import { useState } from 'react',;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
@@ -347,10 +364,65 @@ export function WorkExperienceItemForm({;
 
             <FormField
               control={form && form.control}
+=======
+              name='location'
+              render={({ field }: { field: any }) => (                <FormItem>;
+                  <FormLabel>Location</FormLabel>;
+                  <FormControl>;
+                    <Input
+                      placeholder='e && e.g. New York, NY (Remote)'
+  return (
+    <>;
+      <Form {...form}>;
+        <form;
+          on_submit={form.handle_submit (handleFormSubmit)}
+          className='space - y-6';
+        >;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+            <FormField;
+              control={form.control}
+              name='company_name';
+              render={({ field }: { field: any }) => (                <FormItem>;
+                  <FormLabel > Company Name</FormLabel>;
+                  <FormControl>;
+                    <Input placeholder='e.g. Acme Corporation' {...field} />;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>)}
+            />;
+            <FormField;
+              control={form.control}
+
+            />;
+              name="role_title"
+              render={({ field }: { field: any }) => (
+                <FormItem>
+                  <FormLabel>Role Title</FormLabel>
+                  <FormControl>
+                    <Input placeholder="e.g. Senior Developer" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+            <FormField
+              control={form.control}
+              name='location'
+              render={({ field }: { field: any }) => (                <FormItem>
+
+
+            <FormField
+
+                </FormItem>)}
+              control={form.control}
+              name="location"
+              render={({ field }: { field: any }) => (
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <FormItem>
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <FormLabel>Location</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. New York, NY (Remote)" {...field} />
@@ -359,6 +431,7 @@ export function WorkExperienceItemForm({;
                 </FormItem>
               )}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       I currently work here
                     </label>
                   </div>
@@ -368,64 +441,28 @@ export function WorkExperienceItemForm({;
             />
           </div>
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <Popover>
                     <PopoverTrigger asChild>
                       <FormControl>
                         <Button
-
-                          {field.value ? (
-                            format(field.value, "MMM yyyy")
-                          ) : (
-                            <span>Select date</span>
-                            'w-full pl-3 text-left font-normal',
-                            !field && field.value && 'text-muted-foreground'
-                          )}>;
-                          {field && field.value ? (;
-                            format(field && field.value, 'MMM yyyy');
-                          ) : (;
-                            <span>Select date</span>;
-                          )}
-
-                </FormItem>)}
-            />;
-          </div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-            <FormField;
-              control={form.control}
-              name='start_date';
-              render={({ field }: { field: any }) => (
-                <FormItem className='flex flex - col'>                  <FormLabel > Start Date</FormLabel>;
-                  <Popover>;
-                    <PopoverTrigger as_child>;
-                      <FormControl>;
-                        <Button;
-                          variant={'outline'}
-                          className={cn (
-                            'w - full pl - 3 text - left font - normal',
-                            !field.value && 'text - muted - foreground')}                        >;
-                          {field.value ? (
-                            format (field.value, 'MMM yyyy')) : (
-                            <span > Select date</span>)}
-                          <CalendarIcon;
-                            className='ml - auto h - 4 w - 4 opacity - 50';
-                            aria - hidden='true';
-
-                          />;
-                        </Button>;
-                      </FormControl>;
-                    </PopoverTrigger>;
-
-                          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" />
-                        </Button>
-                      </FormControl>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0" align="start">
-                      <Calendar
-
                     <Popover>
                       <PopoverTrigger asChild>
                         <FormControl>
                           <Button
+=======
+                            variant={'outline'}
+                            className={cn(
+                              'w-full pl-3 text-left font-normal'
+                              !field.value && 'text-muted-foreground'
+                            )}                          >
+                            variant={"outline"}
+                            className={cn(
+                              "w-full pl-3 text-left font-normal",
+                              !field.value && "text-muted-foreground"
+                            )}
+                          >
+<<<<<<< HEAD
 
                             {field.value ? (
                               format(field.value, "MMM yyyy")
@@ -494,36 +531,77 @@ export function WorkExperienceItemForm({;
                       </PopoverTrigger>
                       <PopoverContent className="w-auto p-0" align="start">
                         <Calendar
-
-                )}
-              />
-            )}
-
-                  <FormLabel>Description</FormLabel>
-                  <div className="flex gap-2">
-                    <AIEnhancementButton
-                      options={{
-
-                      onEnhanced={content =>
-                        form.setValue('description', content, {
-                          shouldDirty: true
-                        })
-                      }
-                      buttonText='Enhance with AI'
-                    />
-                    <Button
-                      type='button'
-                      variant='outline'
-                      size='sm'
-                      onClick={() => setIsEnhancementDialogOpen(true)}
-                      className='text-xs'                    >
-
                       AI Writer
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
         onApply={handleAIEnhancement}
         defaultOptions={{
 
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <div className='flex justify-end gap-2'>
+            <Button type='button' variant='outline' onClick={onCancel}>
+          
+          <div className="flex justify-end gap-2">
+            <Button type="button" variant="outline" onClick={onCancel}>
+
+              Cancel
+            </Button>
+            <Button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Saving...
+                </>
+              ) : (
+                <>Save</>
+              )}
+            </Button>
+          </div>
+        </form>
+      </Form>
+          />;
+
+          <div className='flex justify-end gap-2'>;
+            <Button type='button' variant='outline' onClick={onCancel}>;
+              Cancel;
+            </Button>;
+            <Button type='submit' disabled={isSubmitting}>;
+              {isSubmitting ? (;
+                <>;
+                  <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
+                  Saving...;
+                </>;
+              ) : (;
+                <>Save</>;
+              )}
+              </FormItem>)}
+          />;
+          <div className='flex justify - end gap - 2'>;
+            <Button type='button' variant='outline' on_click={on_cancel}>;
+              Cancel;
+            </Button>;
+            <Button type='submit' disabled={is_submitting}>;
+              {is_submitting ? (
+                <>;
+                  <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />;
+                  Saving...;
+                </>) : (
+                <>Save</>)}
+            </Button>;
+          </div>;
+        </form>;
+      </Form>;
+
+
+        title="Enhance Work Experience Description"
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }}
         initialContent={form.getValues('description') |''}      />
 
@@ -615,3 +693,14 @@ setIsEnhancementDialogOpen (false);
 }</div> <FormField <FormLabel>Description</FormLabel> <div className="flex gap-2" > <AIEnhancementButton > AI Writer </Button> </div> </div> <FormControl> <Textarea placeholder="Describe your responsibilities, achievements, and skills used in this role..." className="min-h-[150px]" {
   ...field
 }/> </FormControl> <FormMessage /> </FormItem>) "
+<<<<<<< HEAD
+          enhancementType: "work-description",
+          content: form.getValues("description") || "",
+          context: `${watchRoleTitle} at ${watchCompanyName}`}}
+        initialContent={form.getValues("description") || ""}
+      />
+    </>
+  )
+}
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

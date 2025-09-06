@@ -1,6 +1,15 @@
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
+
+export interface MatchResultItem {;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   title: string;
   description: string;
@@ -13,6 +22,7 @@
 }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   item: MatchResultItem;
   score: number;
 
@@ -29,8 +39,8 @@ const sample_data: MatchResultItem[] = [;
     category: "Talent - Engineering";
 
 =======
-    price: 120,
-    skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"];
+    price: 120
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   }
   {
@@ -51,7 +61,26 @@ const sample_data: MatchResultItem[] = [;
 
 
 
+  type: string = ""
+// AI Matchmaking utility functions;
+export interface MatchResultItem {;
+  id: string,;
+  title: string,;
+  description: string,;
+  category: string,;
+  price?: number,;
+  skills?: string[],;
+  image?: string;
+}
+;
+export interface MatchResult {;
+  item: MatchResultItem,;
+  score: number,;
+  matchedSkills: string[],;
+  reason: string;
+}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Sample data for testing when API is not available
 const sampleData: MatchResultItem[] = [
   {
@@ -93,13 +122,6 @@ const sampleData: MatchResultItem[] = [
     // For now, we'll simulate a response with sample data
     // Simulate API call delay
 
-=======
-
-    await new Promise(resolve => setTimeout(resolve, 1000)),
-    
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     // Filter by type if provided
     let filteredItems = sampleData;
     if (type && type !== "all") {
@@ -173,7 +195,7 @@ export async function findMatches(;
   } catch (error) {;
     console.error("Error in matchmaking:", error);
     return [];
-
+=======
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -189,6 +211,9 @@ export async function findMatches(;
     }));
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

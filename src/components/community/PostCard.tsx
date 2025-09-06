@@ -1,3 +1,28 @@
+=======
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { ForumPost } from "@/types/community";
+import { logInfo } from '@/utils/productionLogger';
+interface PostCardProps {
+  post: ForumPost,
+  compact?: boolean
+}
+
+import React from 'react',
+import { formatDistanceToNow } from "date-fns",
+import Link from "next/link",
+import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react'
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { cn } from "@/lib/utils",
+import { ForumPost } from "@/types/community",
+import { logInfo } from '@/utils/productionLogger',
+<<<<<<< HEAD
 
 
 interface PostCardProps {
@@ -5,6 +30,11 @@ interface PostCardProps {
   compact?: boolean
 }
 <<<<<<< HEAD
+
+
+
+
+
   return (
     <Card data-testid="post-card" className={cn(
       "transition-shadow hover:shadow-md"
@@ -16,10 +46,6 @@ export default PostCard;
       "transition-shadow hover: shadow-md",
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
 export default PostCard;
-
-
-export default PostCard;
-<<<<<<< HEAD
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
 =======
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

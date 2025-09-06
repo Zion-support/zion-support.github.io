@@ -1,12 +1,48 @@
 
 
-=======
-
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+import React from 'react'
+import { render, screen, fireEvent } from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Layoutdynamic from '../components/Layout.dynamic'
+describe('Layoutdynamic'
+  test('renders without crashing'
+    expect(screen.getByTestId('layout.dynamic'
+  test('displays correct content'
+  test('handles user interactions'
+  test('applies correct styling'
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Layoutdynamic from "./components/Layout.dynamic"; describe('Layoutdynamic', () => { test("renders without crashing",() => { render(<Layoutdynamic />); expect(screen.getByTestId("layout.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Layoutdynamic />)}); test("handles user interactions",() => { render(<Layoutdynamic />)}); test("applies correct styling"
+import _React from 'react';  import '@testing-library/jest-dom'; import Layoutdynamic from '../components/Layout.dynamic'; describe('Layoutdynamic',() => { test('renders without crashing',() => { render(<Layoutdynamic />); expect(screen.getByTestId('layout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Layoutdynamic />)}); test('handles user interactions',() => { render(<Layoutdynamic />)}); test('applies correct styling',() => { render(<Layoutdynamic />)})});
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/main
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import Layoutdynamic from '../components/Layout.dynamic';
+describe('Layoutdynamic', () => {
+  test('renders without crashing', () => {
+    render(<Layoutdynamic />);
+    expect(screen.getByTestId('layout.dynamic')).toBeInTheDocument();
+  });
+  test('displays correct content', () => {
+    render(<Layoutdynamic />);
+  });
+  test('handles user interactions', () => {
+    render(<Layoutdynamic />);
+  });
+  test('applies correct styling', () => {
+    render(<Layoutdynamic />);
+  });
+});
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Layoutdynamic from "./components/Layout.dynamic"; describe("Layoutdynamic",() => { test("renders without crashing",() => { render(<Layoutdynamic />); expect(screen.getByTestId("layout.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Layoutdynamic />)}); test("handles user interactions",() => { render(<Layoutdynamic />)}); test("applies correct styling",() => { render(<Layoutdynamic />)})});''"
+import _React from 'react';  import '@testing-library/jest-dom'; import Layoutdynamic from '../components/Layout.dynamic'; describe('Layoutdynamic',() => { test('renders without crashing',() => { render(<Layoutdynamic />); expect(screen.getByTestId('layout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Layoutdynamic />)}); test('handles user interactions',() => { render(<Layoutdynamic />)}); test('applies correct styling',() => { render(<Layoutdynamic />)})});
+import _React from 'react';  import '@testing-library/jest-dom'; import Layoutdynamic from '../components/Layout.dynamic'; describe('Layoutdynamic',() => { test('renders without crashing',() => { render(<Layoutdynamic />); expect(screen.getByTestId('layout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Layoutdynamic />)}); test('handles user interactions',() => { render(<Layoutdynamic />)}); test('applies correct styling',() => { render(<Layoutdynamic />)})});
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     // Test content display
   test('handles user interactions', () => {
     // Test user interactions
@@ -14,9 +50,10 @@
     // Test styling
 
 =======
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  });
+});
+origin/main
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -28,34 +65,6 @@ describe('Layoutdynamic'
 });
 
 =======
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Layout from '../components/Layout.dynamic';
-
-describe('Layout', () => {
-  test('renders without crashing', () => {
-    render(<Layout />);
-    expect(screen.getByTestId('layout.dynamic')).toBeInTheDocument();
-  });
-
-  test('displays correct content', () => {
-    render(<Layout />);
-    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
-  });
-
-  test('handles user interactions', () => {
-    render(<Layout />);
-    // Add interaction tests here
-  });
-
-  test('applies correct styling', () => {
-    render(<Layout />);
-    // Add styling tests here
-  });
-});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
-=======
   test ('displays correct content', () => {
     // Test content display;
   test ('handles user interactions', () => {
@@ -65,3 +74,12 @@ describe('Layout', () => {
 });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+    expect(screen.getByTestId('layout.dynamic'
+  test('displays correct content'
+  test('handles user interactions'
+  test('applies correct styling'
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Layoutdynamic from "./components/Layout.dynamic"; describe('Layoutdynamic', () => { test("renders without crashing",() => { render(<Layoutdynamic />); expect(screen.getByTestId("layout.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Layoutdynamic />)}); test("handles user interactions",() => { render(<Layoutdynamic />)}); test("applies correct styling"
+origin/automation-improvements-final
+});
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -99,15 +99,32 @@ if (return) {
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
+=======
+          
+          if (distance < 100) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();          }            ctx.stroke()
+          }
+<<<<<<< HEAD
         }
       }
-
-        }
-      }
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+            ctx.stroke();          }
+
+          }
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+        }
+      }
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       // Draw animated grid
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)';
       ctx.lineWidth = 0.5;
@@ -311,6 +328,9 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Floating Elements */}
       <div className='absolute inset-0'>
         {/* Animated Grid Pattern */}
@@ -331,6 +351,85 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
         style={{ zIndex: -1 }}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+            rotate: [360, 0];
+            scale: [1, 1.2, 1];
+            opacity: [0.2, 0.5, 0.2];
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+
+          className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
+        />;
+        <motion.div;
+          className='absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 / 20 transform rotate - 45';
+          animate={{
+            rotate: [45, 405],
+            scale: [1, 1.15, 1],
+            opacity: [0.2, 0.3, 0.2],          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: 'linear',          }}
+        />;
+        <motion.div;
+          className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 / 20 transform rotate - 45";
+          animate={{
+
+            duration: 12
+            repeat: Infinity
+            ease: 'linear'
+
+          }}
+
+        />;
+
+
+        {/* Additional Floating Elements */}
+        <motion&& motion.div
+          className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12'
+          animate={{
+
+            rotate: [12, 372],
+            scale: [1, 1 && 1.1, 1],
+            opacity: [0 && 0.15, 0 && 0.25, 0 && 0.15],          }}
+
+          transition={{
+            duration: 15
+            repeat: Infinity
+            ease: 'linear',          }}
+
+            rotate: [45, 405];
+            scale: [1, 1.15, 1];
+            opacity: [0.2, 0.3, 0.2];
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+
+<<<<<<< HEAD
+            duration: 15,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+
+          className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full"
+        />;
+        <motion.div;
+          className='absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green - 400 / 20 rounded - full';
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.2, 1],
+            opacity: [0.15, 0.3, 0.15],          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             ease: 'linear',          }}
         />;
         <motion.div;
@@ -380,6 +479,7 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
           }}
           transition={{
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }}
         />
 
@@ -408,8 +508,22 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
         <motion&& motion.div
           className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full"
           animate={{
+            y: [0, -20, 0];
+            opacity: [0.4, 0.8, 0.4]
+          transition={{
+            duration: 18,
+            repeat: Infinity,
 
 
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }}
           transition={{
 
@@ -506,10 +620,18 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
 
           }}
           transition={{
-            duration: 4,
+            duration: 5
+            repeat: Infinity
+            ease: 'easeInOut'
+            duration: 5,
             repeat: Infinity,
+            ease: 'easeInOut',
+            delay: 2,
+          }}
+        />
+      </div>
             ease: "easeInOut",
-            delay: 1
+            delay: 2
           }}
 
         />;
@@ -518,12 +640,20 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
 
           animate={{
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            delay: 2
           }}
           transition={{
 
-          }}
-          transition={{
-
+      <style jsx>{`
+        @keyframes gridMove {
+          0% {
+=======
+            duration: 5,
+            repeat: Infinity,
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             ease: 'easeInOut',
             delay: 2,
           }}
@@ -612,6 +742,7 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
 };
 export default UltraFuturisticBackground2040;
 
+=======
 
       `}</style>;
     </div>);
@@ -623,18 +754,11 @@ export default UltraFuturisticBackground2040;
 }  );
 }
 ;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default UltraFuturisticBackground2040;
-;
-
-=======
-
 export default UltraFuturisticBackground2040;
-
-=======
+<<<<<<< HEAD
 export default UltraFuturisticBackground2040;
-=======
-export default UltraFuturisticBackground2040;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

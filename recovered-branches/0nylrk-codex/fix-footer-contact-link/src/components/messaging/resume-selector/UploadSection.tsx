@@ -4,6 +4,13 @@ import React from 'react',
 import { Button } from "@/components/ui/button",
 import { Upload, FileText } from 'lucide-react',
 
+import React from 'react',
+import { Button } from "@/components/ui/button",
+import { Upload, FileText } from 'lucide-react',
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface UploadSectionProps {
   customFile: File | null,
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
@@ -30,43 +37,6 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
         </Button>
       </div>
 
-  return (
-    <div className="space-y-3">;
-      <div className="flex flex-col items-center justify-center border-2 border-dashed border-zion-purple/30 rounded-lg p-6 bg-zion-blue-dark/30">;
-        <Upload className="h-8 w-8 text-zion-purple mb-2" />;
-        <p className="text-sm text-zion-slate mb-2">;
-          {customFile;
-            ? customFile && customFile.name;
-=======
-import React from './react';
-import { Button  } from '@/components / ui / button';
-import { Upload, FileText  } from './lucide-react';
-interface UploadSectionProps {
-  custom_file: File | null;
-  onFileUpload: (e: React.ChangeEvent < HTMLInputElement>) => void;
-}
-export /**
- * UploadSection - Function description
- */
-function UploadSection() {
-  return (
-    <div className="space - y-3">;
-      <div className="flex flex - col items - center justify - center border - 2 border - dashed border - zion - purple / 30 rounded - lg p - 6 bg - zion - blue - dark / 30">;
-        <Upload className="h - 8 w - 8 text - zion - purple mb - 2" />;
-        <p className="text - sm text - zion - slate mb - 2">;
-          {custom_file;
-            ? custom_file.name;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-            : "Drag & drop your PDF or click to browse"}
-        </p>;
-        <Button variant="outline" className="relative">;
-          Browse Files;
-
-
-      
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {customFile && (
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
@@ -80,9 +50,56 @@ function UploadSection() {
             </span>
           </div>
         </div>
+      )}
+    </div>
+  );
+}
+=======
+
 
 =======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import React from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Upload, FileText } from 'lucide-react',;
+interface UploadSectionProps {;
+  customFile: File | null;
+  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+;
+export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {;
+  return (;
+    <div className="space-y-3">;
+      <div className="flex flex-col items-center justify-center border-2 border-dashed border-zion-purple/30 rounded-lg p-6 bg-zion-blue-dark/30">;
+        <Upload className="h-8 w-8 text-zion-purple mb-2" />;
+        <p className="text-sm text-zion-slate mb-2">;
+          {customFile ? customFile.name : "Drag & drop your PDF or click to browse"}
+        </p>;
+        <Button variant="outline" className="relative">;
+          Browse Files;
+          <input;
+            type="file";
+            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer";
+            accept=".pdf";
+            onChange={onFileUpload}
+
+          />;
+        </Button>;
+      </div>;
+
+      {customFile && (;
+        <div className="p-3 bg-zion-blue-dark/30 rounded-md">;
+          <div className="flex items-center justify-between">;
+            <div className="flex items-center">;
+              <FileText className="h-4 w-4 mr-2 text-zion-cyan" />;
+              <span className="text-white">{customFile && customFile.name}</span>;
+            </div>;
+            <span className="text-xs text-zion-slate">;
+              {Math && Math.round(customFile && customFile.size / 1024)} KB;
+            </span>;
+          </div>;
+        </div>;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       )}
     </div>;
   );
@@ -110,5 +127,11 @@ function UploadSection() {
     </div>);
 
 }
+;
 =======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

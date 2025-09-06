@@ -59,6 +59,73 @@ const ServicesPage: React.FC = () => {
           >
             Email Us
           </a>
+========
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330:src/pages/Services.tsx
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏥</span>
+              </div>
+              <h3 className="text-lg font-semibold">Healthcare</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏦</span>
+              </div>
+              <h3 className="text-lg font-semibold">Finance</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏭</span>
+              </div>
+              <h3 className="text-lg font-semibold">Manufacturing</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🛒</span>
+              </div>
+              <h3 className="text-lg font-semibold">Retail</h3>
+            </div>
+<<<<<<<< HEAD:backup-problematic-files/src/pages/Services.tsx
+            <div className="text-center">
+              <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🎓</span>
+              </div>
+              <h3 className="text-lg font-semibold">Education</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏛️</span>
+              </div>
+              <h3 className="text-lg font-semibold">Government</h3>
+            </div>
+
+========
+<<<<<<< HEAD
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-xl text-blue-100 mb-8">Let's discuss how our services can help transform your business.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
+            >
+              Get Free Consultation
+            </Link>
+            <Link
+              to="/pricing"
+              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
+            >
+              View Pricing
+            </Link>
+          </div>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         </div>
       </div>
     </div>

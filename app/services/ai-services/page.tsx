@@ -4,7 +4,6 @@ export const metadata = {
   title: 'AI Services | Zion Tech Group',
   description: 'Advanced AI solutions including machine learning, natural language processing, computer vision, and intelligent automation. Transform your business with cutting-edge AI technology.'
 };
-<<<<<<< HEAD
 
 export default function AIPage() {
   return (
@@ -21,6 +20,7 @@ export default function AIPage() {
 export default function AIPage() {
   return (
     <div className="animate-fade-in">
+<<<<<<< HEAD
       <section className="py-12">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -580,20 +580,6 @@ function AIPricingCard({ name, price, duration, features, recommended }: {
 
 function Item({ title, details }: { title: string; details: string[] }) {
   return (
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-    <div className="bg-white border border-gray-200 rounded-xl p-6">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2">
-        {details.map((detail, index) => (
-          <li key={index} className="flex items-start text-gray-600">
-            <span className="text-blue-500 mr-2 mt-1">•</span>
-            {detail}
-          </li>
-        ))}
-      </ul>
-<<<<<<< HEAD
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
     </div>
   );
 }
@@ -605,7 +591,6 @@ function AIServiceCategory({ title, icon, description, services }: {
   services: string[];
 }) {
   return (
-<<<<<<< HEAD
     <section className="py-12">
       <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">AI Development Packages</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -649,68 +634,116 @@ function AIServiceCategory({ title, icon, description, services }: {
           ]} 
         />
       </div>
-    </section>
-  );
-}
-
-function Plan({ name, price, duration, features }: { 
-  name: string; 
-  price: string; 
-  duration: string;
-  features: string[]; 
-}) {
-  return (
-    <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
-      <h4 className="text-2xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-blue-600 mb-2">{price}</div>
-      <div className="text-gray-600 mb-6">{duration}</div>
-      <ul className="space-y-3 mb-8">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-gray-600">
-            <span className="text-green-500 mr-3">✓</span>
-            {feature}
+      <ul className="text-gray-600 space-y-2">
+        {features.map((feature) => (
+          <li key={feature} className="flex items-center">
+            <span className="text-blue-500 mr-2">•</span> {feature}
           </li>
         ))}
       </ul>
       <a 
         href="tel:+13024640950" 
-        className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
+        className="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
       >
         Get Started
       </a>
 function ContactSection() {
   return (
-    <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
-      <div className="text-center">
-        <h3 className="text-3xl font-bold text-gray-900 mb-4">
-          Ready to Transform Your Business with AI?
-        </h3>
-        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Let's discuss how AI can solve your specific challenges and create competitive advantages. 
-          Our AI experts have delivered 100+ successful AI implementations.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Email Us
-          </a>
-        </div>
-        <div className="mt-8 text-sm text-gray-500">
-          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-        </div>
+    <div className="text-center p-6">
+      <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+        {step}
+      </div>
+      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
+}
+
+function AITechStack({ title, technologies }: { 
+  title: string; 
+  technologies: string[]; 
+}) {
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 bg-white">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+      <div className="flex flex-wrap gap-2">
+        {technologies.map((tech) => (
+          <span key={tech} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+            {tech}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function IndustryUseCase({ title, description, examples, icon }: { 
+  title: string; 
+  description: string; 
+  examples: string[]; 
+  icon: string; 
+}) {
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="text-gray-600 space-y-2">
+        {examples.map((example) => (
+          <li key={example} className="flex items-center">
+            <span className="text-blue-500 mr-2">•</span> {example}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function AIBenefitCard({ title, description, icon }: { 
+  title: string; 
+  description: string; 
+  icon: string; 
+}) {
+  return (
+    <div className="text-center p-6 border border-gray-200 rounded-xl bg-white hover:shadow-lg transition-shadow">
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
+}
+
+function Pricing() {
+  return (
+    <section className="mb-16">
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">AI Service Pricing</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Plan 
+          name="AI Discovery" 
+          price="$5k–$12k" 
+          features={["2–3 weeks", "Use-case design", "Tech selection", "Roadmap", "Proof of concept"]} 
+          popular={false}
+        />
+        <Plan 
+          name="Pilot" 
+          price="$15k–$45k" 
+          features={["4–8 weeks", "RAG/agent MVP", "Evals + safety", "Dashboards", "Basic monitoring"]} 
+          popular={true}
+        />
+        <Plan 
+          name="Production" 
+          price="$50k+" 
+          features={["Hardened infra", "Monitoring", "SLAs", "Cost optimization", "24/7 support"]} 
+          popular={false}
+        />
       </div>
     </section>
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

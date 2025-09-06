@@ -1,10 +1,7 @@
 
 
-=======
 
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -12,10 +9,24 @@ import {LanguageThemeSelector} from "../components/onboarding/LanguageThemeSelec
 import {RolePicker} from "../components/onboarding/RolePicker";
 import {SignUpForm} from "../components/onboarding/SignUpForm";
 type OnboardingStep = "language" | "role" | "signup";
+export function MobileOnboarding() {
 
+export function MobileOnboarding() {;
   const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
   const navigate = useNavigate();
+import React, { useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { Button } from "@/components/ui/button",
+import { LanguageThemeSelector } from "../components/onboarding/LanguageThemeSelector",
+import { RolePicker } from "../components/onboarding/RolePicker",
+import { SignUpForm } from "../components/onboarding/SignUpForm",
+type OnboardingStep = "language" | "role" | "signup",
 
+export function MobileOnboarding() {
+  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language"),
+  const navigate = useNavigate(),
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const goToNextStep = () => {
     if (currentStep === "language") {
       setCurrentStep("role")
@@ -24,6 +35,17 @@ type OnboardingStep = "language" | "role" | "signup";
     } else {
       navigate("/mobile")
     }
+=======
+  }
+  const handleRoleSelect = () => {
+    setCurrentStep("signup")
+  }
+  },
+  
+  const handleRoleSelect = () => {
+    setCurrentStep("signup")
+  },
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -65,5 +87,9 @@ type OnboardingStep = "language" | "role" | "signup";
             <SignUpForm />
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

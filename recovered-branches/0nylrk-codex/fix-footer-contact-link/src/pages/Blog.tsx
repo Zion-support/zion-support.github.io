@@ -1,5 +1,16 @@
 
-
+import {useState} from "react";
+import {Link} from "react-router-dom";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {GradientHeading} from "@/components/GradientHeading";
+import {SEO} from "@/components/SEO";
+import {Card, CardContent, CardFooter} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
+import {BlogPost} from "@/types/blog";
+import {Search} from "lucide-react";
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { Header } from "@/components/Header",
@@ -10,6 +21,28 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
+import { BlogPost } from "@/types/blog";
+import { Search } from "lucide-react";
+// Sample blog data - in a real app this would come from an API or CMS
+const BLOG_POSTS: BlogPost[] = [
+  {
+import { BlogPost } from "@/types/blog",
+import { Search } from "lucide-react",
+// Sample blog data - in a real app this would come from an API or CMS
+const BLOG_POSTS: BlogPost[] = [
+  {
+    id: "ai-trends-2025",
+    title: "10 Emerging AI Trends to Watch in 2025",
+    slug: "ai-trends-2025",
+    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.",
+    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
+
+
+    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 <h2>1. Multimodal AI Systems</h2>
 <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>
 <h2>2. Neuromorphic Computing</h2>
@@ -39,7 +72,26 @@ import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@
     slug: "optimize-ai-listings"
     excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients."
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
+<<<<<<< HEAD
 
+      name: "Dr. Alicia Zhang"
+      title: "AI Research Director"
+      avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
+    }
+    publishedDate: "Apr 15, 2025";
+    readTime: "5 min read"
+    category: "Trends"
+    tags: ["AI", "Technology Trends", "Machine Learning", "Future Tech"];
+    featuredImage: "https://images.unsplash.com/photo-1677442135026-f00ef565c4be?auto=format&fit=crop&w=1200&h=630"
+    isFeatured: true
+  }
+  {
+    id: "optimize-ai-listings"
+    title: "How to Optimize Your AI Service Listings for Maximum Visibility"
+    slug: "optimize-ai-listings"
+    excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients."
+    content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 <h2>Crafting an Irresistible Service Title</h2>
 <p>Your title is the first element potential clients see. It should be specific, include relevant keywords, and clearly communicate your unique value proposition. Avoid generic terms and focus on the specific problems you solve or results you deliver.</p>
 <h2>Compelling Service Descriptions That Convert</h2>
@@ -56,6 +108,8 @@ import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@
       avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200"
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 <h2>Energy-Efficient Hardware Selection</h2>
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>
 <h2>Optimizing Cooling Systems</h2>
@@ -71,8 +125,6 @@ import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@
       title: "Sustainability Engineer"
       avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200"
 
-=======
-
     },
     publishedDate: "Apr 5, 2025",
     readTime: "6 min read",
@@ -83,27 +135,6 @@ import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  {
-    id: "ai-ethics-frameworks"
-    title: "Implementing Ethical AI Frameworks in Enterprise Applications"
-    slug: "ai-ethics-frameworks"
-    excerpt: "A comprehensive guide to integrating ethical considerations into your AI development lifecycle."
-    content: `<p>As AI systems become more prevalent in critical decision-making, organizations must implement robust ethical frameworks to ensure responsible deployment. This article provides a practical roadmap for embedding ethics throughout your AI development lifecycle.</p>
-<h2>Establishing Ethical Principles</h2>
-<p>Begin by defining clear ethical principles that align with your organization's values and industry requirements. These typically include fairness, transparency, accountability, privacy, and human oversight. These principles should be documented and socialized across all teams involved in AI development.</p>
-<h2>Data Ethics and Governance</h2>
-<p>Ethical AI begins with ethical data practices. Establish robust data governance policies that address collection consent, proper anonymization techniques, representation biases, and appropriate usage limitations. Regular data audits should verify adherence to these standards.</p>
-<h2>Model Development and Testing</h2>
-<p>Implement bias testing throughout the development process, not just at the end. Use diverse test datasets that represent different demographics and edge cases. Document model limitations and potential risks in model cards that accompany each deployed system.</p>
-<h2>Deployment with Human Oversight</h2>
-<p>Even highly accurate AI systems require human oversight mechanisms. Implement appropriate appeal processes, confidence thresholds that trigger human review, and ongoing monitoring for performance drift that might introduce new ethical concerns.</p>
-<h2>Continuous Ethical Evaluation</h2>
-<p>Ethics isn't a one-time consideration. Establish regular review cycles that evaluate both technical performance and ethical implications of deployed systems. Create channels for stakeholder feedback, including affected users and communities.</p>`;
-    author: {
-      name: "Dr. James Peterson"
-      title: "AI Ethics Officer"
-      avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200"
-
   {
     id: "ai-talent-acquisition"
     title: "Winning the AI Talent War: Recruitment Strategies for 2025"
@@ -167,31 +198,6 @@ import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-// Categories for filtering
-const CATEGORIES = [
-  "All Categories",
-  "Trends",
-  "Marketing",
-  "Sustainability",
-  "Ethics",
-  "Recruitment",
-  "Infrastructure"
-
-  // Filter blog posts based on search and category
-  const filteredPosts = BLOG_POSTS.filter(post => {
-    const matchesSearch =
-      post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
-
-    const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory,
-
-    return matchesSearch && matchesCategory
-  }),
-
-  // Get featured posts
-  const featuredPosts = BLOG_POSTS.filter(post => post.isFeatured),
-
   return (
     <>
       <SEO
@@ -210,6 +216,8 @@ const CATEGORIES = [
             </p>
           </div>
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts && featuredPosts.length > 0 && (;
             <div className="mb-16">;
@@ -254,88 +262,6 @@ const CATEGORIES = [
                     asChild
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit">;
                     <Link to={`/blog/${featuredPosts[0].slug}`}>;
-=======
-;
-export default /**
- * Blog - Function description
- */
-function Blog() {
-  const [search_query, setSearchQuery] = useState ("");
-  const [selected_category, setSelectedCategory] = useState ("All Categories");
-;
-  // Filter blog posts based on search and category;
-  const filtered_posts = BLOG_POSTS.filter (post => {
-    const matches_search =;
-      post.title.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-      post.excerpt.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-      post.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ()));
-;
-    const matches_category = selected_category === "All Categories" || post.category === selected_category;
-;
-    return matches_search && matches_category;
-  });
-;
-  // Get featured posts;
-  const featured_posts = BLOG_POSTS.filter (post => post.is_featured);
-;
-  return (
-    <>;
-      <SEO;
-        title="Blog - AI & Tech Insights";
-        description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation.";
-        keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT";
-        canonical="https://app.ziontechgroup.com / blog";
-      />;
-      <Header />;
-      <div className="min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4">;
-        <div className="container mx - auto">;
-          <div className="text - center mb - 12">;
-            <GradientHeading > AI & Tech Insights</GradientHeading>;
-            <p className="mt - 4 text - zion - slate - light text - xl max - w-3xl mx - auto">;
-              Expert perspectives on artificial intelligence, tech innovation, and digital transformation;
-            </p>;
-          </div>;
-          {/* Featured Post Section - Only show if there are featured posts */}
-          {featured_posts.length > 0 && (
-            <div className="mb - 16">;
-              <h2 className="text - 2xl font - bold text - white mb - 6">Featured Article</h2>;
-              <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
-                <div className="aspect - video overflow - hidden rounded - lg">;
-                  <img;
-                    src={featured_posts[0].featured_image}
-                    alt={featured_posts[0].title}
-                    className="object - cover w - full h - full hover:scale - 105 transition - transform duration - 300";
-                  />;
-                </div>;
-                <div className="flex flex - col justify - center">;
-                  <span className="text - sm text - zion - cyan bg - zion - blue - dark px - 3 py - 1 rounded - full inline - block mb - 2">;
-                    {featured_posts[0].category}
-                  </span>;
-                  <h3 className="text - 3xl font - bold text - white mb - 4">;
-                    {featured_posts[0].title}
-                  </h3>;
-                  <p className="text - zion - slate - light mb - 6">;
-                    {featured_posts[0].excerpt}
-                  </p>;
-                  <div className="flex items - center mb - 6">;
-                    <img;
-                      src={featured_posts[0].author.avatar_url}
-                      alt={featured_posts[0].author.name}
-                      className="w - 10 h - 10 rounded - full mr - 3";
-                    />;
-                    <div>;
-                      <p className="text - white font - medium">{featured_posts[0].author.name}</p>;
-                      <p className="text - sm text - zion - slate - light">;
-                        {featured_posts[0].published_date} • {featured_posts[0].read_time}
-                      </p>;
-                    </div>;
-                  </div>;
-                  <Button;
-                    as_child;
-                    className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple w - fit";
-                  >;
-                    <Link to={`/blog/${featured_posts[0].slug}`}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       Read Article;
                     </Link>;
                   </Button>;
@@ -522,16 +448,70 @@ function Blog() {
                 }}
                 }}
 
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                }}
+
+                  setSearchQuery(""),
+                  setSelectedCategory("All Categories")
+                }}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
                 Clear all filters
               </Button>
             </div>
-
+          )}
+        </div>
+      </div>
+      <Footer />
+    </>
+  )
+}
+                    </p>;
+                    <div className="flex items-center">;
+                      <img;
+                        src={post.author.avatarUrl} ;
+                        alt={post.author.name} ;
+                        className="w-8 h-8 rounded-full mr-2";
+                      />;
+                      <span className="text-sm text-white">{post.author.name}</span>;
+                    </div>;
+                  </CardContent>;
+                  <CardFooter className="p-6 pt-0">;
+                    <Button;
+                      variant="link";
+                      className="text-zion-cyan p-0 hover:text-zion-purple";
+                      asChild;
+                    >;
+                      <Link to={`/blog/${post.slug}`}>;
+                        Read More →;
+                      </Link>;
+                    </Button>;
+                  </CardFooter>;
+                </Card>;
+              ))}
+            </div>;
+          ) : (;
+            <div className="text-center py-16">;
+              <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>;
+              <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>;
+              <Button;
+                variant="outline";
+                onClick={() => {;
+                  setSearchQuery("");
+                  setSelectedCategory("All Categories");
+                }}
+                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+              >
+                Clear all filters
+              </Button>
+            </div>
+<<<<<<< HEAD
 =======
 
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           )}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </div>;
@@ -541,4 +521,7 @@ function Blog() {
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

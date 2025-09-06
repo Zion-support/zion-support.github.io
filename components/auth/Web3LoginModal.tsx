@@ -79,40 +79,67 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
       const bs58 = (await import('bs58')).default;
 
       const verifyRes = await fetch('/api/auth/verify-sol', {
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message, signature: bs58.encode(signature), publicKey })});
+      if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');
+      onLoggedIn?.({ address: publicKey, chain: 'sol' });
+      onClose();
+    } catch (e: any) {
+      console.error(e);
+      setError(e?.message |'Phantom connection failed');
+    } finally {
+      setLoading(false);    }      if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');
+      onLoggedIn?.({ address: publicKey, chain: 'sol' })
+      setLoading(false);    }
+
+      onLoggedIn?.({ address: publicKey, chain: 'sol' }),
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+      onClose()
+    } catch (e: any) {
+      console.error(e);
+      setError(e?.message |'Phantom connection failed')
+    } finally {
+      setLoading(false)
+      setLoading(false);    }
+
+
+      const verifyRes = await fetch('/api/auth/verify-sol', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({;
+          message,;
+          signature: bs58 && bs58.encode(signature),;
+          publicKey,;
+        }),;
+      });
+      if (!verifyRes && verifyRes.ok) throw new Error('Failed to verify Phantom signature');
+      onLoggedIn?.({ address: publicKey, chain: 'sol' });
+      onClose();
+    } catch (e: any) {;
+      console && console.error(e);
+      setError(e?.message || 'Phantom connection failed');
+    } finally {;
+      setLoading(false);    }      if (!verifyRes && verifyRes.ok) throw new Error('Failed to verify Phantom signature');
+      onLoggedIn?.({ address: publicKey, chain: 'sol' }),;
+      onClose();
+    } catch (e: any) {;
+      console && console.error(e);
+      setError(e?.message || 'Phantom connection failed');
+    } finally {;
+      setLoading(false);
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
   }, [onClose, onLoggedIn]);
   if (!isOpen) return null;
   return (
-=======
-
-
-            Cancel;
-          </button>;
-        </div>;
-      </div>;
-
-
-
-  return <ModalInner {...props} />;        </div>
-        {error && (
-          <div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
-        )}
-        <div className="space-y-3">
-          <button onClick={handleEvmConnect} disabled={loading} className="w-full rounded-lg bg-black text-white py-2.5 dark:bg-white dark:text-black">
-            {loading ? 'Connecting…' : 'Connect MetaMask / WalletConnect'}
-          </button>
-          <button onClick={handlePhantomConnect} disabled={loading} className="w-full rounded-lg bg-purple-600 text-white py-2.5">
-
-            {loading ? 'Connecting…' : 'Connect Phantom (Solana)'}
-          </button>
-        </div>
-        <div className="mt-4 flex justify-end">
-
-        </div>
-      </div>
-    </div>
-  )
 }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

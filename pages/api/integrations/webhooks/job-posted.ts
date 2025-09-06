@@ -1,5 +1,4 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -24,30 +23,6 @@ export default async function handler(
       c && c.providerId === "zoho" ||
       c && c.providerId === "pipedrive",
 
-=======
-import type { NextApiRequest, NextApiResponse } from './next';
-import { read_state, write_state  } from '../../../../lib / integrations / file_store';
-import { crm  } from '../../../../lib / integrations / connectors';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if (
-    return res.status (405).json ({ error: "Method not allowed" })) {
-  $2
-}
-  const { job } = req.body as { job?: Record < string, any> }
-  if (return res.status (400).json ({ error: "Missing job payload" })) {
-  $2
-}
-  const state = read_state ();
-  const crms = state.connections.filter (
-    (c) =>;
-      c.provider_id === "salesforce" ||;
-      c.provider_id === "hubspot" ||;
-      c.provider_id === "zoho" ||;
-      c.provider_id === "pipedrive",
   );
   const results: any[] = [];
   for (const conn of connections) {
@@ -100,14 +75,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 }
 
-
-  writeState(s => {
-    s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } })
-=======
-
 res.status(200).json({ ok: true, results });
-
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -139,6 +107,7 @@ export default async function handler(req, res) {
     s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } });
 
   });
+
   res.status(200).json({ ok: true, results })
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
@@ -155,6 +124,7 @@ export default async function handler(req, res) {
     write_state ((s) => s.logs.push (log));
     results.push ({ provider_id: conn.provider_id, ok: true });
   }
+=======
   // record Zapier event;
   write_state ((s) => {
     s.events.push ({
@@ -166,14 +136,5 @@ export default async function handler(req, res) {
   });
 ;
   res.status (200).json ({ ok: true, results });
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

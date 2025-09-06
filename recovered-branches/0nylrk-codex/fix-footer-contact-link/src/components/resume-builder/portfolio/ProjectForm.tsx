@@ -1,7 +1,22 @@
 
-
-=======
-
+import { useState  } from 'react';
+import { useForm  } from 'react-hook-form';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import { z  } from 'zod';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage } from '@/components/ui/form';
+import { Loader2, Link, FileImage, Github, Edit  } from 'lucide-react';
+import { PortfolioProject  } from '@/types/resume';
+import { usePortfolio  } from '@/hooks/usePortfolio';
+import { useAuth } from '@/hooks/useAuth';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
@@ -14,6 +29,7 @@ import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
 import {PortfolioProject} from '@/types/resume';
 import {usePortfolio} from '@/hooks/usePortfolio';
 import {useAuth} from '@/hooks/useAuth';
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -45,8 +61,21 @@ interface ProjectFormProps {;
   onSuccess: () => void,;
   onCancel: () => void;
 }
+export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
+=======
+export function ProjectForm(): any ({ project, onSuccess, onCancel }: ProjectFormProps) {;
+
+=======
+
+
+export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
@@ -61,6 +90,85 @@ interface ProjectFormProps {;
       github_url: project?.github_url |''
       demo_url: project?.demo_url |''
       pdf_url: project?.pdf_url |''}
+=======
+  });
+  const onSubmit = async (data: ProjectFormValues) => {
+    if (!user) return;
+    setIsLoading(true)
+    try {
+      const projectData: PortfolioProject = {
+        title: data.title
+        description: data.description
+        technologies: data.technologies ?
+          data.technologies.split().map(tech => tech.trim()) : []
+        image_url: data.image_url
+        github_url: data.github_url |undefined
+        demo_url: data.demo_url |undefined
+        pdf_url: data.pdf_url}
+      let success = false;
+      if (isEditing && project?.id) {
+        success = await updateProject(project.id, projectData)
+      } else {
+        const projectId = await addProject(projectData);
+        success = !!projectId
+      }
+      if (success) {
+        onSuccess();
+        form.reset()
+import { useState } from 'react',;
+import { useForm } from 'react-hook-form',;
+import { zodResolver } from '@hookform/resolvers/zod',;
+import { z } from 'zod',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Textarea } from '@/components/ui/textarea',;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from '@/components/ui/form',;
+import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react',;
+import { PortfolioProject } from '@/types/resume',;
+import { usePortfolio } from '@/hooks/usePortfolio',;
+import { useAuth } from '@/hooks/useAuth',;
+// Define schema for form validation;
+const projectSchema = z.object({;
+  title: z.string().min(1, 'Project title is required'),;
+  description: z.string().optional(),;
+  technologies: z.string().optional(),;
+  image_url: z.string().optional(),;
+  github_url: z;
+    .union([z.string().url('Please enter a valid URL'), z.literal('')]);
+    .optional(),;
+  demo_url: z;
+    .union([z.string().url('Please enter a valid URL'), z.literal('')]);
+    .optional(),;
+  pdf_url: z.string().optional()}),;
+type ProjectFormValues = z.infer<typeof projectSchema>,;
+interface ProjectFormProps {;
+  project?: PortfolioProject,;
+  onSuccess: () => void,;
+  onCancel: () => void;
+}
+;
+export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
+  const { user } = useAuth(),;
+  const { addProject, updateProject } = usePortfolio(),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const isEditing = !!project,;
+  const form = useForm<ProjectFormValues>({;
+    resolver: zodResolver(projectSchema),;
+    defaultValues: {;
+      title: project?.title || '',;
+      description: project?.description || '',;
+      technologies: project?.technologies ? project && project.technologies.join() : '',;
+      image_url: project?.image_url || '',;
+      github_url: project?.github_url || '',;
+      demo_url: project?.demo_url || '',;
+      pdf_url: project?.pdf_url || ''}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   });
   const onSubmit = async (data: ProjectFormValues) => {
     if (!user) return;
@@ -99,6 +207,8 @@ interface ProjectFormProps {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  };
+  },
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
@@ -242,6 +352,7 @@ interface ProjectFormProps {;
       </form>;
     </Form>;
   );
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 import {PortfolioProject} from '@/types / resume';
 import {use_portfolio} from '@/hooks / use_portfolio';
@@ -261,7 +372,10 @@ const project_schema = z.object ({
   pdf_url: z.string ().optional ()}),
 type ProjectFormValues = z.infer < typeof project_schema>;
 ;
+<<<<<<< HEAD
 
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

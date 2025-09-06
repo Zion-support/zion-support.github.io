@@ -1,10 +1,12 @@
 
-
-=======
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "sonner",
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "sonner";
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "sonner",
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export async function createJob(jobData: any) {
   try {
@@ -19,15 +21,6 @@ export async function createJob(jobData: any) {
     throw new Error(error.message || "Failed to create job")
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  }
-}
-export async function updateJob(jobId: string, jobData: any) {
-  try {
-    const { data, error } = await supabase
-      .from('jobs')
-      .update(jobData)
-      .eq('id', jobId)
-
     if (error) throw error,
     return data
   } catch (error: any) {
@@ -35,16 +28,6 @@ export async function updateJob(jobId: string, jobData: any) {
     throw new Error(error.message || "Failed to update job")
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  }
-}
-export async function getJobById(jobId: string) {
-  try {
-    const { data, error } = await supabase
-      .from('jobs')
-      .select('*')
-
-    if (error) throw error,
-
     return data
   } catch (error: any) {
     console && console.error("Error fetching job:", error);
@@ -59,11 +42,14 @@ export async /**
  */
 function create_job() {
   try {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 
 }
 ;
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -311,12 +311,6 @@ const { execSync } = require('child_process')
         "status"
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        "status"
-=======
-        "status"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d

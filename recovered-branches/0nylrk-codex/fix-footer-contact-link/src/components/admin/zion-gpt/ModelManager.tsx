@@ -1,22 +1,40 @@
 
-
+import { useState, useEffect  } from 'react';
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState, useEffect } from 'react',
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
 
+import {useState, useEffect} from 'react';
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+import {Loader2, RefreshCw, Play, CheckCircle, AlertCircle} from "lucide-react";
+import {supabase} from '@/integrations/supabase/client';
+import {ModelConfig} from '@/utils/zion-gpt';
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface ModelVersionData extends ModelConfig {
 
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed'
 
   errorMessage?: string
+}
+export function ZionGPTModelManager() {
+  const [models, setModels] = useState<ModelVersionData[]>([]),
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+export function ZionGPTModelManager() {;
+  const [models, setModels] = useState<ModelVersionData[]>([]);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [isLoading, setIsLoading] = useState(true);
   const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),;
 
@@ -141,7 +159,23 @@ if (throw error) {
     } catch (error) {
       console.error('Error toggling model active state:', error)
     }
+  }
+  };
+import { useState, useEffect } from 'react',
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",
+import { supabase } from '@/integrations/supabase/client',
+import { ModelConfig } from '@/utils/zion-gpt',
+interface ModelVersionData extends ModelConfig {
+  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
+  errorMessage?: string
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -255,6 +289,8 @@ export function ZionGPTModelManager() {;
 
   },
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <Card className="w-full">;
@@ -351,10 +387,18 @@ export function ZionGPTModelManager() {;
                       </Button>;
 
                     )}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               ))}
             </TableBody>;
           </Table>;
         )}
+=======
+      </CardContent>
+    </Card>
+  )
+}
+      </CardContent>;
+    </Card>;
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

@@ -1,5 +1,4 @@
 
-=======
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem } from "../shared/types.js",;
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN,;
 async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMilestoneItem[] | null> {;
@@ -86,8 +85,11 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
 ;
 export async function generateMilestones(input: MilestoneSuggestionInput): Promise<MilestoneSuggestionResponse> {;
   const ai = await callOpenAI(input);
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
   return { milestones }
 }

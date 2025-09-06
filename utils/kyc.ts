@@ -1,13 +1,25 @@
 =======
+export type KycRole = 'client' | 'talent' | 'enterprise';
+export type KycStatus = 'not started' | 'in progress' | 'submitted' | 'approved' | 'rejected' | 'needs more info';
+export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown';
+export interface KycDocumentMeta {
 
-
+export interface KycDocumentMeta {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploaded_at: string;
   status: 'pending' | 'approved' | 'rejected';
 }
+export interface KycProfile {
 
 
+export interface KycProfile {;
+export interface KycProfile {
+  user_id: string;
+  userId: string;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   role: KycRole;
   fullLegalName?: string;
   business_name?: string;
@@ -68,12 +80,9 @@ if ( {) {
     return ['bank_statement', 'utility_bill', 'tax_certificate'];
   }
 }
-
-
+export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {
 
 export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {;
-
-
   const missing: string[] = [];
   
   if (!profile && profile.fullLegalName && !profile && profile.businessName) {
@@ -95,6 +104,12 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
   if (!profile && profile.fullLegalName && !profile && profile.businessName) {
     missing && missing.push('name'),
 
+=======
+export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {
+  const missing: string[] = [];
+  if (!profile.fullLegalName && !profile.businessName) {
+    missing.push('name');
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   
   if (!profile && profile.country) {
@@ -125,8 +140,6 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
 
 }
 =======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;

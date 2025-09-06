@@ -1,5 +1,26 @@
 
-
+import {Fragment} from "react";
+import {Route, Routes} from "react-router-dom";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import Dashboard from "@/pages/Dashboard";
+import ClientDashboard from "@/pages/ClientDashboard";
+import TalentDashboard from "@/pages/TalentDashboard";
+import CreatorDashboard from "@/pages/CreatorDashboard";
+import Analytics from "@/pages/Analytics";
+import ProjectMilestones from "@/pages/ProjectMilestones";
+import ProjectDetails from "@/pages/ProjectDetails";
+import ProjectRoom from "@/pages/ProjectRoom";
+import MessagingInbox from "@/pages/MessagingInbox";
+import Payments from "@/pages/Payments";
+import Interviews from "@/pages/Interviews";
+import Notifications from "@/pages/Notifications";
+import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker";
+import HiringTracker from "@/pages/HiringTracker";
+import PortfolioBuilder from "@/pages/PortfolioBuilder";
+import Referrals from "@/pages/Referrals";
+import DeveloperPortal from "@/pages/DeveloperPortal";
+import WalletPage from "@/pages/Wallet";
+import ContractBuilder from "@/pages/ContractBuilder";
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
@@ -20,7 +41,11 @@ import HiringTracker from "@/pages/HiringTracker",
 import PortfolioBuilder from "@/pages/PortfolioBuilder",
 import Referrals from "@/pages/Referrals",
 import DeveloperPortal from "@/pages/DeveloperPortal",
+import WalletPage from "@/pages/Wallet";
+import ContractBuilder from "@/pages/ContractBuilder";
 
+import WalletPage from "@/pages/Wallet",
+import ContractBuilder from "@/pages/ContractBuilder",
 const DashboardRoutes = () => {
   return (
     <Routes>
@@ -195,6 +220,10 @@ const DashboardRoutes = () => {
       />
     </Routes>
   )
+}
+export default DashboardRoutes;
+
+},
 
 export default DashboardRoutes,
 import { Fragment } from "react",;
@@ -219,9 +248,9 @@ import Referrals from "@/pages/Referrals",;
 import DeveloperPortal from "@/pages/DeveloperPortal",;
 import WalletPage from "@/pages/Wallet",;
 import ContractBuilder from "@/pages/ContractBuilder",;
-const DashboardRoutes = () => {
 =======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const DashboardRoutes = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
@@ -590,11 +619,17 @@ const DashboardRoutes = () =>: any {
           <ProtectedRoute>;
             <ContractBuilder />;
           </ProtectedRoute>;
+=======
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         } ;
       />;
     </Routes>;
   );
 },;
+<<<<<<< HEAD
 
 export default DashboardRoutes;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+export default DashboardRoutes;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

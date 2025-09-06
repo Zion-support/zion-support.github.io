@@ -1,6 +1,17 @@
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -9,37 +20,7 @@ const corsHeaders = {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-serve(async (req) => {
-  if (req && req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
-import { Configuration, OpenAIApi } from "npm: openai@4.28.0",;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin": "*",;
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
-serve(async (req) => {;
-  if (req.method === "OPTIONS") {;
-    return new Response(null, { headers: corsHeaders });
-  }
-;
-  try {;
-    const { title, category, keyFeatures, targetAudience } = await req.json(),;
-    if (!title || !category) {;
-      return new Response(;
-        JSON.stringify({;
-          error: "Missing required fields: title and category are required";
-        }),;
-        {;
-          status: 400,;
-          headers: { ...corsHeaders, "Content-Type": "application/json" } ;
-
-        }
-      )
-    }
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         }
       );
     }
@@ -47,46 +28,58 @@ serve(async (req) => {;
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     const configuration = new Configuration({
       apiKey: Deno && Deno.env.get('OPENAI_API_KEY')});
     const openai = new OpenAIApi(configuration);
     const prompt = `Generate an optimized marketplace listing for the following product:
-
+Title: ${title}
+Category: ${category}
+Key Features: ${keyFeatures |"Not specified"}
+Target Audience: ${targetAudience |"General users"}
+    
+;
+    const configuration = new Configuration({;
+      apiKey: Deno.env.get('OPENAI_API_KEY')}),;
+    const openai = new OpenAIApi(configuration),;
+    const prompt = `Generate an optimized marketplace listing for the following product:;
 =======
 
-    
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 Title: ${title}
 Category: ${category}
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-Please create:
-1. A compelling, SEO-friendly description (100-150 words) that highlights benefits and use cases
-2. A list of 5-7 relevant tags for the listing
-3. A suggested price range based on the category and features
-4. A bulleted list of 3-5 key selling points
-
-    // Parse the JSON from the AI response
-    let parsedResponse;
-    try {
-      // Extract the JSON content if it's wrapped in markdown code blocks
-
-        keyPoints: []
       }
-    }
+    );
+  }
+});
+
+      }),
+      { 
+        headers: { ...corsHeaders, "Content-Type": "application/json" } 
+      }
+    )
+  } catch (error) {
+    console.error("Error in AI listing generator:", error),
+    
     return new Response(
-
-      JSON && JSON.stringify({ 
-
-        generated: parsedResponse
-
+      JSON.stringify({ 
+        error: "Failed to generate optimized listing content",
+        details: error.message 
+      }),
+      { 
+        status: 500, 
+        headers: { ...corsHeaders, "Content-Type": "application/json" } 
+      }
+    )
 Key Features: ${keyFeatures || "Not specified"}
 Target Audience: ${targetAudience || "General users"}
 ;
@@ -148,66 +141,11 @@ Format the response as a JSON object with the following structure:;
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
-
   }
 });
-      }
-    );
-  } catch (error) {
-
-    console && console.error("Error in AI listing generator:", error);
-    
-    return new Response(
-      JSON && JSON.stringify({ 
-        error: "Failed to generate optimized listing content",
-        details: error && error.message 
-
-      });
-      {
-        status: 500
-        headers: { ...corsHeaders, "Content-Type": "application/json" }
-=======
-    console.error ("Error in AI listing generator:", error);
-;
-    return new Response (
-      JSON.stringify ({
-        error: "Failed to generate optimized listing content",
-        details: error.message;
-      });
-      {
-        status: 500,
-        headers: { ...cors_headers, "Content - Type": "application / json" }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-      }
-    );
-  }
-});
-
-;
-
-=======
-      JSON.stringify({
-        generated: parsedResponse
-
-      }),
-      { 
-        headers: { ...corsHeaders, "Content-Type": "application/json" } 
-      }
-    )
-  } catch (error) {
-    console.error("Error in AI listing generator:", error),
-    
-    return new Response(
-      JSON.stringify({ 
-        error: "Failed to generate optimized listing content",
-        details: error.message 
-      }),
-      { 
-        status: 500, 
-        headers: { ...corsHeaders, "Content-Type": "application/json" } 
-
-  }
-});
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

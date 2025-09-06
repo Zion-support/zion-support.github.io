@@ -1,7 +1,18 @@
 
-
+import React from "react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import {CodeBlock} from "@/components/developers/CodeBlock";
+export function ApiGettingStarted() {
+  const authExample = `curl -X GET \\
+  https: //api.zionai.com/v1/jobs \\
+  -H "Authorization: Bearer YOUR_API_KEY"`,;
+const quickStartJs = `import axios from 'axios';
 import React from "react",
-
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import { CodeBlock } from "@/components/developers/CodeBlock";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+import { CodeBlock } from "@/components/developers/CodeBlock",
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function ApiGettingStarted() {
 
   const authExample = `curl -X GET \\
@@ -9,6 +20,9 @@ export function ApiGettingStarted() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   headers: {
@@ -28,13 +42,6 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {
         <h2>Authentication</h2>
         <p>
 
-=======
-
-          All API requests must include your API key in the Authorization header. 
-          You can generate API keys in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</Link>.
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         </p>
         <CodeBlock code={authExample} language="bash" showLineNumbers={false} />
         <div className="bg-yellow-900/20 border border-yellow-700/50 rounded-md p-4 my-6">
@@ -88,3 +95,13 @@ export default ApiGettingStarted;
 export default ApiGettingStarted;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+}
+
+;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export default ApiGettingStarted;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

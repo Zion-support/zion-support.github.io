@@ -9,6 +9,19 @@ interface PaymentSummaryProps {
 
 }
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms },) => {
+import { CreditCard } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+import React from 'react'
+interface PaymentSummaryProps {
+
+  milestones: Milestone[]
+  paymentTerms: string | null
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+}
+
+export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const totalPayment = milestones.reduce(
 
     (sum, m) => sum + parseFloat(m.amount.toString()),
@@ -23,6 +36,19 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
     ).toFixed(2),
 
 =======
+=======
+
+import { CreditCard } from 'lucide-react';
+interface PaymentSummaryProps {;
+  milestones: Milestone[],;
+  paymentTerms: string | null;
+}
+
+export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms },) => {;
+  const totalPayment = milestones && milestones.reduce(;
+    (sum, m) => sum + parseFloat(m && m.amount.toString());    0;
+  ).toFixed(2);
+
   const paidAmount = milestones;
     .filter(m => m && m.status === 'paid');
     .reduce(;
@@ -32,7 +58,8 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 
 
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <Card className="mb-8 bg-muted/30">;
       <CardHeader className="pb-3">;
@@ -48,6 +75,9 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
               ${totalPayment}
             </p>
           </div>
+=======
+          
+<<<<<<< HEAD
 
           <div>
             <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>
@@ -55,9 +85,13 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
               {paymentTerms |"Not specified"}
             </p>
           </div>
-
-          <div>
-            <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
-            <p className="font-medium">
-              ${paidAmount}
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+            </p>;
+          </div>;
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
+};
 <<<<<<< HEAD

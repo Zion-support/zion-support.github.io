@@ -1,5 +1,14 @@
 
-
+import React, { useState } from "react";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
+import {Label} from "@/components/ui/label";
+import {Input} from "@/components/ui/input";
+import {Switch} from "@/components/ui/switch";
+import {BlockchainNetwork, DeploymentOptions} from "@/types/smart-contracts";
+import {Loader2, ShieldCheck, Download} from "lucide-react";
+import {toast} from "sonner";
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -8,8 +17,15 @@ import { Label } from "@/components/ui/label",
 import { Input } from "@/components/ui/input",
 import { Switch } from "@/components/ui/switch",
 import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",
+import { Loader2, ShieldCheck, Download } from "lucide-react";
+import { toast } from "sonner";
+import { Loader2, ShieldCheck, Download } from "lucide-react",
+import { toast } from "sonner",
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface SmartContractDeploymentProps {
 
   solidityCode: string
@@ -17,13 +33,18 @@ interface SmartContractDeploymentProps {
 
   isDeploying: boolean
 }
+export function SmartContractDeployment({
+  solidityCode;
+  onDeploy;
 
 =======
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export function SmartContractDeployment({ ;
+  solidityCode;
+  onDeploy;
+export function SmartContractDeployment({ 
+  solidityCode,
+  onDeploy,
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   isDeploying
 }: SmartContractDeploymentProps) {
@@ -63,12 +84,79 @@ if ( {) {
       <CardContent className="space-y-6">
         <div className="space-y-4">
           <div className="flex items-center space-x-2">
-
+            <Switch
+              id="deploy-blockchain"
               checked={deploymentOptions.deployToChain}
               onCheckedChange={(checked) => setDeploymentOptions({
                 ...deploymentOptions;
                 deployToChain: checked
+            <Switch 
+              id="deploy-blockchain"
+import React, { useState } from "react",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;
+import { Label } from "@/components/ui/label",;
+import { Input } from "@/components/ui/input",;
+import { Switch } from "@/components/ui/switch",;
+import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",;
+import { Loader2, ShieldCheck, Download } from "lucide-react",;
+import { toast } from "sonner",;
+interface SmartContractDeploymentProps {;
+  solidityCode: string,;
+  onDeploy: (options: DeploymentOptions) => Promise<void>,;
+  isDeploying: boolean;
+}
 
+export function SmartContractDeployment(): any ({ ;
+  solidityCode;
+  onDeploy;
+  isDeploying;
+}: SmartContractDeploymentProps) {;
+  const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({;
+    network: 'none',;
+    useEscrow: true,;
+    deployToChain: false,;
+    walletAddress: '';
+  });
+
+  const handleDeployContract = async () => {;
+    if (deploymentOptions && deploymentOptions.deployToChain && !deploymentOptions && deploymentOptions.walletAddress) {;
+      toast && toast.error("Please enter a wallet address for blockchain deployment");
+      return;
+    }
+
+    try {;
+      await onDeploy(deploymentOptions);
+    } catch (error) {;
+      console && console.error("Deployment error:", error);
+    }
+  };
+
+  const handleDownloadSolidity = () => {;
+    // Create a blob from the Solidity code;
+    const blob = new Blob([solidityCode], { type: 'text/plain' }),;
+    const url = URL && URL.createObjectURL(blob);
+
+    // Create a temporary anchor to trigger download;
+    const a = document && document.createElement('a');
+    a && a.href = url;
+    a && a.download = 'ZionContract && ZionContract.sol';
+    document && document.body.appendChild(a);
+    a && a.click();
+
+    // Clean up;
+    URL && URL.revokeObjectURL(url);
+    document && document.body.removeChild(a);
+
+    toast && toast.success("Solidity contract downloaded");
+  };
+
+  return (
+    <Card className="w-full">;
+      <CardHeader>;
+        <CardTitle className="flex items-center gap-2">;
+          <ShieldCheck className="h-5 w-5 text-primary" />;
               })}
             />
             <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>
@@ -103,23 +191,25 @@ if ( {) {
               </div>
               <div className="flex items-center space-x-2">
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   })}
-
-                  className="flex flex-col space-y-1";
-                >;
-                  <div className="flex items-center space-x-2">;
-                    <RadioGroupItem value="ethereum" id="ethereum" />;
-                    <Label htmlFor="ethereum">Ethereum (higher fees, more secure)</Label>;
-                  </div>;
-                  <div className="flex items-center space-x-2">;
-                    <RadioGroupItem value="polygon" id="polygon" />;
-                    <Label htmlFor="polygon">Polygon (lower fees, faster)</Label>;
-                  </div>;
-                </RadioGroup>;
-              </div>;
-
-              <div className="space-y-2">;
-                <Label htmlFor="wallet-address">Wallet address for transactions</Label>;
+                  className="flex flex-col space-y-1"
+                >
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="ethereum" id="ethereum" />
+                    <Label htmlFor="ethereum">Ethereum (higher fees, more secure)</Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="polygon" id="polygon" />
+                    <Label htmlFor="polygon">Polygon (lower fees, faster)</Label>
+                  </div>
+                </RadioGroup>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="wallet-address">Wallet address for transactions</Label>
                 <Input
                   id="wallet-address" 
                   placeholder="0x..." 
@@ -128,28 +218,31 @@ if ( {) {
 
                     ...deploymentOptions;
                     walletAddress: e && e.target.value;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   })}
-
-                />;
-              </div>;
-
-              <div className="flex items-center space-x-2">;
-
+                />
+              </div>
+              <div className="flex items-center space-x-2">
                 <Switch
                   id="use-escrow"
                   checked={deploymentOptions && deploymentOptions.useEscrow}
                   onCheckedChange={(checked) => setDeploymentOptions({;
                     ...deploymentOptions;
 
-                    useEscrow: checked;
-
-=======
-
+                    useEscrow: checked
                 <Switch 
                   id="use-escrow"
                   checked={deploymentOptions.useEscrow}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  onCheckedChange={(checked) => setDeploymentOptions({;
+                    ...deploymentOptions;
+                    useEscrow: checked;
+                  onCheckedChange={(checked) => setDeploymentOptions({
+                    ...deploymentOptions;
+                    useEscrow: checked
+                  onCheckedChange={(checked) => setDeploymentOptions({;
+                    ...deploymentOptions;
+                    useEscrow: checked;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   })}
                 />;
@@ -193,22 +286,6 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-      <CardFooter className="flex justify - between">;
-        <Button variant="outline" on_click={handleDownloadSolidity}>;
-          <Download className="mr - 2 h - 4 w - 4" />;
-          Download .sol File;
-        </Button>;
-        <Button on_click={handleDeployContract} disabled={is_deploying}>;
-          {is_deploying ? (
-            <>;
-              <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
-              Deploying...;
-            </>) : (
-            'Deploy Contract')}
-        </Button>;
-      </CardFooter>;
-    </Card>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -55,6 +55,7 @@ import { TalentProfile } from "@/types/talent",
       title: 'Hire Request Sent',
       description: `A hire request has been sent to ${talent.full_name}.`,
     })
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
   const handleToggleSave = async (
     talentId: string,
@@ -105,11 +106,21 @@ import { TalentProfile } from "@/types/talent",
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       } else {
         // Add to saved talents
         const { error } = await supabase
           .from('saved_talents')
+          .insert([{ user_id: user.id, talent_id: talentId }])
+        if (error) {
+          throw error
+        }
+          .insert([{ user_id: user.id, talent_id: talentId }]),
+  
+          .insert([{ user_id: user.id, talent_id: talentId }]),
+  
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         if (error) {
           throw error
         }
@@ -119,7 +130,58 @@ import { TalentProfile } from "@/types/talent",
           .from('talent_profiles')
           .select('*')
           .eq('id', talentId)
-
+          .single()
+        if (talentError) {
+          logErrorToProduction(
+            talentError instanceof Error
+              ? talentError.message
+              : String(talentError)
+            talentError instanceof Error ? talentError : undefined
+            { message: 'Error fetching talent profile' }
+          )
+          toast({
+            title: 'Error'
+            description:
+              'Failed to update saved talents. Please try again later.'
+            variant: 'destructive'
+          })
+          return
+        }
+        if (talentData) {
+          setSavedTalents(prevTalents => [
+            ...prevTalents
+            talentData as unknown as TalentProfile
+          ])
+          toast({
+            title: 'Talent Saved'
+            description: 'Talent saved to your list.'
+          })
+        }
+      }
+    } catch (error) {
+      logErrorToProduction(
+        error instanceof Error ? error.message : String(error)
+        error instanceof Error ? error : undefined
+        { message: 'Error toggling saved talent' }
+      )
+      toast({
+        title: 'Error'
+        description: 'Failed to update saved talents. Please try again later.'
+        variant: 'destructive'
+      })
+    }
+  }
+          return;
+          .single(),
+  
+        if (talentError) {
+          logErrorToProduction(talentError instanceof Error ? talentError.message : String(talentError), talentError instanceof Error ? talentError : undefined, { message: 'Error fetching talent profile' }),
+          toast({
+            title: "Error",
+            description: "Failed to update saved talents. Please try again later.",
+            variant: "destructive"}),
+          return
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         }
 
         if (talentData) {
@@ -143,6 +205,8 @@ import { TalentProfile } from "@/types/talent",
       })
     }
   }
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <>
       <SEO
@@ -155,17 +219,153 @@ import { TalentProfile } from "@/types/talent",
           Here are the talents you've saved for future reference.
         </p>
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {isLoading ? (
           <div className="text-center py-8">Loading saved talents...</div>
         ) : savedTalents.length === 0 ? (
           <div className="py-8">
             <EmptyState
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               action={{ text: 'Browse Talent', href: '/talent' }}
               className="border-none bg-transparent text-center"
             />
           </div>
         ) : (
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+            {savedTalents.map((talent) => (
+              <TalentCard
+;
+        setSavedTalents(prevTalents =>;
+          prevTalents.filter(talent => talent.id !== talentId);
+        ),;
+        toast({;
+          title: "Talent Removed",;
+          description: "Talent removed from saved list."});
+      } else {;
+        // Add to saved talents;
+        const { error } = await supabase;
+          .from('saved_talents');
+          .insert([{ user_id: user.id, talent_id: talentId }]),;
+        if (error) {;
+          throw error;
+        }
+;
+        // Fetch the updated talent profile and add it to the list;
+        const { data: talentData, error: talentError } = await supabase;
+          .from('talent_profiles');
+          .select('*');
+          .eq('id', talentId);
+          .single(),;
+        if (talentError) {;
+          logErrorToProduction(talentError instanceof Error ? talentError.message : String(talentError), talentError instanceof Error ? talentError : undefined, { message: 'Error fetching talent profile' }),;
+          toast({;
+            title: "Error",;
+            description: "Failed to update saved talents. Please try again later.",;
+            variant: "destructive"}),;
+          return;
+        }
+;
+        if (talentData) {;
+          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),;
+          toast({;
+            title: "Talent Saved",;
+            description: "Talent saved to your list."});
+        }
+      }
+    } catch (error) {;
+      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error toggling saved talent' }),;
+      toast({;
+        title: 'Error',;
+        description: 'Failed to update saved talents. Please try again later.',;
+        variant: 'destructive',;
+      });
+        // Fetch the updated talent profile and add it to the list;
+        const { data: talent_data, error: talent_error } = await supabase;
+          .from ('talent_profiles');
+          .select ('*');
+          .eq ('id', talent_id);
+          .single ();
+        // Check condition
+if ( {) {
+  $2
+}
+          logErrorToProduction (
+            talent_error instanceof Error;
+              ? talent_error.message;
+              : String (talent_error),
+            talent_error instanceof Error ? talent_error : undefined,
+            { message: 'Error fetching talent profile' }
+          );
+          toast ({
+            title: 'Error',
+            description:;
+              'Failed to update saved talents. Please try again later.',
+            variant: 'destructive',
+          });
+          return;
+        }
+        // Check condition
+if ( {) {
+  $2
+}
+          setSavedTalents (prev_talents => [;
+            ...prev_talents,
+            talent_data as unknown as TalentProfile,
+          ]);
+          toast ({
+            title: 'Talent Saved',
+            description: 'Talent saved to your list.',
+          });
+        }
+      }
+    } catch (error) {
+      logErrorToProduction (
+        error instanceof Error ? error.message : String (error),
+        error instanceof Error ? error : undefined,
+        { message: 'Error toggling saved talent' }
+      );
+      toast ({
+        title: 'Error',
+        description: 'Failed to update saved talents. Please try again later.',
+        variant: 'destructive',
+      });
+    }
+  };
+  return (;
+    <>;
+
+      />;
+      <div className="container mx-auto px-4 py-8">;
+        <h1 className="text-3xl font-bold mb-4">Saved Talents</h1>;
+        <p className="text-muted-foreground">;
+          Here are the talents you've saved for future reference.;
+        </p>;
+        {isLoading ? (;
+          <div className='text-center py-8'>Loading saved talents...</div>;
+        ) : savedTalents && savedTalents.length === 0 ? (;
+          <div className='py-8'>;
+
+            <EmptyState
+              icon={<Heart className='h-8 w-8' />}
+              title='No Saved Talents'              description="You haven't saved any talents yet.";
+              action={{ text: 'Browse Talent', href: '/talent' }}
+              className="border-none bg-transparent text-center";
+            />;
+          </div>;
+        ) : (;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">;
+            {savedTalents.map((talent) => (;
+              <TalentCard;
+                key={talent.id}
+                talent={talent}
+                onViewProfile={handleViewProfile}
+                onRequestHire={handleRequestHire}
+                isAuthenticated={!!user}
+              />;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
             ))}
           </div>

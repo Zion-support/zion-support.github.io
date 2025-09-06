@@ -19,13 +19,17 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
       </div>
     </div>
   )
-<<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 import React from 'react',;
 import { useRouter } from 'next/router',;
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 interface ProjectHeaderProps {;
   title: string;
+<<<<<<< HEAD
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+}
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

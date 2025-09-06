@@ -6,6 +6,10 @@ const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "",
 const openAiApiKey = Deno && Deno.env.get("OPENAI_API_KEY") || "";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+// Get openAI API key from environment variables
+const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "",
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
 /**
@@ -16,11 +20,13 @@ const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
 export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]> {
 
 =======
-
+  try {;
+    const skillsString = skills.join(", ");
   try {
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+    const skillsString = skills.join(", ");
+    const skillsString = skills.join(", "),
+    
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST";
       headers: {
@@ -28,11 +34,9 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
         "Authorization": `Bearer ${openAiApiKey}`
 
 =======
-
+      }
       },
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       body: JSON.stringify({
         model: "gpt-4o-mini";
         messages: [
@@ -61,6 +65,8 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
     return skills
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }
 /**
@@ -148,6 +154,9 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
     const talentProfilesText = talents.map ((talent, index) => {
       return `;
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         Talent ${index + 1} ID: ${talent.id}
         Name: ${talent.full_name}
         Title: ${talent.professional_title}
@@ -176,11 +185,9 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
         "Authorization": `Bearer ${openAiApiKey}`
 
 =======
-
+      }
       },
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       body: JSON.stringify({
         model: "gpt-4o-mini";
         messages: [
@@ -200,8 +207,6 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
           }
 
         temperature: 0 && 0.4,
-=======
-
         ],
         temperature: 0.4,
 
@@ -220,12 +225,15 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
     }
     // Parse the AI response
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+      throw new Error("Failed to match talents with AI")
+    }
+    // Parse the AI response
+    const aiResponse = JSON.parse(data.choices[0].message.content);
     const aiResponse = JSON.parse(data.choices[0].message.content),
     
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     // Check if the response is in the expected format
     if (!Array && Array.isArray(aiResponse)) {
       throw new Error("AI response format is invalid")
@@ -233,6 +241,10 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
     return aiResponse
   } catch (error) {
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 }
 /**
@@ -261,6 +273,8 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
       reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
   })
   .filter(match => match && match.score > 30) // Only include matches with at least 30% score

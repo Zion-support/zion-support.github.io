@@ -83,6 +83,8 @@ export function WorkExperienceForm({
       } else {
         success = await addWorkExperience(resumeId, experienceData)
       }
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       if (success) {
         form.reset({
           company_name: ''
@@ -95,7 +97,13 @@ export function WorkExperienceForm({
         setEditingId(null)
       }
     } catch (err: any) {
+<<<<<<< HEAD
+      setError(err.message || 'An error occurred');
+    };
+  };
+  const handleEdit = (work: WorkExperience) => {;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     setEditingId(work.id!);    form.reset({
       ...work
   const handleEdit = (work: WorkExperience) => {
@@ -127,6 +135,48 @@ export function WorkExperienceForm({
       </div>
       {workExperiences.length > 0 && (
 
+
+      {workExperiences && workExperiences.length > 0 && (;
+        <div className='space-y-4'>;
+          <h3 className='text-md font-medium'>Added Experience</h3>;
+          {workExperiences && workExperiences.map(work => (;
+            <Card key={work && work.id} className='bg-muted/40'>;
+              <CardContent className='pt-6'>;
+                <div className='flex justify-between'>                  <div>;
+                    <h4 className='font-medium'>{work && work.role_title}</h4>;
+                    <p className='text-sm text-muted-foreground'>;
+                      {work && work.company_name}
+                    </p>;
+                    <p className='text-xs text-muted-foreground mt-1'>;
+                      {typeof work && work.start_date === 'string';
+                        ? work && work.start_date;
+                        : format(work && work.start_date, 'MMM yyyy')}{' '}
+                      -{' '}
+                      {work.is_current
+                        ? 'Present'
+                        : work.end_date
+                          ? typeof work.end_date === 'string'
+                            ? work.end_date
+                            : format(work.end_date, 'MMM yyyy')
+                          : ''}
+        <div className="space-y-4">
+          <h3 className="text-md font-medium">Added Experience</h3>
+          {workExperiences.map((work) => (
+            <Card key={work.id} className="bg-muted/40">
+              <CardContent className="pt-6">
+                <div className="flex justify-between">
+                  <div>
+                    <h4 className="font-medium">{work.role_title}</h4>
+                    <p className="text-sm text-muted-foreground">{work.company_name}</p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      {typeof work.start_date === 'string' 
+                        ? work.start_date 
+                        : format(work.start_date, 'MMM yyyy')} - {work.is_current 
+                        ? 'Present' 
+                        : (work.end_date ? (typeof work.end_date === 'string' 
+                          ? work.end_date 
+                          : format(work.end_date, 'MMM yyyy')) : '')}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     </p>
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
@@ -235,6 +285,7 @@ export function WorkExperienceForm({
                 onClick={() => {
                   if (editingId) {
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     form.reset({
                       company_name: '',
                       role_title: '',
@@ -242,6 +293,7 @@ export function WorkExperienceForm({
                       is_current: false,
                       description: '',
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   } else {
                     onBack()
             />;
@@ -275,36 +327,3 @@ export function WorkExperienceForm({
                 {editingId ? 'Cancel' : 'Back'}
 
               </Button>
-
-                  {editingId ? 'Update' : 'Add'} Experience
-                </Button>
-                {!editingId && workExperiences.length > 0 && (
-                  <Button type="button" onClick={onComplete}>
-                    Next
-                  </Button>
-                )}
-=======
-
-              />;
-            </div>;
-
-
-
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-                name='start_date'
-                      <Input 
-
-                            value={field.value || ''}                          />
-
-              name="location"
-
-<<<<<<< HEAD
-    </div>);
-}> {';
-  editing_id ? 'Cancel': 'Back';
-}</Button> Next </Button>);
-}</div> </div> </form> </Form> </div> </div>);
-}'"  );
-}
-;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

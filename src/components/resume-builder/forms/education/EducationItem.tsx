@@ -6,6 +6,32 @@
         </div>
         {education.description && (
 <<<<<<< HEAD
+
+
+              onClick={() => onDelete(education && education.id!)}
+              aria-label='Delete education'            >;
+              <Trash2 className='h-4 w-4' />            </Button>;
+          </div>;
+        </div>;
+        {education && education.description && (;
+          <p className='text-sm mt-3 line-clamp-2'>{education && education.description}</p>        )}
+      </CardContent>;
+    </Card>;
+  );
+}              <Trash2 className="h-4 w-4" />;
+            </Button>;
+          </div>;
+        </div>;
+        {education && education.description && (;
+          <p className='text-sm mt-3 line-clamp-2'>{education && education.description}</p>          <p className="text-sm mt-3 line-clamp-2">{education && education.description}</p>;
+
+    </Card>;
+  );
+};
+<<<<<<< HEAD
+
+          <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         )}
       </CardContent>;
     </Card>;

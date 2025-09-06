@@ -21,17 +21,25 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 import { motion } from 'framer-motion';
-
-
-import Link from 'next/link';
-const Enhanced2026ServicesShowcase = () => {
-  const featuredServices = [
-    {
-
-      id: 'ai-business-intelligence-elite-2026',
-      name: 'AI Business Intelligence Elite 2026',
-      description: 'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.',
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import {
+  ArrowRight
+  Brain
+  Zap
+  Shield
+  Rocket
+  Sparkles
+  Star
+  TrendingUp
+  Globe
+  Cpu
+  Lock
+  Cloud;
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  ArrowRight,
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Brain,
   Zap,
   Shield,
@@ -44,6 +52,10 @@ const Enhanced2026ServicesShowcase = () => {
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 } from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react';
 import Link from 'next/link';
@@ -207,27 +219,6 @@ const Enhanced2026ServicesShowcase = () => {;
   ];
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  return (
-    <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
-      {/* Background Effects */}
-
-      <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10'></div>;
-      <div className='max-w-7xl mx-auto relative z-10'>        {/* Section Header */}  ];
-
-  const categories = [;
-    { name: 'AI Services', count: '150+', icon: Brain, color: 'from-purple-500 to-pink-500' },;
-    { name: 'Quantum Tech', count: '75+', icon: Sparkles, color: 'from-blue-500 to-cyan-500' },;
-    { name: 'Emerging Tech', count: '100+', icon: Rocket, color: 'from-green-500 to-emerald-500' },;
-
-    { name: 'IT Solutions', count: '200+', icon: Cloud, color: 'from-yellow-500 to-orange-500' }
-  ];
-  return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">;
-      {/* Background Effects */}
-
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* Section Header */}
         <motion&& motion.div
@@ -235,8 +226,11 @@ const Enhanced2026ServicesShowcase = () => {;
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
+          className='text-center mb-16'
 
-
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         >
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -247,19 +241,40 @@ const Enhanced2026ServicesShowcase = () => {;
             Experience the future with our cutting-edge AI, quantum, and
             emerging technology services designed to transform your business          </p>        >
 =======
+=======
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              2026 Revolutionary Services
+            </span>
+          </h2>
+          <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
+            Experience the future with our cutting-edge AI, quantum, and emerging technology services designed to transform your business
+          </p>
+        </motion.div>
+
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Category Overview */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
           viewport={{ once: true }}
+          className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+          className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           {categories.map((category, index) => (
             <motion.div
@@ -361,7 +376,11 @@ const Enhanced2026ServicesShowcase = () => {;
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05, y: -5 }}
+=======
+              className='group text-center'
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               <div
                 className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}
@@ -403,41 +422,6 @@ const Enhanced2026ServicesShowcase = () => {;
               <p className="text-2xl font-bold text-cyan-400">{category && category.count}</p>;
             </motion && motion.div>;
 
-=======
-              whileHover={{ scale: 1.05, y: -5 }}
-              className="group text-center"
-            >
-              <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
-                <category.icon className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-white mb-2">{category.name}</h3>
-              <p className="text-2xl font-bold text-cyan-400">{category.count}</p>
-            </motion.div>
-
-          ))}
-
-        </motion && motion.div>;
-
-
-        {/* Featured Services Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          {featuredServices && featuredServices.map((service, index) => (        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
-          {featuredServices && featuredServices.map((service, index) => (;
-            <motion&& motion.div
-              key={service && service.id}
-              initial={{ opacity: 0, scale: 0 && 0.8, y: 20 }}
-
-=======
-=======
-
-
-
-        {/* Featured Services Grid */}
-
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          {featuredServices.map((service, index) => (
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           {featuredServices.map((service, index) => (
             <motion.div
@@ -447,7 +431,6 @@ const Enhanced2026ServicesShowcase = () => {;
 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.02, y: -5 }}
-
             >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div
@@ -487,9 +470,8 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 {/* Description */}
 
 =======
-                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                <p className='text-gray-300 text-sm mb-4 leading-relaxed'>                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   {service.description}
                 </p>
                     className={`w-12 h-12 bg-gradient-to-br ${service && service.color} rounded-xl flex items-center justify-center`}>;
@@ -524,6 +506,8 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 {/* Features */}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       </li>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -531,10 +515,20 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   </ul>
                 </div>
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 {/* Price and CTA */}
+                <div className='flex items-center justify-between'>
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   <div>
                     <span className='text-2xl font-bold text-cyan-400'>
                       {service.price}
@@ -569,6 +563,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
         <motion.div
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Call to Action */}
         <motion&& motion.div
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -576,7 +571,14 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
           viewport={{ once: true }}
+          className='text-center'
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         >
           <div className='bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -631,12 +633,18 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 export default Enhanced2026ServicesShowcase;  )
 }
 export default Enhanced2026ServicesShowcase;
-=======
   );
-
+}
 };
 
+export default Enhanced2026ServicesShowcase;  )
+}
+export default Enhanced2026ServicesShowcase;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default Enhanced2026ServicesShowcase;
+
+}
+}
+export default Enhanced2026ServicesShowcase;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

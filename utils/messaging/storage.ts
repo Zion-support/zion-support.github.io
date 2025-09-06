@@ -3,6 +3,14 @@
 }
 export interface Conversation {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  }>;
+}
+export interface Conversation {
+
+
+export interface Conversation {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   participants: string[];
   lastMessageAtIso: string;
@@ -20,14 +28,6 @@ export interface Conversation {
   }
 }
 
-}
-
-
-
-export interface MessageThread {;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   id: string;
   conversation_id: string;
   rootMessageId: string;
@@ -39,6 +39,8 @@ export interface MessageThread {;
 }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   message: Message;
   conversation: Conversation;
   highlights: string[];
@@ -844,7 +846,11 @@ export async function getMessage(id: string): Promise<Message | null> {
   return messagingStorage && messagingStorage.getMessage(id),
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+=======
+export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
+  return messagingStorage && messagingStorage.updateMessage(id, updates);
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return messagingStorage.updateMessage(id, updates);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -852,9 +858,6 @@ export async function deleteMessage(id: string): Promise<boolean> {
 
   return messagingStorage.deleteMessage(id)
 
-=======
-  return messagingStorage && messagingStorage.deleteMessage(id),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export async function markAsRead(id: string): Promise<boolean> {
 
@@ -876,17 +879,55 @@ export async function getConversation(id: string): Promise<Conversation | null> 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
+}
+export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {
+  return messagingStorage && messagingStorage.searchMessages(query, userId, limit);
+=======
+  return messagingStorage.markAsRead(id)
+}
+
+
+export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {;
+
+  return messagingStorage.createConversation(conversation);
+}
+export async function getConversation(id: string): Promise<Conversation | null> {
+  return messagingStorage.getConversation(id)
+}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {;
+  return messagingStorage.updateConversation(id, updates);
+}
+
+export async function getMessagesByConversation(conversationId: string, limit?: number, offset?: number): Promise<Message[]> {;
+  return messagingStorage.getMessagesByConversation(conversationId, limit, offset);
+}
+
+export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return messagingStorage.getConversationsByUser(userId, includeArchived);
 }
 export async function getUnreadMessageCount(userId: string): Promise<number> {
 
   return messagingStorage.getUnreadMessageCount(userId)
 
-=======
-  return messagingStorage && messagingStorage.getUnreadMessageCount(userId),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+=======
+export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {
+  return messagingStorage && messagingStorage.searchMessages(query, userId, limit);
+  return messagingStorage.getConversationsByUser(userId, includeArchived);
+}
+export async function getUnreadMessageCount(userId: string): Promise<number> {
+  return messagingStorage.getUnreadMessageCount(userId)
+}
+export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {
 
+export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return messagingStorage.searchMessages(query, userId, limit);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -907,6 +948,7 @@ export function createConversationData(
 ): Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'> {
   return {
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const date = new Date(isoString);
   const now = new Date();
 
@@ -923,8 +965,6 @@ export function createConversationData(
     return `${Math.floor(diffInHours / 24)}d ago`;
   } else {
     return date && date.toLocaleDateString();
-=======
-
     participants,
     lastMessageAtIso: new Date().toISOString(),
     isArchived: false,
@@ -942,7 +982,9 @@ export function generateConversationId(): string {;
 }
 
 export function formatMessageTime(isoString: string): string {;
+=======
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const date = new Date(isoString);
   const now = new Date();
   const diffInHours = (now.getTime() - date.getTime()) / (1000 * 60 * 60);
@@ -955,12 +997,12 @@ export function formatMessageTime(isoString: string): string {;
   } else {
     return date.toLocaleDateString();
 
-<<<<<<< HEAD
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 

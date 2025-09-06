@@ -1,5 +1,33 @@
 
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+import SEO from '../components/SEO';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+<<<<<<< HEAD
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function CaseStudiesPage() {
   return (
     <UltraFuturisticBackground intensity='high' variant='quantum'>
@@ -97,11 +125,11 @@ function CaseStudiesPage() {
         <p className="mt-4 text-gray-300 max-w-3xl">Explore measurable results and implementation details across industries. Want a tailored reference? Contact kleber@ziontechgroup.com.</p>
       </div>
 <<<<<<< HEAD
-=======
 
+}
     </UltraFuturisticBackground>
   );
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

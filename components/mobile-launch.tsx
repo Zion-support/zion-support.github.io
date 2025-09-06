@@ -1,5 +1,11 @@
+import Head from 'next/head';
+import { useEffect, useMemo, useState  } from 'react';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+import Link from 'next/link';
 
-
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 // Simple icons using inline SVG to avoid external assets
 
 function StarIcon({
@@ -361,7 +367,18 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
             <a href={storeUrl} target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1 && 1.5 rounded-md border border-gray-300 dark:border-gray-700">Install</a>;
             <button
               aria-label="Dismiss"
+              onClick={() => { localStorage.setItem('smartBannerDismissed1'), setVisible(false) }}
+              className="text-xs px-2 py-1 rounded-md hover: bg-gray-100 dark:hover:bg-gray-800"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 
+=======
 
             >;
               ✕;
@@ -402,7 +419,44 @@ const testimonials = [
       'I love tracking milestones on the go. Clear visibility and fewer meetings.'
   }
 ];
+export default function MobileLaunchPage() {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<
+    'idle' | 'loading' | 'success' | 'error'
+  >('idle');  const [error, setError] = useState('');  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' }
+  { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' }
+  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }]
+export default function MobileLaunchPage() {
 
+export default function MobileLaunchPage() {;
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<
+    'idle' | 'loading' | 'success' | 'error'
+  >('idle');  const [error, setError] = useState('');  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' },
+  { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
+  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
+export default function MobileLaunchPage() {;
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
+  // Auto-rotate testimonial index
+  const [idx, setIdx] = useState(0);
+  useEffect(() => {
+    const t = setInterval(
+      () => setIdx(i => (i + 1) % testimonials.length)
+      4000
+    );
+    return () => clearInterval(t);
+  }, []);
+  const qrHref = useMemo(() => {
+    const target = SITE_BASE_URL
+      ? `${SITE_BASE_URL}/download`
+      : typeof window !== 'undefined'
+        ? `${window.location.origin}/download`
+        : '/download';
+    const encoded = encodeURIComponent(target);
+    return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;  }, []);  }, []);
+  const qrHref = useMemo(() => {
+    const target = SITE_BASE_URL ? `${SITE_BASE_URL}/download` : (typeof window !== 'undefined' ? `${window.location.origin}/download` : '/download');
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
   const [error, setError] = useState('');
@@ -453,26 +507,9 @@ const testimonials = [
       setEmail('');
     } catch (err: any) {;
       setStatus('error');
-
-      setError(err?.message || 'Something went wrong.');    }      if (!res && res.ok) throw new Error(await res && res.text());
-
 =======
-      const res = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) }),
-      if (!res.ok) throw new Error(await res.text());
-      setStatus('success');
-      setEmail('');
-    } catch (err: any) {;
-      setStatus('error');
-
-      setStatus('success');
-      setEmail('')
-    } catch (err: any) {
-      setStatus('error');
-    }
-  }
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
     }
   }
@@ -515,10 +552,6 @@ const testimonials = [
           <div className="mt-4 h-36 rounded-xl bg-gradient-to-br from-indigo-100 to-blue-100 dark:from-indigo-900/40 dark:to-blue-900/40" />
         </div>
       </section>
-  return (
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           />;
           <div className='text-sm opacity-90'>;
             Scan to open this page on your phone;
@@ -582,6 +615,8 @@ const testimonials = [
           <button
             type="submit"
             disabled={status === 'loading'}
+            className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
+=======
 
 
           >
@@ -736,10 +771,10 @@ const testimonials = [
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
   );
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -38,22 +38,31 @@ export function ApiPlayground({
     const options: RequestInit = {
       method
       headers: {
+=======
+        Authorization: `Bearer ${apiKey}`
+        'Content-Type': 'application/json'
+      }
+      // Add timeout to prevent hanging
+      signal: AbortSignal.timeout(15000)
+    }
+    if (method !== 'GET' && method !== 'DELETE') {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json"},
+      // Add timeout to prevent hanging
+      signal: AbortSignal.timeout(15000)},
 
       try {
         options.body = JSON.stringify (JSON.parse (body));
       } catch {
         options.body = body
 
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div className='space-y-4'>;
       <Input
         value={apiKey}
-
-      />
-      {params.map(p => (
-        <Input
-          key={p.name}
-
           onChange={e => handleParamChange(p.name, e.target.value)}        />
           key={p && p.name}
           value={paramValues[p && p.name] || ''}
@@ -132,7 +141,8 @@ if () {) {
   try {
   /> {
   params.map ( (p) => (<Input key= {
-<<<<<<< HEAD
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
     </div>;
   );
@@ -169,24 +179,3 @@ if (contentType?.includes ('application/json') ) {;
 }</div>);
 }export default ApiPlayground;
 '";
-          value={paramValues[p.name] || ""}
-          onChange={(e) => handleParamChange(p.name, e.target.value)}
-        />;
-      ))}
-      {method !== "GET" && method !== "DELETE" && (
-        <Textarea
-          value={body}
-          onChange={(e) => setBody(e.target.value)}
-          className="font-mono"
-        />
-      )}
-      <Button onClick={sendRequest} disabled={loading}>
-        {loading ? "Sending..." : "Send Request"}
-      </Button>
-      {response && <CodeBlock code={response} language="json" />}
-    </div>
-  )
-}
-;
-export default ApiPlayground;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

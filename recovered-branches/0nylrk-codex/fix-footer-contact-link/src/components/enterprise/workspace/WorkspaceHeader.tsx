@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button",
 import { type Company } from "./CompanyDashboard",
 import { Bell, Users, Settings } from "lucide-react",
 
+=======
 
 
 
@@ -25,6 +26,23 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">
+<<<<<<< HEAD
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { type Company } from "./CompanyDashboard",;
+import { Bell, Users, Settings } from "lucide-react";
+interface WorkspaceHeaderProps {;
+  company: Company;
+}
+;
+export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
+  return (;
+
+    <div className="space-y-6">;
+      <div className="flex items-center justify-between">;
+        <div className="flex items-center gap-4">;
+          <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <img
               src={company.logoUrl |"/placeholder.svg"}
               alt={company.name}
@@ -129,3 +147,6 @@ function WorkspaceHeader() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

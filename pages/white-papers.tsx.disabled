@@ -1,6 +1,17 @@
 =======
 import React from 'react';
 import { motion } from 'framer-motion';
+=======
+import Link from 'next/link';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+import React from 'react';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+import React, { useState } from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+import { motion } from 'framer-motion';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ========
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -164,6 +175,7 @@ import {
   Calendar,
   User,
   ArrowRight,
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -448,6 +460,32 @@ export default function WhitePapersPage() {
                 Free downloads covering AI, cloud solutions, cybersecurity, and more.
 
               </p>
+=======
+              
+              <div className="mb-4">
+                <div className="flex items-center text-sm text-gray-600 mb-2">
+                  <User className="h-4 w-4 mr-2" />
+                  <span className="font-semibold">Author:</span>
+                  <span className="ml-2">{paper.author}</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-600 mb-2">
+                  <Clock className="h-4 w-4 mr-2" />
+                  <span className="font-semibold">Read Time:</span>
+                  <span className="ml-2">{paper.readTime}</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-600 mb-4">
+                  <Eye className="h-4 w-4 mr-2" />
+                  <span className="font-semibold">Downloads:</span>
+                  <span className="ml-2">{paper.downloadCount}</span>
+                </div>
+              </div>
+              
+              <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center">
+                <Download className="h-4 w-4 mr-2" />
+                Download PDF
+              </button>
+            </motion.div>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 <
 
@@ -457,13 +495,6 @@ export default function WhitePapersPage() {
 
               </p>
 
-            </motion.div>
-          </div>
-        </section>
-
-                </motion.div>
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               ))}
             </div>
@@ -532,9 +563,6 @@ export default function WhitePapersPage() {
 
               </Link>
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* Featured White Papers */}

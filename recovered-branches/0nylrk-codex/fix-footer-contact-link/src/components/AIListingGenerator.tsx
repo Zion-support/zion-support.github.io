@@ -1,4 +1,16 @@
+=======
 
+import React, { useState } from "react";
+import {useToast} from "@/hooks/use-toast";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Skeleton} from "@/components/ui/skeleton";
+import {Sparkles, ArrowRight} from "@/components/icons";
+import {supabase} from "@/integrations/supabase/client";
+import {Badge} from "@/components/ui/badge";
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -7,7 +19,21 @@ import { Textarea } from "@/components/ui/textarea",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Skeleton } from "@/components/ui/skeleton",
 import { Sparkles, ArrowRight } from "@/components/icons",
+<<<<<<< HEAD
+}
 
+interface AIListingGeneratorProps {;
+  onApplyGenerated?: (content: GeneratedContent) => void,;
+  initialValues?: {;
+
+    title?: string;
+    category?: string;
+    keyFeatures?: string;
+    targetAudience?: string
+import { supabase } from "@/integrations/supabase/client",
+import { Badge } from "@/components/ui/badge",
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -16,6 +42,7 @@ interface GeneratedContent {
     max: number
   },
   keyPoints: string[]
+}
 
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
@@ -45,6 +72,7 @@ interface AIListingGeneratorProps {;
     keyFeatures?: string,;
     targetAudience?: string;
 
+<<<<<<< HEAD
   }
 }
 
@@ -90,7 +118,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: "Please provide at least a title and category."
         variant: "destructive"
 
-=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       });
       return;
     }
@@ -180,6 +208,7 @@ if ( {) {
       }),;
       if (error) {;
         throw new Error(error.message);
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -299,10 +328,41 @@ if ( {) {
               onChange={(e) => handleInputChange(e, 'targetAudience')}
               placeholder="e.g. Developers, Marketers, Startups"
               className="bg-zion-blue border border-zion-blue-light text-white"
-
+              disabled={isLoading}
+            />
+          </div>
+          <Button
             onClick={handleGenerate}
-            disabled={isLoading || !title || !category}
+            disabled={isLoading |!title |!category}
+          <Button 
+;
+      setGeneratedContent(data.generated),;
 
+      toast({;
+        title: "Content Generated",;
+        description: "AI has created optimized listing content for you.";
+      });
+    } catch (error) {;
+      console && console.error("Error generating content:", error);
+      toast({;
+        title: "Generation Failed",;
+        description: error instanceof Error ? error && error.message : "Failed to generate content. Please try again.",;
+        variant: "destructive";
+      });
+    } finally {;
+      setIsLoading(false);
+    }
+  };
+
+  const handleApply = () => {;
+    if (generatedContent && onApplyGenerated) {;
+      onApplyGenerated(generatedContent);
+      toast({;
+        title: "Content Applied",;
+        description: "The generated content has been applied to your listing.";
+      });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
   }
 
@@ -365,10 +425,7 @@ if ( {) {
             />;
           </div>;
           <Button;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             onClick={handleGenerate}
             disabled={isLoading |!title |!category}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -406,83 +463,7 @@ if ( {) {
           </CardContent>
         </Card>
       )}
-              ))}
-            </div>;
-            <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />;
-            <div className="space-y-2">;
-              {[...Array(3)].map((_, i) => (;
-                <Skeleton key={i} className="h-6 w-full bg-zion-blue-light/20" />;
-              ))}
-            </div>;
-          </CardContent>;
-        </Card>;
-      )}
 
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-      {generatedContent && !isLoading && (
-        <Card className="border border-zion-blue-light bg-zion-blue-dark">
-          <CardHeader>
-            <CardTitle className="text-white">Generated Content</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div>
-              <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>
-              <p className="text-white">{generatedContent.description}</p>
-            </div>
-            <div>
-              <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
-              <div className="flex flex-wrap gap-2">
-                {generatedContent.tags.map((tag, index) => (
-                  <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">{tag}</Badge>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
-              <p className="text-white">${generatedContent.suggestedPrice.min.toFixed(2)} - ${generatedContent.suggestedPrice.max.toFixed(2)}</p>
-            </div>
-            <div>
-              <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
-              <ul className="list-disc pl-5 text-white space-y-1">
-                {generatedContent.keyPoints.map((point, index) => (
-                  <li key={index}>{point}</li>
-=======
-
-      {generatedContent && !isLoading && (;
-        <Card className="border border-zion-blue-light bg-zion-blue-dark">;
-          <CardHeader>;
-            <CardTitle className="text-white">Generated Content</CardTitle>;
-          </CardHeader>;
-          <CardContent className="space-y-4">;
-            <div>;
-              <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>;
-              <p className="text-white">{generatedContent && generatedContent.description}</p>;
-            </div>;
-
-            <div>;
-              <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>;
-              <div className="flex flex-wrap gap-2">;
-                {generatedContent && generatedContent.tags.map((tag, index) => (;
-                  <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">{tag}</Badge>;
-                ))}
-              </div>;
-            </div>;
-
-            <div>;
-              <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>;
-              <p className="text-white">${generatedContent && generatedContent.suggestedPrice.min && min.toFixed(2)} - ${generatedContent && generatedContent.suggestedPrice.max && max.toFixed(2)}</p>;
-            </div>;
-
-            <div>;
-              <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>;
-              <ul className="list-disc pl-5 text-white space-y-1">;
-                {generatedContent && generatedContent.keyPoints.map((point, index) => (;
-                  <li key={index}>{point}</li>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 ))}
 =======
 ;

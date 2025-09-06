@@ -1,9 +1,24 @@
 
 =======
+import { JobApplication } from "@/types/jobs";
+interface ScoreBadgeProps {;
+  application: JobApplication;
+}
+export function ScoreBadge({ application }: ScoreBadgeProps) {
 
+  const score = application.match_score |0;
 
+export function ScoreBadge({ application }: ScoreBadgeProps) {;
+  const score = application.match_score || 0;
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import { JobApplication } from "@/types/jobs",
+interface ScoreBadgeProps {
+  application: JobApplication
+}
+
+export function ScoreBadge({ application }: ScoreBadgeProps) {
+  const score = application.match_score || 0,
+  
 import { JobApplication } from "@/types/jobs";
 interface ScoreBadgeProps {;
   application: JobApplication;
@@ -20,6 +35,19 @@ interface ScoreBadgeProps {;
     <span className={`rounded-full px-2 py-1 text-xs font-medium ${className}`}>
       {score ? `${score}%` : "Not scored"}
     </span>
+=======
+  );
+}
+  )
+import { JobApplication } from "@/types/jobs",;
+interface ScoreBadgeProps {;
+  application: JobApplication;
+}
+;
+export function ScoreBadge({ application }: ScoreBadgeProps) {;
+  const score = application.match_score || 0,;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // Determine color based on score;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   let className = "text-gray-700 bg-gray-100";
@@ -68,5 +96,9 @@ if (class_name = "text - orange - 700 bg - orange - 100") {
     </span>);
 
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

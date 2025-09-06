@@ -1,10 +1,8 @@
-
-=======
-
+import { useEffect, useState  } from 'react';
 import { useEffect, useState } from 'react';
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function Reports() {
   const [uptime, setUptime] = useState<any[]>([]),
   const [seo, setSeo] = useState<any>({}),
@@ -18,10 +16,13 @@ export default function Reports() {
   const [deps, setDeps] = useState<any>({});
   const [changelog, setChangelog] = useState<any>({});
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [pagespeed, setPagespeed] = useState<any>({});
   useEffect(() => {
     Promise.all([
 
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       fetch('/api/reports/uptime')
         .then(r => r.json())
         .then(setUptime)
@@ -62,11 +63,13 @@ export default function Reports() {
                   (r: any) => r.status >= 200 && r.status < 400
                 ).length
               }
-              /{lastUptime.results?.length} ok
-            </div>
-          ) : (
-            <div className='text-sm text-gray-500'>No data</div>
+              /{lastUptime && lastUptime.results?.length} ok;
+            </div>;
+          ) : (;
+            <div className='text-sm text-gray-500'>No data</div>;
           )}
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         </div>
         <div className='border rounded p-4'>
           <div className='font-medium mb-1'>SEO (weekly)</div>
@@ -101,10 +104,16 @@ export default function Reports() {
       </section>
     </div>
 );
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+      fetch('/api/reports/pagespeed').then((r) => r.json()).then(setPagespeed)
+    ]).catch(() => {})
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }, []);
+
   const lastUptime = uptime[uptime.length - 1];
+
   return (
     <div className="space-y-6">
       <div>
@@ -117,8 +126,12 @@ export default function Reports() {
           <div className="font-medium mb-1">Changelog (weekly)</div>
           <div className="text-sm text-gray-600">Commits: {changelog?.totalCommits || 0}</div>
         </div>
+
         <div className="border rounded p-4">
           <div className="font-medium mb-1">PageSpeed (weekly)</div>
           <div className="text-sm text-gray-600">Pages: {pagespeed?.results?.length || 0}</div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

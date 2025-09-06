@@ -1,7 +1,10 @@
 
-
-=======
+import { supabase } from '@/integrations/supabase/client';
 import { supabase } from '@/integrations/supabase/client',
+import {supabase} from '@/integrations/supabase/client';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+import { supabase } from '@/integrations/supabase/client',
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -11,21 +14,45 @@ export async function ensureAnalyticsTablesExist() {
     const { error } = await supabase
       .from('analytics_events')
 
-=======
-
       .select('id')
+      .limit(1);
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     if (error && error.code === 'PGRST204') {
       console && console.log('Creating analytics tables...');
       await createAnalyticsTables()
+    }
+  } catch (error) {
+    console.warn('Error checking if analytics tables exist:', error);
+    // No need to create tables here, as this could be a connection error
+  }
+}
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import { supabase } from '@/integrations/supabase/client',;
+export async function ensureAnalyticsTablesExist() {;
+  try {;
+    // Check if analytics_events table exists;
+    const { error } = await supabase;
+      .from('analytics_events');
+      .select('id');
+      .limit(1),;
+    if (error && error.code === 'PGRST204') {;
+      // // // console.log('Creating analytics tables...'),;
+      await createAnalyticsTables();
+    }
+  } catch (error) {;
+    console.warn('Error checking if analytics tables exist:', error),;
+    // No need to create tables here, as this could be a connection error;
+=======
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 async function createAnalyticsTables() {
   try {
     // Create analytics_events table
@@ -71,6 +98,10 @@ async function createAnalyticsTables() {
         LEFT JOIN page_views p ON c.date = p.date
         ORDER BY c.date DESC,
       `
+    });
+    console.log('Analytics tables created successfully')
+  } catch (error) {
+    console.error('Error creating analytics tables:', error);
 
 ;
 async function createAnalyticsTables() {;
@@ -139,4 +170,7 @@ async function createAnalyticsTables() {;
   }
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

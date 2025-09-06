@@ -25,6 +25,7 @@ import React, { useState } from 'react';
 export default function MilestoneForm(): any ({ onSubmit }: Props) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
@@ -72,11 +73,7 @@ export default function MilestoneForm(): any ({ onSubmit }: Props) {;
         <label className='block text-sm font-medium'>Description</label>      <div>
     }
   }
-=======
-
   };
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -158,5 +155,29 @@ export default function MilestoneForm(): any ({ onSubmit }: Props) {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {loading ? 'Adding...' : 'Add Milestone'}
 
+<<<<<<< HEAD
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  );
+=======
+
+  );
+
+}
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+      <button;
+        type='submit';
+        className='bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50'        disabled={loading}        type="submit";
+        className="bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50";
+        disabled={loading}
+      >;
+        {loading ? 'Adding...' : 'Add Milestone'}
+      </button>;
+    </form>);
+}
+  );
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

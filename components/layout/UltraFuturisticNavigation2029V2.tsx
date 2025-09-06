@@ -3,8 +3,99 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+  Menu
+  X
+  Search
+  ChevronDown
+  ChevronRight
+  Home
+  Users
+  Settings
+  HelpCircle
+  Mail
+  Phone
+  MapPin
+  BookOpen
+  MessageCircle
+  Star
+  TrendingUp
+  Layers
+  Cpu
+  Database
+  Cloud
+  Lock
+  Shield
+  Globe
+  Factory
+  Car
+  Building
+  GraduationCap
+  Scale
+  Palette
+  Camera
+  Video
+  Music
+  Gamepad2
+  Heart
+  Leaf
+  Sun
+  Moon
+  Wind
+  Droplets
+  Mountain
+  Code
+  Wrench
+  Smartphone
+  BarChart3
+  Eye
+  Globe2
+  Zap
+  Rocket
+  Brain
+  Sparkles
+  ShieldCheck
+  Target
+  Users2
+  Briefcase
+  Lightbulb
+  Award
+  Clock
+  CheckCircle;} from 'lucide-react';import {
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+=======
+import {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Menu,
   X,
   Search,
@@ -65,6 +156,7 @@ import {
 =======
   Clock,;
   CheckCircle,;} from 'lucide-react';import { ;
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -163,14 +255,6 @@ export default function UltraFuturisticNavigation2029V2() {
 
 
 const mainNavigation = [
-=======
-  }, ];      'Advanced Research AutomationQuantum Research PlatformAI Research AssistantBiotech Research Suite';
-    ];
-  }
-];
-;
-const main_navigation = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
   { name: 'AI Solutions', href: '/ai - solutions', icon: Brain },
@@ -187,24 +271,9 @@ const quickLinks = [
 =======
   { name: 'Contact', href: '/contact', icon: MessageCircle }, ];  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
-;
-const quick_links = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  { name: 'About Us', href: '/about', icon: Users },
-  { name: 'Case Studies', href: '/case - studies', icon: BookOpen },
-  { name: 'Blog', href: '/blog', icon: BookOpen },
-  { name: 'News', href: '/news', icon: TrendingUp },
-  { name: 'Careers', href: '/careers', icon: GraduationCap },
 
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default function UltraFuturisticNavigation2029V2() {
-  const [isOpen, setIsOpen] = useState(false)
-=======
-
-
-
+export default function UltraFuturisticNavigation2029V2() {;
   const [isOpen, setIsOpen] = useState(false);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -222,7 +291,14 @@ export default function UltraFuturisticNavigation2029V2() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='relative'>
@@ -318,7 +394,13 @@ export default function UltraFuturisticNavigation2029V2() {
                   <span>{item.name}</span>
                 </Link>
                 {/* Hover effect */}
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300" />
+                <div className='absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300' />              </motion.div>                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300" />
+              </motion.div>
+            ))}
+          </div>
+          {/* Right side - Contact & Search */}
+          <div className='hidden lg:flex items-center space-x-4'>
+
               </motion.div>
 
             ))}
@@ -333,6 +415,7 @@ export default function UltraFuturisticNavigation2029V2() {
 
           {/* Right side - Contact & Search */}
 
+=======
           <div className="hidden lg:flex items-center space-x-4">
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             {/* Search */}
@@ -356,6 +439,9 @@ export default function UltraFuturisticNavigation2029V2() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             {/* Contact Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -382,6 +468,9 @@ export default function UltraFuturisticNavigation2029V2() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Mobile Navigation Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -391,7 +480,12 @@ export default function UltraFuturisticNavigation2029V2() {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <div className='px-4 py-6 space-y-4'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -471,16 +565,47 @@ export default function UltraFuturisticNavigation2029V2() {
               {/* Contact Info */}
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Quick Links */}
+              <div className='pt-4 border-t border-gray-700'>
+                <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
+                  Quick Links
+                </h3>
+                <div className='space-y-2'>
+                  {quickLinks.map(item => (                    <Link
+                      key={item.name}
+                      href={item.href}
+                      onClick={closeMenu}
+                      className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
+                    >
+                      <item.icon className='w-4 h-4' />
+                      <span className='text-sm'>{item.name}</span>                    </Link>              <div className="pt-4 border-t border-gray-700">
+                <h3 className="text-sm font-medium text-gray-400 mb-3 px-4">Quick Links</h3>
+                <div className="space-y-2">
+                  {quickLinks.map((item) => (
+                      key={item.name}
+                      href={item.href}
+                      onClick={closeMenu}
+                      className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
+                    >
+                      <item.icon className='w-4 h-4' />
+                      <span className='text-sm'>{item.name}</span>                      className="flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300"
+                    >
+                      <item.icon className="w-4 h-4" />
+                      <span className="text-sm">{item.name}</span>
+                  ))}
+                </div>
+              </div>
 
 
                   ))}
                 </div>
               </div>
 
-
-
-
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               {/* Contact Info */}
               <div className='pt-4 border-t border-gray-700'>
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
@@ -491,6 +616,7 @@ export default function UltraFuturisticNavigation2029V2() {
                     <Phone className='w-4 h-4' />
                     <span className='text-sm'>{contactInfo.mobile}</span>
 
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -507,156 +633,8 @@ export default function UltraFuturisticNavigation2029V2() {
                   </div>
                 </div>
               </div>
-=======
-
-                </div>;
-              </div>;
-
-
-              {/* Contact Info */}
-              <div className='pt-4 border-t border-gray-700'>;
-                <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>;
-                  Contact Info;
-                </h3>;
-                <div className='space-y-2 px-4'>;
-                  <div className='flex items-center space-x-3 text-gray-400'>;
-                    <Phone className='w-4 h-4' />;
-                    <span className='text-sm'>{contactInfo && contactInfo.mobile}</span>;
-                  </div>;
-                  <div className='flex items-center space-x-3 text-gray-400'>;
-                    <Mail className='w-4 h-4' />;
-                    <span className='text-sm'>{contactInfo && contactInfo.email}</span>;
-                  </div>;
-                  <div className='flex items-center space-x-3 text-gray-400'>;
-                    <MapPin className='w-4 h-4' />;
-                    <span className='text-sm'>{contactInfo && contactInfo.address}</span>                  </div>                  </div>;
-                  <div className="flex items-center space-x-3 text-gray-400">;
-                    <Mail className="w-4 h-4" />;
-                    <span className="text-sm">{contactInfo && contactInfo.email}</span>;
-                  </div>;
-                  <div className="flex items-center space-x-3 text-gray-400">;
-                    <MapPin className="w-4 h-4" />;
-                    <span className="text-sm">{contactInfo && contactInfo.address}</span>;
-      {/* Mobile Navigation Menu */}
-      <AnimatePresence>;
-        {is_open && (
-          <motion.div;
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className='lg:hidden bg - gray - 900 / 95 backdrop - blur - xl border - t border - cyan - 500 / 20';
-          >;
-            <div className='px - 4 py - 6 space - y-4'>;
-              {/* Mobile Search */}
-              <div className='relative'>;
-                <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text - gray - 400' />;
-                <input;
-                  type='text';
-                  placeholder='Search services...';
-                  value={search_query}
-                  on_change={e => setSearchQuery (e.target.value)}
-                  className='w - full pl - 10 pr - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 rounded - lg text - gray - 300 placeholder - gray - 500 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 focus:border - cyan - 500 / 50'                />;
-              </div>;
-              {/* Mobile Navigation Links */}
-              <div className='space - y-2'>;
-                {main_navigation.map (item => (                  <Link;
-                    key={item.name}
-                    href={item.href}
-                    on_click={close_menu}
-                    className='flex items - center space - x-3 px - 4 py - 3 text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50 rounded - lg transition - colors duration - 300';
-                  >;
-                    <item.icon className='w - 5 h - 5' />                    <span>{item.name}</span>          >;
-            <div className="px - 4 py - 6 space - y-4">;
-              {/* Mobile Search */}
-              <div className="relative">;
-                <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text - gray - 400" />;
-                <input;
-                  type="text";
-                  placeholder="Search services...";
-                  value={search_query}
-                  on_change={(e) => setSearchQuery (e.target.value)}
-                  className="w - full pl - 10 pr - 4 py - 3 bg - gray - 800 / 50 border border - gray - 700 rounded - lg text - gray - 300 placeholder - gray - 500 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 / 50 focus:border - cyan - 500 / 50";
-                />;
-              </div>;
-              {/* Mobile Navigation Links */}
-              <div className='space - y-2'>;
-                {main_navigation.map (item => (              <div className="space - y-2">;
-                {main_navigation.map ((item) => (
-                  <Link;
-                    key={item.name}
-                    href={item.href}
-                    on_click={close_menu}
-                    className='flex items - center space - x-3 px - 4 py - 3 text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50 rounded - lg transition - colors duration - 300';
-                  >;
-                    <item.icon className='w - 5 h - 5' />                    className="flex items - center space - x-3 px - 4 py - 3 text - gray - 300 hover:text - cyan - 400 hover:bg - gray - 800 / 50 rounded - lg transition - colors duration - 300";
-                  >;
-                    <item.icon className="w - 5 h - 5" />;
-                    <span>{item.name}</span>;
-                  </Link>))}
-              </div>;
-              {/* Quick Links */}
-              <div className='pt - 4 border - t border - gray - 700'>;
-                <h3 className='text - sm font - medium text - gray - 400 mb - 3 px - 4'>;
-                  Quick Links;
-                </h3>;
-                <div className='space - y-2'>;
-                  {quick_links.map (item => (                    <Link;
-                      key={item.name}
-                      href={item.href}
-                      on_click={close_menu}
-                      className='flex items - center space - x-3 px - 4 py - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - gray - 800 / 50 rounded - lg transition - colors duration - 300';
-                    >;
-                      <item.icon className='w - 4 h - 4' />;
-                      <span className='text - sm'>{item.name}</span>                    </Link>              <div className="pt - 4 border - t border - gray - 700">;
-                <h3 className="text - sm font - medium text - gray - 400 mb - 3 px - 4">Quick Links</h3>;
-                <div className="space - y-2">;
-                  {quick_links.map ((item) => (
-                      key={item.name}
-                      href={item.href}
-                      on_click={close_menu}
-                      className='flex items - center space - x-3 px - 4 py - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - gray - 800 / 50 rounded - lg transition - colors duration - 300';
-                    >;
-                      <item.icon className='w - 4 h - 4' />;
-                      <span className='text - sm'>{item.name}</span>                      className="flex items - center space - x-3 px - 4 py - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - gray - 800 / 50 rounded - lg transition - colors duration - 300";
-                    >;
-                      <item.icon className="w - 4 h - 4" />;
-                      <span className="text - sm">{item.name}</span>))}
-                </div>;
-              </div>;
-              {/* Contact Info */}
-              <div className='pt - 4 border - t border - gray - 700'>;
-                <h3 className='text - sm font - medium text - gray - 400 mb - 3 px - 4'>;
-                  Contact Info;
-                </h3>;
-                <div className='space - y-2 px - 4'>;
-                  <div className='flex items - center space - x-3 text - gray - 400'>;
-                    <Phone className='w - 4 h - 4' />;
-                    <span className='text - sm'>{contact_info.mobile}</span>;
-                  </div>;
-                  <div className='flex items - center space - x-3 text - gray - 400'>;
-                    <Mail className='w - 4 h - 4' />;
-                    <span className='text - sm'>{contact_info.email}</span>;
-                  </div>;
-                  <div className='flex items - center space - x-3 text - gray - 400'>;
-                    <MapPin className='w - 4 h - 4' />;
-                    <span className='text - sm'>{contact_info.address}</span>                  </div>                  </div>;
-                  <div className="flex items - center space - x-3 text - gray - 400">;
-                    <Mail className="w - 4 h - 4" />;
-                    <span className="text - sm">{contact_info.email}</span>;
-                  </div>;
-                  <div className="flex items - center space - x-3 text - gray - 400">;
-                    <MapPin className="w - 4 h - 4" />;
-                    <span className="text - sm">{contact_info.address}</span>;
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
-
-      </AnimatePresence>;
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Service Categories Dropdown */}
       <AnimatePresence>;
         {activeCategory && (;
@@ -677,8 +655,12 @@ export default function UltraFuturisticNavigation2029V2() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40'
 
-
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           >
             <div className='max-w-7xl mx-auto px-4 py-8'>
               <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
@@ -798,6 +780,18 @@ export default function UltraFuturisticNavigation2029V2() {
                           </div>;
                         </Link>;
 
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+                        </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       ))}
                     </div>;
                   </div>;
@@ -807,5 +801,77 @@ export default function UltraFuturisticNavigation2029V2() {
           </motion && motion.div>;
         )}
 
+<<<<<<< HEAD
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  );
+=======
+
+  );
+
+}
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+                        </p>;
+                      </div>;
+                    </div>;
+                    <div className='space - y-3'>                      {category.services.map ((service, index) => (
+                        <Link;
+                          key={service.name}
+                          href={service.href}
+                          className='block p - 3 rounded - lg bg - gray - 800 / 50 hover:bg - gray - 800 / 70 transition - colors duration - 300 group'          >;
+            <div className="max - w-7xl mx - auto px - 4 py - 8">;
+              <div className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap - 8">;
+                {service_categories.map ((category) => (
+                  <div key={category.title} className="space - y-4">;
+                    <div className="flex items - center space - x-3">;
+                      <div className={`p - 2 rounded - lg bg - gradient - to - r ${category.color}`}>;
+                        <category.icon className="w - 5 h - 5 text - white" />;
+                      </div>;
+                      <div>;
+                        <h3 className="text - lg font - semibold text - white">{category.title}</h3>;
+                        <p className="text - sm text - gray - 400">{category.description}</p>;
+                      </div>;
+                    </div>;
+                    <div className="space - y-3">;
+                      {category.services.map ((service, index) => (
+                        <Link;
+                          key={service.name}
+                          href={service.href}
+                          className='block p - 3 rounded - lg bg - gray - 800 / 50 hover:bg - gray - 800 / 70 transition - colors duration - 300 group';
+                        >;
+                          <div className='flex justify - between items - start'>;
+                            <div>;
+                              <h4 className='font - medium text - white group - hover:text - cyan - 400 transition - colors duration - 300'>;
+                                {service.name}
+                              </h4>;
+                              <p className='text - sm text - gray - 400 mt - 1'>;
+                                {service.description}
+                              </p>;
+                            </div>;
+                            <span className='text - sm font - semibold text - cyan - 400'>;
+                              {service.price}
+                            </span>                          </div>                        >;
+                          <div className="flex justify - between items - start">;
+                            <div>;
+                              <h4 className="font - medium text - white group - hover:text - cyan - 400 transition - colors duration - 300">;
+                                {service.name}
+                              </h4>;
+                              <p className="text - sm text - gray - 400 mt - 1">{service.description}</p>;
+                            </div>;
+                            <span className="text - sm font - semibold text - cyan - 400">{service.price}</span>;
+                          </div>;
+                        </Link>))}
+                    </div>;
+                  </div>))}
+              </div>;
+            </div>;
+          </motion.div>)}
+      </AnimatePresence>;
+    </nav>);
+}
+  );
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

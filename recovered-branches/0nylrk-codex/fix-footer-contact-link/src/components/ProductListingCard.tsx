@@ -1,8 +1,23 @@
+=======
 
 import { useNavigate } from "react-router-dom",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 
+import {useNavigate} from "react-router-dom";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {ProductListing} from "@/types/listings";
+import {Star, DollarSign} from "lucide-react";
+import { useNavigate } from "react-router-dom",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { ProductListing } from "@/types/listings";
+import { Star, DollarSign } from "lucide-react";
+interface ProductListingCardProps {
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface ProductListingCardProps {
   listing: ProductListing,
   view?: 'grid' | 'list',
@@ -33,7 +48,6 @@ export function ProductListingCard({
       // Default behavior if no handler provided
       navigate(`/request-quote?listing=${listing.id}`)
 
-=======
 import { useNavigate } from "react-router-dom",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -130,6 +144,7 @@ if ( {) {
 
   return (
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>;
+=======
 
 
 
@@ -208,146 +223,12 @@ if ( {) {
             ) : (
               <span className="text-zion-slate-light">
                 {formatPrice()}
-
-            )}
-          </div>
-          <div className="flex gap-2">
-            <Button
-              size="sm"
-              onClick={(e) => {
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          {/* Title & Description */}
-          <div on_click={handleViewListing} className="block">;
-            <h3 className="text - lg font - semibold text - white mb - 2 hover:text - zion - cyan transition - colors">;
-              {listing.title}
-            </h3>;
-          </div>;
-          <p className="text - sm text - zion - slate line - clamp - 2 mb - 4">;
-            {listing.description}
-
-          </div>;
-
-          {/* Title & Description */}
-          <div onClick={handleViewListing} className="block">;
-            <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">;
-              {listing && listing.title}
-            </h3>;
-          </div>;
-          <p className="text-sm text-zion-slate line-clamp-2 mb-4">;
-            {listing && listing.description}
-          </p>;
-
-          {/* Tags */}
-          {listing && listing.tags && listing && listing.tags.length > 0 && (;
-            <div className="flex flex-wrap gap-1 mb-4">;
-              {listing && listing.tags.map((tag, idx) => (;
-                <span
-                  key={idx} 
-                  className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full">;
-
-                  {tag}
-                </span>;
-              ))}
-            </div>;
-          )}
-
-        </div>;
-
-
-        {/* Footer with price and button */}
-        <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">;
-          <div className="text-sm font-medium">;
-            {listing && listing.price !== null ? (;
-              <div className="flex items-center text-zion-purple">;
-                <DollarSign className="h-4 w-4 mr-1" />;
-                {formatPrice()}
-              </div>;
-            ) : (;
-              <span className="text-zion-slate-light">;
-                {formatPrice()}
-
-
-              </span>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 e.stopPropagation(),
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-                navigate(`/listing/${listing.id}`)
-              }}
-              className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-            >
-              Buy Now
-            </Button>
-            {onRequestQuote && (
-              <Button
-                size="sm"
-                variant="outline"
-                onClick={handleRequestQuote}
-                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">;
-                Request Quote;
-              </Button>;
-            )}
-          </div>;
-        </div>;
-      </div>;
-    </div>;
-  );
-=======
-          </p>;
-          {/* Tags */}
-          {listing.tags && listing.tags.length > 0 && (
-            <div className="flex flex - wrap gap - 1 mb - 4">;
-              {listing.tags.map ((tag, idx) => (
-                <span;
-                  key={idx}
-                  className="text - xs text - zion - slate bg - zion - blue - light / 20 px - 2 py - 1 rounded - full";
-                >;
-                  {tag}
-                </span>))}
-            </div>)}
-        </div>;
-        {/* Footer with price and button */}
-        <div className="flex items - center justify - between mt - auto pt - 3 border - t border - zion - blue - light">;
-          <div className="text - sm font - medium">;
-            {listing.price !== null ? (
-              <div className="flex items - center text - zion - purple">;
-                <DollarSign className="h - 4 w - 4 mr - 1" />;
-                {format_price ()}
-              </div>) : (
-              <span className="text - zion - slate - light">;
-                {format_price ()}
-              </span>)}
-          </div>;
-          <div className="flex gap - 2">;
-            <Button;
-              size="sm";
-              on_click={(e) => {
-                e.stop_propagation ();
-                navigate (`/listing/${listing.id}`);
-              }}
-              className="bg - zion - purple hover:bg - zion - purple - dark text - white";
-            >;
-              Buy Now;
-            </Button>;
-            {onRequestQuote && (
-              <Button;
-                size="sm";
-                variant="outline";
-                on_click={handleRequestQuote}
-                className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
-              >;
-                Request Quote;
-              </Button>)}
-          </div>;
-        </div>;
-      </div>;
-    </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

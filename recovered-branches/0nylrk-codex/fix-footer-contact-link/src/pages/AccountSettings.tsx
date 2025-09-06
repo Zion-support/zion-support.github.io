@@ -1,5 +1,20 @@
 
-=======
+import { useState, useEffect  } from 'react';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';
+import { SEO  } from '@/components/SEO';
+import { useAuth  } from '@/hooks/useAuth';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Wallet, Database, Save } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Separator  } from '@/components/ui/separator';
+import { Switch  } from '@/components/ui/switch';
+import { Label  } from '@/components/ui/label';
+import { toast } from 'sonner';
+export default function AccountSettings() {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState, useEffect} from 'react';
 import {Header} from '@/components / Header';
 import {Footer} from '@/components / Footer';
@@ -13,29 +28,45 @@ import {Separator} from '@/components / ui / separator';
 import {Switch} from '@/components / ui / switch';
 import {Label} from '@/components / ui / label';
 import {toast} from 'sonner';
+export default function AccountSettings() {;
 
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
   const [enableBackup, setEnableBackup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 =======
+  useEffect(() => {
+    try {
 
-
-
-  useEffect(() => {;
-    try {;
-      const saved = localStorage && localStorage.getItem('account_settings');
-      if (saved) {;
-        const parsed = JSON && JSON.parse(saved);
-        setDisplayWeb3(!!parsed && parsed.displayWeb3);
-        setDidHandle(parsed && parsed.didHandle || '');
-        setEnableBackup(!!parsed && parsed.enableBackup);
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+      const saved = localStorage.getItem('account_settings');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        setDisplayWeb3(!!parsed.displayWeb3);
+        setDidHandle(parsed.didHandle |'');
+        setEnableBackup(!!parsed.enableBackup)
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+import { useState, useEffect } from 'react',
+import { Header } from '@/components/Header',
+import { Footer } from '@/components/Footer',
+import { SEO } from '@/components/SEO',
+import { useAuth } from '@/hooks/useAuth',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Wallet, Database, Save } from "lucide-react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
+import { Separator } from '@/components/ui/separator',
+import { Switch } from '@/components/ui/switch',
+import { Label } from '@/components/ui/label',
+import { toast } from 'sonner',
+export default function AccountSettings() {
+  const { user } = useAuth(),
+  const [displayWeb3, setDisplayWeb3] = useState(false),
+  const [didHandle, setDidHandle] = useState(''),
+  const [enableBackup, setEnableBackup] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   useEffect(() => {
     try {
@@ -45,7 +76,6 @@ import {toast} from 'sonner';
         setDisplayWeb3(!!parsed.displayWeb3),
         setDidHandle(parsed.didHandle || ''),
         setEnableBackup(!!parsed.enableBackup)
-
 import { useState, useEffect } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -73,65 +103,120 @@ export default function AccountSettings() {;
         setDisplayWeb3(!!parsed.displayWeb3),;
         setDidHandle(parsed.didHandle || ''),;
         setEnableBackup(!!parsed.enableBackup);
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
     } catch (e) {;
       console && console.error('Error loading account settings', e);
     }
 =======
-
-
+  }, []);
+  const handleSave = () => {
+    setIsSubmitting(true);
   }, []),
+  }, []),
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const handleSave = () => {
     setIsSubmitting(true),
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-    // Simulate API call
-    setTimeout(() => {
+=======
+=======
+          'account_settings',
+          JSON.stringify({ displayWeb3, didHandle, enableBackup })
+        ),
+        // // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup }),
+        toast.success('Account settings updated successfully')
+      } catch (e) {
+        console.error('Failed to save settings', e),
+        toast.error('Failed to save settings')
+      } finally {
+        setIsSubmitting(false)
+      }
+    }, 1000)
+  }
+  const handleConnectWallet = async () => {
+    try {
+      // Check if wallet is available
+      const ethereum = (window as any).ethereum;
+      if (!ethereum) {
+        toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
+        return
+      }
+      // Request accounts
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
+      const address = accounts[0];
+      // Sign message to verify ownership
+      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`
+      await ethereum.request({
+        method: 'personal_sign'
+        params: [address, message]
+      });
+      // Auto-set DID handle if ENS is available
       try {
-        localStorage.setItem(
-
-
+        const provider = new (window as any).ethers.providers.Web3Provider(ethereum);
+        const ensName = await provider.lookupAddress(address);
+        if (ensName) {
+          setDidHandle(ensName)
+  }, []),;
   const handleSave = () => {;
-    setIsSubmitting(true);
-
+    setIsSubmitting(true),;
     // Simulate API call;
     setTimeout(() => {;
       try {;
-        localStorage && localStorage.setItem(;
-
-          'account_settings';
-          JSON && JSON.stringify({ displayWeb3, didHandle, enableBackup });
-        );
-        console && console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
-        toast && toast.success('Account settings updated successfully');
+        localStorage.setItem(;
+          'account_settings',;
+          JSON.stringify({ displayWeb3, didHandle, enableBackup });
+        ),;
+        // // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup }),;
+        toast.success('Account settings updated successfully');
       } catch (e) {;
-        console && console.error('Failed to save settings', e);
-        toast && toast.error('Failed to save settings');
+        console.error('Failed to save settings', e),;
+        toast.error('Failed to save settings');
       } finally {;
         setIsSubmitting(false);
       }
-
     }, 1000);
-  };
-
+  },;
   const handleConnectWallet = async () => {;
     try {;
       // Check if wallet is available;
-
-      const ethereum = (window as any).ethereum;
+      const ethereum = (window as any).ethereum,;
       if (!ethereum) {;
-        toast && toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
+        toast.error('No wallet detected. Please install MetaMask or another compatible wallet.'),;
         return;
       }
+;
+
+      // Request accounts;
+      const accounts = await ethereum && ethereum.request({ method: 'eth_requestAccounts' }),;
+      const address = accounts[0];
+
+      // Sign message to verify ownership;
+      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`,;
+      await ethereum && ethereum.request({;
+        method: 'personal_sign',;
+        params: [address, message];
+      });
+
+      // Auto-set DID handle if ENS is available;
+      try {;
+        const provider = new (window as any).ethers && ethers.providers.Web3Provider(ethereum);
+        const ensName = await provider && provider.lookupAddress(address);
+        if (ensName) {;
+          setDidHandle(ensName);
+=======
 
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         }
       } catch (error) {;
         console && console.error('ENS lookup error:', error);
@@ -148,9 +233,9 @@ export default function AccountSettings() {;
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
 
     <>;
@@ -343,6 +428,25 @@ export default function AccountSettings() {;
                   Restore Profile from Backup
                 </Button>
                 <p className="text-xs text-gray-500 mt-1">
+=======
+                  {enableBackup
+                    ? 'Restore your profile data from decentralized storage'
+                    : 'Enable backup first to use this feature'}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </main>
+      <Footer />
+    </>
+  )
+}
+                  {enableBackup 
+                    ? 'Restore your profile data from decentralized storage' 
+
+                    : 'Enable backup first to use this feature'}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 </p>;
               </div>;
             </CardContent>;
@@ -356,6 +460,9 @@ export default function AccountSettings() {;
 
 =======
 ;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

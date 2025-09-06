@@ -42,6 +42,56 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+=======
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Label } from '@/components/ui/label',;
+import { Textarea } from '@/components/ui/textarea',;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogDescription,;
+  DialogFooter,;
+  DialogHeader,;
+  DialogTitle,;
+} from '@/components/ui/dialog';
+import { User, Mail, MapPin, CreditCard } from 'lucide-react';
+import { isProdDomain } from '@/utils/getStripe';
+
+interface GuestCheckoutModalProps {;
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  onSubmit: (details: { email: string; address: string }) => void;
+export default function GuestCheckoutModal(): any ({;
+  open,;
+  onOpenChange,;
+  onSubmit,;
+}: GuestCheckoutModalProps) {;
+  const [email, setEmail] = useState('');
+  const [address, setAddress] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+    if (!email || !address) {;
+      alert('Please fill in all required fields');
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {;
+      onSubmit({ email, address });
+    } finally {;
+      setIsSubmitting(false);
+
+    }
+  }
+
+    }
+  },
+
+<<<<<<< HEAD
 
   return (
 
@@ -92,38 +142,17 @@ class ErrorBoundary extends React.Component {
             </Button>
             <Button
               type="submit"
+              {isSubmitting ? (
+                'Processing...'
+              ) : (
+                <>
+                  <CreditCard className='h-4 w-4 mr-2' />
+                  Continue to Payment
+                </>
+              )}
+<<<<<<< HEAD
               disabled={isSubmitting || !email || !address}
               className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
             >
 
 <<<<<<< HEAD
-=======
-};
-};
-
-
-          <DialogFooter className='space - x-2'>;
-            <Button;
-              type='button';
-              variant='outline';
-              on_click={() => onOpenChange (false)}
-              className='border - zion - cyan / 30 text - zion - slate - light hover:bg - zion - cyan / 10'            >;
-              Cancel;
-            </Button>;
-            <Button;
-              type='submit';
-              disabled={is_submitting || !email || !address}
-              className='bg - zion - cyan hover:bg - zion - cyan / 90 text - zion - blue'            >;
-              {is_submitting ? (
-                'Processing...') : (
-                <>;
-                  <CreditCard className='h - 4 w - 4 mr - 2' />;
-                  Continue to Payment;
-                </>)}
-
-
-    </Dialog>);
-}
-}
-;
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

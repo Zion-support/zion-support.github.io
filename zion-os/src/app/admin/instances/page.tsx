@@ -1,6 +1,4 @@
 
-=======
-
 // import { prisma } from "@/lib/prisma",;
 interface InstanceWithCounts {;
   id: string,;
@@ -27,8 +25,6 @@ interface InstanceWithCounts {;
 export default function InstancesPage() {;
   const instances: any[] = [], // Temporary empty array;
   const error: string | null = null,;
-
-
   return (;
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
@@ -54,9 +50,10 @@ export default function InstancesPage() {;
             </p>;
 
 =======
-          </div>)}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+          </div>;
+        )}
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Stats Overview */}
         <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 6 mb - 8">;
           <div className="glass - effect rounded - xl p - 6 text - center">;
@@ -85,16 +82,16 @@ export default function InstancesPage() {;
         {/* Instances Grid */}
 
 =======
-        {instances.length > 0 && (
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-            {instances.map ((inst) => (
-              <div key={inst.id} className="feature - card group hover - lift">;
-                <div className="flex items - start justify - between mb - 4">;
-                  <div className="flex items - center gap - 3">;
-                    <div className={`w - 3 h - 3 rounded - full ${
-                      inst.is_public ? 'bg - green - 500' : 'bg - yellow - 500';
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+        {instances.length > 0 && (;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
+            {instances.map((inst) => (;
+              <div key={inst.id} className="feature-card group hover-lift">;
+                <div className="flex items-start justify-between mb-4">;
+                  <div className="flex items-center gap-3">;
+                    <div className={`w-3 h-3 rounded-full ${inst.isPublic ? 'bg-green-500' : 'bg-yellow-500';
+                    <div className={`w-3 h-3 rounded-full ${;
+                      inst.isPublic ? 'bg-green-500' : 'bg-yellow-500';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     }`}></div>;
                     <div className="font - semibold text - lg text - white group - hover:text - blue - 400 transition - colors">;
                       {inst.name}
@@ -110,11 +107,9 @@ export default function InstancesPage() {;
                     <span className="truncate">;
 
 =======
-
+                      {inst.domain |inst.subdomain |inst.slug}
                       {inst.domain || inst.subdomain || inst.slug}
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     </span>;
                   </div>;
                   <div className="flex items - center gap - 2 text - sm text - white / 70">;
@@ -153,11 +148,7 @@ export default function InstancesPage() {;
                     </a>;
                     <a;
 
-=======
-
                       href={`/admin/instances/${inst.id}/deployments`} ;
-
-
                       className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";
@@ -169,10 +160,12 @@ export default function InstancesPage() {;
                 </div>;
 
 =======
-              </div>))}
-          </div>)}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+              </div>;
+            ))}
+          </div>;
+        )}
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Empty State */}
         {instances.length === 0 && !error && (
           <div className="text - center py - 16">;
@@ -230,12 +223,8 @@ export default function InstancesPage() {;
             <div key={inst.id} className="card card - hover">;
               {/* Instance Header */}
 
-=======
-
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${;
                       inst.vertical === 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :;
-
-
                       inst.vertical === 'HEALTH' ? 'bg-green-500/20 text-green-400' :;
                       inst.vertical === 'EDUCATION' ? 'bg-purple-500/20 text-purple-400' :;
                       inst.vertical === 'LAW' ? 'bg-yellow-500/20 text-yellow-400' :;
@@ -265,11 +254,9 @@ export default function InstancesPage() {;
                   <span>🌐</span>;
 
 =======
-
+                  <span>{inst.domain |inst.subdomain |inst.slug}</span>;
                   <span>{inst.domain || inst.subdomain || inst.slug}</span>;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 </div>;
                 <div className="flex items - center space - x-2 text - sm text - white / 70">;
                   <span>🏛️</span>;
@@ -309,11 +296,7 @@ export default function InstancesPage() {;
                 </a>;
                 <a;
 
-=======
-
                   href={`/admin/instances/${inst.id}/deployments`} ;
-
-
                   className="flex-1 btn-secondary text-center text-sm py-2";
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   className="flex-1 btn-secondary text-center text-sm py-2";
@@ -328,10 +311,12 @@ export default function InstancesPage() {;
               </div>;
 
 =======
-            </div>))}
-        </div>)}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+            </div>;
+          ))}
+        </div>;
+      )}
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Quick Actions */}
       <div className="card text - center py - 8">;
         <h2 className="text - 2xl font - semibold mb - 4">Quick Actions</h2>;
@@ -499,24 +484,27 @@ export default function InstancesPage() {;
 }
 
 =======
-/**
- * getGovernanceLabel - Function description
- */
-function getGovernanceLabel() {
-  switch (type) {
-    case "ADMIN": return "Admin Control",
-    case "DAO_LITE": return "DAO - lite",
-    case "DAO_FULL": return "Full DAO",
+function getGovernanceLabel(type: string) {switch (type) {;
+    case "ADMIN": return "Admin Control";
+    case "DAO_LITE": return "DAO-lite";
+    case "DAO_FULL": return "Full DAO";
     default: return type;
   }
 }
-/**
- * getTokenSystemLabel - Function description
- */
-function getTokenSystemLabel() {
-  switch (type) {
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+function getTokenSystemLabel(type: string) {switch (type) {;
+;
+function getGovernanceLabel(type: string) {;
+  switch (type) {;
+    case "ADMIN": return "Admin Control",;
+    case "DAO_LITE": return "DAO-lite",;
+    case "DAO_FULL": return "Full DAO",;
+    default: return type;
+  }
+}
+;
+function getTokenSystemLabel(type: string) {;
+  switch (type) {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     case "SHARED": return "ZION$ Shared";
     case "LOCAL": return "Local Token";
     default: return type;

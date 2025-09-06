@@ -1,21 +1,4 @@
 
-=======
-'use client',
-import { useState, useEffect } from 'react',
-import Link from 'next / link',
-export default /**
- * Header - Function description
- */
-function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState (false),
-  const [is_scrolled, setIsScrolled] = useState (false),
-  useEffect (() => {
-    const handle_scroll = () =>: any {
-      setIsScrolled (window.scroll_y > 20);
-    },
-    window.addEventListener ('scroll', handle_scroll),
-    return () => window.removeEventListener ('scroll', handle_scroll);
-  }, []),
   const navigation = [;
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
@@ -40,9 +23,12 @@ function Header() {
           ? 'bg - black / 90 backdrop - blur - xl border - b border - white / 20 shadow - 2xl';
           : 'bg - black / 60 backdrop - blur - md border - b border - white / 10';
       }`}
-
-=======
-
+      role="banner"
+      aria-label="Main navigation"
+role=&quot;banner&quot;
+      aria-label=&quot;Main navigation&quot;
+      role="banner"
+      aria-label="Main navigation"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
@@ -70,10 +56,38 @@ function Header() {
                 aria - label={`Navigate to ${item.name} page`}
               >;
                 {item.name}
-
-
+<span className=&quot;absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full&quot;></span>
+              </Link>
+            ))}
+            {/* Services Dropdown */}
+<div className=&quot;relative group&quot;>
+              <button
+                className=&quot;text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group&quot;
+                aria-expanded=&quot;false&quot;
+                aria-haspopup=&quot;true&quot;
+                aria-label=&quot;Services menu&quot;
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
+=======
+=======
+=======
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+              </Link>
+            ))}
+;
+            {/* Services Dropdown */}
+            <div className="relative group">
+<div className=&quot;relative group&quot;>
+            <div className="relative group">
+              <button 
+                className="text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group"
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Services menu"
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
                 Services
                 <svg className=&quot;ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot;>
@@ -228,11 +242,11 @@ export default function Header() {;
           </nav>;
           {/* CTA Button */}
 
+          <div className="hidden lg:flex items-center space-x-4">
 =======
 
-          <div className="hidden lg:flex items-center space-x-4">
 
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <Link
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
@@ -244,10 +258,9 @@ export default function Header() {;
           {/* Mobile menu button */}
           <button;
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-
+className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200&quot;
             className="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200"
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-controls="mobile-menu"
@@ -257,9 +270,6 @@ export default function Header() {;
               {isMenuOpen ? (
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <Link
               href="/contact"
@@ -303,6 +313,7 @@ export default function Header() {;
                 </Link>;
               ))}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 {services.map((service) => (
                   <Link
                     key={service.name}
@@ -325,11 +336,14 @@ export default function Header() {;
 
                   </Link>;
                 ))}
-
+</div>
+              <div className=&quot;pt-4&quot;>
               </div>
               <div className="pt-4">
+=======
 
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 <Link
                   href="/contact"

@@ -1,9 +1,17 @@
 
+import { Star } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
+interface ReviewStatsProps {
 
-=======
 
+  ratingDistribution?: Record<number, number>
 import { Star } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
+import {Star} from "lucide-react";
+import {Progress} from "@/components/ui/progress";
+import { Star } from "lucide-react",
+import { Progress } from "@/components/ui/progress",
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface ReviewStatsProps {
   averageRating: number,
   totalReviews: number,
@@ -12,11 +20,18 @@ interface ReviewStatsProps {
 }
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+}
+export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
+  // Format the average rating to one decimal place;
+  const formattedRating = averageRating.toFixed(1);
   // Format the average rating to one decimal place
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  const formattedRating = averageRating.toFixed(1);
+  const formattedRating = averageRating.toFixed(1),
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // Calculate percentages for distribution if available
   const getPercentage = (count: number) => {
     if (totalReviews === 0) return 0
@@ -35,6 +50,7 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                   className={`h-4 w-4 ${
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <div className="bg-card border rounded-lg p-4">;
@@ -49,9 +65,11 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
 
                   className={`h-4 w-4 ${;
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   }`}
                 />;

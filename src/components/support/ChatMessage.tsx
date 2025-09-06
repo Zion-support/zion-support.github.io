@@ -6,6 +6,55 @@ import { format } from "date-fns";
 // Use the wrapper hook so TypeScript properly infers the return type
 // from the ThemeProvider context
 
+
+export const ChatMessage: React.FC<ChatMessageProps> = ({;
+  message,;
+  isUser,;
+  timestamp,;
+}: ChatMessageProps) => {;
+  const { theme } = useTheme();
+
+  // Memoise the sanitized + formatted HTML so we don't create a new object on every render –;
+  // this avoids the `react/jsx-no-constructed-context-values` & `react/jsx-no-bind` warnings.;
+  const sanitizedHtml = useMemo<{ __html: string }>(;
+    () => ({ __html: formatMessageWithLinks(message) }),    [message];
+  );
+
+
+
+
+  return (
+    <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
+      <Avatar className="h-8 w-8">
+        {isUser ? (
+          <>
+            <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar" />
+            <AvatarFallback>U</AvatarFallback>
+          </>
+        ) : (
+          <>
+            <AvatarImage
+              src="https://placehold.co/40x40?text=AI"
+              alt="Zion Support"
+            />
+            <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>
+          </>
+        )}
+      </Avatar>
+      <div
+        className={cn(
+
+
+      
+      <div className={cn(
+        "max-w-[80%] rounded-lg px-4 py-2 text-sm",
+        isUser 
+          ? "bg-zion-purple text-white" 
+          : theme === "dark"
+            ? "bg-zion-blue-light text-white"
+            : "bg-gray-100 text-gray-800"
+      )}>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <div dangerouslySetInnerHTML={sanitizedHtml} />
         <div className={cn(
           "text-xs mt-1",
@@ -16,9 +65,6 @@ import { format } from "date-fns";
               : "text-gray-500"
         )}>
           {format(timestamp, "h:mm a")}
-
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
 // characters. This ensures any user-supplied string is rendered harmless
@@ -26,6 +72,9 @@ import { format } from "date-fns";
 function escapeHtml(unsafe: string): string {
   return unsafe
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     .replace(/&/g, "&amp,")
     .replace(/</g, "<")
     .replace(/>/g, ">")
@@ -121,7 +170,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 },;
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy;
 // dependency like DOMPurify for now and instead escape the five critical;
-<<<<<<< HEAD
 
 // characters. This ensures any user-supplied string is rendered harmless;
 // before we perform our link replacements below.;
@@ -153,5 +201,4 @@ function formatMessageWithLinks(message: string): string {
 }
 ;
 <<<<<<< HEAD
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+<<<<<<< HEAD

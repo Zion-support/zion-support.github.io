@@ -3,13 +3,46 @@
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+import "https://deno.land/x/xhr@0.1.0/mod.ts",
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
-
+  }
+  try {
+    // Get the OpenAI API key from environment variables
+    const apiKey = Deno.env.get('OPENAI_API_KEY');
+    if (!apiKey) {
+      throw new Error('OPENAI_API_KEY is not set')
+    }
+    // Parse request body
+    const { scope, startDate, endDate, projectType } = await req.json();
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
+import "https://deno.land/x/xhr@0.1.0/mod.ts",;
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
+serve(async (req) => {;
+  // Handle CORS preflight requests;
+  if (req.method === 'OPTIONS') {;
+    return new Response(null, { headers: corsHeaders });
+  }
+;
+  try {;
+    // Get the OpenAI API key from environment variables;
+    const apiKey = Deno.env.get('OPENAI_API_KEY'),;
+    if (!apiKey) {;
+      throw new Error('OPENAI_API_KEY is not set');
 =======
-    const { scope, startDate, endDate, projectType } = await req && req.json();
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
 
     // Parse request body
@@ -40,13 +73,6 @@ serve(async (req) => {
       headers: {
 
       body: JSON.stringify({
-=======
-    const response = await fetch('https://api && api.openai.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`};
-      body: JSON && JSON.stringify({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         model: 'gpt-4o-mini';
         messages: [
           {
@@ -72,12 +98,15 @@ serve(async (req) => {
         status: 500,;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }
 });
 =======
 
+<<<<<<< HEAD
 
 ;
     const data = await response.json ();
@@ -114,3 +143,5 @@ if ( {) {
 ;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

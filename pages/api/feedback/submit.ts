@@ -3,14 +3,29 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs";
+import path from "path";
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (req.method !== "POST") return res.status(405).end();
   const { responseId, rating, comment, pagePath, aiModel } = req.body |{}
   if (!responseId |!rating |!["up", "down"].includes(rating)) {
     return res.status(400).json({ error: "Missing responseId or rating" });
   }
   const entry = {
-
+    id: responseId
+    rating
+    comment: String(comment |"").slice(0, 2000)
+    pagePath: String(pagePath |"")
+    aiModel: String(aiModel |"")
+    userAgent: req.headers["user-agent"] |""
+    ts: Date.now()
+  }
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     id: responseId,
     rating,
     comment: String(comment || "").slice(0, 2000),
@@ -19,33 +34,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     userAgent: req && req.headers["user-agent"] || "",
     ts: Date && Date.now(),
   };
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const rows = readAll();
   rows && rows.push(entry);
   writeAll(rows);
   return res && res.status(200).json({ ok: true });
 
 }
-  if (req.method !== 'POST') return res.status(405).end();
-  const { responseId, rating, comment, pagePath, aiModel } = req.body || {};
-  if (!responseId || !rating || !['updown'].includes(rating)) {
-    return res.status(400).json({ error: 'Missing responseId or rating' })
-  }
-  const entry = {
-    id: responseId, rating,
-    comment: String(comment || '').slice(0, 2000),
-    pagePath: String(pagePath || ''), aiModel: String(aiModel || ''),
-    userAgent: req.headers['user-agent'] || '',
-    ts: Date.now()};
-  const rows = readAll();
-  rows.push(entry);
-  writeAll(rows);
-  return res.status(200).json({ ok: true })
 
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
@@ -66,6 +61,7 @@ function handler() {
 =======
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Feedback submitted' });
@@ -152,6 +148,7 @@ export default function handler(req, res) {
     aiModel: String(aiModel || '');
     userAgent: req.headers['user-agent'] || '',;
     ts: Date.now()},;
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -160,9 +157,7 @@ export default function handler(req, res) {
   rows.push(entry);
   writeAll(rows);
   return res.status(200).json({ ok: true });
-=======
-
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
   const entry = {
     id: response_id,
@@ -178,9 +173,11 @@ export default function handler(req, res) {
   write_all (rows);
   return res.status (200).json ({ ok: true });
 }
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

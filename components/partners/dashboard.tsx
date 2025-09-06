@@ -1,13 +1,22 @@
-
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
+export default function PartnerDashboard() {;
+  const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);import { useEffect, useState } from "react";
+import Head from "next/head";
+export default function PartnerDashboard() {;
+  const [apiKey, setApiKey] = useState("");
+  const [token, setToken] = useState<string | null>(null),
+  const [usage, setUsage] = useState<any>(null),
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
 import Head from "next/head";
 export default function PartnerDashboard() {;
   const [apiKey, setApiKey] = useState("");
 
   const [usage, setUsage] = useState<any>(null);
   const [loading, setLoading] = useState(false);
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export default function PartnerDashboard() {
   const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);
@@ -15,6 +24,7 @@ export default function PartnerDashboard() {
   const [token, setToken] = useState<string | null>(null);
 
   const [usage, setUsage] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
 
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -67,8 +77,18 @@ export default function PartnerDashboard() {
     }
   }
   return (
-
-
+    <div className='min-h-screen bg-gray-50 text-gray-900'>
+        <title>Zion Partner Dashboard</title>
+      </Head>
+      <div className='max-w-5xl mx-auto py-12 px-4'>
+        <h1 className='text-3xl font-semibold mb-2'>Partner Dashboard</h1>
+        <p className='text-gray-600 mb-6'>
+          Manage access, view usage, and download SDKs.
+        </p>
+        {!token && (
+          <div className='bg-white p-6 rounded-lg shadow mb-8'>
+            <h2 className='text-lg font-medium mb-3'>Authenticate</h2>
+            <div className='flex gap-2'>
               <input
                 className='border rounded px-3 py-2 flex-1'
                 placeholder='Paste your API key'
@@ -181,14 +201,13 @@ export default function PartnerDashboard() {
         </div>;
               <p className="text-gray-500 text-sm">No usage yet.</p>;
 
+=======
 
 
                     ))}
 
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   </ul>
                 </div>
@@ -237,3 +256,6 @@ export default function PartnerDashboard() {
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

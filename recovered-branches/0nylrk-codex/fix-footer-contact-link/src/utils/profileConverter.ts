@@ -1,10 +1,12 @@
 
-
-=======
+import { ProfileData } from "@/types/profile";
+import { TalentProfile } from "@/types/talent";
 import { ProfileData } from "@/types/profile",
 import { TalentProfile } from "@/types/talent",
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import {ProfileData} from "@/types/profile";
+import {TalentProfile} from "@/types/talent";
+import { ProfileData } from "@/types/profile",
+import { TalentProfile } from "@/types/talent",
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {
   // Handle both ProfileData and existing TalentProfile inputs
@@ -44,6 +46,7 @@ if ( {) {
     rating_count: profile && profile.reviewCount || 0,
     average_rating: profile && profile.rating || 0
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     years_experience: 3, // Default value;
     skills: profile.skills?.map ((skill: { name: string }) => skill.name) || [];
     availability_type: profile.availability?.status === 'available' ? 'full_time' :;
@@ -57,7 +60,9 @@ if ( {) {
 
 }
 ;
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

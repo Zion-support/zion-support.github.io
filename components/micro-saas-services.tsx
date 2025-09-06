@@ -4,15 +4,25 @@ import Button from '../components/ui/Button';
 
 import {
 
-=======
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  Brain
+  Monitor
+  Search
+  Shield
+  Mail
+  Share2
+  Check
+  Star
+  Zap
+  TrendingUp
+  Users
+  Globe
+  Lock
+  BarChart3
+  Calendar
+  Target;} from 'lucide-react';import {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Brain,
   Monitor,
   Search,
@@ -27,11 +37,17 @@ import {
   Globe,
   Lock,
   BarChart3,
-
-=======
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  Calendar,
+  Target,;} from 'lucide-react';import { 
+  Calendar,;
+  Target,;} from 'lucide-react';import { ;
+  Brain;
+  Monitor
+  Search
+  Shield
+  Mail
+  Share2
+  Check
   Brain;
   Monitor,
   Search,
@@ -73,6 +89,7 @@ export default /**
  */
 function MicroSaasServicesPage() {
   const microSaasServices = [;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -162,6 +179,25 @@ function MicroSaasServicesPage() {
       website: 'https://performance.ziontech.ai',
       demo: 'https://demo.performance.ziontech.ai',
     },
+            'Unlimited accounts',
+            'Enterprise scheduling',
+            'Advanced calendar',
+            'Enterprise analytics',
+            'Dedicated support',
+            'White-label options',
+          ],
+        },
+      },
+      marketPrice: '$19-129/month',
+      competitors: ['Buffer', 'Hootsuite', 'Later'],
+      website: 'https://social.ziontech.ai',
+      demo: 'https://demo.social.ziontech.ai',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    },  ];      demo: 'https://demo.social.ziontech.ai'
+    }
+  ];
+  const marketInsights = [
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
     {
       id: 'seo - analytics',
       name: 'SEO Analytics Dashboard',
@@ -336,8 +372,23 @@ function MicroSaasServicesPage() {
         },
         enterprise: {
 
-    },  ];      demo: 'https://demo.social.ziontech.ai'
 
+
+            'Unlimited accounts',
+            'Enterprise scheduling',
+            'Advanced calendar',
+            'Enterprise analytics',
+            'Dedicated support',
+            'White - label options',
+          ],
+        },
+      },
+      market_price: '$19 - 129 / month',
+      competitors: ['Buffer', 'Hootsuite', 'Later'],
+      website: 'https://social.ziontech.ai',
+      demo: 'https://demo.social.ziontech.ai',;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+    },  ];      demo: 'https://demo.social.ziontech.ai'
     }
   ];
 
@@ -921,6 +972,7 @@ export default function MicroSaasServicesPage() {;
                     </div>;
                     <div className='text - green - 400 font - semibold'>;
                       {insight.growth}
+<<<<<<< HEAD
 
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -1021,17 +1073,28 @@ export default function MicroSaasServicesPage() {;
                   <p className="text-gray-400 text-sm">{insight.description}</p>
                 </div>
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
+=======
+          </div>
+        </div>
+      </section>
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Services Grid */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Our Micro SaaS Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1174,18 +1237,6 @@ export default function MicroSaasServicesPage() {;
                             </li>;
                           ))}
 
-=======
-                        </ul>;
-                      </div>;
-                      <div>;
-                        <h4 className='text-lg font-semibold text-white mb-3 flex items-center'>;
-                          <Target className='w-5 h-5 mr-2 text-cursor-blue' />;
-                          Use Cases;
-                        </h4>;
-                        <ul className='space-y-2'>;
-                          {service && service.useCases.map((useCase, useCaseIndex) => (;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                             <li
                               key={useCaseIndex}
                               className='flex items-center text-gray-300 text-sm'>;
@@ -1324,6 +1375,9 @@ export default function MicroSaasServicesPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </div>
             </Card>
           </div>
@@ -1345,3 +1399,6 @@ export default function MicroSaasServicesPage() {;
             </Button>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

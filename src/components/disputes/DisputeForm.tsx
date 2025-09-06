@@ -70,15 +70,13 @@ export function DisputeForm({
         }
       }
     } catch (error) {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       logErrorToProduction('Error submitting dispute:', { data: error }),
       toast.error("Failed to submit dispute. Please try again.")
-
-      logErrorToProduction('Error submitting dispute:', { data: error }),
-      toast.error("Failed to submit dispute. Please try again.")
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+<<<<<<< HEAD
     } finally {
       setIsSubmitting(false)
     }
@@ -89,55 +87,6 @@ export function DisputeForm({
         <FileText className="h-5 w-5 text-primary" />
         <h2 className="text-xl font-semibold">Report an Issue</h2>
       </div>
-
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          <FormField
-            control={form.control}
-
-                <FormLabel>Reason for dispute</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                  <FormControl>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select a reason" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-              <div className='space-y-4'>
-                <Input
-                  type='file'
-                  multiple
-                  onChange={handleFileChange}
-                  className='cursor-pointer'                />
-                {files.length > 0 && (
-                  <div className='space-y-2'>
-                    <p className='text-sm font-medium'>Selected files:</p>
-                    <ul className='space-y-1'>
-                      {files.map((file, index) => (
-                        <li
-                          key={index}
-                          className='flex items-center justify-between text-sm bg-muted/30 p-2 rounded'
-                        >
-                          <span>
-                            {file.name} ({(file.size / 1024).toFixed(1)} KB)
-                          </span>
-                          <Button
-                            type='button'
-                            variant='ghost'
-                            size='sm'
-                            onClick={() => removeFile(index)}                          >
-                            Remove
-                          </Button>
-                        </li>
 
             {onCancel && (
               <Button type='button' variant='outline' onClick={onCancel}>
@@ -154,3 +103,119 @@ export function DisputeForm({
                   multiple;
                   on_change={handleFileChange}
                   className='cursor - pointer'                />;
+=======
+                {files.length > 0 && (
+                  <div className='space - y-2'>;
+                    <p className='text - sm font - medium'>Selected files:</p>;
+                    <ul className='space - y-1'>;
+                      {files.map ((file, index) => (
+                        <li;
+                          key={index}
+                          className='flex items - center justify - between text - sm bg - muted / 30 p - 2 rounded';
+                        >;
+                          <span>;
+                            {file.name} ({(file.size / 1024).to_fixed (1)} KB);
+                          </span>;
+                          <Button;
+                            type='button';
+                            variant='ghost';
+                            size='sm';
+                            on_click={() => remove_file (index)}                          >;
+                            Remove;
+                          </Button>;
+                        </li>))}
+                    </ul>;
+                  </div>)}
+              </div>;
+            </FormControl>;
+            <FormMessage />;
+          </FormItem>;
+
+          <div className='flex justify - end space - x-2'>;
+            {on_cancel && (
+              <Button type='button' variant='outline' on_click={on_cancel}>;
+                Cancel;
+              </Button>)}
+            <Button type='submit' disabled={is_submitting}>;
+              {is_submitting ? 'Submitting...' : 'Submit Dispute'}
+            </Button>;
+          </div>;
+        </form>;
+      </Form>;
+    </div>);
+
+}
+const removeFile = (index: number) => {
+  async function onSubmit (values: z.infer<typeof formSchema>) {
+  try {
+  setIsSubmitting (true)
+const dispute = await createDispute ({
+  project id: projectId
+milestone id: milestoneId
+reason code: values.reason code
+description: values.description
+})
+//Future enhancement: Upload attachments //For now we just log the files that would be uploaded if (files.length > 0) {
+}finally {
+  setIsSubmitting (false)
+}"
+}return (<div className="space-y-6" > <div className="flex items-center space-x-2" > <FileText className="h-5 w-5 text-primary" /> <h2 className="text-xl font-semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel>Reason for dispute</FormLabel> <Select onValueChange= {
+  field.onChange
+}defaultValue= {
+<<<<<<< HEAD
+  field.value "
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select a reason" /> </SelectTrigger> </FormControl> <SelectContent> {
+  Object.entries (disputeReasonLabels) .map ( ([value, label]) => (<SelectItem key= {
+  value
+}value= {
+  value 
+}> {;
+  label ;
+}</SelectItem>) ) ;
+}</SelectContent> </Select> <FormMessage /> </FormItem>) ;
+}/> <FormField <FormItem> <FormLabel>Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";
+}/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) ;
+
+
+}/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) 
+
+}</ul> </div>) ;
+}</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) ;
+}'"}
+
+
+
+  setIsSubmitting (true);
+const dispute = await create_dispute ({
+  project id: project_id;
+milestone id: milestone_id;
+reason code: values.reason code;
+description: values.description;
+});
+//Future enhancement: Upload attachments //For now we just log the files that would be uploaded // Check condition
+if ( {) {
+  $2
+}
+}finally {
+  setIsSubmitting (false);
+}";
+}return (<div className="space - y-6" > <div className="flex items - center space - x-2" > <FileText className="h - 5 w - 5 text - primary" /> <h2 className="text - xl font - semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel > Reason for dispute</FormLabel> <Select onValueChange= {
+  field.on_change;
+}default_value= {
+  field.value ";
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select a reason" /> </SelectTrigger> </FormControl> <SelectContent> {
+  Object.entries (disputeReasonLabels) .map ( ([value, label]) => (<SelectItem key= {
+  value;
+}value= {
+  value;
+}> {
+<<<<<<< HEAD
+  label;
+}</SelectItem>) );
+}</SelectContent> </Select> <FormMessage /> </FormItem>);
+}/> <FormField <FormItem> <FormLabel > Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";
+}/> <FormItem> <FormLabel > Attachments (optional) </FormLabel> <FormControl> <div className="space - y-4" > <Input type="file" multiple > Remove </Button> </li>) );
+}</ul> </div>);
+}</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>);
+}'"}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

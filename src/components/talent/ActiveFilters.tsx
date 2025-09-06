@@ -33,6 +33,67 @@ import { Button } from '@/components/ui/button'
 import React from "react",
 
 
+
+
+  selectedSkills
+  toggleSkill
+  selectedAvailability
+  toggleAvailability
+  selectedRegions
+  toggleRegion
+  priceRange
+  setPriceRange
+  experienceRange
+  setExperienceRange
+  clearFilters
+}: ActiveFiltersProps) {
+  // Check if any filters are active
+  const hasActiveFilters =
+    selectedSkills.length > 0 |
+    selectedAvailability.length > 0 |
+    selectedRegions.length > 0 |
+    experienceRange[0] !== 0 |
+    experienceRange[1] !== 15 |
+    priceRange[0] !== 50 |
+    priceRange[1] !== 200
+  if (!hasActiveFilters) return null
+
+export function ActiveFilters({
+
+  selectedSkills
+  toggleSkill
+  selectedAvailability
+  toggleAvailability
+  selectedRegions
+  toggleRegion
+  priceRange
+  setPriceRange
+  experienceRange
+  setExperienceRange
+  clearFilters
+}: ActiveFiltersProps) {
+  // Check if any filters are active
+  const hasActiveFilters =
+    selectedSkills.length > 0 |
+    selectedAvailability.length > 0 |
+    selectedRegions.length > 0 |
+    experienceRange[0] !== 0 |
+    experienceRange[1] !== 15 |
+    priceRange[0] !== 50 |
+    priceRange[1] !== 200
+  if (!hasActiveFilters) return null
+
+  const hasActiveFilters = null;
+    selectedSkills.length > 0 ||
+    selectedAvailability.length > 0 ||
+
+    selectedRegions.length > 0 ||
+    experienceRange[0] !== 0 ||
+    experienceRange[1] !== 15 ||
+    priceRange[0] !== 50 ||
+<<<<<<< HEAD
+
+
     selectedRegions.length > 0 ||
     experienceRange[0] !== 0 ||
     experienceRange[1] !== 15 ||
@@ -153,14 +214,31 @@ export function ActiveFilters({;
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
           onClick={() => setExperienceRange([0, 15])}        >
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {experienceRange[0]}-{experienceRange[1]} years
           <X className="h-3 w-3" />
         </ClickableBadge>
       )}
+          <X className="h-3 w-3" />
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
       <Button
         variant='ghost'
         size='sm'
         onClick={clearFilters}
-<<<<<<< HEAD
         className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'      >
+<<<<<<< HEAD
+        Clear All
+      </Button>
+    </div>
+  );
+};
+}
+<<<<<<< HEAD
+        Clear All
+      </Button>
+    </div>
+  )
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

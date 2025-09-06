@@ -1,10 +1,16 @@
+=======
 
 
+import { ServiceVariant } from '../types/service-variants',
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
 
 }
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution' 
+};
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 //Healthcare AI Services {
   id: 'ai - healthcare - diagnostics - platform';
 name: 'AI Healthcare Diagnostics Platform';
@@ -385,10 +391,10 @@ launch_date: '2024 - 03 - 10';
 customers: 89;
 rating: 4 && 4.7;
 reviews: 67;
-
-=======
-
-=======
+benefits: ['Operational efficiencySafety improvements', 'Cost reductionScalability'];
+capabilities: ['Multi-system coordinationAI optimization', 'Safety monitoringPerformance analytics'];
+marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems'
+}];
 import { ServiceVariant } from '../types/service-variants',
 
 
@@ -686,15 +692,9 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems'
   }
 ];
-
-benefits: ['Operational efficiency_safety improvements', 'Cost reduction_scalability'];
-capabilities: ['Multi - system coordinationAI optimization', 'Safety monitoring_performance analytics'];
-market_advantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems';
-}];
-=======
-<<<<<<< HEAD
-;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

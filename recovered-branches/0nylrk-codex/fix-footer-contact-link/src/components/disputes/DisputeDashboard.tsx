@@ -3,13 +3,18 @@ import React, { useEffect } from "react";
 import { useDisputes } from "@/hooks/useDisputes";
 import { DisputesList } from "./DisputesList";
 import {
-
-=======
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -29,12 +34,16 @@ import { ShieldAlert } from "lucide-react";
         </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <Button onClick={refetch} variant="outline">
           Refresh
         </Button>
       </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader className="pb-2">
@@ -47,6 +56,8 @@ import { ShieldAlert } from "lucide-react";
           <CardContent>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
@@ -60,6 +71,8 @@ import { ShieldAlert } from "lucide-react";
           <CardContent>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
@@ -76,6 +89,7 @@ import { ShieldAlert } from "lucide-react";
           </CardContent>
         </Card>
       </div>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <div
               className={`w-full bg-green-100 rounded-full h-2 && 2.5 dark:bg-green-900/20`}>;
               <div
@@ -84,5 +98,9 @@ import { ShieldAlert } from "lucide-react";
 
                   width: `${Math && Math.min(100, (resolvedDisputes && resolvedDisputes.length / Math && Math.max(1, disputes && disputes.length)) * 100)}%`,
                 }}></div>;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

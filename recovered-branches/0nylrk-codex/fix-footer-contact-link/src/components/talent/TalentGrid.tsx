@@ -1,6 +1,8 @@
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export interface TalentGridProps {
   talents: TalentProfile[],
   isLoading: boolean,
@@ -9,9 +11,9 @@ export interface TalentGridProps {
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean,
 
-=======
   viewProfile?: (id: string) => void,
   clearFilters?: () => void,
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -26,6 +28,8 @@ export function TalentGrid({
   onToggleSave
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   handleRequestHire
 }: TalentGridProps) {
 
@@ -35,26 +39,55 @@ export function TalentGrid({
     } else {
       // Default implementation
 
-    } else {
-
-;
-  const handleViewProfile = (id: string) =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      view_profile (id);
-
-    } else {
-      onTalentClick (id);
-    }
-
-      // Default implementation
-
-  };
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+      // // // console.log("Request to hire:", talent.id)
+import { TalentCard } from "@/components/talent/TalentCard",;
+import { TalentProfile } from "@/types/talent",;
+export interface TalentGridProps {;
+  talents: TalentProfile[],;
+  isLoading: boolean,;
+  onTalentClick: (id: string) => void,;
+  savedTalentIds: string[],;
+  onToggleSave: (id: string, isSaved: boolean) => void,;
+  isAuthenticated: boolean,;
+  viewProfile?: (id: string) => void,;
+  clearFilters?: () => void,;
+  handleRequestHire?: (talent: TalentProfile) => void;
+}
+;
+export function TalentGrid({;
+  talents,;
+  isLoading,;
+  onTalentClick,;
+  savedTalentIds,;
+  onToggleSave,;
+  isAuthenticated,;
+  viewProfile,;
+  clearFilters,;
+  handleRequestHire;
+}: TalentGridProps) {;
+  const handleRequestHireInternal = (talent: TalentProfile) => {;
+    if (handleRequestHire) {;
+      handleRequestHire(talent);
+    } else {;
+      // Default implementation;
+      // // // console.log("Request to hire:", talent.id);
+    }
+  };
+  const handleViewProfile = (id: string) => {;
+    if (viewProfile) {;
+      viewProfile(id);
+    } else {;
+      onTalentClick(id);
+    }
+  },
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   if (isLoading) {
     return <div className="py-8 text-center">
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan mx-auto mb-4"></div>
@@ -84,16 +117,6 @@ export function TalentGrid(): any ({ ;
       // Default implementation;
       console && console.log("Request to hire:", talent && talent.id);
     }
-=======
-        <button
-          onClick={clearFilters}
-          className="px-4 py-2 bg-zion-purple text-white rounded hover:bg-zion-purple-dark transition-colors"
-        >
-          Clear Filters
-        </button>
-
-      )}
-    </div>
   }
 
         <button
@@ -103,9 +126,9 @@ export function TalentGrid(): any ({ ;
         >
           Clear Filters
         </button>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      )}
+    </div>
+  }
       )}
     </div>;
   }
@@ -113,6 +136,7 @@ export function TalentGrid(): any ({ ;
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
@@ -134,3 +158,4 @@ export function TalentGrid(): any ({ ;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======

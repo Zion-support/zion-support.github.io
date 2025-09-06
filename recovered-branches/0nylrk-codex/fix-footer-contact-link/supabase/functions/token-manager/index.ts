@@ -1,6 +1,29 @@
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+interface TokenRequest {
+  userId: string;
+  amount: number
+  reason?: string
+}
+
+
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
+const serviceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
+
+const supabase = createClient(supabaseUrl, serviceKey);
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
+import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.0";
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface TokenRequest {
   userId: string,
   amount: number,
@@ -11,16 +34,7 @@ const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
 const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, serviceKey),
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-serve(async (req) => {
-  if (req && req.method === 'OPTIONS') {
-    return new Response('ok', {
-      headers: {
-        'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -28,7 +42,6 @@ serve(async (req) => {
   const action = url.pathname.split ('/').pop ();
   const { user_id, amount, reason } = await req.json () as TokenRequest;
 ;
-<<<<<<< HEAD
 =======
   // Check condition
 if ( {) {
@@ -96,10 +109,8 @@ if ( {) {
     reason}),;
   if (txError) return new Response(JSON.stringify({ error: txError.message }), { status: 500 });
   return new Response(JSON.stringify({ success: true, balance }), { status: 200 });
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   } else {
     const { error } = await supabase;

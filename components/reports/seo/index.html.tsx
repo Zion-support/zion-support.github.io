@@ -9,11 +9,10 @@
         <Link href=&quot;/&quot;><a className=&quot;text-blue-600 hover:underline&quot;>Back to Home</a></a>
       </div>
 
-=======
-
 
 export default function Placeholder() {
   return (
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -27,7 +26,15 @@ export default function Placeholder() {
         <p className="text-gray-600 mb-6">Auto-generated placeholder for missing route: <code>/reports/seo/index.html</code>.</p>
         <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></a>
       </div>
+    </main>
+  );
+}
+    </main>;
+  );
+}
 
+}
+    </main>
   )
   } catch (error) {
     console.error("Error:", error);
@@ -35,4 +42,5 @@ export default function Placeholder() {
   }
 }
 ;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

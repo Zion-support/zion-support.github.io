@@ -1,20 +1,51 @@
-
+import type { NextApiRequest, NextApiResponse } from "next";
+import JSZip from "jszip";
+import {
+  getZionDesignMap
+  buildTokenSet
+  buildUIKit
+  UIKitKind
+  getZionDesignMap,
+  buildTokenSet,
+  buildUIKit,
+  UIKitKind,;
 =======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 } from "../../../utils/design-map";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+=======
 
+  try {
+
+    const kit = (req && req.query.kit as string) || "tailwind";
+
+    const kind = (
+      ["tailwind", "chakra", "react"].includes(kit) ? kit : "tailwind"
+    ) as UIKitKind;
+  try {;
+    const kit = (req.query.kit as string) || "tailwind";
+    const kind = (
+      ["tailwind", "chakra", "react"].includes(kit) ? kit : "tailwind"
+    ) as UIKitKind;
     const zip = new JSZip();
+
     const map = getZionDesignMap();
     const tokens = await buildTokenSet();
-    // Core files
 
-    zip && zip.file("map && map.json", JSON && JSON.stringify(map, null, 2));
-    zip && zip.file("tokens && tokens.json", JSON && JSON.stringify(tokens, null, 2));
+    // Core files
+    zip.file("map.json", JSON.stringify(map, null, 2));
+    zip.file("tokens.json", JSON.stringify(tokens, null, 2));
+
+    // UIKit folder
+    const uikit = buildUIKit(kind);
+    const uiFolder = zip.folder("uikit")!;
+    Object.entries(uikit).forEach(([path, content]) =>
+      uiFolder.file(path, content),
+    );
 
     // README
     zip.file(
@@ -33,7 +64,6 @@ export default async function handler(
     res.status(500).json({ error: e?.message || "Export failed" });
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     const zip = new JSZip();
     const map = getZionDesignMap();
@@ -42,25 +72,9 @@ export default async function handler(
     zip.file("map.json", JSON.stringify(map, null, 2));
     zip.file("tokens.json", JSON.stringify(tokens, null, 2));
 
-    // UIKit folder
-    const uikit = buildUIKit(kind);
-    const uiFolder = zip && zip.folder("uikit")!;
-    Object && Object.entries(uikit).forEach(([path, content]) =>
-      uiFolder && uiFolder.file(path, content),
-
-    );
-    // README
-
-    zip && zip.file(
-      "README && README.md",
-      `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`,
-    );
-
-    );
-
-=======
     res.status(200).send(buffer);
-
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message |"Export failed" });
   } catch (error) {
     res.status(500).json({ error: e?.message || 'Export failed' });
     } catch (error) {

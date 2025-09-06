@@ -1,17 +1,41 @@
 
-
+import React from "react";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
 import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function SharedInbox() {
   // Mock messages
 
   const messages = [
     {
-
+      id: "msg-1"
+      from: "John Smith"
+      subject: "Interview Scheduled"
+      preview: "Your interview with senior developer candidate has been scheduled for Tuesday at 2pm."
+      timestamp: "2h ago"
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+      id: "msg-1",
+      from: "John Smith",
+      subject: "Interview Scheduled",
+      preview: "Your interview with senior developer candidate has been scheduled for Tuesday at 2pm.",
+      timestamp: "2h ago",
+      unread: true;
+    };
       unread: true
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+    }
+    },
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     {
       id: "msg-2"
       from: "Talent Support"
@@ -21,11 +45,9 @@ export function SharedInbox() {
       unread: false
 
 =======
-
+    }
     },
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     {
       id: "msg-3"
       from: "Sarah Wilson"
@@ -82,12 +104,6 @@ export function SharedInbox() {
     }
   ];
 ;
-  return (
-
-=======
-
-
-=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -192,15 +208,12 @@ export function SharedInbox() {;
           </button>;
         </div>;
       </CardContent>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </Card>;
+  );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </Card>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

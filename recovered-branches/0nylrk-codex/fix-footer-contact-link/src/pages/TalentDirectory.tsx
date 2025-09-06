@@ -1,5 +1,19 @@
 
 
+import React, { useState } from "react";
+import {useNavigate} from "react-router-dom";
+import {AppLayout} from "@/layout/AppLayout";
+import {TalentGrid} from "@/components/talent/TalentGrid";
+import {FilterSidebar} from "@/components/talent/FilterSidebar";
+import {TalentResults} from "@/components/talent/TalentResults";
+import {useTalentDirectory} from "@/hooks/useTalentDirectory";
+import {SORT_OPTIONS} from "@/data/sortOptions";
+import {X} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {TalentProfile} from "@/types/talent";
+export default function TalentDirectory() {;
+  const navigate = useNavigate();
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React, { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -10,6 +24,14 @@ import { useTalentDirectory } from "@/hooks/useTalentDirectory",
 import { SORT_OPTIONS } from "@/data/sortOptions",
 import { X } from "lucide-react",
 
+
+  const navigate = useNavigate();
+  // Use our custom hook to manage state
+  const {
+    filteredTalents;
+    isLoading;
+    searchTerm;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     setSearchTerm;
     selected_skills;
     selected_availability;
@@ -36,7 +58,6 @@ import { X } from "lucide-react",
   // Use our custom hook to manage state
   const {
 
-=======
     filteredTalents,
     isLoading,
     searchTerm,
@@ -85,6 +106,10 @@ import { X } from "lucide-react",
           </div>
 
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             {/* Mobile filter button */}
             <div className="lg:hidden mb-4">;
               <Button
@@ -98,6 +123,9 @@ import { X } from "lucide-react",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             {/* Results */}
             <TalentResults;
               filtered_talents={filtered_talents}
@@ -109,6 +137,8 @@ import { X } from "lucide-react",
               isAuthenticated={isAuthenticated}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 experienceRange;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 setExperienceRange;
@@ -166,35 +196,6 @@ import { X } from "lucide-react",
                 </div>
               </div>
             )}
-                    setSearchTerm={setSearchTerm}
-                    selected_skills={selected_skills}
-                    toggle_skill={toggle_skill}
-                    selected_availability={selected_availability}
-                    toggle_availability={toggle_availability}
-                    selected_regions={selected_regions}
-                    toggle_region={toggle_region}
-                    price_range={price_range}
-                    setPriceRange={setPriceRange}
-                    experience_range={experience_range}
-                    setExperienceRange={setExperienceRange}
-                    expanded_sections={expanded_sections}
-                    toggle_section={toggle_section}
-                    sort_option={sort_option}
-                    setSortOption={setSortOption}
-                    clear_filters={clear_filters}
-                    isMobileFilterOpen={isMobileFilterOpen}
-                  />;
-                </div>;
-
-              </div>)}
-          </div>;
-        </div>;
-      </div>;
-    </AppLayout>);
-}
-
-=======
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

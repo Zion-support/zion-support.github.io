@@ -28,7 +28,6 @@ function fileToBase64(file: File): Promise<string> {
 }
 export default function BookBuilder() {
 
-=======
   const [project, setProject] = useState<BookProject>(initialProject),
   const [pageSize, setPageSize] = useState<'A4' | 'LETTER'>('LETTER'),
   const [busy, setBusy] = useState<boolean>(false),

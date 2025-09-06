@@ -11,6 +11,7 @@ interface HelpArticleViewProps {
 }
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Find the article in all categories
   let article = null;
   for (const category of HELP_CATEGORIES) {
@@ -28,6 +29,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
     setFeedbackGiven(type)
   return new Date(date).toLocaleDateString("en-US", {
 <<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 
 export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;

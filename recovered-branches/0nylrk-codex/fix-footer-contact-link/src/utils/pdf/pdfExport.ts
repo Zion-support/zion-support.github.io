@@ -1,6 +1,17 @@
 
-
-=======
+import { Resume  } from '@/types/resume';
+import { jsPDF  } from 'jspdf';
+import 'jspdf-autotable';
+import { getPdfThemeColors  } from './themeConfig';
+import { loadCustomFonts, FontFamily  } from './fontConfig';
+import { addBasicInfoSection  } from './sections/basicInfoSection';
+import { addSkillsSection  } from './sections/skillsSection';
+import { addWorkExperienceSection  } from './sections/workExperienceSection';
+import { addEducationSection  } from './sections/educationSection';
+import { addCertificationsSection  } from './sections/certificationsSection';
+import { addPortfolioSection } from './sections/portfolioSection';
+export interface ExportOptions {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {Resume} from '@/types/resume';
 import {jsPDF} from 'jspdf';
 import 'jspdf-autotable';
@@ -13,8 +24,10 @@ import {addEducationSection} from './sections/educationSection';
 import {addCertificationsSection} from './sections/certificationsSection';
 import {addPortfolioSection} from './sections/portfolioSection';
 export interface ExportOptions {;
+=======
 
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   theme: 'light' | 'dark';
   includePortfolio?: boolean;
@@ -31,8 +44,11 @@ const defaultOptions: ExportOptions = {
 export async function exportResumeToPDF(
   resume: Resume
   options: Partial<ExportOptions> = {}
-
-<<<<<<< HEAD
+): Promise<Blob> {
+  const mergedOptions: ExportOptions = { ...defaultOptions, ...options }
+): Promise<Blob> {;
+  const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions;
   // Create new PDF document (A4)
   const doc = new jsPDF({
@@ -65,6 +81,8 @@ export async function exportResumeToPDF(
     currentY = addPortfolioSection(doc, resume.portfolio_projects, colors, currentY, maxProjects)
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
   return doc.output ('blob');
 }

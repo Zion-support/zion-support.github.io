@@ -1,11 +1,10 @@
 
 
-=======
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -45,11 +44,15 @@ import {
   Brain
 } from 'lucide-react';
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  Brain;
+} from 'lucide-react';
+ursor/fix-syntax-push-and-merge-to-main-40de
+  Brain
+} from 'lucide-react';
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import SimpleLayout from '../../components/SimpleLayout';
   Brain;
 } from 'lucide-react';
@@ -82,8 +85,19 @@ const industries = [
     icon: Settings,
 
 =======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+    href: '/industries/manufacturing',
+    features: ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],
+    color: 'from-blue-500 to-cyan-500'
+    href: '/industries/manufacturing',
+    features: ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],
+    color: 'from-blue-500 to-cyan-500'
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+    href: '/industries/manufacturing',
+    features: ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],
+    color: 'from-blue-500 to-cyan-500'
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     href: '/industries/manufacturing,',
     features: ['IoT Integration, 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],',
     color: 'from-blue-500 to-cyan-500'';
@@ -94,8 +108,19 @@ const industries = [
     icon: ShoppingCart,
 
 =======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+    href: '/industries/retail',
+    features: ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],
+    color: 'from-purple-500 to-violet-500'
+    href: '/industries/retail',
+    features: ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],
+    color: 'from-purple-500 to-violet-500'
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+    href: '/industries/retail',
+    features: ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],
+    color: 'from-purple-500 to-violet-500'
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     href: '/industries/retail,',
     features: ['Personalization, 'Inventory Management', 'Omnichannel', 'Customer Analytics'],',
     color: 'from-purple-500 to-violet-500'';
@@ -106,8 +131,19 @@ const industries = [
     icon: BookOpen,
 
 =======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+    href: '/industries/education',
+    features: ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],
+    color: 'from-orange-500 to-yellow-500'
+    href: '/industries/education',
+    features: ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],
+    color: 'from-orange-500 to-yellow-500'
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+    href: '/industries/education',
+    features: ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],
+    color: 'from-orange-500 to-yellow-500'
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     href: '/industries/education,',
     features: ['AI Tutoring, 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],',
     color: 'from-orange-500 to-yellow-500'';
@@ -118,8 +154,9 @@ const industries = [
     icon: Building,
 
 =======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     href: '/industries/government',
     features: ['Citizen Portals', 'Data Analytics', 'Digital Services', 'Security Compliance'],
     color: 'from-gray-500 to-slate-500'
@@ -149,10 +186,13 @@ const stats = [;
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function IndustriesPage() {
   return (;
     <Layout);
@@ -239,10 +279,13 @@ export default function Industries() {
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -250,8 +293,8 @@ export default function Industries() {
               transition={{ duration: 0.8 }}
 
 =======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -457,8 +500,13 @@ export default function Industries() {
                     key={index}
 
 =======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group""
+                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group""
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group""
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     className="bg-white/10 backdrop-blur-md rounded-xl p-8 hover:bg-white/20 transition-all duration-300 group"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -493,7 +541,7 @@ export default function Industries() {
 
                       </div>,
                     </div>;
-
+                    
                     <Link
                       href={industry.href}
                     >;
@@ -523,24 +571,75 @@ export default function Industries() {
         </section>;
 
 =======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+ursor/fix-syntax-push-and-merge-to-main-40de
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {industry.features.map((feature, idx) => (
+                          <span
+                            key={idx}
+                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                          >
+                    <div className="mb-6">";
+                      <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions:</h4>";
+                      <div className="flex flex-wrap gap-2">";
+                        {industry.features.map((feature, idx) => (,
+                          <span}),
+                            key={idx}
+                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full""
+                          >;
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                      </div>,
+                    </div>;
+                    <Link
+                      href={industry.href}
+                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
+                    >
+                      <span>Learn More</span>
+                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors""
+                    >;
+                      <span>Learn More</span>;
+                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />;
+                    </Link>;
+                  </motion && motion.div>;
+                ),;
+              })}
+            </div>;
+          </div>;
+        </section>;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Why Choose Us Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-
-        {/* Why Choose Us Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-
 
 =======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+        {/* Why Choose Us Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              className="text-center mb-16"
+
+
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         <section className="py-20 bg-white">"
@@ -582,8 +681,9 @@ export default function Industries() {
                 viewport={{ once: true }}
 
 =======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Users className="w-8 h-8 text-blue-600" />
@@ -592,8 +692,10 @@ export default function Industries() {
                 <p className="text-gray-600">
 
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               >,
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">";
                   <Users className="w-8 h-8 text-blue-600" />";
@@ -633,6 +735,12 @@ export default function Industries() {
                 </p>;
               </motion.div>;
 
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <motion.div
                 className="text-center p-8"
                 initial={{ opacity: 0, y: 30 }}
@@ -647,9 +755,6 @@ export default function Industries() {
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Scalable Solutions</h3>
                 <p className="text-gray-600">
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               >,
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">";
                   <Cloud className="w-8 h-8 text-purple-600" />";
@@ -674,8 +779,10 @@ export default function Industries() {
                   className="text-center"
 
 =======
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
@@ -779,6 +886,50 @@ export default function Industries() {
               </div>
             >,
               <h2 className="text-3xl md:text-4xl font-bold mb-6">";
+=======
+                Ready to Transform Your Industry?;
+              </h2>;
+              <p className="text-xl mb-8 max-w-2xl mx-auto">";
+                Let our industry experts help you leverage technology to solve your sector-specific challenges.;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
+                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+                  Get Industry Consultation;
+                </Link>;
+                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";
+                  Explore Solutions;
+                </Link>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Don't See Your Industry?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                We work with organizations across all sectors. Contact us to discuss your specific industry needs.
+              </p>
+              <Link href="/contact">
+                <a className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                  Contact Us
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
+              </Link>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </SimpleLayout>
+    </SimpleLayout>
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+    </SimpleLayout>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+    </Layout>
+  );
                 Ready to Transform Your Industry?;
               </h2>;
               <p className="text-xl mb-8 max-w-2xl mx-auto">";

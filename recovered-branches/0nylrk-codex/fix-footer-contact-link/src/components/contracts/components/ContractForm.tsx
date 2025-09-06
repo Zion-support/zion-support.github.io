@@ -1,10 +1,7 @@
 
 
-=======
 
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState, useEffect} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -23,6 +20,8 @@ import {AdditionalClausesFields} from "./AdditionalClausesFields";
 import {DeploymentOptions} from "@/types/smart-contracts";
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const formSchema = z.object({
   projectName: z.string().min(1, "Project name is required");
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters");
@@ -31,6 +30,13 @@ const formSchema = z.object({
   onDeployOptionsChange?: (options: DeploymentOptions) => void
 }
 
+export function ContractForm({;
+  talent;
+  clientName;
+  initialValues;
+  onFormValuesChange;
+  onContractGenerated;
+  deployOptions;
 export function ContractForm({
   talent,
   clientName,
@@ -38,7 +44,6 @@ export function ContractForm({
   onFormValuesChange,
   onContractGenerated,
   deployOptions,
-
   onDeployOptionsChange
 }: ContractFormProps) {
 
@@ -49,6 +54,8 @@ export function ContractForm({
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
     setGeneratedMilestones(milestones)
     // If payment terms isn't already set to milestone, update it
@@ -77,6 +84,8 @@ export function ContractForm({
         variant: "destructive"})
     } finally {
       setIsGenerating(false)
+    }
+  }
 
           Create a professional contract for your project with {talent.full_name}
         </DialogDescription>
@@ -151,31 +160,40 @@ export function ContractForm({
       <DialogHeader>;
         <DialogTitle className="text-xl">Contract Builder</DialogTitle>;
         <DialogDescription>;
-          Create a professional contract for your project with {talent && talent.full_name}
-        </DialogDescription>;
-      </DialogHeader>;
-
-      <Form {...form}>;
-        <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
+          Create a professional contract for your project with {talent.full_name}
+        </DialogDescription>
+      </DialogHeader>
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <ProjectDetailsFields
-            form={form} 
-          />;
+            form={form}
+          />
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <PaymentTermsFields
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
 
+          <PaymentTermsFields 
+            form={form}
+            talent={talent}
+            handleMilestonesGenerated={handleMilestonesGenerated}
+          />;
+          <AdditionalClausesFields;
+            form={form}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           />
           <AdditionalClausesFields
             form={form}
           />
           <Button
             type="submit"
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
             disabled={isGenerating}>;
             {isGenerating ? (;
@@ -200,6 +218,9 @@ export function ContractForm({
 
 =======
 ;
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

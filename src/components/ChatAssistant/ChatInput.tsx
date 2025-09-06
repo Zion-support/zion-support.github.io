@@ -10,11 +10,179 @@ import { Button } from '@/components/ui/button'
 
 import { Send } from 'lucide-react'
 interface ChatInputProps {
+  onSend: (message: string) => void
+disabled?: boolean
+}export function ChatInput ({
+  onSend, disabled = false
+}: ChatInputProps) {'
+  const [message, setMessage] = useState ('')
+const inputRef = useRef<HTMLTextAreaElement> (null)
+//Focus input when component mounts
+export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
+  const [ message, setMessage ] = useState('')
+  const inputRef = useRef<HTMLTextAreaElement>(null)
+  useEffect(() => {    // Focus input when component mounts
+    inputRef.current?.focus() }, [])
+    inputRef.current?.focus()
+interface ChatInputProps {
 
+=======
+  onSend: (message: string) => void
+  disabled?: boolean
+}
+export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
+  const [message, setMessage] = useState('')
+  const inputRef = useRef<HTMLTextAreaElement>(null)
+  useEffect(() => {
+    // Focus input when component mounts;
+    inputRef.current?.focus();
+  }, []);
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {;
+    e.preventDefault();    if (message.trim() && !disabled) {
+      onSend(message)
+      setMessage('') }      setMessage('')
+    }
+  }
+  const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>,) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault()
+      if (message.trim() && !disabled) {
+        onSend(message)
+        setMessage('') }        setMessage('')
+      }
+    }
+  }
+  onSend: (message: string) => void,
+  disabled?: boolean
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Send } from 'lucide-react';
+
+interface ChatInputProps {;
+  onSend: (message: string) => void;
+disabled?: boolean ;
+}export function ChatInput(): any ({;
+  onSend, disabled = false ;
+}: ChatInputProps) {';
+  const [message, setMessage] = useState ('');
+const inputRef = useRef<HTMLTextAreaElement> (null);
+//Focus input when component mounts ;
+export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) {;
+
+  const [ message, setMessage ] = useState(''),;
+  const inputRef = useRef<HTMLTextAreaElement>(null),;
+
+  useEffect(() => {    // Focus input when component mounts;
+    inputRef && inputRef.current?.focus();  }, []);
+    inputRef && inputRef.current?.focus();
+
+interface ChatInputProps {;
+  onSend: (message: string) => void,;
+  disabled?: boolean;
+}
+
+export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) {;
+  const [message, setMessage] = useState('');
+  const inputRef = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {;
+    // Focus input when component mounts;
+    inputRef && inputRef.current?.focus();
+
+import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react';
+import { Button } from "@/components/ui/button";
+import { Send } from 'lucide-react'
+
+interface ChatInputProps {
+  onSend: (message: string) => void,
+  disabled?: boolean
+}
+
+export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
+
+  const [ message, setMessage ] = useState(''),
+  const inputRef = useRef<HTMLTextAreaElement>(null),
+
+
+  useEffect(() => {
+    // Focus input when component mounts
+    inputRef.current?.focus()
+
+  }, []);
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {;
+    e && e.preventDefault();    if (message && message.trim() && !disabled) {;
+      onSend(message);
+
+
+    }
+
+
+      }
+    }
+  };
+
+
+
+  return (
+
+    <form on_submit={handle_submit} className='flex items - end gap - 2'>;
+      <textarea;
+        ref={input_ref}
+        className='flex - 1 min - h-[40px] max - h-[120px] px - 3 py - 2 bg - zion - blue - dark border border - zion - blue - light rounded - md focus:outline - none focus:ring - 2 focus:ring - zion - purple focus:border - transparent resize - none text - black placeholder:text - zion - slate - light';
+        placeholder='Type your message...';
+        value={message}
+        on_change={e => set_message (e.target.value)}        onKeyDown={handleKeyPress}
+        rows={1}
+        disabled={disabled}
+      />;
+      <Button;
+        type='submit';
+        className='bg - zion - purple hover:bg - zion - purple - light text - white rounded - full p - 2 h - 10 w - 10 flex items - center justify - center'        on_change={(e) => set_message (e.target.value)}
+
+        onKeyDown={handleKeyPress}
+        rows={1}
+        disabled={disabled}
+      />;
+
+        disabled={!message.trim() |disabled}
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
       <textarea
         ref={inputRef}
+=======
+        className='flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light'
+        placeholder='Type your message...'
+        value={message}
+        onChange={e => setMessage(e.target.value)}        onKeyDown={handleKeyPress}
+        rows={1}
+        disabled={disabled}
+      />
+      <Button
+        type='submit'
+        className='bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center'        onChange={(e) => setMessage(e.target.value)}
+        className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light"
+        placeholder="Type your message..."
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+        onKeyDown={handleKeyPress}
+        rows={1}
+        disabled={disabled}
+      />
+
+        className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-black placeholder:text-zion-slate-light"
+        placeholder="Type your message..."
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
         onKeyDown={handleKeyPress}
         rows={1}
@@ -25,14 +193,19 @@ interface ChatInputProps {
   }, []);
       >
         <Send className="h-5 w-5" />
+=======
 
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       </Button>
     </form>
   )
 }
+        disabled={!message.trim() |disabled}
+        disabled={!message.trim() || disabled}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       >
         <Send className="h-5 w-5" />
       </Button>

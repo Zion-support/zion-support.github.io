@@ -4,6 +4,7 @@
     './components/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{js,ts,jsx,tsx}'
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   ],
   theme: {
     extend: {
@@ -24,9 +25,6 @@
           700: '#374151',
           800: '#1f2937',
           900: '#111827',
-=======
-          950: '#030712'
-        }
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -66,7 +64,6 @@
       },
       borderRadius: {
         '4xl': '2rem',
-<<<<<<< HEAD
         '5xl': '2.5rem'
       },
       boxShadow: {
@@ -76,6 +73,7 @@
       }
     }
   },
+<<<<<<< HEAD
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),

@@ -1,8 +1,6 @@
 
-
-import { ChevronDown, ChevronUp } from "lucide-react",
-import { Button } from "@/components/ui/button",
-
+=======
+<<<<<<< HEAD
 // Common skills in AI and tech
 
 const POPULAR_SKILLS = [
@@ -53,7 +51,6 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
 
-=======
 import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { Checkbox } from "@/components/ui/checkbox",;
@@ -98,6 +95,7 @@ const POPULAR_SKILLS = [;
 
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -110,10 +108,5 @@ const POPULAR_SKILLS = [;
       )}
     </div>
   )
-=======
-
-};
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

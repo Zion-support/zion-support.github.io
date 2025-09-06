@@ -3,6 +3,8 @@ import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useState
 import { Star } from 'lucide-react'
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface ListingScoreCardProps {
   title: string;
   description: string;
@@ -25,8 +27,25 @@ export function ListingScoreCard({
   description,
   image,
   category,
+  tags,
+  author,
+  authorImage,
+  aiScore,
+  rating = 0,
+  reviewCount = 0,
+  className
+}: ListingScoreCardProps) {
+  const [mainImageError, setMainImageError] = useState(false)
+  const [authorImageError, setAuthorImageError] = useState(false)
+    >
+  const [mainImageError, setMainImageError] = useState(false),
+  const [authorImageError, setAuthorImageError] = useState(false),
 
-
+  return (
+    <div className={cn(
+      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
+      className
+    )}>
       {image && !mainImageError && (
         <div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
           <Image
@@ -40,6 +59,7 @@ export function ListingScoreCard({
   image, 
   category, 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         </div>
       )}
       {(!image |mainImageError) && ( // Fallback if no image or error
@@ -55,6 +75,36 @@ export function ListingScoreCard({
           </Badge>
           {aiScore === undefined || aiScore === null ? (
             <div className="text-xs italic text-zion-slate-light">Beta – simulated results</div>
+=======
+          ) : (
+            aiScore > 0 && (
+              <div className="flex items-center px-2 py-1 bg-zion-cyan/10 rounded text-zion-cyan text-xs">
+                <span className="font-medium mr-1">AI Match:</span>
+                <span>{aiScore}%</span>
+              </div>
+            )
+          )}
+        </div>
+        <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>
+          {title}
+        </h3>
+        <p className='text-zion-slate mb-4 flex-grow line-clamp-2'>
+          {description}
+        </p>
+        {rating > 0 && (
+          <div className='flex items-center gap-1 mb-4'>
+            <div className='flex'>
+              {[1, 2, 3, 4, 5].map(star => (
+                <StarIcon
+                  key={star}
+                  className={cn(
+                    'h-4 w-4'
+                    star <= Math.round(rating)
+                      ? 'text-zion-cyan fill-zion-cyan'
+                      : 'text-zion-slate-light'
+                  )}                />
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
               ))}
             </div>;
@@ -63,7 +113,7 @@ export function ListingScoreCard({
             </span>;
           </div>;
         )}
-
+        {tags && tags.length > 0 && (
           <div className='flex flex-wrap gap-2 mb-4'>
             {tags.map((tag, i) => (
               <Badge
@@ -78,7 +128,22 @@ export function ListingScoreCard({
         <Button className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>
           Request Quote
         </Button>
+        
+        {tags && tags.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-4">
+            {tags.map((tag, i) => (
+              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
+                {tag}
+              </Badge>;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+            ))}
+          </div>
+        )}
+        <Button className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>
+          Request Quote
+        </Button>
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {author && (
           <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>
             {authorImage && !authorImageError ? (
@@ -125,13 +190,3 @@ export function ListingScoreCard({
                   src={author_image}
                   alt={author}
 
-                {author.charAt(0)}
-              </div>
-            )}
-
-          </div>
-        )}
-      </div>;
-    </div>;
-  );
-<<<<<<< HEAD

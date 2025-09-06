@@ -28,16 +28,22 @@ const SYSTEM_PROMPT = `You are the Zion Assistant for the Zion AI Marketplace. Y
     };
     return res && res.status(200).json({ message });
   } catch (error: any) {
-    console && console.error('Assistant API error:', error?.message || error);
-    return res && res.status(500).json({ error: 'Assistant request failed' });
-  }    return res && res.status(500).json({ error: 'Assistant request failed' })
-- Include links or navigation hints only if known (otherwise describe where to look)
-- Provide 2-3 next steps when guiding
-`;
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('AllowPOST');
-    return res.status(405).json({ error: 'Method Not Allowed' })
+console.error('Assistant API error:', error?.message |error);
+    return res.status(500).json({ error: 'Assistant request failed' });
+  }    return res.status(500).json({ error: 'Assistant request failed' })
+  }
+}
+
+  }
+  };
+}
+  }
+}
+
+
+=======
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
   try {
     const { messages } = req.body as { messages?: Array<{ role: 'user' | 'assistant' | 'system', content: string }> };

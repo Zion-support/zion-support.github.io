@@ -5,16 +5,6 @@ import ErrorBoundary from "@/components/GlobalErrorBoundary",
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
-import { Folder } from 'lucide-react'
-import { CATEGORIES  } from '@/data/categories';
-import { NextSeo  } from '@/components/NextSeo';
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface CategoryType {
-  id: string;
-  name: string;
-  slug: string;
-  icon: string
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -43,6 +33,7 @@ class ErrorBoundary extends React.Component {
     fallbackData: initialCategories}),;
   const categories = data || [];
   const isLoading = !data && !error;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       logErrorToProduction ('Categories API error:', { data: response.status_text }),
@@ -209,6 +200,7 @@ const fetcher = async (url: string): Promise<CategoryType[]> => {;
 export interface CategoriesProps {;
   categories?: CategoryType[];
 }
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function Categories({ categories: initialCategories = [] }: CategoriesProps) {
   const { data, error } = useSWR<CategoryType[]>('/api/categories', fetcher, {

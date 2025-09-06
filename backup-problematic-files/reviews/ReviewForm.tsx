@@ -97,6 +97,43 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
         />
       </div>
 
+=======
+:backup-problematic-files/reviews/ReviewForm.tsx
+      <div className="flex items-center gap-3">
+        <input id="anonymous" type="checkbox" checked={anonymous} onChange={(e) => setAnonymous(e.target.checked)} />
+        <label htmlFor="anonymous">Submit anonymously</label>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-4">
+        <div className="enhanced-card">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm">Communication</span>
+            <StarRating value={communication || 0} onChange={(v) => setCommunication(v)} />
+          </div>
+          <span className="pill">Optional</span>
+        </div>
+        <div className="enhanced-card">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm">Quality of Work</span>
+            <StarRating value={qualityOfWork || 0} onChange={(v) => setQualityOfWork(v)} />
+          </div>
+          <span className="pill">Optional</span>
+        </div>
+        <div className="enhanced-card">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm">Timeliness</span>
+            <StarRating value={timeliness || 0} onChange={(v) => setTimeliness(v)} />
+          </div>
+          <span className="pill">Optional</span>
+        </div>
+        <div className="enhanced-card">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm">Would Work With Again</span>
+            <input type="checkbox" checked={wouldWorkWithAgain} onChange={(e) => setWouldWorkWithAgain(e.target.checked)} />
+          </div>
+          <span className="pill">Optional</span>
+main:components/reviews/ReviewForm.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         </div>
       </div>
 
@@ -124,10 +161,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
       </button>
       {message && <p className='text-sm'>{message}</p>}
 
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     </form>
   );

@@ -1,17 +1,24 @@
 =======
+<<<<<<< HEAD
 
+origin/automation-improvements-final
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
 import { motion } from 'framer-motion';
 import {
-
-
+  Shield
+  Settings
+  Info
+  ExternalLink
+  ArrowRight
+  CheckCircle
+  XCircle
+  AlertTriangle
   Shield,
   Settings,
   Info,
@@ -20,17 +27,21 @@ import {
   CheckCircle,
   XCircle,
   AlertTriangle;
-
 } from 'lucide-react';
 export default function CookiePolicyPage() {
   const [cookiePreferences, setCookiePreferences] = useState({
-
+    necessary: true
+    analytics: false
+    marketing: false
+    functional: false
     necessary: true,
     analytics: false,
     marketing: false,
     functional: false;
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   });
   const cookieTypes = [
     {
@@ -71,48 +82,6 @@ export default function CookiePolicyPage() {
   }
   const savePreferences = () => {
     // In a real implementation, this would save to localStorage and update cookie settings
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
-import { motion } from 'framer-motion';
-import {;
-  Shield,;
-  Settings,;
-  Info,;
-  ExternalLink,;
-  ArrowRight,;
-  CheckCircle,;
-  XCircle,;
-  AlertTriangle;
-} from 'lucide-react';
-export default function CookiePolicyPage() {;
-  const [cookiePreferences, setCookiePreferences] = useState({;
-    necessary: true,;
-    analytics: false,;
-    marketing: false,;
-    functional: false;
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
 import React, { useState } from 'react';
@@ -124,7 +93,10 @@ import {
 export default function CookiePolicyPage() {
   const [cookiePreferences, setCookiePreferences] = useState({
 
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   });
+
   const cookieTypes = [;
     {;
       id: 'necessary',;
@@ -155,15 +127,19 @@ export default function CookiePolicyPage() {
       examples: ['Language preferences', 'User settings', 'Chat widgets'];
     }
   ];
+
   const handleCookieToggle = (cookieId: string) => {;
     if (cookieId === 'necessary') return; // Can't disable necessary cookies;
+
     setCookiePreferences(prev => ({;
       ...prev,;
       [cookieId]: !prev[cookieId];
     }));
   };
+
   const savePreferences = () => {;
     // In a real implementation, this would save to localStorage and update cookie settings;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     alert('Cookie preferences saved!');
   }
   return (
@@ -179,6 +155,7 @@ export default function CookiePolicyPage() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
           </div>;
+
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
 
@@ -220,6 +197,7 @@ export default function CookiePolicyPage() {
                 Some cookies are necessary for the website to function properly.;
               </p>;
             </motion && motion.div>;
+
             <div className="max-w-4xl mx-auto">;
               <div className="bg-white rounded-lg shadow-lg p-8">;
                 <div className="space-y-6">;
@@ -270,6 +248,7 @@ export default function CookiePolicyPage() {
 
                         </div>;
                       </div>;
+
                       <div className="ml-9">;
                         <h4 className="text-sm font-medium text-gray-900 mb-2">Examples:</h4>;
                         <ul className="text-sm text-gray-600 space-y-1">;
@@ -284,6 +263,7 @@ export default function CookiePolicyPage() {
                     </motion && motion.div>;
                   ))}
                 </div>;
+
                 <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-end">;
                   <button
                     onClick={() => setCookiePreferences({;
@@ -314,6 +294,7 @@ export default function CookiePolicyPage() {
                     onClick={savePreferences}
 
                     className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
+=======
   Shield,
   Settings,
   Info,
@@ -538,6 +519,7 @@ if (return) {
                 They help us provide you with a better experience and understand how you use our site.;
               </p>;
             </motion && motion.div>;
+
             <div className="max-w-4xl mx-auto">;
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
                 <motion&& motion.div
@@ -569,6 +551,7 @@ if (return) {
                     </li>;
                   </ul>;
                 </motion && motion.div>;
+
                 <motion&& motion.div
                   className="bg-gray-50 p-6 rounded-lg"
                   initial={{ opacity: 0, y: 30 }}
@@ -598,6 +581,7 @@ if (return) {
                     </li>;
                   </ul>;
                 </motion && motion.div>;
+=======
         {/* Cookie Information */}
         <section className="py - 20 bg - white">;
           <div className="container mx - auto px - 4">;
@@ -710,6 +694,10 @@ if (return) {
                   </p>;
                   <p className="text-sm text-gray-500">;
                     Last updated: {new Date().toLocaleDateString()}
+=======
+
+export default function CookiesPage() {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <UltraAdvancedFuturisticBackground>;
       <SEO
@@ -717,12 +705,64 @@ if (return) {
         description='Information about cookies used by Zion Tech Group.'
 
 >>>>>>> origin/automation-improvements-final
+export default function CookiesPage() {
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
+origin/automation-improvements-final
+      <div className="container mx-auto px-4 py-24 text-white">
+        <div className="max-w-3xl mx-auto space-y-6">
+          <h1 className="text-4xl md:text-5xl font-bold">Cookie Policy</h1>
+          <p className="text-gray-300">We use minimal, privacy‑respecting analytics. Some third‑party embeds may set cookies. You can block non‑essential cookies via your browser.</p>
+          <ul className="list-disc list-inside text-gray-300 space-y-1">
+origin/automation-improvements-final
+            <li>Purpose: performance and security</li>
+<li>Purpose: performance and security</li>
+            <li>Retention: session or short‑term</li>
+            <li>Opt‑out: browser settings and extensions</li>
+          </ul>
+origin/automation-improvements-final
+          <p className='text-gray-400 text-sm'>
+            Questions?{' '}
+            <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
+              kleber@ziontechgroup.com
+            </a>
+          </p>
+        </div>
+      </Layout>
+    </>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+  );
+      </Layout>
+    </>;
+  );
+
+ <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
 =======
-    </>);
-;
-<li > Purpose: performance and security</li> <li > Retention: session or short‑term</li> <li > Opt‑out: browser settings and extensions</li> </ul> <p className="text - gray - 400 text - sm" >Questions? <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>);
+          <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
+        </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  )
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+}
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

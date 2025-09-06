@@ -1,14 +1,6 @@
 
 
-<<<<<<< HEAD
-=======
-  Bell
-  FileText
-  Home
-  Mail
-  Search
-  Settings
-  Users
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 
 import {;
@@ -104,8 +96,3 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-reac
 
     </Sidebar>;
   );
-}
-  );
-}
-}
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

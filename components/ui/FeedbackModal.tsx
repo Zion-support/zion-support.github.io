@@ -1,5 +1,21 @@
 import { useState } from 'react';
 
+=======
+export type FeedbackContext = { actionType?: string; metadata?: any }
+export default function FeedbackModal({
+  isOpen
+  onClose
+  defaultContext
+  defaultKind = 'general'
+  userHeaders
+}: {
+  isOpen,
+  onClose,
+  defaultContext,
+  defaultKind = 'general',
+  userHeaders,
+}: {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   isOpen: boolean;
   onClose: (submitted: boolean) => void;
   defaultContext?: FeedbackContext;
@@ -179,39 +195,16 @@ import { useState } from 'react';
         }),;
 
       });
-
-
-
-
-=======
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) };
-        body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })})
-    } catch {}
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    setLoading(false);
+    onClose(true);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     setLoading(false);
     onClose(true)
   }
   return (
 
-=======
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
-      <div className="bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4">
-        <div className="text-lg font-medium">Was this helpful?</div>
-        <div className="flex gap-2">
-          {[1,2,3,4,5].map(n => (
-
-=======
-
-
-            <button
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
@@ -412,14 +405,11 @@ function submit() {
       </div>;
     </div>;
 
-=======
-          <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
-        </div>
-      </div>
-    </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className='flex justify - end gap - 2'>;
           <button;
             on_click={() => on_close (false)}
@@ -512,3 +502,14 @@ function submit() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+}
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

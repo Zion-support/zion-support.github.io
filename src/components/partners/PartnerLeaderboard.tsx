@@ -13,12 +13,7 @@ export function PartnerLeaderboard() {
     {
 
 
-=======
-
     },
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     {
       id: "2"
       rank: 2
@@ -27,26 +22,6 @@ export function PartnerLeaderboard() {
       referrals: 145
       earnings: 3625
       badges: ["silver"]
-
-    {
-      id: "3"
-      rank: 3
-      name: "Neural Networks Pro"
-      avatar: ""
-      referrals: 124
-      earnings: 3100
-      badges: ["bronze"]
-
-    {
-      id: "4"
-      rank: 4
-      name: "AI Career Insights"
-      avatar: ""
-      referrals: 98
-      earnings: 2450
-      badges: []
-
-<<<<<<< HEAD
     {
       id: "5",
       rank: 5,

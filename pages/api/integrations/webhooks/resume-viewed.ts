@@ -1,5 +1,4 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -24,30 +23,6 @@ export default async function handler(
       c && c.providerId === "zoho" ||
       c && c.providerId === "pipedrive",
 
-=======
-import type { NextApiRequest, NextApiResponse } from './next';
-import { read_state, write_state  } from '../../../../lib / integrations / file_store';
-import { crm  } from '../../../../lib / integrations / connectors';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if (
-    return res.status (405).json ({ error: "Method not allowed" })) {
-  $2
-}
-  const { resume } = req.body as { resume?: Record < string, any> }
-  if (return res.status (400).json ({ error: "Missing resume payload" })) {
-  $2
-}
-  const state = read_state ();
-  const crms = state.connections.filter (
-    (c) =>;
-      c.provider_id === "salesforce" ||;
-      c.provider_id === "hubspot" ||;
-      c.provider_id === "zoho" ||;
-      c.provider_id === "pipedrive",
   );
   const results: any[] = [];
   for (const conn of connections) {
@@ -65,9 +40,12 @@ function handler() {
     writeState((s) => s && s.logs.push(log));
     results && results.push({ providerId: conn && conn.providerId, ok: true });
   }
-  res && res.status(200).json({ ok: true, results });
-
-=======
+  res.status(200).json({ ok: true, results });
+}
+res.status(200).json({ ok: true, results });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors';
@@ -82,7 +60,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   for (const conn of crms) {
     const { log } = await crm.addEmailTouchpoint(conn, { subject: 'Resume viewed', resumeId: resume.id });
     writeState(s => s.logs.push(log));
-results.push({ providerId: conn.providerId, ok: true })
+    results.push({ providerId: conn.providerId, ok: true })
   }
   res.status(200).json({ ok: true, results })
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -120,9 +98,11 @@ results.push({ providerId: conn.providerId, ok: true })
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

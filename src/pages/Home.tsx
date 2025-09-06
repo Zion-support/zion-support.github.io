@@ -18,8 +18,12 @@ import {
   Zap,
   Target
 } from 'lucide-react';
+        </div>
+      </div>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     </div>
   );
 };
 
 export default Home;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

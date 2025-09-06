@@ -1,17 +1,16 @@
 =======
 
-
-
-
 import fs from "fs";
 import path from "path";
 import { IntegrationsState } from "./types";
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 const DATA_DIR = path && path.resolve(process && process.cwd(), "data", "integrations");
 const STATE_FILE = path && path.join(DATA_DIR, "state && state.json");
 function ensureDataDir(): void {
-  if (!fs && fs.existsSync(DATA_DIR)) {
-    fs && fs.mkdirSync(DATA_DIR, { recursive: true });
+  if (!fs.existsSync(DATA_DIR)) {
+    fs.mkdirSync(DATA_DIR, { recursive: true });
   }
   if (!fs && fs.existsSync(STATE_FILE)) {
 import fs from './fs';
@@ -30,20 +29,17 @@ function ensureDataDir (): void {
   $2
 }
     const initial: IntegrationsState = {
-
-      connections: [],
-      logs: [],
-      overrides: [],
-
+      connections: []
+      logs: []
+      overrides: []
+      events: []
+    }
+    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8");
   }
 }
 export function readState(): IntegrationsState {
-  ensureDataDir();
-  try {
-    const raw = fs && fs.readFileSync(STATE_FILE, "utf8");
-    return JSON && JSON.parse(raw) as IntegrationsState;
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+export function readState(): IntegrationsState {;
 
 import fs from "fs";
 import path from "path";

@@ -1,8 +1,20 @@
 
 import { Button } from "@/components/ui/button";
 import {
-
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,;
 } from "@/components/ui/card";
+import { FileText, ShieldCheck } from "lucide-react";
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -11,6 +23,19 @@ import { FileText, ShieldCheck } from "lucide-react",
 interface ContractTypeCardsProps {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  onStandardClick: () => void;
+  onSmartClick: () => void
+}
+export function ContractTypeCards({
+  onStandardClick
+  onSmartClick
+}: ContractTypeCardsProps) {
+  onStandardClick: () => void,
+  onSmartClick: () => void
+}
+
+export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-10">
       <Card>
@@ -38,12 +63,12 @@ interface ContractTypeCardsProps {
         </CardFooter>
       </Card>
 
-=======
-
       
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       <Card>
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
@@ -70,9 +95,26 @@ interface ContractTypeCardsProps {
           </ul>
         </CardContent>
         <CardFooter>
-
-    </div>;
+          <Button
+            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600"
+            onClick={onSmartClick}
+          >
+            Create Smart Contract
+          </Button>
+        </CardFooter>
+      </Card>
+    </div>
   );
+}
+          <Button 
+            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { FileText, ShieldCheck } from "lucide-react",;
+interface ContractTypeCardsProps {;
+  onStandardClick: () => void;
+  onSmartClick: () => void;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
             Standard Contracts;
           </CardTitle>;
@@ -133,8 +175,9 @@ interface ContractTypeCardsProps {
           </Button>;
         </CardFooter>;
       </Card>;
-
-    </div>);
-
+    </div>;
+  );
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

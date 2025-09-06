@@ -1,4 +1,5 @@
 
+=======
 
 import { format } from "date-fns",
 import { JobApplication } from "@/types/jobs",
@@ -26,13 +27,72 @@ interface ApplicationsTableProps {
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>
   onViewScore: (application: JobApplication) => void
 =======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import {format} from "date-fns";
+import {JobApplication} from "@/types/jobs";
+import {Avatar} from "@/components/ui/avatar";
+import {Badge} from "@/components/ui/badge";
+import {ClickableBadge} from "@/components/ui/clickable-badge";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {ApplicationActions} from "./ApplicationActions";
+import {StatusBadge} from "./StatusBadge";
+import {Briefcase, User} from "lucide-react";
+import {HireConfirmationModal} from "@/components/hiring-tracker/HireConfirmationModal";
+import {useState} from "react";
+import {toast} from "@/hooks/use-toast";
+import { format } from "date-fns",
+import { JobApplication } from "@/types/jobs",
+import { Avatar } from "@/components/ui/avatar",
+import { Badge } from "@/components/ui/badge";
+import { ClickableBadge } from "@/components/ui/clickable-badge";
+import { Badge } from "@/components/ui/badge",
+import { ClickableBadge } from "@/components/ui/clickable-badge",
+import { 
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow
+} from "@/components/ui/table",
+import { ApplicationActions } from "./ApplicationActions",
+import { StatusBadge } from "./StatusBadge",
+import { Briefcase, User } from "lucide-react",
+import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal",
+import { useState } from "react";
+import { toast } from "@/hooks/use-toast";
+import { useState } from "react",
+import { toast } from "@/hooks/use-toast",
+interface ApplicationsTableProps {
+
+  applications: JobApplication[]
+  processingId: string | null
+  onViewApplication: (applicationId: string) => Promise<void>
+  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>
+  onViewScore: (application: JobApplication) => void
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 export function ApplicationsTable({
   applications
   processingId
   onViewApplication
 
+=======
+  onStatusChange;
+  onViewScore;
+}: ApplicationsTableProps) {;
+  const [hireModalOpen, setHireModalOpen] = useState(false);
+
+  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
+export function ApplicationsTable({ 
+  applications, 
+  processingId, 
+  onViewApplication, ;
+  onStatusChange;
+  onViewApplication, 
+  onStatusChange,
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   onViewScore
 }: ApplicationsTableProps) {
   const [hireModalOpen, setHireModalOpen] = useState(false),
@@ -42,12 +102,6 @@ export function ApplicationsTable({
     setSelectedApplication(application)
     setHireModalOpen(true)
 
-=======
-  },
-  
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const handleHireConfirmed = () => {
     // This will be called after the hire confirmation is completed
     toast({
@@ -78,6 +132,8 @@ export function ApplicationsTable({
                       {application.talent_profile?.profile_picture_url ? (
 
 
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     <ClickableBadge
                       variant="outline"
                       className="cursor-pointer"
@@ -144,6 +200,7 @@ export function ApplicationsTable({
                       <Briefcase className="h - 3 w - 3 mr - 1" /> Hire;
                     </ClickableBadge>;
                     <ApplicationActions;
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -172,18 +229,3 @@ export function ApplicationsTable({
   );
 }
 
-=======
-              </TableRow>))}
-          </TableBody>;
-        </Table>;
-      </div>;
-      {/* Hire Confirmation Modal */}
-      <HireConfirmationModal;
-        is_open={hireModalOpen}
-        on_close={() => setHireModalOpen (false)}
-        application={selected_application || undefined}
-        on_confirm={handleHireConfirmed}
-      />;
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

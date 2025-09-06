@@ -250,10 +250,10 @@ function main() {
   ];
   let successCount = 0;
 
-<<<<<<< HEAD
     } catch (error) {
       console.error(`❌ Error in ${optimization.name}:`, error.message)}
   }
 
+<<<<<<< HEAD
 main();
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

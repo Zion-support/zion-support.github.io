@@ -2,6 +2,14 @@
 if (ctx) {
 export default function UltraFuturisticBackground2035({
 
+
+}
+ canvas && canvas.width = window && window.innerWidth * (window && window.devicePixelRatio || 1);
+canvas && canvas.height = window && window.innerHeight * (window && window.devicePixelRatio || 1);
+if (ctx) {;
+export default function UltraFuturisticBackground2035(): any ({;
+  children,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 
 import { motion } from 'framer-motion';
@@ -184,10 +192,6 @@ interface UltraFuturisticBackground2035Props {
     <>;
       <div className='fixed inset-0 z-0 overflow-hidden'>        cancelAnimationFrame(animationFrameId);
 
-=======
-        cancelAnimationFrame(animationFrameId)
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
   }, []);
@@ -217,11 +221,7 @@ interface UltraFuturisticBackground2035Props {
             style={{
               backgroundImage: `
 
-=======
-
               linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
-
-
               linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
             `
               backgroundSize: '50px 50px'
@@ -247,6 +247,16 @@ interface UltraFuturisticBackground2035Props {
               linear-gradient(90deg, rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
             `
             backgroundSize: '50px 50px'
+=======
+          }} />
+        </div>
+        {/* Canvas for animated particles */}
+        <canvas
+          ref={canvasRef}
+          className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}          className="absolute inset-0 w-full h-full"
+          style={{ filter: 'blur(0.5px)' }}
+        />
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
         {/* Canvas for animated particles */}
         <canvas
@@ -255,15 +265,6 @@ interface UltraFuturisticBackground2035Props {
           style={{ filter: 'blur(0.5px)' }}
         />
 
-=======
-          className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}
-
-          style={{ filter: 'blur(0.5px)' }}
-
-        />
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         {/* Floating neon orbs */}
@@ -303,10 +304,11 @@ interface UltraFuturisticBackground2035Props {
           animate={{
 
 =======
-            scale: [1, 1 && 1.2, 1],
-            opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+            scale: [1, 1.2, 1]
+            opacity: [0.2, 0.4, 0.2]
+            scale: [1, 1.2, 1],
+            opacity: [0.2, 0.4, 0.2],
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             rotate: [0, 180, 360],          }}
           transition={{
 
@@ -334,7 +336,6 @@ interface UltraFuturisticBackground2035Props {
             rotate: [360, 180, 0],          }}
           transition={{
 
-=======
         <motion.div
           className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20"
           animate={{
@@ -348,11 +349,13 @@ interface UltraFuturisticBackground2035Props {
             rotate: [360, 180, 0]
           }}
           transition={{
-
             duration: 8
             repeat: Infinity
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+            duration: 8,
+            repeat: Infinity,
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             ease: 'easeInOut',            ease: 'easeInOut'
           }}
 
@@ -380,19 +383,21 @@ interface UltraFuturisticBackground2035Props {
               duration: 4
               repeat: Infinity
               ease: 'easeInOut',          <motion.div
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
             animate={{
               y: [-100, 100, -100];
               opacity: [0, 0.3, 0]
+<<<<<<< HEAD
 
-            }}
-            transition={{
-              duration: 4
-              repeat: Infinity
-            animate={{
-              coordinate_y: [-100, 100, -100];
-              opacity: [0, 0.3, 0];
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            duration: 8,
+            repeat: Infinity,
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
             }}
             transition={{
               duration: 4,
@@ -419,6 +424,15 @@ interface UltraFuturisticBackground2035Props {
             animate={{
               y: [100, -100, 100];
               opacity: [0, 0.3, 0]
+=======
+            duration: 8,
+            repeat: Infinity,
+
+          }}
+        />
+
+        {/* Quantum energy waves */}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
             }}
             transition={{
@@ -429,10 +443,7 @@ interface UltraFuturisticBackground2035Props {
             }}
           />
         </div>
-=======
-
       </div>
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

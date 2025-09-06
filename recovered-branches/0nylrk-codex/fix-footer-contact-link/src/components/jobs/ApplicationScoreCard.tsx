@@ -1,13 +1,27 @@
 
-
+import {useState} from "react";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {Card, CardHeader, CardTitle, CardContent, CardFooter} from "@/components/ui/card";
+import {supabase} from "@/integrations/supabase/client";
+import {Loader2, Star, BarChart2, Lightbulb} from "lucide-react";
+import {toast} from "sonner";
+import {JobApplication} from "@/types/jobs";
 import { useState } from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card",
 import { supabase } from "@/integrations/supabase/client",
 import { Loader2, Star, BarChart2, Lightbulb } from "lucide-react",
+import { toast } from "sonner";
+import { JobApplication } from "@/types/jobs";
+import { toast } from "sonner",
+import { JobApplication } from "@/types/jobs",
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface ApplicationScoreCardProps {
 
   application: JobApplication
@@ -15,14 +29,20 @@ interface ApplicationScoreCardProps {
   onScoreUpdated?: (updatedApplication: JobApplication) => void
 }
 
+export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {;
+  const [isScoring, setIsScoring] = useState(false);
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
+  const [isScoring, setIsScoring] = useState(false);
+  // Determine if application has been scored
+  const [isScoring, setIsScoring] = useState(false),
 
   // Determine if application has been scored
   const hasScore = typeof application.match_score === 'number',
-
+  
   // Format the date when the application was scored
-  const scoredDate = application.scored_at
-    ? new Date(application.scored_at).toLocaleDateString()
+  const scoredDate = application.scored_at 
+    ? new Date(application.scored_at).toLocaleDateString() 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     : null,
 
   const hasScore = typeof application.match_score === 'number';
@@ -45,10 +65,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       case "Recommended for Review":;
         return "bg-blue-100 text-blue-800";
 
-=======
-
-
-=======
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -146,9 +162,11 @@ function ApplicationScoreCard() {
       ),
       
       if (error) throw error,
+=======
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       toast.success("Resume scoring has been initiated"),
@@ -183,31 +201,26 @@ function ApplicationScoreCard() {
           setIsScoring(false);
           return toast && toast.error("Failed to check scoring status");
         }
-
-
-        if (data && data.scored_at) {;
-
-          setIsScoring(false);
-          toast && toast.success("Resume scoring completed");
-          if (onScoreUpdated) onScoreUpdated(data as JobApplication);
-          return;
+        if (data.scored_at) {
+          setIsScoring(false),
+          toast.success("Resume scoring completed"),
+          if (onScoreUpdated) onScoreUpdated(data as JobApplication),
+          return
         }
-
-
-        if (attempts < maxAttempts) {;
-          setTimeout(checkScore, 3000);
-        } else {;
-
+        if (attempts < maxAttempts) {
+          setTimeout(checkScore, 3000)
+        } else {
           setIsScoring(false);
-          toast && toast.info("Scoring is taking longer than expected. Check back later.");
+          toast.info("Scoring is taking longer than expected. Check back later.")
         }
-
-      };
-=======
-
+      }
+      setTimeout(checkScore, 3000)
+    } catch (error: any) {
+      setIsScoring(false)
+      toast.error(`Failed to score resume: ${error.message}`)
+    }
+  }
   };
-
-=======
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
       ),;
@@ -249,6 +262,10 @@ function ApplicationScoreCard() {
     }
   },
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 
 
@@ -339,23 +356,13 @@ function ApplicationScoreCard() {
                         {application && application.match_breakdown.skills_match && skills_match.missing && (;
                           <p>Missing skills: {application && application.match_breakdown.skills_match && skills_match.missing.join(", ")}</p>;
                         )}
-
-                    )}
-
-                    {application.match_breakdown.experience_match && (
-                      <div>
-                        <p className="font-medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>
-                        <p>{application.match_breakdown.experience_match.analysis}</p>
                       </div>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     )}
-
-
-                    {application && application.match_breakdown.experience_match && (;
-                      <div>;
-                        <p className="font-medium">Experience Match: {application && application.match_breakdown.experience_match && experience_match.score}/100</p>;
-                        <p>{application && application.match_breakdown.experience_match && experience_match.analysis}</p>;
                       </div>;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     )}
 
                     {application && application.match_breakdown.education_match && (;
@@ -365,6 +372,13 @@ function ApplicationScoreCard() {
                       </div>;
 
                     )}
+=======
+                  </div>
+                </details>
+              </div>
+                  </div>;
+                </details>;
+              </div>;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -393,9 +407,3 @@ function ApplicationScoreCard() {
           </div>;
         )}
 =======
-
-      </CardContent>;
-    </Card>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

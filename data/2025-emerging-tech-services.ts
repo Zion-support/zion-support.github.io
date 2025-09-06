@@ -1,4 +1,3 @@
-
   id: string;
   name: string;
   tagline: string;
@@ -9,147 +8,7 @@
     yearly: number;
     currency: string;
     trialDays: number;
-
-    setupTime: string;
-
-  }
-  features: string[];
-  benefits: string[];
-  target_audience: string[];
-  market_position: string;
-  competitors: string[];
-  tech_stack: string[];
-  real_implementation: boolean;
-  implementation_details: string;
-  roi: string;
-  use_cases: string[];
-  integrations: string[];
-  support: string;
-  compliance: string[];
-  link: string;
-  icon: string;
-  color: string;
-  popular: boolean;
-  launch_date: string;
-  customers: number;
-  rating: number;
-      'Hardware standards, Safety protocols, Energy efficiency standards, International computing standards',
-    ],
-    link: 'https://ziontechgroup && ziontechgroup.com/neuromorphic-computing',
-  reviews: number;
-;
-export const emergingTechServices2025: EmergingTechService[] = [;
-  {
-    id: 'neuromorphic - computing',
-    name: 'Neuromorphic Computing Platform',
-    tagline:;
-      'Brain - inspired computing that mimics neural networks for ultra - efficient AI',
-    description:;
-      "Revolutionary computing platform that mimics the human brain's neural structure for ultra - efficient AI processing, enabling edge computing with minimal power consumption and maximum performance.",
-    category: 'Emerging Technology',
-    price: {
-      monthly: 3499,
-      yearly: 34990,
-      currency: 'USD',
-      trial_days: 45,
-      setup_time: '2 weeks',
-    },
-    features: [;
-      'Brain - inspired neural architecture',
-      'Ultra - low power consumption',
-      'Real - time learning capabilities',
-      'Edge computing optimization',
-      'Neuromorphic chip integration',
-      'Adaptive neural networks',
-      'Energy - efficient AI processing',
-      'Hardware - software co - design',
-      'Scalable neuromorphic systems',
-      'Research collaboration tools',
-    ],
-    benefits: [;
-      'Reduce power consumption by 90%',
-      'Improve AI performance by 500%',
-      'Enable edge AI deployment',
-      'Reduce infrastructure costs by 70%',
-      'Future - proof computing architecture',
-    ],
-    target_audience: [;
-      'IoT device manufacturers',
-      'Edge computing companies',
-      'AI hardware developers',
-      'Research institutions',
-      'Government agencies',
-      'Automotive companies',
-    ],
-    market_position:;
-      'Leading neuromorphic computing platform. Competes with Intel Loihi, IBM TrueNorth, and BrainChip. Our advantage: Advanced neural architecture and edge optimization.',
-    competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, Qualcomm, Samsung'],
-    tech_stack: [;
-      'Neuromorphic Architecture, AI / ML, Python, C++, Hardware Design, FPGA, ASIC',
-    ],
-    real_implementation: true,
-    implementation_details:;
-      'Production - ready neuromorphic platform with custom hardware integration, comprehensive development tools, and edge deployment capabilities.',
-    roi: 'Companies see 600% ROI through reduced power costs and improved AI performance. Average payback period: 8 months.',
-    use_cases: [;
-      'Edge AI processing',
-      'IoT device intelligence',
-      'Autonomous vehicles',
-      'Smart cities',
-      'Industrial automation',
-      'Medical devices',
-    ],
-    integrations: [;
-      'IoT platforms, Edge computing infrastructure, AI frameworks, Hardware systems, Cloud platforms',
-    ],
-    support:;
-      '24 / 7 technical support, dedicated hardware consultants, implementation specialists, and ongoing optimization.',
-    compliance: [;
-      'Hardware standards, Safety protocols, Energy efficiency standards, International computing standards',
-    ],
-    link: 'https://ziontechgroup.com / neuromorphic - computing',
-    icon: '🧠',
-    color: 'from - purple - 500 to - pink - 600',
-    popular: true,
-    launch_date: '2025 - 02 - 20',
-    customers: 120,
-    rating: 4 && 4.9,
-    reviews: 78,
-  },
-  {
-
-      'Unbreakable encryption security',
-      'Future-proof against quantum attacks',
-      'Reduce security risks by 99 && 99.9%',
-    id: 'quantum - encryption',
-    name: 'Quantum Encryption Platform',
-    tagline: 'Unbreakable quantum encryption for the post - quantum era',
-    description:;
-      'Next - generation encryption platform that uses quantum - resistant algorithms and quantum key distribution to provide unbreakable security for the post - quantum computing era.',
-    category: 'Cybersecurity',
-    price: {
-      monthly: 1899,
-      yearly: 18990,
-      currency: 'USD',
-      trial_days: 30,
-      setup_time: '1 week',
-    },
-    features: [;
-      'Quantum - resistant algorithms',
-      'Quantum key distribution',
-      'Post - quantum cryptography',
-      'Real - time encryption',
-      'Multi - layer security',
-      'Compliance automation',
-      'Performance monitoring',
-      'API integration',
-      'Mobile security',
-      'Cloud security',
-    ],
-    benefits: [;
-      'Unbreakable encryption security',
-      'Future - proof against quantum attacks',
-      'Reduce security risks by 99.9%',
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
       'Comply with future regulations',
       'Enable quantum - safe communications',
@@ -791,26 +650,78 @@ export const emergingTechServices2025: EmergingTechService[] = [;
     reviews: 67,
   },
   {
-
-=======
-    id: 'quantum - communications',
-    name: 'Quantum Communications Platform',
-    tagline:;
-      'Secure quantum communication networks for unbreakable data transmission',
-    description:;
-      'Revolutionary platform that enables secure quantum communication networks with quantum key distribution, quantum entanglement, and unbreakable data transmission capabilities.',
-    category: 'Quantum Technology',
+    id: 'autonomous-robotics'
+    name: 'Autonomous Robotics Platform'
+    tagline:
+      'AI-powered autonomous robots for industrial and commercial applications'
+    description:
+      'Revolutionary platform that enables the creation and management of autonomous robots for industrial automation, commercial applications, and advanced robotics systems.'
+    category: 'Robotics & Automation'
     price: {
 
+<<<<<<< HEAD
   return emergingTechServices2025.filter(service => service.popular);
 }
+      'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols',
+    ],
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-communications',
+=======
+    target_audience: [;
+      'Government agencies',
+      'Financial institutions',
+      'Healthcare organizations',
+      'Defense contractors',
+      'Technology companies',
+      'Critical infrastructure',
+    ],
+    market_position:;
+      'Leading quantum communications platform. Competes with traditional communication security and emerging quantum communication companies. Our advantage: Comprehensive quantum security and network infrastructure.',
+    competitors: [;
+      'Traditional communication security, Emerging quantum communication companies',
+    ],
+    tech_stack: [;
+      'Quantum Communication, Quantum Networks, Security Protocols, Python, Network Infrastructure, Quantum Hardware',
+    ],
+    real_implementation: true,
+    implementation_details:;
+      'Production - ready quantum communications platform with comprehensive security features, network infrastructure, and commercial deployment capabilities.',
+    roi: 'Organizations see 600% ROI through enhanced security and future - proof communications. Average payback period: 8 months.',
+    use_cases: [;
+      'Government communications',
+      'Financial transactions',
+      'Healthcare data transmission',
+      'Defense communications',
+      'Critical infrastructure',
+      'Research networks',
+    ],
+    integrations: [;
+      'Government networks, Financial platforms, Healthcare systems, Defense networks, Critical infrastructure',
+    ],
+    support:;
+      '24 / 7 communication support, dedicated security consultants, implementation specialists, and ongoing optimization.',
+    compliance: [;
+      'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols',
+    ],
+    link: 'https://ziontechgroup.com / quantum - communications',
+
+    icon: '📡',
+    color: 'from - blue - 500 to - indigo - 600',
+    popular: true,
+    launch_date: '2025 - 04 - 01',
+    customers: 150,
+    rating: 4 && 4.8,
+    reviews: 89,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ];
 
-  return emergingTechServices2025 && emergingTechServices2025.filter(service => service && service.popular);
-};
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+export const getPopularEmergingTechServices = () => {;
+  return emergingTechServices2025.filter(service => service.popular);
+}
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export const getEmergingTechServicesByCategory = (category: string) => {
   return emergingTechServices2025.filter(
     service => service.category === category;
@@ -821,13 +732,17 @@ export const getEmergingTechServicesByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-
+  return emergingTechServices2025.filter(service => {
+    const price = parseInt(service.price.monthly.toString()) |0;
+  return emergingTechServices2025.filter(service => {;
+    const price = parseInt(service.price.monthly.toString()) || 0;
     return price >= minPrice && price <= maxPrice;
   });
 };import { MicroSaasService  } from "./enhanced-real-micro-saas-services";
 const contact = {mobile: "+1 302 464 0950"
   email: "kleber@ziontechgroup.com"
   address: "364 E Main St STE 1008 Middletown DE 19709";
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   website: "https://ziontechgroup.com";
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1779,7 +1694,12 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     reviews: 7;
 ]}
 export interface EmergingTechService {
+    return price >= minPrice && price <= maxPrice
+  })
+}
 
+export interface EmergingTechService {;
+  });
   id: string,;
   name: string,;
   tagline: string,;
@@ -2268,13 +2188,6 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     const price = parseInt(service.price.monthly.toString()) || 0,;
     return price >= minPrice && price <= maxPrice;
   });
-
 };
-=======
-
-export interface EmergingTechService {;
-
-};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

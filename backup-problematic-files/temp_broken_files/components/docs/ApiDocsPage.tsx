@@ -1,5 +1,10 @@
 =======
 
+import React, { useMemo, useState } from 'react';
+import Sidebar from './Sidebar';
+import EndpointDetail from './EndpointDetail';
+import v1 from '../../data/api-docs/v1';
+import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types';
 import React, { useMemo, useState } from 'react',;
 import Sidebar from './Sidebar',;
 import EndpointDetail from './EndpointDetail',;
@@ -14,13 +19,7 @@ import EndpointDetail from './EndpointDetail';
 import v1 from '../../data/api-docs/v1';
 import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types';
 =======
-import React, { useMemo, useState } from 'react',;
-import Sidebar from './Sidebar',;
-import EndpointDetail from './EndpointDetail',;
-import v1 from '../../data/api-docs/v1',;
-import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types',;
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function ApiDocsPage() {
   const spec: ApiDocsSpec = v1, // could switch by version later
   const [selectedVersion, setSelectedVersion] = useState<string>(spec.defaultVersion)
@@ -53,8 +52,13 @@ export default function ApiDocsPage() {
 <<<<<<< HEAD:components/docs/ApiDocsPage.tsx
         {activeEndpoint ? (
 =======
+:components/docs/ApiDocsPage.tsx
+        {activeEndpoint ? (
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+        {_activeEndpoint ? (
+:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
+:backup-problematic-files/temp_broken_files/components/docs/ApiDocsPage.tsx
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <EndpointDetail endpoint={activeEndpoint} />
         ) : (
           <div className="text-sm text-high-contrast-muted">Select an endpoint from the sidebar</div>

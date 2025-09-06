@@ -4,13 +4,10 @@ import Image from 'next/image';
 import { PortfolioProject } from '@/types/resume';
 interface ProjectCardProps {
 
-=======
-
+  project: PortfolioProject
+  onEdit: (project: PortfolioProject) => void
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   onDelete: (projectId: string) => void; import Image from 'next/image'
 interface ProjectCardProps {
   project: PortfolioProject
@@ -19,6 +16,149 @@ interface ProjectCardProps {
 
 }
 
+
+}
+
+}
+
+export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardProps) {;
+=======
+=======
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+}
+<<<<<<< HEAD
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+
+  const handleDelete = () => {;
+    if (project && project.id) {;
+      onDelete(project && project.id);
+    }
+    setDeleteDialogOpen(false);
+  };
+
+
+  return (
+    <Card className='h-full flex flex-col'>;
+      <div className='relative h-48 overflow-hidden rounded-t-lg bg-muted'>        {project && project.image_url ? (;
+          <Image
+            src={project && project.image_url}
+            alt={project && project.title}
+            className='object-cover'
+            loading='lazy'    <Card className="h-full flex flex-col">;
+      <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
+        {project && project.image_url ? (;
+          <Image
+            src={project && project.image_url}
+            alt={project && project.title}
+            className='object-cover'
+            loading='lazy'
+        ) : (
+          <div className='w-full h-full flex items-center justify-center bg-muted'>;
+            <FileText className='h-12 w-12 text-muted-foreground/50' />;
+          </div>;
+        )}
+
+import { useState } from 'react';
+import { Card, CardContent, CardFooter } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { Badge } from '@/components / ui / badge';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from '@/components / ui / alert - dialog';
+import { Edit, Trash2, Github, Link, FileText } from 'lucide-react';
+import Image from 'next / image';
+import { PortfolioProject } from '@/types / resume';
+interface ProjectCardProps {
+  project: PortfolioProject;
+  on_edit: (project: PortfolioProject) => void;
+  on_delete: (project_id: string) => void; import Image from 'next / image';
+interface ProjectCardProps {
+  project: PortfolioProject,
+  on_edit: (project: PortfolioProject, ) => void,
+  on_delete: (project_id: string, ) => void;
+}
+export /**
+ * ProjectCard - Function description
+ */
+function ProjectCard() {
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState (false);
+  const handle_delete = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      on_delete (project.id);
+    }
+    setDeleteDialogOpen (false);
+  }
+  return (
+    <Card className='h - full flex flex - col'>;
+      <div className='relative h - 48 overflow - hidden rounded - t-lg bg - muted'>        {project.image_url ? (
+          <Image;
+            src={project.image_url}
+            alt={project.title}
+            className='object - cover';
+            loading='lazy'    <Card className="h - full flex flex - col">;
+      <div className="relative h - 48 overflow - hidden rounded - t-lg bg - muted">;
+        {project.image_url ? (
+          <Image;
+            src={project.image_url}
+            alt={project.title}
+            className='object - cover';
+            loading='lazy') : (
+          <div className='w - full h - full flex items - center justify - center bg - muted'>;
+            <FileText className='h - 12 w - 12 text - muted - foreground / 50' />;
+          </div>)}
+      </div>;
+      <CardContent className='flex - grow pt - 6'>;
+        <div className='space - y-2'>;
+          <h3 className='font - semibold text - lg'>{project.title}</h3>;
+
+          {project.description && (
+            <p className='text - sm text - muted - foreground line - clamp - 3'>;
+              {project.description}
+
+          {project.technologies && project.technologies.length > 0 && (
+            <div className='flex flex-wrap gap-1 mt-2'>
+              {project.technologies.map((tech, index) => (
+                <Badge key={index} variant='secondary' className='text-xs'>                  {tech}                <Badge key={index} variant="secondary" className="text-xs">
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
+import { Edit, Trash2, Github, Link, FileText } from 'lucide-react'
+import Image from 'next/image';
+import { PortfolioProject } from '@/types/resume';
+interface ProjectCardProps {
+  project: PortfolioProject,
+  onEdit: (project: PortfolioProject) => void,
+  onDelete: (projectId: string) => void
+}
+
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
+<<<<<<< HEAD
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const handleDelete = null;
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false)
+  const handleDelete = () => {
+    if (project.id) {
+      onDelete(project.id)
+    }
+    setDeleteDialogOpen(false)
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
@@ -26,6 +166,20 @@ interface ProjectCardProps {
           <Image
             src={project.image_url}
             alt={project.title}
+=======
+            className='object-cover'
+            loading='lazy'    <Card className="h-full flex flex-col">
+      <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
+        {project.image_url ? (
+          <Image
+            src={project.image_url}
+            alt={project.title}
+            className='object-cover'
+            loading='lazy'
+            className="object-cover"
+            loading="lazy"
+          />
+<<<<<<< HEAD
 
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-muted">
@@ -76,19 +230,32 @@ interface ProjectCardProps {
               aria-label='GitHub'
               title='GitHub'
               href = {project.github_url,}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
               title="GitHub"
             >
-
                 <Link className="h-4 w-4" />
               </Button>
             </Link>
           )}
         </div>
 
+=======
+        
+        <div className="flex gap-2">
+          <Button variant="ghost" size="icon" onClick={() => onEdit(project)} aria-label="Edit project">
+            <Edit className="h-4 w-4" />
+          </Button>
+          <Button variant="ghost" size="icon" onClick={() => setDeleteDialogOpen(true)} aria-label="Delete project">
+            <Trash2 className="h-4 w-4" />
+          </Button>
+        </div>
+      </CardFooter>
+      
+<<<<<<< HEAD
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -99,6 +266,14 @@ interface ProjectCardProps {
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
+=======
+            <AlertDialogAction
+              onClick={handleDelete}
+              className='bg-destructive text-destructive-foreground'
+            >            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
+            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
+<<<<<<< HEAD
+<<<<<<< HEAD
 
               Delete
             </AlertDialogAction>

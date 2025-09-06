@@ -1,6 +1,7 @@
 =======
 
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function KnowledgeGraph({ report }: Props) {
   if (!report) return <div>No knowledge graph yet.</div>;
   return (
@@ -30,10 +31,11 @@ export default function KnowledgeGraph({ report }: Props) {
           {report && report.edges.slice(0, 200).map((e, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{e && e.source} ⇄ {e && e.target}</span><span className="text-gray-500 truncate">{e && e.terms.join(', ')}</span></li>;
           ))}
-
-        </ul>;
-      </section>;
-    </div>;
+        </ul>
+      </section>
+    </div>
+);
+}
   );
 }
 

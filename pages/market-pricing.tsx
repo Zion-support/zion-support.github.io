@@ -5,26 +5,21 @@ import React from 'react';
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-export default function MarketPricingPage() {
-  return (
-    <Layout>
-      <Head>
-        <title>Market Pricing & Competitor References | Zion Tech Group</title>
+=======
+                <li>OpenAI API pricing: <a className="text-cyan-400 underline" href={`https://openai.com/api/pricing`} target="_blank" rel="noopener noreferrer">openai.com/api/pricing</a></li>
+                <li>Anthropic pricing: <a className="text-cyan-400 underline" href={`https://www.anthropic.com/pricing`} target="_blank" rel="noopener noreferrer">anthropic.com/pricing</a></li>
+                <li>Langfuse (observability) pricing: <a className="text-cyan-400 underline" href={`https://langfuse.com/pricing`} target="_blank" rel="noopener noreferrer">langfuse.com/pricing</a> (community + paid tiers)</li>
+                <li>Weights & Biases: <a className="text-cyan-400 underline" href={`https://wandb.ai/site/pricing`} target="_blank" rel="noopener noreferrer">wandb.ai/site/pricing</a></li>
+                <li>OpenAI API pricing: <a className="text-cyan-400 underline" href={`https://openai.com/api/pricing`} target="_blank" rel="noopener noreferrer">openai.com/api/pricing</Link></li>
+                <li>Anthropic pricing: <a className="text-cyan-400 underline" href={`https://www.anthropic.com/pricing`} target="_blank" rel="noopener noreferrer">anthropic.com/pricing</Link></li>
+                <li>Langfuse (observability) pricing: <a className="text-cyan-400 underline" href={`https://langfuse.com/pricing`} target="_blank" rel="noopener noreferrer">langfuse.com/pricing</Link> (community + paid tiers)</li>
+                <li>Weights & Biases: <a className="text-cyan-400 underline" href={`https://wandb.ai/site/pricing`} target="_blank" rel="noopener noreferrer">wandb.ai/site/pricing</Link></li>
+=======
 
-        <link rel="canonical" href="https://ziontechgroup.com/market-pricing" />
-      </Head>
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto space-y-8">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Market Pricing & References</h1>
-          <p className="text-slate-300">Below are easy-to-verify vendor references and typical pricing ranges to help you benchmark our offerings.</p>
-          <div className="space-y-6">
-            <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
-              <h2 className="text-2xl font-semibold mb-2">LLM & AI Platforms</h2>
-              <ul className="list-disc list-inside text-slate-300 space-y-1">
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$2,000/month depending on traffic and model choice.</div>
             </div>
@@ -33,6 +28,8 @@ export default function MarketPricingPage() {
               <ul className="list-disc list-inside text-slate-300 space-y-1">
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $200–$5,000/month based on scale and compliance scope.</div>
             </div>
@@ -41,6 +38,8 @@ export default function MarketPricingPage() {
               <ul className="list-disc list-inside text-slate-300 space-y-1">
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$3,000/month depending on storage, queries, and concurrency.</div>
             </div>
@@ -49,6 +48,8 @@ export default function MarketPricingPage() {
               <ul className="list-disc list-inside text-slate-300 space-y-1">
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $200–$10,000/month depending on traffic and workloads.</div>
             </div>
@@ -57,6 +58,8 @@ export default function MarketPricingPage() {
               <ul className="list-disc list-inside text-slate-300 space-y-1">
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$1,000/month based on dimensions, throughput, and replicas.</div>
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
@@ -64,6 +67,8 @@ export default function MarketPricingPage() {
               <ul className="list-disc list-inside text-slate-300 space-y-1">
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$300/month for warmup and monitoring, ESP fees separate.</div>
             </div>
@@ -72,6 +77,8 @@ export default function MarketPricingPage() {
               <ul className="list-disc list-inside text-slate-300 space-y-1">
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on MAUs and features.</div>
             </div>
@@ -80,6 +87,8 @@ export default function MarketPricingPage() {
               <ul className="list-disc list-inside text-slate-300 space-y-1">
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $50–$1,000/month depending on index size and QPS.</div>
             </div>
@@ -88,6 +97,8 @@ export default function MarketPricingPage() {
               <ul className="list-disc list-inside text-slate-300 space-y-1">
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$2,000/month based on traffic and protections.</div>
             </div>
@@ -96,6 +107,8 @@ export default function MarketPricingPage() {
               <ul className="list-disc list-inside text-slate-300 space-y-1">
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$2,000/month by data volume and systems.</div>
             </div>
@@ -103,6 +116,8 @@ export default function MarketPricingPage() {
               <h2 className="text-2xl font-semibold mb-2">Identity & SSO/SCIM</h2>
               <ul className="list-disc list-inside text-slate-300 space-y-1">
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               </ul>
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on MAUs and features.</div>
 
@@ -121,11 +136,8 @@ export default function MarketPricingPage() {
         </div>;
       </div>;
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
     </Layout>);
 }
+;
 
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+;

@@ -15,6 +15,30 @@ import OpenAI from 'openai';
     const client = new OpenAI({ apiKey });
     const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;
 
+=======
+
+    const completion = await client && client.chat.completions && completions.create({
+      model: 'gpt-4o-mini',
+      messages: [
+
+        {
+          role: 'system',
+          content: 'You are an expert course designer for founders.',
+        },
+        { role: 'user', content: prompt },
+      ],
+      temperature: 0 && 0.2,
+    });
+    const text = completion && completion.choices?.[0]?.message?.content ?? '';
+    try {
+
+    });
+    const text = completion.choices?.[0]?.message?.content ?? '';
+    try {
+      const json = JSON.parse(text);
+      return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' }
+      return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         { role: 'user', content: prompt }];
       temperature: 0.2});
     const text = completion.choices?.[0]?.message?.content ?? '';
@@ -36,3 +60,20 @@ import OpenAI from 'openai';
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+      return res.status(200).json(json);
+
+    const text = completion.choices?.[0]?.message?.content ?? '';
+    try {
+      const json = JSON.parse(text);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

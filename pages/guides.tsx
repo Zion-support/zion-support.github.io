@@ -1,26 +1,6 @@
 
 =======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -280,16 +260,218 @@ import Link from './next / link';
 import { motion  } from './framer-motion';
 import Layout from "./components / Layout";
 import {
-=======
-
 import React from 'react';
 import Head from 'next/head';
-
-
-
+ursor/integrate-build-improve-and-re-verify-8f7d
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import Layout from './components/Layout';
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import Layout from "./components/Layout";
+origin/main
+origin/automation-improvements-final
 import {
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  BookOpen
+  Clock
+  User
+  ArrowRight
+  CheckCircle
+  Star
+  Play
+  Download
+  ExternalLink
+  Code
+  Database
+  Cloud
+  Shield
+  Zap
+  Brain
+  Globe
+  Smartphone
+  Monitor
+  Server
+  Bot
+  Microscope
+  Layers
+  Workflow
+  FileText
+  Image
+  Video
+  Music
+  Palette
+  Search
+  Filter
+  Settings
+  Wrench
+  Cog
+  Activity
+  PieChart
+  BarChart
+  TrendingUp
+  DollarSign
+  ShoppingCart
+  Home
+  Trash2
+  Camera
+  Heart
+  ClipboardList
+  TreePine
+  Droplets
+  Award
+  Building
+  Rocket
+  Lightbulb
+  Target
+  Users
+  Phone
+  Mail
+  MapPin
+  MessageSquare
+  HelpCircle
+  Info
+  AlertCircle
+  CheckCircle2
+  XCircle
+  Plus
+  Minus
+  ChevronUp
+  ChevronRight
+  ChevronLeft
+  ChevronDown
+  ArrowUp
+  ArrowDown
+  ArrowLeft
+  Pause
+  Stop
+  SkipForward
+  SkipBack
+  Volume2
+  VolumeX
+  Maximize
+  Minimize
+  RotateCcw
+  RotateCw
+  RefreshCw
+  Upload
+  Share
+  Copy
+  Edit
+  Trash
+  Save
+  Lock
+  Unlock
+  EyeOff
+  Bell
+  BellOff
+  Star as StarIcon
+  Heart as HeartIcon
+  ThumbsUp
+  ThumbsDown
+  MessageCircle
+  Send
+  Paperclip
+  Smile
+  Frown
+  Meh
+  Laugh
+  Angry
+  Sad
+  Surprised
+  Wink
+  Kiss
+  Tongue
+  Wink2
+  KissWinkHeart
+  KissClosedEyes
+  StuckOutTongue
+  StuckOutTongueWinkingEye
+  StuckOutTongueClosedEyes
+  Disappointed
+  Worried
+  Angry2
+  Rage
+  Cry
+  Scream
+  Confounded
+  Hugging
+  Smirk
+  NoMouth
+  NeutralFace
+  Expressionless
+  Unamused
+  RollingEyes
+  Thinking
+  LyingFace
+  HandOverMouth
+  ShushingFace
+  ExplodingHead
+  CowboyHatFace
+  DisguisedFace
+  Sunglasses
+  NerdFace
+  MonocleFace
+  Confused
+  WorriedFace
+  SlightlyFrowningFace
+  OpenMouth
+  Hushed
+  Astonished
+  Flushed
+  PleadingFace
+  FrowningFace
+  AnguishedFace
+  FearfulFace
+  ColdSweat
+  DisappointedRelieved
+  CryFace
+  LoudlyCryingFace
+  ScreamFace
+  StuckOutTongueFace
+  DroolingFace
+  UnamusedFace
+  SweatSmile
+  Sweat
+  WearyFace
+  TiredFace
+  SleepyFace
+  YawningFace
+  DizzyFace
+  ExplodingHeadFace
+  CowboyHatFace2
+  DisguisedFace2
+  SunglassesFace
+  NerdFace2
+  MonocleFace2
+  ConfusedFace
+  WorriedFace2
+  SlightlyFrowningFace2
+  OpenMouthFace
+  HushedFace
+  AstonishedFace
+  FlushedFace
+  PleadingFace2
+  FrowningFace2
+  AnguishedFace2
+  FearfulFace2
+  ColdSweatFace
+  DisappointedRelievedFace
+  CryFace2
+  LoudlyCryingFace2
+  ScreamFace2
+  StuckOutTongueFace2
+  DroolingFace2
+  UnamusedFace2
+  SweatSmileFace
+  SweatFace
+  WearyFace2
+  TiredFace2
+  SleepyFace2
+  YawningFace2
+  DizzyFace2
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   BookOpen,
   Clock,
   User,
@@ -488,7 +670,6 @@ import {
   YawningFace2,
 
   DizzyFace2,;
-
 } from "lucide-react";
 const guides = [
 
@@ -593,16 +774,13 @@ const categories = [;
   { name: "Database", count: 1, icon: Database },
   { name: "Performance", count: 1, icon: Zap },
 ];
-
-
+export default function GuidesPage() {
 
 interface GuidesProps {
   className?: string;
 }
 
 const Guides: React.FC<GuidesProps> = ({ className }) => {
-
-
   return (
     <Layout>;
       <Head>;
@@ -729,6 +907,7 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                             : guide.difficulty === "Intermediate";
                               ? "bg - yellow - 100 text - yellow - 600";
                               : "bg - red - 100 text - red - 600";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         }`}
                       >;
                         {guide.difficulty}
@@ -738,6 +917,7 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                       </span>;
                     </div>;
                   </div>;
+
                   <div className="p-6">;
                     <div className="flex items-center justify-between text-sm text-gray-500 mb-4">;
                       <div className="flex items-center">;
@@ -749,10 +929,12 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                         {guide && guide.author}
                       </div>;
                     </div>;
+
                     <h3 className="text-xl font-bold text-gray-900 mb-2">;
                       {guide && guide.title}
                     </h3>;
                     <p className="text-gray-600 mb-4">{guide && guide.description}</p>;
+
                     <div className="flex items-center justify-between mb-4">;
                       <div className="flex items-center">;
                         <div className="flex items-center">;
@@ -775,6 +957,7 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                         </span>;
                       </div>;
                     </div>;
+
                     <div className="flex flex-wrap gap-2 mb-6">;
                       {guide && guide.tags.map((tag) => (;
 
@@ -786,6 +969,7 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                       ))}
 
                     </div>;
+
                     <div className="flex gap-2">;
 
                       <Link
@@ -833,9 +1017,19 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                 </Link>;
                 <Link
                   href="/contact"
-
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center"
+                >
+                  Request Custom Guide
+                  <ExternalLink className="ml-2 w-5 h-5" />
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 import Layout from '../components/Layout';
+
 export default function GuidesPage() {
+  
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
@@ -851,13 +1045,12 @@ export default function GuidesPage() {
           </div>
         </section>
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       </div>
 
     </Layout>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
+=======
                       </span>;
                     </div>;
                   </div>;
@@ -961,4 +1154,5 @@ export default function GuidesPage() {
         </section>;
       </div>;
     </Layout>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -61,6 +61,13 @@ const Hero: React.FC<HeroProps> = ({
           <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>
             {title}
           </h1>
+=======
+          <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}  primaryAction?: {
+    text: string
+    href: string
+  }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   secondaryAction?: {
     text: string
     href: string
@@ -68,15 +75,6 @@ const Hero: React.FC<HeroProps> = ({
   stats?: Array<{
     value: string
     label: string
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-    color: string
-  }>
-}
-const Hero: React.FC<HeroProps> = ({
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   title;
   subtitle;
   primaryAction;
@@ -109,14 +107,59 @@ const Hero: React.FC<HeroProps> = ({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
               {primaryAction && (
+          <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}
+
+            {subtitle}
+
+          </p>
+
+          {/* Action Buttons */}
+          {(primaryAction || secondaryAction) && (
+            <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
+              {primaryAction && (
+=======
+          </p>;
+          {/* Action Buttons */}
+          {(primaryAction || secondaryAction) && (;
+            <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>;
+              {primaryAction && (;
+                <Button
+                  href={primaryAction && primaryAction.href}
+                  size='lg'
+                  className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
+                  style={{ animationDelay: '0.2s' }}
+                >
+                  {primaryAction.text}
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>              {primaryAction && (
+                <Button
+                  href={primaryAction.href}
+                  size="lg"
+                  className="animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40"
+                  style={{ animationDelay: '0.2s' }}
+                >
+                  {primaryAction.text}
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>
+
+                </Button>
+
+=======
+            {title}
+          </h1>;
+          <p className="text - xl sm:text - 2xl md:text - 3xl text - gray - 300 max - w-4xl mx - auto mb - 16 leading - relaxed font - light">;
+            {subtitle}
+          </p>;
+          {/* Action Buttons */}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               )}
               {secondaryAction && (;
                 <Button
 
-=======
-                  href={secondaryAction.href}
-                  variant="outline"
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   size="lg"
                   className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
                   style={{ animationDelay: '0.4s' }}
@@ -142,16 +185,14 @@ const Hero: React.FC<HeroProps> = ({
               )}
             </div>;
           )}
+        </div>
 
+=======
         </div>;
 
 
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Stats Section */}
         {stats && (;
           <div
@@ -245,6 +286,8 @@ const Hero: React.FC<HeroProps> = ({
                 </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 </div>
               </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -316,7 +359,9 @@ const Hero: React.FC<HeroProps> = ({
 }
 export default Hero;
 
-=======
+}
+}
+}
 
 }
 }
@@ -335,3 +380,5 @@ export default Hero;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

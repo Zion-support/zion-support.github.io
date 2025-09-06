@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
     {
@@ -14,13 +15,28 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
       content: `# Privacy Policy\n\nWe respect your privacy. Replace with counsel-approved language.`
     }
     {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
     {
-
-=======
-
-
+      path: ''
+      filename: 'legal/terms-of-use.md'
+      type: 'text'
+      content: `# Terms of Use\n\nBy using Zion products, you agree to these terms. Replace with counsel-approved language.`
+    }
+    {
+      path: ''
+      filename: 'legal/privacy-policy.md'
+      type: 'text'
+      content: `# Privacy Policy\n\nWe respect your privacy. Replace with counsel-approved language.`
+    }
+    {
+      path: ''
+      filename: 'legal/jurisdictional-disclosures.md'
+      type: 'text'
+      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
+    }
       path: '',
 
       filename: 'legal / terms - of - use.md',
@@ -31,6 +47,7 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
     },;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ];
   const web3Extras: MediaAsset[] = [
 
@@ -64,11 +81,10 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 
 
 export function buildPressRelease(
-=======
-  type: PressReleaseType
   params: {
     company_name: string;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     companyName: string;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     date: string;
@@ -93,6 +109,33 @@ export function buildPressRelease(
 
 
 =======
+=======
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+export function buildTimeline(startDate: Date) {
+  const addDays = (d: Date, days: number) =>;
+    new Date(d.getFullYear(), d.getMonth(), d.getDate() + days);
+  const fmt = (d: Date) => d.toISOString().substring(0, 10);
+  return [
+    { label: 'Week 1: Closed Beta Invite', date: fmt(addDays(startDate, 0)) }
+    { label: 'Week 2: ZionGPT Core Reveal', date: fmt(addDays(startDate, 7)) }
+    {
+      label: 'Week 3: Token Airdrop Snapshot'
+      date: fmt(addDays(startDate, 14))
+    }
+    { label: 'Week 4: Zion Global Summit', date: fmt(addDays(startDate, 21)) }
+  ];
+<<<<<<< HEAD
+  );}
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 }
 }
@@ -127,3 +170,8 @@ function title_case() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

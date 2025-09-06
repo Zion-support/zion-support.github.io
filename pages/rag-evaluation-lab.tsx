@@ -1,10 +1,12 @@
-
+import React from 'react',
+import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
 export default function RAGEvaluationLabPage() {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
-    <>
+    <>;
       <SEO
         title='RAG Evaluation Lab'
         description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.'
@@ -44,6 +46,7 @@ export default function RAGEvaluationLabPage() {
 
 import SEO from '../components/SEO',
 import Link from 'next/link',
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function RAGEvaluationLabPage() {
 	return (
 		<>
@@ -114,36 +117,7 @@ export default function RAGEvaluationLabPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-						].map((f) => (;
-							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">;
-								<h3 className="text-lg font-semibold text-white">{f.title}</h3>;
-								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>;
-							</div>;
-						))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-					</div>;
-  const useCases = [;
-    'Enterprise Knowledge ManagementCustomer Support SystemsResearch & DevelopmentContent Generation PlatformsEducational ApplicationsLegal & Compliance Systems';
-  ];
-					<div className="mt-12 flex flex-wrap items-center gap-4">;
-						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>;
-						<a href="mailto: kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>;
-						<span className="text-gray-400">Call: +1 302 464 0950</span>;
-					</div>;
-				</div>;
-			</section>;
-		</>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 

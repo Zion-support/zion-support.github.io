@@ -18,6 +18,9 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
+=======
+import Link from 'next/link';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 const EnhancedNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -135,10 +138,6 @@ const EnhancedNavigation = () => {
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-=======
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           </button>
         </div>
         {/* Mobile Navigation */}

@@ -1,7 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-=======
-
+import { supabase } from '../../../utils/supabase/client';
+import {
+  NotificationItem
+  NotificationType;
+  NotificationItem,;
+  NotificationType,;
 } from '../../../utils/notifications';
 function getUserId(req: NextApiRequest): string {
 
@@ -130,3 +133,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  };
+}
+      return res.status (200).json ({ notifications: fallback });
+    }
+    return res.status (200).json ({ notifications: data as NotificationItem[] });
+  } catch (e) {
+return res.status (500).json ({ error: 'Unexpected error' });
+  }    return res.status (500).json ({ error: 'Unexpected error' });
+=======
+return res.status(500).json({ error: 'Unexpected error' });
+  }    return res.status(500).json({ error: 'Unexpected error' })
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  }
+}
+  };
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

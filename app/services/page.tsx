@@ -21,6 +21,7 @@ export default function ServicesOverviewPage() {
           outcomes for your business.{" "}
         </p>{" "}
       </div>{" "}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
 
 export default function ServicesOverviewPage() {
@@ -53,14 +54,19 @@ export default function ServicesOverviewPage() {
             "Billing + subscriptions",
             "Growth analytics",
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           ]}
           icon="🚀"
         />
         <ServiceCard
           href="/services/ai-services"
           title="AI Services"
-          description="LLM applications, RAG systems, and MLOps pipelines"
-          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
+          description="LLM applications, RAG systems, and AI automation"
+          bullets={[
+            'Custom LLM development',
+            'RAG systems',
+            'AI agents & automation'
+          ]}
           icon="🤖"
         />
         <ServiceCard
@@ -107,51 +113,74 @@ export default function ServicesOverviewPage() {
         />
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
       </div>
-      <CTA />{" "}
 
-=======
-function ServiceCard({
-  href,
-  title,
-  description,
-  bullets,
-  icon,
-}: {
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+      <div className="bg-gray-50 rounded-lg p-8 text-center">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>
+        <p className="text-gray-600 mb-6">
+          Let's discuss your project and how we can help you achieve your goals.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link
+            href="/contact"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Get a Quote
+          </Link>
+          <a
+            href="https://ziontechgroup.com"
+            className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors"
+          >
+            Visit Main Site
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ServiceCard({ 
+  href, 
+  title, 
+  description, 
+  bullets, 
+  icon 
+}: { 
+  href: string; 
+  title: string; 
+  description: string; 
+  bullets: string[]; 
+  icon: string; 
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   href: string;
   title: string;
   description: string;
   bullets: string[];
   icon: string;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }) {
   return (
     <Link
       href={href}
-      className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
+      className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
-        <a
-          href="tel:+13024640950"
-          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-        >
-          Call +1 302 464 0950
-        </a>
-=======
-          Call +1 302 464 0950
-        </a>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="space-y-2">
+        {bullets.map((bullet, index) => (
+          <li key={index} className="text-sm text-gray-500 flex items-center">
+            <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+            {bullet}
+          </li>
+        ))}
+      </ul>
+    </Link>
+  );
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
         <a
           href="mailto:kleber@ziontechgroup.com"
           className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
         >
-=======
-<<<<<<< HEAD
-          {" "}
-          Email Us{" "}
-        </a>{" "}
-      </div>{" "}
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-    </div>
-  );
 }

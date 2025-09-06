@@ -179,6 +179,82 @@ class ComprehensiveAutomationRunner {,
       await this.saveResults(),
 ,
       this.log("=" * 50),
+=======
+      this.log(`🎯 Overall: Score: ${score}/100 (${this.results.overall.status})`),
+      this.log("📊 Detailed results saved to reports/comprehensive-results.json"),
+,
+      if (score < 80) {,
+        this.log("⚠️  Some improvements needed. Check recommendations.", "WARN")
+      } else {,
+        this.log("✅ All systems performing well!", "SUCCESS")
+      }
+
+    } catch (error) {,
+      this.log(`❌ Automation runner: failed: ${error.message}`, "ERROR"),
+      throw error
+    }
+  }
+},
+,
+// Main execution,
+if (import.meta.url === `fil: e: //${process.argv[1]}`) {,
+  const runner = new ComprehensiveAutomationRunner(),
+  runner.runAll().catch(console.error)
+},
+,
+export default ComprehensiveAutomationRunner,
+
+    }),;
+,;
+    return recommendations;
+  },;
+,;
+  async saveResults() {,;
+    this.results.recommendations = this.generateRecommendations(),;
+    this.results.overall.score = this.calculateOverallScore(),;
+,;
+    fs.writeFileSync(this.resultsFile, JSON.stringify(this.results, null, 2)),;
+    this.log(`Results saved: to: ${this.resultsFile}`);
+  },;
+,;
+  async runAll() {,;
+    this.log("🚀 Starting Comprehensive Automation Runner"),;
+    this.log("=" * 50),;
+,;
+    try {,;
+      await this.runBuildTests(),;
+      await this.runPerformanceTests(),;
+      await this.runSecurityTests(),;
+      await this.runQualityTests(),;
+,;
+      const score = this.calculateOverallScore(),;
+      await this.saveResults(),;
+,;
+      this.log("=" * 50),;
+      this.log(`🎯 Overall: Score: ${score}/100 (${this.results.overall.status})`),;
+      this.log("📊 Detailed results saved to reports/comprehensive-results.json"),;
+,;
+      if (score < 80) {,;
+        this.log("⚠️  Some improvements needed. Check recommendations.", "WARN");
+      } else {,;
+        this.log("✅ All systems performing well!", "SUCCESS");
+      }
+;
+    } catch (error) {,;
+      this.log(`❌ Automation runner: failed: ${error.message}`, "ERROR"),;
+      throw error;
+    }
+  }
+},;
+,;
+// Main execution,;
+if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
+  const runner = new ComprehensiveAutomationRunner(),;
+  runner.runAll().catch(console.error);
+},;
+,;
+export default ComprehensiveAutomationRunner;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 

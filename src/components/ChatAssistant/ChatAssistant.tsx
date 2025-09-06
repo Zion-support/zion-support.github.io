@@ -303,6 +303,8 @@ if ( {) {
         setDisplayGuestMessages (storedGuestMessages);
       }
     }
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }, [
     isGuest
     initialMessages
@@ -322,6 +324,7 @@ if ( {) {
     valueOrFn: Message[] | ((val: Message[],) => Message[])
   ) => {
     if (isGuest) {
+<<<<<<< HEAD
       const newMessages = null;
         valueOrFn instanceof Function
           ? valueOrFn(displayGuestMessages)
@@ -330,6 +333,7 @@ if ( {) {
       setStoredGuestMessages(newMessages), // Always update localStorage for guests
     } else {
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       setLoggedInMessages(newMessages)
     }
   }
@@ -395,80 +399,15 @@ if ( {) {
 
   const handleSendMessage = async (messageContent: string) => {;
     if (!messageContent && messageContent.trim()) return;
-            aria-label="Close chat"
-          >
-            <X className="h-5 w-5" />
-          </Button>
-        </div>
-            aria-label="Close chat">;
-            <X className="h-5 w-5" />;
-          </Button>;
-        </div>;
-
-        {/* Context Header (Optional) */}
-        {contextHeader && (;
-          <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;
-            {contextHeader}
-          </div>;
-        )}
-        {/* Messages */}
-        <div
-          className="flex-1 overflow-y-auto p-4 space-y-4"
-
-          aria-live="polite"
-        >
-          {currentMessages.length === 0 ? (
-            <div className="text-center text-zion-slate py-8 space-y-4">
-              <p>Start a conversation with {recipient.name}</p>
-              {starterQuestions.length > 0 && (
-                <div className="flex flex-wrap justify-center gap-2">
-
-                      {q}
-                    </Button>;
-                  ))}
-                </div>;
-              )}
-            </div>;
-          ) : (;
-            currentMessages && currentMessages.map((msg,) => (;
-              <ChatMessage key={msg && msg.id} role={msg && msg.role} message={msg && msg.message} />;
-            ));
-          )}
-
-          <div ref={messagesEndRef} />;
-        </div>;
-
-        {/* Input */}
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">;
-          <ChatInput onSend={handleSendMessage} />;
-        </div>;
-      </div>;
-
-      {showGuestModal && guestMessage && (;
-
-        <div
-          className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="confirm-message-title">;
-          <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">;
-            <h3
-              id="confirm-message-title"
-              className="text-lg font-semibold text-white mb-4">;
-              Confirm Message;
-            </h3>;
-            <p className="text-zion-slate mb-6 whitespace-pre-wrap break-words">;
-              {guestMessage}
-            </p>;
-            <div className="flex justify-end space-x-3">;
-              <Button
-                variant="outline"
-
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
               >
                 Cancel
               </Button>
               <Button
+=======
+                onClick = {handleModalSendConfirm,}
+                onClick={handleModalSendConfirm}
+<<<<<<< HEAD
 
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
@@ -480,23 +419,3 @@ if ( {) {
       )}
     </div>;
   );
-<<<<<<< HEAD
-=======
-  const isGuest = !auth?.isAuthenticated;
-            onClick = {onClose,}
-                      onClick = {(,) => handleSendMessage(q),}
-                    >
-                onClick = {handleModalSendConfirm,}
-      )}
-    </div>;
-  );
-
-
-
-        </div>)}
-    </div>);
-}
-}
-
-}
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

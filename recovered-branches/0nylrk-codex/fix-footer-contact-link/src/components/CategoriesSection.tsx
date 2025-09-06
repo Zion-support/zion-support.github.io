@@ -1,9 +1,11 @@
 
 =======
-import { GradientHeading } from './GradientHeading';
-import { Link } from './react-router-dom';
-import { Briefcase, HardDrive, Lightbulb, Users } from './lucide-react';
-const categories = [;
+
+import {GradientHeading} from "./GradientHeading";
+import {Link} from "react-router-dom";
+import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
+const categories = [
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   {
     title: "Services",
     description: "On - demand IT support, consulting, development, and more";
@@ -22,9 +24,18 @@ const categories = [;
   {
     title: "Equipment"
     description: "Rent or buy specialized hardware, servers, and devices";
+    icon: <HardDrive className="w-10 h-10" />
+    link: "/equipment"
+    color: "from-amber-500 to-orange-600"}
+import {GradientHeading} from "./GradientHeading";
+import {Link} from "react-router-dom";
+import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
+import { GradientHeading } from "./GradientHeading",
+import { Link } from "react-router-dom",
+import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
 
 
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const categories = [
   {
     title: "Services",
@@ -46,24 +57,7 @@ const categories = [
     color: "from-amber-500 to-orange-600"},
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  {
-    title: "Innovation"
-    description: "Discover cutting-edge solutions and tech breakthroughs"
-    icon: <Lightbulb className="w-10 h-10" />
-    link: "/category/innovation"
-    color: "from-emerald-500 to-green-600"}]
-const specialServices = [
-  {
-
-  }
-];
-
-interface CategoriesSectionProps {
-  showTitle?: boolean
-
-import { GradientHeading } from "./GradientHeading",;
-import { Link } from "react-router-dom",;
-import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const categories = [;
   {;
     title: "Services",;
@@ -100,16 +94,10 @@ const specialServices = [;
 
 interface CategoriesSectionProps {;
   showTitle?: boolean;
-
 }
 
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
-}
-
-
-export function CategoriesSection(): any ({ showTitle = true }: CategoriesSectionProps) {;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <section className="py-20 bg-zion-blue">;
       <div className="container mx-auto px-4">;
@@ -219,6 +207,12 @@ function CategoriesSection() {
           </div>
         </div>
         <div className="mt-12 flex justify-center">
+};
+          </div>;
+        </div>;
+
+        <div className="mt-12 flex justify-center">;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <Link
             to="/categories"
             className="text-zion-cyan border-b border-zion-cyan hover: border-zion-cyan-dark transition-colors"
@@ -236,11 +230,7 @@ function CategoriesSection() {
 
     </section>);
 }
-
-=======
-
-
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

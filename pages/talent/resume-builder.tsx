@@ -57,78 +57,65 @@
           </div>
         </div>
 
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             />
             <AIAssistant
               buttonLabel="Improve with AI"
               title="Improve Resume Summary"
-
+              defaultPrompt={improveSectionPrompt('summary', summary |'No content provided. Generate a summary based on role, years, and skills.')}
               defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')}
-
               onAccept={setSummary}
               authorizationToken={operatorToken}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             />
           </div>
         </div>
         <textarea value={summary} onChange={e => setSummary(e.target.value)} rows={6} className="w-full rounded-md border p-3" />
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      </section>
-      <section className="mb-8">
-        <div className="flex items-center justify-between mb-2">
-          <h2 className="text-lg font-semibold">Experience</h2>
-          <AIAssistant
-            buttonLabel="Improve with AI"
-            title="Improve Experience"
-
+            defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')}
             onAccept={setExperience}
             authorizationToken={operatorToken}
-
-          />
-        </div>
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           />
         </div>
         <textarea value={experience} onChange={e => setExperience(e.target.value)} rows={10} className="w-full rounded-md border p-3" />
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      </section>
-      <section className="mb-8">
-        <div className="flex items-center justify-between mb-2">
-          <h2 className="text-lg font-semibold">Skills</h2>
-          <AIAssistant
-            buttonLabel="Improve with AI"
-            title="Improve Skills"
-
+            defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
             onAccept={setSkillsText}
             authorizationToken={operatorToken}
-
-          />
-        </div>
-
-      </section>
-    </div>
-  )
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           />
         </div>
         <textarea value={skillsText} onChange={e => setSkillsText(e.target.value)} rows={6} className="w-full rounded-md border p-3" />
       </section>
     </div>
   )
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+}
+export default ResumeBuilder;
 
 },
 export default ResumeBuilder,
+},
 
 =======
 },
-
 export default ResumeBuilder,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+export default ResumeBuilder,;
+export default ResumeBuilder,
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

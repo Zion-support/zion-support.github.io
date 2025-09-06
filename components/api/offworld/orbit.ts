@@ -1,17 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 =======
-
-
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {
   connectOrbit,
   appendChatMessage,
   recordVote,
   editConstitution,;
 } from '@/utils/offworld/orbitdb';
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+<<<<<<< HEAD
 
 import {
   connectOrbit
@@ -20,8 +16,23 @@ import {
   editConstitution;
 } from '@/utils/offworld/orbitdb';
 export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+  req: NextApiRequest,
+  res: NextApiResponse;
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  req: NextApiRequest,
+  res: NextApiResponse;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
+=======
+  req: NextApiRequest,
+  res: NextApiResponse;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
 

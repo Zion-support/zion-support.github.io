@@ -8,17 +8,19 @@ function ensure() {
   if (!fs && fs.existsSync(FILE_PATH))
     fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8');  if (!fs && fs.existsSync(FILE_PATH)) fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8')
 }
-
-  if (req.method !== 'POST') return res.status(405).end();
-  ensure();
-  const { email } = req.body || {};
-  if (!email || typeof email !== 'string') return res.status(400).json({ error: 'Invalid email' });
-
 =======
-
+<<<<<<< HEAD
+  if (req.method !== 'POST') return res.status(405).end();
+  ensure()
+  const { email } = req.body |{}
+  if (!email |typeof email !== 'string')
+    return res.status(400).json({ error: 'Invalid email' });
+  const list: string[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));
+  if (!list.includes(email)) list.push(email);
+  fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8');
+  res.status(200).json({ ok: true });  if (!email |typeof email !== 'string') return res.status(400).json({ error: 'Invalid email' });
   res.status(200).json({ ok: true });  if (!email || typeof email !== 'string') return res.status(400).json({ error: 'Invalid email' });
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const list: string[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));
   if (!list.includes(email)) list.push(email);
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8');
@@ -29,20 +31,7 @@ function ensure() {
 
   res.status(200).json({ ok: true })
 }
-=======
-;
-const DATA_DIR = path.resolve (process.cwd (), 'data', 'newsletter');const FILE_PATH = path.resolve (DATA_DIR, 'subscribers.json');
-;
-/**
- * ensure - Function description
- */
-function ensure() {
-  if () fs.mkdir_sync (DATA_DIR, { recursive: true })) {
-  $2
 }
-  if ()) {
-  $2
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
     fs.writeFileSync (FILE_PATH, JSON.stringify ([], null, 2), 'utf8');const DATA_DIR = path.resolve (process.cwd (), 'datanewsletter');
 const FILE_PATH = path.resolve (DATA_DIR, 'subscribers.json');
@@ -92,3 +81,5 @@ function handler() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

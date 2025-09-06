@@ -1,4 +1,28 @@
 
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+interface Props {
+  samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const tabs: Array<{
   key: Props['samples'][number]['language'];
   label: string;
@@ -7,17 +31,22 @@ const tabs: Array<{
   { key: 'javascript', label: 'JavaScript' }
   { key: 'python', label: 'Python' }
 ];
+export default function CodeSamples({ samples }: Props) {
 
+export default function CodeSamples({ samples }: Props) {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
   const sampleMap = Object.fromEntries(samples.map(s => [s.language, s.code]));
   return (
     <div className='w-full'>
       <div className='flex gap-2 mb-2'>
         {tabs.map(t => (          <button
-
-  const [active, setActive] = useState<typeof tabs[number]['key']>('curl');
-  const sampleMap = Object.fromEntries(samples.map((s) => [s.language, s.code]));
-
+const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
+  { key: 'curl', label: 'cURL' }
+  { key: 'javascript', label: 'JavaScript' }
+  { key: 'python', label: 'Python' }]
+export default function CodeSamples({ samples }: Props) {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div className="w-full">
       <div className="flex gap-2 mb-2">
@@ -48,10 +77,27 @@ const tabs: Array<{
       <div className="flex gap-2 mb-2">;
         {tabs && tabs.map((t) => (;
 
+          <button
+
+            key={t.key}
+            className={`px-3 py-1 rounded border ${active === t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary'}`}
+            onClick={() => setActive(t.key)}
+          >
+            {t.label}
+          </button>
+        ))}
+      </div>
+      <pre className='p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm'>        <code>{sampleMap[active] |''}</code>
+      </pre>
+    </div>
+  );
+}      <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm">
+        <code>{sampleMap[active] |''}</code>
+      </pre>
+    </div>
+);
+}
 =======
-    <div className="w-full">
-      <div className="flex gap-2 mb-2">
-        {tabs.map((t) => (
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           <button
@@ -73,6 +119,9 @@ const tabs: Array<{
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 const tabs: Array<{
   key: Props['samples'][number]['language'];
@@ -139,5 +188,8 @@ function CodeSamples() {
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+}
+  );
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

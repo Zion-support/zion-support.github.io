@@ -1,5 +1,4 @@
 
-=======
 "use client",;
 import { useState } from "react",;
 interface MicroSAASService {;
@@ -297,7 +296,6 @@ const microSAASServices: MicroSAASService[] = [;
 ],;
 export default function MicroSAASPage() {;
   return (;
-
     <div className="space-y-8">;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   deployment: string;

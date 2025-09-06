@@ -1,4 +1,28 @@
 
+=======
+import React from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {ProductSubmissionForm} from "@/components/ProductSubmissionForm";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+import {SEO} from "@/components/SEO";
+export default function PublishProduct() {;
+  const { isAuthenticated, isLoading } = useAuth();
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { ProductSubmissionForm } from "@/components/ProductSubmissionForm",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom";
+import { SEO } from "@/components/SEO";
+export default function PublishProduct() {
+  const { isAuthenticated, isLoading } = useAuth();
+import { Navigate } from "react-router-dom",
+import { SEO } from "@/components/SEO",
+export default function PublishProduct() {
+  const { isAuthenticated, isLoading } = useAuth(),
+  
 
 import React from "react",
 import { Header } from "@/components/Header",
@@ -6,6 +30,7 @@ import { Footer } from "@/components/Footer",
 import { ProductSubmissionForm } from "@/components/ProductSubmissionForm",
 import { useAuth } from "@/hooks/useAuth",
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Show loading while checking authentication
   if (isLoading) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -26,6 +51,35 @@ import { useAuth } from "@/hooks/useAuth",
   }
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { ProductSubmissionForm } from "@/components/ProductSubmissionForm",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate } from "react-router-dom",;
+import { SEO } from "@/components/SEO",;
+export default function PublishProduct() {;
+  const { isAuthenticated, isLoading } = useAuth();
+  // Show loading while checking authentication;
+  if (isLoading) {;
+    return (;
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">;
+        <div className="animate-pulse text-zion-purple text-lg">;
+          Loading...;
+        </div>;
+      </div>;
+    );
+  }
+;
+  // Redirect to login if not authenticated;
+  if (!isAuthenticated) {;
+    return <Navigate to="/login" state={{ from: '/publish' }} replace />;
+  }
+;
+  return (;
+
+    <div className="min-h-screen flex flex-col bg-zion-blue">;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <SEO
         title="Publish Your Product"
         description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals."
@@ -54,15 +108,9 @@ import { useAuth } from "@/hooks/useAuth",
         </div>;
       </main>;
       <Footer />;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </div>;
+  );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

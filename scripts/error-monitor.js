@@ -96,7 +96,6 @@ const __dirname = path.dirname(__filename);
     const lines = output.split(,
   \n');
 
-=======
       }
     }
     return errors}
@@ -105,7 +104,6 @@ const __dirname = path.dirname(__filename);
     const lines = output.split(,
   \n');
 
-=======
     }
     return errors}
   parseBuildErrors(output) {;
@@ -114,15 +112,15 @@ const __dirname = path.dirname(__filename);
   \n');
 
 =======
-      if (line && line.includes(';"Error": ') || line && line.includes(';ERROR')) {;
-        errors && errors.push({;
-          type: ',build,
-          "message": line && line.trim(),
-
+        for (const line of lines) {;
+      if (line.includes(';"Error": ') || line.includes(';ERROR')) {;
+        errors.push({;
+          type:';build,
+          "message": line.trim(),
           "raw": line})}
         )}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
     return errors}
   async triggerAutoFixer(errors) {;
@@ -191,6 +189,7 @@ const __dirname = path.dirname(__filename);
       this.log(';info', `Error monitoring cycle completed. Found ${this.errors.length} errors.`)} catch (error) {;
       this.log(';error', ';Error monitoring cycle failed', error)}
   }
+}
 
 =======
 
@@ -273,3 +272,4 @@ export default ErrorMonitor} catch (error) {
   async triggerAutoFixer(errors) {
     try {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

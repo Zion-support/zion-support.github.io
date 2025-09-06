@@ -1,6 +1,17 @@
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
+import Stripe from "https://esm.sh/stripe@14.21.0",;
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import Stripe from "https://esm.sh/stripe@14.21.0",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -9,15 +20,6 @@ const corsHeaders = {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-serve(async (req) => {
-  if (req && req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  const supabaseClient = createClient(
-
-    Deno.env.get("SUPABASE_URL") ?? "",
-    Deno.env.get("SUPABASE_ANON_KEY") ?? ""
-
   // Create service client for admin operations
   const supabaseAdmin = createClient(
     Deno && Deno.env.get("SUPABASE_URL") ?? "";
@@ -75,8 +77,13 @@ if ( {) {
               reason: "requested_by_customer"
 
               reason: "requested_by_customer"
-
-
+            });
+            // Update transaction status
+            await supabaseAdmin
+              .from("transactions")
+              .update({
+                status: "refunded";
+                refunded_at: new Date().toISOString()
             }),
             
             // Update transaction status
@@ -88,11 +95,6 @@ if ( {) {
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-                refund_id: refund.id
-=======
-                refunded_at: new Date().toISOString(),
-                refund_id: refund && refund.id
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               })
               .eq("id", transactionId)
 =======
@@ -147,8 +149,6 @@ if ( {) {
           }
         }
 
-=======
-
         
         result = { message: "Refund processed successfully" },
         break,
@@ -156,23 +156,6 @@ if ( {) {
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-      case 'cancel':
-        // Only allow cancellation for pending transactions
-        if (transaction && transaction.status !== "pending") {
-          throw new Error("Only pending transactions can be cancelled")
-        }
-        // Update transaction status
-        await supabaseAdmin
-          .from("transactions")
-          .update({
-            status: "cancelled"
-            cancelled_at: new Date().toISOString()
-          })
-
-      default: throw new Error("Invalid action")
-    }
-    return new Response(JSON.stringify(result), {
-
       status: 200})
   } catch (error) {
     console.error("Transaction management error:", error.message);
@@ -189,6 +172,7 @@ serve(async (req) => {;
   if (req.method === "OPTIONS") {;
     return new Response(null, { headers: corsHeaders });
   }
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ;
       case 'cancel':;
         // Only allow cancellation for pending transactions;
@@ -228,3 +212,7 @@ if ( {) {
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  }
+});
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -1,10 +1,7 @@
 
 
-=======
 
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';
@@ -14,17 +11,9 @@ interface TranslationResponse {
   error?: string
 }
 
-interface TranslationResponse {
-  translations: Record < SupportedLanguage, string>;
-  error?: string;
-}
-
-
-
-export function useTranslationService() {;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [isTranslating, setIsTranslating] = useState(false);
   const { currentLanguage } = useLanguage();
   const translateContent = async (
@@ -54,12 +43,35 @@ export function useTranslationService() {;
         }
         initialTranslations[sourceLanguage] = content;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         return { translations: initialTranslations, error: error.message }
       }
       return { translations: data.translations }
+    } catch (err) {
+      setIsTranslating(false);
+      console.error('Translation service error:', err);
+      const initialTranslations: Record<SupportedLanguage, string> = {
+        en: content;
+        es: '';
+        pt: ''
+        ar: ''
+      }
+      initialTranslations[sourceLanguage] = content;
+      return {
+        translations: initialTranslations
+        error: err instanceof Error ? err.message : 'Unknown translation error'
+      }
+    }
+  }
+  const getTranslation = (translations: Record<SupportedLanguage, string>, fallback: string = '') => {
+    if (!translations) return fallback
+    return translations[currentLanguage] |translations.en |fallback
+  }
+  return {
+    translateContent;
+    isTranslating;
 
-<<<<<<< HEAD
-=======
     } catch (err) {;
       setIsTranslating(false),;
       console.error('Translation service error:', err),;
@@ -87,9 +99,7 @@ export function useTranslationService() {;
     translateContent;
     isTranslating;
     getTranslation;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   }
 ;

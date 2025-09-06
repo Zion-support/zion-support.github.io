@@ -1,6 +1,4 @@
 
-=======
-
 import Link from "next/link",;
 export const metadata = {;
   title: "AI Autonomous Business Manager - Zion Tech Group",;
@@ -8,8 +6,6 @@ export const metadata = {;
   keywords: "AI business manager, autonomous business, business automation, AI decision making, Zion Tech Group"},;
 export default function AIBusinessManagerPage() {;
   return (;
-
-
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -39,10 +35,10 @@ export default function AIBusinessManagerPage() {;
               </p>;
 
 =======
-              <p className="text - lg text - gray - 300 leading - relaxed">;
-                From strategic planning to daily operations, the system continuously learns,
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+              <p className="text-lg text-gray-300 leading-relaxed">;
+                From strategic planning to daily operations, the system continuously learns;
+                From strategic planning to daily operations, the system continuously learns,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 adapts, and optimizes every aspect of your business, ensuring maximum;
                 performance and growth potential.;
               </p>;
@@ -95,11 +91,11 @@ export default function AIBusinessManagerPage() {;
               </div>;
 
 =======
-              <h3 className="text - xl font - semibold mb - 2">Strategic Planning</h3>;
-              <p className="text - gray - 400">;
-                AI - powered strategic planning that analyzes market conditions,
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+              <h3 className="text-xl font-semibold mb-2">Strategic Planning</h3>;
+              <p className="text-gray-400">;
+                AI-powered strategic planning that analyzes market conditions;
+                AI-powered strategic planning that analyzes market conditions,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 competitive landscape, and internal capabilities to develop optimal strategies.;
               </p>;
             </div>;
@@ -159,11 +155,11 @@ export default function AIBusinessManagerPage() {;
               </div>;
 
 =======
-              <h3 className="text - xl font - semibold mb - 2">Growth Optimization</h3>;
-              <p className="text - gray - 400">;
-                Data - driven growth strategies with market expansion analysis,
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+              <h3 className="text-xl font-semibold mb-2">Growth Optimization</h3>;
+              <p className="text-gray-400">;
+                Data-driven growth strategies with market expansion analysis;
+                Data-driven growth strategies with market expansion analysis,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 customer acquisition optimization, and revenue maximization.;
               </p>;
             </div>;
@@ -184,11 +180,11 @@ export default function AIBusinessManagerPage() {;
               </div>;
 
 =======
-              <h3 className="text - lg font - semibold mb - 2">Data Collection</h3>;
-              <p className="text - gray - 400 text - sm">;
-                Continuously gathers data from all business systems,
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+              <h3 className="text-lg font-semibold mb-2">Data Collection</h3>;
+              <p className="text-gray-400 text-sm">;
+                Continuously gathers data from all business systems;
+                Continuously gathers data from all business systems,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 market sources, and external factors.;
               </p>;
             </div>;
@@ -198,11 +194,11 @@ export default function AIBusinessManagerPage() {;
               </div>;
 
 =======
-              <h3 className="text - lg font - semibold mb - 2">Analysis & Learning</h3>;
-              <p className="text - gray - 400 text - sm">;
-                AI algorithms analyze patterns, learn from outcomes,
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+              <h3 className="text-lg font-semibold mb-2">Analysis & Learning</h3>;
+              <p className="text-gray-400 text-sm">;
+                AI algorithms analyze patterns, learn from outcomes;
+                AI algorithms analyze patterns, learn from outcomes,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 and identify optimization opportunities.;
               </p>;
             </div>;
@@ -212,11 +208,11 @@ export default function AIBusinessManagerPage() {;
               </div>;
 
 =======
-              <h3 className="text - lg font - semibold mb - 2">Decision Making</h3>;
-              <p className="text - gray - 400 text - sm">;
-                Autonomous decisions are made based on data analysis,
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+              <h3 className="text-lg font-semibold mb-2">Decision Making</h3>;
+              <p className="text-gray-400 text-sm">;
+                Autonomous decisions are made based on data analysis;
+                Autonomous decisions are made based on data analysis,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 business rules, and predictive models.;
               </p>;
             </div>;
@@ -244,44 +240,44 @@ export default function AIBusinessManagerPage() {;
             <div className="card">;
 
 =======
-              <h3 className="text - lg font - semibold mb - 2">E - commerce & Retail</h3>;
-              <p className="text - gray - 400 text - sm">;
-                Inventory management, pricing optimization, customer service automation,
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+              <h3 className="text-lg font-semibold mb-2">E-commerce & Retail</h3>;
+              <p className="text-gray-400 text-sm">;
+                Inventory management, pricing optimization, customer service automation;
+                Inventory management, pricing optimization, customer service automation,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 and supply chain optimization.;
               </p>;
             </div>;
             <div className="card">;
 
 =======
-              <h3 className="text - lg font - semibold mb - 2">Financial Services</h3>;
-              <p className="text - gray - 400 text - sm">;
-                Risk assessment, portfolio management, fraud detection,
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+              <h3 className="text-lg font-semibold mb-2">Financial Services</h3>;
+              <p className="text-gray-400 text-sm">;
+                Risk assessment, portfolio management, fraud detection;
+                Risk assessment, portfolio management, fraud detection,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 and regulatory compliance automation.;
               </p>;
             </div>;
             <div className="card">;
 
 =======
-              <h3 className="text - lg font - semibold mb - 2">Manufacturing</h3>;
-              <p className="text - gray - 400 text - sm">;
-                Production optimization, quality control, predictive maintenance,
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+              <h3 className="text-lg font-semibold mb-2">Manufacturing</h3>;
+              <p className="text-gray-400 text-sm">;
+                Production optimization, quality control, predictive maintenance;
+                Production optimization, quality control, predictive maintenance,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 and supply chain management.;
               </p>;
             </div>;
             <div className="card">;
 
 =======
-              <h3 className="text - lg font - semibold mb - 2">Healthcare</h3>;
-              <p className="text - gray - 400 text - sm">;
-                Patient scheduling, resource allocation, treatment optimization,
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+              <h3 className="text-lg font-semibold mb-2">Healthcare</h3>;
+              <p className="text-gray-400 text-sm">;
+                Patient scheduling, resource allocation, treatment optimization;
+                Patient scheduling, resource allocation, treatment optimization,;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 and administrative efficiency.;
               </p>;
             </div>;

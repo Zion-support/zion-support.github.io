@@ -1,6 +1,15 @@
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
+
+export function AIEnhancementPanel({;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   title;
   defaultOptions;
   onApply;
@@ -17,12 +26,40 @@
   const [copied, setCopied] = useState(false);
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
 
-=======
-    const result = await enhanceContent(options);
-    if (result) {
-      setGeneratedContent(result)
-    }
+import React, { useState } from 'react',;
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
+import { Textarea } from '@/components/ui/textarea',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Sparkles, Loader2, Copy, Check } from '@/components/icons',;
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
+interface AIEnhancementPanelProps {;
+  title: string,;
+  defaultOptions: AIEnhancementOptions,;
+  onApply: (content: string) => void,;
+  onClose?: () => void,;
+  showInstructions?: boolean,;
+  initialContent?: string;
+}
+;
+export function AIEnhancementPanel({;
+  title,;
+  defaultOptions,;
+  onApply,;
+  onClose,;
+  showInstructions = true,;
+  initialContent = '';
+}: AIEnhancementPanelProps) {;
+  const [options, setOptions] = useState<AIEnhancementOptions>({;
+    ...defaultOptions,;
+    content: initialContent || defaultOptions.content}),;
+  const [generatedContent, setGeneratedContent] = useState<string>(''),;
+  const [copied, setCopied] = useState(false),;
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
 
+  const handleGenerate = async () => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     const result = await enhanceContent(options);
     if (result) {;
       setGeneratedContent(result);
@@ -30,10 +67,6 @@
 
   },
 
-
-
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   const handleInputChange = (
@@ -52,31 +85,6 @@
     navigator.clipboard.writeText(generatedContent);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000)
-=======
-
-  };
-
-  const handleInputChange = (;
-    e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,;
-    field: keyof AIEnhancementOptions;
-  ) => {;
-    setOptions({;
-      ...options,;
-      [field]: e && e.target.value});
-  };
-
-  const handleApply = () => {;
-    onApply(generatedContent);
-    if (onClose) onClose();
-  };
-
-  const handleCopy = () => {;
-    navigator && navigator.clipboard.writeText(generatedContent);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
   return (
     <Card className="w-full max-w-2xl mx-auto">;

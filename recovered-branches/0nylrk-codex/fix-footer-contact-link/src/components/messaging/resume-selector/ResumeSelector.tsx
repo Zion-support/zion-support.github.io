@@ -22,6 +22,33 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
 
   const { resume, fetchResume } = useResume(),
 
+
+import React, { useState, useEffect } from 'react',
+import { Button } from "@/components/ui/button",
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
+import { Label } from "@/components/ui/label",
+import { Plus, Loader2 } from 'lucide-react',
+import { useResume } from "@/hooks/useResume",
+import { exportResumeToPDF } from "@/utils/pdfExport",
+import { toast } from "@/components/ui/use-toast",
+import { ResumePreviewCard } from './ResumePreviewCard',
+import { UploadSection } from './UploadSection',
+import { SelectResumeSection } from './SelectResumeSection',
+import { ResumeOption, ResumeSelectorProps } from './types',
+
+export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
+  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
+  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]),
+  const [customFile, setCustomFile] = useState<File | null>(null),
+  const [isLoading, setIsLoading] = useState(false),
+  
+  const { resume, fetchResume } = useResume(),
+  
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Fetch resume data when component mounts
   useEffect(() => {
 
@@ -117,8 +144,20 @@ if ( {) {
     } else if (value === "upload") {;
       setSelectedResume(null);
     }
+  }
+  // Handle resume selection change
+  const handleResumeSelect = (resumeId: string) => {
+    const selected = resumeOptions.find((opt) => opt.id === resumeId);
+    if (selected) {
+      (setSelectedResume(selected), onResumeSelected(selected));
+    }
+  }
+  // Handle custom file upload
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      const file = e.target.files[0];
+  };
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       setIsLoading(true),
       try {
         await fetchResume()
@@ -126,6 +165,11 @@ if ( {) {
         console.error("Error loading resumes:", error)
       } finally {
 
+=======
+  };
+
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // Handle custom file upload
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -136,30 +180,15 @@ if ( {) {
       // Check if it's a PDF file
       if (file.type !== "application/pdf") {
         toast({
-
+          title: "Invalid file type"
+          description: "Please upload a PDF file"
+          variant: "destructive"
+          title: "Invalid file type",
+          description: "Please upload a PDF file",
+          variant: "destructive",
 =======
-  };
-
-  // Handle resume selection change;
-  const handleResumeSelect = (resumeId: string) => {;
-    const selected = resumeOptions && resumeOptions.find((opt) => opt && opt.id === resumeId);
-    if (selected) {;
-      (setSelectedResume(selected), onResumeSelected(selected));
-    }
-  };
-
-  // Handle custom file upload;
-  const handleFileUpload = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
-    if (e && e.target.files && e && e.target.files[0]) {;
-      const file = e && e.target.files[0];
-
-      // Check if it's a PDF file;
-      if (file && file.type !== "application/pdf") {;
-        toast({;
-          title: "Invalid file type",;
-          description: "Please upload a PDF file",;
-          variant: "destructive",;
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         });
         return;
       }
@@ -177,6 +206,8 @@ if ( {) {
       setSelectedResume(customOption);
       onResumeSelected(customOption);
     }
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
   // Handle resume download
   const handleDownloadResume = async () => {
@@ -187,6 +218,7 @@ if ( {) {
     ) {
       return;
     }
+<<<<<<< HEAD
 
           variant: "destructive"
         }),
@@ -224,6 +256,7 @@ if ( {) {
       return;
     }
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     try {
       setIsLoading(true),
       const pdfBlob = await exportResumeToPDF(selectedResume.resume),
@@ -254,6 +287,8 @@ if ( {) {
     }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         className="space-y-3"
       >
         <div className="flex items-center space-x-2">
@@ -264,6 +299,8 @@ if ( {) {
         </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="select" id="select" />
           <Label htmlFor="select" className="text-white">
@@ -272,6 +309,8 @@ if ( {) {
         </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="upload" id="upload" />
           <Label htmlFor="upload" className="text-white">
@@ -281,16 +320,28 @@ if ( {) {
       </RadioGroup>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+            Upload a custom resume (PDF);
+          </Label>;
+        </div>;
+      </RadioGroup>;
+
+      {/* Resume selection options based on radio selection */}
+      {selectedOption === 'recent' && resume && (;
+        <ResumePreviewCard;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           resume={resume}
           onDownload={handleDownloadResume}
           isLoading={isLoading}
         />;
       )}
+<<<<<<< HEAD
 
       {selectedOption === "select" && (
         <SelectResumeSection
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+      {selectedOption === 'select' && (;
+        <SelectResumeSection;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           resumeOptions={resumeOptions}
           selectedResume={selectedResume}
@@ -299,11 +350,13 @@ if ( {) {
           isLoading={isLoading}
         />;
       )}
+<<<<<<< HEAD
 
       {selectedOption === "upload" && (
         <UploadSection
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+      {selectedOption === 'upload' && (;
+        <UploadSection;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           customFile={customFile}
           onFileUpload={handleFileUpload}
@@ -312,7 +365,12 @@ if ( {) {
 
       {/* Generate Resume Now button */}
       <div className="flex justify-between items-center pt-2">
+;
+
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Generate Resume Now button */}
       <div className="flex justify-between items-center pt-2">;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -354,21 +412,12 @@ if ( {) {
     </div>);
 
 }
-=======
-          className="text-zion-purple border-zion-purple/20"
-        >
-          <Plus className="h-4 w-4 mr-2" />
-          Generate Resume Now
-        </Button>
-      </div>
-    </div>
-<<<<<<< HEAD
-=======
-
   )
 }
 ;
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

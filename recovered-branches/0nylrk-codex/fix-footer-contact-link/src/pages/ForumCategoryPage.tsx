@@ -1,10 +1,7 @@
 
 
-=======
 
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState} from "react";
 import {useParams, Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -16,6 +13,37 @@ import {ForumPost, ForumCategoryInfo} from "@/types/community";
 import {Badge} from "@/components/ui/badge";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/components/icons";
+=======
+// Mock category data
+const categoriesInfo: Record<string, ForumCategoryInfo> = {
+  "getting-hired": {
+    id: "getting-hired"
+    name: "Getting Hired"
+    description: "Tips, strategies, and questions about getting hired on the platform.";
+    adminOnly: false
+
+    icon: "Briefcase"
+  }
+import { useState } from "react",
+import { useParams, Link } from "react-router-dom",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { SEO } from "@/components/SEO",
+import { AppLayout } from "@/layout/AppLayout",
+import PostCard from "@/components/community/PostCard",
+import { ForumPost, ForumCategoryInfo } from "@/types/community",
+import { Badge } from "@/components/ui/badge",
+import { useAuth } from "@/hooks/useAuth",
+import {
+  MessageSquare,
+  Briefcase,
+  Code,
+  FileText,
+  Megaphone,
+  Search
+} from "@/components/icons",
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
@@ -23,21 +51,13 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     name: "Getting Hired"
     description: "Tips, strategies, and questions about getting hired on the platform.";
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     adminOnly: false,
     icon: "Briefcase"
   },
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  "project-help": {
-
-    id: "project-help"
-    name: "Project Help"
-    description: "Get help with your ongoing projects and collaboration."
-    adminOnly: false
-
-    icon: "MessageSquare"
-
   "feedback": {
 
     id: "feedback"
@@ -62,12 +82,12 @@ const postsByCategory: Record<string, ForumPost[]> = {
   "getting-hired": [
     {
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
   ];
   "project - help": [;
     {
 
-=======
       isAnswered: true
 
     }
@@ -75,7 +95,6 @@ const postsByCategory: Record<string, ForumPost[]> = {
   "ai - tools": [;
     {
 
-=======
       replyCount: 9
 
     }
@@ -83,7 +102,6 @@ const postsByCategory: Record<string, ForumPost[]> = {
   "feedback": [;
     {
 
-=======
       replyCount: 5
 
     }
@@ -136,21 +154,29 @@ export default function ForumCategoryPage() {;
   if (!categoryId || !categoriesInfo[categoryId]) {;
 
 =======
-  ]
+}
+export default function ForumCategoryPage() {
+  // useParams is typed as `any` in this environment due to missing type
+  // definitions, so avoid passing a type argument to prevent TS2347.
+  const { categoryId } = useParams();
+  const { user } = useAuth();
+  const [searchQuery, setSearchQuery] = useState("");
+  if (!categoryId |!categoriesInfo[categoryId]) {
 },
 
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-const iconMap = {
-  "Briefcase": Briefcase,
-  "MessageSquare": MessageSquare,
-  "Code": Code,
-  "FileText": FileText,
-  "Megaphone": Megaphone
-
+export default function ForumCategoryPage() {
+  // useParams is typed as `any` in this environment due to missing type
+  // definitions, so avoid passing a type argument to prevent TS2347.;
+  const { categoryId } = useParams();
+  const { user } = useAuth();
+  const [searchQuery, setSearchQuery] = useState("");
+  // definitions, so avoid passing a type argument to prevent TS2347.
+  const { categoryId } = useParams(),
+  const { user } = useAuth(),
+  const [searchQuery, setSearchQuery] = useState(""),
+  
   if (!categoryId || !categoriesInfo[categoryId]) {
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     return (
       <AppLayout>;
         <div className="container py-8">;
@@ -163,8 +189,6 @@ const iconMap = {
     );
   }
 
-=======
-
   
   const category = categoriesInfo[categoryId],
   const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare,
@@ -173,14 +197,6 @@ const iconMap = {
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  // Filter posts based on search query
-  const filteredPosts = searchQuery
-    ? posts.filter(post =>
-        post.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-        post.content.toLowerCase().includes(searchQuery.toLowerCase()) |
-        post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      )
-
   return (
     <AppLayout>
       <SEO
@@ -224,6 +240,8 @@ const iconMap = {
   const posts = postsByCategory[categoryId] || [];
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               value={searchQuery}
 
               onChange={(e) => setSearchQuery(e && e.target.value)}
@@ -252,12 +270,6 @@ const iconMap = {
             )}
           </div>;
         )}
-<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-  "Megaphone": Megaphone;
-}
-;
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

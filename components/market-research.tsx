@@ -20,8 +20,17 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+} from 'lucide-react';import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap } from 'lucide-react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function MarketResearchPage() {
 
   const marketSegments = [
@@ -190,6 +199,8 @@ export default function MarketResearchPage() {
         'Long implementation times'
       ]
       marketShare: '45-60%'
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   ];
   const competitiveAnalysis = [
     {
@@ -311,19 +322,24 @@ import { Zap } from 'lucide-react';
 
 
             ))}
+          </div>
+        </div>
+      </section>
 
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Market Segments */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Market Segment Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -333,70 +349,6 @@ import { Zap } from 'lucide-react';
           </div>
           <div className='space-y-8'>
             {marketSegments.map((segment, index) => (
-=======
-          </div>;
-        </div>;
-      </section>;
-      {/* Market Segments */}
-      <section className='section-padding bg-gradient-cursor'>;
-        <div className='container-cursor'>;
-          <div className='text-center mb-20'>;
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
-              Market Segment Analysis;
-            </h2>;
-            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
-            {investment_insights.map ((insight, index) => (
-              <Card;
-                key={index}
-                className='card - hover text - center border - gradient - blue';
-                style={{ animation_delay: `${index * 0.1}s` }}
-              >;
-                <div className='p - 6'>;
-                  <div className='text - 3xl font - bold text - white mb - 2'>;
-                    {insight.value}
-                  </div>;
-                  <div className='text - sm text - gray - 400 mb - 3'>;
-                    {insight.metric}
-                  </div>;
-                  <div className='text - sm text - gray - 300 mb - 4'>;
-                    {insight.description}
-                  </div>;
-                  <div className='inline - flex items - center text - sm text - green - 400'>;
-                    <TrendingUp className='w - 4 h - 4 mr - 1' />                    {insight.change}                <div className="p - 6">;
-                  <div className="text - 3xl font - bold text - white mb - 2">{insight.value}</div>;
-                  <div className="text - sm text - gray - 400 mb - 3">{insight.metric}</div>;
-                  <div className="text - sm text - gray - 300 mb - 4">{insight.description}</div>;
-                  <div className="inline - flex items - center text - sm text - green - 400">;
-                    <TrendingUp className="w - 4 h - 4 mr - 1" />;
-                  </div>;
-                </div>;
-              </Card>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Market Segments */}
-      <section className='section - padding bg - gradient - cursor'>;
-        <div className='container - cursor'>;
-          <div className='text - center mb - 20'>;
-            <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
-              Market Segment Analysis;
-            </h2>;
-            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
-              Detailed analysis of key micro SaaS market segments with market;
-              size, growth rates, trends, and opportunities.;
-            </p>;
-          </div>;
-
-          <div className='space - y-8'>;
-            {market_segments.map ((segment, index) => (
-              <Card;
-=======
-          </div>
-        </div>
-      </section>
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       {/* Market Segments */}
       <section className='section-padding bg-gradient-cursor'>
@@ -497,15 +449,23 @@ import { Zap } from 'lucide-react';
                                 {trend}
                               </li>;
                             ))}
+                          </ul>
+                        </div>
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                         {/* Top Players */}
 
 
                                 {player}
                               </li>;
                             ))}
+                          </ul>
+                        </div>
+                      </div>
 
                       {/* Opportunities */}
                       <div className='mt-8 pt-6 border-t border-gray-700'>
@@ -534,6 +494,7 @@ import { Zap } from 'lucide-react';
                           ))}
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       {/* Opportunities */}
 
 
@@ -543,6 +504,8 @@ import { Zap } from 'lucide-react';
                 </div>;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       </div>
                     </div>
                   </div>
@@ -551,6 +514,9 @@ import { Zap } from 'lucide-react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
+          </div>
+        </div>
+      </section>
 
       {/* Competitive Analysis */}
       <section className='section-padding bg-gradient-cursor-accent'>
@@ -558,8 +524,15 @@ import { Zap } from 'lucide-react';
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Competitive Analysis */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
+=======
 
 
 
@@ -725,42 +698,26 @@ import { Zap } from 'lucide-react';
                   </div>;
                   {/* Strengths */}
 
-=======
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Strengths:</h4>
                     <ul className="space-y-1 text-xs text-gray-300">
                       {analysis.strengths.map((strength, strengthIndex) => (
                         <li key={strengthIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
-
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Weaknesses */}
-                  <div>
-                    <h4 className="text-sm font-semibold text-red-400 mb-2">Weaknesses:</h4>
-                    <ul className="space-y-1 text-xs text-gray-300">
-                      {analysis.weaknesses.map((weakness, weaknessIndex) => (
-                        <li key={weaknessIndex} className="flex items-start">
-                          <span className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
-
-                        </li>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                         </li>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
+                    </ul>
+                  </div>
 
+=======
                     </ul>;
                   </div>;
 
 
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {/* Weaknesses */}
 
 
@@ -771,6 +728,9 @@ import { Zap } from 'lucide-react';
                 </div>;
               </Card>;
             ))}
+          </div>
+        </div>
+      </section>
 
       {/* Market Trends */}
       <section className='section-padding bg-gradient-cursor'>
@@ -786,13 +746,21 @@ import { Zap } from 'lucide-react';
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {marketTrends.map((trend, index) => (
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Market Trends */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Emerging Market Trends
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -802,104 +770,6 @@ import { Zap } from 'lucide-react';
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {marketTrends.map((trend, index) => (
-=======
-          </div>;
-        </div>;
-      </section>;
-      {/* Market Trends */}
-      <section className='section-padding bg-gradient-cursor'>;
-        <div className='container-cursor'>;
-          <div className='text-center mb-20'>;
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
-              Emerging Market Trends;
-            </h2>;
-            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-                      </div>                    </div>;
-                  </div>;
-                  {/* Strengths */}              Competitive Landscape Analysis;
-            </h2>;
-            <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
-              Understanding the competitive landscape and positioning strategies for different types of SaaS companies.;
-            </p>;
-          </div>;
-          <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8">;
-            {competitive_analysis.map ((analysis, index) => (
-              <Card;
-                key={index}
-                className="card - hover border - gradient - blue";
-                style={{ animation_delay: `${index * 0.1}s` }}
-              >;
-                <div className="p - 6">;
-                  <h3 className="text - xl font - bold text - white mb - 4">{analysis.company}</h3>;
-                  {/* Examples */}
-                  <div className="mb - 6">;
-                    <h4 className="text - sm font - semibold text - gray - 400 mb - 2">Examples:</h4>;
-                    <div className="text - sm text - gray - 300">{analysis.examples.join ()}</div>;
-                  </div>;
-                  {/* Market Share & Pricing */}
-                  <div className="grid grid - cols - 2 gap - 4 mb - 6 text - sm">;
-                    <div>;
-                      <span className="text - gray - 400">Market Share:</span>;
-                      <div className="text - white font - semibold">{analysis.market_share}</div>;
-                    </div>;
-                    <div>;
-                      <span className="text - gray - 400">Pricing:</span>;
-                      <div className="text - white font - semibold">{analysis.pricing}</div>;
-                    </div>;
-                  </div>;
-                  {/* Strengths */}
-                  <div className='mb - 4'>;
-                    <h4 className='text - sm font - semibold text - green - 400 mb - 2'>;
-                      Strengths:;
-                    </h4>;
-                    <ul className='space - y-1 text - xs text - gray - 300'>;
-                      {analysis.strengths.map ((strength, strength_index) => (
-                        <li key={strength_index} className='flex items - start'>;
-                          <span className='w - 1.5 h - 1.5 bg - green - 400 rounded - full mr - 2 mt - 1.5 flex - shrink - 0' />                          {strength}                  <div className="mb - 4">;
-                    <h4 className="text - sm font - semibold text - green - 400 mb - 2">Strengths:</h4>;
-                    <ul className="space - y-1 text - xs text - gray - 300">;
-                      {analysis.strengths.map ((strength, strength_index) => (
-                        <li key={strength_index} className="flex items - start">;
-                          <span className="w - 1.5 h - 1.5 bg - green - 400 rounded - full mr - 2 mt - 1.5 flex - shrink - 0" />;
-                        </li>))}
-                    </ul>;
-                  </div>;
-                  {/* Weaknesses */}
-                  <div>;
-                    <h4 className='text - sm font - semibold text - red - 400 mb - 2'>;
-                      Weaknesses:;
-                    </h4>;
-                    <ul className='space - y-1 text - xs text - gray - 300'>;
-                      {analysis.weaknesses.map ((weakness, weakness_index) => (
-                        <li key={weakness_index} className='flex items - start'>;
-                          <span className='w - 1.5 h - 1.5 bg - red - 400 rounded - full mr - 2 mt - 1.5 flex - shrink - 0' />                          {weakness}                    <h4 className="text - sm font - semibold text - red - 400 mb - 2">Weaknesses:</h4>;
-                    <ul className="space - y-1 text - xs text - gray - 300">;
-                      {analysis.weaknesses.map ((weakness, weakness_index) => (
-                        <li key={weakness_index} className="flex items - start">;
-                          <span className="w - 1.5 h - 1.5 bg - red - 400 rounded - full mr - 2 mt - 1.5 flex - shrink - 0" />;
-                        </li>))}
-                    </ul>;
-                  </div>;
-                </div>;
-              </Card>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Market Trends */}
-      <section className='section - padding bg - gradient - cursor'>;
-        <div className='container - cursor'>;
-          <div className='text - center mb - 20'>;
-            <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
-              Emerging Market Trends;
-            </h2>;
-            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
-              Key trends shaping the micro SaaS landscape and creating new;
-              opportunities for innovation and growth.;
-            </p>;
-          </div>;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         }`}>;
                         {trend && trend.impact} Impact;
                       </span>;
@@ -938,19 +808,39 @@ import { Zap } from 'lucide-react';
                         trend.impact === 'High' ? 'bg-red-500/20 text-red-400' :
                         trend.impact === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :
                         'bg-green-500/20 text-green-400'
+                      }`}>
+                        {trend.impact} Impact
+                      </span>
+                      <span className="px-2 py-1 rounded text-xs font-medium bg-blue-500/20 text-blue-400">
+                        {trend.timeline}
+                      </span>
+                    </div>
+                  </div>
+                  <p className='text-gray-300 mb-4'>{trend.description}</p>
+                  <div className='mb-4'>
+                    <h4 className='text-sm font-semibold text-gray-400 mb-2'>
+                      Examples:
+                    </h4>
+                    <ul className='space-y-1 text-xs text-gray-300'>
+                      {trend.examples.map((example, exampleIndex) => (
+                        <li key={exampleIndex} className='flex items-start'>
+                          <span className='w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {example}
+                  <p className="text-gray-300 mb-4">{trend.description}</p>
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>
+                    <ul className="space-y-1 text-xs text-gray-300">
+                      {trend.examples.map((example, exampleIndex) => (
+                        <li key={exampleIndex} className="flex items-start">
+                          <span className="w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0" />
 
 
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                         </li>
                       ))}
                     </ul>
                   </div>
-=======
-                  <div>
-
-                    <h4 className="text-sm font-semibold text-green-400 mb-2">Opportunities:</h4>
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
                     <p className="text-xs text-gray-300">{trend.opportunities}</p>
                   </div>
@@ -960,13 +850,17 @@ import { Zap } from 'lucide-react';
           </div>
         </div>
       </section>
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Pricing Strategies */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Pricing Strategy Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1067,13 +961,29 @@ import { Zap } from 'lucide-react';
                 </div>;
               </Card>;
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {/* Cons */}
+                  <div className='mb-4'>
+                    <h4 className='text-sm font-semibold text-red-400 mb-2'>
+                      Cons:
+                    </h4>
+                    <ul className='space-y-1 text-xs text-gray-300'>
+                      {strategy.cons.map((con, conIndex) => (
+                        <li key={conIndex} className='flex items-start'>
+                          <span className='w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {con}                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-red-400 mb-2">Cons:</h4>
+                    <ul className="space-y-1 text-xs text-gray-300">
+                      {strategy.cons.map((con, conIndex) => (
+                        <li key={conIndex} className="flex items-start">
+                          <span className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {/* Best For */}
                   <div>
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>
@@ -1084,10 +994,13 @@ import { Zap } from 'lucide-react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
       {/* Pricing Strategies */}
       <section className='section-padding bg-gradient-cursor-accent'>;
         <div className='container-cursor'>;
@@ -1203,9 +1116,7 @@ import { Zap } from 'lucide-react';
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
 
 =======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             Ready to Apply This Market Intelligence?
           </h2>
@@ -1246,10 +1157,10 @@ import { Zap } from 'lucide-react';
               size="lg"
               className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"
 
-=======
-
             <Button
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,21 +1,69 @@
 
 
-=======
 
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Link} from "react-router-dom";
 import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock} from "lucide-react";
+export function FeatureCTAs() {
+  const features = [
+    {
+      title: "AI Talent Matching",
+      description: "Our AI - powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.";
+      icon: <Search className="h - 10 w - 10 p - 2 rounded - md bg - blue - 100 text - blue - 700" />,
+      link: "/marketplace",
+      badge: "Popular",
+      details: "Leveraging advanced machine learning, our matching system analyzes over 100+ data points to create perfect connections between talents and opportunities.";
+
+    }
+    {
+      title: "Talent Directory"
+      description: "Browse our extensive database of verified AI and tech specialists, filtered by expertise and availability.";
+
+      icon: <Users className="h - 10 w - 10 p - 2 rounded - md bg - purple - 100 text - purple - 700" />,
+      link: "/talent",
+      details: "Every talent in our directory undergoes a rigorous verification process to ensure quality, authenticity, and reliability.";
+
+    }
+    {
+      title: "Services Marketplace"
+      description: "Discover professional tech and AI services for your business needs, from development to consulting.";
+      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />
+      link: "/services"
+      badge: "New"
+      details: "From on-demand IT support to specialized AI development, our marketplace offers verified services with transparent pricing and reviews."
+    }
+import React from "react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { Link } from "react-router-dom",
+import { 
+  ArrowRight,
+  Users, 
+  Zap, 
+  Settings, 
+  Search, 
+  MessageSquare, 
+  Smartphone, 
+  Calendar,
+  BookOpen,
+  Code,
+  Building,
+  Clock
+} from "lucide-react",
 
 export function FeatureCTAs() {
   const features = [
     {
-
+      title: "AI Talent Matching",;
+      description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.";
+      title: "AI Talent Matching",
+      description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.",
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
       link: "/marketplace",
       badge: "Popular",
@@ -39,13 +87,6 @@ export function FeatureCTAs() {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     {
-      title: "Equipment Catalog"
-      description: "Find specialized hardware and tech equipment for AI development and research."
-      icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700" />
-      link: "/equipment"
-      details: "Access cutting-edge technology with flexible options to buy, rent, or lease specialized equipment for your tech projects."
-
-    {
       title: "Mobile Experience"
       description: "Take Zion with you on the go with our mobile app for iOS and Android devices."
       icon: <Smartphone className="h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700" />
@@ -60,19 +101,6 @@ export function FeatureCTAs() {
       link: "/zion-hire-ai"
       badge: "Premium"
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."
-=======
-      icon: <Calendar className="h - 10 w - 10 p - 2 rounded - md bg - red - 100 text - red - 700" />,
-      link: "/dashboard / projects",
-      details: "Our intuitive project management tools help you track progress, manage deliverables, and ensure timely completion.";
-    }
-    {
-      title: "Zion Hire AI",
-      description: "AI - powered recruiting assistant to streamline your hiring process and find better matches.",
-      icon: <Clock className="h - 10 w - 10 p - 2 rounded - md bg - violet - 100 text - violet - 700" />,
-      link: "/zion - hire - ai",
-      badge: "Premium",
-      details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution.";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   ];
 ;
@@ -95,7 +123,7 @@ export function FeatureCTAs() {
                   {feature.icon}
                   {feature.badge && (
 
-=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
                       {feature.badge}
                     </Badge>

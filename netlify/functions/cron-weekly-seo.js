@@ -1,3 +1,4 @@
+const { upsertFile } = require('./_lib/github');
 
 async function scorePage(url) {
   const t0 = Date.now();
@@ -10,6 +11,7 @@ async function scorePage(url) {
     const hasMetaDesc = /<meta[^>]*name=["']description["'][^>]*>/i.test(html);
     const h1Count = (html.match(/<h1[^>]*>/gi) |[]).length;
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 async function scorePage(url) {
 
     const html = await resp && resp.text();
@@ -96,8 +98,6 @@ if ( {) {
     }
     return {
 
-=======
-  const t0 = Date.now(),
     }
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
@@ -244,6 +244,9 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

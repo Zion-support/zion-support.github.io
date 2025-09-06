@@ -1,6 +1,15 @@
 
+import { UseFormReturn } from "react-hook-form";
+import {UseFormReturn} from "react-hook-form";
+import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {MilestoneSuggestions} from "@/components/projects/milestones/MilestoneSuggestions";
+import {TalentProfile} from "@/types/talent";
+import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
+import {ContractFormValues} from "./ContractForm";
+=======
 
-import {
 import { 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   FormField;
@@ -21,13 +30,13 @@ import {
 import { MilestoneSuggestions } from "@/components/projects/milestones/MilestoneSuggestions",
 import { TalentProfile } from "@/types/talent",
 
-=======
-
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "./ContractForm",
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 interface PaymentTermsFieldsProps {
 
@@ -36,6 +45,10 @@ interface PaymentTermsFieldsProps {
 
   handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void
 }
+export function PaymentTermsFields({
+  form;
+  talent;
+  handleMilestonesGenerated
 
   handleMilestonesGenerated
 
@@ -64,6 +77,7 @@ interface PaymentTermsFieldsProps {
               <FormMessage />
             </FormItem>
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <>;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
@@ -75,6 +89,8 @@ interface PaymentTermsFieldsProps {
               <FormLabel>Payment Terms</FormLabel>;
               <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           )}
 
         />;
@@ -111,8 +127,6 @@ interface PaymentTermsFieldsProps {
         <div className="pt-2">;
           <MilestoneSuggestions
 
-=======
-
             projectName={form.getValues("projectName") || "Project"}
             scopeSummary={form.getValues("scopeSummary") || ""}
             startDate={form.getValues("startDate") || new Date()}
@@ -121,52 +135,3 @@ interface PaymentTermsFieldsProps {
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-                        form.getValues("projectName").includes("Web") ? "Web Development" : "Other"}
-            onMilestonesGenerated={handleMilestonesGenerated}
-          />;
-        </div>;
-      )}
-
-    </>;
-  );
-}
-
-=======
-            </FormItem>)}
-        />;
-        <FormField;
-          control={form.control}
-          name="payment_amount";
-          render={({ field }) => (
-            <FormItem>;
-              <FormLabel > Payment Amount</FormLabel>;
-              <FormControl>;
-                <Input;
-                  placeholder={form.get_values ("payment_terms") === "hourly" ? "$X per hour" : "Total $X"}
-                  {...field}
-                />;
-              </FormControl>;
-              <FormDescription>;
-                {form.get_values ("payment_terms") === "milestone" &&;
-                  "You can define specific milestone amounts in the contract text or use AI to suggest milestones"}
-              </FormDescription>;
-              <FormMessage />;
-            </FormItem>)}
-        />;
-      </div>;
-      {/* Project Milestones */}
-      {form.watch ("payment_terms") === "milestone" && (
-        <div className="pt - 2">;
-          <MilestoneSuggestions;
-            project_name={form.get_values ("project_name") || "Project"}
-            scope_summary={form.get_values ("scope_summary") || ""}
-            start_date={form.get_values ("start_date") || new Date ()}
-            end_date={form.get_values ("end_date")}
-            project_type={form.get_values ("project_name").includes ("AI") ? "AI / ML" :;
-                        form.get_values ("project_name").includes ("Web") ? "Web Development" : "Other"}
-            onMilestonesGenerated={handleMilestonesGenerated}
-          />;
-        </div>)}
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

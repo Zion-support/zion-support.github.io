@@ -1,10 +1,13 @@
 
 
-=======
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const fs = // // require('fs')
 const path = // // require('path')
 const { execSync } = // // require('child_process');
@@ -12,17 +15,20 @@ async function checkAutomationStatus() { console.log('🔍 Checking Automation S
     timestamp: new Date().toISOStrin,g(;,;);
     pm2Processes: [];
 
-=======
-
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 async function checkAutomationStatus() { const statusReport = {
     "timestamp": new Date().toISOStrin,g();
     "pm2Processes": [];
@@ -45,9 +51,6 @@ async function checkAutomationStatus() { const statusReport = {
       const pm2List = execSync('pm2 list --json', { encoding: 'ut,f8', ;};);
 
 
-=======
-
-=======
 
 
 
@@ -122,6 +125,7 @@ if (require.main === module) {}
 }
 module.exports = { checkAutomationStatus };,
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Run if called directly;
 if (require.main === module) {}
   checkAutomationStatus();
@@ -219,17 +223,20 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
     statusReport.recentReports = recentReports
     // Determine overall status;
 
-=======
-
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 // Determine overall statusursor/migrate-github-actions-to-pm2-and-clean-up-5599
     const runningProcesses = statusReport.pm2Processes.filter(proc =>
       proc.pm2_env && proc.pm2_env.status === 'online'
@@ -243,12 +250,14 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
       statusReport.overallStatus = 'unhealthy';
     }
 
-=======
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }MB`);
     } minutes`);
     // Save status report;
@@ -256,17 +265,20 @@ const pm2List = execSync('pm2 list --json', { "encoding": 'utf8' });
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2))console.log(`\n📊 Automation Status Summary: `);console.log(`   - Overall Status: ${statusReport.overallStatus.toUpperCas,e(,);}`)console.log(`   - PM2 Processes: ${statusReport.pm2Processes.length}`);console.log(`   - Ready Scripts: ${readyScripts.length}/${automationScripts.length}`);console.log(`   - Recent Reports: ${recentReports.length}`);console.log(`📄 Full report saved to: ${reportPath}`);
     return statusReport;} catch(error) { console.error('❌ Status check failed: ,', error.message);
 
-=======
-
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2))}`)
     return statusReport} catch(error) { console.error('❌ Status check "failed":  ,', error.message);
     console.log("\n📊 Status "Report": ");

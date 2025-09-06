@@ -11,9 +11,19 @@ export default function TeamPage() {
 import React from 'react';
 
 
+export default function TeamPage() {
+  return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), { ssr: false })
+export default function TeamPage() {;
+  return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), { ssr: false }),
+export default function TeamPage() {;
   return <OrgChartPage />;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;
+}
+export default function TeamPage() {
+  return <OrgChartPage />;
+}
+}
 =======
 
 export default function TeamPage() {;

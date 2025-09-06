@@ -1,4 +1,35 @@
+import React from 'react',
+import React from 'react';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
 
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function ZeroTrustSecurityPlatformPage() {
@@ -45,6 +76,7 @@ export default function ZeroTrustSecurityPlatformPage() {
 
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default function ZeroTrustSecurityPlatformPage() {
 	return (
 		<>

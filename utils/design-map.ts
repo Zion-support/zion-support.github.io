@@ -1,15 +1,23 @@
+export type UIKitKind = 'ios' | 'android' | 'web';
+export interface TokenSet {
 
+export interface TokenSet {;
   colors: Record<string, string>;
   typography: Record<string, any>;
   spacing: Record<string, number>;
 }
+export interface UIKit {
 
+export interface UIKit {;
   components: Record<string, any>;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   tokens: TokenSet;
 }
 export async function buildTokenSet(fileId: string): Promise<TokenSet> {
   // Placeholder implementation
   return {
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     colors: {
       primary: '#007AFF'
       secondary: '#5856D6'
@@ -28,6 +36,9 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
       md: 16
       lg: 24
       xl: 32
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     };
   }
   if (kind === 'chakra') {
@@ -58,80 +69,12 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     return null;
 
 
-=======
-// Design mapping utilities
-export interface DesignElement {
-  id: string;
-  type: 'component' | 'layout' | 'style' | 'asset';
-  name: string;
-  figmaId?: string;
-  properties: Record<string, any>;
-  children?: DesignElement[];
-  parent?: string;
-}
-
-export interface DesignSystem {
-  id: string;
-  name: string;
-  version: string;
-  components: DesignElement[];
-  tokens: Record<string, any>;
-  assets: DesignElement[];
-  lastUpdated: Date;
-}
-
-export interface FigmaNode {
-  id: string;
-  name: string;
-  type: string;
-  children?: FigmaNode[];
-  absoluteBoundingBox?: {
-    x: number;
-    y: number;
-    width: number;
-    height: number;
-  };
-  fills?: Array<{
-    type: string;
-    color?: {
-      r: number;
-      g: number;
-      b: number;
-      a: number;
-    };
-  }>;
-  effects?: Array<{
-    type: string;
-    radius?: number;
-    color?: {
-      r: number;
-      g: number;
-      b: number;
-      a: number;
-    };
-  }>;
-  characters?: string;
-  style?: {
-    fontFamily?: string;
-    fontSize?: number;
-    fontWeight?: number;
-    textAlignHorizontal?: string;
-    textAlignVertical?: string;
-  };
-}
-
-
-export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
-
-
   const tokens = await buildTokenSet(fileId);
 =======
-    };
-  };
-}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const tokens = await buildTokenSet(fileId);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return {
     components: {
       button: {
@@ -149,10 +92,12 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
           padding: tokens.spacing.md;
         }
       }
-    },
-    tokens;
+    }
+    tokens
   }
+
+  };
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

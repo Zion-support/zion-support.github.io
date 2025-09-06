@@ -1,3 +1,4 @@
+=======
 
 import { useEffect, useState } from "react",
 import { QuoteFormData } from "@/types/quotes",
@@ -7,6 +8,35 @@ import { Textarea } from "@/components/ui/textarea",
 import { AIMatchingResults } from "@/components/AIMatchingResults",
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+interface SummaryStepProps {;
+  formData: QuoteFormData,;
+  updateFormData: (data: Partial<QuoteFormData>) => void;
+}
+
+export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepProps) {;
+
+  const [isMatching, setIsMatching] = useState(false);
+
+  const [matches, setMatches] = useState<MatchResult[]>([]);
+
+
+  // Run AI matching when the component mounts;
+  useEffect(() => {;
+    const runMatching = async () => {;
+      if (!formData && formData.projectDescription) return;
+
+      setIsMatching(true);
+      try {;
+        // Create a query string from the form data;
+        const queryString = `;
+          ${formData.projectName} ;
+          ${formData.projectDescription} ;
+          ${formData.serviceType} ;
+          ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
+          ${formData.timeline}
+        `,
+        
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         // Get AI matches
         const results = await findMatches(
           queryString,
@@ -70,13 +100,6 @@ if (return) {
         setIsMatching (false);
       }
 
-=======
-
-    },
-    
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     runMatching()
   }, [formData]);
   const handleSelectMatch = (match: MatchResult) => {
@@ -96,8 +119,11 @@ if (return) {
     if (matchResult) {
       handleSelectMatch(matchResult)
     }
+  }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* AI Matching Results */}
       <AIMatchingResults
         serviceType={formData.serviceType}
@@ -224,3 +250,10 @@ if (return) {
       </div>
     </div>
   )
+=======
+<<<<<<< HEAD
+}
+};
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

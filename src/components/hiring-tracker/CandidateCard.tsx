@@ -41,24 +41,13 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
-
-
-  DropdownMenu
-  DropdownMenuContent
-  DropdownMenuItem
-  DropdownMenuTrigger
-} from '@/components/ui/dropdown-menu'
-import { ScoreBadge } from '@/components/jobs/applications/ScoreBadge'
-import { toast } from '@/hooks/use-toast';
-import { HireConfirmationModal } from './HireConfirmationModal';
-import Image from 'next/image'; // Import next/image
-
-interface CandidateCardProps {
-  application: JobApplication;
-  index: number
-export function CandidateCard({ application, index }: CandidateCardProps) {
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+      title: 'Notes saved'
+      description: 'Your notes have been saved'
+      title: 'Notes saved',
+      description: 'Your notes have been saved',
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     })
     setShowNotes(false)
   }
@@ -69,76 +58,28 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
       description: 'Offer has been sent to the talent.'
     })
   }
-
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  const candidateName = application.talent_profile?.full_name || 'Candidate'
+  return (
+    <>
+      <Draggable draggableId={application.id} index={index}>
+        {provided => (
+          <Card
+            className='mb-2 p-0 shadow-sm border'
+            ref={provided.innerRef}            {...provided.draggableProps}
+<<<<<<< HEAD
   const candidateName = application.talent_profile?.full_name || "Candidate",
 
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             {...provided.dragHandleProps}
           >
             <CardContent className='p-3'>
               {/* Candidate Header */}
-
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant='ghost' className='h-8 w-8 p-0'>
-                      <MoreVertical className='h-4 w-4' />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align='end'>
-                    <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
-                  </AvatarPrimitive>;
-                  <div>;
-                    <h4 className='font-medium text-sm'>{candidateName}</h4>;
-                    <p className='text-xs text-muted-foreground'>;
-                      {application && application.talent_profile?.professional_title ||;
-                        'Applicant'}
-                    </p>;
-                  </div>;
-                </div>;
-
-                <DropdownMenu>;
-                  <DropdownMenuTrigger asChild>;
-                    <Button variant='ghost' className='h-8 w-8 p-0'>;
-                      <MoreVertical className='h-4 w-4' />;
-                    </Button>;
-                  </DropdownMenuTrigger>;
-                  <DropdownMenuContent align='end'>;
-                    <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>;
-                      {showNotes ? 'Hide notes' : 'Add notes'}
-                    </DropdownMenuItem>;
-                    <DropdownMenuItem onClick={() => setShowHireModal(true)}>;
-                      <BriefcaseIcon
-                        className='h-4 w-4 mr-2'
-                        aria-hidden='true'
-                      />{' '}
-                      Hire Candidate;
-                    </DropdownMenuItem>;
-                    <DropdownMenuItem asChild>;
-                      <Link
-                        href={`/messages?talentId=${application && application.talent_id}`}>;
-                        Message;
-                      </Link>;
-                    </DropdownMenuItem>;
-                    {application && application.resume?.file_url && (;
-                      <DropdownMenuItem asChild>;
-                        <a
-                          href={application && application.resume.file_url}
-                          target='_blank'
-                          rel='noopener noreferrer'>;
-                          View Resume;
-                        </a>;
-                      </DropdownMenuItem>;
-                    )}
-
-                  <Link href={`/messages?talentId=${application.talent_id}`}>
-                    <MessageSquare className='h-3 w-3 mr-1' /> Message
-                  </Link>
-                </Button>
-
-<<<<<<< HEAD
                   {application.resume?.file_url ? (
               <div className='flex justify-between mt-2 gap-1'>;
                 <Button variant='outline' size='sm' className='flex-1' asChild>;
@@ -161,3 +102,8 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                     </span>;
                   )}
                 </Button>
+  handleHireConfirmed 
+}/> </>) 
+}'"};
+;
+<<<<<<< HEAD

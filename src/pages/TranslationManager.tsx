@@ -12,3 +12,6 @@ import { useTranslation } from "react-i18next",
 import { AlertTriangle, Check, Globe, Search, Loader2 } from 'lucide-react'
 import { useIsMobile } from "@/hooks/use-mobile",
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
+}
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

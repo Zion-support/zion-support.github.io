@@ -1,6 +1,7 @@
 =======
 
-
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
  const SolutionsPage: React.FC = () => {
   const industrySolutions = [ {
   category: 'Healthcare & Life Sciences', solutions: [ {
@@ -43,6 +44,7 @@
 }</ul> <a > <span>Learn More</span> <ArrowRight className="w-4 h-4" /> </a> </motion.div>) )
 }</div> <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" > Industry Solutions </h1> <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8" > Tailored technology solutions designed specifically for your industry's unique challenges and opportunities. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/contact" className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300" > Get Started <ArrowRight className="inline-block ml-2 w-5 h-5" /> </a> <Link href="/demo" className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10" > Request Demo </a> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Industry-Specific Solutions </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > From healthcare to manufacturing, we deliver specialized solutions that address your industry's unique needs. </p> </motion.div> key= {
   category.category
+=======
 
 
 =======
@@ -514,5 +516,10 @@ export default Solutions;
 export default Solutions;}
 ;
 export default Solutions;
-<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

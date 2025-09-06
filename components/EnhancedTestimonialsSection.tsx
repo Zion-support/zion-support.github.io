@@ -1,5 +1,7 @@
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Star,
   Quote,
   Users,
@@ -8,6 +10,7 @@
 =======
   TrendingUp,;
   CheckCircle,;
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -199,7 +202,22 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
                 {/* Testimonial Text */}
                 <p className='text-white/80 text-sm leading-relaxed mb-6'>                  "{testimonial.content}"
                 </p>
-
+                {/* Author Info */}            <div
+              key={testimonial.id}
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            >
+              {/* Quote Icon */}
+              <div className="absolute top-4 right-4 text-blue-400/20 group-hover:text-blue-400/40 transition-colors duration-300">
+                <Quote className="w-8 h-8" />
+              </div>
+              {/* Content */}
+              <div className="p-8">
+                {/* Rating */}
+                <div className="flex items-center gap-1 mb-4">
+                  {renderStars(testimonial.rating)}
+                </div>
+                {/* Testimonial Text */}
+                <p className='text-white/80 text-sm leading-relaxed mb-6'>                <p className="text-white/80 text-sm leading-relaxed mb-6">
 
                 {/* Author Info */}
 
@@ -208,18 +226,45 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
                 {/* Testimonial Text */}
 
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   "{testimonial.content}"
                 </p>
                 {/* Author Info */}
-
+                <div className='flex items-center gap-4'>
+                  <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm'>
+                    {testimonial.avatar}
+                  </div>
+                  <div className='flex-1'>
+                    <div className='font-semibold text-white'>
+                      {testimonial.name}
+                    </div>
+                    <div className='text-sm text-white/70'>
+                      {testimonial.title}
+                    </div>
+                    <div className='text-xs text-blue-400'>
+                      {testimonial.company}
+                    </div>                  </div>
+                </div>
+                {/* Category Badge */}
+                <div className='mt-4'>
+                  <span className='inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30'>                    {testimonial.category}                  <div className="flex-1">
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-sm text-white/70">{testimonial.title}</div>
+                    <div className="text-xs text-blue-400">{testimonial.company}</div>
+                </div>
+                {/* Category Badge */}
+                <div className='mt-4'>
+                  <span className='inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30'>                <div className="mt-4">
+                  <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30">
+                    {testimonial.category}
 
                     {testimonial.category}
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </span>
                 </div>
               </div>
@@ -279,15 +324,13 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* CTA Section */}
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
             <h3 className='text-2xl font-bold text-white mb-4'>
 
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               Ready to Join Our Success Stories?
             </h3>
@@ -375,7 +418,27 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
     </section>
 
 export default EnhancedTestimonialsSection;  )
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export default EnhancedTestimonialsSection;
+
+
+=======
+    </section>);
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 export default EnhancedTestimonialsSection;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  );
+}
+};
+
+export default EnhancedTestimonialsSection;  )
+}
+export default EnhancedTestimonialsSection;
+
+export default EnhancedTestimonialsSection;
+export default EnhancedTestimonialsSection;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

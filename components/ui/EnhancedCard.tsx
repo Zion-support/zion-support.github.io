@@ -1,9 +1,16 @@
+import React from "react";
 
 
 import React from "react";
 export default function EnhancedCard({
 
   children: React.ReactNode;
+export default function EnhancedCard(): any ({;
+  children,;
+  className = "",;
+}: {;
+  children: React.ReactNode;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   className?: string;
 }) {
 

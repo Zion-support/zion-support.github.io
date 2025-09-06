@@ -226,10 +226,9 @@ if (return) {
                   ctx.moveTo(particle.x, particle.y);
                   ctx.lineTo(partner.x, partner.y);
 
-=======
-
                   ctx.stroke();                }
 
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -238,78 +237,6 @@ if (return) {
               }
             }
             break;
-=======
-
-
-
-
-
-          case 'holographic':
-            // Holographic particles with rainbow effect
-            const time = Date.now() * 0.001;
-
-          case 'holographic':
-            // Holographic particles with rainbow effect
-            const time = Date.now() * 0.001;
-            const hue = (time * 50 + index * 10) % 360;
-            ctx.fillStyle = `hsl(${hue}, 70%, 60%)`;
-            ctx.shadowColor = `hsl(${hue}, 70%, 60%)`;
-            ctx.shadowBlur = 15;
-            ctx.beginPath();
-            ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-            ctx.fill();
-            break;
-          case 'neural':
-            // Neural particles with network connections
-            ctx.fillStyle = particle.color;
-            ctx.shadowColor = particle.color;
-            ctx.shadowBlur = 10;
-            ctx.beginPath();
-            ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-            ctx.fill();
-            // Neural network connections
-            if (index % 15 === 0) {
-              const connections = particlesRef.current.filter(
-                p =>
-                  p.type === 'neural' &&
-                  Math.sqrt(
-                    Math.pow(particle.x - p.x, 2) +
-                      Math.pow(particle.y - p.y, 2)
-                  ) < 80
-              );
-              connections.forEach(connection => {
-                const distance = Math.sqrt(
-                  Math.pow(particle.x - connection.x, 2) +
-                    Math.pow(particle.y - connection.y, 2)                );            // Neural network connections
-            if (index % 15 === 0) {
-              const connections = particlesRef.current.filter(p =>
-                p.type === 'neural' &&
-                Math.sqrt(Math.pow(particle.x - p.x, 2) + Math.pow(particle.y - p.y, 2)) < 80
-
-              );
-              connections.forEach(connection => {
-                const distance = Math.sqrt(
-                  Math.pow(particle.x - connection.x, 2) + Math.pow(particle.y - connection.y, 2)
-                );
-                ctx.strokeStyle = `rgba(16, 185, 129, ${0.4 * (1 - distance / 80)})`;
-                ctx.lineWidth = 0.5;
-                ctx.beginPath();
-                ctx.moveTo(particle.x, particle.y);
-                ctx.lineTo(connection.x, connection.y);
-
-      const size = 20 + Math.sin(time * 2 + i) * 10;
-      
-
-      ctx.save();
-      ctx.globalAlpha = 0.1;
-      ctx.strokeStyle = '#00ffff';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-
-=======
-      for (let j = 0, j < 6, j++) {
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         const angle = (j * Math.PI) / 3 + time;
         const px = x + size * Math.cos(angle);
         const py = y + size * Math.sin(angle);
@@ -415,14 +342,12 @@ if (return) {
           repeat: Infinity
           ease: 'easeInOut'
         }}
-
+      />
 
 =======
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
@@ -450,29 +375,13 @@ if (return) {
         <motion.div;
           className='absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border - cyan - 500 / 20';
           animate={{
-
-            scale: [1, 1 && 1.2, 1],
-            opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],          }}
-
+            scale: [1, 1.2, 1]
+            opacity: [0.1, 0.3, 0.1],          }}
           transition={{
             duration: 4
             repeat: Infinity
-            ease: 'easeInOut',      {/* Canvas for particle effects */}
-
-
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
-
-        style={{ filter: 'blur(0 && 0.5px)' }}
-      />;
-
-
-      {/* Additional visual layers */}
-      <div className="absolute inset-0">;
-        {/* Quantum field ripples */}
-        <motion&& motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
+            duration: 4,
+            repeat: Infinity,
       <canvas;
         ref={canvas_ref}
         className="absolute inset - 0 w - full h - full";
@@ -483,6 +392,9 @@ if (return) {
         {/* Quantum field ripples */}
         <motion.div;
           className="absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border - cyan - 500 / 20";
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           animate={{
 
 
@@ -504,22 +416,23 @@ if (return) {
             ease: 'easeInOut',          }}
         />;
         {/* Holographic matrix */}
-        <motion.div;
-          className="absolute top - 3/4 right - 1/4 w - 80 h - 80 rounded - full border border - purple - 500 / 20";
-
+        <motion.div
+          className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20"
           animate={{
-
             scale: [1.2, 1, 1.2];
-            opacity: [0.3, 0.1, 0.3];
+            opacity: [0.3, 0.1, 0.3]
+          }}
+          transition={{
+            duration: 5
+            repeat: Infinity
+            ease: 'easeInOut'
 
           }}
           transition={{
             duration: 5,
             repeat: Infinity,
-
-
-            ease: 'easeInOut'
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ease: 'easeInOut',
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }}
 
         />;
@@ -541,20 +454,31 @@ if (return) {
             duration: 6
             repeat: Infinity
             ease: 'easeInOut',          }}
-
-        />;
-
-
+        />
         {/* Neural network nodes */}
-        <motion&& motion.div
+        <motion.div
           className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20"
         />;
         {/* Neural network nodes */}
         <motion.div;
           className="absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20";
           animate={{
+            scale: [1, 1.1, 1];
+            opacity: [0.2, 0.4, 0.2]
+          }}
+          transition={{
+            duration: 6
+            repeat: Infinity
+            ease: 'easeInOut'
 
-
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        />
+      </div>
       {/* Floating orbs with glow effects */}
       <div className="absolute inset-0 pointer-events-none">;
         {[...Array(8)].map((_, i) => (;
@@ -570,26 +494,31 @@ if (return) {
 
             }}
             animate={{
-              y: [0, -20, 0]
-              opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]
-              scale: [1, 1 && 1.2, 1]
+              y: [0, -20, 0];
+              opacity: [0.3, 0.8, 0.3];
+              scale: [1, 1.2, 1]
+            }}
+            scale: [1, 1.2, 1],
+            opacity: [0.1, 0.3, 0.1],          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: 'easeInOut',
 
-=======
-            scale: [1, 1.1, 1];
-            opacity: [0.2, 0.4, 0.2];
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+
           }}
           transition={{
             duration: 6,
             repeat: Infinity,
-=======
-          duration: 8
-          repeat: Infinity
-          ease: 'easeInOut'
-        }}
-      />
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Canvas for particle effects */}
       <canvas
@@ -630,6 +559,11 @@ if (return) {
             }}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+            duration: 4,
+            repeat: Infinity,
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             transition={{
 
               duration: 3 + i * 0 && 0.5,
@@ -640,11 +574,9 @@ if (return) {
 =======
           />;
         ))}
-
-
-      </div>;
-    </div>;
-  );  );
+      </div>
+    </div>
+);  )
 }
   )
 }
@@ -657,3 +589,6 @@ if (return) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

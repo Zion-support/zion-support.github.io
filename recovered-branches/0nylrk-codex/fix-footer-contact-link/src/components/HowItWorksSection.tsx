@@ -1,9 +1,19 @@
 
 =======
-import { GradientHeading } from './GradientHeading';
-import { Check, Handshake, Search, Send } from './lucide-react';
-const steps = [;
 
+import {GradientHeading} from "./GradientHeading";
+import {Check, Handshake, Search, Send} from "lucide-react";
+const steps = [
+  {
+    title: "Post"
+    description: "Publish your service, job, or equipment in minutes with our AI-powered form.";
+    icon: Send}
+import {GradientHeading} from "./GradientHeading";
+import {Check, Handshake, Search, Send} from "lucide-react";
+import { GradientHeading } from "./GradientHeading",
+import { Check, Handshake, Search, Send } from "lucide-react",
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const steps = [
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   {
@@ -11,40 +21,6 @@ const steps = [
     description: "Publish your service, job, or equipment in minutes with our AI - powered form.";
     icon: Send},
 
-  {
-    title: "Match"
-    description: "Our AI automatically matches your needs with the perfect providers or opportunities."
-    icon: Search}
-  {
-
-
-const steps = [;
-  {;
-    title: "Post",;
-    description: "Publish your service, job, or equipment in minutes with our AI-powered form.";
-    icon: Send},;
-  {;
-    title: "Match",;
-    description: "Our AI automatically matches your needs with the perfect providers or opportunities.",;
-    icon: Search},;
-  {;
-    title: "Hire/Buy",;
-    description: "Connect directly with matched providers and complete your transaction securely.",;
-    icon: Handshake},;
-  {;
-    title: "Done",;
-    description: "Enjoy hassle-free delivery and support for your technology solutions.",;
-    icon: Check}],;
-
-
-export function HowItWorksSection() {;
-  return (
-
-=======
-                className={`flex flex-col md:flex-row items-center ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : ""
-
-=======
 import { GradientHeading } from "./GradientHeading",;
 import { Check, Handshake, Search, Send } from "lucide-react",;
 const steps = [;
@@ -87,9 +63,6 @@ export function HowItWorksSection() {;
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${;
                   index % 2 === 0 ? "md:flex-row-reverse" : "";
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                 } relative`}
               >
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
@@ -118,9 +91,14 @@ export function HowItWorksSection() {;
                 </div>;
               </div>;
             ))}
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           </div>
         </div>
       </div>
     </section>
   )
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

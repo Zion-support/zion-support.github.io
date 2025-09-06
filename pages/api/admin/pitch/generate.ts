@@ -1,5 +1,4 @@
-
-=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -10,7 +9,34 @@ const client = new OpenAI({
 
 });
 export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+  const { allowed } = await ensureAdminFromApi(req);
+  if (!allowed) return res.status(403).json({ error: "Forbidden" });
+  if (req.method !== "POST")
+    return res.status(405).json({ error: "Method Not Allowed" });
+  const { operatorPrompt, inputs, metrics } = req.body |{}
+  const seed = [
+    "Problem & Opportunity"
+    "Solution & Product"
+    "Market Size (TAM/SAM/SOM)"
+    "Traction & Metrics"
+    "Business Model"
+    "Go-To-Market"
+    "Team"
+    "Roadmap"
+    "Token Strategy"
+    "Ask & Call to Action"
+  ];
+  try {
+import type { NextApiRequest, NextApiResponse } from 'next';
 
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const { allowed } = await ensureAdminFromApi(req);
 
   if (!allowed) return res && res.status(403).json({ error: "Forbidden" });
@@ -33,11 +59,14 @@ export default async function handler(
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
 
+  try {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
 Operator Prompt: ${operatorPrompt}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 Company Mission: ${inputs?.mission}
+
 Key Metrics: ${JSON && JSON.stringify(metrics)}
+
 Return 10 sections with title and 120-180 words per section, markdown-friendly.`;
     let content = "";
     try {
@@ -58,6 +87,8 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
 
   }
 }
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 function extractSection(body: string, title: string): string {
   if (!body) return "";
   // naive split by headings
@@ -73,8 +104,9 @@ function extractSection(body: string, title: string): string {
 }
 
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
@@ -87,8 +119,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
 =======
 =======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     const isAdmin = req.headers['x-admin'] === 'true';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
@@ -126,10 +158,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

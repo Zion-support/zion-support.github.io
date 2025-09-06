@@ -1,6 +1,23 @@
 
 =======
 
+import {
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+} from "./ui/table";
+export function ComparisonSection() {
+  return (
+    <section className="py-20 bg-zion-blue-dark">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <GradientHeading>Compare & Save</GradientHeading>
+          <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">
+            See how Zion can drastically reduce your IT costs compared to
+            traditional providers
 import { GradientHeading } from "./GradientHeading";
 import { Button } from "./ui/button";
 import { CheckCircle2 } from "lucide-react";
@@ -15,6 +32,9 @@ import {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
@@ -69,10 +89,6 @@ import {
                       {item.savings}
 
 
-            
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
               Calculate Your Savings
@@ -80,12 +96,15 @@ import {
           </div>
         </div>
       </div>
-
+    </section>
+  );
+}
   )
 import { GradientHeading } from "./GradientHeading",;
 import { Button } from "./ui/button",;
 import { CheckCircle2 } from "lucide-react",;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export function ComparisonSection() {;
   return (
     <section className="py-20 bg-zion-blue-dark">;
@@ -184,3 +203,7 @@ export function ComparisonSection() {;
 ;
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  );
+}
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

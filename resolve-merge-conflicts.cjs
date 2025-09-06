@@ -127,6 +127,13 @@ function resolveConflicts(filePath) {
   }
 }
 
+=======
+<<<<<<< HEAD
+// Resolve conflicts for each file
+conflictFiles.forEach(resolveConflicts);
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -170,7 +177,6 @@ function resolveConflicts(filePath) {
 <<<<<<< HEAD
 // Resolve conflicts for each file
 conflictFiles.forEach(resolveConflicts);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Run linter to check if issues are resolved

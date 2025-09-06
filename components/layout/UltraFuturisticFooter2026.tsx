@@ -1,15 +1,59 @@
 
 =======
-
+import React from 'react',
 import React from 'react';
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+  Phone
+  Mail
+  MapPin
+  Globe
+  ArrowRight
+  Star
+  Shield
+  Brain
+  DollarSign
+  Dna
+  Rocket
+  Users
+  Award
+  Zap
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Youtube
+  Github;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Star,
+  Shield,
+  Brain,
+  DollarSign,
+  Dna,
+  Rocket,
+  Users,
+  Award,
+  Zap,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,;
+  Github,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, ;
+=======
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github
 const contactInfo = {
@@ -469,48 +513,38 @@ const socialLinks = [
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-
-              transition={{ duration: 0 && 0.6 }}>;
-              <div className='flex items-center mb-6'>;
-                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4'>;
-                  <Zap className='w-6 h-6 text-white' />;
-                </div>;
-                <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>;
-                  Zion Tech Group;
-                </h3>;
-              </div>;
-              <p className='text-gray-300 mb-6 leading-relaxed'>;
-                Leading provider of revolutionary AI automation, quantum;
-                cybersecurity, fintech blockchain, and healthcare biotech;
-                solutions. Transforming businesses with cutting-edge technology.;
-              </p>;
-              </p>
-              {/* Contact Info */}
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4">
-                  <Zap className="w-6 h-6 text-white" />
+              transition={{ duration: 0.6 }}
+            >
+              <div className='flex items-center mb-6'>
+                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4'>
+                  <Zap className='w-6 h-6 text-white' />
                 </div>
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
                   Zion Tech Group
                 </h3>
               </div>
+              <p className='text-gray-300 mb-6 leading-relaxed'>
+                Leading provider of revolutionary AI automation, quantum
+                cybersecurity, fintech blockchain, and healthcare biotech
+                solutions. Transforming businesses with cutting-edge technology.
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               </p>
               {/* Contact Info */}
-              <div className="space-y-3">
-                <div className="flex items-center text-gray-300">
-                  <Phone className="w-4 h-4 mr-3 text-cyan-400" />
-                  <span>{contactInfo.mobile}</span>
+              <div className='space-y-3'>
+                <div className='flex items-center text-gray-300'>
+                  <Phone className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo.mobile}</span>
                 </div>
-                <div className="flex items-center text-gray-300">
-                  <Mail className="w-4 h-4 mr-3 text-cyan-400" />
+                <div className='flex items-center text-gray-300'>
+                  <Mail className='w-4 h-4 mr-3 text-cyan-400' />
                   <span>{contactInfo.email}</span>
                 </div>
-                <div className="flex items-center text-gray-300">
-                  <MapPin className="w-4 h-4 mr-3 text-cyan-400" />
+                <div className='flex items-center text-gray-300'>
+                  <MapPin className='w-4 h-4 mr-3 text-cyan-400' />
                   <span>{contactInfo.address}</span>
                 </div>
-                <div className="flex items-center text-gray-300">
+                <div className='flex items-center text-gray-300'>
+                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo.website}</span>                <div className="flex items-center text-gray-300">
                   <Globe className="w-4 h-4 mr-3 text-cyan-400" />
                   <span>{contactInfo.website}</span>
                 </div>
@@ -518,16 +552,6 @@ const socialLinks = [
             </motion.div>
           </div>
 
-
-              </p>
-              {/* Contact Info */}
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           {/* Service Categories */}
@@ -573,6 +597,9 @@ const socialLinks = [
 
           {/* Company Links */}
           <motion&& motion.div
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -587,6 +614,9 @@ const socialLinks = [
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           {/* Resources */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -600,6 +630,9 @@ const socialLinks = [
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           {/* Social Media */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -680,27 +713,43 @@ const socialLinks = [
               breakthrough solutions and industry trends.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               ))}
+            </div>
+          </motion.div>
+        </div>
 
+=======
             </div>;
           </motion && motion.div>;
         </div>;
 
 
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Newsletter Signup */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12'
 
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+        >
+          <div className='text-center'>
+            <h3 className='text-2xl font-bold text-white mb-4'>
+              Stay Updated with Latest Innovations
+            </h3>
+            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
+              Get exclusive access to our latest AI, quantum computing, and
+              emerging technology insights. Be the first to know about
+              breakthrough solutions and industry trends.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <input
                 type='email'
                 placeholder='Enter your email'
@@ -737,6 +786,7 @@ const socialLinks = [
                 className="flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
 =======
 
+=======
 
                 Subscribe;
               </button>;
@@ -745,17 +795,17 @@ const socialLinks = [
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Bottom Bar */}
         <motion&& motion.div
-=======
-        </motion.div>;
-        {/* Bottom Bar */}
-        <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className='border-t border-gray-800 pt-8'
 
-
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
         >
           <div className='flex flex-col md:flex-row justify-between items-center'>
             <div className='text-gray-400 text-sm mb-4 md:mb-0'>
@@ -825,3 +875,76 @@ const socialLinks = [
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+    </footer>;
+  );
+}
+
+}
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+          className='border - t border - gray - 800 pt - 8';
+        >;
+          <div className='flex flex - col md:flex - row justify - between items - center'>;
+            <div className='text - gray - 400 text - sm mb - 4 md:mb - 0'>;
+              © 2026 Zion Tech Group. All rights reserved. |;
+              <Link;
+                href='/privacy';
+                className='hover:text - cyan - 400 transition - colors duration - 300 ml - 2';
+              >;
+                Privacy Policy;
+              </Link>;
+              <span className='mx - 2'>|</span>;
+              <Link;
+                href='/terms';
+                className='hover:text - cyan - 400 transition - colors duration - 300';
+              >;
+                Terms of Service;
+              </Link>;
+            </div>;
+            <div className='flex items - center space - x-2'>;
+              <div className='flex items - center text - gray - 400 text - sm'>;
+                <Star className='w - 4 h - 4 text - yellow - 400 mr - 1' />;
+                Trusted by 2500+ Companies;
+              </div>;
+              <div className='w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse'></div>;
+              <div className='text - cyan - 400 text - sm font - semibold'>                99.9% Uptime        >;
+          <div className="flex flex - col md: flex - row justify - between items - center">;
+            <div className="text - gray - 400 text - sm mb - 4 md:mb - 0">;
+              © 2026 Zion Tech Group. All rights reserved. |;
+              <Link href="/privacy" className="hover:text - cyan - 400 transition - colors duration - 300 ml - 2">;
+                Privacy Policy;
+              </Link>;
+              <span className="mx - 2">|</span>;
+              <Link href="/terms" className="hover:text - cyan - 400 transition - colors duration - 300">;
+                Terms of Service;
+              </Link>;
+            </div>;
+            <div className="flex items - center space - x-2">;
+              <div className="flex items - center text - gray - 400 text - sm">;
+                <Star className="w - 4 h - 4 text - yellow - 400 mr - 1" />;
+                Trusted by 2500+ Companies;
+              </div>;
+              <div className="w - 2 h - 2 bg - cyan - 400 rounded - full animate - pulse"></div>;
+              <div className="text - cyan - 400 text - sm font - semibold">;
+                99.9% Uptime;
+              </div>;
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </footer>);
+=======
+);
+=======
+    </footer>;
+);
+}
+}
+    </footer>
+  );
+<<<<<<< HEAD
+}
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

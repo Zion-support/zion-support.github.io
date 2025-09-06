@@ -13,6 +13,24 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
 import { toast } from "@/hooks/use-toast",
 import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'
 
+=======
+
+
+import { use_router } from 'next / router';
+import { Button  } from '@/components / ui / button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
+import { Input  } from '@/components / ui / input';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow  } from '@/components / ui / table';
+import { Badge  } from '@/components / ui / badge';
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger  } from '@/components / ui / dialog';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
+import { Alert, AlertDescription, AlertTitle  } from '@/components / ui / alert';
+import { toast  } from '@/hooks / use - toast';
+import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'import { supabase  } from '@/integrations / supabase / client';
+import { logErrorToProduction } from '@/utils / production_logger';
+import { EmptyState  } from '@/components / ui / empty - state';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -29,6 +47,8 @@ interface PartnerProfile {
   fraud_flags?: number,
 
   commission_rate?: number
+  commission_rate?: number;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 export default function PartnerManager() {
 

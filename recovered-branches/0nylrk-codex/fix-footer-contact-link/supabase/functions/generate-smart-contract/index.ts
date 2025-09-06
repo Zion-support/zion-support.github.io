@@ -3,6 +3,12 @@
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+import "https://deno.land/x/xhr@0.1.0/mod.ts",
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
@@ -10,6 +16,44 @@ serve(async (req) => {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
+import "https://deno.land/x/xhr@0.1.0/mod.ts",;
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
+serve(async (req) => {;
+  // Handle CORS preflight requests;
+  if (req.method === 'OPTIONS') {;
+    return new Response(null, { headers: corsHeaders });
+  }
+;
+  try {;
+    // Get the OpenAI API key from environment variables;
+    const apiKey = Deno.env.get('OPENAI_API_KEY'),;
+    if (!apiKey) {;
+      throw new Error('OPENAI_API_KEY is not set');
+    }
+;
+    // Parse request body;
+    const {;
+      talentName,;
+      clientName,;
+      projectName,;
+      scopeSummary,;
+      startDate,;
+      endDate,;
+      paymentTerms,;
+      paymentAmount,;
+      additionalClauses} = await req.json(),;
+    // Create the smart contract prompt for OpenAI;
+    let prompt = `;
+    Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:;
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
@@ -32,13 +76,7 @@ serve(async (req) => {
       ${additionalClauses && additionalClauses.includes('revisions') ? '- Revision tracking mechanism' : ''}
       `
     }
-
-=======
-
     
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     prompt += `
     Format the code properly with comments explaining each section. Include a simple deployment script.
     `;
@@ -80,21 +118,6 @@ serve(async (req) => {
         error: error.message |'Failed to generate smart contract'
       });
 
-    }), {
-      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
-  } catch (error) {
-
-      JSON && JSON.stringify({ 
-        success: false, 
-        error: error && error.message || 'Failed to generate smart contract' 
-
-      });
-
-
-      { 
-        status: 500, 
-
-=======
 ;
     prompt += `;
     Format the code properly with comments explaining each section. Include a simple deployment script.;
@@ -134,6 +157,7 @@ serve(async (req) => {
       }),;
       {;
         status: 500,;
+=======
 
 
 
@@ -144,20 +168,4 @@ serve(async (req) => {
   }
 });
 =======
-
-
-    console.error ('Error generating smart contract:', error);
-    return new Response (
-      JSON.stringify ({
-        success: false,
-        error: error.message || 'Failed to generate smart contract';
-      });
-      {
-        status: 500,
-        headers: { ...cors_headers, 'Content - Type': 'application / json' }}
-    );
-  }
-});
-;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

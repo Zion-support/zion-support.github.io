@@ -32,8 +32,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
 
       case "Recommended for Review":
 
-=======
-
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -65,9 +63,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         return "bg-orange-100 text-orange-800",;
       default:;
         return "bg-gray-100 text-gray-800";
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
   }
   // Trigger the scoring process
@@ -90,14 +85,35 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           .eq("id", application.id)
           .single()
         if (error) {
-
+<<<<<<< HEAD
         }
-        if (data.scored_at) {
-
-          return
-
+        if (attempts < maxAttempts) {
+          setTimeout(checkScore, 3000)
+        } else {
+          setIsScoring(false)
+          toast.info("Scoring is taking longer than expected. Check back later.")
         }
-
+      }
+      setTimeout(checkScore, 3000)
+    } catch (error: any) {
+      setIsScoring(false)
+      toast.error(`Failed to score resume: ${error.message}`)
+    }
+  }
+        
+        if (attempts < maxAttempts) {
+          setTimeout(checkScore, 3000)
+        } else {
+          setIsScoring(false),
+          toast.info("Scoring is taking longer than expected. Check back later.")
+        }
+      },
+      
+      setTimeout(checkScore, 3000)
+      
+    } catch (error: any) {
+      setIsScoring(false),
+      toast.error(`Failed to score resume: ${error.message}`)
       ),;
       if (error) throw error,;
       toast.success("Resume scoring has been initiated"),;
@@ -131,11 +147,14 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           toast.info("Scoring is taking longer than expected. Check back later.");
         }
       },;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       setTimeout(checkScore, 3000);
     } catch (error: any) {;
       setIsScoring(false);
       toast.error(`Failed to score resume: ${error.message}`);
+<<<<<<< HEAD
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   },
 
@@ -150,7 +169,11 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                         {application && application.match_breakdown.skills_match && skills_match.missing && (;
                           <p>Missing skills: {application && application.match_breakdown.skills_match && skills_match.missing.join(", ")}</p>;
                         )}
-
+                      </div>
+                    )}
+                      </div>;
+                      </div>;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     )}
 
                     {application.match_breakdown.experience_match && (
@@ -330,6 +353,7 @@ if ( {) {
                           <p>Missing certs: {application.match_breakdown.certifications_match.missing.join(", ")}</p>
                         )}
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     )}
 
                     {application.match_breakdown.education_match && (
@@ -375,6 +399,23 @@ if ( {) {
             <p className="text-muted-foreground mb-4">
               Analyze how well this resume matches your job requirements.
             </p>
+<<<<<<< HEAD
+            <Button
+              onClick = {handleScore,}
+              disabled = {isScoring,}
+              className="w-full">;
+              {isScoring ? (;
+                <>;
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
+                  Scoring Resume...;
+                </>;
+              ) : (;
+                "Score Resume";
+
+            <Button 
+              onClick={handleScore} 
+              disabled={isScoring}
+<<<<<<< HEAD
 
               className="w-full"
             >
@@ -389,4 +430,9 @@ if ( {) {
             </Button>;
           </div>;
         )}
+<<<<<<< HEAD
+      </CardContent>;
+    </Card>;
+  );
+}
 <<<<<<< HEAD

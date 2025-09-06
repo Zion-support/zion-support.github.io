@@ -12,12 +12,14 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface InterviewCardProps {
 
   interview: Interview
 
   onRefresh: () => Promise<void>
-<<<<<<< HEAD
 =======
 }
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {

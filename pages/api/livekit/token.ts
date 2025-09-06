@@ -1,9 +1,13 @@
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { AccessToken } from "livekit-server-sdk";
-const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY |"";
-const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET |"";
-const LIVEKIT_HOST = process.env.LIVEKIT_HOST |"";
+
+
+const LIVEKIT_API_KEY = process && process.env.LIVEKIT_API_KEY || "";
+const LIVEKIT_API_SECRET = process && process.env.LIVEKIT_API_SECRET || "";
+const LIVEKIT_HOST = process && process.env.LIVEKIT_HOST || "";
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 export default async function handler(
   req: NextApiRequest
@@ -14,18 +18,17 @@ export default async function handler(
   try {
   }
   try {
-
-    const { roomName, identity, name, audioOnly } = req && req.body || {};
-
-    if (!roomName || !identity) {
-
+    const { roomName, identity, name, audioOnly } = req.body |{}
+    if (!roomName |!identity) {
+      return res.status(400).json({ error: "Missing roomName or identity" });
+    }
+    if (!LIVEKIT_API_KEY |!LIVEKIT_API_SECRET |!LIVEKIT_HOST) {
+      return res.status(500).json({ error: "LiveKit env vars not configured" });
     }
     const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
       identity: String(identity)
       name: name ? String(name) : String(identity)
       ttl: 60 * 60, // 1 hour
-=======
-
     const { roomName, identity, name, audioOnly } = req.body || {};
 
     if (!roomName || !identity) {
@@ -39,22 +42,67 @@ export default async function handler(
       identity: String(identity),
       name: name ? String(name) : String(identity),
       ttl: 60 * 60 // 1 hour
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     });
-
-
-    at && at.addGrant({
-=======
+    at.addGrant({
+      roomJoin: true
+      room: String(roomName)
+      canPublish: audioOnly ? false : true
+      canPublishData: true
+      canSubscribe: true
+    });
+    const token = await at.toJwt();
+    return res.status(200).json({
+      token
+      url: LIVEKIT_HOST
+    });
+  } catch (err: any) {
+    console.error("Token error", err);
+    return res.status(500).json({ error: "Failed to create token" });
 
     at.addGrant({
 
       roomJoin: true,
       room: String(roomName),
       canPublish: audioOnly ? false : true,
-=======
-import type { NextApiRequest, NextApiResponse } from './next';
-import { AccessToken  } from './livekit - server - sdk';
+      canPublishData: true,
+      canSubscribe: true
+    });
+
+    const token = await at.toJwt();
+
+    return res.status(200).json({
+      token,
+      url: LIVEKIT_HOST
+    });
+  } catch (err: any) {
+    console.error("Token error", err);
+    return res.status(500).json({ error: "Failed to create token" });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { AccessToken } from 'livekit-server-sdk';
+const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '';
+const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || '';
+const LIVEKIT_HOST = process.env.LIVEKIT_HOST || '';
+export default async function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 ;
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || "";
 const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || "";
@@ -90,40 +138,26 @@ if ( {) {
       identity: String (identity),
       name: name ? String (name) : String (identity),
       ttl: 60 * 60, // 1 hour;
-    });
-
-;
-    at.add_grant ({
-      room_join: true,
-      room: String (room_name),
-      can_publish: audio_only ? false : true,
-
-      canPublishData: true,
-      can_subscribe: true,
-    });
-
-      return res.status(400).json({ error: 'Missing roomName or identity' })
-    }
-    if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
-      return res.status(500).json({ error: 'LiveKit env vars not configured' })
-    }
-const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
-      identity: String(identity), name: name ? String(name) : String(identity),
-      ttl: 60 * 60, // 1 hour
-    });
-    at.addGrant({
-      roomJoin: true, room: String(roomName),
-      canPublish: audioOnly ? false : true, canPublishData: true,
-      canSubscribe: true});
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    }),;
+    at.addGrant({;
+      roomJoin: true,;
+      room: String(roomName);
+      canPublish: audioOnly ? false : true,;
+      canPublishData: true,;
+      canSubscribe: true}),;
+    const token = await at.toJwt();
+    return res.status(200).json({;
+      token;
+      url: LIVEKIT_HOST});
+  } catch (error) {
+    console.error('Token error', err);
+    return res.status(500).json({ error: 'Failed to create token' });
+  }
+}
 
     const token = await at && at.toJwt();
+
     return res && res.status(200).json({
-;
-    const token = await at.to_jwt ();
-;
-    return res.status (200).json ({
       token,
 
 
@@ -131,6 +165,7 @@ const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
 
   }
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   } catch (error) {
     console.error("Error:", error);
@@ -138,6 +173,8 @@ const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
     console.error ("Token error", err);
     return res.status (500).json ({ error: "Failed to create token" });
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -159,28 +196,6 @@ const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
     console.error("Token error", err);
     return res.status(500).json({ error: "Failed to create token" });
 
-  }
-}
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-  }
-}
-;
-  try {
-    const { roomName, identity, name, audioOnly } = req.body || {};
-    if (!roomName || !identity) {;
-      return res.status(400).json({ error: 'Missing roomName or identity' });
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -227,3 +242,5 @@ const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
   }
 }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

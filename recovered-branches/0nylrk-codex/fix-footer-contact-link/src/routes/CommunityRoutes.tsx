@@ -1,4 +1,12 @@
-
+import {Fragment} from "react";
+import {Route, Routes} from "react-router-dom";
+import {ProtectedRoute} from "../components/ProtectedRoute";
+import CommunityPage from "../pages/CommunityPage";
+import ForumCategoryPage from "../pages/ForumCategoryPage";
+import ForumPostPage from "../pages/ForumPostPage";
+import CreatePostPage from "../pages/CreatePostPage";
+import EditPostPage from "../pages/EditPostPage";
+import CommunityProfilePage from "../pages/CommunityProfilePage";
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "../components/ProtectedRoute",
@@ -6,7 +14,11 @@ import CommunityPage from "../pages/CommunityPage",
 import ForumCategoryPage from "../pages/ForumCategoryPage",
 import ForumPostPage from "../pages/ForumPostPage",
 import CreatePostPage from "../pages/CreatePostPage",
+import EditPostPage from "../pages/EditPostPage";
+import CommunityProfilePage from "../pages/CommunityProfilePage";
 
+import EditPostPage from "../pages/EditPostPage",
+import CommunityProfilePage from "../pages/CommunityProfilePage",
 const CommunityRoutes = () => {
   return (
     <Routes>
@@ -16,10 +28,6 @@ const CommunityRoutes = () => {
       <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />
       <Route path="/community/post/:postId" element={<ForumPostPage />} />
       <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />
-const CommunityRoutes = () => {
-=======
-const CommunityRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       {/* Public routes */}
@@ -42,6 +50,20 @@ const CommunityRoutes = () => {;
             <EditPostPage />
           </ProtectedRoute>
 =======
+import { Fragment } from "react",;
+import { Route, Routes } from "react-router-dom",;
+import { ProtectedRoute } from "../components/ProtectedRoute",;
+import CommunityPage from "../pages/CommunityPage",;
+import ForumCategoryPage from "../pages/ForumCategoryPage",;
+import ForumPostPage from "../pages/ForumPostPage",;
+import CreatePostPage from "../pages/CreatePostPage",;
+import EditPostPage from "../pages/EditPostPage",;
+import CommunityProfilePage from "../pages/CommunityProfilePage",;
+const CommunityRoutes = () => {;
+  return (;
+    <Routes>;
+      {/* Public routes */}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 
 =======
@@ -90,8 +112,10 @@ const CommunityRoutes = () =>: any {
 =======
 },;
 export default CommunityRoutes;
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

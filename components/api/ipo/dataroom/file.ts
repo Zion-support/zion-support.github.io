@@ -1,7 +1,5 @@
-
-
-=======
-
+import type { NextApiRequest, NextApiResponse } from 'next',
+import fs from 'fs',
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -37,37 +35,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   appendAuditLog({ type: "file_open", section, name: file });
   fs.createReadStream(fullPath).pipe(res);
 }
-
-
-  );
-  if (!fs && fs.existsSync(fullPath))
-    return res && res.status(404).json({ error: "Not found" });
-  const contentType =
-
-
-  );
-  if (!fs && fs.existsSync(fullPath))
-    return res && res.status(404).json({ error: "Not found" });
-  const contentType =
-
-
-}
-import type { NextApiRequest, NextApiResponse } from './next';
-import fs from './fs';
-import path from './path';
-import mime from './mime - types';
-import { appendAuditLog, resolveDataPath  } from '../../../../utils / api / storage';
-import { requireSuperadminApi  } from '../../../../utils / api / auth';
-export default /**
- * handler - Function description
- */
-function handler() {
-  if () return) {
-  $2
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+import mime from 'mime-types';
+import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return;
 import path from 'path';
 import mime from 'mime-types';
 import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
@@ -75,7 +50,6 @@ import { requireSuperadminApi } from '../../../../utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 =======
-<<<<<<< HEAD
 
   const section = String(req.query.section |"General");
   const file = String(req.query.file |"");
@@ -139,5 +113,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

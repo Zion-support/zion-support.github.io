@@ -111,6 +111,10 @@ export default /**
  */
 function ServicesPage() {
 
+export default function ServicesPage() {;
+  return (;
+    <div className=&quot;bg-black&quot;>
+const Page: React.FC<PageProps> = ({ className }) => {
   return (
     <div className=&quot;bg - black & quot;>;
       {/* Hero section */}
@@ -119,12 +123,14 @@ function ServicesPage() {
           <div className=&quot;text - center & quot;>;
             <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
               Professional{' '}
-
-
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                AI Services
+              </span>
+            </h1>
+            <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+              From strategy to implementation, our comprehensive AI services help you navigate
             <p className="mt-6 text-lg leading-8 text-gray-300">
               From strategy to implementation, our comprehensive AI services help you navigate 
-
-
               the complexities of artificial intelligence and achieve transformative results.
             </p>
           </div>
@@ -137,12 +143,10 @@ function ServicesPage() {
           <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
             Comprehensive AI Solutions
           </p>
-
-
+          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+            We offer end-to-end AI services designed to accelerate your digital transformation
           <p className="mt-6 text-lg leading-8 text-gray-300">
             We offer end-to-end AI services designed to accelerate your digital transformation 
-
-
             and drive measurable business outcomes.
           </p>
         </div>
@@ -279,10 +283,31 @@ export default function ServicesPage() {
         </div>;
       </div>;
       {/* Service Process */}
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
+          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Our Process</h2>
+          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+            How We Deliver Results
+          </p>
+          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+            Our proven methodology ensures successful project delivery and maximum value
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Process</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+            How We Deliver Results
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Our proven methodology ensures successful project delivery and maximum value 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             from your AI investment.
           </p>
         </div>
@@ -303,43 +328,6 @@ export default function ServicesPage() {
                 </div>
               </div>
             ))}
-=======
-<div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
-          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Our Process</h2>;
-          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            How We Deliver Results;
-          </p>;
-          <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-            Our proven methodology ensures successful project delivery and maximum value;
-            from your AI investment.;
-          </p>;
-        </div>;
-        <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
-          <div className=&quot;grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols - 5&quot;>;
-            {service_process.map ((step, index) => (
-              <div key={step.step} className=&quot;relative & quot;>;
-                {index < service_process.length - 1 && (
-                  <div className=&quot;hidden lg:block absolute top - 8 left - 8 w - full h - 0.5 bg - gray - 700 & quot;></div>)}
-                <div className=&quot;bg - white / 5 p - 6 rounded - 2xl backdrop - blur - sm text - center hover:bg - white / 10 transition - all duration - 300 hover:scale - 105 & quot;>;
-                  <div className=&quot;mx - auto flex h - 16 w - 16 items - center justify - center rounded - full bg - blue - 600 / 20 mb - 4&quot;>;
-                    <step.icon className=&quot;h - 8 w - 8 text - blue - 400 & quot; />;
-                  </div>;
-                  <div className=&quot;text - sm font - semibold text - blue - 400 mb - 2&quot;>{step.step}</div>;
-                  <h3 className=&quot;text - lg font - semibold text - white mb - 2&quot;>{step.title}</h3>;
-                  <p className=&quot;text - sm text - gray - 300 & quot;>{step.description}</p>;
-                </div>;
-              </div>))}
-=======
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Our Process</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-            How We Deliver Results
-          </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            Our proven methodology ensures successful project delivery and maximum value
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             How We Deliver Results
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -370,14 +358,18 @@ export default function ServicesPage() {
         </div>;
       </div>;
       {/* Why Choose Us */}
-
-
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
+          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Why Choose Us</h2>
+          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Why Choose Us</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             The Zion Tech Group Advantage
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -422,13 +414,13 @@ export default function ServicesPage() {
         </div>;
       </div>;
       {/* CTA section */}
-
-
+<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
+        <div className=&quot;mx-auto max-w-2xl text-center&quot;>
+          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-
-
+<<<<<<< HEAD
             Ready to get started?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">

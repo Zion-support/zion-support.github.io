@@ -1,14 +1,61 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
-
+import {
+  HelpCircle, MessageCircle, Phone, Mail, Clock
+  BookOpen, Video, FileText, Search, Filter
+  CheckCircle, ArrowRight, Brain, Atom, Rocket
+  Shield, Zap, Users, Star, TrendingUp, Code
+} from 'lucide-react'
+export default function Support() {
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const supportCategories = [
+    {
+      id: 'ai-services'
+      name: 'AI Services'
+      icon: <Brain className="w-8 h-8 text-cyan-400" />
+      description: 'Support for AI consciousness and autonomous systems'
+import React, { useState } from 'react',;
+import { motion } from 'framer-motion',;
+import { 
+  HelpCircle, MessageCircle, Phone, Mail, Clock, 
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
 import {
   HelpCircle, MessageCircle, Phone, Mail, Clock,
+  BookOpen, Video, FileText, Search, Filter,
+  CheckCircle, ArrowRight, Brain, Atom, Rocket,
+  Shield, Zap, Users, Star, TrendingUp, Code
+} from 'lucide-react',
+export default function Support() {
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const supportCategories = [
+    {
+      id: 'ai-services',
+      name: 'AI Services',
+      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      description: 'Support for AI consciousness and autonomous systems',
+      articles: 25
+    }
+    {
+      id: 'quantum-solutions'
+      name: 'Quantum Solutions'
+      icon: <Atom className="w-8 h-8 text-purple-400" />
+      description: 'Help with quantum computing and cryptography'
+      id: 'quantum-solutions',
+      name: 'Quantum Solutions',
+      icon: <Atom className="w-8 h-8 text-purple-400" />,
+      description: 'Help with quantum computing and cryptography',
       articles: 18
     }
     {
-
-=======
+      id: 'autonomous-systems'
+      name: 'Autonomous Systems'
+      icon: <Rocket className="w-8 h-8 text-green-400" />
+      description: 'Support for self-managing business operations'
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       id: 'autonomous-systems',
       name: 'Autonomous Systems',
       icon: <Rocket className="w-8 h-8 text-green-400" />,
@@ -45,30 +92,52 @@ import {
       title: 'Video Call',
       description: 'Screen share and visual assistance',
 
+  return (
+
+    <div className="min-h-screen bg-black text-white">
+      {/* Hero Section */}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20" />
         <div className="relative z-10 container mx-auto px-4">
           <motion.div
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
               How Can We Help?
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-
+              Get the support you need for our AI consciousness, quantum computing
+              Get the support you need for our AI consciousness, quantum computing, 
               and autonomous systems. Our expert team is here to help 24/7.
             </p>
             {/* Search Bar */}
+              Get the support you need for our AI consciousness, quantum computing,
+              and autonomous systems. Our expert team is here to help 24/7.
+            </p>
+            {/* Search Bar */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
@@ -77,6 +146,8 @@ import {
                   placeholder="Search for help articles, guides, and solutions..."
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
                 />
               </div>
@@ -100,6 +171,8 @@ import {
       </section>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -111,6 +184,7 @@ import {
             {quickActions.map((action, index) => (
               <motion.div
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 className="group cursor-pointer"
               >
                 <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
@@ -118,11 +192,16 @@ import {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 text-center">{action.title}</h3>
                   <p className="text-gray-300 mb-4 text-center leading-relaxed">{action.description}</p>
                   <button className={`w-full py-3 px-4 bg-gradient-to-r ${action.color} text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300`}>
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -131,26 +210,8 @@ import {
             <p className="text-xl text-gray-400">Find solutions organized by topic and service area</p>
           </motion.div>
 
-=======
-            className="text - center mb - 16";
-          >;
-            <h2 className="text - 4xl font - bold mb - 4 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">;
-              Browse Help Categories;
-            </h2>;
-            <p className="text - xl text - gray - 400">Find solutions organized by topic and service area</p>;
-          </motion.div>;
-
-          {/* Category Filter */}
-          <div className="flex justify - center mb - 12">;
-            <div className="flex flex - wrap gap - 3">;
-              <button;
-                on_click={() => setSelectedCategory ('all')}
-                className={`px - 6 py - 3 rounded - xl font - medium transition - all duration - 300 ${
-                  selected_category === 'all';
-                    ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
-                    : 'bg - gray - 800 / 50 text - gray - 300 hover:bg - gray - 700 / 50';
-                }`}
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <div className="flex justify-center mb-12">
             <div className="flex flex-wrap gap-3">
               <button
@@ -199,6 +260,7 @@ import {
             {filteredCategories.map((category, index) => (
               <motion.div
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 className="group cursor-pointer"
               >
                 <div className="p-6 bg-gradient-to-br from-gray-900/30 to-black/30 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
@@ -207,14 +269,11 @@ import {
                     <div>
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
 
-=======
                         {category.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       </h3>
@@ -232,8 +291,6 @@ import {
               </motion.div>
 
               transition={{ duration: 0.6 }}
-
-
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -264,9 +321,6 @@ import {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="text-center mb-16"
             >
@@ -281,6 +335,8 @@ import {
               {supportChannels.map((channel, index) => (
                 <motion.div
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{channel.title}</h3>
                   <p className="text-gray-300 text-sm mb-4">{channel.description}</p>
@@ -299,16 +355,15 @@ import {
                     </div>
                   </div>
                 </motion.div>
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              ))}
+            </div>
+          </div>
+        </section>
         {/* Search and Filter */}
         <section className="py - 12 px - 4">;
           <div className="max - w-6xl mx - auto">;
             <div className="flex flex - col lg:flex - row gap - 6 items - center">;
               {/* Search Bar */}
-
-
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -330,17 +385,15 @@ import {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <div className="flex-1 w-full lg:w-auto">
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input
                     type="text"
                     placeholder="Search for help topics, questions, or solutions..."
-
-
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
                     value={searchTerm  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -351,27 +404,11 @@ import {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
                 </div>
               </div>
-
-              <div className="flex - 1 w - full lg:w - auto">;
-                <div className="relative">;
-                  <Search className="absolute left - 4 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5" />;
-                  <input;
-                    type="text";
-                    placeholder="Search for help topics, questions, or solutions...";
-                    value={search_term}
-                    on_change={(e) => setSearchTerm (e.target.value)}
-                    className="w - full pl - 12 pr - 4 py - 3 bg - gray - 800 / 50 border border - gray - 600 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent";
-                  />;
-                </div>;
-              </div>;
-
               {/* Category Filter */}
               <div className="flex flex - wrap gap - 2">;
                 {support_categories.map ((category) => (
@@ -382,9 +419,6 @@ import {
                       selected_category === category.id;
                         ? 'bg - cyan - 500 / 20 border - cyan - 500 / 50 text - cyan - 400';
                         : 'bg - gray - 800 / 50 border - gray - 600 text - gray - 300 hover:bg - cyan - 500 / 20 hover:border - cyan - 500 / 50';
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{channel.title}</h3>
@@ -417,24 +451,91 @@ import {
                 </div>
               </div>
 =======
-              {/* Category Filter */}
-              <div className="flex flex-wrap gap-2">
-                {supportCategories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 ${
-                      selectedCategory === category.id
-                        ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400'
-                        : 'bg-gray-800/50 border-gray-600 text-gray-300 hover:bg-cyan-500/20 hover:border-cyan-500/50'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     }`}
                   >;
                     {category.icon}
                     {category.name}
-
-                    <span className="text - sm text - gray - 400">({category.count})</span>;
-                  </button>))}
+                    <span className="text-sm text-gray-400">({category.count})</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* FAQ Section */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                question: "What is AI Consciousness Evolution?"
+                answer: "AI Consciousness Evolution is our revolutionary platform that creates truly conscious, self-aware, and emotionally intelligent AI systems that transcend traditional artificial intelligence."
+              }
+              {
+                question: "How does Quantum Neural Ecosystem work?"
+                answer: "Our Quantum Neural Ecosystem combines quantum computing with neural networks to solve previously impossible problems, leveraging quantum superposition and entanglement for exponential computational power."
+              }
+              {
+                question: "What makes Space Resource Intelligence unique?"
+                answer: "Our space technology uses AI-powered autonomous exploration to discover and extract extraterrestrial resources, enabling sustainable space colonization and resource utilization."
+              }
+              {
+                question: "How secure is your Quantum Cybersecurity platform?"
+                answer: "Our quantum cybersecurity provides unbreakable encryption using quantum key distribution and quantum-resistant algorithms that future-proof your security beyond current technological limitations."
+              }
+              {
+                question: "Can I integrate your AI with my existing systems?"
+                answer: "Yes! We provide comprehensive integration support, APIs, and custom development services to seamlessly integrate our revolutionary AI solutions with your existing infrastructure."
+              }
+              {
+                question: "What support do you offer for enterprise deployments?"
+                answer: "We provide dedicated enterprise support including 24/7 technical assistance, custom training programs, and dedicated account managers for large-scale deployments."
+              }
+              {/* Category Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <div className="flex flex-wrap gap-2">
+                {supportCategories.map((category) => (
+                  <button
+                    key={category.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    onClick={() => setSelectedCategory(category.id)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className={`px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 ${;
+                      selectedCategory === category.id;
+                        ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400';
+                        : 'bg-gray-800/50 border-gray-600 text-gray-300 hover:bg-cyan-500/20 hover:border-cyan-500/50';
+                    }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  >;
+                    {category.icon  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    {category.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    <span className="text-sm text-gray-400">({category.count})</span>
+                  </button>
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
               </div>;
             </div>;
@@ -472,6 +573,12 @@ import {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 question: "What is AI Consciousness Evolution?",
                 answer: "AI Consciousness Evolution is our revolutionary platform that creates truly conscious, self - aware, and emotionally intelligent AI systems that transcend traditional artificial intelligence.";
               },
@@ -495,9 +602,14 @@ import {
                 question: "What support do you offer for enterprise deployments?",
 
                 answer: "We provide dedicated enterprise support including 24/7 technical assistance, custom training programs, and dedicated account managers for large-scale deployments."
+              }
+                } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ].map((faq, index) => (
               <div key={index} className="p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10">
                 <h3 className="text-lg font-semibold mb-3 text-white">{faq.question}</h3>
@@ -505,6 +617,8 @@ import {
               </div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -514,6 +628,7 @@ import {
                 Quick answers to common questions and solutions
               </p>
             </motion.div>
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     className="p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl border border-gray-700/30"
                   >
                     <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
@@ -522,7 +637,6 @@ import {
                       {faq.tags.map((tag) => (
                         <span
 
-=======
                           key={tag  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -571,9 +685,6 @@ import {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className="text-center mb-16"
             >
@@ -588,6 +699,7 @@ import {
               {resources.map((resource, index) => (
                 <motion.div
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   </div>
                   <h3 className="text-lg font-bold text-white mb-2">{resource.title}</h3>
                   <p className="text-gray-300 text-sm mb-4">{resource.description}</p>
@@ -596,6 +708,9 @@ import {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
                     >
                       Access
@@ -619,6 +734,7 @@ import {
             {popularArticles.map((article, index) => (
               <motion.div
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 className="group cursor-pointer"
               >
                 <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
@@ -627,6 +743,8 @@ import {
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       </h3>
                       <div className="flex items-center gap-4 text-sm text-gray-400">
                         <span className="flex items-center gap-1">
@@ -634,6 +752,9 @@ import {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                         </span>
                         <span className="flex items-center gap-1">
                           <TrendingUp className="w-4 h-4" />
@@ -653,6 +774,7 @@ import {
                 </div>
               </motion.div>
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -677,9 +799,8 @@ import {
                 Support Hours & Availability
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-
+                Our expert support team is available to help you succeed with our 
                 Our expert support team is available to help you succeed with our
-
                 revolutionary technology solutions.
               </p>
               <div className="space-y-4">
@@ -696,14 +817,24 @@ import {
                     }`}>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               className="relative"
             >
               <div className="bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h3 className="text-2xl font-bold mb-4 text-white">Need Immediate Help?</h3>
                 <p className="text-gray-300 mb-6">
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  For urgent technical issues or critical support needs
+                  For urgent technical issues or critical support needs,
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                  For urgent technical issues or critical support needs, 
+                  For urgent technical issues or critical support needs,
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   our team is available around the clock.
                 </p>
                 <div className="space-y-4">
@@ -727,8 +858,11 @@ import {
                   >
                     Contact Support
                     <ArrowRight className="w-5 h-5" />
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 </div>
               </div>
             </motion.div>
@@ -736,6 +870,7 @@ import {
         </div>
       </section>
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
@@ -759,7 +894,10 @@ import {
               Still Need Help?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-
+              Our support team is dedicated to ensuring your success with our
+              Our support team is dedicated to ensuring your success with our 
+              Our support team is dedicated to ensuring your success with our
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               revolutionary technology solutions. Don't hesitate to reach out.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -771,6 +909,8 @@ import {
                 <ArrowRight className="w-5 h-5" />
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <a
                 href="/resources"
                 className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300"
@@ -779,6 +919,7 @@ import {
               </a>
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <section id="contact-support" className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -814,6 +955,8 @@ import {
                   <ArrowRight className="w-5 h-5 ml-2" />
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <a
                   href="tel:+13024640950"
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center"
@@ -823,3 +966,5 @@ import {
                 </a>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

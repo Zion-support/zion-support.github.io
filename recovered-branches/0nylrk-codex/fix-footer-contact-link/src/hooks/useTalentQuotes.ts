@@ -1,10 +1,12 @@
-
-=======
-
+import { useState  } from 'react';
+import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
+import { quoteRequestService  } from '@/services/quoteRequestService';
+import { useAuth  } from '@/hooks/useAuth';
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
 import {useAuth} from '@/hooks/useAuth';
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -37,6 +39,8 @@ export const useTalentQuotes = () => {
       return false
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
     // Archive filter
     if (archiveFilter === 'active' && quote && quote.is_archived) {
@@ -68,7 +72,9 @@ export const useTalentQuotes = () => {
           : "The quote request has been moved back to active quotes"
       });
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
-
+    }
+    };
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     onError: (error: Error) => {
       toast({
         title: "Error";
@@ -91,18 +97,6 @@ export const useTalentQuotes = () => {
     markAsResponded: (id: string) =>
       updateStatusMutation.mutate({ id, status: 'responded' });
 
-  return {
-    quotes: filtered_quotes;
-    unread_count;
-    is_loading;
-    error;
-    status_filter;
-    setStatusFilter;
-
-
-    toggleArchive: (id: string, isArchived: boolean) => 
-
-=======
     },
     onError: (error: Error) => {
       toast({
@@ -174,24 +168,10 @@ export const useTalentQuotes = () => {
     markAsResponded: (id: string) =>;
       updateStatusMutation.mutate({ id, status: 'responded' });
     toggleArchive: (id: string, isArchived: boolean) =>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
 
-=======
-    setArchiveFilter,
-    markAsViewed: (id: string) => 
-      updateStatusMutation && updateStatusMutation.mutate({ id, status: 'in_review' });
-    markAsResponded: (id: string) => 
-      updateStatusMutation && updateStatusMutation.mutate({ id, status: 'responded' });
-    toggleArchive: (id: string, isArchived: boolean) => 
-      toggleArchiveMutation && toggleArchiveMutation.mutate({ id, isArchived })}
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     archive_filter;
     setArchiveFilter,

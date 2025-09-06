@@ -1,24 +1,30 @@
 
 =======
+
+export type ForumCategory =
 export type ForumCategory = 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   | 'getting-hired'
   | 'project-help'
   | 'ai-tools'
   | 'feedback'
   | 'announcements';
+=======
+export interface ForumCategoryInfo {
   id: ForumCategory;
   name: string;
   description: string;
-
-  admin_only: boolean,
-  icon: string;
-
+  adminOnly: boolean
+  icon: string
 }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+export interface ForumPost {
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+export interface ForumPost {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   title: string;
   content: string;
@@ -40,8 +46,14 @@ export type ForumCategory =
   is_featured?: boolean;
 
 }
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+export interface ForumReply {
+
+export interface ForumReply {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   post_id: string;
   parentReplyId?: string;
@@ -58,8 +70,14 @@ export type ForumCategory =
   is_answer?: boolean;
 
 }
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+export interface Badge {
+
+export interface Badge {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   name: string;
   description: string;
@@ -67,13 +85,26 @@ export type ForumCategory =
   icon: string,
   color: string;
 }
+  id: string;
+  name: string;
+  description: string;
+  icon: string
+  color: string
+}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+export interface UserBadge {
 
+
+export interface UserBadge {;
   userId: string;
   badgeId: string
   awardedAt: string
 }
+export interface CommunityUser {
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+export interface CommunityUser {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   id: string;
   name: string;
   avatar?: string;
@@ -87,3 +118,5 @@ export type ForumCategory =
 }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

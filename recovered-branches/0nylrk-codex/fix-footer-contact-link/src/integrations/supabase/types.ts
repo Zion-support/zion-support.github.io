@@ -125,8 +125,6 @@ export type Database = {
           }];
       }
 
-=======
-
       api_logs: {;
         Row: {;
 
@@ -164,10 +162,18 @@ export type Database = {
           status_code?: number;
           user_agent?: string | null;
           user_id?: string | null;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        }
+        Relationships: [;
+          {
+            foreignKeyName: "api_logs_api_key_id_fkey"
+            columns: ["api_key_id"]
+            isOneToOne: false
+            referencedRelation: "api_keys"
+            referencedColumns: ["id"];
+          };
+            referencedColumns: ["id"]
+          }
+          },
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         }
         Relationships: [;
@@ -663,6 +669,7 @@ export type Database = {
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           }
           {
             foreignKeyName: "job_applications_talent_id_fkey";
@@ -1265,13 +1272,6 @@ export type Database = {
             referencedRelation: "jobs"
             referencedColumns: ["id"]
 
-=======
-            foreignKeyName: "projects_client_id_fkey";
-            columns: ["client_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-          }
           {
             foreignKeyName: "projects_job_id_fkey";
             columns: ["job_id"];
@@ -1370,8 +1370,6 @@ export type Database = {
           }];
       }
 
-=======
-
       referral_codes: {;
         Row: {;
 
@@ -1394,6 +1392,7 @@ export type Database = {
           id?: string;
           updated_at?: string;
           user_id?: string;
+=======
 
 
 
@@ -1455,6 +1454,7 @@ export type Database = {
             referencedRelation: "referrals"
             referencedColumns: ["id"]
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           }
           {
             foreignKeyName: "referral_rewards_user_id_fkey";
@@ -1528,12 +1528,6 @@ export type Database = {
             referencedRelation: "referral_codes"
             referencedColumns: ["code"]
 
-=======
-
-          },
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           {
             foreignKeyName: "referrals_referred_id_fkey"
             columns: ["referred_id"]
@@ -1566,6 +1560,8 @@ export type Database = {
       }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         }
         Relationships: [;
           {
@@ -1728,6 +1724,7 @@ export type Database = {
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           }
           {
             foreignKeyName: "reviews_reviewer_id_fkey";
@@ -2216,8 +2213,6 @@ export type Database = {
       }
     }
 
-=======
-
     Functions: {;
       check_users_needing_reminders: {;
         Args: Record<PropertyKey never>;
@@ -2232,6 +2227,7 @@ export type Database = {
           days_since_login: number;
           onboarding_status: Json;
         }[];
+=======
 
 
 
@@ -2254,6 +2250,8 @@ export type Database = {
       }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
       flag_suspicious_content: {
         Args: {
@@ -2287,6 +2285,8 @@ export type Database = {
       }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
       get_event_distribution: {
         Args: { days_back?: number }
@@ -2302,6 +2302,8 @@ export type Database = {
       }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
       trigger_resume_scoring: {
         Args: { application_id: string }
@@ -2343,6 +2345,7 @@ type DefaultSchema = Database[Extract<keyof Database, "public">]
 export type Tables<
   DefaultSchemaTableNameOrOptions extends
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2368,6 +2371,7 @@ export type Tables<
 export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2389,6 +2393,7 @@ export type TablesInsert<
 export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2409,7 +2414,60 @@ export type TablesUpdate<
     : never
 export type Enums<
   DefaultSchemaEnumNameOrOptions extends
+    | keyof DefaultSchema["Enums"];
+    | { schema: keyof Database };
+    | keyof DefaultSchema["Enums"]
+    | { schema: keyof Database }
+    | { schema: keyof Database },
+  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+    schema: keyof Database
+  }
+    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
+    : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
+  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
+  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
+    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
+    : never
+export type CompositeTypes<
+  PublicCompositeTypeNameOrOptions extends
+    | keyof DefaultSchema["CompositeTypes"];
+    | { schema: keyof Database };
+    | keyof DefaultSchema["CompositeTypes"]
+    | { schema: keyof Database }
+    | { schema: keyof Database },
+  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+    schema: keyof Database
+  }
+    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
+    : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
+  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
+  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
+    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
+    : never
+export const Constants = {
+  public: {
+    Enums: {
+      api_key_scope: [;
+        "jobs:read";
+        "jobs:write";
+        "talent:read";
+        "quotes:write";
+      api_key_scope: [
+        "jobs:read";
+        "jobs:write";
+        "talent:read";
+        "quotes:write";
+        "webhooks:manage"]
+      fraud_severity: ["safe", "suspicious", "dangerous"];
+      quote_request_status: [
+        "new";
+        "in_review";
+        "accepted";
+        "responded";
+        "closed";
+        "archived"]
 
+<<<<<<< HEAD
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
     schema: keyof Database
   }
@@ -2512,31 +2570,6 @@ export type TablesUpdate<;
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
         Update: infer U;
       }
-      ? U;
-      : never;
-    : never;
-export type Enums<;
-  DefaultSchemaEnumNameOrOptions extends;
-    | keyof DefaultSchema["Enums"];
-
-    | { schema: keyof Database }
-  EnumName extends DefaultSchemaEnumNameOrOptions extends {
-    schema: keyof Database;
-  }
-    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"];
-    : never = never;
-> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
-
-
-    | keyof DefaultSchema["Enums"]
-
-
-  EnumName extends DefaultSchemaEnumNameOrOptions extends {
-    schema: keyof Database
-  }
-    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
-    : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
   : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
     ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
@@ -2599,3 +2632,7 @@ export const Constants = {
 
         "archived"],
       referral_status: ["pending", "completed", "expired"]}}} as const;
+=======
+<<<<<<< HEAD
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

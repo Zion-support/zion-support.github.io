@@ -5,6 +5,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   const stake = Number(stakeUsd |0);
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // Simple heuristics
   // - Low stake: prefer low fees (Polygon, BNB, Avalanche)
   // - High stake: prefer high trust L2s (Arbitrum/Optimism) or Ethereum
@@ -44,3 +46,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

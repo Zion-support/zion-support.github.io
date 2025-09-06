@@ -1,10 +1,7 @@
 
 
-=======
 
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {supabase} from "@/integrations/supabase/client";
@@ -17,15 +14,142 @@ import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {HireNowCTA} from "@/components/profile/HireNowCTA";
 import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2} from "lucide-react";
+export default function ProfilePage() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+  const { profileId } = useParams() as { profileId?: string }
 
+export default function ProfilePage() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { profileId } = useParams() as { profileId?: string };
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
+import { useState, useEffect } from "react",
+import { useParams } from "react-router-dom",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/components/ui/use-toast",
+import { SEO } from "@/components/SEO",
+import { AppHeader } from "@/layout/AppHeader",
+import { Footer } from "@/components/Footer",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { HireNowCTA } from "@/components/profile/HireNowCTA",
+import { 
+  Star,
+  MapPin, 
+  Clock, 
+  Link as LinkIcon, 
+  Github, 
+  Twitter, 
+  Linkedin,
+  CheckCircle2
+} from "lucide-react",
+
+export default function ProfilePage() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+  const { profileId } = useParams() as { profileId?: string },
+  const [profileData, setProfileData] = useState<any>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [isError, setIsError] = useState(false),
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   useEffect(() => {
     const fetchProfile = async () => {
 
 
+      setIsLoading(true);
+      setIsError(false);
+      try {;
+        const { data, error } = await supabase;
+          .from("talent_profiles");
+          .select("*");
+          .eq("id", profileId);
+          .single();
+
+import { useState, useEffect } from './react';
+import { use_params } from './react-router-dom';
+import { supabase } from '@/integrations / supabase / client';
+import { toast } from '@/components / ui / use - toast';
+import { SEO } from '@/components / SEO';
+import { AppHeader } from '@/layout / AppHeader';
+import { Footer } from '@/components / Footer';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+import { HireNowCTA } from '@/components / profile / HireNowCTA';
+import { Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from './lucide-react';
+;
+export default /**
+ * ProfilePage - Function description
+ */
+function ProfilePage() {
+  // use_params may be untyped in this environment, so avoid passing a;
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { profile_id } = use_params () as { profile_id?: string }
+  const [profile_data, setProfileData] = useState < any>(null);
+  const [is_loading, setIsLoading] = useState (true);
+  const [is_error, setIsError] = useState (false);
+;
+  useEffect (() => {
+    const fetch_profile = async () => {
+      setIsLoading (true);
+      setIsError (false);
+      try {
+        const { data, error } = await supabase;
+          .from ("talent_profiles");
+          .select ("*");
+          .eq ("id", profile_id);
+          .single ();
+;
+        // Check condition
+if ( {) {
+  $2
+}
+          throw error;
+        }
+        setProfileData (data);
+      } catch (error) {
+        console.error ("Error fetching profile:", error);
+        setIsError (true);
+        toast ({
+          title: "Error",
+          description: "Failed to load profile. Please try again later.",
+          variant: "destructive"});
+
+      } finally {
+        setIsLoading (false);
+      }
+
+
+        if (error) {;
+          throw error;
+        }
+
+        setProfileData(data);
+      } catch (error) {;
+        console && console.error("Error fetching profile:", error);
+        setIsError(true);
+        toast({;
+          title: "Error",;
+          description: "Failed to load profile. Please try again later.",;
+          variant: "destructive"});
+      } finally {;
+        setIsLoading(false);
+      }
+    };
+
+    if (profileId) {;
+      fetchProfile();
+    }
+  }, [profileId]),
     return (
       <div className="min-h-screen flex items-center justify-center">;
         <span className="loading loading-ring loading-lg"></span>;
@@ -42,25 +166,7 @@ import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, Chec
       </div>;
     );
   }
-=======
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p className="text-red-500">Failed to load profile.</p>
-      </div>
-    )
-  }
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  return (
-    <>;
-      <SEO
-
-        title={`${profileData.full_name} | Talent Profile`}
-
       />
       <AppHeader />
       <div className="container mx-auto px-4 py-8">
@@ -109,63 +215,6 @@ import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, Chec
                       </div>
                     )}
 
-          {/* Main Content Area */}
-          <div className="col-span-12 lg:col-span-8">;
-            {/* Profile Header */}
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
-              <div className="flex items-start">;
-                {/* Avatar */}
-                <div className="relative mr-4">;
-                  <Avatar className="w-24 h-24">;
-                    {profileData && profileData.profile_picture_url ? (;
-                      <AvatarImage src={profileData && profileData.profile_picture_url} alt={profileData && profileData.full_name} />;
-                    ) : (;
-                      <AvatarFallback>{profileData && profileData.full_name?.charAt(0)}</AvatarFallback>;
-                    )}
-                  </Avatar>;
-                  {profileData && profileData.is_verified && (;
-                    <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0 && 0.5 rounded-full">;
-                      <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
-                    </div>;
-                  )}
-
-                </div>;
-
-
-                {/* Main Info */}
-                <div className="flex-1">;
-                  <div className="flex justify-between items-start">;
-                    <div>;
-                      <h1 className="text-2xl font-bold text-white">{profileData && profileData.full_name}</h1>;
-                      <p className="text-zion-cyan font-medium">{profileData && profileData.professional_title}</p>;
-                    </div>;
-                    {/* Add Save/Unsave Button Here */}
-
-                  </div>;
-
-
-                  {/* Location & Availability */}
-                  <div className="mt-2 flex flex-wrap gap-3 text-sm">;
-                    {profileData && profileData.location && (;
-                      <div className="flex items-center text-zion-slate-light">;
-                        <MapPin className="h-4 w-4 mr-1" />;
-                        <span>{profileData && profileData.location}</span>;
-                      </div>;
-                    )}
-                    {profileData && profileData.availability && (;
-                      <div className="flex items-center text-zion-slate-light">;
-                        <Clock className="h-4 w-4 mr-1" />;
-                        <span>{profileData && profileData.availability}</span>;
-                      </div>;
-                    )}
-
-                  </div>;
-                </div>;
-              </div>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               {/* Skills */}
               {profileData && profileData.skills && profileData && profileData.skills.length > 0 && (;
@@ -235,8 +284,8 @@ import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, Chec
                   >
                     <Github className="h-6 w-6" />
 
-=======
                   </Link>
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -253,6 +302,8 @@ import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, Chec
                     <Twitter className="h-6 w-6" />
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 )}
                 {profileData && profileData.linkedin_link && (;
                   <a
@@ -265,6 +316,8 @@ import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, Chec
                     <Linkedin className="h-6 w-6" />
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 )}
 
               </div>;
@@ -276,6 +329,7 @@ import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, Chec
           <div className="col-span-12 lg:col-span-4 space-y-6">;
             <HireNowCTA
               talentProfile={{
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           </div>;
         </div>;
       </div>;
@@ -286,3 +340,6 @@ import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, Chec
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

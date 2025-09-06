@@ -1,8 +1,5 @@
 {
 
-=======
-  "timestamp": "2025-09-06T10:56:47.356Z",
-  "totalDuration": 7910,
   "optimizations": [
     {
       "type": "bundle-analysis",

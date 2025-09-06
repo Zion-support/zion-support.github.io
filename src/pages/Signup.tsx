@@ -1,3 +1,24 @@
+=======
+import Link from 'next/link';
+import { Input  } from '@/components/ui/input';
+import { Button  } from '@/components/ui/button';
+import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
+import { Alert, AlertDescription  } from '@/components/ui/alert';
+import { PasswordStrengthMeter  } from '@/components/PasswordStrengthMeter';
+import { AuthButtons  } from '@/components/AuthButtons';
+
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router'; // Changed from react-router-domimport { useFormik } from 'formik'
+import * as Yup from 'yup'
+import axios from 'axios'
+import Link from 'next/link'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { LoadingSpinner } from '@/components/ui/enhanced-loading-states'
+import { Alert, AlertDescription } from '@/components/ui/alert'
+import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'
+import { AuthButtons } from '@/components/AuthButtons'
+<<<<<<< HEAD
 
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
 
@@ -19,7 +40,12 @@ const SignupSchema = Yup.object({
   terms: Yup.boolean().oneOf(
     [true]
     'You must accept the terms and conditions'
-
+  )
+})
+export default function Signup() {
+  ),
+});
+export default function Signup() {;
   const router = useRouter(); // Changed from navigate
   const [loading, setLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
@@ -93,6 +119,7 @@ function Signup() {
       setAuthServiceAvailable(false)
       // Set a more specific error message based on the error type
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       ) {
         setHealthCheckError('Network connection issues detected')
       } else if (err.response?.status === 500) {
@@ -231,6 +258,7 @@ if ( {) {
         const status = err.response?.status
         // Try both 'error' and 'message' fields for compatibility
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           'Signup failed. Please try again.'
         logInfo('Processed error message:', { data: errorMsg })
         if (status === 409) {
@@ -335,6 +363,7 @@ if ( {) {
 
   // Show loading state only during initial health check
   if (healthCheckLoading) {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     return (
       <AuthLayout>;
         <div className='flex min-h-screen items-center justify-center p-4'>;
@@ -383,6 +412,7 @@ if ( {) {
             </div>
           )}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <Button
                 type="button"
                 variant="outline"
@@ -400,7 +430,9 @@ if ( {) {
               <AuthButtons providers={["google", "github"]} />
             </div>
           )}
+<<<<<<< HEAD
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     if (isSubmitting) return; // Prevent multiple submissions
     setIsSubmitting(true)
     try {
@@ -430,7 +462,9 @@ if ( {) {
         const { error: sessionError } = await supabase.auth.setSession(resData.session)
         if (sessionError) {
           console.error("Error setting session:", sessionError)
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
         form.set_error ('email', { message: res_data.message });
         toast.error ('Email already registered – please login.');
@@ -636,20 +670,8 @@ export default function Signup() {;
         // Potentially navigate to login or show a more specific error;
         return;
 }
-
-      // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification);
-      if (data && data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {;
-        try {;
-          await mailchimpService && mailchimpService.addSubscriber({;
-            email: data && data.email,;
-            mergeFields: { FNAME: data && data.displayName }
-          });
-          await mailchimpService && mailchimpService.sendWelcomeEmail(data && data.email, 'NEW10');
-} catch (err) {;
-          console && console.error('Mailchimp subscription failed', err);
-          // Non-critical error, don't block user flow;
+}}
 }
-<<<<<<< HEAD
       }
       // Toast and navigation are handled above if session is present;
       // If emailVerificationRequired, no toast/navigation here, message is shown;
@@ -715,5 +737,4 @@ const Signup = () => {;
     return <Navigate to="/" />;
 }
 <<<<<<< HEAD
-=======
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+<<<<<<< HEAD

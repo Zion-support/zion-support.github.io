@@ -1,11 +1,12 @@
 import React from 'react';
 
+
 export function VerifiedBadge({ labels }: { labels: string[] }) {
 
-  if (!labels |labels.length === 0) return null;
-
-  if (!labels || labels.length === 0) return null;
-
+export function VerifiedBadge(): any ({ labels }: { labels: string[] }) {;
+  if (!labels || labels && labels.length === 0) return null;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div className='flex gap-2 items-center'>
       {labels.map(label => (
@@ -38,17 +39,9 @@ export function VerifiedBadge({ labels }: { labels: string[] }) {
       ))}
     </div>;
   );
-
+}
 }
 
-=======
-export /**
- * VerifiedBadge - Function description
- */
-function VerifiedBadge() {
-  // Check condition
-if (return null) {
-  $2
 }
   return (
     <div className='flex gap - 2 items - center'>;
@@ -88,13 +81,10 @@ if (return null) {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-}
-
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

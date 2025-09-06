@@ -1,10 +1,22 @@
 
-
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {useTheme} from "@/hooks/useTheme";
+import {Moon, Sun, Check} from "lucide-react";
+import {Card, CardContent} from "@/components/ui/card";
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { useTheme } from "@/hooks/useTheme",
+import { Moon, Sun, Check } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Moon, Sun, Check } from "lucide-react",
+import { Card, CardContent } from "@/components/ui/card",
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface Language {
 
   code: string
@@ -13,10 +25,58 @@ interface Language {
   flag: string
 }
 const languages: Language[] = [
-
-export function LanguageThemeSelector() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  { code: "en", name: "English", flag: "🇺🇸" }
+  { code: "es", name: "Español", flag: "🇪🇸" }
+  { code: "fr", name: "Français", flag: "🇫🇷" }
+  { code: "de", name: "Deutsch", flag: "🇩🇪" }
+  { code: "zh", name: "中文", flag: "🇨🇳" }]
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {useTheme} from "@/hooks/useTheme";
+import {Moon, Sun, Check} from "lucide-react";
+import {Card, CardContent} from "@/components/ui/card";
+
+interface Language {;
+  code: string,;
+  name: string,;
+  flag: string;
+}
+
+const languages: Language[] = [;
+  { code: "en", name: "English", flag: "🇺🇸" },;
+  { code: "es", name: "Español", flag: "🇪🇸" },;
+  { code: "fr", name: "Français", flag: "🇫🇷" },;
+  { code: "de", name: "Deutsch", flag: "🇩🇪" },;
+  { code: "zh", name: "中文", flag: "🇨🇳" }],;
+
+export function LanguageThemeSelector() {;
+
+  const { theme, setTheme } = useTheme();
+
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  { code: "en", name: "English", flag: "🇺🇸" },
+  { code: "es", name: "Español", flag: "🇪🇸" },
+  { code: "fr", name: "Français", flag: "🇫🇷" },
+  { code: "de", name: "Deutsch", flag: "🇩🇪" },
+  { code: "zh", name: "中文", flag: "🇨🇳" }],
+
+export function LanguageThemeSelector() {;
+  const { theme, setTheme } = useTheme();
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
+export function LanguageThemeSelector() {
+  const { theme, setTheme } = useTheme();
+
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
+  const { theme, setTheme } = useTheme(),
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
 
@@ -32,7 +92,6 @@ export function LanguageThemeSelector() {
                 </div>
                 {selectedLanguage === language.code && (
 
-=======
                   <Check className="h-4 w-4 text-primary" />
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -80,8 +139,10 @@ export function LanguageThemeSelector() {;
                   <span>{language.name}</span>
                 </div>
                 {selectedLanguage === language.code && (
+=======
 
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   <Check className="h-4 w-4 text-primary" />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -117,6 +178,8 @@ export function LanguageThemeSelector() {;
           </Card>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'dark'
                 ? "border-primary bg-primary/5"
@@ -130,18 +193,22 @@ export function LanguageThemeSelector() {;
               {theme === 'dark' && (;
                 <Check className="h-4 w-4 text-primary mt-2" />;
               )}
-
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </div>
+  )
 }
-;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             </CardContent>;
           </Card>;
         </div>;
       </div>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </div>;
+  );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

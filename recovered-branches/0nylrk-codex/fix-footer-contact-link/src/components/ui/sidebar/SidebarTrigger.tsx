@@ -1,33 +1,22 @@
 
 
-=======
-
 
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Menu, X} from "lucide-react";
 import {useSidebar} from "./sidebar-context";
 import {cn} from "@/lib/utils";
-
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
   className?: string
 }
 
-=======
-
-export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
-  const { open, toggleSidebar } = useSidebar(),
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
     <Button
       variant="ghost"
       size="icon"
-
-<<<<<<< HEAD
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Menu, X } from "lucide-react",;
@@ -43,7 +32,6 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
     <Button;
       variant="ghost";
       size="icon";
-
       className={cn("", className)}
       onClick={toggleSidebar}
       {...props}>;
@@ -53,4 +41,7 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
   );
 }
 ;
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

@@ -4,10 +4,16 @@ import { useState, useEffect } from "react",
 import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
-=======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { logWarn } from '@/utils/productionLogger';
 
+        return <CheckCircle className="h-5 w-5 text-green-500" />
+        return <Clock className="h-5 w-5 text-blue-500" />
+      default:;
+        return <AlertCircle className="h-5 w-5 text-gray-500" />};
+import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
+}
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -17,10 +23,23 @@ class ErrorBoundary extends React.Component {
 
 
 
+=======
+        return <CheckCircle className="h-5 w-5 text-green-500" />
+        return <Clock className="h-5 w-5 text-blue-500" />
+      default:;
+        return <AlertCircle className="h-5 w-5 text-gray-500" />};
+import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
+}
+
+  )
+}
+<<<<<<< HEAD
+
+=======
 
 ;
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const FALLBACK_SERVICES: ServiceStatus[] = [
   {
     name: "Marketplace API",

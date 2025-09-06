@@ -3,8 +3,7 @@
 export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {;
   const [storedValue, setStoredValue] = useState<T>(() => {;
 
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     try {;
       const item = window.localStorage.getItem(key);
       return item ? JSON.parse(item) :initialValue} catch (error) {console.error(`Error reading localStorage key "${key}":`, error);
@@ -160,7 +159,7 @@ if ( {) {
 }
 }
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
-<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

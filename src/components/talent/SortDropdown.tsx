@@ -20,6 +20,7 @@ import {
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 
 interface SortDropdownProps {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   sortOption: string
 
@@ -44,6 +45,7 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
             <SortDesc className="h-4 w-4 text-zion-purple" />
             {SORT_OPTIONS.find(opt => opt.value === sortOption)?.label || "Sort by"}
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
         </Button>
@@ -52,23 +54,21 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
         align="start"
         className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
       >
+        {SORT_OPTIONS.map(option => (          <DropdownMenuItem
+            key={option.value}
+            onClick={() => setSortOption(option.value)}
+            className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
+              sortOption === option.value
+                ? 'bg-zion-purple/20 text-zion-purple'
+                : ''            }`}        {SORT_OPTIONS.map((option,) => (
+        {SORT_OPTIONS.map((option) => (
 
           <DropdownMenuItem
             key={option.value}
             onClick={() => setSortOption(option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
+<<<<<<< HEAD
 
-            {SORT_OPTIONS.find(opt => opt.value === sortOption)?.label || "Sort by"}
-          </div>;
-          <ChevronDown className="h-4 w-4 ml-2 opacity-50" />;
-        </Button>;
-      </DropdownMenuTrigger>;
-
-
-              sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : "";
-=======
-              sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
             }`}
           >
             {option.label}

@@ -4,6 +4,15 @@ import Document, {
 } from 'next/document';
 
 export default function Document() {
+import Document, {
+  Html
+  Head
+  Main
+  NextScript
+  DocumentContext;
+} from 'next/document';
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <Html lang='en'>;
@@ -68,22 +77,12 @@ function Document() {
 
   );
 }
-=======
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-=======
-
-
-import Document, {
-
   Html,
   Head,
   Main,
   NextScript,;
   DocumentContext,;
-
 } from 'next/document';
-
-
 
 export default function Document() {
   return (
@@ -104,8 +103,6 @@ export default function Document() {
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
-
-    </Html>);
 }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

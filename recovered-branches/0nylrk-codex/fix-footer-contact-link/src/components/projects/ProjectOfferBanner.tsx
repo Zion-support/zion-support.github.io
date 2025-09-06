@@ -1,20 +1,101 @@
 
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import {useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
+import {Bell, Calendar, X} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent} from "@/components/ui/card";
+import {useProjects} from "@/hooks/useProjects";
+import {Project} from "@/types/projects";
+export function ProjectOfferBanner() {;
+  const navigate = useNavigate();
+  const { projects, isLoading } = useProjects();
+  const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
+  const [dismissed, setDismissed] = useState<Set<string>>(new Set());
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { useEffect, useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Bell, Calendar, X } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 
+
+  const navigate = useNavigate();
+  const { projects, isLoading } = useProjects();
+  const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
+  const [dismissed, setDismissed] = useState<Set<string>>(new Set());
+import { useProjects } from "@/hooks/useProjects",
+import { Project } from "@/types/projects",
+export function ProjectOfferBanner() {
+  const navigate = useNavigate(),
+  const { projects, isLoading } = useProjects(),
+  const [pendingOffers, setPendingOffers] = useState<Project[]>([]),
+  const [dismissed, setDismissed] = useState<Set<string>>(new Set()),
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   useEffect(() => {
     if (projects && !isLoading) {
       const offers = projects.filter(p => p.status === 'offer_sent');
       setPendingOffers(offers)
-
+    }
+  }, [projects, isLoading]);
+  const handleDismiss = (projectId: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    setDismissed(prev => {
+      const updated = new Set(prev);
+      updated.add(projectId)
+      return updated
+    })
   }
+  const handleViewOffer = (projectId: string) => {
+    navigate(`/project/${projectId}`)
+  }
+  if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    return null
+  }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+import { useEffect, useState } from "react",;
+import { useNavigate } from "react-router-dom",;
+import { Bell, Calendar, X } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { useProjects } from "@/hooks/useProjects",;
+import { Project } from "@/types/projects",;
+export function ProjectOfferBanner() {;
+  const navigate = useNavigate(),;
+  const { projects, isLoading } = useProjects(),;
+  const [pendingOffers, setPendingOffers] = useState<Project[]>([]),;
+  const [dismissed, setDismissed] = useState<Set<string>>(new Set()),;
+  useEffect(() => {;
+    if (projects && !isLoading) {;
+      const offers = projects.filter(p => p.status === 'offer_sent'),;
+      setPendingOffers(offers);
+    }
+  }, [projects, isLoading]),;
+  const handleDismiss = (projectId: string, e: React.MouseEvent) => {;
+    e.stopPropagation(),;
+    setDismissed(prev => {;
+      const updated = new Set(prev),;
+      updated.add(projectId),;
+      return updated;
+    });
+  };
+  const handleViewOffer = (projectId: string) => {;
+    navigate(`/project/${projectId}`);
+  };
+  if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
+    return null;
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  }
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
@@ -52,38 +133,5 @@ import { Card, CardContent } from "@/components/ui/card",
             </CardContent>
           </Card>
         ))}
-                  variant="ghost"
-                  onClick={(e) => handleDismiss(offer && offer.id, e)}
-                >;
-                  <X className="h-4 w-4" />;
-                </Button>;
-              </div>;
-            </CardContent>;
-          </Card>;
-        ))}
-
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
-import { useEffect, useState } from './react';
-import { use_navigate } from './react-router-dom';
-import { Bell, Calendar, X } from './lucide-react';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent } from '@/components / ui / card';
-import { use_projects } from '@/hooks / use_projects';
-import { Project } from '@/types / projects';
-export /**
- * ProjectOfferBanner - Function description
- */
-function ProjectOfferBanner() {
-  const navigate = use_navigate ();
-  const { projects, is_loading } = use_projects ();
-  const [pending_offers, setPendingOffers] = useState < Project[]>([]);
-  const [dismissed, set_dismissed] = useState < Set < string>>(new Set ());
-;
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

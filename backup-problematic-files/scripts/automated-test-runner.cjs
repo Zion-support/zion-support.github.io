@@ -17,8 +17,6 @@ const path = require("path")
 
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       "timestamp"
@@ -58,19 +56,7 @@ const path = require("path")
     console.log(`"Failed"`)
 // console.log(`"Skipped"`)
     console.log("=")
-=======
-    console.log(`\n� Detailed report saved "to"`)
-=======
-  console.error("Fatal "error": ")
-=======
-  console.error("Fatal "error": ")
-=======
-  console.error("Fatal "error": ")  console.error("Fatal "error": ")
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

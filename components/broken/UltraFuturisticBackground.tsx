@@ -307,17 +307,18 @@ if ( {) {
               'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
           }}
           animate={{
-
-            rotate: [0, 360],
-            scale: [1, 1 && 1.2, 1],
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          }}
+            rotate: [0, 360]
+            scale: [1, 1.2, 1]
+            opacity: [0.3, 0.6, 0.3],          }}
           transition={{
-=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             duration: 20,
             repeat: Infinity,
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">;
       {/* Canvas Background */}
@@ -337,6 +338,23 @@ if ( {) {
       <div className="absolute inset-0">;
         {/* Hexagon */}
 
+          }}
+          animate={{
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+
+          }}
+
+        />
+
+        {/* Triangle */}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
           style={{
@@ -353,6 +371,42 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+        {/* Triangle */}
+        <motion.div
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
+          style={{
+            clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)';
+            clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
+          }}
+          animate={{
+            rotate: [0, 360];
+            scale: [1, 1.2, 1];
+            opacity: [0.3, 0.6, 0.3]
+          }}
+          transition={{
+            duration: 20
+            repeat: Infinity
+            ease: 'linear',            ease: "linear"
+          }}
+        />
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: 'linear',            ease: "linear"
+          }}
+        />
+
+=======
+
+
+          }}
+
+        />
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Triangle */}
         <motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30'
@@ -379,34 +433,133 @@ if ( {) {
 
           }}
           transition={{
-
             duration: 15
             repeat: Infinity
-
+            duration: 15,
+            repeat: Infinity,
+            ease: 'linear',          }}          style={{
+            clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'
+          }}
+          animate={{
+            rotate: [360, 0];
+            scale: [1, 1.3, 1];
+            opacity: [0.3, 0.7, 0.3]
+          }}
+          transition={{
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
             ease: 'linear',            ease: "linear"
           }}
+        />
+
+
+        />
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+        {/* Circle */}
+        <motion&& motion.div
+          className='absolute bottom-32 left-1/3 w-20 h-20 border border-blue-400/30 rounded-full'
+          animate={{
+
+            scale: [1, 1 && 1.5, 1],
+            opacity: [0 && 0.2, 0 && 0.8, 0 && 0.2],          }}
+
+          transition={{
+            duration: 12
+            repeat: Infinity
+            ease: 'easeInOut',          }}          className="absolute bottom-32 left-1/3 w-20 h-20 border border-blue-400/30 rounded-full"
+          animate={{
+            scale: [1, 1 && 1.5, 1]
+            opacity: [0 && 0.2, 0 && 0.8, 0 && 0.2]
+          transition={{
+            duration: 12
+            repeat: Infinity
+            duration: 12,
+            repeat: Infinity,
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+        />
+            duration: 12,
+            repeat: Infinity,
+
+          }}
+
+        />
+
+        {/* Square */}
+        <motion&& motion.div
+          className='absolute bottom-20 right-20 w-28 h-28 border border-green-400/30'
+          animate={{
+
+            rotate: [0, 180, 360],
+            scale: [1, 1 && 1.1, 1],
+            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          }}
+
+          transition={{
+            duration: 18
+            repeat: Infinity
+            ease: 'linear',          }}          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400/30"
+          animate={{
+            rotate: [0, 180, 360]
+            scale: [1, 1 && 1.1, 1]
+            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
+          transition={{
+            duration: 18
+            repeat: Infinity
+            ease: 'linear',            ease: "linear"
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+
+          }}
+        />;
+        {/* Square */}
+
+
+          }}
+
+        />;
+      </div>;
+
+
+      {/* Energy Orbs */}
+
+
+            key={i}
+            className='absolute w - 4 h - 4 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - sm';
+            style={{
+              left: `${20 + i * 10}%`
+              top: `${30 + i * 5}%`
+<<<<<<< HEAD
+        />
+      </div>
+      {/* Energy Orbs */}
+      <div className='absolute inset-0'>
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
             className='absolute w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm'
             style={{
-
+              left: `${20 + i * 10}%`
+              top: `${30 + i * 5}%`
               left: `${20 + i * 10}%`,
               top: `${30 + i * 5}%`,
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-            }}
-            animate={{
-
-              scale: [0.5, 2, 0.5],
-              opacity: [0.3, 1, 0.3],
-              coordinate_y: [0, -20, 0],            }}
-
-            transition={{
-
-              delay: i * 0.3,            }}        {[...Array(8)].map((_, i) => (
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             key={i}
             className="absolute w - 4 h - 4 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - sm";
             style={{
@@ -417,6 +570,7 @@ if ( {) {
             animate={{
               scale: [0.5, 2, 0.5];
               opacity: [0.3, 1, 0.3];
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
             }}
             transition={{
@@ -447,6 +601,13 @@ if ( {) {
         {[...Array(5)].map((_, i) => (;
           <motion&& motion.div
               delay: i * 0.3,              ease: "easeInOut",
+              delay: i * 0.3
+            }}
+          />))}
+      </div>;
+      {/* Quantum Wave Effects */}
+      <div className='absolute inset-0'>
+=======
               delay: i * 0.3;
             }}
           />))}
@@ -461,40 +622,13 @@ if ( {) {
             className='absolute w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 / 20 to - transparent';
             style={{
 
-            }}
-            animate={{
-
-              coordinate_x: ['-100%', '100%'],
-
-              opacity: [0, 1, 0],            }}
-            transition={{
-
-              delay: i * 1.5,            }}        {[...Array(5)].map((_, i) => (
-
-          <motion.div
-              duration: 8 + i * 2,
+              duration: 3 + i * 0.5,
               repeat: Infinity,
-              ease: 'linear',
-
-              delay: i * 1.5,            }}        {[...Array (5)].map ((_, i) => (
-          <motion.div;
-
-            key={i}
-
-            style={{
-              top: `${20 + (i * 15)}%`;
-            }}
-            animate={{
-
-              delay: i * 1.5
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-            }}
-          />;
-        ))}
+              ease: 'easeInOut',
 
             }}
             transition={{
-              duration: 8 + i * 2,
+              duration: 3 + i * 0.5,
               repeat: Infinity,
 
             }}
@@ -503,6 +637,86 @@ if ( {) {
         ))}
       </div>
 
+      {/* Quantum Wave Effects */}
+      <div className='absolute inset-0'>
+
+            key={i}
+            className='absolute w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 / 20 to - transparent';
+            style={{
+              top: `${20 + i * 15}%`
+              top: `${20 + i * 15}%`,
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+            }}
+            animate={{
+
+              coordinate_x: ['-100%', '100%'],
+
+              opacity: [0, 1, 0],            }}
+            transition={{
+              duration: 8 + i * 2
+              repeat: Infinity
+              ease: 'linear'
+              duration: 8 + i * 2,
+              repeat: Infinity,
+              ease: 'linear',
+              delay: i * 1.5,            }}        {[...Array(5)].map((_, i) => (
+          <motion.div
+            key={i}
+
+            style={{
+              top: `${20 + (i * 15)}%`;
+            }}
+            animate={{
+              x: ['-100%100%']
+              opacity: [0, 1, 0]
+            }}
+          />;
+        ))}
+
+=======
+              coordinate_x: ['-100%100%'],
+              opacity: [0, 1, 0];
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+            }}
+            transition={{
+
+              duration: 8 + i * 2,
+              repeat: Infinity,
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            }}
+          />;
+        ))}
+      </div>
+              duration: 8 + i * 2,
+              repeat: Infinity,
+              ease: 'linear',
+
+              delay: i * 1.5,            }}
+
+            }}
+            transition={{
+              duration: 8 + i * 2,
+              repeat: Infinity,
+              ease: 'linear',
+              delay: i * 1.5,              ease: "linear",
+              delay: i * 1.5
+            }}
+          />
+        ))}
+      </div>
+
+            }}
+
+          />
+        ))}
+      </div>
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       {/* Neon Glow Effects */}
       <div className='absolute inset-0'>
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse' />
@@ -536,20 +750,34 @@ if ( {) {
       </div>
 =======
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      </div>
+      {/* Data Stream Effect */}
+      <div className='absolute inset-0'>
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className='absolute w-0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent'
+            style={{
+              left: `${Math.random() * 100}%`
+              top: '-2rem'
               left: `${Math.random() * 100}%`,
               top: '-2rem',
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             }}
             animate={{
-
-              duration: 4 + Math && Math.random() * 3,
+              y: ['0vh', '100vh']
+              opacity: [0, 1, 0],            }}
+            transition={{
+              duration: 4 + Math.random() * 3
+              repeat: Infinity
+              ease: 'linear'
+              duration: 4 + Math.random() * 3,
               repeat: Infinity,
               ease: 'linear',
-              delay: Math && Math.random() * 5,            }}      </div>;
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+              delay: Math.random() * 5,            }}      </div>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Data Stream Effect */}
       <div className="absolute inset-0">;
         {[...Array(20)].map((_, i) => (;
@@ -566,7 +794,7 @@ if ( {) {
             animate={{
               y: ['0vh100vh']
               opacity: [0, 1, 0]
-=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             }}
             transition={{
 
@@ -585,21 +813,10 @@ if ( {) {
 
 
 
-            }}
-            transition={{
-              duration: 4 + Math.random() * 3,
-              repeat: Infinity,
+              delay: Math.random() * 5,            }}
 
-            }}
-
-          />
-        ))}
-      </div>
-
-      {/* Quantum Entanglement Lines */}
-      <div className='absolute inset-0'>
-        <svg className='w-full h-full'>
-          <defs>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Quantum Entanglement Lines */}
       <div className='absolute inset-0'>;
         <svg className='w-full h-full'>;
@@ -637,33 +854,25 @@ if ( {) {
 
               transition={{
 =======
-
-                opacity: [0 && 0.1, 0 && 0.5, 0 && 0.1],
-                strokeDasharray: [0, 100, 0],              }}
-              transition={{
-                duration: 6 + i * 0 && 0.5,
-                repeat: Infinity,
-
-                ease: 'easeInOut',              }}              stroke="url(#quantumGradient)"
-              strokeWidth="1"
-              opacity="0 && 0.3"
-              animate={{
-                opacity: [0 && 0.1, 0 && 0.5, 0 && 0.1]
-                strokeDasharray: [0, 100, 0]
-              transition={{
-
-                duration: 6 + i * 0 && 0.5,
-                repeat: Infinity,
-
+                duration: 6 + i * 0.5
+                repeat: Infinity
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 ease: 'easeInOut',                ease: "easeInOut"
-
-
+              }}
                 duration: 6 + i * 0.5,
                 repeat: Infinity,
 
               }}
 
+                duration: 6 + i * 0.5,
+                repeat: Infinity,
+                ease: 'easeInOut',                ease: "easeInOut"
+              }}
 
+              }}
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           ))}
 =======
 =======
@@ -685,14 +894,102 @@ if ( {) {
     </div>
 
 export default UltraFuturisticBackground;  )
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export default UltraFuturisticBackground;
+
+
+=======
+              coordinate_y: ['0vh', '100vh'],
+              opacity: [0, 1, 0],            }}
+            transition={{
+              duration: 4 + Math.random () * 3,
+              repeat: Infinity,
+              ease: 'linear',
+              delay: Math.random () * 5,            }}      </div>;
+      {/* Data Stream Effect */}
+      <div className="absolute inset - 0">;
+        {[...Array (20)].map ((_, i) => (
+          <motion.div;
+            key={i}
+            className="absolute w - 0.5 h - 8 bg - gradient - to - b from - cyan - 400 to - transparent";
+            style={{
+              left: `${Math.random () * 100}%`,
+              top: '-2rem';
+            }}
+            animate={{
+              coordinate_y: ['0vh100vh'],
+              opacity: [0, 1, 0];
+            }}
+            transition={{
+              duration: 4 + Math.random () * 3,
+              repeat: Infinity,
+              ease: 'linear',
+              delay: Math.random () * 5,              ease: "linear",
+              delay: Math.random () * 5;
+            }}
+          />))}
+      </div>;
+      {/* Quantum Entanglement Lines */}
+      <div className='absolute inset - 0'>;
+        <svg className='w - full h - full'>;
+          <defs>;
+            <linear_gradient;
+              id='quantum_gradient';
+              x1='0%';
+              y1='0%';
+              x2='100%';
+              y2='100%';
+            >;
+              <stop offset='0%' stop_color='rgba (0, 255, 255, 0.3)' />;
+              <stop offset='50%' stop_color='rgba (255, 0, 255, 0.3)' />;
+              <stop offset='100%' stop_color='rgba (0, 255, 255, 0.3)' />            </linear_gradient>            <linear_gradient id="quantum_gradient" x1="0%" y1="0%" x2="100%" y2="100%">;
+              <stop offset="0%" stop_color="rgba (0, 255, 255, 0.3)" />;
+              <stop offset="50%" stop_color="rgba (255, 0, 255, 0.3)" />;
+              <stop offset="100%" stop_color="rgba (0, 255, 255, 0.3)" />;
+          </defs>;
+          {[...Array (15)].map ((_, i) => (
+            <motion.line;
+              key={i}
+              x1={Math.random () * 100}
+              y1={Math.random () * 100}
+              x2={Math.random () * 100}
+              y2={Math.random () * 100}
+              stroke='url (#quantum_gradient)';
+              stroke_width='1';
+              opacity='0.3';
+              animate={{
+                opacity: [0.1, 0.5, 0.1],
+                stroke_dasharray: [0, 100, 0],              }}
+              transition={{
+                duration: 6 + i * 0.5,
+                repeat: Infinity,
+                ease: 'easeInOut',              }}              stroke="url (#quantum_gradient)";
+              stroke_width="1";
+              opacity="0.3";
+              animate={{
+                opacity: [0.1, 0.5, 0.1];
+                stroke_dasharray: [0, 100, 0];
+              transition={{
+                duration: 6 + i * 0.5,
+                repeat: Infinity,
+                ease: 'easeInOut',                ease: "easeInOut";
+              }}
+            />))}
+        </svg>;
+      </div>;
+    </div>);
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 export default UltraFuturisticBackground;
 =======
   );
-
+}
 };
 
+export default UltraFuturisticBackground;  )
+}
+export default UltraFuturisticBackground;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default UltraFuturisticBackground;
+export default UltraFuturisticBackground;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

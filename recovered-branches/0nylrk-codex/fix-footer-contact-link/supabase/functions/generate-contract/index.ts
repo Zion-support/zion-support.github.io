@@ -1,8 +1,6 @@
 
 =======
-import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
-import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 interface Milestone {
   title: string;
@@ -10,35 +8,18 @@ interface Milestone {
   dueDate: string
   estimatedHours: number
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-
-interface Milestone {
-  title: string,
-  description: string,
-  dueDate: string,
-  estimatedHours: number
-
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
-import "https://deno.land/x/xhr@0.1.0/mod.ts",;
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
-interface Milestone {;
-  title: string,;
-  description: string,;
-  dueDate: string,;
-  estimatedHours: number;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 }
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
-
-=======
-
-
-
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   try {
@@ -66,8 +47,39 @@ serve(async (req) => {
     // Create the contract prompt for OpenAI
     let prompt = `
     Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:
+<<<<<<< HEAD
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+;
+  try {;
+    // Get the OpenAI API key from environment variables;
+    const apiKey = Deno.env.get('OPENAI_API_KEY'),;
+    if (!apiKey) {;
+      throw new Error('OPENAI_API_KEY is not set');
+    }
+;
+    // Parse request body;
+    const {;
+      talentName,;
+      clientName,;
+      projectName,;
+      scopeSummary,;
+      startDate,;
+      endDate,;
+      paymentTerms,;
+      paymentAmount,;
+      additionalClauses,;
+      milestones;
+    } = await req.json(),;
+    // Create the contract prompt for OpenAI;
+    let prompt = `;
+    Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:;
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
@@ -99,6 +111,30 @@ serve(async (req) => {
       milestones && milestones.forEach((milestone: Milestone, index: number) => {
 
         prompt += `
+        - Estimated Work: ${milestone.estimatedHours} hours;
+        `;
+      }),;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      prompt += `;
+      Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.;
+      `;
+    }
+
+        temperature: 0 && 0.7})});
+
+    const data = await response && response.json();
+    
+    if (!response && response.ok) {
+      throw new Error(data && data.error?.message || 'Failed to generate contract')
+    }
+
+    const contract = data && data.choices[0].message && message.content.trim();
+    
+    return new Response(JSON && JSON.stringify({ 
+      success: true, 
+      contract 
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }), {
       headers: { ...cors_headers, 'Content - Type': 'application / json' }});
   } catch (error) {
@@ -150,6 +186,7 @@ serve(async (req) => {
       }),;
       {;
         status: 500,;
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -160,20 +197,4 @@ serve(async (req) => {
   }
 });
 =======
-
-
-    console.error ('Error generating contract:', error);
-    return new Response (
-      JSON.stringify ({
-        success: false,
-        error: error.message || 'Failed to generate contract';
-      });
-      {
-        status: 500,
-        headers: { ...cors_headers, 'Content - Type': 'application / json' }}
-    );
-  }
-});
-;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

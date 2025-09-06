@@ -1,12 +1,25 @@
 
-
+import {useState} from "react";
+import {Search} from "lucide-react";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {CountryServiceCard} from "@/components/services/CountryServiceCard";
+import {CountryPricing} from "@/data/onsiteServicePricing";
 import { useState } from "react",
 import { Search } from "lucide-react",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { CountryServiceCard } from "@/components/services/CountryServiceCard";
+import { CountryPricing } from "@/data/onsiteServicePricing";
+import { CountryServiceCard } from "@/components/services/CountryServiceCard",
+import { CountryPricing } from "@/data/onsiteServicePricing",
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface CountryTabsProps {
 
   popularCountries: string[]
@@ -16,6 +29,8 @@ interface CountryTabsProps {
 
   setSearchQuery: (query: string) => void
 }
+export function CountryTabs({
+  popularCountries;
 
   filteredCountries,
   handleCountrySelect,
@@ -44,7 +59,12 @@ interface CountryTabsProps {
           {filteredCountries
             .filter(country => popularCountries.includes(country.country))
             .map(country => (
-
+              <CountryServiceCard
+                key={country.country}
+                country={country}
+              <CountryServiceCard 
+                key={country.country} 
+                country={country} 
 import { useState } from "react",;
 import { Search } from "lucide-react",;
 import { Input } from "@/components/ui/input",;
@@ -52,6 +72,7 @@ import { Button } from "@/components/ui/button",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { CountryServiceCard } from "@/components/services/CountryServiceCard",;
 import { CountryPricing } from "@/data/onsiteServicePricing",;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface CountryTabsProps {;
   popularCountries: string[],;
   filteredCountries: CountryPricing[],;
@@ -95,6 +116,8 @@ export function CountryTabs(): any ({ ;
                 country={country} ;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 onSelect={handleCountrySelect}
                 isPopular={true}
               />;

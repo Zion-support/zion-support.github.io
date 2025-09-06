@@ -4,15 +4,21 @@ import Button from '../components/ui/Button';
 
 import {
 
-=======
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+  Code
+  GitBranch
+  Database
+  Cloud
+  Shield
+  Zap
+  Star
+  ExternalLink
+  CheckCircle
+  TrendingUp
+  Cpu
+  Globe;} from 'lucide-react';import {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Code,
   GitBranch,
   Database,
@@ -23,11 +29,16 @@ import {
   ExternalLink,
   CheckCircle,
   TrendingUp,
-
-=======
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  Cpu,
+  Globe,;} from 'lucide-react';import { 
+  Cpu,;
+  Globe,;} from 'lucide-react';import { ;
+  Code;
+  GitBranch
+  Database
+  Cloud
+  Shield
+  Zap
   Code;
   GitBranch,
   Database,
@@ -54,100 +65,93 @@ export default function DeveloperToolsPage() {_const _developerTools = [
       features: [
 
       ];
-      pricing: '$10 / month',
-      market_price: '$10 - 20 / month',
-      website: 'https://github.com / features / copilot',
-      color: 'bg - gradient - to - br from - gray - 500 to - black',
-      text_color: 'text - gray - 400',
-      gradient: 'from - gray - 400 to - black',
-      popular: true,
-
-      category: 'Code Generation',
-    },
-      icon: <GitBranch className='w - 8 h - 8 text - white' />,
-      title: 'GitHub Pro',
-      description:;
-        'Advanced GitHub features for professional developers including private repositories, advanced tools, and priority support.',
-      features: [;
-        'Unlimited private repositories',
-        'Advanced code review tools',
-        'Priority support',
-        'Advanced insights',
-        'Team management features',
-      ],      pricing: '$4 / month',        'Unlimited private repositories_advanced code review tools_priority support_advanced insights_team management features';
-
+      pricing: '$10/month'
+      marketPrice: '$10-20/month'
+      website: 'https://github.com/features/copilot'
+      color: 'bg-gradient-to-br from-gray-500 to-black'
+      textColor: 'text-gray-400'
+      gradient: 'from-gray-400 to-black'
+      popular: true
+      category: 'Code Generation'
+    }
+      icon: <GitBranch className='w-8 h-8 text-white' />
+      title: 'GitHub Pro'
+      description:
+        'Advanced GitHub features for professional developers including private repositories, advanced tools, and priority support.'
+      features: [
+        'Unlimited private repositories'
+        'Advanced code review tools'
+        'Priority support'
+        'Advanced insights'
+        'Team management features'
+      ],      pricing: '$4/month',        'Unlimited private repositoriesAdvanced code review toolsPriority supportAdvanced insightsTeam management features'
       ];
-      pricing: '$4 / month',
-      market_price: '$4 / month',
-      website: 'https://github.com / pricing',
-      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
-      text_color: 'text - green - 400',
-      gradient: 'from - green - 400 to - emerald - 500',
-      popular: true,
-
-      category: 'Version Control',
-    },
-      icon: <Database className='w - 8 h - 8 text - white' />,
-      title: 'MongoDB Atlas',
-      description:;
-        'Fully managed cloud database service with automatic scaling, backup, and monitoring for modern applications.',
-      features: [;
-        'Fully managed MongoDB',
-        'Auto - scaling & optimization',
-        'Global distribution',
-        'Advanced security',
-        'Real - time analytics',
-      ],      pricing: '$9 / month',        'Fully managed MongoDBAuto - scaling & optimization_global distribution_advanced security_real - time analytics';
-
+      pricing: '$4/month'
+      marketPrice: '$4/month'
+      website: 'https://github.com/pricing'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      textColor: 'text-green-400'
+      gradient: 'from-green-400 to-emerald-500'
+      popular: true
+      category: 'Version Control'
+    }
+      icon: <Database className='w-8 h-8 text-white' />
+      title: 'MongoDB Atlas'
+      description:
+        'Fully managed cloud database service with automatic scaling, backup, and monitoring for modern applications.'
+      features: [
+        'Fully managed MongoDB'
+        'Auto-scaling & optimization'
+        'Global distribution'
+        'Advanced security'
+        'Real-time analytics'
+      ],      pricing: '$9/month',        'Fully managed MongoDBAuto-scaling & optimizationGlobal distributionAdvanced securityReal-time analytics'
       ];
-      pricing: '$9 / month',
-      market_price: '$9 - 57 / month',
-      website: 'https://www.mongodb.com / atlas',
-      color: 'bg - gradient - to - br from - green - 500 to - blue - 600',
-      text_color: 'text - green - 400',
-      gradient: 'from - green - 400 to - blue - 500',
-      popular: false,
-
-      category: 'Database',
-    },
-      icon: <Cloud className='w - 8 h - 8 text - white' />,
-      title: 'Vercel Pro',
-      description:;
-        'Next.js deployment platform with automatic deployments, preview deployments, and advanced analytics.',
-      features: [;
-        'Zero - config deployments',
-        'Preview deployments',
-        'Advanced analytics',
-        'Team collaboration',
-        'Custom domains',
-      ],      pricing: '$20 / month',        'Zero - config deployments_preview deployments_advanced analytics_team collaboration_custom domains';
-
+      pricing: '$9/month'
+      marketPrice: '$9-57/month'
+      website: 'https://www.mongodb.com/atlas'
+      color: 'bg-gradient-to-br from-green-500 to-blue-600'
+      textColor: 'text-green-400'
+      gradient: 'from-green-400 to-blue-500'
+      popular: false
+      category: 'Database'
+    }
+      icon: <Cloud className='w-8 h-8 text-white' />
+      title: 'Vercel Pro'
+      description:
+        'Next.js deployment platform with automatic deployments, preview deployments, and advanced analytics.'
+      features: [
+        'Zero-config deployments'
+        'Preview deployments'
+        'Advanced analytics'
+        'Team collaboration'
+        'Custom domains'
+      ],      pricing: '$20/month',        'Zero-config deploymentsPreview deploymentsAdvanced analyticsTeam collaborationCustom domains'
       ];
-      pricing: '$20 / month',
-      market_price: '$20 / month',
-      website: 'https://vercel.com / pricing',
-      color: 'bg - gradient - to - br from - black to - gray - 600',
-      text_color: 'text - gray - 400',
-      gradient: 'from - black to - gray - 500',
-      popular: false,
-
-      category: 'Deployment',
-    },
-      icon: <Shield className='w - 8 h - 8 text - white' />,
-      title: 'Snyk',
-      description:;
-        'Developer security platform that finds and fixes vulnerabilities in code, dependencies, and containers.',
-      features: [;
-        'Vulnerability scanning',
-        'Dependency monitoring',
-        'Container security',
-        'Infrastructure as Code',
-        'CI / CD integration',
-      ],      pricing: '$25 / month',        'Vulnerability scanning_dependency monitoring_container security_infrastructure as CodeCI / CD integration';
-
+      pricing: '$20/month'
+      marketPrice: '$20/month'
+      website: 'https://vercel.com/pricing'
+      color: 'bg-gradient-to-br from-black to-gray-600'
+      textColor: 'text-gray-400'
+      gradient: 'from-black to-gray-500'
+      popular: false
+      category: 'Deployment'
+    }
+      icon: <Shield className='w-8 h-8 text-white' />
+      title: 'Snyk'
+      description:
+        'Developer security platform that finds and fixes vulnerabilities in code, dependencies, and containers.'
+      features: [
+        'Vulnerability scanning'
+        'Dependency monitoring'
+        'Container security'
+        'Infrastructure as Code'
+        'CI/CD integration'
+      ],      pricing: '$25/month',        'Vulnerability scanningDependency monitoringContainer securityInfrastructure as CodeCI/CD integration'
       ];
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       ];
       pricing: '$12 / month',
       market_price: '$12 - 99 / month',
@@ -363,19 +367,23 @@ export default function DeveloperToolsPage() {;
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
             ))}
+          </div>
+        </div>
+      </section>
 
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Developer Tools Grid */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               Curated Developer Tools & Services
             </h2>
@@ -556,13 +564,20 @@ export default function DeveloperToolsPage() {;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Developer Workflow */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Complete Developer Workflow
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -599,23 +614,37 @@ export default function DeveloperToolsPage() {;
               <Card
                 key={index}
                 className="card-hover border-gradient-blue"
-
-
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="p-6 text-center">
+                  <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Cpu className="w-8 h-8 text-cursor-blue" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{phase.phase}</h3>
+                  <p className="text-gray-400 mb-4">{phase.description}</p>
+                  <div className="space-y-1">
+                    {phase.tools.map((tool, toolIndex) => (
+                      <div key={toolIndex} className="text-sm text-cursor-blue font-medium">
                         {tool}
-                      </div>;
+                      </div>
                     ))}
-                  </div>;
-                </div>;
-              </Card>;
+                  </div>
+                </div>
+              </Card>
             ))}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Tool Categories */}
-
-
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
               Developer Tool Categories
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Understanding the different types of developer tools helps you
@@ -687,8 +716,15 @@ export default function DeveloperToolsPage() {;
               href='/contact'
               variant='outline'
               size='lg'
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             ))}
+          </div>
+        </div>
+      </section>
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
           </div>;
         </div>;
       </section>;
@@ -706,15 +742,17 @@ export default function DeveloperToolsPage() {;
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* CTA Section */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor text-center'>
           <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
-
             Ready to Level Up Your Development?
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </h2>
           <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed mb-12'>
             Start with one tool or build a complete development stack. Each tool
@@ -738,47 +776,6 @@ export default function DeveloperToolsPage() {;
               Get Dev Consultation
 
 =======
-          <div className='flex flex - col sm:flex - row gap - 6 justify - center'>;
-            <Button;
-              href='/ai - tools';
-              variant='primary';
-              size='lg';
-              className='bg - cursor - blue hover:bg - cursor - blue - dark'            >;
-              Explore AI Tools;
-            </Button>;
-            <Button;
-              href='/contact';
-              variant='outline';
-              size='lg';
-              className='border - cursor - blue text - cursor - blue hover:bg - cursor - blue hover:text - white'            >              href="/ai - tools";
-              variant="primary";
-              size="lg";
-              className="bg - cursor - blue hover:bg - cursor - blue - dark";
-              Explore AI Tools;
-            </Button>;
-            <Button;
-              href='/contact';
-              variant='outline';
-              size='lg';
-              className='border - cursor - blue text - cursor - blue hover:bg - cursor - blue hover:text - white'              href="/contact";
-              variant="outline";
-              size="lg";
-              className="border - cursor - blue text - cursor - blue hover:bg - cursor - blue hover:text - white";
-              Get Dev Consultation;
-
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-
-  );
-}
-
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'            >              href="/ai-tools"
               variant="primary"
@@ -787,10 +784,22 @@ export default function DeveloperToolsPage() {;
               Explore AI Tools
             </Button>
 <<<<<<< HEAD
-=======
-
             <Button
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              href='/contact'
+              variant='outline'
+              size='lg'
+              className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'              href="/contact"
+              variant="outline"
+              size="lg"
+              className="border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white"
+              Get Dev Consultation
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+);
+}
+            <Button
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

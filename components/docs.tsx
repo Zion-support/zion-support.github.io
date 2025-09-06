@@ -1,3 +1,9 @@
+import Head from 'next/head';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
 
 export default function DocsPage() {
 
@@ -9,6 +15,16 @@ function DocsPage() {
   const contact = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+
+        { name: 'Overview', href: '/enhanced-services-showcase' },
+        { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },
+        { name: 'Contact Sales', href: '/contact' }]
+    };
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function DocsPage() {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   const contact = {
     mobile: '+1 302 464 0950'
@@ -75,8 +91,6 @@ function DocsPage() {
     }
     {
 
-=======
-
       title: 'Community Forum',
       description: 'Connect with other developers and users',
       icon: <ExternalLink className='w-6 h-6' />,
@@ -86,49 +100,8 @@ function DocsPage() {
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  ];
-  const filteredDocs = documentationItems.filter(doc => {
-    const matchesSearch =
-      doc.title.toLowerCase().includes(searchTerm.toLowerCase()) |
-      doc.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory =
-      selectedCategory === 'all' |doc.category === selectedCategory;
-    return matchesSearch && matchesCategory;  });
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {    const matchesSearch = doc.title.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         doc.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' |doc.category === selectedCategory;
-    return matchesSearch && matchesCategory
-
-
-export default function DocsPage() {;
-  const contact = {;
-    mobile: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup && ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com';
-  });
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
-
-        return 'bg-green-500/20 text-green-400';
-      case 'Intermediate':;
-        return 'bg-yellow-500/20 text-yellow-400';
-      case 'Advanced':;
-        return 'bg-red-500/20 text-red-400';
-      default:;
-        return 'bg-gray-500/20 text-gray-400';    }      case 'Beginner': return 'bg-green-500/20 text-green-400';
-      case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric'
-      month: 'short'
-      day: 'numeric'
-    });  };      day: 'numeric'
-    })
-  }
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
 
@@ -141,6 +114,7 @@ export default function DocsPage() {;
 
       case 'Advanced': return 'bg-red-500/20 text-red-400',;
       default: return 'bg-gray-500/20 text-gray-400';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
@@ -351,6 +325,7 @@ icon: <ExternalLink className='w - 6 h - 6' />,
                 <li key={e.name}>
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   ))}
                 </ul>;
               </Card>;
@@ -449,16 +424,20 @@ icon: <ExternalLink className='w - 6 h - 6' />,
     </UltraAdvancedFuturisticBackground>
 =======
 
+  );
+}
 ;
 }
-
-=======
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
               ))}
             </ul>
           </Card>
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

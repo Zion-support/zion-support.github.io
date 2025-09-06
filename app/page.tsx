@@ -76,6 +76,7 @@ export default function HomePage() {
             icon="📊"
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           />
         </div>
       </section>
@@ -116,7 +117,6 @@ export default function HomePage() {
 }
 
 =======
-<<<<<<< HEAD
 function Card({ title, description, href, icon }: { title: string; description: string; href: string; icon: string }) {
   return (
     <Link
@@ -152,5 +152,6 @@ function FeatureCard({ title, description }: {
       <p className="text-gray-600">{description}</p>
     </div>
   );
+<<<<<<< HEAD
 }
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea

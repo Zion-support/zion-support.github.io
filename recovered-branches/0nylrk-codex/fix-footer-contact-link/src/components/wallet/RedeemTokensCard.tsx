@@ -1,10 +1,7 @@
 
 
-=======
 
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React, { useState } from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -14,12 +11,19 @@ import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Dia
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 type RewardOption = {
   id: string
   title: string
   description: string
   cost: number
   type: 'credit' | 'feature' | 'course'
+=======
+}
+},
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 const REWARD_OPTIONS: RewardOption[] = [
   {
@@ -84,6 +88,7 @@ const REWARD_OPTIONS: RewardOption[] = [
                       disabled={!wallet |wallet.balance < option.cost}
 
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       onClick={() => handleRedeem(option)}
                     >;
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />;
@@ -203,15 +208,12 @@ if (return, ) {
           </DialogContent>;
         </Dialog>;
       </CardContent>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </Card>;
+  );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </Card>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

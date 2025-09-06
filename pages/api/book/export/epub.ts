@@ -1,5 +1,7 @@
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import { NextApiRequest, NextApiResponse } from "next";
 import { randomUUID } from "crypto";
@@ -9,8 +11,15 @@ export const config = {
   api: {
     bodyParser: {
 =======
-
-
+      sizeLimit: "10mb"
+    }
+  }
+}
+      sizeLimit: "10mb",
+    },
+  },;
+};
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 function escapeHtml(s: string): string {
   return s
@@ -41,6 +50,7 @@ export default async function handler(
   const { project } = req && req.body as { project: any };
   if (!project?.meta || !Array && Array.isArray(project?.chapters)) {
     res && res.status(400).json({ error: "Invalid payload" });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return;
   }
   const tmpPath = `/tmp/${randomUUID()}.epub`;
@@ -58,6 +68,7 @@ export default async function handler(
   }
 }
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   try {
     await new Epub(options, tmpPath).promise;
     const buf = await fs.readFile(tmpPath);
@@ -70,6 +81,7 @@ export default async function handler(
     try { await fs.unlink(tmpPath) } catch {}
   }
 }
+
 function chapterToHtml(text: string): string {
   if (!text) return '';
   return text
@@ -77,6 +89,7 @@ function chapterToHtml(text: string): string {
     .map((p) => `<p>${escapeHtml(p)}</p>`)
     .join('\n')
 }
+
 function escapeHtml(s: string): string {
   return s
     .replace(/&/g, '&amp,')
@@ -85,6 +98,8 @@ function escapeHtml(s: string): string {
     .replace(/"/g, '&quot,')
     .replace(/'/g, '&#039,')
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
 import { NextApiRequest, NextApiResponse  } from './next';
 import { randomUUID  } from './crypto';
 import { promises as fs  } from './fs';
@@ -110,17 +125,6 @@ function escapeHtml(s: string): string {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
-
-}
-;
-function escape_html (string: string): string {
-  return s;
-    .replace (/&/g, "&amp;");
-    .replace (/</g, "&lt;");
-    .replace (/>/g, "&gt;");
-    .replace (/"/g, "&quot;");
-    .replace (/'/g, "&#039;");
-}
 
     return;
   }
@@ -154,17 +158,10 @@ function escape_html (string: string): string {
   } catch (e: any) {
     res.status (500).json ({ error: e?.message || "Failed to build EPUB" });
   } finally {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     try {
       await fs.unlink (tmp_path);
     } catch {}
   }
-<<<<<<< HEAD
 }
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

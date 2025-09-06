@@ -1,6 +1,8 @@
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
@@ -12,20 +14,13 @@ const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req && req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-    // Use service role key for admin privileges
-
         talents:talent_id(*)
       `)
       .eq('statusconfirmed')
       .gte('scheduled_date', now.toISOString())
       .lt('scheduled_date', thirtyMinutesFromNow.toISOString())
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           try {
             await resend.emails.send ({
               from: "Zion Marketplace <onboarding@resend.dev>";
@@ -56,38 +51,6 @@ serve(async (req) => {
         }
         // Send email to talent
 
-=======
-              to: [client_email],
-              subject: `Your interview with ${talent_name} is starting soon!`;
-              html: `;
-                <h1 > Interview Reminder</h1>;
-                <p > Your scheduled interview with ${talent_name} is starting in 30 minutes.</p>;
-                <p><strong > Time:</strong> ${interview_date.toLocaleTimeString ()}</p>;
-                <p><strong > Duration:</strong> ${interview.duration_minutes} minutes</p>;
-                ${interview.meeting_link ? `<p><strong > Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}</a></p>` : ''}
-                <p > Please be ready on time!</p>;
-              `});
-;
-            results.push (`Reminder sent to client: ${client_email}`);
-          } catch (email_error) {
-            console.error (`Error sending reminder to client ${client_email}:`, email_error);
-          }
-        }
-        // Send email to talent;
-        const talent_email = interview.talents?.email;
-        const client_name = interview.clients?.display_name || "Client";
-;
-        // Check condition
-if ( {) {
-  $2
-}
-
-          try {
-            await resend.emails.send ({
-              from: "Zion Marketplace <onboarding@resend.dev>";
-
-        const talentEmail = interview && interview.talents?.email;
-        const clientName = interview && interview.clients?.display_name || "Client";
               html: `
                 <h1>Interview Reminder</h1>
                 <p>Your scheduled interview with ${clientName} is starting in 30 minutes.</p>
@@ -96,13 +59,11 @@ if ( {) {
                 ${interview && interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview && interview.meeting_link}">${interview && interview.meeting_link}</a></p>` : ''}
                 <p>Please be ready on time!</p>
 
-=======
-            
-            results && results.push(`Reminder sent to talent: ${talentEmail}`)
-
           } catch (emailError) {
-            console && console.error(`Error sending reminder to talent ${talentEmail}:`, emailError)
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+            console.error(`Error sending reminder to talent ${talentEmail}:`, emailError)
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           }
         }
         // Mark the interview as reminder sent
@@ -201,18 +162,22 @@ serve(async (req) => {;
           .update({ reminder_sent: new Date().toISOString() });
           .eq('id', interview.id);
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     }
 
     return new Response(JSON.stringify({ success: true, results }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
 
-      status: 200})
-  } catch (error) {
-    console.error("Error in send-interview-reminder function:", error);
-    return new Response(JSON.stringify({ error: error.message }), {
-<<<<<<< HEAD
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+      headers: { ...corsHeaders, "Content-Type": "application/json" }
+      status: 500})
+  }
+});
 
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+      status: 500})
 ;
     return new Response(JSON.stringify({ success: true, results }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
@@ -222,11 +187,7 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });
-  }
-});
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

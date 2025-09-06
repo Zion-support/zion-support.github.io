@@ -35,6 +35,7 @@ for (const file of conflictedFiles) {
   fixMergeConflicts(file)}
 console.log('Merge conflict resolution complete!');
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content.replace(/[\s\S]*?[\s\S]*?}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 // Main execution
 console.log('Finding files with merge conflict markers...');

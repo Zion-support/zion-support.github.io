@@ -17,8 +17,15 @@ class CodeQualityMonitor {
     // Ensure directories exist
 
 =======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+    fs.mkdirSync(path.dirname(this.logFile), { recursive: true });
+    fs.mkdirSync(path.dirname(this.reportFile), { recursive: true });
+  }
+    fs.mkdirSync(path.dirname(this.logFile), { recursive: true });
+    fs.mkdirSync(path.dirname(this.reportFile), { recursive: true });
+  }
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     fs.mkdirSync(path.dirname(this.logFile), { "recursive": true });
     fs.mkdirSync(path.dirname(this.reportFile), { "recursive": true });
   }
@@ -32,6 +39,24 @@ const { execSync } = require("child_process");
 
 class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")};
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+=======
+
+
+=======
+class CodeQualityMonitor {;
+  constructor() {;
+    this.metrics = {;
+      complexity: 0, maintainability: 0,
+      testCoverage: 0, performance: 0,
+      lastUpdated: new Date().toISOString(), ,
+    this.logFile = path.join(__dirname, "logs", "code-quality.log");
+};
+;
+  log(message) {;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     console.log(logMessage.trim());
@@ -144,6 +169,8 @@ if (require.main === module) {
 }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
@@ -151,12 +178,11 @@ if (require.main === module) {
     console.log(message),
 
 =======
-
+    fs.appendFileSync(this.logFile, logMessage),
+  };
     fs.appendFileSync(this.logFile, logMessage)
   },
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ,
   async analyzeCodeQuality() {,
     try {,
@@ -231,8 +257,10 @@ class CodeQualityMonitor {,;
       this.log(`Code quality analysis: failed: ${error.message}`, "ERROR"),;
       return null;
     },;
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,7 +1,16 @@
 
-
-=======
-
+import React, { useState, useEffect, useRef } from 'react';
+import { format  } from 'date-fns';
+import { MessageSquare  } from 'lucide-react';
+import { useMessaging  } from '@/context/MessagingContext';
+import { Button  } from '@/components/ui/button';
+import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
+import { AspectRatio  } from '@/components/ui/aspect-ratio';
+import { useAuth  } from '@/hooks/useAuth';
+import { MessageBubble  } from './MessageBubble';
+import { DateDivider } from './DateDivider';
+export function ConversationDetailView() {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {format} from 'date-fns';
 import {MessageSquare} from 'lucide-react';
 import {useMessaging} from '@/context/MessagingContext';
@@ -12,6 +21,7 @@ import {useAuth} from '@/hooks/useAuth';
 import {MessageBubble} from './MessageBubble';
 import {DateDivider} from './DateDivider';
 export function ConversationDetailView() {;
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -30,20 +40,43 @@ export function ConversationDetailView() {;
       loadMessages(activeConversation.id)
     }
   }, [activeConversation?.id, loadMessages]);
-
-import {MessageSquare} from 'lucide-react';
-import {use_messaging} from '@/context / MessagingContext';
-import {Button} from '@/components / ui / button';
-import {Avatar, AvatarFallback, AvatarImage} from '@/components / ui / avatar';
-import {AspectRatio} from '@/components / ui / aspect - ratio';
-import {use_auth} from '@/hooks / use_auth';
-import {MessageBubble} from './MessageBubble';
-import {DateDivider} from './DateDivider';
-
+  useEffect(() => {
+    scrollToBottom()
+  }, [activeMessages]);
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+  const handleSendMessage = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!messageText.trim() |!activeConversation) return
+    await sendMessage(activeConversation.id, messageText);
+    setMessageText('')
+  }
+import React, { useState, useEffect, useRef } from 'react',;
+import { format } from 'date-fns',;
+import { MessageSquare } from 'lucide-react',;
+import { useMessaging } from '@/context/MessagingContext',;
+import { Button } from '@/components/ui/button',;
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
+import { AspectRatio } from '@/components/ui/aspect-ratio',;
+import { useAuth } from '@/hooks/useAuth',;
+import { MessageBubble } from './MessageBubble',;
+import { DateDivider } from './DateDivider',;
+export function ConversationDetailView() {;
+  const { user } = useAuth(),;
+  const {;
+    activeConversation,;
+    activeMessages,;
+    sendMessage,;
+    loadMessages;
+  } = useMessaging(),;
+  const [messageText, setMessageText] = useState(''),;
+  const messagesEndRef = useRef<HTMLDivElement>(null),;
+  useEffect(() => {;
+    if (activeConversation) {;
+      loadMessages(activeConversation.id);
+    }
   }, [activeConversation?.id, loadMessages]),
-
-
-
   
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   useEffect(() => {
@@ -75,7 +108,8 @@ import {DateDivider} from './DateDivider';
       </div>;
     );
   }
-
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // Group messages by date
   const groupedMessages: { date: string, messages: any[] }[] = []
   activeMessages.forEach(message => {
@@ -90,11 +124,37 @@ import {DateDivider} from './DateDivider';
       })
     }
   });
-
   const hasContextData = activeConversation.context_data &&
-    (activeConversation.context_data.title || activeConversation.context_data.description),
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    (activeConversation.context_data.title |activeConversation.context_data.description);
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+;
+
+  // Group messages by date;
+  const groupedMessages: { date: string, messages: any[] }[] = [],;
+
+  activeMessages && activeMessages.forEach(message => {;
+    const messageDate = format(new Date(message && message.created_at), 'yyyy-MM-dd');
+    const existingGroup = groupedMessages && groupedMessages.find(group => group && group.date === messageDate);
+
+    if (existingGroup) {;
+      existingGroup && existingGroup.messages.push(message);
+    } else {;
+      groupedMessages && groupedMessages.push({;
+        date: messageDate,;
+        messages: [message];
+      });
+    }
+
+  }),
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  
+  const hasContextData = activeConversation.context_data && 
+    (activeConversation.context_data.title || activeConversation.context_data.description),
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <div className="flex-1 flex flex-col h-full">;
@@ -208,15 +268,12 @@ import {DateDivider} from './DateDivider';
           </Button>;
         </form>;
       </div>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </div>;
+  );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

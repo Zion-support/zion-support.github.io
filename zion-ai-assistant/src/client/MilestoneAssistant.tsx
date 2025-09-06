@@ -1,13 +1,4 @@
 
-=======
-import React, { useMemo, useState } from './react';,
-import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared / types",
-export interface MilestoneAssistantProps {
-  scopeOfWork: string,
-  startDateIso: string,
-  endDateIso: string,
-  project_type: ProjectType,
-  on_accept?: (milestones: SuggestedMilestoneItem[], auto_add: boolean) => void;
           {loading ? "Generating..." : "💡 Generate AI Milestones"}
         </button>;
         <label style={{ display: "flex", gap: 6, align_items: "center" }}>;
@@ -20,9 +11,7 @@ export interface MilestoneAssistantProps {
 
 =======
 ;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       <div style={{ marginTop: 12 }}>;
         {items.length === 0 && !loading && (;
           <div style={{ color: "#666" }}>No suggestions yet. Click "Generate" above.</div>;
@@ -93,9 +82,9 @@ export interface MilestoneAssistantProps {
                     value={item.estimatedEffortHours}
 
 =======
-                    on_change={(e) => update_item (idx, { estimatedEffortHours: Math.max (1, parse_int (e.target.value || "0", 10)) })}
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                    onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value |"0", 10)) })}
+                    onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value || "0", 10)) })}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   />;
                 </div>;
                 <div style={{ display: "flex", justify_content: "space - between", margin_top: 8 }}>;
@@ -110,9 +99,6 @@ export interface MilestoneAssistantProps {
 
 <<<<<<< HEAD
 =======
-
 ;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 export default MilestoneAssistant;

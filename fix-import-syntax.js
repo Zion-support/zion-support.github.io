@@ -1,4 +1,22 @@
+#!/usr/bin/env node
+import fs from "fs";
+import path from "path";
+function fixImportSyntax(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, "utf8");
+    let modified = false;
+    // Fix semicolons in import statements
+    const importSemicolonRegex =;
+      /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
+    content = content.replace(importSemicolonRegex, (match, imports) => {
+      // Replace semicolons with commas in import lists;
+      const fixedImports = imports.replace(/;/g, ",");
+      return match.replace(imports, fixedImports);
+    });
+    // Fix missing commas in import statements
 
+    // Fix missing commas in import statements;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
     content = content.replace(importCommaRegex, (match, imports) => {
       // Add missing commas between import items

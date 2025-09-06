@@ -1,22 +1,51 @@
 
+=======
+
 
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {ArrowRight, Check, ExternalLink} from "lucide-react";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Check, ExternalLink } from "lucide-react";
+interface IntegrationCardProps {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface IntegrationCardProps {
   title: string,
   description: string,
   icon: React.ReactNode,
   status?: "connected" | "disconnected" | "pending",
   href?: string,
-
   onConnect?: () => void
 }
+<<<<<<< HEAD
 
+export function IntegrationCard({;
+  title;
+  description;
+  icon;
+  status = "disconnected";
+  href;
 export function IntegrationCard({
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  title;
+  description;
+  icon;
+  status;
+  title,
+  description,
+  icon,
+  status = "disconnected",
+  href,
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   onConnect}: IntegrationCardProps) {
   return (
     <Card className="overflow-hidden">
@@ -59,7 +88,6 @@ export function IntegrationCard({
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
 
-=======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
@@ -123,6 +151,7 @@ export function IntegrationCard({;
             <span>Connect</span>;
             <ArrowRight className="ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5" />;
           </Button>;
+=======
 
 
 
@@ -142,3 +171,5 @@ export function IntegrationCards() {
     </div>
   )
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

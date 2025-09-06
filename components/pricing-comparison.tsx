@@ -1,12 +1,12 @@
 
 =======
-
+import React from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import Button from '../components/ui/Button';
 import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react';
 export default function PricingComparisonPage() {
@@ -25,12 +25,48 @@ export default function PricingComparisonPage() {
           rating: '4.8/5'
           pros: ['Excellent templates', 'Good AI quality', 'Wide integrations']
           cons: [
-
+            'Higher pricing'
+            'Limited customization'
+            'No unlimited plan'
+          ]
+          savings: 'Save $20/month with Zion'
+        },        {
+          name: 'Copy.ai'
+          pricing: '$36/month'
+          rating: '4.6/5'
+          pros: ['Unlimited words', 'Good value', 'Simple interface']
+          cons: ['Basic features', 'Limited templates', 'No advanced SEO']
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             'Higher pricing',
             'Limited customization',
             'No unlimited plan',
           ],
+=======
+          savings: 'Save $20/month with Zion',
+        },        {
+          name: 'Copy.ai',
+          pricing: '$36/month',
+          rating: '4.6/5',
+          pros: ['Unlimited words', 'Good value', 'Simple interface'],
+          cons: ['Basic features', 'Limited templates', 'No advanced SEO'],
+          savings: 'Save $17/month with Zion',
+        },        {
+          name: 'Writesonic',
+          pricing: '$19/month',
+          rating: '4.4/5',          pros: ['Excellent templatesGood AI qualityWide integrations'],
+          cons: ['Higher pricingLimited customizationNo unlimited plan'],
+          savings: 'Save $20/month with Zion';
+        };
+          name: 'Copy.ai',
+          pricing: '$36/month',
+          rating: '4.6/5',
+          pros: ['Unlimited words', 'Good value', 'Simple interface'],
+          cons: ['Basic features', 'Limited templates', 'No advanced SEO'],
+          savings: 'Save $17/month with Zion',
+        },          pros: ['Unlimited wordsGood valueSimple interface'],
+          cons: ['Basic featuresLimited templatesNo advanced SEO'],
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           savings: 'Save $17/month with Zion'
         },        {
           name: 'Writesonic'
@@ -257,6 +293,8 @@ export default function PricingComparisonPage() {
                     {insight.icon}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                   </div>
                   <p className={`text-lg font-semibold ${insight.color}`}>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -280,6 +318,8 @@ export default function PricingComparisonPage() {
                 value.              </p>
             </div>
             {serviceComparisons.map((service, serviceIndex) => (        <section id="comparison" className="py-24 bg-gray-800">
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* Detailed Comparison */}
 
         <section id="comparison" className="py-24 bg-gray-800">
@@ -457,6 +497,9 @@ export default function PricingComparisonPage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                               <Star
                                 key={i}
                                 className={`w-4 h-4 ${
@@ -466,9 +509,10 @@ export default function PricingComparisonPage() {
                                 }`}
                               />;
                             ))}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           </div>
                           <div className='mb-4'>
                             <p className='text-lg font-semibold text-white'>
@@ -536,28 +580,30 @@ export default function PricingComparisonPage() {
                         </div>
                       </Card>
                     </div>
+=======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   ))}
 </div>;
               </div>;
             ))}
+          </div>
+        </section>
 
 =======
-          </div>;
-        </section>;
-
-
-        {/* CTA Section */}
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         {/* CTA Section */}
         <section className='py-24 bg-gradient-to-r from-indigo-600 to-purple-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             </h2>
             <p className='text-xl text-indigo-100 mb-12'>
               Start your free trial today and see why thousands of businesses
@@ -591,10 +637,33 @@ export default function PricingComparisonPage() {
                 Try AI Content Generator
               </Button>
 <<<<<<< HEAD
-=======
-
               <Button
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                href='/cloud-monitoring'
+                variant='secondary'
+                size='lg'
+                className='bg-white text-indigo-600 hover:bg-gray-100'                href="/cloud-monitoring"
+                variant="secondary"
+                size="lg"
+                className="bg-white text-indigo-600 hover:bg-gray-100"
+                Try Cloud Monitoring
+              </Button>
+              <Button
+                href='/devops-automation'
+                variant='secondary'
+                size='lg'
+                className='bg-white text-indigo-600 hover:bg-gray-100'                href="/devops-automation"
+                variant="secondary"
+                size="lg"
+                className="bg-white text-indigo-600 hover:bg-gray-100"
+                Try DevOps Automation
+              </Button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+);
+}
+              <Button
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

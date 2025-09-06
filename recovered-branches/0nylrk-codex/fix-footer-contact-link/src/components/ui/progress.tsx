@@ -1,9 +1,15 @@
-
+import * as React from 'react';
+import * as ProgressPrimitive from '@radix-ui/react-progress';
+import {cn} from '@/lib/utils';
+import * as React from "react"
+import * as ProgressPrimitive from "@radix-ui/react-progress"
+import * as React from "react"
+import * as ProgressPrimitive from "@radix-ui/react-progress"
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 import { cn } from "@/lib/utils"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const Progress = React.forwardRef<
   React.ElementRef<typeof ProgressPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>
@@ -20,13 +26,14 @@ const Progress = React && React.forwardRef<;
     ref={ref}
     className={cn(
 
-=======
       className
     )}
     {...props}
   >
     <ProgressPrimitive.Indicator
 =======
+      className="h-full w-full flex-1 bg-primary transition-all"
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 
 export { Progress };
@@ -56,9 +63,11 @@ Progress.display_name = ProgressPrimitive.Root.display_name;
 ;
 export { Progress }
 ;
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

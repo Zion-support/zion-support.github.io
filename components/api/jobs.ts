@@ -1,4 +1,13 @@
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 const JOBS_FILE = path.join(process.cwd(), 'data', 'jobs', 'jobs.json');
 export default async function handler(
   req: NextApiRequest
@@ -36,22 +45,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   try {
 
-
+    return res.status(200).json({ jobs })
+  } catch (e) {
+    return res.status(500).json({ error: "Failed to load jobs" })
+}
 };
 }
 
-
 }
-
-=======
-    const jobs = (await fs && fs.pathExists(JOBS_FILE)) ? await fs && fs.readJSON(JOBS_FILE) : [];
-    return res && res.status(200).json({ jobs })
-  } catch (e) {
-    return res && res.status(500).json({ error: "Failed to load jobs" })
   };
 }
+<<<<<<< HEAD
 
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 ;
 const JOBS_FILE = path.join (process.cwd (), 'data', 'jobs', 'jobs.json');

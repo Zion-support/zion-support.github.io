@@ -1,8 +1,19 @@
-
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Download, FileImage, FileText, FileType, FileVideo, Link} from "lucide-react";
+import {toast} from "@/hooks/use-toast";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
+import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
+import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",
+import { toast } from "@/hooks/use-toast",
+=======
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 interface ResourceItem {
 
   id: string
@@ -17,25 +28,25 @@ export function PartnerResources() {
   const resources: ResourceItem[] = [
     {
 
+=======
+      id: 'logo-pack'
+      title: 'Zion AI Logo Pack'
+      description: 'Official logos in various formats (PNG, SVG, JPG)';
+      type: 'image'
+      icon: <FileImage className="h-10 w-10 text-zion-purple" />
+      url: '#'
+    }
+      id: 'logo-pack',
+      title: 'Zion AI Logo Pack',;
+      description: 'Official logos in various formats (PNG, SVG, JPG)';
+      title: 'Zion AI Logo Pack',
+      description: 'Official logos in various formats (PNG, SVG, JPG)',
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       type: 'image',
       icon: <FileImage className="h-10 w-10 text-zion-purple" />,
       url: '#'
     },
 
-    {
-      id: 'brand-guidelines'
-      title: 'Brand Guidelines'
-      description: 'How to properly use our brand assets in your content'
-      type: 'document'
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />
-      url: '#'
-
-=======
-
-    },
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     {
       id: 'banner-templates'
       title: 'Social Media Banners'
@@ -68,6 +79,10 @@ export function PartnerResources() {
       icon: <FileText className="h-10 w-10 text-zion-cyan" />
       url: '#'
     }
+=======
+  ];
+  ],
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const handleDownload = (resource: ResourceItem) => {
     // In a real app, this would download the actual resource
@@ -75,6 +90,8 @@ export function PartnerResources() {
       title: "Download started"
       description: `Downloading ${resource.title}`
       variant: "default"})
+  }
+  },
 
 
   },
@@ -102,16 +119,6 @@ import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} f
 import {Button} from "@/components/ui/button";
 import {Download, FileImage, FileText, FileType, FileVideo, Link} from "lucide-react";
 import {toast} from "@/hooks/use-toast";
-=======
-                  <Button
-                    onClick={() => handleDownload(resource)}
-                    size="sm"
-                    variant="outline"
-                    className="w-full flex items-center gap-2"
-                  >
-                    <Download className="h-4 w-4" />
-
-=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",;
@@ -213,6 +220,7 @@ export function PartnerResources() {;
                     className="w-full flex items-center gap-2";
                   >;
                     <Download className="h-4 w-4" />;
+=======
 
 
 
@@ -275,6 +283,14 @@ export function PartnerResources() {;
       </Card>
     </div>
   )
+          </div>;
+        </CardContent>;
+      </Card>;
+
+      <Card className="bg-zion-blue-dark border-zion-blue-light">;
+        <CardHeader>;
+          <CardTitle>Promotion Guidelines</CardTitle>;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           <CardDescription>;
             Best practices for promoting the Zion AI Marketplace;
           </CardDescription>;
@@ -325,9 +341,8 @@ export function PartnerResources() {;
           </Button>;
         </CardContent>;
       </Card>;
-
-    </div>);
-
+    </div>;
+  );
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

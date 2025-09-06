@@ -1,4 +1,38 @@
+=======
 
+import {useState, useEffect} from "react";
+import {useNavigate} from "react-router-dom";
+import {GradientHeading} from "@/components/GradientHeading";
+import {ProductListingCard} from "@/components/ProductListingCard";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
+import {Skeleton} from "@/components/ui/skeleton";
+import {Slider} from "@/components/ui/slider";
+import {ProductListing, ListingView} from "@/types/listings";
+import {Search, Filter, LayoutGrid, List, Star} from "lucide-react";
+import {toast} from "@/hooks/use-toast";
+interface PriceRange {
+  min: number,
+  max: number
+}
+
+interface DynamicListingPageProps {
+  title: string,
+  description: string,
+  categorySlug: string,
+  listings: ProductListing[],
+  categoryFilters: { label: string, value: string }[],
+  initialPrice?: PriceRange
+}
+
+export function DynamicListingPage({;
+  title;
+  description;
+  categorySlug;
+  listings: allListings,
+  categoryFilters;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { useState, useEffect } from "react",
 import { useNavigate } from "react-router-dom",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -9,7 +43,29 @@ import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@
 import { Skeleton } from "@/components/ui/skeleton",
 import { Slider } from "@/components/ui/slider",
 import { ProductListing, ListingView } from "@/types/listings",
+<<<<<<< HEAD
+interface PriceRange {;
+  min: number,;
+  max: number;
+}
 
+interface DynamicListingPageProps {;
+  title: string,;
+  description: string,;
+  categorySlug: string,;
+  listings: ProductListing[],;
+  categoryFilters: { label: string, value: string }[],;
+  initialPrice?: PriceRange;
+}
+
+export function DynamicListingPage(): any ({;
+  title;
+  description;
+  categorySlug;
+  listings: allListings,;
+  categoryFilters,;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   initialPrice = { min: 0, max: 10000 }
 }: DynamicListingPageProps) {
   const navigate = useNavigate(),
@@ -21,9 +77,6 @@ import { ProductListing, ListingView } from "@/types/listings",
 
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
 
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   useEffect(() => {
     const listingsWithPrice = allListings.filter(l => l.price !== null),
     if (listingsWithPrice.length > 0) {
@@ -66,18 +119,22 @@ import { ProductListing, ListingView } from "@/types/listings",
               image: listing.images?.[0]
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             }
           }
         });
       }
 
-=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <div className="min-h-screen bg-zion-blue py-12 px-4">;
       <div className="container mx-auto">;
         <div className="text-center mb-12">;
           <GradientHeading>{title}</GradientHeading>;
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+=======
 
 
 
@@ -85,39 +142,6 @@ import { ProductListing, ListingView } from "@/types/listings",
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             {description}
 
-=======
-                  }}
-                >
-                  <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
-                    <SelectValue placeholder="Select Category" />
-                  </SelectTrigger>
-                  <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
-                    <SelectItem value="all" className="text-white">All Categories</SelectItem>
-                    {categoryFilters.map((filter) => (
-                      <SelectItem key={filter.value} value={filter.value} className="text-white">
-
-=======
-
-          </p>;
-        </div>;
-
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">;
-          <div className="lg:col-span-1">;
-            <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6">;
-              <h3 className="text-lg font-medium text-white mb-4 flex items-center">;
-                <Filter className="mr-2 h-5 w-5" /> Filters;
-              </h3>;
-
-              <div className="mb-6">;
-                <label className="text-sm font-medium text-zion-slate-light block mb-2">;
-                  Category;
-                </label>;
-                <Select
-                  value={selectedCategory} 
-                  onValueChange={(value: string) => {;
-                    console && console.log("Category selected:", value);
-                    setSelectedCategory(value);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   }}
                 >;
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
@@ -128,6 +152,7 @@ import { ProductListing, ListingView } from "@/types/listings",
 
                     {categoryFilters.map((filter) => (;
                       <SelectItem key={filter.value} value={filter.value} className="text-white">;
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -154,6 +179,7 @@ import { ProductListing, ListingView } from "@/types/listings",
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     className="mb-4"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   />
@@ -170,46 +196,16 @@ import { ProductListing, ListingView } from "@/types/listings",
                 <div className="flex flex-wrap gap-2">
                   {[null, 3, 4, 5].map((rating) => (
 
-                    <Button
-                      key={rating === null ? 'any' : rating}
-                      variant="outline"
-                      size="sm"
-                      onClick={() => {;
-                        console && console.log("Rating selected:", rating);
-                        setSelectedRating(rating);
-                      }}
-
-                      className={`${;
-                        selectedRating === rating ;
-                          ? "bg-zion-purple/20 border-zion-purple text-zion-purple" ;
-                          : "border-zion-blue-light text-zion-slate-light";
-
-                      }`}
-                    >;
-                      {rating === null ? (;
-                        "Any";
-                      ) : (;
-                        <div className="flex items-center">;
-                          {[...Array(rating)].map((_, i) => (;
-                            <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />;
-                          ))}
-                          <span className="ml-1">& Up</span>;
-                        </div>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       )}
                     </Button>;
                   ))}
                 </div>
               </div>
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {
 
-=======
                   // // // console.log("Resetting filters"),
                   setSearchQuery(""),
                   setSelectedCategory("all"),
@@ -217,18 +213,6 @@ import { ProductListing, ListingView } from "@/types/listings",
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-                  setSelectedRating(null)
-                }}
-              >
-                Reset Filters
-              </Button>
-            </div>
-          </div>
-          <div className="lg:col-span-3">
-            <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light">
-              <div className="flex flex-col md:flex-row gap-4">
-                <div className="relative flex-grow">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                   <Input
                     type="text"
                     placeholder="Search listings..."
@@ -289,6 +273,7 @@ import { ProductListing, ListingView } from "@/types/listings",
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>
                 {filteredListings.map((listing) => (
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 </div>;
               </div>;
               <Button;
@@ -393,7 +378,13 @@ import { ProductListing, ListingView } from "@/types/listings",
                   <ProductListingCard;
 
                     key={listing.id}
+=======
+=======
 
+                  <ProductListingCard 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     key={listing.id}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     listing={listing}
@@ -406,6 +397,26 @@ import { ProductListing, ListingView } from "@/types/listings",
               <div className="text-center py-20">
                 <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>
                 <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>
+=======
+                <Button
+                  variant="outline"
+                  onClick={() => {
+                    setSearchQuery("");
+                    setSelectedCategory("all");
+                    setCurrentPriceFilter([priceRange.min, priceRange.max]);
+
+                    setSelectedRating(null)
+                    setSearchQuery(""),
+                    setSelectedCategory("all"),
+                    setCurrentPriceFilter([priceRange.min, priceRange.max]),
+                    setSelectedRating(null)
+
+              </div>;
+            ) : (;
+              <div className="text-center py-20">;
+                <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>;
+                <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <Button
                   variant="outline"
                   onClick={() => {
@@ -422,23 +433,6 @@ import { ProductListing, ListingView } from "@/types/listings",
       </div>;
     </div>;
   );
-=======
-                  />))}
-              </div>) : (
-              <div className="text - center py - 20">;
-                <h3 className="text - xl font - bold text - white mb - 2">No listings found</h3>;
-                <p className="text - zion - slate - light mb - 6">Try adjusting your filters or search query</p>;
-                <Button;
-                  variant="outline";
-
-                  onClick={() => {;
-                    setSearchQuery(""),;
-                    setSelectedCategory("all");
-                    setCurrentPriceFilter([priceRange.min, priceRange.max]);
-                    setSelectedRating(null);
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                   }}
                   className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";

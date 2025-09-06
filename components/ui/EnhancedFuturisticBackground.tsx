@@ -1,6 +1,51 @@
 
 const colorSchemes = {
   quantum: {
+=======
+  resizeCanvas ();
+window.addEventListener ('resize', resizeCanvas);
+// Wrap around edges if (this.x < 0) this.x = canvas.width;
+if (this.x > canvas.width) this.x = 0;
+if (this.y < 0) this.y = canvas.height;
+if (this.y > canvas.height) this.y = 0;
+// Fade out near end of life if (this.life < 20) {
+}let particles: Particle[] = [];
+let connections: Connection[] = [];
+// Initialize particles ctx.fill_style = colors.primary;
+ctx.font = `$ {
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+interface EnhancedFuturisticBackgroundProps {
+  children: React.ReactNode,
+  className?: string;
+  intensity?: 'low' | 'medium' | 'high';
+  colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural' | 'cosmic';
+  particleCount?: number;
+  animationSpeed?: number
+
+}
+import React from 'react';
+ const colorSchemes = {;
+  quantum: {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);
 // Wrap around edges if (this.x < 0) this.x = canvas.width;
@@ -91,56 +136,6 @@ const EnhancedFuturisticBackground: React.FC<
 
       x: number;
       y: number;
-=======
-      background: 'rgba (10, 10, 30, 0.9)',
-      particles: [;
-        '#ff6b6b',
-        '#4ecdc4',
-        '#45b7d1',
-        '#96ceb4',
-        '#feca57',
-        '#ff9ff3',
-      ],
-      glow: '#4ecdc4',
-    },  }      background: 'rgba (10, 10, 30, 0.9)';
-      particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
-      glow: '#4ecdc4';
-    }
-  }
-;
-  const intensity_settings = {
-    low: { particle_count: 40, speed: 0.45, size: 2, opacity: 0.25 },
-    medium: { particle_count: 90, speed: 0.9, size: 3, opacity: 0.45 },
-    high: { particle_count: 160, speed: 1.25, size: 3.5, opacity: 0.6 },  }    high: { particle_count: 160, speed: 1.25, size: 3.5, opacity: 0.6 }
-  }
-;
-  useEffect (() => {
-    const canvas = canvas_ref.current;
-    // Check condition
-if (return) {
-  $2
-}
-    const ctx = canvas.get_context ('2d');
-    // Check condition
-if (return) {
-  $2
-}
-    const resize_canvas = () =>: any {
-      canvas.width = window.inner_width;
-      canvas.height = window.inner_height;    }      canvas.height = window.inner_height;
-    }
-;
-    resize_canvas ();
-    window.addEventListener ('resize', resize_canvas);
-;
-    const colors = color_schemes[color_scheme];
-    const settings = intensity_settings[intensity];
-;
-    // Enhanced particle system;
-    class Particle {
-      coordinate_x: number;
-      coordinate_y: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       vx: number;
       vy: number;
@@ -163,6 +158,10 @@ if (return) {
         if (this.x > canvas.width) this.x = 0;
         if (this.y < 0) this.y = canvas.height;
         if (this.y > canvas.height) this.y = 0;
+=======
+        // Fade out near end of life
+        if (this.life < 20) {
+          this.opacity *= 0.95;        }          this.opacity *= 0.95
 
         }
       }
@@ -172,9 +171,6 @@ if (return) {
         }
       }
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       draw() {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
         ctx.save();
@@ -191,32 +187,12 @@ if (return) {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-=======
-
-        
-
-        ctx.restore()
-
-        ctx.restore()
-
-      }
-      isDead() {
-
-        return this.life <= 0 || this.opacity < 0.01
-      }
-
-    }
-
-    // Connection lines between particles
-
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
       isDead() {
         return this.life <= 0 |this.opacity < 0.01
     }
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Connection lines between particles
 =======
       max_life: number,
@@ -566,19 +542,16 @@ if (> 0.975) {) {
           }
           drops[i]++;
         }
-
-
-        for (let i = 0, i < drops.length, i++) {
-          const text = characters[Math.floor(Math.random() * characters.length)];
-          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-
+      }
+      return drawMatrix;    };          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
             drops[i] = 0
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          }
+          drops[i]++
+        }
+      }
+      return drawMatrix
+    }
       };
       return drawMatrix;    };          ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
           if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
@@ -588,7 +561,6 @@ if (> 0.975) {) {
         }
 
     };
-
 
     const drawMatrix = matrixRain();
     // Main animation loop
@@ -719,16 +691,28 @@ if (> 0.975) {) {
       }
       // Create connections between nearby particles
       connections = [];
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const distance = Math.sqrt(
+            Math.pow(particles[i].x - particles[j].x, 2) +
+              Math.pow(particles[i].y - particles[j].y, 2)
+          );
+          if (distance < 150) {
+            connections.push(new Connection(particles[i], particles[j]));          }          const distance = Math.sqrt(
+            Math.pow(particles[i].x - particles[j].x, 2) +
+            Math.pow(particles[i].y - particles[j].y, 2)
+          );
+          if (distance < 150) {
+            connections.push(new Connection(particles[i], particles[j]))
 
+      }
 
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           }
         }
       }
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Draw connections
       connections.forEach(connection => connection.draw());
       // Add floating geometric shapes
@@ -842,7 +826,6 @@ if (< 0.5) {) {
           drops[i]++
         }
 
-<<<<<<< HEAD
     const drawMatrix = matrixRain();
     // Main animation loop
     const animate = () => {
@@ -981,3 +964,5 @@ if ( {) {
 }
 export default EnhancedFuturisticBackground;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

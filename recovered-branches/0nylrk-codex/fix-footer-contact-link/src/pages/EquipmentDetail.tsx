@@ -1,14 +1,6 @@
 
-
-import { useState } from "react",
-import { useParams } from "react-router-dom",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-
+=======
+<<<<<<< HEAD
 }
 
 // Sample data - in a real app this would come from an API
@@ -22,8 +14,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     subcategory: "Cameras",
 
 =======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     images: [
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800";
       "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";
@@ -81,10 +72,10 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
   const handleAddToCart = () => {
 
 =======
+    setIsAdding(true);
     setIsAdding(true),
     
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     // Simulate API call
     setTimeout(() => {
       setIsAdding(false),
@@ -100,6 +91,10 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
         title: "Proceeding to checkout"
         description: `Preparing your order for ${equipment.name}.`})
     }, 800)
+=======
+  }
+  },
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   return (
     <>
@@ -136,6 +131,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
                         />
                       </div>
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       { name: "Weight", value: "32 lbs" }
     ];
     features: [;
@@ -174,39 +170,6 @@ export default function EquipmentDetail() {;
             <div className="text-center py-20">;
               <h1 className="text-3xl font-bold text-white mb-4">Equipment Not Found</h1>;
               <p className="text-zion-slate-light mb-8">The equipment you're looking for doesn't exist or has been removed.</p>;
-=======
-      "Integrated WiFi for wireless control";
-    ],
-    warranty: "3 years manufacturer warranty",
-    return_policy: "21 - day return policy for items in original condition";
-  }
-}
-;
-export default /**
- * EquipmentDetail - Function description
- */
-function EquipmentDetail() {
-  const { equipment_id } = use_params () as { equipment_id?: string }
-  const [selectedImageIndex, setSelectedImageIndex] = useState (0);
-  const [quantity, set_quantity] = useState (1);
-  const [is_adding, setIsAdding] = useState (false);
-;
-  // In a real app, this would fetch from an API;
-  const equipment = equipment_id ? SAMPLE_EQUIPMENT[equipment_id] : undefined;
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <>;
-        <Header />;
-        <div className="min - h-screen bg - zion - blue py - 12 px - 4">;
-          <div className="container mx - auto">;
-            <div className="text - center py - 20">;
-              <h1 className="text - 3xl font - bold text - white mb - 4">Equipment Not Found</h1>;
-              <p className="text - zion - slate - light mb - 8">The equipment you're looking for doesn't exist or has been removed.</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </div>;
@@ -277,6 +240,7 @@ if ( {) {
                           className="w-full h-full object-cover"
                         />;
                       </div>;
+=======
 
 
 
@@ -342,10 +306,6 @@ if ( {) {
                 </Tabs>;
               </div>;
             </div>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">;
@@ -369,6 +329,9 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 {/* Rating */}
                 {equipment && equipment.rating && (;
                   <div className="flex items-center gap-2 mb-4">;
@@ -378,11 +341,6 @@ if ( {) {
                           key={i}
                           className={`h-5 w-5 ${
 
-=======
-                            i < Math && Math.floor(equipment && equipment.rating!) 
-                              ? "text-zion-cyan fill-zion-cyan" 
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                               : "text-zion-slate-light"
                           }`}
                         />;
@@ -439,11 +397,9 @@ if ( {) {
                     />
 
 =======
-
+                    <button
                     <button 
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => prev + 1)}
                       disabled={!equipment.inStock}
@@ -461,7 +417,9 @@ if ( {) {
                   >
                     {isAdding ? "Processing..." : "Buy Now"}
                   </Button>
-
+                  <Button
+                  <Button 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     onClick={handleAddToCart}
                     disabled={isAdding |!equipment.inStock}
                     variant="outline"
@@ -637,6 +595,18 @@ if ( {) {
                       </div>
                     </div>
                   )}
+=======
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  )
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 </div>;
               </div>;
             </div>;
@@ -648,8 +618,6 @@ if ( {) {
     </>);
 }
 
-=======
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

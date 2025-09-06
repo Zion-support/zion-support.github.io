@@ -1,18 +1,14 @@
 
-
-
+import { Badge } from "@/components/ui/badge";
+import { ProfileSkill } from "@/types/profile";
 import { Badge } from "@/components/ui/badge",
 import { ProfileSkill } from "@/types/profile",
-
-=======
 import {Badge} from "@/components/ui/badge";
 import {ProfileSkill} from "@/types/profile";
-=======
 import { Badge } from "@/components/ui/badge",
 import { ProfileSkill } from "@/types/profile",
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ProfileSkillsProps {
   skills: ProfileSkill[];
 }
@@ -32,9 +28,22 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
               )}
             </div>
             <div className="h-2 w-full bg-zion-blue-light rounded-full overflow-hidden">
-
-import {Badge} from "@/components/ui/badge";
-import {ProfileSkill} from "@/types/profile";
+              <div
+                className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"
+              <div 
+                className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan" 
+                style={{ width: `${(skill.level / 5) * 100}%` }}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+              <div 
+                className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan" 
+  )
+import { Badge } from "@/components/ui/badge",;
+import { ProfileSkill } from "@/types/profile";
 interface ProfileSkillsProps {;
   skills: ProfileSkill[];
 }
@@ -68,21 +77,8 @@ export function ProfileSkills(): any ({ skills }: ProfileSkillsProps) {;
     </div>;
   );
 }
-
-=======
-import { Badge  } from '@/components / ui / badge';
-import { ProfileSkill  } from '@/types / profile';
-interface ProfileSkillsProps {
-  skills: ProfileSkill[];
-=======
-
-              <div 
-                className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan" 
-
-  );
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+;
 }
 export /**
  * ProfileSkills - Function description
@@ -112,3 +108,4 @@ function ProfileSkills() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

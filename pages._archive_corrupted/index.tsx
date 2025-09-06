@@ -1,9 +1,5 @@
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <h3 className=\"text-2xl font-bold text-gray-900 mb-4 text-center\">
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -242,24 +238,26 @@ const Home = memo(() => {;
                           {benefit}
                         </li>;
                       ))}
-
-
+                    </ul>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     {service.title}
                   </h3>
                   <p className=\"text-gray-600 mb-6 text-center\">
                     {service.description}
                   </p>
-
-
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <Link href={service.href} className=\"block\">
                     <div className=\"w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold \"hover\": b g-blue-700 transition-colors text-center flex items-center justify-center\">
                   <Link href={service.href} className="block">
                     <div className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold "hover": b g-blue-700 transition-colors text-center flex items-center justify-center">
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
                       Learn More
                       <ArrowRight className=\"w-4 h-4 ml-2\"  />
                     </div>
@@ -287,12 +285,28 @@ const Home = memo(() => {;
           </div>;
         </section>;
         {/* Features Section */}
-
+        <section className=\"py-20 bg-white\">
+          <div className=\"max-w-7xl mx-auto px-4 \"sm\": p x-6 lg: p x-8\">
+            <div className=\"text-center mb-16\">
+              <h2 className=\"text-3xl font-bold text-gray-900 mb-4\">
+                Why Choose Zion Tech Group?
+              </h2>
+              <p className=\"text-lg text-gray-600\">
+                We deliver exceptional results through innovation, expertise,
+                and dedication
+              </p>
+            </div>
             <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 lg: gri d-cols-4 gap-8\">
             <div className="grid grid-cols-1 "md": gri d-cols-2 lg: gri d-cols-4 gap-8">
             <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 lg: gri d-cols-4 gap-8\">
             <div className="grid grid-cols-1 "md": gri d-cols-2 lg: gri d-cols-4 gap-8">
-
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+            <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 lg: gri d-cols-4 gap-8\">
+            <div className="grid grid-cols-1 "md": gri d-cols-2 lg: gri d-cols-4 gap-8">
+            <div className=\"grid grid-cols-1 \"md\": gri d-cols-2 lg: gri d-cols-4 gap-8\">
+            <div className="grid grid-cols-1 "md": gri d-cols-2 lg: gri d-cols-4 gap-8">
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
               {features.map((feature, index) => (
                 <div key={index} className=\"text-center\">
                   <div className=\"bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center\">
@@ -335,55 +349,65 @@ const Home = memo(() => {;
           </div>;
         </section>;
         {/* Contact Information Section */}
-
-
+        <section className=\"py-16 bg-gray-50\">
+          <div className=\"max-w-7xl mx-auto px-4 \"sm\": p x-6 lg: p x-8\">
+            <div className=\"text-center mb-12\">
+              <h2 className=\"text-3xl font-bold text-gray-900 mb-4\">Get In Touch</h2>
+              <p className=\"text-lg text-gray-600\">Ready to start your next project? Contact us today.</p>
+            </div>
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+            <div className=\"grid grid-cols-1 md: gri d-cols-3 gap-8\">
+              <div className=\"text-center\">
+                <div className=\"w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4\">
+                  <Phone className=\"w-6 h-6 text-blue-600\"  />
+            <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-6 h-6 text-blue-600"  />
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 </div>
                 <h3 className=\"text-lg font-semibold text-gray-900 mb-2\">Phone</h3>
                 <a href=\"tel:+13024640950\" className=\"text-blue-600 hover: tex t-blue-700\">
                   +1 302 464 0950
                 </a>
               </div>
-
-
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
               <div className=\"text-center\">
                 <div className=\"w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4\">
                   <Mail className=\"w-6 h-6 text-blue-600\"  />
               <div className="text-center">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-6 h-6 text-blue-600"  />
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 </div>
                 <h3 className=\"text-lg font-semibold text-gray-900 mb-2\">Email</h3>
                 <a href=\"mailto: klebe r@ziontechgroup.com\" className=\"text-blue-600 hover: tex t-blue-700\">
                   kleber@ziontechgroup.com
                 </a>
               </div>
-
-
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
               <div className=\"text-center\">
                 <div className=\"w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4\">
                   <MapPin className=\"w-6 h-6 text-blue-600\"  />
               <div className="text-center">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <MapPin className="w-6 h-6 text-blue-600"  />
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 </div>
                 <h3 className=\"text-lg font-semibold text-gray-900 mb-2\">Address</h3>
                 <p className=\"text-gray-600\">
                   364 E Main St STE 1008<br  />
                   Middletown, DE 19709
                 </p>
-
-
-=======
                 <ul className=\"space-y-2 mb-6\">
                 <ul className="space-y-2 mb-6">
                 <ul className=\"space-y-2 mb-6\">
@@ -397,19 +421,17 @@ const Home = memo(() => {;
                     </li>
                   ))}
                 </ul>
-
-
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 <div className=\"flex items-center justify-between mb-4\">
                   <div className=\"flex items-center space-x-2 text-sm text-gray-500\">
                     <Clock className=\"h-4 w-4\"  />
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-2 text-sm text-gray-500">
                     <Clock className="h-4 w-4"  />
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     <span>{service.delivery}</span>
                   </div>
                   <div className=\"flex items-center space-x-2 text-sm text-gray-500\">
@@ -498,8 +520,25 @@ const Home = memo(() => {;
           </div>;
         </section>;
         {/* Testimonials Section */}
-
-
+        <section className=\"py-20 bg-gray-50\">
+          <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
+            <div className=\"text-center mb-16\">
+              <h2 className=\"text-3xl font-bold text-gray-900 mb-4\">What Our Clients Say</h2>
+              <p className=\"text-xl text-gray-600\">
+                Don\'t just take our word for it - hear from our satisfied clients
+              </p>
+            </div>
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+            <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+              <div className=\"bg-white rounded-lg p-8 shadow-sm\">
+                <div className=\"flex items-center mb-4\">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white rounded-lg p-8 shadow-sm">
+                <div className="flex items-center mb-4">
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className=\"w-5 h-5 text-yellow-400 fill-current\" />
                   ))}
@@ -517,17 +556,15 @@ const Home = memo(() => {;
                   </div>
                 </div>
               </div>
-
-
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
               <div className=\"bg-white rounded-lg p-8 shadow-sm\">
                 <div className=\"flex items-center mb-4\">
               <div className="bg-white rounded-lg p-8 shadow-sm">
                 <div className="flex items-center mb-4">
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className=\"w-5 h-5 text-yellow-400 fill-current\" />
                   ))}
@@ -545,17 +582,15 @@ const Home = memo(() => {;
                   </div>
                 </div>
               </div>
-
-
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
               <div className=\"bg-white rounded-lg p-8 shadow-sm\">
                 <div className=\"flex items-center mb-4\">
               <div className="bg-white rounded-lg p-8 shadow-sm">
                 <div className="flex items-center mb-4">
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className=\"w-5 h-5 text-yellow-400 fill-current\" />
         <section className=\"py-20 bg-gray-50\">;
@@ -635,8 +670,27 @@ const Home = memo(() => {;
           </div>;
         </section>;
         {/* Contact Information Section */}
-
-
+        <section className=\"py-20 bg-white\">
+          <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
+            <div className=\"text-center mb-16\">
+              <h2 className=\"text-3xl font-bold text-gray-900 mb-4\">Get in Touch</h2>
+              <p className=\"text-xl text-gray-600\">
+                Ready to start your digital transformation journey? Contact us today.
+              </p>
+            </div>
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+            <div className=\"grid grid-cols-1 md:grid-cols-3 gap-8\">
+              <div className=\"bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center\">
+                <div className=\"p-3 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-4 w-fit\">
+                  <Phone className=\"w-6 h-6 text-white\" />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center">
+                <div className="p-3 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-4 w-fit">
+                  <Phone className="w-6 h-6 text-white" />
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 </div>
                 <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">Phone</h3>
                 <p className=\"text-gray-600 mb-4\">Call us for immediate assistance</p>
@@ -644,19 +698,17 @@ const Home = memo(() => {;
                   +1 302 464 0950
                 </a>
               </div>
-
-
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
               <div className=\"bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center\">
                 <div className=\"p-3 rounded-lg bg-gradient-to-r from-green-500 to-green-600 mx-auto mb-4 w-fit\">
                   <Mail className=\"w-6 h-6 text-white\" />
               <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center">
                 <div className="p-3 rounded-lg bg-gradient-to-r from-green-500 to-green-600 mx-auto mb-4 w-fit">
                   <Mail className="w-6 h-6 text-white" />
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 </div>
                 <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">Email</h3>
                 <p className=\"text-gray-600 mb-4\">Send us a message anytime</p>
@@ -664,19 +716,17 @@ const Home = memo(() => {;
                   kleber@ziontechgroup.com
                 </a>
               </div>
-
-
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
               <div className=\"bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center\">
                 <div className=\"p-3 rounded-lg bg-gradient-to-r from-purple-500 to-purple-600 mx-auto mb-4 w-fit\">
                   <MapPin className=\"w-6 h-6 text-white\" />
               <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center">
                 <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500 to-purple-600 mx-auto mb-4 w-fit">
                   <MapPin className="w-6 h-6 text-white" />
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
                 </div>
                 <h3 className=\"text-xl font-semibold text-gray-900 mb-2\">Address</h3>
                 <p className=\"text-gray-600 mb-4\">Visit our headquarters</p>

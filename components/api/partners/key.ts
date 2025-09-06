@@ -12,6 +12,13 @@ export default async function handler(
   if (req.method !== 'POST') {;
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method Not Allowed' });
+import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
+import { v4 as uuidv4 } from "uuid";
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST") {
+    res.setHeader("Allow", "POST");
+    return res.status(405).json({ error: "Method Not Allowed" })
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
   const auth = await authenticateRequest(req);
   if (!auth) {
@@ -45,21 +52,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await saveApiKeys(keys);
   return res.status(201).json({ apiKey: newKey.key })
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-  authenticate_request,
-  listApiKeys,
-  saveApiKeys,
-} from '../../../utils / api / partner_auth';
-import { v4 as uuidv4 } from 'uuid';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
+  const newKey = {
+
 }
     res.set_header ('Allow', 'POST');
     return res.status (405).json ({ error: 'Method Not Allowed' });
@@ -150,3 +144,5 @@ if (existing.active = false) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5

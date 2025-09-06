@@ -1,5 +1,64 @@
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+import {motion, AnimatePresence} from 'framer-motion';
+import Link from 'next / link';
+import {
+  ArrowRight
+  Play
+  TrendingUp
+  Brain
+  Shield
+  Rocket
+  Globe
+  Cpu
+  Database
+  Atom
+  Target
+  Star
+  Sparkles as SparklesIcon
+  Brain as BrainIcon
+  Atom as AtomIcon
+  Shield as ShieldIcon
+  Rocket as RocketIcon
+  Zap
+  Eye
+  Heart
+  Infinity
+  ChevronRight
+  ChevronLeft
+  ExternalLink
+  Users
+  Award
+  Clock
+  CheckCircle
+  Zap as ZapIcon
+  DollarSign
+  BarChart3
+  Palette
+  Cloud
+  Network
+  ShoppingCart
+  Settings
+  Building
+  Monitor
+  Layers
+  Globe2
+  Lock
+  Code
+  Server
+  Phone
+  Search
+  Filter
+  Grid
+  List
+  Eye as EyeIcon
+  ArrowUpRight
+  Star as StarIcon
+  Sparkles
+  Target as TargetIcon;} from 'lucide-react';import {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   ArrowRight,
   Play,
   TrendingUp,
@@ -55,6 +114,7 @@
 =======
   Sparkles,;
   Target as TargetIcon,;} from 'lucide-react';import { ;
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -79,6 +139,15 @@ import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
 
   // Combine all innovative services
   const allInnovativeServices = [
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  };
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   const staggerContainer = {
     animate: {
@@ -210,71 +279,58 @@ import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden">;
       {/* Futuristic Background */}
-
+      <UltraFuturisticBackground2047 />
+      {/* Navigation */}
+      <UltraFuturisticNavigation2047 />
 
       {/* Navigation */}
       <UltraFuturisticNavigation2047 />;
 
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      {/* Hero Section */}
-      <section className='relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center'>;
-        <div className='max-w-7xl mx-auto w-full'>;
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>            {/* Left Content */}      <section className="relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">;
-        <div className="max-w-7xl mx-auto w-full">;
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">;
-
-=======
-      
-=======
-  const fadeInUp = {
-    initial: { opacity: 0, coordinate_y: 60 },
-    animate: { opacity: 1, coordinate_y: 0 },
-    transition: { duration: 0.6 },  }    transition: { duration: 0.6 }
-  }
-
-  const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
-
-  };
-
-  const staggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  }
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden'>
-      {/* Futuristic Background */}
-      <UltraFuturisticBackground2047 />  }
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden">
-      {/* Futuristic Background */}
-      <UltraFuturisticBackground2047 />
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Hero Section */}
       <section className='relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center'>
         <div className='max-w-7xl mx-auto w-full'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>            {/* Left Content */}      <section className="relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
             {/* Left Content */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
-
+              className='space-y-8'
+            >
+              <div className='space-y-6'>                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className='inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium'              className="space-y-8"
+            >
+              <div className="space-y-6">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-
+                  className='inline-flex items-center space-x-3 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium'
+                >
+                  <Sparkles className='w-4 h-4' />
+                  <span>Innovating the Future Since 2025</span>
+                </motion.div>
+                <h1 className='text-5xl md:text-7xl font-bold leading-tight'>
+                  <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
+                    Revolutionary
+                  </span>
+                  <br />
+                  <span className='text-white'>Technology Solutions</span>
+                  <br />
+                  <span className='bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent'>                    for 2047 & Beyond
+                  </span>
+                </h1>
                 >
                   <Sparkles className="w-4 h-4" />
                   <span>Innovating the Future Since 2025</span>
@@ -290,33 +346,30 @@ import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
                     for 2047 & Beyond
                   </span>
                 </h1>
-                <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl">
+                <p className='text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl'>
+                  Discover our cutting-edge micro SAAS services, AI autonomous
+                  ecosystems, quantum computing breakthroughs, and
+                  next-generation IT infrastructure that are shaping the future
+                  of technology.                </p>                <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl">
                   Discover our cutting-edge micro SAAS services, AI autonomous ecosystems, quantum computing breakthroughs, and next-generation IT infrastructure that are shaping the future of technology.
                 </p>
               </div>
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               {/* CTA Buttons */}
-              <motion.div
+              <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className='flex flex-col sm:flex-row gap-4'
 
-              >
-                <Link
-                  href='/2025-innovative-services-showcase-v2'
-                  className='group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center space-x-2'
-                >
-                  <span>Explore Services</span>
-                  <ArrowUpRight className='w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200' />
-                </Link>
-
-              {/* CTA Buttons */}
-              <motion&& motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-
-
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Link
@@ -360,12 +413,20 @@ import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
                 className="grid grid-cols-2 md:grid-cols-4 gap-6"
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Stats */}
               <motion&& motion.div
                 variants={staggerContainer}
+                initial='initial'
+                animate='animate'
+                className='grid grid-cols-2 md:grid-cols-4 gap-6'              >                initial="initial"
+                animate="animate"
+                className="grid grid-cols-2 md:grid-cols-4 gap-6"
+                className='grid grid-cols-2 md:grid-cols-4 gap-6'              >
 
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
               >
                 {stats.map((stat, index) => (
                   <motion.div
@@ -426,27 +487,37 @@ import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
                               .starter
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Right Content - Featured Service */}
             <motion&& motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.3 }}
+              className='relative'
+            >
+              <AnimatePresence mode='wait'>                <motion.div              className="relative"
+            >
+              <AnimatePresence mode="wait">
+                <motion.div
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+                  key={currentServiceIndex}
+                  initial={{ opacity: 0, scale: 0 && 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.5 }}
+                  className='relative'
 
 =======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                  key={currentServiceIndex}
-                  initial={{ opacity: 0, scale: 0 && 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-
-
-
-
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 >
                   <div className='bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm'>
                     <div className='flex items-center justify-between mb-6'>
@@ -463,42 +534,6 @@ import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
                       </div>
                     </div>
                     <h3 className='text-2xl font-bold text-white mb-3'>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                  exit={{ opacity: 0, scale: 0 && 0.9 }}
-                  transition={{ duration: 0 && 0.5 }}
-                  className='relative'>;
-                  <div className='bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm'>;
-                    <div className='flex items-center justify-between mb-6'>;
-                      <div className='w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center'>;
-                        <Brain className='w-8 h-8 text-white' />;
-                      </div>;
-                      <div className='text-right'>;
-                        <div className='text-sm text-cyan-400 font-medium'>;
-                          Featured Service;
-                        </div>;
-                        <div className='text-xs text-gray-400'>;
-                          Auto-rotating;
-                        </div>;
-                      </div>;
-                    </div>;
-                    <h3 className='text-2xl font-bold text-white mb-3'>;
-                      {featuredServices[currentServiceIndex]?.name}
-                    </h3>;
-                    <p className='text-gray-300 mb-6 leading-relaxed'>;
-                      {featuredServices[currentServiceIndex]?.description}
-
-                    </p>;
-
-                    <div className='space-y-3 mb-6'>;
-                      <div className='flex items-center justify-between text-sm'>;
-                        <span className='text-gray-400'>Starting at:</span>;
-                        <span className='text-cyan-400 font-semibold'>;
-                          {;
-                            featuredServices[currentServiceIndex]?.pricing;
-                              .starter;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                           }
                         </span>;
                       </div>;
@@ -531,7 +566,9 @@ import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
                       className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block"
 =======
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       Learn More
 
                     </Link>;
@@ -556,10 +593,12 @@ import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
         <div className="max-w-7xl mx-auto">
           <motion.div
 
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
                   className='relative';
@@ -648,9 +687,6 @@ import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
           </div>;
         </div>;
       </section>;
-=======
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
                       Learn More
                     </Link>
@@ -681,6 +717,8 @@ import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
             transition={{ duration: 0.8 }}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Revolutionary Service Categories
@@ -699,6 +737,13 @@ import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           {/* Category Cards */}
           <motion&& motion.div
             variants={staggerContainer}
@@ -747,16 +792,18 @@ import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
           </motion.div>
         </div>
       </section>
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       {/* Featured Services Grid */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
                     category.id === 'all';
@@ -796,9 +843,6 @@ import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
           </motion.div>;
         </div>;
       </section>;
-=======
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       {/* Featured Services Grid */}
       <section className='relative py - 20 px - 4 sm:px - 6 lg:px - 8'>;
@@ -819,6 +863,8 @@ import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
             transition={{ duration: 0.8 }}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Featured Innovative Services
@@ -911,18 +957,17 @@ import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
               </motion.div>
             ))}
           </motion.div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          {/* Services Grid */}
-          <motion&& motion.div
-            variants={staggerContainer}
 
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* View All Services CTA */}
           <motion&& motion.div
-=======
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
           {/* View All Services CTA */}
           <motion.div
@@ -931,7 +976,13 @@ import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
+=======
+            className='text-center mt-16'
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
           >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Link
@@ -940,7 +991,27 @@ import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
               <span>View All {allInnovativeServices && allInnovativeServices.length}+ Services</span>;
               <ArrowRight className='w-5 h-5' />            </Link>          >;
             <Link
+=======
+              href="/2025-innovative-services-showcase-v2"
+              className="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
+            >
+              <span>View All {allInnovativeServices.length}+ Services</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+      {/* CTA Section */}
+      <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-4xl mx-auto text-center'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
 
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -1081,15 +1152,23 @@ export default Homepage2047;
 
 
 
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Footer */}
       <UltraFuturisticFooter2047 />
     </div>
   );
+}
+};
 
 export default Homepage2047;  )
 }
 export default Homepage2047;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+export default Homepage2047;
+export default Homepage2047;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

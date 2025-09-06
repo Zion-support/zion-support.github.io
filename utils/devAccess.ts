@@ -1,10 +1,14 @@
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 import type { NextApiRequest, NextApiResponse } from 'next';
 export type DevRole = 'admin' | 'maintainer' | 'contributor';
+<<<<<<< HEAD
 
   isAuthenticated: boolean;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   roles: DevRole[];
   userId?: string;
 }
@@ -22,7 +26,10 @@ export type DevRole = 'admin' | 'maintainer' | 'contributor';
     return { connected: false }
   }
 }
+export function getDevIdentity(req: NextApiRequest): DevIdentity {
 
+export function getDevIdentity(req: NextApiRequest): DevIdentity {;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // TODO: integrate real auth; for now, check a header and env var for dev
 
   const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];
@@ -33,31 +40,18 @@ export type DevRole = 'admin' | 'maintainer' | 'contributor';
   }
   return { isAuthenticated: false, roles: [] }
 }
+  }
+  return { isAuthenticated: false, roles: [] }
+}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-export function requireRoles(
-  req: NextApiRequest
-  res: NextApiResponse
-  allowed: DevRole[]
-): DevIdentity | undefined {;
-  const identity = getDevIdentity(req);
-  if (!identity.isAuthenticated) {
-    res.status(401).json({ error: 'Unauthorized' });
-    return undefined;
-  }
-  const hasRole = identity.roles.some(r => allowed.includes(r));
-  if (!hasRole) {
-    res.status(403).json({ error: 'Forbidden' });
     return undefined;
   }
   return identity;
-=======
-
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

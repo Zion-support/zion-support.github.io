@@ -1,5 +1,13 @@
-
-
+import { useRouter  } from 'next/router';
+import { useEffect, useState, FormEvent  } from 'react';
+import Link from 'next/link',
+import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react'
+import { useRouter } from 'next/router';
+import { useEffect, useState, FormEvent } from 'react';
+import {useRouter} from 'next/router';
+import {useEffect, useState, FormEvent} from 'react';
+import { useRouter } from 'next/router';
+import { useEffect, useState, FormEvent } from 'react';
 import Link from 'next/link';
 import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
 
@@ -7,16 +15,6 @@ import Head from 'next/head';
 
 import { signIn } from 'next-auth/react';
 import { supabase } from '@/utils/supabase/client';
-import Head from 'next/head';
-
-import { signIn } from 'next-auth/react';
-import { supabase } from '@/utils/supabase/client';
-
-import type {;
-  AuthError,;
-  User,;
-=======
-
   AuthError,
   User,
 
@@ -27,35 +25,17 @@ import {;
   logInfo,;
   logWarn,;
   logErrorToProduction,;
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
-=======
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
-
-} from '@/components/ui/card';
-const LoginPage = () => {;
-
-=======
-import { useRouter } from 'next/router';
-import { useEffect, useState, FormEvent } from 'react';
-import Link from 'next/link';
-import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react'
-import Head from 'next/head';
-import { signIn } from 'next-auth/react';
-import { supabase } from '@/utils/supabase/client';
-=======
 import {
   Card
   CardContent
@@ -66,6 +46,15 @@ import {
 } from '@/components/ui/card';
 const LoginPage = () => {
 
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,;
+  CardTitle,;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+} from '@/components/ui/card';
+const LoginPage = () => {
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import type { AuthError, User, AuthChangeEvent, Session } from '@supabase/supabase-js';
 import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
@@ -73,9 +62,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
-=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const router = useRouter();
   const { t } = useTranslation();
   const [email, setEmail] = useState('');
@@ -86,10 +75,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
   const [isEmailUnverified, setIsEmailUnverified] = useState(false);
   const [verificationEmailSent, setVerificationEmailSent] = useState(false);
   const [isResendingVerification, setIsResendingVerification] = useState(false);
-
-=======
-
-  // States for the new proactive resend form;
 
   const [showProactiveResendForm, setShowProactiveResendForm] = useState(false);
   const [proactiveResendEmail, setProactiveResendEmail] = useState('');
@@ -225,13 +210,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
       const { data, error: signInError } = await supabase.auth.signInWithPassword({
         email;
         password});
-=======
-        returnTo = '/dashboard';
-      }
-
-      logInfo(
-        `LoginPage: Conditions met for redirect. Current path: ${router.pathname}, Target: ${returnTo}`
-      );
       // Add a small delay to ensure session is fully established
       const redirectTimer = setTimeout(() => {
         // Double-check that we're still logged in before redirecting
@@ -322,8 +300,84 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
   };
 
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+          logInfo(`LoginPage: Executing delayed redirect to ${returnTo}`),
+          router.replace(returnTo), // Use replace to avoid back button issues
+        }
+      }, 100), // Small delay to let session stabilize
+      
+      return () => clearTimeout(redirectTimer)
+    }
+    
+    // Return undefined for all other cases
+    return undefined
+  }, [user, sessionChecked, isLoading, router, router.query.returnTo]), // Dependencies: user, sessionChecked, isLoading, router
+
+  const handleResendVerification = async () => {
+    if (!email) {
+      setError({ name: 'ValidationError', message: 'Please enter your email address first' } as AuthError),
+      return
+    }
+    
+
+    setIsResendingVerification(true);
+
+
+    try {;
+      const response = await fetch('/api/resend-verification-email', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({ email }),;
+
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      });
+
+      if (response && response.ok) {;
+        setVerificationEmailSent(true);
+        setError(null);
+      } else {;
+        const data = await response && response.json();
+        setError({;
+          name: 'ResendError',;
+          message: data && data.message || 'Failed to resend verification email',;
+        } as AuthError);
+      }
+
+
+    setIsProactivelyResending(true);
+    setProactiveResendMessage(null);
+
+
+    try {;
+      const response = await fetch('/api/resend-verification-email', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({ email: proactiveResendEmail }),      });
+
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: proactiveResendEmail })
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        setProactiveResendMessage({ type: 'success', text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).` })
+      } else {
+        setProactiveResendMessage({ type: 'error', text: data.message || 'Failed to resend verification email.' })
+      }
+    } catch (err) {
+      setProactiveResendMessage({ type: 'error', text: 'An unexpected error occurred. Please try again.' })
+    } finally {
+      setIsProactivelyResending(false)
+    }
+  };
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true');
           } catch (error) {
     console.error("Error:", error);
@@ -358,135 +412,19 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
           event,;
           userId: session?.user?.id;
         });
-        setUser(session?.user ?? null);
-        // If auth state changes after initial check, ensure sessionChecked is true;
-        // This handles cases like login/logout in another tab.;
-        if (!sessionChecked && event !== "INITIAL_SESSION") {;
-           setSessionChecked(true);
-           logInfo('LoginPage: onAuthStateChange updated sessionChecked to true.');
-          } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      }),;
-      return () => { // Cleanup for listener;
-        logInfo('LoginPage: Unsubscribing from onAuthStateChange.');
-        authListener?.subscription?.unsubscribe();
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    },;
-    const unsubscribePromise = checkSessionAndListen();
-    return () => {;
-      mounted = false;
-      clearTimeout(sessionTimeoutId), // Clear timeout on unmount;
-      logInfo('LoginPage: Unmounting, cleaning up auth listener.');
-      unsubscribePromise.then(cleanup => cleanup && cleanup());
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }, []), // Run only once on mount;
-  // Effect for handling redirection AFTER session is checked and user state is updated;
-  useEffect(() => {;
-    logInfo(`LoginPage: Redirection effect runs. sessionChecked: ${sessionChecked}, isLoading: ${isLoading}, user: ${user?.id}, pathname: ${router.pathname}`);
-    // Only redirect if the initial session check is complete, not currently submitting login form, and user exists;
-    if (sessionChecked && !isLoading && user) {;
-      // Get returnTo from query params, decode it if it exists;
-      let returnTo = '/dashboard', // Default fallback;
-      if (router.query.returnTo && typeof router.query.returnTo === 'string') {;
-        try {
-          returnTo = decodeURIComponent(router.query.returnTo);
-        } catch (error) {
-          logWarn('Failed to decode returnTo parameter:', { data: router.query.returnTo });
-          returnTo = '/dashboard';
-          } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-      // Prevent redirecting back to auth pages or creating loops;
-      const authPages = ['/auth/login/auth/register/login/signup/auth/forgot-password'];
-      if (authPages.includes(returnTo) || returnTo.startsWith('/auth/')) {;
-        returnTo = '/dashboard';
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-      // Ensure returnTo is a relative path to prevent open redirect attacks;
-      if (returnTo.startsWith('http') || returnTo.includes('://')) {;
-        returnTo = '/dashboard';
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-      logInfo(`LoginPage: Conditions met for redirect. Current path: ${router.pathname}, Target: ${returnTo}`);
-      // Add a small delay to ensure session is fully established;
-      const redirectTimer = setTimeout(() => {;
-        // Double-check that we're still logged in before redirecting;
-        if (user && router.pathname === '/auth/login') {;
-          logInfo(`LoginPage: Executing delayed redirect to ${returnTo}`);
-          router.replace(returnTo), // Use replace to avoid back button issues;
-          } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      }, 100), // Small delay to let session stabilize;
-      return () => clearTimeout(redirectTimer);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-    // Return undefined for all other cases;
-    return undefined;
-  }, [user, sessionChecked, isLoading, router, router.query.returnTo]), // Dependencies: user, sessionChecked, isLoading, router;
-  const handleResendVerification = async () => {;
-    if (!email) {;
-      setError({ name: 'ValidationError', message: 'Please enter your email address first' } as AuthError);
-      return;
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-    setIsResendingVerification(true);
-    try {
-      const response = await fetch('/api/resend-verification-email', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify({ email });
-      }),;
-      if (response.ok) {;
-        setVerificationEmailSent(true);
-        setError(null);
       } else {;
-        const data = await response.json();
-        setError({ name: 'ResendError', message: data.message || 'Failed to resend verification email' } as AuthError);
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-      setError({ name: 'NetworkError', message: 'Failed to resend verification email. Please try again.' } as AuthError);
+        setProactiveResendMessage({;
+          type: 'error',;
+          text: data && data.message || 'Failed to resend verification email.',;
+        });
+      }
+    } catch (err) {;
+      setProactiveResendMessage({;
+        type: 'error',;
+        text: 'An unexpected error occurred. Please try again.',;
+
+
+      });
     } finally {;
       setIsResendingVerification(false);
       } catch (error) {
@@ -535,12 +473,40 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 }
   },
 
-  const handleLogin = async (e: FormEvent) => {
-    e.preventDefault(),
-    setIsLoading(true),
-    setError(null),
-    setIsEmailUnverified(false),
-    setVerificationEmailSent(false),
+            handleResendVerification();
+          }, 1000);
+        } else {;
+          // MODIFIED SECTION FOR BETTER ERROR MESSAGES;
+          let displayMessage =;
+            'Login failed. Please check your credentials and try again.'; // Default user-friendly message;
+          if (signInError && signInError.message) {;
+            if (;
+              signInError && signInError.message;
+                .toLowerCase();
+                .includes('invalid login credentials');
+            ) {;
+              displayMessage = 'Invalid email or password. Please try again.';
+            } else if (;
+              signInError && signInError.message;
+                .toLowerCase();
+                .includes('network request failed');
+            ) {;
+              displayMessage =;
+                'Network error. Please check your internet connection and try again.';
+            } else if (;
+              signInError && signInError.message.toLowerCase().includes('user disabled');
+            ) {;
+              displayMessage =;
+                'Your account has been disabled. Please contact support.';
+            }
+            // Add more specific checks here if needed for other Supabase error messages;
+          }
+
+          setError({;
+            name: signInError && signInError.name || 'AuthApiError',;
+            message: displayMessage,;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     try {
       logInfo('Attempting Supabase login with email:', { data: email }),
       const { data, error: signInError } = await supabase.auth.signInWithPassword({
@@ -591,10 +557,77 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
           // MODIFIED SECTION FOR BETTER ERROR MESSAGES
           let displayMessage = 'Login failed. Please check your credentials and try again.', // Default user-friendly message
           if (signInError.message) {
+            if (
+              signInError.message
+                .toLowerCase()
+                .includes('invalid login credentials')
+            ) {
+              displayMessage = 'Invalid email or password. Please try again.';
+            } else if (
+              signInError.message
+                .toLowerCase()
+                .includes('network request failed')
+            ) {
+              displayMessage =
+                'Network error. Please check your internet connection and try again.';
+            } else if (
+              signInError.message.toLowerCase().includes('user disabled')
+            ) {
+              displayMessage =
+                'Your account has been disabled. Please contact support.';
+            }
+            // Add more specific checks here if needed for other Supabase error messages
+          }
+          setError({
+            name: signInError.name |'AuthApiError'
+            message: displayMessage
+          } as AuthError);
+        }
+      } else if (data.user) {
+        logInfo('Supabase sign-in successful, user:', { data: data.user });
+        setUser(data.user); // setUser to trigger useEffect for redirection        // Redirection is now handled by the useEffect hook
+      } else {
+        // Should not happen if signInError is null and data.user is null
+        logWarn('Supabase sign-in returned no error but no user.');
+        setError({
+          name: 'UnknownAuthError'
+          message: 'Login failed due to an unknown error. Please try again.'
+        } as AuthError);
+      }
+    } catch (catchedError: any) {
+      logErrorToProduction('Exception during Supabase sign-in:', {
+        data: catchedError
+      });
+      // Check if the caught error is a network error
+      let exceptionMessage = 'An unexpected error occurred. Please try again.';
+      if (
+        catchedError.message &&
+        catchedError.message
+          .toLowerCase()
+          .includes('networkerror when attempting to fetch resource')
+      ) {
+        exceptionMessage =
+          'Network error. Please check your internet connection and try again.';
+      } else if (catchedError.message) {
+        exceptionMessage = catchedError.message;
+      }
+      setError({
+        name: 'ExceptionError'
+        message: exceptionMessage
+      } as AuthError);
+    } finally {
+      setIsLoading(false);    }
+  }
+  // Auto-redirect to verification status page for unverified users after showing message
+  useEffect(() => {
+    if (isEmailUnverified && verificationEmailSent && email) {
+      const timer = setTimeout(() => {
+        router.push(`/verify-status?email=${encodeURIComponent(email)}`);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+    return undefined; // Explicitly return undefined if condition is not met  }, [isEmailUnverified, verificationEmailSent, email, router]);
 
-
-
-=======
               if (signInError.message.toLowerCase().includes('invalid login credentials')) {
                   displayMessage = 'Invalid email or password. Please try again.'
               } else if (signInError.message.toLowerCase().includes('network request failed')) {
@@ -610,21 +643,42 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
     if (isEmailUnverified && verificationEmailSent && email) {;
       const timer = setTimeout(() => {;
 
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+      }, 3000);
+      return () => clear_timeout (timer);
+    }
+    return undefined; // Explicitly return undefined if condition is not met  }, [isEmailUnverified, verificationEmailSent, email, router]);
+
+        router.push(`/verify-status?email=${encodeURIComponent(email)}`)
+      }, 3000);
+      return () => clearTimeout(timer)
+    }
+    return undefined, // Explicitly return undefined if condition is not met
+  }, [isEmailUnverified, verificationEmailSent, email, router]);
+
+
+=======
+        router.push(`/verify-status?email=${encodeURIComponent(email)}`);
+      }, 3000),;
+      return () => clearTimeout(timer);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    return undefined, // Explicitly return undefined if condition is not met
+  }, [isEmailUnverified, verificationEmailSent, email, router]),
 =======
 
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
 
-=======
-
-
-  // --- Rendering Logic ---;
-  // 1. Primary Loading State: During initial session check;
-  if (isCheckingSession) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     logInfo('LoginPage: Rendering "Checking authentication..."');
     return (
       <div className='min-h-screen flex items-center justify-center'>;
@@ -677,15 +731,74 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
   // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.
   if (sessionChecked && user && !isLoading) {
     logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."'),
-
+=======
+    return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <h2 className="text-2xl font-bold mb-4">Already Logged In</h2>
           <p className="text-gray-600 mb-4">Redirecting to your dashboard...</p>
-
+        </div>
+      </div>
+    );  }
+  // 3. Render Login Form: If session is checked and no user, OR if a login attempt is in progress (isLoading)
+  // This also covers the case where a user was present but a login attempt failed, clearing the user.
+  logInfo(
+    `LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`
   );
-  // Defensive check: If router && router.pathname is not /auth/login, do not render the login form.;
+  // Defensive check: If router.pathname is not /auth/login, do not render the login form.
+  // This is a safeguard against the component's content persisting on other auth routes.
+  if (router.pathname !== '/auth/login' && router.pathname !== '/login') {
+    logWarn(
+      `LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`
+    );
+    return null; // Or a minimal loader/empty div  }
+
+    )
+    return undefined, // Explicitly return undefined if condition is not met;
+  }, [isEmailUnverified, verificationEmailSent, email, router]),;
+  // --- Rendering Logic ---;
+  // 1. Primary Loading State: During initial session check;
+  if (isCheckingSession) {;
+    logInfo('LoginPage: Rendering "Checking authentication..."');
+    return (;
+      <div className="min-h-screen flex items-center justify-center">;
+        <div className="text-center">;
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>;
+          <p className="text-gray-600">Checking authentication...</p>;
+          <p className="text-sm text-gray-500 mt-2">This should only take a moment</p>;
+        </div>;
+      </div>;
+    );
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  // 2. Redirecting State: If session is checked, user exists, and not currently submitting form;
+  // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.;
+  if (sessionChecked && user && !isLoading) {;
+    logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."');
+    return (;
+      <div className="min-h-screen flex items-center justify-center">;
+        <div className="text-center">;
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>;
+          <h2 className="text-2xl font-bold mb-4">Already Logged In</h2>;
+          <p className="text-gray-600 mb-4">Redirecting to your dashboard...</p>;
+        </div>;
+      </div>;
+    );
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  // 3. Render Login Form: If session is checked and no user, OR if a login attempt is in progress (isLoading);
+  // This also covers the case where a user was present but a login attempt failed, clearing the user.;
+  logInfo(`LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`);
+  // Defensive check: If router.pathname is not /auth/login, do not render the login form.;
   // This is a safeguard against the component's content persisting on other auth routes.;
   if (router && router.pathname !== '/auth/login' && router && router.pathname !== '/login') {;
     logWarn(;
@@ -693,20 +806,23 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
     );
     return null; // Or a minimal loader/empty div  }
 
+=======
+  if (router.pathname !== '/auth/login' && router.pathname !== '/login') {;
+    logWarn(`LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`);
+    return null, // Or a minimal loader/empty div;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <>
       <Head>
         <title>{`${t('auth.sign_in')} - Zion Tech Marketplace`}</title>
+<<<<<<< HEAD
 
   return (
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    );
-    return null; // Or a minimal loader/empty div  }
-  return (
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
             <CardTitle>Sign In</CardTitle>
             <CardDescription>
@@ -719,6 +835,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
         />;
       </Head>;
+
       <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>;
         <Card className='w-full max-w-md'>          <CardHeader>;
             <CardTitle>Sign In</CardTitle>;
@@ -733,6 +850,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
                   <p className='text-sm text-red-600'>{error && error.message}</p>;
                 </div>;
               )}
+
               <div className='space-y-2'>;
                 <label htmlFor='email' className='text-sm font-medium'>;
                   Email;
@@ -747,14 +865,105 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
                   value={email}
                   onChange={e => setEmail(e && e.target.value)}                  required;
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 <Input
                   id='password'
                   type='password'
                   value={password}
-                  onChange={e => setPassword(e && e.target.value)}                  required;
+                  onChange={e => setPassword(e.target.value)}                  required
+                  disabled={isLoading}
+                />
+              </div>
+              <Button
+                type='submit'
+                className='w-full'
+                disabled={isLoading |isEmailUnverified}
+              >
+                {isLoading
+                  ? 'Signing in...'
+                  : isEmailUnverified
+                    ? t('auth.email_verification_required')
+                    : t('auth.sign_in')}
+              </Button>
+            </form>
+            <div className='mt-6 text-center'>
+              <p className='text-sm text-gray-600'>
+                Don't have an account?{' '}
+                <Link
+                  href='/auth/register'
+                  className='text-blue-600 hover:underline'
+                >                  Sign up
+              )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
-=======
-              
+              <div className="space-y-2">
+                <label htmlFor="email" className="text-sm font-medium">
+                  Email
+                </label>
+                <Input
+                  id='email'
+                  type='email'
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}                  required
+                  disabled={isLoading}
+                />
+              </div>
+              <div className='space-y-2'>
+                <label htmlFor='password' className='text-sm font-medium'>
+                  Password
+                </label>
+                <Input
+                  id='password'
+                  type='password'
+                  value={password}
+                  onChange={e => setPassword(e.target.value)}                  required
+                  disabled={isLoading}
+                />
+              </div>
+              <Button
+                type='submit'
+                className='w-full'
+                disabled={isLoading || isEmailUnverified}
+              >
+                {isLoading
+                  ? 'Signing in...'
+                  : isEmailUnverified
+                    ? t('auth.email_verification_required')
+                    : t('auth.sign_in')}
+              </Button>
+            </form>
+            <div className='mt-6 text-center'>
+              <p className='text-sm text-gray-600'>
+                Don't have an account?{' '}
+                <Link
+                  href='/auth/register'
+                  className='text-blue-600 hover:underline'
+                >                  Sign up
+                  id="email"
+                  type="email"
+                  value={email  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setEmail(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  required;
+                  disabled={isLoading  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                />
+              </div>
               <div className="space-y-2">
                 <label htmlFor="password" className="text-sm font-medium">
                   Password
@@ -821,25 +1030,22 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
                 />
               </div>
               <Button type="submit" className="w-full" disabled={isLoading || isEmailUnverified}>
-                {isLoading ? 'Signing in...' : isEmailUnverified ? t('auth.email_verification_required') : t('auth.sign_in')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                {isLoading ? 'Signing in...' : isEmailUnverified ? t('auth.email_verification_required') : t('auth.sign_in')}
               </Button>
             </form>
+            
             <div className="mt-6 text-center">
               <p className="text-sm text-gray-600">
-                Don't have an account?{' '  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+                Don't have an account?{' '}
                 <Link href="/auth/register" className="text-blue-600 hover: underline">
                   Sign up
+=======
 
 =======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 </Link>
               </p>
             </div>
@@ -847,9 +1053,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
         </Card>
       </div>
     </>
+);
+};export default LoginPage;
 
+  )
+},
+export default LoginPage,
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 />;
               </div>;
+
               <Button
                 type='submit'
                 className='w-full'
@@ -861,6 +1075,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
                     : t('auth && auth.sign_in')}
               </Button>;
             </form>;
+
             <div className='mt-6 text-center'>;
               <p className='text-sm text-gray-600'>;
                 Don't have an account?{' '}
@@ -997,8 +1212,10 @@ if ( {) {
 =======
 },;
 export default LoginPage;
+=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

@@ -1,11 +1,11 @@
 
-
-=======
-
+import React from "react";
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
 import React from "react",
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
+import React from "react",
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function CreateServiceProfile() {
   return (
@@ -22,10 +22,30 @@ export default function CreateServiceProfile() {
       </div>
     </div>
   )
+}
+import React from "react",;
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
 
+export default function CreateServiceProfile() {;
+  return (
+    <div className="bg-zion-blue min-h-screen py-8 md: py-12">;
+      <div className="container mx-auto px-4">;
+        <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12">;
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Create Your Service Provider Profile</h1>;
+          <p className="text-zion-slate-light max-w-2xl mx-auto">;
+            Showcase your services to potential clients. Create a professional profile ;
+            to get discovered on the Zion Marketplace.;
+          </p>;
+        </div>;
+
+        <ServiceProviderRegistrationForm />;
+      </div>;
+    </div>;
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
-import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
-=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import React from './react';
 import { ServiceProviderRegistrationForm } from '@/components / profile / ServiceProviderRegistrationForm';
 export default /**
@@ -49,9 +69,9 @@ function CreateServiceProfile() {
 }
 
 ;
-<<<<<<< HEAD
 =======
 
 
 
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

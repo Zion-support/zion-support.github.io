@@ -1,5 +1,20 @@
 
-
+import {useParams, Link} from "react-router-dom";
+import {Header} from "@/components/header/Header";
+import {Footer} from "@/components/Footer";
+import {GradientHeading} from "@/components/GradientHeading";
+import {ProductListingCard} from "@/components/ProductListingCard";
+import {useState, useEffect} from "react";
+import {Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase} from "lucide-react";
+import {MARKETPLACE_LISTINGS} from "@/data/listingData";
+import {useNavigate} from "react-router-dom";
+import {toast} from "@/hooks/use-toast";
+export default function CategoryDetail() {
+  // Cast to specify the expected route param type since useParams may be untyped;
+  const { slug } = useParams() as { slug?: string };
+  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(true);
+  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
 import { useParams, Link } from "react-router-dom",
 import { Header } from "@/components/header/Header",
 import { Footer } from "@/components/Footer",
@@ -9,8 +24,26 @@ import { useState, useEffect } from "react",
 import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from "lucide-react",
 import { MARKETPLACE_LISTINGS } from "@/data/listingData",
 import { useNavigate } from "react-router-dom",
+import { toast } from "@/hooks/use-toast";
+export default function CategoryDetail() {
+  // Cast to specify the expected route param type since useParams may be untyped
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  const { slug } = useParams() as { slug?: string }
+  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(true);
+  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
+import { toast } from "@/hooks/use-toast",
+export default function CategoryDetail() {
+  // Cast to specify the expected route param type since useParams may be untyped
+  const { slug } = useParams() as { slug?: string },
+  const navigate = useNavigate(),
+  const [isLoading, setIsLoading] = useState(true),
+  const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: ""
     description: ""
@@ -22,11 +55,9 @@ import { useNavigate } from "react-router-dom",
       icon: <Bot className="w-6 h-6" />
 
 =======
-
+    }
     },
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     'ai-models-apis': {
       title: "AI Models & APIs"
       description: "Access cutting-edge AI models with easy integration"
@@ -82,6 +113,27 @@ import { useNavigate } from "react-router-dom",
           name: `Provider ${index + 1}`
           id: `author-${index + 1}`
           avatarUrl: undefined
+=======
+        }
+        images: [`/placeholder.svg`]
+        createdAt: new Date().toISOString()
+        rating: Math.floor(Math.random() * 5) + 1
+        reviewCount: Math.floor(Math.random() * 100)
+      }));
+    setListings(listingsToShow);
+    setIsLoading(false);
+  }, [slug]);
+        },
+        images: [`/placeholder.svg`],
+        createdAt: new Date().toISOString(),
+        rating: Math.floor(Math.random() * 5) + 1,
+        reviewCount: Math.floor(Math.random() * 100)
+      })),
+
+    setListings(listingsToShow),
+    setIsLoading(false)
+  }, [slug]),
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
@@ -103,12 +155,20 @@ import { useNavigate } from "react-router-dom",
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           }
         }
       });
     }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+  };
+  },
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
 
 ;
@@ -151,9 +211,14 @@ import { useNavigate } from "react-router-dom",
             </div>
           )}
               ))}
-            </div>;
+            </div>
           )}
-
+        </div>
+      </div>
+      <Footer />
+    </>
+  )
+}
         </div>;
       </div>;
       <Footer />;
@@ -181,8 +246,6 @@ import { useNavigate } from "react-router-dom",
     </>);
 }
 
-=======
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

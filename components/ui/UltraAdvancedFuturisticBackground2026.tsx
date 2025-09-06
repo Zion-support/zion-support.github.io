@@ -166,18 +166,15 @@ if ( {) {
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
 
-=======
-
         ctx.restore();      }
 
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     }
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Neural network node class
     class NeuralNode {
       }
@@ -211,6 +208,9 @@ constructor(x: number, y: number) {
         this.activation += (Math.random() - 0.5) * 0.1;
         this.activation = Math.max(0, Math.min(1, this.activation));
         this.pulse = Math.sin(Date.now() * 0.001 + this.x * 0.01) * 0.5 + 0.5
+        ctx.restore();      }
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
       }
       draw() {
         ctx.save();
@@ -246,6 +246,7 @@ constructor(x: number, y: number) {
     // Quantum field class
     class QuantumField {
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -275,13 +276,8 @@ constructor(x: number, y: number) {
           }
         });
         ctx && ctx.restore();
-    }
-
-
-    // Quantum field class;
-    class QuantumField {;
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       x: number;
       y: number;
       radius: number;
@@ -317,7 +313,23 @@ constructor(x: number, y: number) {
           ctx.lineWidth = 2;
           ctx.beginPath();
           ctx.arc(this.x, this.y, waveRadius, 0, Math.PI * 2);
+=======
+<<<<<<< HEAD
+          ctx.stroke()
 
+        ctx.restore();      }          ctx.stroke()
+        }
+        ctx.restore()
+    }
+
+        ctx.restore();      }          ctx.stroke()
+        }
+        ctx.restore()
+<<<<<<< HEAD
+    }
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         ctx.restore();      }
 
       }
@@ -327,6 +339,8 @@ constructor(x: number, y: number) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     // Holographic layer class
     class HolographicLayer {
 
@@ -556,6 +570,11 @@ if ( {) {
         ctx.strokeStyle = this.color;
         ctx.lineWidth = 1;
         ctx.setLineDash([5, 5]);
+=======
+        ctx.beginPath();
+        ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
+        ctx.stroke();
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
@@ -563,16 +582,15 @@ if ( {) {
         ctx.restore();      }
 
         ctx.restore()
+    }
 
       }
 
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     }
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     // Get color based on scheme
     function getColorSchemeColor(): string {
@@ -804,14 +822,16 @@ Math.random() * canvas.width;
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
               ctx.stroke();
+              ctx.restore();
 
 =======
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             }
           });
         });
@@ -821,6 +841,13 @@ Math.random() * canvas.width;
         })
       }
       animationFrameId = requestAnimationFrame(animate)
+=======
+    }
+
+      animationFrameId = requestAnimationFrame(animate);    };
+
+    };
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
     animate();
     return () => {
@@ -838,35 +865,16 @@ Math.random() * canvas.width;
     enableMultidimensional
   ]);
 
-
-      animationFrameId = requestAnimationFrame(animate);
-
-    };
-
-    animate();
-
-
-
-=======
-
-
-
     >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full'
         style={{ zIndex: -1 }}
+      />
 
-      />;
-
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Additional visual effects */}
       {enableMultidimensional && (;
         <div className='absolute inset-0 pointer-events-none'>;
@@ -987,26 +995,11 @@ export default UltraAdvancedFuturisticBackground2026;      {children}
 }
 export default UltraAdvancedFuturisticBackground2026;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             }}
           />
         </div>
       )}
-=======
-              ease: 'easeInOut',              ease: "easeInOut";
-            }}
-          />;
-        </div>)}
-      {children}
-    </div>);
-}
-;
-export default UltraAdvancedFuturisticBackground2026;      {children}
-    </div>);
-}
-;
-export default UltraAdvancedFuturisticBackground2026;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
               duration: 10,

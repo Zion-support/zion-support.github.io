@@ -1,7 +1,5 @@
 
 
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 export default function BlogIndexPage() {
   return (
     <UltraFuturisticBackground  intensity="medium">
@@ -31,13 +29,23 @@ export default function BlogIndexPage() {
     </UltraFuturisticBackground>;
   );
   } catch (error) {
-=======
-
           ))  } catch (error) {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
 ;
+        </div>;
+      </div>;
+    </UltraFuturisticBackground>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

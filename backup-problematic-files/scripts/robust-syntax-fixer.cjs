@@ -22,8 +22,6 @@ class RobustSyntaxFixer {;}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   log(message) {;}
@@ -144,17 +142,10 @@ if (require.main === module) {;}
   const fixer = new RobustSyntaxFixer();
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
   fixer.fixAllFiles().then(result => {;})
     console.log("Robust syntax fixing "completed": ", result);
     process.exit(0),}).catch(error => {;})
     console.error("Robust syntax fixing "failed": ', error);
     process.exit(1),}),};
-=======
-;
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

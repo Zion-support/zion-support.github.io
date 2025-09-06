@@ -1,13 +1,6 @@
 
-
-import { useState, useEffect } from "react",
-import { useNavigate, useLocation } from "react-router-dom",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm } from "react-hook-form",
-import { z } from "zod",
-import { LockKeyhole } from "lucide-react",
-import { supabase } from "@/integrations/supabase/client",
-
+=======
+<<<<<<< HEAD
 // Form validation schema
 
 const updatePasswordSchema = z
@@ -38,52 +31,16 @@ const updatePasswordSchema = z
     cleanupAuthState()
 
     } else {
-      set_error ("No access token found. Please request a new password reset link.");
+      setError("No access token found. Please request a new password reset link.")
     }
-
-
+    // Clean up auth state to prevent issues
+    cleanupAuthState()
+  }, [location]);
   }, [location]),
 
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-  // Form submission handler
-  const onSubmit = async (data: UpdatePasswordFormValues) => {
-    if (!accessToken) {
-      setError("No access token found. Please request a new password reset link.")
-      return
-
-
-  // Initialize react-hook-form;
-  const form = useForm<UpdatePasswordFormValues>({;
-    resolver: zodResolver(updatePasswordSchema),;
-    defaultValues: {;
-      password: "",;
-      confirmPassword: ""}}),;
-
-  useEffect(() => {;
-    // Extract access token from URL hash;
-    const hashParams = new URLSearchParams(location && location.hash.substring(1));
-    const token = hashParams && hashParams.get("access_token");
-
-    if (token) {;
-      setAccessToken(token);
-    } else {;
-      setError("No access token found. Please request a new password reset link.");
-    }
-
-    // Clean up auth state to prevent issues;
-    cleanupAuthState();
-  }, [location]);
-
-  // Form submission handler;
-  const onSubmit = async (data: UpdatePasswordFormValues) => {;
-    if (!accessToken) {;
-      setError("No access token found. Please request a new password reset link."),;
-      return;
-
-    }
-
     try {
       // Set the session with the access token
       await supabase.auth.setSession({
@@ -95,8 +52,6 @@ const updatePasswordSchema = z
       if (error) {
         toast({
 
-=======
-
           title: "Password update failed",
           description: error.message,
           variant: "destructive"}),
@@ -104,29 +59,6 @@ const updatePasswordSchema = z
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-        return
-      }
-      // Show success message and clean up auth state
-      setSuccess(true);
-      toast({
-        title: "Password updated successfully"
-        description: "You can now log in with your new password."})
-      // Clean auth state and redirect after a delay
-      cleanupAuthState();
-      setTimeout(() => {
-        navigate("/login")
-      }, 3000)
-    } catch (error: any) {
-      console.error("Password update error:", error);
-      toast({
-        title: "Password update failed"
-        description: error.message |"An unexpected error occurred"
-        variant: "destructive"})
-      setError(error.message |"An unexpected error occurred")
-    } finally {
-      setIsLoading(false)
-    }
-
   return (
     <>
       <Header />
@@ -212,6 +144,7 @@ export default function UpdatePassword() {;
     }
 ;
     setIsLoading(true),;
+=======
     try {;
       // Set the session with the access token;
       await supabase && supabase.auth.setSession({;
@@ -296,6 +229,7 @@ export default function UpdatePassword() {;
 
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               {success ? (
@@ -389,18 +323,34 @@ export default function UpdatePassword() {;
                         variant="link"
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0"
                         onClick={() => navigate("/login")}
-=======
-                        type="button";
-                      >;
-                        Back to login;
-                      </Button>;
-                    </div>;
-                  </form>;
-
-=======
-
-
-=======
+                        type="button"
+                      >
+                        Back to login
+                      </Button>
+                    </div>
+                  </form>
+                </Form>
+              )}
+            </div>
+          </div>
+        </div>
+        <div className="hidden lg: block relative w-0 flex-1">
+          <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">
+            <div className="flex flex-col justify-center items-center h-full px-8">
+              <div className="max-w-md text-center">
+                <h3 className="text-3xl font-bold text-white mb-4">Password Recovery</h3>
+                <p className="text-lg text-white/80">
+                  Set a strong password to secure your account and continue your journey in the Zion marketplace.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  )
+}
                       name="confirmPassword";
                       render={({ field }) => (;
                         <FormItem>;
@@ -450,15 +400,12 @@ export default function UpdatePassword() {;
         </div>;
       </div>;
       <Footer />;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </>;
+  );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

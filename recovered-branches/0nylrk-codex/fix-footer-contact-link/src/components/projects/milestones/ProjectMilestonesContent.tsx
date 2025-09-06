@@ -1,13 +1,21 @@
 
+import React, { useState, useEffect } from 'react';
 
 =======
-
+import {useParams} from 'react-router-dom';
+import {useProjects} from '@/hooks/useProjects';
+import {useMilestones} from '@/hooks/useMilestones';
+import {useJobDetails} from '@/hooks/useJobDetails';
+import {useAuth} from '@/hooks/useAuth';
+import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
+import {useDisputeCheck} from '@/hooks/useDisputeCheck';
+import {MilestoneActivities, MilestoneManager, MilestoneCreator, ProjectActions, ProjectHeader} from './components';
+export function ProjectMilestonesContent() {
+  const { projectId } = useParams() as { projectId?: string }
 
 export function ProjectMilestonesContent() {;
   const { projectId } = useParams() as { projectId?: string };
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const { user } = useAuth();
   const { getProjectById } = useProjects();
   const {
@@ -35,6 +43,8 @@ export function ProjectMilestonesContent() {;
           setProject(projectData)
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
         }
       } catch (error) {;
         console && console.error("Error loading project:", error);
@@ -78,6 +88,7 @@ export function ProjectMilestonesContent() {;
     loadProject(),;
     refetch();
   }, [projectId, getProjectById, refetch]),;
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const handleMilestoneCreated = async () => {;
     await refetch();
   };
@@ -126,28 +137,16 @@ export function ProjectMilestonesContent() {;
         <h2 className="text-2xl font-bold">Payment Milestones</h2>;
         <ProjectActions;
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           projectId={projectId || ''}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
-          isUnderDispute={isUnderDispute}
-          disputeId={disputeId}
-          isTalent={isTalent}
-          onAddMilestone={() => setActiveTab('create')}
-
-        />;
-      </div>;
-
-      <Tabs value={activeTab} onValueChange={setActiveTab}>;
-        <TabsList className="mb-6">;
-          <TabsTrigger value="milestones">Milestones</TabsTrigger>;
-          <TabsTrigger value="activity">Activity</TabsTrigger>;
-          {isTalent && (;
-            <TabsTrigger value="create">Create Milestone</TabsTrigger>;
-          )}
-        </TabsList>
-        <TabsContent value="milestones">
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+          <MilestoneManager
+            projectId={projectId |''}
+          <MilestoneManager 
+            projectId={projectId || ''}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             milestones={milestones}
             activities={activities}
             isLoading={milestonesLoading}

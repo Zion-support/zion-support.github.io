@@ -20,26 +20,23 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
-
-
-  page: number;
-  page_size: number;
-  total: number;
+export type PaginationProps = {;
 
 export type PaginationProps = {
   on_change: (next_page: number) => void;
 }
-;
-export default /**
- * Pagination - Function description
- */
-function Pagination() {  const total_pages = Math.max (1, Math.ceil (total / page_size));export type PaginationProps = {
-
-  page: number,
-  page_size: number,
-  total: number,
-
-
+export default function Pagination({
+  page
+  pageSize
+  total
+  onChange
+}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
+  page: number
+  pageSize: number
+  total: number
+  onChange: (nextPage: number) => void
+}
+export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
   page,
   pageSize,
   total,
@@ -52,8 +49,10 @@ function Pagination() {  const total_pages = Math.max (1, Math.ceil (total / pag
 };
 
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
+=======
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
@@ -130,9 +129,6 @@ export default function Pagination({
       <div className="text-sm">;
         Page {page} of {totalPages}
 
-=======
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 interface PaginationProps {;
@@ -401,19 +397,11 @@ if ( {) {
 export default Pagination;
 }
 =======
-          <ChevronRight className="w - 4 h - 4 ml - 1" />;
-        </span>)}
-    </nav>);
-}
-export default Pagination;
-=======
+  );
 <<<<<<< HEAD
-        Next
-      </EnhancedButton>
-    </div>
-  )
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

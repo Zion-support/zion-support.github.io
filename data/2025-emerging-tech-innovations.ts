@@ -1,6 +1,13 @@
+import { ServiceVariant } from '../types/service-variants';
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
+export interface EmergingTechInnovationService {
+
+export interface EmergingTechInnovationService {;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   id: string;
   name: string;
   tagline: string;
@@ -1140,16 +1147,15 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
 ];
 
     ];
-    market_advantage: 'Only quantum - powered cybersecurity platform with proven AI integration';
-=======
+    marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
+  }
+];
 
       'Only quantum-powered cybersecurity platform with proven AI integration',
   },;
 ];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
-
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechInnovation {;
   id: string,;
@@ -1615,14 +1621,28 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
       'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting';
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration';
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    ];
+    market_advantage: 'Only quantum - powered cybersecurity platform with proven AI integration';
+=======
+
+      'Only quantum-powered cybersecurity platform with proven AI integration',
+  },;
+];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
+    ];
+    marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechInnovation {;
@@ -2090,9 +2110,9 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration';
 <<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   }
 ];

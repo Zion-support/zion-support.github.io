@@ -1,5 +1,7 @@
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   Menu,
   X,
   ChevronDown,
@@ -25,7 +27,15 @@
   Atom,
   Database,
   Cloud,
+=======
+<<<<<<< HEAD
+  Lock,
+  Code,
+} from 'lucide-react';
 
+import Link from 'next/link';import { ;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
 
   Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
@@ -60,44 +70,6 @@ import Link from 'next/link';
       icon: Brain
       description: 'Cutting-edge AI solutions'
       dropdown: [
-=======
-  Cpu, Zap, Atom, Database, Cloud, Lock, Code;
-} from 'lucide-react';
-import Link from 'next / link';
-  const [is_open, setIsOpen] = useState (false);
-  const [is_scrolled, setIsScrolled] = useState (false);
-  const [active_dropdown, setActiveDropdown] = useState < string | null>(null);
-;
-  useEffect (() => {
-    const handle_scroll = () =>: any {
-      setIsScrolled (window.scroll_y > 50);
-    }
-;
-    window.addEventListener ('scroll', handle_scroll);
-    return () => window.removeEventListener ('scroll', handle_scroll);  }, []);      setIsScrolled (window.scroll_y > 50);
-    }
-;
-    window.addEventListener ('scroll', handle_scroll);
-    return () => window.removeEventListener ('scroll', handle_scroll);
-  const navigation_items = [;
-    {
-      name: 'Home',
-      href: '/',
-      icon: null,
-    },    {      icon: null;
-    }
-    {
-      name: 'AI Services',
-      href: '#',
-      icon: Brain,
-      description: 'Cutting - edge AI solutions',
-      dropdown: [;
-        {
-
-          name: 'AI Agent Orchestrator',
-          href: '/ai - agents',
-          icon: Bot,
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       description: 'Benchmarks & vendor references'
     }
@@ -149,7 +121,14 @@ import Link from 'next / link';
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
@@ -202,6 +181,22 @@ import Link from 'next / link';
           </motion && motion.div>;
           {/* Desktop Navigation */}
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+=======
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+                  </Link>
+                )}
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 {/* Dropdown Menu */}
                 {item && item.dropdown && (;
                   <AnimatePresence>;
@@ -209,8 +204,13 @@ import Link from 'next / link';
                       <motion&& motion.div
                         initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                        className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
 
-
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
                       >
                         <div className="p-4">
                           <div className="text-sm text-gray-400 mb-3">{item.description}</div>
@@ -240,11 +240,14 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                 )}
               </div>;
             ))}
+          </div>
 
+=======
           </div>;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex items-center space-x-6'>;
             <div className='flex items-center space-x-4 text-sm text-gray-300'>;
@@ -255,9 +258,6 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
               >
                 <Phone className='w-4 h-4' />
                 <span className='hidden xl:inline'>{contactInfo.mobile}</span>
-
-
-
 
               </a>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -305,38 +305,6 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
             </motion.a>
           </div>
 
-=======
-                href={`mailto:${contactInfo && contactInfo.email}`}
-                className='flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200'>;
-                <Mail className='w-4 h-4' />;
-                <span className='hidden xl:inline'>{contactInfo && contactInfo.email}</span>;
-              </a>;
-            </div>;
-            <motion&& motion.a
-              href='/contact'
-              whileHover={{ scale: 1 && 1.05 }}
-              whileTap={{ scale: 0 && 0.95 }}
-              className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300'>              </a>;
-              <a href={`mailto:${contactInfo && contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-400 transition-colors duration-200">;
-                <Mail className="w-4 h-4" />;
-                <span className="hidden xl:inline">{contactInfo && contactInfo.email}</span>;
-              </a>;
-            </div>;
-            <motion&& motion.a
-              href="/contact"
-              whileHover={{ scale: 1 && 1.05 }}
-              whileTap={{ scale: 0 && 0.95 }}
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300">;
-              Get Started;
-            </motion && motion.a>;
-          </div>;
-
-
-          {/* Mobile Menu Button */}
-          <div className='lg:hidden'>;
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <button
               onClick={() => setIsOpen(!isOpen)}
               className='text-gray-300 hover:text-white transition-colors duration-200';
@@ -348,14 +316,18 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               )}            </button>            <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white transition-colors duration-200";
-            >;
+              className="text-gray-300 hover:text-white transition-colors duration-200"
+            >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
       </div>
+=======
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -406,9 +378,6 @@ className="flex items-center justify-between w-full text-left text-gray-300 hove
                       </button>
                       {activeDropdown === item.name && (
                         <div className="ml-8 mt-2 space-y-2">
-=======
-=======
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
       {/* Mobile Menu */}
       <AnimatePresence>
@@ -478,6 +447,12 @@ className="flex items-center justify-between w-full text-left text-gray-300 hove
                       {item.icon && <item.icon className="w-5 h-5" />}
                       <span>{item.name}</span>
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     </Link>
 
                   )}
@@ -566,3 +541,17 @@ export default UltraAdvancedNavigation;  )
 export default UltraAdvancedNavigation;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+};
+export default UltraAdvancedNavigation;  );
+};
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+export default UltraAdvancedNavigation;
+
+export default UltraAdvancedNavigation;
+export default UltraAdvancedNavigation;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

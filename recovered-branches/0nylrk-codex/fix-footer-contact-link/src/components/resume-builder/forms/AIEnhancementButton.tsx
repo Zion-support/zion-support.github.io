@@ -1,11 +1,14 @@
 
-
-=======
-
+import { useState  } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Sparkles, Loader2  } from 'lucide-react';
+import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2} from 'lucide-react';
 import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
+=======
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -20,6 +23,7 @@ interface AIEnhancementButtonProps {
   className?: string
 }
 
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Sparkles, Loader2} from 'lucide-react';
@@ -32,7 +36,7 @@ export function AIEnhancementButton({;
   enhancementType;
   context;
   onEnhanced;
-
+<<<<<<< HEAD
   className
 }: AIEnhancementButtonProps) {
   const { enhanceContent, isEnhancing } = useResumeEnhancer(),
@@ -43,7 +47,18 @@ export function AIEnhancementButton({;
       setError('Please enter at least some basic content before enhancing'),
       return
     }
-
+    
+    setError(null);
+    const enhancedContent = await enhanceContent(
+      currentContent;
+      enhancementType;
+      context
+    );
+    
+    if (enhancedContent) {
+      onEnhanced(enhancedContent)
+    }
+  };
 ;
     setError(null),;
     const enhancedContent = await enhanceContent(;
@@ -55,9 +70,11 @@ export function AIEnhancementButton({;
       onEnhanced(enhancedContent);
     }
   },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   return (
     <Button
       type="button"
@@ -75,23 +92,9 @@ export function AIEnhancementButton({;
     </Button>
   )
 =======
-import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
-interface AIEnhancementButtonProps {
-  current_content: string,
-  enhancement_type: 'summary' | 'work - description' | 'skill - categorization' | 'general',
-  context?: string;
-  on_enhanced: (enhanced_content: string) => void,
-  button_text?: string;
-  class_name?: string;
 }
-export /**
- * AIEnhancementButton - Function description
- */
-function AIEnhancementButton() {
-  const { enhance_content, is_enhancing } = useResumeEnhancer ();
-  const [error, set_error] = useState < string | null>(null);
-;
-
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

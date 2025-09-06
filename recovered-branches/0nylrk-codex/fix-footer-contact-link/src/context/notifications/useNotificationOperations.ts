@@ -1,9 +1,7 @@
-
 =======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Notification, FilterType, NotificationContextType} from './types';
@@ -70,14 +68,9 @@ if (throw error) {
     dismissNotification;
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     setFilter;
     fetchNotifications}
 }
 
-=======
-    dismiss_notification;
-    set_filter;
-    fetch_notifications}
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

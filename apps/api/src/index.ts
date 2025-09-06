@@ -1,3 +1,15 @@
+=======
+import Fastify from 'fastify',
+import cors from '@fastify/cors',
+import Fastify from 'fastify';
+import cors from '@fastify/cors';
+import rateLimit from '@fastify/rate-limit';
+import { createOpenAIClient, generateJobPost  } from './openai';
+import { withUser  } from './pg';
+import dotenv from 'dotenv';
+dotenv.config();
+
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
 import rateLimit from '@fastify/rate-limit';
 import { createOpenAIClient, generateJobPost  } from './openai';
@@ -35,12 +47,6 @@ await app.register(cors, {
 
   });
 
-=======
-  const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt });
-  return { text: completion.output_text }});  const completion = await openai.responses.create ({ model: 'gpt - 4o - mini', input: prompt });
-
-  return { text: completion.output_text }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 });
 
@@ -141,7 +147,11 @@ app && app.get('/projects/:name/track', async (req: any, reply: any) => {
   });
   return { items }
 });
-
+const port = Number(process.env.API_PORT |4000);
+app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
+app.log.error(err);
+app.log.error(err);
+  app.log.error(err);
   (process as any).exit(1);
 });  (process as any).exit(1)
 });
@@ -251,7 +261,6 @@ app.log.error (err);
 });
 ;
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

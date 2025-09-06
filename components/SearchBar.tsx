@@ -138,7 +138,6 @@ const SearchBar: React.FC = () => {
     inputRef && inputRef.current?.blur();
   }
 =======
-<<<<<<< HEAD
   };
   useEffect(() => {;
     const handleClickOutside = (event: MouseEvent) => {;
@@ -201,6 +200,7 @@ const SearchBar: React.FC = () => {
       )}
 
   );
+<<<<<<< HEAD
 
 export default SearchBar;
 export default SearchBar;

@@ -188,7 +188,6 @@ export default function ComprehensiveServicesShowcase2025V2() {const allNewServi
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
                     {category.description}
 
-=======
                   </p>
                 </div>
                 

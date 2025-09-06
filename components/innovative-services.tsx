@@ -1,11 +1,124 @@
-
+import React, { useState } from 'react',
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import React, { useState } from 'react';
 import Head from 'next/head';
-
-import {
 
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+import {
+  Check
+  Star
+  Zap
+  Shield
+  Users
+  Globe
+  ArrowRight
+  ExternalLink
+  TrendingUp
+  Clock
+  Target
+  Building
+  Rocket
+  Award
+  DollarSign
+  ChartBar
+  Lock
+  Cpu
+  Database
+  Cloud
+  Smartphone
+  Palette
+  Search
+  MessageSquare
+  FileText
+  Calendar
+  CreditCard
+  BarChart3
+  Settings
+  Zap as ZapIcon
+  Code
+  BookOpen
+  Activity
+  Database as DatabaseIcon
+  Play
+  Mail
+  Phone
+  MapPin
+  Filter
+  Grid
+  List
+  ChevronDown
+  ChevronUp
+  Sparkles
+  FlaskConical
+  Dna
+  Car
+  Leaf
+  Factory
+  Truck
+  Microscope
+  GraduationCap
+  ShieldCheck
+  Brain
+  Atom
+  Globe2
+  Bot
+  Eye
+  Target as TargetIcon
+  Zap as ZapIcon2
+  Shield as ShieldIcon
+  Globe as GlobeIcon
+  Cpu as CpuIcon
+  Cloud as CloudIcon
+  Bot as BotIcon
+  Lock as LockIcon
+  BarChart3 as BarChart3Icon
+  TrendingUp as TrendingUpIcon
+  Users as UsersIcon
+  Award as AwardIcon
+  Star as StarIcon
+  Check as CheckIcon
+  ArrowRight as ArrowRightIcon
+  ExternalLink as ExternalLinkIcon
+  Phone as PhoneIcon
+  Mail as MailIcon
+  MapPin as MapPinIcon
+  Trophy
+  FlaskConical as FlaskConicalIcon
+  Dna as DnaIcon
+  Car as CarIcon
+  Leaf as LeafIcon
+  Factory as FactoryIcon
+  Truck as TruckIcon
+  Microscope as MicroscopeIcon
+  GraduationCap as GraduationCapIcon
+  ShieldCheck as ShieldCheckIcon;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
@@ -28,7 +141,138 @@ import {
   getInnovativeServiceCategories;
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [priceRange, setPriceRange] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortBy, setSortBy] = useState('innovation');
+  const [showFilters, setShowFilters] = useState(false);
 
+
+
+    { value: '1001-2000', label: '$1,001 - $2,000' };
+    { value: '2001-3000', label: '$2,001 - $3,000' };
+    { value: '3001-5000', label: '$3,001 - $5,000' };
+    { value: '5001+', label: '$5,001+' }
+
+
+  Check,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Clock,
+  Target,
+  Building,
+  Rocket,
+  Award,
+  DollarSign,
+  ChartBar,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Settings,
+  Zap as ZapIcon,
+  Code,
+  BookOpen,
+  Activity,
+  Database as DatabaseIcon,
+  Play,
+  Mail,
+  Phone,
+  MapPin,
+  Filter,
+  Grid,
+  List,
+  ChevronDown,
+  ChevronUp,
+  Sparkles,
+  FlaskConical,
+  Dna,
+  Car,
+  Leaf,
+  Factory,
+  Truck,
+  Microscope,
+  GraduationCap,
+  ShieldCheck,
+  Brain,
+  Atom,
+  Globe2,
+  Bot,
+  Eye,
+  Target as TargetIcon,
+  Zap as ZapIcon2,
+  Shield as ShieldIcon,
+  Globe as GlobeIcon,
+  Cpu as CpuIcon,
+  Cloud as CloudIcon,
+  Bot as BotIcon,
+  Lock as LockIcon,
+  BarChart3 as BarChart3Icon,
+  TrendingUp as TrendingUpIcon,
+  Users as UsersIcon,
+  Award as AwardIcon,
+  Star as StarIcon,
+  Check as CheckIcon,
+  ArrowRight as ArrowRightIcon,
+  ExternalLink as ExternalLinkIcon,
+  Phone as PhoneIcon,
+  Mail as MailIcon,
+  MapPin as MapPinIcon,
+  Trophy,
+  FlaskConical as FlaskConicalIcon,
+  Dna as DnaIcon,
+  Car as CarIcon,
+  Leaf as LeafIcon,
+  Factory as FactoryIcon,
+  Truck as TruckIcon,
+  Microscope as MicroscopeIcon,
+
+  GraduationCap as GraduationCapIcon,;
+  ShieldCheck as ShieldCheckIcon,;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+} from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
+import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
+import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
+import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
+import {
+  innovativeMicroSaasServices
+  getInnovativeServicesByCategory
+  getPopularInnovativeServices
+  getInnovativeServicesByPriceRange
+  getInnovativeServiceCategories;
+} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+
+export default function InnovativeServicesPage() {
+  innovativeMicroSaasServices,
+  getInnovativeServicesByCategory,
+  getPopularInnovativeServices,
+  getInnovativeServicesByPriceRange,;
+  getInnovativeServiceCategories,;
+} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+export default function InnovativeServicesPage() {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
@@ -37,6 +281,7 @@ import {
   const [showFilters, setShowFilters] = useState(false);
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           const aLevel = a.innovationLevel.split(' - ')[0];
           const bLevel = b.innovationLevel.split(' - ')[0];
           return (innovationOrder[aLevel as keyof typeof innovationOrder] |0) - (innovationOrder[bLevel as keyof typeof innovationOrder] |0)
@@ -166,9 +411,6 @@ import {
 
   };
 
-
-
-
   const popularServices = getPopularInnovativeServices();
   const categories = getInnovativeServiceCategories();
   return (
@@ -194,24 +436,34 @@ import {
 
                   {/* Category Filter */}
 
-=======
-                  <div className="flex-shrink-0">
-                    <select
-                      value={selectedCategory}
-
-                      onChange={(e) => setSelectedCategory(e.target.value)}
-                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    >
-                      <option value="All">All Categories</option>
-                      {categories.map((category) => (
-                        <option key={category.name} value={category.name}>
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                           {category.name} ({category.count})
                         </option>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
+                    </select>
+                  </div>
+                  {/* Price Range Filter */}
+                  <div className='flex-shrink-0'>
+
+
+                    <select
+                      value={priceRange}
+                      onChange={e => setPriceRange(e.target.value)}
+                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                    >
+                      {priceRanges.map(range => (                        <option key={range.value} value={range.value}>                    <select
+                      value={priceRange}
+                      onChange={(e) => setPriceRange(e.target.value)}
+                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    >
+                      {priceRanges.map((range) => (
+                        <option key={range.value} value={range.value}>
+                      {priceRanges.map(range => (                        <option key={range.value} value={range.value}>
+
+                        <option key={range.value} value={range.value}>
 
                     <select
                       value={priceRange}
@@ -224,12 +476,36 @@ import {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                           {range.label}
                         </option>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
+                    </select>
+                  </div>
+                  {/* Sort Options */}
+                  <div className='flex-shrink-0'>
 
+
+                    <select
+                      value={sortBy}
+                      onChange={e => setSortBy(e.target.value)}
+                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                    >
+                      {sortOptions.map(option => (                        <option key={option.value} value={option.value}>                    <select
+                      value={sortBy}
+                      onChange={(e) => setSortBy(e.target.value)}
+                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    >
+                      {sortOptions.map((option) => (
+                        <option key={option.value} value={option.value}>
+                      {sortOptions.map(option => (                        <option key={option.value} value={option.value}>
+
+                        <option key={option.value} value={option.value}>
+
+<<<<<<< HEAD
                     <select
                       value={sortBy}
                       onChange={e => setSortBy(e.target.value)}
@@ -241,21 +517,15 @@ import {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                           {option.value}
                         </option>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
 
-=======
-
-
-                  {/* View Mode Toggle */}
-                  <div className='flex-shrink-0'>
-                    <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       <button
@@ -272,10 +542,18 @@ import {
                       <button
                         onClick={() => setViewMode('list')}
                         className={`px-3 py-2 rounded-lg transition-all ${
+                          viewMode === 'list'
+                            ? 'bg-cyan-500 text-white'
+                            : 'text-gray-400 hover:text-white'
+                        }`}
+                      >
+                        <List className='w-5 h-5' />                      </button>                          viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
+                        }`}
+                      >
+                        <List className="w-5 h-5" />
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                     </div>
                   </div>
                 </div>
@@ -332,6 +610,8 @@ import {
                           {service.popular && (
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                         {/* Tagline */}
                         <p className='text-gray-300 mb-4 font-medium'>
                           {service.tagline}
@@ -339,6 +619,9 @@ import {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                         {/* Description */}
                         <p className='text-gray-400 text-sm mb-6 leading-relaxed'>
                           {service.description}
@@ -436,6 +719,20 @@ import {
                         {/* Key Features */}
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+                            )}
+                          </div>
+                        </div>
+                        {/* Market Info */}
+                        <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
+
+                        <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                           <div>
                             <div className='text-gray-400'>Market Size</div>
                             <div className='text-white font-medium'>
@@ -485,12 +782,6 @@ import {
                         {/* Contact Info */}                          <Button
                             href={service && service.link}
 
-=======
-                        <div className="flex space-x-3">
-                          <Button
-                            href={service.link}
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             variant="primary"
                             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">;
                             Learn More;
@@ -529,18 +820,20 @@ import {
               )}
 =======
 
+=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Call to Action */}
+          <section className='px-4 sm:px-6 lg:px-8 mb-20'>
+            <div className='max-w-4xl mx-auto text-center'>
+              <EnhancedFuturisticCard className='p-12'>
+                <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   Ready to Lead the Future?
                 </h2>
                 <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -584,6 +877,8 @@ import {
                   <div className="mt-1">Website: {contactInfo.website}</div>
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
                 </div>
               </EnhancedFuturisticCard>
             </div>
@@ -591,14 +886,15 @@ import {
         </div>
       </QuantumHolographicBackground>
     </>
-
-}
+<<<<<<< HEAD
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
     </>);
 =======
 );
-<<<<<<< HEAD
 =======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+}
+}
+  );
+}

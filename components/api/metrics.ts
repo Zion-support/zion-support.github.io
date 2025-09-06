@@ -25,13 +25,10 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
   return series;
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-=======
-
+  const now = new Date()
+  const labels = Array.from({ length: 14 }, (_, i) => {
   const now = new Date(),
   const labels = Array.from({ length: 14 }, (_, i) => {;
-
-
     const d = new Date(now);
     d.setDate(d.getDate() - (13 - i));
 
@@ -377,3 +374,9 @@ if ( {) {
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+
+  res.status(200).json(response)
+}
+>>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330

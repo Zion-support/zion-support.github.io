@@ -1,5 +1,155 @@
 
 
+
+
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Filter } from 'lucide-react';
+import { SearchFilter } from './filters/SearchFilter';
+import { SortFilter } from './filters/SortFilter';
+import { SkillsFilter } from './filters/SkillsFilter';
+import { AvailabilityFilter } from './filters/AvailabilityFilter';
+import { RegionFilter } from './filters/RegionFilter';
+import { ExperienceFilter } from './filters/ExperienceFilter';
+import { PriceFilter } from './filters/PriceFilter';
+import { FilterSidebarProps } from '@/types/filters';
+export function FilterSidebar(): any ({;
+  searchTerm,;
+  setSearchTerm,;
+  selectedSkills,;
+  toggleSkill,;
+  selectedAvailability,;
+  toggleAvailability,;
+  selectedRegions,;
+  toggleRegion,;
+  priceRange,;
+  setPriceRange,;
+  experienceRange,;
+  setExperienceRange,;
+  expandedSections,;
+  toggleSection,;
+  sortOption,;
+  setSortOption,;
+  clearFilters,;
+  isMobileFilterOpen,}: FilterSidebarProps) {;
+  return (
+    <>
+      {/* Filter header */}
+
+      <div className='flex items-center justify-between mb-6'>;
+        <h3 className='text-lg font-semibold text-white flex items-center'>;
+          <Filter className='h-4 w-4 mr-2 text-zion-purple' />  searchTerm;
+
+  setSearchTerm;
+  selectedSkills;
+  toggleSkill;
+  selectedAvailability;
+  toggleAvailability;
+  selectedRegions;
+  toggleRegion;
+  priceRange;
+  setPriceRange;
+  experienceRange;
+  setExperienceRange;
+  expandedSections;
+  toggleSection;
+  sortOption;
+  setSortOption;
+  clearFilters;
+
+=======
+<<<<<<< HEAD
+import { PriceFilter } from "./filters/PriceFilter";
+import { FilterSidebarProps } from "@/types/filters";
+export function FilterSidebar({
+
+  searchTerm
+  setSearchTerm
+  selectedSkills
+  toggleSkill
+  selectedAvailability
+  toggleAvailability
+  selectedRegions
+  toggleRegion
+  priceRange
+  setPriceRange
+  experienceRange
+  setExperienceRange
+  expandedSections
+  toggleSection
+  sortOption
+  setSortOption
+  clearFilters
+export function FilterSidebar({
+  searchTerm,
+  setSearchTerm,
+  selectedSkills,
+  toggleSkill,
+  selectedAvailability,
+  toggleAvailability,
+  selectedRegions,
+  toggleRegion,
+  priceRange,
+  setPriceRange,
+  experienceRange,
+  setExperienceRange,
+  expandedSections,
+  toggleSection,
+  sortOption,
+  setSortOption,
+  clearFilters,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  isMobileFilterOpen,}: FilterSidebarProps) {
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+          Filters
+        </h3>
+        <Button
+          variant="ghost"
+          size="sm"
+
+import { PriceFilter } from "./filters/PriceFilter",
+import { FilterSidebarProps } from "@/types/filters",
+
+export function FilterSidebar({
+  searchTerm,
+  setSearchTerm,
+  selectedSkills,
+  toggleSkill,
+  selectedAvailability,
+  toggleAvailability,
+  selectedRegions,
+  toggleRegion,
+  priceRange,
+  setPriceRange,
+  experienceRange,
+  setExperienceRange,
+  expandedSections,
+  toggleSection,
+  sortOption,
+  setSortOption,
+  clearFilters,
+
+import { PriceFilter } from "./filters/PriceFilter",
+import { FilterSidebarProps } from "@/types/filters",
+export function FilterSidebar({
+  searchTerm,
+  setSearchTerm,
+  selectedSkills,
+  toggleSkill,
+  selectedAvailability,
+  toggleAvailability,
+  selectedRegions,
+  toggleRegion,
+  priceRange,
+  setPriceRange,
+  experienceRange,
+  setExperienceRange,
+  expandedSections,
+  toggleSection,
+  sortOption,
+  setSortOption,
+  clearFilters,
+
   isMobileFilterOpen
 }: FilterSidebarProps) {
   return (
@@ -8,22 +158,6 @@
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-semibold text-white flex items-center">
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />
-
-          Filters
-        </h3>
-        <Button
-          variant="ghost"
-          size="sm"
-
-          onClick={clearFilters}
-          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
-        >
-          Clear All
-        </Button>
-      </div>
-
-=======
-
       
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -73,9 +207,7 @@ export function FilterSidebar({;
           Clear All;
         </Button>;
       </div>;
-
-
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+<<<<<<< HEAD
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
@@ -150,12 +282,5 @@ export function FilterSidebar({;
         toggleSection={() => toggleSection('price')}
 
 <<<<<<< HEAD
-          onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
-          className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
-        >
-          Apply Filters
-        </Button>
-      )}
-
     </>;
   );
