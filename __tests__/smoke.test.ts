@@ -1,12 +1,3 @@
-describe('smoke', () => {
-  it('true is truthy', () => {
-    expect(true).toBeTruthy();
-  });
-});
-describe("smoke",() => { it("true is truthy",() => { expect(true).toBeTruthy()})});''"
-describe('smoke',() => { it('true is truthy',() => { expect(true).toBeTruthy()})}
-<<<<<<< HEAD
-});''
-=======
-});''
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+describe('smoke'
+  it('true is truthy'
+describe('smoke', () => { it("true is truthy"

@@ -317,4 +317,4 @@ export default function RegisterPage() {
       </div>
     </Layout>
   );
-};
+}
