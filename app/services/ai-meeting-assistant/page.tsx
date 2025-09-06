@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import TestimonialCard from '../../components/TestimonialCard';
 
 export const metadata = {
   title: 'AI Meeting Assistant | Zion Tech Group',
