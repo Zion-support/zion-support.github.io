@@ -96,3 +96,4 @@ export function Steps({ currentStep, className, children }: StepsProps) {
     </div>
   )
 }
+;

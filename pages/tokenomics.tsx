@@ -464,7 +464,7 @@ function MarkdownPreview({
   const content = parts[activeSection] || '';
 
   return (
-    <pre className='whitespace-pre-wrap text-sm leading-6'>
+<pre className='whitespace-pre-wrap text-sm leading-6'>
       {content || markdown}
     </pre>
   );

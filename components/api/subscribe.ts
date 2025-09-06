@@ -58,5 +58,5 @@ export default async function handler(
     return res.status(200).json({ ok: true, data })
   } catch (e: any) {
     return res.status(500).send(e?.message || 'Unexpected error')
-  };
+};
 }

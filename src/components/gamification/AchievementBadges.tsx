@@ -10,7 +10,6 @@ interface AchievementBadgesProps {
   achievements: Achievement[];
   achievements: Achievement[]
 }
-
 export interface Achievement {
   id: string,
   title: string,

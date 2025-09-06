@@ -79,3 +79,4 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
     </div>
   );
 }
+;

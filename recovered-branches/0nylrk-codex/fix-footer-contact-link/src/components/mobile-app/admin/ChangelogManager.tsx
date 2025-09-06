@@ -135,5 +135,5 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
         </div>
       </CardContent>
     </Card>
-  );
+);
 };

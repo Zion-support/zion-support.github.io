@@ -113,3 +113,4 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     </div>
   )
 }
+;

@@ -240,14 +240,22 @@ export default function SecurityPage() {
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
                 >
                   View Compliance Details
+<<<<<<< HEAD
                 </Link>
               </div>
+=======
+                </Link>              </div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
             </motion.div>
           </div>
         </section>
       </div>
     </Layout>
   );
+}  )
 }
+<<<<<<< HEAD
   )
 }
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e

@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
 
   const services = [
     { name: 'Web Development', href: '/services/web-development' },
-    { name: 'Mobile Apps', href: '/services/mobile-apps' },
+{ name: 'Mobile Apps', href: '/services/mobile-apps' },
     { name: 'AI Solutions', href: '/services/ai-solutions' },
     { name: 'Cloud Services', href: '/services/cloud-services' },
   ];
@@ -32,13 +32,11 @@ const Footer: React.FC = () => {
     { name: 'CRM Systems', href: '/solutions/crm' },
     { name: 'Data Analytics', href: '/solutions/analytics' },
     { name: 'Automation', href: '/solutions/automation' },
-
   ];
 
   const company = [
     { name: 'About Us', href: '/about' },
-
-    { name: 'Our Team', href: '/team' },
+{ name: 'Our Team', href: '/team' },
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
     { name: 'Privacy Policy', href: '/privacy' },
@@ -50,7 +48,6 @@ const Footer: React.FC = () => {
     { name: 'Twitter', href: '#', icon: Twitter },
     { name: 'LinkedIn', href: '#', icon: Linkedin },
     { name: 'Instagram', href: '#', icon: Instagram },
-
   ];
 
   return (

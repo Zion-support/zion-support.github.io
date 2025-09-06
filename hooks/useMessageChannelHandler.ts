@@ -40,16 +40,10 @@ export function useMessageChannelHandler({
   onMessage,
   onError,
 }: MessageChannelHandlerProps = {}) {
-  const handleMessage = useCallback(
-    (event: MessageEvent<unknown>) => {
-      try {
-        if (onMessage) {
-          onMessage(event.data);
-        }
-      } catch (error) {
-        if (onError) {
-          onError(error as Error);
-        }
+  const handleMessage = useCallback((event: MessageEvent<unknown>) => {
+    try {
+      if (onMessage) {;
+        onMessage(event.data);
       }
     },
     [onMessage, onError],

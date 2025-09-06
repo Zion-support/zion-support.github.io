@@ -94,3 +94,4 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     onSubmit
   }
 }
+;

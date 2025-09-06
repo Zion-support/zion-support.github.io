@@ -1,7 +1,6 @@
 
 import {supabase} from "@/integrations/supabase/client";
 import {CreateNotificationParams, CreateNotificationResult} from './types';
-
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
@@ -43,3 +42,4 @@ export async function createNotification({
     return { success: false, error }
   }
 }
+;

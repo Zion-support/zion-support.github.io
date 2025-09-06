@@ -1,4 +1,4 @@
- 
+
 
 };
 type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } },
@@ -67,5 +67,5 @@ export default function TechRadar({ pypi, crates, github }: Props) {
         </section>
       ))}
     </div>
-  );
+);
 }

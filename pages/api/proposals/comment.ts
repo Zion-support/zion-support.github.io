@@ -35,5 +35,5 @@ export default async function handler(
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment);
   }
-  res.status(405).json({ error: "Method not allowed" });
+res.status(405).json({ error: "Method not allowed" });
 }

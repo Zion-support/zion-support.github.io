@@ -34,5 +34,5 @@ export default async function handler(
     writeState((s) => s.logs.push(log));
     results.push({ providerId: conn.providerId, ok: true });
   }
-  res.status(200).json({ ok: true, results });
+res.status(200).json({ ok: true, results });
 }

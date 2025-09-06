@@ -47,5 +47,5 @@ export default async function handler(
     await supabase.from('trust_peer_reviews').insert(review)
   } catch {}
 
-  return res.status(200).json({ ok: true, review });
+return res.status(200).json({ ok: true, review });
 }

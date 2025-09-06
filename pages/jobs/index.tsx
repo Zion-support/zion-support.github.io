@@ -3,7 +3,6 @@ import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
 import {useEffect, useState} from 'react';
 import InteractiveSearch from '../../components/ui/InteractiveSearch';
-
 export default function JobsListPage() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -47,4 +46,4 @@ export default function JobsListPage() {
         </div>
       )}
     </div>
-  );
+);

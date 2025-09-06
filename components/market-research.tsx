@@ -1076,5 +1076,5 @@ export default function MarketResearchPage() {
         </div>
       </section>
     </>
-  );
+);
 }

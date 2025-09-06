@@ -183,7 +183,7 @@ export function CertificationsForm({
         </Form>
       </div>
     </div>
-  );
+);
 
 }> {;
   editingId ? 'Cancel' : 'Back' ;

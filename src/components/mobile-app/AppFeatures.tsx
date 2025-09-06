@@ -1,5 +1,4 @@
 };
-
 const features = [
   {
     icon: <Brain className="h-10 w-10 text-zion-cyan" />,

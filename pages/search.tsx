@@ -106,7 +106,6 @@ const filters = [
   { name: 'Recent', count: 4 },
   { name: 'Popular', count: 2 }
 ];
-
 export default function SearchPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -217,8 +216,12 @@ export default function SearchPage() {
                     >
                       {filter.name} ({filter.count})
                     </button>
+<<<<<<< HEAD
                   ))}
                 </div>
+=======
+                  ))}                </div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
               </motion.div>
             )}
           </div>
@@ -274,8 +277,12 @@ export default function SearchPage() {
                         className="ml-4 text-blue-600 hover:text-blue-700 transition-colors"
                       >
                         <ArrowRight className="w-5 h-5" />
+<<<<<<< HEAD
                       </Link>
                     </div>
+=======
+                      </Link>                    </div>
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
                   </motion.div>
                 ))}
               </div>
@@ -353,6 +360,10 @@ export default function SearchPage() {
       </div>
     </Layout>
   );
+}  )
 }
+<<<<<<< HEAD
   )
 }
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e

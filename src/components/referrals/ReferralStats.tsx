@@ -14,7 +14,6 @@ import { ReferralStats as ReferralStatsType } from "@/types/referrals";
 import { Award, Share, Star, TrendingUp } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
-
 interface ReferralStatsProps {
   stats: ReferralStatsType,
   isLoading: boolean
@@ -83,3 +82,4 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
     </div>
   );
 }
+;

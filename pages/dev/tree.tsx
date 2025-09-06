@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Tree, { TreeNode } from '../../components/ui/Tree';
-
 interface ApiResponse {
   nodes: TreeNode[],
 status: {
@@ -92,4 +91,4 @@ export default function DevTreePage() {
         <div>Loading...</div>
       )}
     </div>
-  );
+);

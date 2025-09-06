@@ -108,5 +108,5 @@ export default async function handler(
     }
   } catch (err) {
     return fallback()
-  };
+};
 }

@@ -1,6 +1,6 @@
- const getInitialPosition = () => {
+const getInitialPosition = () => {
   switch (direction) {
-  case 'up': 
+  case 'up':
 
 export const LazySection: React.FC<LazySectionProps> = ({
   children,

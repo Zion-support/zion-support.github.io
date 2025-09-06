@@ -1,7 +1,3 @@
 import React from \'react\'; import React from \"react\"; export const Form = ({ children,...props }) => {} \"; export const FormControl = ({ children,className = }) => {};\"; \"; export const FormLabel = ({ children,className = }) => {};\"; \"; export const FormMessage = ({ className = }) => {}; return <div className=\"{className}\"> <div>Broken JSX</div>
 const React from "react"; import React from "react"; export const Form = ({ children,.props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX</div>'"'"
-<<<<<<< HEAD
 import _React from 'react'; import _React from "react"; export const Form = ({ children,...props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX</div>
-=======
-import _React from 'react'; import _React from "react"; export const Form = ({ children,...props }) => {} "; export const FormControl = ({ children,className = }) => {};"; "; export const FormLabel = ({ children,className = }) => {};"; "; export const FormMessage = ({ className = }) => {}; return <div className="{className}"> <div>Broken JSX</div>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462

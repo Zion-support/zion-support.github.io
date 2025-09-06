@@ -14,7 +14,6 @@ import {
   Atom,
   Shield,;
 } from 'lucide-react';
-
 interface UltraFuturisticNavigationProps {
   className?: string;
 
@@ -418,5 +417,5 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
         )}
       </AnimatePresence>
     </nav>
-  );
+);
 }

@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import type { Tutorial as TutorialType } from '@/types/tutorial';
-
 interface TutorialPageProps {
   tutorial?: TutorialType;
 
@@ -66,3 +65,4 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
   );
 ;
 }
+;

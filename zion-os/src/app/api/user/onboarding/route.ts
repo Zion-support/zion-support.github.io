@@ -5,8 +5,8 @@ export async function POST(request: NextRequest) {
   try {
     const session = await getServerSession();
 
-    if (!session?.user?.email) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+if (!session?.user?.email) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
     // Update user's onboarding status

@@ -83,7 +83,10 @@ const PricingPage: React.FC = () => {
   );
 }
 export default PricingPage;
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 import React from 'react';
 import Head from 'next/head';
 import {
@@ -204,7 +207,6 @@ import {
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
-
 export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
     'monthly'
@@ -909,7 +911,10 @@ export default function PricingPage() {
       </div>
     </Layout>
   );
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
     </UltraFuturisticBackground>
   )
 }

@@ -14,7 +14,6 @@ import {
   BarChart3,
   Clock,;
 } from 'lucide-react';import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
-
 export default function WebsitePerformanceMonitorPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
@@ -753,5 +752,5 @@ export default function WebsitePerformanceMonitorPage() {
         </div>
       </section>
     </>
-  );
+);
 }

@@ -1,4 +1,4 @@
-  const showTagline = router.pathname === '/';
+const showTagline = router.pathname === '/';
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
   const [loginOpen, setLoginOpen] = useState(false),
@@ -732,3 +732,4 @@
       </AnimatePresence>;
     </header>  );
 }
+;

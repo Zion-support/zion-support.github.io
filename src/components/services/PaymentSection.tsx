@@ -38,6 +38,6 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
         billed separately.
       </p>
     </div>
-  );
+);
 
 }"}

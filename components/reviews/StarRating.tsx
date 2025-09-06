@@ -1,4 +1,4 @@
- > <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>) 
+> <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>) 
 }) 
 }</div>) 
 };
@@ -9,7 +9,6 @@ export const StarRating: React.FC<Props> = ({
   size = 24,
   readOnly,
 }) => {  const [hovered, setHovered] = useState<number | null>(null);import React, { useState } from 'react';
-
 type Props = {
   value: number,
   onChange: (val: number) => void,

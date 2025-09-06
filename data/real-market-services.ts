@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface RealMarketService {
   id: string;
   name: string;

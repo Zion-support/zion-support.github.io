@@ -37,7 +37,7 @@ import {
   Briefcase as BriefcaseIcon,
   BookOpen as BookOpenIcon,
   MessageCircle as MessageCircleIcon,
-  Star as StarIcon,;} from 'lucide-react';import { 
+  Star as StarIcon,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
@@ -726,5 +726,5 @@ export default function UltraFuturisticFooter2032() {
         </motion.button>
       </div>
     </footer>
-  );
+);
 }

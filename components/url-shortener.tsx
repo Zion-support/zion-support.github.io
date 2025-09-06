@@ -14,7 +14,6 @@ import {
   Settings,
   Trash2,;
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
-
 export default function URLShortenerPage() {
   const [longUrl, setLongUrl] = useState('');
   const [customAlias, setCustomAlias] = useState('');
@@ -822,5 +821,5 @@ export default function URLShortenerPage() {
         </div>
       </section>
     </>
-  );
+);
 }

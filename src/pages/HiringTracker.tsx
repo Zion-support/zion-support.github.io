@@ -6,7 +6,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { SEO } from '@/components/SEO';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { Briefcase } from 'lucide-react';
-
 function HiringTrackerContent() {
 
   const router = useRouter();
@@ -87,3 +86,4 @@ export default function HiringTracker() {
     </ProtectedRoute>
   );
 }
+;

@@ -30,7 +30,7 @@ import {
   Download,
   Phone,
   Mail,
-  MapPin,;} from 'lucide-react';import { 
+  MapPin,;} from 'lucide-react';import {
   Search, Star, Users, TrendingUp, DollarSign, Clock, 
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe, 
   Zap, Sparkles, Shield, Target, Cpu, Database, Cloud, 
@@ -826,5 +826,5 @@ export default function ServicesShowcase2027() {
         </div>
       </footer>
     </UltraFuturisticMatrixBackground2027>
-  );  )
+);  )
 }

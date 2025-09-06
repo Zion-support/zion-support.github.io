@@ -1,7 +1,6 @@
 import React from "react";
 import { ServiceLandingTemplate } from "../components/services/ServiceLandingTemplate";
-import { Bot, Users, TrendingUp, Star } from "lucide-react";
-
+import { Bot, Users, TrendingUp, Star } from 'lucide-react';
 export default function AITalentMatchingPage() {
   const benefits = [
     {
@@ -48,5 +47,5 @@ export default function AITalentMatchingPage() {
       ctaText="Start Matching Talent"
       ctaLink="/contact"
     />
-  );
+);
 }

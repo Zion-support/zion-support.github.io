@@ -447,4 +447,4 @@ const AIBusinessIntelligence: React.FC = () => {
 
       <EnhancedFooter />
     </>
-  );
+);

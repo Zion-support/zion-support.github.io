@@ -10,7 +10,6 @@ import {
   CheckCircle,
   AlertCircle,;
 } from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
-
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',

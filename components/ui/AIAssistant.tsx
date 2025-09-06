@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-
 export type AIAssistantProps = {
   buttonLabel?: string;
   title?: string;
@@ -181,5 +180,5 @@ export default function AIAssistant({
         </div>
       )}
     </>
-  );
+);
 }

@@ -1,4 +1,4 @@
- useEffect ( () => {
+useEffect ( () => {
   const updateDimensions = () => {
   setDimensions ({
   updateDimensions ();
@@ -36,7 +36,7 @@ ctx.globalAlpha = alpha * 0.5;
 ctx.strokeRect (this.x - this.size, this.y - this.size, this.size * 2, this.size * 2);
 break;
 case 'energy': // Energy field 
-}ctx.restore () 
+}ctx.restore ()
 
 export default function UltraQuantumHolographicBackground({
   children,
@@ -580,5 +580,5 @@ export default function UltraQuantumHolographicBackground({
         />
       </div>
     </div>
-  );  )
+);  )
 }

@@ -45,5 +45,5 @@ export default async function handler(
     });
   });
 
-  res.status(200).json({ ok: true, results });
+res.status(200).json({ ok: true, results });
 }

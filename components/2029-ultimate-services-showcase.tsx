@@ -42,7 +42,7 @@ import {
   Dna,
   Battery,
   Gamepad,
-  Cpu as CpuIcon,;} from 'lucide-react';import { 
+  Cpu as CpuIcon,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Target, Crown, Star, TrendingUp, ArrowRight;
   CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon;
@@ -794,5 +794,5 @@ export default function UltimateServicesShowcase2029() {
 
       <UltraFuturisticFooter2029 />
     </>
-  );  )
+);  )
 }

@@ -1,4 +1,4 @@
- > <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) ) 
+> <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) ) 
 }</select> </>) 
 }</div> </div> <PdfExportButton targetRef= {
   targetRef 
@@ -145,5 +145,5 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
 
   const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
 
-  return { props: { initialData, versions } };
+return { props: { initialData, versions } };
 };

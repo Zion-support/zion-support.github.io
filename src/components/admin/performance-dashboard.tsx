@@ -449,6 +449,6 @@ export function PerformanceDashboard() {
         </CardContent>
       </Card>
     </div>
-  );
+);
 } 
-} 
+}

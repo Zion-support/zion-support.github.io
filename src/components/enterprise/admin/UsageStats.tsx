@@ -14,7 +14,7 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,;
+CardTitle,;
 } from '@/components/ui/card';
 import { Sparkles } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
@@ -193,6 +193,6 @@ export function UsageStats() {
         <Button>Contact Us</Button>
       </div>
     </div>
-  );
+);
 
 }"}

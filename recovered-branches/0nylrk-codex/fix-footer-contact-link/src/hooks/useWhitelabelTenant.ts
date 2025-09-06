@@ -138,4 +138,4 @@ export function useTenantAdminStatus(tenantId?: string) {
   }, [tenantId]);
 
   return { isAdmin, isLoading }
-}
+};

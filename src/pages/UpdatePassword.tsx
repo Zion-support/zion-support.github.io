@@ -32,3 +32,4 @@ type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>;
 }
   );
 }
+;

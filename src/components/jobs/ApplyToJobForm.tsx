@@ -1,4 +1,4 @@
-    import { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { useResume } from "@/hooks/useResume";
 import { useAuth } from "@/hooks/useAuth";
@@ -179,7 +179,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         </Button>
       </div>
     </form>
-  );
+);
   ;
 }setError (null);
 if (success) {;

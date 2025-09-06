@@ -187,5 +187,5 @@ export function ServiceTypeStep({
         </div>
       )}
     </div>
-  );
-}
+  )
+};

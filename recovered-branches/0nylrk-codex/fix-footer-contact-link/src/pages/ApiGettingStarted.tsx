@@ -4,9 +4,8 @@ import { CodeBlock } from "@/components/developers/CodeBlock";
 export function ApiGettingStarted() {
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
-  -H "Authorization: Bearer YOUR_API_KEY"`;
-
-  const quickStartJs = `import axios from 'axios';
+  -H "Authorization: Bearer YOUR_API_KEY"`,
+const quickStartJs = `import axios from 'axios';
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
   headers: {
     Authorization: \`Bearer \${API_KEY}\`

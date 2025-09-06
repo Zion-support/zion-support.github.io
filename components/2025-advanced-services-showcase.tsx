@@ -1024,7 +1024,7 @@ const getServiceFeatures = (service: any) => {
         </motion.div>
       </div>
     </div>
-  );        </div>
+);        </div>
       </div>
     </div>
   );

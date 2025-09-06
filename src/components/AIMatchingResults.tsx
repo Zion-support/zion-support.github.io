@@ -7,7 +7,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react';
 import Skeleton from '@/components/ui/skeleton';
 import { cn } from '@/lib/utils';
-
 interface AIMatchingResultsProps {
   matches: MatchResultItem[];
   onSelectMatch?: (match: MatchResultItem) => void;
@@ -205,5 +204,5 @@ export function AIMatchingResults({
         ))}
       </Tabs>
     </div>
-  );
+);
 }

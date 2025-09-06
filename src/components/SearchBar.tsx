@@ -289,3 +289,4 @@ export function SearchBar({
 }/> </div>) ;
 }'"  )
 }
+;

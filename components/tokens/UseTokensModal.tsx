@@ -129,5 +129,5 @@ export default function UseTokensModal({
         </div>
       </div>
     </div>
-  );
+);
 }

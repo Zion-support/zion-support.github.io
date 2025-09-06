@@ -131,7 +131,7 @@ class ApiClient {
         ...options,
         signal: controller.signal,
         headers: {
-          ...this.defaultHeaders,
+...this.defaultHeaders,
           ...options.headers,
         },
       });
@@ -148,8 +148,7 @@ class ApiClient {
     } catch (error) {
       return {
         success: false,
-        error:
-          error instanceof Error ? error.message : "Unknown error occurred",
+        error: error instanceof Error ? error.message : 'Unknown error occurred',
       };
     }
   }
@@ -168,7 +167,7 @@ class ApiClient {
   ): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       ...options,
-      method: "POST",
+      method: 'POST',
       body: data ? JSON.stringify(data) : undefined,
       headers: {
         "Content-Type": "application/json",
@@ -184,7 +183,7 @@ class ApiClient {
   ): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       ...options,
-      method: "PUT",
+      method: 'PUT',
       body: data ? JSON.stringify(data) : undefined,
       headers: {
         "Content-Type": "application/json",

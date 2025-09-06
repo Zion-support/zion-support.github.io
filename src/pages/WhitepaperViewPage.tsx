@@ -1,4 +1,3 @@
-
 export default WhitepaperViewPage;import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router', // Changed from useParams
 import { supabase } from '@/integrations/supabase/client';
@@ -133,3 +132,4 @@ const WhitepaperViewPage: React.FC = () => {
 },
 
 export default WhitepaperViewPage,
+;

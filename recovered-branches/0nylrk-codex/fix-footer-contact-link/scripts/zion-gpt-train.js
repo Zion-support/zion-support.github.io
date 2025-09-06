@@ -114,3 +114,4 @@ async function main() {
 main().catch((err) => {
   console.error('Training workflow failed', err)
 }),
+;

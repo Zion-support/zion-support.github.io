@@ -365,4 +365,4 @@ export function ReviewsModerationTable({
       )}
     </>
   )
-}
+};

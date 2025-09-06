@@ -4,7 +4,6 @@ import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/compo
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare, Briefcase, Code, FileText, Megaphone} from "@/components/icons";
 import {ForumCategory, ForumCategoryInfo} from "@/types/community";
-
 const categories: ForumCategoryInfo[] = [
   {
     id: "getting-hired",

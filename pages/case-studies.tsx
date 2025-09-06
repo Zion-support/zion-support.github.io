@@ -81,7 +81,6 @@ const stats = [
   { number: "99.9%", label: "Success Rate" },
   { number: "24/7", label: "Support Available" }
 ];
-
 export default function CaseStudiesPage() {
   return (
     <MainLayout
@@ -287,6 +286,7 @@ export default function CaseStudiesPage() {
       </div>
     </MainLayout>
   );
+<<<<<<< HEAD
 }
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -315,6 +315,9 @@ export default function CaseStudiesPage() {
 
  </Head> </section> </Layout> 
 	return (
+=======
+}	return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 		<Layout>
 			<Head>
 				<title>Case Studies | Zion Tech Group</title>

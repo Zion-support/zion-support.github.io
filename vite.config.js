@@ -17,9 +17,9 @@ export default defineConfig({
         manualChunks: {
           vendor: ["react", "react-dom"],
           ui: ["framer-motion", "lucide-react"],
-          router: ["react-router-dom"],
-        },
-      },
+          router: ["react-router-dom"]
+        }
+      }
     },
     terserOptions: {
       compress: {

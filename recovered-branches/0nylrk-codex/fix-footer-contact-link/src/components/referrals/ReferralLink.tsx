@@ -1,16 +1,9 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
 
+import {useState} from "react";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
+import {Copy, Facebook, Link, Share, Twitter} from "lucide-react";
 interface ReferralLinkProps {
   referralLink: string;
   onCopy: () => void;
@@ -102,3 +95,4 @@ export function ReferralLink({
     </Card>
   );
 }
+;

@@ -33,3 +33,4 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
     month: "long",
     day: "numeric", });
 }
+;

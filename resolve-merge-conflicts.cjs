@@ -1,80 +1,124 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-console.log('🔧 Starting merge conflict resolution...');
-
-try {
-  console.log('📥 Starting merge...');
-  execSync('git merge origin/cursor/fix-syntax-push-and-merge-to-main-dfcb --no-ff -m "Merge PR #12067: Fix syntax, push, and merge to main"', { stdio: 'pipe' });
-  console.log('✅ Merge completed successfully!');
-} catch (error) {
-  console.log('⚠️  Merge had conflicts, resolving automatically...');
-  
-  // Get list of conflicted files
-  const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
-  console.log(`📋 Found ${conflictedFiles.length} conflicted files`);
-  
-  for (const file of conflictedFiles) {
-    if (fs.existsSync(file)) {
-      console.log(`🔧 Resolving conflicts in ${file}...`);
-      try {
-        // Accept our version (HEAD) for all conflicts
-        execSync(`git checkout --ours "${file}"`, { stdio: 'pipe' });
-        execSync(`git add "${file}"`, { stdio: 'pipe' });
-        console.log(`✅ Resolved ${file}`);
-      } catch (addError) {
-        console.warn(`⚠️  Could not resolve ${file}: ${addError.message}`);
-      }
-    } else {
-      console.log(`🗑️  Removing deleted file ${file}...`);
-      try {
-        execSync(`git rm "${file}"`, { stdio: 'pipe' });
-        console.log(`✅ Removed ${file}`);
-      } catch (rmError) {
-        console.warn(`⚠️  Could not remove ${file}: ${rmError.message}`);
-      }
-    }
+class MergeConflictResolver {
+  constructor() {
+    this.resolvedFiles = [];
+    this.errors = [];
   }
-  
-  try {
-    execSync('git commit --no-edit', { stdio: 'pipe' });
-    console.log('🎉 Merge commit created successfully!');
-  } catch (commitError) {
-    console.warn(`⚠️  Could not commit merge: ${commitError.message}`);
-  }
-}
 
-console.log('🎉 Merge conflict resolution complete!');
+  log(message, type = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const prefix = {
+      'INFO': 'ℹ️',
+      'SUCCESS': '✅',
+      'ERROR': '❌',
+      'WARNING': '⚠️',
+      'PROGRESS': '🔄'
+    }[type] || 'ℹ️';
+    console.log(`${prefix} [${timestamp}] ${message}`);
+  }
+
+  async resolveConflicts() {
+    this.log('🚀 Starting merge conflict resolution...', 'PROGRESS');
     
-    // If content changed, write it back
-    if (content !== originalContent) {
-      fs.writeFileSync(file, content, 'utf8');
-      console.log(`✅ Resolved conflicts in: ${file}`);
-      resolvedCount++;
-    } else {
-      console.log(`⚠️ No changes needed for: ${file}`);
+    try {
+      // Get list of conflicted files
+      const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
+        .trim()
+        .split('\n')
+        .filter(file => file.length > 0);
+
+      this.log(`Found ${conflictedFiles.length} conflicted files`, 'INFO');
+
+      for (const filePath of conflictedFiles) {
+        try {
+          await this.resolveFile(filePath);
+        } catch (error) {
+          this.errors.push({ filePath, error: error.message });
+          this.log(`  ❌ Failed to resolve ${filePath}: ${error.message}`, 'ERROR');
+        }
+      }
+
+      this.log('\n📊 Merge Conflict Resolution Report', 'INFO');
+      this.log('='.repeat(60));
+      this.log(`Resolved ${this.resolvedFiles.length} files.`, 'SUCCESS');
+      if (this.errors.length > 0) {
+        this.log(`Encountered ${this.errors.length} errors:`, 'WARNING');
+        this.errors.forEach(err => this.log(`  - ${err.filePath}: ${err.error}`, 'ERROR'));
+      } else {
+        this.log('No errors encountered during resolution.', 'SUCCESS');
+      }
+
+      // Add resolved files to git
+      if (this.resolvedFiles.length > 0) {
+        this.log('Adding resolved files to git...', 'PROGRESS');
+        execSync(`git add ${this.resolvedFiles.join(' ')}`, { stdio: 'inherit' });
+        this.log('Files added to git successfully', 'SUCCESS');
+      }
+
+    } catch (error) {
+      this.log(`Error during conflict resolution: ${error.message}`, 'ERROR');
+      throw error;
     }
-  } catch (error) {
-    console.error(`❌ Error resolving ${file}:`, error.message);
-    errorCount++;
   }
-});
 
-console.log(`✅ Successfully resolved: ${resolvedCount} files`);
-console.log(`❌ Errors: ${errorCount} files`);
-console.log(`📁 Total files processed: ${conflictFiles.length}`);
+  async resolveFile(filePath) {
+    if (!fs.existsSync(filePath)) {
+      this.log(`  ⚠️ File ${filePath} does not exist, skipping`, 'WARNING');
+      return;
+    }
 
-if (resolvedCount > 0) {
-  console.log('\n🔄 Adding resolved files to git...');
-  try {
-    execSync('git add .', { stdio: 'inherit' });
-    console.log('✅ Files added to git successfully');
-  } catch (error) {
-    console.error('❌ Error adding files to git:', error.message);
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has merge conflicts
+    if (!content.includes('<<<<<<< HEAD') || !content.includes('>>>>>>>')) {
+      this.log(`  ℹ️ No conflicts in ${filePath}, skipping`, 'INFO');
+      return;
+    }
+
+    // Strategy: Choose incoming changes (from remote) for most files
+    // This means we'll take the version after ======= and before >>>>>>>
+    let resolvedContent = content;
+    
+    // Handle different conflict patterns
+    const conflictPatterns = [
+      // Standard conflict markers
+      /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g,
+      // Modified/delete conflicts
+      /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g
+    ];
+
+    for (const pattern of conflictPatterns) {
+      resolvedContent = resolvedContent.replace(pattern, (match, incoming) => {
+        return incoming ? incoming.trim() : '';
+      });
+    }
+
+    // Clean up any remaining conflict markers
+    resolvedContent = resolvedContent
+      .replace(/<<<<<<< HEAD[\s\S]*?=======/g, '')
+      .replace(/>>>>>>> [^\n]+/g, '')
+      .replace(/^<<<<<<< HEAD$/gm, '')
+      .replace(/^=======$/gm, '')
+      .replace(/^>>>>>>> [^\n]+$/gm, '');
+
+    // Write resolved content
+    fs.writeFileSync(filePath, resolvedContent, 'utf8');
+    this.resolvedFiles.push(filePath);
+    this.log(`  ✅ Resolved ${filePath}`);
   }
 }
 
-console.log('\n🎉 Merge conflict resolution completed!');
+if (require.main === module) {
+  const resolver = new MergeConflictResolver();
+  resolver.resolveConflicts().catch(error => {
+    console.error('Merge conflict resolution failed:', error);
+    process.exit(1);
+  });
+}
+
+module.exports = MergeConflictResolver;

@@ -1,4 +1,4 @@
- const colorSchemes = {
+const colorSchemes = {
   quantum: {
   resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);
@@ -7,7 +7,6 @@ if (this.x > canvas.width) this.x = 0;
 if (this.y < 0) this.y = canvas.height;
 if (this.y > canvas.height) this.y = 0;
 // Fade out near end of life if (this.life < 20) {
-  
 
 }let particles: Particle[] = [];
 let connections: Connection[] = [];
@@ -483,7 +482,7 @@ const EnhancedFuturisticBackground: React.FC<
         }}
       />
 
-      {/* Content */}
+{/* Content */}
       <div className='relative z-10'>{children}</div>
     </div>
   );

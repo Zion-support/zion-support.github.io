@@ -146,4 +146,4 @@ export default function ProjectMilestonesPage() {
         </div>
       </div>
     </div>
-  );
+);

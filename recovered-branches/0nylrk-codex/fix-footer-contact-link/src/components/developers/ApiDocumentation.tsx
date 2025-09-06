@@ -574,7 +574,7 @@ print(data)`
                 This signature is an HMAC SHA-256 hash of the request body using your webhook secret as the key.
               </p>
               
-              <CodeBlock
+<CodeBlock
                 code={`import crypto from 'crypto';
 // Function to verify webhook signature
 function verifyWebhookSignature(payload, signature, secret) {
@@ -866,3 +866,4 @@ function EndpointSection({
   )
 }
 
+;

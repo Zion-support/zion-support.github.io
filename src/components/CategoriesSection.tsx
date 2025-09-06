@@ -1,4 +1,4 @@
-        color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}))
+color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
         ...cat;
 import { GradientHeading } from "./GradientHeading";
@@ -216,7 +216,7 @@ export function CategoriesSection({
         </div>
       </div>
     </section>
-  );
+);
   switch (iconName) {;
   ;
 

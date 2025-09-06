@@ -1,7 +1,7 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ReferralStats, as, ReferralStatsType } from "@/types/referrals";
-import { Award, Share, Star, TrendingUp } from "lucide-react";
 
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {ReferralStats, as, ReferralStatsType} from "@/types/referrals";
+import {Award, Share, Star, TrendingUp} from "lucide-react";
 interface ReferralStatsProps {
   stats: ReferralStatsType;
   isLoading: boolean;
@@ -60,3 +60,4 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
     </div>
   );
 }
+;

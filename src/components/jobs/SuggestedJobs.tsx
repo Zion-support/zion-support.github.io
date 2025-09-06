@@ -1,4 +1,4 @@
-    updateJobMatchStatus, 
+updateJobMatchStatus, 
 import { useAuth } from "@/hooks/useAuth";
 import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge";
 import { useJobSuggestions } from "@/hooks/useJobSuggestions";
@@ -106,7 +106,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
         </div>
       )}
     </div>
-  );
+);
 
 }= useJobSuggestions (currentTalentId);
 const handleApply = (matchId: string, jobId: string) => {;

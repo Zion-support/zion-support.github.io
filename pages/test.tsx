@@ -9,9 +9,12 @@ export default function TestPage() {
       </div>
     </Layout>
   );
+<<<<<<< HEAD
 }
-
 export default function TestPage() {
+=======
+}export default function TestPage() {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
   return (
     <>
       <Head>
@@ -21,8 +24,12 @@ export default function TestPage() {
         <h1 className='text-4xl font-bold text-cyan-400'>Test Page Working</h1>
       </div>
     </>
+<<<<<<< HEAD
   );
       <div className="min-h-screen bg-black text-white flex items-center justify-center">
+=======
+  );      <div className="min-h-screen bg-black text-white flex items-center justify-center">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
         <h1 className="text-4xl font-bold text-cyan-400">Test Page Working</h1>
       </div>
     </>

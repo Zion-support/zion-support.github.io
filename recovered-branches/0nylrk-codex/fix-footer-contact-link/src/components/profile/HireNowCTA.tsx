@@ -101,3 +101,4 @@ function calculateProfileCompleteness(profile: any) {
   
   return Math.min(Math.round((completedFields / totalFields) * 100), 100)
 }
+;

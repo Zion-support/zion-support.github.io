@@ -19,8 +19,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return res.status(500).json({ error: 'Failed to read uptime report' });
     }
   }
-
-  if (req.method === 'POST') {
+if (req.method === 'POST') {
     try {
       const { uptime, downtime, incidents } = req.body;
       

@@ -10,7 +10,6 @@ import {
 import { PricingSuggestionBox } from './PricingSuggestionBox';
 import { useAuth } from '@/hooks/useAuth';
 import { Sparkles } from 'lucide-react';
-
 interface ClientBudgetRecommenderProps {
   jobTitle: string;
   category: string;

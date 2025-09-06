@@ -161,5 +161,5 @@ export const CommunityDiscussion: React.FC = () => {
         homepage.
       </div>
     </div>
-  );
+);
 };

@@ -85,7 +85,6 @@ import {
   AccordionTrigger} from "@/components/ui/accordion";
 import { FileText } from 'lucide-react'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-
 const faqs = [
   {
     question: "How do I publish my AI product or service?",
@@ -154,3 +153,4 @@ export function FaqSection() {
     </section>
   );
 }
+;

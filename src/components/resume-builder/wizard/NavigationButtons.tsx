@@ -49,7 +49,7 @@ export const NavigationButtons = ({
         </Button>
       )}
     </div>
-  );
+);
 };
 "  )
 };

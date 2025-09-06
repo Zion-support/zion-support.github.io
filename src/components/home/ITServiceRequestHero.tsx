@@ -263,3 +263,4 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 }'"
 }
 }
+;

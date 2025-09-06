@@ -75,3 +75,4 @@ export function useAISearch() {
 
   return { results, loading, search }
 }
+;

@@ -25,7 +25,7 @@ import {
   Heart,
   Star,
   Award,
-  CheckCircle,;} from 'lucide-react';import { 
+  CheckCircle,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
@@ -558,3 +558,4 @@ export default function UltraFuturisticFooter2030() {
     </footer>
   );
 }
+;

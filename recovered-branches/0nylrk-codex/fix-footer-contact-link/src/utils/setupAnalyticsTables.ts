@@ -86,3 +86,4 @@ async function createAnalyticsTables() {
     // Tables creation failed, but we can still continue
   }
 }
+;

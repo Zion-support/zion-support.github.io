@@ -35,7 +35,7 @@ export default function InteractiveSearch({
         </button>
       )}
     </motion.div>
-  );
+);
 }
 import React from "react";
 interface InteractiveSearchProps {

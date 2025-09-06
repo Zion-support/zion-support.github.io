@@ -6,50 +6,43 @@ console.log("🔧 Performing selective merge of main source files...");
 
 // List of main source directories to merge
 const mainSourceDirs = [
-  "pages/",
-  "components/",
-  "utils/",
-  "types/",
-  "lib/",
-  "hooks/",
-  "context/",
-  "data/",
-  "services/",
-  "store/",
-  "routes/",
-  "layout/",
-  "legal/",
-  "integrations/",
-  "middleware.ts",
-  "next.config.js",
-  "tailwind.config.js",
-  "postcss.config.cjs",
-  "tsconfig.json",
-  "package.json",
-  "package-lock.json",
-  "yarn.lock",
+  'pages/',
+  'components/',
+  'utils/',
+  'types/',
+  'lib/',
+  'hooks/',
+  'context/',
+  'data/',
+  'services/',
+  'store/',
+  'routes/',
+  'layout/',
+  'legal/',
+  'integrations/',
+  'middleware.ts',
+  'next.config.js',
+  'tailwind.config.js',
+  'postcss.config.cjs',
+  'tsconfig.json',
+  'package.json',
+  'package-lock.json',
+  'yarn.lock';
 ];
 
 // Try to merge specific files from the clean-merge-services-improvements branch
 const mergeSpecificFiles = () => {
   try {
-    // First, let's see what files are in the clean-merge-services-improvements branch
-    console.log(
-      "📋 Checking files in clean-merge-services-improvements branch...",
-    );
-
-    const files = execSync(
-      "git ls-tree -r --name-only origin/clean-merge-services-improvements",
-      { encoding: "utf8" },
-    );
-    const fileList = files.trim().split("\n");
-
+    // First, let's see what files are in the clean-merge-services-improvements branch;
+    console.log('📋 Checking files in clean-merge-services-improvements branch...');
+    
+    const files = execSync('git ls-tree -r --name-only origin/clean-merge-services-improvements', { encoding: 'utf8' });
+    const fileList = files.trim().split('\n');
+    
     // Filter for main source files
-    const mainFiles = fileList.filter((file) => {
-      return (
-        mainSourceDirs.some((dir) => file.startsWith(dir)) ||
-        mainSourceDirs.includes(file)
-      );
+    const mainFiles = fileList.filter(file => {
+      return mainSourceDirs.some(dir => file.startsWith(dir)) || ;
+             mainSourceDirs.includes(file);
     });
 
     console.log(
@@ -89,9 +82,9 @@ const mergeSpecificFiles = () => {
 
 // Main execution
 const main = () => {
-  if (mergeSpecificFiles()) {
-    console.log("✅ Selective merge completed");
-
+  if (mergeSpecificFiles()) {;
+    console.log('✅ Selective merge completed');
+    
     // Add the merged files
     try {
       execSync("git add .", { stdio: "inherit" });

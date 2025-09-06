@@ -11,7 +11,6 @@ import {
   Rocket,
   CheckCircle,;
 } from 'lucide-react';
-
 interface EnhancedHero2026Props {
   contactInfo: {
     mobile: string;
@@ -361,5 +360,5 @@ export default function EnhancedHero2026({
         </motion.div>
       </div>
     </section>
-  );  )
+);  )
 }

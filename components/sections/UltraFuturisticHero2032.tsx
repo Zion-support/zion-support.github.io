@@ -16,7 +16,7 @@ import {
   CheckCircle,
   Phone,
   Mail,
-  MapPin,;} from 'lucide-react';import { 
+  MapPin,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, Star, ArrowRight, Play, CheckCircle;
   Phone, Mail, MapPin

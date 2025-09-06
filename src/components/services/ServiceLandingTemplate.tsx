@@ -1,5 +1,4 @@
-import React from "react";
-
+import React from 'react';
 export interface Benefit {
   title: string;
   description: string;
@@ -125,5 +124,5 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
         </div>
       </section>
     </div>
-  );
+);
 };

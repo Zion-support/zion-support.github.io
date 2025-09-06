@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -13,6 +14,14 @@ import {
   Users,
 } from "lucide-react";
 import MainLayout from "../components/layout/MainLayout";
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Shield, Lock, Eye, Database, Mail, Phone, MapPin, Users } from 'lucide-react';
+import MainLayout from '../components/layout/MainLayout';
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 
 export default function PrivacyPage() {
   return (
@@ -149,7 +158,7 @@ export default function PrivacyPage() {
                   </div>
                 </div>
 
-                <p className="text-sm text-gray-600 mt-8">
+<p className="text-sm text-gray-600 mt-8">
                   Last updated: January 2024
                 </p>
               </div>
@@ -160,3 +169,7 @@ export default function PrivacyPage() {
     </MainLayout>
   );
 }
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e

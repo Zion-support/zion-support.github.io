@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { writeState } from "../../../lib/integrations/fileStore";
 import { getProviderById } from "../../../lib/integrations/registry";
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST")
     return res.status(405).json({ error: "Method not allowed" });
@@ -9,7 +8,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!providerId || !getProviderById(providerId)) {
     return res.status(400).json({ error: "Invalid providerId" });
   }
-  const now = Date.now();
+const now = Date.now();
   const updated = writeState((state) => {
     const idx = state.connections.findIndex((c) => c.providerId === providerId);
     if (idx >= 0) state.connections.splice(idx, 1);

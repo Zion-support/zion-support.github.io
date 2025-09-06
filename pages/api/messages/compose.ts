@@ -31,7 +31,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     linkUrl,
     attachmentBase64,
     attachmentName,
-    context,
+context,
   });
   res.status(200).json({ conversation, message });
 }

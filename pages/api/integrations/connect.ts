@@ -26,7 +26,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       connectedAt: now,
       syncRules: syncRules || {},
       lastSyncAt: undefined,
-      lastError: null,
+lastError: null,
     };
     if (existingIdx >= 0) state.connections[existingIdx] = connection;
     else state.connections.push(connection);

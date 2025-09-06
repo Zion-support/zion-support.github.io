@@ -494,4 +494,4 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
         </section>
       </div>
     </EnhancedFuturisticBackground>
-  );
+);

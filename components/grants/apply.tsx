@@ -265,5 +265,5 @@ export default function ApplyGrantPage() {
         </div>
       </div>
     </EnhancedLayout>
-  );
+);
 }

@@ -78,4 +78,4 @@ export default function MockCheckoutPage() {
         </div>
       </div>
     </div>
-  );
+);

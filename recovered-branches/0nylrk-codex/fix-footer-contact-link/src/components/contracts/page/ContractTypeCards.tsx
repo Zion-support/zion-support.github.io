@@ -8,7 +8,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { FileText, ShieldCheck } from "lucide-react";
-
 interface ContractTypeCardsProps {
   onStandardClick: () => void;
   onSmartClick: () => void;

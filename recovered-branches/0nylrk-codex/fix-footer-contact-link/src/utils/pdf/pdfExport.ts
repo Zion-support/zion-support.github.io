@@ -65,3 +65,4 @@ export async function exportResumeToPDF(
   
   return doc.output('blob')
 }
+;

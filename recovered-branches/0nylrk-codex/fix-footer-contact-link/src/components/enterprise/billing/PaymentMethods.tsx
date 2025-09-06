@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from "lucide-react";
-
 export function PaymentMethods() {
   // Mock payment methods
   const paymentMethods = [
@@ -89,3 +88,4 @@ export function PaymentMethods() {
     </Card>
   );
 }
+;

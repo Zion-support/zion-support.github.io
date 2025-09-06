@@ -49,3 +49,4 @@ export function useTrackUserBehavior(componentName: string) {
 
   return componentRef
 }
+;

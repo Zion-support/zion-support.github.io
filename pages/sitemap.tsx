@@ -124,8 +124,12 @@ export default function SitemapPage() {
       </div>
     </>
   );
+<<<<<<< HEAD
 }
 import {
+=======
+}import {
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
   Home,
   Search,
   Rocket,
@@ -141,7 +145,6 @@ import {
 } from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
-
 export default function SitemapPage() {
   const mainPages = [
     {
@@ -716,3 +719,4 @@ export default function SitemapPage() {
 }> Need Help Finding Something? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/search" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> <Link href="/contact" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Contact Support <Mail className="w-5 h-5 ml-2" /> </Link> </div> </motion.div> </div> </section> <SmartFooter /> </div>) 
   )
 }
+;

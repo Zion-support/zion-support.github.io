@@ -629,5 +629,5 @@ export default function ApiToolsPage() {
         </div>
       </section>
     </>
-  );
+);
 }

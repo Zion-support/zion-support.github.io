@@ -1,6 +1,5 @@
 import React from 'react';
 import type { Room } from 'livekit-client';
-
 type Props = {
   room: Room | null;
   onLeave: () => void;
@@ -72,5 +71,5 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
         Leave
       </button>
     </div>
-  );
+);
 }

@@ -164,7 +164,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
               </div>
             </Card>
 
-            <Card className='p-6 bg-black/40 border border-gray-700/50'>
+<Card className='p-6 bg-black/40 border border-gray-700/50'>
               <h3 className='text-white font-semibold mb-3'>Contact</h3>
               <div className='space-y-3 text-sm'>
                 <div className='flex items-center gap-2 text-cyan-400'>

@@ -1032,7 +1032,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
           tokenSupply={tokenSupply}        />
       </div>
     </div>
-  );
+);
 };
 export default WhitepaperGeneratorPage;
 '"

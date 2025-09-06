@@ -229,7 +229,7 @@ export function TeamManagement() {
         </Table>
       </div>
     </div>
-  );
+);
 
   //In a real app, this would make an API call to remove the member toast ({;
   ;

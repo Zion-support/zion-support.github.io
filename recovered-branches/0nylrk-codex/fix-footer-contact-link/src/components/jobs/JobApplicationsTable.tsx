@@ -80,3 +80,4 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
     </>
   )
 }
+;

@@ -319,4 +319,4 @@ export function DynamicListingPage({
       </div>
     </div>
   )
-}
+};

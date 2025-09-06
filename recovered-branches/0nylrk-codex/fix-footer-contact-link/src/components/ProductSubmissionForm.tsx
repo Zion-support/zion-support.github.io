@@ -325,4 +325,4 @@ export function ProductSubmissionForm() {
       </TabsContent>
     </Tabs>
   )
-}
+};

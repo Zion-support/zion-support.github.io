@@ -86,5 +86,5 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
         </CardContent>
       </Card>
     </div>
-  );
+);
 };

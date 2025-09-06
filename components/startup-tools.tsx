@@ -785,5 +785,5 @@ export default function StartupToolsPage() {
         </div>
       </section>
     </>
-  );
+);
 }

@@ -1,5 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-
 export interface AdvancedITInfrastructureService {
   id: string;
   name: string;

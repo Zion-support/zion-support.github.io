@@ -62,6 +62,6 @@ return (
           </a>
         </section>
       </div>
-    </div>
+</div>
   </Layout>
 );

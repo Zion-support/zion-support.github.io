@@ -1,4 +1,4 @@
- // All services combined const allServices = [ ...advancedAIMLServices;
+// All services combined const allServices = [ ...advancedAIMLServices;
 ...advancedCybersecurityServices;
 ...advancedCloudDevOpsServices2025;
 ...industrySpecificSolutions;
@@ -16,7 +16,7 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 
 }transition= {
   {
-  duration: 0.8 
+  duration: 0.8
 
 }className="text-center" > <h1 className="text-4xl md:text-6xl font-bold mb-6"> 2025 Comprehensive Services Showcase </h1> <p className="text-xl md:text-2xl mb-8 text-blue-100"> Transform your business with our innovative portfolio of micro SAAS, IT infrastructure, and AI services </p> <div className="flex flex-wrap justify-center gap-4 text-sm"> <span className="bg-blue-600/20 px-4 py-2 rounded-full border border-blue-400/30"> {
   allServices.length 

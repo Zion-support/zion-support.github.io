@@ -7,7 +7,7 @@ import {  Table,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,;
+TableRow,;
 } from '@/components/ui/table';
 import { ApplicationActions } from './ApplicationActions';
 import { StatusBadge } from './StatusBadge';
@@ -169,7 +169,7 @@ export function ApplicationsTable({
         onConfirm = {handleHireConfirmed,}
       />
     </>
-  );
+);
 
   /* Using Renamed AvatarPrimitive */ ;
 }{;

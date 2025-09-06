@@ -235,3 +235,4 @@ async function processContentGeneration(supabase, contentType) {
     console.error(`Error processing ${contentType} generation:`, error)
   }
 }
+;

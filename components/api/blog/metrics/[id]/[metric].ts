@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { incrementMetric } from '@/utils/data/blogStore';
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id, metric } = req.query;
   if (req.method !== 'POST') return res.status(405).end();

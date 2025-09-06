@@ -51,5 +51,5 @@ export function NewsletterForm() {
         </form>
       )}
     </div>
-  );
-}
+  )
+};

@@ -1,4 +1,4 @@
- 
+
 
 };
 type Props = { report: Report | null },
@@ -47,5 +47,5 @@ export default function SiteValidator({ report }: Props) {
         </section>
       )}
     </div>
-  );
+);
 }

@@ -1,4 +1,4 @@
- featured: true 
+featured: true 
 };
 {
   title: 'Cybersecurity Partnership with Global Tech Leaders';
@@ -245,7 +245,7 @@ const matchesSearch = article.title.toLowerCase () .includes (searchTerm.toLower
 }</div> <a href="#" className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors duration-300" > <span>Read Insight</span> <ArrowRight className="w-4 h-4" /> </a> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {
   {
-  opacity: 0, y: 20 
+  opacity: 0, y: 20
 
 }whileInView= {
   {
@@ -266,7 +266,7 @@ const matchesSearch = article.title.toLowerCase () .includes (searchTerm.toLower
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > Stay Updated </h2> <p className="text-xl text-gray-300 mb-8" > Get the latest news, insights, and updates delivered directly to your inbox. </p> <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" > <input type="email" placeholder="Enter your email address" className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:bg-white/20 transition-all duration-300" /> <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105" > Subscribe </button> </div> <p className="text-sm text-gray-400 mt-4" > No spam, unsubscribe at any time. We respect your privacy. </p> </motion.div> </div> </section> <div className="max-w-7xl mx-auto" > <motion.div > <h2 className="text-4xl font-bold mb-4" >Latest News</h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Stay updated with our most recent developments and announcements </p> </motion.div> </div> </div> <button className="w-full px-4 py-2 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-2" > Read More <ArrowRight className="w-4 h-4" /> </button> </motion.article>) ) 
 }</div> </div> </section> Stay Updated </h2> <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8" > Subscribe to our newsletter for the latest news, insights, and breakthroughs in AI consciousness and quantum computing. <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30" > <div className="max-w-4xl mx-auto text-center" > <motion.div initial= {
   {
-  opacity: 0, y: 20 
+  opacity: 0, y: 20
 
 }animate= {
   {
@@ -285,7 +285,7 @@ const matchesSearch = article.title.toLowerCase () .includes (searchTerm.toLower
 
 }whileInView= {
   {
-  opacity: 1, y: 0 
+  opacity: 1, y: 0
 
 }transition= {
   {
@@ -1056,3 +1056,4 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
     </>
   ),
 }
+;

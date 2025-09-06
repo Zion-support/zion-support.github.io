@@ -168,3 +168,4 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
     </>
   )
 }
+;

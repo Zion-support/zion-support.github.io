@@ -66,7 +66,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     studentEmail,
     grantCode,
     courseId,
-    redeemedAt: now,
+redeemedAt: now,
   };
   records.push(record);
   await fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 });

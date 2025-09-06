@@ -155,6 +155,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
         </div>
       </CardContent>
     </Card>
-  );
+);
 };  )
 };

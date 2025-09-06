@@ -52,7 +52,6 @@ import {
   FlaskConical,
   Link as LinkIcon,;
 import Button from '../ui/Button';
-
 export default function NeoFuturisticNavigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -905,5 +904,5 @@ export default function NeoFuturisticNavigation() {
 				</div>
 			)}
 		</nav>
-	);
+);
 }

@@ -4,7 +4,6 @@ import {toast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 import {ReferralCode, ReferralStats, Referral, ReferralReward} from "@/types/referrals";
-
 export function useReferrals() {
   const { user } = useAuth();
   const [referralCode, setReferralCode] = useState<ReferralCode | null>(null);
@@ -231,3 +230,4 @@ export function useReferrals() {
     fetchRewards,   // Added this method for refreshing rewards
   }
 }
+;

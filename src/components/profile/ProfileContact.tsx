@@ -103,7 +103,7 @@ export function ProfileContact({
         </div>
       </form>
     </div>
-  );
+);
 
   `mailto:$ {;
   email ;

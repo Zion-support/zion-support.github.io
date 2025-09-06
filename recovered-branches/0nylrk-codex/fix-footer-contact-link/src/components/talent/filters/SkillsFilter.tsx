@@ -61,3 +61,4 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
     </div>
   )
 }
+;

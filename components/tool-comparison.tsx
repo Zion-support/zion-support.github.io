@@ -802,5 +802,5 @@ export default function ToolComparisonPage() {
         </div>
       </section>
     </>
-  );
+);
 }

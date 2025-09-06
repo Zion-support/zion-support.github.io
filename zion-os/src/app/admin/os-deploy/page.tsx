@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 
 export default function OSDeployPage() {
-  const [loading, setLoading] = useState(false);
+const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,20 +24,20 @@ export default function OSDeployPage() {
 
   const labelFor = (key: string) => {
     const labels: { [key: string]: string } = {
-      ai: "AI Integration",
-      blockchain: "Blockchain Technology",
-      governance: "Governance System",
-      treasury: "Treasury Management",
+      ai: 'AI Integration',
+      blockchain: 'Blockchain Technology',
+      governance: 'Governance System',
+      treasury: 'Treasury Management';
     };
     return labels[key] || key;
   };
 
   const getFeatureDescription = (key: string) => {
     const descriptions: { [key: string]: string } = {
-      ai: "Advanced AI capabilities and automation",
-      blockchain: "Secure blockchain infrastructure",
-      governance: "Decentralized governance mechanisms",
-      treasury: "Automated treasury management",
+ai: 'Advanced AI capabilities and automation',
+      blockchain: 'Secure blockchain infrastructure',
+      governance: 'Decentralized governance mechanisms',
+      treasury: 'Automated treasury management'
     };
     return descriptions[key] || "Feature description";
   };

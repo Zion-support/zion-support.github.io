@@ -17,7 +17,7 @@ import {
   Rocket,
   CheckCircle,
   Phone,
-  Mail,;} from 'lucide-react';import { 
+  Mail,;} from 'lucide-react';import {
   ArrowRight, Star, 
   Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;
   Users, Building, Rocket, CheckCircle, Phone, Mail

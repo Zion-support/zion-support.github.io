@@ -59,3 +59,4 @@ export function useTalentProfile(id: string | undefined) {
 
   return { profile, isLoading, error, mockProfileData };
 }
+;

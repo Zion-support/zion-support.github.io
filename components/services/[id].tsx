@@ -5,7 +5,6 @@ import {getServiceById} from '../../data/micro-saas-services';
 import ServiceDetail from '../../components/sections/ServiceDetail';
 import Button from '../../components/ui/Button';
 import {ArrowLeft, ExternalLink} from 'lucide-react';
-
 export default function ServiceDetailPage() {
   const router = useRouter();
   const { id } = router.query;
@@ -169,3 +168,4 @@ export default function ServiceDetailPage() {
     </>
   );
 }
+;

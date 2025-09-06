@@ -78,7 +78,7 @@ import {
   AtomIcon,
   MenuIcon,
   CloseIcon,
-  ChevronRightIcon,;} from 'lucide-react';import { 
+  ChevronRightIcon,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, 
@@ -823,7 +823,7 @@ export default function UltraFuturisticNavigation2032() {
       {/* Spacer for fixed navigation */}
       <div className='h-20' />
     </>
-  );      <div className="h-20" />
+);      <div className="h-20" />
     </>
   );
 }

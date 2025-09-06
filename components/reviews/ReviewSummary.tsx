@@ -42,7 +42,7 @@ export default ReviewSummary;      <div>
         </div>
       </div>
     </div>
-  );
+);
 };
 
 export default ReviewSummary;  )

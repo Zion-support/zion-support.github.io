@@ -53,7 +53,7 @@ import {
   Video,
   LockIcon,
   GlobeIcon,
-  CpuIcon,;} from 'lucide-react';import { 
+  CpuIcon,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Zap, Sparkles, Shield, 
   Phone, Mail, MapPin, Globe, ArrowRight;
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github;
@@ -632,7 +632,7 @@ export default function UltraFuturisticFooter2034() {
         </div>
       </div>
     </footer>
-  );
+);
 }
 import React from "react"; export default function UltraFuturisticFooter2034() { return ( <footer className="py-8 text-center text-sm text-gray-400">", <span>© {new: Date().getFullYear()} Zion Tech Group</span> </footer> )}
 

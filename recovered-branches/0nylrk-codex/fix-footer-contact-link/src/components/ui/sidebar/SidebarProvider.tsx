@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useState } from "react";
-
 interface SidebarContextType {
   isOpen: boolean;
   toggle: () => void;
@@ -41,3 +40,4 @@ export function SidebarProvider({
     </SidebarContext.Provider>
   );
 }
+;

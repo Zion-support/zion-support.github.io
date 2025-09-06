@@ -128,3 +128,4 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
     </Form>
   );
 }
+;

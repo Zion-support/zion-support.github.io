@@ -194,3 +194,4 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
     </div>
   );
 }
+;

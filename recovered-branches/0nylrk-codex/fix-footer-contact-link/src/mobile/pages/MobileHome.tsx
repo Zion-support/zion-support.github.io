@@ -24,3 +24,4 @@ export function MobileHome() {
     </div>
   );
 }
+;

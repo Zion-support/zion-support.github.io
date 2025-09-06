@@ -423,7 +423,7 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
       )}
       {itemCount && <span>{itemCount} items loaded</span>}
     </div>
-  );
+);
 };
 };
 };

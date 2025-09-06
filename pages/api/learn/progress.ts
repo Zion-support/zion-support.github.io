@@ -50,4 +50,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? "Progress error" });
   }
-}
+

@@ -53,7 +53,7 @@ import {
   HelpCircle,
   FileText,
   Video,
-  Headphones,;} from 'lucide-react';import { 
+  Headphones,;} from 'lucide-react';import {
   Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
   Brain, Atom, Shield, Rocket, Target, BookOpen, Users;
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb;
@@ -645,7 +645,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
   );
 };
 
-  /* Animated grid */ 
+/* Animated grid */ 
 }<motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {
   social.icon 
 }</a>) ) 

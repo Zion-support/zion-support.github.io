@@ -726,4 +726,4 @@ setHasMore (data.hasMore);
 export default AdvancedSearchResults;
 '"
 export default AdvancedSearchResults, 
-export default AdvancedSearchResults, 
+export default AdvancedSearchResults,
