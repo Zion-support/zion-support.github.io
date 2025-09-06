@@ -2,15 +2,6 @@
 
 import React, { useState } from 'react';
 
-<<<<<<< HEAD
-export const metadata = {
-  title: 'Contact | Zion Tech Group',
-  description: 'Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.',
-  keywords: 'contact, support, AI services, micro SaaS, IT services, consulting'
-};
-=======
->>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
-
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -55,33 +46,6 @@ export default function ContactPage() {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Contact Us
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-              Ready to transform your business? Let's discuss your project and find the perfect solution.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Get in Touch</h2>
-              <p className="text-lg text-gray-600 mb-8">
-                Ready to transform your business with AI, micro SaaS, or IT solutions?
-                We'd love to hear from you and discuss how we can help.
-              </p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -92,7 +56,6 @@ export default function ContactPage() {
             Ready to transform your business? Get in touch with our team of experts.
           </p>
         </div>
->>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}

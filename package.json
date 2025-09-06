@@ -43,7 +43,6 @@
     "prod:pm2": "pm2 start ecosystem.config.cjs --env production"
   },
   "dependencies": {
-<<<<<<< HEAD
     "next": "^15.5.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -80,22 +79,4 @@
   },
   "author": "Zion Tech Group",
   "license": "MIT"
-=======
-    "@tailwindcss/postcss": "^4.1.13",
-    "autoprefixer": "^10.4.21",
-    "next": "14.2.32",
-    "postcss": "^8.5.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tailwindcss": "^4.1.13"
-  },
-  "devDependencies": {
-    "@types/node": "^20.0.0",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "eslint": "^9.35.0",
-    "eslint-config-next": "14.2.32",
-    "typescript": "^5.0.0"
-  }
->>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
 }
