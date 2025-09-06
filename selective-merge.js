@@ -28,6 +28,27 @@ const mainSourceDirs = [;
   'layout/',
   'legal/',
   'integrations/',
+<<<<<<< HEAD
+=======
+
+    // First, let's see what files are in the clean-merge-services-improvements branch
+    console && console.log('📋 Checking files in clean-merge-services-improvements branch...');
+    const files = execSync('git ls-tree -r --name-only origin/clean-merge-services-improvements', { encoding: 'utf8' });
+    const fileList = files && files.trim().split('\n');
+    // Filter for main source files
+    const mainFiles = fileList && fileList.filter(file => {
+      return mainSourceDirs && mainSourceDirs.some(dir => file && file.startsWith(dir)) || 
+             mainSourceDirs && mainSourceDirs.includes(file);
+    });
+    console && console.log(`Found ${mainFiles && mainFiles.length} main source files to potentially merge`);
+    // Try to cherry-pick specific commits or files
+    console && console.log('🍒 Attempting to cherry-pick specific changes...');
+    // Get the latest commit from the clean-merge-services-improvements branch
+    const latestCommit = execSync('git rev-parse origin/clean-merge-services-improvements', { encoding: 'utf8' }).trim();
+    console && console.log(`Latest commit: ${latestCommit}`);
+    
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     // Try to merge only specific files
     for (const file of mainFiles && mainFiles.slice(0, 10)) { // Limit to first 10 files to avoid conflicts
       try {

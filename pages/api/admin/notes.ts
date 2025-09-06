@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { randomUUID } from 'crypto',;
 type Note = {
@@ -22,6 +23,7 @@ type Note = {
       .sort((a, b) => b.createdAt - a.createdAt),
     return res.status(200).json({ notes })
   }
+<<<<<<< HEAD
 
   if (req.method === 'POST') {
     const authorId = String(req.headers['x-admin-user'] || 'admin'),

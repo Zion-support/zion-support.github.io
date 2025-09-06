@@ -7,8 +7,11 @@ class ErrorBoundary extends React.Component {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -18,6 +21,7 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   static getDerivedStateFromError(error) {
@@ -29,18 +33,24 @@ class ErrorBoundary extends React.Component {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
     
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return this.props.children;
   }
 }
@@ -49,6 +59,7 @@ import Head from 'next / head';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 import Button from '../components / ui / Button';
 import {Atom, CheckCircle, Shield, Sparkles} from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -70,6 +81,10 @@ export default function QuantumServicesPage() {
     'Quantum-safe cryptography assessments and roadmaps'
     'R&D ideation for quantum-ready workloads'
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default /**
  * QuantumServicesPage - Function description
  */
@@ -93,12 +108,19 @@ function QuantumServicesPage() {
     },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ];
   return (
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  ];
+;
+  return (
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
           </header>
@@ -110,6 +132,7 @@ function QuantumServicesPage() {
               </Button>            </div>;
           </header>;
 
+<<<<<<< HEAD
 =======
   ];
 ;
@@ -188,12 +211,15 @@ export default function QuantumServicesPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <section>;
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>;
               Focus Areas;
             </h2>;
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
               {features && features.map(f => (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -203,6 +229,11 @@ export default function QuantumServicesPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <div
                   key={f}
                   className='flex items-start gap-3 p-4 rounded-xl bg-black/40 border border-gray-700/60'>;
@@ -210,10 +241,15 @@ export default function QuantumServicesPage() {
                   <span className='text-gray-200'>{f}</span>                </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Focus Areas</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {features.map((f) => (
@@ -222,6 +258,9 @@ export default function QuantumServicesPage() {
                   <span className="text-gray-200">{f}</span>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -250,10 +289,13 @@ export default function QuantumServicesPage() {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Highlighted Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {solutions.map((s) => (
@@ -264,15 +306,20 @@ export default function QuantumServicesPage() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               ))}
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -312,10 +359,13 @@ export default function QuantumServicesPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </section>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -327,14 +377,20 @@ export default function QuantumServicesPage() {
 }
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </div>;
           </section>;
 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <section className='text-center'>;
             <div className='inline-flex items-center justify-center gap-3 text-gray-300'>;
               <Shield className='w-5 h-5 text-purple-400' />;
@@ -343,10 +399,13 @@ export default function QuantumServicesPage() {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <UltraAdvancedFuturisticBackground color_scheme='quantum' intensity='high'>;
       <Head>;
         <title > Quantum Services | Zion Tech Group</title>;
@@ -423,16 +482,22 @@ export default function QuantumServicesPage() {
                 Post - quantum readiness assessments and migration planning;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </span>            </div>;
           </section>;
         </div>;
       </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -444,12 +509,18 @@ export default function QuantumServicesPage() {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   )
 }
 
     </UltraAdvancedFuturisticBackground>);
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -479,3 +550,11 @@ export default function QuantumServicesPage() {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

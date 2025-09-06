@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -52,6 +56,10 @@ for (const file of files) {}
 	if (processFile(file)) fixedCount++
 };
 console.log(`Fixed syntax errors in ${fixedCount} files.`);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> main
 const fs = require('fs');
 const path = require('path');
 
@@ -143,4 +151,8 @@ walkDir('/workspace/pages');
 walkDir('/workspace/src');
 
 console.log('Final syntax fix completed!');
+<<<<<<< HEAD
 console.log(`Fixed syntax errors in ${fixedCount} files.`);
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> main

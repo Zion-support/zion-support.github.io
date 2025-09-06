@@ -1,8 +1,43 @@
 
+<<<<<<< HEAD
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+
+=======
+
+import { useRouter } from 'next/router';
+
+import TalentGrid from '../../components/seo/TalentGrid';
+import FAQ from '../../components/seo/FAQ';
+
+export type LandingPayload = {
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   title: string;
   h1: string;
   body_html: string;
   region?: string;
+<<<<<<< HEAD
   faq: Array<{ q: string; a: string }>;}
 export default function SEOLandingPage() {
   const router = useRouter();
@@ -81,17 +116,43 @@ export default function SEOLandingPage(req, res) {
       <div className="mt-8">
         <h2 className="text-lg font-semibold mb-2">Featured Talent</h2>
         <TalentGrid region={payload.region} service={payload.service} />
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const router = useRouter();
+  const { slug } = router && router.query as { slug?: string };
+  const [payload, setPayload] = React && React.useState<LandingPayload | null>(null);
+  React && React.useEffect(() => {;
+    if (!router && router.isReady || !slug) return;
+    const dataParam = (router && router.query?.data as string) || '';
+    if (dataParam) {;
+      try {;
+        setPayload(JSON && JSON.parse(decodeURIComponent(dataParam)));
+        return;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
         return
       } catch {}
     }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
     // Fallback: render a basic placeholder until a generated page is deployed
     setPayload({ title: String(slug).replace(/-/g, ' '), h1: String(slug).replace(/-/g, ' '), bodyHtml: '<p>Localized marketplace landing page.</p>', region: undefined, service: undefined, faq: [] })
   }, [router.isReady, slug]);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   if (!payload) return null;
 
   return (
@@ -110,6 +171,14 @@ export default function SEOLandingPage(req, res) {
       <FAQ items={payload && payload.faq} />;
     </div>;
   );
+<<<<<<< HEAD
+=======
+
+
+=======
+  )
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   faq: Array<{ q: string; array: string }>;}
 ;
 export default /**
@@ -170,10 +239,23 @@ if (return null) {
       <FAQ items={payload.faq} />;
     </div>);
 ;
+<<<<<<< HEAD
 );
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

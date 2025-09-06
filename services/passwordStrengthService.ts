@@ -5,14 +5,19 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   password: string,
   score: number, // 0-100;
 
   strength: 'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -35,18 +40,25 @@ export interface PasswordStrengthResult {
 =======
 export interface PasswordStrengthResult {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   feedback: string[];
   suggestions: string[];
   details: {
     length: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     has_uppercase: boolean;
     has_lowercase: boolean;
     has_numbers: boolean;
     has_symbols: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     hasUppercase: boolean;
@@ -56,10 +68,13 @@ export interface PasswordStrengthResult {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     hasCommonWords: boolean;
     hasSequentialChars: boolean;
     hasRepeatingChars: boolean;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -71,10 +86,14 @@ export interface PasswordStrengthResult {
   warnings: string[]
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export interface CommonPasswordData {;
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export interface CommonPasswordData {
@@ -86,6 +105,8 @@ export interface CommonPasswordData {;
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   commonPasswords: Set<string>;
 
   commonWords: Set<string>
@@ -101,10 +122,15 @@ class PasswordStrengthService {
     // Common weak passwords
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     this && this.commonPasswords = new Set([
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+    this && this.commonPasswords = new Set([
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     entropy: number,
     crack_time: string;
   }
@@ -123,16 +149,22 @@ class PasswordStrengthService {
     // Common weak passwords;
     this.common_passwords = new Set ([;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhellofreedomwhateverqazwsx', 'trustno1jordanharleyrangeriwantujenniferhunterbuster', 'thomastiggerrobertsoccerbatmantestpasskiller', 'hockeygeorgecharlieandrewmichellelovesunshinejessica';
       'asshole6969amandaaccessyankees987654321dallasaustin', 'thundertaylorbaileyshadowwolverinesteelers';
     ]);
 
+<<<<<<< HEAD
 =======
       'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhellofreedomwhateverqazwsx', 'trustno1jordanharleyrangeriwantujenniferhunterbuster', 'thomastiggerrobertsoccerbatmantestpasskiller', 'hockeygeorgecharlieandrewmichellelovesunshinejessica';
       'asshole6969amandaaccessyankees987654321dallasaustin', 'thundertaylorbaileyshadowwolverinesteelers';
     ]);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
     // Common words that make passwords weak;
     this.common_words = new Set ([;
@@ -142,6 +174,7 @@ class PasswordStrengthService {
     // Common patterns that make passwords predictable;
     this.patterns = [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -150,6 +183,9 @@ class PasswordStrengthService {
       'asshole6969amandaaccessyankees987654321dallasaustin', 'thundertaylorbaileyshadowwolverinesteelers';
     ]);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       /123/, /abc/, /qwe/, /asd/, /zxc/, /qaz/, /wsx/, /edc/, /rfv/, /tgb/;
       /qwerty/, /asdfgh/, /zxcvbn/, /password/, /admin/, /user/, /test/;
       /1234/, /abcd/, /qwer/, /asdf/, /zxcv/, /qaz/, /wsx/, /edc/, /rfv/;
@@ -157,19 +193,27 @@ class PasswordStrengthService {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   /**;
   * Analyze password strength comprehensively;
   */;
   analyze_password (password: string): PasswordStrengthResult {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const result: PasswordStrengthResult = {
       password;
       score: 0;
@@ -179,9 +223,13 @@ class PasswordStrengthService {
       details: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         hasCommonWords: this && this.hasCommonWords(password);
         hasSequentialChars: this && this.hasSequentialChars(password);
         hasRepeatingChars: this && this.hasRepeatingChars(password);
@@ -189,6 +237,9 @@ class PasswordStrengthService {
         crackTime: this && this.estimateCrackTime(password)
       };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       warnings: []
     }
@@ -197,6 +248,7 @@ class PasswordStrengthService {
     result && result.score = this && this.calculateScore(result && result.details);
     result && result.strength = this && this.getStrengthLevel(result && result.score);
 
+<<<<<<< HEAD
 =======
       warnings: []
     }
@@ -204,10 +256,13 @@ class PasswordStrengthService {
     result && result.score = this && this.calculateScore(result && result.details);
     result && result.strength = this && this.getStrengthLevel(result && result.score);
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     // Generate feedback
     result && result.feedback = this && this.generateFeedback(result && result.details);
     result && result.suggestions = this && this.generateSuggestions(result && result.details);
     result && result.warnings = this && this.generateWarnings(result && result.details);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -261,6 +316,10 @@ class PasswordStrengthService {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return result
   }
   /**
@@ -271,9 +330,13 @@ class PasswordStrengthService {
     // Length scoring (0-25 points)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     if (details && details.length >= 12) score += 25;
     else if (details && details.length >= 10) score += 20;
     else if (details && details.length >= 8) score += 15;
@@ -296,6 +359,7 @@ class PasswordStrengthService {
     if (details && details.hasCommonWords) score -= 15;
     if (details && details.hasSequentialChars) score -= 10;
     if (details && details.hasRepeatingChars) score -= 10,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     return Math && Math.max(0, Math && Math.min(100, score))
@@ -325,6 +389,11 @@ class PasswordStrengthService {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+    return Math && Math.max(0, Math && Math.min(100, score))
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   /**
    * Determine strength level based on score
@@ -337,10 +406,15 @@ class PasswordStrengthService {
     return 'very-weak'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface PasswordStrengthResult {;
   password: string,;
   score: number, // 0-100;
@@ -389,6 +463,7 @@ class PasswordStrengthService {;
       /1234/, /abcd/, /qwer/, /asdf/, /zxcv/, /qaz/, /wsx/, /edc/, /rfv/;
     ];
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export interface PasswordStrengthResult {;
@@ -446,6 +521,8 @@ class PasswordStrengthService {;
     ],;
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
   /**;
    * Analyze password strength comprehensively;
@@ -475,6 +552,7 @@ class PasswordStrengthService {;
     result.score = this.calculateScore(result.details),;
     result.strength = this.getStrengthLevel(result.score),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   analyzePassword(password:string):PasswordStrengthResult {;
     const result:PasswordStrengthResult = {;
@@ -503,6 +581,8 @@ class PasswordStrengthService {;
     result.strength = this.getStrengthLevel(result.score),;
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     // Generate feedback;
     result.feedback = this.generateFeedback(result.details),;
     result.suggestions = this.generateSuggestions(result.details),;
@@ -549,6 +629,7 @@ class PasswordStrengthService {;
     return 'very-weak';
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -601,6 +682,10 @@ class PasswordStrengthService {;
     if (score >= 40) return 'weak',;
     return 'very-weak';
   }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -610,6 +695,7 @@ class PasswordStrengthService {;
    * Check if password contains common words
    */
   private hasCommonWords(password: string): boolean {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -660,18 +746,21 @@ class PasswordStrengthService {;
     const charset = new Set(password.split('')).size
     return Math.log2(Math.pow(charset, password.length))
   }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     const lowerPassword = password && password.toLowerCase(),
     for (const word of this && this.commonWords) {
       if (lowerPassword && lowerPassword.includes(word)) {
 
-    const lowerPassword = password && password.toLowerCase(),
-    for (const word of this && this.commonWords) {
-      if (lowerPassword && lowerPassword.includes(word)) {
         return true
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         length: password.length;
         has_uppercase: /[A - Z]/.test (password);
         has_lowercase: /[a - z]/.test (password);
@@ -805,15 +894,20 @@ if (return 'weak', ) {
   $2
 }
         return true;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     }
     return false;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   /**;
   * Check for sequential characters;
   */;
@@ -824,17 +918,25 @@ if (return 'weak', ) {
 }
         return true;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       }
     }
     return false;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   /**;
   * Check for repeating characters;
   */;
@@ -846,27 +948,39 @@ if ( {) {
 }
         return true;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       }
     }
     return false;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     const charset = new Set(password && password.split('')).size,
     return Math && Math.log2(Math && Math.pow(charset, password && password.length))
 
+<<<<<<< HEAD
 =======
     const charset = new Set(password && password.split('')).size,
     return Math && Math.log2(Math && Math.pow(charset, password && password.length))
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
+=======
   }
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -875,10 +989,14 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   /**
    * Estimate time to crack password
    */
   private estimateCrackTime(password: string): string {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -889,12 +1007,18 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+    const entropy = this && this.calculateEntropy(password),
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const attemptsPerSecond = 1000000000, // 1 billion attempts per second
     const totalAttempts = Math && Math.pow(2, entropy);
     const seconds = totalAttempts / attemptsPerSecond;
     if (seconds < 1) return 'Instantly';
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     const entropy = this.calculateEntropy(password)
@@ -905,11 +1029,14 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     if (seconds < 60) return `${Math.ceil(seconds)} seconds`;
     if (seconds < 3600) return `${Math.ceil(seconds / 60)} minutes`;
     if (seconds < 86400) return `${Math.ceil(seconds / 3600)} hours`;
     if (seconds < 31536000) return `${Math.ceil(seconds / 86400)} days`;
     return `${Math.ceil(seconds / 31536000)} years`
+=======
 ;
   /**;
    * Estimate time to crack password;
@@ -929,6 +1056,7 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -940,6 +1068,10 @@ if ( {) {
     if (seconds < 31536000) return `${Math && Math.ceil(seconds / 86400)} days`;
     return `${Math && Math.ceil(seconds / 31536000)} years`
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   /**
    * Generate feedback based on password analysis
@@ -947,6 +1079,9 @@ if ( {) {
   private generateFeedback(details: PasswordStrengthResult['details']): string[] {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -984,6 +1119,7 @@ if ( {) {
 
     if (details && details.hasRepeatingChars) {
       feedback && feedback.push('Avoid repeating character patterns')
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1173,6 +1309,9 @@ if ( {) {
     }
     if (details.hasRepeatingChars) {
       feedback.push('Avoid repeating character patterns')
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     return feedback
   }
@@ -1186,6 +1325,7 @@ if ( {) {
    * Generate improvement suggestions
    */
   private generateSuggestions(details: PasswordStrengthResult['details']): string[] {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1203,6 +1343,16 @@ if ( {) {
       suggestions.push('Avoid keyboard patterns like qwerty or 123456')
     }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+
+
+
+    suggestions.push('Consider using a passphrase with random words');
+    suggestions.push('Use unique passwords for each account');
+    suggestions.push('Consider a password manager for secure storage');
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -1246,6 +1396,7 @@ if ( {) {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -1254,6 +1405,9 @@ if ( {) {
     suggestions.push('Consider a password manager for secure storage');
     return suggestions
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
     suggestions.push('Consider using a passphrase with random words'),;
     suggestions.push('Use unique passwords for each account'),;
@@ -1262,6 +1416,7 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -1269,6 +1424,10 @@ if ( {) {
 =======
     return suggestions
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   /**
    * Generate security warnings
@@ -1276,6 +1435,9 @@ if ( {) {
   private generateWarnings(details: PasswordStrengthResult['details']): string[] {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     const warnings: string[] = [],
 
@@ -1294,6 +1456,7 @@ if ( {) {
     if (details && details.crackTime === 'Instantly' || details && details.crackTime.includes('seconds')) {
       warnings && warnings.push('WARNING: Password can be cracked in seconds')
 
+<<<<<<< HEAD
     }
     return warnings
   }
@@ -1318,6 +1481,8 @@ if ( {) {
     }
     if (details && details.crackTime === 'Instantly' || details && details.crackTime.includes('seconds')) {
       warnings && warnings.push('WARNING: Password can be cracked in seconds')
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     return warnings
   }
@@ -1326,6 +1491,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
     const warnings: string[] = []
     if (details.length < 8) {
       warnings.push('CRITICAL: Password is extremely weak and easily crackable')
@@ -1345,6 +1511,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   /**
    * Generate a strong password
    */
@@ -1354,19 +1522,27 @@ if ( {) {
     // Ensure at least one character from each category
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     password += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math && Math.floor(Math && Math.random() * 26)];
     password += 'abcdefghijklmnopqrstuvwxyz'[Math && Math.floor(Math && Math.random() * 26)];
     password += '0123456789'[Math && Math.floor(Math && Math.random() * 10)];
     password += '!@#$%^&*()_+-=[]{}|,:,.<>?'[Math && Math.floor(Math && Math.random() * 32)];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     
 
     // Fill the rest randomly
     for (let i = 4, i < length, i++) {
 
+<<<<<<< HEAD
 =======
     // Fill the rest randomly
     for (let i = 4, i < length, i++) {
@@ -1382,7 +1558,10 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       password += charset[Math.floor(Math.random() * charset.length)]
+=======
 ;
   /**;
    * Generate a strong password;
@@ -1398,7 +1577,14 @@ if ( {) {
     // Fill the rest randomly;
     for (let i = 4, i < length, i++) {;
       password += charset[Math.floor(Math.random() * charset.length)];
+<<<<<<< HEAD
       password += charset[Math && Math.floor(Math && Math.random() * charset && charset.length)]
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     // Shuffle the password
     return password && password.split('').sort(() => Math && Math.random() - 0 && 0.5).join('')
@@ -1410,6 +1596,7 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     }
     // Shuffle the password
@@ -1419,6 +1606,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   /**
    * Generate a memorable passphrase
    */
@@ -1430,14 +1619,20 @@ if ( {) {
     for (let i = 0, i < wordCount, i++) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const word = words[Math && Math.floor(Math && Math.random() * words && words.length)];
       passphrase += (i === 0 ? '' : '-') + word
 
 =======
+<<<<<<< HEAD
 =======
       const word = words[Math.floor(Math.random() * words.length)];
       passphrase += (i === 0 ? '' : '-') + word
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
   /**;
    * Generate a memorable passphrase;
@@ -1453,6 +1648,7 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -1461,6 +1657,10 @@ if ( {) {
       const word = words[Math && Math.floor(Math && Math.random() * words && words.length)];
       passphrase += (i === 0 ? '' : '-') + word
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     return passphrase
   }
@@ -1470,6 +1670,7 @@ if ( {) {
   addCommonPassword(password: string): void {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     this && this.commonPasswords.add(password && password.toLowerCase())
 =======
     this.commonPasswords.add(password.toLowerCase())
@@ -1477,6 +1678,9 @@ if ( {) {
 =======
     this && this.commonPasswords.add(password && password.toLowerCase())
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    this && this.commonPasswords.add(password && password.toLowerCase())
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   /**
    * Remove password from common list
@@ -1484,15 +1688,21 @@ if ( {) {
   removeCommonPassword(password: string): void {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     this && this.commonPasswords.delete(password && password.toLowerCase())
   }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    this && this.commonPasswords.delete(password && password.toLowerCase())
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1505,6 +1715,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   /**
    * Get service statistics
    */
@@ -1512,11 +1724,15 @@ if ( {) {
     return {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       totalCommonPasswords: this && this.commonPasswords.size;
       totalCommonWords: this && this.commonWords.size,
       totalPatterns: this && this.patterns.length
 
+<<<<<<< HEAD
 =======
       totalCommonPasswords: this && this.commonPasswords.size;
       totalCommonWords: this && this.commonWords.size,
@@ -1527,6 +1743,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
   }
 }
@@ -1537,6 +1755,7 @@ export const passwordStrengthService = new PasswordStrengthService();
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
@@ -1553,6 +1772,13 @@ export { PasswordStrengthService }
 export { PasswordStrengthService }
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+=======
+;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   /**;
   * Calculate password entropy (measure of randomness);
   */;
@@ -1779,6 +2005,7 @@ export const passwordStrengthService = new PasswordStrengthService ();
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export { PasswordStrengthService };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1851,24 +2078,11 @@ export { PasswordStrengthService }
       totalPatterns:this.patterns.length;
     },;
 export { PasswordStrengthService }
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-;
-  /**;
-   * Get service statistics;
-   */;
-  getStats(): { totalCommonPasswords: number, totalCommonWords: number, totalPatterns: number } {;
-    return {;
-      totalCommonPasswords: this.commonPasswords.size,;
-      totalCommonWords: this.commonWords.size,;
-      totalPatterns: this.patterns.length;
-    }
-  }
-}
-;
-// Export singleton instance;
-export const passwordStrengthService = new PasswordStrengthService(),;
-// Export the class for custom instances;
 export { PasswordStrengthService };
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -1876,3 +2090,7 @@ export { PasswordStrengthService };
 export { PasswordStrengthService }
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

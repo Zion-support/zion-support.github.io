@@ -1,6 +1,10 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   "timestamp": "2025-09-06T10:56:47.356Z",
   "totalDuration": 7910,
@@ -17261,8 +17265,11 @@
         "Consider consolidating JavaScript files"
       ]
 
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     },
     {
       "type": "image-optimization",
@@ -17293,6 +17300,7 @@
     }
 <<<<<<< HEAD
   ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -17343,6 +17351,12 @@
         "Optimize font loading and subsetting"
       ]
     }
+=======
+  "timestamp": "2025-09-05T22:09:22.350Z",
+  "bundleAnalysis": {
+    "success": true,
+    "result": "\n> ziontechgroup-site@1.0.0 build:analyze\n> ANALYZE=true npm run build\n\n\n> ziontechgroup-site@1.0.0 prebuild\n> echo \"Starting build...\"\n\nStarting build...\n\n> ziontechgroup-site@1.0.0 build\n> next build\n\n  ▲ Next.js 14.2.32\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully\n   Collecting page data ...\n   Generating static pages (0/6) ...\n   Generating static pages (1/6) \r\n   Generating static pages (2/6) \r\n   Generating static pages (4/6) \r\n ✓ Generating static pages (6/6)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                             Size     First Load JS\n┌ ○ /                                     2.13 kB        84.6 kB\n├ ○ /404                                  1.9 kB         84.3 kB\n├ ○ /ai-services                          4.12 kB        86.6 kB\n├ ○ /blockchain                           3.48 kB        85.9 kB\n└ ○ /contact                              3.25 kB        85.7 kB\n+ First Load JS shared by all             80 kB\n  ├ chunks/framework-64ad27b21261a9ce.js  44.8 kB\n  ├ chunks/main-dc99c5fa652eb074.js       34.2 kB\n  └ other shared chunks (total)           947 B\n\nƒ Middleware                              25.7 kB\n\n○  (Static)  prerendered as static content\n\n\n> ziontechgroup-site@1.0.0 postbuild\n> echo \"Build completed\"\n\nBuild completed\n"
+>>>>>>> main
   },
   "summary": {
     "bundleOptimized": false,
@@ -17351,6 +17365,10 @@
     "cachingConfigured": true,
     "compressionSetup": true
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   "timestamp": "2025-09-06T01:32:26.433Z",
   "optimizations": [
     "Use WebP format for images",
@@ -17386,8 +17404,10 @@
       "Enable gzip compression"
     ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
   "timestamp": "2025-09-06T00:06:24.470Z",
@@ -17409,4 +17429,12 @@
 =======
   }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+  }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
+=======
+}
+>>>>>>> main

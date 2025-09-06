@@ -24,6 +24,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -33,6 +34,11 @@ export default function GitHubRedirect() {;
     if (typeof window !== 'undefined') {;
       window && window.location.replace('https: //github && github.com/Zion-Holdings'),;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next / head';
 export default /**
  * GitHubRedirect - Function description
@@ -46,28 +52,39 @@ if ( {) {
       window.location.replace ('https: //github.com / Zion - Holdings'),
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
+=======
 
       window.location.replace('https: //github.com/Zion-Holdings'),
     };
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }, []);
   return (
     <>;
       <Head>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 }
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function GitHubRedirect() {
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
@@ -91,9 +108,13 @@ export default function GitHubRedirect() {
 	)
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <title > GitHub | Zion Tech Group</title>;
         <link rel='canonical' href='https: //github.com / Zion - Holdings' />;
         <meta;
@@ -113,6 +134,7 @@ export default function GitHubRedirect() {
     </>);
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -255,3 +277,11 @@ export default function GitHubRedirect() {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

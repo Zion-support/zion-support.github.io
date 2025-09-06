@@ -1,16 +1,22 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 const { spawn } = require ('child_process'),
 console.log ('🚀 Starting development server...'),
 =======
 
 =======
+<<<<<<< HEAD
 =======
 const { spawn } = require ('child_process'),
 console.log ('🚀 Starting development server...'),
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 console.log('🚀 Starting development server...'),;
 
@@ -26,6 +32,7 @@ dev_process.on ('close', (code) => {
   console.log (`Development server exited with code ${code}`);
 }),
 // Handle process termination;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 const { spawn } = require('child_process');
@@ -76,6 +83,8 @@ process.on('SIGTERM', () => {;
 }),;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 process.on ('SIGINT', () => {
   console.log ('Stopping development server...'),
   dev_process.kill ('SIGINT'),
@@ -86,6 +95,7 @@ process.on ('SIGTERM', () => {
   dev_process.kill ('SIGTERM'),
   process.exit (0);
 }),
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -122,3 +132,6 @@ process.on('SIGTERM', () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

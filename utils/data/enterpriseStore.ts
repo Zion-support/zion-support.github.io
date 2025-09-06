@@ -1,7 +1,89 @@
 <<<<<<< HEAD
+export interface CompanyRecord {
+  id: string;
+  name: string;
+  slug: string;
+  logoUrl?: string;
+  brandColor?: string;
+  plan: {
+    tier: 'starter' | 'business' | 'enterprise';
+    seatsPurchased: number;
+    seatsUsed: number;
+    usageLimits: {
+      monthlyJobPosts: number;
+      budgetCapUsd: number;
+    };
+  };
+  members: Array<{
+    id: string;
+    email: string;
+    name: string;
+    role: 'admin' | 'manager' | 'recruiter';
+  }>;
+  activity: Array<{
+    id: string;
+    timestampIso: string;
+    actorEmail: string;
+    action: string;
+    meta?: Record<string, any>;
+  }>;
+  invoices: Array<{
+    id: string;
+    amount: number;
+    status: 'pending' | 'paid' | 'overdue';
+    dueDate: string;
+  }>;
+}
+
+function generateId(): string {
+  return Math.random().toString(36).substr(2, 9);
+}
+
+const companiesById: Record<string, CompanyRecord> = {};
+const companiesBySlug: Record<string, CompanyRecord> = {};
+
+export function createCompany(record: Omit<CompanyRecord, 'members' | 'activity' | 'invoices'>): CompanyRecord {
+  const { id, slug } = record;
+  
+  const fullRecord: CompanyRecord = {
+    ...record,
+    members: [],
+    activity: [],
+    invoices: []
+  };
+  
+  companiesById[id] = fullRecord;
+  companiesBySlug[slug] = fullRecord;
+  
+  return fullRecord;
+}
+
+export function getCompanyById(id: string): CompanyRecord | undefined {
+  return companiesById[id];
+}
+
+export function getCompanyBySlug(slug: string): CompanyRecord | undefined {
+  return companiesBySlug[slug];
+}
+
+export function updateCompany(id: string, updates: Partial<CompanyRecord>): CompanyRecord | null {
+  const company = companiesById[id];
+  if (!company) return null;
+  
+  const updated = { ...company, ...updates };
+  companiesById[id] = updated;
+  companiesBySlug[updated.slug] = updated;
+  
+  return updated;
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import {
   CompanyRecord,
@@ -11,6 +93,7 @@ import {
 } from '../types/enterprise';
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise',;
@@ -22,7 +105,10 @@ import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const generateId = () => Math.random().toString(36).slice(2, 10);
+<<<<<<< HEAD
 const seedCompany: CompanyRecord = {id: 'cmp_acme';
   name: 'Acme Corporation';
   slug: 'acme';
@@ -120,6 +206,12 @@ const seed_company: CompanyRecord = {
     usage_limits: {
       monthlyJobPosts: 50,
       budgetCapUsd: 10000}},
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   slug: 'acme',;
   logoUrl: '/logo-acme.svg',;
   brandColor: '#4F46E5',;
@@ -130,6 +222,7 @@ const seed_company: CompanyRecord = {
     usageLimits: {;
       monthlyJobPosts: 50,;
       budgetCapUsd: 10000}},;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   members: [;
     { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },
     { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },
@@ -181,6 +274,7 @@ const seed_company: CompanyRecord = {
     const company = companiesById[company_id];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return company ? company.invoices : [];
+<<<<<<< HEAD
 <<<<<<< HEAD
   }}
 =======
@@ -306,3 +400,7 @@ export const store = {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  }}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43

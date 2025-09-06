@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -6,6 +7,10 @@ export function getConfig() {
     totalSupply: 1000000
   };
 export interface TokenTransaction {;
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   userId: string;
 
@@ -60,11 +65,19 @@ export function redeemTokens(
 
   transactions.push(transaction);
   return transaction;
+=======
+
+  transactions.push(transaction);
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return transaction;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
     reason,
     timestamp: Date && Date.now()
+<<<<<<< HEAD
     timestamp: Date.now();
   };
 // Token service utilities
@@ -88,4 +101,9 @@ export function setConfig(
   // Update the configuration
   Object.assign(current, partial);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

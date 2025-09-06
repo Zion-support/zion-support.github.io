@@ -48,9 +48,13 @@ import {Check, ExternalLink} from 'lucide-react';
 
                 rel='noreferrer'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <div className='rounded - 2xl border border - emerald - 400 / 30 p - 6'>;
                 <h3 className='text - xl font - bold'>Enterprise</h3>;
                 <p className='mt - 2 text - gray - 300'>;
@@ -61,6 +65,7 @@ import {Check, ExternalLink} from 'lucide-react';
             </div>;
             <p className='mt - 4 text - sm text - gray - 400'>;
               Market references:{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 class ErrorBoundary extends React.Component {
@@ -242,6 +247,8 @@ export default function ApiPerformanceTestingPage() {
 	)
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <a;
                 className='underline hover:text - cyan - 300';
                 href='https://k6.io / pricing/';
@@ -276,6 +283,7 @@ export default function ApiPerformanceTestingPage() {
               href='mailto:kleber@ziontechgroup && ziontechgroup.com'
               className='px-5 py-3 rounded-lg border border-white/20'>;
               Email: kleber@ziontechgroup && ziontechgroup.com;
+<<<<<<< HEAD
             </a>;
             <span className='text-gray-400'>Call: +1 302 464 0950</span>;
           </div>;
@@ -298,11 +306,14 @@ export default function ApiPerformanceTestingPage() {
               className='px - 5 py - 3 rounded - lg border border - white / 20';
             >;
               Email: kleber@ziontechgroup.com;
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </a>;
             <span className='text - gray - 400'>Call: +1 302 464 0950</span>;
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
     </div>);
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -386,6 +397,11 @@ export default function ApiPerformanceTestingPage(req, res) {
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+    </div>;
+  );
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
 
 <div className='mt - 14 flex flex - wrap items - center gap - 4'>;
             <Link;
@@ -408,4 +424,8 @@ export default function ApiPerformanceTestingPage(req, res) {
 ;
 
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

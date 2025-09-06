@@ -5,6 +5,7 @@ const supabaseUrl =
 const supabaseKey =
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key";
 
+<<<<<<< HEAD
 export function getServerSupabase() {
   return createClient(supabaseUrl, supabaseKey);
 }

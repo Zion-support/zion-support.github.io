@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
+<<<<<<< HEAD
 import {
   Brain, Shield, Rocket, Globe, Cpu, Database
   TrendingUp, Users, Star, Zap, Lock, Target
@@ -81,6 +82,8 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
   }
 }
 
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   ],
   const categories = [;
@@ -111,6 +114,10 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     { number: "200+", label: "Countries Served", icon: Globe }
   ],
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
@@ -146,16 +153,57 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
         <link rel="canonical" href="https://ziontechgroup.com/innovative-2025-services-showcase" />
       </Head>
       <div className="min-h-screen bg-black text-white overflow-hidden">
+<<<<<<< HEAD
+=======
+
+
+        {/* Animated Background */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className="fixed inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.3),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_80%,rgba(120,219,255,0.3),transparent_50%)]"></div>
+<<<<<<< HEAD
+=======
+
+  },
+  return (
+    <>;
+      <Head>;
+        <title > Innovative 2025 Services Showcase - Zion Tech Group</title>;
+        <meta name="description" content="Discover Zion Tech Group's innovative 2025 services including AI - powered solutions, advanced IT infrastructure, and cutting - edge micro SAAS platforms. Transform your business with our revolutionary technology solutions." />;
+        <meta name="keywords" content="innovative services 2025, AI services, IT infrastructure, micro SAAS, cybersecurity, cloud solutions, Zion Tech Group" />;
+        <meta name="viewport" content="width = device - width, initial - scale = 1" />;
+        <link rel="canonical" href="https://ziontechgroup.com / innovative - 2025 - services - showcase" />;
+      </Head>;
+      <div className="min - h-screen bg - black text - white overflow - hidden">;
+        {/* Animated Background */}
+        <div className="fixed inset - 0 z - 0">;
+          <div className="absolute inset - 0 bg - gradient - to - br from - black via - gray - 900 to - black"></div>;
+          <div className="absolute inset - 0 bg-[radial - gradient (circle_at_20%_50%, rgba (120, 119, 198, 0.3), transparent_50%)]"></div>;
+          <div className="absolute inset - 0 bg-[radial - gradient (circle_at_80%_20%, rgba (255, 119, 198, 0.3), transparent_50%)]"></div>;
+          <div className="absolute inset - 0 bg-[radial - gradient (circle_at_40%_80%, rgba (120, 219, 255, 0.3), transparent_50%)]"></div>;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {/* Floating Particles */}
           <div className="absolute inset - 0 overflow - hidden">;
             {[...Array (20)].map ((_, i) => (
               <div;
                 key={i}
+<<<<<<< HEAD
+=======
+                className="absolute w - 1 h - 1 bg - white rounded - full opacity - 20 animate - pulse";
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {/* Floating Particles */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -169,7 +217,13 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 style={{
                   left: `${Math.random() * 100}%`
                   top: `${Math.random() * 100}%`
@@ -183,11 +237,16 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
         {/* Content */}
         <div className="relative z - 10">;
           {/* Header */}
+<<<<<<< HEAD
           <motion.header
             className="relative z-20 py-8 px-4 sm:px-6 lg:px-8"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   ],;
   const filteredServices = allInnovativeServices.filter(service => {;
     const matchesCategory = selectedCategory === 'all' ||;
@@ -316,6 +375,12 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Innovative 2025
@@ -325,6 +390,13 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
           </motion.h1>
           <motion.p
             className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
+<<<<<<< HEAD
+=======
+
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -342,19 +414,86 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
 }
           >
             Experience the future of technology with our revolutionary AI platforms, quantum computing solutions,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             autonomous systems, and innovative micro SAAS services that are transforming industries worldwide.
           </motion.p>
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+<<<<<<< HEAD
+=======
+
+          <motion.header;
+            className="relative z - 20 py - 8 px - 4 sm:px - 6 lg:px - 8";
+            initial={{ opacity: 0, coordinate_y: -20 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+          >;
+            <span className="bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent">;
+              Innovative 2025;
+            </span>;
+            <br />;
+            <span className="text - white">Services Showcase</span>;
+          </motion.h1>;
+          <motion.p;
+            className="text - xl md:text - 2xl text - gray - 300 mb - 12 max - w-4xl mx - auto leading - relaxed";
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >;
+            Experience the future of technology with our revolutionary AI platforms, quantum computing solutions,
+            autonomous systems, and innovative micro SAAS services that are transforming industries worldwide.;
+          </motion.p>;
+          <motion.div;
+            className="flex flex - col sm:flex - row gap - 4 justify - center items - center";
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             transition={{ duration: 0.8, delay: 0.4 }}
           >;
             <div className="max - w-7xl mx - auto">;
               {/* Search Bar */}
+<<<<<<< HEAD
+=======
+
+
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8, delay: 0.4 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >
+            <div className="max-w-7xl mx-auto">
+              {/* Search Bar */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <div className="mb-8">
                 <div className="relative max-w-2xl mx-auto">
                   <input
                     type="text"
                     placeholder="Search innovative services..."
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     value={searchTerm  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -365,11 +504,59 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     className="w-full px-6 py-4 bg-gray-900/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
                   <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+
+              <div className="mb - 8">;
+                <div className="relative max - w-2xl mx - auto">;
+                  <input;
+                    type="text";
+                    placeholder="Search innovative services...";
+                    value={search_term}
+                    on_change={(e) => setSearchTerm (e.target.value)}
+                    className="w - full px - 6 py - 4 bg - gray - 900 / 50 border border - gray - 700 rounded - xl text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - purple - 500 focus:border - transparent";
+                  />;
+                  <Search className="absolute right - 4 top - 1/2 transform -translate - y-1 / 2 w - 6 h - 6 text - gray - 400" />;
+                </div>;
+              </div>;
+
+              {/* Category Filters */}
+              <div className="flex flex - wrap justify - center gap - 4 mb - 8">;
+                {categories.map ((category) => (
+                  <button;
+                    key={category.id}
+                    on_click={() => setSelectedCategory (category.id)}
+                    className={`flex items - center space - x-2 px - 6 py - 3 rounded - xl border transition - all duration - 300 ${
+                      selected_category === category.id;
+                        ? 'border - purple - 500 bg - purple - 500 / 20 text - purple - 300';
+                        : 'border - gray - 700 text - gray - 300 hover:border - gray - 600 hover:text - white';
+                    }`}
+                  >;
+                    <category.icon className="w - 5 h - 5" />;
+                    <span>{category.name}</span>;
+                    <span className="bg - gray - 700 px - 2 py - 1 rounded - full text - xs">;
+                      {category.count}
+
+
+              {/* Category Filters */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {categories.map((category) => (
                   <button
@@ -396,6 +583,10 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                     <category.icon className="w-5 h-5" />
                     <span>{category.name}</span>
                     <span className="bg-gray-700 px-2 py-1 rounded-full text-xs">
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       {category.count  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -423,6 +614,12 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             initial="initial"
             animate="animate"
           >
@@ -430,6 +627,27 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service) => (
                   <motion.div
+<<<<<<< HEAD
+=======
+
+                    </span>;
+                  </button>))}
+              </div>;
+            </div>;
+          </motion.section>;
+          {/* Services Grid */}
+          <motion.section;
+            className="relative z - 20 py - 16 px - 4 sm:px - 6 lg:px - 8";
+            variants={stagger_container}
+            initial="initial";
+            animate="animate";
+          >;
+            <div className="max - w-7xl mx - auto">;
+              <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+                {filtered_services.map ((service) => (
+                  <motion.div;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     key={service.id}
                     className="group relative";
                     variants={fadeInUp}
@@ -438,6 +656,13 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                   >;
                     <div className="relative overflow - hidden rounded - 2xl bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 30 border border - gray - 700 / 50 backdrop - blur - sm">;
                       {/* Service Icon and Header */}
+<<<<<<< HEAD
+=======
+
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -474,11 +699,37 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           </div>
                                                       {(service as any).popular && (
                             <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
                               POPULAR
                             </div>
+<<<<<<< HEAD
+=======
+
+                      <div className="p - 8">;
+                        <div className="flex items - center justify - between mb - 6">;
+                          <div className={`w - 16 h - 16 rounded - xl bg - gradient - to - r ${(service as any).color || 'from - blue - 500 to - purple - 500'} flex items - center justify - center text - 3xl`}>;
+                            {(service as any).icon || '🚀'}
+                          </div>;
+                                                      {(service as any).popular && (
+                            <div className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full">;
+                              POPULAR;
+                            </div>)}
+                        </div>;
+
+                        {/* Service Name and Tagline */}
+                        <h3 className="text - 2xl font - bold text - white mb - 3 group - hover:text - purple - 300 transition - colors">;
+                          {service.name}
+
+                        </h3>;
+                        <p className="text - gray - 300 mb - 6 leading - relaxed">;
+                          {(service as any).tagline || service.description?.substring (0, 100) || 'Innovative service solution'}
+                        </p>;
+                        {/* Price */}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         <div className="flex items - baseline mb - 6">;
                           <span className="text - 3xl font - bold text - white">{(service as any).price || (service as any).pricing?.starter || 'Contact Us'}</span>;
                           <span className="text - gray - 400 ml - 2">{(service as any).period || ''}</span>;
@@ -491,6 +742,13 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                               <CheckCircle className="w - 5 h - 5 text - green - 400 mt - 0.5 flex - shrink - 0" />;
                               <span className="text - gray - 300 text - sm">{feature}</span>;
                             </div>))}
+<<<<<<< HEAD
+=======
+=======
+
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -521,6 +779,12 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         <div className="flex items-baseline mb-6">
                           <span className="text-3xl font-bold text-white">{(service as any).price || (service as any).pricing?.starter || 'Contact Us'}</span>
                           <span className="text-gray-400 ml-2">{(service as any).period || ''}</span>
@@ -542,6 +806,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {service.features.length > 5 && (
                             <div className="text-gray-500 text-sm">
                               +{service.features.length - 5} more features
@@ -570,6 +835,10 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -595,6 +864,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                             <div className="text-xs text-gray-400">Reviews</div>
                           </div>
                         </div>
+<<<<<<< HEAD
                         {/* CTA Button */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -606,12 +876,30 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
                         >
                           <span>Learn More</span>
                           <ArrowRight className="w-5 h-5" />
                         </Link>
                       </div>
+<<<<<<< HEAD
+=======
+
+
+                      {/* Hover Overlay */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                   </motion.div>
@@ -636,6 +924,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
 
 
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
                   <div className="text-6xl mb-6">🔍</div>
                   <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
@@ -646,6 +935,19 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                     onClick={() => {
                       setSearchTerm('')
                       setSelectedCategory('all')
+<<<<<<< HEAD
+=======
+
+
+                    }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
                   >
                     Clear Filters
@@ -666,6 +968,12 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-8">
@@ -726,6 +1034,12 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
@@ -785,11 +1099,15 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
                   © 2025 Zion Tech Group. All rights reserved. |
                   <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> |
 
+=======
                   © 2025 Zion Tech Group. All rights reserved. | 
                   <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> | 
+=======
                   © 2025 Zion Tech Group. All rights reserved. |
                   <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> |
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Link href="/terms" className="hover:text-white transition-colors ml-2">Terms of Service</Link>
                 </p>
               </div>
@@ -800,9 +1118,16 @@ const Innovative2025ServicesShowcase: React.FC = () => {;
     </>
   )
 
+<<<<<<< HEAD
 export default Innovative2025ServicesShowcase,;
 ;
 export default Innovative2025ServicesShowcase,
+=======
+};
+
+
+export default Innovative2025ServicesShowcase;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           className="w - full bg - gradient - to - r from - purple - 500 to - pink - 500 text - white py - 3 px - 6 rounded - xl font - semibold hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105 flex items - center justify - center space - x-2";
                         >;
                           <span > Learn More</span>;
@@ -950,6 +1275,15 @@ export default Innovative2025ServicesShowcase,
 },
 export default Innovative2025ServicesShowcase,
 ;
+<<<<<<< HEAD
 
 },
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+},
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -24,5 +24,6 @@ function escapeHtml(str: string) {
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,')
     .replace(/"/g, '&quot,')
+<<<<<<< HEAD
     .replace(/'/g, '&#039,')
 };

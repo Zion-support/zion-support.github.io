@@ -1,24 +1,35 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </Link>
         </main>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 
 =======
 );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next / head';
 import Link from 'next / link';
 ;
@@ -26,10 +37,12 @@ export default /**
  * Custom404 - Function description
  */
 function Custom404() {
+=======
 
 }
 
 
+=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -44,6 +57,7 @@ const NotFoundPage: NextPage = () => {
       <Head>;
           </Link>;
         </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -131,6 +145,9 @@ const NotFoundPage: NextPage = () => {
         </div>;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       </main>;
     </>;
   );
@@ -139,15 +156,48 @@ const NotFoundPage: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import MainLayout from '../components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout
+      title="404 - Page Not Found"
+      description="Page not found"
+    >
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
+          <p className="text-xl text-gray-600 mb-8">Page not found</p>
+          <a href="/" className="text-blue-600 hover:text-blue-800">
+            Go back home
+          </a>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+>>>>>>> main

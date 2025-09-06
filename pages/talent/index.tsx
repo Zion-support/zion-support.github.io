@@ -6,6 +6,7 @@ import Pagination from '../../components / ui / Pagination';
 import {TrustBadge, MicroTestimonial} from '../../components / ui / Badges';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -31,11 +32,21 @@ interface Talent {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+interface Talent {
+=======
+import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
+
+interface Talent {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   name: string;
   title: string;
   badges: Array<'Verified' | 'Pro' | 'Top Rated'>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -93,6 +104,8 @@ const TalentDirectory: NextPage = () => {
   }, [page]),
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   testimonial?: { quote: string; author: string }
 const mock_talent: Talent[] = Array.from ({ length: 47 }).map ((_, i) => ({
   id: String (i + 1),
@@ -109,9 +122,13 @@ const mock_talent: Talent[] = Array.from ({ length: 47 }).map ((_, i) => ({
       ? { quote: 'Delivered beyond expectations!', author: 'Happy Client' }
       : undefined
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   testimonial?: { quote: string; author: string };
 const mockTalent: Talent[] = Array && Array.from({ length: 47 }).map((_, i) => ({;
   id: String(i + 1),;
@@ -127,9 +144,13 @@ const mockTalent: Talent[] = Array && Array.from({ length: 47 }).map((_, i) => (
       ? { quote: 'Delivered beyond expectations!', author: 'Happy Client' }
       : undefined,;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }));
 const TalentDirectory: NextPage = () => {;
 
@@ -145,25 +166,33 @@ const TalentDirectory: NextPage = () => {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   return (
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <div className="space-y-6 pb-16">
       <Head>
         <title>Talent - Zion</title>
       </Head>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
       <h1 className="text-2xl font-semibold">Explore Talent</h1>
 
       <div className="grid sm: grid-cols-2 lg:grid-cols-3 gap-4">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       <h1 className="text-2xl font-semibold">Explore Talent</h1>
@@ -185,6 +214,8 @@ const TalentDirectory: NextPage = () => {;
 
       <div className="grid sm: grid-cols-2 lg:grid-cols-3 gap-4">
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {pageItems.map((t) => (
           <article key={t.id} className="border rounded-md p-4 space-y-2">
             <div className="flex items-center justify-between">
@@ -192,6 +223,9 @@ const TalentDirectory: NextPage = () => {;
               <div className="flex gap-1">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 {t.badges.map((b) => (
                   <TrustBadge key={b} type={b} />
 
@@ -218,6 +252,7 @@ const TalentDirectory: NextPage = () => {;
 export default TalentDirectory;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 =======
 
       <Pagination page={page} pageSize={pageSize} total={total} onChange={setPage} />
@@ -226,6 +261,8 @@ export default TalentDirectory;
 
 export default TalentDirectory;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         on_change={set_page}
       />;
     </div>);
@@ -235,17 +272,23 @@ export default TalentDirectory;
 export default TalentDirectory;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export default TalentDirectory;
 
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                 {t.badges.map((b) => (
                   <TrustBadge key={b} type={b} />
                 ))  } catch (error) {
@@ -286,6 +329,9 @@ export default TalentDirectory;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <MicroTestimonial quote={t.testimonial.quote} author={t.testimonial.author} />
             )  } catch (error) {
     console.error("Error:", error);
@@ -307,6 +353,7 @@ export default TalentDirectory;
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -314,3 +361,8 @@ export default TalentDirectory;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

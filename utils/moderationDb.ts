@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 export interface ModerationFlag {
 export interface ModerationFlag {;
 
 
 export interface ModerationFlag {
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   contentId: string;
   contentType: "post" | "comment" | "user";
@@ -12,15 +17,6 @@ export interface ModerationFlag {
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
-export interface ModerationFlag {
-  id: string;
-  content_id: string;
-  content_type: 'post' | 'comment' | 'user';
-  reason: string;
-  user_email: string;
-  status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-  created_at: string;
-  admin_notes?: string;
 }
 
 ;
@@ -69,3 +65,8 @@ export async function updateFlagStatus(
   await upsertFlag(flag);
   return flag;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

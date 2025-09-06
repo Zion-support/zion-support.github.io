@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
@@ -8,6 +9,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
     const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
     const entries = Object.values(users as any).map((u: any) => ({
+<<<<<<< HEAD
   };
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -18,6 +20,11 @@ import fs from 'fs';
 import path from 'path';
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),;
 export default function handler(req, res) {
+=======
+
+
+    res.status(200).json({ leaderboard: top })
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',

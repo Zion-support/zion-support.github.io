@@ -17,6 +17,7 @@ export function writeState(
   updater: (state: IntegrationState) => void,
 ): IntegrationState {
   updater(state);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return { ...state }
 }
 export function resetState(): void {

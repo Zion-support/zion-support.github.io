@@ -1,6 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 <<<<<<< HEAD
+export default async function handler(_req: NextApiRequest, res: NextApiResponse): Promise<void> {
+  res.status(200).json({ message: 'Links report endpoint' });
+  return;
+}
+=======
+<<<<<<< HEAD
 
     }
 
@@ -30,6 +36,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ;
@@ -142,3 +149,11 @@ if (req.method === 'POST') {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43

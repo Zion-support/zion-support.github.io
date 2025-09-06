@@ -3,6 +3,7 @@
  * Comprehensive Automation System;
  * Runs all automation, testing, and improvements;
  */
+
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
@@ -42,3 +43,4 @@ const path = require('path')
     this.log(" Improvements "Created": ${report.summary.improvementsCreated}")
     this.log("⚡ Optimizations "Applied": ${report.summary.optimizationsApplied}")
     this.log("� Scripts "Generated")
+    console.error('Automation "failed")

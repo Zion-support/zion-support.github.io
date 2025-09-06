@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
@@ -73,6 +74,10 @@ export default async function handler(req, res) {
   } catch (error) {
     return res.status(500).json({ error: e?.message });
     const { error } = await supabase.from('payout_requests').insert({
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       partner_code: String(code).toLowerCase(),
       amount: Number(amount) || null,
       status: "requested",
@@ -82,6 +87,7 @@ export default async function handler(req, res) {
 
   }
 }
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getServerSupabase  } from '../../../utils / supabase / server';
 export default async /**
@@ -111,9 +117,23 @@ if ( {) {
       partner_code: String (code).toLowerCase (),
       amount: Number (amount) || null,
       status: "requested",
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     });
     if (return res.status (500).json ({ error: "Database error" })) {
   $2
 }
     return res.status (200).json ({ ok: true, status: "requested" });
   } catch (e: any) {
+<<<<<<< HEAD
+=======
+
+    return res.status(500).json({ error: e?.message });
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  }
+}
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

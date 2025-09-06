@@ -81,6 +81,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 =======
 =======
@@ -315,3 +316,6 @@ Node.js v22.16.0
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
 >>>>>>> origin/main
+=======
+/workspace/scripts/performance-monitor-enhanced.cjs:1
+>>>>>>> main

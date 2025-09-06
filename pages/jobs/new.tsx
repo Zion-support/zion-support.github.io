@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState  } from 'react';
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton',
@@ -33,6 +34,10 @@ export default function NewJobPage() {
       notify('Job posted! Invite talent to get responses.success')
     }, 800)
   },
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <div className="max-w-2xl mx-auto">
       <EnhancedCard>
@@ -46,6 +51,34 @@ export default function NewJobPage() {
             <textarea className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm" rows={5} placeholder="Job description" />
             <EnhancedButton type="submit" variant="primary">Publish</EnhancedButton>
           </form>
+<<<<<<< HEAD
+=======
+
+
+          </form>;
+        )}
+      </EnhancedCard>;
+    </div>;
+  );
+
+
+=======
+  )
+}
+import {useState} from 'react';
+import EnhancedCard from '../../components / ui / EnhancedCard';
+import EnhancedButton from '../../components / ui / EnhancedButton';
+import EnhancedLoading from '../../components / ui / EnhancedLoading';
+import { use_toast } from '../../components / ui / NotificationSystem';
+          </form>)}
+      </EnhancedCard>;
+    </div>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -59,3 +92,9 @@ export default function NewJobPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

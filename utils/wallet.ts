@@ -13,6 +13,9 @@ export async function connectMetaMask(): Promise<string[]> {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export async function getAccounts(): Promise<string[]> {
   if (typeof window === "undefined" || !window.ethereum) {
@@ -29,6 +32,9 @@ export async function getAccounts(): Promise<string[]> {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export async function getBalance(address: string): Promise<string> {
   if (typeof window === "undefined" || !window.ethereum) {
@@ -46,6 +52,9 @@ export async function getBalance(address: string): Promise<string> {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export async function signMessage(
   message: string,
@@ -73,12 +82,31 @@ export async function signMessage(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+    const signature = await window && window.ethereum.request({
+=======
+export async function sign_message (message: string, address: string): Promise < string> {
+  // Check condition
+if ( {) {
+  $2
+}
+    throw new Error ('MetaMask is not installed');
+  }
+  try {
+    const signature = await window.ethereum.request ({
+
+      method: 'personal_sign',
+      params: [message, address],
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     });
     return signature;
   } catch (error) {
     throw new Error("Failed to sign message");
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -89,6 +117,11 @@ export async function signMessage(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+// Extend Window interface for TypeScript;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 declare global {
   interface Window {
     ethereum?: {
@@ -104,6 +137,7 @@ declare global {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
     }
 
@@ -115,5 +149,7 @@ declare global {
 =======
     }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 }

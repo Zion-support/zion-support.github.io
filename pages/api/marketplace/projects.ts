@@ -3,11 +3,14 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from "next";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
 import { getProjectById, saveProject } from "../../../utils/marketplace/store";
@@ -16,6 +19,7 @@ import {
   ProjectDocument
   ProjectNote
 } from "../../../utils/marketplace/types";
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
@@ -38,6 +42,10 @@ import { getProjectById, saveProject } from "../../../utils/marketplace/store",
 import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types",
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
+=======
+function bad(res: NextApiResponse, message: string, code = 400) {
+  return res && res.status(code).json({ ok: false, error: message });
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
@@ -45,6 +53,7 @@ function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user && user.role === "talent" && user && user.talentSlug === project && project.talentSlug)
     return true;
   return false;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -63,24 +72,32 @@ function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user.role === "client" && user.id === project.clientId) return true;
   if (user.role === "talent" && user.talentSlug === project.talentSlug) return true;
   return false
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const user = getDemoUser(req);
     const { id } = (req.method === "GET" ? req.query : req.body) as { id?: string };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     if (!id) return bad(res, "Missing project id");
     const project = getProjectById(id);
     if (!project) return bad(res, "Not found", 404);
     if (!canAccess(user, project)) return bad(res, "Forbidden", 403);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     if (req && req.method === "PATCH") {
       const { action } = req && req.body as { action: string };
       if (action === "add_note") {
@@ -227,14 +244,13 @@ if ( {) {
           createdAtIso: new Date().toISOString()};
         project.notes.push(note);
         saveProject(project);
-        return res.json({ ok: true, project });
+        return res.json({ ok: true, project })
       }
       if (action === "add_document") {
         const { name, url } = req.body as { name: string, url?: string };
         if (!name) return bad(res, "Missing name");
         const doc: ProjectDocument = {
-          id: uuidv4(),
-          name,
+          id: uuidv4(), name,
           url,
           uploadedAtIso: new Date().toISOString()};
         project.documents.push(doc);
@@ -258,18 +274,6 @@ if ( {) {
   } catch (e: any) {
     const status = e?.statusCode || 500;
     return res.status(status).json({ ok: false, error: e?.message || "Server error" })
-
-  }
-
-  }
-}
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
 }
           uploadedAtIso: new Date ().toISOString (),
@@ -379,6 +383,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     return bad(res, "Method not allowed", 405)
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",
 import { v4 as uuidv4 } from "uuid";
 import { getDemoUser } from "../../../utils/marketplace/auth";
@@ -410,16 +415,27 @@ import { v4 as uuidv4 } from "uuid",
 import { getDemoUser } from "../../../utils/marketplace/auth",
 import { getProjectById, saveProject } from "../../../utils/marketplace/store",
 import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types",
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user.role === "client" && user.id === project.clientId) return true;
   if (user.role === "talent" && user.talentSlug === project.talentSlug)
     return true;
   return false;
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
@@ -450,11 +466,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const project = getProjectById(id);
     if (!project) return bad(res, "Not found", 404);
     if (!canAccess(user, project)) return bad(res, "Forbidden", 403);
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
         project.notes.push(note);
         saveProject(project);
         return res.json({ ok: true, project });
       }
+<<<<<<< HEAD
+=======
+
+      if (action === "add_document") {
+        const { name, url } = req.body as { name: string; url?: string }
+        if (!name) return bad(res, "Missing name");
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         project.documents.push(doc);
         saveProject(project);
         return res.json({ ok: true, project });
@@ -542,11 +569,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return bad(res, "Method not allowed", 405)
   } catch (e: any) {
     const status = e?.statusCode || 500;
     return res.status(status).json({ ok: false, error: e?.message || "Server error" })
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 }
@@ -572,3 +602,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+}
+
+  }
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

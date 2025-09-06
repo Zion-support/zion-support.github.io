@@ -7,6 +7,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { q } = req.body || {},
     if (typeof q === 'string' && q.trim()) {
       memoryStore.push({ q: q.trim(), ts: Date.now() })
+<<<<<<< HEAD
     }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -48,6 +49,28 @@ export default function handler(req, res) {
 }
   if (req.method === 'GET') {
     const counts = new Map<string number>();
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',
+;
+const memory_store: { q: string, ts: number }[] = [],
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    const { q } = req.body || {},
+    if () {) {
+  $2
+}
+      memory_store.push ({ q: q.trim (), ts: Date.now () });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return res.status (204).end ();
 
   }
