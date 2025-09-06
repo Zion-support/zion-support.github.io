@@ -63,7 +63,16 @@ const stats = [
 
 export default function AIServicesPage() {
   return (
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-12">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            AI Services
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Harness the power of artificial intelligence to transform your business
+          </p>
+        </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {aiServices.map((service, index) => (

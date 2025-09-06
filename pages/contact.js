@@ -9,6 +9,7 @@ const Contact = () => {
     service: '',
     message: ''
   });
+  const [message, setMessage] = useState('');
 
   const handleChange = (e) => {
     setFormData({
@@ -20,8 +21,8 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
+    // Form submitted successfully
+    setMessage('Thank you for your message! We will get back to you soon.');
   };
 
   return (
@@ -46,6 +47,11 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="bg-white rounded-lg shadow-lg p-8">
               <h2 className="text-2xl font-bold text-gray-800 mb-6">Send us a Message</h2>
+              {message && (
+                <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded">
+                  {message}
+                </div>
+              )}
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>

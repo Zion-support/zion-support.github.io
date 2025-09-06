@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import Head from 'next/head'
-import Layout from '../components/layout/Layout'
-export default function BlogPage() {
-	return (
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 		<Layout>
 			<Head>
 				<title>Blog | Zion Tech Group</title>
@@ -18,7 +11,6 @@ export default function BlogPage() {
 	)
 }
 ;
-=======
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 
@@ -39,4 +31,3 @@ const Page = () => {
 };
 
 export default Page;
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

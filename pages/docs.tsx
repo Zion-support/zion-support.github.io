@@ -11,7 +11,6 @@
 	)
 }
 ;
-=======
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 
@@ -32,4 +31,3 @@ const Page = () => {
 };
 
 export default Page;
->>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
