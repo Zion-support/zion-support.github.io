@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -9,10 +10,23 @@
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Basic styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+>>>>>>> 7f75898722d8fd84372e93f8a34999dbfb36e377
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+<<<<<<< HEAD
 body {
   margin: 0;
   display: flex;
@@ -33,4 +47,9 @@ body {
     color: #213547;
     background-color: #ffffff;
   }
+=======
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+>>>>>>> 7f75898722d8fd84372e93f8a34999dbfb36e377
 }

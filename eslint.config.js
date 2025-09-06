@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -31,12 +32,30 @@ import react from "eslint-plugin-react";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 
 import js from '@eslint/js';
+=======
+import js from '@eslint/js';
+import globals from 'globals';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+
+export default [
+  {
+    files: ['src/App.tsx', 'src/main.tsx', 'src/components/Header.tsx', 'src/components/Footer.tsx', 'src/components/Sidebar.tsx', 'src/components/PerformanceMonitor.tsx', 'src/components/ErrorBoundary.tsx', 'src/pages/Home.tsx', 'src/pages/About.tsx', 'src/pages/Services.tsx', 'src/pages/Pricing.tsx', 'src/pages/Contact.tsx'],
+>>>>>>> 7f75898722d8fd84372e93f8a34999dbfb36e377
     ignores: [
       '.next/**',
       'out/**',
       'dist/**',
       'build/**',
       'node_modules/**',
+<<<<<<< HEAD
+=======
+      'coverage/**',
+>>>>>>> 7f75898722d8fd84372e93f8a34999dbfb36e377
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
@@ -51,9 +70,41 @@ import js from '@eslint/js';
       '**/*.temp.*',
       '**/*.test.*',
       '**/*.spec.*',
+<<<<<<< HEAD
+=======
+      '**/performance-*.txt',
+      '**/zion-os/**',
+      '**/zion-website/**',
+      '**/zion-academy/**',
+      '**/zion-film/**',
+      '**/zion-ai-assistant/**',
+      '**/*.min.js',
+      '**/*.bundle.js',
+      '**/public/**',
+      '**/static/**',
+      'temp_exclude/**',
+      'temp_backup/**',
+      'temp_broken_files/**',
+      'temp_components/**',
+      'temp_conflicts/**',
+      'tests/**',
+      'types/**',
+      'utils/**',
+      'ultimate-*.cjs',
+      'zion-website/**',
+      'zion_academy/**',
+      'src_backup/**',
+      'supabase/**',
+      'start-dev.js',
+      'structural-fix.js',
+      'super-syntax-fixer.cjs',
+      'system-monitor.cjs',
+      'test-next.js',
+      'types/service-variants.js',
+>>>>>>> 7f75898722d8fd84372e93f8a34999dbfb36e377
     ],
     languageOptions: {
-      parser: typescriptParser,
+      parser: tsparser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -62,6 +113,7 @@ import js from '@eslint/js';
         },
       },
       globals: {
+<<<<<<< HEAD
         // Browser globals
         // React
         React: 'readonly',
@@ -140,18 +192,46 @@ export default [
         "warn",
         { allowConstantExport: true }
       ],
+=======
+        ...globals.browser,
+        ...globals.node,
+        React: 'readonly',
+        jest: 'readonly',
+>>>>>>> 7f75898722d8fd84372e93f8a34999dbfb36e377
         describe: 'readonly',
         it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
         beforeEach: 'readonly',
-        afterEach: 'readonly'
-      }
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly',
+      },
     },
     plugins: {
+<<<<<<< HEAD
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks
     },
     rules: {
+=======
+      '@typescript-eslint': tseslint,
+      react,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+      'jsx-a11y': jsxA11y,
+    },
+    rules: {
+      ...tseslint.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...jsxA11y.configs.recommended.rules,
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
+>>>>>>> 7f75898722d8fd84372e93f8a34999dbfb36e377
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       'react-hooks/exhaustive-deps': 'warn',
@@ -159,28 +239,33 @@ export default [
       'no-unused-vars': 'off',
       'no-console': 'warn',
       'react/prop-types': 'off',
+<<<<<<< HEAD
       'react/react-in-jsx-scope': 'off'
       "react/react-in-jsx-scope": "off"
 
+=======
+      'react/react-in-jsx-scope': 'off',
+>>>>>>> 7f75898722d8fd84372e93f8a34999dbfb36e377
     },
     settings: {
       react: {
-        version: "detect"
-      }
-    }
+        version: 'detect',
+      },
+    },
   },
   {
     files: [
-      "**/*.cjs",
-      "**/scripts/**/*.js",
-      "**/automation/**/*.js",
-      "**/pm2/**/*.js"
+      '**/*.cjs',
+      '**/scripts/**/*.js',
+      '**/automation/**/*.js',
+      '**/pm2/**/*.js',
     ],
     languageOptions: {
       ecmaVersion: 2021,
-      sourceType: "script",
+      sourceType: 'script',
       globals: {
         ...globals.node,
+<<<<<<< HEAD
         console: "readonly",
         process: "readonly",
         require: "readonly",
@@ -191,10 +276,23 @@ export default [
         Buffer: "readonly",
         global: "readonly"
       }
+=======
+        console: 'readonly',
+        process: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        exports: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        Buffer: 'readonly',
+        global: 'readonly',
+      },
+>>>>>>> 7f75898722d8fd84372e93f8a34999dbfb36e377
     },
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'warn',
+<<<<<<< HEAD
       'no-undef': 'error'
     }
       '@typescript-eslint/no-unused-vars': 'warn',
@@ -237,3 +335,9 @@ export default [
 ];
   }
 ];
+=======
+      'no-undef': 'error',
+    },
+  },
+];
+>>>>>>> 7f75898722d8fd84372e93f8a34999dbfb36e377
