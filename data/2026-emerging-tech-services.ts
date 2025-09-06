@@ -321,16 +321,16 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
 ],
 
 export const getEmergingTechServices2026ByCategory = (category: string) => {
-  return emergingTechServices2026.filter(service => service.category === category)
-},
+  return emergingTechServices2026.filter(service => service.category === category);
+};
 
 export const getPopularEmergingTechServices2026 = () => {
-  return emergingTechServices2026.filter(service => service.popular)
-},
+  return emergingTechServices2026.filter(service => service.popular);
+};
 
 export const getEmergingTechServices2026ByPriceRange = (minPrice: number, maxPrice: number) => {
   return emergingTechServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', '')),
     return price >= minPrice && price <= maxPrice
   })
-},
+};

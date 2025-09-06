@@ -8,20 +8,20 @@ async function fetchFromGitHub(): Promise<any[]> {
     const owner = process.env.GITHUB_OWNER || (match ? match[1] : '');
     const repo = process.env.GITHUB_REPO || (match ? match[2] : '');
     if (!owner || !repo) return [];
-    const apiUrl = `https: //api.github.com/repos/${owner}/${repo}/contents/automation_logs`,
+    const apiUrl = `https: //api.github.com/repos/${owner}/${repo}/contents/automation_logs`;
     const headers: Record<string, string> = { 'User-Agent': 'zion-autonomy' };
     if (process.env.GITHUB_TOKEN) headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
     const resp = await fetch(apiUrl, { headers });
     if (!resp.ok) return [];
     const files = (await resp.json()) as Array<{ name: string, download_url: string, type: string }>,
     const jsonFiles = files.filter((f) => f.type === 'file' && f.name.endsWith('.json'));
-    const results: any[] = [],
+    const results: any[] = [];
     for (const f of jsonFiles.slice(-50).reverse()) {
       try {
         const r = await fetch(f.download_url, { headers });
         if (!r.ok) continue;
         const j = await r.json();
-        results.push({ id: j.id || f.name, file: f.name, generatedAt: j.generatedAt, insights: j.insights })
+        results.push({ id: j.id || f.name, file: f.name, generatedAt: j.generatedAt, insights: j.insights });
       } catch {
         // ignore
       }
@@ -47,7 +47,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             return { id: f, file: f }
           }
         }),
-        return res.status(200).json({ logs })
+        return res.status(200).json({ logs });
       }
     }
   } catch {
@@ -55,5 +55,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   const remote = await fetchFromGitHub();
-  return res.status(200).json({ logs: remote })
+  return res.status(200).json({ logs: remote });
 }

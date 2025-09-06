@@ -2,14 +2,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { Octokit } from '@octokit/rest';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.setHeader('AllowPOST'),
-    return res.status(405).json({ error: 'Method not allowed' })
+    res.setHeader('AllowPOST');
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
     const { app, severity, message, stack, metadata } = req.body || {};
     const title = `[Autoheal] ${app || 'app'} crash: ${message?.slice(0, 64) || 'Unknown'}`;
-    const octokit = new Octokit({ auth: GITHUB_TOKEN || undefined }),
+    const octokit = new Octokit({ auth: GITHUB_TOKEN || undefined });
     const [owner, repo] = REPO.split('/');
     const body = `Auto-healing alert
 
@@ -21,7 +21,7 @@ Stack:\n\n${stack || 'n/a'}
 
 Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
 `;
-    const issue = await octokit.issues.create({ owner, repo, title, body, labels: ['autohealbug'] }),
+    const issue = await octokit.issues.create({ owner, repo, title, body, labels: ['autohealbug'] });
     // trigger workflow dispatch
     try {
       await octokit.actions.createWorkflowDispatch({
@@ -34,9 +34,9 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
       // ignore if missing
     }
 
-    return res.status(200).json({ ok: true, issue: issue.data.number })
+    return res.status(200).json({ ok: true, issue: issue.data.number });
   } catch (e) {
-    console.error(e),
-    return res.status(500).json({ error: 'Failed to process webhook' })
+    console.error(e);
+    return res.status(500).json({ error: 'Failed to process webhook' });
   }
 }

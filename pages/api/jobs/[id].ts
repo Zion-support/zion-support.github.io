@@ -9,12 +9,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const jobs = readJsonFile<Job[]>(FILE, []);
   const idx = jobs.findIndex((j) => j.id === id);
   if (idx === -1) {
-    res.status(404).json({ error: 'Job not found' }),
+    res.status(404).json({ error: 'Job not found' });
     return
   }
 
   if (req.method === 'GET') {
-    res.status(200).json({ job: jobs[idx] }),
+    res.status(200).json({ job: jobs[idx] });
     return
   }
 
@@ -23,7 +23,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const job = jobs[idx];
     const isOwner = userEmail && userEmail === job.clientEmail;
     if (!isOwner && !isAdminEmail(userEmail)) {
-      res.status(403).json({ error: 'Forbidden' }),
+      res.status(403).json({ error: 'Forbidden' });
       return
     }
 
@@ -44,5 +44,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   res.setHeader('AllowGET, PATCH');
-  res.status(405).end('Method Not Allowed')
+  res.status(405).end('Method Not Allowed');
 }

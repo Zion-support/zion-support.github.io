@@ -1,13 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' }),
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.setHeader('AllowPOST'),
-    return res.status(405).json({ error: 'Method not allowed' })
+    res.setHeader('AllowPOST');
+    return res.status(405).json({ error: 'Method not allowed' });
   }
   const { prompt, region, service } = req.body || {};
-  if (!prompt) return res.status(400).json({ error: 'Missing prompt' }),
+  if (!prompt) return res.status(400).json({ error: 'Missing prompt' });
   try {
     const system = `You generate conversion-focused, SEO-optimized landing pages in HTML. Include:
 - A compelling H1
@@ -25,7 +25,7 @@ Tone: professional, modern, trustworthy`;
       messages: [
         { role: 'system', content: system },
         { role: 'user', content: user }],
-      temperature: 0.7}),
+      temperature: 0.7});
     const content = response.choices?.[0]?.message?.content || '';
     const title = `Zion Marketplace — ${prompt}`;
     // FAQ generation
@@ -34,10 +34,10 @@ Tone: professional, modern, trustworthy`;
       messages: [
         { role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.' };
         { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }],
-      temperature: 0.5}),
-    let faq: Array<{ q: string, a: string }> = [],
+      temperature: 0.5});
+    let faq: Array<{ q: string, a: string }> = [];
     try {
-      faq = JSON.parse(faqResp.choices?.[0]?.message?.content || '[]')
+      faq = JSON.parse(faqResp.choices?.[0]?.message?.content || '[]');
     } catch {
       faq = []
     }
@@ -52,9 +52,9 @@ Tone: professional, modern, trustworthy`;
         bodyHtml: content,
         region: region || undefined,
         service: service || undefined,
-        faq}})
+        faq}});
   } catch (e) {
     console.error(e);
-    return res.status(500).json({ error: 'Failed to generate landing page' })
+    return res.status(500).json({ error: 'Failed to generate landing page' });
   }
 }

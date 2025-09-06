@@ -22,15 +22,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       deliveryDeadlineIso;
       clientEmail} = req.body || {};
     if (!title || !description || !clientEmail) {
-      res.status(400).json({ error: 'Missing required fields' }),
+      res.status(400).json({ error: 'Missing required fields' });
       return
     }
 
     const nowIso = new Date().toISOString();
     const job: Job = {
-      id: uuidv4(),
-      title: String(title),
-      description: String(description),
+      id: uuidv4();
+      title: String(title);
+      description: String(description);
       category: String(category || ''),
       requiredSkills: Array.isArray(requiredSkills) ? requiredSkills.map(String) : [],
       budgetMinUsd: typeof budgetMinUsd === 'number' ? budgetMinUsd : undefined,
@@ -56,5 +56,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   res.setHeader('AllowGET, POST');
-  res.status(405).end('Method Not Allowed')
+  res.status(405).end('Method Not Allowed');
 }

@@ -13,11 +13,11 @@ function missionParagraph(region: string, instanceName: string, modules: Record<
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const body = req.body || {},
+    const body = req.body || {};
     const {
       instanceName;
       defaultLanguage;
@@ -28,7 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       modules = {};
       bonusModules = {}} = body;
     if (!instanceName || !deploymentRegion) {
-      return res.status(400).json({ error: 'Missing required fields: instanceName, deploymentRegion' })
+      return res.status(400).json({ error: 'Missing required fields: instanceName, deploymentRegion' });
     }
 
     // Simulated provisioning operations – replace with real infra hooks later
@@ -74,8 +74,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       export: {
         type: 'application/json',
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}},
-    return res.status(200).json({ outputActions, deployLog, access, operator })
+    return res.status(200).json({ outputActions, deployLog, access, operator });
   } catch (err: any) {
-    return res.status(500).json({ error: err.message || 'Internal error' })
+    return res.status(500).json({ error: err.message || 'Internal error' });
   }
 }

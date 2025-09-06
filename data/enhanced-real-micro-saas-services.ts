@@ -2029,7 +2029,7 @@ export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSa
   
   // Map category names to match service categories
   const categoryMapping: { [key: string]: string[] } = {
-    'Quantum Computing': ['Quantum AI & ComputingQuantum Technology'],
+    'Quantum Computing': ['Quantum AI & ComputingQuantum Technology'];
     'AI & Machine Learning': ['AI & Content CreationAI & Customer ServiceAI & Sales AutomationAI & Data AnalyticsAI & Legal TechAI & HR TechAI & Market ResearchAI & Video Production', 'AI & SEOAI & BlockchainAI & IoTAdvanced AI Services'],
     'Cybersecurity': ['Cybersecurity & PrivacyCybersecurity'],
     'Blockchain & Web3': ['Blockchain & DeFiAI & Blockchain'],
@@ -2049,7 +2049,7 @@ export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSa
 
 // Service categories
 export const serviceCategories = [
-  'AllAI & Enterprise AutomationQuantum AI & BiotechAI & CybersecurityQuantum AI & FinanceAI & Supply ChainQuantum AI & ClimateAI & Manufacturing',
+  'AllAI & Enterprise AutomationQuantum AI & BiotechAI & CybersecurityQuantum AI & FinanceAI & Supply ChainQuantum AI & ClimateAI & Manufacturing';
   'Quantum AI & HealthcareAI & LogisticsQuantum AI & EnergyAI & EducationQuantum AI & CybersecurityAI & MarketingQuantum AI & ResearchAI & Legal Services',
   'Quantum AI & Autonomous VehiclesAI & Real EstateQuantum AI & CyberneticsQuantum AI & Space Technology',
   // ADDITIONAL INNOVATIVE CATEGORIES
@@ -2061,13 +2061,13 @@ export const serviceCategories = [
 ],
 
 export const getServicesByCategory = (category: string) => {
-  if (category === 'All') return allEnhancedRealMicroSaasServices,
-  return allEnhancedRealMicroSaasServices.filter(service => service.category === category)
+  if (category === 'All') return allEnhancedRealMicroSaasServices;
+  return allEnhancedRealMicroSaasServices.filter(service => service.category === category);
 },
 
 export const getPopularServices = () => {
-  return allEnhancedRealMicroSaasServices.filter(service => service.popular)
-},
+  return allEnhancedRealMicroSaasServices.filter(service => service.popular);
+};
 
 export const getServicesByPriceRange = (min: number, max: number) => {
   return allEnhancedRealMicroSaasServices.filter(service => {
@@ -2077,7 +2077,7 @@ export const getServicesByPriceRange = (min: number, max: number) => {
 },
 
 export const serviceCategories = [
-  'AllQuantum ComputingAI & Machine LearningCybersecurityBiomedical & HealthcareFinancial TechnologyContent & MarketingData Analytics & BI',
+  'AllQuantum ComputingAI & Machine LearningCybersecurityBiomedical & HealthcareFinancial TechnologyContent & MarketingData Analytics & BI';
   'Customer Service & SupportSupply Chain & LogisticsHuman ResourcesLegal TechnologySales & MarketingBlockchain & Web3IoT & Edge ComputingCloud & Infrastructure',
   'Video & MediaSEO & Digital MarketingAutomation & RoboticsEdge ComputingPredictive Analytics'
 ],

@@ -6,19 +6,19 @@ import path from 'path';
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
-    return JSON.parse(raw)
+    return JSON.parse(raw);
   } catch {
     return {}
   }
 }
 
 function save(db: Record<string, KycProfile>) {
-  fs.mkdirSync(DATA_DIR, { recursive: true }),
+  fs.mkdirSync(DATA_DIR, { recursive: true });
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { userId, role, fullLegalName, businessName, businessRegistrationNumber } = req.body as {
     userId?: string;
     role?: KycRole;
@@ -26,16 +26,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     businessName?: string;
     businessRegistrationNumber?: string
   };
-  if (!userId || !role) return res.status(400).json({ error: 'Missing userId or role' }),
+  if (!userId || !role) return res.status(400).json({ error: 'Missing userId or role' });
   const db = load();
   const now = new Date().toISOString();
   const existing = db[userId];
   const profile: KycProfile = existing || {
-    userId,
+    userId;
     role;
     fullLegalName;
     businessName;
-    businessRegistrationNumber;
+    businessRegistrationNumber,
     documents: [],
     status: 'in_progress',
     amlStatus: 'unknown',

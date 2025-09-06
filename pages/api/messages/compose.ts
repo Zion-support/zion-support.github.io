@@ -5,7 +5,7 @@ import { ConversationContext } from '../../../utils/messaging/types';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body as {
     recipientId: string,
     body: string,
@@ -14,14 +14,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     attachmentName?: string;
     context?: ConversationContext
   };
-  if (!recipientId || !body) return res.status(400).json({ error: 'Missing fields' }),
+  if (!recipientId || !body) return res.status(400).json({ error: 'Missing fields' });
   const { conversation, message } = sendMessage({
-    senderId: user.id,
+    senderId: user.id;
     recipientId;
     body;
     linkUrl;
     attachmentBase64;
     attachmentName;
     context});
-  res.status(200).json({ conversation, message })
+  res.status(200).json({ conversation, message });
 }

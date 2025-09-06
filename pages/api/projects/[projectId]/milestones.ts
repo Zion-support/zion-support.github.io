@@ -5,19 +5,19 @@ import { Milestone } from '../../../../utils/types/milestones';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
-  const { projectId } = req.query as { projectId: string },
+  const { projectId } = req.query as { projectId: string };
   const project = getProject(projectId);
   if (!project) {
-    res.status(404).json({ error: 'Project not found' }),
+    res.status(404).json({ error: 'Project not found' });
     return
   }
   if (!assertParticipantOrAdmin(project, user)) {
-    res.status(403).json({ error: 'Forbidden' }),
+    res.status(403).json({ error: 'Forbidden' });
     return
   }
 
   if (req.method === 'GET') {
-    res.status(200).json({ milestones: project.milestones }),
+    res.status(200).json({ milestones: project.milestones });
     return
   }
 
@@ -36,11 +36,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       description: body.description,
       dueDate: body.dueDate,
       amountUsd: body.amountUsd,
-      attachments: body.attachments || []}),
-    res.status(201).json({ milestone: created }),
+      attachments: body.attachments || []});
+    res.status(201).json({ milestone: created });
     return
   }
 
   res.setHeader('AllowGET, POST');
-  res.status(405).end('Method Not Allowed')
+  res.status(405).end('Method Not Allowed');
 }

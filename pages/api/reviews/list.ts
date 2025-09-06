@@ -4,19 +4,19 @@ import type { PublicReview, ReviewsSummary } from '../../../types/reviews';
 import { TALENT_PROFILES } from '../../../data/talent';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
     const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
     if (!targetType || !targetId) {
-      return res.status(400).json({ error: 'Missing targetType or targetId' })
+      return res.status(400).json({ error: 'Missing targetType or targetId' });
     }
     if (targetType !== 'talent' && targetType !== 'client') {
-      return res.status(400).json({ error: 'Invalid targetType' })
+      return res.status(400).json({ error: 'Invalid targetType' });
     }
 
-    const all = await readReviews(),
+    const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
     const filtered = all.filter((r) => {
       if (r.removed || !r.approved) return false;
@@ -56,12 +56,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       (targetType === 'client' && p.clientId === targetId)
     )).length;
     const summary: ReviewsSummary = {
-      averageRating,
+      averageRating;
       totalReviews;
-      totalCompletedProjects;
+      totalCompletedProjects,
       mostRecent: publicReviews.slice(0, 5)};
-    return res.status(200).json({ summary, reviews: publicReviews })
+    return res.status(200).json({ summary, reviews: publicReviews });
   } catch (error: any) {
-    return res.status(500).json({ error: 'Internal server error', details: error?.message })
+    return res.status(500).json({ error: 'Internal server error', details: error?.message });
   }
 }

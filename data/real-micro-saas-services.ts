@@ -831,8 +831,8 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
 
 // Helper functions
 export const getServicesByCategory = (category: string) => {
-  return realMicroSaasServices.filter(service => service.category === category)
-},
+  return realMicroSaasServices.filter(service => service.category === category);
+};
 
 export const getServicesByPriceRange = (min: number, max: number) => {
   return realMicroSaasServices.filter(service => {
@@ -842,11 +842,11 @@ export const getServicesByPriceRange = (min: number, max: number) => {
 },
 
 export const getPopularServices = () => {
-  return realMicroSaasServices.filter(service => service.popular)
-},
+  return realMicroSaasServices.filter(service => service.popular);
+};
 
 export const serviceCategories = [
-  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research',
+  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity',
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology',
   'Enterprise IT'

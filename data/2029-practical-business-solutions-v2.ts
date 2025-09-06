@@ -396,16 +396,16 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
 ],
 
 export const getPopularPracticalBusinessSolutions2029 = () => {
-  return practicalBusinessSolutions2029.filter(service => service.popular)
-},
+  return practicalBusinessSolutions2029.filter(service => service.popular);
+};
 
 export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
-  return practicalBusinessSolutions2029.filter(service => service.category === category)
-},
+  return practicalBusinessSolutions2029.filter(service => service.category === category);
+};
 
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
   return practicalBusinessSolutions2029.filter(service => {
     const price = parseInt(service.price.replace(/[^0-9]/g, '')),
     return price >= minPrice && price <= maxPrice
   })
-},
+};

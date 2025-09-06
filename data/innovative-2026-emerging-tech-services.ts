@@ -313,18 +313,18 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
 ],
 
 export const getPopularEmergingTechServices = () => {
-  return innovative2026EmergingTechServices.filter(service => service.popular)
-},
+  return innovative2026EmergingTechServices.filter(service => service.popular);
+};
 
 export const getEmergingTechServicesByCategory = (category: string) => {
   return innovative2026EmergingTechServices.filter(service => 
     service.category.toLowerCase().includes(category.toLowerCase())
   )
-},
+};
 
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return innovative2026EmergingTechServices.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(, '')),
     return price >= minPrice && price <= maxPrice
   })
-},
+};

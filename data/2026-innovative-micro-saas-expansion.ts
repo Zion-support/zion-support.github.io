@@ -400,16 +400,16 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
 ],
 
 export const getInnovativeMicroSaasServices2026ByCategory = (category: string) => {
-  return innovativeMicroSaasServices2026.filter(service => service.category === category)
-},
+  return innovativeMicroSaasServices2026.filter(service => service.category === category);
+};
 
 export const getPopularInnovativeMicroSaasServices2026 = () => {
-  return innovativeMicroSaasServices2026.filter(service => service.popular)
-},
+  return innovativeMicroSaasServices2026.filter(service => service.popular);
+};
 
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number, maxPrice: number) => {
   return innovativeMicroSaasServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', '')),
     return price >= minPrice && price <= maxPrice
   })
-},
+};

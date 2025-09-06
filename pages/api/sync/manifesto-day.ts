@@ -5,10 +5,10 @@ import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { nextVersionFor } from "../../../utils/sync/versioning";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
   const state = readState();
   if (!state.config.optIn || state.config.paused) {
-    return res.status(403).json({ error: "Sync disabled for this instance" })
+    return res.status(403).json({ error: "Sync disabled for this instance" });
   }
 
   const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number };
@@ -35,5 +35,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         try { await axios.post(url, body, { headers, timeout: 5000 }) } catch {}
       })
   ),
-  return res.status(200).json({ status: "created", version, eventId: event.eventId })
+  return res.status(200).json({ status: "created", version, eventId: event.eventId });
 }
