@@ -14,7 +14,6 @@ import { ArrowRight } from 'lucide-react'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 
 interface GeneratedContent {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   description: string,
   tags: string[],
   suggestedPrice: {
