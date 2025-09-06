@@ -44,7 +44,6 @@ const PerformanceMonitor: React.FC = () => {
     return null;
   }
 
-<<<<<<< HEAD
   return (
     <div className={`fixed top-4 right-4 z-50 p-3 rounded-lg text-xs font-mono ${
       metrics.isSlow 
@@ -60,7 +59,3 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;
-=======
-import React from 'react';
-;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -4,12 +4,8 @@ module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
-<<<<<<< HEAD
     './src/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}', // Added for Next.js app directory compatibility
-=======
-    './src/**/*.{js,ts,jsx,tsx}'
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ],
   theme: {
     extend: {
@@ -20,13 +16,6 @@ module.exports = {
           600: '#2563eb',
           700: '#1d4ed8',
         },
-<<<<<<< HEAD
-      },
-    },
-  },
-  plugins: [],
-};
-=======
         gray: {
           50: '#f9fafb',
           100: '#f3f4f6',
@@ -94,4 +83,3 @@ module.exports = {
     require('@tailwindcss/aspect-ratio')
   ]
 };
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

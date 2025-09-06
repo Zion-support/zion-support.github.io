@@ -1,154 +1,207 @@
 import React from 'react';
-<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+import { 
+  Users, 
+  Target, 
+  Award, 
+  Globe, 
+  Lightbulb, 
+  Shield,
+  Phone,
+  Mail,
+  MapPin
+} from 'lucide-react';
 
 const About: React.FC = () => {
+  const team = [
+    {
+      name: 'Kleber Santos',
+      role: 'CEO & Founder',
+      description: 'Visionary leader with 15+ years in technology and business strategy.',
+      image: '/api/placeholder/300/300'
+    },
+    {
+      name: 'AI Development Team',
+      role: 'Machine Learning Engineers',
+      description: 'Expert team specializing in cutting-edge AI and ML solutions.',
+      image: '/api/placeholder/300/300'
+    },
+    {
+      name: 'Cloud Architecture Team',
+      role: 'Cloud Solutions Architects',
+      description: 'Certified professionals in AWS, Azure, and GCP platforms.',
+      image: '/api/placeholder/300/300'
+    }
+  ];
+
+  const values = [
+    {
+      icon: Lightbulb,
+      title: 'Innovation',
+      description: 'We constantly push the boundaries of what\'s possible with technology.'
+    },
+    {
+      icon: Shield,
+      title: 'Security',
+      description: 'Your data and systems are protected with enterprise-grade security measures.'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Serving clients worldwide with localized expertise and support.'
+    },
+    {
+      icon: Users,
+      title: 'Collaboration',
+      description: 'We work closely with our clients as partners in their success.'
+    }
+  ];
+
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '50+', label: 'Countries Served' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '24/7', label: 'Support Available' }
+  ];
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">About Zion Tech Group</h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Leading the future of technology with innovative AI, micro SaaS, and enterprise solutions
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 animate-fade-in">
+            About Zion Tech Group
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto animate-slide-up">
+            Leading the future of technology with innovative AI, micro SaaS, and enterprise solutions that transform businesses worldwide.
+          </p>
+        </div>
+
+        {/* Stats Section */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">
+                {stat.number}
+              </div>
+              <div className="text-gray-300 text-sm md:text-base">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Mission & Vision */}
+        <div className="grid md:grid-cols-2 gap-12 mb-20">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <div className="flex items-center mb-6">
+              <Target className="w-8 h-8 text-blue-400 mr-3" />
+              <h2 className="text-2xl font-bold">Our Mission</h2>
+            </div>
+            <p className="text-gray-300 text-lg leading-relaxed">
+              To empower businesses with cutting-edge technology solutions that drive growth, 
+              efficiency, and innovation. We believe technology should be accessible, secure, 
+              and transformative for organizations of all sizes.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <div className="flex items-center mb-6">
+              <Award className="w-8 h-8 text-purple-400 mr-3" />
+              <h2 className="text-2xl font-bold">Our Vision</h2>
+            </div>
+            <p className="text-gray-300 text-lg leading-relaxed">
+              To be the global leader in AI-powered technology solutions, creating a world 
+              where every business can leverage advanced technology to achieve unprecedented 
+              success and growth.
             </p>
           </div>
         </div>
-      </div>
 
-      {/* Mission Section */}
-      <div className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
-              <p className="text-lg text-gray-600 mb-6">
-                At Zion Tech Group, we're dedicated to transforming businesses through cutting-edge technology solutions. 
-                Our mission is to democratize access to advanced AI, blockchain, and cloud technologies, making them 
-                accessible to businesses of all sizes.
-              </p>
-              <p className="text-lg text-gray-600">
-                We believe that every company deserves access to enterprise-grade technology solutions that can 
-                accelerate growth, improve efficiency, and drive innovation.
-              </p>
+        {/* Values Section */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-center mb-12">Our Core Values</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => {
+              const IconComponent = value.icon;
+              return (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
+                  <p className="text-gray-300">{value.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Team Section */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-center mb-12">Meet Our Team</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {team.map((member, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-12 h-12 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
+                <p className="text-blue-400 mb-3">{member.role}</p>
+                <p className="text-gray-300 text-sm">{member.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Contact Section */}
+        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+          <h2 className="text-3xl font-bold text-center mb-8">Get in Touch</h2>
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div className="flex flex-col items-center">
+              <Phone className="w-8 h-8 text-blue-400 mb-3" />
+              <h3 className="text-lg font-semibold mb-2">Phone</h3>
+              <a href="tel:+13024640950" className="text-gray-300 hover:text-blue-400 transition-colors">
+                +1 302 464 0950
+              </a>
             </div>
-            <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
-              <p className="text-lg">
-                To be the world's leading provider of AI-powered technology solutions, enabling businesses 
-                to thrive in the digital age through innovation, reliability, and exceptional service.
+            <div className="flex flex-col items-center">
+              <Mail className="w-8 h-8 text-blue-400 mb-3" />
+              <h3 className="text-lg font-semibold mb-2">Email</h3>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-blue-400 transition-colors">
+                kleber@ziontechgroup.com
+              </a>
+            </div>
+            <div className="flex flex-col items-center">
+              <MapPin className="w-8 h-8 text-blue-400 mb-3" />
+              <h3 className="text-lg font-semibold mb-2">Address</h3>
+              <p className="text-gray-300">
+                364 E Main St STE 1008<br />
+                Middletown, DE 19709
               </p>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Values Section */}
-      <div className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Core Values</h2>
-            <p className="text-xl text-gray-600">The principles that guide everything we do</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Innovation</h3>
-              <p className="text-gray-600">We constantly push the boundaries of what's possible with technology, always seeking new and better ways to solve complex problems.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Reliability</h3>
-              <p className="text-gray-600">Our solutions are built with enterprise-grade security and reliability, ensuring your business operations run smoothly 24/7.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Partnership</h3>
-              <p className="text-gray-600">We work closely with our clients as trusted partners, understanding their unique needs and delivering solutions that exceed expectations.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-      {/* Team Section */}
-      <div className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
-            <p className="text-xl text-gray-600">Experienced professionals dedicated to your success</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-6 shadow-lg">
-              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl font-bold">K</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 text-center mb-2">Kleber</h3>
-              <p className="text-gray-600 text-center mb-4">CEO & Founder</p>
-              <p className="text-gray-600 text-center text-sm">
-                Visionary leader with 15+ years in technology and business development, 
-                passionate about AI and digital transformation.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-lg">
-              <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl font-bold">T</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 text-center mb-2">Tech Team</h3>
-              <p className="text-gray-600 text-center mb-4">Engineering Excellence</p>
-              <p className="text-gray-600 text-center text-sm">
-                World-class engineers and developers specializing in AI, blockchain, 
-                cloud computing, and enterprise software solutions.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-lg">
-              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl font-bold">S</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 text-center mb-2">Support Team</h3>
-              <p className="text-gray-600 text-center mb-4">Customer Success</p>
-              <p className="text-gray-600 text-center text-sm">
-                Dedicated support professionals ensuring your success with 24/7 
-                assistance and proactive monitoring of your solutions.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Contact CTA */}
-      <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-white mb-6">Ready to Work With Us?</h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how Zion Tech Group can help transform your business with cutting-edge technology solutions.
+        {/* CTA Section */}
+        <div className="text-center mt-16">
+          <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how we can help transform your business with our technology solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/25"
             >
-              Contact Us
-            </a>
-            <a
-              href="tel:+13024640950"
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
+              Start Your Project
+            </Link>
+            <Link
+              to="/services"
+              className="border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
             >
-              Call Us
-            </a>
+              View Our Services
+            </Link>
           </div>
         </div>
       </div>

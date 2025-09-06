@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useState, Suspense } from 'react';
-=======
-import React from 'react';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header';
@@ -72,7 +68,6 @@ const HomePage = () => (
           <Card title="Scalability" description="Solutions designed to grow with you." />
           <Card title="Security" description="Robust protection for all your data." />
           <Card title="Support" description="24/7 dedicated customer assistance." />
-<<<<<<< HEAD
         </div>
       </div>
     </div>
@@ -109,16 +104,10 @@ function App() {
           
           <Footer />
           <PerformanceMonitor />
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </div>
       </Router>
     </ErrorBoundary>
   );
 }
 
-<<<<<<< HEAD
 export default App;
-=======
-export default App;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
