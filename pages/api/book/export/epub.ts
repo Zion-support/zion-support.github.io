@@ -1,31 +1,31 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { randomUUID } from 'crypto',
-import { promises as fs } from 'fs',
-const Epub = require('epub-gen'),
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { randomUUID } from 'crypto';
+import { promises as fs } from 'fs';
+const Epub = require('epub-gen');
 
 export const config = {
   api: {
     bodyParser: {
-      sizeLimit: '10mb'}}},
+      sizeLimit: '10mb'}}};
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' }),
-    return
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
   }
 
-  const { project } = req.body as { project: any },
+  const { project } = req.body as { project: any };
   if (!project?.meta || !Array.isArray(project?.chapters)) {
-    res.status(400).json({ error: 'Invalid payload' }),
-    return
+    res.status(400).json({ error: 'Invalid payload' });
+    return;
   }
 
-  const tmpPath = `/tmp/${randomUUID()}.epub`,
+  const tmpPath = `/tmp/${randomUUID()}.epub`;
   const options = {
     title: project.meta.title,
     author: project.meta.author,
     publisher: project.meta.publisher || 'Zion',
-    content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))},
+    content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))};
 
   try {
     await new Epub(options, tmpPath).promise,
