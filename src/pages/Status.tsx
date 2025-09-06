@@ -1,269 +1,412 @@
-import React from 'react';
-import { 
-  CheckCircle, 
-  AlertTriangle, 
-  XCircle, 
-  Clock, 
-  Server, 
-  Database, 
-  Globe,
-  Zap,
-  Shield,
-  Activity
-} from 'lucide-react';
+import { logWarn } from '@/utils/productionLogger'
+import { SEO } from "@/components/SEO",
+import { useState, useEffect } from "react",
+import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+import Link from "next/link",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { logWarn } from '@/utils/productionLogger';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { logWarn } from '@/utils/productionLogger',
+interface ServiceStatus {
 
-const Status: React.FC = () => {
-  const systemStatus = {
-    overall: 'operational',
-    uptime: '99.9%',
-    lastIncident: '2024-01-15',
-    responseTime: '45ms'
-  };
+  name: string
+  status: 'operational' | 'degraded' | 'outage' | 'maintenance'
+  description: string
+  lastChecked: string
+}
 
-  const services = [
-    {
-      name: 'Website',
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '45ms',
-      lastCheck: '2 minutes ago'
-    },
-    {
-      name: 'API Services',
-      status: 'operational',
-      uptime: '99.8%',
-      responseTime: '120ms',
-      lastCheck: '1 minute ago'
-    },
-    {
-      name: 'Database',
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '15ms',
-      lastCheck: '30 seconds ago'
-    },
-    {
-      name: 'Authentication',
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '80ms',
-      lastCheck: '1 minute ago'
-    },
-    {
-      name: 'File Storage',
-      status: 'operational',
-      uptime: '99.7%',
-      responseTime: '200ms',
-      lastCheck: '2 minutes ago'
-    },
-    {
-      name: 'Email Services',
-      status: 'operational',
-      uptime: '99.8%',
-      responseTime: '150ms',
-      lastCheck: '1 minute ago'
+        return <CheckCircle className="h-5 w-5 text-green-500" />
+        return <Clock className="h-5 w-5 text-blue-500" />
+      default:;
+        return <AlertCircle className="h-5 w-5 text-gray-500" />};
+import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
+}
+
+  )
+}
+
+;
+const FALLBACK_SERVICES: ServiceStatus[] = [
+  {
+    name: "Marketplace API",
+    status: "operational",
+    description: "Product listings and search functionality",
+    lastChecked: new Date().toISOString()
+  },
+  {
+    name: "Authentication Service", 
+    status: "operational",
+    description: "User login and registration",
+    lastChecked: new Date().toISOString()
+  },
+  {
+    name: "Payment Processing",
+    status: "operational", 
+    description: "Checkout and payment handling",
+    lastChecked: new Date().toISOString()
+  },
+  {
+    name: "Talent Directory",
+    status: "operational",
+    description: "AI talent profiles and matching",
+    lastChecked: new Date().toISOString()
+  }
+],
+
+export default function Status() {
+  const [externalStatusLoaded, setExternalStatusLoaded] = useState(false),
+  const [showFallback, setShowFallback] = useState(false),
+  const [uptime, setUptime] = useState<number | null>(null),
+  const statusUrl = process.env.NEXT_PUBLIC_STATUS_PAGE_URL || "https: //status.ziontechgroup.com",
+
+  useEffect(() => {
+    // Try to load external status page, fallback after timeout
+    const timeout = setTimeout(() => {
+      if (!externalStatusLoaded) {
+        setShowFallback(true)
+import { SEO } from "@/components/SEO",;
+import { useState, useEffect } from "react",;
+import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react';
+import { Button } from "@/components/ui/button",;
+import Link from "next/link",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { logWarn } from '@/utils/productionLogger',;
+interface ServiceStatus {;
+  name: string,;
+  status: 'operational' | 'degraded' | 'outage' | 'maintenance',;
+  description: string,;
+  lastChecked: string;
+}
+;
+const FALLBACK_SERVICES: ServiceStatus[] = [;
+  {;
+    name: "Marketplace API",;
+    status: "operational",;
+    description: "Product listings and search functionality",;
+    lastChecked: new Date().toISOString();
+  },;
+  {;
+    name: "Authentication Service",;
+    status: "operational",;
+    description: "User login and registration",;
+    lastChecked: new Date().toISOString();
+  },;
+  {;
+    name: "Payment Processing",;
+    status: "operational",;
+    description: "Checkout and payment handling",;
+    lastChecked: new Date().toISOString();
+  },;
+  {;
+    name: "Talent Directory",;
+    status: "operational",;
+    description: "AI talent profiles and matching",;
+    lastChecked: new Date().toISOString();
+  }
+],;
+export default function Status() {;
+  const [externalStatusLoaded, setExternalStatusLoaded] = useState(false),;
+  const [showFallback, setShowFallback] = useState(false),;
+  const [uptime, setUptime] = useState<number | null>(null),;
+  const statusUrl = process.env.NEXT_PUBLIC_STATUS_PAGE_URL || "https: //status.ziontechgroup.com",;
+  useEffect(() => {;
+    // Try to load external status page, fallback after timeout;
+    const timeout = setTimeout(() => {;
+      if (!externalStatusLoaded) {;
+        setShowFallback(true);
+      }
+    }, 5000), // 5 second timeout;
+    return () => clearTimeout(timeout);
+  }, [externalStatusLoaded]),;
+  useEffect(() => {;
+    async function fetchUptime() {;
+      try {;
+        const res = await fetch('/api/health'),;
+        if (!res.ok) return,;
+        const data = await res.json(),;
+        if (typeof data.uptime === 'number') {;
+          setUptime(data.uptime);
+        }
+      } catch (err) {;
+        logWarn('Failed to fetch uptime', { data: err });
+      }
     }
-  ];
+    fetchUptime()
+  }, []),
 
-  const incidents = [
-    {
-      date: '2024-01-15',
-      title: 'Scheduled Maintenance',
-      description: 'Database maintenance completed successfully',
-      status: 'resolved',
-      duration: '2 hours'
-    },
-    {
-      date: '2024-01-10',
-      title: 'API Performance Issue',
-      description: 'Increased response times due to high traffic',
-      status: 'resolved',
-      duration: '45 minutes'
-    },
-    {
-      date: '2024-01-05',
-      title: 'Email Service Interruption',
-      description: 'Temporary email delivery delays',
-      status: 'resolved',
-      duration: '1 hour'
-    }
-  ];
-
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (status: ServiceStatus['status']) => {
     switch (status) {
       case 'operational':
-        return <CheckCircle className="w-5 h-5 text-green-500" />;
+        return <CheckCircle className="h-5 w-5 text-green-500" />,
       case 'degraded':
-        return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
+        return <Clock className="h-5 w-5 text-yellow-500" />,
       case 'outage':
-        return <XCircle className="w-5 h-5 text-red-500" />;
+        return <AlertCircle className="h-5 w-5 text-red-500" />,
+      case 'maintenance':
+        return <Clock className="h-5 w-5 text-blue-500" />,
       default:
-        return <Clock className="w-5 h-5 text-gray-500" />;
+        return <AlertCircle className="h-5 w-5 text-gray-500" />
+    fetchUptime();
+  }, []),;
+  const getStatusIcon = (status: ServiceStatus['status']) => {;
+    switch (status) {;
+      case 'operational':;
+        return <CheckCircle className="h-5 w-5 text-green-500" />,;
+      case 'degraded':;
+        return <Clock className="h-5 w-5 text-yellow-500" />,;
+      case 'outage':;
+        return <AlertCircle className="h-5 w-5 text-red-500" />,;
+      case 'maintenance':;
+        return <Clock className="h-5 w-5 text-blue-500" />,;
+      default:;
+        return <AlertCircle className="h-5 w-5 text-gray-500" />;
     }
-  };
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'operational':
-        return 'text-green-500';
-      case 'degraded':
-        return 'text-yellow-500';
-      case 'outage':
-        return 'text-red-500';
-      default:
+  },;
+  const getStatusText = (status: ServiceStatus['status']) => {;
+    switch (status) {;
+      case 'operational':;
+        return 'Operational',;
+      case 'degraded':;
+        return 'Degraded Performance',;
+      case 'outage':;
+        return 'Service Outage',;
+      case 'maintenance':;
+        return 'Scheduled Maintenance',;
+      default:;
+        return 'Unknown';
+    }
+  },;
+  const getStatusColor = (status: ServiceStatus['status']) => {;
+    switch (status) {;
+      case 'operational':;
+        return 'text-green-500',;
+      case 'degraded':;
+        return 'text-yellow-500',;
+      case 'outage':;
+        return 'text-red-500',;
+      case 'maintenance':;
+        return 'text-blue-500',;
+      default:;
         return 'text-gray-500';
     }
-  };
+  },
+
+  const formatUptime = (seconds: number) => {
+    const days = Math.floor(seconds / 86400),
+    const hours = Math.floor((seconds % 86400) / 3600),
+    const minutes = Math.floor((seconds % 3600) / 60),
+    const parts: string[] = [],
+    if (days > 0) parts.push(`${days}d`),
+    if (hours > 0) parts.push(`${hours}h`),
+    parts.push(`${minutes}m`),
+    return parts.join(' ')
+  },
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              System
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Status
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Real-time status of Zion Tech Group's services and infrastructure
+    <>
+      <SEO
+        title="API Status"
+        description="View real-time service availability and uptime statistics."
+        canonical="https://app.ziontechgroup.com/status"
+      />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-bold text-white mb-4">System Status</h1>
+            <p className="text-zion-slate-light text-lg">
+              Real-time monitoring of Zion platform services
             </p>
+            {uptime !== null && (
+              <p className="text-zion-slate-light text-sm mt-2">Uptime: {formatUptime(uptime)}</p>
+            )}
           </div>
 
-          {/* Overall Status */}
-          <div className="mb-16">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">
-                    {systemStatus.uptime}
+          {!showFallback && (
+            <div className="mb-8">
+              <Card className="bg-zion-blue-dark border-zion-blue-light">
+                <CardHeader>
+                  <CardTitle className="text-white flex items-center gap-2">
+                    <ExternalLink className="h-5 w-5" />
+                    Live Status Dashboard
+                  </CardTitle>
+                  <CardDescription>
+                    Loading detailed status information...
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <iframe
+                    src={statusUrl}
+                    title="Zion Status Page"
+                    className="w-full border-0 rounded"
+                    height="600"
+                    onLoad={() => setExternalStatusLoaded(true)}
+                    onError={() => setShowFallback(true)}
+                  />
+                  <div className="mt-4 text-center">
+                    <Button
+                      variant="outline"
+                      onClick={() => setShowFallback(true)}
+                      className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
+                    >
+                      View Simplified Status
+                    </Button>
                   </div>
-                  <div className="text-gray-300">Uptime</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">
-                    {systemStatus.responseTime}
-                  </div>
-                  <div className="text-gray-300">Response Time</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">
-                    {systemStatus.lastIncident}
-                  </div>
-                  <div className="text-gray-300">Last Incident</div>
-                </div>
-                <div className="text-center">
-                  <div className="flex items-center justify-center mb-2">
-                    {getStatusIcon(systemStatus.overall)}
-                  </div>
-                  <div className={`font-semibold ${getStatusColor(systemStatus.overall)}`}>
-                    {systemStatus.overall.charAt(0).toUpperCase() + systemStatus.overall.slice(1)}
-                  </div>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             </div>
-          </div>
+          )}
 
-          {/* Services Status */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">Service Status</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-semibold text-white">{service.name}</h3>
-                    {getStatusIcon(service.status)}
-                  </div>
-                  <div className="space-y-2 text-sm text-gray-300">
-                    <div className="flex justify-between">
-                      <span>Uptime:</span>
-                      <span className="text-green-400">{service.uptime}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Response:</span>
-                      <span className="text-blue-400">{service.responseTime}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Last Check:</span>
-                      <span className="text-gray-400">{service.lastCheck}</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Recent Incidents */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">Recent Incidents</h2>
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
-              {incidents.length === 0 ? (
-                <div className="text-center text-gray-300">
-                  <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                  <p className="text-xl">No recent incidents</p>
-                  <p className="text-sm">All systems are operating normally</p>
-                </div>
-              ) : (
-                <div className="space-y-6">
-                  {incidents.map((incident, index) => (
-                    <div key={index} className="flex items-start space-x-4 p-4 bg-white/5 rounded-lg">
-                      <div className="flex-shrink-0">
-                        {incident.status === 'resolved' ? (
-                          <CheckCircle className="w-6 h-6 text-green-500" />
-                        ) : (
-                          <AlertTriangle className="w-6 h-6 text-yellow-500" />
-                        )}
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center justify-between mb-2">
-                          <h3 className="font-semibold text-white">{incident.title}</h3>
-                          <span className="text-sm text-gray-400">{incident.date}</span>
+          {showFallback && (
+            <>
+              <div className="mb-8">
+                <Card className="bg-zion-blue-dark border-zion-blue-light">
+                  <CardHeader>
+                    <CardTitle className="text-white">Service Status Overview</CardTitle>
+                    <CardDescription>
+                      Current status of core platform services
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    {FALLBACK_SERVICES.map((service) => (
+                      <div key={service.name} className="flex items-center justify-between p-4 bg-zion-blue rounded-lg">
+                        <div className="flex items-center gap-3">
+                          {getStatusIcon(service.status)}
+                          <div>
+                            <h3 className="font-medium text-white">{service.name}</h3>
+                            <p className="text-sm text-zion-slate-light">{service.description}</p>
+                          </div>
                         </div>
-                        <p className="text-gray-300 text-sm mb-2">{incident.description}</p>
-                        <div className="flex items-center space-x-4 text-xs text-gray-400">
-                          <span className={`px-2 py-1 rounded ${
-                            incident.status === 'resolved' ? 'bg-green-500/20 text-green-400' : 'bg-yellow-500/20 text-yellow-400'
-                          }`}>
-                            {incident.status}
-                          </span>
-                          <span>Duration: {incident.duration}</span>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          </div>
+                        <div className="text-right">
+                          <div className={`font-medium ${getStatusColor(service.status)}`}>
+                            {getStatusText(service.status)}
+                          </div>
+                          <div className="text-xs text-zion-slate-light">
+                            Updated: {new Date(service.lastChecked).toLocaleTimeString()}
+                          </div>;
+                        </div>;
+                      </div>;
+                    ))}
+                  </CardContent>
+                </Card>
+              </div>
 
-          {/* Status Legend */}
-          <div className="text-center">
-            <h3 className="text-xl font-semibold mb-4">Status Legend</h3>
-            <div className="flex flex-wrap justify-center gap-6 text-sm">
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-4 h-4 text-green-500" />
-                <span className="text-gray-300">Operational</span>
+              <div className="text-center">
+                <p className="text-zion-slate-light mb-4">
+                  For detailed incident history and real-time updates:
+                </p>
+                <Button
+                  variant="outline"
+                  asChild
+                  className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
+                >
+                  <a 
+                    href={statusUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    Visit Full Status Page
+                  </Link>
+                </Button>
               </div>
-              <div className="flex items-center space-x-2">
-                <AlertTriangle className="w-4 h-4 text-yellow-500" />
-                <span className="text-gray-300">Degraded Performance</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <XCircle className="w-4 h-4 text-red-500" />
-                <span className="text-gray-300">Outage</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Clock className="w-4 h-4 text-gray-500" />
-                <span className="text-gray-300">Maintenance</span>
-              </div>
-            </div>
+            </>
+          )}
+
+          <div className="mt-12 text-center">
+            <Card className="bg-zion-blue-dark border-zion-blue-light">
+              <CardHeader>
+                <CardTitle className="text-white">Need Help?</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-zion-slate-light">
+                  If you're experiencing issues not reflected here, please contact our support team.
+                </p>
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                  <Button
+                    variant="outline"
+                    asChild
+                    className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
+                  >
+                    <Link href="/contact">Contact Support</Link>
+                  </Button>
+                  <Button
+                    variant="outline"
+                    asChild
+                    className="text-zion-purple border-zion-purple hover:bg-zion-purple/10"
+                  >
+                    <a href="https://twitter.com/ZionTechGroup" target="_blank" rel="noopener noreferrer">
+                      @ZionTechGroup
+                    </Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
-      </section>
-    </div>
+      </main>
+    </>
+  )
+                  </CardContent>;
+                </Card>;
+              </div>;
+              <div className="text-center">;
+                <p className="text-zion-slate-light mb-4">;
+                  For detailed incident history and real-time updates:;
+                </p>;
+                <Button;
+                  variant="outline";
+                  asChild;
+                  className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10";
+                >;
+                  <a;
+                    href={statusUrl} ;
+                    target="_blank";
+                    rel="noopener noreferrer";
+                    className="flex items-center gap-2";
+                  >;
+                    <ExternalLink className="h-4 w-4" />;
+                    Visit Full Status Page;
+                  </a>;
+                </Button>;
+              </div>;
+            </>;
+          )}
+;
+          <div className="mt-12 text-center">;
+            <Card className="bg-zion-blue-dark border-zion-blue-light">;
+              <CardHeader>;
+                <CardTitle className="text-white">Need Help?</CardTitle>;
+              </CardHeader>;
+              <CardContent className="space-y-4">;
+                <p className="text-zion-slate-light">;
+                  If you're experiencing issues not reflected here, please contact our support team.;
+                </p>;
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                  <Button;
+                    variant="outline";
+                    asChild;
+                    className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10";
+                  >;
+                    <Link href="/contact">Contact Support</Link>;
+                  </Button>;
+                  <Button;
+                    variant="outline";
+                    asChild;
+                    className="text-zion-purple border-zion-purple hover:bg-zion-purple/10";
+                  >;
+                    <a href="https://twitter.com/ZionTechGroup" target="_blank" rel="noopener noreferrer">;
+                      @ZionTechGroup;
+                    </a>;
+                  </Button>;
+                </div>;
+              </CardContent>;
+            </Card>;
+          </div>;
+        </div>;
+      </main>;
+    </>;
   );
-};
-
-export default Status;
+}
+;

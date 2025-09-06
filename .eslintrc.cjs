@@ -1,41 +1,191 @@
 module.exports = {
-  root: true,
-  env: {
-    browser: true,
-    es2021: true,
-    node: true,
-  },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
   extends: [
-    'eslint:recommended',
-    '@typescript-eslint/recommended',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:jsx-a11y/recommended',
+    'next/core-web-vitals',
+    '@typescript-eslint/recommended'
   ],
   parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 12,
-    sourceType: 'module',
-  },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-    'jsx-a11y',
-  ],
+  plugins: ['@typescript-eslint'],
   rules: {
-    'react/react-in-jsx-scope': 'off', // Not needed in React 17+
-    'react/prop-types': 'off', // Using TypeScript instead
-    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    'jsx-a11y/anchor-is-valid': 'off', // React Router handles this
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+  rules: {
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "no-undef": "off"
   },
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
+  ignorePatterns: [
+    "node_modules/",
+    ".next/",
+    "out/",
+    "dist/",
+    "build/",
+    "coverage/",
+    "*.config.js",
+    "*.config.cjs",
+    "*.config.mjs",
+    "fix-critical-files.js",
+    "fix-*.js",
+    "fix-*.cjs",
+    "*-fix*.cjs",
+    "*-fix*.js",
+    "advanced-*.cjs",
+    "aggressive-*.cjs",
+    "aggressive-*.js",
+    "app-improvement-*.cjs",
+    "analyze-*.cjs",
+    "code-quality-*.js",
+    "components",
+    "test_build/",
+    "tests.disabled/",
+    "pages.disabled/",
+    "src.disabled/",
+    "components.disabled/",
+    "hooks.disabled/",
+    "types.disabled/",
+    "contracts.disabled/",
+    "solutions.disabled/",
+    "zion-os.disabled/",
+    "zion_academy/",
+    "automation_backup/",
+    "automation/backups/",
+    "backup-pages/",
+    "backup/",
+    "lib_backup/",
+    "data_backup/",
+    "styles_backup/",
+    "api-backup/",
+    "temp_backup/",
+    "corrupted_files_backup_2/",
+    "ai-optimization-backups/",
+    "optimization-reports/",
+    "test-generation-reports/",
+    "test-reports/",
+    "test-results/",
+    "security-reports/",
+    "pages.__backup/",
+    "pages-disabled/",
+    "pages.disabled_auto/"
+  ]
 };
+  "extends": ['next/core-web-vitals',
+    '"eslint": recommended',
+    '@typescript-eslint/recommended',
+  ],
+:.eslintrc.cjs
+  rules: {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-unused-vars": [
+      "warn",
+      { argsIgnorePattern: "^_" }
+    ],
+    "react/no-unescaped-entities": "off"
+  }
+};
+  "parser": '@typescript-eslint/parser',
+  "plugins": ['@typescript-eslint'],
+  "rules": {
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+    '@typescript-eslint/no-unused-vars': 'warn',
+    '@typescript-eslint/no-explicit-any': 'warn',
+    'react-hooks/exhaustive-deps': 'warn',
+    'react/react-in-jsx-scope': 'off',
+    'no-undef': 'off',
+    'no-console': 'off',
+    'react/no-unescaped-entities': 'warn'
+  },
+  env: {
+    browser: true,
+    node: true,
+    es6: true,
+    dom: true
+  },
+  globals: {
+    KeyboardEvent: 'readonly',
+<<<<<<< HEAD
+    HTMLElement: 'readonly',
+    HTMLButtonElement: 'readonly',
+    HTMLAnchorElement: 'readonly',
+    MutationObserver: 'readonly',
+    RequestInit: 'readonly',
+    AbortController: 'readonly',
+    fs: 'readonly',
+    CodeQualityChecker: 'readonly'
+  },
+  ignorePatterns: [
+    'node_modules/',
+    '.next/',
+    'out/',
+    'dist/',
+    'build/',
+    'coverage/',
+    '*.config.js',
+    '*.config.cjs',
+    '*.config.mjs',
+    'fix-critical-files.js',
+    'fix-*.js',
+    'fix-*.cjs',
+    '*-fix*.cjs',
+    '*-fix*.js',
+    'advanced-*.cjs',
+    'aggressive-*.cjs',
+    'aggressive-*.js',
+    'app-improvement-*.cjs',
+    'analyze-*.cjs',
+    'code-quality-*.js',
+    'components',
+    'test_build/',
+    'tests.disabled/',
+    'pages.disabled/',
+    'src.disabled/',
+    'components.disabled/',
+    'hooks.disabled/',
+    'types.disabled/',
+    'contracts.disabled/',
+    'solutions.disabled/',
+    'zion-os.disabled/',
+    'zion_academy/',
+    'automation_backup/',
+    'automation/backups/',
+    'backup-pages/',
+    'backup/',
+    'lib_backup/',
+    'data_backup/',
+    'styles_backup/',
+    'api-backup/',
+    'temp_backup/',
+    'corrupted_files_backup_2/',
+    'ai-optimization-backups/',
+    'optimization-reports/',
+    'test-generation-reports/',
+    'test-reports/',
+    'test-results/',
+    'security-reports/',
+    'pages.__backup/',
+    'pages-disabled/',
+    'pages.disabled_auto/'
+  ]
+};
+=======
+    "HTMLElement": 'readonly',
+    "HTMLButtonElement": 'readonly',
+    "HTMLAnchorElement": 'readonly',
+    "MutationObserver": 'readonly',
+    "RequestInit": 'readonly',
+    "AbortController": 'readonly',
+    "fs": 'readonly',
+    "CodeQualityChecker": 'readonly'}};
+<<<<<<< HEAD
+module.exports = { extends: [ 'next/core-web-vitals','eslint:recommended','@typescript-eslint/recommended',],parser: '@typescript-eslint/parser',plugins: ['@typescript-eslint'],rules: { '@typescript-eslint/no-unused-vars': 'warn','@typescript-eslint/no-explicit-any': 'warn','no-console': 'off','react/no-unescaped-entities': 'warn','no-undef': 'off',},overrides: [{ files: ['*.ts','*.tsx'],rules: { 'no-undef': 'off' } }],env: { browser: true,node: true,es6: true,dom: true },globals: { KeyboardEvent: 'readonly',HTMLElement: 'readonly',HTMLButtonElement: 'readonly',HTMLAnchorElement: 'readonly',MutationObserver: 'readonly',RequestInit: 'readonly',AbortController: 'readonly',fs: 'readonly',CodeQualityChecker: 'readonly',},};
+=======
+module.exports = { extends: [ 'next/core-web-vitals','eslint:recommended','@typescript-eslint/recommended',],parser: '@typescript-eslint/parser',plugins: ['@typescript-eslint'],rules: { '@typescript-eslint/no-unused-vars': 'warn','@typescript-eslint/no-explicit-any': 'warn','no-console': 'off','react/no-unescaped-entities': 'warn','no-undef': 'off',},overrides: [{ files: ['*.ts','*.tsx'],rules: { 'no-undef': 'off' } }],env: { browser: true,node: true,es6: true,dom: true },globals: { KeyboardEvent: 'readonly',HTMLElement: 'readonly',HTMLButtonElement: 'readonly',HTMLAnchorElement: 'readonly',MutationObserver: 'readonly',RequestInit: 'readonly',AbortController: 'readonly',fs: 'readonly',CodeQualityChecker: 'readonly',},};
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

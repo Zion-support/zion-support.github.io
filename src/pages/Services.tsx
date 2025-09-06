@@ -1,120 +1,154 @@
-import React, { useMemo, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import ServiceCard from '../components/ServiceCard';
+import Card from '../components/Card';
 
 const Services: React.FC = () => {
-  const [query, setQuery] = useState('');
-  const services = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
-  const featuredCategories = [
-    { icon: Workflow, title: 'Process Automation', desc: 'Human + AI workflows across CRMs, ERPs and support.', href: '/ai-services' },
-    { icon: MessageSquare, title: 'Helpdesk & Knowledge', desc: 'Tickets, KB, and chatbots trained on your docs.', href: '/micro-saas' },
-    { icon: Globe, title: 'Localization & Multilingual', desc: '50+ languages, locale-aware UX, translation QA pipelines.', href: '/micro-saas' }
-  ];
-
-  const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    if (!q) return services;
-    return services.filter(s =>
-      s.title.toLowerCase().includes(q) ||
-      s.description.toLowerCase().includes(q) ||
-      s.category.toLowerCase().includes(q) ||
-      s.tags?.some(t => t.toLowerCase().includes(q))
-    );
-  }, [query, services]);
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO title="Services - Zion Tech Group" description="AI, Micro SaaS, Cloud/DevOps, Digital Twin, Data & Analytics, and Enterprise IT solutions." />
+    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
+            Comprehensive technology solutions designed to transform your business 
+            and drive innovation across all sectors.
+          </p>
+        </div>
 
-      <section className="relative py-16 sm:py-24">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto">
-            <motion.h1 initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-4xl sm:text-6xl font-extrabold tracking-tight">
-              Explore Our Services
-            </motion.h1>
-            <p className="mt-4 text-lg text-slate-300">Productized Micro SaaS, AI platforms, and end-to-end IT solutions.</p>
-          </div>
+        {/* Main Services */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <ServiceCard
+            title="AI & Machine Learning"
+            description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision."
+            icon="🤖"
+          />
+          <ServiceCard
+            title="Cybersecurity"
+            description="Protect your digital assets with advanced security solutions, threat detection, and compliance management."
+            icon="🔒"
+          />
+          <ServiceCard
+            title="Cloud Infrastructure"
+            description="Scale your operations with robust cloud solutions, migration services, and infrastructure optimization."
+            icon="☁️"
+          />
+          <ServiceCard
+            title="Digital Transformation"
+            description="Modernize your business processes with comprehensive digital transformation strategies and implementation."
+            icon="🚀"
+          />
+          <ServiceCard
+            title="Data Analytics"
+            description="Unlock insights from your data with advanced analytics, business intelligence, and reporting solutions."
+            icon="📊"
+          />
+          <ServiceCard
+            title="IoT Solutions"
+            description="Connect and manage your devices with Internet of Things solutions for smart operations and monitoring."
+            icon="🌐"
+          />
+        </div>
 
-          <div className="max-w-2xl mx-auto mt-10 relative">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400" />
-            <input
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search services, e.g. analytics, quantum, devops"
-              className="w-full pl-12 pr-4 py-3 rounded-xl bg-slate-800/70 border border-cyan-400/20 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none"
+        {/* Service Categories */}
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold text-center mb-12">Service Categories</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card
+              title="Consulting Services"
+              description="Strategic technology consulting to help you make informed decisions about your digital future."
+            />
+            <Card
+              title="Implementation"
+              description="End-to-end implementation of technology solutions tailored to your specific business needs."
+            />
+            <Card
+              title="Support & Maintenance"
+              description="Ongoing support and maintenance to ensure your systems run smoothly and efficiently."
+            />
+            <Card
+              title="Training & Education"
+              description="Comprehensive training programs to help your team master new technologies and processes."
+            />
+            <Card
+              title="Custom Development"
+              description="Bespoke software development solutions designed specifically for your unique requirements."
+            />
+            <Card
+              title="Integration Services"
+              description="Seamless integration of new technologies with your existing systems and workflows."
             />
           </div>
         </div>
-      </section>
 
-      <section className="pb-20">
-        <div className="container mx-auto px-4 grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {filtered.slice(0, 30).map((svc) => (
-            <div key={svc.id} className="group bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-colors rounded-2xl p-6">
-              <div className="text-xs uppercase tracking-wide text-cyan-300/70">{svc.category}</div>
-              <h3 className="mt-2 text-xl font-semibold group-hover:text-cyan-300 transition-colors">{svc.title}</h3>
-              <p className="mt-2 text-sm text-slate-300 line-clamp-3">{svc.description}</p>
-              <div className="mt-4 text-sm text-cyan-300/80">Market: {svc.marketPrice}</div>
+        {/* Industry Solutions */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-12">Industry Solutions</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏥</span>
+              </div>
+              <h3 className="text-lg font-semibold">Healthcare</h3>
             </div>
-          ))}
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏦</span>
+              </div>
+              <h3 className="text-lg font-semibold">Finance</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏭</span>
+              </div>
+              <h3 className="text-lg font-semibold">Manufacturing</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🛒</span>
+              </div>
+              <h3 className="text-lg font-semibold">Retail</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🎓</span>
+              </div>
+              <h3 className="text-lg font-semibold">Education</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏛️</span>
+              </div>
+              <h3 className="text-lg font-semibold">Government</h3>
+            </div>
+          </div>
         </div>
 
-        <div className="container mx-auto px-4 text-center mt-12">
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <Link to="/services/micro-saas-solutions" className="inline-flex items-center px-5 py-3 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 text-white hover:opacity-90">
-              Explore Micro SaaS Solutions
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-            <Link to="/revolutionary-services-2030" className="inline-flex items-center px-5 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:opacity-90">
-              Revolutionary Services 2030
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-            <Link to="/revolutionary-services-showcase-2030" className="inline-flex items-center px-5 py-3 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:opacity-90">
-              Services Showcase 2030
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-            <Link to="/pricing-2030" className="inline-flex items-center px-5 py-3 rounded-lg bg-gradient-to-r from-orange-500 to-red-500 text-white hover:opacity-90">
-              Pricing Guide 2030
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </div>
-          <div className="mt-6 text-sm text-slate-300">
-            Questions? Call <a className="text-cyan-300 hover:text-cyan-200" href="tel:+13024640950">+1 302 464 0950</a> or email <a className="text-cyan-300 hover:text-cyan-200" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.
-            Our office: 364 E Main St STE 1008 Middletown DE 19709.
-            See more at <a className="text-cyan-300 hover:text-cyan-200" href="https://ziontechgroup.com" target="_blank" rel="noreferrer">ziontechgroup.com</a>.
-          </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {featuredCategories.map((c) => (
-              <Link key={c.title} to={c.href} className="block bg-slate-900/60 border border-cyan-400/15 hover:border-cyan-400/40 rounded-2xl p-6 text-left">
-                <div className="text-xs uppercase tracking-wide text-cyan-300/70">Featured</div>
-                <div className="mt-2 text-xl font-semibold">{c.title}</div>
-                <div className="mt-2 text-sm text-slate-300">{c.desc}</div>
+        {/* CTA Section */}
+        <div className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-blue-100 mb-8">Let's discuss how our services can help transform your business.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
+              >
+                Get Free Consultation
               </Link>
-            ))}
-          </div>
-
-          <div className="mt-12 rounded-xl border border-white/10 bg-white/5 p-6 text-sm text-slate-300">
-            <div className="mb-2 font-semibold text-white">Pricing Overview</div>
-            <ul className="grid gap-2 sm:grid-cols-2">
-              <li>AI projects: $5k–$60k+, IT projects: $10k–$120k+</li>
-              <li>Micro SaaS: $39–$99/mo typical; setup $1k–$10k</li>
-            </ul>
-            <div className="mt-4 flex items-center gap-2 text-xs">
-              <DollarSign className="h-3 w-3" />
-              Blended rates $110–$220/hr; fixed scope available.
+              <Link 
+                to="/pricing" 
+                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
+              >
+                View Pricing
+              </Link>
             </div>
-            <a className="mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200" href="https://ziontechgroup.com/services" target="_blank" rel="noreferrer">
-              See services on our site <ExternalLink className="ml-1 h-3 w-3" />
-            </a>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };
 
 export default Services;
-

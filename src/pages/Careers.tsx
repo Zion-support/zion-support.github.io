@@ -1,383 +1,463 @@
-import { Users, MapPin, Clock, Briefcase, GraduationCap, Heart, Zap, Globe } from 'lucide-react';
+import { SEO } from '@/components/SEO'
+import { GradientHeading } from '@/components/GradientHeading'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import Link from 'next/link'
+import { CAREER_JOBS } from '@/data/careersJobs'
 export default function Careers() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedDepartment, setSelectedDepartment] = useState('all');
-  const [selectedLocation, setSelectedLocation] = useState('all');
-  const departments = [
-    { id: 'all', name: 'All Departments', count: 25 },
-    { id: 'engineering', name: 'Engineering', count: 12 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', count: 8 },
-    { id: 'cybersecurity', name: 'Cybersecurity', count: 6 },
-    { id: 'sales', name: 'Sales & Business Development', count: 4 },
-    { id: 'marketing', name: 'Marketing', count: 3 },
-    { id: 'operations', name: 'Operations', count: 2 }
-  ];
-  const locations = [
-    { id: 'all', name: 'All Locations', count: 25 },
-    { id: 'remote', name: 'Remote', count: 15 },
-    { id: 'middletown-de', name: 'Middletown, DE', count: 5 },
-    { id: 'new-york', name: 'New York, NY', count: 3 },
-    { id: 'london', name: 'London, UK', count: 2 }
-  ];
-  const jobOpenings = [
-    {
-      id: 1,
-      title: 'Senior AI Engineer',
-      department: 'Engineering',
-      location: 'Remote / San Francisco, CA',
-      type: 'Full-time',
-      experience: '5+ years',
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
-      requirements: [
-        'Advanced degree in Computer Science, AI, or related field',
-        'Expertise in Python, TensorFlow, PyTorch',
-        'Experience with large language models and NLP',
-        'Strong background in machine learning algorithms'
-      ]
-    },
-    {
-      id: 2,
-      title: 'Cybersecurity Specialist',
-      department: 'Security',
-      location: 'Remote / New York, NY',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Protect our systems and clients with advanced security solutions.',
-      requirements: [
-        'Bachelor\'s degree in Cybersecurity or related field',
-        'Certifications: CISSP, CEH, or similar',
-        'Experience with penetration testing and vulnerability assessment',
-        'Knowledge of compliance frameworks (SOC2, ISO27001)'
-      ]
-    },
-    {
-      id: 3,
-      title: 'Cloud Solutions Architect',
-      department: 'Infrastructure',
-      location: 'Remote / London, UK',
-      type: 'Full-time',
-      experience: '4+ years',
-      description: 'Design and implement scalable cloud infrastructure solutions.',
-      requirements: [
-        'Bachelor\'s degree in Computer Science or related field',
-        'AWS, Azure, or GCP certifications',
-        'Experience with Kubernetes and Docker',
-        'Strong understanding of microservices architecture'
-      ]
-    },
-    {
-      id: 4,
-      title: 'Product Manager',
-      department: 'Product',
-      location: 'Remote / Toronto, CA',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Drive product strategy and development for our technology solutions.',
-      requirements: [
-        'Bachelor\'s degree in Business, Engineering, or related field',
-        'Experience in B2B SaaS product management',
-        'Strong analytical and communication skills',
-        'Background in technology or consulting preferred'
-      ]
-    }
-  ];
+  const applyEmail = 'careers@ziontechgroup.com'
+  const jobs = CAREER_JOBS
+  const whyWork = null;
+    'At Zion, we’re building more than a marketplace—we’re cultivating a community where forward-thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. You’ll join a remote-first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. You’ll work alongside passionate peers who care about real-world results, not just buzzwords. Zion’s growth means endless opportunities to expand your skills, explore new roles, and contribute to open-source initiatives. If you’re driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine what’s possible and make advanced AI accessible to all. Join us to transform ideas into reality today.'
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import Link from "next/link";
+import { CAREER_JOBS } from "@/data/careersJobs";
+export default function Careers() {
+import Link from "next/link",
+import { CAREER_JOBS } from "@/data/careersJobs",
+export default function Careers() {
+  const applyEmail = "careers@ziontechgroup.com",
+  const jobs = CAREER_JOBS,
+
+  const applyEmail = 'careers@ziontechgroup.com'
+  const jobs = CAREER_JOBS
+  const whyWork =
+    'At Zion, we’re building more than a marketplace—we’re cultivating a community where forward-thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. You’ll join a remote-first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. You’ll work alongside passionate peers who care about real-world results, not just buzzwords. Zion’s growth means endless opportunities to expand your skills, explore new roles, and contribute to open-source initiatives. If you’re driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine what’s possible and make advanced AI accessible to all. Join us to transform ideas into reality today.'
+  // Benefits list
   const benefits = [
     {
-      icon: <Heart className="w-6 h-6" />,
-      title: 'Health & Wellness',
-      description: 'Comprehensive health insurance, dental, vision, and mental health support'
-    },
+      title: 'Flexible Work'
+      description:
+        'Remote-first culture with flexible hours to support your productivity and work-life balance.'
+    "At Zion, we’re building more than a marketplace—we’re cultivating a community where forward-thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. You’ll join a remote-first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. You’ll work alongside passionate peers who care about real-world results, not just buzzwords. Zion’s growth means endless opportunities to expand your skills, explore new roles, and contribute to open-source initiatives. If you’re driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine what’s possible and make advanced AI accessible to all. Join us to transform ideas into reality today.",
+
+  // Benefits list
+  const benefits = [
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: 'Flexible Work',
-      description: 'Remote-first culture with flexible hours and unlimited PTO'
-    },
-    {
-      icon: <GraduationCap className="w-6 h-6" />,
-      title: 'Learning & Growth',
-      description: 'Professional development budget, conferences, and certification programs'
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: 'Innovation Time',
-      description: '20% time for personal projects and innovation initiatives'
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: 'Global Team',
-      description: 'Work with talented professionals from around the world'
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: 'Team Events',
-      description: 'Regular team building, hackathons, and social events'
+      title: "Flexible Work",
+      description: "Remote-first culture with flexible hours to support your productivity and work-life balance.",
+      icon: (
+        <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+      )
     }
-  ];
-  const values = [
     {
-      title: 'Innovation First',
-      description: 'We push boundaries and embrace cutting-edge technology to solve complex problems.'
+      title: 'Health & Wellness'
+      description:
+        'Comprehensive health insurance and wellness programs to keep you at your best.'
     },
     {
-      title: 'Excellence',
-      description: 'We maintain the highest standards in everything we do, from code quality to client service.'
-    },
-    {
-      title: 'Collaboration',
-      description: 'We believe the best solutions come from diverse teams working together.'
-    },
-    {
-      title: 'Impact',
-      description: 'We focus on creating meaningful solutions that make a real difference.'
+      title: "Health & Wellness",
+      description: "Comprehensive health insurance and wellness programs to keep you at your best.",
+      icon: (
+        <svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg>
+      )
     }
-  };
-  const contactInfo = [
-    { icon: Mail, label: "Email", value: "careers@ziontechgroup.com", href: "mailto:careers@ziontechgroup.com" },
-    { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
-    { icon: MapPinIcon, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" }
-  ];
+    {
+      title: 'Continuous Learning'
+      description:
+        'Education stipends and dedicated learning time to help you grow professionally.'
+    },
+    {
+      title: "Continuous Learning",
+      description: "Education stipends and dedicated learning time to help you grow professionally.",
+      icon: (
+        <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+      )
+    }
+    {
+      title: 'Competitive Compensation'
+      description:
+        'Salary packages that recognize your value, plus equity options to share in our success.'
+    },
+    {
+      title: "Competitive Compensation",
+      description: "Salary packages that recognize your value, plus equity options to share in our success.",
+      icon: (
+        <svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      )
+    }
+    {
+      title: 'Impactful Projects'
+      description:
+        'Contribute to innovations that make advanced technology accessible worldwide.'
+    },
+    {
+      title: "Impactful Projects",
+      description: "Contribute to innovations that make advanced technology accessible worldwide.",
+      icon: (
+        <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      ),
+    },
+  ]
+      )
+    }
+  ]
+  ],
+
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Join Our Team
-          </h1>
-          <p className="text-xl md:text-2xl text-zion-slate-light max-w-3xl mx-auto">
-            Build the future of technology with a team that values innovation, excellence, and impact
-          </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#open-positions"
-              className="bg-zion-cyan text-white px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan/90 transition-colors"
-            >
-              View Open Positions
-            </a>
-            <a
-              href="mailto:careers@ziontechgroup.com"
-              className="border-2 border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-            >
-              Contact Recruiting
-            </a>
-          </div>
-        </div>
-      </section>
-      {/* Why Work With Us */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <>
+      <SEO
+        title="Careers at Zion - Join Our Team"
+        description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
+        keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs"
+        canonical="https://app.ziontechgroup.com/careers"
+      />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">
-              Why Work at Zion Tech Group?
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              We're building the future of technology, and we need brilliant minds to join us on this journey
+            <GradientHeading>Join Our Team</GradientHeading>
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+              Help us build the future of AI and technology
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
-                  <div className="text-zion-cyan">
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24'>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>
+              <p className="text-zion-slate-light text-lg whitespace-pre-line">
+                {whyWork}
+              </p>
+            </div>
+            <div className="rounded-lg overflow-hidden relative w-full h-full">
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=600&q=80"
+                alt="Team collaboration"
+                className="object-cover"
+              />
+            </div>
+          </div>
+          <div className='mb-24'>
+            <h2 className='text-3xl font-bold text-white mb-12 text-center'>
+              Our Benefits
+            </h2>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+              {benefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className='bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light'
+                >
+                  <div className='bg-zion-blue inline-flex p-4 rounded-full mb-4'>                    {benefit.icon}
+          
+          <div className="mb-24">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Benefits</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
+                  <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
                     {benefit.icon}
                   </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                  <p className="text-zion-slate-light">{benefit.description}</p>
                 </div>
-                <h3 className="text-lg font-semibold text-zion-slate-dark mb-2">
-                  {benefit.title}
-                </h3>
-                <p className="text-zion-slate-light">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-      {/* Our Values */}
-      <section className="py-20 bg-zion-slate-light">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">
-              Our Values
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              These core principles guide everything we do and shape our company culture
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-sm">
-                <h3 className="text-xl font-semibold text-zion-slate-dark mb-3">
-                  {value.title}
-                </h3>
-                <p className="text-zion-slate-light leading-relaxed">
-                  {value.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Open Positions */}
-      <section id="open-positions" className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">
+          <div className='mb-24'>
+            <h2 className='text-3xl font-bold text-white mb-12 text-center'>
               Open Positions
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Ready to make an impact? Explore our current opportunities and find your perfect role
-            </p>
-          </div>
-          <div className="space-y-6">
-            {openPositions.map((position) => (
-              <div key={position.id} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
-                  <div>
-                    <h3 className="text-xl font-semibold text-zion-slate-dark mb-2">
-                      {position.title}
-                    </h3>
-                    <div className="flex flex-wrap gap-4 text-sm text-zion-slate-light">
-                      <div className="flex items-center">
-                        <Briefcase className="w-4 h-4 mr-2" />
-                        {position.department}
-                      </div>
-                      <div className="flex items-center">
-                        <MapPin className="w-4 h-4 mr-2" />
-                        {position.location}
-                      </div>
-                      <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-2" />
-                        {position.type}
-                      </div>
-                      <div className="flex items-center">
-                        <Users className="w-4 h-4 mr-2" />
-                        {position.experience}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mt-4 lg:mt-0">
-                    <a
-                      href={`mailto:careers@ziontechgroup.com?subject=Application for ${position.title}`}
-                      className="inline-flex items-center px-6 py-2 bg-zion-cyan text-white rounded-lg font-medium hover:bg-zion-cyan/90 transition-colors"
+            <Tabs defaultValue='engineering' className='w-full'>
+              <TabsList className='bg-zion-blue-dark border border-zion-blue-light mb-8 w-full flex flex-wrap justify-center'>
+                <TabsTrigger
+                  value='engineering'
+                  className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'
+                >
+                  Engineering
+                </TabsTrigger>
+                <TabsTrigger
+                  value='product'
+                  className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'
+                >
+                  Product
+                </TabsTrigger>
+                <TabsTrigger
+                  value='marketing'
+                  className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'
+                >
+                  Marketing
+                </TabsTrigger>
+                <TabsTrigger
+                  value='operations'
+                  className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'
+                >
+                  Operations
+                </TabsTrigger>
+              </TabsList>
+              {Object.entries(jobs).map(([department, jobList]) => (
+                <TabsContent
+                  key={department}
+                  value={department}
+                  className='space-y-6'
+                >
+                  {jobList.map((job, index) => (
+                    <Card
+                      key={index}
+                      className='bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors'
                     >
-                      Apply Now
-                    </a>
-                  </div>
-                </div>
-                <p className="text-zion-slate-light mb-4">
-                  {position.description}
-                </p>
-                <div>
-                  <h4 className="font-medium text-zion-slate-dark mb-2">Requirements:</h4>
-                  <ul className="list-disc list-inside text-zion-slate-light space-y-1">
-                    {position.requirements.map((req, index) => (
-                      <li key={index}>{req}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
+                      <CardContent className='p-6'>
+                        <div className='flex flex-col md:flex-row md:items-center md:justify-between'>                          <div>
+                            <h3 className='text-xl font-bold text-white mb-2'>
+                              {job.title}
+                            </h3>
+                            <div className='flex flex-wrap gap-2 mb-4'>
+                              <span className='text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full'>
+                                {job.location}
+                              </span>
+                              <span className='text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full'>
+                                {job.type}
+                              </span>
+                              <span className='text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full'>
+                                {job.department}
+                              </span>
+          
+          <div className="mb-24">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Open Positions</h2>
+            
+            <Tabs defaultValue="engineering" className="w-full">
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light mb-8 w-full flex flex-wrap justify-center">
+                <TabsTrigger value="engineering" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Engineering</TabsTrigger>
+                <TabsTrigger value="product" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Product</TabsTrigger>
+                <TabsTrigger value="marketing" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Marketing</TabsTrigger>
+                <TabsTrigger value="operations" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Operations</TabsTrigger>
+              </TabsList>
+              
+              {Object.entries(jobs).map(([department, jobList]) => (
+                <TabsContent key={department} value={department} className="space-y-6">
+                  {jobList.map((job, index) => (
+                    <Card key={index} className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors">
+                      <CardContent className="p-6">
+                        <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                          <div>
+                            <h3 className="text-xl font-bold text-white mb-2">{job.title}</h3>
+                            <div className="flex flex-wrap gap-2 mb-4">
+                              <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.location}</span>
+                              <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.type}</span>
+                              <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.department}</span>
+                            </div>
+                            <p className="text-zion-slate-light mb-4">{job.description}</p>
+                          </div>
+                          <Button
+                            asChild
+                            className="w-full md:w-auto mt-4 md:mt-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                          >
+                            <Link href={`/careers/${job.id}`}>View Details</Link>
+                          </Button>
+                        </div>
+                      </CardContent>
+                    </Card>
+import { SEO } from "@/components/SEO",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import Link from "next/link",;
+import { CAREER_JOBS } from "@/data/careersJobs",;
+export default function Careers() {;
+  const applyEmail = "careers@ziontechgroup.com",;
+  const jobs = CAREER_JOBS,;
+  const whyWork =;
+    "At Zion, we’re building more than a marketplace—we’re cultivating a community where forward-thinking engineers, product visionaries, and creatives collaborate to pioneer accessible AI technology. You’ll join a remote-first team dedicated to removing barriers and shaping solutions that empower everyday innovators. Our culture emphasizes trust, continuous learning, and meaningful impact, giving you the freedom to take ownership and experiment. We believe diverse perspectives fuel groundbreaking ideas, so we welcome talent from every background. You’ll work alongside passionate peers who care about real-world results, not just buzzwords. Zion’s growth means endless opportunities to expand your skills, explore new roles, and contribute to open-source initiatives. If you’re driven by curiosity and want to leave a lasting mark on the future of technology, Zion offers a supportive environment where your contributions truly matter. Come help us redefine what’s possible and make advanced AI accessible to all. Join us to transform ideas into reality today.",;
+  // Benefits list;
+  const benefits = [;
+    {;
+      title: "Flexible Work",;
+      description: "Remote-first culture with flexible hours to support your productivity and work-life balance.",;
+      icon: (;
+        <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">;
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />;
+        </svg>;
+      );
+    },;
+    {;
+      title: "Health & Wellness",;
+      description: "Comprehensive health insurance and wellness programs to keep you at your best.",;
+      icon: (;
+        <svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">;
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />;
+        </svg>;
+      );
+    },;
+    {;
+      title: "Continuous Learning",;
+      description: "Education stipends and dedicated learning time to help you grow professionally.",;
+      icon: (;
+        <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">;
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />;
+        </svg>;
+      );
+    },;
+    {;
+      title: "Competitive Compensation",;
+      description: "Salary packages that recognize your value, plus equity options to share in our success.",;
+      icon: (;
+        <svg className="w-10 h-10 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">;
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />;
+        </svg>;
+      );
+    },;
+    {;
+      title: "Impactful Projects",;
+      description: "Contribute to innovations that make advanced technology accessible worldwide.";
+      icon: (;
+        <svg className="w-10 h-10 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">;
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />;
+        </svg>;
+      );
+    }
+  ];
+  return (;
+    <>;
+      <SEO;
+        title="Careers at Zion - Join Our Team";
+        description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform.";
+        keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs";
+        canonical="https://app.ziontechgroup.com/careers";
+      />;
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">;
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
+          <div className="text-center mb-16">;
+            <GradientHeading>Join Our Team</GradientHeading>;
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+              Help us build the future of AI and technology;
+            </p>;
+          </div>;
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">;
+            <div>;
+              <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>;
+              <p className="text-zion-slate-light text-lg whitespace-pre-line">;
+                {whyWork}
+              </p>;
+            </div>;
+            <div className="rounded-lg overflow-hidden relative w-full h-full">;
+              <img;
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=600&q=80";
+                alt="Team collaboration";
+                className="object-cover";
+              />;
+            </div>;
+          </div>;
+          <div className="mb-24">;
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Benefits</h2>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+              {benefits.map((benefit, index) => (;
+                <div key={index} className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">;
+                  <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">;
+                    {benefit.icon}
+                  </div>;
+                  <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>;
+                  <p className="text-zion-slate-light">{benefit.description}</p>;
+                </div>;
+              ))}
+            </div>;
+          </div>;
+          <div className="mb-24">;
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Open Positions</h2>;
+            <Tabs defaultValue="engineering" className="w-full">;
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light mb-8 w-full flex flex-wrap justify-center">;
+                <TabsTrigger value="engineering" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Engineering</TabsTrigger>;
+                <TabsTrigger value="product" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Product</TabsTrigger>;
+                <TabsTrigger value="marketing" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Marketing</TabsTrigger>;
+                <TabsTrigger value="operations" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Operations</TabsTrigger>;
+              </TabsList>;
+              {Object.entries(jobs).map(([department, jobList]) => (;
+                <TabsContent key={department} value={department} className="space-y-6">;
+                  {jobList.map((job, index) => (;
+                    <Card key={index} className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors">;
+                      <CardContent className="p-6">;
+                        <div className="flex flex-col md:flex-row md:items-center md:justify-between">;
+                          <div>;
+                            <h3 className="text-xl font-bold text-white mb-2">{job.title}</h3>;
+                            <div className="flex flex-wrap gap-2 mb-4">;
+                              <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.location}</span>;
+                              <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.type}</span>;
+                              <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.department}</span>;
+                            </div>;
+                            <p className="text-zion-slate-light mb-4">{job.description}</p>;
+                          </div>;
+                          <Button;
+                            asChild;
+                            className="w-full md:w-auto mt-4 md:mt-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
+                          >;
+                            <Link href={`/careers/${job.id}`}>View Details</Link>;
+                          </Button>;
+                        </div>;
+                      </CardContent>;
+                    </Card>;
+                  ))}
+                </TabsContent>
+              ))}
+            </Tabs>
           </div>
-          <div className="text-center mt-12">
-            <p className="text-zion-slate-light mb-4">
-              Don't see a position that fits? We're always looking for talented individuals
-            </p>
-            <a
-              href="mailto:careers@ziontechgroup.com?subject=General Application"
-              className="inline-flex items-center px-8 py-3 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-colors"
-            >
-              Send General Application
-            </a>
-          </div>
-        </div>
-      </section>
-      {/* Application Process */}
-      <section className="py-20 bg-zion-slate-light">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">
-              Our Application Process
+          <div className='bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center'>
+            <h2 className='text-3xl font-bold text-white mb-6'>
+              Don't see the right position?
             </h2>
-            <p className="text-xl text-zion-slate-light">
-              Simple, transparent, and designed to find the best fit for both you and our team
+            <p className='text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto'>
+              We're always looking for talented individuals who are passionate
+              about AI and technology. Send us your resume and let's start a
+              conversation. You can also apply directly by emailing us at
+          
+          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>
+            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
+              We're always looking for talented individuals who are passionate about AI and technology.
+              Send us your resume and let's start a conversation. You can also
+              apply directly by emailing us at
+              <a
+                href={`mailto:${applyEmail}`}
+                className="text-zion-cyan hover:text-zion-purple transition-colors"
+              >
+                {applyEmail}
+              </Link>
+              .
             </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-zion-cyan text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
-                1
-              </div>
-              <h3 className="text-lg font-semibold text-zion-slate-dark mb-2">
-                Application Review
-              </h3>
-              <p className="text-zion-slate-light">
-                Our team reviews your application and portfolio within 48 hours
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-zion-cyan text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
-                2
-              </div>
-              <h3 className="text-lg font-semibold text-zion-slate-dark mb-2">
-                Initial Interview
-              </h3>
-              <p className="text-zion-slate-light">
-                A 30-minute conversation to discuss your background and our opportunities
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-zion-cyan text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
-                3
-              </div>
-              <h3 className="text-lg font-semibold text-zion-slate-dark mb-2">
-                Technical Assessment
-              </h3>
-              <p className="text-zion-slate-light">
-                Skills-based evaluation relevant to the role you're applying for
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-zion-cyan text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
-                4
-              </div>
-              <h3 className="text-lg font-semibold text-zion-slate-dark mb-2">
-                Final Interview
-              </h3>
-              <p className="text-zion-slate-light">
-                Meet the team and discuss how you can contribute to our mission
-              </p>
-            </div>
+            <Button
+              asChild
+              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+            >
+              <a href={`mailto:${applyEmail}`}>Send General Application</Link>
+            </Button>
           </div>
         </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan to-zion-purple">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Join Our Team?
-          </h2>
-          <p className="text-xl text-white/90 mb-8">
-            Let's build the future of technology together. Start your journey with Zion Tech Group today.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#open-positions"
-              className="inline-flex items-center px-8 py-4 bg-white text-zion-purple rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
-            >
-              <Briefcase className="w-5 h-5 mr-2" />
-              View Positions
-            </a>
-            <a
-              href="mailto:careers@ziontechgroup.com"
-              className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors duration-300"
-            >
-              <Users className="w-5 h-5 mr-2" />
-              Contact Recruiting
-            </a>
-          </div>
+      </main>
+    </>
+  )
+import React from 'react'
+import { SEO } from '../components/SEO'
+const Careers: React.FC = () => {
+  return(<>
+      <SEO title="Careers - Zion Tech Group" />
+      <div className="min-h-screen bg-white py-20">
+        <div className="max-w-4xl mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Careers</h1>
+          <p className="text-lg text-gray-600">Content coming soon...</p>
         </div>
-      </section>
-    </div>
-  );
+      </div>
+    </>
+  )
 }
+export default Careers
+}
+}
+;
+};
+export default Careers;
+};
+}
+;

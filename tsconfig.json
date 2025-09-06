@@ -1,51 +1,33 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
-    "module": "ESNext",
+    "lib": ["dom", "dom.iterable", "es6", "es2017", "es2018", "es2019", "es2020", "es2021", "es2022"],
+    "allowJs": true,
     "skipLibCheck": true,
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "strict": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "strictNullChecks": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-    "allowJs": true,
+    "jsx": "preserve",
     "incremental": true,
-    "plugins": []
-  },
-  "include": [
-    "src/**/*.js",
-    "src/**/*.jsx",
-    "src/**/*.ts",
-    "src/**/*.tsx"
-  ],
-  "exclude": [
-    "src/components.disabled",
-    "src/components.disabled/**/*",
-    "src_disabled/**/*",
-    "temp_components.disabled/**/*",
-    "node_modules"
-  ]
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/types/*": ["./types/*"]
+    },
+    "allowSyntheticDefaultImports": true
+  }
 }

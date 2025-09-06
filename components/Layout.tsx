@@ -1,19 +1,148 @@
+import React from "react";
+import Head from "next/head";
+import Header from "./Header";
+import Footer from "./Footer";
+ursor/integrate-build-improve-and-re-verify-8f7d
 import React from 'react';
-import EnhancedNavigation2025 from './layout/EnhancedNavigation2025';
-import EnhancedFooter from './layout/EnhancedFooter';
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
+origin/automation-improvements-final
 
+import React from "react";
+import Head from "next/head";
+import Header from "./Header";
+import Footer from "./Footer";
+origin/main
 interface LayoutProps {
   children: React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+}
+const Layout: React.FC<LayoutProps> = ({
+  children
+  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions"
+  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses."
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation"
+  canonical = "https://ziontechgroup.com"
+  ogTitle
+  ogDescription
+  ogImage = "https://ziontechgroup.com/og-image.jpg"
+  noIndex = false
+}) => {
+  const jsonLd = {
+    "@context": "https://schema.org"
+    "@type": "Organization"
+    name: "Zion Tech Group"
+    url: "https://ziontechgroup.com"
+    logo: "https://ziontechgroup.com/logo.png"
+    description: description
+    address: {
+      "@type": "PostalAddress"
+      streetAddress: "364 E Main St STE 1008"
+      addressLocality: "Middletown"
+      addressRegion: "DE"
+      postalCode: "19709"
+      addressCountry: "US"
+    }
+    contactPoint: {
+      "@type": "ContactPoint"
+      telephone: "+1-302-464-0950"
+      contactType: "customer service"
+      email: "kleber@ziontechgroup.com"
+    }
+  }
+  return (
+    <div className="min-h-screen bg-white">
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        {canonical && <link rel="canonical" href={canonical} />}
+        {noIndex && <meta name="robots" content="noindex,nofollow" />}
+        {/* Open Graph */}
+        <meta property="og:title" content={ogTitle |title} />
+        <meta
+          property="og:description"
+          content={ogDescription |description}
+        />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:type" content="website" />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={ogTitle |title} />
+        <meta
+          name="twitter:description"
+          content={ogDescription |description}
+        />
+        <meta name="twitter:image" content={ogImage} />
+        {/* JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </Head>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </div>
+import React, { ReactNode } from "react";
+
+interface LayoutProps {
+  children: ReactNode,
 }
 
-export default function Layout({ children }: LayoutProps) {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <EnhancedNavigation2025 />
-      <main className="flex-grow">
-        {children}
-      </main>
-      <EnhancedFooter />
-    </div>
+    <main className="min-h-screen">
+      {children}
+    </main>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
   );
 }
+export default Layout;
+import React, { ReactNode } from "react";
+interface LayoutProps {
+  children: ReactNode;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <main className="min-h-screen">
+      {children  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </main>
+  );
+};
+export default Layout;

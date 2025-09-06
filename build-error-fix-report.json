@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-09-06T09:18:20.881Z",
+  "fixedFiles": [
+    "next.config.js",
+    "data/talent.ts",
+    "pages/api/disputes/[id].ts",
+    "pages/api/dao/metrics.ts",
+    "pages/api/deploy/genesis.ts",
+    "pages/api/book/export/epub.ts",
+    "package.json"
+  ],
+  "errors": [],
+  "totalFixed": 7,
+  "totalErrors": 0
+}

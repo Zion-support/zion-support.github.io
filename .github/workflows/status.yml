@@ -24,5 +24,5 @@ jobs:
         elif [ "${{ github.event.workflow_run.conclusion }}" == "failure" ]; then
           echo "❌ Workflow failed"
         else
-          echo "⚠️ Workflow completed with warnings"
+          echo "⚠️ Workflow status: ${{ github.event.workflow_run.conclusion }}"
         fi
