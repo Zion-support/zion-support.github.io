@@ -831,7 +831,7 @@ export const generateFilterOptions = () => {;
   const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort();
   const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort();
   const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort();
-  const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort(),;
+  const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort();
   const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort(),;
   return {;
     productTypes: productTypes.map(type => ({;

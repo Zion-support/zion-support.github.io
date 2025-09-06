@@ -140,7 +140,7 @@ const dataDir = path.join(process.cwd(), 'dataproposals');
   metadata?: Record<string, any>
 };
 const dataDir = path.join(process.cwd(), 'dataproposals');
-const publicDir = path.join(process.cwd(), 'publicproposals'),;
+const publicDir = path.join(process.cwd(), 'publicproposals');
 function ensureDirs() {;
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
   if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });

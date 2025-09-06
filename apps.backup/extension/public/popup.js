@@ -131,7 +131,7 @@ document.getElementById('askBtn').addEventListener('click', async () => {;
   const prompt = document.getElementById('prompt').value.trim();
   const prompt = document.getElementById('prompt').value.trim();
   if (!prompt) return,;
-  const userId = await new Promise((r) => getUserId(r)),;
+  const userId = await new Promise((r) => getUserId(r));
   const res = await fetch(`${API_BASE}/ai/ask`, {;
     method: 'POST',;
     headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },;

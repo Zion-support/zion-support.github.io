@@ -25,7 +25,7 @@ export type WikiSection = {id: string;
 
 
 },;
-export type WikiContent = {;
+export type WikiContent = {
   title: string,;
   intro: string,;
   infobox: Infobox,;
@@ -235,7 +235,7 @@ if ( {) {
 export const operatorPrompt = `Write a Wikipedia-style article about Zion OS — the world’s first decentralized AI protocol for trust, work, and talent. Include use cases, launch history, modules, and governance model.`;
 export function generateZionWiki(): WikiContent {;
   const title = 'Zion OS';
-  const intro = 'Zion OS is a decentralized AI marketplace protocol that coordinates trust, work, and talent across open networks. It combines an AI agent layer (ZionGPT), token incentives (ZION$), and a modular protocol to enable verifiable marketplaces for tasks, models, and contributions.',;
+  const intro = 'Zion OS is a decentralized AI marketplace protocol that coordinates trust, work, and talent across open networks. It combines an AI agent layer (ZionGPT), token incentives (ZION$), and a modular protocol to enable verifiable marketplaces for tasks, models, and contributions.';
   const infobox: Infobox = {;
     founder: 'Zion Holdings';
     launchYear: '2025';

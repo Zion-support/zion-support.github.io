@@ -119,7 +119,7 @@ app.command('/zion', async ({ command, ack, respond }) => {;
   await ack(),;
   const text = (command.text || '').trim();
   const [sub, ...rest] = text.split(' '),;
-  const userId = command.user_id,;
+  const userId = command.user_id;
   try {;
     if (!sub || sub.toLowerCase() === 'help') {;
       await respond({ response_type: 'ephemeral', text: helpText() }),;

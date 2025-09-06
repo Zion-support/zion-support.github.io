@@ -371,8 +371,7 @@ export type InnovativeMicroSaas = {}
 ];
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-export type InnovativeMicroSaas = {;
-	}
+export type InnovativeMicroSaas = {}
 ursor/fix-website-loading-errors-and-merge-6662
 ];
 ;

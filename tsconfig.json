@@ -13,6 +13,7 @@
       "es2021",
       "es2022"
 
+      "ES2020"
     ],
     "target": "es5",
     "lib": ["dom", "dom.iterable", "es6"],
@@ -80,6 +81,8 @@ ursor/automate-test-improve-and-merge-code-646c
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     },
     "allowSyntheticDefaultImports": true
+      "@/*": ["./*"]
+    }
   },
   "include": [
     "next-env.d.ts",

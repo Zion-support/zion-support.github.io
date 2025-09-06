@@ -1,3 +1,4 @@
+/* eslint-env node */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -16,6 +17,9 @@ ursor/automate-test-improve-and-merge-code-646c
     './src/**/*.{js,ts,jsx,tsx}'
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}"
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
     extend: {
@@ -166,6 +170,11 @@ ursor/automate-test-improve-and-merge-code-646c
         'zion-slate-dark': '#1e293b',
         'zion-slate': '#334155',
         'zion-slate-light': '#475569'
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))'
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif']
       },
       boxShadow: {
         'glow': '0 0 20px rgba(59, 130, 246, 0.3)',
@@ -192,3 +201,5 @@ ursor/automate-test-improve-and-merge-code-646c
 };
   plugins: []
 }
+  plugins: []
+};

@@ -291,7 +291,7 @@ ursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
 
-export type CuttingEdgeAIService = {;
+export type CuttingEdgeAIService = {
 	id: string,;
 	name: string,;
 	description: string,;

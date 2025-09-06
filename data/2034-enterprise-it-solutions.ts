@@ -1098,7 +1098,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 
 
 
-export type EnterpriseITSolution = {;
+export type EnterpriseITSolution = {
 	id: string,;
 	name: string,;
 	tagline?: string,;

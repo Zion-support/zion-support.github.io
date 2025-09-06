@@ -1,3 +1,8 @@
+export default {
+  apps: [
+    {
+      name: 'bolt-zion-app',
+>>>>>>> main
 
 
 export default {
@@ -445,6 +450,7 @@ ursor/automate-test-improve-and-merge-code-646c
       script: 'npm',
       args: 'run preview',
       cwd: './',
+>>>>>>> main
       instances: 1,
       autorestart: true,
       watch: false,
@@ -465,11 +471,18 @@ ursor/automate-test-improve-and-merge-code-646c
       log_file: 'logs/pm2/preview.log',
       error_file: 'logs/pm2/preview-error.log',
       out_file: 'logs/pm2/preview-out.log'
+      log_file: 'logs/pm2/preview.log',
+      error_file: 'logs/pm2/preview-error.log',
+      out_file: 'logs/pm2/preview-out.log'
     },
     {
       name: 'auto-fix',
       script: 'node',
       args: 'scripts/pm2/auto-fix.js',
+
+      log_file: 'logs / pm2 / preview.log',
+      error_file: 'logs / pm2 / preview - error.log',
+      out_file: 'logs / pm2 / preview - out.log'
 
       log_file: 'logs / pm2 / preview.log',
       error_file: 'logs / pm2 / preview - error.log',
@@ -484,12 +497,15 @@ ursor/automate-test-improve-and-merge-code-646c
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       cron_restart: '0 */6 * * *',
+>>>>>>> main
+      cron_restart: '0 */6 * * *',
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
 
 ursor/automate-test-improve-and-merge-code-646c
+        NODE_ENV: 'production'
         NODE_ENV: 'production'
         NODE_ENV: 'production'
       },
@@ -505,6 +521,9 @@ ursor/automate-test-improve-and-merge-code-646c
 
         NODE_ENV: 'production'
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+      out_file: 'logs / pm2 / auto - fix - out.log',
+
+        NODE_ENV: 'production'
     },
     {
       name: 'healthcheck',
@@ -779,6 +798,7 @@ module && module.exports = {
 }
 >>>>>>> main
 }
+>>>>>>> main
       },
       error_file: './logs/code-quality-error.log',
       out_file: './logs/code-quality-out.log',
@@ -789,6 +809,7 @@ module && module.exports = {
 }
 export default {
   apps: [
+    {}
     {}
       error_file: './logs/performance-error.log'
       out_file: './logs/performance-out.log'
@@ -802,6 +823,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 }
 origin/main
 origin/automation-improvements-final
+}
+}
 }
 }
 export default {
@@ -1116,6 +1139,7 @@ export default {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production'
+        NODE_ENV: 'production'
       },
       log_file: 'logs / pm2 / preview.log',
       error_file: 'logs / pm2 / preview - error.log',
@@ -1136,6 +1160,9 @@ export default {
       log_file: 'logs / pm2 / auto - fix.log',
       error_file: 'logs / pm2 / auto - fix - error.log',
       out_file: 'logs / pm2 / auto - fix - out.log'
+      log_file: 'logs / pm2 / auto - fix.log',
+      error_file: 'logs / pm2 / auto - fix - error.log',
+      out_file: 'logs / pm2 / auto - fix - out.log'
     },
     {
       name: 'healthcheck',
@@ -1151,6 +1178,7 @@ export default {
       log_file: 'logs / pm2 / health.log',
       error_file: 'logs / pm2 / health - error.log',
       out_file: 'logs / pm2 / health - out.log'
+      out_file: 'logs / pm2 / health - out.log'
     },
     {
       name: 'code - quality - monitor',
@@ -1164,10 +1192,12 @@ export default {
         PM2_PROCESS_NAME: 'code - quality - monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true'
+        AUTO_FIX_CRITICAL: 'true'
       },
       cron_restart: '0 */6 * * *',
       log_file: 'logs / pm2 / code - quality - monitor.log',
       error_file: 'logs / pm2 / code - quality - monitor - error.log',
+      out_file: 'logs / pm2 / code - quality - monitor - out.log'
       out_file: 'logs / pm2 / code - quality - monitor - out.log'
     },
     {
@@ -1182,10 +1212,12 @@ export default {
         PM2_PROCESS_NAME: 'auto - commit - fixes',
         COMMIT_FREQUENCY: 'hourly',
         AUTO_PUSH: 'false'
+        AUTO_PUSH: 'false'
       },
       cron_restart: '0 */2 * * *',
       log_file: 'logs / pm2 / auto - commit - fixes.log',
       error_file: 'logs / pm2 / auto - commit - fixes - error.log',
+      out_file: 'logs / pm2 / auto - commit - fixes - out.log'
       out_file: 'logs / pm2 / auto - commit - fixes - out.log'
     },
     {
@@ -1200,10 +1232,12 @@ export default {
         PM2_PROCESS_NAME: 'dependency - monitor',
         AUTO_UPDATE_DEV: 'true',
         SECURITY_ALERTS: 'true'
+        SECURITY_ALERTS: 'true'
       },
       cron_restart: '0 0 * * 0',
       log_file: 'logs / pm2 / dependency - monitor.log',
       error_file: 'logs / pm2 / dependency - monitor - error.log',
+      out_file: 'logs / pm2 / dependency - monitor - out.log'
       out_file: 'logs / pm2 / dependency - monitor - out.log'
     },
     {
@@ -1218,10 +1252,12 @@ export default {
         PM2_PROCESS_NAME: 'performance - monitor',
         PERFORMANCE_THRESHOLD: '3000',
         BUNDLE_SIZE_LIMIT: '2MB'
+        BUNDLE_SIZE_LIMIT: '2MB'
       },
       cron_restart: '0 */8 * * *',
       log_file: 'logs / pm2 / performance - monitor.log',
       error_file: 'logs / pm2 / performance - monitor - error.log',
+      out_file: 'logs / pm2 / performance - monitor - out.log'
       out_file: 'logs / pm2 / performance - monitor - out.log'
     },
     {
@@ -1238,10 +1274,12 @@ export default {
         AUTO_MERGE_SAFE: 'true',
         CONFLICT_RESOLUTION: 'true',
         BRANCH_STRATEGY: 'gitflow'
+        BRANCH_STRATEGY: 'gitflow'
       },
       cron_restart: '0 */6 * * *',
       log_file: 'logs / pm2 / git - workflow.log',
       error_file: 'logs / pm2 / git - workflow - error.log',
+      out_file: 'logs / pm2 / git - workflow - out.log'
       out_file: 'logs / pm2 / git - workflow - out.log'
     },
     {
@@ -1256,10 +1294,12 @@ export default {
         PM2_PROCESS_NAME: 'error - detection',
         AUTO_FIX_ENABLED: 'true',
         MONITOR_FREQUENCY: '*/5 * * * *'
+        MONITOR_FREQUENCY: '*/5 * * * *'
       },
       cron_restart: '*/5 * * * *',
       log_file: 'logs / pm2 / error - detection.log',
       error_file: 'logs / pm2 / error - detection - error.log',
+      out_file: 'logs / pm2 / error - detection - out.log'
       out_file: 'logs / pm2 / error - detection - out.log'
     },
     {
@@ -1274,6 +1314,7 @@ export default {
         PM2_PROCESS_NAME: 'syntax - fixer',
         AUTO_FIX_ENABLED: 'true',
         MONITOR_FREQUENCY: '*/10 * * * *'
+        MONITOR_FREQUENCY: '*/10 * * * *'
       },
       cron_restart: '*/10 * * * *',
       log_file: 'logs / pm2 / syntax - fixer.log',
@@ -1283,10 +1324,16 @@ export default {
   ],
 module && module.exports = {
   apps: [{},
+      out_file: 'logs / pm2 / syntax - fixer - out.log'
+    }
+  ],
+module && module.exports = {
+  apps: [{},
     max_memory_restart: "1G",
     node_args: "--max-old-space-size=1024",
     error_file: "./logs/err && err.log",
     out_file: "./logs/out && out.log",
+    log_file: "./logs/combined && combined.log"
     log_file: "./logs/combined && combined.log"
 };
 
@@ -1298,6 +1345,7 @@ module && module.exports = {
   }]
 };
 }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     name: "ziontechgroup - site",
     script: "npm",
@@ -1339,6 +1387,8 @@ module && module.exports = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> main
       error_file: './logs/performance-error.log',
       out_file: './logs/performance-out.log',
       log_file: './logs/performance-combined.log',
@@ -1370,3 +1420,7 @@ ursor/automate-test-improve-and-merge-code-646c
 ursor/merge-pull-requests-and-resolve-conflicts-bf80
 >>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
+>>>>>>> main
+};
+ursor/merge-pull-requests-and-resolve-conflicts-bf80
+>>>>>>> main

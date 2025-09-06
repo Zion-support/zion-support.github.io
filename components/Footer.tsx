@@ -448,28 +448,22 @@ ursor/automate-test-improve-and-merge-code-646c
 
 
           {/* Solutions */}
+              Leading the future of AI, quantum computing, and autonomous business solutions.
+              Leading provider of AI solutions, IT services, and micro SaaS applications. 
+              Transform your business with cutting-edge technology.
+            </p>
+          </div>
           <div>
-            <h3 className="text-lg font-semibold mb-4">Solutions</h3>
+            <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
-              {footerLinks.solutions.map((link) => (
-                <li key={link.name}>
-                  <Link
-          {/* Company */}
-          <div>
-            <h3 className=text-lg font-semibold mb-6">Company</h3>
-            <ul className="space-y-3>
-              {company.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
+              <li><a href="/about" className="text-gray-300 hover:text-white">About</a></li>
+              <li><a href="/services" className="text-gray-300 hover:text-white">Services</a></li>
+              <li><a href="/solutions" className="text-gray-300 hover:text-white">Solutions</a></li>
+              <li><a href="/research" className="text-gray-300 hover:text-white">Research</a></li>
             </ul>
           </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
@@ -643,10 +637,20 @@ ursor/automate-test-improve-and-merge-code-646c
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+              <li><a href="/contact" className="text-gray-300 hover:text-white">Contact Us</a></li>
+              <li><a href="mailto:info@ziontechgroup.com" className="text-gray-300 hover:text-white">Email</a></li>
+            </ul>
+          </div>
+        </div>
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+          <p className="text-gray-300">
+            © 2024 Zion Tech Group. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
   );
+}
 }
         {/* Bottom Footer */}
         <div className="border-t border-gray-800 mt-8 pt-8>

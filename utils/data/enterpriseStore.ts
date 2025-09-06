@@ -371,7 +371,7 @@ export const store = {;
     return true;
   },;
   setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {;
-    const company = companiesById[companyId],;
+    const company = companiesById[companyId];
     if (!company) return false,;
     const company = companiesById[companyId];
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });

@@ -1797,7 +1797,7 @@ export type Real2036InnovativeService = {
 ];
 ursor/fix-website-loading-errors-and-merge-6662
 
-export type Real2036InnovativeService = {;
+export type Real2036InnovativeService = {
   id: string,;
   name: string,;
   tagline: string,;
