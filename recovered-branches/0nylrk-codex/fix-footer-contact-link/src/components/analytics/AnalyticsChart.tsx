@@ -4,29 +4,19 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useState } from "react";
 interface AnalyticsChartProps {
-<<<<<<< HEAD
-  title: string;
-  description?: string;
-  data: any[];
-  type?: 'line' | 'bar';
-  dataKeys: string[];
-=======
+
   title: string
   description?: string;
   data: any[]
   type?: 'line' | 'bar';
   dataKeys: string[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   timeRange?: string;
   onTimeRangeChange?: (range: string) => void
 }
 export function AnalyticsChart({
   title;
-<<<<<<< HEAD
-  description;
-  data;
-  type;
-=======
+
   description
   data
   type = 'line';
@@ -121,7 +111,7 @@ export function AnalyticsChart({
                   contentStyle={{
                     backgroundColor: '#1a2332'
                     borderColor: '#293445'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                     color: '#fff'
                   }}
                 />

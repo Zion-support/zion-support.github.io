@@ -5,13 +5,10 @@ import { Sparkles, Loader2, RefreshCw, Check, X  } from '@/components/icons';
 import { useAIContentEnhancer, AIEnhancementOptions  } from '@/hooks/useAIContentEnhancer';
 import { toast } from '@/hooks/use-toast';
 interface AIEnhancementButtonProps {
-<<<<<<< HEAD
-  options: AIEnhancementOptions;
-  onEnhanced: (enhancedContent: string) => void;
-=======
+
   options: AIEnhancementOptions
   onEnhanced: (enhancedContent: string) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   buttonText?: string;
   className?: string;
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
@@ -21,9 +18,7 @@ interface AIEnhancementButtonProps {
 export function AIEnhancementButton({
   options;
   onEnhanced;
-<<<<<<< HEAD
-  buttonText;
-=======
+
   buttonText = "Enhance with AI";
   className;
   variant = "ghost";
@@ -66,7 +61,7 @@ export function AIEnhancementButton({
     setShowActions(false);
     setGeneratedContent(null)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">

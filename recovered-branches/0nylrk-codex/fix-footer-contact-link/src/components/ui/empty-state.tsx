@@ -4,28 +4,20 @@ import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 interface EmptyStateProps {
-<<<<<<< HEAD
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  action?: {
-    text: string;
-=======
+
   icon: React.ReactNode
   title: string
   description: string
   action?: {
     text: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     href?: string;
     onClick?: () => void
   }
   secondaryAction?: {
-<<<<<<< HEAD
-    text: string;
-=======
+
     text: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     href?: string;
     onClick?: () => void
   }
@@ -40,12 +32,10 @@ export function EmptyState({
   className}: EmptyStateProps) {
   return (
     <div
-<<<<<<< HEAD
-      className;
-=======
+
       className={cn(
         "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
         className
       )}
     >

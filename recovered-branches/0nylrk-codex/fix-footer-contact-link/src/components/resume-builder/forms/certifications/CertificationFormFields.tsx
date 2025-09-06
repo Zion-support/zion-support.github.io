@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 
-import { FormField, FormItem, FormLabel, FormControl, FormMessage  } from '@/components/ui/form';
-import { Input  } from '@/components/ui/input';
-import { UseFormReturn  } from 'react-hook-form';
-import { CertificationFormValues } from './types';
-=======
 import {
   FormField
   FormItem
@@ -15,7 +9,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { UseFormReturn } from "react-hook-form";
 import { CertificationFormValues } from "./types";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface CertificationFormFieldsProps {
   form: UseFormReturn<CertificationFormValues>;
 }

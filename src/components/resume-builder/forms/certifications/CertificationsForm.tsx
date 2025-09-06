@@ -17,18 +17,7 @@ interface CertificationsFormProps {
   certifications: Certification[];
   onComplete: () => void;
   onBack: () => void
-<<<<<<< HEAD
-}
 
-export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {
-  const { addCertification, updateCertification, deleteCertification, isLoading } = useResume();
-  const [editingId, setEditingId] = useState<string | null>(null),
-  const [error, setError] = useState<string | null>(null),
-
-  // Helper function to format dates as strings for form inputs
-  const formatDateValue = null;
-                      credential_url: ''})
-=======
 export function CertificationsForm({
   resumeId
   certifications
@@ -155,7 +144,7 @@ export function CertificationsForm({
                       credential_id: ''
                       credential_url: ''
                     })
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                   } else {
                     onBack()
                   }

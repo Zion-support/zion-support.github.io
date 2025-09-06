@@ -8,10 +8,7 @@ import { Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud;
  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
-<<<<<<< HEAD
-const contactInfo = null;
-              we provide comprehensive protection that adapts to evolving threats.
-=======
+
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -187,7 +184,7 @@ export default function CybersecurityServices() {
               Protect your business with cutting-edge cybersecurity solutions.
               From zero trust security to AI threat intelligence, we provide
               comprehensive protection that adapts to evolving threats.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Link href='#services' className='group'>

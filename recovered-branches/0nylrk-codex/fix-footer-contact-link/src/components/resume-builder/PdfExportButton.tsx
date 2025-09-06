@@ -23,11 +23,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
   const [isExporting, setIsExporting] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),
   const [includePortfolio, setIncludePortfolio] = useState(true);
-<<<<<<< HEAD
-  const [fontFamily, setFontFamily] = useState<FontFamily>('default'),
 
-  const handleExport = null;
-=======
   const [fontFamily, setFontFamily] = useState<FontFamily>('default');
   const handleExport = async () => {
     if (isExporting) return;
@@ -64,7 +60,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
       setIsExporting(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

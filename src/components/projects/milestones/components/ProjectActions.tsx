@@ -11,17 +11,12 @@ interface ProjectActionsProps {
   isTalent: boolean;
   onAddMilestone: () => void
 export function ProjectActions({
-<<<<<<< HEAD
-  projectId;
-  isUnderDispute;
-  disputeId;
-  isTalent;
-=======
+
   projectId
   isUnderDispute
   disputeId
   isTalent
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onAddMilestone
 }: ProjectActionsProps) {
   return (

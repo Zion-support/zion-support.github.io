@@ -1,10 +1,8 @@
 import Head from 'next/head',
 import Link from 'next/link';
-<<<<<<< HEAD
-import React from 'react';
-=======
+
 import React from 'react'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function FutureOfWork() {
   return (
     <>
@@ -13,9 +11,7 @@ export default function FutureOfWork() {
           The Future of Work: Human-AI Collaboration | Zion Tech Group
         </title>
         <meta
-<<<<<<< HEAD
-          name;
-=======
+
           name='description'
           content='How autonomous systems are reshaping the workplace and enhancing human capabilities.'
         />
@@ -73,7 +69,7 @@ export default function FutureOfWork() {
                 <p className='text-white/90 mb-4'>
                   At Zion Tech Group, we believe the future of work lies in
                   creating intelligent systems that work alongside humans;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                   handling routine tasks while humans focus on creative
                   problem-solving, strategic thinking, and innovation.
                 </p>

@@ -5,39 +5,29 @@ export interface TalentProfileData {
   name: string;
   title: string;
   bio: string;
-<<<<<<< HEAD
-  skills: string[];
-=======
+
   skills: string[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   location?: string
 }
 export interface CategorizedSkills {
   programming: string[];
   devops: string[];
   platforms: string[];
-<<<<<<< HEAD
-  softSkills: string[];
-=======
+
   softSkills: string[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   other: string[]
 }
 export interface EnhancedProfile {
-<<<<<<< HEAD
-  summary: string;
-=======
+
   summary: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   categorizedSkills: CategorizedSkills
 }
 export function useTalentProfileEnhancer() {
   const [isGenerating, setIsGenerating] = useState(false);
-<<<<<<< HEAD
-  const [error, setError] = useState<string | null>(null),
-  
-  const enhanceProfile = null;
-=======
+
   const [error, setError] = useState<string | null>(null);
   const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {
     setIsGenerating(true);
@@ -61,7 +51,7 @@ export function useTalentProfileEnhancer() {
   return {
     enhanceProfile;
     isGenerating;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     error
   }
 }

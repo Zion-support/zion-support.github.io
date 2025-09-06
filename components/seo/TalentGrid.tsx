@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import { TALENT_PROFILES } from '../../data/talent';
-import type { TalentProfile } from '../../data/talent';
-type Props = any;
-=======
+
 import React from "react";
 import { TALENT_PROFILES } from "../../data/talent";
 import type { TalentProfile } from "../../data/talent";
@@ -32,7 +27,7 @@ export default function TalentGrid({ region, service }: Props) {
       )
     [region, service]
   );
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (items.length === 0) {
     return (
       <div className="text-sm text-gray-400">

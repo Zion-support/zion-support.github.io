@@ -4,9 +4,7 @@ import { useAuth  } from '@/hooks/useAuth';
 import { MessagingContextType  } from '@/types/messaging';
 import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging';
 // Default context used when React type definitions are missing
-<<<<<<< HEAD
-const defaultContext: MessagingContextType;
-=======
+
 const defaultContext: MessagingContextType = {
   messages: []
   conversations: []
@@ -89,7 +87,7 @@ export function MessagingProvider({ children }: { children: ReactNode }) {
     fetchConversations
     loadMessages
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <MessagingContext.Provider value={contextValue}>
       {children}

@@ -8,19 +8,7 @@ import {
 } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
-<<<<<<< HEAD
-import Link from "next/link";
-import { cn } from "@/lib/utils";
-interface InteractiveFeaturesProps {
-  className?: string;
-  style?: React.CSSProperties
-}
 
-export function InteractiveFeatures({ className, style }: InteractiveFeaturesProps) {
-  const [openIndex, setOpenIndex] = React.useState<number | null>(null),
-
-  const features = null;
-=======
 import Link from 'next/link'
 import { cn } from '@/lib/utils';interface InteractiveFeaturesProps {
   className?: string
@@ -133,4 +121,4 @@ export function InteractiveFeatures({
     </section>
   )
 export default InteractiveFeatures
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

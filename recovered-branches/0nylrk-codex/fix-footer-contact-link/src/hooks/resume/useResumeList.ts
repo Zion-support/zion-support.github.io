@@ -6,12 +6,7 @@ import { useAuth } from '@/hooks/useAuth';
 export function useResumeList() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-  const [error, setError] = useState<string | null>(null),
-  const [resumes, setResumes] = useState<Resume[]>([]),
-  
-  const fetchResumes = null;
-=======
+
   const [error, setError] = useState<string | null>(null);
   const [resumes, setResumes] = useState<Resume[]>([]);
   const fetchResumes = async () => {
@@ -70,7 +65,7 @@ export function useResumeList() {
     isLoading;
     error;
     resumes;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     fetchResumes
   }
 }

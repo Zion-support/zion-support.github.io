@@ -11,21 +11,14 @@ import { MessageSquare, FileText, Video, Calendar, Users, Settings, X  } from 'l
 import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
 import { toast  } from 'sonner';
 export default function ProjectRoom() {
-<<<<<<< HEAD
-  const { projectId } = useParams() as { projectId: string };
-  const [activeTab, setActiveTab] = useState('chat');
-  const [isInCall, setIsInCall] = useState(false);
-  const [callParticipants, setCallParticipants] = useState<Array<{
-    id: string;
-    name: string;
-=======
+
   const { projectId } = useParams() as { projectId: string }
   const [activeTab, setActiveTab] = useState('chat');
   const [isInCall, setIsInCall] = useState(false);
   const [callParticipants, setCallParticipants] = useState<Array<{
     id: string
     name: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     avatar?: string;
     isMuted?: boolean;
     isVideoEnabled?: boolean;
@@ -33,17 +26,7 @@ export default function ProjectRoom() {
     isHost?: boolean
   }>>([
     {
-<<<<<<< HEAD
-      id: 'user-1';
-      name: 'You';
-      isHost: true;
-      isVideoEnabled: true;
-      isMuted: false
-    }
-  ]);
-  
-  const startVideoCall = null;
-=======
+
       id: 'user-1'
       name: 'You'
       isHost: true
@@ -80,7 +63,7 @@ export default function ProjectRoom() {
       toast(`${randomUser.name} joined the call`)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />

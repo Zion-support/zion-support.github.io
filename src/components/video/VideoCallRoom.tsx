@@ -5,16 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react'
-<<<<<<< HEAD
-import './video-call.css';
-interface Participant {
-  id: string;
-  name: string;
-  avatar?: string;
-  isMuted?: boolean;
-  isVideoEnabled?: boolean;
-  isScreenSharing?: boolean;
-=======
+
 import './video-call.css';interface Participant {
   id: string
   name: string
@@ -22,24 +13,11 @@ import './video-call.css';interface Participant {
   isMuted?: boolean
   isVideoEnabled?: boolean
   isScreenSharing?: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   isHost?: boolean
 }
 interface VideoCallRoomProps {
-<<<<<<< HEAD
-  roomId: string;
-  participants?: Participant[];
-  onLeave?: () => void;
-  onToggleMute?: (isMuted: boolean) => void;
-  onToggleVideo?: (isEnabled: boolean) => void;
-  onToggleScreenShare?: (isSharing: boolean) => void;
-  className?: string
-}
 
-export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ 
-  roomId;
-  participants;
-=======
   roomId: string
   participants?: Participant[]
   onLeave?: () => void
@@ -225,4 +203,4 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     </Card>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

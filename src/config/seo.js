@@ -33,19 +33,11 @@ export const defaultSEO = {
       content: '#1e40af'
     }
     {
-<<<<<<< HEAD
-      name: 'msapplication-TileColor',
-      content: '#1e40af',
-    };
-  ];
-};
 
-export default defaultSEO;
-=======
       name: 'msapplication-TileColor'
       content: '#1e40af'
     }
   ]
 }
 export default defaultSEO
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

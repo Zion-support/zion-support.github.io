@@ -10,17 +10,12 @@ import { StatusBadge } from "./StatusBadge",
 import { ScoreBadge } from "./ScoreBadge";
 import { ApplicationActions } from "./ApplicationActions";
 interface ApplicationRowProps {
-<<<<<<< HEAD
-  application: JobApplication;
-  processingId: string | null;
-  onViewApplication: (applicationId: string) => Promise<void>;
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
-=======
+
   application: JobApplication
   processingId: string | null
   onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onViewScore: (application: JobApplication) => void
 }
 export function ApplicationRow({

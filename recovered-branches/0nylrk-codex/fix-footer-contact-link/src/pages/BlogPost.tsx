@@ -10,10 +10,7 @@ import { AppLayout } from "@/layout/AppLayout";
 // Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from "@/data/blog-posts";
 export default function BlogPost() {
-<<<<<<< HEAD
-  const { slug } = useParams() as { slug: string };
-  const navigate = null;
-=======
+
   const { slug } = useParams() as { slug: string }
   const navigate = useNavigate();
   const [post, setPost] = useState<BlogPostType | null>(null);
@@ -217,7 +214,7 @@ export default function BlogPost() {
                           className="object-cover w-full h-full"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                             target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
                           }}
                         />

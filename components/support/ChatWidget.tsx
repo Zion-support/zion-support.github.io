@@ -1,8 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { X } from 'lucide-react';
-<<<<<<< HEAD
-type ChatMessage = any;
-=======
+
 type ChatMessage = {
   role: 'user' | 'assistant' | 'system'
   content: string
@@ -275,7 +273,7 @@ export default function ChatWidget() {
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' && !e.shiftKey) {
                       e.preventDefault();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                       onSend()
                     }
                   }}

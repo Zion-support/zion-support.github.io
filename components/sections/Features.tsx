@@ -1,36 +1,21 @@
 import React from 'react',
 import Card from '../ui/Card';
 import { Zap } from 'lucide-react';
-<<<<<<< HEAD
-interface Feature {
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+
   icon: React.ReactNode;
   title: string;
   description: string;
   color: string;
   gradient: string;
-<<<<<<< HEAD
-  delay?: number
-}
 
-=======
   delay?: number;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface FeaturesProps {
   title: string;
   subtitle: string;
   features: Feature[];
-<<<<<<< HEAD
-  columns?: 2 | 3 | 4
-}
 
-const Features: React.FC<FeaturesProps> = ({
-  title;
-  subtitle;
-  features;
-  columns;
-=======
   columns?: 2 | 3 | 4;
 const Features: React.FC<FeaturesProps> = ({
   title
@@ -102,4 +87,4 @@ const Features: React.FC<FeaturesProps> = ({
 export default Features;  )
 }
 export default Features;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

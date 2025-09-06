@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-const configPath = null;
-    return res.status(200).json(result)
-=======
+
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -84,7 +78,7 @@ export default async function handler(
     }
     writeJson(cachePath, result);
     return res.status(200).json(result);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch (e: any) {
     return res
       .status(500)

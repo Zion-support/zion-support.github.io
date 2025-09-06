@@ -5,10 +5,7 @@ import {
   NotificationType;
 } from '../../../utils/notifications';
 function getUserId(req: NextApiRequest): string {
-<<<<<<< HEAD
-  const cookie = null;
-      return res.status(200).json({ notifications: fallback })
-=======
+
   const cookie = req.headers.cookie |'';
   const match = cookie
     .split(';')
@@ -110,7 +107,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }
       ];
       return res.status(200).json({ notifications: fallback });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     }
     return res.status(200).json({ notifications: data as NotificationItem[] });
   } catch (e) {

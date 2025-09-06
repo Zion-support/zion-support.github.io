@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-import { useEffect, useState  } from 'react';
-=======
+
 import { useEffect, useState } from 'react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([])
   useEffect(() => {
@@ -10,11 +8,9 @@ export default function CloudAutomationHub() {
       .then((r) => r.json())
       .then((d) => setLogs(d.logs |[]))
       .catch(() => setLogs([]))
-<<<<<<< HEAD
-  }, []);
-=======
+
   }, [])
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6">
       <div>

@@ -7,9 +7,7 @@ import { Brain, BarChart3, TrendingUp, Users, Target, Zap;
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function AIBusinessIntelligencePage() {
-<<<<<<< HEAD
-  const features = null;
-=======
+
   const features = [
     {
       icon: Brain
@@ -137,7 +135,7 @@ const AIBusinessIntelligence: React.FC = () => {
       popular: false
     }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Layout>
       <Head>

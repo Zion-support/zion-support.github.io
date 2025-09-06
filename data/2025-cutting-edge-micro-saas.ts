@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export const cuttingEdgeMicroSaasServices2025 = null;
-=======
+
 export const cuttingEdgeMicroSaasServices2025 = [
   {
     id: 'customer-success-ai-pro'
@@ -439,4 +437,4 @@ export const cuttingEdgeMicroSaasServices2025 = [
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button";
-import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react'
-import { toast } from "@/hooks/use-toast";
-=======
+
 import {
   Card
   CardContent
@@ -21,7 +16,7 @@ import { Button } from '@/components/ui/button'
   Link
 } from 'lucide-react'
 import { toast } from '@/hooks/use-toast'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface ResourceItem {
   id: string;
   title: string;
@@ -32,13 +27,7 @@ interface ResourceItem {
 export function PartnerResources() {
   const resources: ResourceItem[] = [
     {
-<<<<<<< HEAD
-      id: 'logo-pack';
-      title: 'Zion AI Logo Pack';
-      description: 'Official logos in various formats (PNG, SVG, JPG)',
-      type: 'image';
-      icon: <FileImage className;
-=======
+
       id: 'logo-pack'
       title: 'Zion AI Logo Pack'
       description: 'Official logos in various formats (PNG, SVG, JPG)'
@@ -95,7 +84,7 @@ export function PartnerResources() {
       variant: 'default'
     })
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='space-y-6'>
       <Card className='bg-zion-blue-dark border-zion-blue-light'>

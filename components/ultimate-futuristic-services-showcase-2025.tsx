@@ -2,10 +2,7 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Star, TrendingUp, Users, Award, Clock, Heart;
-  Brain, Atom, Shield, Rocket, Zap, Globe;
-=======
+
 import {
   Star
   TrendingUp
@@ -63,7 +60,7 @@ import Layout from '../components/layout/Layout';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';import {
   Star, TrendingUp, Users, Award, Clock, Heart
   Brain, Atom, Shield, Rocket, Zap, Globe
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   CheckCircle, ArrowRight, Search, Filter;
   ChevronDown, ChevronUp, Eye, Play, Sparkles;
   Target, Microscope, Lock, Cloud, BarChart3;
@@ -77,9 +74,7 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
-<<<<<<< HEAD
-const contactInfo = null;
-=======
+
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -652,7 +647,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
                 className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300'              >              <button
                 onClick={() => {
                   setSearchTerm('');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                   setSelectedCategory('all')
                 }}
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"

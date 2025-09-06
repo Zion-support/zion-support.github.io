@@ -2,9 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import UseTokensButton from '../../components/tokens/UseTokensButton';
-<<<<<<< HEAD
-const LandingPageGenerator: NextPage;
-=======
+
 const LandingPageGenerator: NextPage = () => {
   return (
     <div>
@@ -22,4 +20,4 @@ const LandingPageGenerator: NextPage = () => {
   )
 }
 export default LandingPageGenerator;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

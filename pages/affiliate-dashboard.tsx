@@ -1,8 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 function getRefCode(): string {
-<<<<<<< HEAD
-  if (typeof window;
-=======
+
   if (typeof window === 'undefined') return ''
   return localStorage.getItem('ref_code') |''
 }
@@ -40,7 +38,7 @@ export default function AffiliateDashboard() {
     }
   }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (!code) {
     return (
       <div className="space-y-4">

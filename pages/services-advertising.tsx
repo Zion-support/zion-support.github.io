@@ -1,8 +1,6 @@
 import React from 'react';
 import SEO from '../components/SEO';
-<<<<<<< HEAD
-const ext = null;
-=======
+
 const ext = (url: string) => (
 	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://', '')}</a>
 )
@@ -379,7 +377,7 @@ export default function ServicesAdvertisingPage() {
                 { name: 'Domain & DNS Monitor', price: '$89/mo', href: '/domain-dns-monitor' }
                 { name: 'Uptime & SLO Monitor', price: '$99/mo', href: '/uptime-slo-monitor' }
                 { name: 'PDF Render API', price: '$49/mo', href: '/pdf-render-api' }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor' }
               ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">

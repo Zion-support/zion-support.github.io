@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { createClient } from '@supabase/supabase-js';
-import OpenAI from 'openai';
-const supabaseUrl = null;
-    return res.status(500).json({ message: 'Server error' })
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 import OpenAI from "openai";
@@ -91,6 +85,6 @@ export default async function handler(
       return res.status(500).json({ message: "Server error" });
     }
     return res.status(500).json({ message: "Server error" });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
 }

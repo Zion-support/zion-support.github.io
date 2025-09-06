@@ -1,14 +1,4 @@
-<<<<<<< HEAD
 
-import React, { useState } from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge";
-=======
 import React, { useState } from 'react'
 import {
   Card
@@ -34,13 +24,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
   TableRow
 } from '@/components/ui/table'
 import { Badge } from '@/components/ui/badge'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Search, Filter } from 'lucide-react'
 import { SEO } from "@/components/SEO";
 // Mock data for support requests
-<<<<<<< HEAD
-const MOCK_SUPPORT_REQUESTS = null;
-=======
+
 const MOCK_SUPPORT_REQUESTS = [
   {
     id: 'SR-1001'
@@ -167,7 +155,7 @@ export default function SupportRequests() {
     setPriorityFilter(null)
     setCategoryFilter(null)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO

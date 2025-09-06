@@ -8,13 +8,7 @@ import { RefreshCcw, AlertCircle } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface MarketplaceErrorFallbackProps extends FallbackProps {
   // Additional props if needed
-<<<<<<< HEAD
 
-function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErrorFallbackProps) {
-  const handleRetry = null;
-  return (
-    <ErrorBoundary 
-=======
 function MarketplaceErrorFallback({
   error
   resetErrorBoundary
@@ -109,7 +103,7 @@ export function MarketplaceErrorBoundary({
   )
 }   return (
     <ErrorBoundary
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       FallbackComponent={MarketplaceErrorFallback}
       onError={handleError}
     >

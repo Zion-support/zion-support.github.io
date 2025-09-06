@@ -1,7 +1,5 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-export type Course = any;
-=======
+
 export type Course = {
   id: string;
   title: string;
@@ -20,7 +18,7 @@ export default function CourseCard({ course }: { course: Course }) {
   category: string
   certificationBadge: string
   description?: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function CourseCard({ course }: { course: Course }) {
   return (
     <div className='border rounded-lg p-4 hover:shadow-md transition'>

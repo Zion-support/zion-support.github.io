@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from "react",
-import EnhancedLayout from "../../components/layout/EnhancedLayout";
-export default function AdminTokens() {
-  const [transactions, setTransactions] = useState<any[]>([]);
-  const [userId, setUserId] = useState("");
-  const [amount, setAmount] = useState(100);
-  const [reason, setReason] = useState("admin_action");
-  const [config, setConfig] = useState<any>(null),
 
-  async function load() {
-    const [txRes, cfgRes] = await Promise.all([
-      fetch("/api/admin/tokens").then((r) => r.json()),
-      fetch("/api/admin/tokens/config").then((r) => r.json())]),
-    setTransactions(txRes.transactions || []);
-=======
 import React, { useEffect, useState } from "react";
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
 export default function AdminTokens() {
@@ -27,16 +12,14 @@ export default function AdminTokens() {
       fetch("/api/admin/tokens").then((r) => r.json())
       fetch("/api/admin/tokens/config").then((r) => r.json())])
     setTransactions(txRes.transactions |[])
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     setConfig(cfgRes)
   }
   useEffect(() => {
     load()
   }, [])
   async function issue() {
-<<<<<<< HEAD
-    const res = null;
-=======
+
     const res = await fetch("/api/admin/tokens/issue", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
@@ -60,7 +43,7 @@ export default function AdminTokens() {
       headers: { "Content-Type": "application/json" }
       body: JSON.stringify(config)})
     const data = await res.json()
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     setConfig(data)
   }
   return (

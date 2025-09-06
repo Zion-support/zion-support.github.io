@@ -1,9 +1,7 @@
 import type { GetServerSideProps } from 'next';
 import { FormEvent, useState } from 'react';
 import type { Vendor } from '../../utils/vendor-types';
-<<<<<<< HEAD
-type Props = any;
-=======
+
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
 export default function VendorProfilePage({ vendor }: Props) {
   const [message, setMessage] = useState<string | null>(null);
@@ -194,4 +192,4 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const vendor = slug ? getVendorBySlug(slug) |null : null;
   return { props: { vendor } }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

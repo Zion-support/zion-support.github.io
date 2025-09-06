@@ -7,9 +7,7 @@ import { ContractTemplate } from "@/types/contracts";
 import { ContractFormValues } from "@/components/contracts/components/ContractForm";
 export function useContractTemplates() {
   const { user, isAuthenticated } = useAuth();
-<<<<<<< HEAD
-  const queryClient = null;
-=======
+
   const queryClient = useQueryClient();
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
@@ -221,7 +219,7 @@ export function useContractTemplates() {
     createTemplate;
     updateTemplate;
     deleteTemplate
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     setDefaultTemplate
   }
 }

@@ -2,10 +2,7 @@ import React from 'react',
 import Head from 'next/head';
 import Link from 'next/link';
 export default function TechnologyInsightsPage() {
-<<<<<<< HEAD
-  const technologyTrends = null;
-                      AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
-=======
+
   const technologyTrends = [
     {
       id: 'quantum-computing'
@@ -314,7 +311,7 @@ export default function TechnologyInsightsPage() {
                     <h3 className="text-2xl font-bold mb-4 text-cyan-400">Cutting-Edge Research</h3>
                     <p className="text-white/80 mb-6">
                       Our innovation lab is dedicated to exploring the frontiers of technology, conducting research in autonomous systems, AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                     </p>
                     <ul className="space-y-2 text-white/70">
                       <li>• Advanced AI research and development</li>

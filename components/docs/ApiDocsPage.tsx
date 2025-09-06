@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import React, { useMemo, useState } from 'react',
-import Sidebar from './Sidebar',
-import EndpointDetail from './EndpointDetail',
-import v1 from '../../data/api-docs/v1';
-import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types';
-export default function ApiDocsPage() {
-  const spec: ApiDocsSpec;
-=======
+
 import React, { useMemo, useState } from 'react';
 import Sidebar from './Sidebar';
 import EndpointDetail from './EndpointDetail';
@@ -68,7 +60,7 @@ function ChangelogWidget() {
   async function save() {
     setMessage('')
     await fetch('/api/docs/changelog', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content }) })
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     setMessage('Saved')
   }
   return (

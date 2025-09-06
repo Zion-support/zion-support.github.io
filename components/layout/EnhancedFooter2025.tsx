@@ -1,14 +1,7 @@
 import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Phone, Mail, MapPin, Star, ArrowRight;
-  Brain, Atom, Shield, Rocket, Target, Microscope;
-  Zap, Globe, Database, Lock, Cloud, BarChart3;
-  Twitter, Linkedin, Github, Youtube, Instagram
- } from 'lucide-react';
-const contactInfo = null;
-=======
+
 import {
   Phone
   Mail
@@ -438,4 +431,4 @@ const EnhancedFooter2025: React.FC = () => {
 export default EnhancedFooter2025;  )
 }
 export default EnhancedFooter2025;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -3,11 +3,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 export default function FrontLanding() {
   return (
-<<<<<<< HEAD
-    <div className;
-              { title: 'Content & SEO', desc: 'Curates content, updates promotions, and tunes metadata for reach.' }].map((c) => (
-              <motion.article
-=======
+
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>
       <Head>
         <title>Zion — Autonomous Cloud Automations</title>
@@ -185,7 +181,7 @@ export default function FrontLanding() {
                 desc: 'Curates content, updates promotions, and tunes metadata for reach.'
               }
             ].map(c => (              <motion.article
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 key={c.title}
                 initial={{ opacity: 0, y: 8 }}
                 whileInView={{ opacity: 1, y: 0 }}

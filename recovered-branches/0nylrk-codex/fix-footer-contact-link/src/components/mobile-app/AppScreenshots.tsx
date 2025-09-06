@@ -3,9 +3,7 @@ import React, { useRef } from "react",
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 // These would be replaced with actual screenshots
-<<<<<<< HEAD
-const mockScreenshots = null;
-=======
+
 const mockScreenshots = [
   { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" }
   { id: 2, alt: "Talent matching screen", src: "/placeholder.svg" }
@@ -71,4 +69,4 @@ export const AppScreenshots: React.FC = () => {
     </section>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

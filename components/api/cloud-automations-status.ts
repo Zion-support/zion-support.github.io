@@ -2,10 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  const dir = null;
-          data[f.replace('.json', '')] = JSON.parse(fs.readFileSync(fp, 'utf8'))
-=======
+
   const dir = path.resolve(process.cwd(), "data/cloud-automations");
   const data: Record<string, any> = {}
   try {
@@ -19,7 +16,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
           data[f.replace(".json", "")] = JSON.parse(
             fs.readFileSync(fp, "utf8")
           );
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
         }
       }
     }

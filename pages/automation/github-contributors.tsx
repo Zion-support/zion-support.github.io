@@ -2,11 +2,9 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
 import data from '../../data/github-contributors.json';
 export default function GithubContributorsPage() {
-<<<<<<< HEAD
-  const items: any[] = (data?.items || []).slice(0, 60);
-=======
+
   const items: any[] = (data?.items |[]).slice(0, 60)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">

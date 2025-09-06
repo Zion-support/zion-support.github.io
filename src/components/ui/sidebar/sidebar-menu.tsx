@@ -10,10 +10,7 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   target?: string;
   badge?: React.ReactNode
 }
-<<<<<<< HEAD
 
-const SidebarMenuItem = null;
-=======
 const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
   ({ icon, active, children, href, target, badge, className, ...props }, ref,) => {
     if (href) {
@@ -26,4 +23,4 @@ export { SidebarMenuItem, SidebarMenuGroup }
 export { SidebarMenuItem, SidebarMenuGroup }
 }
 export { SidebarMenuItem, SidebarMenuGroup }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

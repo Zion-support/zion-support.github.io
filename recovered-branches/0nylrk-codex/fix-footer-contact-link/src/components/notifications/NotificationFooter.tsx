@@ -5,11 +5,7 @@ import { useNavigate } from 'react-router-dom';
 interface NotificationFooterProps {
   onClose: () => void;
 }
-<<<<<<< HEAD
 
-export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {
-  const navigate = null;
-=======
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({
   onClose
 }) => {
@@ -31,4 +27,4 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({
     </div>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

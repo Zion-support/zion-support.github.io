@@ -11,35 +11,26 @@ import { PricingSuggestionBox } from "./PricingSuggestionBox",
 import { useAuth } from "@/hooks/useAuth";
 import { Sparkles } from "lucide-react";
 interface TalentRateRecommenderProps {
-<<<<<<< HEAD
-  skills: string[];
-  yearsExperience: number;
-  location?: string;
-  onSuggestionApplied: (value: number) => void;
-=======
+
   skills: string[]
   yearsExperience: number
   location?: string;
   onSuggestionApplied: (value: number) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   rateType: "hourly" | "fixed"
 }
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
   skills;
   yearsExperience;
   location;
-<<<<<<< HEAD
-  onSuggestionApplied;
-=======
+
   onSuggestionApplied
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   rateType}) => {
   const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
   const { user } = useAuth();
-<<<<<<< HEAD
-  const generateSuggestion = null;
-=======
+
   const generateSuggestion = async () => {
     if (skills.length === 0 |yearsExperience <= 0) {
       return
@@ -101,4 +92,4 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
     </div>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

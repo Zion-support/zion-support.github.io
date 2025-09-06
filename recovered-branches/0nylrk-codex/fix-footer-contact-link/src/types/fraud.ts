@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
-export type FraudSeverity = any;
-=======
+
 export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
 export interface FraudFlag {
   id: string;
@@ -28,6 +26,6 @@ export interface FraudStats {
   suspicious_count: number;
   dangerous_count: number;
   false_positives: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   actioned_count: number
 }

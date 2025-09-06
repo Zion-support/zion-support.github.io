@@ -1,6 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
+
   id: string;
   name: string;
   tagline: string;
@@ -517,7 +516,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
     contactInfo
   }
 ];import { ServiceVariant  } from "../types/service-variants";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export interface MarketValidatedService {
 	id: string;
 	name: string;
@@ -533,17 +532,7 @@ export interface MarketValidatedService {
 	customers?: number;
 	trialDays?: number;
 	setupTime?: string;
-<<<<<<< HEAD
-	contactInfo: {
-		mobile: string;
-		email: string;
-		address: string;
-		website?: string
-	}
-}
 
-const contactInfo = null;
-=======
 	contactInfo: {mobile: string;
 		email: string;
 		address: string;
@@ -931,4 +920,4 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		setupTime: '2 hours';
 		contactInfo
 	}];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

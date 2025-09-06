@@ -18,14 +18,7 @@ import { CalendarIcon, Check, Clock } from "lucide-react",
 import { toast } from "@/components/ui/use-toast";
 import { useInterviews } from "@/hooks/useInterviews";
 interface InterviewRequestFormProps {
-<<<<<<< HEAD
-  talent: TalentProfile;
-  onClose: () => void;
-  userDetails?: UserProfile
-}
 
-const formSchema = null;
-=======
   talent: TalentProfile
   onClose: () => void
   userDetails?: UserProfile
@@ -141,7 +134,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                         variant="outline"
                         className={cn(
                           "w-full pl-3 text-left font-normal";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                           !field.value && "text-muted-foreground"
                         )}
                       >

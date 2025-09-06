@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-import { Notification as BaseNotification } from '@/types/notifications';
-export type NotificationType = any;
-=======
+
 import {Notification, as, BaseNotification} from '@/types/notifications';
 export type NotificationType =
   | 'message'
@@ -31,6 +28,6 @@ export interface NotificationContextType {
   markAllAsRead: () => Promise<void>;
   dismissNotification: (id: string) => Promise<void>;
   setFilter: (filter: FilterType) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   fetchNotifications: () => Promise<void>
 }

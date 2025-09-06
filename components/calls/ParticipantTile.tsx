@@ -1,8 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-<<<<<<< HEAD
-import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
-type Props = any;
-=======
+
 import type {
   RemoteParticipant
   LocalParticipant
@@ -84,7 +81,7 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
       </div>
     </div>
   );  }, [participant]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative">
       <video ref={videoRef} autoPlay playsInline muted={Boolean(isLocal)} className="w-full h-48 object-cover bg-black" />

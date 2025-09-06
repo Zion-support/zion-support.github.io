@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 
-import React from "react",
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",
-import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",
-import { JobMatchCard } from "@/components/jobs/JobMatchCard",
-=======
 import React from "react";
 import {
   Card
@@ -15,19 +9,17 @@ import {
 } from "@/components/ui/card";
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
 import { JobMatchCard } from "@/components/jobs/JobMatchCard";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { useJobMatches } from "@/hooks/useJobMatches";
 import { Skeleton } from "@/components/ui/skeleton";
 interface JobMatchesProps {
   jobId: string;
 }
 export function JobMatches({ jobId }: JobMatchesProps) {
-<<<<<<< HEAD
-  const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId);
-=======
+
   const { matches, isLoading, isProcessing, triggerAIMatching } =
     useJobMatches(jobId);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (isLoading) {
     return (
       <Card>

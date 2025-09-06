@@ -7,9 +7,7 @@ interface ServiceDetailsProps {
 // Component to show service details for the selected country
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
-<<<<<<< HEAD
-  const getDatacenters = null;
-=======
+
   const getDatacenters = (country: string): string[] => {
     const dataCenters: Record<string, string[]> = {
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"];
@@ -58,7 +56,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
            `For remote locations, additional travel fees may apply.`
   }
   const datacenters = getDatacenters(country);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>

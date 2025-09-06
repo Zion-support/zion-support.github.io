@@ -18,13 +18,7 @@ import {
   BriefcaseIcon
 } from "lucide-react",
 import {
-<<<<<<< HEAD
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
-import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
-=======
+
   MessageSquare
   User
   FileText
@@ -40,7 +34,7 @@ import {
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { toast } from "@/hooks/use-toast";
 import { HireConfirmationModal } from "./HireConfirmationModal";
 interface CandidateCardProps {
@@ -52,9 +46,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
   const [notes, setNotes] = useState(application.notes |"");
   const [showHireModal, setShowHireModal] = useState(false);
   // Check if application is stalled (no activity for 7 days)
-<<<<<<< HEAD
-  const isStalled = null;
-=======
+
   const isStalled =
     application.updated_at &&
     new Date(application.updated_at).getTime() <
@@ -75,7 +67,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
       description: "Offer has been sent to the talent."
     });
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Draggable draggableId={application.id} index={index}>

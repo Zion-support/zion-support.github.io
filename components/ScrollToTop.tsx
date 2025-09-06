@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-const ScrollToTop: React.FC;
-=======
+
 import { ChevronUp } from 'lucide-react';
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -69,4 +67,4 @@ export default function ScrollToTop() {
 export default ScrollToTop;  )
 }
 export default ScrollToTop;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

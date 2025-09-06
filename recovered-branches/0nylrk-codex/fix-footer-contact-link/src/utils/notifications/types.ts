@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
-export type NotificationType = any;
-=======
+
 export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 export interface CreateNotificationParams {
   userId: string;
@@ -38,6 +36,6 @@ export interface SystemNotificationParams {
   message: string;
   actionUrl?: string | null;
   actionText?: string | null
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   sendEmail?: boolean
 }

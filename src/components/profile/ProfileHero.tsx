@@ -5,30 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Star } from 'lucide-react'
 import { cn } from "@/lib/utils";
 interface ProfileHeroProps {
-<<<<<<< HEAD
-  name: string;
-  title: string;
-  avatarUrl?: string;
-  coverImageUrl?: string;
-  location?: string;
-  rating?: number;
-  reviewCount?: number;
-  aiScore?: number;
-  profileType: 'service' | 'talent'
-export function ProfileHero({
-  name;
-  title;
-  avatarUrl;
-  coverImageUrl;
-  location;
-  rating;
-  reviewCount;
-  aiScore;
-  profileType
-}: ProfileHeroProps) {
-  return (
-    <div className;
-=======
+
   name: string
   title: string;  avatarUrl?: string;  name: string
   title: string
@@ -129,7 +106,7 @@ export function ProfileHero({
                   variant="outline"
                   className={cn(
                     "ml-2 border-zion-purple/50 text-zion-cyan"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}

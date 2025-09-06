@@ -3,22 +3,17 @@ import React from "react",
 import { Drawer } from "@/components/ui/drawer";
 import { FilterSidebar } from "@/components/talent/FilterSidebar";
 interface MobileFilterDrawerProps {
-<<<<<<< HEAD
-  isMobileFilterOpen: boolean;
-  setIsMobileFilterOpen: (isOpen: boolean) => void;
-=======
+
   isMobileFilterOpen: boolean
   setIsMobileFilterOpen: (isOpen: boolean) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   filterProps: any, // We'll pass all filter-related props through this object
 }
 export function MobileFilterDrawer({
   isMobileFilterOpen;
-<<<<<<< HEAD
-  setIsMobileFilterOpen;
-=======
+
   setIsMobileFilterOpen
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   filterProps
 }: MobileFilterDrawerProps) {
   return (

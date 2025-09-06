@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-type ProposalListItem = any;
-=======
+
 type ProposalListItem = {
   id: string
   title: string
@@ -22,7 +20,7 @@ export default function InternationalProposalsPage() {
       .catch(() => setItems([]))
   }, [])
   const filtered = items.filter((i) => (filter === 'All' ? true : i.regionalScope === filter))
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <EnhancedLayout>
       <div className="space-y-4">

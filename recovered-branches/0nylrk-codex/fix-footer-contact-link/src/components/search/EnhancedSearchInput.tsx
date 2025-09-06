@@ -5,22 +5,16 @@ import { Input } from "@/components/ui/input",
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
 import { SearchSuggestion } from "@/types/search";
 interface EnhancedSearchInputProps {
-<<<<<<< HEAD
-  value: string;
-  onChange: (value: string) => void;
-=======
+
   value: string
   onChange: (value: string) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   placeholder?: string;
   searchSuggestions: SearchSuggestion[]
 }
 export function EnhancedSearchInput({
   value;
-<<<<<<< HEAD
-  onChange;
-  placeholder;
-=======
+
   onChange
   placeholder = "Search..."
   searchSuggestions
@@ -62,7 +56,7 @@ export function EnhancedSearchInput({
     setIsFocused(false)
     inputRef.current?.blur()
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="relative w-full" ref={containerRef}>
       <div className="relative">

@@ -11,22 +11,17 @@ import { PersonalInfoFields } from "./PersonalInfoFields";
 import { ContactFields } from "./ContactFields";
 export interface BasicInfoFormProps {
   resumeId?: string;
-<<<<<<< HEAD
-  initialData?: Partial<BasicInfoFormData>,
-  onSave: (data: BasicInfoFormData) => void;
-=======
+
   initialData?: Partial<BasicInfoFormData>;
   onSave: (data: BasicInfoFormData) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   skills?: string[];
   yearsExperience?: number;
   onComplete?: () => void
 }
 export function BasicInfoForm({
   resumeId;
-<<<<<<< HEAD
-  initialData;
-=======
+
   initialData = {}
   onSave;
   skills = [];
@@ -61,7 +56,7 @@ export function BasicInfoForm({
       onComplete()
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">

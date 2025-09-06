@@ -6,10 +6,7 @@ interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
 }
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
-<<<<<<< HEAD
-  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive";
-  let message = null;
-=======
+
   let variant: "default" | "destructive" | "secondary" | "outline" = "destructive"
   let message = "This item has an open dispute";
   switch (status) {
@@ -25,7 +22,7 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       variant = "outline";
       message = "This dispute has been closed";
       break;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     default:
       break
   }

@@ -3,9 +3,7 @@ import fs from 'fs';
 import path from 'path';
 const HOST = process.env.SELF_HOST |'http: //localhost:3000'
 async function post(url: string, body: any) {
-<<<<<<< HEAD
-  const res = null;
-=======
+
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
   return await res.json()
 }
@@ -27,4 +25,4 @@ async function main() {
   }
 }
 main().catch((e) => { console.error(e), process.exit(1) });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,31 +1,19 @@
 import React from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Brain, Atom, Shield, Target, Rocket;
-  ArrowRight, Check, Star, TrendingUp, Users;
-  Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin
- } from 'lucide-react';
-// Import our new 2025 V2 innovative services
-=======
+
 import {Brain, Atom, Shield, Target, Rocket;
   ArrowRight, Check, Star, TrendingUp, Users;
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin;
 } from 'lucide-react';
 // Import our new 2025 V2 innovative services;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { innovativeMicroSaas2025ExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2';
 import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-services-expansion-v2';
 import { innovativeAIServices2025ExpansionV2 } from '../data/2025-innovative-ai-services-expansion-v2';
 import { industrySpecificSolutions2025V2 } from '../data/2025-industry-specific-solutions-v2';
 import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-breakthroughs-v2';
-<<<<<<< HEAD
-const fadeInUp = null;
-            IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs.
-          </motion.p>
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-=======
+
 const fadeInUp = {initial: { opacity: 0, y: 20 }
   animate: { opacity: 1, y: 0 }
   transition: { duration: 0.6 }
@@ -116,7 +104,7 @@ export default function ComprehensiveServicesShowcase2025V2() {const allNewServi
           </motion.p>;
           <motion.div;
             className="flex flex-col sm:flex-row gap-4 justify-center";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}

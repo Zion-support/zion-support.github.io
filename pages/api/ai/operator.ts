@@ -1,15 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-<<<<<<< HEAD
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY || 'mock-key'
-});
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-=======
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 // In-memory simple rate limiter (per IP)
 const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000, // 5 minutes
@@ -41,26 +32,10 @@ const authHeader = req.headers.authorization |''
 const ip = (req.headers['x-forwarded-for'] as string)?.split()[0]?.trim() |req.socket.remoteAddress |'unknown'
   if (isRateLimited(ip)) {
     return res.status(429).json({ error: 'Too Many Requests' })
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
   try {
-<<<<<<< HEAD
-    const { prompt } = req.body || {};
-    if (!prompt) {
-      return res.status(400).json({ error: 'Prompt is required' });
-    }
 
-    const response = await openai.chat.completions.create({
-      model: 'gpt-3.5-turbo',
-      messages: [{ role: 'user', content: prompt }],
-      max_tokens: 500
-    });
-
-    const content = response.choices[0]?.message?.content || '';
-    return res.status(200).json({ content });
-  } catch (error) {
-    return res.status(500).json({ error: 'Internal Server Error' });
-=======
 const { prompt, system, temperature } = (typeof req.body === 'string') ? JSON.parse(req.body) : req.body
     if (!prompt |typeof prompt !== 'string') {
       return res.status(400).json({ error: 'Missing prompt' })
@@ -79,6 +54,6 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
   } catch (err: any) {
     console.error('Operator error', err)
     return res.status(500).json({ error: 'Internal Server Error' })
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
 }

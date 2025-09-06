@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { useState } from 'react';
-import EnhancedButton from '../../components/ui/EnhancedButton';
-const steps = null;
-=======
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
@@ -56,4 +50,4 @@ const Onboarding: NextPage = () => {
   );
 }
 export default Onboarding;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,11 +1,5 @@
 
-<<<<<<< HEAD
-import React from "react",
-import { AppLayout } from "@/layout/AppLayout",
-import { SEO } from "@/components/SEO";
-import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager";
-const AppMetadataManager: React.FC;
-=======
+
 import React from "react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
@@ -26,4 +20,4 @@ const AppMetadataManager: React.FC = () => {
   )
 }
 export default AppMetadataManager;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -3,11 +3,9 @@ export interface ContentGenerationRequest {
   topic: string;
   tone: 'professional' | 'casual' | 'friendly' | 'formal';
   length: 'short' | 'medium' | 'long';
-<<<<<<< HEAD
-  keywords?: string[];
-=======
+
   keywords?: string[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   targetAudience?: string
 }
 export interface ContentGenerationResponse {
@@ -18,11 +16,9 @@ export interface ContentGenerationResponse {
   suggestions: string[];
   metadata: {
     title: string;
-<<<<<<< HEAD
-    description: string;
-=======
+
     description: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     tags: string[]
   }
 }
@@ -31,19 +27,14 @@ export interface ContentTemplate {
   name: string;
   description: string;
   type: string;
-<<<<<<< HEAD
-  preview: string;
-=======
+
   preview: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   price: number
 }
 export class AIContentGeneratorService {
   private apiKey: string;
-<<<<<<< HEAD
-  private baseUrl: string;
-  constructor(apiKey: string, baseUrl: string;
-=======
+
   private baseUrl: string
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
     this.apiKey = apiKey
@@ -175,4 +166,4 @@ export const AI_CONTENT_PRICING = {
     ]
   }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

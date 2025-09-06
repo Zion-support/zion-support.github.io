@@ -10,12 +10,7 @@ import { AddSkillForm  } from './AddSkillForm';
 import { BulkAddSkills } from './BulkAddSkills';
 export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {
   const { addSkill, deleteSkill, fetchResume } = useResume();
-<<<<<<< HEAD
-  const [error, setError] = useState<string | null>(null),
-  const [localSkills, setLocalSkills] = useState<Skill[]>(skills),
-  
-  const handleAddSkill = null;
-=======
+
   const [error, setError] = useState<string | null>(null);
   const [localSkills, setLocalSkills] = useState<Skill[]>(skills);
   const handleAddSkill = async (data: Skill) => {
@@ -51,7 +46,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       setError(err.message |'Failed to refresh skills')
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6">
       <div>

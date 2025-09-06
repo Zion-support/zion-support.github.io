@@ -2,9 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase as supabaseClient  } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL } from '@/data/talent';
 import type { TalentProfile } from '@/utils/types/talent';
-<<<<<<< HEAD
-const hasSupabase = null;
-=======
+
 const hasSupabase =
   !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
   !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
@@ -64,7 +62,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const base = LOCAL.find((t) => t.slug === slug) |null;
     if (!base) return res.status(404).json({ error: 'Not found' });
     const { item, translated } = applyTranslations(base, lang);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     return res.status(200).json({ item, translated })
   } catch (e: any) {
     return res.status(500).json({ error: e.message })

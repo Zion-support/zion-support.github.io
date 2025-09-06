@@ -2,9 +2,7 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-=======
+
 import {
   Rocket
   Brain
@@ -47,7 +45,7 @@ import {
   Gamepad
   Cpu as CpuIcon;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Target, Crown, Star, TrendingUp, ArrowRight;
   CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon;
   Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale;
@@ -64,10 +62,7 @@ export default function UltimateServicesShowcase2029() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-<<<<<<< HEAD
-  const allServices = null;
-                  setSelectedPriceRange('all')
-=======
+
   const allServices = [
     ...cuttingEdge2028MicroSaas
     ...practicalBusinessSolutions2028
@@ -685,7 +680,7 @@ export default function UltimateServicesShowcase2029() {
                   setSelectedPriceRange('all');
                 }}
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'                  setSelectedPriceRange('all')
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
               >

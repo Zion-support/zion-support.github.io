@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-        {description && <meta name;
-=======
+
 import React from 'react;';
 import * as React from 'react';
 import Head from next/head';
@@ -19,4 +17,4 @@ export default function SimpleLayout({ title, description, children }: SimpleLay
       {children}
     </>)
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

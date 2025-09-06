@@ -86,14 +86,10 @@ class ApiClient {
     this.baseURL = baseURL;
     this.defaultHeaders = defaultHeaders;
   }
-<<<<<<< HEAD
 
-  private async request<T>(
-    endpoint: string;
-=======
   async request<T = unknown>(
     endpoint: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     options: RequestOptions = {}
   ): Promise<ApiResponse<T>> {
     const url = `${this.baseURL}${endpoint}`;
@@ -102,10 +98,7 @@ class ApiClient {
     if (options.timeout) {
       setTimeout(() => controller.abort(), options.timeout);
     }
-<<<<<<< HEAD
 
-      const response = null;
-=======
     try {
       const response = await fetch(url, {
         ...options
@@ -114,18 +107,14 @@ class ApiClient {
 ...this.defaultHeaders
           ...options.headers
         }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
       return {
-<<<<<<< HEAD
-        error: error instanceof Error ? error.message : 'Unknown error occurred';
-        success: false;
-      };
-=======
+
         success: true
         data
       }
@@ -134,7 +123,7 @@ class ApiClient {
         success: false
         error: error instanceof Error ? error.message : 'Unknown error occurred'
       }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     }
   }
   async get<T = unknown>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
@@ -142,11 +131,7 @@ class ApiClient {
   }
   async post<T = unknown>(endpoint: string, data?: any, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
-<<<<<<< HEAD
-      ...options;
-      method: 'POST';
-      body: data ? JSON.stringify(data) : undefined;
-=======
+
       ...options
       method: 'POST'
       body: data ? JSON.stringify(data) : undefined
@@ -154,16 +139,12 @@ class ApiClient {
         'Content-Type': 'application/json'
         ...options?.headers
       }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     });
   }
   async put<T = unknown>(endpoint: string, data?: any, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
-<<<<<<< HEAD
-      ...options;
-      method: 'PUT';
-      body: data ? JSON.stringify(data) : undefined;
-=======
+
       ...options
       method: 'PUT'
       body: data ? JSON.stringify(data) : undefined
@@ -171,7 +152,7 @@ class ApiClient {
         'Content-Type': 'application/json'
         ...options?.headers
       }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     });
   }
   async delete<T = unknown>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {

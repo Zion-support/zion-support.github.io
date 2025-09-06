@@ -1,10 +1,5 @@
 import { ChevronDown, ChevronUp } from 'lucide-react'
-<<<<<<< HEAD
-import { Slider } from "@/components/ui/slider";
-import { ExperienceFilterProps } from "@/types/filters";
-export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {
-  const handleChange = null;
-=======
+
 import { Slider } from '@/components/ui/slider'
 import { ExperienceFilterProps } from '@/types/filters'
 export function ExperienceFilter({
@@ -44,7 +39,7 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
   const handleChange = (values: number[]) => {
     setExperienceRange([values[0] |0, values[1] |15])
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button

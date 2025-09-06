@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-const UltraFuturisticBackground2047: React.FC;
-=======
+
 const UltraFuturisticBackground2047: React.FC = () => {
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
@@ -349,4 +347,4 @@ export default UltraFuturisticBackground2047;        }
   )
 }
 export default UltraFuturisticBackground2047;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

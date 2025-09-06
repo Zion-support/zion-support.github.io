@@ -7,13 +7,10 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX  } from '@/components/icons';
 import './video-call.css';
 interface Participant {
-<<<<<<< HEAD
-  id: string;
-  name: string;
-=======
+
   id: string
   name: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   avatar?: string;
   isMuted?: boolean;
   isVideoEnabled?: boolean;
@@ -21,20 +18,7 @@ interface Participant {
   isHost?: boolean
 }
 interface VideoCallRoomProps {
-<<<<<<< HEAD
-  roomId: string;
-  participants?: Participant[];
-  onLeave?: () => void;
-  onToggleMute?: (isMuted: boolean) => void;
-  onToggleVideo?: (isEnabled: boolean) => void;
-  onToggleScreenShare?: (isSharing: boolean) => void;
-  className?: string
-}
 
-export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ 
-  roomId;
-  participants;
-=======
   roomId: string
   participants?: Participant[];
   onLeave?: () => void;
@@ -215,4 +199,4 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     </Card>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

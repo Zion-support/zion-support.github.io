@@ -4,11 +4,7 @@ import { requireSuperadminApi } from '../../../../utils/api/auth';
 import PDFDocument from 'pdfkit';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
-<<<<<<< HEAD
-  const id = null;
-  doc.end()
-}
-=======
+
   const id = String(req.query.id |"");
   const updates = readJsonFile("updates.json", [] as any[]);
   const u = updates.find((x: any) => x.id === id);
@@ -37,4 +33,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc.end();
   doc.end();
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

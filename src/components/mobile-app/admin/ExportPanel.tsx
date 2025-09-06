@@ -7,14 +7,7 @@ import { AppPlatform, AppMetadataValues } from "./MetadataManager",
 import { toast } from "sonner";
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface ExportPanelProps {
-<<<<<<< HEAD
-  platform: AppPlatform;
-  metadata: AppMetadataValues
-}
 
-export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) => {
-  const handleExport = null;
-=======
   platform: AppPlatform
   metadata: AppMetadataValues
 }
@@ -98,4 +91,4 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
     </Card>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

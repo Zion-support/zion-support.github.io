@@ -7,10 +7,7 @@ interface SidebarMenuButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEl
   children?: React.ReactNode;
   asChild?: boolean
 }
-<<<<<<< HEAD
 
-export const SidebarMenuButton = null;
-=======
 export const SidebarMenuButton = forwardRef<HTMLButtonElement, SidebarMenuButtonProps>(
   ({ className, children, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
@@ -31,4 +28,4 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElement, SidebarMenuButton
   }
 );
 SidebarMenuButton.displayName = "SidebarMenuButton";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

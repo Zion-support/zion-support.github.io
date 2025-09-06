@@ -7,13 +7,9 @@ interface SidebarProps {
   selectedVersion: string;
   onChangeVersion: (v: string) => void;
   visibilityFilter: Visibility | 'all';
-<<<<<<< HEAD
-  onChangeVisibility: (v: Visibility | 'all') => void
-}
 
-=======
   onChangeVisibility: (v: Visibility | 'all') => void;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function Sidebar({
   spec
   activeEndpointId

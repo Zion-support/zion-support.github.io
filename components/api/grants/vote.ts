@@ -15,9 +15,7 @@ function grantPath(id: string) {
 }
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
-<<<<<<< HEAD
-  const p = null;
-=======
+
   const p = grantPath(id);
   if (!fs.existsSync(p)) return null;
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
@@ -70,6 +68,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   g.votes = [...(g.votes |[]), vote];
   g.updatedAt = new Date().toISOString();
   writeGrant(g);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   res.status(200).json({ record: g })
 }

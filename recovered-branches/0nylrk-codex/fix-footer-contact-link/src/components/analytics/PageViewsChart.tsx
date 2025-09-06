@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-=======
 import React from "react";
 import {
   Card
@@ -11,7 +7,7 @@ import {
   CardHeader
   CardTitle
 } from "@/components/ui/card";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 interface PageViewsChartProps {
   data: Array<{ date: string, views: number }>;

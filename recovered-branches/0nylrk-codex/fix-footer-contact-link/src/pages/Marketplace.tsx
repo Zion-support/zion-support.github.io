@@ -15,9 +15,7 @@ import { useNavigate } from "react-router-dom",
 import { SearchSuggestion } from "@/types/search";
 import { AppLayout } from "@/layout/AppLayout";
 export default function Marketplace() {
-<<<<<<< HEAD
-  const navigate = null;
-=======
+
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
@@ -141,7 +139,7 @@ export default function Marketplace() {
                 selectedProductTypes;
                 selectedLocations;
                 selectedAvailability
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 selectedRating
               }}
               filterOptions={filterOptions}

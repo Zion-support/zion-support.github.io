@@ -7,9 +7,7 @@ export function useJobSuggestions(talentId?: string) {
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-<<<<<<< HEAD
-    const fetchSuggestedJobs = null;
-=======
+
     const fetchSuggestedJobs = async () => {
       if (!talentId) return;
       try {
@@ -89,7 +87,7 @@ export function useJobSuggestions(talentId?: string) {
       newMatches;
       viewedMatches;
       appliedMatches
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       declinedMatches
     }
   }

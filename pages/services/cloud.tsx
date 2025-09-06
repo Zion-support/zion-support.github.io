@@ -1,15 +1,7 @@
 import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Cloud, Cpu, Database, Zap, Shield, Rocket;
-  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
- } from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
-export default function CloudServicesPage() {
-  const services = null;
-=======
+
 import {
   Cloud
   Cpu
@@ -90,7 +82,7 @@ export default function CloudServicesPage() {
     { number: '24/7', label: 'Support Available', icon: Clock }
     { number: '100+', label: 'Cloud Projects', icon: CheckCircle }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>

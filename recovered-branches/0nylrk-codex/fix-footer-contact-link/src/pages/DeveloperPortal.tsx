@@ -1,26 +1,5 @@
 
-<<<<<<< HEAD
-import { useState } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { 
-  BookOpen;
-  Code;
-  Key;
-  List;
-  LucideIcon;
-  Terminal;
-  Webhook 
-} from "lucide-react",
 
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
-import { WebhooksManager } from "@/components/developers/WebhooksManager",
-import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
-import { ApiLogs } from "@/components/developers/ApiLogs";
-interface TabDefinition {
-  id: string;
-  label: string;
-=======
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook} from "lucide-react";
@@ -32,17 +11,14 @@ import {ApiLogs} from "@/components/developers/ApiLogs";
 interface TabDefinition {
   id: string
   label: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   icon: LucideIcon
 }
 export function DeveloperPortal() {
   const { user } = useAuth();
-<<<<<<< HEAD
-  const [activeTab, setActiveTab] = useState<string>("documentation"),
-  
-=======
+
   const [activeTab, setActiveTab] = useState<string>("documentation");
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // Define the tabs
   const tabs: TabDefinition[] = [
     { id: "documentation", label: "Documentation", icon: BookOpen }
@@ -50,9 +26,7 @@ export function DeveloperPortal() {
     { id: "webhooks", label: "Webhooks", icon: Webhook }
     { id: "logs", label: "Logs", icon: List }]
   return (
-<<<<<<< HEAD
-    <div className;
-=======
+
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-white flex items-center">
@@ -68,7 +42,7 @@ export function DeveloperPortal() {
         <div className="flex flex-wrap -mb-px">
           {tabs.map((tab) => {
             const Icon = tab.icon;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             return (
               <button
                 key={tab.id}

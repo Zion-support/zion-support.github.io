@@ -1,14 +1,5 @@
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { useLoadMilestones  } from './useLoadMilestones';
-import { useCreateMilestone  } from './useCreateMilestone';
-import { useUpdateMilestone  } from './useUpdateMilestone';
-import { useDeleteMilestone  } from './useDeleteMilestone';
-import { useUploadDeliverable  } from './useUploadDeliverable';
-import { MilestoneStatus } from './types';
-export const useMilestones = null;
-=======
+
 import {useState} from 'react';
 import {useLoadMilestones} from './useLoadMilestones';
 import {useCreateMilestone} from './useCreateMilestone';
@@ -43,4 +34,4 @@ export const useMilestones = (projectId?: string) => {
     refetch
   }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

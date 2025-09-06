@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { requireUser } from '[^']*';
-import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '[^']*';
-import { Milestone } from '[^']*';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = null;
-  res.status(405).end('Method Not Allowed')
-}
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../../utils/api/auth";
 import {
@@ -66,4 +57,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

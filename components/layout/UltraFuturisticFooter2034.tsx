@@ -1,9 +1,7 @@
 import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Rocket, Brain, Atom, Zap, Sparkles, Shield;
-=======
+
 import {
   Rocket
   Brain
@@ -58,7 +56,7 @@ import {
   GlobeIcon
   CpuIcon;} from 'lucide-react';import {
   Rocket, Brain, Atom, Zap, Sparkles, Shield
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Phone, Mail, MapPin, Globe, ArrowRight;
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github;
   CheckCircle, Award, Star, Crown, Gem, Infinity;
@@ -66,10 +64,7 @@ import {
   Target, Microscope, Cpu, Database, Cloud, Lock;
   Home, Building, DollarSign, FileText, MessageSquare, MessageCircle, Newspaper, Handshake, LifeBuoy, Activity;
   ShoppingCart, UserCheck, BarChart, Palette, Video, LockIcon, GlobeIcon, CpuIcon
-<<<<<<< HEAD
- } from 'lucide-react';
-const contactInfo = null;
-=======
+
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -268,7 +263,7 @@ const stats = [
   { label: 'Services Delivered', value: '200+', icon: Rocket }
   { label: 'Countries Served', value: '45+', icon: Globe }
   { label: 'Success Rate', value: '99.9%', icon: CheckCircle },];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function UltraFuturisticFooter2034() {
   return (
     <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>  { label: 'Success Rate', value: '99.9%', icon: CheckCircle }

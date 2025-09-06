@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
-export type ReviewStatus = any;
-=======
+
 export type ReviewStatus = 'pending' | 'approved' | 'rejected';
 export interface Review {
   id: string;
@@ -32,6 +30,6 @@ export interface ReviewReport {
   reason: string;
   status: 'pending' | 'resolved' | 'dismissed';
   created_at: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   resolved_at?: string
 }

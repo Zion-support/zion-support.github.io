@@ -18,9 +18,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { useNavigate } from "react-router-dom";
 export default function ContentGenerator() {
   const { user, isLoading } = useAuth();
-<<<<<<< HEAD
-  const navigate = null;
-=======
+
   const navigate = useNavigate();
   const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog');
   const [customPrompt, setCustomPrompt] = useState('');
@@ -86,7 +84,7 @@ export default function ContentGenerator() {
       toast.error("Failed to send test newsletter. Please try again.")
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // Check if user is still loading
   if (isLoading) {
     return (

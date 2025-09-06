@@ -4,27 +4,16 @@ import { User  } from 'lucide-react';
 import { Conversation  } from '@/types/messaging';
 import { ConversationItem } from './ConversationItem';
 interface ConversationsListProps {
-<<<<<<< HEAD
-  conversations: Conversation[];
-  activeConversation: Conversation | null;
-  setActiveConversation: (conversation: Conversation) => void;
-=======
+
   conversations: Conversation[]
   activeConversation: Conversation | null
   setActiveConversation: (conversation: Conversation) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   markAsRead: (conversationId: string) => Promise<void>
 }
 export function ConversationsList({
   conversations;
-<<<<<<< HEAD
-  activeConversation;
-  setActiveConversation;
-  markAsRead 
-}: ConversationsListProps) {
-  return (
-    <div className;
-=======
+
   activeConversation
   setActiveConversation
   markAsRead
@@ -51,7 +40,7 @@ export function ConversationsList({
               isActive={activeConversation?.id === conversation.id}
               onClick={() => {
                 setActiveConversation(conversation);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 markAsRead(conversation.id)
               }}
             />

@@ -9,17 +9,12 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/u
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react";
 // Example listing type
 interface Listing {
-<<<<<<< HEAD
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-=======
+
   id: string
   title: string
   description: string
   category: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   subcategory?: string;
   image?: string;
   tags?: string[];
@@ -32,20 +27,7 @@ interface Listing {
   createdAt: string
 }
 interface CategoryListingPageProps {
-<<<<<<< HEAD
-  title: string;
-  description: string;
-  listings: Listing[];
-  sortOptions?: { label: string, value: string }[],
-  filterOptions?: { label: string, value: string }[]
-}
 
-export function CategoryListingPage({ 
-  title;
-  description;
-  listings: initialListings;
-  sortOptions;
-=======
   title: string
   description: string
   listings: Listing[]
@@ -203,7 +185,7 @@ export function CategoryListingPage({
                 variant="outline"
                 onClick={() => {
                   setSearchQuery("");
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                   setSelectedFilter(filterOptions[0].value)
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"

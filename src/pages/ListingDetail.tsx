@@ -1,22 +1,4 @@
-<<<<<<< HEAD
 
-import { useState } from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { ChatWidget } from "@/components/ChatWidget",
-import { useRouter } from "next/router",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import Skeleton from "@/components/ui/skeleton",
-import ImageWithRetry from '@/components/ui/ImageWithRetry',
-import { Star, MessageSquare, Brain, Shield } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import Link from 'next/link',
-import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
-import { toast } from "@/hooks/use-toast",
-import { PaymentButton } from "@/components/transactions/PaymentButton",
-import { ProfileContact } from "@/components/profile/ProfileContact",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-=======
 import { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { ChatWidget } from '@/components/ChatWidget';
@@ -38,14 +20,12 @@ import {
   DialogHeader
   DialogTitle
 } from '@/components/ui/dialog';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { useCurrency } from '@/hooks/useCurrency';
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-<<<<<<< HEAD
-  const router = null;
-=======
+
   const router = useRouter();
   const id = router.query.id as string;  const [selectedImageIndex, setSelectedImageIndex] = useState(0);  const [isLoading, setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
@@ -400,7 +380,7 @@ export default function ListingDetail() {
                         />
                       </div>
                     ) : (                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                             target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                           }}
                         />

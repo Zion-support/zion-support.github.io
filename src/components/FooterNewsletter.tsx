@@ -5,22 +5,7 @@ import { useToast  } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function FooterNewsletter(): React.ReactElement {
-<<<<<<< HEAD
-  const [email, setEmail] = useState('');
-  const [honeypot, setHoneypot] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [emailError, setEmailError] = useState('');
-  const { toast } = useToast();
-  const EMAIL_REGEX = null;
-  return (
-    <form
-      id="footer-newsletter-form"
-      aria-label="Newsletter sign-up"
-      onSubmit={handleSubmit}
-      className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
-    >
-      <label htmlFor="newsletter-email" className="sr-only">
-=======
+
   const [email, setEmail] = useState('')
   const [honeypot, setHoneypot] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -85,7 +70,7 @@ export function FooterNewsletter(): React.ReactElement {
   }
       >
       <label htmlFor='newsletter-email' className='sr-only'>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
         Email address for newsletter subscription
       </label>
       <Input

@@ -11,11 +11,7 @@ import {
   SelectValue
 } from '@/components/ui/select'
 import { X, Filter } from 'lucide-react'
-<<<<<<< HEAD
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
-import { Badge } from "@/components/ui/badge",
-import { Label } from "@/components/ui/label";
-=======
+
   Sheet
   SheetContent
   SheetHeader
@@ -25,7 +21,7 @@ import { Label } from "@/components/ui/label";
 } from '@/components/ui/sheet'
 import { Badge } from '@/components/ui/badge'
 import { Label } from '@/components/ui/label'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface BrowseFiltersProps {
   type: 'jobs' | 'talents'
 export function BrowseFilters({ type }: BrowseFiltersProps) {

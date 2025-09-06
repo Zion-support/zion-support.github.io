@@ -29,11 +29,9 @@ interface MessageChannelHandlerProps {
   onError?: (error: Error) => void;
 }
 export function useMessageChannelHandler({
-<<<<<<< HEAD
-  onMessage;
-=======
+
   onMessage
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onError
 }: MessageChannelHandlerProps = {}) {
   const handleMessage = useCallback(

@@ -7,40 +7,30 @@ export interface HireRequestData {
   talent: {
     id: string;
     full_name: string;
-<<<<<<< HEAD
-    professional_title: string;
-=======
+
     professional_title: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     email?: string
   }
   requester: {
     name: string;
-<<<<<<< HEAD
-    email: string;
-=======
+
     email: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     id?: string
   }
   project: {
     overview: string;
     timeline: string;
-<<<<<<< HEAD
-    budgetMin: number;
-=======
+
     budgetMin: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     budgetMax: number
   }
 }
 export function useHireRequest() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
-  const [error, setError] = useState<string | null>(null),
 
-  const submitHireRequest = null;
-=======
   const [error, setError] = useState<string | null>(null);
   const submitHireRequest = async (requestData: HireRequestData) => {
     setIsSubmitting(true);
@@ -74,7 +64,7 @@ export function useHireRequest() {
   return {
     submitHireRequest;
     isSubmitting;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     error
   }
 }

@@ -26,17 +26,12 @@ interface ReviewFormValues {
   is_anonymous?: boolean
 }
 interface ReviewFormProps {
-<<<<<<< HEAD
-  projectId: string;
-  revieweeId: string;
-  revieweeName: string;
-  onSubmit: (data: any) => Promise<boolean>;
-=======
+
   projectId: string
   revieweeId: string
   revieweeName: string
   onSubmit: (data: any) => Promise<boolean>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   defaultValues?: Review;
   isSubmitting: boolean
 }
@@ -48,10 +43,7 @@ export function ReviewForm({
   defaultValues;
   isSubmitting}: ReviewFormProps) {
   const [hoveredStar, setHoveredStar] = useState<number>(0);
-<<<<<<< HEAD
-  
-  const form = null;
-=======
+
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
       rating: defaultValues.rating
@@ -129,7 +121,7 @@ export function ReviewForm({
             required: "Please provide feedback"
             minLength: {
               value: 20
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               message: "Review must be at least 20 characters"}}}
           render={({ field }) => (
             <FormItem>

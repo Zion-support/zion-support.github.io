@@ -1,15 +1,7 @@
 import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { BarChart3, Database, Zap, Shield, Rocket, Cpu;
-  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
- } from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
-export default function AnalyticsServicesPage() {
-  const services = null;
-=======
+
 import {
   BarChart3
   Database
@@ -87,7 +79,7 @@ export default function AnalyticsServicesPage() {
     { number: '24/7', label: 'Real-time Analytics', icon: Clock }
     { number: '300%', label: 'ROI Improvement', icon: TrendingUp }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>

@@ -9,21 +9,15 @@ import { useToast } from "@/hooks/use-toast",
 import { ForumPost, ForumCategory } from "@/types/community";
 import { useAuth } from "@/hooks/useAuth";
 interface PostFormValues {
-<<<<<<< HEAD
-  title: string;
-  content: string;
-  categoryId: ForumCategory;
-=======
+
   title: string
   content: string
   categoryId: ForumCategory
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   tags: string
 }
 // Mock post data
-<<<<<<< HEAD
-const mockPost: ForumPost;
-=======
+
 const mockPost: ForumPost = {
   id: "1"
   title: "Best practices for AI model fine-tuning"
@@ -117,7 +111,7 @@ export default function EditPostPage() {
       })
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <AppLayout>
       <SEO

@@ -5,13 +5,10 @@ import { useTheme } from "@/hooks/useTheme",
 import { Moon, Sun, Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 interface Language {
-<<<<<<< HEAD
-  code: string;
-  name: string;
-=======
+
   code: string
   name: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   flag: string
 }
 const languages: Language[] = [
@@ -22,12 +19,9 @@ const languages: Language[] = [
   { code: "zh", name: "中文", flag: "🇨🇳" }]
 export function LanguageThemeSelector() {
   const { theme, setTheme } = useTheme();
-<<<<<<< HEAD
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),
 
-=======
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-8 px-4">
       <div className="space-y-2">

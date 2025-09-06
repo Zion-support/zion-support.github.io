@@ -11,9 +11,7 @@ import { Search, Filter } from "lucide-react",
 import { AppLayout } from "@/layout/AppLayout";
 import { SEO } from "@/components/SEO";
 // Mock data for support requests
-<<<<<<< HEAD
-const MOCK_SUPPORT_REQUESTS = null;
-=======
+
 const MOCK_SUPPORT_REQUESTS = [
   {
     id: "SR-1001"
@@ -132,7 +130,7 @@ export default function SupportRequests() {
     setPriorityFilter(null);
     setCategoryFilter(null)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <AppLayout>
       <SEO

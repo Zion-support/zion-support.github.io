@@ -1,9 +1,6 @@
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton';
-<<<<<<< HEAD
-import { useEffect, useState } from 'react';
-const STEPS = null;
-=======
+
 import {useEffect, useState} from 'react';
 const STEPS = [
   { key: 'job', label: 'Job posted' }
@@ -35,7 +32,7 @@ export default function ClientDashboard() {
   );
   const toggle = (key: StepKey) =>
     setCompleted(c => ({ ...c, [key]: !c[key] }));
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='space-y-4'>
       <EnhancedCard>

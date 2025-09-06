@@ -11,20 +11,15 @@ import { useNavigate } from 'react-router-dom';
 export default function MessagingInbox() {
   const {
     conversations;
-<<<<<<< HEAD
-    activeConversation;
-    setActiveConversation;
-=======
+
     activeConversation
     setActiveConversation
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     markAsRead;
     fetchConversations;
     isLoading
   } = useMessaging();
-<<<<<<< HEAD
-  const isMobile = null;
-=======
+
   const isMobile = useIsMobile();
   const navigate = useNavigate();
   const [activeCall, setActiveCall] = useState<string | null>(null);
@@ -54,7 +49,7 @@ export default function MessagingInbox() {
     // Navigate to video call page
     navigate(`/call/${roomId}`)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">

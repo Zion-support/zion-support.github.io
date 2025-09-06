@@ -8,12 +8,9 @@ export function useWallet() {
   const [wallet, setWallet] = useState<Wallet | null>(null),
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
   const [loading, setLoading] = useState(true);
-<<<<<<< HEAD
-  const [error, setError] = useState<string | null>(null),
 
-=======
   const [error, setError] = useState<string | null>(null);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   async function fetchWallet() {
     if (!user?.id) {
       setWallet(null);
@@ -57,9 +54,7 @@ export function useWallet() {
   }
   async function earnTokens(amount: number, reason?: string) {
     if (!user?.id) return;
-<<<<<<< HEAD
-    setWallet(prev;
-=======
+
     setWallet(prev => prev ? { ...prev, balance: prev.balance + amount } : prev);
     setTransactions(prev => [
       {
@@ -98,6 +93,6 @@ export function useWallet() {
     fetchWallet;
     fetchTransactions;
     earnTokens;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     spendTokens}
 }

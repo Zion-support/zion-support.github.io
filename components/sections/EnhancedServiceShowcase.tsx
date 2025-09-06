@@ -1,11 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Star, Users, TrendingUp, DollarSign, Clock;
-  CheckCircle, ArrowRight, Zap, Shield, Rocket;
-  Brain, Globe, Lock, Code, Database, Cloud
- } from 'lucide-react';
-=======
+
 import {
   Star
   Users
@@ -23,7 +18,7 @@ import {
   Code
   Database
   Cloud;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import Button from '../ui/Button';
 interface Service {
   id: string;
@@ -56,39 +51,24 @@ interface Service {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-    website: string
-  },
-=======
+
     website: string;
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number
-}
 
-=======
   reviews: number;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface EnhancedServiceShowcaseProps {
   title: string;
   subtitle: string;
   showFilters?: boolean;
   services?: Service[];
-<<<<<<< HEAD
-  maxServices?: number
-}
 
-const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
-  title;
-  subtitle;
-  showFilters;
-=======
   maxServices?: number;
 const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
   title
@@ -629,4 +609,4 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 export default EnhancedServiceShowcase;  )
 }
 export default EnhancedServiceShowcase;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

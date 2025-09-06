@@ -2,23 +2,7 @@ import React from 'react',
 import Link from 'next/link';
 import { ErrorBoundary, FallbackProps  } from 'react-error-boundary';
 import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react'
-<<<<<<< HEAD
-import { logErrorToProduction } from '@/utils/productionLogger';
-import { logInfo, logErrorToProduction as prodLogError } from '@/utils/productionLogger';
-interface PageErrorFallbackProps extends FallbackProps {
-  pageName?: string
-}
 
-function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFallbackProps) {
-  const isAuthConfigError = null;
-  return (
-    <ErrorBoundary
-      FallbackComponent={FallbackComponent}
-      onError={handleError}
-      onReset={() => {
-        // Reset any application state if needed
-        logInfo(`Resetting error boundary for ${pageName || 'page'}`)
-=======
 import { logErrorToProduction } from '@/utils/productionLogger'
 import {
   logInfo
@@ -178,7 +162,7 @@ export default function PageErrorBoundary({
     ))
       onReset={() => {        // Reset any application state if needed
         logInfo(`Resetting error boundary for ${pageName |'page'}`)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       }}
     >
       {children}

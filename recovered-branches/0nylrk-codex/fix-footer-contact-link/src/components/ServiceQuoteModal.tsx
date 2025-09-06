@@ -16,14 +16,7 @@ import { ProductListing } from "@/types/listings";
 import { toast  } from '@/hooks/use-toast';
 import { supabase } from "@/integrations/supabase/client";
 interface ServiceQuoteModalProps {
-<<<<<<< HEAD
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-  service: ProductListing | null
-}
 
-const BUDGET_RANGES = null;
-=======
   open: boolean
   onOpenChange: (open: boolean) => void
   service: ProductListing | null
@@ -208,7 +201,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                         variant={"outline"}
                         className={cn(
                           "justify-start text-left font-normal w-full";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}
                       >

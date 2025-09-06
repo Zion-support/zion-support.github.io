@@ -2,9 +2,7 @@
 import React, { useState, useEffect } from "react",
 import { X } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
-<<<<<<< HEAD
-export const AppStoreBanner: React.FC;
-=======
+
 export const AppStoreBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const isMobile = useIsMobile();
@@ -49,4 +47,4 @@ export const AppStoreBanner: React.FC = () => {
     </div>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

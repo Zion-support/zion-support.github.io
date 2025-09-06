@@ -1,10 +1,6 @@
 import Link from 'next/link',
 import Head from 'next/head';
-<<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { ContactInfo  } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
-=======
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
@@ -725,14 +721,12 @@ const industries = [
   { name: 'Education', icon: GraduationCap, description: 'Educational technology and learning management systems' }
   { name: 'Government', icon: Globe, description: 'Secure government IT solutions and compliance' }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function ITServices() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   useEffect(() => {
-<<<<<<< HEAD
-    const timer = null;
-=======
+
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);  }, []);
   const contact: ContactInfo = {
@@ -1006,7 +1000,7 @@ export default function ITServices() {
     selectedCategory === 'all'
       ? services
       : services.filter(service => service.category === selectedCategory);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Layout>
       <Head>

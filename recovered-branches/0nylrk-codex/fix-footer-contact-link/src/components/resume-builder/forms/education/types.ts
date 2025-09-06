@@ -14,10 +14,7 @@ export interface EducationItemProps {
 export interface EducationFormFieldsProps {
   isEditing: boolean;
   onSubmit: (data: any) => Promise<void>;
-<<<<<<< HEAD
-  onCancel: () => void
-}
-=======
+
   onCancel: () => void;
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

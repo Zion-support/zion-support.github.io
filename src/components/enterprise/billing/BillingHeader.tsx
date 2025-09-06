@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 
-import React from "react",
-import { Button } from "@/components/ui/button";
-import { Download, Mail, BarChart3 } from 'lucide-react'
-import Link from "next/link";
-=======
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { Download, Mail, BarChart3 } from 'lucide-react'
@@ -34,7 +28,7 @@ export function BillingHeader() {
 import React from "react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export function BillingHeader() {
   return (
     <div className="space-y-2">

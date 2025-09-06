@@ -25,9 +25,7 @@ declare global {
   var __decorate: any;
   var __awaiter: any
 // CRITICAL: Self polyfill - must be first
-<<<<<<< HEAD
-if (typeof self;
-=======
+
 if (typeof self === 'undefined') {
   if (typeof global !== 'undefined') {
     (global as any).self = global
@@ -275,7 +273,7 @@ export const verifyPolyfills = () => {
   //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {
 export default {}; // Ensure this can be imported as a module
 }, // Ensure this can be imported as a module'"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {
   setTimeout((,) => verifyPolyfills(), 100)

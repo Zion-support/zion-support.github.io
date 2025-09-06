@@ -9,21 +9,16 @@ import { Button } from "@/components/ui/button";
 import { ApplicationStatus } from "@/types/jobs";
 export function ApplicationsTracker() {
   const { applications, isLoading, error } = useJobApplications();
-<<<<<<< HEAD
-  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all'),
-  
-=======
+
   const [statusFilter, setStatusFilter] = useState<ApplicationStatus | "all">(
     "all"
   );
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (isLoading) {
     return <LoadingState />;
   }
   if (error) {
-<<<<<<< HEAD
-    return <ErrorState error;
-=======
+
     return <ErrorState error={error} />;
   }
   if (applications.length === 0) {
@@ -33,7 +28,7 @@ export function ApplicationsTracker() {
     statusFilter === "all"
       ? applications
       : applications.filter((app) => app.status === statusFilter);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap gap-2">

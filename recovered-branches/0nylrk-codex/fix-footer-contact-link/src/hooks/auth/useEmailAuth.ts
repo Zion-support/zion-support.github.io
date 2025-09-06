@@ -3,10 +3,7 @@ import { useState } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast";
 import type { UserProfile } from "@/types/auth";
-<<<<<<< HEAD
-import { cleanupAuthState } from "@/utils/authUtils";
-export const useEmailAuth = null;
-=======
+
 import {cleanupAuthState} from "@/utils/authUtils";
 export const useEmailAuth = (
   setUser: (user: UserProfile | null) => void
@@ -111,4 +108,4 @@ export const useEmailAuth = (
   }
   return { login, signup, resetPassword }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

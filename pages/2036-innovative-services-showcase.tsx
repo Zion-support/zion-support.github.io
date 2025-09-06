@@ -2,18 +2,7 @@ import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Brain, Rocket, Shield, Zap, Target, Atom, Globe;
-  Cpu, Lock, Cloud, Settings, Eye, Award, Clock;
-  Star, TrendingUp, Users, Building, Lightbulb;
-  ArrowRight, Filter, Search, Grid, List, Phone, Mail, MapPin
- } from 'lucide-react';
-import { real2036InnovativeServices  } from '../data/real-2036-innovative-services';
-import { real2036SpecializedServices } from '../data/real-2036-specialized-services';
-const contactInfo = null;
-              AI platforms, and cutting-edge technology solutions designed for the future.
-            </p>
-=======
+
 import {
   Brain
   Rocket
@@ -247,7 +236,7 @@ export default function InnovativeServicesShowcase2036() {
               Discover our comprehensive portfolio of innovative micro SAAS
               services, AI platforms, and cutting-edge technology solutions
               designed for the future.            </p>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           </motion.div>
           {/* Filters and Controls */}
           <motion.div

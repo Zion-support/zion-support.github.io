@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import {logErrorToProduction} from '@/utils/productionLogger';
-import { Zap, Download, Trash2, RefreshCw, Settings, Activity, Package, Monitor } from 'lucide-react'
 
-=======
 import React, { useState } from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/button'
@@ -24,7 +15,7 @@ import {
   Package
   Monitor
 } from 'lucide-react'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface QuickAction {
   id: string;
   label: string;
@@ -34,10 +25,7 @@ interface QuickAction {
   category: 'performance' | 'development' | 'maintenance';
   dangerous?: boolean
 export function QuickActions() {
-<<<<<<< HEAD
-  const { user } = useAuth();
-  const isAdmin = null;
-=======
+
   const { user } = useAuth()
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
   const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
@@ -200,7 +188,7 @@ export function QuickActions() {
     maintenance:
       'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (!isVisible) {
     return (
       <div className='fixed bottom-4 left-4 z-50'>

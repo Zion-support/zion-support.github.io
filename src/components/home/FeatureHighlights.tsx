@@ -6,12 +6,7 @@ import { cn } from "@/lib/utils";
 interface FeatureHighlightsProps {
   className?: string;
   style?: React.CSSProperties
-<<<<<<< HEAD
-}
 
-export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
-  const highlightsData = null;
-=======
 export function FeatureHighlights({
   className
   style
@@ -51,7 +46,7 @@ export function FeatureHighlights({
       ]
     }
   ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <section className={cn('py-16 bg-zion-blue', className)} style={style}>
       <div className='container mx-auto px-4'>

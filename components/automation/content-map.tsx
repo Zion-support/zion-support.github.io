@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import fs from 'fs',
-import path from 'path';
-import type { GetStaticProps } from 'next';
-type Entry = any;
-=======
+
 }
 ) )
 }</ul> </section> <section>) )
@@ -11,7 +6,7 @@ type Entry = any;
 export default function ContentMap({ report }: Props) {
   if (!report) return <div>No content map yet. Check back later.</div>;
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6">
       <header className="space-y-1">

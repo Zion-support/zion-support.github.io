@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
-<<<<<<< HEAD
-type Holder = any;
-=======
+
 type Holder = { address: string, amount: string }
 type Metrics = {
   updatedAt: number
@@ -26,7 +24,7 @@ export default function DaoMetrics() {
   }, [])
   if (loading) return <div>Loading...</div>
   if (!data) return <div>Error loading data</div>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between">

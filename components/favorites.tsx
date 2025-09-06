@@ -3,9 +3,7 @@ import Head from 'next/head',
 import Link from 'next/link';
 import { TALENT_PROFILES } from '../data/talent';
 function useFavorites() {
-<<<<<<< HEAD
-  const storageKey = null;
-=======
+
   const storageKey = 'zion_favorites';
   const [favorites, setFavorites] = useState<string[]>([]);
   useEffect(() => {
@@ -22,7 +20,7 @@ export default function FavoritesPage() {
     () => TALENT_PROFILES.filter(t => favorites.includes(t.slug))
     [favorites]
   );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div>
       <Head>

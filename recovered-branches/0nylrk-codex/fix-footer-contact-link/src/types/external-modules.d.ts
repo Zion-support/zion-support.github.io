@@ -24,10 +24,7 @@ declare module 'react-day-picker' {
 }
 declare module 'sonner';
 declare module 'lucide-react' {
-<<<<<<< HEAD
-  import { FC, SVGProps } from 'react';
-  export type LucideProps = any;
-=======
+
 import {FC, SVGProps} from 'react';
   export type LucideProps = SVGProps<SVGSVGElement>;
   export type LucideIcon = FC<LucideProps>;
@@ -321,4 +318,4 @@ declare module 'ws';
 declare module 'recharts';
 declare module 'next-themes';
 declare module 'tailwind-merge';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

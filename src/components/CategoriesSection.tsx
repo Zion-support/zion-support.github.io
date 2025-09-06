@@ -1,18 +1,4 @@
-<<<<<<< HEAD
 
-import { GradientHeading } from "./GradientHeading",
-import Link from "next/link",
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
-import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
-import { cn } from "@/lib/utils";
-import { useTranslation } from "react-i18next";
-// This is the type definition copied from Categories.tsx for consistency.
-// Ideally, this would be in a shared types file.
-interface CategoryType {
-  id: string;
-  name: string;
-  description?: string;
-=======
 color: defaultCategories.find(dc => dc.id === cat.id)?.color |"from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
         ...cat
@@ -27,7 +13,7 @@ interface CategoryType {
   id: string
   name: string
   description?: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   iconName?: string, // Example field if categories have icons
   itemCount?: number, // Example field for number of items in a category
   // Add a 'link' property if your API provides it, or construct it.
@@ -79,9 +65,7 @@ const specialServices = [{
     link: "/services - comparison"
 }
 // Default static categories with translation keys
-<<<<<<< HEAD
-const getDefaultCategories = null;
-=======
+
 const getDefaultCategories = (t: any,) => [
   {
     id: "services"
@@ -156,7 +140,7 @@ export function CategoriesSection({
         ...cat
         title: cat.name
         icon: getIcon(cat.iconName)}))
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // If fetchedCategories is an empty array, and we want to show nothing:
   if (fetchedCategories && fetchedCategories.length === 0) {
     return (

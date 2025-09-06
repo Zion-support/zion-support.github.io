@@ -1,16 +1,4 @@
-<<<<<<< HEAD
 
-import React from "react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-import { CheckCircle, ChevronRight, FileText, MessageSquare, Video } from 'lucide-react'
-import { Progress } from "@/components/ui/progress",
-import { SeverityIndicator } from "../common/SeverityIndicator";
-import { useRouter  } from 'next/router';
-import { toast } from "sonner";
-=======
 import React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -27,7 +15,7 @@ import { Progress } from '@/components/ui/progress'
 import { SeverityIndicator } from '../common/SeverityIndicator'
 import { useRouter } from 'next/router'
 import { toast } from 'sonner'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface Milestone {
   id: string;
   title: string;
@@ -52,9 +40,7 @@ interface ProjectViewProps {
   }
   milestones: Milestone[]
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
-<<<<<<< HEAD
-  const router = null;
-=======
+
   const router = useRouter()
   const startProjectCall = () => {
     const roomId = `project-${project.id}`
@@ -69,7 +55,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
     })
     // Navigate to messaging with this client
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='space-y-6 px-4 pb-24'>
       <Card>

@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head';
-import { motion  } from 'framer-motion';
-import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin  } from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-export default function Security() {
-  const securityMeasures = null;
-=======
+
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -58,7 +49,7 @@ const securityStats = [
   { number: '100%', label: 'Data Encryption' }
 ];
 export default function SecurityPage() {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Layout
       title="Security - Zion Tech Group"

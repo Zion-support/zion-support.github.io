@@ -7,10 +7,7 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
   const [disputeId, setDisputeId] = useState<string | null>(null),
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-<<<<<<< HEAD
-    const checkDispute = null;
-    isLoading 
-=======
+
     const checkDispute = async () => {
       if (!projectId && !milestoneId) {
         setIsLoading(false);
@@ -56,6 +53,6 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
     disputeStatus
     disputeId;
     isLoading
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
 }

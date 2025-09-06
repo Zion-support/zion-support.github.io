@@ -21,26 +21,15 @@ import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea";
 import { ForumCategory } from "@/types/community";
 interface PostFormValues {
-<<<<<<< HEAD
-  title: string;
-  content: string;
-  categoryId: ForumCategory;
-=======
+
   title: string
   content: string
   categoryId: ForumCategory
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   tags: string
 }
 interface PostFormProps {
-<<<<<<< HEAD
-  initialValues?: Partial<PostFormValues>,
-  onSubmit: (values: PostFormValues) => void;
-  isEditing?: boolean
-}
 
-export const PostForm = null;
-=======
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void
   isEditing?: boolean
@@ -152,4 +141,4 @@ export const PostForm = ({
   )
 }
 export default PostForm;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

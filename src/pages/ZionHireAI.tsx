@@ -1,15 +1,4 @@
-<<<<<<< HEAD
 
-import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { useWhitelabel } from "@/context/WhitelabelContext",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from 'lucide-react'
-import { useAuth } from "@/hooks/useAuth";
-import Link from "next/link";
-=======
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -32,17 +21,13 @@ import { Button } from '@/components/ui/button'
 } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth'
 import Link from 'next/link'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function ZionHireAI() {
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
   const { isAuthenticated } = useAuth();
   return (
     <>
-<<<<<<< HEAD
-      <SEO 
-        title;
-              reduce time-to-hire, and improve candidate experience.
-=======
+
       <SEO
         title='Zion Hire AI - White-labeled AI Recruiting Assistant'
         description='Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience.'
@@ -415,7 +400,7 @@ export default function ZionHireAI() {
             <p className='text-zion-slate-light max-w-2xl mx-auto mb-8'>
               Join leading companies using Zion Hire AI to find better talent
               faster, reduce time-to-hire, and improve candidate experience.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             </p>
             <Button
               size='lg'

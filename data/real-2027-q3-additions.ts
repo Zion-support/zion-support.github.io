@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export const real2027Q3Additions = null;
-=======
+
 export const real2027Q3Additions = [
   {
     id: 'it-asset-discovery-agent'
@@ -332,4 +330,4 @@ export const real2027Q3Additions = [
     roi: 'Prevent high-severity API incidents and cut MTTR.'
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

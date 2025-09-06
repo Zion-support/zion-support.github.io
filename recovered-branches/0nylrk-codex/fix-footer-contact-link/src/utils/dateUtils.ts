@@ -5,9 +5,7 @@ import { format } from "date-fns";
  * @param dateString ISO date string to format
  * @returns Formatted date string
  */
-<<<<<<< HEAD
-export const formatDate = null;
-=======
+
 export const formatDate = (dateString: string): string => {
   try {
     return format(new Date(dateString), 'PP')
@@ -15,4 +13,4 @@ export const formatDate = (dateString: string): string => {
     return dateString
   }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

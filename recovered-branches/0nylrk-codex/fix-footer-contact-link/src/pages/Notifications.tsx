@@ -1,27 +1,5 @@
 
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import { AppHeader } from "@/layout/AppHeader",
-import { Footer } from "@/components/Footer";
-import { useNotifications } from "@/context/notifications/NotificationContext";
-import {
-  NotificationType;
-  NotificationContextType
-} from "@/context/notifications",
-import { formatDistanceToNow } from "date-fns";
-import { 
-  Bell, Check, Trash2, ChevronRight, CheckCircle;
-  AlertCircle, MessageCircle, Briefcase, UserCheck, Settings
-} from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
-import { Badge } from "@/components/ui/badge",
-import { Skeleton } from "@/components/ui/skeleton",
-import { SEO } from "@/components/SEO",
-import { useNavigate } from "react-router-dom";
-import { cn } from "@/lib/utils";
-const getNotificationIcon = null;
-=======
+
 import React, { useState } from 'react';
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -169,7 +147,7 @@ export default function NotificationsPage() {
     filter;
     setFilter
   } = useNotifications() as NotificationContextType;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO

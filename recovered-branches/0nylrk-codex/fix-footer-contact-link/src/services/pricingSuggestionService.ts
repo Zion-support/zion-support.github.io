@@ -3,31 +3,25 @@
 export interface PricingSuggestion {
   minRate: number;
   maxRate: number;
-<<<<<<< HEAD
-  confidence: "High" | "Medium" | "Low";
-=======
+
   confidence: "High" | "Medium" | "Low"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   explanation: string
 }
 export interface ClientBudgetParams {
   jobTitle: string;
   category: string;
   timeline?: string;
-<<<<<<< HEAD
-  scope?: string;
-=======
+
   scope?: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   experienceLevel?: string
 }
 export interface TalentRateParams {
   skills: string[];
-<<<<<<< HEAD
-  yearsExperience: number;
-=======
+
   yearsExperience: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   location?: string
 }
 // Mock function to generate suggestions
@@ -38,9 +32,7 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
     // For now, we'll simulate a response based on job category
     const { jobTitle, category } = params;
     // Simulate API call delay
-<<<<<<< HEAD
-    await new Promise(resolve;
-=======
+
     await new Promise(resolve => setTimeout(resolve, 1000));
     // Basic logic to determine budget range based on category
     let minRate = 25;
@@ -176,7 +168,7 @@ export async function trackPricingSuggestion(data: {
     return true
   } catch (error) {
     console.error("Error tracking pricing suggestion:", error);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     return false
   }
 }

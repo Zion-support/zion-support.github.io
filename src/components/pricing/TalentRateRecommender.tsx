@@ -1,23 +1,5 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button";
-import {logErrorToProduction} from '@/utils/productionLogger';
-import { 
-  getTalentRateSuggestion;
-  PricingSuggestion;
-  TalentRateParams;
-  trackPricingSuggestion
-} from "@/services/pricingSuggestionService",
-import { PricingSuggestionBox } from "./PricingSuggestionBox";
-import { useAuth } from "@/hooks/useAuth";
-import { Sparkles } from 'lucide-react'
-interface TalentRateRecommenderProps {
-  skills: string[];
-  yearsExperience: number;
-  location?: string;
-  onSuggestionApplied: (value: number) => void;
-=======
+
 interface TalentRateRecommenderProps {
   skills: string[]
   yearsExperience: number
@@ -40,21 +22,11 @@ interface TalentRateRecommenderProps {
   yearsExperience: number
   location?: string
   onSuggestionApplied: (value: number,) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   rateType: "hourly" | "fixed"
 }
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
-<<<<<<< HEAD
-  skills;
-  yearsExperience;
-  location;
-  onSuggestionApplied;
-  rateType}) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
-  const { user } = useAuth();
-  const generateSuggestion = null;
-=======
+
   skills
   yearsExperience
   location
@@ -140,4 +112,4 @@ return (<div className="space-y-4" > <div> {"
 }
 '"}
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

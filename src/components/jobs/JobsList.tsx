@@ -11,18 +11,7 @@ import { format } from "date-fns",
 import Link from "next/link";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface JobsListProps {
-<<<<<<< HEAD
-  filter?: JobStatus;
-  onSelectJob?: (jobId: string, jobTitle: string) => void
-}
 
-export function JobsList({ filter, onSelectJob }: JobsListProps) {
-  const { user } = useAuth();
-  const [jobs, setJobs] = useState<Job[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    const fetchJobs = null;
-=======
   filter?: JobStatus
   onSelectJob?: (jobId: string, jobTitle: string) => void}
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
@@ -85,7 +74,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
         return "bg-gray-100 text-gray-800"
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {jobs.map((job,) => (

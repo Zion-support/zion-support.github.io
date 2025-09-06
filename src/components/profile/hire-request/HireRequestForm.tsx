@@ -61,21 +61,14 @@ export function HireRequestForm({
                 <Loader2 className='mr-2 h-4 w-4 animate-spin' />                Submitting...  onSubmitSuccess?: () => void
 }
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
-<<<<<<< HEAD
-  const { form, isSubmitting, onSubmit } = useHireRequestForm({ 
-    talent;
-    onClose: onSubmitSuccess || onClose;
-    initialJobTitle;
-    userDetails 
-  });
-=======
+
   const { form, isSubmitting, onSubmit } = useHireRequestForm({
     talent
     onClose: onSubmitSuccess |onClose
     initialJobTitle
     userDetails
   })
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">

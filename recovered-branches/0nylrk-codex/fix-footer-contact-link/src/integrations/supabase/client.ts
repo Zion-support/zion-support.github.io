@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-import { createClient } from '@supabase/supabase-js';
-export const supabaseUrl = null;
-=======
+
 import {createClient} from '@supabase/supabase-js';
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
@@ -44,4 +41,4 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
 });
 // Helper function to get profiles table
 export const getFromProfiles = () => supabase.from('profiles');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -10,11 +10,7 @@ interface MainLayoutProps {
   image?: string;
   url?: string;}
 const MainLayout: React.FC<MainLayoutProps> = ({
-<<<<<<< HEAD
-  children;
-  title;
-}) => {
-=======
+
   children
   title = 'Zion Tech Group - Technology Solutions'
   description = 'Leading technology solutions provider specializing in web development, mobile applications, AI integration, and cloud services.'
@@ -25,7 +21,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   type = 'website'
   image = '/og-image.jpg'
   url
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

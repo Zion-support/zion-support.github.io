@@ -4,18 +4,7 @@ import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { Button } from "@/components/ui/button";
 import { X } from 'lucide-react'
 interface ActiveFiltersProps {
-<<<<<<< HEAD
-  selectedSkills: string[];
-  toggleSkill: (skill: string) => void;
-  selectedAvailability: string[];
-  toggleAvailability: (status: string) => void;
-  selectedRegions: string[];
-  toggleRegion: (region: string) => void;
-  priceRange: [number, number],
-  setPriceRange: (range: [number, number]) => void;
-  experienceRange: [number, number],
-  setExperienceRange: (range: [number, number]) => void;
-=======
+
   selectedSkills: string[]
   toggleSkill: (skill: string) => void
   selectedAvailability: string[]
@@ -37,26 +26,11 @@ interface ActiveFiltersProps {
   setPriceRange: (range: [number, number],) => void
   experienceRange: [number, number]
   setExperienceRange: (range: [number, number],) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   clearFilters: () => void
 }
 export function ActiveFilters({
-<<<<<<< HEAD
-  selectedSkills;
-  toggleSkill;
-  selectedAvailability;
-  toggleAvailability;
-  selectedRegions;
-  toggleRegion;
-  priceRange;
-  setPriceRange;
-  experienceRange;
-  setExperienceRange;
-  clearFilters
-}: ActiveFiltersProps) {
-  // Check if any filters are active
-  const hasActiveFilters = null;
-=======
+
   selectedSkills
   toggleSkill
   selectedAvailability
@@ -79,7 +53,7 @@ export function ActiveFilters({
     priceRange[0] !== 50 |
     priceRange[1] !== 200
   if (!hasActiveFilters) return null
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='mb-6 flex flex-wrap gap-2 items-center'>
       <span className='text-zion-slate-light text-sm'>Active filters:</span>

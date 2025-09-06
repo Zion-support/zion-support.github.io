@@ -8,11 +8,7 @@ export function useDisputes() {
   const { user } = useAuth();
   const [disputes, setDisputes] = useState<Dispute[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-<<<<<<< HEAD
-  const [error, setError] = useState<string | null>(null),
 
-  const fetchDisputes = null;
-=======
   const [error, setError] = useState<string | null>(null);
   const fetchDisputes = async () => {
     if (!user) {
@@ -235,7 +231,7 @@ export function useDisputes() {
     updateDisputeStatus;
     resolveDispute;
     getDisputeMessages
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     addDisputeMessage
   }
 }

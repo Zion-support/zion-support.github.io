@@ -36,11 +36,7 @@ reporter: [ ['list'], ['json', {
   //   {
   //     name: firefox',  //     use: { ...devices['Desktop Firefox'] },  //   }
   //   {
-<<<<<<< HEAD
-  //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   };
-  // ]
-});
-=======
+
   //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   }
   // ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

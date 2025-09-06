@@ -102,13 +102,7 @@ export class ErrorTracker {
     this.errorCounts = new Map();  }
   trackError(error, context = {}) {
     const errorInfo = {
-<<<<<<< HEAD
-      message: error.message,
-      stack: error.stack;
-      timestamp: new Date().toISOString();
-      context,
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown';
-=======
+
       message: error.message
       stack: error.stack
       context
@@ -129,7 +123,7 @@ export class ErrorTracker {
         return {      timestamp: new Date().toISOString()
       context
       userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       url: typeof window !== 'undefined' ? window.location.href : 'unknown'
     }
     this.errors.push(errorInfo);
@@ -142,13 +136,10 @@ export class ErrorTracker {
       error => new Date(error.timestamp) > new Date(Date.now() - 24 * 60 * 60 * 1000)
     );
     return {
-<<<<<<< HEAD
-      total: this.errors.length;
-      recent: recentErrors.length;
-=======
+
       total: this.errors.length
       recent: recentErrors.length
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       topErrors: Array.from(this.errorCounts.entries())
         .sort((a, b) => b[1] - a[1])
         .slice(0, 10);
@@ -159,13 +150,10 @@ export const errorTracker = new ErrorTracker();
 // Global error handler
 if (=> {
     errorTracker.trackError(event.error, {
-<<<<<<< HEAD
-      filename: event.filename);
-      lineno: event.lineno);
-=======
+
       filename: event.filename
       lineno: event.lineno
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       colno: event.colno
     });
   });
@@ -186,22 +174,14 @@ export class AnalyticsTracker {
   }
   track(event, properties = {}) {
     const eventData = {
-<<<<<<< HEAD
-      event,
-      properties;
-      timestamp: new Date().toISOString();
-      sessionId: this.sessionId;
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown'
-    };
 
-=======
       event
       properties
       timestamp: new Date().toISOString()
       sessionId: this.sessionId
       url: typeof window !== 'undefined' ? window.location.href : 'unknown';
     }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     this.events.push(eventData);
     // Send to analytics service (implement as needed)
     this.sendToAnalytics(eventData);
@@ -253,16 +233,7 @@ async getConnection() {
     }
 });
   }
-<<<<<<< HEAD
 
-export function debounce(func, wait) {
-  let timeout = null;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-=======
 releaseConnection(connection) {
     this.usedConnections.delete(connection);
     this.availableConnections.push(connection);
@@ -274,7 +245,7 @@ releaseConnection(connection) {
       createdAt: new Date()
       isHealthy: true
     }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
 getPoolStatus() {
     return {
@@ -285,62 +256,7 @@ getPoolStatus() {
     }
   }
 export const connectionPool = new ConnectionPool();`
-<<<<<<< HEAD
-  };
-}
 
-export function throttle(func, limit) {
-  let inThrottle = null;
-  return function(...args) {
-    if (!inThrottle) {
-      func.apply(this, args);
-      inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
-    }
-  };
-}`,
-
-    'utils/optimization.js': `// General optimization utilities
-export function optimizeImages() {
-  if (typeof window === 'undefined') return;
-
-  const images = document.querySelectorAll('img');
-  images.forEach(img => {
-    // Add loading="lazy" if not present
-    if (!img.hasAttribute('loading')) {
-      img.setAttribute('loading', 'lazy');
-    }
-    
-    // Add proper alt text if missing
-    if (!img.alt) {
-      img.alt = 'Image';
-    }
-  });
-}
-
-export function preloadCriticalResources() {
-  if (typeof window === 'undefined') return;
-
-  const criticalResources = [
-    '/fonts/main.woff2';
-    '/css/critical.css'
-  ];
-
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
-    document.head.appendChild(link);
-  });
-}`
-
-  };
-
-  Object.entries(optimizationFiles).forEach(([filename, content]) => {
-    const fullPath = path.join('/workspace', filename);
-    fs.mkdirSync(path.dirname(fullPath), { recursive: true });
-=======
   }
   // Create monitoring files
   Object.entries(monitoringFiles).forEach(([filePath, content]) => {
@@ -349,7 +265,7 @@ export function preloadCriticalResources() {
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     fs.writeFileSync(fullPath, content);
     console.log(`✅ Created ${filePath}`);
   });

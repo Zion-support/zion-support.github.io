@@ -10,13 +10,10 @@ import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",
 import { Loader2, ShieldCheck, Download } from "lucide-react";
 import { toast } from "sonner";
 interface SmartContractDeploymentProps {
-<<<<<<< HEAD
-  solidityCode: string;
-  onDeploy: (options: DeploymentOptions) => Promise<void>;
-=======
+
   solidityCode: string
   onDeploy: (options: DeploymentOptions) => Promise<void>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   isDeploying: boolean
 }
 export function SmartContractDeployment({
@@ -25,15 +22,7 @@ export function SmartContractDeployment({
   isDeploying
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
-<<<<<<< HEAD
-    network: 'none';
-    useEscrow: true;
-    deployToChain: false;
-    walletAddress: ''
-  });
 
-  const handleDeployContract = null;
-=======
     network: 'none'
     useEscrow: true
     deployToChain: false
@@ -129,7 +118,7 @@ export function SmartContractDeployment({
                   checked={deploymentOptions.useEscrow}
                   onCheckedChange={(checked) => setDeploymentOptions({
                     ...deploymentOptions;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                     useEscrow: checked
                   })}
                 />

@@ -5,17 +5,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge";
 import { CandidateCard } from "./CandidateCard";
 interface KanbanColumnProps {
-<<<<<<< HEAD
-  id: string;
-  title: string;
-  description: string;
-  applications: JobApplication[];
-=======
+
   id: string
   title: string
   description: string
   applications: JobApplication[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   count: number
 }
 export function KanbanColumn({
@@ -26,9 +21,7 @@ export function KanbanColumn({
   count
 }: KanbanColumnProps) {
   // Add color based on column type
-<<<<<<< HEAD
-  const getBadgeVariant = null;
-=======
+
   const getBadgeVariant = (columnId: string) => {
     switch (columnId) {
       case "new": return "secondary";
@@ -53,7 +46,7 @@ export function KanbanColumn({
         return "bg-muted/30"
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}>
       <CardHeader className="pb-2">

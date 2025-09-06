@@ -27,15 +27,11 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
     const existingClass = (children.props as { className?: string })?.className |'';
     const mergedClassName = [existingClass, className].filter(Boolean).join(' ');
     return React.cloneElement(children as React.ReactElement<{ href?: string; className?: string }>, {
-<<<<<<< HEAD
-      href: resolved;
-      className: mergedClassName;
-      ...rest;
-=======
+
       href: resolved
       className: mergedClassName
       ...rest
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     });
   }
   return (

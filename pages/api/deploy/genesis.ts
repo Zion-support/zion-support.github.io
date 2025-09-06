@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
 
-function summarizeModules(modules: Record<string, boolean>, bonus: Record<string, boolean>) {
-  const active = null;
-    return res.status(200).json({ outputActions, deployLog, access, operator })
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 function summarizeModules(
   modules: Record<string, boolean>
@@ -123,7 +117,7 @@ export default async function handler(
       operator
       access
     });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch (err: any) {
     return res.status(500).json({ error: err.message |"Internal error" });
   }

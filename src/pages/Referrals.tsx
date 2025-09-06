@@ -24,9 +24,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { useRouter } from 'next/router'; // Changed from useNavigate
 export default function ReferralsPage() {
-<<<<<<< HEAD
-  const router = null;
-=======
+
   const router = useRouter(); // Changed from navigate
   const { isAuthenticated } = useAuth()
   const {
@@ -60,7 +58,7 @@ export default function ReferralsPage() {
     }
   }, [isAuthenticated, router]); // Changed navigate to router in dependencies
   const referralLink = getReferralLink()
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='container max-w-7xl py-10'>
       <div className='mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4'>

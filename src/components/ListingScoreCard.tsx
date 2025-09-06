@@ -18,25 +18,7 @@ interface ListingScoreCardProps {
   rating?: number;
   reviewCount?: number;
   className?: string
-<<<<<<< HEAD
-}
 
-export function ListingScoreCard({ 
-  title;
-  description;
-  image;
-  category;
-  tags;
-  author;
-  authorImage;
-  aiScore;
-  rating;
-                    star <= Math.round(rating) 
-                      ? "text-zion-cyan fill-zion-cyan" 
-                      : "text-zion-slate-light"
-                  )}
-                />
-=======
 export function ListingScoreCard({
   title
   description
@@ -110,7 +92,7 @@ export function ListingScoreCard({
                       ? 'text-zion-cyan fill-zion-cyan'
                       : 'text-zion-slate-light'
                   )}                />
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               ))}
             </div>
             <span className='text-sm text-zion-slate-light ml-1'>

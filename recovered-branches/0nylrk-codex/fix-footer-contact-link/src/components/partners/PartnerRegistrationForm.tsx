@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-import { useState } from "react",
-import { z } from "zod",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/hooks/use-toast",
-import { useAuth } from "@/hooks/useAuth";
-import { supabase } from "@/integrations/supabase/client";
-const partnerFormSchema = null;
-=======
+
 import {useState} from "react";
 import {z} from "zod";
 import {useForm} from "react-hook-form";
@@ -124,7 +109,7 @@ export function PartnerRegistrationForm() {
       toast({
         title: "Submission failed"
         description: error.message |"There was a problem submitting your application."
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
         variant: "destructive"})
     } finally {
       setIsSubmitting(false)

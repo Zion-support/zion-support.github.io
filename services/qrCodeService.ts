@@ -8,11 +8,9 @@ export interface QRCodeOptions {
   format?: 'svg' | 'png' | 'jpeg' | 'webp';
   logo?: {
     url: string;
-<<<<<<< HEAD
-    width: number;
-=======
+
     width: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     height: number
   }
 }
@@ -21,11 +19,9 @@ export interface QRCodeResult {
   options: QRCodeOptions;
   generatedAt: Date;
   size: {
-<<<<<<< HEAD
-    width: number;
-=======
+
     width: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     height: number
   }
 }
@@ -33,11 +29,9 @@ export interface QRCodeTemplate {
   id: string;
   name: string;
   description: string;
-<<<<<<< HEAD
-  options: Partial<QRCodeOptions>;
-=======
+
   options: Partial<QRCodeOptions>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   category: 'business' | 'personal' | 'social' | 'custom'
 }
 class QRCodeService {
@@ -46,13 +40,7 @@ class QRCodeService {
     foregroundColor: '#000000';
     backgroundColor: '#FFFFFF';
     errorCorrectionLevel: 'M';
-<<<<<<< HEAD
-    margin: 4;
-    format: 'svg'
-  };
 
-  private readonly ERROR_CORRECTION_LEVELS;
-=======
     margin: 4
     format: 'svg'
   }
@@ -301,4 +289,4 @@ class QRCodeService {
   }
 }
 export const qrCodeService = new QRCodeService();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { randomUUID } from '[^']*';
-import { promises as fs } from '[^']*';
-const Epub = null;
-  return text
-    .split(/\n\n+/)
-    .map((p) => `<p>${escapeHtml(p)}</p>`)
-    .join('\n')
-}
 
-=======
 import { NextApiRequest, NextApiResponse } from "next";
 import { randomUUID } from "crypto";
 import { promises as fs } from "fs";
@@ -21,7 +10,7 @@ export const config = {
     }
   }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 function escapeHtml(s: string): string {
   return s
     .replace(/&/g, "&amp;")

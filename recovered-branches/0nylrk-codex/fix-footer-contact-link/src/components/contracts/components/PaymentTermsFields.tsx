@@ -21,13 +21,10 @@ import { TalentProfile } from "@/types/talent",
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
 import { ContractFormValues } from "./ContractForm";
 interface PaymentTermsFieldsProps {
-<<<<<<< HEAD
-  form: UseFormReturn<ContractFormValues>;
-  talent: TalentProfile;
-=======
+
   form: UseFormReturn<ContractFormValues>
   talent: TalentProfile
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   handleMilestonesGenerated: (milestones: GeneratedMilestone[]) => void
 }
 export function PaymentTermsFields({

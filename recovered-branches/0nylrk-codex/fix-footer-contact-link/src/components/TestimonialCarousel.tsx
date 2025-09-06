@@ -1,16 +1,5 @@
 
-<<<<<<< HEAD
-import {
-  Carousel;
-  CarouselContent;
-  CarouselItem;
-  CarouselNext;
-  CarouselPrevious} from "@/components/ui/carousel",
-import { Card, CardContent } from "@/components/ui/card",
-import { Avatar } from "@/components/ui/avatar";
-import { Quote } from "lucide-react";
-const testimonials = null;
-=======
+
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import {Card, CardContent} from "@/components/ui/card";
 import {Avatar} from "@/components/ui/avatar";
@@ -54,7 +43,7 @@ export function TestimonialCarousel() {
           <Carousel
             opts={{
               align: "start"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               loop: true}}
             className="w-full"
           >

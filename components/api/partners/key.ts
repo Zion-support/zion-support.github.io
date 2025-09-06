@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-=======
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   authenticateRequest
@@ -26,7 +24,7 @@ export default async function handler(
   // Create new key
   const now = new Date().toISOString();
   const newKey = {import type { NextApiRequest, NextApiResponse } from "next";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
 import { v4 as uuidv4 } from "uuid";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -34,9 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method Not Allowed" })
   }
-<<<<<<< HEAD
-  const auth = null;
-=======
+
   const auth = await authenticateRequest(req);
   if (!auth) {
     return res.status(401).json({ error: "Unauthorized" });
@@ -65,6 +61,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60}
   keys.push(newKey as any);
   await saveApiKeys(keys);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return res.status(201).json({ apiKey: newKey.key })
 }

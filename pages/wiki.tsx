@@ -1,16 +1,5 @@
 import React, { useMemo, useState } from 'react';
-<<<<<<< HEAD
-import { generateZionWiki;
-  buildMarkdownFromWiki;
-  buildWikitextFromWiki;
-  operatorPrompt;
-  slugify } from '../utils/data/zionContent';
-function CopyButton({ text, label }: { text: string, label: string }) {
-  const [copied, setCopied] = useState(false);
-  return (
-    <button
-      onClick;
-=======
+
 import {
   generateZionWiki
   buildMarkdownFromWiki
@@ -36,7 +25,7 @@ export default function WikiPage() {
   const wiki = useMemo(() => generateZionWiki(), [])
   const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki])
   const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki])
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8">
       <aside className="sticky top-20 self-start hidden lg:block">

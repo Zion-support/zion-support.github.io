@@ -1,18 +1,6 @@
 import { useState, useEffect  } from 'react';
 import { Search } from 'lucide-react'
-<<<<<<< HEAD
-import { Input  } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Pagination;
-  PaginationContent;
-  PaginationItem;
-  PaginationButton;
-  PaginationNext;
-  PaginationPrevious } from '@/components/ui/pagination';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
-import { CountryServiceCard  } from '@/components/services/CountryServiceCard';
-import { CountryPricing } from '@/data/onsiteServicePricing';
-=======
+
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import {
@@ -26,7 +14,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { CountryServiceCard } from '@/components/services/CountryServiceCard'
 import { CountryPricing } from '@/data/onsiteServicePricing'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface CountryTabsProps {
   popularCountries: string[];
   filteredCountries: CountryPricing[];
@@ -35,17 +23,7 @@ interface CountryTabsProps {
   searchQuery: string;
   setSearchQuery: (query: string) => void
 export function CountryTabs({
-<<<<<<< HEAD
-  popularCountries;
-  filteredCountries;
-  handleCountrySelect;
-  onQuote;
-  searchQuery;
-  setSearchQuery}: CountryTabsProps) {
-  const [currentPage, setCurrentPage] = useState(1);
-  const countriesPerPage = null;
-                      setCurrentPage(Math.min(totalPages, currentPage + 1))
-=======
+
   popularCountries
   filteredCountries
   handleCountrySelect
@@ -130,7 +108,7 @@ export function CountryTabs({
                     onClick={e => {
                       e.preventDefault()
                       setCurrentPage(Math.max(1, currentPage - 1))
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                     }}
                   />
                 </PaginationItem>

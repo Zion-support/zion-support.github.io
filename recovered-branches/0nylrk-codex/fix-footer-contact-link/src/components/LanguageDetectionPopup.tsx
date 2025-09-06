@@ -1,25 +1,4 @@
-<<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { useTranslation } from 'react-i18next';
-import { AlertDialog;
-  AlertDialogAction;
-  AlertDialogCancel;
-  AlertDialogContent;
-  AlertDialogDescription;
-  AlertDialogFooter;
-  AlertDialogHeader;
-  AlertDialogTitle } from '../components/ui/alert-dialog';
-import { useLanguage, SupportedLanguage, LanguageContextType } from '../context/LanguageContext';
-export function LanguageDetectionPopup() {
-  const [open, setOpen] = useState(false);
-  const { t } = useTranslation();
-  const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage() as LanguageContextType;
-  const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null),
 
-  useEffect(() => {
-    // Check if this is first visit
-    const hasVisited = null;
-=======
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import {
@@ -69,7 +48,7 @@ export function LanguageDetectionPopup() {
     await changeLanguage(detectedLanguage);
     setOpen(false);
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <AlertDialog open={open} onOpenChange={setOpen}>
       <AlertDialogContent className="bg-zion-blue-dark text-white border border-zion-purple/20">

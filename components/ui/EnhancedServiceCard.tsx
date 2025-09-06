@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { Star, ExternalLink, ArrowRight, TrendingUp, Users, Clock, Shield, Zap } from 'lucide-react';
-=======
+
 import { motion } from 'framer-motion';
 import {
   Star
@@ -14,7 +11,7 @@ import {
   Shield
   Zap;
 } from 'lucide-react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface EnhancedServiceCardProps {
   service: {
     id: string;
@@ -47,26 +44,16 @@ interface EnhancedServiceCardProps {
       mobile: string;
       email: string;
       address: string;
-<<<<<<< HEAD
-      website: string
-    },
-=======
+
       website: string;
     }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     realImplementation: boolean;
     implementationDetails: string;
     launchDate: string;
     customers: number;
     rating: number;
-<<<<<<< HEAD
-    reviews: number
-  }
-}
 
-const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) => {
-  const cardVariants = null;
-=======
     reviews: number;
   }
 const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
@@ -366,4 +353,4 @@ export default EnhancedServiceCard;    </motion.div>
   )
 }
 export default EnhancedServiceCard;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

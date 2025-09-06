@@ -4,9 +4,7 @@ import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
 import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react';
 export default function PricingComparisonPage() {
-<<<<<<< HEAD
-  const serviceComparisons = null;
-=======
+
   const serviceComparisons = [
     {
       service: 'AI Content Generator'
@@ -226,7 +224,7 @@ export default function PricingComparisonPage() {
       color: 'text-yellow-400'
     }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

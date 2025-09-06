@@ -5,10 +5,7 @@ import { Button  } from '@/components/ui/button';
 import { Edit, Trash2 } from 'lucide-react'
 import { format } from 'date-fns';
 interface CertificationsListProps {
-<<<<<<< HEAD
-  certifications: Certification[];
-  onEdit: (cert: Certification) => void;
-=======
+
   certifications: Certification[]
   onEdit: (cert: Certification) => void
   onDelete: (id: string) => void
@@ -21,7 +18,7 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
 interface CertificationsListProps {
   certifications: Certification[]
   onEdit: (cert: Certification) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onDelete: (id: string) => void
 }
 export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {

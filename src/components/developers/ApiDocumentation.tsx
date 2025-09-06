@@ -1,33 +1,6 @@
 import { useState } from 'react'
 import { BookOpen, Terminal } from 'lucide-react'
-<<<<<<< HEAD
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import { Badge } from "@/components/ui/badge",
-import CodeBlock from "./CodeBlock";
-import { logInfo } from '@/utils/productionLogger';
-interface EndpointParam {
-  name: string;
-  type: string;
-  description: string;
-  required?: boolean
-}
 
-interface EndpointSectionProps {
-  method: string;
-  endpoint: string;
-  description: string;
-  note?: string;
-  params?: EndpointParam[];
-  codeExamples?: Record<string, string>,
-  responseExamples?: { success: string }
-}
-
-export function ApiDocumentation() {
-  return (
-    <Card className;
-=======
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import {
   Card
@@ -1058,7 +1031,7 @@ function EndpointSection({
   responseExamples
 }: EndpointSectionProps) {
   const [activeTab, setActiveTab] = useState('curl')
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='border border-zinc-800 rounded-md'>
       <div className='p-4'>

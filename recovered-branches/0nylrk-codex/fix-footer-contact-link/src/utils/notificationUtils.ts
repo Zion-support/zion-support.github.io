@@ -1,8 +1,5 @@
 
-<<<<<<< HEAD
-import { supabase } from "@/integrations/supabase/client";
-type NotificationType = any;
-=======
+
 import {supabase} from "@/integrations/supabase/client";
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 /**
@@ -236,7 +233,7 @@ export async function createTestNotification(userId: string) {
     type: randomType;
     sendEmail: true;
     actionUrl: actions[randomType].url
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     actionText: actions[randomType].text
   })
 }

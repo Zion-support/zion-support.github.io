@@ -1,10 +1,5 @@
 
-<<<<<<< HEAD
-import { GradientHeading } from "./GradientHeading",
-import { Link } from "react-router-dom";
-import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
-const categories = null;
-=======
+
 import {GradientHeading} from "./GradientHeading";
 import {Link} from "react-router-dom";
 import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
@@ -39,7 +34,7 @@ const specialServices = [
     link: "/it-onsite-services"
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface CategoriesSectionProps {
   showTitle?: boolean
 }

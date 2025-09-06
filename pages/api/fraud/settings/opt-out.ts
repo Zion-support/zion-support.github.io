@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getFraudStore } from '[^']*';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const store = null;
-    return res.status(200).json(updated)
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 export default async function handler(
@@ -24,7 +18,7 @@ export default async function handler(
       return res.status(400).json({ error: "Missing userId or optOut" });
     const updated = await store.setPrivacySettings(userId, optOut);
     return res.status(200).json(updated);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
   res.status(405).json({ error: "Method not allowed" });
 }

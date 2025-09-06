@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
-export type ProjectStatus = any;
-=======
+
 export type ProjectStatus =
   | 'offer_sent'
   | 'offer_accepted'
@@ -43,7 +41,7 @@ export interface ProjectNote {
   created_at: string;
   created_by_profile?: {
     display_name: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     avatar_url?: string
   }
 }

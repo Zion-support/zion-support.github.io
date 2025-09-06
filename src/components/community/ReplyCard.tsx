@@ -8,15 +8,7 @@ import { Badge } from "@/components/ui/badge",
 import { ForumReply } from "@/types/community";
 import { cn } from "@/lib/utils";
 interface ReplyCardProps {
-<<<<<<< HEAD
-  reply: ForumReply;
-  onMarkAnswer?: () => void;
-  canMarkAnswer?: boolean;
-  className?: string
-}
 
-export const ReplyCard = null;
-=======
   reply: ForumReply
   onMarkAnswer?: () => void
   canMarkAnswer?: boolean
@@ -87,4 +79,4 @@ export const ReplyCard = ({
   )
 }
 export default ReplyCard
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

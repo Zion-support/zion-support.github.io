@@ -2,15 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-import { Brain;
-  MessageSquare;
-  Image;
-  Video;
-  Code;
-  FileText;
-  Zap;
-=======
+
 import {
   Brain
   MessageSquare
@@ -31,17 +23,13 @@ import {
   Code
   FileText
   Zap
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Star;
   ExternalLink;
   CheckCircle;
   TrendingUp;
   Shield
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function AiToolsPage() {
-  const aiTools = null;
-=======
+
 export default function AiToolsPage() {
   const aiTools = [
     {
@@ -296,7 +284,7 @@ export default function AiToolsPage() {
     },      avgPrice: '$82/month'
     }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

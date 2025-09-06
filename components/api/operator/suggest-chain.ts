@@ -1,11 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { CHAINS } from '../../../utils/chains';
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { region, stakeUsd } = req.body || {},
-  const stake = null;
-=======
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -56,6 +51,6 @@ export default async function handler(
     candidates = stake > 5000 ? ['arbitrumoptimismethereum'] : ['polygonarbitrumoptimism']
   }
   const ranked = candidates.map((k) => ({ key: k, chain: (CHAINS as any)[k] }));
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
 }

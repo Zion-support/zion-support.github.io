@@ -1,9 +1,7 @@
 import Head from 'next/head';
-<<<<<<< HEAD
-import React from 'react';
-=======
+
 import React from 'react'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function Update202508150111() {
   return (
     <>

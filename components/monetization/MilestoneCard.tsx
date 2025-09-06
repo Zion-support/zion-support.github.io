@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Milestone } from '../../utils/types/milestones';
-<<<<<<< HEAD
-type Props = any;
-=======
+
 type Props = {
   milestone: Milestone;
   projectId: string;
@@ -66,7 +64,7 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
   const canTalentSubmit = (role === 'talent' |role === 'admin') && milestone.status === 'In Progress';
   const canClientApprove = role !== 'talent' && milestone.status === 'Submitted';
   const canClientMarkPaid = role !== 'talent' && milestone.status === 'Approved';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="border rounded-lg p-4 bg-white shadow-sm">
       <div className="flex items-start justify-between">

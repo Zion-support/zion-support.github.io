@@ -1,13 +1,6 @@
 import Head from 'next/head',
 import Link from 'next/link';
-<<<<<<< HEAD
-import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart  } from 'lucide-react';
-import { motion, useScroll, useSpring  } from 'framer-motion';
-import { useEffect, useState } from 'react';
-export default function MainFrontIndex() {
-  const { scrollYProgress } = useScroll();
-  const progressX = null;
-=======
+
 import {
   Cpu
   Gauge
@@ -4782,7 +4775,7 @@ export default function MainFrontIndex() {
               { title: 'SEO Audit Runner', href: '/.netlify/functions/seo-audit-runner' }
               { title: 'AI Trends Radar', href: '/.netlify/functions/ai-trends-radar-runner' }
               { title: 'Front Index Directory Builder', href: '/.netlify/functions/front-index-directory-builder' }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               { title: 'Revenue Ideas Promoter', href: '/.netlify/functions/revenue-ideas-promoter' }].map((tool) => (
               <a key={tool.title} href={tool.href} className="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 hover:border-cyan-400/30 hover:text-white transition-colors">
                 <div className="text-base font-semibold text-white">{tool.title}</div>

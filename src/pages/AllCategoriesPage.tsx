@@ -4,9 +4,7 @@ import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBou
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 // Reusing the categories array from CategoriesSection.tsx
 // Ideally, this would come from a shared data source or API
-<<<<<<< HEAD
-const categories = null;
-=======
+
 const categories = [
   {
     title: 'Services'
@@ -36,7 +34,7 @@ const categories = [
     color: undefined, // Let CategoryCard use default color
   }
 ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function AllCategoriesPage() {
   return (
     <div className='min-h-screen bg-zion-blue'>

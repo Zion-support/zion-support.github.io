@@ -3,12 +3,7 @@ import { ProfileData } from "@/types/profile";
 // Mock talent profiles for development and testing
 export const MOCK_TALENTS: ProfileData[] = [
   {
-<<<<<<< HEAD
-    id: "talent-1";
-    name: "Alexandra Chen";
-    title: "Senior AI Engineer & Machine Learning Expert";
-    avatarUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto;
-=======
+
     id: 'talent-1'
     name: 'Alexandra Chen'
     title: 'Senior AI Engineer & Machine Learning Expert'
@@ -502,4 +497,4 @@ availableHours: [ {
 hourlyRate: 125;
 contactEmail: "david.martinez@example.com"
 }];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

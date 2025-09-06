@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import clsx from 'clsx';
-export type EnhancedButtonProps = any;
-=======
+
 import React from "react";
 import clsx from "clsx";
 export type EnhancedButtonProps =
@@ -33,7 +29,7 @@ export default function EnhancedButton({
   variant = "primary"
   size = "md"
   fullWidth
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   ...props
 }: EnhancedButtonProps) {
   return (

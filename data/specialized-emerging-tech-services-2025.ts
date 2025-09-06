@@ -1,8 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-export interface SpecializedEmergingTechService {
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+
   id: string;
   name: string;
   tagline: string;
@@ -33,13 +31,10 @@ export interface SpecializedEmergingTechService {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-    website: string
-  },
-=======
+
     website: string;
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -48,12 +43,7 @@ export interface SpecializedEmergingTechService {
   reviews: number;
   benefits: string[];
   capabilities: string[];
-<<<<<<< HEAD
-  marketAdvantage: string
-}
 
-const contact = null;
-=======
   marketAdvantage: string;
 const contact = {
   mobile: '+1 302 464 0950'
@@ -604,4 +594,4 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

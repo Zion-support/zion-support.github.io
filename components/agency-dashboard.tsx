@@ -1,9 +1,7 @@
 import type { GetServerSideProps } from 'next';
 import { FormEvent, useEffect, useState } from 'react';
 import type { Vendor } from '../utils/vendor-types';
-<<<<<<< HEAD
-type Props = any;
-=======
+
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
 export default function AgencyDashboardPage({ vendor }: Props) {
   const [activeVendor, setActiveVendor] = useState(vendor);
@@ -273,4 +271,4 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const vendor = listVendors()[0] |null, // tie to auth later
   return { props: { vendor } }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

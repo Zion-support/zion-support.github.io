@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import OpenAI from 'openai';
-export type AnalyzeRequestBody = any;
-=======
+
 const user = [ `Operator Prompt: $ {
   operatorPrompt
 }`;
@@ -74,7 +70,7 @@ export default async function handler(
     return res.status(200).json({ analysis })
   } catch (error: any) {
     console.error('Analyze API error', error?.message |error);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     return res.status(500).json({ error: 'Failed to generate analysis' })
 }
 }

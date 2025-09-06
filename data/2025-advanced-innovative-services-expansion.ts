@@ -1,8 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-export interface AdvancedInnovativeService {
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+
   id: string;
   name: string;
   tagline: string;
@@ -33,13 +31,10 @@ export interface AdvancedInnovativeService {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-    website: string
-  },
-=======
+
     website: string;
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -48,12 +43,7 @@ export interface AdvancedInnovativeService {
   reviews: number;
   benefits: string[];
   capabilities: string[];
-<<<<<<< HEAD
-  marketAdvantage: string
-}
 
-const contact = null;
-=======
   marketAdvantage: string;
 const contact = {
   mobile: '+1 302 464 0950'
@@ -791,4 +781,4 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

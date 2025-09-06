@@ -2,12 +2,7 @@ import { useRouter  } from 'next/router';
 import useSWR from 'swr';
 import { TALENT_PROFILES  } from '../../../../data/talent';
 import Link from 'next/link';
-<<<<<<< HEAD
-const fetcher = null;
-          return (
-            <div key={a.id} className="border rounded p-4 bg-white dark:bg-gray-900">
-              <div className="flex items-center justify-between">
-=======
+
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export default function JobApplicantsPage() {
   const router = useRouter()
@@ -35,7 +30,7 @@ export default function JobApplicantsPage() {
           const talent = TALENT_PROFILES.find(t => t.slug === a.talentSlug);
             >
               <div className='flex items-center justify-between'>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 <div>
                   <p className='font-medium'>{talent?.name |a.talentSlug}</p>
                   <p className='text-xs text-gray-500'>

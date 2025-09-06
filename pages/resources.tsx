@@ -1,17 +1,12 @@
-<<<<<<< HEAD
-import React from 'react',
-import SEO from '../components/SEO',
-=======
+
 import React from 'react';
 import SEO from '../components/SEO';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
 export default function ResourcesPage() {
   return (
-<<<<<<< HEAD
-    <UltraFuturisticBackground intensity;
-=======
+
     <UltraFuturisticBackground intensity="high" variant="quantum">
       <SEO title="Resources | Zion Tech Group" description="Guides, case studies, support, training, and market pricing links." canonical="https://ziontechgroup.com/resources/" />
       <div className="container mx-auto px-4 py-16 text-white">
@@ -250,7 +245,7 @@ export default function ResourcesPage() {
             <h2 className="text-4xl font-bold text-white mb-6">Need More Resources?</h2>
             <p className="text-xl text-blue-100 mb-8">
               Can't find what you're looking for? Our team is here to help with custom research
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               personalized consultations, and tailored solutions for your specific needs.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">

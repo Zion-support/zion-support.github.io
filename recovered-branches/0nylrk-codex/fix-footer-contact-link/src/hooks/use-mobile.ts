@@ -5,9 +5,7 @@ export function useIsMobile() {
     typeof window !== 'undefined' ? window.innerWidth < 768 : false
   );
   useEffect(() => {
-<<<<<<< HEAD
-    const handleResize = null;
-=======
+
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768)
     }
@@ -17,6 +15,6 @@ export function useIsMobile() {
     }
     return undefined
   }, []);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return isMobile
 }

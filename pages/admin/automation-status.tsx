@@ -1,8 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-<<<<<<< HEAD
-const AutomationStatus: NextPage;
-=======
+
 const AutomationStatus: NextPage = () => {
   return (
     <div>
@@ -18,4 +16,4 @@ const AutomationStatus: NextPage = () => {
   )
 }
 export default AutomationStatus;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -4,21 +4,17 @@ export interface InvestmentPortfolio {
   name: string;
   totalValue: number;
   currency: string;
-<<<<<<< HEAD
-  riskTolerance: 'conservative' | 'moderate' | 'aggressive';
-=======
+
   riskTolerance: 'conservative' | 'moderate' | 'aggressive'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   investmentHorizon: number, // in years
   targetReturn: number;
   assets: PortfolioAsset[];
   lastRebalanced: Date;
   performance: PortfolioPerformance;
-<<<<<<< HEAD
-  createdAt: Date;
-=======
+
   createdAt: Date
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   updatedAt: Date
 }
 export interface PortfolioAsset {
@@ -28,11 +24,9 @@ export interface PortfolioAsset {
   type: 'stock' | 'bond' | 'etf' | 'mutual_fund' | 'crypto' | 'real_estate' | 'commodity';
   quantity: number;
   currentPrice: number;
-<<<<<<< HEAD
-  marketValue: number;
-=======
+
   marketValue: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   allocation: number, // percentage of portfolio
   purchasePrice: number;
   purchaseDate: Date;
@@ -40,11 +34,9 @@ export interface PortfolioAsset {
     dailyReturn: number;
     weeklyReturn: number;
     monthlyReturn: number;
-<<<<<<< HEAD
-    yearlyReturn: number;
-=======
+
     yearlyReturn: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     totalReturn: number
   }
 }
@@ -57,11 +49,9 @@ export interface PortfolioPerformance {
   beta: number;
   alpha: number;
   trackingError: number;
-<<<<<<< HEAD
-  informationRatio: number;
-=======
+
   informationRatio: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   sortinoRatio: number
 }
 export interface InvestmentRecommendation {
@@ -71,18 +61,7 @@ export interface InvestmentRecommendation {
   asset: {
     symbol: string;
     name: string;
-<<<<<<< HEAD
-    type: string;
-    currentPrice: number
-  },
-  confidence: number;
-  reasoning: string[];
-  expectedReturn: number;
-  riskLevel: 'low' | 'medium' | 'high';
-  timeHorizon: number, // in months
-  alternatives: string[];
-  createdAt: Date;
-=======
+
     type: string
     currentPrice: number
   }
@@ -93,7 +72,7 @@ export interface InvestmentRecommendation {
   timeHorizon: number, // in months
   alternatives: string[];
   createdAt: Date
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   expiresAt: Date
 }
 export interface FinancialGoal {
@@ -107,37 +86,28 @@ export interface FinancialGoal {
   category: 'retirement' | 'education' | 'home' | 'emergency' | 'vacation' | 'business' | 'other';
   monthlyContribution: number;
   expectedReturn: number;
-<<<<<<< HEAD
-  riskTolerance: 'conservative' | 'moderate' | 'aggressive';
-  progress: number, // percentage
-  createdAt: Date;
-=======
+
   riskTolerance: 'conservative' | 'moderate' | 'aggressive'
   progress: number, // percentage
   createdAt: Date
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   updatedAt: Date
 }
 export interface MarketAnalysis {
   id: string;
   market: string;
-<<<<<<< HEAD
-  analysis: string;
-  keyMetrics: Record<string, number>,
-=======
+
   analysis: string
   keyMetrics: Record<string, number>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   trends: string[];
   risks: string[];
   opportunities: string[];
   recommendations: string[];
   confidence: number;
-<<<<<<< HEAD
-  lastUpdated: Date;
-=======
+
   lastUpdated: Date
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   nextUpdate: Date
 }
 export interface FinancialPlan {
@@ -145,75 +115,56 @@ export interface FinancialPlan {
   userId: string;
   name: string;
   summary: string;
-<<<<<<< HEAD
-  goals: FinancialGoal[];
-  investmentStrategy: {
-    assetAllocation: Record<string, number>,
-    rebalancingFrequency: 'monthly' | 'quarterly' | 'semi_annually' | 'annually';
-=======
+
   goals: FinancialGoal[]
   investmentStrategy: {
     assetAllocation: Record<string, number>;
     rebalancingFrequency: 'monthly' | 'quarterly' | 'semi_annually' | 'annually'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     riskManagement: string[]
   }
   cashFlow: {
     monthlyIncome: number;
     monthlyExpenses: number;
-<<<<<<< HEAD
-    savingsRate: number;
-=======
+
     savingsRate: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     emergencyFund: number
   }
   insurance: {
     life: boolean;
     health: boolean;
     disability: boolean;
-<<<<<<< HEAD
-    property: boolean;
-=======
+
     property: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     recommendations: string[]
   }
   tax: {
     estimatedTaxLiability: number;
-<<<<<<< HEAD
-    taxOptimizationStrategies: string[];
-=======
+
     taxOptimizationStrategies: string[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     deductions: string[]
   }
   retirement: {
     targetAge: number;
     estimatedNeeds: number;
     currentSavings: number;
-<<<<<<< HEAD
-    monthlyContribution: number;
-    projectedValue: number
-  },
-  createdAt: Date;
-=======
+
     monthlyContribution: number
     projectedValue: number
   }
   createdAt: Date
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   updatedAt: Date
 }
 export interface FinancialRequest {
   userId: string;
-<<<<<<< HEAD
-  requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking';
-  parameters: Record<string, any>,
-=======
+
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
   parameters: Record<string, any>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   preferences?: Record<string, any>
 }
 export interface FinancialResponse {
@@ -222,29 +173,19 @@ export interface FinancialResponse {
     portfolio?: InvestmentPortfolio;
     recommendations?: InvestmentRecommendation[];
     plan?: FinancialPlan;
-<<<<<<< HEAD
-    analysis?: MarketAnalysis;
-    goals?: FinancialGoal[]
-  },
-  insights: string[];
-  nextSteps: string[];
-  riskWarnings: string[];
-=======
+
     analysis?: MarketAnalysis
     goals?: FinancialGoal[]
   }
   insights: string[];
   nextSteps: string[];
   riskWarnings: string[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   estimatedFees: number
 }
 export class AIFinancialAdvisorService {
   private apiKey: string;
-<<<<<<< HEAD
-  private baseUrl: string;
-  constructor(apiKey: string, baseUrl: string;
-=======
+
   private baseUrl: string
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
     this.apiKey = apiKey
@@ -435,4 +376,4 @@ export class AIFinancialAdvisorService {
   }
 }
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY |'demo-key');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

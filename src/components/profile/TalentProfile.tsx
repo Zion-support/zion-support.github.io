@@ -16,24 +16,16 @@ interface TalentProfileProps {
   profile: TalentProfileType;
   onRequestHire: () => void;
   onMessageTalent?: () => void
-<<<<<<< HEAD
-}
 
-export function TalentProfile({ 
-  profile;
-  onRequestHire;
-=======
 export function TalentProfile({
   profile
   onRequestHire
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onMessageTalent
 }: TalentProfileProps) {
   const { isAuthenticated } = useAuth();
   // Create proper availability object from talent profile
-<<<<<<< HEAD
-  const availability: Availability;
-=======
+
   const availability: Availability = {
     status:
       profile.availability_type === 'full_time'
@@ -57,7 +49,7 @@ export function TalentProfile({
       description: proj.description
       date: new Date().toISOString(), // Default date since we don't have this data
     })) |[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='container mx-auto px-4 py-8'>
       {/* Profile Header */}

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-type Question = any;
-=======
+
 type Question = {
   id: string;
   question: string;
@@ -43,7 +41,7 @@ export default function Quiz({ questions, onComplete }: Props) {
                   type='radio'                  name={q.id}
   function submit() {
     setSubmitted(true);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     onComplete(score)
   }
   return (

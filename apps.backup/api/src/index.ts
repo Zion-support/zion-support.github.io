@@ -8,10 +8,7 @@ dotenv.config();
 const app = Fastify({ logger: true });
 await app.register(cors, {
   origin: (origin, cb) => {
-<<<<<<< HEAD
-    const allowed = null;
-const openai = createOpenAIClient(process.env.OPENAI_API_KEY || '');
-=======
+
     const allowed = (process.env.CORS_ORIGINS |'').split().map((s) => s.trim());
     if (!origin |allowed.includes('*') |allowed.includes(origin)) {
       cb(null, true);
@@ -23,15 +20,12 @@ const openai = createOpenAIClient(process.env.OPENAI_API_KEY || '');
 });
 await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
 const openai = createOpenAIClient(process.env.OPENAI_API_KEY |'');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 function getUserId(req: any): string | null {
   return (req.headers['x-user-id'] as string) |(req.query as any)['user_id'] |null;
 }
 app.post('/ai/ask', async (req, reply) => {
-<<<<<<< HEAD
-  const body = null;
-const port = Number(process.env.API_PORT || 4000);
-=======
+
   const body = (req.body as any) |{}
   const prompt = body.prompt as string;
   if (!prompt) return reply.code(400).send({ error: 'prompt required' });
@@ -97,7 +91,7 @@ app.get('/notifications', async (req, reply) => {
   return { items }
 });
 const port = Number(process.env.API_PORT |4000);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 app.listen({ port, host: '0.0.0.0' }).catch((err) => {
   app.log.error(err);
   process.exit(1)

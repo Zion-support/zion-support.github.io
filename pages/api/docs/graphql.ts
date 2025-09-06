@@ -1,11 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import v1 from '../../../data/api-docs/v1';
 function toSDL() {
-<<<<<<< HEAD
-  const typedefs = null;
-  res.status(200).send(toSDL())
-}
-=======
+
   const typedefs = [
     `schema { query: Query, mutation: Mutation }`
     "type Query { _placeholder: String }"
@@ -24,4 +20,4 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.setHeader("Content-Type", "text/plain");
   res.status(200).send(toSDL());
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

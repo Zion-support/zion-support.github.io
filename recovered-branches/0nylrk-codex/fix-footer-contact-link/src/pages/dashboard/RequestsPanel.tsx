@@ -14,9 +14,7 @@ import type { QuoteRequest } from "@/types/quotes";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function RequestsPanel() {
   const { user } = useAuth();
-<<<<<<< HEAD
-  const isTalent = null;
-=======
+
   const isTalent = user?.userType === 'creator' |user?.userType === 'jobSeeker';
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
@@ -91,7 +89,7 @@ export default function RequestsPanel() {
           isOpen={showDetails}
           onClose={() => {
             setShowDetails(false);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             setSelectedQuote(null)
           }}
         />

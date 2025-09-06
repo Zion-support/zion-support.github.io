@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-export const BrowserRouter = null;
-=======
+
 import React from 'react'
 export const BrowserRouter = ({ children }: { children: any }) => children
 export const Routes = ({ children }: { children: any }) => children
@@ -42,4 +39,4 @@ export const useSearchParams = () => [new URLSearchParams(), () => {}] as any; e
   useLocation
   useParams
   useSearchParams}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

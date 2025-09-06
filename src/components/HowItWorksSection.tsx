@@ -6,11 +6,7 @@ import { useTranslation } from "react-i18next";
 interface HowItWorksSectionProps {
   className?: string;
   style?: React.CSSProperties
-<<<<<<< HEAD
-}
 
-const getSteps = null;
-=======
 const getSteps = (t: any,) => [
   {
     title: t('how_it_works.post')
@@ -121,7 +117,7 @@ export function HowItWorksSection({
           </p>
         </div>
         <div className='relative'>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">

@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import fs from 'fs',
-import path from 'path';
-import { TALENT_PROFILES } from '../../data/talent';
-type TalentSummary = any;
-=======
+
 </div>) )
 }</div> </div>) import fs from 'fs';
 import path from 'path';
@@ -22,7 +17,7 @@ export async function getServerSideProps() {
 }
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
   const map = new Map(summaries.map(s => [s.slug, s.summary]));
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">AI Automation: Talent Summaries</h1>

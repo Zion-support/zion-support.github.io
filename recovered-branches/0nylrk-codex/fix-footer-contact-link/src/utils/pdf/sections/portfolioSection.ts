@@ -7,9 +7,7 @@ export function addPortfolioSection(
   projects: PortfolioProject[];
   colors: PdfThemeColors;
   startY: number;
-<<<<<<< HEAD
-  maxProjects: number;
-=======
+
   maxProjects: number = 2
 ): number {
   if (projects.length === 0) return startY;
@@ -71,7 +69,7 @@ export function addPortfolioSection(
     doc.setFontSize(10);
     doc.setTextColor(colors.text);
     doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     yPos += 6
   }
   return yPos + 5

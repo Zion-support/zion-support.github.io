@@ -12,73 +12,43 @@ import {
 import { ForumCategory, ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
   {
-<<<<<<< HEAD
-    id: "getting-hired";
-    name: "Getting Hired";
-    description: "Tips, strategies, and questions about getting hired on the platform.",
-    adminOnly: false;
-=======
+
     id: "getting-hired"
     name: "Getting Hired"
     description: "Tips, strategies, and questions about getting hired on the platform.";
     adminOnly: false
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     icon: "Briefcase"
   }
   {
-<<<<<<< HEAD
-    id: "project-help";
-    name: "Project Help";
-    description: "Get help with your ongoing projects and collaboration.";
-    adminOnly: false;
-=======
+
     id: "project-help"
     name: "Project Help"
     description: "Get help with your ongoing projects and collaboration."
     adminOnly: false
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     icon: "MessageSquare"
   }
   {
-<<<<<<< HEAD
-    id: "ai-tools";
-    name: "AI Tools Discussion";
-    description: "Discuss AI tools, frameworks, and best practices.",
-    adminOnly: false;
-=======
+
     id: "ai-tools"
     name: "AI Tools Discussion"
     description: "Discuss AI tools, frameworks, and best practices.";
     adminOnly: false
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     icon: "Code"
   }
   {
-<<<<<<< HEAD
-    id: "feedback";
-    name: "Feedback & Feature Requests";
-    description: "Share your feedback and suggest new features.";
-    adminOnly: false;
-=======
+
     id: "feedback"
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
     adminOnly: false
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     icon: "FileText"
   }
   {
-<<<<<<< HEAD
-    id: "announcements";
-    name: "Announcements";
-    description: "Official announcements from the Zion team.";
-    adminOnly: true;
-    icon: "Megaphone"
-  }
-];
 
-const iconMap = null;
-=======
     id: "announcements"
     name: "Announcements"
     description: "Official announcements from the Zion team."
@@ -123,4 +93,4 @@ export const ForumCategories = () => {
   )
 }
 export default ForumCategories;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

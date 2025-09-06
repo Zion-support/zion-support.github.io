@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { TALENT_PROFILES, TalentProfile } from '../../data/talent';
-import OpenAI from 'openai';
-type RequestBody = any;
-  return res.status(200).json(response)
-}
-=======
+
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
@@ -284,4 +277,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   }
 return res.status(200).json(response);  return res.status(200).json(response)
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

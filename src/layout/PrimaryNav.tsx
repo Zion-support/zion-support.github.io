@@ -21,14 +21,7 @@ import { useTranslation  } from 'react-i18next';
 import { CartDrawer  } from '@/components/cart/CartDrawer';
 import { LoginModal } from '@/components/auth/LoginModal';
 export function PrimaryNav() {
-<<<<<<< HEAD
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [loginOpen, setLoginOpen] = useState(false);
-  const { user } = useAuth();
-  const isLoggedIn = null;
-                  setLoginOpen(true)
-                }}
-=======
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [loginOpen, setLoginOpen] = useState(false)
   const { user } = useAuth()
@@ -188,7 +181,7 @@ export function PrimaryNav() {
                 onClick={e => {
                   e.preventDefault()
                   setLoginOpen(true) }}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               >
                 {t('auth.login')}
               </Link>

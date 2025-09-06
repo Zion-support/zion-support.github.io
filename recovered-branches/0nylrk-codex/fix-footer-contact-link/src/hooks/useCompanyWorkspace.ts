@@ -4,20 +4,15 @@ import { Company } from "@/components/enterprise/workspace/CompanyDashboard";
 export function useCompanyWorkspace(companySlug?: string) {
   const [company, setCompany] = useState<Company | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-<<<<<<< HEAD
-  const [error, setError] = useState<string | null>(null),
 
-=======
   const [error, setError] = useState<string | null>(null);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   useEffect(() => {
     // In a real app, this would fetch data from an API based on the companySlug
     // For now, we'll simulate a delay and return mock data
     setIsLoading(true);
     setTimeout(() => {
-<<<<<<< HEAD
-      if (companySlug;
-=======
+
       if (companySlug === "demo" |!companySlug) {
         // Demo company data
         setCompany({
@@ -55,6 +50,6 @@ export function useCompanyWorkspace(companySlug?: string) {
       setIsLoading(false)
     }, 1000), // Simulate loading delay
   }, [companySlug]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return { company, isLoading, error }
 }

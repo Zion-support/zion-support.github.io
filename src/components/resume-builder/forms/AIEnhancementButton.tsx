@@ -11,13 +11,7 @@ interface AIEnhancementButtonProps {
   buttonText?: string;
   className?: string
 export function AIEnhancementButton({
-<<<<<<< HEAD
-  currentContent;
-  enhancementType;
-  context;
-  onEnhanced;
-  buttonText;
-=======
+
   currentContent
   enhancementType
   context
@@ -42,7 +36,7 @@ export function AIEnhancementButton({
       onEnhanced(enhancedContent)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Button
       type="button"

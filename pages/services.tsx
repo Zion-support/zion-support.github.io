@@ -1,21 +1,11 @@
-<<<<<<< HEAD
-import Link from 'next/link',
-import Head from 'next/head';
-import { useState, useEffect  } from 'react';
-import { ContactInfo  } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
-import LoadingSpinner from '../components/LoadingSpinner';
-export default function Services() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  useEffect(() => {
-    const timer = null;
-                  return (
-                    <div 
-                      key={category.title}
-                      className={`p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-${category.color}-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                      style={{ transitionDelay: `${index * 200}ms` }}
-=======
+
 import React from 'react';
+<<<<<<< HEAD
+import Head from 'next/head';
+import Link from 'next/link';
+
+export default function Services() {
+=======
 import Link from 'next/link';
 type Service = {
   name: string;
@@ -1846,22 +1836,26 @@ export default function Services() {
       }
     }
     return colors[color as keyof typeof colors] |colors.blue;  }
+>>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
   return (
     <>
       <Head>
         <title>Our Services - Zion Tech Group</title>
-        <meta
-          name='description'
-          content='Explore our comprehensive range of micro SaaS products, AI services, and IT solutions. 350+ innovative services to transform your business.'
-        />
-        <meta
-          name='keywords'
-          content='micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity'
-        />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <meta name='robots' content='index, follow' />
-        <link rel='canonical' href={`${contact.site}/services`} />
+        <meta name="description" content="Explore the advanced IT and AI services offered by Zion Tech Group." />
       </Head>
+<<<<<<< HEAD
+      <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center py-12">
+        <main className="text-center max-w-4xl px-4">
+          <h1 className="text-5xl font-bold mb-6 gradient-text">Our Advanced Services</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            At Zion Tech Group, we offer a comprehensive suite of IT and AI services designed to propel your business forward.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div className="card">
+              <h3 className="text-2xl font-semibold mb-3">AI & Machine Learning</h3>
+              <p className="text-gray-400">
+                Harness the power of artificial intelligence for automation, data analysis, and intelligent decision-making.
+=======
       <ErrorBoundary level='page'>
         <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
           {/* Hero Section */}
@@ -1876,14 +1870,49 @@ export default function Services() {
                 className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
                 350+ Innovative Solutions for Modern Businesses
+>>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
               </p>
-              <p
-                className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              >
-                From cutting-edge AI services to comprehensive IT solutions and
-                specialized micro SaaS products, we provide everything your
-                business needs to thrive in the digital age.              </p>
             </div>
+<<<<<<< HEAD
+            <div className="card">
+              <h3 className="text-2xl font-semibold mb-3">Cloud Solutions</h3>
+              <p className="text-gray-400">
+                Scalable and secure cloud infrastructure, migration, and management services.
+              </p>
+            </div>
+            <div className="card">
+              <h3 className="text-2xl font-semibold mb-3">Web & Mobile Development</h3>
+              <p className="text-gray-400">
+                Crafting modern, responsive, and high-performance web and mobile applications.
+              </p>
+            </div>
+            <div className="card">
+              <h3 className="text-2xl font-semibold mb-3">Cybersecurity</h3>
+              <p className="text-gray-400">
+                Robust security solutions to protect your digital assets from evolving threats.
+              </p>
+            </div>
+            <div className="card">
+              <h3 className="text-2xl font-semibold mb-3">Data Analytics</h3>
+              <p className="text-gray-400">
+                Transforming raw data into actionable insights for strategic business growth.
+              </p>
+            </div>
+            <div className="card">
+              <h3 className="text-2xl font-semibold mb-3">IT Consulting</h3>
+              <p className="text-gray-400">
+                Expert guidance and strategic planning to optimize your technology landscape.
+              </p>
+            </div>
+          </div>
+          <Link href="/contact" className="btn-primary">
+            Get a Free Consultation
+          </Link>
+        </main>
+      </div>
+    </>
+  );
+=======
           </section>
           {/* Service Categories */}
           <section className='py-16 px-4' role='main'>
@@ -1891,7 +1920,7 @@ export default function Services() {
               <div className='grid lg:grid-cols-3 gap-8'>
                 {serviceCategories.map((category, index) => {
                   const colors = getColorClasses(category.color);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                     >
                       <div className='flex items-center justify-between mb-6'>                        <h3 className={`text-2xl font-bold ${colors.text}`}>
                           {category.title}
@@ -2087,4 +2116,5 @@ export default function Services() {
     </>
   );
   )
+>>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
 }

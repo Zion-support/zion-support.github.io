@@ -7,32 +7,22 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { CountryServiceCard } from "@/components/services/CountryServiceCard";
 import { CountryPricing } from "@/data/onsiteServicePricing";
 interface CountryTabsProps {
-<<<<<<< HEAD
-  popularCountries: string[];
-  filteredCountries: CountryPricing[];
-  handleCountrySelect: (country: CountryPricing) => void;
-  searchQuery: string;
-=======
+
   popularCountries: string[]
   filteredCountries: CountryPricing[]
   handleCountrySelect: (country: CountryPricing) => void
   searchQuery: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   setSearchQuery: (query: string) => void
 }
 export function CountryTabs({
   popularCountries;
-<<<<<<< HEAD
-  filteredCountries;
-  handleCountrySelect;
-  searchQuery;
-  setSearchQuery 
-=======
+
   filteredCountries
   handleCountrySelect
   searchQuery
   setSearchQuery
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }: CountryTabsProps) {
   return (
     <Tabs defaultValue="featured" className="w-full">

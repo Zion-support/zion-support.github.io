@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
-const contactInfo = null;
-=======
+
 import { motion } from 'framer-motion';
 import {
   Phone
@@ -22,7 +18,7 @@ const contactInfo = {
 export default function NeoFuturisticFooter() {
   return (  website: 'https://ziontechgroup.com'
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function NeoFuturisticFooter() {
   return (
     <footer className='relative mt-20 border-t border-slate-800/60 bg-black/60 backdrop-blur-xl overflow-hidden'>

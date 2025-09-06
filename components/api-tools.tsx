@@ -2,15 +2,7 @@ import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-import { Code;
-  Database;
-  Globe;
-  Shield;
-  Zap;
-  Bot;
-  BarChart3;
-=======
+
 import {
   Code
   Database
@@ -35,7 +27,7 @@ import {
   Zap
   Bot
   BarChart3
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Lock;
   ArrowRight;
   CheckCircle;
@@ -45,11 +37,7 @@ import {
   BookOpen;
   Github;
   Terminal
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function ApiToolsPage() {
-  const apiTools = null;
-=======
+
 export default function ApiToolsPage() {
   const apiTools = [
     {
@@ -279,7 +267,7 @@ export default function ApiToolsPage() {
       <Head>  const filteredTools = selectedCategory === 'All'
     ? apiTools
     : apiTools.filter(tool => tool.category === selectedCategory);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

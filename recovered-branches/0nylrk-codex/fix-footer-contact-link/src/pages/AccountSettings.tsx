@@ -20,9 +20,7 @@ export default function AccountSettings() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   useEffect(() => {
     try {
-<<<<<<< HEAD
-      const saved = null;
-=======
+
       const saved = localStorage.getItem('account_settings');
       if (saved) {
         const parsed = JSON.parse(saved);
@@ -85,7 +83,7 @@ export default function AccountSettings() {
       toast.error(error.message |'Failed to connect wallet')
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO title="Account Settings" description="Manage your account" />

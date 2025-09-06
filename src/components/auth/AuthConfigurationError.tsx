@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Link from 'next/link';
-=======
+
 import React from 'react'
 import Link from 'next/link'
 import {
@@ -13,18 +10,14 @@ import {
 } from 'lucide-react'; import { Button } from '@/components/ui/button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription } from '@/components/ui/alert'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 interface AuthConfigurationErrorProps {
   onRetry?: () => void;
   showSetupButton?: boolean
-<<<<<<< HEAD
-}
 
-export function AuthConfigurationError({ onRetry, showSetupButton;
-=======
 export function AuthConfigurationError({
   onRetry
   showSetupButton = true
@@ -319,4 +312,4 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
   )
 export default AuthConfigurationError }
 export default AuthConfigurationError
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

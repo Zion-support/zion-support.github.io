@@ -12,9 +12,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  
 import { toast  } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 // Form schema
-<<<<<<< HEAD
-const formSchema = null;
-=======
+
 const formSchema = z.object({
   brand_name: z.string().min(2, { message: 'Brand name must be at least 2 characters' })
   subdomain: z.string()
@@ -73,7 +71,7 @@ export function WhitelabelRequestForm() {
         description: error.message |'Something went wrong'})
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card className="w-full max-w-2xl">
       <CardHeader>

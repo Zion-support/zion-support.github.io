@@ -29,12 +29,7 @@ import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react'
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "sonner";
 export function DisputeDetail() {
-<<<<<<< HEAD
-  const router = null;
-                                setAdminNote("")
-                              })
-                            }
-=======
+
   const router = useRouter()
   const { disputeId } = router.query as { disputeId?: string }
   const { user } = useAuth()
@@ -567,7 +562,7 @@ export function DisputeDetail() {
                                 )
                                 setAdminNote('')
                               }) }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                           }}
                         >
                           Add Admin Note

@@ -6,18 +6,7 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import {
-<<<<<<< HEAD
-  Card;
-  CardContent;
-  CardDescription;
-  CardFooter;
-  CardHeader;
-  CardTitle} from "@/components/ui/card",
-import { Sparkles } from "lucide-react";
-import { Progress } from "@/components/ui/progress";
-export function UsageStats() {
-  const handleSaveChanges = null;
-=======
+
   Card
   CardContent
   CardDescription
@@ -34,7 +23,7 @@ export function UsageStats() {
       description: "The new usage limits have been saved successfully."
     });
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-8">
       <div>

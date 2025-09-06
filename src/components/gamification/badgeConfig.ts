@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 
-import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react'
-
-export type BadgeKey = any;
-=======
 import {
   LucideIcon
   BadgeCheck
@@ -81,4 +76,4 @@ export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find(b => b.key === key)
 export const getBadgeMeta = (key: BadgeKey) =>
   badgeList.find((b) => b.key === key)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

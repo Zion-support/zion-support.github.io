@@ -5,24 +5,7 @@ import {useForm, type, UseFormReturn} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {z} from "zod";
 import {User, Mail, Lock, Eye, EyeOff, Facebook, Twitter} from "lucide-react";
-<<<<<<< HEAD
 
-import { useAuth } from "@/hooks/useAuth",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
-import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form",
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-// Form validation schema
-const signupSchema = null;
-=======
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -71,7 +54,7 @@ export default function Signup() {
       setIsSubmitting(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
     return <Navigate to="/" />

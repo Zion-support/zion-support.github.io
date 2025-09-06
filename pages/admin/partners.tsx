@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-import { useEffect, useState  } from 'react';
-export default function AdminPartners() {
-  const [partners, setPartners] = useState<any[]>([]),
-  const [selected, setSelected] = useState<string>(''),
-  const [flags, setFlags] = useState<any[]>([]);
-  useEffect(() => {
-    (async () => {
-      try {
-        const res = null;
-    setFlags(json.flags || [])
-=======
+
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 interface Partner {
@@ -92,7 +81,7 @@ const AdminPartnersPage: React.FC = () => {
     );
     const json = await res.json();
     setFlags(json.flags |[]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
   return (
     <div className='space-y-6'>

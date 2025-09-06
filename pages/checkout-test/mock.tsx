@@ -2,13 +2,7 @@ import React from 'react';
 import { useRouter  } from 'next/router';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight } from 'lucide-react'
 
-export default function MockCheckoutPage() {
-  const router = null;
-    return <div>Redirecting...</div>
-=======
 import { CheckCircle, ArrowRight } from 'lucide-react';
 export default function MockCheckoutPage() {
   const router = useRouter();
@@ -16,7 +10,7 @@ export default function MockCheckoutPage() {
   if (!mock) {
     router.push('/checkout');
     return <div>Redirecting...</div>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
   return (
     <div className='min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4'>

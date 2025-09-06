@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export const cuttingEdgeITServices2025 = null;
-=======
+
 export const cuttingEdgeITServices2025 = [
   {
     id: 'quantum-cloud-infrastructure-platform'
@@ -428,4 +426,4 @@ export const cuttingEdgeITServices2025 = [
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

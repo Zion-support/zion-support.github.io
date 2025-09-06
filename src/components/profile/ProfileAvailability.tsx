@@ -5,12 +5,7 @@ import { Calendar, Clock, Check } from 'lucide-react'
 import { Calendar } from 'lucide-react'
 interface ProfileAvailabilityProps {
   availability: Availability
-<<<<<<< HEAD
-}
 
-export function ProfileAvailability({ availability }: ProfileAvailabilityProps) {
-  const getStatusColor = null;
-=======
 export function ProfileAvailability({
   availability
 }: ProfileAvailabilityProps) {
@@ -37,7 +32,7 @@ export function ProfileAvailability({
       default:
         return '' }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>
       <h3 className='text-xl font-bold text-white mb-4'>Availability</h3>

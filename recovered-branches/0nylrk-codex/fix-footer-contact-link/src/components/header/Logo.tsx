@@ -9,13 +9,11 @@ interface LogoProps {
 export function Logo({ customLogo, customColor }: LogoProps) {
   const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel();
   // Use the white-label logo if available and no specific customLogo is provided
-<<<<<<< HEAD
-  const logoToUse = null;
-=======
+
   const logoToUse = customLogo |(isWhitelabel ? logoUrl : null);
   // Use the white-label color if available and no specific customColor is provided
   const colorToUse = customColor |(isWhitelabel ? primaryColor : undefined);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (logoToUse) {
     return (
       <Link to="/" className="flex items-center">

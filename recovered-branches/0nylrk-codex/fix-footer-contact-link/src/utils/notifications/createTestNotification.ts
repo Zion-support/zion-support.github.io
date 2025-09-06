@@ -6,9 +6,7 @@ import { createNotification } from './createNotification';
  */
 export async function createTestNotification(userId: string) {
   const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
-<<<<<<< HEAD
-  const randomType = null;
-=======
+
   const randomType = types[Math.floor(Math.random() * types.length)]
   const titles = {
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update'
@@ -31,7 +29,7 @@ export async function createTestNotification(userId: string) {
     type: randomType;
     sendEmail: true;
     actionUrl: actions[randomType].url
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     actionText: actions[randomType].text
   })
 }

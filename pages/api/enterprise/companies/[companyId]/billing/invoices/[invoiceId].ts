@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
 
-export const config = null;
-  res.status(200).send(pdfBuffer)
-}
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 export const config = {
   api: {
@@ -37,4 +31,4 @@ export default async function handler(
   );
   res.status(200).send(pdfBuffer);
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,7 +1,5 @@
 import React, { forwardRef } from 'react';
-<<<<<<< HEAD
-export type ResumeData = any;
-=======
+
 export type ResumeData = {
   name: string;
   contact?: {
@@ -334,4 +332,4 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
 );
 ResumePreview.displayName = 'ResumePreview';
 export default ResumePreview;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

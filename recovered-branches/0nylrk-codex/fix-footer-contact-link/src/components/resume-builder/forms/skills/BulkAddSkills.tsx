@@ -1,15 +1,5 @@
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { Button  } from '@/components/ui/button';
-import { Loader2, Sparkles  } from 'lucide-react';
-import { useResumeEnhancer  } from '@/hooks/useResumeEnhancer';
-import { useResume  } from '@/hooks/useResume';
-import { BulkAddSkillsProps  } from './types';
-import { Alert, AlertDescription  } from '@/components/ui/alert';
-import { Textarea } from '@/components/ui/textarea';
-export const BulkAddSkills = null;
-=======
+
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Loader2, Sparkles} from 'lucide-react';
@@ -94,4 +84,4 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
     </div>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

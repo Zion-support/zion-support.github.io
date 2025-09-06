@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm } from "react-hook-form",
-import { z } from "zod",
-import { WorkExperience } from "@/types/resume",
-import { Button } from "@/components/ui/button",
-import { Calendar } from "@/components/ui/calendar",
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { Textarea } from "@/components/ui/textarea",
-import { cn } from "@/lib/utils",
-import { Switch } from "@/components/ui/switch",
-import { format } from "date-fns",
-=======
+
 import { useState } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
@@ -38,17 +23,12 @@ import { Textarea } from '@/components/ui/textarea'
 import { cn } from '@/lib/utils'
 import { Switch } from '@/components/ui/switch'
 import { format } from 'date-fns'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { CalendarIcon, Loader2 } from 'lucide-react'
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
 // Define form schema
-<<<<<<< HEAD
-const formSchema = null;
-          context: `${watchRoleTitle} at ${watchCompanyName}`}}
-        initialContent={form.getValues("description") || ""}
-      />
-=======
+
 const formSchema = z.object({
   company_name: z.string().min(1, 'Company name is required')
   role_title: z.string().min(1, 'Role title is required')
@@ -338,7 +318,7 @@ export function WorkExperienceItemForm({
           context: `${watchRoleTitle} at ${watchCompanyName}`
         }}
         initialContent={form.getValues('description') |''}      />
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     </>
   )
 is current: z.boolean () .default (false)

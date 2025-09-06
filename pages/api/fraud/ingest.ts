@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { evaluateHeuristics } from '[^']*';
-import { classifyWithGPT } from '[^']*';
-import { getFraudStore, newEvent } from '[^']*';
-import { extractClientIp } from '[^']*';
-import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '[^']*';
-import { sendWarningEmail } from '[^']*';
-const allowedSources: MonitoredSource[] = ['signupjob_postmessagequotereview'];
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
 import { classifyWithGPT } from "../../../utils/fraud/gpt";
@@ -39,13 +26,10 @@ export default async function handler(
   if (req.method !== "POST") {
     res.status(405).json({ error: "Method not allowed" });
     return;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
   try {
-<<<<<<< HEAD
-    const body = null;
-      createdAt: saved.createdAt})
-=======
+
     const body = req.body |{}
     const source = body.source as MonitoredSource;
     if (!allowedSources.includes(source)) {
@@ -113,7 +97,7 @@ export default async function handler(
       autoHidden: saved.autoHidden
       createdAt: saved.createdAt
     });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch (e: any) {
     res
       .status(500)

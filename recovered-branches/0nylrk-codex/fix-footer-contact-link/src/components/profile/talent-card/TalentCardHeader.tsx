@@ -4,28 +4,20 @@ import { BadgeCheck } from "lucide-react",
 import { TalentCardAvatar } from "./TalentCardAvatar";
 import { TalentCardAvailability } from "./TalentCardAvailability";
 interface TalentCardHeaderProps {
-<<<<<<< HEAD
-  fullName: string;
-  professionalTitle: string;
-  profilePicture?: string;
-  availabilityType: string;
-=======
+
   fullName: string
   professionalTitle: string
   profilePicture?: string;
   availabilityType: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   yearsExperience: number
 }
 export function TalentCardHeader({
   fullName;
-<<<<<<< HEAD
-  professionalTitle;
-  profilePicture;
-=======
+
   professionalTitle
   profilePicture
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   availabilityType;
   yearsExperience
 }: TalentCardHeaderProps) {

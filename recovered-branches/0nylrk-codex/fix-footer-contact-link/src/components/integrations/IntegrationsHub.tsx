@@ -1,13 +1,4 @@
-<<<<<<< HEAD
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { IntegrationCards } from "./IntegrationCards",
-import { ZapierIntegration } from "./ZapierIntegration",
-import { Badge } from "@/components/ui/badge",
-=======
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -22,7 +13,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { IntegrationCards } from "./IntegrationCards";
 import { ZapierIntegration } from "./ZapierIntegration";
 import { Badge } from "@/components/ui/badge";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { WebhookManager } from "./WebhookManager";
 import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
 export function IntegrationsHub() {

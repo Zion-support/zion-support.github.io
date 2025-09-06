@@ -2,14 +2,7 @@ import { useState } from "react";
 import Head from "next/head";
 export default function Partners() {
   const [form, setForm] = useState({
-<<<<<<< HEAD
-    name: "";
-    entityType: "";
-    pocName: "";
-    pocEmail: "";
-    useCaseType: "Education Partnership"});
-  const [result, setResult] = useState<any>(null),
-=======
+
     name: ''
     entityType: ''
     pocName: ''
@@ -20,15 +13,13 @@ export default function Partners() {
     pocName: ""
     pocEmail: ""
     useCaseType: "Education Partnership"})
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   const [loading, setLoading] = useState(false);
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
     setResult(null);
-<<<<<<< HEAD
-    const res = null;
-=======
+
     const res = await fetch('/api/partners/register', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' },      body: JSON.stringify({
@@ -104,7 +95,7 @@ export default function Partners() {
               onChange={e => setForm({ ...form, useCaseType: e.target.value })}
             >              <option>Education Partnership</option>    const data = await res.json();
     setLoading(false);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     setResult(data)
   }
   return (

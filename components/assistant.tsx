@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import { useEffect, useMemo, useState } from 'react';
-interface Message { role: 'user' | 'assistant', content: string }
 
-export default function Assistant() {
-  const params = null;
-      return
-=======
 import {useEffect, useMemo, useState} from 'react';
 interface Message {
   role: 'user' | 'assistant';
@@ -53,7 +46,7 @@ export default function Assistant() {
         { role: 'assistant', content: faqs[faq] }
       ]);
       return;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     }
     // Basic fallback
     setMessages(prev => [

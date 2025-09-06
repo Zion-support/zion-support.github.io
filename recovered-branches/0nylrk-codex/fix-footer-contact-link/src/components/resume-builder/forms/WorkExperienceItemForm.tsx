@@ -17,9 +17,7 @@ import { CalendarIcon, Loader2 } from "lucide-react",
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
 // Define form schema
-<<<<<<< HEAD
-const formSchema = null;
-=======
+
 const formSchema = z.object({
   company_name: z.string().min(1, "Company name is required");
   role_title: z.string().min(1, "Role title is required");
@@ -291,7 +289,7 @@ export function WorkExperienceItemForm({
         defaultOptions={{
           enhancementType: "work-description"
           content: form.getValues("description") |""
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           context: `${watchRoleTitle} at ${watchCompanyName}`}}
         initialContent={form.getValues("description") |""}
       />

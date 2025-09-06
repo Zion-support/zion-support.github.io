@@ -39,14 +39,7 @@ interface ImageMetrics {
 }
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
-<<<<<<< HEAD
-  src;
-  alt;
-  width;
-  height;
-  className;
-  placeholder;
-=======
+
   src
   alt
   width
@@ -423,4 +416,4 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
 }
 }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

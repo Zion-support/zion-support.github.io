@@ -2,11 +2,7 @@ import * as React from 'react'
 import * as ToastPrimitives from '@radix-ui/react-toast'
 import { cva, type VariantProps } from 'class-variance-authority'
 import { X } from 'lucide-react'
-<<<<<<< HEAD
-import { cn } from "@/lib/utils"
-import { logInfo } from '@/utils/productionLogger';
-const ToastProvider = null;
-=======
+
 import { cn } from '@/lib/utils'
 import { logInfo } from '@/utils/productionLogger'
 const ToastProvider = ToastPrimitives.Provider; import { logInfo } from '@/utils/productionLogger'
@@ -123,6 +119,6 @@ export {
 //       // Implementation of toast functionality
 //       logInfo('Toast:', { data: props })
 //     }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 //   }
 // }

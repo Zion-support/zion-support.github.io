@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { RoomServiceClient, CreateRoomOptions } from '[^']*';
 
-const LIVEKIT_API_KEY = null;
-    return res.status(500).json({ error: 'Failed to create room' })
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { RoomServiceClient, CreateRoomOptions } from "livekit-server-sdk";
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY |"";
@@ -56,6 +50,6 @@ export default async function handler(
   } catch (err: any) {
     console.error("Room create error", err);
     return res.status(500).json({ error: "Failed to create room" });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
 }

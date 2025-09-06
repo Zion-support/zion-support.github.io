@@ -3,11 +3,7 @@ import type { KycDocumentMeta, KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
-<<<<<<< HEAD
-const DATA_DIR = null;
-  res.status(200).json({ ok: true, profile })
-}
-=======
+
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
 function load(): Record<string, KycProfile> {
   try {
@@ -60,4 +56,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   save(db);
 res.status(200).json({ ok: true, profile });
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

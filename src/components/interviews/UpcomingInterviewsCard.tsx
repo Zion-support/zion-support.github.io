@@ -9,14 +9,7 @@ import { Calendar, Clock, Video } from 'lucide-react'
 import { Avatar } from "@/components/ui/avatar";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function UpcomingInterviewsCard() {
-<<<<<<< HEAD
 
-  const { fetchInterviews } = useInterviews();
-  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    const loadInterviews = null;
-=======
   const { fetchInterviews } = useInterviews()
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([])
   const [isLoading, setIsLoading] = useState(true)
@@ -113,7 +106,7 @@ export function UpcomingInterviewsCard() {
             const isStartingSoon =
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
               interviewDate.getTime() > now.getTime()
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             return (
               <div key={interview.id} className='flex items-center gap-3'>
                 <Avatar className='h-10 w-10 bg-zion-purple/10'>

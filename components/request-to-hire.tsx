@@ -2,9 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 import { TALENT_PROFILES } from '../data/talent';
 export default function RequestToHirePage() {
-<<<<<<< HEAD
-  const router = null;
-=======
+
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
   const selected = useMemo(
@@ -64,7 +62,7 @@ export default function RequestToHirePage() {
       setSubmitting(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (result) {
     return (
       <div className='max-w-xl mx-auto py-12'>

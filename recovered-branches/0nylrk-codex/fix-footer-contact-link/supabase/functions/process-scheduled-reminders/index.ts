@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1";
-const supabaseUrl = null;
-=======
+
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
@@ -107,4 +103,4 @@ serve(async (req: Request) => {
     )
   }
 });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

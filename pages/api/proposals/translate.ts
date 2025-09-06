@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { OpenAI } from '[^']*';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  try {
-    const { markdown, targetLanguage;
-    return res.status(200).json({ translated })
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { OpenAI } from "openai";
 export default async function handler(
@@ -35,7 +27,7 @@ export default async function handler(
     });
     const translated = completion.choices?.[0]?.message?.content |markdown;
     return res.status(200).json({ translated });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch (error: any) {
     return res
       .status(500)

@@ -13,10 +13,7 @@ import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
-<<<<<<< HEAD
-  const router = null;
-                hourly_rate: profileData?.hourly_rate || 0
-=======
+
   const router = useRouter();
   const profileId = router.query.profileId as string;
   const [profileData, setProfileData] = useState<any>(null);
@@ -210,7 +207,7 @@ export default function ProfileDetail() {
                 full_name: profileData?.full_name |''
                 professional_title: profileData?.professional_title |''
                 hourly_rate: profileData?.hourly_rate |0
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               }}
             />
             {/* Contact Information */}

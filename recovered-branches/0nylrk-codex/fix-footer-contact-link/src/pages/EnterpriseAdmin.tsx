@@ -10,11 +10,9 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function EnterpriseAdmin() {
   const { user } = useAuth();
   // Check if user has enterprise admin role
-<<<<<<< HEAD
-  const isEnterpriseAdmin = null;
-=======
+
   const isEnterpriseAdmin = user?.role === "enterprise_admin";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (!isEnterpriseAdmin) {
     return <Navigate to="/unauthorized" />
   }

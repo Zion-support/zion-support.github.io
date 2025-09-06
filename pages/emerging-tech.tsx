@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Layout from '../components/layout/Layout';
-import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react';
-export default function EmergingTechPage() {
-  const features = null;
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -18,7 +11,7 @@ export default function EmergingTechPage() {
     { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' }
     { name: '5G Private Networks', href: '/5g-private-network-solutions' }
     { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Layout>
       <Head>

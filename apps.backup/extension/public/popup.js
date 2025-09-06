@@ -14,24 +14,17 @@ document.getElementById('askBtn').addEventListener('click', async () => {
   const prompt = document.getElementById('prompt').value.trim();
   if (=> getUserId(r)),
   const res = await fetch(`${API_BASE}/ai/ask`, {
-<<<<<<< HEAD
-    method: 'POST');
-    headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) };
-=======
+
     method: 'POST'
     headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     body: JSON.stringify({ prompt })
   }));
   const data = await res.json();
-<<<<<<< HEAD
-  document.getElementById('result').textContent = data.text || JSON.stringify(data, null, 2)
-}),
 
-=======
   document.getElementById('result').textContent = data.text |JSON.stringify(data, null, 2);
 });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 document.getElementById('postJob').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r));
   const res = await fetch(`${API_BASE}/jobs/generate`, {
@@ -40,14 +33,10 @@ document.getElementById('postJob').addEventListener('click', async () => {
     body: JSON.stringify({ role: 'Cloud Engineer' })
   });
   const data = await res.json();
-<<<<<<< HEAD
-  document.getElementById('result').textContent = data.description || 'Draft saved.'
-}),
 
-=======
   document.getElementById('result').textContent = data.description |'Draft saved.';
 });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 document.getElementById('resumeSearch').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r));
   if (return (document.getElementById('result').textContent = 'Sign in first.'));
@@ -55,14 +44,10 @@ document.getElementById('resumeSearch').addEventListener('click', async () => {
     headers: { ...(userId ? { 'x-user-id': userId } : {}) }
   });
   const data = await res.json();
-<<<<<<< HEAD
-  document.getElementById('result').textContent = JSON.stringify(data.results || [], null, 2)
-}),
 
-=======
   document.getElementById('result').textContent = JSON.stringify(data.results |[], null, 2);
 });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 document.getElementById('viewNotifications').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r));
   if (!userId) return (document.getElementById('result').textContent = 'Sign in first.');
@@ -70,22 +55,15 @@ document.getElementById('viewNotifications').addEventListener('click', async () 
     headers: { 'x-user-id': userId }
   });
   const data = await res.json();
-<<<<<<< HEAD
-  document.getElementById('result').textContent = JSON.stringify(data.items || [], null, 2)
-}),
 
-=======
   document.getElementById('result').textContent = JSON.stringify(data.items |[], null, 2);
 });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 document.getElementById('signIn').addEventListener('click', async () => {
   // Placeholder sign-in: generate a random user id and store it.
   const id = crypto.randomUUID();
   setUserId(id);
-<<<<<<< HEAD
-  document.getElementById('result').textContent = 'Signed in (local).'
-});
-=======
+
   document.getElementById('result').textContent = 'Signed in (local).';
 });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

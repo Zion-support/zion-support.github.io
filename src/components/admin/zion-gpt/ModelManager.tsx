@@ -12,19 +12,7 @@ interface ModelVersionData extends ModelConfig {
   errorMessage?: string
 }
 
-<<<<<<< HEAD
-export function ZionGPTModelManager() {
-  const [models, setModels] = useState<ModelVersionData[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),
 
-  // Fetch model data on component mount
-  useEffect(() => {
-    fetchModels()
-  }, []),
-
-  const fetchModels = null;
-=======
         .order('createdAt', { ascending: false })
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {
     try {
@@ -46,7 +34,7 @@ export function ZionGPTModelManager() {
       logErrorToProduction('Error toggling model active state:', { data: error })
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card className="w-full">
       <CardHeader className="flex flex-row items-center justify-between">

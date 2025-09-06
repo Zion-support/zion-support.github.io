@@ -8,22 +8,14 @@ import { useAuthStatus } from "@/hooks/talent";
 import type { UserProfile } from "@/types/auth";
 import { useRouter } from 'next/router';
 interface TalentCardFooterProps {
-<<<<<<< HEAD
-  profile: TalentProfile;
-  onViewProfile: (id: string) => void;
-  onRequestHire?: (profile: TalentProfile) => void
-=======
+
   profile: TalentProfile
   onViewProfile: (id: string,) => void
   onRequestHire?: (profile: TalentProfile,) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
-<<<<<<< HEAD
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
-  const { userDetails } = useAuthStatus();
-  const router = null;
-=======
+
   const [isHireModalOpen, setIsHireModalOpen] = useState(false)
   const { userDetails } = useAuthStatus()
   const router = useRouter()
@@ -63,7 +55,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
       onViewProfile(profile.id |'')
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">

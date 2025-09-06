@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { ArrowRight, ExternalLink, Star, TrendingUp;
-  Users, Zap, Shield, Clock, Check, Brain;
-  Rocket, Dna, DollarSign, Lock, Globe
- } from 'lucide-react';
-=======
+
 import {
   ArrowRight
   ExternalLink
@@ -27,7 +22,7 @@ interface UltraAdvancedServiceCardProps {
   ArrowRight, ExternalLink, Star, TrendingUp
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface UltraAdvancedServiceCardProps {
   service: {
     id: string;
@@ -60,20 +55,16 @@ interface UltraAdvancedServiceCardProps {
       mobile: string;
       email: string;
       address: string;
-<<<<<<< HEAD
-      website: string
-    },
-=======
+
       website: string;
     }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     realImplementation: boolean;
     implementationDetails: string;
     launchDate: string;
     customers: number;
     rating: number;
-<<<<<<< HEAD
-=======
+
     reviews: number;
   }
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
@@ -91,16 +82,14 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
     launchDate: string
     customers: number
     rating: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     reviews: number
   }
 }
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-<<<<<<< HEAD
-  const getCategoryIcon = null;
-=======
+
   const getCategoryIcon = (category: string) => {
     if (category.includes('AI') |category.includes('Machine Learning'))
       return <Brain className='w-4 h-4' />;
@@ -473,4 +462,4 @@ export default UltraAdvancedServiceCard;            className="flex justify-cent
 export default UltraAdvancedServiceCard;  )
 }
 export default UltraAdvancedServiceCard;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

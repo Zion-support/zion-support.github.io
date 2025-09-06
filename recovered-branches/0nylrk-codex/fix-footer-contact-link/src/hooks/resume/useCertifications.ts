@@ -7,11 +7,7 @@ import { formatDateForDB, handleResumeError, showSuccessToast } from './useResum
 export function useCertifications() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-  const [error, setError] = useState<string | null>(null),
-  
-  const addCertification = null;
-=======
+
   const [error, setError] = useState<string | null>(null);
   const addCertification = async (resumeId: string, cert: Certification): Promise<boolean> => {
     if (!user) {
@@ -92,7 +88,7 @@ export function useCertifications() {
     error;
     addCertification;
     updateCertification;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     deleteCertification
   }
 }

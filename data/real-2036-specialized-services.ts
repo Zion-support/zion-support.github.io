@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export type Real2036SpecializedService = any;
-=======
+
 export type Real2036SpecializedService = {
   id: string;
   name: string;
@@ -685,4 +683,4 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     technology: ['Space systemsSafety protocolsTraining technologyCustomer management']
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

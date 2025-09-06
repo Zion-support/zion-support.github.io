@@ -16,15 +16,11 @@ import {
   AlertDialogTitle} from "@/components/ui/alert-dialog",
 import { useState } from "react";
 interface TemplateListProps {
-<<<<<<< HEAD
-  templates: ContractTemplate[];
-  isLoading: boolean;
-  onSelect: (template: ContractTemplate) => void;
-=======
+
   templates: ContractTemplate[]
   isLoading: boolean
   onSelect: (template: ContractTemplate) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onEdit: (template: ContractTemplate) => void
 }
 export function TemplateList({
@@ -35,9 +31,7 @@ export function TemplateList({
 }: TemplateListProps) {
   const [templateToDelete, setTemplateToDelete] = useState<string | null>(null),
   const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
-<<<<<<< HEAD
-  const handleDeleteClick = null;
-=======
+
   const handleDeleteClick = (templateId: string) => {
     setTemplateToDelete(templateId)
   }
@@ -50,7 +44,7 @@ export function TemplateList({
   const handleSetDefault = async (templateId: string) => {
     await setDefaultTemplate.mutateAsync(templateId)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (isLoading) {
     return (
       <div className="flex justify-center items-center py-8">

@@ -1,33 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Phone;
-  Mail;
-  Facebook;
-  Twitter;
-  Linkedin;
-  Instagram;
-  ChevronDown;
-  Menu;
-  X;
-  Code;
-  Smartphone;
-  Cloud;
-  Database;
-  Shield;
-  Zap;
-  Building;
-  ShoppingCart;
-  Heart;
-  GraduationCap;
-  Factory;
-  Truck;
-  CreditCard
-} from 'lucide-react';
 
-=======
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
@@ -49,7 +20,7 @@ import {
   Truck
   CreditCard
 } from "lucide-react";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -65,25 +36,7 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-<<<<<<< HEAD
 
-  const servicesDropdown = null;
-      icon: Zap
-    }
-  ];
-
-  const solutionsDropdown = null;
-      icon: GraduationCap
-    }
-  ];
-
-  const industriesDropdown = null;
-    { name: 'Retail', href: '/industries/retail', icon: ShoppingCart }
-  ];
-
-  const navigation = null;
-    { name: 'Contact', href: '/contact' }
-=======
   const servicesDropdown = [
     {
       title: "Web Development"
@@ -172,7 +125,7 @@ export default function Header() {
     { name: "Solutions", href: "/solutions" }
     { name: "Industries", href: "/industries" }
     { name: "Contact", href: "/contact" }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   ];
   const handleServiceClick = (href: string) => {
     closeMenu();

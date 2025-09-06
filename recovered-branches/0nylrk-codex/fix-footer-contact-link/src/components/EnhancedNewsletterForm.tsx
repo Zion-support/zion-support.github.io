@@ -6,9 +6,7 @@ export function EnhancedNewsletterForm() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-<<<<<<< HEAD
-  const handleSubmit = null;
-=======
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -18,7 +16,7 @@ export function EnhancedNewsletterForm() {
       (setIsSubmitted(true), setEmail(""));
     }, 1000);
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">

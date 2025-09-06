@@ -10,12 +10,7 @@ export default function AccountSettingsPage() {
   const [linking, setLinking] = useState(false);
   const [backupCid, setBackupCid] = useState('');
   const [restoreCid, setRestoreCid] = useState('');
-<<<<<<< HEAD
-  const [status, setStatus] = useState<string | null>(null),
 
-  useEffect(() => {
-    const saved = null;
-=======
   const [status, setStatus] = useState<string | null>(null);
   useEffect(() => {
     const saved =
@@ -124,7 +119,7 @@ export default function AccountSettingsPage() {
     } catch (e: any) {
       setStatus(e?.message |'Restore failed');    }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

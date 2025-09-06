@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-=======
 import { Button } from '@/components/ui/button'
 import {
   Card
@@ -12,7 +8,7 @@ import {
   CardHeader
   CardTitle
 } from '@/components/ui/card'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { FileText, ShieldCheck } from 'lucide-react'
 interface ContractTypeCardsProps {
   onStandardClick: () => void
@@ -30,11 +26,9 @@ export function ContractTypeCards({
           <CardTitle className="flex items-center gap-2">
             <FileText className="h-5 w-5" />
 interface ContractTypeCardsProps {
-<<<<<<< HEAD
-  onStandardClick: () => void;
-=======
+
   onStandardClick: () => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onSmartClick: () => void
 }
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {

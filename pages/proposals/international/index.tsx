@@ -1,13 +1,6 @@
 import React, { useEffect, useState } from 'react';
 export default function InternationalProposals() {
-<<<<<<< HEAD
-  const [items, setItems] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    (async () => {
-      const res = null;
-    setItems(data.proposals || [])
-=======
+
   const [items, setItems] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
   useEffect(() => {
@@ -23,7 +16,7 @@ export default function InternationalProposals() {
     const res = await fetch('/api/proposals/list')
     const data = await res.json()
     setItems(data.proposals |[])
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
   return (
     <div className="space-y-6">

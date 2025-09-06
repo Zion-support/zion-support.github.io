@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import { useState, useEffect, useCallback, useMemo  } from 'react';
-import { useTranslation  } from 'react-i18next';
-import { motion, AnimatePresence  } from 'framer-motion';
-=======
+
 
 import { useRouter } from 'next/router'
 import { useState, useEffect, useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react'
 import { NextSeo  } from '@/components/NextSeo';
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
@@ -24,10 +19,7 @@ import { INITIAL_MARKETPLACE_PRODUCTS  } from '@/data/initialMarketplaceProducts
 import { useCurrency  } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
 // Market insights component
-<<<<<<< HEAD
-const MarketplaceInsights = null;
-                      onClick: () => router.push('/cart')}})
-=======
+
 const MarketplaceInsights = ({ stats }: { stats: any },) => (
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
     <CardContent className="p-6">
@@ -355,7 +347,7 @@ function MarketplacePageContent() {
                     action: {
                       label: 'View Cart'
                       onClick: (,) => router.push('/cart')}})
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 }}
               />
             </motion.div>

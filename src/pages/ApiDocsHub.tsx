@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 
-import React from "react",
-import Link from "next/link";
-import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from 'lucide-react'
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-export function ApiDocsHub() {
-  const sections = null;
-=======
 import React from 'react'
 import Link from 'next/link'
 import {
@@ -109,4 +101,4 @@ export function ApiDocsHub() {
     </ApiDocsLayout>
   )
 export default ApiDocsHub
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

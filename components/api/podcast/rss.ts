@@ -1,11 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-const EPISODES_PATH = null;
-  return res.status(200).json({ ok: true, path: '/podcast.xml' })
-}
-=======
+
 const EPISODES_PATH = path.join(
   process.cwd()
   'data'
@@ -67,4 +63,4 @@ fs.writeFileSync(RSS_PATH, xml, 'utf8');
   items
 }</channel> </rss>`;  return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

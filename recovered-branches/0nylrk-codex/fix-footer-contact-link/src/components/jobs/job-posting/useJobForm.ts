@@ -11,10 +11,7 @@ export interface JobPostingProps {
   jobId?: string;
   onSuccess?: () => void
 }
-<<<<<<< HEAD
 
-export const useJobForm = null;
-=======
 export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -87,4 +84,4 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
     submitJob
   }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

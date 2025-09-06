@@ -5,20 +5,7 @@ import { PaymentSummary  } from '../PaymentSummary';
 import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
 import { toast } from "sonner";
 interface MilestoneManagerProps {
-<<<<<<< HEAD
-  projectId: string;
-  milestones: Milestone[];
-  activities: Record<string, MilestoneActivity[]>,
-  isLoading: boolean;
-  isClient: boolean;
-  isTalent: boolean;
-  paymentTerms?: string;
-  isSubmitting: boolean;
-  onCreateMilestone: (data: any) => Promise<Milestone | null>;
-  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,
-  onDeleteMilestone: (id: string) => Promise<boolean>;
-  onUploadDeliverable: (id: string, file: File) => Promise<any>;
-=======
+
   projectId: string
   milestones: Milestone[]
   activities: Record<string, MilestoneActivity[]>;
@@ -31,7 +18,7 @@ interface MilestoneManagerProps {
   onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>;
   onDeleteMilestone: (id: string) => Promise<boolean>
   onUploadDeliverable: (id: string, file: File) => Promise<any>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   refetch: () => Promise<void>
 }
 export function MilestoneManager({
@@ -49,9 +36,7 @@ export function MilestoneManager({
   onUploadDeliverable;
   refetch
 }: MilestoneManagerProps) {
-<<<<<<< HEAD
-  const handleMilestoneApproved = null;
-=======
+
   const handleMilestoneApproved = async (milestoneId: string) => {
     try {
       await onUpdateStatus(milestoneId, "completed" as MilestoneStatus);
@@ -72,7 +57,7 @@ export function MilestoneManager({
       toast.error("Failed to reject milestone")
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2">

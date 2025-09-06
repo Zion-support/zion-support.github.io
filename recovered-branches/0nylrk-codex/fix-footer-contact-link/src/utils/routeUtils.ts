@@ -1,9 +1,7 @@
 
 import { completeSitemap, SitemapItem } from "@/config/sitemap";
 // Find a route by path in the complete sitemap
-<<<<<<< HEAD
-export const findRouteByPath = null;
-=======
+
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path)
 }
@@ -55,4 +53,4 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
   }
   return breadcrumbs
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

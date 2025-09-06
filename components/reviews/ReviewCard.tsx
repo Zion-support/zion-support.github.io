@@ -4,10 +4,7 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   return (import React from 'react';
 import StarRating from './StarRating';
 import type { PublicReview } from '../../types/reviews';
-<<<<<<< HEAD
-type Props = any;
-export default ReviewCard;
-=======
+
 import {Star} from 'lucide-react';
 type Props = {
   review: PublicReview
@@ -87,4 +84,4 @@ export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
   )
 }
 export default ReviewCard;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

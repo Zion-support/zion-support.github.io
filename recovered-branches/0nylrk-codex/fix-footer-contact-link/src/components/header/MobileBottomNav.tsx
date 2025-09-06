@@ -7,10 +7,7 @@ import { useAuth } from "@/hooks/useAuth";
 interface MobileBottomNavProps {
   unreadCount?: number
 }
-<<<<<<< HEAD
 
-export function MobileBottomNav({ unreadCount;
-=======
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const location = useLocation();
   const { user } = useAuth();
@@ -63,7 +60,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
             to={item.href}
             className={cn(
               "flex flex-col items-center justify-center w-full h-full px-1 py-1";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               item.matches(location.pathname)
                 ? "text-zion-cyan"
                 : "text-white/70 hover:text-white"

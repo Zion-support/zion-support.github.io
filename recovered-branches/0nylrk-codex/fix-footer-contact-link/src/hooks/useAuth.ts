@@ -1,9 +1,7 @@
 import { useContext  } from 'react';
 import { AuthContext  } from '@/context/auth/AuthContext';
 import type { AuthContextType } from '@/types/auth';
-<<<<<<< HEAD
-export const useAuth = null;
-=======
+
 export const useAuth = (): AuthContextType => {
   const context = useContext(AuthContext);
   if (context === undefined) {
@@ -14,4 +12,4 @@ export const useAuth = (): AuthContextType => {
   // returned value matches `AuthContextType` exactly.
   return context as AuthContextType
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

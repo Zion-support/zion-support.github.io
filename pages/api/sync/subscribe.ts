@@ -3,10 +3,7 @@ import { readState, writeState } from "../../../utils/sync/storage";
 import { Peer } from "../../../utils/sync/types";
 import { v4 as uuidv4 } from "uuid";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
-  const state = null;
-=======
+
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   const peer = req.body as Partial<Peer>
@@ -20,6 +17,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     state.config.peers.push({ id, baseUrl: peer.baseUrl, scope: peer.scope |state.config.scope, paused: false })
   }
   writeState(state)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return res.status(200).json({ peers: state.config.peers })
 }

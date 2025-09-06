@@ -18,10 +18,7 @@ interface ChunkInfo {
   loadTime: number;
   cached: boolean
 export function BundleAnalyzer() {
-<<<<<<< HEAD
-  const { user } = useAuth();
-  const isAdmin = null;
-=======
+
   const { user } = useAuth()
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
   const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
@@ -110,7 +107,7 @@ export function BundleAnalyzer() {
       collectBundleInfo()
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (!shouldShow) {
     return null
   }

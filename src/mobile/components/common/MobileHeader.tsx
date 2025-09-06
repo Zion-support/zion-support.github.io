@@ -4,18 +4,7 @@ import { ChevronLeft, Bell, Settings } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 interface MobileHeaderProps {
-<<<<<<< HEAD
-  title: string;
-  showBack?: boolean;
-  showNotifications?: boolean;
-  showSettings?: boolean;
-  className?: string;
-  onNotificationsClick?: () => void;
-  onSettingsClick?: () => void
-export function MobileHeader({
-  title;
-  showBack;
-=======
+
   title: string;  showBack?: boolean;  title: string
   showBack?: boolean
   showNotifications?: boolean
@@ -37,7 +26,7 @@ export function MobileHeader({
   return (
     <header className={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       className
     )}>
       <div className="flex items-center justify-between h-14 px-4">

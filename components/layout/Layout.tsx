@@ -13,10 +13,7 @@ interface LayoutProps {
   noIndex?: boolean;
 }
 export default function Layout({
-<<<<<<< HEAD
-  children;
-  title;
-=======
+
   children
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions"
   description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses."
@@ -26,7 +23,7 @@ export default function Layout({
   ogDescription
   ogImage
   noIndex = false
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }: LayoutProps) {
   return (
     <div className="min-h-screen bg-white">

@@ -5,13 +5,10 @@ import { Badge } from "@/components/ui/badge",
 import { Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 interface ProfileHeroProps {
-<<<<<<< HEAD
-  name: string;
-  title: string;
-=======
+
   name: string
   title: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   avatarUrl?: string;
   coverImageUrl?: string;
   location?: string;
@@ -32,9 +29,7 @@ export function ProfileHero({
   profileType
 }: ProfileHeroProps) {
   return (
-<<<<<<< HEAD
-    <div className;
-=======
+
     <div className="w-full overflow-hidden">
       <div className="relative">
         <AspectRatio ratio={3/1} className="bg-zion-blue-light">
@@ -66,7 +61,7 @@ export function ProfileHero({
                   variant="outline"
                   className={cn(
                     "ml-2 border-zion-purple/50 text-zion-cyan";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}
                 >

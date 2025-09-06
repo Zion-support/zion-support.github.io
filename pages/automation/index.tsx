@@ -1,8 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-<<<<<<< HEAD
-const Index: NextPage;
-=======
+
 const Index: NextPage = () => {
   return (
     <div>
@@ -18,4 +16,4 @@ const Index: NextPage = () => {
   )
 }
 export default Index;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

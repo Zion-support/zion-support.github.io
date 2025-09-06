@@ -1,21 +1,5 @@
 
-<<<<<<< HEAD
-import { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { useNavigate } from "react-router-dom",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { GradientHeading } from "@/components/GradientHeading",
-import { StepProgress } from "@/components/QuoteRequestForm/StepProgress",
-import { ServiceTypeStep } from "@/components/QuoteRequestForm/ServiceTypeStep",
-import { ProjectDetailsStep } from "@/components/QuoteRequestForm/ProjectDetailsStep",
-import { TimelineStep } from "@/components/QuoteRequestForm/TimelineStep",
-import { BudgetStep } from "@/components/QuoteRequestForm/BudgetStep",
-import { SummaryStep } from "@/components/QuoteRequestForm/SummaryStep",
-import { QuoteFormData } from "@/types/quotes";
-import { Sparkles } from "lucide-react";
-export type QuoteRequestSteps = any;
-=======
+
 import {useState} from "react";
 import {useToast} from "@/hooks/use-toast";
 import {useNavigate} from "react-router-dom";
@@ -132,7 +116,7 @@ export function QuoteRequestForm() {
       default: return null
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-3xl mx-auto">

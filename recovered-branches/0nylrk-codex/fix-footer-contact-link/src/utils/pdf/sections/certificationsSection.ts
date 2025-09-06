@@ -9,9 +9,7 @@ export function addCertificationsSection(
   colors: PdfThemeColors;
   startY: number
 ): number {
-<<<<<<< HEAD
-  if (certifications.length;
-=======
+
   if (certifications.length === 0) return startY;
   let yPos = startY;
   // Check if we need to add a new page
@@ -42,7 +40,7 @@ export function addCertificationsSection(
       const issueDate = formatDate(cert.issue_date);
       const expirationText = cert.expiration_date ? ` - ${formatDate(cert.expiration_date)}` : '';
       doc.setFontSize(10);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10)
     }
     yPos += 16

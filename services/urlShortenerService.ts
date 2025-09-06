@@ -5,11 +5,9 @@ export interface ShortUrl {
   shortUrl: string;
   createdAt: Date;
   expiresAt?: Date;
-<<<<<<< HEAD
-  isActive: boolean;
-=======
+
   isActive: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   userId?: string
 }
 export interface UrlAnalytics {
@@ -19,11 +17,9 @@ export interface UrlAnalytics {
   countries: string[];
   devices: string[];
   browsers: string[];
-<<<<<<< HEAD
-  lastClicked: Date;
-=======
+
   lastClicked: Date
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   clickHistory: ClickEvent[]
 }
 export interface ClickEvent {
@@ -35,21 +31,17 @@ export interface ClickEvent {
   country: string;
   city: string;
   device: string;
-<<<<<<< HEAD
-  browser: string;
-=======
+
   browser: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   os: string
 }
 export interface CreateShortUrlRequest {
   originalUrl: string;
   customCode?: string;
-<<<<<<< HEAD
-  expiresAt?: Date;
-=======
+
   expiresAt?: Date
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   userId?: string
 }
 class UrlShortenerService {
@@ -57,9 +49,7 @@ class UrlShortenerService {
   private analytics: Map<string, UrlAnalytics> = new Map();
   private clicks: Map<string, ClickEvent[]> = new Map();
   async createShortUrl(request: CreateShortUrlRequest): Promise<ShortUrl> {
-<<<<<<< HEAD
-    const shortCode = null;
-=======
+
     const shortCode = request.customCode |this.generateShortCode()
     if (this.urls.has(shortCode)) {
       throw new Error('Short code already exists')
@@ -169,4 +159,4 @@ class UrlShortenerService {
   }
 }
 export const urlShortenerService = new UrlShortenerService();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

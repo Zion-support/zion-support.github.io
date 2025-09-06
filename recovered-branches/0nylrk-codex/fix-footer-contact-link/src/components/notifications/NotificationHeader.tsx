@@ -6,13 +6,7 @@ interface NotificationHeaderProps {
   onMarkAllAsRead: () => Promise<void>
 }
 export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
-<<<<<<< HEAD
-  unreadCount;
-  onMarkAllAsRead
-}) => {
-  return (
-    <div className;
-=======
+
   unreadCount
   onMarkAllAsRead
 }) => {
@@ -32,4 +26,4 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
     </div>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -4,9 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { FileText, Plus, Users, Search, Calendar } from "lucide-react";
 export function QuickActions() {
-<<<<<<< HEAD
-  const actions = null;
-=======
+
   const actions = [
     {
       id: "post-job"
@@ -37,7 +35,7 @@ export function QuickActions() {
       color: "bg-amber-100 dark:bg-amber-900/20"
     }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card>
       <CardHeader>

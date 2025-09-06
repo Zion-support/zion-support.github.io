@@ -1,9 +1,6 @@
 import React from 'react',
 import Link from 'next/link';
-<<<<<<< HEAD
-import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
-const EnhancedFooter: React.FC;
-=======
+
 import {
   Brain
   Mail
@@ -390,4 +387,4 @@ company updates.;
       </button>
     </footer>
   )}"'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

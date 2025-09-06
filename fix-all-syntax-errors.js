@@ -84,19 +84,13 @@ const fixWebinars = () => {
 // Main execution
 const main = () => {console.log('Starting comprehensive syntax fixes...');
   const fixes = [
-<<<<<<< HEAD
-    fixAccessibility,
-    fixApi,
-    fixCareers;
-    fixSupport;
-    fixWebinars
-=======
+
     fixAccessibility
     fixApi
     fixCareers
     fixSupport
     fixWebinars;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   ];
   let successCount = 0;
   for (const fix of fixes) {

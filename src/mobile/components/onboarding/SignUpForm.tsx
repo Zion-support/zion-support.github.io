@@ -1,28 +1,16 @@
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Label } from "@/components/ui/label",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
-import { useRouter  } from 'next/router';
-import Link from 'next/link',
-import { useAuth } from "@/context/auth/AuthProvider",
-=======
+
 
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { useAuth } from "@/context/auth/AuthProvider"
 import { AlertCircle } from 'lucide-react'import { useRouter } from 'next/router'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { AlertCircle } from 'lucide-react'
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function SignUpForm() {
-<<<<<<< HEAD
 
-  const router = null;
-=======
   const router = useRouter()
   const { signUp, login, loginWithGoogle } = useAuth()
   const [formData, setFormData] = useState({
@@ -100,7 +88,7 @@ export function SignUpForm() {
       setError(err.message)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium text-center">

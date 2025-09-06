@@ -14,11 +14,9 @@ import { useNavigate } from "react-router-dom";
 export default function Partners() {
   const [activeTab, setActiveTab] = useState("overview");
   const { user, isAuthenticated } = useAuth();
-<<<<<<< HEAD
-  const navigate = null;
-=======
+
   const navigate = useNavigate();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
     return (

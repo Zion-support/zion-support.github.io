@@ -10,30 +10,21 @@ interface FraudDetectionMiddlewareProps {
 // Interface for the context
 interface FraudDetectionContextType {
   scanMessageContent: (
-<<<<<<< HEAD
-    userId: string;
-    messageId: string;
-    content: string;
-    userEmail?: string
-  ) => Promise<{
-    isSafe: boolean;
-=======
+
     userId: string
     messageId: string
     content: string
     userEmail?: string
   ) => Promise<{
     isSafe: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     explanation?: string
   }>
 }
 // Create the context. "createContext" can be untyped if React type definitions
 // aren't available. Passing a generic argument to an untyped function causes
 // TS2347, so we cast the default value instead of using a type parameter.
-<<<<<<< HEAD
-export const FraudDetectionContext = null;
-=======
+
 export const FraudDetectionContext = React.createContext(
   undefined as FraudDetectionContextType | undefined
 );
@@ -123,4 +114,4 @@ export const useFraudDetection = () => {
   }
   return context
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

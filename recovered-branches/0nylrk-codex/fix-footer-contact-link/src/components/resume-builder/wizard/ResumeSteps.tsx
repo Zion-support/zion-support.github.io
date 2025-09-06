@@ -6,10 +6,7 @@ interface ResumeStepsProps {
   activeTab: string;
   onChange: (value: string) => void
 }
-<<<<<<< HEAD
 
-export const ResumeSteps = null;
-=======
 export const ResumeSteps = ({
   steps
   activeTab
@@ -25,4 +22,4 @@ export const ResumeSteps = ({
     </TabsList>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

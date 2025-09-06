@@ -11,9 +11,7 @@ interface PreviewHeaderProps {
 }
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
   const [isPrinting, setIsPrinting] = useState(false);
-<<<<<<< HEAD
-  const isMobile = null;
-=======
+
   const isMobile = useIsMobile();
   const handleBrowserPrint = () => {
     setIsPrinting(true);
@@ -47,7 +45,7 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
       setIsPrinting(false);
     }, 1000);
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div
       className={`flex ${isMobile ? "flex-col" : "justify-between"} items-${isMobile ? "stretch" : "center"} gap-3`}

@@ -3,11 +3,9 @@ import React from "react",
 import { AppHeader } from "./AppHeader";
 import { Footer } from "@/components/Footer";
 interface AppLayoutProps {
-<<<<<<< HEAD
-  children: React.ReactNode;
-=======
+
   children: React.ReactNode
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   hideFooter?: boolean
 }
 export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {

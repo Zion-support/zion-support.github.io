@@ -11,17 +11,12 @@ interface SelectResumeSectionProps {
   handleDownloadResume: () => void;
   isLoading: boolean
 export function SelectResumeSection({
-<<<<<<< HEAD
-  resumeOptions;
-  selectedResume;
-  handleResumeSelect;
-  handleDownloadResume;
-=======
+
   resumeOptions
   selectedResume
   handleResumeSelect
   handleDownloadResume
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   isLoading
 }: SelectResumeSectionProps) {
   return (

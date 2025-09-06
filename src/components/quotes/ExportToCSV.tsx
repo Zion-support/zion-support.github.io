@@ -3,13 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react'
 import type { QuoteRequest } from "@/types/quotes";
 interface ExportToCSVProps {
-<<<<<<< HEAD
-  quotes: QuoteRequest[];
-  filename?: string
-}
 
-export const ExportToCSV = null;
-=======
   quotes: QuoteRequest[]
   filename?: string
 export const ExportToCSV = ({
@@ -152,4 +146,4 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 '"}
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

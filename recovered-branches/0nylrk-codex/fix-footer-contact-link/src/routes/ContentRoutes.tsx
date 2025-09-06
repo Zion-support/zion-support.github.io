@@ -13,9 +13,7 @@ import HelpCenterPage from "@/pages/HelpCenterPage",
 import AccountSettings from "@/pages/AccountSettings",
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
-<<<<<<< HEAD
-const ContentRoutes = null;
-=======
+
 const ContentRoutes = () => {
   return (
     <Routes>
@@ -47,4 +45,4 @@ const ContentRoutes = () => {
   )
 }
 export default ContentRoutes;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

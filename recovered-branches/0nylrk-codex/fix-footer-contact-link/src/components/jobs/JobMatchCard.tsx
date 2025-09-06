@@ -7,20 +7,7 @@ import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react",
 import { formatDistanceToNow } from "date-fns";
 import { JobMatch } from "@/types/jobs";
 interface JobMatchProps {
-<<<<<<< HEAD
-  matchId: string;
-  talentId: string;
-  name: string;
-  title: string;
-  company: string;
-  avatar: string;
-  location: string;
-  category: string;
-  matchPercent: number;
-  skills: string[];
-  onApply?: (matchId: string) => void;
-  onViewDetails?: (matchId: string) => void;
-=======
+
   matchId: string
   talentId: string
   name: string
@@ -33,27 +20,12 @@ interface JobMatchProps {
   skills: string[]
   onApply?: (matchId: string) => void
   onViewDetails?: (matchId: string) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onInvite?: (matchId: string) => void
 }
 export function JobMatchCard({
   matchId;
-<<<<<<< HEAD
-  talentId;
-  name;
-  title;
-  company;
-  avatar;
-  location;
-  category;
-  matchPercent;
-  skills;
-  onApply;
-  onViewDetails;
-  onInvite 
-}: JobMatchProps) {
-  const handleApply = null;
-=======
+
   talentId
   name
   title
@@ -84,7 +56,7 @@ export function JobMatchCard({
   }
   // Generate a formatted date for display
   const postedDate = new Date();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks
   return (
     <Card className="overflow-hidden">

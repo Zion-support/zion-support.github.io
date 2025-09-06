@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-import type { GetStaticProps } from 'next';
-import content from '../../../data/docs/content.json';
-export type Section = any;
-=======
+
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
@@ -51,7 +46,7 @@ export default function PrintDocs({ docs }: PageProps) {
                   {c.content}
                 </pre>
               ))}          </section>  }, []);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="p-8 max-w-4xl mx-auto">
       <h1 className="text-3xl font-bold mb-6">{docs.title}</h1>

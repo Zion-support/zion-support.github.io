@@ -5,9 +5,7 @@
  * @param format Optional format specification
  * @returns Formatted date string
  */
-<<<<<<< HEAD
-export const formatDate = null;
-=======
+
 export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {
   const dateObj = new Date(date);
   switch (format) {
@@ -79,4 +77,4 @@ export const timeAgo = (date: Date | string | number): string => {
   }
   return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

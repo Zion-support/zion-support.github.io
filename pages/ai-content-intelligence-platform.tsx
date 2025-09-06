@@ -8,9 +8,7 @@ import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin;
   ShoppingCart
  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD
-const contactInfo = null;
-=======
+
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -151,7 +149,7 @@ const integrations = [
   'Slack'
   'Zapier'
   'API Access',];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function AIContentIntelligencePlatform() {
   return (
     <Layout>

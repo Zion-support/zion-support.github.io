@@ -9,9 +9,7 @@ interface Report {
   stalePages: { file: string, lastCommitAt: string }[]
 }
 
-<<<<<<< HEAD
-type Props = any;
-=======
+
 }
 type Props = { report: Report | null }
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -26,7 +24,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 }
 export default function RepoHealth({ report }: Props) {
   if (!report) return <div>No report yet. Check back soon.</div>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6">
       <header className="space-y-1">

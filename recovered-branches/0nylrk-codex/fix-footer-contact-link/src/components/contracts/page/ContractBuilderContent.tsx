@@ -8,9 +8,7 @@ import { RecentContractsTable  } from './RecentContractsTable';
 import { TalentProfile  } from '@/types/talent';
 import { useAuth } from '@/hooks/useAuth';
 // Mock data for demo purposes
-<<<<<<< HEAD
-const mockTalent: TalentProfile;
-=======
+
 const mockTalent: TalentProfile = {
   id: 'talent-123'
   user_id: 'user-abc-123'
@@ -47,7 +45,7 @@ export function ContractBuilderContent() {
     console.log('Viewing contract:', contractId);
     // Future implementation: View specific contract details
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <ContractHeader onCreateClick={() => setShowBuilderType('smart')} />

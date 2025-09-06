@@ -10,16 +10,7 @@ import { format } from "date-fns";
 import type { DateRange } from "@/types/dateRange";
 import type { QuoteStatus } from "@/types/quotes";
 interface QuotesFilterProps {
-<<<<<<< HEAD
-  searchQuery: string;
-  setSearchQuery: (value: string) => void;
-  statusFilter: QuoteStatus | 'all';
-  setStatusFilter: (value: QuoteStatus | 'all') => void;
-  archiveFilter: 'active' | 'archived' | 'all';
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
-  dateRange: DateRange | undefined;
-  setDateRange: (range: DateRange | undefined) => void;
-=======
+
   searchQuery: string
   setSearchQuery: (value: string) => void
   statusFilter: QuoteStatus | 'all'
@@ -28,7 +19,7 @@ interface QuotesFilterProps {
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
   dateRange: DateRange | undefined
   setDateRange: (range: DateRange | undefined) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onReset: () => void
 }
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
@@ -39,13 +30,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   archiveFilter;
   setArchiveFilter;
   dateRange;
-<<<<<<< HEAD
-  setDateRange;
-  onReset
-}) => {
-  return (
-    <Card className;
-=======
+
   setDateRange
   onReset
 }) => {
@@ -139,4 +124,4 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
     </Card>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

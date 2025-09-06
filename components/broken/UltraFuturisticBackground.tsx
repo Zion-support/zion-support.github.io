@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-const UltraFuturisticBackground: React.FC;
-=======
+
 const UltraFuturisticBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
@@ -431,4 +429,4 @@ const UltraFuturisticBackground: React.FC = () => {
 export default UltraFuturisticBackground;  )
 }
 export default UltraFuturisticBackground;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

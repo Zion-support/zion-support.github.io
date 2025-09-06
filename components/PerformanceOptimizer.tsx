@@ -1,8 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network } from 'lucide-react';
-=======
+
 import { motion } from 'framer-motion';
 import {
   Zap
@@ -14,15 +11,14 @@ import {
   Database
   Network;
 } from 'lucide-react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
-<<<<<<< HEAD
-=======
+
   timeToInteractive: number;
 }, []);
 //Optimize images for (const img of Array.from (images) ) {
@@ -39,16 +35,13 @@ interface PerformanceMetrics {
   largestContentfulPaint: number
   cumulativeLayoutShift: number
   firstInputDelay: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   timeToInteractive: number
 }
 interface PerformanceOptimizerProps {
   className?: string
 }
-<<<<<<< HEAD
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className;
-=======
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '' }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0
@@ -594,4 +587,4 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   return null;
 }
 export default PerformanceOptimizer;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

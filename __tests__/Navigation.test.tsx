@@ -7,11 +7,8 @@ describe('Navigation', () => {
     render(<Navigation />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
-<<<<<<< HEAD
 
 
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   test('displays correct content', () => {
     expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
 });

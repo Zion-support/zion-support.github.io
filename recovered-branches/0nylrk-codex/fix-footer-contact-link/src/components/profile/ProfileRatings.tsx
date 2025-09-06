@@ -11,10 +11,7 @@ interface ProfileRatingsProps {
   averageRating?: number;
   ratingCount?: number
 }
-<<<<<<< HEAD
 
-export function ProfileRatings({ userId, averageRating;
-=======
 export function ProfileRatings({
   userId
   averageRating = 0
@@ -46,7 +43,7 @@ export function ProfileRatings({
   useEffect(() => {
     fetchUserReviews(userId);
   }, [userId]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">

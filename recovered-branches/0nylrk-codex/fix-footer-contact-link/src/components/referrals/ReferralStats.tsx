@@ -7,9 +7,7 @@ interface ReferralStatsProps {
   isLoading: boolean
 }
 export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
-<<<<<<< HEAD
-  const statCards = null;
-=======
+
   const statCards = [
     {
       title: "Total Referrals"
@@ -36,7 +34,7 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       description: "Credits earned from referrals"
     }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
       {statCards.map((card, i) => (

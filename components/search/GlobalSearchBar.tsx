@@ -1,9 +1,7 @@
 import { useEffect, useMemo, useRef, useState  } from 'react';
 import { useRouter } from 'next/router';
 export default function GlobalSearchBar() {
-<<<<<<< HEAD
-  const router = null;
-=======
+
   const router = useRouter();
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState<string[]>([]);
@@ -131,7 +129,7 @@ export default function GlobalSearchBar() {
                   onClick={() => {
                     setQuery(s);
                     setOpen(false);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"

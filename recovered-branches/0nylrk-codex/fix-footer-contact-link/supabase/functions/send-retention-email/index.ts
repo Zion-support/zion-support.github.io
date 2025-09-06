@@ -1,11 +1,5 @@
 
-<<<<<<< HEAD
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-import { Resend } from "npm: resend@2.0.0";
-// Initialize Resend with API key
-const resend = null;
-=======
+
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0"
 import {Resend} from "npm: resend@2.0.0";
@@ -327,7 +321,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
   // Default generic email
   return {
     subject: `${firstName}, we miss you at Zion AI Marketplace`;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     html: `
       <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
         <h2>We've missed you!</h2>

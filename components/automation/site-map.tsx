@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-type RouteInfo = any;
-    generatedAt = json.generatedAt || ''
-=======
+
 <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )
 }</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';
@@ -16,7 +11,7 @@ export async function getServerSideProps() {
     const json = JSON.parse(raw);
     routes = json.routes |[];
     generatedAt = json.generatedAt |''
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch {}
   return { props: { routes, generatedAt } }
 }

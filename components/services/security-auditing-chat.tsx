@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-const SecurityAuditingChat: NextPage;
-=======
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -23,4 +18,4 @@ const SecurityAuditingChat: NextPage = () => {
   );
 }
 export default SecurityAuditingChat;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

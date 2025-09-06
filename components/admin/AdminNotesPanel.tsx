@@ -1,7 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
-export type AdminNotesPanelProps = any;
-=======
+
 export type AdminNotesPanelProps = {
   targetType: string; // e.g., 'user' | 'listing'
   targetId: string; // unique identifier for the target
@@ -90,7 +88,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         return
       }
       setText('');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       await fetchNotes()
     } finally {
       setAdding(false)

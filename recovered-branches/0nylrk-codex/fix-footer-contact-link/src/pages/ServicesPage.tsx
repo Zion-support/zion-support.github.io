@@ -9,19 +9,7 @@ import { Globe } from "lucide-react";
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
   {
-<<<<<<< HEAD
-    id: "service-1";
-    title: "AI Development & Integration";
-    description: "Full-stack AI development services to integrate advanced machine learning models into your existing business systems.";
-    category: "Development";
-    price: 5000;
-    currency: "$";
-    tags: ["AI Integration", "Machine Learning", "Enterprise"],
-    author: {
-      name: "TechSolutions Inc.";
-      id: "tech-solutions";
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto;
-=======
+
     id: "service-1"
     title: "AI Development & Integration"
     description: "Full-stack AI development services to integrate advanced machine learning models into your existing business systems."
@@ -128,7 +116,7 @@ const SERVICE_FILTERS = [
   { label: 'Analytics', value: 'analytics' }
   { label: 'Consulting', value: 'consulting' }
   { label: 'Strategy', value: 'strategy' }]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function ServicesPage() {
   return (
     <AppLayout>

@@ -1,8 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-type DistributionItem = any;
-=======
+
 type DistributionItem = { label: string; percent: number }
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
 export default function TokenomicsWhitepaperBuilder() {
@@ -445,7 +443,7 @@ function MarkdownPreview({
     });
     return map;  }, [markdown]);
   const content = parts[activeSection] |'';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
 <pre className='whitespace-pre-wrap text-sm leading-6'>
       {content |markdown}

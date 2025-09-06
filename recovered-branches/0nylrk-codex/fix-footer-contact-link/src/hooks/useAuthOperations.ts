@@ -6,21 +6,16 @@ import { toast } from "@/hooks/use-toast";
 import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils";
 import { cleanupAuthState } from "@/utils/authUtils";
 export function useAuthOperations(
-<<<<<<< HEAD
-  setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>;
-=======
+
   setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>
 ) {
   // Check for referral code in URL when the hook is first used
   useEffect(() => {
     checkUrlForReferralCode()
   }, []);
-<<<<<<< HEAD
 
-  const login = null;
-=======
   const login = async ({ email, password }: { email: string, password: string }) => {
     setIsLoading(true);
     try {
@@ -269,6 +264,6 @@ export function useAuthOperations(
     loginWithGoogle;
     loginWithFacebook;
     loginWithTwitter;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     loginWithWeb3}
 }

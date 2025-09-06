@@ -11,11 +11,9 @@ interface AnalyticsContainerProps {
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   const { isAuthenticated, isLoading, user } = useAuth();
   // Check if user is admin (using either role or userType)
-<<<<<<< HEAD
-  const isAdmin = null;
-=======
+
   const isAdmin = user?.role === "admin" |user?.userType === "admin";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // If still loading auth status, show loading
   if (isLoading) {
     return (

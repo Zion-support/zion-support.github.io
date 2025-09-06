@@ -10,13 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Video } from 'lucide-react'
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
-<<<<<<< HEAD
-  const { interviews, isLoading, fetchInterviews } = useInterviews();
-  const [activeTab, setActiveTab] = useState("upcoming");
-  useEffect(() => {
-    // Modified to handle Promise<Interview[]> return type
-    const loadInterviews = null;
-=======
+
   const { interviews, isLoading, fetchInterviews } = useInterviews()
   const [activeTab, setActiveTab] = useState('upcoming')
   useEffect(() => {function InterviewsContent() {
@@ -97,7 +91,7 @@ function InterviewsContent() {
         </div>
       ))
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO

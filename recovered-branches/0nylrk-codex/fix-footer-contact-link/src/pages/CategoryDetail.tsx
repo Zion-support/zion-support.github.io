@@ -11,10 +11,7 @@ import { useNavigate } from "react-router-dom",
 import { toast } from "@/hooks/use-toast";
 export default function CategoryDetail() {
   // Cast to specify the expected route param type since useParams may be untyped
-<<<<<<< HEAD
-  const { slug } = useParams() as { slug?: string };
-  const navigate = null;
-=======
+
   const { slug } = useParams() as { slug?: string }
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
@@ -146,7 +143,7 @@ export default function CategoryDetail() {
       })
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Header />

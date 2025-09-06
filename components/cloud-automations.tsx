@@ -9,11 +9,9 @@ export default function CloudAutomationsPage() {
       .then(setData)
       .catch(() => setData({ ok: false }))
   }, []);
-<<<<<<< HEAD
-  const items = null;
-=======
+
   const items = data?.data ? Object.entries(data.data) : [];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='space-y-6'>
       <h1 className='text-3xl font-bold'>Cloud Automations</h1>

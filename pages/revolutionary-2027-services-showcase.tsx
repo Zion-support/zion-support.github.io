@@ -1,23 +1,6 @@
 import React, { useState, useMemo } from 'react',
 import Head from 'next/head';
-<<<<<<< HEAD
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Search, CheckCircle, ArrowRight, Rocket, Mail, Phone, MapPin, MessageSquare, Globe  } from 'lucide-react';
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
-import { revolutionary2027AIServices  } from '../data/revolutionary-2027-ai-services';
-import { revolutionary2027ITServices  } from '../data/revolutionary-2027-it-services';
-import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas';
-export default function Revolutionary2027ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
-  const [sortBy, setSortBy] = useState<string>('name'),
 
-  const allServices = null;
-                    setSelectedPriceRange('all')
-                  }} className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white">
-                  Clear Filters
-=======
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Search
@@ -440,7 +423,7 @@ import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-mic
                   }}
                   className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                 >                  Clear Filters
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 </button>
               </motion.div>
             )}

@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react',
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;
-=======
+
 import {
   ArrowRight
   Play
@@ -36,7 +34,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';import {
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
  } from 'lucide-react';
@@ -47,9 +45,7 @@ import { innovative2040ITServices  } from '../data/innovative-2040-it-services';
 import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
 import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services';
 // Loading fallback component
-<<<<<<< HEAD
-const LoadingFallback = null;
-=======
+
 const LoadingFallback = () => (
   <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
@@ -635,4 +631,4 @@ const Homepage2045: React.FC = () => {
   once: true
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>)
 };export default Homepage2045;export default Homepage2045;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

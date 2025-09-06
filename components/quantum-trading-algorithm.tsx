@@ -1,9 +1,7 @@
 import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { TrendingUp, Brain, Shield, Zap, Target;
-=======
+
 import {
   TrendingUp
   Brain
@@ -24,14 +22,12 @@ import {
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';import {
   TrendingUp, Brain, Shield, Zap, Target
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD
-const contactInfo = null;
-=======
+
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -101,7 +97,7 @@ const pricingPlans = [
     popular: false
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function QuantumTradingAlgorithm() {
   return (
     <Layout>

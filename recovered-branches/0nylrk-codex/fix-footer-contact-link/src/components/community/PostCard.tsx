@@ -10,13 +10,7 @@ import { cn } from "@/lib/utils",
 import { ForumPost } from "@/types/community";
 import { ProfileBadge } from "@/components/profile/ProfileBadge";
 interface PostCardProps {
-<<<<<<< HEAD
-  post: ForumPost;
-  compact?: boolean
-}
 
-export const PostCard = null;
-=======
   post: ForumPost
   compact?: boolean
 }
@@ -92,4 +86,4 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
   )
 }
 export default PostCard;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

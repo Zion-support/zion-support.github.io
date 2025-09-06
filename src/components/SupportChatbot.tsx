@@ -6,9 +6,7 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 interface Msg { id: string, role: 'user' | 'assistant', message: string }
 
 // Fallback responses when API is unavailable
-<<<<<<< HEAD
-const FALLBACK_RESPONSES = null;
-=======
+
 const FALLBACK_RESPONSES = [
   "I'm here to help! You can browse our help documentation, contact support at support@ziontechgroup.com, or try asking your question in a different way."
   "Thanks for reaching out! While I'm having trouble connecting to my knowledge base, I can suggest checking our FAQ section or contacting our support team directly."
@@ -162,7 +160,7 @@ export function SupportChatbot() {
       setTyping(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (!open) {
         onClick={() => setOpen(true)}
         size='icon'

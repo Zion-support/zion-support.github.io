@@ -8,24 +8,7 @@ interface ContentCardProps {
   color: string;
   glow: string;
   date?: string;
-<<<<<<< HEAD
-  category?: string
-}
 
-const ContentCard: React.FC<ContentCardProps> = ({
-  title;
-  description;
-  href;
-  icon;
-  color;
-  glow;
-  date;
-  category
-}) => {
-  return (
-    <Link
-      href;
-=======
   category?: string;
 const ContentCard: React.FC<ContentCardProps> = ({
   title
@@ -96,4 +79,4 @@ export default ContentCard;    </Link>
   )
 }
 export default ContentCard;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

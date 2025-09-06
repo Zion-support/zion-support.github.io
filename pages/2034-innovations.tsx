@@ -3,12 +3,7 @@ import Head from 'next/head';
 import { motion  } from 'framer-motion';
 import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032';
 import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
-<<<<<<< HEAD
-const contactInfo = null;
-                  color: 'from-indigo-500 to-purple-600'
-                }
-              ].map((feature, index) => (
-=======
+
 }
 export default function Innovations2034Page() {
   return (
@@ -323,7 +318,7 @@ export default function Innovations2034Page() {
                     '24/7 expert support from our team of technology pioneers and industry experts.'
                   color: 'from-indigo-500 to-purple-600'
                 },              ].map((feature, index) => (
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 <motion.div
                   key={feature.title}
                   initial={{ opacity: 0, y: 50 }}

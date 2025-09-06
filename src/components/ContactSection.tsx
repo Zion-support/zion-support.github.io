@@ -1,23 +1,5 @@
 
-<<<<<<< HEAD
-import { useState } from "react",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/components/ui/use-toast";
-import z from "zod";
-import { Mail } from 'lucide-react'
 
-export function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: "";
-    email: "";
-    subject: "";
-    message: ""});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-=======
 export function ContactSection() {
   const [formData, setFormData] = useState({
     name: ""
@@ -26,17 +8,13 @@ export function ContactSection() {
     message: ""})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   const [errors, setErrors] = useState<{
     name?: string;
     email?: string;
     subject?: string;
     message?: string
-<<<<<<< HEAD
-  }>({}),
 
-  const handleChange = null;
-=======
   }>({})
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -148,7 +126,7 @@ export function ContactSection() {
           variant: "destructive"})
       })
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <section className="py-20 bg-zion-blue" id="contact">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,14 +1,7 @@
 import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
-  Rocket, Shield, Cpu, Target, Microscope, Users;
-  Facebook, Twitter, Linkedin, Instagram, Youtube;
-  Github, ArrowRight, Heart, Star, Award, CheckCircle
- } from 'lucide-react';
-const contactInfo = null;
-=======
+
 import {
   Phone
   Mail
@@ -228,7 +221,7 @@ const socialLinks = [
 const certifications = [
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP Authorized'
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function UltraFuturisticFooter2030() {
   return (
     <footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>

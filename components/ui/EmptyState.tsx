@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Link from 'next/link';
-import EnhancedButton from './EnhancedButton';
-export type EmptyStateProps = any;
-=======
+
 import React from "react";
 import Link from "next/link";
 import EnhancedButton from "./EnhancedButton";
@@ -40,7 +35,7 @@ export default function EmptyState({
   primaryAction?: { label: string, href: string }
   secondaryAction?: { label: string, href: string }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function EmptyState({ title, description, icon, primaryAction, secondaryAction }: EmptyStateProps) {
   return (
     <div className="w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3">

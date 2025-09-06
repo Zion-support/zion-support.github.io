@@ -1,28 +1,6 @@
 
 import React from 'react';
-<<<<<<< HEAD
-import { useForm  } from 'react-hook-form';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { z  } from 'zod';
-import { CalendarIcon, Loader2  } from 'lucide-react';
-import { format  } from 'date-fns';
-import { Button  } from '@/components/ui/button';
-import { Calendar } from '@/components/ui/calendar';
-import { Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage } from '@/components/ui/form';
-import { Input  } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Popover;
-  PopoverContent;
-  PopoverTrigger } from '@/components/ui/popover';
-import { AIMilestoneGenerator  } from './AIMilestoneGenerator';
-import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator';
-const formSchema = null;
-=======
+
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {z} from 'zod';
@@ -100,7 +78,7 @@ export function AddMilestoneForm({
       amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
     })
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6">
       {/* AI Milestone Generator */}

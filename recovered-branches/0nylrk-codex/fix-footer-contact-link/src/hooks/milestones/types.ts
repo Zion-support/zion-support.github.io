@@ -1,8 +1,5 @@
 
-<<<<<<< HEAD
-import { supabase } from '@/integrations/supabase/client';
-export type MilestoneStatus = any;
-=======
+
 import {supabase} from '@/integrations/supabase/client';
 export type MilestoneStatus = 'pending' | 'in_progress' | 'submitted' | 'completed' | 'rejected' | 'paid' | 'approved';
 export interface Milestone {
@@ -29,7 +26,7 @@ export interface MilestoneActivity {
   created_at: string;
   created_by_profile?: {
     display_name: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     avatar_url?: string
   }
 }

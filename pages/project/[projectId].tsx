@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import { useEffect, useState } from "react",
-import { useRouter } from "next/router";
-import FeedbackModal from "../../components/ui/FeedbackModal";
-export default function ProjectPage() {
-  const router = null;
-=======
+
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import FeedbackModal from "../../components/ui/FeedbackModal";
@@ -59,7 +53,7 @@ export default function ProjectPage() {
     const json = await res.json()
     if (json.ok) {
       setProject(json.project)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       setShowFeedback(true)
     }
   }

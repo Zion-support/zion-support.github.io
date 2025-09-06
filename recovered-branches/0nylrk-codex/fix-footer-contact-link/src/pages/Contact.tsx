@@ -14,22 +14,16 @@ import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
 import { AppLayout } from "@/layout/AppLayout";
 export default function Contact() {
   const [formData, setFormData] = useState({
-<<<<<<< HEAD
-    name: "";
-    email: "";
-    subject: "";
-=======
+
     name: ""
     email: ""
     subject: ""
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
-<<<<<<< HEAD
-  const handleChange = null;
-=======
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }))
@@ -292,7 +286,7 @@ export default function Contact() {
             id: 'ai-assistant'
             name: 'AI Assistant'
             avatarUrl: 'https://placehold.co/64x64?text=AI'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             role: 'Support Bot'
           }}
           onSendMessage={handleSendMessage}

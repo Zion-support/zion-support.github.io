@@ -13,14 +13,7 @@ export function ConversationDetailView() {
   const { user } = useAuth();
   const {
     activeConversation;
-<<<<<<< HEAD
-    activeMessages;
-    sendMessage;
-    loadMessages
-  } = useMessaging();
-  const [messageText, setMessageText] = useState('');
-  const messagesEndRef = null;
-=======
+
     activeMessages
     sendMessage
     loadMessages
@@ -71,7 +64,7 @@ export function ConversationDetailView() {
   });
   const hasContextData = activeConversation.context_data &&
     (activeConversation.context_data.title |activeConversation.context_data.description);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="flex-1 flex flex-col h-full">
       {/* Header */}

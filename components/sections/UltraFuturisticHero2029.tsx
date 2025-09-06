@@ -1,13 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom, Rocket, Target, Shield, Cpu, Globe, Sparkles  } from 'lucide-react';
-import Link from 'next/link';
-export default function UltraFuturisticHero2029() {
-  const features = null;
-            backgroundSize: '50px 50px'
-          }} />
-=======
+
 import { motion } from 'framer-motion';
 import {
   ArrowRight
@@ -124,7 +116,7 @@ export default function UltraFuturisticHero2029() {
               backgroundSize: '50px 50px'
             }}
           />
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
         </div>
         {/* Gradient Orbs */}
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse' />

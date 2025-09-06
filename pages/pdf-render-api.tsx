@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head';
-import { FileText, Phone, Mail, MapPin, Check, ArrowRight, Star  } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function PdfRenderApiPage() {
-  const service = null;
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import { FileText, Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react';
@@ -15,7 +7,7 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 export default function PdfRenderApiPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/pdf-render-api'))
   if (!service) return null
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Layout>
       <Head>

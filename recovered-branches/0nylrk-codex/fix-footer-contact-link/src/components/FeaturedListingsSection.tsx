@@ -6,10 +6,7 @@ import { Link } from "react-router-dom";
 interface FeaturedListingsSectionProps {
   showTitle?: boolean
 }
-<<<<<<< HEAD
 
-export function FeaturedListingsSection({ showTitle;
-=======
 export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSectionProps) {
   const featuredListings = [
     {
@@ -81,7 +78,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
         id: "social-ai"
       }
     }];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <section id="featured" className="py-12 px-4 bg-zion-blue-dark">
       <div className="container mx-auto">

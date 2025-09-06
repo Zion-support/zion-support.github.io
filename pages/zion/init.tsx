@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { useState  } from 'react';
-import type { NextPage } from 'next';
-type GovernanceMode = any;
-=======
+
 const InitPage: NextPage = () => {
   const [state, setState] = useState<DeployFormState> ({
   instanceName: '', defaultLanguage: 'en', deploymentRegion: 'us-east-1', tokenActivation: true, governanceMode: 'Hybrid', branding: {
@@ -266,4 +262,4 @@ const InitPage: NextPage = () => {
   );
 }
 export default InitPage;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

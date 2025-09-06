@@ -1,10 +1,6 @@
 import React, { useState } from 'react',
 import Head from 'next/head';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin
- } from 'lucide-react';
-=======
+
 import { motion } from 'framer-motion';
 import {
   Check
@@ -25,15 +21,13 @@ import {
   MapPin;} from 'lucide-react';import {
   Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin
 } from 'lucide-react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025  } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeQuantumServices2025  } from '../data/2025-cutting-edge-quantum-services';
 import { cuttingEdgeEnterpriseITServices2025  } from '../data/2025-cutting-edge-enterprise-it';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
-<<<<<<< HEAD
-const contactInfo = null;
-=======
+
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -197,7 +191,7 @@ export default function CuttingEdgePricing2025() {
       }
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

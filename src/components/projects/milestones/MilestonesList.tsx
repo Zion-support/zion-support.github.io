@@ -10,19 +10,7 @@ import { Card, CardContent  } from '@/components/ui/card';
 import { Plus } from 'lucide-react'
 import { EmptyState } from '@/components/ui/empty-state';
 interface MilestonesListProps {
-<<<<<<< HEAD
-  milestones: Milestone[];
-  activities: Record<string, MilestoneActivity[]>,
-  isLoading: boolean;
-  isClient: boolean;
-  onCreateMilestone: (data: any) => Promise<Milestone | null>;
-  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,
-  onDeleteMilestone: (id: string) => Promise<boolean>;
-  onUploadDeliverable: (id: string, file: File) => Promise<any>;
-  isSubmitting: boolean;
-  onApprove?: (id: string) => Promise<void>;
-  onReject?: (id: string) => Promise<void>
-=======
+
   milestones: Milestone[]
   activities: Record<string, MilestoneActivity[]>
   isLoading: boolean
@@ -33,25 +21,10 @@ interface MilestonesListProps {
   onUploadDeliverable: (id: string, file: File) => Promise<any>,  isSubmitting: boolean
   onApprove?: (id: string,) => Promise<void>
   onReject?: (id: string,) => Promise<void>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }
 export const MilestonesList: React.FC<MilestonesListProps> = ({
-<<<<<<< HEAD
-  milestones;
-  activities;
-  isLoading;
-  isClient;
-  onCreateMilestone;
-  onUpdateStatus;
-  onDeleteMilestone;
-  onUploadDeliverable;
-  isSubmitting;
-  onApprove;
-  onReject
-}) => {
-  const [showAddForm, setShowAddForm] = useState(false);
-  const handleSubmit = null;
-=======
+
   milestones
   activities
   isLoading
@@ -142,4 +115,4 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   )
 }
 "
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

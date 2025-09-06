@@ -13,13 +13,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   // Find the article in all categories
   let article = null;
   for (const category of HELP_CATEGORIES) {
-<<<<<<< HEAD
-    const found = null;
-    day: "numeric"
-  })
-}
-;
-=======
+
     const found = category.articles.find(a => a.id === articleId)
     if (found) {
       article = found
@@ -36,4 +30,4 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
     month: "long"
     day: "numeric", })
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

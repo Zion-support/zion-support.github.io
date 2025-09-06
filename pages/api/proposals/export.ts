@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { PDFDocument, StandardFonts } from '[^']*';
-import crypto from 'crypto';
-import { updateArtifacts, getProposal, savePdf } from '[^']*';
-import { create as createIpfsClient } from '[^']*';
-import { ethers } from '[^']*';
-import fs from 'fs';
-import path from 'path';
-function buildIpfsClient() {
-  const projectId = null;
-    return res.status(200).json({ meta: updated })
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { PDFDocument, StandardFonts } from "pdf-lib";
 import crypto from "crypto";
@@ -119,7 +107,7 @@ export default async function handler(
       ipfsCid
     });
     return res.status(200).json({ meta: updated });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch (error: any) {
     return res.status(500).json({ error: error?.message |"Export failed" });
   }

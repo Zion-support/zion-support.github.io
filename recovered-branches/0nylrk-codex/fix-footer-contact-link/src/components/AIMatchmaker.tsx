@@ -8,13 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Sparkles, Search } from "lucide-react";
 interface AIMatchmakerProps {
   serviceType?: string;
-<<<<<<< HEAD
-  onMatchSelect?: (match: any) => void;
-  className?: string
-}
 
-export function AIMatchmaker({ serviceType;
-=======
   onMatchSelect?: (match: any) => void
   className?: string
 }
@@ -69,7 +63,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   }
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className |""}`}>
       <CardHeader className="pb-2">

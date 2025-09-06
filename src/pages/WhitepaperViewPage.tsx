@@ -8,9 +8,7 @@ import Link from 'next/link', // For a back button, changed from react-router-do
 import {logErrorToProduction} from '@/utils/productionLogger';
 // Placeholder for user context/role checking
 // In a real app, this would come from an auth context
-<<<<<<< HEAD
-const useAuth = null;
-=======
+
 const useAuth = () => {
     // const { user } = useUserContext(), // Example from a real app
     // return { isAdmin: user?.role === 'admin', isAuthenticated: !!user }
@@ -122,4 +120,4 @@ const WhitepaperViewPage: React.FC = () => {
   )
 }
 export default WhitepaperViewPage;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

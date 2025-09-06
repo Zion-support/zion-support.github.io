@@ -3,13 +3,7 @@ import Layout from './layout/Layout',
 import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { ArrowRight, Star;
-  Brain, Atom, Shield, Zap, TrendingUp, Globe;
-  Rocket, Target, Cpu, Cloud, Lock, Users, Award;
-  CheckCircle, Sparkles, Infinity, Zap as Lightning
- } from 'lucide-react';
-=======
+
 import {
   ArrowRight
   Star
@@ -34,14 +28,12 @@ import {
   Brain, Atom, Shield, Zap, TrendingUp, Globe;
   Rocket, Target, Cpu, Cloud, Lock, Users, Award;
   CheckCircle, Sparkles, Infinity, Zap as Lightning
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 // Import new services
 import { innovative2038MicroSaasServices  } from '../data/innovative-2038-micro-saas-services';
 import { innovative2038ITServices  } from '../data/innovative-2038-it-services';
 import { innovative2038AIServices } from '../data/innovative-2038-ai-services';
-<<<<<<< HEAD
-const Homepage2038: React.FC;
-=======
+
 const Homepage2038: React.FC = () => {
   // Get featured services from each category
   const featuredMicroSaas = innovative2038MicroSaasServices
@@ -651,4 +643,4 @@ const Homepage2038: React.FC = () => {
 export default Homepage2038;  )
 }
 export default Homepage2038;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

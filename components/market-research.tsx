@@ -21,9 +21,7 @@ import {
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Zap } from 'lucide-react';
 export default function MarketResearchPage() {
-<<<<<<< HEAD
-  const marketSegments = null;
-=======
+
   const marketSegments = [
     {
       name: 'AI & Machine Learning'
@@ -410,7 +408,7 @@ export default function MarketResearchPage() {
     },      description: 'Average time for SaaS companies to reach profitability'
     }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

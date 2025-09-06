@@ -8,9 +8,7 @@ interface FraudStatsCardsProps {
 }
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
   return (
-<<<<<<< HEAD
-    <div className;
-=======
+
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">
       <Card>
         <CardHeader className="pb-2">
@@ -61,4 +59,4 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
   )
 }
 "
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

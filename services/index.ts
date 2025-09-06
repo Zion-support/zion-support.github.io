@@ -38,9 +38,7 @@ export type {
   TextSummary
 } from './textAnalysisService';
 // Service categories for easy discovery
-<<<<<<< HEAD
-export const SERVICE_CATEGORIES = null;
-=======
+
 export const SERVICE_CATEGORIES = {
   UTILITIES: {
     name: 'Utility Tools';
@@ -141,4 +139,4 @@ export const getServiceStats = () => {
     }
   }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

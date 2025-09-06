@@ -23,9 +23,7 @@ import { useAuth } from "@/hooks/useAuth",
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
 import { supabase } from "@/integrations/supabase/client";
 // Define the form schema with validation
-<<<<<<< HEAD
-const talentSchema = null;
-=======
+
 const talentSchema = z.object({
   // Step 1: Basic Info
   basicInfo: z.object({
@@ -124,7 +122,7 @@ export function TalentOnboardingForm() {
       .getPublicUrl(fileName);
     return publicUrl
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // Rest of the file remains unchanged...
   // [Previous implementation continues...]
   return null

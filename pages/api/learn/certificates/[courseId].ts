@@ -2,10 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs',
 import path from 'path';
 import PDFDocument from 'pdfkit';
-<<<<<<< HEAD
-const usersPath = null;
-    doc.end()
-=======
+
 const doc = new PDFDocument ({
   size: 'A4', margin: 50
 });
@@ -62,7 +59,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     doc.moveDown(2);
     doc.fontSize(12).text(`Date: ${date}`, { align: 'center' });
     doc.end();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch (e: any) {
     res
       .status(500)

@@ -1,7 +1,5 @@
 import EnhancedLayout from '../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-const CAPABILITIES = null;
-=======
+
 const CAPABILITIES = [
   'Full‑stack Web'
   'Mobile (iOS/Android)'
@@ -13,7 +11,7 @@ const CAPABILITIES = [
   'Security',];const CAPABILITIES = [
   'Full‑stack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity'
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function CapabilitiesPage() {
   return (
     <EnhancedLayout>

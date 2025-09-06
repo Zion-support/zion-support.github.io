@@ -11,38 +11,26 @@ import { ProductListing, ListingView } from "@/types/listings",
 import { Search, Filter, LayoutGrid, List, Star } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 interface PriceRange {
-<<<<<<< HEAD
-  min: number;
-=======
+
   min: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   max: number
 }
 interface DynamicListingPageProps {
-<<<<<<< HEAD
-  title: string;
-  description: string;
-  categorySlug: string;
-  listings: ProductListing[];
-  categoryFilters: { label: string, value: string }[],
-=======
+
   title: string
   description: string
   categorySlug: string
   listings: ProductListing[]
   categoryFilters: { label: string, value: string }[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   initialPrice?: PriceRange
 }
 export function DynamicListingPage({
   title;
   description;
   categorySlug;
-<<<<<<< HEAD
-  listings: allListings;
-  categoryFilters;
-  initialPrice;
-=======
+
   listings: allListings
   categoryFilters;
   initialPrice = { min: 0, max: 10000 }
@@ -298,7 +286,7 @@ export function DynamicListingPage({
                     setSearchQuery("");
                     setSelectedCategory("all");
                     setCurrentPriceFilter([priceRange.min, priceRange.max]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                     setSelectedRating(null)
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"

@@ -3,9 +3,7 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
 import { Bot, Users, TrendingUp } from 'lucide-react'
 
 export default function AITalentMatchingPage() {
-<<<<<<< HEAD
-  const benefits = null;
-=======
+
   const benefits = [
     {
       icon: Bot
@@ -36,7 +34,7 @@ export default function AITalentMatchingPage() {
     { label: "Client Satisfaction", value: "98%" }
     { label: "Time to Hire", value: "50% faster" }
   ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"

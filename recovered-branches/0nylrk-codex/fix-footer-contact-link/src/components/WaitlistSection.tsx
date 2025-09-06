@@ -13,9 +13,7 @@ export function WaitlistSection() {
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-<<<<<<< HEAD
-  const handleSubmit = null;
-=======
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!email |!name |!role |!agreeTerms) {
@@ -46,7 +44,7 @@ export function WaitlistSection() {
       setIsSubmitting(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">
       {/* Background elements */}

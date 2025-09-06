@@ -7,11 +7,7 @@ import { formatDateForDB, handleResumeError, showSuccessToast } from './useResum
 export function useResumeActions() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-  const [error, setError] = useState<string | null>(null),
-  
-  const createResume = null;
-=======
+
   const [error, setError] = useState<string | null>(null);
   const createResume = async (basicInfo: ResumeBasicInfo): Promise<string | null> => {
     if (!user) {
@@ -98,6 +94,6 @@ export function useResumeActions() {
     error;
     createResume;
     updateBasicInfo;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     setActiveResume}
 }

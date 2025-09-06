@@ -1,20 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 // Use the shared icon wrapper
-<<<<<<< HEAD
-import { Bell  } from '@/components/icons';
-import { Button  } from '@/components/ui/button';
-import { Popover, PopoverContent, PopoverTrigger  } from '@/components/ui/popover';
-import { useNotifications  } from '@/context/notifications/NotificationContext';
-import { toast } from 'sonner';
-import { NotificationFilter;
-  NotificationHeader;
-  NotificationList;
-  NotificationFooter 
- } from '@/components/notifications';
-import { FilterType } from '@/components/notifications/NotificationFilter';
-export const NotificationCenter: React.FC;
-=======
+
 import {Bell} from '@/components/icons';
 import {Button} from '@/components/ui/button';
 import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover';
@@ -98,4 +85,4 @@ export const NotificationCenter: React.FC = () => {
     </Popover>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

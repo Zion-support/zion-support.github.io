@@ -5,9 +5,7 @@ import { useConversationState  } from './useConversationState';
 import { useConversations  } from './useConversations';
 import { useMessages } from './useMessages';
 // Allow either UserProfile or UserDetails
-<<<<<<< HEAD
-type UserWithProfile = any;
-=======
+
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook that combines all messaging operations
@@ -71,7 +69,7 @@ export function useMessagingOperations(user: UserWithProfile) {
     createConversation;
     markAsRead;
     fetchConversations;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     loadMessages
   }
 }

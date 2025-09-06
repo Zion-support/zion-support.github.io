@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2";
-const corsHeaders = null;
-=======
+
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 const corsHeaders = {
@@ -60,4 +56,4 @@ serve(async (req) => {
     )
   }
 });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

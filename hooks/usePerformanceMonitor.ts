@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-},
-,
-export default usePerformanceMonitor;
-=======
+
 interface PerformanceMetrics {
   loadTime: number, firstContentfulPaint: number
   largestContentfulPaint: number, firstInputDelay: number
@@ -75,4 +71,4 @@ export function usePerformanceMonitor() {
   }, []);
   return { metrics, isSupported }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

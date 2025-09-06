@@ -4,9 +4,7 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Eye  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 export default function HolographicAICommunicationPage() {
-<<<<<<< HEAD
-  const contactInfo = null;
-=======
+
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -22,7 +20,7 @@ export default function HolographicAICommunicationPage() {
   }
   const features = [
     'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>

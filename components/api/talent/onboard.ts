@@ -3,22 +3,16 @@ import fs from 'fs';
 import path from 'path';
 import fse from 'fs-extra';
 import { randomUUID } from 'crypto';
-<<<<<<< HEAD
-// Lazy import to avoid serverless cold start cost unless needed
-async function summarizeAndTag(input: {
-  fullName: string;
-=======
+
 async function summarizeAndTag(input: {fullName: string;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   professionalTitle: string;
   bio: string;
   projects?: string;
   skills: string;
   tools?: string
 }) {
-<<<<<<< HEAD
-  const openaiApiKey = null;
-=======
+
   const openaiApiKey =
     process.env.OPENAI_API_KEY |process.env.OPENAI_API_KEY_ZION |'';
   const combinedText = [
@@ -204,7 +198,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     aggregate.push(record);
     await fse.writeJSON(aggregatePath, aggregate, { spaces: 2 });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
     // For now, just return success with AI data
     return res.status(200).json({ ok: true, id, summary, tags });

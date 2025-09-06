@@ -1,7 +1,5 @@
 import useSWR from 'swr';
-<<<<<<< HEAD
-const fetcher = null;
-=======
+
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export function useProjectDisputeStatus(projectId: string): {
   hasActiveDispute: boolean;
@@ -32,7 +30,7 @@ export default function UnderDisputeBadge({
 export default function UnderDisputeBadge({ projectId }: { projectId: string }) {
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
   if (!hasActiveDispute) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">
       Under Dispute

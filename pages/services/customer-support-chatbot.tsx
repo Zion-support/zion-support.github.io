@@ -2,9 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import UseTokensButton from '../../components/tokens/UseTokensButton';
-<<<<<<< HEAD
-const CustomerSupportChatbot: NextPage;
-=======
+
 const CustomerSupportChatbot: NextPage = () => {
   return (
     <div>
@@ -22,4 +20,4 @@ const CustomerSupportChatbot: NextPage = () => {
   )
 }
 export default CustomerSupportChatbot;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

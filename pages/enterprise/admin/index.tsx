@@ -1,8 +1,6 @@
 import { useEffect, useMemo, useState  } from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-type Member = any;
-=======
+
 type Member = {
   id: string;
   name: string;
@@ -242,7 +240,7 @@ function UsageTab({
       body: JSON.stringify({ monthlyJobPosts, budgetCapUsd })
     });
     setUsage({ monthlyJobPosts, budgetCapUsd });  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <section>
       <h2>Usage limits</h2>

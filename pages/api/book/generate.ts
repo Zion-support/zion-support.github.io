@@ -2,14 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
-    res.status(405).json({ error: 'Method not allowed' });
-    return
-  }
 
-  const { meta, chapters } = req.body as { meta: any, chapters: { title: string, content?: string }[] };
-  const apiKey = null;
-=======
     res.status(405).json({ error: 'Method not allowed' })
     return
   }
@@ -35,7 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         { role: 'user', content: prompt }]
       temperature: 0.7})
     const text = completion.choices?.[0]?.message?.content |''
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     drafted.push({ title: ch.title, content: text })
   }
   res.status(200).json({ chapters: drafted })

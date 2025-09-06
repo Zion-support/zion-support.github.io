@@ -14,17 +14,12 @@ import { Search } from "lucide-react";
 // Sample blog data - in a real app this would come from an API or CMS
 const BLOG_POSTS: BlogPost[] = [
   {
-<<<<<<< HEAD
-    id: "ai-trends-2025";
-    title: "10 Emerging AI Trends to Watch in 2025";
-    slug: "ai-trends-2025";
-    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.",
-=======
+
     id: "ai-trends-2025"
     title: "10 Emerging AI Trends to Watch in 2025"
     slug: "ai-trends-2025"
     excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
 <h2>1. Multimodal AI Systems</h2>
 <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>
@@ -37,11 +32,7 @@ const BLOG_POSTS: BlogPost[] = [
 <h2>5. AI for Climate Solutions</h2>
 <p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`;
     author: {
-<<<<<<< HEAD
-      name: "Dr. Alicia Zhang";
-      title: "AI Research Director";
-      avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto;
-=======
+
       name: "Dr. Alicia Zhang"
       title: "AI Research Director"
       avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
@@ -365,7 +356,7 @@ export default function Blog() {
                 variant="outline"
                 onClick={() => {
                   setSearchQuery("");
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                   setSelectedCategory("All Categories")
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"

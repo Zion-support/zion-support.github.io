@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-const AboutPage: React.FC;
-=======
+
 import React from "react";
 import Layout from "../components/Layout";
 export default function About() {
@@ -32,4 +26,4 @@ export default function About() {
     </Layout>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

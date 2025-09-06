@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
-export type DisputeStatus = any;
-=======
+
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed';
 export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null;
 export interface Dispute {
@@ -69,4 +67,4 @@ export const disputeReasonLabels: Record<DisputeReason, string> = {
   payment: 'Payment Dispute';
   contract_terms: 'Contract Terms Disagreement'
 other: 'Other Issue'}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

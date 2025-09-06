@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import React, { useCallback, useEffect, useMemo, useState } from 'react',
-import Head from 'next/head',
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { GetServerSideProps  } from 'next';
-import { requireAdminRole  } from '../../utils/auth';
-import DatePicker from 'react-datepicker';
-export const getServerSideProps: GetServerSideProps;
-=======
+
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -90,7 +82,7 @@ export default function UsageAnalytics() {
     }
   }, [start, end, userType])
   useEffect(() => { refresh() }, [])
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <EnhancedLayout>
       <Head>

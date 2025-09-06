@@ -1,11 +1,7 @@
 import { useEffect, useState  } from 'react';
 import Link from 'next/link',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/grants';
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
-const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'];
-=======
+
 import type {
   GrantApplication
   GrantCategory
@@ -24,7 +20,7 @@ const statuses: GrantStatus[] = [
   'Approved'
   'Rejected'
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function GrantsPage() {
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{
@@ -39,9 +35,7 @@ export default function GrantsPage() {
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
   useEffect(() => {
-<<<<<<< HEAD
-    const params = null;
-=======
+
     const params = new URLSearchParams();
     if (filters.sector) params.set('sector', filters.sector);
     if (filters.status) params.set('status', filters.status);
@@ -56,7 +50,7 @@ export default function GrantsPage() {
       .then((d) => setItems(d.items |[]))
       .catch(() => setItems([]))
   }, [filters]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <EnhancedLayout>
       <div className='flex items-center justify-between mb-6'>

@@ -10,19 +10,13 @@ import { useAuth  } from '@/hooks/useAuth';
 import { MessageBubble  } from './MessageBubble';
 import { DateDivider } from './DateDivider';
 export function ConversationDetailView() {
-<<<<<<< HEAD
-  const { user } = useAuth();
-  const { 
-    activeConversation;
-    activeMessages;
-    sendMessage;
-=======
+
   const { user } = useAuth()
   const {
     activeConversation
     activeMessages
     sendMessage
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     loadMessages
   } = useMessaging();
   const [messageText, setMessageText] = useState('');

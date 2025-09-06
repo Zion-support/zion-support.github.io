@@ -6,19 +6,13 @@ import { Button  } from '@/components/ui/button';
 import { NotificationItem  } from './NotificationItem';
 import { Notification } from '@/context/notifications';
 interface NotificationListProps {
-<<<<<<< HEAD
-  loading: boolean;
-  error: string | null;
-  notifications: Notification[];
-  onMarkAsRead: (id: string) => Promise<void>;
-  onDismiss: (id: string) => Promise<void>;
-=======
+
   loading: boolean
   error: string | null
   notifications: Notification[]
   onMarkAsRead: (id: string) => Promise<void>
   onDismiss: (id: string) => Promise<void>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onRetry: () => void
 }
 export const NotificationList: React.FC<NotificationListProps> = ({
@@ -26,13 +20,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   error;
   notifications;
   onMarkAsRead;
-<<<<<<< HEAD
-  onDismiss;
-  onRetry
-}) => {
-  return (
-    <ScrollArea className;
-=======
+
   onDismiss
   onRetry
 }) => {
@@ -73,4 +61,4 @@ export const NotificationList: React.FC<NotificationListProps> = ({
     </ScrollArea>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -7,11 +7,7 @@ export function useProjects() {
   const { user } = useAuth();
   const [projects, setProjects] = useState<Project[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-<<<<<<< HEAD
-  const [error, setError] = useState<string | null>(null),
 
-  const fetchProjects = null;
-=======
   const [error, setError] = useState<string | null>(null);
   const fetchProjects = async () => {
     if (!user) {
@@ -116,7 +112,7 @@ export function useProjects() {
     error;
     refetch: fetchProjects;
     getProjectById
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     updateProjectStatus
   }
 }

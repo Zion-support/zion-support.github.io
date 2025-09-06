@@ -22,9 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode>
           <AuthProvider>
             <NotificationProvider>
               <AnalyticsProvider>
-<<<<<<< HEAD
-                <LanguageProvider authState;
-=======
+
                 <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
                   <App />
                   <LanguageDetectionPopup />
@@ -36,4 +34,4 @@ ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode>
       </WhitelabelProvider>
     </HelmetProvider>
   </React.StrictMode>);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

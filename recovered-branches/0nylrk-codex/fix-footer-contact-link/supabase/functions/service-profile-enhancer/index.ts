@@ -4,19 +4,15 @@ interface ServiceProfileData {
   name: string;
   title: string;
   bio: string;
-<<<<<<< HEAD
-  services?: string[];
-=======
+
   services?: string[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   location: string
 }
 serve(async (req) => {
   try {
     // CORS headers
-<<<<<<< HEAD
-    const headers = null;
-=======
+
     const headers = {
       "Access-Control-Allow-Origin": "*";
       "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type";
@@ -119,4 +115,4 @@ serve(async (req) => {
     )
   }
 });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

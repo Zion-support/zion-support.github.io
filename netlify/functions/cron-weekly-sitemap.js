@@ -43,18 +43,12 @@ exports.handler = async function () {
     const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
       `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +
       pages.map((p) => `<url><loc>${baseUrl}${p}</loc></url>`).join('') +
-<<<<<<< HEAD
-      `</urlset>`,
 
-    const owner = process.env.GITHUB_OWNER,
-    const repo = process.env.GITHUB_REPO,
-    const token = process.env.GITHUB_TOKEN;
-=======
       `</urlset>`
     const owner = process.env.GITHUB_OWNER
     const repo = process.env.GITHUB_REPO
     const token = process.env.GITHUB_TOKEN
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'public/sitemap-autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token })
     }
@@ -62,8 +56,6 @@ exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
-};
-=======
+
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

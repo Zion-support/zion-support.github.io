@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-=======
 import React from "react";
 import {
   Card
@@ -11,21 +7,14 @@ import {
   CardHeader
   CardTitle
 } from "@/components/ui/card";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleListProps {
   categoryId: string;
   onArticleSelect: (articleId: string) => void;
   searchQuery: string
 }
-<<<<<<< HEAD
 
-export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {
-  const category = null;
-    day: "numeric"
-  })
-}
-=======
 export function HelpArticleList({
   categoryId
   onArticleSelect
@@ -89,4 +78,4 @@ function formatDate(date: string): string {
     day: "numeric"
   });
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

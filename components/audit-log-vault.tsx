@@ -7,9 +7,7 @@ import Card from '../components/ui/Card';
 import {FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck} from 'lucide-react';
 import {Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter} from '@/components/ui/card';
 export default function AuditLogVaultPage() {
-<<<<<<< HEAD
-  const contactInfo = null;
-=======
+
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -19,7 +17,7 @@ export default function AuditLogVaultPage() {
   const features = [
     'Append-only, tamper-evident storageFlexible retention and legal holdsCryptographic digests and attestationsFine-grained search and export bundlesChain-of-custody and access reviewsAlerts for risky access patterns'
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>

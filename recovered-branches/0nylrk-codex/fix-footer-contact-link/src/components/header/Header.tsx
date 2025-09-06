@@ -15,15 +15,7 @@ export interface HeaderProps {
   hideLogin?: boolean;
   customLogo?: string;
   customTheme?: {
-<<<<<<< HEAD
-    primaryColor: string;
-    backgroundColor: string;
-    textColor: string
-  }
-}
 
-export function Header({ hideLogin;
-=======
     primaryColor: string
     backgroundColor: string
     textColor: string
@@ -54,7 +46,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
       setQuery("")
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <header
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md"

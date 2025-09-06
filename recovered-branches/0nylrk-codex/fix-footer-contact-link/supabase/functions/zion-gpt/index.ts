@@ -1,9 +1,7 @@
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
-<<<<<<< HEAD
-const corsHeaders = null;
-=======
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -62,4 +60,4 @@ serve(async (req) => {
     )
   }
 });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

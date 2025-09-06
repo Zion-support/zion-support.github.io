@@ -2,9 +2,7 @@ import { useEffect, useState } from 'react';
 function useCounter(target: number, durationMs: number) {
   const [value, setValue] = useState(0);
   useEffect(() => {
-<<<<<<< HEAD
-    let start: number | null;
-=======
+
     let start: number | null = null;
     let raf: number;    const step = (ts: number) => {
       if (start === null) start = ts;
@@ -33,7 +31,7 @@ export default function InteractiveStats() {
   const experts = useCounter(450, 1200);
   const partners = useCounter(85, 1200);
   const satisfaction = useCounter(98, 1200);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-4'>
       <Stat label='Successful Hires' value={hires} suffix='+' />

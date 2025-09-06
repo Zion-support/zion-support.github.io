@@ -3,9 +3,7 @@ import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIEmotionalIntelligenceTraining() {
 	return (
 		<ServiceLanding
-<<<<<<< HEAD
-			title;
-=======
+
 			title="AI Emotional Intelligence Training"
 			slug="ai-emotional-intelligence-training"
 			description="Dynamic coaching that improves communication, empathy, and leadership. AI evaluates tone, clarity, and sentiment to deliver tailored practice scenarios and feedback."
@@ -19,7 +17,7 @@ export default function AIEmotionalIntelligenceTraining() {
 				"Personalized learning paths and certifications"
 				"Team dashboards and skill gap analysis"
 				"Integrations: LMS, Slack/Teams, Gmail/Outlook"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 				"Privacy-first voice and text processing"
 			]}
 			industries={["Customer Support", "Sales", "HR & L&D", "Leadership"]}

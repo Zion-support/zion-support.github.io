@@ -8,10 +8,7 @@ import { toast  } from '@/hooks/use-toast';
 import { SEO  } from '@/components/SEO';
 import {logErrorToProduction} from '@/utils/productionLogger';
 export default function ProductPage() {
-<<<<<<< HEAD
 
-  const router = null;
-=======
   const router = useRouter();
   const { id: rawId } = router.query;
   const id = typeof rawId === 'string' ? rawId : undefined;
@@ -63,7 +60,7 @@ export default function ProductPage() {
     toast.success(`1× ${product.title} added`);
     setTimeout(() => setAdding(false), 500)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO

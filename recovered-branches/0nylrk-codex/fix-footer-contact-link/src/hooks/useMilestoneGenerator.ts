@@ -5,31 +5,23 @@ import { toast } from 'sonner';
 export interface MilestoneInput {
   scope: string;
   startDate: string;
-<<<<<<< HEAD
-  endDate: string | null;
-=======
+
   endDate: string | null
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   projectType: string
 }
 export interface GeneratedMilestone {
   title: string;
   description: string;
   dueDate: string;
-<<<<<<< HEAD
-  estimatedHours: number;
-=======
+
   estimatedHours: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   isAiGenerated: boolean
 }
 export function useMilestoneGenerator() {
   const [isGenerating, setIsGenerating] = useState(false);
-<<<<<<< HEAD
-  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]),
 
-  const generateMilestones = null;
-=======
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
   const generateMilestones = async (input: MilestoneInput): Promise<GeneratedMilestone[]> => {
     try {
@@ -59,6 +51,6 @@ export function useMilestoneGenerator() {
     generateMilestones;
     generatedMilestones;
     isGenerating;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     clearGeneratedMilestones}
 }

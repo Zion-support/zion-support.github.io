@@ -12,19 +12,13 @@ import { useSmartContracts } from "@/hooks/useSmartContracts",
 import { toast } from "sonner";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface SmartContractBuilderProps {
-<<<<<<< HEAD
-  isOpen: boolean;
-  onClose: () => void;
-  talent: TalentProfile;
-  clientName: string;
-  onContractGenerated?: (contractContent: string) => void
-=======
+
   isOpen: boolean
   onClose: () => void
   talent: TalentProfile
   clientName: string
   onContractGenerated?: (contractContent: string,) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }
 export function SmartContractBuilder({
   isOpen;
@@ -39,17 +33,7 @@ export function SmartContractBuilder({
   ),
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [deployOptions, _setDeployOptions] = useState<DeploymentOptions>({
-<<<<<<< HEAD
-    network: 'ethereum';
-    useEscrow: true;
-    deployToChain: false
-  }),
-  const [deployStatus, setDeployStatus] = useState<string>(''),
-  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null),
-  
-  const { deploySmartContract } = useSmartContracts();
-  const handleLoadTemplate = null;
-=======
+
     network: 'ethereum'
     useEscrow: true
     deployToChain: false
@@ -368,7 +352,7 @@ export function SmartContractBuilder({
     setGeneratedContract(contract)
     setActiveTab("preview")
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">

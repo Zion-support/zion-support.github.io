@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export const innovativeMicroSaasSolutions2025 = null;
-=======
+
 export const innovativeMicroSaasSolutions2025 = [
   {
     id: 'ai-powered-customer-feedback-analyzer'
@@ -431,4 +429,4 @@ export const innovativeMicroSaasSolutions2025 = [
     compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations']
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

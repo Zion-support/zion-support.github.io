@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-import { Menu, X, ChevronDown, Globe, Brain, Shield, Rocket;
-  Cpu, Database, Users, Award, BookOpen, Phone
- } from 'lucide-react';
-const EnhancedNavigation: React.FC;
-=======
+
 import {motion} from 'framer-motion';
 import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users, Award, BookOpen, Phone} from 'lucide-react';
 const EnhancedNavigation: React.FC = () => {
@@ -220,4 +214,4 @@ const EnhancedNavigation: React.FC = () => {
   );
 }
 export default EnhancedNavigation;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

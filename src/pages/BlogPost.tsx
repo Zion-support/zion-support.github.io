@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-import { useRouter  } from 'next/router';
-import Link from 'next/link',
-import { SEO } from "@/components/SEO",
-import JsonLd from "@/components/JsonLd",
-import { Button } from "@/components/ui/button",
-import ImageWithRetry from '@/components/ui/ImageWithRetry',
-=======
+
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
@@ -46,7 +38,7 @@ export default function BlogPost() {
 import { SEO } from "@/components/SEO"
 import JsonLd from "@/components/JsonLd"
 import { Button } from "@/components/ui/button"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
 import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator } from "@/components/ui/separator";
@@ -57,10 +49,7 @@ import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 export default function BlogPost() {
-<<<<<<< HEAD
 
-  const router = null;
-=======
   const router = useRouter()
   const { slug } = router.query as { slug: string }
   const [post, setPost] = useState<BlogPostType | null>(null)
@@ -157,7 +146,7 @@ export default function BlogPost() {
       name: post.author.name
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO

@@ -7,21 +7,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { Sparkles } from "lucide-react";
 interface AIListingFormProps {
   onSubmit: (formData: {
-<<<<<<< HEAD
-    title: string;
-    category: string;
-    keyFeatures: string;
-    targetAudience: string
-  }) => void;
-  isLoading: boolean;
-=======
+
     title: string
     category: string
     keyFeatures: string
     targetAudience: string
   }) => void;
   isLoading: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   initialValues?: {
     title?: string;
     category?: string;
@@ -29,10 +22,7 @@ interface AIListingFormProps {
     targetAudience?: string
   }
 }
-<<<<<<< HEAD
 
-export function AIListingForm({ onSubmit, isLoading, initialValues;
-=======
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
   const { toast } = useToast();
   const [title, setTitle] = useState(initialValues.title |"");
@@ -55,7 +45,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       targetAudience
     })
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-4">
       <div className="space-y-2">

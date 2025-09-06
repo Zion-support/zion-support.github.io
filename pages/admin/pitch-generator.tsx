@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React, { useCallback, useMemo, useState } from 'react',
-import Head from 'next/head',
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { GetServerSideProps  } from 'next';
-import { requireAdminRole } from '../../utils/auth';
-export type Slide = any;
-=======
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 interface Slide {
@@ -242,7 +235,7 @@ export default function PitchGenerator() {
       </div>
     );
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

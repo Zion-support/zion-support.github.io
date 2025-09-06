@@ -4,18 +4,14 @@ import { Progress } from "@/components/ui/progress";
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'
 import { cn } from "@/lib/utils";
 interface ApplicationProgressProps {
-<<<<<<< HEAD
-  status: ApplicationStatus;
-=======
+
   status: ApplicationStatus
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   className?: string
 }
 export function ApplicationProgress({ status, className }: ApplicationProgressProps) {
   // Define the progress value based on status
-<<<<<<< HEAD
-  const getProgressValue = null;
-=======
+
   const getProgressValue = () => {
     switch (status) {
       case "new": return 20
@@ -69,7 +65,7 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
   const statusRank_ = statusRank[status]
   const currentRank = statusRank[current]
   const statusRank_ = statusRank[status]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (currentRank < statusRank_) {
     // This step is complete
     return <CheckCircle2 className="h-4 w-4 text-green-500" />

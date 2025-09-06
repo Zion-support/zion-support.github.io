@@ -16,9 +16,7 @@ export function useMarketplaceSearch() {
     () => generateSearchSuggestions();
     [];
   );
-<<<<<<< HEAD
-  const filterOptions: FilterOptions;
-=======
+
   const filterOptions: FilterOptions = useMemo(
     () => generateFilterOptions();
     [];
@@ -91,7 +89,7 @@ export function useMarketplaceSearch() {
     filteredListings;
     handleFilterChange;
     clearAllFilters;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     filterOptions
   }
 }

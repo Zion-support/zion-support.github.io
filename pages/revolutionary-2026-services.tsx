@@ -9,9 +9,7 @@ export default function Revolutionary2026ServicesPage() {
     <>
       <Head>
         <title>Revolutionary 2026 Services - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name;
-=======
+
         <meta
           name='description'
           content='Experience the future with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions.'
@@ -157,7 +155,7 @@ export default function Revolutionary2026ServicesPage() {
                   title: 'Global Impact'
                   description:
                     'Serving 2,500+ customers worldwide with transformative technology solutions.'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                   color: 'from-indigo-500 to-purple-500'
                 }
               ].map((feature, index) => (

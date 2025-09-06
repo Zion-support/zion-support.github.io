@@ -9,9 +9,7 @@ export default function TrustPage() {
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
-<<<<<<< HEAD
-    const params = null;
-=======
+
     const params = new URLSearchParams(window.location.search);
     const u = params.get('user');
     if (u) setUserId(u);    if (u) setUserId(u)
@@ -60,7 +58,7 @@ export default function TrustPage() {
   return (
     <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
     alert('Appeal submitted');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     form.reset()
   }
   return (

@@ -4,9 +4,7 @@ import path from 'path';
 import fs from 'fs';
 import DocsLayout from '../../../components/docs/DocsLayout';
 import CodeBlock from '../../../components/docs/CodeBlock';
-<<<<<<< HEAD
-export type Section = any;
-=======
+
   id: string;
   title: string;
   html?: string;
@@ -25,7 +23,7 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
   const docs = JSON.parse(raw) as DocsContent;
   return { props: { docs } }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function ApiDocsPage({ docs }: PageProps) {
       nav={docs.sections.map(s => ({ id: s.id, title: s.title }))}
     >

@@ -1,8 +1,6 @@
 import { useEffect, useMemo, useState  } from 'react';
 import { translateTextViaAI } from '../utils/translation';
-<<<<<<< HEAD
-export type UseAutoTranslateResult = any;
-=======
+
 export type UseAutoTranslateResult = {
   translations: Record<string, string>;
   loading: boolean;
@@ -43,7 +41,7 @@ export function useAutoTranslate(
       clearTimeout(timer);
     }
   }, [key, debounceMs]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return { translations, loading, error }
     }
   }, [key, debounceMs]);

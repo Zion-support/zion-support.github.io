@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 const EnhancedNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-<<<<<<< HEAD
-=======
+
   return (
     <nav className='bg-white shadow-lg sticky top-0 z-50'>
       <div className='container mx-auto px-4'>
@@ -60,7 +59,7 @@ const EnhancedNavigation = () => {
               className='bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors'
             >              Get Startedconst EnhancedNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
@@ -187,13 +186,9 @@ const EnhancedNavigation = () => {
         )}
       </div>
     </nav>
-<<<<<<< HEAD
-  )
-};
-export default EnhancedNavigation;
-=======
+
 );
 }
 export default EnhancedNavigation;}
 export default EnhancedNavigation;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

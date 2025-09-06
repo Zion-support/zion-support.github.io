@@ -12,19 +12,13 @@ import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from "@/types
 import { useSmartContracts } from "@/hooks/useSmartContracts";
 import { toast } from "sonner";
 interface SmartContractBuilderProps {
-<<<<<<< HEAD
-  isOpen: boolean;
-  onClose: () => void;
-  talent: TalentProfile;
-  clientName: string;
-  onContractGenerated?: (contractContent: string) => void;
-=======
+
   isOpen: boolean
   onClose: () => void
   talent: TalentProfile
   clientName: string
   onContractGenerated?: (contractContent: string) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onDeploy?: (contractContent: string) => void
 }
 export function SmartContractBuilder({
@@ -42,21 +36,16 @@ export function SmartContractBuilder({
   ),
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
-<<<<<<< HEAD
-    network: 'ethereum';
-    useEscrow: true;
-=======
+
     network: 'ethereum'
     useEscrow: true
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     deployToChain: false
   });
   const [deployStatus, setDeployStatus] = useState<string>('');
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null);
   const { generateSolidityContract, deploySmartContract, deploymentStatus } = useSmartContracts();
-<<<<<<< HEAD
-  const handleLoadTemplate = null;
-=======
+
   const handleLoadTemplate = (templateData: ContractFormValues) => {
     setFormValues(templateData)
   }
@@ -104,7 +93,7 @@ export function SmartContractBuilder({
     setGeneratedContract(contract);
     setActiveTab("preview")
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">

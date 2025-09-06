@@ -4,24 +4,7 @@ import { zodResolver  } from '@hookform/resolvers/zod';
 import { z  } from 'zod';
 import { format  } from 'date-fns';
 import { Loader2 } from 'lucide-react'
-<<<<<<< HEAD
-import { Button  } from '@/components/ui/button';
-import { Textarea  } from '@/components/ui/textarea';
-import { Input  } from '@/components/ui/input';
-import { Checkbox  } from '@/components/ui/checkbox';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage } from '@/components/ui/form';
-import { useState  } from 'react';
-import { EducationFormFieldsProps  } from './types';
-import { Education } from '@/types/resume';
-// Define schema for form validation
-const educationSchema = null;
-=======
+
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import { Input } from '@/components/ui/input'
@@ -79,7 +62,7 @@ export function EducationFormFields({
       setIsLoading(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className='space-y-4'>

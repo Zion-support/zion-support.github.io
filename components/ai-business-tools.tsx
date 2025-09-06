@@ -2,15 +2,7 @@ import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-import { Brain;
-  MessageSquare;
-  Image;
-  Video;
-  FileText;
-  BarChart3;
-  Users;
-=======
+
 import {
   Brain
   MessageSquare
@@ -34,7 +26,7 @@ import {
   FileText
   BarChart3
   Users
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Zap;
   ArrowRight;
   Star;
@@ -43,11 +35,7 @@ import {
   TrendingUp;
   Shield;
   Globe
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function AIBusinessToolsPage() {
-  const aiTools = null;
-=======
+
 export default function AIBusinessToolsPage() {
   const aiTools = [
     {
@@ -309,7 +297,7 @@ export default function AIBusinessToolsPage() {
       : aiTools.filter(tool => tool.category === selectedCategory);  const filteredTools = selectedCategory === 'All'
     ? aiTools
     : aiTools.filter(tool => tool.category === selectedCategory);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

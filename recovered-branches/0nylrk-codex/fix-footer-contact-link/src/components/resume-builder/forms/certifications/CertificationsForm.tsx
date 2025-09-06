@@ -13,26 +13,16 @@ import { CertificationsList  } from './CertificationsList';
 import { CertificationFormFields  } from './CertificationFormFields';
 import { CertificationFormValues, certificationSchema } from './types';
 interface CertificationsFormProps {
-<<<<<<< HEAD
-  resumeId: string;
-  certifications: Certification[];
-  onComplete: () => void;
-=======
+
   resumeId: string
   certifications: Certification[]
   onComplete: () => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onBack: () => void
 }
 export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {
   const { addCertification, updateCertification, deleteCertification, isLoading } = useResume();
-<<<<<<< HEAD
-  const [editingId, setEditingId] = useState<string | null>(null),
-  const [error, setError] = useState<string | null>(null),
 
-  // Helper function to format dates as strings for form inputs
-  const formatDateValue = null;
-=======
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   // Helper function to format dates as strings for form inputs
@@ -128,7 +118,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                       issue_date: ''
                       expiration_date: ''
                       credential_id: ''
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                       credential_url: ''})
                   } else {
                     onBack()

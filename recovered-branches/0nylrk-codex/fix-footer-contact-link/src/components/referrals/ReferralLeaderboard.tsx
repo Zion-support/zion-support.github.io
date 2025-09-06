@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-=======
 import {
   Card
   CardContent
@@ -9,7 +6,7 @@ import {
   CardHeader
   CardTitle
 } from "@/components/ui/card";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Award } from "lucide-react";
 interface LeaderboardEntry {
   rank: number;

@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronRight, Home, Star, Users;
-  Settings, HelpCircle, Mail, Phone, MapPin;
-  Brain, Atom, Shield, Rocket, DollarSign;
-  Globe, Cpu, Database, Lock, Zap;
-  TrendingUp, Award, CheckCircle, Clock;
-  ArrowRight, Search, Menu, X as CloseIcon;
-  Target, BookOpen, Truck, BarChart3;
-  Sparkles, Eye, Lightbulb, Palette, Code
- } from 'lucide-react';
-interface SidebarItem {
-  name: string;
-=======
+
 ]
 }];
 ];</div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50" ></div> </div> <div> <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </h2> <p className="text-xs text-gray-400" >Navigation</p> </div> </div> </div> </div> </div> {
@@ -591,19 +576,12 @@ import { motion, AnimatePresence               } from 'framer-motion.ts;
 import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown,'  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star;
 } from 'lucide-react.ts;
 interface SidebarItem {name: string;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   href: string;
   icon?: React.ReactNode;
   description?: string;
   children?: SidebarItem[];
-<<<<<<< HEAD
-  badge?: string;
-  isNew?: boolean;
-  isHot?: boolean
-}
 
-const contactInfo = null;
-=======
   badge?: string
   color?: string
   isNew?: boolean
@@ -1494,4 +1472,4 @@ export default EnhancedSidebar2025,";
   ),,
 }
 }}}}}}}}}}}}}}}}}}}}}}}}}})))))))))))))))))))))))))))))))))
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

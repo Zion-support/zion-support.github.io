@@ -5,9 +5,7 @@ const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), {
 });const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), { ssr: false })
 async function resolveDisplayName(addr: string): Promise<string | null> {
   try {
-<<<<<<< HEAD
-    const r = null;
-=======
+
     const r = await fetch(`/api/did/get?address=${encodeURIComponent(addr)}`);
     const { data } = await r.json();
     const did = data?.payload |{}
@@ -67,7 +65,7 @@ export default function Web3LoginButton() {
   if (user) {
     const base =
       displayName |`${user.address.slice(0, 6)}…${user.address.slice(-4)}`;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     return (
       <div className='flex items-center gap-2'>
         <span className='hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1.5 py-0.5'>

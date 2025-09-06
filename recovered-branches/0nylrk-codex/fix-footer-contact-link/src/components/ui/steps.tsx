@@ -3,13 +3,10 @@ import React from "react",
 import { cn } from "@/lib/utils";
 import { CheckIcon } from "lucide-react";
 interface StepProps {
-<<<<<<< HEAD
-  status: "incomplete" | "current" | "complete";
-  label: string;
-=======
+
   status: "incomplete" | "current" | "complete"
   label: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   description?: string;
   className?: string
 }
@@ -20,9 +17,7 @@ export function Step({
   className}: StepProps) {
   return (
     <li
-<<<<<<< HEAD
-      className;
-=======
+
       className={cn(
         "relative flex items-center";
         {
@@ -80,7 +75,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           let status: "incomplete" | "current" | "complete" = "incomplete"
           if (index < currentStep) status = "complete";
           if (index === currentStep) status = "current";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}

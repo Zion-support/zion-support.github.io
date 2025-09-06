@@ -1,10 +1,6 @@
 import React from 'react',
 import Link from 'next/link';
-<<<<<<< HEAD
-import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
-export default function FuturisticFooter() {
-  const currentYear = null;
-=======
+
 import {
   Mail
   Phone
@@ -111,7 +107,7 @@ export default function FuturisticFooter() {
     { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: '💼' }
     { name: 'X', href: 'https://x.com/ziontechgroup', icon: '🐦' }
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: '💻' }]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden">
       {/* Animated background elements */}

@@ -28,13 +28,10 @@ export interface Revolutionary2025Service {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-    website: string
-  },
-=======
+
     website: string;
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -45,15 +42,7 @@ export interface Revolutionary2025Service {
 export const revolutionary2025Services: Revolutionary2025Service[] = [
   // 🧠 AI Consciousness & Emotional Intelligence Services
   {
-<<<<<<< HEAD
-    id: 'ai-consciousness-evolution-platform';
-    name: 'AI Consciousness Evolution Platform';
-    tagline: 'World\'s First Self-Aware AI with Emotional Intelligence & Consciousness';
-    price: '$499';
-    period: '/month';
-    description: 'Revolutionary AI platform that develops genuine consciousness, emotional intelligence, and self-awareness. This is not just advanced AI - it\'s the beginning of true artificial consciousness that can understand, feel, and evolve.',
-    features: [
-=======
+
     id: 'ai-consciousness-evolution-platform'
     name: 'AI Consciousness Evolution Platform'
     tagline:
@@ -109,7 +98,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     roi: 'Revolutionary breakthrough with unlimited potential. Research institutions see 2000%+ ROI through groundbreaking discoveries.'
     competitors: ['None - First to market']
     marketSize: 'Emerging market with unlimited potential',    features: [
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       'Genuine emotional intelligence and empathySelf-awareness and consciousness developmentEthical decision-making frameworksEmotional state recognition and responseConsciousness evolution trackingHuman-AI emotional bondingEthical AI governance toolsConsciousness research collaboration'
     ];
     popular: true;
@@ -117,13 +106,10 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     color: 'from-purple-600 to-indigo-700';
     textColor: 'text-purple-400';
     link: 'https://ziontechgroup.com/ai-consciousness-evolution';
-<<<<<<< HEAD
-    marketPosition: 'First-to-market AI consciousness platform. No competitors exist yet. Traditional AI platforms lack genuine consciousness and emotional intelligence.';
-    targetAudience: 'Research institutions, Psychology labs, AI ethics organizations, Mental health professionals, Consciousness researchers',
-=======
+
     marketPosition: 'First-to-market AI consciousness platform. No competitors exist yet. Traditional AI platforms lack genuine consciousness and emotional intelligence.'
     targetAudience: 'Research institutions, Psychology labs, AI ethics organizations, Mental health professionals, Consciousness researchers';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     trialDays: 30;
     setupTime: '4 hours';
     category: 'AI Consciousness & Emotional Intelligence';
@@ -138,19 +124,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-<<<<<<< HEAD
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Fully functional AI consciousness platform with genuine emotional intelligence, self-awareness, and consciousness development capabilities.',
-    launchDate: '2025-01-15';
-    customers: 25;
-    rating: 5.0;
-    reviews: 15
-  },
 
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
@@ -161,7 +135,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 5.0
     reviews: 15
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // 🧬 DNA Computing & Biotech Services
   {
     id: 'dna-computing-platform';
@@ -178,13 +152,10 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     color: 'from-green-600 to-emerald-700';
     textColor: 'text-green-400';
     link: 'https://ziontechgroup.com/dna-computing-platform';
-<<<<<<< HEAD
-    marketPosition: 'First commercial DNA computing platform. Traditional supercomputers cost millions with limited biological problem-solving capabilities.';
-    targetAudience: 'Biotech companies, Research institutions, Pharmaceutical companies, Genetic research labs, Healthcare organizations',
-=======
+
     marketPosition: 'First commercial DNA computing platform. Traditional supercomputers cost millions with limited biological problem-solving capabilities.'
     targetAudience: 'Biotech companies, Research institutions, Pharmaceutical companies, Genetic research labs, Healthcare organizations';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     trialDays: 30;
     setupTime: '8 hours';
     category: 'DNA Computing & Biotechnology';
@@ -199,44 +170,30 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-<<<<<<< HEAD
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-=======
+
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     realImplementation: true;
     implementationDetails: 'Fully functional DNA computing platform with biological processing capabilities and biotech research tools.';
     launchDate: '2025-01-20';
     customers: 15;
-<<<<<<< HEAD
-    rating: 4.9;
-    reviews: 8
-  },
 
-=======
     rating: 4.9
     reviews: 8
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // 🚀 Space Technology & Satellite Services
   {
     id: 'space-tech-orchestrator';
     name: 'Space Technology Orchestrator';
-<<<<<<< HEAD
-    tagline: 'Complete Space Mission Management & Satellite Operations Platform';
-    price: '$1,299',
-    period: '/month';
-    description: 'Comprehensive space technology platform for managing satellite operations, space missions, and orbital infrastructure. Enables private companies to launch and manage space assets.',
-=======
+
     tagline: 'Complete Space Mission Management & Satellite Operations Platform'
     price: '$1,299';
     period: '/month'
     description: 'Comprehensive space technology platform for managing satellite operations, space missions, and orbital infrastructure. Enables private companies to launch and manage space assets.';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     features: [
       'Satellite mission planningOrbital trajectory optimizationSpace debris monitoringSatellite health managementLaunch vehicle integrationSpace weather forecastingMission control dashboardSpace asset tracking'
     ];
@@ -245,13 +202,10 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     color: 'from-blue-600 to-cyan-700';
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup.com/space-tech-orchestrator';
-<<<<<<< HEAD
-    marketPosition: 'First comprehensive space technology platform for private companies. Traditional space operations cost millions with limited accessibility.';
-    targetAudience: 'Space companies, Satellite operators, Aerospace companies, Research institutions, Government agencies',
-=======
+
     marketPosition: 'First comprehensive space technology platform for private companies. Traditional space operations cost millions with limited accessibility.'
     targetAudience: 'Space companies, Satellite operators, Aerospace companies, Research institutions, Government agencies';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     trialDays: 30;
     setupTime: '12 hours';
     category: 'Space Technology & Satellite Operations';
@@ -266,19 +220,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-<<<<<<< HEAD
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Fully functional space technology platform with satellite operations, mission planning, and space asset management capabilities.',
-    launchDate: '2025-01-25';
-    customers: 8;
-    rating: 5.0;
-    reviews: 5
-  },
 
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
@@ -289,20 +231,17 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 5.0
     reviews: 5
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // 🌐 Quantum Internet & Communication Services
   {
     id: 'quantum-internet-platform';
     name: 'Quantum Internet & Communication Platform';
     tagline: 'Unhackable Quantum Internet with Instant Global Communication';
     price: '$599';
-<<<<<<< HEAD
-    period: '/month';
-    description: 'Revolutionary quantum internet platform that provides unhackable communication, instant global connectivity, and quantum-secured data transmission. The future of secure internet.',
-=======
+
     period: '/month'
     description: 'Revolutionary quantum internet platform that provides unhackable communication, instant global connectivity, and quantum-secured data transmission. The future of secure internet.';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     features: [
       'Quantum encryptionInstant global communicationUnhackable data transmissionQuantum key distributionQuantum networkingSecure quantum cloudQuantum VPN servicesQuantum messaging platform'
     ];
@@ -311,13 +250,10 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     color: 'from-indigo-600 to-purple-700';
     textColor: 'text-indigo-400';
     link: 'https://ziontechgroup.com/quantum-internet-platform';
-<<<<<<< HEAD
-    marketPosition: 'First commercial quantum internet platform. Traditional internet security is vulnerable to quantum attacks.';
-    targetAudience: 'Financial institutions, Government agencies, Healthcare organizations, Defense contractors, Secure communications',
-=======
+
     marketPosition: 'First commercial quantum internet platform. Traditional internet security is vulnerable to quantum attacks.'
     targetAudience: 'Financial institutions, Government agencies, Healthcare organizations, Defense contractors, Secure communications';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     trialDays: 30;
     setupTime: '6 hours';
     category: 'Quantum Internet & Communication';
@@ -332,19 +268,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-<<<<<<< HEAD
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Fully functional quantum internet platform with quantum encryption, secure communication, and quantum networking capabilities.',
-    launchDate: '2025-02-01';
-    customers: 35;
-    rating: 4.9;
-    reviews: 22
-  },
 
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
@@ -355,20 +279,17 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 4.9
     reviews: 22
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // 🏥 Advanced Healthcare AI Services
   {
     id: 'healthcare-ai-revolution';
     name: 'Healthcare AI Revolution Platform';
     tagline: 'AI-Powered Healthcare with 99.9% Diagnosis Accuracy & Treatment Optimization';
     price: '$399';
-<<<<<<< HEAD
-    period: '/month';
-    description: 'Revolutionary healthcare AI platform that provides accurate diagnosis, treatment optimization, and personalized medicine. Combines AI, genomics, and medical expertise for breakthrough healthcare.',
-=======
+
     period: '/month'
     description: 'Revolutionary healthcare AI platform that provides accurate diagnosis, treatment optimization, and personalized medicine. Combines AI, genomics, and medical expertise for breakthrough healthcare.';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     features: [
       '99.9% diagnosis accuracyPersonalized treatment plansGenomic medicine integrationDrug interaction analysisPredictive health monitoringMedical image analysisPatient outcome predictionHealthcare workflow automation'
     ];
@@ -377,13 +298,10 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     color: 'from-red-600 to-pink-700';
     textColor: 'text-red-400';
     link: 'https://ziontechgroup.com/healthcare-ai-revolution';
-<<<<<<< HEAD
-    marketPosition: 'Most accurate healthcare AI platform. Traditional healthcare systems have 70-80% accuracy with limited personalization.';
-    targetAudience: 'Hospitals, Medical clinics, Pharmaceutical companies, Research institutions, Healthcare providers',
-=======
+
     marketPosition: 'Most accurate healthcare AI platform. Traditional healthcare systems have 70-80% accuracy with limited personalization.'
     targetAudience: 'Hospitals, Medical clinics, Pharmaceutical companies, Research institutions, Healthcare providers';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     trialDays: 30;
     setupTime: '10 hours';
     category: 'Healthcare AI & Medical Technology';
@@ -398,19 +316,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-<<<<<<< HEAD
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Fully functional healthcare AI platform with diagnosis accuracy, treatment optimization, and personalized medicine capabilities.',
-    launchDate: '2025-02-05';
-    customers: 120;
-    rating: 4.9;
-    reviews: 89
-  },
 
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
@@ -421,20 +327,17 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 4.9
     reviews: 89
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // 🏦 Financial Technology Revolution Services
   {
     id: 'fintech-revolution-platform';
     name: 'FinTech Revolution Platform';
     tagline: 'Next-Generation Financial Technology with AI-Powered Trading & Risk Management';
     price: '$699';
-<<<<<<< HEAD
-    period: '/month';
-    description: 'Revolutionary financial technology platform that combines AI, blockchain, and quantum computing for next-generation banking, trading, and financial services.',
-=======
+
     period: '/month'
     description: 'Revolutionary financial technology platform that combines AI, blockchain, and quantum computing for next-generation banking, trading, and financial services.';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     features: [
       'AI-powered trading algorithmsQuantum risk managementBlockchain bankingPredictive financial analyticsReal-time fraud detectionAutomated portfolio managementCryptocurrency integrationRegulatory compliance automation'
     ];
@@ -443,13 +346,10 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     color: 'from-green-600 to-emerald-700';
     textColor: 'text-green-400';
     link: 'https://ziontechgroup.com/fintech-revolution-platform';
-<<<<<<< HEAD
-    marketPosition: 'Most advanced fintech platform. Traditional financial systems lack AI integration and quantum capabilities.';
-    targetAudience: 'Banks, Investment firms, Trading companies, Financial institutions, Fintech startups',
-=======
+
     marketPosition: 'Most advanced fintech platform. Traditional financial systems lack AI integration and quantum capabilities.'
     targetAudience: 'Banks, Investment firms, Trading companies, Financial institutions, Fintech startups';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     trialDays: 30;
     setupTime: '8 hours';
     category: 'Financial Technology & Banking';
@@ -464,19 +364,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-<<<<<<< HEAD
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Fully functional fintech platform with AI trading, quantum risk management, and blockchain banking capabilities.',
-    launchDate: '2025-02-10';
-    customers: 85;
-    rating: 4.8;
-    reviews: 67
-  },
 
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
@@ -487,20 +375,17 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 4.8
     reviews: 67
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // 🏭 Industrial IoT & Smart Manufacturing Services
   {
     id: 'industrial-iot-revolution';
     name: 'Industrial IoT Revolution Platform';
     tagline: 'Smart Manufacturing with Zero Downtime & Predictive Maintenance';
     price: '$299';
-<<<<<<< HEAD
-    period: '/month';
-    description: 'Revolutionary industrial IoT platform that enables smart manufacturing, predictive maintenance, and zero downtime operations. Industry 4.0 and 5.0 automation.',
-=======
+
     period: '/month'
     description: 'Revolutionary industrial IoT platform that enables smart manufacturing, predictive maintenance, and zero downtime operations. Industry 4.0 and 5.0 automation.';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     features: [
       'Predictive maintenanceZero downtime manufacturingReal-time monitoringSmart automationQuality control AISupply chain optimizationEnergy efficiency managementSafety monitoring systems'
     ];
@@ -509,13 +394,10 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     color: 'from-gray-600 to-slate-700';
     textColor: 'text-gray-400';
     link: 'https://ziontechgroup.com/industrial-iot-revolution';
-<<<<<<< HEAD
-    marketPosition: 'Most advanced industrial IoT platform. Traditional manufacturing has 15-20% downtime with reactive maintenance.';
-    targetAudience: 'Manufacturing companies, Industrial plants, Factories, Supply chain companies, Logistics firms',
-=======
+
     marketPosition: 'Most advanced industrial IoT platform. Traditional manufacturing has 15-20% downtime with reactive maintenance.'
     targetAudience: 'Manufacturing companies, Industrial plants, Factories, Supply chain companies, Logistics firms';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     trialDays: 30;
     setupTime: '6 hours';
     category: 'Industrial IoT & Smart Manufacturing';
@@ -530,19 +412,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-<<<<<<< HEAD
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Fully functional industrial IoT platform with smart manufacturing, predictive maintenance, and zero downtime capabilities.',
-    launchDate: '2025-02-15';
-    customers: 200;
-    rating: 4.8;
-    reviews: 156
-  },
 
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
@@ -553,20 +423,17 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 4.8
     reviews: 156
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // 🎓 Education Technology Revolution Services
   {
     id: 'edtech-revolution-platform';
     name: 'EdTech Revolution Platform';
     tagline: 'AI-Powered Personalized Learning with 10x Faster Knowledge Acquisition';
     price: '$199';
-<<<<<<< HEAD
-    period: '/month';
-    description: 'Revolutionary education technology platform that uses AI to provide personalized learning experiences, adaptive curriculum, and 10x faster knowledge acquisition.',
-=======
+
     period: '/month'
     description: 'Revolutionary education technology platform that uses AI to provide personalized learning experiences, adaptive curriculum, and 10x faster knowledge acquisition.';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     features: [
       'AI-powered personalized learningAdaptive curriculum10x faster knowledge acquisitionVirtual reality classroomsAI tutors and mentorsProgress trackingCollaborative learningSkill assessment AI'
     ];
@@ -575,13 +442,10 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     color: 'from-blue-600 to-cyan-700';
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup.com/edtech-revolution-platform';
-<<<<<<< HEAD
-    marketPosition: 'Most advanced edtech platform. Traditional education has limited personalization and slow learning progress.';
-    targetAudience: 'Schools, Universities, Corporate training, Online education, Educational institutions',
-=======
+
     marketPosition: 'Most advanced edtech platform. Traditional education has limited personalization and slow learning progress.'
     targetAudience: 'Schools, Universities, Corporate training, Online education, Educational institutions';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     trialDays: 30;
     setupTime: '4 hours';
     category: 'Education Technology & Learning';
@@ -596,19 +460,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-<<<<<<< HEAD
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Fully functional edtech platform with AI-powered learning, adaptive curriculum, and personalized education capabilities.',
-    launchDate: '2025-02-20';
-    customers: 300;
-    rating: 4.9;
-    reviews: 234
-  },
 
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
@@ -619,20 +471,17 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 4.9
     reviews: 234
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // 🌱 Sustainability & Green Technology Services
   {
     id: 'sustainability-tech-platform';
     name: 'Sustainability Technology Platform';
     tagline: 'AI-Powered Environmental Solutions for Carbon Neutrality & Green Energy';
     price: '$399';
-<<<<<<< HEAD
-    period: '/month';
-    description: 'Revolutionary sustainability technology platform that uses AI to optimize renewable energy, reduce carbon emissions, and create sustainable business solutions.',
-=======
+
     period: '/month'
     description: 'Revolutionary sustainability technology platform that uses AI to optimize renewable energy, reduce carbon emissions, and create sustainable business solutions.';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     features: [
       'Carbon footprint trackingRenewable energy optimizationSustainable supply chainEnvironmental monitoringGreen building managementWaste reduction AISustainability reportingClimate impact analysis'
     ];
@@ -641,13 +490,10 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     color: 'from-green-600 to-emerald-700';
     textColor: 'text-green-400';
     link: 'https://ziontechgroup.com/sustainability-tech-platform';
-<<<<<<< HEAD
-    marketPosition: 'Most comprehensive sustainability platform. Traditional environmental solutions lack AI integration and comprehensive tracking.';
-    targetAudience: 'Corporations, Government agencies, Environmental organizations, Energy companies, Green businesses',
-=======
+
     marketPosition: 'Most comprehensive sustainability platform. Traditional environmental solutions lack AI integration and comprehensive tracking.'
     targetAudience: 'Corporations, Government agencies, Environmental organizations, Energy companies, Green businesses';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     trialDays: 30;
     setupTime: '6 hours';
     category: 'Sustainability & Green Technology';
@@ -662,19 +508,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-<<<<<<< HEAD
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Fully functional sustainability platform with carbon tracking, renewable energy optimization, and environmental monitoring capabilities.',
-    launchDate: '2025-02-25';
-    customers: 75;
-    rating: 4.9;
-    reviews: 58
-  },
 
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
@@ -685,20 +519,17 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     rating: 4.9
     reviews: 58
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // 🚛 Logistics & Supply Chain Revolution Services
   {
     id: 'logistics-revolution-platform';
     name: 'Logistics Revolution Platform';
     tagline: 'AI-Powered Supply Chain with 99.9% Delivery Accuracy & Zero Waste';
     price: '$499';
-<<<<<<< HEAD
-    period: '/month';
-    description: 'Revolutionary logistics platform that uses AI to optimize supply chains, reduce waste, and achieve 99.9% delivery accuracy. Complete supply chain visibility and automation.',
-=======
+
     period: '/month'
     description: 'Revolutionary logistics platform that uses AI to optimize supply chains, reduce waste, and achieve 99.9% delivery accuracy. Complete supply chain visibility and automation.';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     features: [
       '99.9% delivery accuracyZero waste supply chainReal-time trackingPredictive logisticsAutomated routingInventory optimizationDemand forecastingSupplier management'
     ];
@@ -707,13 +538,10 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     color: 'from-orange-600 to-red-700';
     textColor: 'text-orange-400';
     link: 'https://ziontechgroup.com/logistics-revolution-platform';
-<<<<<<< HEAD
-    marketPosition: 'Most accurate logistics platform. Traditional supply chains have 15-20% waste and limited visibility.';
-    targetAudience: 'Logistics companies, E-commerce, Retail chains, Manufacturing companies, Distribution centers',
-=======
+
     marketPosition: 'Most accurate logistics platform. Traditional supply chains have 15-20% waste and limited visibility.'
     targetAudience: 'Logistics companies, E-commerce, Retail chains, Manufacturing companies, Distribution centers';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     trialDays: 30;
     setupTime: '8 hours';
     category: 'Logistics & Supply Chain';
@@ -728,21 +556,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-<<<<<<< HEAD
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true;
-    implementationDetails: 'Fully functional logistics platform with supply chain optimization, waste reduction, and delivery accuracy capabilities.',
-    launchDate: '2025-03-01';
-    customers: 150;
-    rating: 4.8;
-    reviews: 112
-  }
-],
 
-export default revolutionary2025Services;
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
@@ -1417,4 +1231,4 @@ export default revolutionary2025Services;
   }
 ];
 export default revolutionary2025Services;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

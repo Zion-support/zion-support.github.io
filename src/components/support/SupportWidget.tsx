@@ -6,14 +6,7 @@ import { MessageSquare, Info, X } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { useTheme } from "@/hooks/useTheme";
 export function SupportWidget() {
-<<<<<<< HEAD
-  const [isOpen, setIsOpen] = useState(false);
-  const { theme } = useTheme();
-  const router = null;
-            theme === "dark" 
-              ? "bg-zion-blue-dark border border-zion-blue-light" 
-              : "bg-white border border-gray-200"
-=======
+
   const [isOpen, setIsOpen] = useState(false)
   const { theme } = useTheme()
   const router = useRouter()
@@ -37,7 +30,7 @@ export function SupportWidget() {
             theme === 'dark'
               ? 'bg-zion-blue-dark border border-zion-blue-light'
               : 'bg-white border border-gray-200'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           )}
           style={{ height: '600px', maxHeight: '80vh' }}        >
           <div className='flex items-center justify-between p-4 border-b border-zion-purple/20'>

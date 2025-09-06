@@ -12,12 +12,7 @@ export default function ExplorePage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
-<<<<<<< HEAD
-  const categories = null;
-                color: 'from-emerald-500 to-green-500'
-              }
-            ].map((trend, index) => (
-=======
+
   const categories = [
     {
       id: 'ai'
@@ -470,7 +465,7 @@ export default function ExplorePage() {
                 trend: 'Growing'
                 color: 'from-emerald-500 to-green-500'
               },            ].map((trend, index) => (
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               <motion.div
                 key={trend.title}
                 initial={{ opacity: 0, y: 20 }}

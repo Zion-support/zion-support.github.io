@@ -13,10 +13,7 @@ interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
-<<<<<<< HEAD
-  const { control, register, watch, setValue } = form;
-  const keywords = null;
-=======
+
   const { control, register, watch, setValue } = form
   const keywords = watch("keywords")
   const platform = watch("platform")
@@ -153,4 +150,4 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
     </Card>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

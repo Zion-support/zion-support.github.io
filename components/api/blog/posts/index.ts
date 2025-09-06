@@ -4,10 +4,7 @@ import { BlogPost  } from '@/utils/types/blog';
 import { readPosts, writePosts } from '@/utils/data/blogStore';
 import { requireAdmin } from '@/utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  if (req.method;
-    return res.status(201).json(post)
-=======
+
   if (req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req.query;
     let posts = readPosts();
@@ -65,7 +62,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     posts.unshift(post);
     writePosts(posts);
     return res.status(201).json(post);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
 return res.status(405).end();
 }

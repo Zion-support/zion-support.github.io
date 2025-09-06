@@ -5,9 +5,7 @@ import { createOpenAIClient, generateJobPost  } from './openai';
 import { withUser  } from './pg';
 import dotenv from 'dotenv';
 dotenv.config();
-<<<<<<< HEAD
-const app = null;
-=======
+
 const app = Fastify({ logger: true });
 await app.register(cors, {
   origin: (
@@ -136,4 +134,4 @@ app.log.error(err);
   (process as any).exit(1);
 });  (process as any).exit(1)
 });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

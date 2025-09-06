@@ -1,19 +1,7 @@
 import { useRouter  } from 'next/router';
 import { useApiErrorHandling  } from '@/hooks/useApiErrorHandling';
 import ProductCard from '@/components/ProductCard';
-<<<<<<< HEAD
-import { useState, useEffect, useCallback, useMemo, useRef  } from 'react';
-import { useTranslation  } from 'react-i18next';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { AuthModal  } from '@/components/auth/AuthModal';
-import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star } from 'lucide-react'
-import { SkeletonCard  } from '@/components/ui/skeleton';
-import { ErrorState  } from '@/components/jobs/applications/ErrorState';
-import { ProductsEmptyState  } from '@/components/marketplace/EmptyState';
-import { Button  } from '@/components/ui/button';
-import { Badge  } from '@/components/ui/badge';
-import { Card, CardContent  } from '@/components/ui/card';
-=======
+
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -32,7 +20,7 @@ import { ProductsEmptyState } from '@/components/marketplace/EmptyState';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import Spinner from '@/components/ui/spinner';
 import { ProductListing  } from '@/types/listings';
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
@@ -48,9 +36,7 @@ export interface MarketplaceProps {
   // All props removed - component now fetches data independently
 // Market insights component
 const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
-<<<<<<< HEAD
-  <Card className;
-=======
+
   <Card className='bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6'>
     <CardContent className='p-6'>
       <div className='flex items-center gap-2 mb-4'>
@@ -665,7 +651,7 @@ export default function Marketplace() {
                       variant: 'destructive'
                     });
                     // Re-throw to allow ProductCard's catch to also run if needed
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                     // though ProductCard will reset its state in .finally() regardless.
                     throw error;
                   }

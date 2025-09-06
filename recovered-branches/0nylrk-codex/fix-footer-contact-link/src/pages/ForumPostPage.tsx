@@ -17,9 +17,7 @@ import ReplyCard from "@/components/community/ReplyCard",
 import ReplyForm from "@/components/community/ReplyForm";
 import { useToast } from "@/hooks/use-toast";
 // Mock data for a forum post
-<<<<<<< HEAD
-const mockPost: ForumPost;
-=======
+
 const mockPost: ForumPost = {
   id: "1"
   title: "Best practices for AI model fine-tuning"
@@ -213,7 +211,7 @@ export default function ForumPostPage() {
   }
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <AppLayout>
       <SEO

@@ -5,21 +5,16 @@ import { cn } from "@/lib/utils",
 import { format } from "date-fns";
 import { useTheme } from "@/hooks/useTheme";
 interface ChatMessageProps {
-<<<<<<< HEAD
-  message: string;
-  isUser: boolean;
-=======
+
   message: string
   isUser: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   timestamp: Date
 }
 export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
   const { theme } = useTheme();
   return (
-<<<<<<< HEAD
-    <div className;
-=======
+
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
       <Avatar className="h-8 w-8">
         {isUser ? (
@@ -74,6 +69,6 @@ function formatMessageWithLinks(message: string): string {
     helpCenterRegex
     '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
   )
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return formattedMessage
 }

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-export type ModerationModalProps = any;
-=======
+
 export type ModerationModalProps = {
   flag: any | null;
   onClose: () => void;
@@ -16,7 +14,7 @@ export default function ModerationModal({
 }: ModerationModalProps) {
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>
       <div className='bg-white dark:bg-black w-full max-w-2xl rounded shadow-lg'>

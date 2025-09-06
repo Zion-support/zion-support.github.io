@@ -1,15 +1,7 @@
 import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Shield, Lock, Eye, Zap, Cpu, Database;
-  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
- } from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
-export default function CybersecurityServicesPage() {
-  const services = null;
-=======
+
 import {
   Shield
   Lock
@@ -88,7 +80,7 @@ export default function CybersecurityServicesPage() {
     { number: '0', label: 'Security Breaches', icon: Lock }
     { number: '500+', label: 'Protected Systems', icon: CheckCircle }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>

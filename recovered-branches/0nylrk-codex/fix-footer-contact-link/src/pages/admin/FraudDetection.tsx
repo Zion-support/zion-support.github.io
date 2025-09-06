@@ -8,17 +8,9 @@ import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client";
 import { FraudFlag, FraudStats } from "@/types/fraud";
 // Import refactored components
-<<<<<<< HEAD
-import {
-  FraudStatsCards;
-  FraudFilters;
-  FraudFlagsTable;
-  FraudTabContent
-} from "@/components/admin/fraud-detection",
 
-=======
 import {FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent} from "@/components/admin/fraud-detection";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function FraudDetection() {
   const [flags, setFlags] = useState<FraudFlag[]>([]),
   const [filteredFlags, setFilteredFlags] = useState<FraudFlag[]>([]),
@@ -28,17 +20,7 @@ export default function FraudDetection() {
   const [severityFilter, setSeverityFilter] = useState<string | null>(null),
   const [contentTypeFilter, setContentTypeFilter] = useState<string | null>(null),
   const [stats, setStats] = useState<FraudStats>({
-<<<<<<< HEAD
-    total_flags: 0;
-    pending_flags: 0;
-    suspicious_count: 0;
-    dangerous_count: 0;
-    false_positives: 0;
-    actioned_count: 0}),
 
-  // Fetch fraud flags
-  const fetchFraudFlags = null;
-=======
     total_flags: 0
     pending_flags: 0
     suspicious_count: 0
@@ -140,7 +122,7 @@ export default function FraudDetection() {
     setContentTypeFilter(null)
   }
   const hasFilters = !!(searchQuery |statusFilter |severityFilter |contentTypeFilter);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <AppLayout>
       <SEO

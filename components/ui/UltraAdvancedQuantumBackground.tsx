@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-interface UltraAdvancedQuantumBackgroundProps {
-  children: React.ReactNode;
-  className?: string
-}
 
-const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps> = ({ 
-  children;
-  className;
-=======
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let animationFrameId: number;
@@ -437,4 +426,4 @@ export default UltraAdvancedQuantumBackground;            ease: "linear"
 export default UltraAdvancedQuantumBackground;  )
 }
 export default UltraAdvancedQuantumBackground;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-type Props = any;
-=======
+
 type Props = {
   onSubmit: (payload: {
     title: string;
@@ -58,7 +56,7 @@ export default function MilestoneForm({ onSubmit }: Props) {
       setLoading(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <form onSubmit={handleSubmit} className='space-y-4'>
       {error && <div className='text-red-600 text-sm'>{error}</div>}

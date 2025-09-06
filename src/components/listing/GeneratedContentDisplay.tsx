@@ -3,21 +3,7 @@ import React from "react",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from 'lucide-react'
-<<<<<<< HEAD
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-interface GeneratedContent {
-  description: string;
-  tags: string[];
-  suggestedPrice: {
-    min: number;
-    max: number
-  },
-  keyPoints: string[]
-}
 
-interface GeneratedContentDisplayProps {
-  content: GeneratedContent;
-=======
 import {
   Card
   CardContent
@@ -35,7 +21,7 @@ max: number
 keyPoints: string[]
 }interface GeneratedContentDisplayProps {
   content: GeneratedContent
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onApply: () => void
 export function GeneratedContentDisplay({
   content

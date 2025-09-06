@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-=======
 import {
   Card
   CardContent
@@ -10,7 +7,7 @@ import {
   CardHeader
   CardTitle
 } from '@/components/ui/card'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Server, Clock, MapPin } from 'lucide-react'
 import Image from "next/image";
 interface ServiceDetailsProps {
@@ -18,9 +15,7 @@ interface ServiceDetailsProps {
 // Component to show service details for the selected country
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
-<<<<<<< HEAD
-  const getDatacenters = null;
-=======
+
   const getDatacenters = (country: string): string[] => {
     const dataCenters: Record<string, string[]> = {
       'United States': [
@@ -90,7 +85,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
     )
   }
   const datacenters = getDatacenters(country)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card className='bg-zion-blue-dark border-zion-blue-light'>
       <CardHeader>

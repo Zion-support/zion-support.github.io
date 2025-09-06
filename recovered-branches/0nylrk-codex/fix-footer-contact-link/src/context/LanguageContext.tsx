@@ -1,10 +1,5 @@
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
-<<<<<<< HEAD
-import { useTranslation  } from 'react-i18next';
-import { supabase  } from '../integrations/supabase/client';
-import { toast } from '../components/ui/use-toast';
-export type SupportedLanguage = any;
-=======
+
 import {useTranslation} from 'react-i18next';
 import {supabase} from '../integrations/supabase/client';
 import {toast} from '../components/ui/use-toast';
@@ -123,4 +118,4 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     </LanguageContext.Provider>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

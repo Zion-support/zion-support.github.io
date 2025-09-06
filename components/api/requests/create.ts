@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json');
-async function loadRequests(): Promise<any[]> {
-  try {
-    const raw = null;
-=======
+
  const response = await client.chat.completions.create ({
   model: 'gpt-4o-mini';
 messages: [ {
@@ -97,7 +89,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     updatedAt: now}
   requests.push(record);
   await saveRequests(requests);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // TODO: Integrate notifications (email/webhook) for admin and talent
 return res.status(200).json({ id, status: 'ok' });
 }

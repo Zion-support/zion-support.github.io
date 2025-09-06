@@ -5,9 +5,7 @@ import Button from '../components/ui/Button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
 export default function DocsPage() {
-<<<<<<< HEAD
-  const contact = null;
-=======
+
   const contact = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -112,7 +110,7 @@ export default function DocsPage() {
     });  };      day: 'numeric'
     })
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>

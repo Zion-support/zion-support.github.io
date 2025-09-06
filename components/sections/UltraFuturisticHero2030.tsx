@@ -1,14 +1,7 @@
 import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { ArrowRight, Zap, Brain, Atom, Rocket, Star;
-  TrendingUp, Shield, Globe, Cpu, Sparkles;
-  Play, CheckCircle, Award, Users, Clock, Phone, Mail
- } from 'lucide-react';
-const contactInfo = null;
-            ease: "easeInOut"
-=======
+
 import {
   ArrowRight
   Zap
@@ -390,7 +383,7 @@ export default function UltraFuturisticHero2030() {
       </div>
     </section>
   );            ease: "easeInOut"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           }}
         />
       </div>

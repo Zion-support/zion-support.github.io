@@ -4,13 +4,7 @@ interface SkeletonProps {
   className?: string;
   height?: string;
   width?: string;
-<<<<<<< HEAD
-  rounded?: string
-}
 
-const Skeleton: React.FC<SkeletonProps> = ({ 
-  className;
-=======
   rounded?: string;
 const Skeleton: React.FC<SkeletonProps> = ({
   className = ''
@@ -92,4 +86,4 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
 export default Skeleton;  )
 }
 export default Skeleton;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

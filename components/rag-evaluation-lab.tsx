@@ -1,22 +1,8 @@
 import React from 'react',
 import SEO from '../components/SEO';
 import Link from 'next/link';
-<<<<<<< HEAD
-export default function RAGEvaluationLabPage() {
-	return (
-		<>
-			<SEO title;
-							{ title: 'Dashboards & Reports', desc: 'Team dashboards, API access, and exportable reports.' }
-						].map((f) => (
-							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
-								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>
-							</div>
-						))}
-					</div>
 
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO

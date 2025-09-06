@@ -15,15 +15,11 @@ import { TalentProfile } from "@/types/talent",
 import { toast } from "@/components/ui/use-toast";
 import { useNavigate } from "react-router-dom";
 export interface MessageTalentModalProps {
-<<<<<<< HEAD
-  talent: TalentProfile;
-  isOpen: boolean;
-  onClose: () => void;
-=======
+
   talent: TalentProfile
   isOpen: boolean
   onClose: () => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   jobTitle?: string
 }
 export function MessageTalentModal({
@@ -33,9 +29,7 @@ export function MessageTalentModal({
   jobTitle
 }: MessageTalentModalProps) {
   const { createConversation } = useMessaging();
-<<<<<<< HEAD
-  const navigate = null;
-=======
+
   const navigate = useNavigate();
   const [message, setMessage] = useState(
     jobTitle
@@ -85,7 +79,7 @@ export function MessageTalentModal({
       setIsSubmitting(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-md bg-zion-blue border-zion-purple/20">

@@ -5,14 +5,12 @@ import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
 interface ActionButtonsProps {
   flagId: string;
   status: string;
-<<<<<<< HEAD
-  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
-=======
+
   onAction: (
     flagId: string
     action: "warning" | "suspension" | "ban" | "ignore"
   ) => void;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }
 export const ActionButtons: React.FC<ActionButtonsProps> = ({
   flagId
@@ -20,9 +18,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
   onAction
 }) => {
   return (
-<<<<<<< HEAD
-    <div className;
-=======
+
     <div className="flex space-x-2">
       <Button
         variant="ghost"
@@ -71,4 +67,4 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
     </div>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

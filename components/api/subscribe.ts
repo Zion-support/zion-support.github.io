@@ -1,14 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase } from '../../utils/supabase/client';
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
-  const { email } = req.body || {},
-  if (!email || typeof email !== 'string') return res.status(400).send('Invalid email');
-  try {
-    // Basic validation
-    const normalized = null;
-=======
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -45,7 +37,7 @@ export default async function handler(
       })      .select('*')      .insert({ email: normalized, source: 'mobile-launch', created_at: new Date().toISOString() })
       .select('*')
       .single();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     if (error) {
       if (error.message && error.message.includes('duplicate')) {
         return res.status(200).json({ ok: true, duplicate: true });

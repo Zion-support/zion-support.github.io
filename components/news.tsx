@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-  const featuredNews = null;
-=======
+
 featured: true
 }
 {
@@ -886,7 +883,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
     }
   ];
   const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

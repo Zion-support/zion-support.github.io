@@ -6,14 +6,7 @@ import { useReviews } from "@/hooks/useReviews",
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 interface ProfileRatingsProps {
-<<<<<<< HEAD
-  userId: string;
-  averageRating?: number;
-  ratingCount?: number
-}
 
-export function ProfileRatings({ userId, averageRating;
-=======
   userId: string
 averageRating?: number
 ratingCount?: number
@@ -73,7 +66,7 @@ export function ProfileRatings({
   useEffect(() => {
     fetchUserReviews(userId)
   }, [userId])
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">

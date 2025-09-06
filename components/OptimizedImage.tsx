@@ -12,15 +12,13 @@ interface OptimizedImageProps {
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src;
   alt;
-<<<<<<< HEAD
-  width;
-=======
+
   width = 800;
   height = 600;
   className = '';
   priority = false;
   quality = 75
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }) => {
   return (
     <Image

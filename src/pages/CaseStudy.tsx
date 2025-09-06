@@ -4,17 +4,7 @@ import { CASE_STUDIES  } from '@/data/case-studies';
 import { SEO  } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react'
-<<<<<<< HEAD
-import { Breadcrumb;
-  BreadcrumbList;
-  BreadcrumbItem;
-  BreadcrumbLink;
-  BreadcrumbSeparator } from '@/components/ui/breadcrumb';
-import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
-import { getBreadcrumbsForPath } from '@/utils/routeUtils';
-export default function CaseStudy() {
-  const router = null;
-=======
+
 import {  Breadcrumb
   BreadcrumbList
   BreadcrumbItem
@@ -36,7 +26,7 @@ export default function CaseStudy() {
   const slug = router.query.slug as string
   const study = CASE_STUDIES.find((s,) => s.slug === slug)
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (!study) {
     return (
       <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>        Case study not found.import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'

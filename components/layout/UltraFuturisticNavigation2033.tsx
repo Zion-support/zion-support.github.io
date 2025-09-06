@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Phone, Mail, MapPin, Globe, Rocket, Brain, Atom;
-  Cpu, Target, Microscope, Shield, Zap, Sparkles;
-  Menu, X, Search, ChevronDown, Home, Briefcase;
-  DollarSign, BookOpen, Users, MessageCircle
- } from 'lucide-react';
-const contactInfo = null;
-=======
+
 import {
   Phone
   Mail
@@ -316,7 +309,7 @@ export default function UltraFuturisticNavigation2033() {
     }
     document.addEventListener('keydown', handleEscape);
     return () => document.removeEventListener('keydown', handleEscape)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       {/* Top Contact Bar */}

@@ -1,15 +1,7 @@
 import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-  Target, Cpu, Database, Cloud, Lock, ArrowRight;
-  Star, TrendingUp, Users, CheckCircle
- } from 'lucide-react';
-export default function UltraFuturisticHero2027() {
-  const features = null;
-            ease: "easeInOut"
-=======
+
 import {
   Rocket
   Brain
@@ -161,7 +153,7 @@ export default function UltraFuturisticHero2027() {
             duration: 12
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           }}
         />
         {/* Grid Pattern */}

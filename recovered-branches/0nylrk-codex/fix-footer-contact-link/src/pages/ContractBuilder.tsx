@@ -9,10 +9,7 @@ function ContractBuilderPage() {
   return (
     <ProtectedRoute>
       <>
-<<<<<<< HEAD
-        <SEO 
-          title;
-=======
+
         <SEO
           title="Smart Contract Builder | Zion AI Marketplace"
           description="Create and deploy blockchain-backed smart contracts for your projects"
@@ -27,4 +24,4 @@ function ContractBuilderPage() {
   )
 }
 export default ContractBuilderPage;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

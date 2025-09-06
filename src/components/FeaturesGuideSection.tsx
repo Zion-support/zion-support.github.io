@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-import Link from "next/link",
-import { GradientHeading } from "./GradientHeading",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Button } from "./ui/button";
-import { fireEvent } from '@/lib/analytics';
-import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react'
-import { Zap } from 'lucide-react'
-export function FeaturesGuideSection() {
-  const features = null;
-=======
+
 import Link from 'next/link'
 import { GradientHeading } from './GradientHeading'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -283,7 +273,7 @@ export function FeaturesGuideSection() {
       buttonText: "View Resources"
     }
   ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">

@@ -1,8 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-<<<<<<< HEAD
-export type FeedbackWidgetProps = any;
-=======
+
 export type FeedbackWidgetProps = {
   responseId?: string;
   aiModel?: string;
@@ -70,7 +68,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
       setSubmitting(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
       <div className='text-sm font-medium mb-2'>Was this answer useful?</div>

@@ -1,10 +1,5 @@
 
-<<<<<<< HEAD
-import { useAuth  } from '@/hooks/useAuth';
-import { supabase  } from '@/integrations/supabase/client';
-import { MilestoneActivity } from './types';
-export const useRecordActivity = null;
-=======
+
 import {useAuth} from '@/hooks/useAuth';
 import {supabase} from '@/integrations/supabase/client';
 import {MilestoneActivity} from './types';
@@ -44,4 +39,4 @@ export const useRecordActivity = () => {
     recordMilestoneActivity
   }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -11,20 +11,7 @@ export interface MetaverseDigitalRealityService2026 {
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-    address: string
-  }
-}
 
-export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] = [
-  {
-    id: "2026-metaverse-digital-reality";
-    name: "2026 Metaverse Digital Reality Platform";
-    tagline: "Immersive digital reality experiences";
-    price: "$399/month";
-    description: "Advanced metaverse platform creating immersive digital reality experiences for 2026 and beyond.";
-    features: [
-=======
     address: string;
   }
 export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] =
@@ -53,22 +40,17 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
       }
     }
   ];    features: [
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       "Immersive experiences";
       "Digital reality";
       "Metaverse platform";
       "Advanced graphics",
       "Social interactions"
-<<<<<<< HEAD
-    ],
-    link: "/services/2026-metaverse-digital-reality";
-    category: "Metaverse Digital Reality 2026";
-    realImplementation: true;
-=======
+
     ];
     link: "/services/2026-metaverse-digital-reality", category: "Metaverse Digital Reality 2026"
     realImplementation: true
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     contactInfo: {
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";

@@ -4,9 +4,7 @@ import { Link } from "react-router-dom",
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 export function ApiDocsHub() {
-<<<<<<< HEAD
-  const sections = null;
-=======
+
   const sections = [
     {
       title: "Getting Started"
@@ -82,4 +80,4 @@ export function ApiDocsHub() {
   )
 }
 export default ApiDocsHub;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

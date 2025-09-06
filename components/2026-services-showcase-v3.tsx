@@ -5,15 +5,13 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
 import Enhanced2026ServicesShowcaseV3 from '../components/sections/Enhanced2026ServicesShowcaseV3';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 export default function ServicesShowcase2026V3() {
-<<<<<<< HEAD
-  const contactInfo = null;
-=======
+
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <UltraQuantumHolographicBackground
       intensity="extreme"

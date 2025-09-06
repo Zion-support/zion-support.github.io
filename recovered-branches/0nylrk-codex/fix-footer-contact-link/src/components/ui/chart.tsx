@@ -4,11 +4,7 @@ import * as RechartsPrimitive from "recharts"
 import {useReactId} from "@/hooks/useReactId"
 import {cn} from "@/lib/utils"
 // Format: { THEME_NAME: CSS_SELECTOR }
-<<<<<<< HEAD
-const THEMES = null;
-  ChartStyle}
-;
-=======
+
 const THEMES = { light: "", dark: ".dark" } as const
 export type ChartConfig = Record<
   string;
@@ -325,4 +321,4 @@ export {
   ChartLegend;
   ChartLegendContent;
   ChartStyle}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

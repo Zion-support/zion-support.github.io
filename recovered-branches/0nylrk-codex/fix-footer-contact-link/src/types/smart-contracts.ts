@@ -1,8 +1,5 @@
 
-<<<<<<< HEAD
 
-export type BlockchainNetwork = any;
-=======
 export type BlockchainNetwork = 'ethereum' | 'polygon' | 'none';
 export interface SmartContractInfo {
   id: string;
@@ -29,6 +26,6 @@ export interface DeploymentOptions {
   network: BlockchainNetwork;
   walletAddress?: string;
   useEscrow: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   deployToChain: boolean
 }

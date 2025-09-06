@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export const real2036ITServices = null;
-=======
+
 export const real2036ITServices = [
   {
     id: 'quantum-cloud-infrastructure-platform'
@@ -335,4 +333,4 @@ export const real2036ITServices = [
     ]
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

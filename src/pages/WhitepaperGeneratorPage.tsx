@@ -9,17 +9,7 @@ import { Send } from 'lucide-react', // Added Send icon
 import { toast } from "sonner";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface WhitepaperSection {
-<<<<<<< HEAD
-  id: string;
-  title: string;
-  content: string
-}
 
-interface DistributionItem {
-  id: string;
-  name: string;
-  percentage: string
-=======
   id: string
 title: string
 content: string
@@ -44,7 +34,7 @@ const [governanceLogic, setGovernanceLogic] = useState ('Token holders can vote 
 const [legalDisclaimers, setLegalDisclaimers] = useState ('This whitepaper is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any security. The token is a utility token and should not be considered an investment. Please consult with a legal professional in your jurisdiction.')
 const [distributionData, setDistributionData] = useState<DistributionItem[]> ([ {'
   id: crypto.randomUUID (),  name: 'Team & Advisors', percentage: '15'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }
 {'
   id: crypto.randomUUID (),  name: 'Private Sale Investors', percentage: '20'
@@ -113,13 +103,7 @@ setSections ([])
 }finally {
   setIsLoading (false)
 interface DistributionChartItem {
-<<<<<<< HEAD
-    name: string;
-    value: number
-}
 
-const COLORS = null;
-=======
   name: string
   value: number
 const COLORS = [
@@ -1002,4 +986,4 @@ const WhitepaperGeneratorPage: React.FC = () => {
 }
 export default WhitepaperGeneratorPage
 '"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

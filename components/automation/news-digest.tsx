@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-type NewsItem = any;
-    generatedAt = json.generatedAt || ''
-=======
+
 </div> </div>) )
 }</div> </div>) import fs from 'fs';
 import path from 'path';
@@ -16,7 +11,7 @@ export async function getServerSideProps() {
     const json = JSON.parse(raw);
     items = json.items |[];
     generatedAt = json.generatedAt |''
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch {}
   return { props: { items, generatedAt } }
 }

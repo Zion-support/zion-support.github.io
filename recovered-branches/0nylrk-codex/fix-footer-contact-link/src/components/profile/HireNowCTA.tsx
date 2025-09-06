@@ -5,11 +5,9 @@ import { useState } from "react";
 import { TalentProfile } from "@/types/talent";
 interface HireNowCTAProps {
   talentProfile: {
-<<<<<<< HEAD
-    id: string;
-=======
+
     id: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     full_name?: string;
     professional_title?: string;
     hourly_rate?: number
@@ -17,9 +15,7 @@ interface HireNowCTAProps {
 }
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
   const [modalOpen, setModalOpen] = useState(false);
-<<<<<<< HEAD
-  const handleOpenModal = null;
-=======
+
   const handleOpenModal = () => {
     setModalOpen(true)
   }
@@ -91,6 +87,6 @@ function calculateProfileCompleteness(profile: any) {
     }
     totalFields++
   });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return Math.min(Math.round((completedFields / totalFields) * 100), 100)
 }

@@ -1,11 +1,6 @@
 import React from "react";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-<<<<<<< HEAD
 
-import React from 'react';
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
-export type FilterType = any;
-=======
 export type FilterType =
   | "all"
   | "unread"
@@ -47,4 +42,4 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
     </div>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

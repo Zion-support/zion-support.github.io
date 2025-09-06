@@ -5,9 +5,7 @@ import Quiz from '../../components/learn/Quiz',
 import CertificatePreview from '../../components/learn/CertificatePreview';
 import CoachWidget from '../../components/learn/CoachWidget';
 export default function CourseView() {
-<<<<<<< HEAD
-  const router = null;
-=======
+
   const router = useRouter();
   const { courseId } = router.query as { courseId: string }
   const [course, setCourse] = useState<any>(null);
@@ -65,7 +63,7 @@ export default function CourseView() {
     const passed = score >= needed;
     setFinalPassed(passed);  }
   if (!course) return <div>Loading...</div>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='grid lg:grid-cols-3 gap-6'>
       <div className='lg:col-span-2 space-y-4'>

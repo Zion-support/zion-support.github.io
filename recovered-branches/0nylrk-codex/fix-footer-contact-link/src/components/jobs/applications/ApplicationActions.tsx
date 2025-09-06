@@ -11,15 +11,11 @@ import { Button } from "@/components/ui/button",
 import { Eye, ChevronDown, Loader2 } from "lucide-react";
 import { JobApplication, ApplicationStatus } from "@/types/jobs";
 interface ApplicationActionsProps {
-<<<<<<< HEAD
-  application: JobApplication;
-  processingId: string | null;
-  onViewApplication: (applicationId: string) => Promise<void>;
-=======
+
   application: JobApplication
   processingId: string | null
   onViewApplication: (applicationId: string) => Promise<void>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
 export function ApplicationActions({

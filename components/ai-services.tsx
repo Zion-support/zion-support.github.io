@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion  } from 'framer-motion';
-import { Brain, Zap, Target, Shield, Rocket, Atom, Cpu, Users, Star, ArrowRight  } from 'lucide-react';
-import SEO from '../components/SEO';
-const aiServices = null;
-export default function AIServices() {
-=======
+
 export default function AIServices () {
 }> <Head> <title>AI Services | Zion Tech Group</title> </div>) )
 }</div>) )
@@ -20,7 +13,7 @@ export default function AIServices () {
   {
   duration: 0.8, delay: 0.4
 }> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business with AI? </h2> <p className="text-xl text-gray-400 mb-8" > Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <motion.button > Schedule Consultation </motion.button> <motion.button export default function AIServices() {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <QuantumHolographicMatrixBackground intensity={1.5}>
       <Head>

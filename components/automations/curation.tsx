@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React from "react",
-import fs from "fs";
-import path from "path";
-type Experiment = any;
-=======
+
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
@@ -123,7 +118,7 @@ export async function getStaticProps() {
       revalidate: 300
     }
   }        items: []}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       revalidate: 300}
 }
 }

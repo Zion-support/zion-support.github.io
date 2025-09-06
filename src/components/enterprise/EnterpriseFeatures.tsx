@@ -1,10 +1,7 @@
 
 import React from "react";
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
-<<<<<<< HEAD
 
-const features = null;
-=======
 const features = [
   {
     title: 'Private Hiring Portal'
@@ -43,7 +40,7 @@ const features = [
     icon: Globe
   }
 ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export function EnterpriseFeatures() {
   return (
     <section id='features' className='py-20 px-4 md:px-6 bg-muted/50'>

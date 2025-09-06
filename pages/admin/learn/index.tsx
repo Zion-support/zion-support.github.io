@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import { useEffect, useState  } from 'react';
-export default function AdminLearn() {
-  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' });
-  const [message, setMessage] = useState('');
-  async function saveCourse() {
-    setMessage('');
-    const resp = null;
-    else setMessage('Error: ' + (data.error || 'unknown'))
-=======
+
 import { useEffect, useState } from 'react';
 export default function AdminLearn() {
   const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' })
@@ -22,7 +13,7 @@ export default function AdminLearn() {
     const data = await resp.json()
     if (data.ok) setMessage('Saved')
     else setMessage('Error: ' + (data.error |'unknown'))
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
   return (
     <div className="space-y-4">

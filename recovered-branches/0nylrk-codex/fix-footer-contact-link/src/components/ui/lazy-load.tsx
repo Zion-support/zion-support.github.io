@@ -5,18 +5,14 @@ import { Skeleton } from "@/components/ui/skeleton";
 interface LazyLoadProps {
   height?: string | number;
   width?: string | number;
-<<<<<<< HEAD
-  children: ReactNode;
-=======
+
   children: ReactNode
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   loadingComponent?: ReactNode;
   className?: string
 }
 export function LazyLoad({
-<<<<<<< HEAD
-  height;
-=======
+
   height = "200px";
   width = "100%";
   children;
@@ -66,7 +62,7 @@ export function LazyLoad({
       ref={containerRef}
       className={cn("transition-opacity duration-500"
         isLoaded ? "opacity-100" : "opacity-0";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
         className
       )}
     >

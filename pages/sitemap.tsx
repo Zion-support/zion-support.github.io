@@ -2,16 +2,7 @@ import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Home, Search, Rocket, FileText, Users, Mail, Map;
-  ArrowRight, ExternalLink, ChevronRight, Globe, Building
- } from 'lucide-react';
-import SmartHeader from '../components/SmartHeader';
-import SmartFooter from '../components/SmartFooter';
-export default function SitemapPage() {
-  const mainPages = null;
-              resources, and information available at Zion Tech Group.
-=======
+
 import {
   Home
   Brain
@@ -350,7 +341,7 @@ export default function SitemapPage() {
               Navigate our comprehensive website and discover all the AI-powered
               technology solutions, resources, and information available at Zion
               Tech Group.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a

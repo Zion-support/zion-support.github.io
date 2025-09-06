@@ -18,9 +18,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-<<<<<<< HEAD
-    const fetchJobs = null;
-=======
+
     const fetchJobs = async () => {
       if (!user) return;
       try {
@@ -78,7 +76,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
         return "bg-gray-100 text-gray-800"
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {jobs.map((job) => (

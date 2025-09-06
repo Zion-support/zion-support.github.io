@@ -11,9 +11,7 @@ export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
   const { roomId } = useParams();
-<<<<<<< HEAD
-  const navigate = null;
-=======
+
   const navigate = useNavigate();
   const [isJoining, setIsJoining] = useState(false);
   const [hasJoined, setHasJoined] = useState(false);
@@ -67,7 +65,7 @@ export default function VideoCall() {
       toast(`${randomUser.name} joined the call`)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO title={`Video Call - Room ${roomId}`} description="Zion video call" />

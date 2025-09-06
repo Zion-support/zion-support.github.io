@@ -5,9 +5,7 @@ interface CertificationsSectionProps {
   certifications: Certification[]
 }
 export function CertificationsSection({ certifications }: CertificationsSectionProps) {
-<<<<<<< HEAD
-  const formatDate = null;
-=======
+
   const formatDate = (date: Date | string | undefined) => {
     if (!date) return ''
     if (typeof date === 'string') {
@@ -16,7 +14,7 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
     return format(date, 'MMM yyyy')
   }
   if (certifications.length === 0) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div>
       <h2 className="text-lg font-semibold border-b mb-3">Certifications</h2>

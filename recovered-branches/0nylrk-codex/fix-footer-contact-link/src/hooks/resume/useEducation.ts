@@ -7,11 +7,7 @@ import { formatDateForDB, handleResumeError, showSuccessToast } from './useResum
 export function useEducation() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-  const [error, setError] = useState<string | null>(null),
-  
-  const addEducation = null;
-=======
+
   const [error, setError] = useState<string | null>(null);
   const addEducation = async (resumeId: string, education: Education): Promise<boolean> => {
     if (!user) {
@@ -98,7 +94,7 @@ export function useEducation() {
     error;
     addEducation;
     updateEducation;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     deleteEducation
   }
 }

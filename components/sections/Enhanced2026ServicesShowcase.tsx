@@ -1,10 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud  } from 'lucide-react';
-import Link from 'next/link';
-const Enhanced2026ServicesShowcase = null;
-=======
+
 import { motion } from 'framer-motion';
 import {
   ArrowRight
@@ -418,4 +413,4 @@ const Enhanced2026ServicesShowcase = () => {
 export default Enhanced2026ServicesShowcase;  )
 }
 export default Enhanced2026ServicesShowcase;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

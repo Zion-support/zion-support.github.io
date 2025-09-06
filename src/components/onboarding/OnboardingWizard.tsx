@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 
-import { useState, useEffect  } from 'react';
-import { useRouter  } from 'next/router';
-import { useAuth  } from '@/hooks/useAuth';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
-=======
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useAuth } from '@/hooks/useAuth'
@@ -26,7 +19,7 @@ import {
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
 import { cn } from '@/lib/utils';
 interface WizardStep {
@@ -43,15 +36,7 @@ interface OnboardingWizardProps {
   onComplete: () => void;
   onSkip: () => void;
   className?: string
-<<<<<<< HEAD
-}
 
-export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
-  const [currentStep, setCurrentStep] = useState(0);
-  const router = null;
-                  index === currentStep
-                    ? "bg-zion-purple scale-125"
-=======
 export function OnboardingWizard({
   type
   onComplete
@@ -175,7 +160,7 @@ export function OnboardingWizard({
                 className={cn(
                   'h-2 w-2 rounded-full mx-1',                  index === currentStep
                     ? 'bg-zion-purple scale-125'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                     : index < currentStep
                       ? 'bg-zion-cyan'
                       : 'bg-zion-blue-light'

@@ -1,11 +1,5 @@
 import React, { useMemo, useState } from 'react';
-<<<<<<< HEAD
-import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2  } from 'lucide-react';
-import { buildPrintableHtml  } from '../../utils/export/buildHtml';
-import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/bookTypes';
-import { defaultChapters } from '../../utils/book/defaultOutline';
-const initialProject: BookProject;
-=======
+
 import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2 } from 'lucide-react';
 import { buildPrintableHtml } from '../../utils/export/buildHtml';
 import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/bookTypes';
@@ -250,7 +244,7 @@ export default function BookBuilder() {
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts]
                   quoteCallouts[i] = { ...quoteCallouts[i], attribution: e.target.value }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                   setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })
                 }}
                 placeholder="Attribution"

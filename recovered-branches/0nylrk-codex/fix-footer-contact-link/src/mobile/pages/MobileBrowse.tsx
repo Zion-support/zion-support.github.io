@@ -7,9 +7,7 @@ import { BrowseCards } from "../components/browse/BrowseCards",
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 // Mock data for demonstration
-<<<<<<< HEAD
-const jobsData = null;
-=======
+
 const jobsData = [
   {
     id: "1"
@@ -88,7 +86,7 @@ export function MobileBrowse() {
     console.log(`View details for item ${id}`);
     // Navigate to details page
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="min-h-screen">
       <MobileHeader

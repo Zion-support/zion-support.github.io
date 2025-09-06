@@ -3,9 +3,7 @@ import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIAutonomousResearchAssistant() {
 	return (
 		<ServiceLanding
-<<<<<<< HEAD
-			title;
-=======
+
 			title="AI Autonomous Research Assistant"
 			slug="ai-autonomous-research-assistant"
 			description="An AI agent that continuously tracks competitors, markets, regulations, and technologies. It synthesizes findings, drafts briefs, and recommends actions—so your team stays ahead."
@@ -19,7 +17,7 @@ export default function AIAutonomousResearchAssistant() {
 				"Regulatory watchlists and impact analysis"
 				"RFP/RFI opportunity discovery and alerts"
 				"Export to Slides/Docs/Notion"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 				"Compliance-friendly data handling, audit logs"
 			]}
 			industries={["Consulting", "Healthcare", "Finance", "Public Sector"]}

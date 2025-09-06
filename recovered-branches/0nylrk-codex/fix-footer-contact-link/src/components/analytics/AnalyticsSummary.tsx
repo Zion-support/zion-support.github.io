@@ -6,11 +6,9 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { formatDistanceToNow } from "date-fns";
 export function AnalyticsSummary() {
   const { data: stats, isLoading } = useQuery({
-<<<<<<< HEAD
-    queryKey: ['analytics-summary'];
-=======
+
     queryKey: ['analytics-summary']
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     queryFn: async () => {
       // Get total page views
       const { data: pageViewsData, error: pageViewsError } = await supabase
@@ -26,9 +24,7 @@ export function AnalyticsSummary() {
         .eq('event_typepage_view')
         .is('user_idnot.null');
       if (uniqueVisitorsError) throw uniqueVisitorsError;
-<<<<<<< HEAD
-      const uniqueUserIds = null;
-=======
+
       const uniqueUserIds = new Set(uniqueVisitorsData?.map(item => item.user_id) |[]);
       // Get conversion count
       const { data: conversionsData, error: conversionsError } = await supabase
@@ -99,7 +95,7 @@ export function AnalyticsSummary() {
 interface StatCardProps {
   title: string
   value: React.ReactNode
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   icon: React.ReactNode
 }
 function StatCard({ title, value, icon }: StatCardProps) {

@@ -8,24 +8,7 @@ import { Separator } from "@/components/ui/separator",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
 import { useAuth } from "@/hooks/useAuth";
 // useRouter replaces the old useLocation hook from react-router
-<<<<<<< HEAD
-import { useRouter } from 'next/router';
-import {
-  AlertDialog;
-  AlertDialogAction;
-  AlertDialogCancel;
-  AlertDialogContent;
-  AlertDialogDescription;
-  AlertDialogFooter;
-  AlertDialogHeader;
-  AlertDialogTitle} from "@/components/ui/alert-dialog",
-import { useState } from "react";
-interface TemplateListProps {
-  templates: ContractTemplate[];
-  isLoading: boolean;
-  onSelect: (template: ContractTemplate) => void;
-  onEdit: (template: ContractTemplate) => void
-=======
+
   AlertDialog
   AlertDialogAction
   AlertDialogCancel
@@ -40,7 +23,7 @@ interface TemplateListProps {
   isLoading: boolean
   onSelect: (template: ContractTemplate,) => void
   onEdit: (template: ContractTemplate,) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }
 export function TemplateList({
   templates;
@@ -48,12 +31,7 @@ export function TemplateList({
   onSelect;
   onEdit
 }: TemplateListProps) {
-<<<<<<< HEAD
-  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null),
-  const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
-  const { user } = useAuth();
-  const router = null;
-=======
+
   const [templateToDelete, setTemplateToDelete] = useState<string | null>(null)
   const { deleteTemplate, setDefaultTemplate } = useContractTemplates()
   const { user } = useAuth()
@@ -75,7 +53,7 @@ export function TemplateList({
     }
     await setDefaultTemplate.mutateAsync(templateId)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (isLoading) {
     return (
       <div className="flex justify-center items-center py-8">

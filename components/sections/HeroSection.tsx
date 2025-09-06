@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-'use client',
 
-import React from 'react',
-import Link from 'next/link';
-import { motion  } from 'framer-motion';
-import { ArrowRight, Play, Star, Users, Award, Zap } from 'lucide-react';
-const HeroSection: React.FC;
-=======
 'use client';
 import React from 'react';
 import Link from 'next/link';
@@ -235,4 +227,4 @@ export default HeroSection;        className="absolute bottom-8 left-1/2 transfo
 export default HeroSection;  )
 }
 export default HeroSection;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

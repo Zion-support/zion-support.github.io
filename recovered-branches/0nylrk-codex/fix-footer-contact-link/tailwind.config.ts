@@ -2,9 +2,7 @@ import { Config } from "tailwindcss",
 import { fontFamily } from "tailwindcss/defaultTheme",
 import plugin from "tailwindcss/plugin";
 import animatePlugin from "tailwindcss-animate";
-<<<<<<< HEAD
-const config: Config;
-=======
+
 const config: Config = {
   darkMode: ["class"]
   content: [
@@ -93,4 +91,4 @@ const config: Config = {
       addUtilities(newUtilities)
     })]}
 export default config;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

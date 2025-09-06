@@ -1,10 +1,7 @@
 
 import React from "react";
 import { Star } from 'lucide-react'
-<<<<<<< HEAD
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-const testimonials = null;
-=======
+
 import { Card, CardContent, CardFooter } from '@/components/ui/card'
 const testimonials = [
   {
@@ -134,4 +131,4 @@ export const AppTestimonials: React.FC = () => {"
 '"}
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

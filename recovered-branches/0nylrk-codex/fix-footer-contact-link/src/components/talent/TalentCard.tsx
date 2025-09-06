@@ -5,19 +5,13 @@ import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
 import { useNavigate } from "react-router-dom";
 import { TalentProfile } from "@/types/talent";
 export interface TalentCardProps {
-<<<<<<< HEAD
-  talent: TalentProfile;
-  onViewProfile: (id: string) => void;
-  onRequestHire: (talent: TalentProfile) => void;
-  isSaved: boolean;
-  onToggleSave: (id: string, isSaved: boolean) => void;
-=======
+
   talent: TalentProfile
   onViewProfile: (id: string) => void
   onRequestHire: (talent: TalentProfile) => void
   isSaved: boolean
   onToggleSave: (id: string, isSaved: boolean) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   isAuthenticated: boolean
 }
 export function TalentCard({
@@ -28,9 +22,7 @@ export function TalentCard({
   onToggleSave;
   isAuthenticated
 }: TalentCardProps) {
-<<<<<<< HEAD
-  const navigate = null;
-=======
+
   const navigate = useNavigate();
   const handleViewProfile = () => {
     // Navigate directly to the talent profile
@@ -161,7 +153,7 @@ export function TalentCard({
               variant="ghost"
               onClick={(e) => {
                 e.stopPropagation();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 handleViewProfile()
               }}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"

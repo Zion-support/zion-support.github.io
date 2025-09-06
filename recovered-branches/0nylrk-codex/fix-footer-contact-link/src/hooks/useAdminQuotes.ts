@@ -4,9 +4,7 @@ import { quoteRequestService  } from '@/services/quoteRequestService';
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 import { useToast } from '@/components/ui/use-toast';
 import type { DateRange } from '@/types/dateRange';
-<<<<<<< HEAD
-export const useAdminQuotes = null;
-=======
+
 export const useAdminQuotes = () => {
   const { toast } = useToast();
   const queryClient = useQueryClient();
@@ -137,4 +135,4 @@ export const useAdminQuotes = () => {
       toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation.mutate(id)}
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

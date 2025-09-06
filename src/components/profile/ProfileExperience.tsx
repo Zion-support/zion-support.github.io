@@ -5,10 +5,7 @@ interface ProfileExperienceProps {
   experience: ProfileExperienceType[]
 export function ProfileExperience({ experience }: ProfileExperienceProps) {
   return (
-<<<<<<< HEAD
-    <div className;
-}
-=======
+
     <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>
       <h3 className='text-xl font-bold text-white mb-4'>Experience</h3>
       <div className='space-y-6'>
@@ -40,4 +37,4 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
     </div>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

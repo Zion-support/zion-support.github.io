@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export const innovativeITInfrastructureServices2025 = null;
-=======
+
 export const innovativeITInfrastructureServices2025 = [
   {
     id: 'quantum-edge-computing-orchestrator'
@@ -441,4 +439,4 @@ export const innovativeITInfrastructureServices2025 = [
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry-specific regulations']
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

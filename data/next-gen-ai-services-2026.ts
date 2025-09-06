@@ -30,24 +30,16 @@ export interface NextGenAIService2026 {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-    website: string
-  },
-=======
+
     website: string;
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number
-}
 
-const contact = null;
-=======
   reviews: number;    mobile: string
     email: string
     address: string
@@ -484,4 +476,4 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     reviews: 445
   }
 ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

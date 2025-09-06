@@ -7,10 +7,7 @@ import { Cpu, Network, Zap, Shield, Database, Globe;
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function EdgeComputingPage() {
-<<<<<<< HEAD
-  const features = null;
-                reduced bandwidth usage, and improved reliability for distributed applications.
-=======
+
   const features = [
     {
       icon: Cpu
@@ -253,7 +250,7 @@ export default function EdgeComputingPage() {
                 Edge computing brings processing power closer to where data is
                 generated, enabling faster response times, reduced bandwidth
                 usage, and improved reliability for distributed applications.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               </p>
               <div className='space-y-4'>                {benefits.map((benefit, index) => (
                   <motion.div

@@ -1,11 +1,7 @@
 import { useCallback, useMemo, useState  } from 'react';
 import Head from 'next/head',
 import DatePicker from 'react-datepicker';
-<<<<<<< HEAD
-import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
-import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
-const KitPage = null;
-=======
+
 import type {
   MediaBundle
   MediaAsset
@@ -262,4 +258,4 @@ const KitPage = () => {
   );
 }
 export default KitPage;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

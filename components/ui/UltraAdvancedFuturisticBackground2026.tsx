@@ -1,9 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-=======
+
 import { motion } from 'framer-motion';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface UltraAdvancedFuturisticBackground2026Props {
   intensity?: 'low' | 'medium' | 'high' | 'extreme',
   colorScheme?: 'neural-network' | 'quantum-field' | 'cyberpunk' | 'holographic' | 'multidimensional';
@@ -13,13 +11,7 @@ interface UltraAdvancedFuturisticBackground2026Props {
   enableQuantumEffects?: boolean;
   enableNeuralNetworks?: boolean;
   enableMultidimensional?: boolean;
-<<<<<<< HEAD
-  children?: React.ReactNode
-}
 
-const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props> = ({
-  intensity;
-=======
   children?: React.ReactNode;
 const UltraAdvancedFuturisticBackground2026: React.FC<
   UltraAdvancedFuturisticBackground2026Props
@@ -557,4 +549,4 @@ export default UltraAdvancedFuturisticBackground2026;      {children}
   )
 }
 export default UltraAdvancedFuturisticBackground2026;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

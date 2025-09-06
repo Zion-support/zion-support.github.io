@@ -3,9 +3,7 @@ import EnhancedNavigation from './EnhancedNavigation',
 import EnhancedFooter from './EnhancedFooter',
 import i18n, { isRtl } from '../../utils/i18n';
 import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
-<<<<<<< HEAD
-export type EnhancedLayoutProps = any;
-=======
+
 export type EnhancedLayoutProps = {
   children: React.ReactNode;}
 export type EnhancedLayoutProps = {
@@ -19,7 +17,7 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', lng);
   }, []);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='min-h-screen flex flex-col'>      <header>
         <EnhancedNavigation />

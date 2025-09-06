@@ -2,11 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import axios from 'axios';
-<<<<<<< HEAD
-const EPISODES_PATH = null;
-    return res.status(500).json({ error: error?.message || 'Synthesis failed' })
-};
-=======
+
 const EPISODES_PATH = path.join(
   process.cwd()
   'data'
@@ -118,6 +114,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (error: any) {
     console.error(error)
     return res.status(500).json({ error: error?.message |'Synthesis failed' })
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }
 }

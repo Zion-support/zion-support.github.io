@@ -18,13 +18,10 @@ export function TransactionHistory() {
       </Card>
     )
   }
-<<<<<<< HEAD
 
-  const earnTransactions = null;
-=======
   const earnTransactions = transactions.filter(tx => tx.transaction_type === 'earn');
   const burnTransactions = transactions.filter(tx => tx.transaction_type === 'burn');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card>
       <CardHeader>

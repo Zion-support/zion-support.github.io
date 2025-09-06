@@ -11,11 +11,9 @@ interface UseHireRequestFormProps {
   initialJobTitle?: string;
   userDetails?: {
     name?: string;
-<<<<<<< HEAD
-    email?: string;
-=======
+
     email?: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     id?: string
   }
 }
@@ -24,20 +22,16 @@ export interface FormValues {
   requesterEmail: string;
   projectOverview: string;
   timeline: string;
-<<<<<<< HEAD
-  budgetMin: number;
-=======
+
   budgetMin: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   budgetMax: number
 }
 export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { submitHireRequest } = useHireRequest();
   // Define the form schema with validation rules
-<<<<<<< HEAD
-  const formSchema = null;
-=======
+
   const formSchema = z.object({
     requesterName: z.string().min(2, "Name is required");
     requesterEmail: z.string().email("Valid email is required")
@@ -95,7 +89,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
   return {
     form;
     isSubmitting;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     onSubmit
   }
 }

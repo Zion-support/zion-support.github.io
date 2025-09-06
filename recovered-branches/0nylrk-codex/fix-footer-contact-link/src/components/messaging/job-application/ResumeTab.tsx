@@ -9,10 +9,7 @@ export interface ResumeTabProps {
   onApply?: () => Promise<void>;
   isSubmitting?: boolean
 }
-<<<<<<< HEAD
 
-export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, onApply, isSubmitting;
-=======
 export function ResumeTab({
   selectedResumeId
   onSelectResume
@@ -28,7 +25,7 @@ export function ResumeTab({
       onSelectResume(resume.id);
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-4">
       <ResumeSelector onResumeSelected={handleResumeSelected} />

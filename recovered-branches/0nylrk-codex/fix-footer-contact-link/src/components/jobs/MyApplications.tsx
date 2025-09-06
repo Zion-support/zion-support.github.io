@@ -10,9 +10,7 @@ import { Link } from "react-router-dom";
 import { ApplicationStatus } from "@/types/jobs";
 export function MyApplications() {
   const { applications, isLoading, error } = useJobApplications();
-<<<<<<< HEAD
-  const getStatusBadge = null;
-=======
+
   const getStatusBadge = (status: ApplicationStatus) => {
     switch (status) {
       case "new": return <Badge variant="secondary">New</Badge>;
@@ -30,7 +28,7 @@ export function MyApplications() {
         return <Badge variant="outline">{status}</Badge>
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">

@@ -12,9 +12,7 @@ export default function WhitelabelManager() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("tenants");
   // Check if user has admin role
-<<<<<<< HEAD
-  const isAdmin = null;
-=======
+
   const isAdmin = user?.role === "admin";
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
@@ -87,7 +85,7 @@ export default function WhitelabelManager() {
                 <h3>Admin Access</h3>
                 <p>
                   You can assign tenant administrators who will have access to manage their white-label instance
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                   including content, users, and analytics. Tenant admins cannot access data from other tenants.
                 </p>
               </div>

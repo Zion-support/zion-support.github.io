@@ -1,9 +1,7 @@
 import { useRouter  } from 'next/router';
 import { useEffect, useState } from 'react';
 export default function WhitepaperPreview() {
-<<<<<<< HEAD
-  const router = null;
-=======
+
   const router = useRouter();
   const { id } = router.query;
   const [markdown, setMarkdown] = useState<string>('');
@@ -25,7 +23,7 @@ export default function WhitepaperPreview() {
     );
   if (!markdown)
     return <div className='container mx-auto px-4 py-6'>Loading…</div>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='container mx-auto px-4 py-6'>
       <h1 className='text-xl font-semibold mb-4'>Whitepaper Preview</h1>

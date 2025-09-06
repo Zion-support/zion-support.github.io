@@ -1,13 +1,4 @@
-<<<<<<< HEAD
 
-import { useState } from "react",
-import { format } from "date-fns",
-import { Calendar } from "@/components/ui/calendar",
-import { Button } from "@/components/ui/button",
-import { Label } from "@/components/ui/label",
-import { CalendarIcon } from "@/components/icons",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-=======
 import { useState } from "react";
 import { format } from "date-fns";
 import { Calendar } from "@/components/ui/calendar";
@@ -19,7 +10,7 @@ import {
   PopoverContent
   PopoverTrigger
 } from "@/components/ui/popover";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { cn } from "@/lib/utils";
 import { QuoteFormData } from "@/types/quotes";
 interface TimelineStepProps {
@@ -28,9 +19,7 @@ interface TimelineStepProps {
 }
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
-<<<<<<< HEAD
-    <div className;
-=======
+
     <div className="space-y-6">
       <div>
         <h3 className="text-xl font-semibold text-white mb-4">
@@ -112,7 +101,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                       variant="outline"
                       className={cn(
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover: bg-zion-blue-dark"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                         !formData.endDate && "text-zion-slate-light"
                       )}
                     >

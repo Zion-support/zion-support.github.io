@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 
-import { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-=======
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -14,7 +9,7 @@ import {
   CardHeader
   CardTitle
 } from "@/components/ui/card";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Input } from "@/components/ui/input";
 import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
 interface ReferralLinkProps {
@@ -22,12 +17,7 @@ interface ReferralLinkProps {
   onCopy: () => void;
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void
 }
-<<<<<<< HEAD
 
-export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
-  const [copied, setCopied] = useState(false);
-  const handleCopy = null;
-=======
 export function ReferralLink({
   referralLink
   onCopy
@@ -39,7 +29,7 @@ export function ReferralLink({
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card className="mt-6">
       <CardHeader>

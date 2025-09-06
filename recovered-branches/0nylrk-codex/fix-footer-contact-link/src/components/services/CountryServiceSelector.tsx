@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 
-import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
-import { CountrySelector } from "./CountrySelector",
-=======
 import {
   onsiteServicePricing
   CountryPricing
 } from "@/data/onsiteServicePricing";
 import { CountrySelector } from "./CountrySelector";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { PaymentSection } from "./PaymentSection";
 import { ServiceDetails } from "./ServiceDetails";
 interface CountryServiceSelectorProps {

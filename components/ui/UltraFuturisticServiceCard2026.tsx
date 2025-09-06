@@ -2,32 +2,19 @@ import React from 'react';
 import { motion  } from 'framer-motion';
 import { Star, Check, Zap, TrendingUp, Shield, Brain, Atom, Rocket } from 'lucide-react';
 interface Service {
-<<<<<<< HEAD
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-=======
+
   id: string
   name: string
   tagline: string
   description: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   price?: string | {
     monthly?: number;
     yearly?: number;
     currency?: string;
     trialDays?: number;
     setupTime?: string
-<<<<<<< HEAD
-  },
-  period?: string;
-  pricing?: any;
-  features: string[];
-  popular?: boolean;
-  category: string;
-  icon: string;
-=======
+
   }
   period?: string;
   pricing?: any;
@@ -35,7 +22,7 @@ interface Service {
   popular?: boolean;
   category: string
   icon: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   marketPrice?: string;
   competitors?: string[];
   targetMarket?: string;
@@ -44,13 +31,7 @@ interface Service {
   benefits?: string[]
 }
 interface ServiceCardProps {
-<<<<<<< HEAD
-  service: Service;
-  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
-}
 
-const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant;
-=======
   service: Service
   variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
 }
@@ -275,4 +256,4 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 });
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

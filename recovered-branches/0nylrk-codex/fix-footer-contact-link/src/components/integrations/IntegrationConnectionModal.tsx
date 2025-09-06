@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 
-import React, { useState } from "react",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { Checkbox } from "@/components/ui/checkbox",
-=======
 import React, { useState } from "react";
 import {
   Dialog
@@ -20,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
 interface Integration {
@@ -36,18 +28,7 @@ interface IntegrationConnectionModalProps {
   onClose: () => void;
   integration: Integration
 }
-<<<<<<< HEAD
 
-export function IntegrationConnectionModal({ isOpen, onClose, integration }: IntegrationConnectionModalProps) {
-  const [isConnecting, setIsConnecting] = useState(false);
-  const [syncSettings, setSyncSettings] = useState({
-    autoCreateContacts: true;
-    pushNotes: false;
-    syncJobDetails: true;
-    syncApplicantData: true
-  });
-  const handleConnectOAuth = null;
-=======
 export function IntegrationConnectionModal({
   isOpen
   onClose
@@ -81,7 +62,7 @@ export function IntegrationConnectionModal({
     toast.success("Integration settings saved");
     onClose();
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-md">

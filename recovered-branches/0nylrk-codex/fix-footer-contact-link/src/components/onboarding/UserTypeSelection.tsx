@@ -3,68 +3,48 @@ import { useState } from "react",
 import { Briefcase, Star, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 interface UserTypeOption {
-<<<<<<< HEAD
-  id: "serviceProvider" | "talent" | "client";
-  name: string;
-  description: string;
-=======
+
   id: "serviceProvider" | "talent" | "client"
   name: string
   description: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   icon: React.ElementType
 }
 interface UserTypeSelectionProps {
-<<<<<<< HEAD
-  onSelect: (userType: "serviceProvider" | "talent" | "client") => void;
-=======
+
   onSelect: (userType: "serviceProvider" | "talent" | "client") => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   selectedType: string | null
 }
 export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
   const userTypes: UserTypeOption[] = [
     {
-<<<<<<< HEAD
-      id: "serviceProvider";
-      name: "Service Provider";
-      description: "I want to offer services on the platform";
-=======
+
       id: "serviceProvider"
       name: "Service Provider"
       description: "I want to offer services on the platform"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       icon: Briefcase
     }
     {
-<<<<<<< HEAD
-      id: "talent";
-      name: "Talent";
-      description: "I want to showcase my skills and find opportunities";
-=======
+
       id: "talent"
       name: "Talent"
       description: "I want to showcase my skills and find opportunities"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       icon: Star
     }
     {
-<<<<<<< HEAD
-      id: "client";
-      name: "Client";
-      description: "I want to discover and hire talent or services";
-=======
+
       id: "client"
       name: "Client"
       description: "I want to discover and hire talent or services"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       icon: User
     }
   ];
   return (
-<<<<<<< HEAD
-    <div className;
-=======
+
     <div className="space-y-6">
       <div className="text-center mb-6">
         <h3 className="text-2xl font-bold text-white">Choose your role</h3>
@@ -76,7 +56,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
         {userTypes.map((type) => {
           const Icon = type.icon;
           const isSelected = selectedType === type.id
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           return (
             <Button
               key={type.id}

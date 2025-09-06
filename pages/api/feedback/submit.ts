@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-const DATA_DIR = null;
-  return res.status(200).json({ ok: true })
-}
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -29,4 +22,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   writeAll(rows);
   return res.status(200).json({ ok: true });
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,13 +1,7 @@
 
 export interface Wallet {
   user_id: string;
-<<<<<<< HEAD
-  balance: number;
-  updated_at: string
-}
 
-export type TransactionType = any;
-=======
   balance: number
   updated_at: string
 }
@@ -18,6 +12,6 @@ export interface TokenTransaction {
   amount: number;
   transaction_type: TransactionType;
   reason: string | null
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   created_at: string
 }

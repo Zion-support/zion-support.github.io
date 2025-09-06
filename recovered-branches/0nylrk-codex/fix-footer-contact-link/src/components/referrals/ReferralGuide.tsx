@@ -1,9 +1,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 export function ReferralGuide() {
-<<<<<<< HEAD
-  const steps = null;
-=======
+
   const steps = [
     {
       title: "Share your referral link"
@@ -17,7 +15,7 @@ export function ReferralGuide() {
     {
       title: "You earn rewards"
       description: "Rewards are issued based on the type of user who completes onboarding"}]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card>
       <CardHeader>

@@ -1,30 +1,7 @@
 import React, { useState } from 'react',
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Search, Star, Users, TrendingUp;
-  DollarSign, Clock, CheckCircle, ArrowRight;
-  Rocket, Monitor, Cpu;
-  Zap, Database, Cloud, Lock, Code;
-  Sparkles, Target, Award, Lightbulb
- } from 'lucide-react';
-import { innovative2025Services  } from '../data/innovative-2025-services';
-import { emergingTech2025Services  } from '../data/emerging-tech-2025-services';
-import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
-export default function EnhancedServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
-  const [sortBy, setSortBy] = useState<string>('name'),
 
-  const allServices = null;
-  return (
-    <EnhancedFuturisticBackground 
-      intensity="high" 
-      colorScheme="quantum"
-      particleCount={300}
-      animationSpeed={1.5}
-=======
 import {
   Search
   Star
@@ -164,7 +141,7 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
       }
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     >
       <div className='min-h-screen'>
         <Head>

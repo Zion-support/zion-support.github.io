@@ -4,121 +4,77 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge";
 import { Crown, Medal, Trophy } from "lucide-react";
 interface LeaderboardEntry {
-<<<<<<< HEAD
-  id: string;
-  rank: number;
-  name: string;
-  avatar?: string;
-  referrals: number;
-  earnings: number;
-=======
+
   id: string
   rank: number
   name: string
   avatar?: string;
   referrals: number
   earnings: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   badges: string[]
 }
 export function PartnerLeaderboard() {
   // Placeholder data - would come from API in real implementation
   const leaderboard: LeaderboardEntry[] = [
     {
-<<<<<<< HEAD
-      id: "1";
-      rank: 1;
-      name: "AI Tech Guru";
-      avatar: "", // URL would be here
-      referrals: 178;
-      earnings: 4500;
-=======
+
       id: "1"
       rank: 1
       name: "AI Tech Guru"
       avatar: "", // URL would be here
       referrals: 178
       earnings: 4500
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       badges: ["gold", "trending"]
     }
     {
-<<<<<<< HEAD
-      id: "2";
-      rank: 2;
-      name: "Machine Learning Hub";
-      avatar: "";
-      referrals: 145;
-      earnings: 3625;
-=======
+
       id: "2"
       rank: 2
       name: "Machine Learning Hub"
       avatar: ""
       referrals: 145
       earnings: 3625
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       badges: ["silver"]
     }
     {
-<<<<<<< HEAD
-      id: "3";
-      rank: 3;
-      name: "Neural Networks Pro";
-      avatar: "";
-      referrals: 124;
-      earnings: 3100;
-=======
+
       id: "3"
       rank: 3
       name: "Neural Networks Pro"
       avatar: ""
       referrals: 124
       earnings: 3100
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       badges: ["bronze"]
     }
     {
-<<<<<<< HEAD
-      id: "4";
-      rank: 4;
-      name: "AI Career Insights";
-      avatar: "";
-      referrals: 98;
-      earnings: 2450;
-=======
+
       id: "4"
       rank: 4
       name: "AI Career Insights"
       avatar: ""
       referrals: 98
       earnings: 2450
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       badges: []
     }
     {
-<<<<<<< HEAD
-      id: "5";
-      rank: 5;
-      name: "Deep Learning Daily";
-      avatar: "";
-      referrals: 87;
-      earnings: 2175;
-=======
+
       id: "5"
       rank: 5
       name: "Deep Learning Daily"
       avatar: ""
       referrals: 87
       earnings: 2175
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       badges: ["newcomer"]
     }
   ];
   // Function to render rank badge
-<<<<<<< HEAD
-  const renderRankBadge = null;
-=======
+
   const renderRankBadge = (rank: number) => {
     switch(rank) {
       case 1:
@@ -131,7 +87,7 @@ export function PartnerLeaderboard() {
         return <span className="text-sm font-semibold">{rank}</span>
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">

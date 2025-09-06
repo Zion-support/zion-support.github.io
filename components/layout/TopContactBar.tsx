@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Phone, Mail, MapPin, Globe;
-  Clock, ChevronDown, ChevronUp;
-  MessageCircle, Calendar, Star
- } from 'lucide-react';
-const contactInfo = null;
-=======
+
 import {
   Phone
   Mail
@@ -48,7 +42,7 @@ const quickActions = [
   { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w-4 h-4" /> }
 export default function TopContactBar() {
   const [isExpanded, setIsExpanded] = useState(false);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='relative z-40'>
       {/* Main Contact Bar */}

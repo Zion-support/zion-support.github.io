@@ -1,9 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { getFraudStore } from '[^']*';
-function ensureAdmin(req: NextApiRequest): boolean {
-  const token = null;
-=======
+
 import { getFraudStore } from '../../../../utils/fraud/store';
 function ensureAdmin(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token']
@@ -26,6 +22,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     userId
     status: status as any
     label: label as any})
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   res.status(200).json({ items })
 }
